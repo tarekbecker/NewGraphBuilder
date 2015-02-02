@@ -10,6 +10,7 @@ public class TeamMember extends Relationship {
     public String first_name;
     public String last_name;
     public String title;
+    public String type = "TeamMember";
 
     @Override
     public String getPath() {

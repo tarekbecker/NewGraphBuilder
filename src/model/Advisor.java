@@ -9,6 +9,8 @@ import java.util.Objects;
  */
 public class Advisor extends TeamMember {
 
+    public String type = "Advisor";
+
     @Override
     public String getRelType() {
         return "hasBoardMemberAndAdvisor";

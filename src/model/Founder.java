@@ -7,6 +7,7 @@ package model;
 public class Founder extends TeamMember {
 
     public String name;
+    public String type = "Founder";
 
     @Override
     public String getRelType() {
