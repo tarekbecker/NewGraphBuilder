@@ -11,6 +11,7 @@ public class Region implements Location {
 
     public String path;
     public String name;
+    public String type = "Region";
 
     @Override
     public boolean equals(Object o) {

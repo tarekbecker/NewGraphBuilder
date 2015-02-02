@@ -11,6 +11,7 @@ public class Country implements Location {
 
     public String path;
     public String name;
+    public String type = "Country";
 
     @Override
     public boolean equals(Object o) {

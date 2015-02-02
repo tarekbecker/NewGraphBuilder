@@ -11,6 +11,7 @@ public class City implements Location {
 
     public String path;
     public String name;
+    public String type = "City";
 
     @Override
     public boolean equals(Object o) {
