@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html dir="ltr" lang="en-US">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width"> 
+  <title>Decision Support, Decision Sciences and Big Data Analytics Blog – Mu Sigma</title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="shortcut icon" href="favicon/favicon.ico"> 
+  <link rel="stylesheet" type="text/css" media="all" href="http://www.mu-sigma.com/analytics/blog/wp-content/themes/twentyeleven/style.css"> 
+  <link rel="pingback" href="http://www.mu-sigma.com/analytics/blog/xmlrpc.php"> 
+  <!--[if lt IE 9]>
+<script src="http://www.mu-sigma.com/analytics/blog/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]--> 
+  <link rel="alternate" type="application/rss+xml" title=" » Feed" href="http://www.mu-sigma.com/analytics/blog/feed"> 
+  <link rel="alternate" type="application/rss+xml" title=" » Comments Feed" href="http://www.mu-sigma.com/analytics/blog/comments/feed"> 
+  <link rel="stylesheet" id="social_shareSheets-css" href="http://www.mu-sigma.com/analytics/blog/wp-content/plugins/simple-social-sharing/simple-social-sharing.css?ver=3.2.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="mr_social_sharing-css" href="http://www.mu-sigma.com/analytics/blog/wp-content/plugins/social-sharing-toolkit/style.css?ver=3.2.1" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://www.mu-sigma.com/analytics/blog/wp-includes/js/l10n.js?ver=20101110"></script> 
+  <script type="text/javascript" src="http://www.mu-sigma.com/analytics/blog/wp-includes/js/jquery/jquery.js?ver=1.6.1"></script> 
+  <script type="text/javascript" src="http://www.mu-sigma.com/analytics/blog/wp-content/plugins/social-sharing-toolkit/script.js?ver=3.2.1"></script> 
+  <script type="text/javascript" src="http://www.mu-sigma.com/analytics/blog/wp-content/plugins/social-sharing-toolkit/googleplus.js.php?lang=en_US&amp;ver=3.2.1"></script> 
+  <script type="text/javascript" src="http://apis.google.com/js/plusone.js?ver=3.2.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.mu-sigma.com/analytics/blog/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.mu-sigma.com/analytics/blog/wp-includes/wlwmanifest.xml"> 
+  <link rel="index" title="" href="http://www.mu-sigma.com/analytics/blog"> 
+  <meta name="generator" content="WordPress 3.2.1"> 
+  <meta name="description" content="Read insightful Blogs on Decision Support, Big Data Analytics &amp; new concepts in the area of decision sciences."> 
+  <style>
+		/* Link color */
+		a,
+		#site-title a:focus,
+		#site-title a:hover,
+		#site-title a:active,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-title a:active,
+		.widget_twentyeleven_ephemera .comments-link a:hover,
+		section.recent-posts .other-recent-posts a[rel="bookmark"]:hover,
+		section.recent-posts .other-recent-posts .comments-link a:hover,
+		.format-image footer.entry-meta a:hover,
+		#site-generator a:hover {
+			color: #800000;
+		}
+		section.recent-posts .other-recent-posts .comments-link a:hover {
+			border-color: #800000;
+		}
+		article.feature-image.small .entry-summary p a:hover,
+		.entry-header .comments-link a:hover,
+		.entry-header .comments-link a:focus,
+		.entry-header .comments-link a:active,
+		.feature-slider a.active {
+			background-color: #800000;
+		}
+	</style> 
+  <style type="text/css">
+body { background-color: #e6e6e6; }
+</style> 
+ </head> 
+ <body class="home blog two-column right-sidebar"> 
+  <!-- top navi --> 
+  <div align="right" class="maintopnavi"> 
+   <a href="http://www.mu-sigma.com/contact.html">Contact us</a> | 
+   <a href="http://www.mu-sigma.com/sitemap.html">Sitemap</a> | 
+   <a href="http://www.mu-sigma.com/privacy.html">Privacy Policy</a>
+  </div> 
+  <div class="topMaindiv" style="height:165px;"> 
+   <div class="fltLeft logo" style="padding-right:30px;">
+    <div>
+     <a href="../../index.html"><img src="../images/logo.jpg" alt="Mu Sigma" width="106" height="116" border="0"></a>
+    </div> 
+    <div class="tagline" style="margin-top:-7px;">
+     DO THE MATH
+    </div>
+   </div> 
+   <div class="fltLeft topnavi" style="padding-left:16px; width:110px;"> 
+    <h2 style="width:auto;"><a href="../aboutus/who-we-are.html">About Us</a></h2> 
+    <ul> 
+     <li><a href="../aboutus/who-we-are.html">Who We Are</a></li> 
+     <li><a href="../aboutus/vision.html">Vision</a></li> 
+     <li><a href="../aboutus/our-philosophy.html">Philosophy</a></li> 
+     <li><a href="../aboutus/our-customers.html">Our Customers</a></li> 
+     <li><a href="../aboutus/management.html">Our Team</a></li> 
+     <li><a href="../aboutus/news-2014.html">News</a></li> 
+    </ul> 
+   </div> 
+   <div class="fltLeft topnavi" style="width:110px;"> 
+    <h2 style="width:auto;"><a href="../platforms/overview.html">Platforms</a></h2> 
+    <ul> 
+     <li><a href="../platforms/overview.html">Overview</a></li> 
+     <li><a href="../platforms/decision-sciences.html">Decision Sciences</a></li> 
+     <li><a href="../platforms/data-sciences.html">Data Sciences</a></li> 
+    </ul> 
+   </div> 
+   <div class="fltLeft topnavi" style="width:110px;"> 
+    <h2 style="width:auto;"><a href="../ecosystem/idse.html">Ecosystem</a></h2> 
+    <ul> 
+     <li><a href="../ecosystem/idse.html">Overview</a></li> 
+     <li><a href="../ecosystem/dipp.html">DIPP™</a></li> 
+     <li><a href="../ecosystem/interdisciplinaryapproach.html">Interdisciplinary Approach</a></li> 
+     <li><a href="../ecosystem/innovation.html">Innovation &amp; Development</a></li> 
+     <li><a href="../ecosystem/convergence.html">Convergence</a></li> 
+    </ul> 
+   </div> 
+   <div class="fltLeft topnavi" style="width:110px;"> 
+    <h2 style="width:auto;"><a href="../solutions/overview.html">Solutions</a></h2> 
+    <ul> 
+     <li><a href="../solutions/overview.html">Overview</a></li> 
+     <li><a href="../solutions/verticals.html">Verticals</a></li> 
+     <li><a href="../solutions/horizontals.html">Horizontals</a></li> 
+     <li><a href="../solutions/casestudies-marketing-analytics.html">Case Studies</a></li> 
+    </ul> 
+   </div> 
+   <div class="fltLeft topnavi" style="width:120px;"> 
+    <h2 style="width:120px;"><a href="../thought_leadership/whitepapers.html">Thought Leadership</a></h2> 
+    <ul> 
+     <li><a href="../thought_leadership/whitepapers.html">White Papers</a></li> 
+     <li><a href="../thought_leadership/technicalresearch.html">Technical Research</a></li> 
+     <li><a href="../thought_leadership/muview.html">Our Views</a></li> 
+     <li class="topnavicl"><a href="../blog">Decision Sciences Blog</a></li> 
+     <li><a href="../thought_leadership/cafe-cerebral.html">Café Cerebral</a></li> 
+     <li><a href="../thought_leadership/videos.html">Videos</a></li> 
+    </ul> 
+   </div> 
+   <div class="fltLeft topnavi" style="width:110px;"> 
+    <h2 style="width:auto;"><a href="../people/talentcreationphilosophy.html">People</a></h2> 
+    <ul> 
+     <li><a href="../people/talentcreationphilosophy.html">Talent Creation Philosophy</a></li> 
+     <li><a href="../people/our-values.html">Our Values</a></li> 
+     <li><a href="../people/life-at-musigma.html">Life @ Mu Sigma</a></li> 
+     <li><a href="../people/careers.html">Careers</a></li> 
+     <li><a href="../people/workwithus.html">Work With Us</a></li> 
+    </ul> 
+   </div> 
+  </div>
+  <!-- top navi  ends--> 
+  <!-- body content --> 
+  <!-- header --> 
+  <div class="headerbg" style="background-image:url(images/headerbg.gif)">
+   Mu Sigma 
+   <h2>Decision Sciences Blog</h2> 
+   <!-- header ends--> 
+  </div>
+  <div class="container"> 
+   <!--bredcurmbs--> 
+   <div class="bredcrumbs" style="padding-bottom:20px;">
+    <a href="http://www.mu-sigma.com/analytics/index.html">HOME</a> &gt; 
+    <a href="/blog"><span class="bredcrumbscl">Blog</span></a>
+   </div> 
+   <!--bredcrumbs ends-->
+   <div> 
+    <div id="primary"> 
+     <div id="content" role="main"> 
+      <nav id="nav-above"> 
+       <h3 class="assistive-text">Post navigation</h3> 
+       <div class="nav-previous">
+        <a href="http://www.mu-sigma.com/analytics/blog/page/2"><span class="meta-nav">←</span> Older posts</a>
+       </div> 
+       <div class="nav-next"></div> 
+      </nav>
+      <!-- #nav-above --> 
+      <article id="post-576" class="post-576 post type-post status-publish format-standard hentry category-generic"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://www.mu-sigma.com/analytics/blog/why-having-a-couch-in-your-office-could-lead-to-better-decisions" title="Permalink to Why having a couch in your office could lead to better decisions" rel="bookmark">Why having a couch in your office could lead to better decisions</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://www.mu-sigma.com/analytics/blog/why-having-a-couch-in-your-office-could-lead-to-better-decisions" title="12:58 pm" rel="bookmark"><time class="entry-date" datetime="2014-11-26T12:58:44+00:00" pubdate="">November 26, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.mu-sigma.com/analytics/blog/author/ambiga-dhiraj" title="View all posts by Ambiga Dhiraj" rel="author">Ambiga Dhiraj</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://www.mu-sigma.com/analytics/blog/why-having-a-couch-in-your-office-could-lead-to-better-decisions#respond" title="Comment on Why having a couch in your office could lead to better decisions"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <a href="http://www.mu-sigma.com/analytics/blog/why-having-a-couch-in-your-office-could-lead-to-better-decisions"><img width="110" height="110" src="http://www.mu-sigma.com/analytics/blog/wp-content/plugins/thumbnail-for-excerpts/tfe_no_thumb.png" class="alignleft wp-post-image tfe" alt="" title=""></a>
+        <p>Why did Sigmund Freud make his patients lie on couches? The solution to this mystery is uncovered and on display in a fascinating exhibition in Freud's old apartment in Vienna. Here is what the Guardian had to say: In Freud's day, reclining in mixed company was an extremely risqué business. "If a visitor is announced, you are ...</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://www.mu-sigma.com/analytics/blog/category/generic" title="View all posts in Generic" rel="category tag">Generic</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://www.mu-sigma.com/analytics/blog/why-having-a-couch-in-your-office-could-lead-to-better-decisions#respond" title="Comment on Why having a couch in your office could lead to better decisions"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-576 --> 
+      <article id="post-563" class="post-563 post type-post status-publish format-standard hentry category-best-practices category-center-of-excellence category-decision-sciences-2"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://www.mu-sigma.com/analytics/blog/decision-sciences-coe-make-it-an-enabler-not-just-another-middleman" title="Permalink to Decision Sciences COE: Make it an enabler, not just another middleman" rel="bookmark">Decision Sciences COE: Make it an enabler, not just another middleman</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://www.mu-sigma.com/analytics/blog/decision-sciences-coe-make-it-an-enabler-not-just-another-middleman" title="12:30 pm" rel="bookmark"><time class="entry-date" datetime="2014-11-14T12:30:35+00:00" pubdate="">November 14, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.mu-sigma.com/analytics/blog/author/ganesh-lakshminarayanan" title="View all posts by Ganesh Lakshminarayanan" rel="author">Ganesh Lakshminarayanan</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://www.mu-sigma.com/analytics/blog/decision-sciences-coe-make-it-an-enabler-not-just-another-middleman#respond" title="Comment on Decision Sciences COE: Make it an enabler, not just another middleman"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <a href="http://www.mu-sigma.com/analytics/blog/decision-sciences-coe-make-it-an-enabler-not-just-another-middleman"><img width="92" height="110" src="http://www.mu-sigma.com/analytics/blog/wp-content/uploads/2013/04/analytics22.jpg" class="alignleft tfe wp-post-image" alt="analytics2" title="analytics2"></a>
+        <p>You may have heard the parable of the Blind Men and the Elephant. A group of blind men are asked to touch an elephant and then describe what it must look like. Each feels a different part – the one who touches the tusk says the elephant looks like a solid pipe; the one who ...</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://www.mu-sigma.com/analytics/blog/category/best-practices" title="View all posts in Best Practices" rel="category tag">Best Practices</a>, <a href="http://www.mu-sigma.com/analytics/blog/category/center-of-excellence" title="View all posts in Center of Excellence" rel="category tag">Center of Excellence</a>, <a href="http://www.mu-sigma.com/analytics/blog/category/decision-sciences-2" title="View all posts in Decision Sciences" rel="category tag">Decision Sciences</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://www.mu-sigma.com/analytics/blog/decision-sciences-coe-make-it-an-enabler-not-just-another-middleman#respond" title="Comment on Decision Sciences COE: Make it an enabler, not just another middleman"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-563 --> 
+      <article id="post-551" class="post-551 post type-post status-publish format-standard hentry category-analytics"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://www.mu-sigma.com/analytics/blog/designing-a-dashboard-look-to-airplane-cockpits-for-cues" title="Permalink to Designing a dashboard? Look to airplane cockpits for cues" rel="bookmark">Designing a dashboard? Look to airplane cockpits for cues</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://www.mu-sigma.com/analytics/blog/designing-a-dashboard-look-to-airplane-cockpits-for-cues" title="1:06 pm" rel="bookmark"><time class="entry-date" datetime="2014-11-11T13:06:02+00:00" pubdate="">November 11, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.mu-sigma.com/analytics/blog/author/chirag-kataruka" title="View all posts by Chirag Kataruka" rel="author">Chirag Kataruka</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://www.mu-sigma.com/analytics/blog/designing-a-dashboard-look-to-airplane-cockpits-for-cues#respond" title="Comment on Designing a dashboard? Look to airplane cockpits for cues"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <a href="http://www.mu-sigma.com/analytics/blog/designing-a-dashboard-look-to-airplane-cockpits-for-cues"><img width="110" height="110" src="http://www.mu-sigma.com/analytics/blog/wp-content/plugins/thumbnail-for-excerpts/tfe_no_thumb.png" class="alignleft wp-post-image tfe" alt="" title=""></a>
+        <p>When I was a child and took a flight with my parents, the most exciting part of the trip was always getting the chance to see the cockpit, and having the pilot give me those shiny plastic wings to pin on my shirt. Post 9-11, I believe those visits ended – but like many, I ...</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://www.mu-sigma.com/analytics/blog/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://www.mu-sigma.com/analytics/blog/designing-a-dashboard-look-to-airplane-cockpits-for-cues#respond" title="Comment on Designing a dashboard? Look to airplane cockpits for cues"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-551 --> 
+      <article id="post-534" class="post-534 post type-post status-publish format-standard hentry category-analytics category-big-data-2 category-trends category-visualization"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://www.mu-sigma.com/analytics/blog/five-trends-to-watch-in-visualization" title="Permalink to Five trends to watch in visualization" rel="bookmark">Five trends to watch in visualization</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://www.mu-sigma.com/analytics/blog/five-trends-to-watch-in-visualization" title="3:26 pm" rel="bookmark"><time class="entry-date" datetime="2014-11-06T15:26:44+00:00" pubdate="">November 6, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.mu-sigma.com/analytics/blog/author/trisha-anand" title="View all posts by Trisha Anand" rel="author">Trisha Anand</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://www.mu-sigma.com/analytics/blog/five-trends-to-watch-in-visualization#respond" title="Comment on Five trends to watch in visualization"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <a href="http://www.mu-sigma.com/analytics/blog/five-trends-to-watch-in-visualization"><img width="110" height="110" src="http://www.mu-sigma.com/analytics/blog/wp-content/plugins/thumbnail-for-excerpts/tfe_no_thumb.png" class="alignleft wp-post-image tfe" alt="" title=""></a>
+        <p>Some still believe that the traditional flavors of analytics – descriptive, inquisitive, predictive, and prescriptive – represent a linear evolution.&nbsp; But the real democratization of analytics will occur when we answer the “What” in a way that enables businesses to better answer the “Why”, “How”, and “What’s Next?” And that will require the right approach ...</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://www.mu-sigma.com/analytics/blog/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, <a href="http://www.mu-sigma.com/analytics/blog/category/big-data-2" title="View all posts in Big Data" rel="category tag">Big Data</a>, <a href="http://www.mu-sigma.com/analytics/blog/category/trends" title="View all posts in Trends" rel="category tag">Trends</a>, <a href="http://www.mu-sigma.com/analytics/blog/category/visualization" title="View all posts in Visualization" rel="category tag">Visualization</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://www.mu-sigma.com/analytics/blog/five-trends-to-watch-in-visualization#respond" title="Comment on Five trends to watch in visualization"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-534 --> 
+      <article id="post-510" class="post-510 post type-post status-publish format-standard hentry category-concepts"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://www.mu-sigma.com/analytics/blog/what-can-lesser-living-organisms-teach-decision-makers-and-decision-scientists" title="Permalink to What can lesser living organisms teach decision makers and decision scientists?" rel="bookmark">What can lesser living organisms teach decision makers and decision scientists?</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://www.mu-sigma.com/analytics/blog/what-can-lesser-living-organisms-teach-decision-makers-and-decision-scientists" title="11:11 am" rel="bookmark"><time class="entry-date" datetime="2013-10-22T11:11:18+00:00" pubdate="">October 22, 2013</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.mu-sigma.com/analytics/blog/author/admin" title="View all posts by Mu Sigma" rel="author">Mu Sigma</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://www.mu-sigma.com/analytics/blog/what-can-lesser-living-organisms-teach-decision-makers-and-decision-scientists#comments" title="Comment on What can lesser living organisms teach decision makers and decision scientists?">1</a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <a href="http://www.mu-sigma.com/analytics/blog/what-can-lesser-living-organisms-teach-decision-makers-and-decision-scientists"><img width="110" height="110" src="http://www.mu-sigma.com/analytics/blog/wp-content/uploads/2013/10/img2-150x150.jpg" class="alignleft wp-post-image tfe" alt="" title="img2"></a>
+        <p>More than 100 years ago, ornithologists discovered that Blue Tits were far more adaptable to ecological disruptions than Robins. When milk used to get delivered early in the morning in bottles and aluminum seals hadn’t been invented, the milk bottles were left open. Robins and Blue Tits, both songbirds (known for their high intellect among ...</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://www.mu-sigma.com/analytics/blog/category/concepts" title="View all posts in Concepts" rel="category tag">Concepts</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://www.mu-sigma.com/analytics/blog/what-can-lesser-living-organisms-teach-decision-makers-and-decision-scientists#comments" title="Comment on What can lesser living organisms teach decision makers and decision scientists?"><b>1</b> Reply</a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-510 --> 
+      <article id="post-500" class="post-500 post type-post status-publish format-standard hentry category-analytics category-concepts"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://www.mu-sigma.com/analytics/blog/are-you-moving-rocks-or-pebbles" title="Permalink to Are you moving rocks or pebbles?" rel="bookmark">Are you moving rocks or pebbles?</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://www.mu-sigma.com/analytics/blog/are-you-moving-rocks-or-pebbles" title="12:27 pm" rel="bookmark"><time class="entry-date" datetime="2013-09-25T12:27:00+00:00" pubdate="">September 25, 2013</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.mu-sigma.com/analytics/blog/author/admin" title="View all posts by Mu Sigma" rel="author">Mu Sigma</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://www.mu-sigma.com/analytics/blog/are-you-moving-rocks-or-pebbles#respond" title="Comment on Are you moving rocks or pebbles?"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <a href="http://www.mu-sigma.com/analytics/blog/are-you-moving-rocks-or-pebbles"><img width="110" src="http://www.mu-sigma.com/analytics/blog/wp-content/uploads/2013/09/analytics1-150x136.jpg" class="alignleft wp-post-image tfe" alt="" title="analytics1"></a>
+        <p>The speed of business transformation has led to an exponentially increasing range of business problems across the marketing, risk and supply chain functions. Companies are forced to think of ways to tackle these business problems in a manner that future-proofs their environment from the impending impact.&nbsp; So what do organizations need to do? How do they ...</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://www.mu-sigma.com/analytics/blog/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, <a href="http://www.mu-sigma.com/analytics/blog/category/concepts" title="View all posts in Concepts" rel="category tag">Concepts</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://www.mu-sigma.com/analytics/blog/are-you-moving-rocks-or-pebbles#respond" title="Comment on Are you moving rocks or pebbles?"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-500 --> 
+      <article id="post-376" class="post-376 post type-post status-publish format-standard hentry category-concepts"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://www.mu-sigma.com/analytics/blog/innovation-%e2%80%93-hitting-the-bull%e2%80%99s-eye" title="Permalink to Innovation – Hitting the Bull’s Eye" rel="bookmark">Innovation – Hitting the Bull’s Eye</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://www.mu-sigma.com/analytics/blog/innovation-%e2%80%93-hitting-the-bull%e2%80%99s-eye" title="12:01 pm" rel="bookmark"><time class="entry-date" datetime="2013-07-15T12:01:23+00:00" pubdate="">July 15, 2013</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.mu-sigma.com/analytics/blog/author/dhiraj" title="View all posts by Mu Sigma" rel="author">Mu Sigma</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://www.mu-sigma.com/analytics/blog/innovation-%e2%80%93-hitting-the-bull%e2%80%99s-eye#comments" title="Comment on Innovation – Hitting the Bull’s Eye">1</a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <a href="http://www.mu-sigma.com/analytics/blog/innovation-%e2%80%93-hitting-the-bull%e2%80%99s-eye"><img width="110" src="http://www.mu-sigma.com/analytics/blog/wp-content/uploads/2013/07/marketing2.jpg" class="alignleft wp-post-image tfe" alt="" title="marketing2"></a>
+        <p>If change is the only constant, then innovation is the way to sustain edge and transform positioning. So how does innovation happen in organizations? There have been many theories and frameworks proposed on making innovation sustainable and structured from ideation to execution. However, in a world of extreme speed, innovation is seen to be directly proportional ...</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://www.mu-sigma.com/analytics/blog/category/concepts" title="View all posts in Concepts" rel="category tag">Concepts</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://www.mu-sigma.com/analytics/blog/innovation-%e2%80%93-hitting-the-bull%e2%80%99s-eye#comments" title="Comment on Innovation – Hitting the Bull’s Eye"><b>1</b> Reply</a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-376 --> 
+      <article id="post-371" class="post-371 post type-post status-publish format-standard hentry category-analytics category-big-data-2 category-concepts"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://www.mu-sigma.com/analytics/blog/is-there-something-called-a-decision-supply-chain" title="Permalink to Is there something called a Decision Supply Chain?" rel="bookmark">Is there something called a Decision Supply Chain?</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://www.mu-sigma.com/analytics/blog/is-there-something-called-a-decision-supply-chain" title="11:18 am" rel="bookmark"><time class="entry-date" datetime="2013-07-08T11:18:28+00:00" pubdate="">July 8, 2013</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.mu-sigma.com/analytics/blog/author/dhiraj" title="View all posts by Mu Sigma" rel="author">Mu Sigma</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://www.mu-sigma.com/analytics/blog/is-there-something-called-a-decision-supply-chain#respond" title="Comment on Is there something called a Decision Supply Chain?"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <a href="http://www.mu-sigma.com/analytics/blog/is-there-something-called-a-decision-supply-chain"><img width="110" src="http://www.mu-sigma.com/analytics/blog/wp-content/uploads/2013/07/analytics1.jpg" class="alignleft wp-post-image tfe" alt="" title="analytics1"></a>
+        <p>Many of us have heard of “supply chain”. In the traditional manufacturing supply chain, raw materials are procured in one place, goods are made in another place, and those goods are transported and eventually sold to customers in many different places. We source, we produce, we distribute and we consume. Can we think of decision making ...</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://www.mu-sigma.com/analytics/blog/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, <a href="http://www.mu-sigma.com/analytics/blog/category/big-data-2" title="View all posts in Big Data" rel="category tag">Big Data</a>, <a href="http://www.mu-sigma.com/analytics/blog/category/concepts" title="View all posts in Concepts" rel="category tag">Concepts</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://www.mu-sigma.com/analytics/blog/is-there-something-called-a-decision-supply-chain#respond" title="Comment on Is there something called a Decision Supply Chain?"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-371 --> 
+      <article id="post-351" class="post-351 post type-post status-publish format-standard hentry category-analytics category-concepts category-talent"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://www.mu-sigma.com/analytics/blog/knowledge-hinders-sharing-%e2%80%93-part-1" title="Permalink to Knowledge hinders sharing – Part 1" rel="bookmark">Knowledge hinders sharing – Part 1</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://www.mu-sigma.com/analytics/blog/knowledge-hinders-sharing-%e2%80%93-part-1" title="7:43 pm" rel="bookmark"><time class="entry-date" datetime="2013-05-30T19:43:02+00:00" pubdate="">May 30, 2013</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.mu-sigma.com/analytics/blog/author/admin" title="View all posts by Mu Sigma" rel="author">Mu Sigma</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://www.mu-sigma.com/analytics/blog/knowledge-hinders-sharing-%e2%80%93-part-1#comments" title="Comment on Knowledge hinders sharing – Part 1">1</a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <a href="http://www.mu-sigma.com/analytics/blog/knowledge-hinders-sharing-%e2%80%93-part-1"><img width="110" src="http://www.mu-sigma.com/analytics/blog/wp-content/uploads/2013/05/data11-150x150.jpg" class="alignleft wp-post-image tfe" alt="" title="data1"></a>
+        <p>There is mounting evidence over the years that knowing gets in the way of learning. We will bring out two stories over two posts that confirm our belief. In this post we speak about how knowledge hinders sharing. In 1990, Elizabeth Newton from Stanford University conducted an experiment in psychology. She paired the participants or subjects ...</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://www.mu-sigma.com/analytics/blog/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, <a href="http://www.mu-sigma.com/analytics/blog/category/concepts" title="View all posts in Concepts" rel="category tag">Concepts</a>, <a href="http://www.mu-sigma.com/analytics/blog/category/talent" title="View all posts in Talent" rel="category tag">Talent</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://www.mu-sigma.com/analytics/blog/knowledge-hinders-sharing-%e2%80%93-part-1#comments" title="Comment on Knowledge hinders sharing – Part 1"><b>1</b> Reply</a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-351 --> 
+      <article id="post-339" class="post-339 post type-post status-publish format-standard hentry category-concepts"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://www.mu-sigma.com/analytics/blog/learning-over-knowing" title="Permalink to What does it take to be Anti-fragile?" rel="bookmark">What does it take to be Anti-fragile?</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://www.mu-sigma.com/analytics/blog/learning-over-knowing" title="11:38 am" rel="bookmark"><time class="entry-date" datetime="2013-04-30T11:38:31+00:00" pubdate="">April 30, 2013</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.mu-sigma.com/analytics/blog/author/krishna-r" title="View all posts by Mu Sigma" rel="author">Mu Sigma</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://www.mu-sigma.com/analytics/blog/learning-over-knowing#comments" title="Comment on What does it take to be Anti-fragile?">2</a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <a href="http://www.mu-sigma.com/analytics/blog/learning-over-knowing"><img width="110" src="http://www.mu-sigma.com/analytics/blog/wp-content/uploads/2013/04/data2-150x146.jpg" class="alignleft wp-post-image tfe" alt="" title="data2"></a>
+        <p>Nassim Taleb’s book ‘Anti-Fragile: Things That Gain From Disorder’ gave a new term to the lexicon: “anti-fragile”, to describe systems that not only can survive stress, and volatility, but also gain from them, that require them to survive. He goes on to make a distinction between the resilient which has the ability to resist shocks ...</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://www.mu-sigma.com/analytics/blog/category/concepts" title="View all posts in Concepts" rel="category tag">Concepts</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://www.mu-sigma.com/analytics/blog/learning-over-knowing#comments" title="Comment on What does it take to be Anti-fragile?"><b>2</b> Replies</a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-339 --> 
+      <nav id="nav-below"> 
+       <h3 class="assistive-text">Post navigation</h3> 
+       <div class="nav-previous">
+        <a href="http://www.mu-sigma.com/analytics/blog/page/2"><span class="meta-nav">←</span> Older posts</a>
+       </div> 
+       <div class="nav-next"></div> 
+      </nav>
+      <!-- #nav-above --> 
+     </div>
+     <!-- #content --> 
+    </div>
+    <!-- #primary --> 
+    <div id="secondary" class="widget-area" role="complementary"> 
+     <aside id="recent-posts-2" class="widget widget_recent_entries"> 
+      <h3 class="widget-title">Recent Posts</h3> 
+      <ul> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/why-having-a-couch-in-your-office-could-lead-to-better-decisions" title="Why having a couch in your office could lead to better decisions">Why having a couch in your office could lead to better decisions</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/decision-sciences-coe-make-it-an-enabler-not-just-another-middleman" title="Decision Sciences COE: Make it an enabler, not just another middleman">Decision Sciences COE: Make it an enabler, not just another middleman</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/designing-a-dashboard-look-to-airplane-cockpits-for-cues" title="Designing a dashboard? Look to airplane cockpits for cues">Designing a dashboard? Look to airplane cockpits for cues</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/five-trends-to-watch-in-visualization" title="Five trends to watch in visualization">Five trends to watch in visualization</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/what-can-lesser-living-organisms-teach-decision-makers-and-decision-scientists" title="What can lesser living organisms teach decision makers and decision scientists?">What can lesser living organisms teach decision makers and decision scientists?</a></li> 
+      </ul> 
+     </aside>
+     <aside id="archives-3" class="widget widget_archive">
+      <h3 class="widget-title">Archives</h3> 
+      <ul> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2014/11" title="November 2014">November 2014</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2013/10" title="October 2013">October 2013</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2013/09" title="September 2013">September 2013</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2013/07" title="July 2013">July 2013</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2013/05" title="May 2013">May 2013</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2013/04" title="April 2013">April 2013</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2013/01" title="January 2013">January 2013</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2012/12" title="December 2012">December 2012</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2012/11" title="November 2012">November 2012</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2012/09" title="September 2012">September 2012</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2012/07" title="July 2012">July 2012</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2012/06" title="June 2012">June 2012</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2012/05" title="May 2012">May 2012</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2012/02" title="February 2012">February 2012</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2012/01" title="January 2012">January 2012</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2011/12" title="December 2011">December 2011</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2011/11" title="November 2011">November 2011</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2011/10" title="October 2011">October 2011</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2011/09" title="September 2011">September 2011</a></li> 
+       <li><a href="http://www.mu-sigma.com/analytics/blog/2011/07" title="July 2011">July 2011</a></li> 
+      </ul> 
+     </aside> 
+    </div>
+    <!-- #secondary .widget-area --> 
+    <div class="footer1" style="background-image:url(../images/hdbg.gif); background-repeat:repeat-x; clear:both; margin-left:-10px;"> 
+     <div class="fltLeft" style="background-image:url(../images/hdbg.gif); background-repeat:repeat-x; clear:both;">
+      <a href="../aboutus/who-we-are.html">Who We Are |</a> 
+      <a href="../aboutus/vision.html">Vision |</a> 
+      <a href="../ecosystem/idse.html">Ecosystem |</a> 
+      <a href="../platforms/overview.html">Platforms |</a> 
+      <a href="../solutions/overview.html">Solutions |</a> 
+      <a href="../thought_leadership/muview.html">Our Views </a> 
+     </div> 
+     <div class="fltRight" style="background-image:url(../images/hdbg.gif); ">
+       © Copyright 2014, Mu Sigma. All rights reserved 
+     </div> 
+    </div>  
+   </div>
+  </div>
+ </body>
+</html>

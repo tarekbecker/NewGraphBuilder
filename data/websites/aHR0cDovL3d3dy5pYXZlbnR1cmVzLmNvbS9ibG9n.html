@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie ie7 lte10 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie ie8 lte10 lte9 lte8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie ie9 lte10 lte9"> <![endif]-->
+<!--[if IE 10 ]>   <html lang="en" class="no-js ie ie10 lte10"> <![endif]-->
+<!--[if gt IE 10]><!-->
+<html lang="en" class="no-js" style="background: #1e1d1d url('/assets/images/bg-body.jpg') no-repeat top left;">
+ <!--<![endif]-->
+ <head> 
+  <link rel="shortcut icon" href="http://www.iaventures.com/favicon.ico?v=2"> 
+  <link media="all" rel="stylesheet" type="text/css" href="/assets/css/all.css?v=07312013"> 
+  <link media="only screen and (max-device-width: 480px)" rel="stylesheet" type="text/css" href="/assets/css/mobile.css"> 
+  <link rel="stylesheet" type="text/css" href="/assets/fonts/IAVentures_unhinted.css"> 
+  <script>
+    var user_ipaddress = '155.56.40.73';
+  </script> 
+  <script type="text/javascript" src="/assets/js/jquery-1.6.1.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/jquery.selectbox-0.5.js"></script> 
+  <script type="text/javascript" src="/assets/js/underscore-min.js"></script> 
+  <script type="text/javascript" src="/assets/js/ICanHaz.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/json2.js"></script> 
+  <script type="text/javascript" src="/assets/js/backbone.js"></script> 
+  <script type="text/javascript" src="/assets/js/spin.min.js"></script> 
+  <script type="text/javascript" src="/assets/js/jquery.scrollTo-min.js"></script> 
+  <script type="text/javascript" src="/assets/js/HashMap.js"></script> 
+  <script type="text/javascript" src="/assets/js/cookieHandling.js"></script> 
+  <script type="text/javascript" src="/assets/js/main.js"></script> 
+  <script type="text/javascript">
+		var baseURL = 'www.iaventures.com';
+		var allCompanies = '';
+		var queryMap = new HashMap();
+		queryMap.set('Amicus',{
+		      companyName:'"Amicus"',
+		      keywords:'""',
+		      excludes:'"Energy Search"',
+		      location:'"New York"'});allCompanies = '"Amicus"';queryMap.set('BillGuard',{
+		      companyName:'"BillGuard"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"BillGuard"';queryMap.set('Consumr',{
+		      companyName:'"Consumr"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Consumr"';queryMap.set('Datadog',{
+		      companyName:'"Datadog"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Datadog"';queryMap.set('Datapop',{
+		      companyName:'"Datapop"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Datapop"';queryMap.set('DataRobot',{
+		      companyName:'"DataRobot"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"DataRobot"';queryMap.set('Datasift',{
+		      companyName:'"Datasift"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Datasift"';queryMap.set('DigitalOcean',{
+		      companyName:'DigitalOcean',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + 'DigitalOcean';queryMap.set('Flatiron Health',{
+		      companyName:'"Flatiron Health"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Flatiron+Health"';queryMap.set('FluidInfo',{
+		      companyName:'"Fluidinfo"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Fluidinfo"';queryMap.set('Kinsa',{
+		      companyName:'"Kinsa"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'"New York"'});allCompanies = allCompanies + '+OR+' + '"Kinsa"';queryMap.set('Kohort',{
+		      companyName:'"Kohort"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Kohort"';queryMap.set('Lore',{
+		      companyName:'"Lore"',
+		      keywords:'"coursekit"',
+		      excludes:'"pets"',
+		      location:'"New York"'});allCompanies = allCompanies + '+OR+' + '"Lore"';queryMap.set('Lua',{
+		      companyName:'"Lua Technologies"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Lua+Technologies"';queryMap.set('MemSQL',{
+		      companyName:'"MemSQL"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"MemSQL"';queryMap.set('Metamarkets',{
+		      companyName:'"Metamarkets"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Metamarkets"';queryMap.set('MobileROI',{
+		      companyName:'"MobileROI"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"MobileROI"';queryMap.set('NewsCred',{
+		      companyName:'"NewsCred"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"NewsCred"';queryMap.set('Next Big Sound',{
+		      companyName:'"Next Big Sound"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Next+Big+Sound"';queryMap.set('PlaceIQ',{
+		      companyName:'"PlaceIQ"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"PlaceIQ"';queryMap.set('Recorded Future',{
+		      companyName:'"Recorded Future"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Recorded+Future"';queryMap.set('SavingStar',{
+		      companyName:'"SavingStar"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"SavingStar"';queryMap.set('Sight Machine',{
+		      companyName:'"Sight Machine"',
+		      keywords:'',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Sight+Machine"';queryMap.set('Signifyd',{
+		      companyName:'"Signifyd"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Signifyd"';queryMap.set('Simple',{
+		      companyName:'"Simple Finance"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Simple+Finance"';queryMap.set('The Trade Desk',{
+		      companyName:'"The Trade Desk"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"The+Trade+Desk"';queryMap.set('ThinkNear',{
+		      companyName:'"ThinkNear"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"ThinkNear"';queryMap.set('Transcriptic',{
+		      companyName:'"Transcriptic"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Transcriptic"';queryMap.set('TransferWise',{
+		      companyName:'"TransferWise"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"TransferWise"';queryMap.set('Twice',{
+		      companyName:'"Twice"',
+		      keywords:'"clothing"',
+		      excludes:'""',
+		      location:'"San Francisco"'});allCompanies = allCompanies + '+OR+' + '"Twice"';queryMap.set('Updater',{
+		      companyName:'"Updater"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'"New York"'});allCompanies = allCompanies + '+OR+' + '"Updater"';queryMap.set('Vectra',{
+		      companyName:'"Vectra"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Vectra"';queryMap.set('Visual Revenue',{
+		      companyName:'"Visual Revenue"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Visual+Revenue"';queryMap.set('x.ai',{
+		      companyName:'x.ai',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'"New York"'});allCompanies = allCompanies + '+OR+' + 'x.ai';queryMap.set('Yipit',{
+		      companyName:'"Yipit"',
+		      keywords:'""',
+		      excludes:'""',
+		      location:'""'});allCompanies = allCompanies + '+OR+' + '"Yipit"';queryMap.set('all',{companyName:allCompanies, keywords:'', excludes:'', location:''});	</script> 
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]--> 
+  <title>IA Ventures - Blog</title> 
+ </head> 
+ <body class="content blog"> 
+  <a id="logo" href="/" class="ir">IA Ventures</a> 
+  <ul id="navigation"> 
+   <li><a href="/principles">Principles</a></li> 
+   <li><a href="/portfolio">Portfolio</a></li> 
+   <li><a href="/team">Team</a></li> 
+   <li><a href="/blog" class="selected">Blog</a></li> 
+   <li><a href="/careers" "="">Careers</a></li> 
+   <li><a href="http://resources.iaventures.com/">Resources</a></li> 
+  </ul> 
+  <h1 class="indent">Blog</h1> 
+  <div id="content"> 
+   <!--
+    <ul class="filter">
+      <li><a href="/blog" class="selected">All</a></li>
+          </ul>
+    --> 
+   <ul class="blog"> 
+   </ul> 
+  </div> 
+  <div id="footer"> 
+   <a href="http://www.andculture.com/#?ref=iaventures" target="_blank" id="cltr">Site design by andCulture</a> 
+   <p>© 2014 &nbsp; | &nbsp; IA Ventures &nbsp; | &nbsp; <a href="http://twitter.com/iaventures" target="_blank">@iaventures</a> &nbsp; | &nbsp; <a target="_blank" href="http://maps.google.com/maps/place?cid=14886379733134415940&amp;hl=en">NYC</a></p> 
+  </div> 
+  <a href="javascript:void(0)" id="up">Top</a>  
+  <!-- *** OLD TRACKING CODE. Commented out 7/5/13 by Adrian *** --> 
+  <!--    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try{ 
+        var pageTracker = _gat._getTracker("UA-25933726-1");
+        pageTracker._trackPageview();
+      } catch(err) {} 
+    </script>
+    --> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42252381-1', 'iaventures.com');
+  ga('send', 'pageview');
+
+</script>   
+  <!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+
+ Served from: www.iaventures.com @ 2014-12-05 03:52:41 by W3 Total Cache -->
+ </body>
+</html>

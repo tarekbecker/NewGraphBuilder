@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "109994807e6bf3752daf1855167a8350",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "permalink": "zauber",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "name": "Zauber",
+      "description": "Zauber is a US/LatAm-based Software Boutique and Social Analytics company providing professional services and SaaS products to industry leaders and Internet startups from Latin America and Silicon Valley.\n\nOur Software Boutique provides high-end software development services for Consumer Web, Mobile and Big Data projects. Clients include IDEO, MuleSoft, Al Jazeera, Coca-Cola, JWT and Mercado Libre.\n\nOur Social Media monitoring (Tribatics) and Social Engagement (Flowics) products target brands, media companies, tv networks and publishers from Latin America and the US. Clients include Caracol.TV, Ora.TV, Clarin, La Nacion, Peugeot, Coca-Cola, Yahoo!, Telefe.\n",
+      "short_description": "Zauber, a software boutique and social analytics company, specializes in consumer web, social analytics, and big data projects.",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 6,
+      "founded_on_month": 2,
+      "founded_on_year": 2007,
+      "founded_on": "2007-02-01",
+      "homepage_url": "http://www.zauberlabs.com",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "email_address": "info@zauberlabs.com",
+      "created_at": 1253199447,
+      "updated_at": 1407958449,
+      "total_funding_usd": 1000000,
+      "number_of_investments": 0,
+      "number_of_employees": 48
+    },
+    "relationships": {
+      "past_team": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/past_team",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "first_name": "Santiago",
+            "last_name": "Villa Fernandez",
+            "title": "Software Engineer",
+            "started_on": null,
+            "ended_on": null,
+            "path": "person/santiago-villa-fernandez-2",
+            "created_at": 1407954119,
+            "updated_at": 1410386426
+          }
+        ]
+      },
+      "current_team": {
+        "paging": {
+          "total_items": 6,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "Gabriel",
+            "last_name": "Banos",
+            "title": "CEO & Founder",
+            "started_on": null,
+            "path": "person/gabriel-baos",
+            "created_at": 1253199446,
+            "updated_at": 1397989235
+          },
+          {
+            "first_name": "Mariano",
+            "last_name": "Cortesi",
+            "title": "CTO & Founder",
+            "started_on": "2007-01-01",
+            "path": "person/mariano-cortesi",
+            "created_at": 1219718478,
+            "updated_at": 1397988993
+          },
+          {
+            "first_name": "Juan",
+            "last_name": "F. Codagnone",
+            "title": "CIO & Founder",
+            "started_on": null,
+            "path": "person/juan-f-codagnone",
+            "created_at": 1253199446,
+            "updated_at": 1397989235
+          },
+          {
+            "first_name": "Martin",
+            "last_name": "Marquez",
+            "title": "Founder",
+            "started_on": null,
+            "path": "person/martin-marquez",
+            "created_at": 1253199446,
+            "updated_at": 1397989235
+          },
+          {
+            "first_name": "Andres",
+            "last_name": "Moratti",
+            "title": "COO & Founder",
+            "started_on": null,
+            "path": "person/andrs-moratti",
+            "created_at": 1253199446,
+            "updated_at": 1397989235
+          },
+          {
+            "first_name": "Fernando",
+            "last_name": "Zunino",
+            "title": "CIO & Founder",
+            "started_on": null,
+            "path": "person/fernando-zunino",
+            "created_at": 1253199446,
+            "updated_at": 1397989235
+          }
+        ]
+      },
+      "offices": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/offices",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Palo Alto Office",
+            "street_1": "364 University Av.",
+            "street_2": null,
+            "postal_code": null,
+            "city": "Palo Alto",
+            "city_path": "location/palo-alto/0d81d68c9c59f14f01163ad9ce7145ca",
+            "region": "California",
+            "region_path": "location/california/eb879a83c91a121e0bb8829782dbcf04",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": 37.4467495,
+            "longitude": -122.1607423,
+            "created_at": 1364569358,
+            "updated_at": 1397990912
+          },
+          {
+            "type": "Address",
+            "name": "Headquarters",
+            "street_1": "Costa Rica 5546",
+            "street_2": null,
+            "postal_code": "1414",
+            "city": "Buenos Aires",
+            "city_path": "location/buenos-aires/0db4708f6b65e5e7b7745b7afb010a52",
+            "region": "Distrito Federal",
+            "region_path": "location/distrito-federal/5a2261c329739785a4bb8a64e7562b47",
+            "country": "Argentina",
+            "country_path": "location/argentina/cb42416cf6b32f47f5bd46fed057cd0a",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1253174247,
+            "updated_at": 1397991028
+          }
+        ]
+      },
+      "headquarters": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/headquarters",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Headquarters",
+            "street_1": "Costa Rica 5546",
+            "street_2": null,
+            "postal_code": "1414",
+            "city": "Buenos Aires",
+            "city_path": "location/buenos-aires/0db4708f6b65e5e7b7745b7afb010a52",
+            "region": "Distrito Federal",
+            "region_path": "location/distrito-federal/5a2261c329739785a4bb8a64e7562b47",
+            "country": "Argentina",
+            "country_path": "location/argentina/cb42416cf6b32f47f5bd46fed057cd0a",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1253174247,
+            "updated_at": 1397991028
+          }
+        ]
+      },
+      "funding_rounds": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/funding_rounds",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "FundingRound",
+            "name": "Zauber raises 1000000 in unknown round",
+            "path": "funding-round/eaaa0efbb58a4be59a3337ae7a1d9129",
+            "created_at": 1335317549,
+            "updated_at": 1415307547
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 8,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1417159419
+          },
+          {
+            "type": "Category",
+            "name": "Social Television",
+            "uuid": "3299296157e8c161f06bad8e2b6ed430",
+            "path": "category/social television/3299296157e8c161f06bad8e2b6ed430",
+            "created_at": 1397980727,
+            "updated_at": 1416962918
+          },
+          {
+            "type": "Category",
+            "name": "Semantic Web",
+            "uuid": "ac34c4c6e430f66f44aeef8ca45b52bb",
+            "path": "category/semantic web/ac34c4c6e430f66f44aeef8ca45b52bb",
+            "created_at": 1397980727,
+            "updated_at": 1417073743
+          },
+          {
+            "type": "Category",
+            "name": "Analytics",
+            "uuid": "99c5404c0ff58ee5d3344b944ddb8cd9",
+            "path": "category/analytics/99c5404c0ff58ee5d3344b944ddb8cd9",
+            "created_at": 1397980727,
+            "updated_at": 1417171293
+          },
+          {
+            "type": "Category",
+            "name": "Machine Learning",
+            "uuid": "5ea0cdb7c9a647fc50f8c9b0fac04863",
+            "path": "category/machine learning/5ea0cdb7c9a647fc50f8c9b0fac04863",
+            "created_at": 1397980727,
+            "updated_at": 1417171338
+          },
+          {
+            "type": "Category",
+            "name": "Software",
+            "uuid": "c08b5441a05b9777b7a6012728caddd9",
+            "path": "category/software/c08b5441a05b9777b7a6012728caddd9",
+            "created_at": 1397980727,
+            "updated_at": 1417194917
+          },
+          {
+            "type": "Category",
+            "name": "Opinions",
+            "uuid": "69425b454d7f99f011a6cd629f735aad",
+            "path": "category/opinions/69425b454d7f99f011a6cd629f735aad",
+            "created_at": 1397980726,
+            "updated_at": 1416825038
+          },
+          {
+            "type": "Category",
+            "name": "Mobile",
+            "uuid": "e907cf2a842d8a30a0b107d9de4a8178",
+            "path": "category/mobile/e907cf2a842d8a30a0b107d9de4a8178",
+            "created_at": 1397980726,
+            "updated_at": 1417207503
+          }
+        ]
+      },
+      "founders": {
+        "paging": {
+          "total_items": 6,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/founders",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Person",
+            "name": "Fernando Zunino",
+            "path": "person/fernando-zunino",
+            "created_at": 1253199446,
+            "updated_at": 1397989235
+          },
+          {
+            "type": "Person",
+            "name": "Andres Moratti",
+            "path": "person/andrs-moratti",
+            "created_at": 1253199446,
+            "updated_at": 1397989235
+          },
+          {
+            "type": "Person",
+            "name": "Martin Marquez",
+            "path": "person/martin-marquez",
+            "created_at": 1253199446,
+            "updated_at": 1397989235
+          },
+          {
+            "type": "Person",
+            "name": "Juan F. Codagnone",
+            "path": "person/juan-f-codagnone",
+            "created_at": 1253199446,
+            "updated_at": 1397989235
+          },
+          {
+            "type": "Person",
+            "name": "Gabriel Banos",
+            "path": "person/gabriel-baos",
+            "created_at": 1253199446,
+            "updated_at": 1397989235
+          },
+          {
+            "type": "Person",
+            "name": "Mariano Cortesi",
+            "path": "person/mariano-cortesi",
+            "created_at": 1219718478,
+            "updated_at": 1397988993
+          }
+        ]
+      },
+      "products": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/products",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Product",
+            "name": "Tribatics",
+            "path": "product/tribatics",
+            "created_at": 1336187416,
+            "updated_at": 1397995515
+          },
+          {
+            "type": "Product",
+            "name": "Flowics",
+            "path": "product/flowics",
+            "created_at": 1334900159,
+            "updated_at": 1397995482
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1397750255/0be0f8487536cc78e9cad7efe9a835b5.png",
+            "created_at": 1398018636,
+            "updated_at": 1398018636
+          }
+        ]
+      },
+      "images": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/images",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1397750257/595aa803b13043836b9711b694097826.png",
+            "created_at": 1398018636,
+            "updated_at": 1398018636
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 6,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zauber/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.linkedin.com/company/zauber",
+            "type": "WebPresence",
+            "title": "linkedin",
+            "created_at": 1406420363,
+            "updated_at": 1406420363
+          },
+          {
+            "url": "http://www.github.com/zauberlabs",
+            "type": "WebPresence",
+            "title": "github",
+            "created_at": 1397877760,
+            "updated_at": 2014
+          },
+          {
+            "url": "http://www.facebook.com/ZauberLabs",
+            "type": "WebPresence",
+            "title": "facebook",
+            "created_at": 1397877760,
+            "updated_at": 2014
+          },
+          {
+            "url": "http://twitter.com/zauberlabs",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1253174247,
+            "updated_at": 1409424665
+          },
+          {
+            "url": "http://blog.zauberlabs.com",
+            "type": "WebPresence",
+            "title": "blog",
+            "created_at": 1253174247,
+            "updated_at": 1397988253
+          },
+          {
+            "url": "http://www.zauberlabs.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1253174247,
+            "updated_at": 1397988253
+          }
+        ]
+      }
+    }
+  }
+}

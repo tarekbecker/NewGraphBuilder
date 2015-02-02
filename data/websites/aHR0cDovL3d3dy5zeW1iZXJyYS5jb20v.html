@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7" lang="en-US"><![endif]-->
+<!--[if IE 8]><html class="ie ie8" lang="en-US"><![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Symberra | The next-gen big data modelling platform</title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://www.symberra.com/xmlrpc.php"> 
+  <link rel="icon" href="http://www.symberra.com/wp-content/uploads/2014/08/xlogo.png.pagespeed.ic.TkO6CKh4Ek.png" type="image/x-icon"> 
+  <link rel="stylesheet" id="validate-engine-css-css" href="http://www.symberra.com/wp-content/plugins/wysija-newsletters/css/A.validationEngine.jquery.css.pagespeed.cf.NDfTYte682.css" type="text/css" media="all"> 
+  <style id="raleway-font-css" media="all">@font-face{font-family:'Raleway';src:url('wp-content/themes/symberra/fonts/raleway/raleway-regular-webfont.eot');src:url('wp-content/themes/symberra/fonts/raleway/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),url('wp-content/themes/symberra/fonts/raleway/raleway-regular-webfont.woff') format('woff'),url('wp-content/themes/symberra/fonts/raleway/raleway-regular-webfont.ttf') format('truetype'),url('wp-content/themes/symberra/fonts/raleway/raleway-regular-webfont.svg#ralewayregular') format('svg');font-weight:400;font-style:normal;}@font-face{font-family:'Raleway';src:url('wp-content/themes/symberra/fonts/raleway/raleway-light-webfont.eot');src:url('wp-content/themes/symberra/fonts/raleway/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),url('wp-content/themes/symberra/fonts/raleway/raleway-light-webfont.woff') format('woff'),url('wp-content/themes/symberra/fonts/raleway/raleway-light-webfont.ttf') format('truetype'),url('wp-content/themes/symberra/fonts/raleway/raleway-light-webfont.svg#ralewaylight') format('svg');font-weight:300;font-style:normal;}@font-face{font-family:'Raleway';src:url('wp-content/themes/symberra/fonts/raleway/raleway-extralight-webfont.eot');src:url('wp-content/themes/symberra/fonts/raleway/raleway-extralight-webfont.eot?#iefix') format('embedded-opentype'),url('wp-content/themes/symberra/fonts/raleway/raleway-extralight-webfont.svg#ralewayextralight') format('svg'),url('wp-content/themes/symberra/fonts/raleway/raleway-extralight-webfont.woff') format('woff'),url('wp-content/themes/symberra/fonts/raleway/raleway-extralight-webfont.ttf') format('truetype');font-weight:200;font-style:normal;}</style> 
+  <style id="montserrat-font&quot;-css" media="all">@font-face{font-family:'Montserrat';src:url('wp-content/themes/symberra/fonts/montserrat/montserrat-bold-webfont.eot');src:url('wp-content/themes/symberra/fonts/montserrat/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),url('wp-content/themes/symberra/fonts/montserrat/montserrat-bold-webfont.svg#montserratbold') format('svg'),url('wp-content/themes/symberra/fonts/montserrat/montserrat-bold-webfont.woff') format('woff'),url('wp-content/themes/symberra/fonts/montserrat/montserrat-bold-webfont.ttf') format('truetype');font-weight:700;font-style:normal;}@font-face{font-family:'Montserrat';src:url('wp-content/themes/symberra/fonts/montserrat/montserrat-regular-webfont.eot');src:url('wp-content/themes/symberra/fonts/montserrat/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),url('wp-content/themes/symberra/fonts/montserrat/montserrat-regular-webfont.woff') format('woff'),url('wp-content/themes/symberra/fonts/montserrat/montserrat-regular-webfont.ttf') format('truetype'),url('wp-content/themes/symberra/fonts/montserrat/montserrat-regular-webfont.svg#montserratregular') format('svg');font-weight:400;font-style:normal;}</style> 
+  <link rel="stylesheet" id="bootstrap-css" href="http://www.symberra.com/wp-content/themes/symberra/assets/css/A.bootstrap.css.pagespeed.cf.YobAgIJPj5.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="style-css" href="http://www.symberra.com/wp-content/themes/symberra/css/style.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="ionicons-css" href="http://www.symberra.com/wp-content/themes/symberra/css/A.ionicons.min.css.pagespeed.cf.chQ79HV2G9.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="liquid-slider-css" href="http://www.symberra.com/wp-content/themes/symberra/css/liquid-slider.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="animate-css" href="http://www.symberra.com/wp-content/themes/symberra/css/A.animate.css.pagespeed.cf.eQ75gwQ0XF.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="magnific-popup-css" href="http://www.symberra.com/wp-content/themes/symberra/css/A.magnific-popup.css.pagespeed.cf.SIRzGt1sqV.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="YTPlayer-css" href="http://www.symberra.com/wp-content/themes/symberra/css/YTPlayer.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="flexslider-css" href="http://www.symberra.com/wp-content/themes/symberra/css/A.flexslider.css.pagespeed.cf.WJ1-4BhkTu.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="cubeportfolio-css" href="http://www.symberra.com/wp-content/themes/symberra/css/cubeportfolio.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="custom-woo-css" href="http://www.symberra.com/wp-content/themes/symberra/css/A.custom-woo.css.pagespeed.cf.QHj8gPMOra.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="theme-panel-css" href="http://www.symberra.com/wp-content/themes/symberra/css/A.theme_panel.css.pagespeed.cf.8zakwvVhlq.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="color-skin-css" href="http://www.symberra.com/wp-content/themes/symberra/css/A.color.php,qmain_color=blue.css.pagespeed.cf.SJaique98e.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="redux-google-fonts-css" href="http://fonts.googleapis.com/css?family=Droid+Sans%7CRaleway&amp;subset=latin" type="text/css" media="all"> 
+  <link rel="stylesheet" id="font-awesome-css" href="http://www.symberra.com/wp-content/themes/symberra/css/A.font-awesome.min.css.pagespeed.cf.RxKEk9Kq5R.css" type="text/css" media="all"> 
+  <link rel="canonical" href="http://www.symberra.com/"> 
+  <script type="text/javascript">(function($){$(window).load(function(){$('a').filter(function(){return this.href.match(/.*\.(zip|mp3*|mpe*g|pdf|docx*|pptx*|xlsx*|jpe*g|png|gif|tiff|rar*)(\?.*)?$/);}).click(function(e){ga('send','event','download','click',this.href,{'nonInteraction':1});});$('a[href^="mailto"]').click(function(e){ga('send','event','email','send',this.href,{'nonInteraction':1});});var loc=location.host.split('.');while(loc.length>2){loc.shift();}
+loc=loc.join('.');var localURLs=[loc,'http://www.symberra.com'];$('a[href^="http"]').filter(function(){for(var i=0;i<localURLs.length;i++){if(this.href.indexOf(localURLs[i])==-1)return this.href;}}).click(function(e){ga('send','event','outbound','click',this.href,{'nonInteraction':1});});});})(jQuery);</script> 
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-54512458-1','auto');ga('require','displayfeatures');ga('require','linkid','linkid.js');ga('send','pageview');</script> 
+  <!--[if lt IE 9]>                  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>                  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>                <![endif]--> 
+  <meta name="title" content="Symberra - The next-gen big data modelling platform"> 
+  <meta name="description" content="Symberra is a cloud-based data analytic platform that specialises in large-scale data modelling and simulations. Our optimised data storage and simulation algorithms enable the domain experts to gain in-depth insights from big data in a fraction of the time required today."> 
+  <meta name="keywords" content="symberra, modelling platform"> 
+  <style type="text/css" title="dynamic-css" class="options-output">body{font-family:Droid\ Sans;line-height:20px;font-weight:normal;font-style:normal;color:#0000;font-size:13px}.navbar-right{font-family:Raleway;line-height:20px;font-weight:normal;font-style:normal;color:#0000;font-size:13px}</style> 
+ </head> 
+ <body class="home page page-id-8 page-template page-template-template-home-php page_fullwidth wpb-js-composer js-comp-ver-4.2.3 vc_responsive">
+  <script type="text/javascript">
+//<![CDATA[
+try{(function(a){var b="http://",c="www.symberra.com",d="/cdn-cgi/cl/",e="img.gif",f=new a;f.src=[b,c,d,e].join("")})(Image)}catch(e){}
+//]]>
+</script> 
+  <div id="preloader"> 
+   <div class="preloader-container"> 
+    <h4 class="preload-logo wow fadeInLeft">Loading</h4> 
+    <h4 class="back-logo wow fadeInRight">Loading</h4> 
+    <img src="http://www.symberra.com/wp-content/themes/symberra/img/preload.gif.pagespeed.ce.S8App_EimP.gif" class="preload-gif wow fadeInUp" alt="Loading..." pagespeed_url_hash="338133082"> 
+   </div> 
+  </div> 
+  <section id="fixed-navbar" class=""> 
+   <nav class="navbar navbar-default navbar-static-top" role="navigation"> 
+    <div class="container"> 
+     <div class="navbar-header"> 
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      <a class="navbar-brand" href="http://www.symberra.com" title=""> <img src="http://www.symberra.com/wp-content/uploads/2014/09/xsymberra_logo_shadowed400.png.pagespeed.ic.FuLQUn2WyX.png" alt="Symberra" pagespeed_url_hash="3407082785"> </a> 
+     </div> 
+     <div id="main-nav" class="collapse navbar-collapse">
+      <ul id="menu-primary" class="nav navbar-nav  navbar-right">
+       <li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-44 active"><a title="Home" href="http://www.symberra.com/#">Home</a></li> 
+       <li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-45 active"><a title="About" href="http://www.symberra.com/#about">About</a></li> 
+       <li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-46 active"><a title="Features" href="http://www.symberra.com/#features">Features</a></li> 
+       <li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-47 active"><a title="Team" href="http://www.symberra.com/#team">Team</a></li> 
+       <li id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-48 active"><a title="Contact" href="http://www.symberra.com/#contact">Contact</a></li> 
+      </ul>
+     </div> 
+    </div> 
+   </nav> 
+  </section> 
+  <section id="home-pattern" data-stellar-background-ratio="0.5" data-stellar-vertical-offset=""> 
+   <div class="parallax-overlay"></div> 
+   <div class="home-container text-center"> 
+    <div class="home-title liquid-slider" id="slider-home" style="z-index:99;"> 
+     <div> 
+      <img src="http://www.symberra.com/wp-content/uploads/2014/08/symberra_logo_white-e1409876913715.png.pagespeed.ce.OxWb70IYxr.png" pagespeed_url_hash="1954694533"> 
+      <h3 class=""><small class="white">The next-gen <span class="highlight">big data modelling platform</span> </small> </h3> 
+      <div class="home-btn"> 
+       <h4 class="btn-home"> <a href="#contact"> Get in touch with us </a> </h4> 
+      </div> 
+     </div> 
+     <div> 
+      <img src="http://www.symberra.com/wp-content/uploads/2014/08/symberra_logo_white-e1409876913715.png.pagespeed.ce.OxWb70IYxr.png" pagespeed_url_hash="1954694533"> 
+      <h3 class=""><small class="white">Get <span class="highlight">more</span> out of big data with <span class="highlight">less time</span> </small> </h3> 
+      <div class="home-btn"> 
+       <h4 class="btn-home"> <a href="#features"> See Features </a> </h4> 
+      </div> 
+     </div> 
+     <div> 
+      <img src="http://www.symberra.com/wp-content/uploads/2014/08/symberra_logo_white-e1409876913715.png.pagespeed.ce.OxWb70IYxr.png" pagespeed_url_hash="1954694533"> 
+      <h3 class=""><small class="white">Incorporate your <span class="highlight">expert insights</span> into big data </small> </h3> 
+      <div class="home-btn"> 
+       <h4 class="btn-home"> <a href="#features"> See Features </a> </h4> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="home-bottom"> 
+    <div class="container text-center"> 
+     <div class="move"> 
+      <a href="#about" class="fa fa-chevron-down"></a> 
+      <div class="dots"></div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="about" class=" section_row  section-whitebg vc_custom_1409991318628" style="color:#ffffff;" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="">
+   <div class="parallax-overlay"></div>
+   <div class="container">
+    <div class="row"> 
+     <div class="col-lg-2 section-title-team column_container"> 
+      <div> 
+      </div> 
+     </div> 
+     <div class="col-lg-8 column_container"> 
+      <div> 
+       <div class="wpb_text_column wpb_content_element  section_title wpb_animate_when_almost_visible wpb_left-to-right"> 
+        <div class="wpb_wrapper"> 
+         <h2 style="color: #121212; text-align: center;"><small class="">What is </small> <span class="highlight">Symberra</span>?</h2> 
+        </div> 
+       </div> 
+       <section id="single_row_no_id769459325" class=" section_row  section-whitebg">
+        <div class="container">
+         <div class="row"> 
+          <div class="col-lg-12 column_container"> 
+           <div> 
+            <div class="about-row wow fadeInLeft"> 
+             <div class="about-icon"> 
+              <i class="icon ion-laptop ion-3x highlight"></i> 
+              <i class="icon ion-laptop back-icon"></i> 
+             </div> 
+             <div class="about-info"> 
+              <h4><br> <small>Symberra is a cloud-based data analytic platform that specialises in large-scale data modelling and simulations. Our optimised data storage and simulation algorithms enable the domain experts to gain in-depth insights from big data in a fraction of the time required today.</small> </h4> 
+              <p class="about-description"></p> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div>
+        </div> 
+       </section> 
+      </div> 
+     </div> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+    </div>
+   </div> 
+  </section>
+  <section id="features" class=" section_row  section-whitebg vc_custom_1409686928300">
+   <div class="container">
+    <div class="row"> 
+     <div class="col-lg-12 column_container"> 
+      <div> 
+       <div class="wpb_text_column wpb_content_element  vc_custom_1409721582758 wpb_animate_when_almost_visible wpb_top-to-bottom"> 
+        <div class="wpb_wrapper"> 
+         <h2 style="text-align: center;"><small class="">Product </small> Features</h2> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div>
+   </div> 
+  </section>
+  <section id="single_row_no_id1779365027" class=" section_row  section-whitebg vc_custom_1409684118205">
+   <div class="container">
+    <div class="row"> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+     <div class="col-lg-8 column_container"> 
+      <div> 
+       <section id="single_row_no_id963776470" class=" section_row  section-whitebg">
+        <div class="container">
+         <div class="row"> 
+          <div class="col-lg-8 col-sm-9 column_container"> 
+           <div> 
+            <div class="about-row wow fadeInLeft"> 
+             <div class="about-icon"> 
+              <i class="icon ion-ios7-gear-outline ion-3x highlight"></i> 
+              <i class="icon ion-ios7-gear-outline back-icon"></i> 
+             </div> 
+             <div class="about-info"> 
+              <h4>Focus on Your Domain Knowledge<br> <small>High Level Modelling Platform </small> </h4> 
+              <p class="about-description">Symberra provides an easy-to-use high-level modelling platform that allows you to perform complicated modelling tasks without obscure coding.</p> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-lg-4 col-sm-3 column_container"> 
+           <div> 
+            <div class="wpb_single_image wpb_content_element wpb_animate_when_almost_visible wpb_appear vc_align_center"> 
+             <div class="wpb_wrapper"> 
+              <a href="http://www.symberra.com/features/#domain" target="_self"><img class="vc_box_shadow_border_circle vc_box_border_grey " src="http://www.symberra.com/wp-content/uploads/2014/08/150x150xhealt_domain-150x150.jpg.pagespeed.ic.0qz11GcLxI.jpg" width="150" height="150" alt="healt_domain" pagespeed_url_hash="2903186317"></a> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div>
+        </div> 
+       </section> 
+      </div> 
+     </div> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+    </div>
+   </div> 
+  </section>
+  <section id="single_row_no_id1199742794" class=" section_row  section-whitebg vc_custom_1409684118205">
+   <div class="container">
+    <div class="row"> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+     <div class="col-lg-8 column_container"> 
+      <div> 
+       <section id="single_row_no_id1055710903" class=" section_row  section-whitebg">
+        <div class="container">
+         <div class="row"> 
+          <div class="col-lg-4 col-sm-3 column_container"> 
+           <div> 
+            <div class="wpb_single_image wpb_content_element wpb_animate_when_almost_visible wpb_appear vc_align_center"> 
+             <div class="wpb_wrapper"> 
+              <a href="http://www.symberra.com/features/#user-friendly" target="_self"><img class="vc_box_shadow_border_circle vc_box_border_grey " src="http://www.symberra.com/wp-content/uploads/2014/08/150x150xscreen_scenario_single-150x150.png.pagespeed.ic.WKTAQfBI6H.jpg" width="150" height="150" alt="screen_scenario_single" pagespeed_url_hash="3294578614"></a> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-lg-8 col-sm-9 column_container"> 
+           <div> 
+            <div class="about-row wow fadeInRight"> 
+             <div class="about-icon"> 
+              <i class="icon ion-leaf ion-3x highlight"></i> 
+              <i class="icon ion-leaf back-icon"></i> 
+             </div> 
+             <div class="about-info"> 
+              <h4>User-friendly Environment<br> <small>Keep Productive and Pleasant</small> </h4> 
+              <p class="about-description">Advanced modelling tools do not have to have a dated look. With our purpose designed user interface and beautiful data visualisations, Symberra keeps you both productive and pleasant.</p> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div>
+        </div> 
+       </section> 
+      </div> 
+     </div> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+    </div>
+   </div> 
+  </section>
+  <section id="single_row_no_id421596856" class=" section_row  section-whitebg vc_custom_1409684118205">
+   <div class="container">
+    <div class="row"> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+     <div class="col-lg-8 column_container"> 
+      <div> 
+       <section id="single_row_no_id1615932768" class=" section_row  section-whitebg">
+        <div class="container">
+         <div class="row"> 
+          <div class="col-lg-8 col-sm-9 column_container"> 
+           <div> 
+            <div class="about-row wow fadeInLeft"> 
+             <div class="about-icon"> 
+              <i class="icon ion-ios7-timer ion-3x highlight"></i> 
+              <i class="icon ion-ios7-timer back-icon"></i> 
+             </div> 
+             <div class="about-info"> 
+              <h4>Get Result Fast<br> <small>Optimised Algorithm</small> </h4> 
+              <p class="about-description">We optimise our algorithms specifically for simulation based modelling and big data processing so you can get much more in much less time.</p> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-lg-4 col-sm-3 column_container"> 
+           <div> 
+            <div class="wpb_single_image wpb_content_element wpb_animate_when_almost_visible wpb_appear vc_align_center"> 
+             <div class="wpb_wrapper"> 
+              <a href="http://www.symberra.com/features/#fast-result" target="_self"><img class="vc_box_shadow_border_circle vc_box_border_grey " src="http://www.symberra.com/wp-content/uploads/2014/08/150x150xscreen_chart-150x150.jpg.pagespeed.ic.j-wHiSTSjU.jpg" width="150" height="150" alt="screen_chart" pagespeed_url_hash="2960336145"></a> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div>
+        </div> 
+       </section> 
+      </div> 
+     </div> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+    </div>
+   </div> 
+  </section>
+  <section id="single_row_no_id244031135" class=" section_row  section-whitebg vc_custom_1409684118205">
+   <div class="container">
+    <div class="row"> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+     <div class="col-lg-8 column_container"> 
+      <div> 
+       <section id="single_row_no_id893779849" class=" section_row  section-whitebg">
+        <div class="container">
+         <div class="row"> 
+          <div class="col-lg-4 col-sm-3 column_container"> 
+           <div> 
+            <div class="wpb_single_image wpb_content_element wpb_animate_when_almost_visible wpb_appear vc_align_center"> 
+             <div class="wpb_wrapper"> 
+              <a href="http://www.symberra.com/features/#collaboration" target="_self"><img class="vc_box_shadow_border_circle vc_box_border_grey " src="http://www.symberra.com/wp-content/uploads/2014/08/150x150xteam_work1-150x150.jpg.pagespeed.ic.m0A9fHT43Y.jpg" width="150" height="150" alt="team_work" pagespeed_url_hash="2548760536"></a> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-lg-8 col-sm-9 column_container"> 
+           <div> 
+            <div class="about-row wow fadeInRight"> 
+             <div class="about-icon"> 
+              <i class="icon ion-ios7-people-outline ion-3x highlight"></i> 
+              <i class="icon ion-ios7-people-outline back-icon"></i> 
+             </div> 
+             <div class="about-info"> 
+              <h4>Work as a Team<br> <small>People collaboration</small> </h4> 
+              <p class="about-description">We understand the importance of inter and intra team collaboration on complex modelling tasks. You can easily work with your colleagues on the same projects in Symberra and share your results with anyone, anywhere.</p> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div>
+        </div> 
+       </section> 
+      </div> 
+     </div> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+    </div>
+   </div> 
+  </section>
+  <section id="single_row_no_id36208286" class=" section_row  section-whitebg">
+   <div class="container">
+    <div class="row"> 
+     <div class="col-lg-12 column_container"> 
+      <div> 
+       <div class="vc_separator wpb_content_element vc_el_width_100 vc_sep_color_grey"> 
+        <span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span> 
+        <span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span> 
+       </div> 
+      </div> 
+     </div> 
+    </div>
+   </div> 
+  </section>
+  <section id="team" class=" section_row  section-whitebg vc_custom_1408880783001">
+   <div class="container">
+    <div class="row"> 
+     <div class="col-lg-12 column_container"> 
+      <div> 
+       <div class="wpb_text_column wpb_content_element  section_title wpb_animate_when_almost_visible wpb_bottom-to-top"> 
+        <div class="wpb_wrapper"> 
+         <h2 style="color: #121212; text-align: center;">Our Expert Team</h2> 
+         <p class="lead" style="text-align: center;">Interdisciplinary teams with <span class="highlight">big ideas.</span></p> 
+        </div> 
+       </div> 
+       <section id="single_row_no_id1402146450" class=" section_row  section-whitebg">
+        <div class="container">
+         <div class="row"> 
+          <div class="col-lg-2 column_container"> 
+           <div> 
+           </div> 
+          </div> 
+          <div class="col-lg-8 column_container"> 
+           <div> 
+            <div class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_bottom-to-top"> 
+             <div class="wpb_wrapper"> 
+              <p style="text-align: center;"></p>
+              <p class="lead">We are an interdisciplinary team&nbsp;experienced in <span class="highlight">complex data analyses and simulation model development, big data solutions for high profile clients (such as banking groups and telecommunication companies), and user experience designs</span>. The team holds a range of advanced qualifications (PhD, Msc) in the field of machine learning, economic modelling, engineering, software development and graphic design. </p>
+              <p></p> 
+             </div> 
+            </div> 
+            <div class="action-5-info"> 
+             <h4 class=""><small class="">We are part of the </small> </h4> 
+            </div> 
+            <div class="action-5-btn"> 
+             <a href="http://www.griffinaccelerator.com.au/portfolio/" class="btn btn-primary btn-lg btn-responsive">Griffin Accelerator</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-lg-2 column_container"> 
+           <div> 
+           </div> 
+          </div> 
+         </div>
+        </div> 
+       </section> 
+      </div> 
+     </div> 
+    </div>
+   </div> 
+  </section>
+  <section id="contact" class=" section_row  section-whitebg vc_custom_1409989232537" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="">
+   <div class="parallax-overlay"></div>
+   <div class="container">
+    <div class="row"> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+     <div class="col-lg-8 column_container"> 
+      <div> 
+       <div class="contact_info white text-center "> 
+        <div class="phone-info"> 
+         <h1><i class="fa fa-phone"></i> </h1> 
+        </div> 
+        <div class="col-lg-12"> 
+         <h3><small class="white"><a href="/cdn-cgi/l/email-protection#680b07061c090b1c281b11050a0d1a1a09460b0705573b1d0a020d0b1c55200d0404074d5a583b11050a0d1a1a09">contact@<span class="highlight">symberra.com</span></a> </small><br> <small class="white">7 London Circuit, ACT </small><span class="highlight">Australia</span></h3> 
+        </div> 
+       </div> 
+       <div class="wpb_text_column wpb_content_element "> 
+        <div class="wpb_wrapper"> 
+         <h4 class="text-center"><small class="white">or simply fill this form with your <span class="highlight">email address</span> to get update </small> </h4> 
+        </div> 
+       </div> 
+       <div class="wpb_widgetised_column wpb_content_element"> 
+        <div class="wpb_wrapper"> 
+         <div id="wysija-3" class="widget woocommerce shop-widget-container blog-widget-container widget_wysija">
+          <h4 class="widget-title"></h4>
+          <div class="widget_wysija_cont">
+           <div id="msg-form-wysija-3" class="wysija-msg ajax"></div>
+           <form id="form-wysija-3" method="post" action="#wysija" class="widget_wysija"> 
+            <p class="wysija-paragraph"> <label>Email <span class="wysija-required">*</span></label> <input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="Email" value=""> <span class="abs-req"> <input type="text" name="wysija[user][abs][email]" class="wysija-input validated[abs][email]" value=""> </span> </p> 
+            <input class="wysija-submit wysija-submit-field" type="submit" value="Sign up for the Updates!"> 
+            <input type="hidden" name="form_id" value="1"> 
+            <input type="hidden" name="action" value="save"> 
+            <input type="hidden" name="controller" value="subscribers"> 
+            <input type="hidden" value="1" name="wysija-page"> 
+            <input type="hidden" name="wysija[user_list][list_ids]" value="1"> 
+           </form>
+          </div>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-lg-2 column_container"> 
+      <div> 
+      </div> 
+     </div> 
+    </div>
+   </div> 
+  </section>
+  <section id="single_row_no_id576693022" class=" section_row  section-whitebg">
+   <div class="fullwidth"> 
+    <div class="col-lg-12 column_container"> 
+     <div> 
+      <div class="map_wrap">
+       <div style="height: 480px" class="st_google_map" data-address="7 London Circuit, ACT, Australia" data-marker="http://www.symberra.com/wp-content/themes/symberra/img/marker.png"> 
+       </div>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <footer id="footer"> 
+   <div class="col-lg-12 text-center"> 
+    <div class="back-to-top"> 
+     <i class="fa fa-angle-double-up"></i> 
+    </div> 
+   </div> 
+   <div class="container text-center"> 
+    <div class="row"> 
+     <div class="col-md-12 footer-logo"> 
+      <a href="#"><h4 class="white">Symberra</h4></a> 
+     </div> 
+     <div class="footer-info col-md-12"> 
+      <p>Copyright © 2014 Symberra.Pty.Ltd. All Rights Reserved.</p> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <link rel="stylesheet" id="js_composer_front-css" href="http://www.symberra.com/wp-content/plugins/js_composer/assets/css/A.js_composer_front.css.pagespeed.cf.bvNYjP9zg8.css" type="text/css" media="all"> 
+  <script type="text/javascript">//<![CDATA[
+var st_params={"theme_url":"http:\/\/www.symberra.com\/wp-content\/themes\/symberra","site_url":"http:\/\/www.symberra.com","header_disable_fixed":"1"};
+//]]></script> 
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+  <script type="text/javascript">try{jQuery.noConflict();}catch(e){};</script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-includes/js/jquery/jquery-migrate.min.js.pagespeed.jm.mhpNjdU8Wl.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/plugins/q2w3-fixed-widget/js/q2w3-fixed-widget.min.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/assets/js/bootstrap.min.js.pagespeed.jm._71g7qV96k.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/jquery.liquid-slider.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/modernizr.custom.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/jquery.sticky.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/waypoints.min.js.pagespeed.jm.6ZRHhV-RiN.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/wow.min.js.pagespeed.jm.laUQsRn2sv.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/jquery.easing.1.3.min.js.pagespeed.jm.Xd1m1axJTa.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/jquery.touchSwipe.min.js.pagespeed.jm.FOr79fOKlH.js"></script> 
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/gmap3.min.js.pagespeed.jm.vRC34KBEKE.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/jquery.flexslider-min.js.pagespeed.jm.fhe-vLZLRO.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/jquery.backstretch.min.js.pagespeed.jm.U1NgPaOuHw.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/jquery.stellar.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/jquery.mb.YTPlayer.js.pagespeed.jm.IIdq1NCGA-.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/jquery.st.youtube.js"></script> 
+  <script type="text/javascript">//<![CDATA[
+(function(e){"use strict";e.fn.counterUp=function(t){var n=e.extend({time:400,delay:10},t);return this.each(function(){var t=e(this),r=n,i=function(){var e=[],n=r.time/r.delay,i=t.text(),s=/[0-9]+,[0-9]+/.test(i);i=i.replace(/,/g,"");var o=/^[0-9]+$/.test(i),u=/^[0-9]+\.[0-9]+$/.test(i),a=u?(i.split(".")[1]||[]).length:0;for(var f=n;f>=1;f--){var l=parseInt(i/n*f);u&&(l=parseFloat(i/n*f).toFixed(a));if(s)while(/(\d+)(\d{3})/.test(l.toString()))l=l.toString().replace(/(\d+)(\d{3})/,"$1,$2");e.unshift(l)}t.data("counterup-nums",e);t.text("0");var c=function(){t.text(t.data("counterup-nums").shift());if(t.data("counterup-nums").length)setTimeout(t.data("counterup-func"),r.delay);else{delete t.data("counterup-nums");t.data("counterup-nums",null);t.data("counterup-func",null)}};t.data("counterup-func",c);setTimeout(t.data("counterup-func"),r.delay)};t.waypoint(i,{offset:"100%",triggerOnce:!0})})}})(jQuery);
+//]]></script> 
+  <script type="text/javascript">//<![CDATA[
+(function(window){if(Modernizr.touch){function classReg(className){return new RegExp("(^|\\s+)"+className+"(\\s+|$)");}
+var hasClass,addClass,removeClass;if('classList'in document.documentElement){hasClass=function(elem,c){return elem.classList.contains(c);};addClass=function(elem,c){elem.classList.add(c);};removeClass=function(elem,c){elem.classList.remove(c);};}
+else{hasClass=function(elem,c){return classReg(c).test(elem.className);};addClass=function(elem,c){if(!hasClass(elem,c)){elem.className=elem.className+' '+c;}};removeClass=function(elem,c){elem.className=elem.className.replace(classReg(c),' ');};}
+function toggleClass(elem,c){var fn=hasClass(elem,c)?removeClass:addClass;fn(elem,c);}
+var classie={hasClass:hasClass,addClass:addClass,removeClass:removeClass,toggleClass:toggleClass,has:hasClass,add:addClass,remove:removeClass,toggle:toggleClass};if(typeof define==='function'&&define.amd){define(classie);}else{window.classie=classie;}
+[].slice.call(document.querySelectorAll('ul.grid > li > figure')).forEach(function(el,i){el.querySelector('figcaption > a').addEventListener('touchstart',function(e){e.stopPropagation();},false);el.addEventListener('touchstart',function(e){classie.toggle(this,'cs-hover');},false);});}})(window);
+//]]></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/jquery.cubeportfolio.min.js.pagespeed.jm.1oyWG92pFI.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/retina.min.js.pagespeed.jm.DMNx9mNjSk.js"></script> 
+  <script type="text/javascript">//<![CDATA[
+jQuery(document).ready(function($)
+{$("#theme-panel .panel-btn").click(function(){$("#theme-panel").toggleClass("panel-close","panel-open",800);$("#theme-panel").toggleClass("panel-open","panel-close",400);return false;});$('.color-switch').click(function(){var title=jQuery(this).attr('title');var new_url=st_params.theme_url;console.log(new_url+'/css/colors/'+title+'.css');jQuery('#color-skin-css').attr('href',new_url+'/css/colors/'+title+'.css');return false;});});
+//]]></script> 
+  <script type="text/javascript">//<![CDATA[
+var wunderkind={"slides":["http:\/\/www.symberra.com\/wp-content\/uploads\/2014\/08\/healt_domain.jpg","http:\/\/www.symberra.com\/wp-content\/uploads\/2014\/08\/webhost1600.jpg","http:\/\/www.symberra.com\/wp-content\/uploads\/2014\/08\/1600file0001163694074.jpg","http:\/\/www.symberra.com\/wp-content\/uploads\/2014\/08\/1600file0001813464902.jpg","http:\/\/www.symberra.com\/wp-content\/uploads\/2014\/08\/1600file301266529142.jpg"],"fade":"1000","duration":"5000","video_version":"0"};
+//]]></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/themes/symberra/js/scripts.js.pagespeed.jm.mqN22OwwHB.js"></script> 
+  <script type="text/javascript">//<![CDATA[
+jQuery(document).ready(function($){function add_flickr_item(data,itemID,wrapID){var pic=data.items[itemID];var smallpic=pic.media.m.replace('_m.jpg','_s.jpg');$(".flickr_"+wrapID).append('<li class="st-flickr-item-'+itemID+'"></li>');setTimeout(function(){var item=$("<a title='"+pic.title+"' href='"+pic.link+"' target='_blank'><img width=\"75px\" height=\"75px\" src='"+smallpic+"' /></a>").hide().fadeIn(600,"easeInOutExpo",function(){$(this).parent().addClass("loaded");});$(".flickr_"+wrapID).find(".st-flickr-item-"+itemID).append(item);},100*itemID)}
+if(typeof list_flickrs!='undefined'&&list_flickrs.length>0)
+{$.each(list_flickrs,function(i,v){if(typeof v.user_id!="undefined")
+{$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id="+v.user_id+"&format=json&jsoncallback=?",function(data){for(i=1;i<=v.number_images;i++){add_flickr_item(data,i,v.flickr_widget_id);}});}});}});
+//]]></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/plugins/js_composer/assets/js/js_composer_front.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/plugins/js_composer/assets/lib/jquery-waypoints/waypoints.min.js.pagespeed.jm.pcNPmj-8Bj.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/plugins/wysija-newsletters/js/validate/languages/jquery.validationEngine-en.js.pagespeed.jm.cLDCoOzPIz.js"></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/plugins/wysija-newsletters/js/validate/jquery.validationEngine.js.pagespeed.jm.DpGlqY_RYG.js"></script> 
+  <script type="text/javascript">//<![CDATA[
+var wysijaAJAX={"action":"wysija_ajax","controller":"subscribers","ajaxurl":"http:\/\/www.symberra.com\/wp-admin\/admin-ajax.php","loadingTrans":"Loading...","is_rtl":""};var wysijaAJAX={"action":"wysija_ajax","controller":"subscribers","ajaxurl":"http:\/\/www.symberra.com\/wp-admin\/admin-ajax.php","loadingTrans":"Loading...","is_rtl":""};
+//]]></script> 
+  <script type="text/javascript" src="http://www.symberra.com/wp-content/plugins/wysija-newsletters/js/front-subscribers.js"></script> 
+  <style type="text/css" data-type="vc-shortcodes-custom-css">.vc_custom_1409991318628{padding-top:60px!important;padding-bottom:60px!important;background-image:url(http://www.symberra.com/wp-content/uploads/2014/08/xbg_symberra.jpg,qid=916.pagespeed.ic.z4q2O6HEnD.jpg)!important;background-position:center!important;background-repeat:no-repeat!important;background-size:cover!important}.vc_custom_1409686928300{background-position:center!important;background-repeat:no-repeat!important;background-size:cover!important}.vc_custom_1409684118205{padding-top:50px!important;padding-bottom:50px!important}.vc_custom_1409684118205{padding-top:50px!important;padding-bottom:50px!important}.vc_custom_1409684118205{padding-top:50px!important;padding-bottom:50px!important}.vc_custom_1409684118205{padding-top:50px!important;padding-bottom:50px!important}.vc_custom_1408880783001{padding-top:60px!important;padding-bottom:30px!important}.vc_custom_1409989232537{padding-top:30px!important;padding-bottom:20px!important;background-image:url(http://www.symberra.com/wp-content/uploads/2014/08/xblogger-336371_1280.jpg,qid=839.pagespeed.ic.lDc4vvJyfh.jpg)!important;background-position:center!important;background-repeat:no-repeat!important;background-size:cover!important}.vc_custom_1409721582758{padding-top:30px!important}</style> 
+  <script>//<![CDATA[
+(function(){var d=encodeURIComponent,f=window,g=document,h="documentElement",k="length",l="prototype",m="body",p="&",s="&ci=",t=",",u="?",v="Content-Type",w="Microsoft.XMLHTTP",x="Msxml2.XMLHTTP",y="POST",z="application/x-www-form-urlencoded",A="img",B="input",C="load",D="oh=",E="on",F="pagespeed_url_hash",G="url=";f.pagespeed=f.pagespeed||{};var H=f.pagespeed,I=function(a,b,c){this.c=a;this.e=b;this.d=c;this.b=this.f();this.a={}};I[l].f=function(){return{height:f.innerHeight||g[h].clientHeight||g[m].clientHeight,width:f.innerWidth||g[h].clientWidth||g[m].clientWidth}};I[l].g=function(a){a=a.getBoundingClientRect();return{top:a.top+(void 0!==f.pageYOffset?f.pageYOffset:(g[h]||g[m].parentNode||g[m]).scrollTop),left:a.left+(void 0!==f.pageXOffset?f.pageXOffset:(g[h]||g[m].parentNode||g[m]).scrollLeft)}};I[l].h=function(a){if(0>=a.offsetWidth&&0>=a.offsetHeight)return!1;a=this.g(a);var b=a.top.toString()+t+a.left.toString();if(this.a.hasOwnProperty(b))return!1;this.a[b]=!0;return a.top<=this.b.height&&a.left<=this.b.width};I[l].i=function(a){var b;if(f.XMLHttpRequest)b=new XMLHttpRequest;else if(f.ActiveXObject)try{b=new ActiveXObject(x)}catch(c){try{b=new ActiveXObject(w)}catch(e){}}if(!b)return!1;b.open(y,this.c+(-1==this.c.indexOf(u)?u:p)+G+d(this.e));b.setRequestHeader(v,z);b.send(a);return!0};I[l].k=function(){for(var a=[A,B],b=[],c={},e=0;e<a[k];++e)for(var q=g.getElementsByTagName(a[e]),n=0;n<q[k];++n){var r=q[n].getAttribute(F);r&&(q[n].getBoundingClientRect&&this.h(q[n]))&&!(r in c)&&(b.push(r),c[r]=!0)}if(0!=b[k]){a=D+this.d;a+=s+d(b[0]);for(e=1;e<b[k];++e){c=t+d(b[e]);if(131072<a[k]+c[k])break;a+=c}H.criticalImagesBeaconData=a;this.i(a)}};H.j=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,!1);else if(a.attachEvent)a.attachEvent(E+b,c);else{var e=a[E+b];a[E+b]=function(){c.call(this);e&&e.call(this)}}};H.l=function(a,b,c){var e=new I(a,b,c);H.j(f,C,function(){f.setTimeout(function(){e.k()},0)})};H.criticalImagesBeaconInit=H.l;})();pagespeed.criticalImagesBeaconInit('/mod_pagespeed_beacon','http://www.symberra.com/','8LN25qEewU');
+//]]></script>
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script> 
+ </body>
+</html>

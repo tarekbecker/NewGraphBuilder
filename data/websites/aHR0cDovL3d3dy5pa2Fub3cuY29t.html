@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Open Source Big Data Analytics | IKANOW</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link rel="shortcut icon" href="http://www.ikanow.com/wp-content/uploads/2013/12/IKANOW-favicon.png"> 
+  <link rel="alternate" type="application/rss+xml" title="Open Source Big Data Analytics » Feed" href="http://www.ikanow.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Open Source Big Data Analytics » Comments Feed" href="http://www.ikanow.com/comments/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Open Source Big Data Analytics » Ikanow Home Comments Feed" href="http://www.ikanow.com/home/feed/"> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://www.ikanow.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="us-body-text-font-css" href="http://fonts.googleapis.com/css?family=PT+Sans%3A400%2C700&amp;subset=latin&amp;ver=3.8.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="us-navigation-font-css" href="http://fonts.googleapis.com/css?family=Dosis%3A400%2C700&amp;subset=latin&amp;ver=3.8.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="us-heading-font-css" href="http://fonts.googleapis.com/css?family=Dosis%3A400%2C700&amp;subset=latin&amp;ver=3.8.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="motioncss-css" href="http://www.ikanow.com/wp-content/themes/Corsa/css/motioncss.css?ver=1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="motioncss-widgets-css" href="http://www.ikanow.com/wp-content/themes/Corsa/css/motioncss-widgets.css?ver=1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="jgrowl-css" href="http://www.ikanow.com/wp-content/themes/Corsa/css/jquery.jgrowl.css?ver=1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="font-awesome-css" href="http://www.ikanow.com/wp-content/themes/Corsa/css/font-awesome.css?ver=1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="magnific-popup-css" href="http://www.ikanow.com/wp-content/themes/Corsa/css/magnific-popup.css?ver=1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="style-css" href="http://www.ikanow.com/wp-content/themes/Corsa/css/style.css?ver=1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-widgets-css" href="http://www.ikanow.com/wp-content/themes/Corsa/css/wp-widgets.css?ver=1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="responsive-css" href="http://www.ikanow.com/wp-content/themes/Corsa/css/responsive.css?ver=1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="corsa-style-css" href="http://www.ikanow.com/wp-content/themes/Corsa-child/style.css?ver=1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-social-sharing-css" href="http://www.ikanow.com/wp-content/plugins/wp-social-sharing/static/socialshare.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="hubspot-css" href="http://www.ikanow.com/wp-content/plugins/hubspot/css/hubspot.css?ver=3.8.5" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://www.ikanow.com/wp-includes/js/jquery/jquery.js?ver=1.10.2"></script> 
+  <script type="text/javascript" src="http://www.ikanow.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/modernizr.js?ver=3.8.5"></script> 
+  <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/supersized.3.2.7.js?ver=3.8.5"></script> 
+  <script type="text/javascript" src="http://www.ikanow.com/wp-includes/js/comment-reply.min.js?ver=3.8.5"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.ikanow.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.ikanow.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="next" title="Blog" href="http://www.ikanow.com/blog/"> 
+  <meta name="generator" content="WordPress 3.8.5"> 
+  <link rel="shortlink" href="http://www.ikanow.com/?p=5"> 
+  <!-- All in One SEO Pack 2.2.3.1 by Michael Torbert of Semper Fi Web Design[68,105] --> 
+  <link rel="canonical" href="http://www.ikanow.com/"> 
+  <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-19512953-1', { 'allowLinker': true } );
+			
+			ga('send', 'pageview');
+			</script> 
+  <script type="text/javascript">
+		function recordOutboundLink(link, category, action) {
+					ga('send', 'event', category, action);
+					if ( link.target == '_blank' ) return true;
+			setTimeout('document.location = "' + link.href + '"', 100);
+			return false;
+		}
+			/* use regular Javascript for this */
+			function getAttr(ele, attr) {
+				var result = (ele.getAttribute && ele.getAttribute(attr)) || null;
+				if( !result ) {
+					var attrs = ele.attributes;
+					var length = attrs.length;
+					for(var i = 0; i < length; i++)
+					if(attr[i].nodeName === attr) result = attr[i].nodeValue;
+				}
+				return result;
+			}
+			function aiosp_addLoadEvent(func) {
+			  var oldonload = window.onload;
+			  if (typeof window.onload != 'function') {
+			    window.onload = func;
+			  } else {
+			    window.onload = function() {
+			      if (oldonload) {
+			        oldonload();
+			      }
+			      func();
+			    }
+			  }
+			}
+			
+			function aiosp_addEvent(element, evnt, funct){
+			  if (element.attachEvent)
+			   return element.attachEvent('on'+evnt, funct);
+			  else
+			   return element.addEventListener(evnt, funct, false);
+			}
+
+			aiosp_addLoadEvent(function () {
+				var links = document.getElementsByTagName('a');
+				for (var x=0; x < links.length; x++) {
+					if (typeof links[x] == 'undefined') continue;
+					aiosp_addEvent( links[x], 'onclick', function () {
+						var mydomain = new RegExp(document.domain, 'i');
+						href = getAttr(this, 'href');
+						if (href && href.toLowerCase().indexOf('http') === 0 && !mydomain.test(href)) {
+							recordOutboundLink(this, 'Outbound Links', href);
+						}
+					});
+				}
+			});
+		</script> 
+  <!-- /all in one seo pack --> 
+ </head> 
+ <body class="home page page-id-5 page-template page-template-page-home-php l-body hometype_fullscreen headertype_sticky headerpos_top"> 
+  <style id="us_fonts_inline">
+/* Main Text Font */
+
+body,
+p,
+td {
+	font-family: 'PT Sans';
+	}
+body,
+p,
+td {
+	font-size: 16px;
+	line-height: 26px;
+	}
+	
+
+/* Navigation Text Font */
+
+.l-subheader .w-nav-item.level_1 {
+	font-family: 'Dosis';
+	}
+.l-subheader .w-nav-item.level_1 {
+	font-size: 17px;
+	}
+
+	
+/* Heading Text Font */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.l-preloader-counter,
+.w-blog.imgpos_atleft .w-blog-entry-meta-date-day,
+.w-counter-number,
+.w-logo-title,
+.w-pricing-item-title,
+.w-pricing-item-price,
+.w-tabs.layout_accordion .w-tabs-section-title-text,
+.w-tabs-item-title {
+	font-family: 'Dosis';
+	}
+h1 {
+	font-size: 54px;
+	line-height: 66px;
+	}
+h2 {
+	font-size: 44px;
+	line-height: 54px;
+	}
+h3 {
+	font-size: 36px;
+	line-height: 46px;
+	}
+h4 {
+	font-size: 30px;
+	line-height: 40px;
+	}
+h5 {
+	font-size: 24px;
+	line-height: 34px;
+	}
+h6 {
+	font-size: 20px;
+	line-height: 28px;
+	}
+
+</style> 
+  <style id="us_colors_inline">
+/*************************** HEADER ***************************/
+
+/* Header Background color */
+.l-header,
+.l-subheader .w-nav-item.level_2:hover .w-nav-anchor.level_2,
+.l-subheader .w-nav-item.level_2.active:hover .w-nav-anchor.level_2,
+.l-subheader .w-nav-item.level_2.current-menu-item:hover .w-nav-anchor.level_2,
+.l-subheader .w-nav-item.level_2.current-menu-ancestor:hover .w-nav-anchor.level_2,
+.l-subheader .w-nav-item.level_3:hover .w-nav-anchor.level_3,
+.l-subheader .w-nav-item.level_3.active:hover .w-nav-anchor.level_3,
+.l-subheader .w-nav-item.level_3.current-menu-item:hover .w-nav-anchor.level_3,
+.l-subheader .w-nav-item.level_3.current-menu-ancestor:hover .w-nav-anchor.level_3,
+.l-subheader .w-nav.touch_enabled .w-nav-list.level_1 {
+	background-color: #fff;
+	}
+
+/* Header Alternate Background Color */
+.l-subheader .w-nav-item.level_1 .w-nav-anchor.level_1:before,
+.l-subheader .w-nav-list.level_2,
+.l-subheader .w-nav-list.level_3 {
+	background-color: #f5f5f5;
+	}
+	
+/* Border Color */
+.l-subheader .w-nav.touch_enabled .w-nav-anchor {
+	border-color: #e8e8e8;
+	}
+	
+/* Navigation Color */
+.w-logo-title,
+.l-subheader .w-nav-control,
+.l-subheader .w-nav-anchor.level_1,
+.l-subheader .w-nav-list.level_2 .w-nav-anchor,
+.l-header .w-socials-item-link {
+	color: #666;
+	}
+	
+/* Navigation Hover Color */
+.w-logo-link:hover .w-logo-title,
+.l-subheader .w-nav-control:hover,
+.l-subheader .w-nav-control:active,
+.l-subheader .w-nav-item.level_1:hover .w-nav-anchor.level_1,
+.l-subheader .w-nav-item.level_2:hover .w-nav-anchor.level_2,
+.l-subheader .w-nav-item.level_3:hover .w-nav-anchor.level_3 {
+	color: #7B190F;
+	}
+	
+/* Navigation Active Color */
+.l-subheader .w-nav-item.level_1.active .w-nav-anchor.level_1,
+.l-subheader .w-nav-item.level_1.current-menu-item .w-nav-anchor.level_1,
+.l-subheader .w-nav-item.level_1.current-menu-ancestor .w-nav-anchor.level_1,
+.l-subheader .w-nav-item.level_2.active .w-nav-anchor.level_2,
+.l-subheader .w-nav-item.level_2.current-menu-item .w-nav-anchor.level_2,
+.l-subheader .w-nav-item.level_2.current-menu-ancestor .w-nav-anchor.level_2,
+.l-subheader .w-nav-item.level_3.active .w-nav-anchor.level_3,
+.l-subheader .w-nav-item.level_3.current-menu-item .w-nav-anchor.level_3,
+.l-subheader .w-nav-item.level_3.current-menu-ancestor .w-nav-anchor.level_3 {
+	color: #7B190F;
+	}
+
+
+
+/*************************** MAIN CONTENT ***************************/
+
+/* Background Color */
+.l-section,
+.l-preloader,
+.g-hr-h i,
+.color_primary .g-btn.type_primary,
+.w-blog.imgpos_atleft .w-blog-entry-meta-date,
+.w-clients-itemgroup,
+.w-clients-nav,
+.w-tabs-item.active,
+#supersized li,
+#prevslide,
+#nextslide,
+.flex-direction-nav span {
+	background-color: #fff;
+	}
+.w-icon.color_border.with_circle .w-icon-link,
+.w-pricing-item-title {
+	color: #fff;
+	}
+.w-portfolio-item-anchor:after {
+	border-bottom-color: #fff;
+	}
+
+/* Alternate Background Color */
+.l-preloader-bar,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+textarea,
+select,
+.g-pagination-item,
+.w-actionbox,
+.no-touch .w-blog.imgpos_atleft .w-blog-entry:hover,
+.w-comments-item-icon,
+.l-main .w-contacts-item > i,
+.w-icon.with_circle .w-icon-link,
+.w-portfolio-item-details-close:hover,
+.w-portfolio-item-details-arrow:hover,
+.w-tabs-list,
+.w-tabs.layout_accordion .w-tabs-section-title:hover,
+.w-tags.layout_block .w-tags-item-link,
+.w-testimonial-text {
+	background-color: #f2f2f2;
+	}
+.w-testimonial-person:after {
+	border-top-color: #f2f2f2;
+	}
+
+/* Border Color */
+.g-hr-h,
+.w-blog.imgpos_atleft .w-blog-list,
+.w-blog.imgpos_atleft .w-blog-entry,
+.w-blog-entry.sticky,
+.w-comments,
+.w-nav-list.layout_ver .w-nav-anchor,
+.w-pricing-item-h,
+.w-portfolio-item-meta,
+.w-shortblog-entry-meta-date,
+.w-tabs.layout_accordion,
+.w-tabs.layout_accordion .w-tabs-section,
+#wp-calendar thead th,
+#wp-calendar tbody td,
+#wp-calendar tfoot td,
+.widget.widget_nav_menu .menu-item a,
+.widget.widget_nav_menu .menu-item a:hover {
+	border-color: #e8e8e8;
+	}
+.g-btn.type_default,
+.w-icon.color_border.with_circle .w-icon-link {
+	background-color: #e8e8e8;
+	}
+.g-hr-h i,
+.page-404 i,
+.w-icon.color_border .w-icon-link {
+	color: #e8e8e8;
+	}
+
+/* Text Color */
+.l-section,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+textarea,
+select,
+.color_primary .g-btn.type_primary,
+.l-preloader-counter,
+.g-pagination-item,
+.g-btn.type_default,
+.w-blog.imgpos_atleft .w-blog-entry-meta-date,
+.w-clients-nav,
+.l-subsection.color_primary .w-clients-nav,
+.l-subsection.color_primary .w-clients-nav:hover,
+.l-subsection.color_dark .w-clients-nav:hover,
+.l-main .w-contacts-item > i,
+.w-icon-link,
+.w-iconbox .w-iconbox-title,
+#prevslide,
+#nextslide,
+.flex-direction-nav span,
+#wp-calendar tbody td#today,
+.widget.widget_nav_menu .menu-item.current-menu-item > a,
+.widget.widget_nav_menu .menu-item.current-menu-ancestor > a {
+	color: #333;
+	}
+.w-pricing-item-title {
+	background-color: #333;
+	}
+
+/* Primary Color */
+a,
+.home-heading-line.type_primary,
+.g-html .highlight,
+.w-counter-number,
+.w-icon.color_primary .w-icon-link,
+.w-iconbox-icon,
+.l-subsection.color_dark .w-icon-link:hover,
+.w-iconbox.with_circle .w-iconbox-link:hover .w-iconbox-title,
+.w-nav-list.layout_ver .w-nav-anchor:hover,
+.w-nav-list.layout_ver .active .w-nav-anchor.level_1,
+.w-tabs-item.active,
+.w-tabs.layout_accordion .w-tabs-section.active .w-tabs-section-title,
+.w-team-member-name,
+.w-testimonial-person-name {
+	color: #7B190F;
+	}
+.l-subsection.color_primary,
+.home-heading-line.type_primary_bg,
+.color_primary .g-hr-h i,
+.g-btn.type_primary,
+input[type="submit"],
+.no-touch .g-btn.type_secondary:after,
+.g-pagination-item.active,
+.w-actionbox.color_primary,
+.w-icon.color_primary.with_circle .w-icon-link,
+.w-iconbox.with_circle .w-iconbox-link:hover .w-iconbox-icon,
+.w-pricing-item.type_featured .w-pricing-item-title,
+.w-team-member-links .w-team-member-links-item:hover {
+	background-color: #7B190F;
+	}
+.g-html blockquote,
+.w-clients.columns_5 .w-clients-item:hover,
+.w-tabs-item.active {
+	border-color: #7B190F;
+	}
+.w-iconbox.with_circle .w-iconbox-icon:after {
+	box-shadow: 0 0 0 3px #7B190F;
+	}
+
+/* Secondary Color */
+a:hover,
+a:active,
+.home-heading-line.type_secondary,
+.w-icon.color_secondary .w-icon-link,
+.w-iconbox-link:hover .w-iconbox-icon,
+.w-iconbox-link:hover .w-iconbox-title,
+.w-tags-item-link:hover,
+.widget.widget_nav_menu .menu-item a:hover:before,
+.widget.widget_tag_cloud .tagcloud a:hover {
+	color: #555;
+	}
+.home-heading-line.type_secondary_bg,
+.no-touch .g-btn.type_default:after,
+.no-touch .g-btn.type_primary:after,
+.no-touch input[type="submit"]:hover,
+.g-btn.type_secondary,
+.g-pagination-item:hover,
+.w-icon.color_secondary.with_circle .w-icon-link,
+.w-iconbox.with_circle .w-iconbox-icon,
+.w-tags.layout_block .w-tags-item-link:hover {
+	background-color: #555;
+	}
+	
+/* Fade Elements Color */
+.w-bloglist-entry:before,
+.w-blogpost-meta i,
+.w-blogpost-meta,
+.w-comments-title i,
+.w-comments-item-icon,
+.w-comments-item-date,
+.w-icon.color_fade .w-icon-link,
+.w-links-anchor:before,
+.w-socials-item-link,
+.w-testimonial-person,
+#wp-calendar thead th,
+#wp-calendar tbody td,
+.widget.widget_archive ul li:before,
+.widget.widget_categories ul li:before,
+.widget.widget_nav_menu .menu-item a:before,
+.widget.widget_recent_entries ul li:before,
+.widget.widget_rss ul li span,
+.widget.widget_rss ul li cite,
+.widget.widget_tag_cloud .tagcloud a {
+	color: #999;
+	}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+	box-shadow: 0 0 0 2px #999;
+	}
+
+	
+	
+/*************************** ALTERNATE CONTENT ***************************/
+
+/* Background Color */
+.l-subsection.color_alternate,
+.color_alternate .g-hr-h i,
+.color_alternate .color_primary .g-btn.type_primary,
+.color_alternate .w-blog.imgpos_atleft .w-blog-entry-meta-date,
+.color_alternate .w-clients-itemgroup,
+.color_alternate .w-clients-nav,
+.color_alternate .w-tabs-item.active {
+	background-color: #e8e8e8;
+	}
+.color_alternate .w-pricing-item-title,
+.color_alternate .w-icon.color_border.with_circle .w-icon-link {
+	color: #e8e8e8;
+	}
+.color_alternate .w-portfolio-item-anchor:after {
+	border-bottom-color: #e8e8e8;
+	}
+
+/* Alternate Background Color */
+.color_alternate .g-btn.type_default,
+.color_alternate input[type="text"],
+.color_alternate input[type="password"],
+.color_alternate input[type="email"],
+.color_alternate input[type="url"],
+.color_alternate input[type="tel"],
+.color_alternate input[type="number"],
+.color_alternate input[type="date"],
+.color_alternate textarea,
+.color_alternate select,
+.color_alternate .g-pagination-item,
+.color_alternate .w-actionbox,
+.no-touch .color_alternate .w-blog.imgpos_atleft .w-blog-entry:hover,
+.color_alternate .w-comments-item-icon,
+.color_alternate .w-contacts-item > i,
+.color_alternate .w-icon.with_circle .w-icon-link,
+.color_alternate .w-portfolio-item-details-close:hover,
+.color_alternate .w-portfolio-item-details-arrow:hover,
+.color_alternate .w-tabs-list,
+.color_alternate .w-tabs.layout_accordion .w-tabs-section-title:hover,
+.color_alternate .w-tags.layout_block .w-tags-item-link,
+.color_alternate .w-testimonial-text {
+	background-color: #fff;
+	}
+.color_alternate .w-testimonial-person:after {
+	border-top-color: #fff;
+	}
+
+/* Border Color */
+.color_alternate .g-hr-h,
+.color_alternate .w-blog.imgpos_atleft .w-blog-list,
+.color_alternate .w-blog.imgpos_atleft .w-blog-entry,
+.color_alternate .w-blog-entry.sticky,
+.color_alternate .w-comments,
+.color_alternate .w-nav-list.layout_ver .w-nav-anchor,
+.color_alternate .w-pricing-item-h,
+.color_alternate .w-portfolio-item-meta,
+.color_alternate .w-shortblog-entry-meta-date,
+.color_alternate .w-tabs.layout_accordion,
+.color_alternate .w-tabs.layout_accordion .w-tabs-section,
+.color_alternate #wp-calendar thead th,
+.color_alternate #wp-calendar tbody td,
+.color_alternate #wp-calendar tfoot td,
+.color_alternate .widget.widget_nav_menu .menu-item a,
+.color_alternate .widget.widget_nav_menu .menu-item a:hover {
+	border-color: #999;
+	}
+.color_alternate .g-btn.type_default,
+.color_alternate .w-icon.color_border.with_circle .w-icon-link {
+	background-color: #999;
+	}
+.color_alternate .g-hr-h i,
+.color_alternate .page-404 i,
+.color_alternate .w-icon.color_border .w-icon-link {
+	color: #999;
+	}
+
+/* Text Color */
+.color_alternate,
+.color_alternate input[type="text"],
+.color_alternate input[type="password"],
+.color_alternate input[type="email"],
+.color_alternate input[type="url"],
+.color_alternate input[type="tel"],
+.color_alternate input[type="number"],
+.color_alternate input[type="date"],
+.color_alternate textarea,
+.color_alternate select,
+.color_alternate .g-pagination-item,
+.color_alternate .g-btn.type_default,
+.color_alternate .w-blog.imgpos_atleft .w-blog-entry-meta-date,
+.color_alternate .w-clients-nav,
+.color_alternate .w-contacts-item > i,
+.color_alternate .w-icon-link,
+.color_alternate .w-iconbox .w-iconbox-title,
+.color_alternate  #wp-calendar tbody td#today,
+.color_alternate .widget.widget_nav_menu .menu-item.current-menu-item > a,
+.color_alternate .widget.widget_nav_menu .menu-item.current-menu-ancestor > a {
+	color: #333;
+	}
+.color_alternate .w-pricing-item-title {
+	background-color: #333;
+	}
+
+/* Primary Color */
+.color_alternate a,
+.color_alternate .home-heading-line.type_primary,
+.color_alternate .g-html .highlight,
+.color_alternate .w-counter-number,
+.color_alternate .w-icon.color_primary .w-icon-link,
+.color_alternate .w-iconbox-icon,
+.color_alternate .w-iconbox.with_circle .w-iconbox-link:hover .w-iconbox-title,
+.color_alternate .w-nav-list.layout_ver .w-nav-anchor:hover,
+.color_alternate .w-nav-list.layout_ver .active .w-nav-anchor.level_1,
+.color_alternate .w-tabs-item.active,
+.color_alternate .w-tabs.layout_accordion .w-tabs-section.active .w-tabs-section-title,
+.color_alternate .w-team-member-name,
+.color_alternate .w-testimonial-person-name {
+	color: #7B190F;
+	}
+.color_alternate .home-heading-line.type_primary_bg,
+.color_alternate .g-btn.type_primary,
+.color_alternate input[type="submit"],
+.no-touch .color_alternate .g-btn.type_secondary:after,
+.color_alternate .g-pagination-item.active,
+.color_alternate .w-actionbox.color_primary,
+.color_alternate .w-icon.color_primary.with_circle .w-icon-link,
+.color_alternate .w-iconbox.with_circle:hover .w-iconbox-icon,
+.color_alternate .w-pricing-item.type_featured .w-pricing-item-title,
+.color_alternate .w-team-member-links .w-team-member-links-item:hover {
+	background-color: #7B190F;
+	}
+.color_alternate .g-html blockquote,
+.color_alternate .w-clients.columns_5 .w-clients-item:hover,
+.color_alternate .w-tabs-item.active {
+	border-color: #7B190F;
+	}
+.color_alternate .w-iconbox.with_circle .w-iconbox-icon:after {
+	box-shadow: 0 0 0 3px #7B190F;
+	}
+
+/* Secondary Color */
+.color_alternate a:hover,
+.color_alternate a:active,
+.color_alternate .home-heading-line.type_secondary,
+.color_alternate .w-icon.color_secondary .w-icon-link,
+.color_alternate .w-tags-item-link:hover,
+.color_alternate .widget.widget_nav_menu .menu-item a:hover:before,
+.color_alternate .widget.widget_tag_cloud .tagcloud a:hover {
+	color: #444;
+	}
+.color_alternate .home-heading-line.type_secondary_bg,
+.no-touch .color_alternate .g-btn.type_default:after,
+.no-touch .color_alternate .g-btn.type_primary:after,
+.no-touch .color_alternate input[type="submit"]:hover,
+.color_alternate .g-btn.type_secondary,
+.color_alternate .g-pagination-item:hover,
+.color_alternate .w-icon.color_secondary.with_circle .w-icon-link,
+.color_alternate .w-iconbox.with_circle .w-iconbox-icon,
+.color_alternate .w-tags.layout_block .w-tags-item-link:hover {
+	background-color: #444;
+	}
+	
+/* Fade Elements Color */
+.color_alternate .w-bloglist-entry:before,
+.color_alternate .w-blogpost-meta i,
+.color_alternate .w-blogpost-meta,
+.color_alternate .w-comments-title i,
+.color_alternate .w-comments-item-icon,
+.color_alternate .w-comments-item-date,
+.color_alternate .w-icon.color_fade .w-icon-link,
+.color_alternate .w-links-anchor:before,
+.color_alternate .w-socials-item-link,
+.color_alternate .w-testimonial-person,
+.color_alternate #wp-calendar thead th,
+.color_alternate #wp-calendar tbody td,
+.color_alternate .widget.widget_archive ul li:before,
+.color_alternate .widget.widget_categories ul li:before,
+.color_alternate .widget.widget_nav_menu .menu-item a:before,
+.color_alternate .widget.widget_recent_entries ul li:before,
+.color_alternate .widget.widget_rss ul li span,
+.color_alternate .widget.widget_rss ul li cite,
+.color_alternate .widget.widget_tag_cloud .tagcloud a {
+	color: #999;
+	}
+.color_alternate input[type="text"]:focus,
+.color_alternate input[type="password"]:focus,
+.color_alternate input[type="email"]:focus,
+.color_alternate input[type="url"]:focus,
+.color_alternate input[type="tel"]:focus,
+.color_alternate input[type="number"]:focus,
+.color_alternate input[type="date"]:focus,
+.color_alternate textarea:focus,
+.color_alternate select:focus {
+	box-shadow: 0 0 0 2px #999;
+	}
+	
+
+	
+/*************************** FOOTER ***************************/
+
+/* Background Color */
+.l-footer {
+	background-color: #333;
+	}
+
+/* Border Color */
+.l-subfooter.at_top,
+.l-footer #wp-calendar thead th,
+.l-footer #wp-calendar tbody td,
+.l-footer #wp-calendar tfoot td,
+.l-footer .widget.widget_nav_menu .menu-item a,
+.l-footer .widget.widget_nav_menu .menu-item a:hover {
+	border-color: #444;
+	}
+.l-footer input[type="text"],
+.l-footer input[type="password"],
+.l-footer input[type="email"],
+.l-footer input[type="url"],
+.l-footer input[type="tel"],
+.l-footer input[type="number"],
+.l-footer input[type="date"],
+.l-footer textarea,
+.l-footer select {
+	background-color: #444;
+	}
+
+/* Text Color */
+.l-footer,
+.l-footer .w-socials-item-link,
+.l-footer #wp-calendar thead th,
+.l-footer #wp-calendar tbody td,
+.l-footer #wp-calendar tbody td#today,
+.l-footer .widget.widget_archive ul li:before,
+.l-footer .widget.widget_categories ul li:before,
+.l-footer .widget.widget_nav_menu .menu-item a:before,
+.l-footer .widget.widget_recent_entries ul li:before,
+.l-footer .widget.widget_rss ul li span,
+.l-footer .widget.widget_rss ul li cite,
+.l-footer .widget.widget_tag_cloud .tagcloud a {
+	color: #999;
+	}
+.l-footer input[type="text"]:focus,
+.l-footer input[type="password"]:focus,
+.l-footer input[type="email"]:focus,
+.l-footer input[type="url"]:focus,
+.l-footer input[type="tel"]:focus,
+.l-footer input[type="number"]:focus,
+.l-footer input[type="date"]:focus,
+.l-footer textarea:focus,
+.l-footer select:focus {
+	box-shadow: 0 0 0 2px #999;
+	}
+
+/* Link Color */
+.l-footer a,
+.l-footer input[type="text"],
+.l-footer input[type="password"],
+.l-footer input[type="email"],
+.l-footer input[type="url"],
+.l-footer input[type="tel"],
+.l-footer input[type="number"],
+.l-footer input[type="date"],
+.l-footer textarea,
+.l-footer select {
+	color: #ddd;
+	}
+
+/* Link Hover Color */
+.l-footer a:hover,
+.l-footer a:active,
+.l-footer .w-tags-item-link:hover,
+.l-footer .widget.widget_nav_menu .menu-item a:hover:before,
+.l-footer .widget.widget_tag_cloud .tagcloud a:hover {
+	color: #7B190F;
+	}
+
+</style> 
+  <!-- HEADER --> 
+  <div class="l-header"> 
+   <div class="l-header-h"> 
+    <!-- subheader --> 
+    <div class="l-subheader"> 
+     <div class="l-subheader-h i-cf"> 
+      <!-- logo --> 
+      <div class="w-logo"> 
+       <div class="w-logo-h"> 
+        <a class="w-logo-link" href="#"> <img class="w-logo-img" src="http://www.ikanow.com/wp-content/uploads/2013/12/IKANOW-BD-270x40.jpg" alt="Open Source Big Data Analytics"> <span class="w-logo-title"> <span class="w-logo-title-h">Ikanow</span> </span> </a> 
+       </div> 
+      </div> 
+      <!-- nav --> 
+      <nav class="w-nav"> 
+       <div class="w-nav-h"> 
+        <div class="w-nav-control"> 
+         <i class="fa fa-bars"></i> 
+        </div> 
+        <div class="w-nav-list layout_hor width_auto level_1"> 
+         <div class="w-nav-list-h">
+          <div id="menu-item-1766" class="menu-item menu-item-type-post_type menu-item-object-us_main_page_section w-nav-item level_1 menu-item-1766">
+           <div class="w-nav-item-h">
+            <a class="w-nav-anchor level_1" href="#home"><span class="w-nav-title">Home</span><span class="w-nav-hint"></span></a>
+           </div>
+          </div> 
+          <div id="menu-item-1765" class="menu-item menu-item-type-post_type menu-item-object-us_main_page_section w-nav-item level_1 menu-item-1765">
+           <div class="w-nav-item-h">
+            <a class="w-nav-anchor level_1" href="#why_ikanow"><span class="w-nav-title">Why Ikanow?</span><span class="w-nav-hint"></span></a>
+           </div>
+          </div> 
+          <div id="menu-item-1768" class="menu-item menu-item-type-post_type menu-item-object-us_main_page_section w-nav-item level_1 menu-item-1768">
+           <div class="w-nav-item-h">
+            <a class="w-nav-anchor level_1" href="#your_role"><span class="w-nav-title">Your Role</span><span class="w-nav-hint"></span></a>
+           </div>
+          </div> 
+          <div id="menu-item-1769" class="menu-item menu-item-type-post_type menu-item-object-us_main_page_section menu-item-has-children with_sublevel w-nav-item level_1 menu-item-1769">
+           <div class="w-nav-item-h">
+            <a class="w-nav-anchor level_1" href="#your_interests"><span class="w-nav-title">Your Interests</span><span class="w-nav-hint"></span></a> 
+            <div class="w-nav-list level_2 place_down show_onhover">
+             <div class="w-nav-list-h"> 
+              <div id="menu-item-11389" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_2 menu-item-11389">
+               <div class="w-nav-item-h">
+                <a class="w-nav-anchor level_2" href="http://www.ikanow.com/cyber-intelligence/"><span class="w-nav-title">Cyber Intelligence</span><span class="w-nav-hint"></span></a> 
+               </div>
+              </div> 
+              <div id="menu-item-11390" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_2 menu-item-11390">
+               <div class="w-nav-item-h">
+                <a class="w-nav-anchor level_2" href="http://www.ikanow.com/social-analysis/"><span class="w-nav-title">Social Intelligence</span><span class="w-nav-hint"></span></a> 
+               </div>
+              </div> 
+              <div id="menu-item-11401" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_2 menu-item-11401">
+               <div class="w-nav-item-h">
+                <a class="w-nav-anchor level_2" href="http://www.ikanow.com/crisis-management/"><span class="w-nav-title">Crisis Management</span><span class="w-nav-hint"></span></a> 
+               </div>
+              </div> 
+              <div id="menu-item-11405" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_2 menu-item-11405">
+               <div class="w-nav-item-h">
+                <a class="w-nav-anchor level_2" href="http://www.ikanow.com/supply-chain-risk/"><span class="w-nav-title">Supply Chain Risk</span><span class="w-nav-hint"></span></a> 
+               </div>
+              </div> 
+             </div>
+            </div> 
+           </div>
+          </div> 
+          <div id="menu-item-9749" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_1 menu-item-9749">
+           <div class="w-nav-item-h">
+            <a class="w-nav-anchor level_1" href="http://www.ikanow.com/partners/"><span class="w-nav-title">Partners</span><span class="w-nav-hint"></span></a>
+           </div>
+          </div> 
+          <div id="menu-item-10850" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_1 menu-item-10850">
+           <div class="w-nav-item-h">
+            <a class="w-nav-anchor level_1" href="http://www.ikanow.com/blog/"><span class="w-nav-title">Blog</span><span class="w-nav-hint"></span></a>
+           </div>
+          </div> 
+          <div id="menu-item-9750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children with_sublevel w-nav-item level_1 menu-item-9750">
+           <div class="w-nav-item-h">
+            <a class="w-nav-anchor level_1" href="http://www.ikanow.com/about/"><span class="w-nav-title">About</span><span class="w-nav-hint"></span></a> 
+            <div class="w-nav-list level_2 place_down show_onhover">
+             <div class="w-nav-list-h"> 
+              <div id="menu-item-9755" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_2 menu-item-9755">
+               <div class="w-nav-item-h">
+                <a class="w-nav-anchor level_2" href="http://www.ikanow.com/platform/"><span class="w-nav-title">Platform</span><span class="w-nav-hint"></span></a> 
+               </div>
+              </div> 
+              <div id="menu-item-9754" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_2 menu-item-9754">
+               <div class="w-nav-item-h">
+                <a class="w-nav-anchor level_2" href="http://www.ikanow.com/resources/"><span class="w-nav-title">Resources</span><span class="w-nav-hint"></span></a> 
+               </div>
+              </div> 
+              <div id="menu-item-9753" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_2 menu-item-9753">
+               <div class="w-nav-item-h">
+                <a class="w-nav-anchor level_2" href="http://www.ikanow.com/events/"><span class="w-nav-title">Events</span><span class="w-nav-hint"></span></a> 
+               </div>
+              </div> 
+              <div id="menu-item-9751" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_2 menu-item-9751">
+               <div class="w-nav-item-h">
+                <a class="w-nav-anchor level_2" href="http://www.ikanow.com/careers/"><span class="w-nav-title">Careers</span><span class="w-nav-hint"></span></a> 
+               </div>
+              </div> 
+              <div id="menu-item-10004" class="menu-item menu-item-type-post_type menu-item-object-page w-nav-item level_2 menu-item-10004">
+               <div class="w-nav-item-h">
+                <a class="w-nav-anchor level_2" href="http://www.ikanow.com/news/"><span class="w-nav-title">News</span><span class="w-nav-hint"></span></a> 
+               </div>
+              </div> 
+             </div>
+            </div> 
+           </div>
+          </div> 
+          <div id="menu-item-1770" class="menu-item menu-item-type-post_type menu-item-object-us_main_page_section w-nav-item level_1 menu-item-1770">
+           <div class="w-nav-item-h">
+            <a class="w-nav-anchor level_1" href="#contact"><span class="w-nav-title">Contact</span><span class="w-nav-hint"></span></a>
+           </div>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </nav> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- /HEADER --> 
+  <!-- MAIN --> 
+  <div class="l-main"> 
+   <div class="l-main-h">
+    <section id="home" class="l-section"> 
+     <div class="l-subsection">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf">
+        <div class="us_supersized"> 
+         <a id="prevslide" class="load-item"><i class="fa fa-chevron-left"></i></a> 
+         <a id="nextslide" class="load-item"><i class="fa fa-chevron-right"></i></a> 
+         <div class="slidecaption"> 
+          <div id="slidecaption"></div> 
+         </div> 
+        </div> 
+        <script type="text/javascript">
+						jQuery(document).ready(function() {
+							jQuery.supersized({
+								// Functionality
+								slide_interval : 7000, // Length between transitions
+								transition : 3, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+								transition_speed : 50, // Speed of transition
+								// Components
+								slides  : [ // Slideshow Images
+									
+{thumb: "", image: "http://www.ikanow.com/wp-content/uploads/2014/10/cyber1.jpg", title: "<h4 style='text-align: center;'></h4> <h4 style='font-size: 75px;'><span style='color: #ffffff;'>Your SIEM will never be the same</span></h4> <h5 dir='ltr' style='text-align: center;'><span style='color: #ffffff;'>Next-gen cyber intelligence software from IKANOW</span></h5> <h5 dir='ltr' style='text-align: center;'><span style='color: #ffffff;'></span></h5> <p style='text-align: center;'><a href='https://ikanow.typeform.com/to/zOWoBj' target='_blank'class='g-btn type_primary'><span>Get More Information</span></a> <a href='http://www.ikanow.com/451-research-report/'class='g-btn type_primary'><span>Download 451 Report</span></a>", url: ""}
+,{thumb: "", image: "http://www.ikanow.com/wp-content/uploads/2014/10/social.jpg", title: "<h4 style='text-align: center;'></h4> <h4 style='font-size: 60px;'><span style='color: #ffffff;'>Software that gets your data talking</span></h4> <h5 dir='ltr' style='text-align: center;'><span style='color: #ffffff;'>Next-gen social intelligence software from IKANOW</span></h5> <p style='text-align: center;'><a href='https://ikanow.typeform.com/to/Z3RvP9' target='_blank'class='g-btn type_primary'><span>Get More Information</span></a>", url: ""}
+,{thumb: "", image: "http://www.ikanow.com/wp-content/uploads/2014/10/crisis1.jpg", title: "<h4 style='text-align: center;'></h4> <h4 style='font-size: 70px;'><span style='color: #ffffff;'>Software that cares</span></h4> <h5 dir='ltr' style='text-align: center;'><span style='color: #ffffff;'>Crisis informatics software from IKANOW: Delivering help where help is needed</span></h5> <p style='text-align: center;'><a href='https://ikanow.typeform.com/to/YLD4gd' target='_blank'class='g-btn type_primary'><span>Get More Information</span></a>", url: ""}
+
+								]
+							});
+						});
+					</script> 
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="why_ikanow" class="l-section"> 
+     <div class="l-subsection">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf">
+        <div align="center"> 
+         <h6 align="center">Trusted by enterprises and agencies such as</h6> 
+         <table border="0" cellspacing="0" cellpadding="0" align="middle"> 
+          <tbody> 
+           <tr> 
+            <td style="vertical-align: middle;"><img class="alignnone size-medium wp-image-11531" alt="zurich-logo" src="http://www.ikanow.com/wp-content/uploads/2014/10/zurich.png" width="220" height="100"></td> 
+            <td style="vertical-align: middle;"><img class="size-medium wp-image-11530 aligncenter" alt="SNC_grey" src="http://www.ikanow.com/wp-content/uploads/2014/10/SNC_grey-300x57.jpg" width="190" height="77"></td> 
+            <td style="vertical-align: middle;"><img class="alignnone size-medium wp-image-11531" alt="irs-logo" src="http://www.ikanow.com/wp-content/uploads/2014/10/irs-logo-300x150.png" width="150" height="40"></td> 
+            <td style="vertical-align: middle;"><img class="alignnone size-medium wp-image-11532" alt="Dod-seal" src="http://www.ikanow.com/wp-content/uploads/2014/10/Dod-seal-300x300.png" width="100" height="100"></td> 
+            <td style="vertical-align: middle;"><img class="alignnone size-full wp-image-11529" alt="army_grey" src="http://www.ikanow.com/wp-content/uploads/2014/10/army_grey.png" width="80" height="80"></td> 
+           </tr> 
+          </tbody> 
+         </table> 
+        </div> 
+        <h2><strong>Why Ikanow?</strong></h2> 
+        <p class="subtitle">We enable organizations to connect the dots and </p> 
+        <p class="subtitle">provide insights that lead to <span class="highlight"><strong>brilliant decisions</strong></span>. </p> 
+        <div class="g-hr"> 
+         <span class="g-hr-h"> <i class="fa fa-star"></i> </span> 
+        </div> 
+        <div class="g-cols"> 
+         <div class="one-half"> 
+          <h6 style="text-align: left;"><span class="highlight">Do you</span></h6> 
+          <ul> 
+           <li style="text-align: left;">Lack staff to meet all of your analytical needs?</li> 
+           <li style="text-align: left;">Have access to the data you need to make informed decisions?</li> 
+           <li style="text-align: left;">Find yourself locked into costly, proprietary solutions and need more flexibility?</li> 
+          </ul> 
+         </div> 
+         <div class="one-half"> 
+          <h6 style="text-align: left;"><span class="highlight">Does</span></h6> 
+          <ul> 
+           <li style="text-align: left;">It take too long for you or your team to perform the analysis needed to make informed decisions?</li> 
+           <li style="text-align: left;">Your team need more time to go through available data sources to reach a conclusion, or are they forced to make decisions based on incomplete information?</li> 
+          </ul> 
+         </div> 
+        </div> 
+        <h4><strong>These are the types of challenges our clients come to us to solve</strong></h4> 
+        <p><iframe src="//www.youtube.com/embed/6XU-NDFP9ck?rel=0" height="480" width="853" allowfullscreen frameborder="0"></iframe></p> 
+        <p><span class="hs-cta-wrapper" id="hs-cta-wrapper-918a7320-f9ba-4b13-9dc9-ab916e60a00e"> <span class="hs-cta-node hs-cta-918a7320-f9ba-4b13-9dc9-ab916e60a00e" id="hs-cta-918a7320-f9ba-4b13-9dc9-ab916e60a00e"><br> 
+           <!--[if lte IE 8]></p>
+<div id="hs-cta-ie-element"></div>
+<p><![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/163225/918a7320-f9ba-4b13-9dc9-ab916e60a00e"><img class="hs-cta-img" id="hs-cta-img-918a7320-f9ba-4b13-9dc9-ab916e60a00e" style="border-width: 0px;" alt="" src="https://no-cache.hubspot.com/cta/default/163225/918a7320-f9ba-4b13-9dc9-ab916e60a00e.png"></a><br> </span></span><br> 
+         <!-- end HubSpot Call-to-Action Code --></p>
+        <div class="w-testimonial"> 
+         <div class="w-testimonial-h"> 
+          <div class="w-testimonial-text">
+            The side-by-side integration of record-based analysis with a robust, cost-effective, and scalable analytics platform is a game changer for my analysts. IKANOW provides the flexibility to solve not just today’s problems – but the ‘unknown/unknowns’ of tomorrow’s problems. 
+          </div> 
+          <div class="w-testimonial-person"> 
+           <i class="fa fa-user"></i> 
+           <span class="w-testimonial-person-name">Head of Cyber Threat Intelligence from a Fortune 200 organization</span> 
+           <span class="w-testimonial-person-meta"></span> 
+          </div> 
+         </div> 
+        </div> 
+        <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script>
+        <script type="text/javascript">// <![CDATA[
+hbspt.cta.load(163225, '918a7320-f9ba-4b13-9dc9-ab916e60a00e');
+// ]]&gt;</script>
+        <p></p> 
+       </div>
+      </div>
+     </div>
+     <div class="l-subsection color_alternate">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf"> 
+        <p class="subtitle">How do we do it?</p> 
+        <h3><span class="highlight"><strong>Why life is better with Ikanow</strong></span></h3> 
+        <div class="g-hr type_invisible"> 
+         <span class="g-hr-h"> <i class="fa fa-star"></i> </span> 
+        </div> 
+        <div class="g-cols"> 
+         <div class="one-quarter">
+          <div class="w-iconbox iconpos_top with_circle"> 
+           <div class="w-iconbox-h"> 
+            <div class="w-iconbox-link"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-thumbs-up"></i> 
+             </div> 
+             <h4 class="w-iconbox-title">Proactive Approach</h4> 
+            </div> 
+            <div class="w-iconbox-text"> 
+             <p>Organizations struggle to detect and combat cyber threats; with Ikanow they are able to become more proactive in detecting and combating threats.</p> 
+            </div> 
+           </div> 
+          </div>
+         </div> 
+         <div class="one-quarter">
+          <div class="w-iconbox iconpos_top with_circle"> 
+           <div class="w-iconbox-h"> 
+            <div class="w-iconbox-link"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-lightbulb-o"></i> 
+             </div> 
+             <h4 class="w-iconbox-title">Brilliant Decision Making</h4> 
+            </div> 
+            <div class="w-iconbox-text"> 
+             <p>Organizations make risky decisions due to not having all the information they need. With Ikanow they achieve a complete picture of their problem and the data needed to make more informed decisions. </p> 
+            </div> 
+           </div> 
+          </div>
+         </div> 
+         <div class="one-quarter">
+          <div class="w-iconbox iconpos_top with_circle"> 
+           <div class="w-iconbox-h"> 
+            <div class="w-iconbox-link"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-eye"></i> 
+             </div> 
+             <h4 class="w-iconbox-title">Amazing<br> Insights</h4> 
+            </div> 
+            <div class="w-iconbox-text"> 
+             <p> Organizations make risky decisions due to having incomplete information sets. With Ikanow they achieve a complete picture of their problem and the data needed to make more informed decisions </p> 
+            </div> 
+           </div> 
+          </div>
+         </div> 
+         <div class="one-quarter">
+          <div class="w-iconbox iconpos_top with_circle"> 
+           <div class="w-iconbox-h"> 
+            <div class="w-iconbox-link"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-folder-open-o"></i> 
+             </div> 
+             <h4 class="w-iconbox-title">Open &amp;<br> Flexible</h4> 
+            </div> 
+            <div class="w-iconbox-text"> 
+             <p> Proprietary systems can lead to higher costs and lock you into their platform and consulting resources. Ikanow provides a cost-effective, open, and scalable analytical platform to meet your specific needs.</p> 
+            </div> 
+           </div> 
+          </div>
+         </div> 
+        </div> 
+        <div class="g-hr type_invisible"> 
+         <span class="g-hr-h"> <i class="fa fa-star"></i> </span> 
+        </div> 
+       </div>
+      </div>
+     </div>
+     <div class="l-subsection">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf"> 
+        <h4>How about Some Fun Facts about Ikanow?</h4> 
+        <div class="g-hr type_invisible size_small"> 
+         <span class="g-hr-h"> <i class="fa fa-star"></i> </span> 
+        </div> 
+        <div class="g-cols"> 
+         <div class="one-quarter">
+          &nbsp;
+          <div class="w-counter" data-count="2" data-prefix="" data-suffix="M"> 
+           <div class="w-counter-h"> 
+            <div class="w-counter-number">
+             2M
+            </div> 
+            <h6 class="w-counter-title">Number of times data sources are updated each week</h6> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="one-quarter">
+          &nbsp;
+          <div class="w-counter" data-count="56" data-prefix="" data-suffix=""> 
+           <div class="w-counter-h"> 
+            <div class="w-counter-number">
+             56
+            </div> 
+            <h6 class="w-counter-title">Hours of peaceful sleep each week knowing you're covered</h6> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="one-quarter">
+          &nbsp;
+          <div class="w-counter" data-count="3000" data-prefix="" data-suffix="+"> 
+           <div class="w-counter-h"> 
+            <div class="w-counter-number">
+             3000+
+            </div> 
+            <h6 class="w-counter-title">Number of data sources harvesting daily</h6> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="one-quarter">
+          &nbsp;
+          <div class="w-counter" data-count="200" data-prefix="" data-suffix="+"> 
+           <div class="w-counter-h"> 
+            <div class="w-counter-number">
+             200+
+            </div> 
+            <h6 class="w-counter-title">Different data connectors</h6> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div>
+      </div>
+     </div>
+     <div class="l-subsection color_dark with_parallax" style="background-image: url(http://www.ikanow.com/wp-content/uploads/2013/12/Section2.jpg)">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf"> 
+        <h2>See your data like you’ve <strong>never</strong> seen it before<strong>.</strong></h2> 
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="your_role" class="l-section"> 
+     <div class="l-subsection">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf">
+        <h2>Understand the Problem</h2> 
+        <h2>And Solve with Focused and Targeted Steps</h2> 
+        <span class="w-icon color_border size_small with_circle"> <span class="w-icon-link"> <i class="fa fa-chevron-down"></i> </span> </span> 
+       </div>
+      </div>
+     </div>
+     <div class="l-subsection full_height full_width">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf">
+        <div class="w-portfolio"> 
+         <div class="w-portfolio-h"> 
+          <div class="w-portfolio-list"> 
+           <div class="w-portfolio-list-h">
+            <div class="w-portfolio-item"> 
+             <div class="w-portfolio-item-h"> 
+              <a class="w-portfolio-item-anchor" href="javascript:void(0);" data-id="1590"> 
+               <div class="w-portfolio-item-image" style="background-image:url(http://www.ikanow.com/wp-content/uploads/2014/01/Section3_CXO-500x500.jpg);"></div> 
+               <div class="w-portfolio-item-meta"> 
+                <h2 class="w-portfolio-item-title">CxO</h2> 
+               </div> 
+               <div class="w-portfolio-item-hover">
+                <i class="fa fa-plus"></i>
+               </div> </a> 
+              <div class="w-portfolio-item-details" style="display: none;"> 
+               <div class="w-portfolio-item-details-h"> 
+                <div class="w-portfolio-item-details-content"> 
+                 <div class="w-portfolio-item-details-content-preview"> 
+                  <img src="http://www.ikanow.com/wp-content/uploads/2014/01/Section3_CXO.jpg" alt=""> 
+                 </div> 
+                 <div class="w-portfolio-item-details-content-text"> 
+                  <h3>CxO</h3> 
+                  <p>Your job is to make critical strategic decisions that drive your organization, but the information you need is not at your fingertips. Why? Because it’s spread across your entire organization and the Internet. Without timely access, you might need to make hasty decisions, or take so long to make decisions that you miss strategic opportunities. Get the information and insights you need to make more informed decisions. With Ikanow:</p> 
+                  <ul> 
+                   <li>Quickly access to the information you need</li> 
+                   <li>Improve decision making</li> 
+                   <li>Greater transparency across your entire organization</li> 
+                   <li>Minimize your risk exposure</li> 
+                  </ul> 
+                  <p><span class="hs-cta-wrapper" id="hs-cta-wrapper-f74ea67c-bb6b-47c7-89fd-13effb525ab9"><span class="hs-cta-node hs-cta-f74ea67c-bb6b-47c7-89fd-13effb525ab9" id="hs-cta-f74ea67c-bb6b-47c7-89fd-13effb525ab9"><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/163225/f74ea67c-bb6b-47c7-89fd-13effb525ab9" target="_blank"><img class="hs-cta-img" id="hs-cta-img-f74ea67c-bb6b-47c7-89fd-13effb525ab9" style="border-width: 0px;" alt="" src="https://no-cache.hubspot.com/cta/default/163225/f74ea67c-bb6b-47c7-89fd-13effb525ab9.png"></a><br> </span><br> <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script><script type="text/javascript">// <![CDATA[ hbspt.cta.load(163225, 'f74ea67c-bb6b-47c7-89fd-13effb525ab9'); // ]]&gt;</script><br> </span><br> 
+                   <!-- end HubSpot Call-to-Action Code --></p> 
+                 </div> 
+                </div> 
+                <div class="w-portfolio-item-details-close"></div> 
+                <div class="w-portfolio-item-details-arrow to_prev">
+                 <i class="fa fa-angle-left"></i>
+                </div> 
+                <div class="w-portfolio-item-details-arrow to_next">
+                 <i class="fa fa-angle-right"></i>
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div>
+            <div class="w-portfolio-item"> 
+             <div class="w-portfolio-item-h"> 
+              <a class="w-portfolio-item-anchor" href="javascript:void(0);" data-id="1592"> 
+               <div class="w-portfolio-item-image" style="background-image:url(http://www.ikanow.com/wp-content/uploads/2014/01/Section3_Finance-500x500.jpg);"></div> 
+               <div class="w-portfolio-item-meta"> 
+                <h2 class="w-portfolio-item-title">Finance</h2> 
+               </div> 
+               <div class="w-portfolio-item-hover">
+                <i class="fa fa-plus"></i>
+               </div> </a> 
+              <div class="w-portfolio-item-details" style="display: none;"> 
+               <div class="w-portfolio-item-details-h"> 
+                <div class="w-portfolio-item-details-content"> 
+                 <div class="w-portfolio-item-details-content-preview"> 
+                  <img src="http://www.ikanow.com/wp-content/uploads/2014/01/Section3_Finance.jpg" alt=""> 
+                 </div> 
+                 <div class="w-portfolio-item-details-content-text"> 
+                  <h3>Finance</h3> 
+                  <p>You know you need to be more responsive to your analytical challenges and you know you are not taking advantage of all the information available that could help you make less risky decisions — but getting there quickly and concisely is next to impossible.&nbsp; Why?&nbsp; Because your available data does not account for the way people are communicating and because spreadsheet and PowerPoint analysis are just not cutting it. With Ikanow:</p> 
+                  <ul> 
+                   <li>Get a more complete picture of your financial data</li> 
+                   <li>Minimize your risk</li> 
+                   <li>Improved decision making</li> 
+                  </ul> 
+                  <p><span class="hs-cta-wrapper" id="hs-cta-wrapper-e2ff9055-31c2-4e66-9905-afb002e96d86"><span class="hs-cta-node hs-cta-e2ff9055-31c2-4e66-9905-afb002e96d86" id="hs-cta-e2ff9055-31c2-4e66-9905-afb002e96d86">
+                     <!--[if lte IE 8]></p>
+<div id="hs-cta-ie-element"></div>
+<p><![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/163225/e2ff9055-31c2-4e66-9905-afb002e96d86" target="_blank"><img class="hs-cta-img" id="hs-cta-img-e2ff9055-31c2-4e66-9905-afb002e96d86" style="border-width: 0px;" alt="" src="https://no-cache.hubspot.com/cta/default/163225/e2ff9055-31c2-4e66-9905-afb002e96d86.png"></a><br> </span><br> <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script><script type="text/javascript">// <![CDATA[ hbspt.cta.load(163225, 'e2ff9055-31c2-4e66-9905-afb002e96d86'); // ]]&gt;</script><br> </span><br> 
+                   <!-- end HubSpot Call-to-Action Code --></p> 
+                 </div> 
+                </div> 
+                <div class="w-portfolio-item-details-close"></div> 
+                <div class="w-portfolio-item-details-arrow to_prev">
+                 <i class="fa fa-angle-left"></i>
+                </div> 
+                <div class="w-portfolio-item-details-arrow to_next">
+                 <i class="fa fa-angle-right"></i>
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div>
+            <div class="w-portfolio-item"> 
+             <div class="w-portfolio-item-h"> 
+              <a class="w-portfolio-item-anchor" href="javascript:void(0);" data-id="1612"> 
+               <div class="w-portfolio-item-image" style="background-image:url(http://www.ikanow.com/wp-content/uploads/2014/01/Section3-Operations-500x500.jpg);"></div> 
+               <div class="w-portfolio-item-meta"> 
+                <h2 class="w-portfolio-item-title">Operations</h2> 
+               </div> 
+               <div class="w-portfolio-item-hover">
+                <i class="fa fa-plus"></i>
+               </div> </a> 
+              <div class="w-portfolio-item-details" style="display: none;"> 
+               <div class="w-portfolio-item-details-h"> 
+                <div class="w-portfolio-item-details-content"> 
+                 <div class="w-portfolio-item-details-content-preview"> 
+                  <img src="http://www.ikanow.com/wp-content/uploads/2014/01/Section3-Operations.jpg" alt=""> 
+                 </div> 
+                 <div class="w-portfolio-item-details-content-text"> 
+                  <h3>Operations</h3> 
+                  <p>You run your business unit (whether its cyber, AML, Forensics, etc.) as a mini-company. You make decisions on a daily basis that are critical to your unit’s success yet you may not have all the information needed to make these decisions or it takes too long to get the information and analysis needed to make these decisions. With Ikanow:</p> 
+                  <ul> 
+                   <li>Quickly access the information you need</li> 
+                   <li>Improve decision making</li> 
+                   <li>Generate results that get senior leaderships attention</li> 
+                   <li>Take a more proactive approach</li> 
+                  </ul> 
+                  <p><span class="hs-cta-wrapper" id="hs-cta-wrapper-8dd470df-94bd-49d1-9f87-ef76bc4c9b3d"><span class="hs-cta-node hs-cta-8dd470df-94bd-49d1-9f87-ef76bc4c9b3d" id="hs-cta-8dd470df-94bd-49d1-9f87-ef76bc4c9b3d"><a href="http://cta-redirect.hubspot.com/cta/redirect/163225/8dd470df-94bd-49d1-9f87-ef76bc4c9b3d" target="_blank"><img class="hs-cta-img" id="hs-cta-img-8dd470df-94bd-49d1-9f87-ef76bc4c9b3d" style="border-width: 0px;" alt="" src="https://no-cache.hubspot.com/cta/default/163225/8dd470df-94bd-49d1-9f87-ef76bc4c9b3d.png"></a><br> </span><br> <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script><script type="text/javascript">// <![CDATA[ hbspt.cta.load(163225, '8dd470df-94bd-49d1-9f87-ef76bc4c9b3d'); // ]]&gt;</script><br> </span><br> 
+                   <!-- end HubSpot Call-to-Action Code --></p> 
+                 </div> 
+                </div> 
+                <div class="w-portfolio-item-details-close"></div> 
+                <div class="w-portfolio-item-details-arrow to_prev">
+                 <i class="fa fa-angle-left"></i>
+                </div> 
+                <div class="w-portfolio-item-details-arrow to_next">
+                 <i class="fa fa-angle-right"></i>
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div>
+            <div class="w-portfolio-item"> 
+             <div class="w-portfolio-item-h"> 
+              <a class="w-portfolio-item-anchor" href="javascript:void(0);" data-id="1610"> 
+               <div class="w-portfolio-item-image" style="background-image:url(http://www.ikanow.com/wp-content/uploads/2014/01/Section3_Sales-500x500.jpg);"></div> 
+               <div class="w-portfolio-item-meta"> 
+                <h2 class="w-portfolio-item-title">Sales &amp; Marketing</h2> 
+               </div> 
+               <div class="w-portfolio-item-hover">
+                <i class="fa fa-plus"></i>
+               </div> </a> 
+              <div class="w-portfolio-item-details" style="display: none;"> 
+               <div class="w-portfolio-item-details-h"> 
+                <div class="w-portfolio-item-details-content"> 
+                 <div class="w-portfolio-item-details-content-preview"> 
+                  <img src="http://www.ikanow.com/wp-content/uploads/2014/01/Section3_Sales.jpg" alt=""> 
+                 </div> 
+                 <div class="w-portfolio-item-details-content-text"> 
+                  <h3>Sales &amp; Marketing</h3> 
+                  <p>Your job is to drive demand for your organization’s products or services, engage with clients, generate revenue, and increase market share. If you aren’t automating and fusing together your applications, existing data and bringing in new data to get a more complete picture, then you are falling behind. With Ikanow:</p> 
+                  <ul> 
+                   <li>Monitor your brand</li> 
+                   <li>Get a more complete picture of your client and prospects</li> 
+                   <li>Perform competitive analysis</li> 
+                   <li>Fuse multiple sales &amp; marketing applications together into one solution</li> 
+                  </ul> 
+                  <p>
+                   <!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-f193c509-4c12-448d-98cb-ad02521aa546"><span class="hs-cta-node hs-cta-f193c509-4c12-448d-98cb-ad02521aa546" id="hs-cta-f193c509-4c12-448d-98cb-ad02521aa546"><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/163225/f193c509-4c12-448d-98cb-ad02521aa546" target="_blank"><img class="hs-cta-img" id="hs-cta-img-f193c509-4c12-448d-98cb-ad02521aa546" style="border-width: 0px;" alt="" src="https://no-cache.hubspot.com/cta/default/163225/f193c509-4c12-448d-98cb-ad02521aa546.png"></a><br> </span><br> <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script><script type="text/javascript">// <![CDATA[ hbspt.cta.load(163225, 'f193c509-4c12-448d-98cb-ad02521aa546'); // ]]&gt;</script><br> </span><br> 
+                   <!-- end HubSpot Call-to-Action Code --></p> 
+                 </div> 
+                </div> 
+                <div class="w-portfolio-item-details-close"></div> 
+                <div class="w-portfolio-item-details-arrow to_prev">
+                 <i class="fa fa-angle-left"></i>
+                </div> 
+                <div class="w-portfolio-item-details-arrow to_next">
+                 <i class="fa fa-angle-right"></i>
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div>
+            <div class="w-portfolio-item"> 
+             <div class="w-portfolio-item-h"> 
+              <a class="w-portfolio-item-anchor" href="javascript:void(0);" data-id="1608"> 
+               <div class="w-portfolio-item-image" style="background-image:url(http://www.ikanow.com/wp-content/uploads/2013/10/Section3-IT-New-500x500.jpg);"></div> 
+               <div class="w-portfolio-item-meta"> 
+                <h2 class="w-portfolio-item-title">IT &amp; Development</h2> 
+               </div> 
+               <div class="w-portfolio-item-hover">
+                <i class="fa fa-plus"></i>
+               </div> </a> 
+              <div class="w-portfolio-item-details" style="display: none;"> 
+               <div class="w-portfolio-item-details-h"> 
+                <div class="w-portfolio-item-details-content"> 
+                 <div class="w-portfolio-item-details-content-preview"> 
+                  <img src="http://www.ikanow.com/wp-content/uploads/2013/10/Section3-IT-New.jpg" alt=""> 
+                 </div> 
+                 <div class="w-portfolio-item-details-content-text"> 
+                  <h3>IT &amp; Development</h3> 
+                  <p>Your job is create the cutting edge applications that help your leadership make less risky decisions but you often need to re-invent the wheel cobbling open source tools together to solve your data integration and analysis challenges.&nbsp; Why? Because the primary focus of typical open source is focus on a single technology challenge leaving it you to glue the pieces together.&nbsp; With Ikanow:</p> 
+                  <ul> 
+                   <li>Quickly and easily get a big data platform up and running</li> 
+                   <li>Create tailored applications via REST APIs</li> 
+                   <li>Easily use and manage proven open source technologies such as MongoDB, Hadoop, and Elasticsearch</li> 
+                  </ul> 
+                  <p><span class="hs-cta-wrapper" id="hs-cta-wrapper-0aa72d8a-38bf-42da-967a-8d1b7bb51ab4"><span class="hs-cta-node hs-cta-0aa72d8a-38bf-42da-967a-8d1b7bb51ab4" id="hs-cta-0aa72d8a-38bf-42da-967a-8d1b7bb51ab4">
+                     <!--[if lte IE 8]></p>
+<div id="hs-cta-ie-element"></div>
+<p><![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/163225/0aa72d8a-38bf-42da-967a-8d1b7bb51ab4" target="_blank"><img class="hs-cta-img" id="hs-cta-img-0aa72d8a-38bf-42da-967a-8d1b7bb51ab4" style="border-width: 0px;" alt="" src="https://no-cache.hubspot.com/cta/default/163225/0aa72d8a-38bf-42da-967a-8d1b7bb51ab4.png"></a><br> </span><br> <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script><script type="text/javascript">// <![CDATA[ hbspt.cta.load(163225, '0aa72d8a-38bf-42da-967a-8d1b7bb51ab4'); // ]]&gt;</script><br> </span><br> 
+                   <!-- end HubSpot Call-to-Action Code --></p> 
+                 </div> 
+                </div> 
+                <div class="w-portfolio-item-details-close"></div> 
+                <div class="w-portfolio-item-details-arrow to_prev">
+                 <i class="fa fa-angle-left"></i>
+                </div> 
+                <div class="w-portfolio-item-details-arrow to_next">
+                 <i class="fa fa-angle-right"></i>
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div>
+            <div class="w-portfolio-item"> 
+             <div class="w-portfolio-item-h"> 
+              <a class="w-portfolio-item-anchor" href="javascript:void(0);" data-id="1606"> 
+               <div class="w-portfolio-item-image" style="background-image:url(http://www.ikanow.com/wp-content/uploads/2013/10/Section3-Data-New-500x500.jpg);"></div> 
+               <div class="w-portfolio-item-meta"> 
+                <h2 class="w-portfolio-item-title">Data &amp; Analytics</h2> 
+               </div> 
+               <div class="w-portfolio-item-hover">
+                <i class="fa fa-plus"></i>
+               </div> </a> 
+              <div class="w-portfolio-item-details" style="display: none;"> 
+               <div class="w-portfolio-item-details-h"> 
+                <div class="w-portfolio-item-details-content"> 
+                 <div class="w-portfolio-item-details-content-preview"> 
+                  <img src="http://www.ikanow.com/wp-content/uploads/2013/10/Section3-Data-New.jpg" alt=""> 
+                 </div> 
+                 <div class="w-portfolio-item-details-content-text"> 
+                  <h3>Data &amp; Analytics</h3> 
+                  <p>Your job is to provide insightful information to your organization to help them make great decisions, but often you are inhibited by the tools and data that is available to you.&nbsp; Why? Because often the open source tools you are using not integrated in a way that makes it easy for you find, collect and perform analysis. With Ikanow:</p> 
+                  <ul> 
+                   <li>Access to various data sources</li> 
+                   <li>Perform complex analytics with clicks of a button</li> 
+                   <li>Reduce your analytical timeline</li> 
+                   <li>Quickly add new data connections with minimal or even no IT involvement</li> 
+                  </ul> 
+                  <p>
+                   <!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-4d140606-1649-4348-9db1-65d12cfe9fbf"><span class="hs-cta-node hs-cta-4d140606-1649-4348-9db1-65d12cfe9fbf" id="hs-cta-4d140606-1649-4348-9db1-65d12cfe9fbf"><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/163225/4d140606-1649-4348-9db1-65d12cfe9fbf" target="_blank"><img class="hs-cta-img" id="hs-cta-img-4d140606-1649-4348-9db1-65d12cfe9fbf" style="border-width: 0px;" alt="" src="https://no-cache.hubspot.com/cta/default/163225/4d140606-1649-4348-9db1-65d12cfe9fbf.png"></a><br> </span><br> <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script><script type="text/javascript">// <![CDATA[ hbspt.cta.load(163225, '4d140606-1649-4348-9db1-65d12cfe9fbf'); // ]]&gt;</script><br> </span><br> 
+                   <!-- end HubSpot Call-to-Action Code --></p> 
+                 </div> 
+                </div> 
+                <div class="w-portfolio-item-details-close"></div> 
+                <div class="w-portfolio-item-details-arrow to_prev">
+                 <i class="fa fa-angle-left"></i>
+                </div> 
+                <div class="w-portfolio-item-details-arrow to_next">
+                 <i class="fa fa-angle-right"></i>
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div>
+           </div> 
+          </div> 
+         </div> 
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="your_interests" class="l-section"> 
+     <div class="l-subsection color_dark" style="background-image: url(http://www.ikanow.com/wp-content/uploads/2014/01/Section4_blur.jpg)">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf"> 
+        <h2>Turning your questions into</h2> 
+        <h2><strong>meaningful</strong> answers</h2> 
+       </div>
+      </div>
+     </div>
+     <div class="l-subsection">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf"> 
+        <h2><span class="highlight"><strong>Your Interests</strong></span></h2> 
+        <div class="g-hr type_short"> 
+         <span class="g-hr-h"> <i class="fa fa-star"></i> </span> 
+        </div> 
+        <div class="g-hr type_invisible"> 
+         <span class="g-hr-h"> <i class="fa fa-star"></i> </span> 
+        </div> 
+        <div class="g-cols"> 
+         <div class="one-third"> 
+          <div class="w-iconbox iconpos_left with_circle"> 
+           <div class="w-iconbox-h"> 
+            <div class="w-iconbox-link"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-dollar"></i> 
+             </div> 
+             <h4 class="w-iconbox-title">Finance</h4> 
+            </div> 
+            <div class="w-iconbox-text"> 
+             <p>Because spreadsheet and PowerPoint analysis are just not cutting it. </p> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="one-third"> 
+          <div class="w-iconbox iconpos_left with_circle"> 
+           <div class="w-iconbox-h"> 
+            <div class="w-iconbox-link"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-briefcase"></i> 
+             </div> 
+             <h4 class="w-iconbox-title">Insurance</h4> 
+            </div> 
+            <div class="w-iconbox-text"> 
+             <p> Better, smarter algorithms and access to additional information to analyze risk. </p> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="one-third"> 
+          <div class="w-iconbox iconpos_left with_circle"> 
+           <div class="w-iconbox-h"> 
+            <a class="w-iconbox-link" href="http://www.ikanow.com/using-big-data-analytics-to-minimize-your-supply-chain-risk/"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-building-o"></i> 
+             </div> <h4 class="w-iconbox-title">Supply Chain</h4> </a> 
+            <div class="w-iconbox-text"> 
+             <p> We provide the tools that allow you focus more on analysis and less on the hunt for information. </p> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="g-hr type_invisible"> 
+         <span class="g-hr-h"> <i class="fa fa-star"></i> </span> 
+        </div> 
+        <div class="g-cols"> 
+         <div class="one-third"> 
+          <div class="w-iconbox iconpos_left with_circle"> 
+           <div class="w-iconbox-h"> 
+            <a class="w-iconbox-link" href="http://www.ikanow.com/cyber-intelligence/"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-lightbulb-o"></i> 
+             </div> <h4 class="w-iconbox-title">Cyber Intelligence</h4> </a> 
+            <div class="w-iconbox-text"> 
+             <p> Helping you become more proactive versus reactive to combat your cyber threats. </p> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="one-third"> 
+          <div class="w-iconbox iconpos_left with_circle"> 
+           <div class="w-iconbox-h"> 
+            <a class="w-iconbox-link" href="http://www.ikanow.com/crisis-management/"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-warning"></i> 
+             </div> <h4 class="w-iconbox-title">Crisis Informatics</h4> </a> 
+            <div class="w-iconbox-text"> 
+             <p>We help improve client support in times of crisis. </p> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="one-third"> 
+          <div class="w-iconbox iconpos_left with_circle"> 
+           <div class="w-iconbox-h"> 
+            <a class="w-iconbox-link" href="http://www.ikanow.com/fraud-detection/"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-bug"></i> 
+             </div> <h4 class="w-iconbox-title">Fraud Detection</h4> </a> 
+            <div class="w-iconbox-text"> 
+             <p> Because fraudulent activities shouldn’t take forever to detect and recover. </p> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="g-hr type_invisible"> 
+         <span class="g-hr-h"> <i class="fa fa-star"></i> </span> 
+        </div> 
+        <div class="g-cols"> 
+         <div class="one-third"> 
+          <div class="w-iconbox iconpos_left with_circle"> 
+           <div class="w-iconbox-h"> 
+            <a class="w-iconbox-link" href="http://www.ikanow.com/social-analysis/"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-group"></i> 
+             </div> <h4 class="w-iconbox-title">Social Intelligence</h4> </a> 
+            <div class="w-iconbox-text"> 
+             <p> Because valuable intelligence can be gathered from the social web. </p> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="one-third"> 
+          <div class="w-iconbox iconpos_left with_circle"> 
+           <div class="w-iconbox-h"> 
+            <a class="w-iconbox-link" href="http://www.ikanow.com/data-fusion/"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-bar-chart-o"></i> 
+             </div> <h4 class="w-iconbox-title">Data Fusion</h4> </a> 
+            <div class="w-iconbox-text"> 
+             <p> Because stove-piped data can be damaging to your organization. </p> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="one-third"> 
+          <div class="w-iconbox iconpos_left with_circle"> 
+           <div class="w-iconbox-h"> 
+            <a class="w-iconbox-link" href="http://www.ikanow.com/decision-support/"> 
+             <div class="w-iconbox-icon"> 
+              <i class="fa fa-thumbs-up"></i> 
+             </div> <h4 class="w-iconbox-title">Decision Support</h4> </a> 
+            <div class="w-iconbox-text"> 
+             <p> Because data is only more useful if it helps your organization to be more effective.</p> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="g-hr type_invisible"> 
+         <span class="g-hr-h"> <i class="fa fa-star"></i> </span> 
+        </div> 
+        <h5>If these aren’t areas of interest for you but you are struggling to answer your questions,<br> contact us to see if we can assist you.</h5> 
+       </div>
+      </div>
+     </div>
+     <div class="l-subsection color_dark with_parallax" style="background-image: url(http://www.ikanow.com/wp-content/uploads/2013/12/Section5.jpg)">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf"> 
+        <h3>The organizations who have&nbsp;<strong>trusted</strong>&nbsp;us</h3> 
+        <div class="w-clients type_carousel columns_5"> 
+         <div class="w-clients-h"> 
+          <div class="w-clients-list"> 
+           <div class="w-clients-list-h">
+            <div class="w-clients-item">
+             <img width="200" height="133" src="http://www.ikanow.com/wp-content/uploads/2014/10/zurich_white-200x133.png" class="attachment-carousel-thumb wp-post-image" alt="zurich_white">
+            </div>
+            <div class="w-clients-item">
+             <img width="200" height="133" src="http://www.ikanow.com/wp-content/uploads/2014/10/IRS.png" class="attachment-carousel-thumb wp-post-image" alt="IRS">
+            </div>
+            <div class="w-clients-item">
+             <img width="200" height="133" src="http://www.ikanow.com/wp-content/uploads/2013/10/Aveshka.png" class="attachment-carousel-thumb wp-post-image" alt="Aveshka">
+            </div>
+            <div class="w-clients-item">
+             <img width="200" height="133" src="http://www.ikanow.com/wp-content/uploads/2013/10/Datasift.png" class="attachment-carousel-thumb wp-post-image" alt="Datasift">
+            </div>
+            <div class="w-clients-item">
+             <img width="200" height="133" src="http://www.ikanow.com/wp-content/uploads/2013/10/DIA.png" class="attachment-carousel-thumb wp-post-image" alt="DIA">
+            </div>
+            <div class="w-clients-item">
+             <img width="200" height="133" src="http://www.ikanow.com/wp-content/uploads/2013/10/SierraNevadaCorp.png" class="attachment-carousel-thumb wp-post-image" alt="SierraNevadaCorp">
+            </div>
+            <div class="w-clients-item">
+             <img width="200" height="133" src="http://www.ikanow.com/wp-content/uploads/2013/10/USArmy.png" class="attachment-carousel-thumb wp-post-image" alt="USArmy">
+            </div>
+           </div> 
+          </div> 
+          <a class="w-clients-nav to_prev disabled" href="javascript:void(0)" title=""></a> 
+          <a class="w-clients-nav to_next" href="javascript:void(0)" title=""></a> 
+         </div> 
+        </div> 
+       </div>
+      </div>
+     </div>
+     <div class="l-subsection color_alternate">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf"> 
+        <h4><strong>Are you ready to discover how we can solve your needs?</strong></h4> 
+        <p>For the right situations, our clients tell us we deliver extraordinary results.</p> 
+        <div align="center"> 
+         <table border="0" cellspacing="0" cellpadding="0" align="center"> 
+          <tbody> 
+           <tr> 
+            <td style="text-align: center;"><a href="http://www.ikanow.com/?page_id=1832" class="g-btn type_primary"><span>Get Started</span></a></td> 
+            <td style="text-align: center;"><a href="http://www.ikanow.com/downloads/?utm_referrer=http%3A%2F%2Fwww.ikanow.com%2Fcommunity-edition%2F" class="g-btn type_primary"><span>Download</span></a></td> 
+           </tr> 
+          </tbody> 
+         </table> 
+        </div> 
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="contact" class="l-section"> 
+     <div class="l-subsection color_dark with_parallax" style="background-image: url(http://www.ikanow.com/wp-content/uploads/2014/11/restontown1.jpg)">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf"> 
+        <h2><strong>Contact Us</strong></h2> 
+        <div class="w-contacts"> 
+         <div class="w-contacts-h"> 
+          <div class="w-contacts-list">
+           <div class="w-contacts-item"> 
+            <i class="fa fa-map-marker"></i> 
+            <span class="w-contacts-item-value">Reston Town Center 11921 Freedom Drive, Suite 550 Reston, VA 20190</span> 
+           </div>
+           <br>
+           <div class="w-contacts-item"> 
+            <i class="fa fa-envelope-o"></i> 
+            <span class="w-contacts-item-value"><a href="mailto:info@ikanow.com">info@ikanow.com</a></span> 
+           </div>
+          </div> 
+         </div> 
+        </div> 
+       </div>
+      </div>
+     </div>
+     <div class="l-subsection full_height full_width">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf"> 
+       </div>
+      </div>
+     </div>
+     <div class="l-subsection">
+      <div class="l-subsection-h">
+       <div class="l-subsection-hh g-html i-cf"> 
+        <a href="http://www.ikanow.com/see-if-ikanow-is-right-for-you/" class="g-btn type_primary size_big"><span>SEE IF IKANOW IS RIGHT FOR YOU</span></a> 
+       </div>
+      </div>
+     </div>
+    </section> 
+    <script type="text/javascript">
+jQuery(document).ready(function($){
+	$('#form-popup').magnificPopup({type:'iframe'});
+});
+</script> 
+   </div> 
+  </div> 
+  <!-- /MAIN --> 
+  <!-- FOOTER --> 
+  <div class="l-footer color_dark"> 
+   <div class="l-footer-h"> 
+    <!-- subfooter: top --> 
+    <div class="l-subfooter at_top"> 
+     <div class="l-subfooter-h g-cols cols_fluid"> 
+      <div class="one-third"> 
+       <div id="contact-2" class="widget widget_contact">
+        <h5>Contact Us</h5>
+        <div class="w-contacts">
+         <div class="w-contacts-h">
+          <div class="w-contacts-list">
+           <div class="w-contacts-item"> 
+            <i class="fa fa-map-marker"></i> 
+            <span class="w-contacts-item-value">11921 Freedom Drive Suite #550 Reston, VA 20190</span> 
+           </div>
+           <div class="w-contacts-item"> 
+            <i class="fa fa-envelope-o"></i> 
+            <span class="w-contacts-item-value"><a href="mailto:info@ikanow.com">info@ikanow.com</a></span> 
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+      </div> 
+      <div class="one-third"> 
+       <div id="recent-posts-3" class="widget widget_recent_entries"> 
+        <h5>Recent Posts</h5> 
+        <ul> 
+         <li> <a href="http://www.ikanow.com/cisos-top-concerns-for-in-2015/">CISO’s Top Concerns for 2015</a> <span class="post-date">December 1, 2014</span> </li> 
+         <li> <a href="http://www.ikanow.com/top-10-global-data-breaches-of-2014/">Top 10 Global Data Breaches of 2014</a> <span class="post-date">November 17, 2014</span> </li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="one-third"> 
+       <div id="text-2" class="widget widget_text">
+        <h5>About Us</h5> 
+        <div class="textwidget">
+         <p>Ikanow is a software organization that has created the world's first open source analytics platform. </p> 
+         <p><a href="http://www.ikanow.com/enterprise-edition/">Enterprise Edition</a> | <a href="http://www.ikanow.com/lab-edition/">Lab Edition</a> | <a href="http://www.ikanow.com/community-edition/">Community Edition</a></p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- subfooter --> 
+    <div class="l-subfooter at_bottom"> 
+     <div class="l-subfooter-h i-cf"> 
+      <div class="w-copyright">
+       Copyright 2014 | 
+       <a href="</div"> </a>
+       <div class="w-socials size_normal">
+        <a href="</div"> 
+         <div class="w-socials-h"> 
+          <div class="w-socials-list"> 
+           <div class="w-socials-item facebook"> 
+            <a class="w-socials-item-link" target="_blank" href="https://www.facebook.com/ikanow"> <i class="fa fa-facebook"></i> </a> 
+            <div class="w-socials-item-popup"> 
+             <div class="w-socials-item-popup-h"> 
+              <span class="w-socials-item-popup-text">Facebook</span> 
+             </div> 
+            </div> 
+           </div>
+           <div class="w-socials-item twitter"> 
+            <a class="w-socials-item-link" target="_blank" href="https://twitter.com/ikanowdata"> <i class="fa fa-twitter"></i> </a> 
+            <div class="w-socials-item-popup"> 
+             <div class="w-socials-item-popup-h"> 
+              <span class="w-socials-item-popup-text">Twitter</span> 
+             </div> 
+            </div> 
+           </div>
+           <div class="w-socials-item gplus"> 
+            <a class="w-socials-item-link" target="_blank" href="https://plus.google.com/u/0/communities/109270974873410890170"> <i class="fa fa-google-plus"></i> </a> 
+            <div class="w-socials-item-popup"> 
+             <div class="w-socials-item-popup-h"> 
+              <span class="w-socials-item-popup-text">Google+</span> 
+             </div> 
+            </div> 
+           </div>
+           <div class="w-socials-item linkedin"> 
+            <a class="w-socials-item-link" target="_blank" href="http://www.linkedin.com/company/ikanow"> <i class="fa fa-linkedin"></i> </a> 
+            <div class="w-socials-item-popup"> 
+             <div class="w-socials-item-popup-h"> 
+              <span class="w-socials-item-popup-text">LinkedIn</span> 
+             </div> 
+            </div> 
+           </div>
+           <div class="w-socials-item youtube"> 
+            <a class="w-socials-item-link" target="_blank" href="http://www.youtube.com/ikanow"> <i class="fa fa-youtube-play"></i> </a> 
+            <div class="w-socials-item-popup"> 
+             <div class="w-socials-item-popup-h"> 
+              <span class="w-socials-item-popup-text">YouTube</span> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div></a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- /FOOTER --> 
+   <a class="w-toplink" href="#"><i class="fa fa-chevron-up"></i></a> 
+   <script>
+	window.ajaxURL = 'http://www.ikanow.com/wp-admin/admin-ajax.php';
+	window.nameFieldError = "Please enter Your Name!";
+	window.emailFieldError = "Please enter Your Email!";
+	window.phoneFieldError = "Please enter Your Phone!";
+	window.messageFieldError = "Please enter Message!";
+	window.messageFormSuccess = "Message Sent!";
+	window.preloaderSetting = "disabled";
+		</script> 
+   <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19512953-1']);
+  _gaq.push(['_setDomainName', 'ikanow.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+   <!-- Start of Async HubSpot Analytics Code for WordPress v1.9.4 --> 
+   <script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "standard-page"]);
+(function(d,s,i,r) {
+  if (d.getElementById(i)){return;}
+  var n = d.createElement(s),e = document.getElementsByTagName(s)[0];
+  n.id=i;n.src = '//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/163225.js';
+  e.parentNode.insertBefore(n, e);
+})(document, "script", "hs-analytics", 300000);
+</script> 
+   <!-- End of Async HubSpot Analytics Code --> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.ikanow.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.9.3"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/jquery.easing.min.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/jquery.isotope.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/jquery.carousello.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/jquery.flexslider.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/jquery.jgrowl.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/jquery.gmap.min.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/jquery.magnific-popup.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/jquery.parallax.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/jquery.queryloader2.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/supersized.shutter.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/waypoints.min.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/us.widgets.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/responsive.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/themes/Corsa/js/plugins.js?ver=3.8.5"></script> 
+   <script type="text/javascript" src="http://www.ikanow.com/wp-content/plugins/wp-social-sharing/static/socialshare.js?ver=1.0"></script>  
+  </div>
+ </body>
+</html>

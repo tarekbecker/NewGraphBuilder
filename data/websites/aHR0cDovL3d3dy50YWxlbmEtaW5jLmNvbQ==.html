@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <link rel="shortcut icon" href="favicon.ico"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Talena - Defining the path to big data management</title> 
+  <meta name="keywords" content="TALENA, Big Data, Data Management, Big Data Storage, data management platform"> 
+  <meta name="description" content="Our world-class team with deep storage and big data experience has embarked on building the next-generation data management platform that will disrupt the big data and storage industry."> 
+  <link href="css/style.css" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" type="text/css" media="all" href="fancybox/jquery.fancybox.css"> 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+  <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.0.6"></script> 
+  <style>
+.company
+{ color:#FF9900!important;
+	}
+</style> 
+  <script>
+$(document).ready(function () {
+    var intputElements = document.getElementsByTagName("INPUT");
+    for (var i = 0; i < intputElements.length; i++) {
+        intputElements[i].oninvalid = function (e) {
+		   if(intputElements[i].name == "email_footer")
+		   {
+		    e.target.setCustomValidity("");          
+		   }
+		   else
+		   {
+            e.target.setCustomValidity("");
+            if (!e.target.validity.valid) { 
+                    e.target.setCustomValidity("This field is required");              
+            }
+			}
+        };
+    }
+})
+</script> 
+ </head> 
+ <body> 
+  <div id="Container"> 
+   <!-- Page Header Code Start Here --> 
+   <div id="divheader"> 
+    <a href="home.html"> <img src="images/Talena_logo.png" alt="Talena" title="Talena" width="177px" height="62px" border="0"></a> 
+    <div id="menu" class="menupadding"> 
+     <ul id="topnav"> 
+      <li> <a href="home.html" class="company">Company&nbsp;</a> </li> 
+      <li> <a href="join_us.html" class="jobs">&nbsp;&nbsp;&nbsp;&nbsp;Jobs&nbsp;</a> </li> 
+      <li> <a href="contact_us.html" class="contactus">Contact Us</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <!-- Page Code end here --> 
+   <!-- Page Body start here --> 
+   <section id="divcontent"> 
+    <img src="images/home_header.png" height="165" width="1020px" title="DEFINING THE PATH TO BIG DATA MANAGEMENT" alt="DEFINING THE PATH TO BIG DATA MANAGEMENT"> 
+    <aside id="aside" class="divleft content">
+      Talena is a venture backed Silicon Valley startup company operating in stealth mode. Our world-class team with deep storage and big data experience has embarked on building the next-generation data management platform that will disrupt the big data and storage industry. Stay tuned for news on our amazing company and industry-changing products as we get out of stealth mode. 
+    </aside> 
+    <div id="bside"> 
+     <img src="images/Ideation.jpg" alt="Talena" title="Talena"> 
+    </div> 
+    <div class="clearboth"></div> 
+    <article class="homenote textcenter">
+      To learn more, feel free to subscribe to our mailing list or fill out the 
+     <a class="link" href="contact_us.html">Contact Us</a> page. 
+    </article> 
+   </section> 
+   <!-- Page Body End here --> 
+   <!-- Page footer start here --> 
+   <div id="inline"> 
+   </div> 
+   <footer id="divfooter"> 
+    <div class="divleft footermenu"> 
+     <a href="contact_us.html">Contact Us </a>
+    </div> 
+    <div class="divleft footerdrpadding">
+     <img src="images/footer_seperate.png" border="0" height="42" width="9"> 
+    </div> 
+    <div class="divleft footermiddle"> 
+     <a href="join_us.html">Join Us</a>
+    </div> 
+    <div class="divleft footerdrpaddingright">
+     <img src="images/footer_seperate.png" border="0" height="42" width="9"> 
+    </div> 
+    <form id="contact" name="contact" action="#" method="post"> 
+     <div class="divleft footermiddle txtboxrightpadding">
+       Sign Up
+      <br> 
+     </div>
+     <div class="footerimgpaddingmiddle">
+      <div class="divleft signmargintop"> 
+       <input class="email" placeholder="Email" type="email" id="email_footer" name="email_footer" required>
+      </div>
+      <div> 
+       <button id="signin" name="signin" class="signin"></button>
+       <div class="clearboth"></div>
+      </div> 
+      <div class="hzdivider"></div>
+      <div class="copyright"> 
+       <div class="clearboth"></div> © 2013 Talena, Inc. All rights reserved. 
+      </div>
+     </div> 
+    </form>
+   </footer>
+  </div>  
+  <!-- Page footer End here --> 
+  <script type="application/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-44790549-1', 'talena-inc.com');
+  ga('send', 'pageview');
+ 
+</script> 
+  <script type="text/javascript">
+
+function validateEmail(email) { 
+		var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return reg.test(email);
+	}
+	
+(function (exports) {
+    function valOrFunction(val, ctx, args) {
+        if (typeof val == "function") {
+            return val.apply(ctx, args);
+        } else {
+            return val;
+        }
+    }
+
+    function InvalidInputHelper(input, options) {
+        input.setCustomValidity(valOrFunction(options.defaultText, window, [input]));
+        input.addEventListener("input", function (evt) {
+            if (evt.target.value == "") {
+                evt.target.setCustomValidity(valOrFunction(options.emptyText, window, [input]));
+            } else {
+                evt.target.setCustomValidity("");
+            }
+        });
+        
+        function changeOrInput() {
+            if (input.value != "") {
+                input.setCustomValidity(valOrFunction(options.invalidText, window, [input]));
+            }
+        };
+        input.addEventListener("change", changeOrInput);
+        input.addEventListener("invalid", changeOrInput);
+    }
+    exports.InvalidInputHelper = InvalidInputHelper;
+})(window);	
+InvalidInputHelper(document.getElementById("email_footer"), {
+    defaultText: "This field is required",
+    emptyText: "This field is required",
+    invalidText: function (input) {
+	var mailvalid = validateEmail(input.value);
+	  if(mailvalid == false)
+	  {
+        return "Please enter valid email address";
+		}
+		else
+		{ return ""; }
+    }
+});
+</script> 
+  <script type="text/javascript">	
+
+	function validateEmail(email) { 
+		var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return reg.test(email);
+	}
+	
+	$(document).ready(function() {	
+	
+	  $("#contact").submit(function() { return false; });
+	  
+		$("#signin").on("click", function(){
+		 var emailval  = $("#email_footer").val();		
+			var mailvalid = validateEmail(emailval);
+			if(mailvalid == false) {
+				$("#email_footer").addClass("error");		
+			}
+			else if(mailvalid == true){
+				$("#email_footer").removeClass("error");			
+			}		
+		    if(mailvalid == true) {
+				// if both validate we attempt to send the e-mail
+				// first we hide the submit btn so the user doesnt click twice
+				$("#signin").replaceWith("<em>sending...</em>");
+				$.ajax({
+					type: 'POST',
+					url: 'send_form_email1.php',
+					data: $("#contact").serialize(),
+					success: function(data) {
+						if(data == "true") {
+						
+							    $.fancybox(
+							'<h2><p><strong>Thank you for signing up to our mailing list!</strong></p></h2>',
+							{
+								'autoDimensions'	: false,
+								'width'         	: 350,
+								'height'        	: 80,
+								'transitionIn'		: 'none',
+								'transitionOut'		: 'none'
+							}
+						); setTimeout("$.fancybox.close()", 3000); 	
+						
+						$("#email_footer").removeAttr('value');	
+						setInterval(function(){window.location = "home.html" },3000);							
+						}
+					}
+				});	
+				}		
+		});
+		
+	});</script>  
+  <script type="text/Javascript">
+_lf_cid = "LF_6cce58e8";
+(function(){var _cid = _lf_cid;var load = function() {var s, p;var m = 10;var c = 0;s = document.createElement('script');s.type = 'text/javascript';s.async = true;if (window.location.protocol.indexOf('https:') == 0) {s.src = 'https://c368677.ssl.cf1.rackcdn.com/loopfuse_listener.js';} else {s.src = 'http://static.lfov.net/loopfuse_listener.js';}p = document.getElementsByTagName('script')[0];p.parentNode.insertBefore(s, p);var remora = function() {if (c < m) {c++;if (typeof _lf_remora !== 'undefined') {_lf_cid = _cid;_lf_remora();} else {setTimeout(function() { remora() }, 500);}}};remora();};if (window.attachEvent) {window.attachEvent('onload', load);} else {window.addEventListener('load', load, false);}})();
+</script> 
+  <script>
+
+var _pt = ["EF557B0F-21A3-498A-973C-7B703EF771C0"];
+(function(d,t){
+var a=d.createElement(t),s=d.getElementsByTagName(t)[0];a.src='//a1webstats.com/tracking/track.js';s.parentNode.insertBefore(a,s);
+}(document,'script'));
+
+</script>   
+ </body>
+</html>

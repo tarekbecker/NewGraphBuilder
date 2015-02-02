@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "bf732aaa9c46372a221dcf785bf94995",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "closed_on_year": null,
+      "closed_on_trust_code": 0,
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on": null,
+      "short_description": "Bigdata startUP",
+      "permalink": "connective-technology",
+      "primary_role": "company",
+      "is_closed": false,
+      "homepage_url": "http://www.connective.com.tr",
+      "name": "Connective",
+      "created_at": 1416487164,
+      "updated_at": 1416488148,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "products": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/connective-technology/products",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Product",
+            "name": "Sosyomod",
+            "path": "product/sosyomod",
+            "created_at": 1416488730,
+            "updated_at": 1416488732
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/connective-technology/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1416486918/gfkgnb7zevw9azda5qap.jpg",
+            "created_at": 1416487166,
+            "updated_at": 1416487166
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/connective-technology/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.connective.com.tr",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1416487165,
+            "updated_at": 1416487165
+          }
+        ]
+      }
+    }
+  }
+}

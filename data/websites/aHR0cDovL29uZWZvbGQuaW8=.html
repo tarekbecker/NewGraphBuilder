@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <title>OneFold</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="/newSite/samples/sample-03/img/LogoShapeOnlyNoShadow.png"> 
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" href="/newSite/flat-ui/bootstrap/css/bootstrap.css"> 
+  <link rel="stylesheet" href="/newSite/flat-ui/bootstrap/css/bootstrap-responsive.css"> 
+  <link rel="stylesheet" href="/newSite/flat-ui/css/flat-ui.css"> 
+  <!-- Using only with Flat-UI (free)--> 
+  <link rel="stylesheet" href="/newSite/common-files/css/icon-font.css"> 
+  <!-- end --> 
+  <link rel="stylesheet" href="/stylesheets/style.css"> 
+  <link rel="stylesheet" href="/stylesheets/scaffold.css"> 
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
+  <!--[if lt IE 9]>
+  <script src="flat-ui/js/html5shiv.js"></script>
+  <![endif]--> 
+  <!-- facebook retargeting --> 
+  <script>(function() {
+    var _fbq = window._fbq || (window._fbq = []);
+    if (!_fbq.loaded) {
+      var fbds = document.createElement('script');
+      fbds.async = true;
+      fbds.src = '//connect.facebook.net/en_US/fbds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(fbds, s);
+      _fbq.loaded = true;
+    }
+    _fbq.push(['addPixelId', '563493050446698']);
+  })();
+  window._fbq = window._fbq || [];
+  window._fbq.push(['track', 'PixelInitialized', {}]);
+  </script> 
+  <noscript></noscript>
+ </head>
+ <body>
+  <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=563493050446698&amp;ev=PixelInitialized"> 
+  <!-- optimizely --> 
+  <script src="//cdn.optimizely.com/js/1476551534.js"></script> 
+  <!-- jQuery and bootstrap --> 
+  <script src="/newSite/flat-ui/js/jquery-1.8.3.min.js"></script> 
+  <script src="/newSite/flat-ui/js/bootstrap.min.js"></script>   
+  <header class="header-11"> 
+   <div class="container"> 
+    <div class="navbar span12"> 
+     <div class="navbar-inner"> 
+      <button type="button" class="btn btn-navbar"></button> 
+      <a class="brand" href="/"><img src="/newSite/samples/sample-03/img/LogoShapeOnly.png" width="50" height="50" alt="">OneFold</a> 
+      <div class="nav-collapse collapse pull-right"> 
+       <ul class="nav"> 
+        <li> <a class="onefold-header" data-header="product" href="/#product">PRODUCT</a> </li> 
+        <li><a class="onefold-header" data-header="docs" href="/docs">DOCS</a></li> 
+        <li><a class="onefold-header" data-header="about" href="/about">ABOUT</a></li> 
+        <li><a class="onefold-header" data-header="investor" href="/about#investor">INVESTOR</a></li> 
+        <li><a class="onefold-header" data-header="jobs" href="/about#jobs">JOBS</a></li> 
+        <li> <a class="onefold-header" data-header="login" href="/users/sign_in"> 
+          <div class="btn">
+           Login
+          </div> </a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </header> 
+  <style>
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-family: 'Open Sans';
+    letter-spacing: -1px;
+    color: #2c3e50;
+  }
+
+  .header-11-sub h3 {
+    font-size: 33px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    letter-spacing: -2px;
+  }
+
+  body {
+    color: #34495e;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    line-height: 1.231;
+  }
+
+  .content-1 {
+    padding-top: 15px;
+    padding-bottom: 0px;
+    position: relative;
+  }
+
+  .feature-box {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .feature-box .header {
+    color: black;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .feature-box .description {
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .content-1 h3 {
+    font-size: 30px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-family: 'Open Sans';
+  }
+
+  #myCarousel img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #myCarousel .carousel-control {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  #myCarousel .video-play {
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    left: 50%;
+    margin-left: -75px;
+    margin-top: -48px;
+  }
+
+  @media (min-width: 768px) {
+    .modal-video {
+      width: 950px;
+      margin-left: -475px;
+    }
+
+    .modal-video .modal-body {
+      max-height: 534px;
+      height: 534px;
+    }
+
+    .modal-video .modal-body iframe {
+      width: 950px;
+      height: 534px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .modal-video {
+      width: 100%;
+    }
+
+    .modal-video .modal-body {
+      height: 100%;
+    }
+
+    .modal-video .modal-body iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+</style> 
+  <section class="header-11-sub bg-onefoldgray1" style="padding-top: 30px; padding-bottom: 30px;"> 
+   <div class="background">
+    &nbsp;
+   </div> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span12" style="text-align: center;"> 
+      <h3 style="font-size:42px; margin-bottom: 5px;">BigData Warehouse in the Cloud<span style="font-size:30px;"></span></h3> 
+      <h4 style="font-size:30px;">Query Across All your Data Sources</h4> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="span10 offset1" style="text-align:center;"> 
+      <div id="myCarousel" class="carousel slide" data-interval="false"> 
+       <!-- Carousel items --> 
+       <div class="carousel-inner" style="height: 400px;"> 
+        <div class="active item"> 
+         <a href="#myModal" role="button" class="btn" data-toggle="modal"> 
+          <!--<a href="#" id="play-video">--> <img class="video-play" src="/images/video-play.png"> <img src="/images/video-cover.png" style="height: 349px;"> </a> 
+        </div> 
+        <div class="item"> 
+         <img src="/images/sql_nosql/diagram-onefold-slide-14.png" style=""> 
+        </div> 
+       </div> 
+       <!-- Carousel nav --> 
+       <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a> 
+       <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="content-1 bg-white" style="padding-top: 20px; padding-bottom: 0px;"> 
+   <br> 
+   <br> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span9"> 
+      <h3>Customer Testimonial</h3> 
+      <div class="span2" style="background-color: white;"> 
+       <div class="info" style="padding: 0px;"> 
+        <img src="/images/jason-citron-2.jpg" style="width: 160px;"> 
+        <h2 style="font-size: 23px;">Jason Citron,</h2> 
+        <span style="font-style: italic; font-size: 10px;">Founder, Hammer &amp; Chisel<br>Funded by Benchmark Capital</span> 
+       </div> 
+      </div> 
+      <div class="span6" style="text-align: left; background-color: white; margin-left: 0px;"> 
+       <div class="info triangle-right left" style="font-size: 16px; font-weight: 300; line-height: 1.3em; padding: 30px; margin-top:0px; margin-left: 57px;">
+         "Within a day, Onefold's BigData Warehouse unified ALL of my JSON data into a SINGLE data warehouse with support for easy SQL querying so I can ask any question, and still get High Performance for Large Data Sets and Export result sets to Excel for Visualization. Powerful. Highly Recommended." 
+       </div> 
+      </div> 
+     </div> 
+     <!--Sign Up Form--> 
+     <div class="span3"> 
+      <div class="signup-form"> 
+       <div class="signup-form-title">
+        Join Beta
+       </div> 
+       <form action="/leads" class="new_lead" id="new_lead" method="post">
+        <div style="margin:0;padding:0;display:inline">
+         <input name="authenticity_token" type="hidden" value="JegZAheBUFee0SBs+sL1EvMdJxz4ujVBRGaa872HTc0=">
+        </div> 
+        <div class="controls controls-row"> 
+         <input class="span3" id="lead_name" name="lead[name]" placeholder="Name" size="30" type="text"> 
+        </div> 
+        <div class="controls controls-row"> 
+         <input class="span3" id="lead_email" name="lead[email]" placeholder="Email" size="30" type="text"> 
+        </div> 
+        <div class="controls controls-row"> 
+         <input class="span3" id="lead_company" name="lead[company]" placeholder="Company" size="30" type="text"> 
+        </div> 
+        <div class="controls controls-row"> 
+         <input class="span3 btn btn-info btn-block" id="lead_submit" name="commit" type="submit" value="Sign up"> 
+        </div> 
+        <input id="lead_page" name="lead[page]" type="hidden"> 
+       </form> 
+      </div> 
+      <div class="additional-links">
+        Be sure to take a look at our 
+       <a href="http://www.onefold.io/tos">Terms of Services</a> and 
+       <a href="http://www.onefold.io/privacy">Privacy Policy</a> 
+      </div> 
+     </div> 
+     <!--/Sign Up Form--> 
+    </div> 
+   </div> 
+   <br> 
+   <br> 
+  </section> 
+  <section class="content-1 bg-clouds"> 
+   <br> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span12"> 
+      <a name="product"></a> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="span8 offset2" style=""> 
+      <div class="feature-box"> 
+       <div class="header">
+        Unified Data Warehouse
+       </div> 
+       <div class="description">
+        Easily Unify All your Data Sources in One Data Warehouse 
+        <br> in the Cloud. 1 TB in Less Than a Day. 
+       </div> 
+      </div> 
+      <img src="/images/sql_nosql/diagram-onefold-slide-2.png" style="margin-top: -50px;"> 
+     </div> 
+    </div> 
+   </div> 
+   <br> 
+  </section> 
+  <section class="content-1 bg-offwhite"> 
+   <br> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span8 offset2" style=""> 
+      <div class="feature-box"> 
+       <div class="header">
+        OneFold’s Dynamic Transformation Engine
+       </div> 
+       <div class="description">
+        Transform ANY JSON - Simple or Nested into SQL query-able tables. As JSON Data Structure Changes, Our Engine Dynamically Update your Schema. 
+       </div> 
+      </div> 
+      <img src="/images/sql_nosql/diagram-onefold-slide-3.png" style="margin-top: -50px;"> 
+     </div> 
+    </div> 
+   </div> 
+   <br> 
+  </section> 
+  <section class="content-1 bg-clouds"> 
+   <br> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span8 offset2" style=""> 
+      <div class="feature-box"> 
+       <div class="header">
+        High Performance
+       </div> 
+       <div class="description">
+        Leverage Google’s Awesome Elastic Columnar Technology. Built for Incredible Performance and Scale. 
+       </div> 
+      </div> 
+      <img src="/images/sql_nosql/diagram-onefold-slide-4.png" style="margin-top: -50px;"> 
+     </div> 
+    </div> 
+   </div> 
+   <br> 
+  </section> 
+  <section class="content-1 bg-offwhite"> 
+   <br> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span8 offset2" style=""> 
+      <div class="feature-box"> 
+       <div class="header">
+        Ease of Use
+       </div> 
+       <div class="description">
+        Use Standard SQL for querying and Excel for visualizations. Alternatively, use WYSIWYG tools like Chartio for Querying and Visualization. 
+       </div> 
+      </div> 
+      <img src="/images/sql_nosql/diagram-onefold-slide-5.png" style="margin-top: -50px;"> 
+     </div> 
+    </div> 
+   </div> 
+   <br> 
+  </section> 
+  <section class="content-1 bg-clouds"> 
+   <br> 
+   <div class="container"> 
+    <div class="row"> 
+    </div> 
+    <div class="row"> 
+     <div class="span3" style="text-align: center; float: none; margin: 0px auto;"> 
+      <div class="signup-form"> 
+       <div class="signup-form-title">
+        Join Beta
+       </div> 
+       <form action="/leads" class="new_lead" id="new_lead" method="post">
+        <div style="margin:0;padding:0;display:inline">
+         <input name="authenticity_token" type="hidden" value="JegZAheBUFee0SBs+sL1EvMdJxz4ujVBRGaa872HTc0=">
+        </div> 
+        <div class="controls controls-row"> 
+         <input class="span3" id="lead_name" name="lead[name]" placeholder="Name" size="30" type="text"> 
+        </div> 
+        <div class="controls controls-row"> 
+         <input class="span3" id="lead_email" name="lead[email]" placeholder="Email" size="30" type="text"> 
+        </div> 
+        <div class="controls controls-row"> 
+         <input class="span3" id="lead_company" name="lead[company]" placeholder="Company" size="30" type="text"> 
+        </div> 
+        <div class="controls controls-row"> 
+         <input class="span3 btn btn-info btn-block" id="lead_submit" name="commit" type="submit" value="Sign up"> 
+        </div> 
+        <input id="lead_page" name="lead[page]" type="hidden"> 
+       </form> 
+      </div> 
+      <div class="additional-links">
+        Be sure to take a look at our 
+       <a href="http://www.onefold.io/tos">Terms of Services</a> and 
+       <a href="http://www.onefold.io/privacy">Privacy Policy</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <br> 
+   <br> 
+  </section> 
+  <!-- Modal --> 
+  <div id="myModal" class="modal modal-video hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+   <div class="modal-header"> 
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+    <h3 id="myModalLabel">&nbsp;</h3> 
+   </div> 
+   <div class="modal-body" style="padding: 0;"> 
+   </div> 
+  </div> 
+  <script>
+  $('#myModal').on('show', function () {
+    $('div.modal-body').html('<iframe src="//www.youtube.com/embed/URlHsodgO2Q?rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen=""></iframe>');
+  });
+
+  $("#myModal .close").live("click", function () {
+    $('div.modal-body').html('');
+  });
+</script> 
+  <footer class="footer-2 bg-base"> 
+   <div class="container"> 
+    <div class="social-btns pull-right"> 
+     <a href="http://www.linkedin.com/company/onefold"> 
+      <div class="fui-linkedin"></div> 
+      <div class="fui-linkedin"></div> </a> 
+     <a href="https://twitter.com/OneFoldData"> 
+      <div class="fui-twitter"></div> 
+      <div class="fui-twitter"></div> </a> 
+    </div> 
+    <div class="additional-links pull-left">
+      info@onefold.io
+     <br> 
+     <br> 1901 South Bascom Ave, #1180
+     <br> Campbell, CA, 95008 
+    </div> 
+   </div> 
+  </footer> 
+  <!--[if lt IE 8]>
+<script src="flat-ui/js/icon-font-ie7.js"></script>
+<![endif]--> 
+  <script src="/newSite/common-files/js/startup-kit.js"></script> 
+  <script src="/newSite/samples/sample-03/js/script.js"></script> 
+  <!-- start Mixpanel --> 
+  <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("bb24fde61ab0a163d9a9aac94a9faaa6");</script> 
+  <!-- end Mixpanel --> 
+  <script src="/javascripts/tabnav.js?1417770128" type="text/javascript"></script> 
+  <script>
+
+  function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) {
+      var sParameterName = sURLVariables[i].split('=');
+      if (sParameterName[0] == sParam) {
+        return sParameterName[1];
+      }
+    }
+  }
+
+  var page_name = location.pathname.split("/")[1];
+
+  $(document).ready(function () {
+
+    
+    mixpanel.track(page_name + "_document_ready");
+    
+
+    // mixpanel track header clicks
+    $(".onefold-header").click(function () {
+      
+      mixpanel.track(page_name + "_" + $(this).data("header") + "_header_clicked");
+      
+      return true;
+    });
+
+  });
+
+</script>   
+ </body>
+</html>

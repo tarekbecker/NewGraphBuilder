@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content=""> 
+  <meta name="author" content=""> 
+  <title>Chiprix - Big Data for NFC</title> 
+  <!-- Bootstrap Core CSS --> 
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+  <!-- Fonts --> 
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+  <link href="css/animate.css" rel="stylesheet"> 
+  <!-- Squad theme CSS --> 
+  <link href="css/style.css" rel="stylesheet"> 
+  <link href="color/default.css" rel="stylesheet"> 
+  <style>
+      #map_canvas {
+        width: 100%;
+        height: 270px;
+      }
+    </style> 
+  <script src="https://maps.googleapis.com/maps/api/js"></script> 
+  <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map_canvas');
+            var mapOptions = {
+                center: new google.maps.LatLng(31.7622004, 35.2141704),
+                zoom: 16,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+		pos = new google.maps.LatLng(31.7622004, 35.2141704);
+		map.panTo(pos); 
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script> 
+ </head> 
+ <body id="page-top" data-spy="scroll" data-target=".navbar-custom"> 
+  <!-- Preloader --> 
+  <div id="preloader"> 
+   <div id="load"></div> 
+  </div> 
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation"> 
+   <div class="container"> 
+    <div class="navbar-header page-scroll"> 
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button> 
+     <a class="navbar-brand" href="index.html"> <h1> <img src="img/chiprix.gif" width="65px">&nbsp; Big Data for NFC</h1> </a> 
+    </div> 
+    <!-- Collect the nav links, forms, and other content for toggling --> 
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse"> 
+     <ul class="nav navbar-nav"> 
+      <li class="active"><a href="#intro">Home</a></li> 
+      <li><a href="#about">About</a></li> 
+      <li><a href="#service">Products</a></li> 
+      <li><a href="#contact">Contact</a></li> 
+     </ul> 
+    </div> 
+    <!-- /.navbar-collapse --> 
+   </div> 
+   <!-- /.container --> 
+  </nav> 
+  <!-- Section: intro --> 
+  <section id="intro" class="intro"> 
+   <div class="slogan"> 
+    <h2> </h2> 
+    <h4><br><br><br><br> <br></h4> 
+   </div> 
+   <div class="page-scroll"> 
+    <a href="#about" class="btn btn-circle"> <i class="fa fa-angle-double-down animated"></i> </a> 
+   </div> 
+  </section> 
+  <!-- /Section: intro --> 
+  <!-- Section: about --> 
+  <section id="about" class="home-section text-center"> 
+   <div class="heading-about"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-lg-8 col-lg-offset-2"> 
+       <div class="wow bounceInDown" data-wow-delay="0.4s"> 
+        <div class="section-heading"> 
+         <h2>About us</h2> 
+         <i class="fa fa-2x fa-angle-down"></i> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-lg-2 col-lg-offset-5"> 
+      <hr class="marginbot-50"> 
+     </div> 
+    </div> 
+    <div class="row" align="center"> 
+     <div class="col-xs-6 col-sm-3 col-md-3"> 
+      <div class="wow bounceInUp" data-wow-delay="0.2s"> 
+       <div class="team boxed-grey"> 
+        <div class="inner"> 
+         <h5>Shoshi <br>Rushnevsky</h5> 
+         <p class="subtitle">Co-Founder &amp; CEO</p> 
+         <div class="avatar">
+          <img src="img/team/1.jpg" alt="" class="img-responsive img-circle">
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-xs-6 col-sm-3 col-md-3"> 
+      <div class="wow bounceInUp" data-wow-delay="0.5s"> 
+       <div class="team boxed-grey"> 
+        <div class="inner"> 
+         <h5>Dan <br>Siboni</h5> 
+         <p class="subtitle">Co-Founder &amp; CTO</p> 
+         <div class="avatar">
+          <img src="img/team/2.jpg" alt="" class="img-responsive img-circle">
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- /Section: about --> 
+  <!-- Section: services --> 
+  <section id="service" class="home-section text-center bg-gray"> 
+   <div class="heading-about"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-lg-8 col-lg-offset-2"> 
+       <div class="wow bounceInDown" data-wow-delay="0.4s"> 
+        <div class="section-heading"> 
+         <h2>Products</h2> 
+         <i class="fa fa-2x fa-angle-down"></i> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-lg-2 col-lg-offset-5"> 
+      <hr class="marginbot-50"> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-sm-3 col-md-3"> 
+      <div class="wow fadeInUp" data-wow-delay="0.2s"> 
+       <div class="service-box"> 
+        <div class="service-icon"> 
+         <img src="img/icons/service-icon-2.png" alt=""> 
+        </div> 
+        <div class="service-desc"> 
+         <h5>UnBound Connect</h5> 
+         <p>unBound Connect is using NFC technology to revolutionise the way people meet at conferences. unBound Connect enables people to make notes and directly upload the people they meet to their contacts.</p> 
+         <p><img src="img/unBoundConnect.png" width="150px"></p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-3 col-md-3"> 
+      <div class="wow fadeInUp" data-wow-delay="0.2s"> 
+       <div class="service-box"> 
+        <div class="service-icon"> 
+         <img src="img/icons/service-icon-3.png" alt=""> 
+        </div> 
+        <div class="service-desc"> 
+         <h5>Chiprix Gallery</h5> 
+         <p>Art and photography tagging and identification tool for galleries and artists based on NFC technoloy<br><br></p> 
+         <p><img src="img/chiprix_gallery.gif" width="150px"></p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-3 col-md-3"> 
+      <div class="wow fadeInLeft" data-wow-delay="0.2s"> 
+       <div class="service-box"> 
+        <div class="service-icon"> 
+         <img src="img/icons/service-icon-1.png" alt=""> 
+        </div> 
+        <div class="service-desc"> 
+         <h5>Chiprix API</h5> 
+         <p>Big Data analysis and statistics API for NFC &amp; Bluetooth usage</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-3 col-md-3"> 
+      <div class="wow fadeInRight" data-wow-delay="0.2s"> 
+       <div class="service-box"> 
+        <div class="service-icon"> 
+         <img src="img/icons/service-icon-4.png" alt=""> 
+        </div> 
+        <div class="service-desc"> 
+         <h5>Other</h5> 
+         <p>NFC for Blind, NFC in Retail, Marketing tools, Event Management and more...</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- /Section: services --> 
+  <!-- Section: contact --> 
+  <section id="contact" class="home-section text-center"> 
+   <div class="heading-contact"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-lg-8 col-lg-offset-2"> 
+       <div class="wow bounceInDown" data-wow-delay="0.4s"> 
+        <div class="section-heading"> 
+         <h2>Get in touch</h2> 
+         <i class="fa fa-2x fa-angle-down"></i> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-lg-2 col-lg-offset-5"> 
+      <hr class="marginbot-50"> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-lg-8"> 
+      <div class="boxed-grey"> 
+       <div class="row"> 
+        <div id="map_canvas"></div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-lg-4"> 
+      <div class="widget-contact"> 
+       <h5>Main Office</h5> 
+       <address> <strong>Chiprix</strong><br> Amazia 12/3<br> Jerusalem, Israel 9314817<br> <abbr title="Phone">P:</abbr> (972) 54-9454320 </address> 
+       <address> <strong>Email</strong><br> <a href="mailto:info@chiprix.com">info@chiprix.com</a> </address> 
+       <address> <strong>We're on social networks</strong><br> 
+        <ul class="company-social"> 
+         <li class="social-facebook"><a href="https://www.facebook.com/pages/Chiprix/1380060682286036" target="_blank"><i class="fa fa-facebook"></i></a></li> 
+         <li class="social-twitter"><a href="https://twitter.com/chiprix_global" target="_blank"><i class="fa fa-twitter"></i></a></li> 
+         <li class="social-dribble"><a href="https://www.linkedin.com/company/chiprix" target="_blank"><i class="fa fa-dribbble"></i></a></li> 
+         <li class="social-google"><a href="https://plus.google.com/u/0/b/114647907059123360414/114647907059123360414/about" target="_blank"><i class="fa fa-google-plus"></i></a></li> 
+        </ul> </address> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- /Section: contact --> 
+  <footer> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-12 col-lg-12"> 
+      <div class="wow shake" data-wow-delay="0.4s"> 
+       <div class="page-scroll marginbot-30"> 
+        <a href="#intro" id="totop" class="btn btn-circle"> <i class="fa fa-angle-double-up animated"></i> </a> 
+       </div> 
+      </div> 
+      <p>©Copyright 2014 - Chiprix. All rights reserved.</p> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <!-- Core JavaScript Files --> 
+  <script src="js/jquery.min.js"></script> 
+  <script src="js/bootstrap.min.js"></script> 
+  <script src="js/jquery.easing.min.js"></script> 
+  <script src="js/jquery.scrollTo.js"></script> 
+  <script src="js/wow.min.js"></script> 
+  <!-- Custom Theme JavaScript --> 
+  <script src="js/custom.js"></script>   
+ </body>
+</html>

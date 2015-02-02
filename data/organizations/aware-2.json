@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "b650720121b96511334aee594fc0d3c1",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "short_description": "Aware makes big data simple",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 6,
+      "founded_on_month": 8,
+      "founded_on_year": 2014,
+      "founded_on": "2014-08-01",
+      "permalink": "aware-2",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://www.aware.io",
+      "name": "Aware",
+      "closed_on_year": null,
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on": null,
+      "created_at": 1408538807,
+      "updated_at": 1408538850,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "categories": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/aware-2/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1416991129
+          },
+          {
+            "type": "Category",
+            "name": "Big Data Analytics",
+            "uuid": "8a60151f6739dde3c98235fcef7a2db8",
+            "path": "category/big data analytics/8a60151f6739dde3c98235fcef7a2db8",
+            "created_at": 1397980727,
+            "updated_at": 1417026534
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/aware-2/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.aware.io",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1408538808,
+            "updated_at": 1408538808
+          }
+        ]
+      }
+    }
+  }
+}

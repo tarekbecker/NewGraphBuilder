@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "d1ee30018751cca1da4220dfc1d5e49e",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "permalink": "gruter",
+      "primary_role": "company",
+      "closed_on_trust_code": 0,
+      "name": "Gruter",
+      "email_address": "contact@gruter.com",
+      "description": "Gruter is a Hadoop-based infrastructure company which builds big data platforms and provides technical services for the data-driven enterprise market. Solutions combining in-house and open-source technologies include the Qoobah big data platform, the Cloumon\u00ae platform monitoring and management solution, and the Seenal social analytics service. Gruter is also a major contributor to the Apache Tajo project, an open-source sql-on-hadoop big data warehouse system. Gruter is based in Seoul, South Korea, with a view to global expansion.\n",
+      "short_description": "Big data platform and analytics",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 6,
+      "founded_on_month": 2,
+      "founded_on_year": 2006,
+      "founded_on": "2006-02-01",
+      "is_closed": false,
+      "homepage_url": "http://www.gruter.com",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "created_at": 1386725325,
+      "updated_at": 1416160303,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "current_team": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/gruter/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "Young-kil",
+            "last_name": "Kwon",
+            "title": "Founder & CEO",
+            "started_on": "2006-02-01",
+            "path": "person/young-kil-kwon",
+            "created_at": 1386754124,
+            "updated_at": 1397989335
+          }
+        ]
+      },
+      "offices": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/gruter/offices",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Seoul",
+            "street_1": "Daechi-dong 889-70",
+            "street_2": "Gangnam-gu",
+            "postal_code": "135839",
+            "city": "Seoul",
+            "city_path": "location/seoul/8b33ebb2fa74d65d2bbfdb8b2f9637c3",
+            "region": "Seoul-t'ukpyolsi",
+            "region_path": "location/seoul-t-ukpyolsi/afe8dc4fe7211e88f8f18d5d5a8fbd42",
+            "country": "South Korea",
+            "country_path": "location/south-korea/2744d40afc3325359a3eded185736fd1",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1386725325,
+            "updated_at": 1397992267
+          }
+        ]
+      },
+      "headquarters": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/gruter/headquarters",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Seoul",
+            "street_1": "Daechi-dong 889-70",
+            "street_2": "Gangnam-gu",
+            "postal_code": "135839",
+            "city": "Seoul",
+            "city_path": "location/seoul/8b33ebb2fa74d65d2bbfdb8b2f9637c3",
+            "region": "Seoul-t'ukpyolsi",
+            "region_path": "location/seoul-t-ukpyolsi/afe8dc4fe7211e88f8f18d5d5a8fbd42",
+            "country": "South Korea",
+            "country_path": "location/south-korea/2744d40afc3325359a3eded185736fd1",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1386725325,
+            "updated_at": 1397992267
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 4,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/gruter/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1417159419
+          },
+          {
+            "type": "Category",
+            "name": "Open Source",
+            "uuid": "eb80816d769eb2dce9b4b6399e8c498e",
+            "path": "category/open source/eb80816d769eb2dce9b4b6399e8c498e",
+            "created_at": 1397980727,
+            "updated_at": 1417152524
+          },
+          {
+            "type": "Category",
+            "name": "Software",
+            "uuid": "c08b5441a05b9777b7a6012728caddd9",
+            "path": "category/software/c08b5441a05b9777b7a6012728caddd9",
+            "created_at": 1397980727,
+            "updated_at": 1417191354
+          },
+          {
+            "type": "Category",
+            "name": "Analytics",
+            "uuid": "99c5404c0ff58ee5d3344b944ddb8cd9",
+            "path": "category/analytics/99c5404c0ff58ee5d3344b944ddb8cd9",
+            "created_at": 1397980727,
+            "updated_at": 1417171293
+          }
+        ]
+      },
+      "founders": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/gruter/founders",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Person",
+            "name": "Young-kil Kwon",
+            "path": "person/young-kil-kwon",
+            "created_at": 1386754124,
+            "updated_at": 1397989335
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/gruter/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1397187763/b977941f7422200b0c94590a34967537.png",
+            "created_at": 1398018960,
+            "updated_at": 1398018960
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 5,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/gruter/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://twitter.com/GruterCorp",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1416160303,
+            "updated_at": 1416160303
+          },
+          {
+            "url": "http://www.linkedin.com/company/gruter",
+            "type": "WebPresence",
+            "title": "linkedin",
+            "created_at": 1416160302,
+            "updated_at": 1416160303
+          },
+          {
+            "url": "http://www.facebook.com/GruterInc",
+            "type": "WebPresence",
+            "title": "facebook",
+            "created_at": 1416160302,
+            "updated_at": 1416160302
+          },
+          {
+            "url": "http://www.gruter.com/blog",
+            "type": "WebPresence",
+            "title": "blog",
+            "created_at": 1386725325,
+            "updated_at": 1397989508
+          },
+          {
+            "url": "http://www.gruter.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1386725325,
+            "updated_at": 1397989508
+          }
+        ]
+      }
+    }
+  }
+}

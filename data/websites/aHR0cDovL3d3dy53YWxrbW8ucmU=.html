@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html style="margin-top: 0 !important" class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html style="margin-top: 0 !important" class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html style="margin-top: 0 !important" class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--<![endif]-->
+<html style="margin-top: 0 !important" lang="en-US">
+ <!--<![endif]-->
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>walkmore</title> 
+  <link rel="stylesheet" href="https://walkmo.re/wp-content/themes/scrn/style.css" type="text/css" media="screen"> 
+  <!-- Mobile Specific Metas
+      ================================================== --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--> 
+  <!--[if IE]>
+        <link href="https://walkmo.re/wp-content/themes/scrn/css/ie.css" rel='stylesheet' type='text/css'>
+    <![endif]--> 
+  <script type="text/javascript">
+    var templateDir = "https://walkmo.re/wp-content/themes/scrn";
+    </script> 
+  <link rel="alternate" type="application/rss+xml" title="walkmore » Feed" href="https://walkmo.re/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="walkmore » Comments Feed" href="https://walkmo.re/comments/feed/"> 
+  <link rel="stylesheet" id="aqpb-view-css-css" href="https://walkmo.re/wp-content/themes/scrn/teoPanel/Page-Builder/assets/css/aqpb-view.css?ver=1417770928" type="text/css" media="all"> 
+  <link rel="stylesheet" id="base-css" href="https://walkmo.re/wp-content/themes/scrn/css/base.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="layout-css" href="https://walkmo.re/wp-content/themes/scrn/css/layout.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="skeleton-css" href="https://walkmo.re/wp-content/themes/scrn/css/skeleton.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="flexslider-css" href="https://walkmo.re/wp-content/themes/scrn/css/flexslider.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="prettyPhoto-css" href="https://walkmo.re/wp-content/themes/scrn/css/prettyPhoto.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="source-sans-css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700%2C400italic%2C600italic%2C700italic&amp;ver=3.8.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="oswald-css" href="https://fonts.googleapis.com/css?family=Oswald%3A400%2C700%2C300&amp;ver=3.8.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="fancybox-css" href="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.6.pack.css?ver=1.5.6" type="text/css" media="screen"> 
+  <script type="text/javascript" src="https://walkmo.re/wp-includes/js/jquery/jquery.js?ver=1.10.2"></script> 
+  <script type="text/javascript" src="https://walkmo.re/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/js/jquery.cycle.all.min.js?ver=3.8.5"></script> 
+  <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/js/jquery.flexslider.js?ver=1.0"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://walkmo.re/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://walkmo.re/wp-includes/wlwmanifest.xml"> 
+  <link rel="shortcut icon" href="https://walkmo.re/wp-content/uploads/2013/11/favicon.png"> 
+  <style type="text/css"> 
+#intro .bg1 { background-image: url('https://walkmo.re/wp-content/uploads/2013/11/header_numbers_3.jpg'); } 
+</style> 
+  <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> 
+  <style type="text/css">#separator_5, #contact, #comment-wrap, .singlemeta {display: none;}
+.separator1 {height: 250px;}
+nav {height: 51px;}
+#fancybox-title-over {display: none;}</style> 
+  <!-- Easy Columns 2.1.1 by Pat Friedl http://www.patrickfriedl.com --> 
+  <link rel="stylesheet" href="https://walkmo.re/wp-content/plugins/easy-columns/css/easy-columns.css" type="text/css" media="screen, projection"> 
+  <!-- Easy FancyBox 1.5.6 using FancyBox 1.3.6 - RavanH (http://status301.net/wordpress-plugins/easy-fancybox/) --> 
+  <script type="text/javascript">
+	/* <![CDATA[ */
+	var fb_timeout = null;
+	var fb_opts = { 'overlayShow' : true, 'hideOnOverlayClick' : true, 'showCloseButton' : true, 'centerOnScroll' : true, 'enableEscapeButton' : true, 'autoScale' : true };
+	var easy_fancybox_handler = function(){
+	/* IMG */
+	var fb_IMG_select = 'a[href*=".jpg"]:not(.nofancybox), area[href*=".jpg"]:not(.nofancybox), a[href*=".jpeg"]:not(.nofancybox), area[href*=".jpeg"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox), area[href*=".png"]:not(.nofancybox)';
+	jQuery(fb_IMG_select).addClass('fancybox');
+	var fb_IMG_sections = jQuery('div.gallery ');
+	fb_IMG_sections.each(function() { jQuery(this).find(fb_IMG_select).attr('rel', 'gallery-' + fb_IMG_sections.index(this)); });
+	jQuery('a.fancybox, area.fancybox, li.fancybox a:not(li.nofancybox a)').fancybox( jQuery.extend({}, fb_opts, { 'transitionIn' : 'elastic', 'easingIn' : 'easeOutBack', 'transitionOut' : 'elastic', 'easingOut' : 'easeInBack', 'opacity' : false, 'hideOnContentClick' : false, 'titleShow' : true, 'titlePosition' : 'over', 'titleFromAlt' : true, 'showNavArrows' : true, 'enableKeyboardNav' : true, 'cyclic' : false }) );
+	/* Auto-click */ 
+	jQuery('#fancybox-auto').trigger('click');
+	}
+	/* ]]> */
+	</script> 
+  <style type="text/css">
+.fancybox-hidden{display:none}.rtl #fancybox-left{left:auto;right:0px}.rtl #fancybox-right{left:0px;right:auto}.rtl #fancybox-right-ico{background-position:-40px -30px}.rtl #fancybox-left-ico{background-position:-40px -60px}.rtl .fancybox-title-over{text-align:right}.rtl #fancybox-left-ico,.rtl #fancybox-right-ico{right:-9999px}.rtl #fancybox-right:hover span{right:auto;left:20px}.rtl #fancybox-left:hover span{right:20px}#fancybox-img{max-width:none;max-height:none}
+	</style> 
+  <!--[if lt IE 8]>            
+		<style type="text/css">
+.fancybox-ie6 #fancybox-close{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_close.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-left-ico{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_nav_left.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-right-ico{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_nav_right.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-title-over{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_title_over.png",sizingMethod="scale");zoom:1}
+.fancybox-ie6 #fancybox-title-float-left{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_title_left.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-title-float-main{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_title_main.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-title-float-right{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_title_right.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-bg-w,.fancybox-ie6 #fancybox-bg-e,.fancybox-ie6 #fancybox-left,.fancybox-ie6 #fancybox-right,#fancybox-hide-sel-frame{height:expression(this.parentNode.clientHeight+"px")}
+#fancybox-loading.fancybox-ie6{position:absolute;margin-top:0;top:expression((-20+(document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2)+(ignoreMe=document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+"px")}
+#fancybox-loading.fancybox-ie6 div{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_loading.png", sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-n{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_n.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-ne{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_ne.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-e{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_e.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-se{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_se.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-s{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_s.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-sw{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_sw.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-w{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_w.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-nw{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_nw.png",sizingMethod="scale")}
+		</style>
+	<![endif]--> 
+  <!--[if IE 8]>            
+		<style type="text/css">
+.fancybox-ie #fancybox-bg-n{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_n.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-ne{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_ne.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-e{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_e.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-se{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_se.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-s{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_s.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-sw{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_sw.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-w{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_w.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-nw{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_nw.png",sizingMethod="scale")'}
+		</style>
+	<![endif]--> 
+ </head> 
+ <body class="home blog"> 
+  <!-- Primary Page Layout
+    ================================================== --> 
+  <div id="intro"> 
+   <div class="bg1"></div> 
+   <div class="title"> 
+    <img src="https://walkmo.re/wp-content/uploads/2014/02/logo_home_5.png" alt="walkmore"> 
+    <div class="social-intro"> 
+     <ul> 
+     </ul> 
+    </div> 
+   </div> 
+   <!-- end title --> 
+  </div> 
+  <!-- end intro --> 
+  <nav> 
+   <ul id="menu-main" class="menu">
+    <li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="https://walkmo.re/#intro"><img src="https://walkmo.re/wp-content/uploads/2013/11/walkmore-logo-30px.png"></a></li> 
+    <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://walkmo.re#product">Product</a></li> 
+    <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://walkmo.re#custom-made">Custom Made</a></li> 
+    <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://walkmo.re#about-us">About Us</a></li> 
+    <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://walkmo.re#the-team">The Team</a></li> 
+    <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://walkmo.re#contact-us">Contact Us</a></li> 
+   </ul> 
+  </nav> 
+  <div class="bg " id="product"> 
+   <div class="container"> 
+    <div class="sixteen columns"> 
+     <h2> <span class="lines"> Product </span> </h2> 
+    </div> 
+    <!-- end sixteen columns --> 
+    <div class="clear"></div> 
+    <p></p>
+    <div class="ezcol ezcol-two-third">
+     <strong>Big Data Analytics</strong>
+     <p></p> 
+     <p>Walkmore provides affordable, easy to deploy, big data analytics products for financial institutions. Our standalone software solutions deliver actionable insights into customer behavior to empower decision makers to make more informed strategic and operational decisions. Walkmore combines the latest advances in machine learning to provide quick wins – we focus only on correlations that bring you immediate ROI. We make data science accessible to financial institutions of any size and replace expensive enterprise solutions through a plug &amp; play approach: run our software from any computer, offline, and we’ll get you recommendations you can act upon within 30 days.</p> 
+     <p>We’ve applied our models to more than 500,000 individuals and achieved the following for our financial institution customers: 15% less loan delinquency, 1% more loans issued and substantially increased revenues through product recommendations.</p>
+    </div> 
+    <div class="ezcol ezcol-one-third ezcol-last"> 
+     <p>&nbsp;</p> 
+     <p><a href="http://walkmo.re/wp-content/uploads/2013/11/diagram.jpg"></a><a href="https://walkmo.re/wp-content/uploads/2013/11/diagram.jpg"><img class="aligncenter size-medium wp-image-55" alt="diagram" src="https://walkmo.re/wp-content/uploads/2013/11/diagram-232x300.jpg" width="232" height="300"></a></p>
+    </div>
+    <div class="ezcol-divider"></div>
+    <p></p> 
+    <p>&nbsp;</p> 
+    <h5 style="text-align: center;">We’re proving you do not need expensive legacy enterprise systems in order to use big data &nbsp;to your advantage.</h5> 
+    <h5 style="text-align: right;">- Karlo Rodriguez, CXO, Walkmore</h5> 
+    <p>&nbsp;</p> 
+    <p><strong>Loyalty Platform</strong></p> 
+    <p>The Walkmore loyalty platform enables the financial institution to increase its lifetime customer value, generate new leads by offering meaningful engagement, and improve its credit rating systems. With the goal to predict the customer’s financial behavior, the individual (end user) is allowed to aggregate and visualize data from almost any physical activity tracking device or app. Increased activity is rewarded in cash, better interest rates, and discounts from local businesses. The activity is vetted through a fraud detection system. Additional data is gathered, such as environmental, financial, personal, or economic factors. Predictions on the individual’s behavior are then produced. The vast amount of factors enables us to make these predictions with high accuracy.</p> 
+    <p>&nbsp;</p> 
+    <p><a href="http://walkmo.re/wp-content/uploads/2013/11/the-app.png"></a><a href="https://walkmo.re/wp-content/uploads/2013/11/the-app.png"><img class="aligncenter size-medium wp-image-56" alt="the app" src="https://walkmo.re/wp-content/uploads/2013/11/the-app-300x174.png" width="300" height="174"></a></p> 
+    <p style="text-align: center;"><em>The Walkmore loyalty platform and app are white-labeled to protect your brand.</em></p> 
+    <p style="text-align: left;">Take a look at an example of how you might promote this product among your members and customers:</p> 
+    <p style="text-align: center;"><iframe src="//www.youtube.com/embed/UZH1mx3pKbY?rel=0" height="360" width="640" allowfullscreen frameborder="0"></iframe></p> 
+    <h5 style="text-align: center;">The Walkmore platform exploits trends and tools from big data and the quantified-self&nbsp;movement, and uses concepts borrowed from behavioral psychology and mobile gamification to generate new leads, increase loyalty, and improve your customer lifetime value.</h5> 
+    <h5 style="text-align: right;">- Eli Mohamad, CEO, Walkmore</h5> 
+   </div> 
+   <!-- end container --> 
+  </div> 
+  <!-- end bg --> 
+  <div id="separator_1" class="separator1"> 
+   <div class="bg2 bg" style="background-image: url('https://walkmo.re/wp-content/uploads/2013/11/slider3-Copy.jpg') "></div> 
+   <p class="separator"></p> 
+  </div> 
+  <div class="bg " id="custom-made"> 
+   <div class="container"> 
+    <div class="sixteen columns"> 
+     <h2> <span class="lines"> Custom Made </span> </h2> 
+    </div> 
+    <!-- end sixteen columns --> 
+    <div class="clear"></div> 
+    <p>It is easy to extract insights about your members and customers with customized Walkmore&nbsp;applications.&nbsp;Just follow these simple steps:</p> 
+    <p>&nbsp;</p> 
+    <div class="ezcol ezcol-one-quarter"> 
+     <p style="text-align: center;"><img class="size-full wp-image-51 aligncenter" alt="1" src="https://walkmo.re/wp-content/uploads/2013/11/1.jpg" width="180" height="150"></p> 
+    </div> 
+    <div class="ezcol ezcol-one-quarter"> 
+     <p><a href="http://walkmo.re/wp-content/uploads/2013/10/2.jpg"><img class="aligncenter size-full wp-image-52" alt="2" src="https://walkmo.re/wp-content/uploads/2013/11/2.jpg" width="180" height="150"><br> </a></p> 
+    </div> 
+    <div class="ezcol ezcol-one-quarter"> 
+     <p><img class="aligncenter size-full wp-image-53" alt="3" src="https://walkmo.re/wp-content/uploads/2013/11/3.jpg" width="180" height="150"></p> 
+    </div> 
+    <div class="ezcol ezcol-one-quarter ezcol-last"> 
+     <p><img class="aligncenter size-full wp-image-50" alt="4" src="https://walkmo.re/wp-content/uploads/2013/11/4.jpg" width="180" height="150"></p> 
+    </div>
+    <div class="ezcol-divider"></div>
+    <p></p> 
+    <p>&nbsp;</p> 
+    <h5 style="text-align: center;">We’ve designed our products to fit financial institutions of any size. You have data – we turn it into insights. Cheap, quick and effective.</h5> 
+    <h5 style="text-align: right;">- Philipp Kallerhoff, CTO, Walkmore</h5> 
+    <p>&nbsp;</p> 
+    <p>&nbsp;</p> 
+   </div> 
+   <!-- end container --> 
+  </div> 
+  <!-- end bg --> 
+  <div id="separator_2" class="separator1"> 
+   <div class="bg3 bg" style="background-image: url('https://walkmo.re/wp-content/uploads/2013/11/slider2-Copy.jpg') "></div> 
+   <p class="separator"></p> 
+  </div> 
+  <div class="bg " id="about-us"> 
+   <div class="container"> 
+    <div class="sixteen columns"> 
+     <h2> <span class="lines"> About Us </span> </h2> 
+    </div> 
+    <!-- end sixteen columns --> 
+    <div class="clear"></div> 
+    <p><strong>Walkmore</strong> has evolved from a <a href="http://singularityu.org/">Singularity University</a>&nbsp;project funded by the <a href="http://filene.org/">Filene Research Institute</a>&nbsp;and supported by the National Credit Union Roundtable, with a vision of transforming the way in which banking work to allow for a more holistic picture and path to improvement for the individual.</p> 
+    <p>We’ve scientifically proven that the healthier you are, the better financial decisions you make. We can now improve financial credit rating and risk assessment systems by accurately predicting financial behavior from physical activity data.</p> 
+    <p>The company recently raised an investment round, and is incubated at <a href="http://singularityu.org/">Singularity University Labs</a>&nbsp;in Mountain View,&nbsp;Silicon Valley, California.</p> 
+    <p>&nbsp;</p> 
+    <p style="text-align: center;"><img class="aligncenter size-full wp-image-43" alt="logos" src="https://walkmo.re/wp-content/uploads/2013/11/logos.jpg" width="550" height="75"></p> 
+   </div> 
+   <!-- end container --> 
+  </div> 
+  <!-- end bg --> 
+  <div id="separator_3" class="separator1"> 
+   <div class="bg4 bg" style="background-image: url('https://walkmo.re/wp-content/uploads/2013/11/slider1-Copy.jpg') "></div> 
+   <p class="separator"></p> 
+  </div> 
+  <div class="bg " id="the-team"> 
+   <div class="container"> 
+    <div class="sixteen columns"> 
+     <h2> <span class="lines"> The Team </span> </h2> 
+    </div> 
+    <!-- end sixteen columns --> 
+    <div class="clear"></div> 
+    <p></p>
+    <div class="ezcol ezcol-one-half">
+     <div class="ezcol ezcol-one-third"> 
+      <p><img class="aligncenter size-full wp-image-62" alt="elmo" src="https://walkmo.re/wp-content/uploads/2013/11/elmo.jpg" width="173" height="173"></p> 
+     </div> 
+     <div class="ezcol ezcol-two-third ezcol-last"> 
+      <p>&nbsp;</p> 
+      <h3>Eli Mohamad</h3> 
+      <h3>CEO</h3> 
+     </div>
+     <div class="ezcol-divider"></div>
+     <strong>Eli Mohamad</strong>&nbsp;is a former management consultant and European Commission expert on innovation, with ample experience in designing and managing projects across a number of industries. He holds a MSc in Technology and Innovation Management from the University of Sussex, UK.
+     <p></p> 
+     <p>Twitter: <a href="http://twitter.com/elimohamad">@elimohamad</a></p> 
+     <p>LinkedIn:&nbsp;<a href="http://hr.linkedin.com/in/emohamad">emohamad</a></p> 
+    </div> 
+    <div class="ezcol ezcol-one-half ezcol-last">
+     <div class="ezcol ezcol-one-third"> 
+      <p><img class="aligncenter size-full wp-image-59" alt="phka" src="https://walkmo.re/wp-content/uploads/2013/11/phka.jpg" width="173" height="170"></p> 
+     </div> 
+     <div class="ezcol ezcol-two-third ezcol-last"> 
+      <p>&nbsp;</p> 
+      <h3>Dr. Philipp Kallerhoff</h3> 
+      <h3>CTO</h3> 
+     </div>
+     <div class="ezcol-divider"></div>
+     <strong>Philipp Kallerhoff</strong>&nbsp;studied Engineering and Management, Psychology and Physics at the Technical University Berlin, Sophia University Tokyo and the State Universtiy New York. After completing a PhD in computational Neuroscience at the Technical University Berlin, he worked in the banking and hedge fund industry.
+     <p></p> 
+     <p>Twitter: <a href="http://twitter.com/Kallerhoff">@kallerhoff</a></p> 
+     <p>LinkedIn: <a href="http://www.linkedin.com/pub/philipp-kallerhoff/12/96b/50a">Phillip Kallerhoff</a></p> 
+    </div>
+    <div class="ezcol-divider"></div>
+    <p></p> 
+    <p>&nbsp;</p> 
+    <p></p>
+    <div class="ezcol ezcol-one-half">
+     <div class="ezcol ezcol-one-third"> 
+      <p><img class="aligncenter size-full wp-image-63" alt="karo" src="https://walkmo.re/wp-content/uploads/2013/11/karo.jpg" width="175" height="175"></p> 
+     </div> 
+     <div class="ezcol ezcol-two-third ezcol-last"> 
+      <p>&nbsp;</p> 
+      <h3>Karlo Rodríguez</h3> 
+      <h3>CXO</h3> 
+     </div>
+     <div class="ezcol-divider"></div>
+     <strong>Karlo&nbsp;</strong>is a creative technologist and former innovation director for one of the largest marketing agencies of the world. He holds degrees in electrical engineering and software development, and has more than 10 years of experience in big data analytics, and hardware and software development.
+     <p></p> 
+     <p>Twitter: <a href="https://twitter.com/Jack_Valentine_">@jack_valentine_</a></p> 
+     <p>LinkedIn: <a href="http://mx.linkedin.com/pub/karlo-valent%C3%ADn-rodr%C3%ADguez-rangel/78/745/a35">Karlo Rodríguez</a></p> 
+    </div> 
+    <div class="ezcol ezcol-one-half ezcol-last">
+     <div class="ezcol ezcol-one-third"> 
+      <p><img class="aligncenter size-full wp-image-58" alt="peke" src="https://walkmo.re/wp-content/uploads/2013/11/peke.jpg" width="173" height="172"></p> 
+     </div> 
+     <div class="ezcol ezcol-two-third ezcol-last"> 
+      <p>&nbsp;</p> 
+      <h3>Peter Kellner</h3> 
+      <h3>Investor/Co-founder</h3> 
+     </div>
+     <div class="ezcol-divider"></div>
+     <strong>Peter Kellner</strong> is a successful early-stage venture capitalist, entrepreneur, and adviser to companies on five continents. He co-founded&nbsp;
+     <a href="http://www.endeavor.org/" target="_blank">Endeavor</a>, a pioneering organization driving high-impact entrepreneurship around the world and is Founder and Managing Partner of&nbsp;
+     <a href="http://www.rglobal.com/" target="_blank">Richmond Global</a>, a company with venture capital investments in technology and communications in the U.S., Europe, China, Latin America and India.
+     <p></p> 
+     <p>Twitter: <a href="https://twitter.com/peterbkellner">@peterbkellner</a></p> 
+     <p>LinkedIn: <a href="http://www.linkedin.com/pub/peter-kellner/0/77/56">Peter Kellner</a></p> 
+    </div>
+    <div class="ezcol-divider"></div>
+    <p></p> 
+    <p>&nbsp;</p> 
+    <p></p>
+    <div class="ezcol ezcol-one-half">
+     <div class="ezcol ezcol-one-third"> 
+      <p><img class="aligncenter size-full wp-image-60" alt="brdi" src="https://walkmo.re/wp-content/uploads/2013/11/brdi.jpg" width="171" height="173"></p> 
+     </div> 
+     <div class="ezcol ezcol-two-third ezcol-last"> 
+      <p>&nbsp;</p> 
+      <h3>Brent Dixon</h3> 
+      <h3>Adviser</h3> 
+     </div>
+     <div class="ezcol-divider"></div>
+     <strong>Brent Dixon</strong>&nbsp;is a designer with a passion for fixing consumer finance. He advised on behalf of The Filene Research Institute, a consumer financial think tank, and founded The Cooperative Trust, a grassroots network of hundreds of young people fighting for the future of socially responsible finance.
+     <p></p> 
+     <p>Twitter: <a href="http://twitter.com/itsjustbrent">@itsJustBrent</a></p> 
+     <p>LinkedIn: <a href="http://www.linkedin.com/in/itsjustbrent">itsJustBrent</a></p> 
+    </div> 
+    <div class="ezcol ezcol-one-half ezcol-last"> 
+     <div class="ezcol ezcol-one-third"> 
+      <p><img class="aligncenter size-full wp-image-61" alt="bryan" src="https://walkmo.re/wp-content/uploads/2013/11/bryan.jpg" width="173" height="173"></p> 
+     </div> 
+     <div class="ezcol ezcol-two-third ezcol-last"> 
+      <p>&nbsp;</p> 
+      <h3>Bryan Clagett</h3> 
+      <h3>Adviser</h3> 
+     </div>
+     <div class="ezcol-divider"></div>
+     <strong>Bryan Clagett</strong> &nbsp;is CMO of Geezeo, a leading Personal Financial Management provider serving more than 200 US financial&nbsp;institutions. He has worked within the financial services&nbsp;industry&nbsp;for over 25 years.
+     <p></p> 
+     <p>Twitter: <a href="http://twitter.com/clagett">@clagett</a></p> 
+     <p>LinkedIn: <a href="http://www.linkedin.com/in/bryanclagett">Bryan Clagett</a></p> 
+    </div>
+    <div class="ezcol-divider"></div>
+    <p></p> 
+    <p>&nbsp;</p> 
+    <p></p>
+    <div class="ezcol ezcol-one-half">
+     <div class="ezcol ezcol-one-third"> 
+      <p><img class="aligncenter size-full wp-image-60" alt="brdi" src="https://walkmo.re/wp-content/uploads/2014/01/web_salim_ismail_1.jpg" width="171" height="173"></p> 
+     </div> 
+     <div class="ezcol ezcol-two-third ezcol-last"> 
+      <p>&nbsp;</p> 
+      <h3>Salim Ismail</h3> 
+      <h3>Adviser</h3> 
+     </div>
+     <div class="ezcol-divider"></div>
+     <strong>Salim Ismail</strong> is a sought after speaker, strategist and entrepreneur – his last company, Angstro, was acquired by Google in August 2010. Salim spent two years as SU’s founding Executive Director and currently serves as its Global Ambassador focusing on its global presence. Prior to that, Salim was a Vice President at Yahoo and the Head of Brickhouse, Yahoo’s internal ‘ideas factory’.
+     <p></p> 
+     <p>Twitter: <a href="https://twitter.com/salimismail">@salimismail</a></p> 
+     <p>LinkedIn: <a href="http://www.linkedin.com/in/salimismail">Salim Ismail</a></p> 
+    </div> 
+    <div class="ezcol ezcol-one-half ezcol-last"> 
+     <div class="ezcol ezcol-one-third"> 
+     </div> 
+     <div class="ezcol ezcol-two-third ezcol-last"></div>
+     <div class="ezcol-divider"></div>
+     <p></p> 
+     <p>&nbsp;</p> 
+    </div>
+    <div class="ezcol-divider"></div>
+    <p></p> 
+   </div> 
+   <!-- end container --> 
+  </div> 
+  <!-- end bg --> 
+  <div id="separator_4" class="separator1"> 
+   <div class="bg5 bg" style="background-image: url('https://walkmo.re/wp-content/uploads/2013/11/slider4-Copy.jpg') "></div> 
+   <p class="separator"></p> 
+  </div> 
+  <div class="bg " id="contact-us"> 
+   <div class="container"> 
+    <div class="sixteen columns"> 
+     <h2> <span class="lines"> Contact Us </span> </h2> 
+    </div> 
+    <!-- end sixteen columns --> 
+    <div class="clear"></div> 
+    <div class="ezcol ezcol-two-fifth"> 
+     <p><strong>Mailing Address</strong></p> 
+     <p style="padding-left: 30px;">NASA Research Park,<br> SU Labs<br> Building 20 S. Akron Rd., MS 20-1,<br> Moffett Field, CA 94035-0001.</p> 
+     <p><strong>Phone</strong></p> 
+     <p style="padding-left: 30px;">+1&nbsp;(650) 274-7866</p> 
+     <p><strong>Social Media</strong></p> 
+     <p style="padding-left: 30px;"><a href="https://www.facebook.com/wewalkmore"><img class="size-full wp-image-47 alignnone" alt="facebook_icon&amp;48" src="https://walkmo.re/wp-content/uploads/2013/11/facebook_icon48.png" width="48" height="48"></a>&nbsp; &nbsp;<a href="https://twitter.com/TheRealWalkMore"><img class="alignnone size-full wp-image-46" alt="twitter_2_icon&amp;48" src="https://walkmo.re/wp-content/uploads/2013/11/twitter_2_icon48.png" width="48" height="48"></a></p> 
+    </div> 
+    <div class="ezcol ezcol-three-fifth ezcol-last"> 
+     <h3 style="text-align: center;">Get in touch</h3> 
+     <p>Schedule a demo, discuss your big data needs, or simply explore opportunities for cooperation. We’d love to hear from you.</p> 
+     <p>Email us at <span style="color: #ff6600;"><a href="mailto:eli@walkmo.re"><span style="color: #ff6600;">eli@walkmo.re</span></a></span></p> 
+    </div>
+    <div class="ezcol-divider"></div>
+    <p></p> 
+    <p>&nbsp;</p> 
+    <p style="text-align: center;"><a title="Terms of Service" href="http://walkmo.re/terms-of-service/">Terms of Service</a> &nbsp;- &nbsp;<a title="Privacy Policy" href="http://walkmo.re/privacy-policy/">Privacy Policy</a>&nbsp; </p> 
+   </div> 
+   <!-- end container --> 
+  </div> 
+  <!-- end bg --> 
+  <div id="separator_5" class="separator1"> 
+   <div class="bg6 bg" style=" "></div> 
+   <p class="separator"></p> 
+  </div> 
+  <div id="contact" class="dark-bg"> 
+   <div class="container"> 
+    <div class="sixteen columns"> 
+     <h2 class="white"><span class="lines">Contact</span></h2> 
+    </div> 
+    <!-- end sixteen columns --> 
+    <div class="clear"></div> 
+    <div class="eight columns"> 
+     <div class="contact-form"> 
+      <div class="done"> 
+       <b>Thank you!</b> I have received your message. 
+      </div> 
+      <form method="post" action="process.php"> 
+       <p>name</p> 
+       <input type="text" name="name" class="text"> 
+       <p>email</p> 
+       <input type="text" name="email" class="text" id="email"> 
+       <p>message</p> 
+       <textarea name="comment" class="text"></textarea> 
+       <input type="submit" id="submit" value="send" class="submit-button"> 
+      </form> 
+     </div> 
+     <!-- end contact-form --> 
+    </div> 
+    <!-- end eight columns --> 
+    <div class="eight columns"> 
+     <div class="contact-info"> 
+      <h5>Contact Info</h5> 
+      <p class="white"><img src="https://walkmo.re/wp-content/themes/scrn/images/icn-email.png" alt=""> <a href="mailto:eli@walkmo.re">eli@walkmo.re</a></p> 
+     </div> 
+     <!-- end contact-info --> 
+     <div class="social"> 
+      <ul> 
+      </ul> 
+     </div> 
+     <!-- end social --> 
+    </div> 
+    <!-- end eight columns --> 
+    <div class="clear"></div> 
+   </div> 
+   <!-- end container --> 
+  </div> 
+  <!-- end contact --> 
+  <div id="footer"> 
+   <div class="container"> 
+    <div class="sixteen columns"> 
+     <div class="copyright"> 
+      <p>© 2013 All Rights Reserved, Walkmo.re</p> 
+     </div> 
+    </div> 
+   </div> 
+   <div align="left">
+    <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics"></a> 
+    <div align="right" style="background-color:#FFFFFF;">
+     <a href="http://rackspace.com"><img src="https://walkmo.re/wp-content/uploads/2013/12/reduxRH.jpg" alt="Rackspace Hosting" style="margin:20px;"></a> 
+    </div> 
+   </div> 
+   <!-- JS
+
+    ================================================== --> 
+   <!-- fancybox --> 
+   <script type="text/javascript">
+
+    function scrollTo(target){
+
+          var myArray = target.split('#');
+
+          var targetPosition = jQuery('#' + myArray[1]).offset().top;
+
+          jQuery('html,body').animate({ scrollTop: targetPosition}, 'slow');
+
+        }
+
+    jQuery(document).ready(function() {
+
+
+
+        jQuery("nav").sticky({topSpacing:0});
+
+
+
+        /* This is basic - uses default settings */
+
+      
+
+        jQuery("a[class^='prettyPhoto']").prettyPhoto({
+
+            social_tools: false,
+
+            theme: 'light_square'
+
+          });
+
+      
+
+        /* Using custom settings */
+
+      
+
+        jQuery('.proj-img').hover(function() {
+
+            jQuery(this).find('i').stop().animate({
+
+              opacity: 0.8
+
+            }, 'fast');
+
+            jQuery(this).find('a').stop().animate({
+
+              "top": "0"
+
+            });
+
+          }, function() {
+
+            jQuery(this).find('i').stop().animate({
+
+              opacity: 0
+
+            }, 'fast');
+
+            jQuery(this).find('a').stop().animate({
+
+              "top": "-600px"
+
+            });
+
+        });
+
+
+
+          jQuery('.flexslider').flexslider({
+
+            animation: "slide",
+
+            slideshow: true,
+
+            slideshowSpeed: 3500,
+
+            animationSpeed: 1000
+
+          });
+
+
+
+          jQuery('nav ul').mobileMenu({
+
+               defaultText: 'Navigate to...',
+
+               className: 'mobile-menu',
+
+               subMenuDash: '&ndash;'
+
+          });
+
+
+
+    });
+
+    
+
+  </script> 
+   <!-- End Document
+
+================================================== --> 
+   <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-45764669-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/teoPanel/Page-Builder/assets/js/aqpb-view.js?ver=1417770928"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/js/jquery.sticky.js?ver=1.0"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/js/jquery.smooth-scroll.js?ver=1.0"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/js/contact-form.js?ver=1.0"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/plugins/easy-fancybox/jquery.easing.pack.js?ver=1.3"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/js/jquery.prettyPhoto.js?ver=1.0"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/js/jquery.inview.js?ver=1.0"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/js/custom.js?ver=1.0"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/js/jquery.isotope.min.js?ver=1.0"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/themes/scrn/js/jquery.mobilemenu.js?ver=1.0"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.6.pack.js?ver=1.5.6"></script> 
+   <script type="text/javascript" src="https://walkmo.re/wp-content/plugins/easy-fancybox/jquery.mousewheel.pack.js?ver=3.1.3"></script> 
+   <script type="text/javascript">
+jQuery(document).on('ready post-load', easy_fancybox_handler );
+</script>  
+  </div>
+ </body>
+</html>

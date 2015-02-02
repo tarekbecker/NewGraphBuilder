@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "749d3e1488b52a7431780d61739eb3ca",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "short_description": "Domosite is a social network for the people, who inhabit big houses in a modern city. Exchanging data with the managing company, conducting",
+      "permalink": "domosayt",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "https://domosite.ru/",
+      "name": "Domosite",
+      "closed_on_year": null,
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on": null,
+      "description": "Domosite owns and operates a social network for people who live in big houses. Users can meet members of other condominiums, send a request to the plumber or just chat about the news. Domosite is based in the Russian Federation.\n",
+      "created_at": 1399701111,
+      "updated_at": 1399701110,
+      "total_funding_usd": 700000,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "funding_rounds": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/domosayt/funding_rounds",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "FundingRound",
+            "name": "Domosite Funding Round",
+            "path": "funding-round/6cce59fb4f79516823c88762f179754a",
+            "created_at": 1399701110,
+            "updated_at": 1400209663
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/domosayt/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1399618361/mvzjmivp0glkoxpgjefc.png",
+            "created_at": 1399618407,
+            "updated_at": 1399618407
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/domosayt/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://domosite.ru/",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1399618407,
+            "updated_at": 1409522547
+          }
+        ]
+      }
+    }
+  }
+}

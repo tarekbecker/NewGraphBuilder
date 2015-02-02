@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html class="v2" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head> 
+  <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible"> 
+  <meta content="width=1100" name="viewport"> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <script type="text/javascript">(function() { var b=window,f="chrome",g="tick",k="jstiming";(function(){function d(a){this.t={};this.tick=function(a,d,c){var e=void 0!=c?c:(new Date).getTime();this.t[a]=[e,d];if(void 0==c)try{b.console.timeStamp("CSI/"+a)}catch(h){}};this[g]("start",null,a)}var a;b.performance&&(a=b.performance.timing);var n=a?new d(a.responseStart):new d;b.jstiming={Timer:d,load:n};if(a){var c=a.navigationStart,h=a.responseStart;0<c&&h>=c&&(b[k].srt=h-c)}if(a){var e=b[k].load;0<c&&h>=c&&(e[g]("_wtsrt",void 0,c),e[g]("wtsrt_","_wtsrt",h),e[g]("tbsd_","wtsrt_"))}try{a=null,
+b[f]&&b[f].csi&&(a=Math.floor(b[f].csi().pageT),e&&0<c&&(e[g]("_tbnd",void 0,b[f].csi().startE),e[g]("tbnd_","_tbnd",c))),null==a&&b.gtbExternal&&(a=b.gtbExternal.pageT()),null==a&&b.external&&(a=b.external.pageT,e&&0<c&&(e[g]("_tbnd",void 0,b.external.startE),e[g]("tbnd_","_tbnd",c))),a&&(b[k].pt=a)}catch(p){}})();b.tickAboveFold=function(d){var a=0;if(d.offsetParent){do a+=d.offsetTop;while(d=d.offsetParent)}d=a;750>=d&&b[k].load[g]("aft")};var l=!1;function m(){l||(l=!0,b[k].load[g]("firstScrollTime"))}b.addEventListener?b.addEventListener("scroll",m,!1):b.attachEvent("onscroll",m);
+ })();</script> 
+  <meta content="blogger" name="generator"> 
+  <link href="http://blog.packetloop.com/favicon.ico" rel="icon" type="image/x-icon"> 
+  <link href="http://blog.packetloop.com/" rel="canonical"> 
+  <link rel="alternate" type="application/atom+xml" title="Packetloop Blog - Atom" href="http://blog.packetloop.com/feeds/posts/default"> 
+  <link rel="alternate" type="application/rss+xml" title="Packetloop Blog - RSS" href="http://blog.packetloop.com/feeds/posts/default?alt=rss"> 
+  <link rel="service.post" type="application/atom+xml" title="Packetloop Blog - Atom" href="http://www.blogger.com/feeds/768505746142801567/posts/default"> 
+  <link rel="openid.server" href="http://www.blogger.com/openid-server.g"> 
+  <link rel="openid.delegate" href="http://blog.packetloop.com/"> 
+  <!--[if IE]><script type="text/javascript" src="https://www.blogger.com/static/v1/jsbin/3204238090-ieretrofit.js"></script>
+<![endif]--> 
+  <!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]--> 
+  <title>Packetloop Blog</title> 
+  <link href="https://plus.google.com/102967241915785394766" rel="publisher"> 
+  <meta content="" name="description"> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,800" rel="stylesheet" type="text/css"> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script>
+var link = document.createElement("link")
+link.type = "text/css";link.rel = "stylesheet"
+link.href = "https://www.packetloop.com/assets/arbor_sale_banner.css?body=1"
+document.getElementsByTagName("head")[0].appendChild(link)
+$.getScript('https://www.packetloop.com/assets/packetloop/arbor-sale-banner.js?body=1')
+    </script> 
+  <link type="text/css" rel="stylesheet" href="https://www.blogger.com/static/v1/widgets/1535467126-widget_css_2_bundle.css"> 
+  <link type="text/css" rel="stylesheet" href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=768505746142801567&amp;zx=a39fdc11-2a13-45c6-bbd4-7dcac6001687"> 
+  <style id="page-skin-1" type="text/css"><!--
+body {
+font-family: 'Open Sans', sans-serif;
+background-color: #d9e6eb;
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAIAAADZSiLoAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/PH7z8PX7xkYGJgglLyoIBOEAvIBAgwA0f4LsMuAsZAAAAAASUVORK5CYII=');
+}
+.blogger-clickTrap { display: none }
+.hugewrap {
+position relative;
+width: 100%;
+}
+.bigwrap {
+position: absolute;
+display: block;
+width: 940px;
+margin-left: -470px;
+left: 50%;
+top: 0;
+bottom: 0;
+height: 100%;
+min-height: 100%;
+}
+.magical-white-background {
+/*background-color: white;*/
+display: block;
+position: absolute;
+right: 0px;
+top: 0px;
+bottom: 0px;
+width: 50%;
+}
+#navbar {
+display:none;
+}
+#navbar * {
+height: 0px;
+visibility: hidden;
+display: none;
+}
+#Blog1 {
+margin: 0;
+margin-top: 20px;
+}
+#Profile1 {
+display: none;
+}
+.section {
+margin: 0;
+}
+#Attribution1 {
+display: none;
+}
+.side {
+vertical-align: top;
+display: inline-block;
+width: 196px;
+font-size: 12px;
+color: #333333;
+}
+.side h2 {
+color: #535353;
+font-size: 18px;
+text-weight: normal;
+text-transform: uppercase;
+border-bottom: 1px dashed #757575;
+padding-bottom: 10px;
+margin-bottom: 10px;
+}
+.side a {
+color: #535353;
+}
+.content {
+min-height: 100%;
+vertical-align: top;
+display: inline-block;
+width: 710px;
+padding-left: 30px;
+font-size: 14px;
+position: relative;
+background-image: url(http://packetloop-blog.s3.amazonaws.com/side-shadow.png);
+background-repeat: repeat-y;
+background-position: 15px 0px;
+}
+.post-body h2 {
+padding-top: 10px
+}
+.content .inner {
+min-height: 100%;
+padding-left: 30px;
+padding-right: 30px;
+background-color: #fff;
+padding-right: 30px;
+}
+.blog-posts {
+position: relative;
+padding-bottom: 40px;
+}
+.post-divide {
+position: absolute;
+left: -30px;
+}
+.date-header {
+display: none;
+}
+.date-outer {
+padding-bottom: 10px;
+}
+.post-outer, .post {
+padding-bottom: 20px;
+}
+.nav {
+padding-top: 20px;
+display: inline-block;
+}
+.nav ol {
+padding: 0;
+}
+.nav ol li {
+display: inline-block;
+margin-right: 5px;
+}
+.nav ol li a {
+padding: 10px;
+color: black;
+text-transform: uppercase;
+text-decoration: none;
+font-size: 14px;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+}
+.nav ol li a:hover, .nav .selected {
+background-color: black;
+color: white;
+}
+.social {
+display: inline-block;
+position: absolute;
+right: 50px;
+top: 30px;
+}
+.social a {
+display: inline-block;
+}
+a {
+color: #00a9ff;
+}
+.social a img:hover {
+-webkit-transform: scale(1.1);
+}
+.post-details {
+border-top: 1px dashed #888;
+border-bottom: 1px dashed #888;
+padding-top: 7px;
+padding-bottom: 7px;
+margin-bottom: 10px;
+font-size: 12px;
+color: #00a9ff;
+line-height: 12px;
+}
+.post-details * {
+display: inline-block;
+}
+.post-details img {
+padding-top: 1px;
+}
+.post-details .padleft {
+padding-left: 20px;
+}
+.post-details a {
+text-decoration: none;
+color: #00a9ff;
+}
+.post-details a:hover {
+color: #000;
+}
+.content .post {
+position: relative;
+}
+.content .fancydate {
+position: absolute;
+background-image: url(http://packetloop-blog.s3.amazonaws.com/date-background.png);
+background-repeat: no-repeat;
+color: white;
+display: block;
+left: -35px;
+width: 88px;
+height: 48px;
+text-align: center;
+padding-left: 13px;
+padding-top: 8px;
+line-height: 1;
+}
+.content .fancydate .fd1 {
+font-size: 20px
+}
+.content .fancydate .fd2 {
+font-size: 11px
+}
+.content h3 {
+font-size: 25px;
+font-weight: 700;
+padding-left: 60px;
+padding-top: 6px;
+padding-bottom: 15px;
+}
+.content h3 a {
+color: black;
+text-decoration: none;
+}
+.post-footer {
+padding-top: 10px;
+}
+.footer {
+clear: both;
+}
+
+--></style> 
+  <style id="template-skin-1" type="text/css"><!--
+
+--></style> 
+  <script type="text/javascript">var a="indexOf",b="&m=1",e="(^|&)m=",f="?",g="?m=1";function h(){var c=window.location.href,d=c.split(f);switch(d.length){case 1:return c+g;case 2:return 0<=d[1].search(e)?null:c+b;default:return null}}var k=navigator.userAgent;if(-1!=k[a]("Mobile")&&-1!=k[a]("WebKit")&&-1==k[a]("iPad")||-1!=k[a]("Opera Mini")||-1!=k[a]("IEMobile")){var l=h();l&&window.location.replace(l)};
+</script>
+  <script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script>
+ </head> 
+ <body class="loading"> 
+  <div class="navbar section" id="navbar">
+   <div class="widget Navbar" id="Navbar1">
+    <script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script> 
+    <div id="navbar-iframe-container"></div> 
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script> 
+    <script type="text/javascript">
+        gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+          if (gapi.iframes && gapi.iframes.getContext) {
+            gapi.iframes.getContext().openChild({
+                url: 'https://www.blogger.com/navbar.g?targetBlogID\075768505746142801567\46blogName\75Packetloop+Blog\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://blog.packetloop.com/search\46blogLocale\75en_GB\46v\0752\46homepageUrl\75http://blog.packetloop.com/\46blogFollowUrl\75https://plus.google.com/102967241915785394766\46vt\75-286687959498911426',
+                where: document.getElementById("navbar-iframe-container"),
+                id: "navbar-iframe"
+            });
+          }
+        });
+      </script>
+    <script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script> 
+   </div>
+  </div> 
+  <div class="magical-white-background"></div> 
+  <div class="hugewrap"> 
+   <div class="bigwrap"> 
+    <div class="side"> 
+     <div class="header section" id="header">
+      <div class="widget Header" id="Header1"> 
+       <div id="header-inner"> 
+        <a href="http://blog.packetloop.com/" style="display: block"> <img alt="Packetloop Blog" height="245px; " id="Header1_headerimg" src="http://4.bp.blogspot.com/-2C_Z3uzwpOY/T41e4c8rdeI/AAAAAAAAJeA/mU0D867uZuo/s1600/bloglogo.png" style="display: block" width="199px; "> </a> 
+       </div> 
+      </div>
+     </div> 
+     <div class="tabs section" id="crosscol"></div> 
+     <div class="tabs section" id="crosscol-overflow"></div> 
+     <aside> 
+      <div class="sidebar section" id="sidebar-left-1">
+       <div class="widget BlogArchive" id="BlogArchive1"> 
+        <h2>Blog Archive</h2> 
+        <div class="widget-content"> 
+         <div id="ArchiveList"> 
+          <div id="BlogArchive1_ArchiveList"> 
+           <ul class="hierarchy"> 
+            <li class="archivedate expanded"> <a class="toggle" href="javascript:void(0)"> <span class="zippy toggle-open">▼&nbsp;</span> </a> <a class="post-count-link" href="http://blog.packetloop.com/search?updated-min=2013-01-01T00:00:00-08:00&amp;updated-max=2014-01-01T00:00:00-08:00&amp;max-results=13">2013</a> <span class="post-count" dir="ltr">(13)</span> 
+             <ul class="hierarchy"> 
+              <li class="archivedate expanded"> <a class="toggle" href="javascript:void(0)"> <span class="zippy toggle-open">▼&nbsp;</span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2013_09_01_archive.html">September</a> <span class="post-count" dir="ltr">(1)</span> 
+               <ul class="posts"> 
+                <li><a href="http://blog.packetloop.com/2013/09/packetloop-acquired-by-arbor-networks.html">Packetloop acquired by Arbor Networks</a></li> 
+               </ul> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2013_05_01_archive.html">May</a> <span class="post-count" dir="ltr">(1)</span> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2013_04_01_archive.html">April</a> <span class="post-count" dir="ltr">(1)</span> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2013_03_01_archive.html">March</a> <span class="post-count" dir="ltr">(3)</span> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2013_02_01_archive.html">February</a> <span class="post-count" dir="ltr">(3)</span> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2013_01_01_archive.html">January</a> <span class="post-count" dir="ltr">(4)</span> </li> 
+             </ul> </li> 
+           </ul> 
+           <ul class="hierarchy"> 
+            <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/search?updated-min=2012-01-01T00:00:00-08:00&amp;updated-max=2013-01-01T00:00:00-08:00&amp;max-results=17">2012</a> <span class="post-count" dir="ltr">(17)</span> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2012_12_01_archive.html">December</a> <span class="post-count" dir="ltr">(2)</span> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2012_11_01_archive.html">November</a> <span class="post-count" dir="ltr">(1)</span> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2012_10_01_archive.html">October</a> <span class="post-count" dir="ltr">(4)</span> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2012_09_01_archive.html">September</a> <span class="post-count" dir="ltr">(1)</span> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2012_07_01_archive.html">July</a> <span class="post-count" dir="ltr">(1)</span> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2012_06_01_archive.html">June</a> <span class="post-count" dir="ltr">(4)</span> </li> 
+             </ul> 
+             <ul class="hierarchy"> 
+              <li class="archivedate collapsed"> <a class="toggle" href="javascript:void(0)"> <span class="zippy"> ►&nbsp; </span> </a> <a class="post-count-link" href="http://blog.packetloop.com/2012_03_01_archive.html">March</a> <span class="post-count" dir="ltr">(4)</span> </li> 
+             </ul> </li> 
+           </ul> 
+          </div> 
+         </div> 
+         <div class="clear"></div> 
+         <span class="widget-item-control"> <span class="item-control blog-admin"> <a class="quickedit" href="//www.blogger.com/rearrange?blogID=768505746142801567&amp;widgetType=BlogArchive&amp;widgetId=BlogArchive1&amp;action=editWidget&amp;sectionId=sidebar-left-1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;BlogArchive1&quot;));" target="configBlogArchive1" title="Edit"> <img alt="" height="18" src="http://img1.blogblog.com/img/icon18_wrench_allbkg.png" width="18"> </a> </span> </span> 
+         <div class="clear"></div> 
+        </div> 
+       </div>
+       <div class="widget Profile" id="Profile1"> 
+        <h2>About Me</h2> 
+        <div class="widget-content"> 
+         <ul> 
+          <li><a class="profile-name-link g-profile" href="http://www.blogger.com/profile/06276597363935837869" style="background-image: url(//www.blogger.com/img/logo-16.png);">The Goodtime Stringband</a></li> 
+          <li><a class="profile-name-link g-profile" href="https://plus.google.com/114167423140989517977" style="background-image: url(//www.google.com/images/icons/ui/gprofile_button-16.png);">Michael Baker</a></li> 
+          <li><a class="profile-name-link g-profile" href="https://plus.google.com/113426021638893865323" style="background-image: url(//www.google.com/images/icons/ui/gprofile_button-16.png);">Tyson Garrett</a></li> 
+          <li><a class="profile-name-link g-profile" href="https://plus.google.com/110015040439187581298" style="background-image: url(//www.google.com/images/icons/ui/gprofile_button-16.png);">Scott Crane</a></li> 
+         </ul> 
+         <div class="clear"></div> 
+         <span class="widget-item-control"> <span class="item-control blog-admin"> <a class="quickedit" href="//www.blogger.com/rearrange?blogID=768505746142801567&amp;widgetType=Profile&amp;widgetId=Profile1&amp;action=editWidget&amp;sectionId=sidebar-left-1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Profile1&quot;));" target="configProfile1" title="Edit"> <img alt="" height="18" src="http://img1.blogblog.com/img/icon18_wrench_allbkg.png" width="18"> </a> </span> </span> 
+         <div class="clear"></div> 
+        </div> 
+       </div>
+      </div> 
+     </aside> 
+     <aside> 
+     </aside> 
+    </div>
+    <div class="content"> 
+     <div class="inner"> 
+      <div class="nav"> 
+       <ol> 
+        <li><a class="selected" href="/">The Blog</a></li> 
+        <li><a href="/p/about-us.html">About us</a></li> 
+        <li><a href="http://www.packetloop.com/">Visit the site</a></li> 
+        <li><a href="mailto:info@packetloop.com">Contact us</a></li> 
+       </ol> 
+      </div> 
+      <div class="social"> 
+       <a href="http://twitter.com/#!/packetloop"> <img alt="Twitter" height="26" src="http://packetloop-blog.s3.amazonaws.com/twitter.png" title="Packetloop on Twitter" width="25"> </a> 
+       <a href="https://www.facebook.com/pages/Packetloop/334341666593938"> <img alt="Facebook" height="26" src="http://packetloop-blog.s3.amazonaws.com/facebook.png" title="Packetloop on Facebook" width="25"> </a> 
+       <a href="https://plus.google.com/102967241915785394766?prsrc=3"> <img alt="Google+" height="26" src="http://packetloop-blog.s3.amazonaws.com/google.png" title="Packetloop on Google+" width="25"> </a> 
+      </div> 
+      <div class="main section" id="main">
+       <div class="widget Blog" id="Blog1"> 
+        <div class="blog-posts hfeed"> 
+         <div class="post-outer"> 
+          <div class="post hentry"> 
+           <a name="4710929584415106272"></a> 
+           <div class="fancydate">
+             3 Sep 2013 
+           </div> 
+           <h3 class="post-title entry-title"> <a href="http://blog.packetloop.com/2013/09/packetloop-acquired-by-arbor-networks.html">Packetloop acquired by Arbor Networks</a> </h3> 
+           <div class="post-details"> 
+            <span class="post-author vcard"> <img height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-author.png" width="14"> <a href="https://plus.google.com/110015040439187581298" rel="author" title="author profile"> Scott Crane </a> </span> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-comments.png" width="15"> 
+            <a class="comment-link" href="http://blog.packetloop.com/2013/09/packetloop-acquired-by-arbor-networks.html#comment-form" onclick="">0 comments</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-permalink.png" width="12"> 
+            <a href="http://blog.packetloop.com/2013/09/packetloop-acquired-by-arbor-networks.html#more" title="Packetloop acquired by Arbor Networks">Permalink</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-clock.png" width="12"> 
+            <abbr class="published" title="2013-09-03T07:44:00-07:00">Tuesday, September 03, 2013</abbr> 
+           </div> 
+           <div class="post-body entry-content" id="post-body-4710929584415106272"> 
+            <div class="MsoNormal"> 
+             <div dir="ltr" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt;"> 
+              <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">Today we are thrilled to announce that Packetloop has agreed to become part of <a href="http://www.arbornetworks.com/" target="_blank">Arbor Networks</a>. </span><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">We could not have found a better partner than Arbor, who are an icon in the security industry, leading the way in network traffic management and DDoS mitigation solutions. I say partner, because we see this relationship as more than just an acquisition. It is bringing together two powerful and complimentary security solutions and two organizations who are incredibly similar in every way despite the obvious difference in size. Let me explain.</span></span>
+              <br> 
+              <span style="font-size: 15px; line-height: 1.15; white-space: pre-wrap;"><span style="font-family: Arial, Helvetica, sans-serif;"><br></span></span> 
+              <span style="font-size: 15px; line-height: 1.15; white-space: pre-wrap;"><span style="font-family: Arial, Helvetica, sans-serif;">When we started Packetloop back in 2011, we set out with a singular goal, to create a platform that would change the way the industry performed security analytics. Not just any platform, but one that we would be happy to use ourselves on a daily basis as security consultants. &nbsp;We also listened to what our customers and peers were saying, the challenges they were facing and the questions they had that were not being answered. The platform also had to solve what no one else had yet achieved; how to process and present network packet captures on a massive scale, from anywhere in the network. This meant processing terabytes of data representing months of network traffic. All of these elements went into the development of Packetloop and drove a cycle of constant innovation that led to us having the first Cloud based Big Data Security Analytics platform in the market.</span></span>
+             </div> 
+             <span style="font-size: 15px; line-height: 1.15; white-space: pre-wrap;"><span style="font-family: Arial, Helvetica, sans-serif;"><br></span></span> 
+             <span style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size: 15px; line-height: 1.15; white-space: pre-wrap;">On this journey we spoke to a lot of different people and got plenty of feedback from different organizations. Everyone had a view on what we were doing, how we could do it better, whom we should partner with and what was missing from the platform. </span><span style="font-size: 15px; line-height: 1.15; white-space: pre-wrap;">We never let this shift the focus from ensuring we put the best features into the platform, even if this meant delaying a release or re-engineering part of the platform to find more performance or simply present the data in a better way. </span></span>
+             <br> 
+             <span style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"><br></span> 
+             <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">But it was our initial meetings with Arbor where we first truly met a group of like-minded security professionals, who fully understood what we were trying to achieve, appreciated the enormity of what we had created and could see the future in our feature roadmap. As we were introduced to the wider Arbor team, we discovered a company culture identical to our own. A team with a sense of focus, committed and passionate about achieving their goals, who had been able to maintain that startup feel. Arbor threw down a challenge to us. Did we really want to build something big? Did we want to revolutionize the security analytics market? With this challenge (building and changing the market) and understanding where Packetloop would fit alongside</span><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"> <a href="http://www.arbornetworks.com/products/peakflow" target="_blank">Peakflow</a> and <a href="http://www.arbornetworks.com/products/pravail" target="_blank">Pravail</a></span><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">, and more importantly how the team would fit into Arbor, completing the deal that led to this announcement today just made sense. See what acquiring Packetloop <a href="http://www.arbornetworks.com/blog/packetloop" target="_blank">means to Arbor </a>and you will understand the significance of this deal. </span></span>
+             <br> 
+             <span style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"><br></span> 
+             <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">So what does this mean for Packetloop? We have a world-class Big Data Security Analytics platform that now has the backing of an incredible engineering and support team. We will now be represented by a global sales and consulting presence, and we will have access to the </span><span style="font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">ATLAS Intelligence Feed</span><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"> and </span><span style="font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">ASERT</span><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"> research teams. Most importantly for us, Arbor’s belief in what we have achieved so far means that they will </span><span style="color: black; font-size: 15px; font-weight: bold; vertical-align: baseline; white-space: pre-wrap;">invest in further growth of the Packetloop development team locally, establishing an R&amp;D centre of excellence based in Sydney, Australia</span><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">. This is incredible news for the Australian information security industry and Australian startups in general, and further proof that Arbor is a truly global organization. We look forward to the months ahead where we will integrate Packetloop with the Arbor product suite, and bring to the industry an even more revolutionary suite of security analytics tools that will change the way the people think about Advanced Threat Mitigation.</span></span>
+             <br> 
+             <span style="font-size: 15px; line-height: 1.15; white-space: pre-wrap;"><span style="font-family: Arial, Helvetica, sans-serif;"><br></span></span> 
+             <span style="font-size: 15px; line-height: 1.15; white-space: pre-wrap;"><span style="font-family: Arial, Helvetica, sans-serif;">As this will be the last blog post under the Packetloop banner, I would like to take this opportunity to thank all of our early access and beta users, customers and free users, blog readers, people who followed us on social media and everyone who turned up at conferences to hear us speak about Big Data Security Analytics. Your feedback and continued support is what drives us and is what makes us keep innovating and delivering the best platform we can. Most importantly I need to thank the Packetloop team, whose incredible efforts have made this announcement possible today.</span></span>
+             <br> 
+             <span style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"><br></span> 
+             <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">For more information on Arbor and the acquisition, please see the full </span><a href="http://www.arbornetworks.com/news/packetloop" style="line-height: 1.15; text-decoration: none;"><span style="color: #1155cc; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">press release</span></a><span style="color: black; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"> on the Arbor Networks.</span></span>
+             <br> 
+             <b style="font-weight: normal;"><span style="font-family: Arial, Helvetica, sans-serif;"><br><span style="background-color: transparent; color: black; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="background-color: transparent; color: black; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br><span style="background-color: transparent; color: black; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;"></span></span></b>
+             <br> 
+             <div dir="ltr" style="line-height: 1.15; margin-bottom: 0pt; margin-top: 0pt;"> 
+              <span style="background-color: transparent; color: black; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Scott Crane</span>
+             </div> 
+             <span style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">CEO and Co-Founder</span>
+            </div> 
+            <div class="MsoNormal"> 
+             <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+            </div> 
+            <div class="MsoNormal"> 
+             <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+            </div> 
+            <div class="MsoNormal"> 
+             <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+            </div> 
+            <!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Revision>0</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Pages>1</o:Pages>
+  <o:Words>585</o:Words>
+  <o:Characters>3337</o:Characters>
+  <o:Company>Packetloop</o:Company>
+  <o:Lines>27</o:Lines>
+  <o:Paragraphs>7</o:Paragraphs>
+  <o:CharactersWithSpaces>3915</o:CharactersWithSpaces>
+  <o:Version>14.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--> 
+            <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>JA</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]-->
+            <!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="276">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--> 
+            <!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+table.MsoNormalTable
+ {mso-style-name:"Table Normal";
+ mso-tstyle-rowband-size:0;
+ mso-tstyle-colband-size:0;
+ mso-style-noshow:yes;
+ mso-style-priority:99;
+ mso-style-parent:"";
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-para-margin:0cm;
+ mso-para-margin-bottom:.0001pt;
+ mso-pagination:widow-orphan;
+ font-size:12.0pt;
+ font-family:Cambria;
+ mso-ascii-font-family:Cambria;
+ mso-ascii-theme-font:minor-latin;
+ mso-hansi-font-family:Cambria;
+ mso-hansi-theme-font:minor-latin;
+ mso-ansi-language:EN-US;}
+</style>
+<![endif]--> 
+            <!--StartFragment--> 
+            <!--EndFragment-->
+            <br> 
+            <div class="MsoNormal"> 
+             <br>
+            </div> 
+            <div style="clear: both;"></div> 
+           </div> 
+           <div class="post-footer"> 
+            <div class="post-footer-line post-footer-line-1"> 
+             <span class="post-icons"> <span class="item-control blog-admin pid-1075858920"> <a href="http://www.blogger.com/post-edit.g?blogID=768505746142801567&amp;postID=4710929584415106272&amp;from=pencil" title="Edit Post"> <img alt="" class="icon-action" height="18" src="http://img2.blogblog.com/img/icon18_edit_allbkg.gif" width="18"> </a> </span> </span> 
+             <div class="post-share-buttons goog-inline-block"> 
+              <a class="goog-inline-block share-button sb-email" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4710929584415106272&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a>
+              <a class="goog-inline-block share-button sb-blog" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4710929584415106272&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a>
+              <a class="goog-inline-block share-button sb-twitter" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4710929584415106272&amp;target=twitter" target="_blank" title="Share to Twitter"><span class="share-button-link-text">Share to Twitter</span></a>
+              <a class="goog-inline-block share-button sb-facebook" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4710929584415106272&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a>
+              <a class="goog-inline-block share-button sb-pinterest" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4710929584415106272&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+              <div class="goog-inline-block dummy-container">
+               <g:plusone source="blogger:blog:plusone" href="http://blog.packetloop.com/2013/09/packetloop-acquired-by-arbor-networks.html" size="medium" width="300" annotation="inline" />
+              </div> 
+             </div> 
+            </div> 
+            <div class="post-footer-line post-footer-line-2">
+             <span class="post-labels"> </span> 
+            </div> 
+            <div class="post-footer-line post-footer-line-3">
+             <span class="post-location"> </span> 
+            </div> 
+           </div> 
+          </div> 
+          <img class="post-divide" height="21" src="http://packetloop-blog.s3.amazonaws.com/post-divide.png" width="474"> 
+         </div> 
+         <div class="post-outer"> 
+          <div class="post hentry"> 
+           <a name="4494399246204644715"></a> 
+           <div class="fancydate">
+             15 May 2013 
+           </div> 
+           <h3 class="post-title entry-title"> <a href="http://blog.packetloop.com/2013/05/manipulating-time-and-space-big-data.html">Manipulating Time and Space - Big Data Security Analytics and the Kill Chain</a> </h3> 
+           <div class="post-details"> 
+            <span class="post-author vcard"> <img height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-author.png" width="14"> <a href="https://plus.google.com/114167423140989517977" rel="author" title="author profile"> Michael Baker </a> </span> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-comments.png" width="15"> 
+            <a class="comment-link" href="http://blog.packetloop.com/2013/05/manipulating-time-and-space-big-data.html#comment-form" onclick="">0 comments</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-permalink.png" width="12"> 
+            <a href="http://blog.packetloop.com/2013/05/manipulating-time-and-space-big-data.html#more" title="Manipulating Time and Space - Big Data Security Analytics and the Kill Chain">Permalink</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-clock.png" width="12"> 
+            <abbr class="published" title="2013-05-15T18:44:00-07:00">Wednesday, May 15, 2013</abbr> 
+           </div> 
+           <div class="post-body entry-content" id="post-body-4494399246204644715"> 
+            <br> In preparing for speaking at the Auscert Conference next week I kept thinking about the 'Promise' of Big Data and Security and this includes it's future potential as well as the hope it brings to deliver the next generation and evolution of security products. I am also mindful that part of the audience will think that Big Data is just hype or buzz and as it enters the 
+            <a href="http://blogs.gartner.com/svetlana-sicular/guest-post-big-data-is-falling-into-the-trough-of-disillusionment/" target="_blank">trough of disillusionment</a> it will be absorbed, quickly forgotten.
+            <br> 
+            <br> Then I re-read the 
+            <a href="http://intelreport.mandiant.com/" target="_blank">Mandiant APT1 report</a> and 
+            <a href="http://krebsonsecurity.com/2012/09/chinese-hackers-blamed-for-intrusion-at-energy-industry-giant-telvent/" target="_blank">posts</a> 
+            <a href="http://www.bloomberg.com/news/2012-07-26/china-hackers-hit-eu-point-man-and-d-c-with-byzantine-candor.html" target="_blank">related</a> to the tactics used then and 
+            <a href="http://theonion.github.io/blog/2013/05/08/how-the-syrian-electronic-army-hacked-the-onion/" target="_blank">now</a>. Normally at this time I remember something that 
+            <a href="https://twitter.com/s_crawford" target="_blank">Scott Crawford</a> and I have discussed months before and I get a Tada! moment. Big Data Security Analytics is the first technology capable of disrupting the lateral movements of attackers. This is often referred to as the attack lifecycle or the kill chain.
+            <br> 
+            <h2> Attack Life Cycles (Kill Chain)</h2> 
+            <div>
+              The attack lifecycle or Kill Chain reflects the&nbsp;reality&nbsp;of modern tactics when it comes to a compromise. Some great references to read more about it are:
+            </div> 
+            <div> 
+             <ul> 
+              <li>“Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains” by Hutchins, Cloppert and Amin from Lockheed Martin Corporation [<a href="http://papers.rohanamin.com/wp-content/uploads/papers.rohanamin.com/2011/08/iciw2011.pdf" target="_blank">PDF</a>]</li> 
+              <li>Mandiant's APT1 Report p27 "APT1: Attack Lifecycle" [<a href="http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf" target="_blank">PDF</a>]</li> 
+              <li>"A Case Study of Intelligence-Driven Defense" by <a href="https://twitter.com/dguido" target="_blank">Dan Guido</a>.</li> 
+             </ul> In “Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains” by Hutchins, Cloppert and Amin from Lockheed Martin Corporation the phases are defined as:
+            </div> 
+            <div> 
+             <ul> 
+              <li>Reconnaissance</li> 
+              <li>Weaponization</li> 
+              <li>Delivery</li> 
+              <li>Exploitation</li> 
+              <li>Installation</li> 
+              <li>Command and Control</li> 
+              <li>Actions and Objectives</li> 
+             </ul> 
+             <div>
+               Breaking the kill chain can be thought of trying to Detect, Deny, Disrupt, Degrade, Deceive or Destroy these phases.&nbsp;
+             </div> 
+            </div> 
+            <h2> Invasion Games</h2> 
+            <div>
+              The dichotomy of Advanced Persistent Threat (APT) is that we know they are not advanced technically but rather the posture of the attacker is advanced in the sense they are prepared to move/think laterally and easily accomplish their goal. Why is that? What is attacker asymmetry?
+            </div> 
+            <div> 
+             <br>
+            </div> 
+            <div>
+              I find it best to explain to people as an invasion game which we are all really familiar with. If you aren't familiar with the term there's a quick explanation 
+             <a href="http://www.thephysicaleducator.com/resources/games/invasion/" target="_blank">here</a>. For me the greatest invasion game is Rugby a game where
+             <i> defence has improved significantly over the last decade. </i>Defence dominates the game and good defensive lines can totally stifle an attack.
+            </div> 
+            <div> 
+             <br>
+            </div> 
+            <div> 
+             <div class="p1"> 
+              <span class="s1">Invasion games pit Attackers against Defenders. The Attackers have a defined goal and can manipulate or avoid defensive lines. Defensive lines can be thought of as passive (on their heels) or active. Active defenses communicate, cover each other and frustrate - their goal is to disrupt, delay and ultimately repel the attack.&nbsp;</span>
+             </div> 
+             <div class="p2"> 
+              <span class="s1"></span>
+              <br>
+             </div> 
+             <div class="p1"> 
+              <span class="s1">Attackers and Defenders are both trying to manipulate time and space. This can be thought of as the speed and structure of their attack patterns as well as how broad or spread they are.</span>
+             </div> 
+             <div class="p2"> 
+              <span class="s1"></span>
+              <br>
+             </div> 
+             <div class="p1"> 
+              <span class="s1">In ‘Security’ defensive lines have generally been inactive or passive at best. When faced with a determined Attacker defensive lines are easily stretched, avoided and where there are collisions the Attacker is able to win them. There is little disruption of the attack lifecycle or breaking of the ‘kill chain’. Furthermore collisions are not sought out by Defenders to create a contest.</span>
+             </div> 
+             <div class="p2"> 
+              <span class="s1"></span>
+              <br>
+             </div> 
+             <div class="p1"> 
+              <span class="s1">Great defensive lines communicate, are knowledgable of attack patterns, move fast off the line, collapse when breached, are able to stretch and reset. They seek to encounter and win their interactions. They manipulate time and space by moving forward to meet the attacker and force attackers into predictable lateral moves that are easy to disrupt.</span>
+             </div> 
+             <div class="p2"> 
+              <span class="s1"></span>
+              <br>
+             </div> 
+             <div class="p1"> 
+              <span class="s1">Understanding attack patterns and seeking out and winning collisions denies momentum and this is the disruption of the kill chain.</span>
+             </div> 
+             <h2> <span class="s1">Manipulating Time and Space</span></h2> 
+             <div class="p1"> 
+              <span class="s1">Pioneering the use of Big Data for Security taught us a lot about attackers and attack lifecycles. We are able to enumerate, enrich, link and build context to understand security events from network packet captures. If I want the deep packet inspection information for every indicator and warning <a href="http://blog.packetloop.com/2013/03/from-indicators-of-compromise-to.html" target="_blank">I can get it</a>, if I want to track the specific attributes of an attacker (user agent(s) or operating system) I can. There's literally no limit to the information that can be access, extracted, enriched and linked contextually. Threats, Sessions, Protocols and Files / Security, Network and Threat intelligence.</span>
+             </div> 
+             <div class="p1"> 
+              <span class="s1"><br></span>
+             </div> 
+             <div class="p1">
+               Big Data tooling and NoSQL data models allowed us to manipulate 'Space' and radically changed the nature of 'Time'. You can zoom from years to minutes, you can understand attacks and attackers in incredible detail but you have to wait - maybe it's 7 minutes, maybe it's 15 minutes but this was the trade off for Big Data or so we thought.
+             </div> 
+             <div class="p1"> 
+              <br>
+             </div> 
+             <div class="p1">
+               To truly create a next generation security technology Big Data Security Analytics needs to disrupt the attack life cycle or kill chain. This means not just solving the Size and Scale problems of network data and security event streams but also doing this in real time.
+             </div> 
+             <div class="p1"> 
+              <br>
+             </div> 
+             <div class="p1">
+               A real time Big Data Security Analytics system is broad (laterally), seeks out and wins it's collisions e.g. every interaction with the attacker is expected to be biased towards the defender and enables decisions to be made in real time. These decisions relate to the modelling and disruption of the Kill Chain.
+             </div> 
+             <div class="p1"> 
+              <br>
+             </div> 
+             <div class="p1">
+               While processing at the speed of the stream (network and security event streams) we can't dismiss the incredible amount of knowledge that is delivered after the fact. It's the reason why we are named Packetloop. There's gold in replaying network traffic and reprocessing files. This information is generally the 
+              <b>best</b>&nbsp;information for Kill Chain modelling.
+             </div> 
+             <h2> Disrupting the Kill Chain in Real Time</h2> 
+             <div>
+               In the previous section I mentioned that there are collisions between Defenders and Attackers. These collisions can be thought of as interactions and where there is an&nbsp;interaction&nbsp;I want it biased in my (defender's) favor. The bias is in terms of information and knowledge regarding the current interaction and how it relates to all other interactions.
+             </div> 
+             <div> 
+              <br>
+             </div> 
+             <div>
+               So suppose you give me a file (via email or something I was tricked into downloading). This interaction of a single file holds so much information that I can use. I have quickly sketched some of these in the diagram below;
+             </div> 
+             <div> 
+              <br>
+             </div> 
+             <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+              <tbody> 
+               <tr>
+                <td style="text-align: center;"><a href="http://3.bp.blogspot.com/-KfAbIqvuHb0/UZQrBtxu-XI/AAAAAAAAAbA/XFqbH081mKk/s1600/File+Stream.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="424" src="http://3.bp.blogspot.com/-KfAbIqvuHb0/UZQrBtxu-XI/AAAAAAAAAbA/XFqbH081mKk/s640/File+Stream.png" width="640"></a></td>
+               </tr> 
+               <tr>
+                <td class="tr-caption" style="text-align: center;">The 'Jujutsu' of interactions</td>
+               </tr> 
+              </tbody>
+             </table> 
+             <div> 
+              <br>
+             </div> 
+             <div>
+               So take a file, enrich it, link the information and correlate it based on other information you have from Threats, Sessions and Protocols and you start to see how this could be used to disrupt a Kill Chain. Is it the compile time? Is it the ssdeep hash of the file hidden inside the executable file? Is it a yara signature triggering for shellcode? Is it the emulation of shellcode? Is it the IP address of the web server? the Country it resides in? It's name servers? or the mean distance between those name servers?
+             </div> 
+             <div> 
+              <br>
+             </div> 
+             <div>
+               When you read the Mandiant APT1 report or similar posts you realise how successful attacks can be when they move laterally. Delivery the file by email, establish C2 communication initially via HTTP (WEBC2) and then later via a more elaborate remote access trojan (RAT). Moving laterally through privilege escalation and further compromise. Data is compressed and encrypted and exfiltrated.
+             </div> 
+             <div> 
+              <br>
+             </div> 
+             <div>
+               The real time Big Data Security analytics can model this as it happens.
+             </div> 
+             <div> 
+              <ul> 
+               <li>The email is processed, mail headers extracted to gain the origination IP address of the sender. The text can be analysed for irregularities and sentiment and the attachment extracted and processed.</li> 
+               <li>Pivoting off the attachment can produce a vast amount of information. Are there files embedded inside the attachment? Is the attachment or files within the attachment known malware when compared to VirusTotal or malware database (e.g. MD5/SHA-1/ssdeep).</li> 
+               <li>Detonate the attachment in a controlled way using a Malware Sandbox and extract the output communications (DNS, HTTP, IRC, XMPP) for DNS and IP information.</li> 
+               <li>Determine based on Session and Protocol information indicating that this communication is an outlier.</li> 
+               <li>Correlate all of this information with indicators and warnings produced by threat management systems.</li> 
+              </ul> 
+              <div>
+                The correlation is not a JOIN on an IP address it is a&nbsp;probabilistic&nbsp;model that is used to make a&nbsp;decision&nbsp;.. but more on this in a future post.
+              </div> 
+             </div> 
+             <div> 
+              <br>
+             </div> 
+             <div>
+               Although my points look simple there is real math and real science (Machine Learning) that can be applied to this task. This is a light year away from traditional classification and correlation. For example take the modelling of entropy for Metasploits Meterpreter - a payload delivered to remotely access a compromised host.&nbsp;
+             </div> 
+             <div> 
+              <br>
+             </div> 
+             <div>
+               It's a simple model because I am only looking at two vectors (features). Entropy of the data transmitted and the amount or size of data transmitted. The blue line is the Client to Server entropy and the red dots are Server to Client entropy. This conversation takes place over HTTP and despite some weird URI's it looks like any other conversation to Wireshark.
+             </div> 
+             <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+              <tbody> 
+               <tr>
+                <td style="text-align: center;"><a href="http://2.bp.blogspot.com/-2zpW59k7xUI/UZQyJQVheQI/AAAAAAAAAbQ/ybH11VZQnps/s1600/figure_1.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="304" src="http://2.bp.blogspot.com/-2zpW59k7xUI/UZQyJQVheQI/AAAAAAAAAbQ/ybH11VZQnps/s640/figure_1.png" width="640"></a></td>
+               </tr> 
+               <tr>
+                <td class="tr-caption" style="text-align: center;">Client and Server Entropy for a Meterpreter Session over HTTP</td>
+               </tr> 
+              </tbody>
+             </table> 
+             <div>
+               When I look at the same conversation in approximately 55K conversations of HTTP conversations you can see how even simple features can be used to find outliers. In the figure below I have graphed Client to Server entropy for 54,189 HTTP conversations and that of the Meterpreter session which is also using HTTP. Meterpreter encrypts all communications between the client and the server and therefore has a very high entropy of almost 8 bits per byte.
+             </div> 
+             <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+              <tbody> 
+               <tr>
+                <td style="text-align: center;"><a href="http://2.bp.blogspot.com/-MhQg_nLIeLQ/UZQy7UMMm5I/AAAAAAAAAbY/TdyYyc49O-c/s1600/figure_4.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="304" src="http://2.bp.blogspot.com/-MhQg_nLIeLQ/UZQy7UMMm5I/AAAAAAAAAbY/TdyYyc49O-c/s640/figure_4.png" width="640"></a></td>
+               </tr> 
+               <tr>
+                <td class="tr-caption" style="text-align: center;">The Meterpreter needle in a HTTP haystack</td>
+               </tr> 
+              </tbody>
+             </table> 
+             <h2> Conclusion</h2> 
+             <div>
+               Big Data Security Analytics is the next generation of real time security products and has real applicability in disrupting the attack lifecycle or kill chain. Simple lateral attacks currently thwart defensive lines because of lack of communication and information sharing, there's no brain to contemplate and mitigate attacks.
+             </div> 
+             <div> 
+              <br>
+             </div> 
+             <div>
+               I have briefly touched on Machine Learning and it's use in Big Data Security Analytics. I will look to focus on it in some future blog posts. Hope you enjoyed this post! If you did let us know!
+             </div> 
+            </div> 
+            <div style="clear: both;"></div> 
+           </div> 
+           <div class="post-footer"> 
+            <div class="post-footer-line post-footer-line-1"> 
+             <span class="post-icons"> <span class="item-control blog-admin pid-689447016"> <a href="http://www.blogger.com/post-edit.g?blogID=768505746142801567&amp;postID=4494399246204644715&amp;from=pencil" title="Edit Post"> <img alt="" class="icon-action" height="18" src="http://img2.blogblog.com/img/icon18_edit_allbkg.gif" width="18"> </a> </span> </span> 
+             <div class="post-share-buttons goog-inline-block"> 
+              <a class="goog-inline-block share-button sb-email" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4494399246204644715&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a>
+              <a class="goog-inline-block share-button sb-blog" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4494399246204644715&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a>
+              <a class="goog-inline-block share-button sb-twitter" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4494399246204644715&amp;target=twitter" target="_blank" title="Share to Twitter"><span class="share-button-link-text">Share to Twitter</span></a>
+              <a class="goog-inline-block share-button sb-facebook" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4494399246204644715&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a>
+              <a class="goog-inline-block share-button sb-pinterest" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4494399246204644715&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+              <div class="goog-inline-block dummy-container">
+               <g:plusone source="blogger:blog:plusone" href="http://blog.packetloop.com/2013/05/manipulating-time-and-space-big-data.html" size="medium" width="300" annotation="inline" />
+              </div> 
+             </div> 
+            </div> 
+            <div class="post-footer-line post-footer-line-2">
+             <span class="post-labels"> Labels: <a href="http://blog.packetloop.com/search/label/attack%20lifecycle" rel="tag">attack lifecycle</a>, <a href="http://blog.packetloop.com/search/label/big%20data%20security%20analytics" rel="tag">big data security analytics</a>, <a href="http://blog.packetloop.com/search/label/kill%20chain" rel="tag">kill chain</a>, <a href="http://blog.packetloop.com/search/label/real%20time" rel="tag">real time</a> </span> 
+            </div> 
+            <div class="post-footer-line post-footer-line-3">
+             <span class="post-location"> </span> 
+            </div> 
+           </div> 
+          </div> 
+          <img class="post-divide" height="21" src="http://packetloop-blog.s3.amazonaws.com/post-divide.png" width="474"> 
+         </div> 
+         <div class="post-outer"> 
+          <div class="post hentry"> 
+           <a name="892541262253820424"></a> 
+           <div class="fancydate">
+             10 Apr 2013 
+           </div> 
+           <h3 class="post-title entry-title"> <a href="http://blog.packetloop.com/2013/04/5-minutes-with-threat-analysis.html">5 minutes with Threat Analysis</a> </h3> 
+           <div class="post-details"> 
+            <span class="post-author vcard"> <img height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-author.png" width="14"> <a href="https://plus.google.com/114167423140989517977" rel="author" title="author profile"> Michael Baker </a> </span> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-comments.png" width="15"> 
+            <a class="comment-link" href="http://blog.packetloop.com/2013/04/5-minutes-with-threat-analysis.html#comment-form" onclick="">0 comments</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-permalink.png" width="12"> 
+            <a href="http://blog.packetloop.com/2013/04/5-minutes-with-threat-analysis.html#more" title="5 minutes with Threat Analysis">Permalink</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-clock.png" width="12"> 
+            <abbr class="published" title="2013-04-10T19:32:00-07:00">Wednesday, April 10, 2013</abbr> 
+           </div> 
+           <div class="post-body entry-content" id="post-body-892541262253820424">
+             Packetloop's Threat Analysis feature allows you to step through attacks play by play to accurately confirm indicators of compromise with real evidence. This screencast follows on from my last post "
+            <a href="http://blog.packetloop.com/2013/03/from-indicators-of-compromise-to.html" target="_blank">From Indicators of Compromise to Smoking Guns</a>".
+            <br> 
+            <br> 
+            <iframe allowfullscreen frameborder="0" height="360" mozallowfullscreen="mozallowfullscreen" src="http://player.vimeo.com/video/63788800" webkitallowfullscreen="webkitallowfullscreen" width="640"></iframe>
+            <br> 
+            <br> As you can see security analysts have the ability to identify and undersand attacks incredibly fast. They can&nbsp;visualize&nbsp;the entire attack timeline and walk through every packet step by step. Using the Advanced Filter they can quickly identify who the source of attack is, how the breach took place, how long the attacker was inside the network and what systems were affected and what information was accessed or stolen. 
+            <div style="clear: both;"></div> 
+           </div> 
+           <div class="post-footer"> 
+            <div class="post-footer-line post-footer-line-1"> 
+             <span class="post-icons"> <span class="item-control blog-admin pid-689447016"> <a href="http://www.blogger.com/post-edit.g?blogID=768505746142801567&amp;postID=892541262253820424&amp;from=pencil" title="Edit Post"> <img alt="" class="icon-action" height="18" src="http://img2.blogblog.com/img/icon18_edit_allbkg.gif" width="18"> </a> </span> </span> 
+             <div class="post-share-buttons goog-inline-block"> 
+              <a class="goog-inline-block share-button sb-email" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=892541262253820424&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a>
+              <a class="goog-inline-block share-button sb-blog" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=892541262253820424&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a>
+              <a class="goog-inline-block share-button sb-twitter" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=892541262253820424&amp;target=twitter" target="_blank" title="Share to Twitter"><span class="share-button-link-text">Share to Twitter</span></a>
+              <a class="goog-inline-block share-button sb-facebook" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=892541262253820424&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a>
+              <a class="goog-inline-block share-button sb-pinterest" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=892541262253820424&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+              <div class="goog-inline-block dummy-container">
+               <g:plusone source="blogger:blog:plusone" href="http://blog.packetloop.com/2013/04/5-minutes-with-threat-analysis.html" size="medium" width="300" annotation="inline" />
+              </div> 
+             </div> 
+            </div> 
+            <div class="post-footer-line post-footer-line-2">
+             <span class="post-labels"> Labels: <a href="http://blog.packetloop.com/search/label/analysis" rel="tag">analysis</a>, <a href="http://blog.packetloop.com/search/label/big%20data" rel="tag">big data</a>, <a href="http://blog.packetloop.com/search/label/big%20data%20security%20analytics" rel="tag">big data security analytics</a>, <a href="http://blog.packetloop.com/search/label/deep%20packet%20inspection" rel="tag">deep packet inspection</a>, <a href="http://blog.packetloop.com/search/label/security%20analytics" rel="tag">security analytics</a>, <a href="http://blog.packetloop.com/search/label/SIEM" rel="tag">SIEM</a>, <a href="http://blog.packetloop.com/search/label/threat%20analysis" rel="tag">threat analysis</a>, <a href="http://blog.packetloop.com/search/label/video" rel="tag">video</a> </span> 
+            </div> 
+            <div class="post-footer-line post-footer-line-3">
+             <span class="post-location"> </span> 
+            </div> 
+           </div> 
+          </div> 
+          <img class="post-divide" height="21" src="http://packetloop-blog.s3.amazonaws.com/post-divide.png" width="474"> 
+         </div> 
+         <div class="post-outer"> 
+          <div class="post hentry"> 
+           <a name="4848171215149711258"></a> 
+           <div class="fancydate">
+             25 Mar 2013 
+           </div> 
+           <h3 class="post-title entry-title"> <a href="http://blog.packetloop.com/2013/03/from-indicators-of-compromise-to.html">From Indicators of Compromise to Smoking Guns</a> </h3> 
+           <div class="post-details"> 
+            <span class="post-author vcard"> <img height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-author.png" width="14"> <a href="https://plus.google.com/114167423140989517977" rel="author" title="author profile"> Michael Baker </a> </span> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-comments.png" width="15"> 
+            <a class="comment-link" href="http://blog.packetloop.com/2013/03/from-indicators-of-compromise-to.html#comment-form" onclick="">0 comments</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-permalink.png" width="12"> 
+            <a href="http://blog.packetloop.com/2013/03/from-indicators-of-compromise-to.html#more" title="From Indicators of Compromise to Smoking Guns">Permalink</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-clock.png" width="12"> 
+            <abbr class="published" title="2013-03-25T04:39:00-07:00">Monday, March 25, 2013</abbr> 
+           </div> 
+           <div class="post-body entry-content" id="post-body-4848171215149711258">
+             In a 
+            <a href="http://blog.packetloop.com/2012/12/what-is-big-data-security-analytics.html" target="_blank">previous post</a>&nbsp;I used the intuitive visualization in Packetloop to zero in on a particular attacker that had targeted at least two systems with indicators suggesting Warez related FTP and the delivery of shellcode. The analysis at that time was interesting but hardly a smoking gun. The security analyst was presented with indicators of compromise but could not conclusively prove a breach.
+            <br> 
+            <br> Packetloop's "Threat Analysis" feature started out as a functionality story called "play by play". I wanted to be able to peer inside an attack and step through it play by play. To do this we needed to take every indicator and warning and then perform deep packet inspection on every packet from every conversation and link it into our User Interface. Packetloop's Advanced Filter experience is powerful and fast and Threat Analysis had to be able to respond in the same way. So you could zoom in and out, pan left and right through time and filter on Attacker, Victim, Attack, Port or Industry Reference (e.g. CVE). It was a pretty bold concept and initially difficult enough that we pushed the functionality back - but we didn't give up ;)
+            <br> 
+            <br> Remember this is the canonical DARPA98 data set that I am analysing here. So the attacks have that old school retro feel.
+            <br> 
+            <h2> Threat Analysis</h2> In the previous post the the source of attack 152.169.215.104 was located due to a large number of New Attacks in a very small period of time (12 new attacks in 1 minute). These attacks were related to information discovery (Finger and RPC Mapping) against 172.16.112.50. On closer inspection there was suspected FTP warez activity triggering a number of indicators. Filtering by 152.169.215.104 as the source and then zooming out to a 3 month time window we were able to view the entire attack timeline and find a second host 172.16.114.50 that was also the destination of attacks (x86 NOOP Shellcode). Despite these indicators it was difficult to conclusively prove and analyse the breach.
+            <br> 
+            <br> 
+            <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+             <tbody> 
+              <tr>
+               <td style="text-align: center;"><a href="http://4.bp.blogspot.com/-qZsBcvpjXEY/UVAXQx0-bzI/AAAAAAAAAV8/XPFROyZak70/s1600/Screen+Shot+2013-03-25+at+3.52.27+PM.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="385" src="http://4.bp.blogspot.com/-qZsBcvpjXEY/UVAXQx0-bzI/AAAAAAAAAV8/XPFROyZak70/s640/Screen+Shot+2013-03-25+at+3.52.27+PM.png" width="640"></a></td>
+              </tr> 
+              <tr>
+               <td class="tr-caption" style="text-align: center;">The attack timeline shows Finger and RPC requests being used by the Attacker to enumerate the target</td>
+              </tr> 
+             </tbody>
+            </table> 
+            <br> 
+            <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+             <tbody> 
+              <tr>
+               <td style="text-align: center;"><a href="http://4.bp.blogspot.com/-r4yawhb1f6c/UVAXUhkcdbI/AAAAAAAAAWE/EL2U-Rtw9i0/s1600/Screen+Shot+2013-03-25+at+3.56.46+PM.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="386" src="http://4.bp.blogspot.com/-r4yawhb1f6c/UVAXUhkcdbI/AAAAAAAAAWE/EL2U-Rtw9i0/s640/Screen+Shot+2013-03-25+at+3.56.46+PM.png" width="640"></a></td>
+              </tr> 
+              <tr>
+               <td class="tr-caption" style="text-align: center;">An open FTP server is used to store and access Warez and Tools including the Linux Root Kit.</td>
+              </tr> 
+             </tbody>
+            </table> 
+            <br> 
+            <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+             <tbody> 
+              <tr>
+               <td style="text-align: center;"><a href="http://1.bp.blogspot.com/-9jeqlwd74b8/UVAXYpPFRiI/AAAAAAAAAWM/kDgUwMouq5c/s1600/Screen+Shot+2013-03-25+at+3.56.56+PM.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="386" src="http://1.bp.blogspot.com/-9jeqlwd74b8/UVAXYpPFRiI/AAAAAAAAAWM/kDgUwMouq5c/s640/Screen+Shot+2013-03-25+at+3.56.56+PM.png" width="640"></a></td>
+              </tr> 
+              <tr>
+               <td class="tr-caption" style="text-align: center;">A vulnerability in BIND is exploited to gain root access</td>
+              </tr> 
+             </tbody>
+            </table> Threat analysis enables you to move from indicators and warnings to find the proverbial smoking gun. The initial series of attacks are mostly information discovery with finger attempts and rpcmap's to enumerate users and interfaces. The second set of attacks is linked to FTP and Warez and this is where Threat Analysis really shows it's power. If we focus on those purple bars in the centre of the main&nbsp;visualization, and we switch to the Analysis view in the Data Panel, we can immediately see exactly what this attacker is doing.
+            <br> 
+            <br> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <a href="http://4.bp.blogspot.com/-WHrRhpMgAOE/UVAaHEzQxlI/AAAAAAAAAWc/SA8fVA9bqLA/s1600/Screen+Shot+2013-03-25+at+8.31.50+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="400" src="http://4.bp.blogspot.com/-WHrRhpMgAOE/UVAaHEzQxlI/AAAAAAAAAWc/SA8fVA9bqLA/s640/Screen+Shot+2013-03-25+at+8.31.50+PM.png" width="640"></a>
+            </div> 
+            <br> The attacker logs in to the ftp server as 'ftp' and idents and the changes into the "caliberX" and then the "Win98.Final-PWA" directory. At a glance we have gone from thinking that this might be suspicious activity on our network to knowing that it is. Scrolling down we can view the individual files that the attacker is accessing including the zip files and nfo files.
+            <br> 
+            <br> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <a href="http://1.bp.blogspot.com/-DmKL6gWzaBU/UVAbH0_NH2I/AAAAAAAAAWo/-wUZcKMLuR4/s1600/Screen+Shot+2013-03-25+at+8.37.45+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="196" src="http://1.bp.blogspot.com/-DmKL6gWzaBU/UVAbH0_NH2I/AAAAAAAAAWo/-wUZcKMLuR4/s640/Screen+Shot+2013-03-25+at+8.37.45+PM.png" width="640"></a>
+            </div> 
+            <br> Later in the attack timeline the evidence becomes clearer and more damning. Looking into more FTP sessions between 152.169.215.104 and 172.16.112.50 we see the attacker download tools for exploiting Linux systems.
+            <br> 
+            <br> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <a href="http://4.bp.blogspot.com/-VQv4E7iIlxA/UVAcPmWcwII/AAAAAAAAAW0/43M7fwh4CMQ/s1600/Screen+Shot+2013-03-25+at+8.40.20+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="400" src="http://4.bp.blogspot.com/-VQv4E7iIlxA/UVAcPmWcwII/AAAAAAAAAW0/43M7fwh4CMQ/s640/Screen+Shot+2013-03-25+at+8.40.20+PM.png" width="640"></a>
+            </div> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <br>
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;">
+              Again the attacker logs in as 'ftp' changes directory into 'lr2k-1.1' and then in the final row of output downloads 'lrootk.tgz'. This is a version of the Linux Rootkit.
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;"> 
+             <br>
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;">
+              The Shellcode attacks between 152.169.215.104 and 172.16.114.50 establish a shell that is used to initiate an X11 Window session between the attacker and the target. Using the advanced filter we can limit the search and zoom into the attack timeline. Shellcode is delivered over DNS (UDP/53) in a series of attacks at 12:33AM and then another flurry of attacks at 12:39AM.
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;"> 
+             <br>
+            </div> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <a href="http://4.bp.blogspot.com/-cDxtlDiwd4o/UVAfi2zvYVI/AAAAAAAAAXU/tBBeAyuBV2Q/s1600/Screen+Shot+2013-03-25+at+8.56.30+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="398" src="http://4.bp.blogspot.com/-cDxtlDiwd4o/UVAfi2zvYVI/AAAAAAAAAXU/tBBeAyuBV2Q/s640/Screen+Shot+2013-03-25+at+8.56.30+PM.png" width="640"></a>
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;"> 
+             <br>
+            </div> 
+            <br> 
+            <div class="separator" style="clear: both; text-align: left;">
+              The Shellcode targets a vulnerability in BIND 4.9 and BIND 8.0. This can be determined by highlighting the CVE in the Advanced Filter.
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;"> 
+             <br>
+            </div> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <a href="http://2.bp.blogspot.com/-JYHLJ710WPA/UVAg6Pbz9zI/AAAAAAAAAXk/j1Ze_Qey5xA/s1600/Screen+Shot+2013-03-25+at+9.02.15+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="192" src="http://2.bp.blogspot.com/-JYHLJ710WPA/UVAg6Pbz9zI/AAAAAAAAAXk/j1Ze_Qey5xA/s640/Screen+Shot+2013-03-25+at+9.02.15+PM.png" width="640"></a>
+            </div> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <br>
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;"> 
+             <br>
+            </div> 
+            <br> The timeline is important as an X11 session is established in the reverse direction (172.16.114.50 to 152.169.215.104) soon after the initial attacks with the first back channel created at 12:39AM. This is shown in the screenshot below.
+            <br> 
+            <br> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <a href="http://1.bp.blogspot.com/-PmBJyM0tbGA/UVAieFBMoaI/AAAAAAAAAXw/5VOdMLQcUzc/s1600/Screen+Shot+2013-03-25+at+9.05.25+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="388" src="http://1.bp.blogspot.com/-PmBJyM0tbGA/UVAieFBMoaI/AAAAAAAAAXw/5VOdMLQcUzc/s640/Screen+Shot+2013-03-25+at+9.05.25+PM.png" width="640"></a>
+            </div> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <br>
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;">
+              Packetloop's Threat Analysis provides a full breakdown of the X11 session.
+            </div> 
+            <br> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <a href="http://4.bp.blogspot.com/-qUJR6rhpYBo/UVAieUvcwVI/AAAAAAAAAX4/vQH8bzBYpW0/s1600/Screen+Shot+2013-03-25+at+9.05.50+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="402" src="http://4.bp.blogspot.com/-qUJR6rhpYBo/UVAieUvcwVI/AAAAAAAAAX4/vQH8bzBYpW0/s640/Screen+Shot+2013-03-25+at+9.05.50+PM.png" width="640"></a>
+            </div> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <br>
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;">
+              We can tell that the attacker used the DNS exploit to gain root access because they issue an 'id' command that returns 'root'.
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;"> 
+             <br>
+            </div> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <a href="http://4.bp.blogspot.com/-TqoqHV1Yfv4/UVAi5Ui8r1I/AAAAAAAAAYE/knchpi5e2e4/s1600/Screen+Shot+2013-03-25+at+9.07.34+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="226" src="http://4.bp.blogspot.com/-TqoqHV1Yfv4/UVAi5Ui8r1I/AAAAAAAAAYE/knchpi5e2e4/s640/Screen+Shot+2013-03-25+at+9.07.34+PM.png" width="640"></a>
+            </div> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <br>
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;">
+              Again we can access a detailed breakdown of the X11 sessions where the id command is executed.
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;"> 
+             <br>
+            </div> 
+            <div class="separator" style="clear: both; text-align: center;"> 
+             <a href="http://1.bp.blogspot.com/-v9I2t8vvq3o/UVAjGZIzNjI/AAAAAAAAAYM/-c62Qg3pgFc/s1600/Screen+Shot+2013-03-25+at+9.07.49+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="400" src="http://1.bp.blogspot.com/-v9I2t8vvq3o/UVAjGZIzNjI/AAAAAAAAAYM/-c62Qg3pgFc/s640/Screen+Shot+2013-03-25+at+9.07.49+PM.png" width="640"></a>
+            </div> 
+            <div class="separator" style="clear: both; text-align: left;"> 
+             <br>
+            </div> 
+            <h2> Conclusion</h2> 
+            <div>
+              This is a canonical example of an attacker performing&nbsp;reconnaissance&nbsp;and targeting, exploiting a vulnerability and establishing full root access. Packetloop allows you to find and analyse these incidents in minutes with full data fidelity. Every attack and attacker can be isolated, every packet in the attack can be stepped through and analysed.
+            </div> 
+            <div> 
+             <br>
+            </div> 
+            <div>
+              With Packetloop's Threat Analysis there is no guesswork. The entire attack time line can be examined from months to minutes.
+            </div> 
+            <div> 
+             <br>
+            </div> 
+            <div> 
+             <a href="https://www.packetloop.com/#sign-up" target="_blank">Sign Up for a Free account</a>&nbsp;today and explore the 50GB of Public Datasets available on the Packetloop platform using Packetloop Threat Analysis.
+            </div> 
+            <br> 
+            <br> 
+            <br> 
+            <div style="clear: both;"></div> 
+           </div> 
+           <div class="post-footer"> 
+            <div class="post-footer-line post-footer-line-1"> 
+             <span class="post-icons"> <span class="item-control blog-admin pid-689447016"> <a href="http://www.blogger.com/post-edit.g?blogID=768505746142801567&amp;postID=4848171215149711258&amp;from=pencil" title="Edit Post"> <img alt="" class="icon-action" height="18" src="http://img2.blogblog.com/img/icon18_edit_allbkg.gif" width="18"> </a> </span> </span> 
+             <div class="post-share-buttons goog-inline-block"> 
+              <a class="goog-inline-block share-button sb-email" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4848171215149711258&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a>
+              <a class="goog-inline-block share-button sb-blog" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4848171215149711258&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a>
+              <a class="goog-inline-block share-button sb-twitter" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4848171215149711258&amp;target=twitter" target="_blank" title="Share to Twitter"><span class="share-button-link-text">Share to Twitter</span></a>
+              <a class="goog-inline-block share-button sb-facebook" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4848171215149711258&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a>
+              <a class="goog-inline-block share-button sb-pinterest" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4848171215149711258&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+              <div class="goog-inline-block dummy-container">
+               <g:plusone source="blogger:blog:plusone" href="http://blog.packetloop.com/2013/03/from-indicators-of-compromise-to.html" size="medium" width="300" annotation="inline" />
+              </div> 
+             </div> 
+            </div> 
+            <div class="post-footer-line post-footer-line-2">
+             <span class="post-labels"> Labels: <a href="http://blog.packetloop.com/search/label/analysis" rel="tag">analysis</a>, <a href="http://blog.packetloop.com/search/label/big%20data" rel="tag">big data</a>, <a href="http://blog.packetloop.com/search/label/big%20data%20security%20analytics" rel="tag">big data security analytics</a>, <a href="http://blog.packetloop.com/search/label/deep%20packet%20inspection" rel="tag">deep packet inspection</a>, <a href="http://blog.packetloop.com/search/label/security%20analytics" rel="tag">security analytics</a>, <a href="http://blog.packetloop.com/search/label/threat%20analysis" rel="tag">threat analysis</a> </span> 
+            </div> 
+            <div class="post-footer-line post-footer-line-3">
+             <span class="post-location"> </span> 
+            </div> 
+           </div> 
+          </div> 
+          <img class="post-divide" height="21" src="http://packetloop-blog.s3.amazonaws.com/post-divide.png" width="474"> 
+         </div> 
+         <div class="post-outer"> 
+          <div class="post hentry"> 
+           <a name="3063804728938132520"></a> 
+           <div class="fancydate">
+             23 Mar 2013 
+           </div> 
+           <h3 class="post-title entry-title"> <a href="http://blog.packetloop.com/2013/03/whats-new-threat-analysis-with-deep.html">What's New?! - Threat Analysis with Deep Packet Inspection</a> </h3> 
+           <div class="post-details"> 
+            <span class="post-author vcard"> <img height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-author.png" width="14"> <a href="https://plus.google.com/114167423140989517977" rel="author" title="author profile"> Michael Baker </a> </span> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-comments.png" width="15"> 
+            <a class="comment-link" href="http://blog.packetloop.com/2013/03/whats-new-threat-analysis-with-deep.html#comment-form" onclick="">0 comments</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-permalink.png" width="12"> 
+            <a href="http://blog.packetloop.com/2013/03/whats-new-threat-analysis-with-deep.html#more" title="What's New?! - Threat Analysis with Deep Packet Inspection">Permalink</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-clock.png" width="12"> 
+            <abbr class="published" title="2013-03-23T05:18:00-07:00">Saturday, March 23, 2013</abbr> 
+           </div> 
+           <div class="post-body entry-content" id="post-body-3063804728938132520"> 
+            <h2> Introduction</h2> Context is King when it comes to understanding and analysing attacks and attackers. Today we are releasing the analysis feature for the Threats module. Internally we call this feature "play by play" and it does exactly that. It allows you to peer inside every attack and step through it so you can rule the attack in or out of your analysis.
+            <br> 
+            <br> What do you need to do to enable it? - nothing. We are processing all datasets on Packetloop today to enable this new functionality.
+            <br> 
+            <br> 
+            <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+             <tbody> 
+              <tr>
+               <td style="text-align: center;"><a href="http://1.bp.blogspot.com/-cvJTkGVTpME/UU2X1nS0AAI/AAAAAAAAAVs/bK332oqa-5M/s1600/Screen+Shot+2013-03-23+at+10.49.10+PM.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="398" src="http://1.bp.blogspot.com/-cvJTkGVTpME/UU2X1nS0AAI/AAAAAAAAAVs/bK332oqa-5M/s640/Screen+Shot+2013-03-23+at+10.49.10+PM.png" width="640"></a></td>
+              </tr> 
+              <tr>
+               <td class="tr-caption" style="text-align: center;">MySQL Login and a Drop Database shown in Analysis view</td>
+              </tr> 
+             </tbody>
+            </table> In the screenshot above the full context of a MySQL root login is shown. Stepping through the attack you can see the successful connection, authentication and then a "drop database" command is issued and executed successfully on the database server.
+            <br> 
+            <h2> Packet Level Detail and Protocol Context</h2> For every Attack each packet is analysed using deep packet inspection to identify and parse the protocol used in the attack. Relevant information from each layer of the TCP/IP stack is easily accessed and presented in a tree structure so you can drill down to specific information you are looking for.
+            <br> 
+            <br> If you want to know who dropped your database tables - it's right there. The specific HTTP URI used as part of an attack - it's right there.
+            <br> 
+            <br> Clicking on the attack in the Analysis view allows you to explore and find evidence and details that can aid your analysis.
+            <br> 
+            <h2> How does it work?</h2> Every packet capture you upload is passed through multiple detection engines and are analysed for attacks. At the same time we pass every packet and conversation through deep packet inspection - for every attack we record the specific protocol information related to the attack.
+            <br> 
+            <h2> Rule in or Rule Instantly</h2> 
+            <div>
+              The&nbsp;analysis&nbsp;information combined with Packetloop's Advanced Search allows you to access the context you need incredibly fast. Click on a Country, City, IP or Attack type and you can immediately filter all analysis to that data type. Using your scroll wheel or mouse pad you can zoom in and out from years to minutes or pan left and right to go forward and back in time.&nbsp;
+            </div> 
+            <div> 
+             <br>
+            </div> 
+            <div>
+              No detection system is perfect and context is king for analysts. Allowing you to inspect any attack and be able to rule it in or out of your analysis almost instantly saves you precious time. Time that can be spent finding other complex attacks.
+            </div> 
+            <h2> Availability</h2> 
+            <div>
+              This feature is now available for all new uploads and any packet captures stored in Packetloop. We have more functionality to add to it. As always if you have any feedback let us know.
+            </div> 
+            <br> 
+            <br> 
+            <br> 
+            <div style="clear: both;"></div> 
+           </div> 
+           <div class="post-footer"> 
+            <div class="post-footer-line post-footer-line-1"> 
+             <span class="post-icons"> <span class="item-control blog-admin pid-689447016"> <a href="http://www.blogger.com/post-edit.g?blogID=768505746142801567&amp;postID=3063804728938132520&amp;from=pencil" title="Edit Post"> <img alt="" class="icon-action" height="18" src="http://img2.blogblog.com/img/icon18_edit_allbkg.gif" width="18"> </a> </span> </span> 
+             <div class="post-share-buttons goog-inline-block"> 
+              <a class="goog-inline-block share-button sb-email" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=3063804728938132520&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a>
+              <a class="goog-inline-block share-button sb-blog" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=3063804728938132520&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a>
+              <a class="goog-inline-block share-button sb-twitter" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=3063804728938132520&amp;target=twitter" target="_blank" title="Share to Twitter"><span class="share-button-link-text">Share to Twitter</span></a>
+              <a class="goog-inline-block share-button sb-facebook" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=3063804728938132520&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a>
+              <a class="goog-inline-block share-button sb-pinterest" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=3063804728938132520&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+              <div class="goog-inline-block dummy-container">
+               <g:plusone source="blogger:blog:plusone" href="http://blog.packetloop.com/2013/03/whats-new-threat-analysis-with-deep.html" size="medium" width="300" annotation="inline" />
+              </div> 
+             </div> 
+            </div> 
+            <div class="post-footer-line post-footer-line-2">
+             <span class="post-labels"> Labels: <a href="http://blog.packetloop.com/search/label/analysis" rel="tag">analysis</a>, <a href="http://blog.packetloop.com/search/label/big%20data%20security%20analytics" rel="tag">big data security analytics</a>, <a href="http://blog.packetloop.com/search/label/deep%20packet%20inspection" rel="tag">deep packet inspection</a>, <a href="http://blog.packetloop.com/search/label/threat%20analysis" rel="tag">threat analysis</a>, <a href="http://blog.packetloop.com/search/label/whats%20new" rel="tag">whats new</a> </span> 
+            </div> 
+            <div class="post-footer-line post-footer-line-3">
+             <span class="post-location"> </span> 
+            </div> 
+           </div> 
+          </div> 
+          <img class="post-divide" height="21" src="http://packetloop-blog.s3.amazonaws.com/post-divide.png" width="474"> 
+         </div> 
+         <div class="post-outer"> 
+          <div class="post hentry"> 
+           <a name="4593324160934797624"></a> 
+           <div class="fancydate">
+             3 Mar 2013 
+           </div> 
+           <h3 class="post-title entry-title"> <a href="http://blog.packetloop.com/2013/03/what-new-amazon-s3-bucket-processing.html">What's New?! - Amazon S3 Bucket Processing + More</a> </h3> 
+           <div class="post-details"> 
+            <span class="post-author vcard"> <img height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-author.png" width="14"> <a href="https://plus.google.com/114167423140989517977" rel="author" title="author profile"> Michael Baker </a> </span> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-comments.png" width="15"> 
+            <a class="comment-link" href="http://blog.packetloop.com/2013/03/what-new-amazon-s3-bucket-processing.html#comment-form" onclick="">0 comments</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-permalink.png" width="12"> 
+            <a href="http://blog.packetloop.com/2013/03/what-new-amazon-s3-bucket-processing.html#more" title="What's New?! - Amazon S3 Bucket Processing + More">Permalink</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-clock.png" width="12"> 
+            <abbr class="published" title="2013-03-03T17:57:00-08:00">Sunday, March 03, 2013</abbr> 
+           </div> 
+           <div class="post-body entry-content" id="post-body-4593324160934797624">
+             Our current focus is the Cloud but that won't always be our 
+            <a href="http://blog.packetloop.com/2013/01/packetloop-on-premise.html" target="_blank">only delivery model</a>. Packetloop will be available on premise but we have a lot to deliver and the Cloud allows us to demonstrate what the product is capable of - fast and iteratively.
+            <br> 
+            <br> In the last week we added some cool new features and we will continue to add cool new things every week. Obviously the ones that Customers need go in first. Here is a summary of the 1.0 releases.
+            <br> 
+            <h2> Amazon S3 Bucket Processing</h2> 
+            <div>
+              Our Customers are pretty equally split between people who are producing captures from their corporate network and performing analysis in Packetloop and those that have applications that operate 100% in the Cloud. For Customers already in the Cloud copying full packet captures down to their computer and then re-uploading to Packetloop is classic double handling. It would be much easier if they could just push their full packet captures to an S3 bucket and give Packetloop the ability to process their bucket.
+            </div> 
+            <div> 
+             <br>
+            </div> 
+            <div>
+              We built this functionality directly into the application. All the Customer has to do is make sure they have granted the ability for Packetloop to access their bucket via a 
+             <a href="https://gist.github.com/cloudjunky/5001040" target="_blank">bucket&nbsp;policy</a>. The following screenshots show how simple it is to process large captures from an S3 bucket.
+            </div> 
+            <div> 
+             <br>
+            </div> 
+            <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+             <tbody> 
+              <tr>
+               <td style="text-align: center;"><a href="http://2.bp.blogspot.com/--gRTpR07FSg/UTPiuSQAZ1I/AAAAAAAAAUo/ZQuzfcBGZ-U/s1600/Screenshot_4_03_13_10_49_AM.png" imageanchor="1" style="margin-left: auto; margin-right: auto; text-align: center;"><img border="0" height="390" src="http://2.bp.blogspot.com/--gRTpR07FSg/UTPiuSQAZ1I/AAAAAAAAAUo/ZQuzfcBGZ-U/s640/Screenshot_4_03_13_10_49_AM.png" width="640"></a></td>
+              </tr> 
+              <tr>
+               <td class="tr-caption" style="text-align: center;">Select Upload Files and then S3 Bucket</td>
+              </tr> 
+             </tbody>
+            </table> 
+            <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+             <tbody> 
+              <tr>
+               <td style="text-align: center;"><a href="http://4.bp.blogspot.com/-vBQaZVTDyKw/UTPiuAeKeuI/AAAAAAAAAUg/yhgBl9JNOBc/s1600/Screenshot_4_03_13_10_50_AM-2.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="392" src="http://4.bp.blogspot.com/-vBQaZVTDyKw/UTPiuAeKeuI/AAAAAAAAAUg/yhgBl9JNOBc/s640/Screenshot_4_03_13_10_50_AM-2.png" width="640"></a></td>
+              </tr> 
+              <tr>
+               <td class="tr-caption" style="text-align: center;">Select a Capture Point and specify your Bucket Name</td>
+              </tr> 
+             </tbody>
+            </table> 
+            <div> 
+            </div> 
+            <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+             <tbody> 
+              <tr>
+               <td style="text-align: center;"><a href="http://3.bp.blogspot.com/-r5pGNVvwgnU/UTPiuYoSWyI/AAAAAAAAAUk/QjIH60c6SEU/s1600/Screenshot_4_03_13_10_52_AM.png" imageanchor="1" style="display: inline !important; margin-left: auto; margin-right: auto; text-align: center;"><img border="0" height="396" src="http://3.bp.blogspot.com/-r5pGNVvwgnU/UTPiuYoSWyI/AAAAAAAAAUk/QjIH60c6SEU/s640/Screenshot_4_03_13_10_52_AM.png" width="640"></a></td>
+              </tr> 
+              <tr>
+               <td class="tr-caption" style="text-align: center;">Select the files you want to process and submit</td>
+              </tr> 
+             </tbody>
+            </table> The packet captures are copied directly from bucket to bucket avoiding the requirement to download and re-upload the data. It's simple and fast! After the files are copied they are processed as normal by Packetloop.
+            <br> 
+            <div> 
+             <div> 
+              <br>
+             </div> 
+             <div>
+               In the future we will add scheduling capabilities so we can scan the bucket periodically, find new capture files and seamlessly process them (stay tuned!).
+              <br> 
+              <h2> Command Line Upload</h2> Some customers roll their full packet captures over based on time (e.g. 1 hour) or based on size (e.g. 100Mb) and wanted an easy way of getting these captures into Packetloop. We brought forward enough of our API functionality to allow you to login, list/create capture points and upload files. Here's an example of how to do this using 
+              <a href="https://gist.github.com/dsturnbull/4974638" target="_blank">cURL</a>. So now when Customers roll their captures they can fire the script and upload to Packetloop and the next time they login the data will have been processed.
+              <br> 
+              <h2> Compression and Archive Support</h2> 
+              <div>
+                Packet captures compress extremely well to often 1/2 or 2/3's of their original size. Packetloop shipped with support for xzip, bzip2, gzip and tar archives but strangely enough no zip support ;( This was addressed in a recent release.
+              </div> 
+              <br> 
+              <br> 
+              <br>
+             </div> 
+            </div> 
+            <div style="clear: both;"></div> 
+           </div> 
+           <div class="post-footer"> 
+            <div class="post-footer-line post-footer-line-1"> 
+             <span class="post-icons"> <span class="item-control blog-admin pid-689447016"> <a href="http://www.blogger.com/post-edit.g?blogID=768505746142801567&amp;postID=4593324160934797624&amp;from=pencil" title="Edit Post"> <img alt="" class="icon-action" height="18" src="http://img2.blogblog.com/img/icon18_edit_allbkg.gif" width="18"> </a> </span> </span> 
+             <div class="post-share-buttons goog-inline-block"> 
+              <a class="goog-inline-block share-button sb-email" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4593324160934797624&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a>
+              <a class="goog-inline-block share-button sb-blog" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4593324160934797624&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a>
+              <a class="goog-inline-block share-button sb-twitter" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4593324160934797624&amp;target=twitter" target="_blank" title="Share to Twitter"><span class="share-button-link-text">Share to Twitter</span></a>
+              <a class="goog-inline-block share-button sb-facebook" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4593324160934797624&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a>
+              <a class="goog-inline-block share-button sb-pinterest" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=4593324160934797624&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+              <div class="goog-inline-block dummy-container">
+               <g:plusone source="blogger:blog:plusone" href="http://blog.packetloop.com/2013/03/what-new-amazon-s3-bucket-processing.html" size="medium" width="300" annotation="inline" />
+              </div> 
+             </div> 
+            </div> 
+            <div class="post-footer-line post-footer-line-2">
+             <span class="post-labels"> Labels: <a href="http://blog.packetloop.com/search/label/packet%20captures" rel="tag">packet captures</a>, <a href="http://blog.packetloop.com/search/label/s3%20bucket" rel="tag">s3 bucket</a>, <a href="http://blog.packetloop.com/search/label/whats%20new" rel="tag">whats new</a> </span> 
+            </div> 
+            <div class="post-footer-line post-footer-line-3">
+             <span class="post-location"> </span> 
+            </div> 
+           </div> 
+          </div> 
+          <img class="post-divide" height="21" src="http://packetloop-blog.s3.amazonaws.com/post-divide.png" width="474"> 
+         </div> 
+         <div class="post-outer"> 
+          <div class="post hentry"> 
+           <a name="1965687178400658202"></a> 
+           <div class="fancydate">
+             19 Feb 2013 
+           </div> 
+           <h3 class="post-title entry-title"> <a href="http://blog.packetloop.com/2013/02/how-to-create-full-packet-capture.html">How to create a Full Packet Capture</a> </h3> 
+           <div class="post-details"> 
+            <span class="post-author vcard"> <img height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-author.png" width="14"> <a href="https://plus.google.com/110015040439187581298" rel="author" title="author profile"> Scott Crane </a> </span> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-comments.png" width="15"> 
+            <a class="comment-link" href="http://blog.packetloop.com/2013/02/how-to-create-full-packet-capture.html#comment-form" onclick="">0 comments</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-permalink.png" width="12"> 
+            <a href="http://blog.packetloop.com/2013/02/how-to-create-full-packet-capture.html#more" title="How to create a Full Packet Capture">Permalink</a> 
+            <img class="padleft" height="12" src="http://packetloop-blog.s3.amazonaws.com/icon-clock.png" width="12"> 
+            <abbr class="published" title="2013-02-19T00:39:00-08:00">Tuesday, February 19, 2013</abbr> 
+           </div> 
+           <div class="post-body entry-content" id="post-body-1965687178400658202"> 
+            <br> This article was written by Tyson Garrett, COO of Packetloop in our Support Forums. I thought it was to good to just live in support, so here it is.
+            <br> 
+            <h2 style="background-color: white; font-size: 20px; margin: 0px; overflow: hidden; padding: 17px 0px 9px; word-wrap: break-word;"> <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">Overview</span></span></h2> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">Once you’ve decided that you’d like to start doing full packet capture, your may well ask how? There are two basic steps in performing full packet captures.</span></span>
+            </div> 
+            <ol style="background-color: white; color: #333333; margin: 0px; padding: 2px 0px 5px 36px;"> 
+             <li style="background-image: none; background-position: initial initial; background-repeat: initial initial; list-style-type: decimal; margin: 2px 0px 5px; padding: 0px;"><span style="font-family: inherit;">Take a copy of the Network Data</span></li> 
+             <li style="background-image: none; background-position: initial initial; background-repeat: initial initial; list-style-type: decimal; margin: 2px 0px 5px; padding: 0px;"><span style="font-family: inherit;">Storing the data as a Full Packet Capture</span></li> 
+            </ol> 
+            <div style="background-color: white; color: #333333; line-height: 1.45em; margin: 0px; padding: 0px;"> 
+             <span style="line-height: normal; margin: 0px; padding: 0px;"><span style="font-family: inherit;">If you know how to perform these two steps, then we expect to see you uploading shortly! If you don't then read on.</span></span>
+            </div> 
+            <h2 style="background-color: white; font-size: 20px; margin: 0px; overflow: hidden; padding: 17px 0px 9px; word-wrap: break-word;"> <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">Taking a copy of the Network Data</span></span></h2> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">Well depending on your environment you are going to have a few options:</span></span>
+            </div> 
+            <ol style="background-color: white; color: #333333; margin: 0px; padding: 2px 0px 5px 36px;"> 
+             <li style="background-image: none; background-position: initial initial; background-repeat: initial initial; list-style-type: decimal; margin: 2px 0px 5px; padding: 0px;"><span style="line-height: 1.45em; margin: 0px; padding: 0px;"><span style="font-family: inherit;">Use a port mirror (aka span port) configuration on your Internet switch</span></span></li> 
+             <li style="background-image: none; background-position: initial initial; background-repeat: initial initial; list-style-type: decimal; margin: 2px 0px 5px; padding: 0px;"><span style="line-height: 1.45em; margin: 0px; padding: 0px;"><span style="font-family: inherit;">Do a traffic export from your router (not recommended)</span></span></li> 
+             <li style="background-image: none; background-position: initial initial; background-repeat: initial initial; list-style-type: decimal; margin: 2px 0px 5px; padding: 0px;"><span style="line-height: 1.45em; margin: 0px; padding: 0px;"><span style="font-family: inherit;">Use a dedicated tapping device</span></span></li> 
+            </ol> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">If you want to get started right now, the easiest option with least potential impact will be the port mirror on your Internet switch located between your Internet router and your firewall (you do have a firewall don’t you?). Most modern switches can be configured to send a copy of the traffic traversing this link and send it to another port to which you can connect your capture device (covered in another blog post link here). At Packetloop the terminology we use for this setup is a&nbsp;<strong style="color: #444444; margin: 0px; padding: 0px;">port mirror</strong>. However some switch vendors may instead refer to this as a span port, network monitor, interface monitor or port monitor.</span></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;"><span style="margin: 0px; padding: 0px;">The configuration for setting up each of the switches will be slightly different based on the hardware and software version and specific Vendor. If we haven’t listed your exact model or switch below try checking either the vendors support site or the this page:&nbsp;</span><span style="margin: 0px; padding: 0px;"><a href="http://wiki.wireshark.org/SwitchReference" style="color: #01a6ff; cursor: pointer; margin: 0px; padding: 0px; text-decoration: initial;" target="_blank">http://wiki.wireshark.org/SwitchReference</a></span></span>
+            </div> 
+            <h2 style="background-color: white; font-size: 20px; margin: 0px; overflow: hidden; padding: 17px 0px 9px; word-wrap: break-word;"> <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">Cisco Switch Port Mirror guides:</span></span></h2> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;"><span style="margin: 0px; padding: 0px;">Cisco Catalayst Switches:&nbsp;</span><a href="http://www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a008015c612.shtml" style="color: #01a6ff; cursor: pointer; margin: 0px; padding: 0px; text-decoration: initial;" target="_blank">http://www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a008015c612.shtml</a></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;"><span style="margin: 0px; padding: 0px;">Cisco Nexus 5000 Switches:&nbsp;</span><a href="http://www.cisco.com/en/US/docs/switches/datacenter/nexus5000/sw/troubleshooting/guide/n5K_ts_oview.html#wp1026252" style="color: #01a6ff; cursor: pointer; margin: 0px; padding: 0px; text-decoration: initial;" target="_blank">http://www.cisco.com/en/US/docs/switches/datacenter/nexus5000/sw/troubleshooting/guide/n5K_ts_oview.html#wp1026252</a></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;"><span style="margin: 0px; padding: 0px;">Cisco Nexus 7000 Switches:&nbsp;</span><span style="margin: 0px; padding: 0px;"><a href="http://www.cisco.com/en/US/products/ps9402/products_configuration_example09186a0080b8253b.shtml" style="color: #01a6ff; cursor: pointer; margin: 0px; padding: 0px; text-decoration: initial;" target="_blank">http://www.cisco.com/en/US/products/ps9402/products_configuration_example09186a0080b8253b.shtml</a></span></span>
+            </div> 
+            <h2 style="background-color: white; font-size: 20px; margin: 0px; overflow: hidden; padding: 17px 0px 9px; word-wrap: break-word;"> <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">Juniper Switches Port Mirror guides:</span></span></h2> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="margin: 0px; padding: 0px;"><a href="http://www.juniper.net/techpubs/en_US/junos12.2/topics/example/port-mirroring-local-qfx-series.html" style="color: #01a6ff; cursor: pointer; margin: 0px; padding: 0px; text-decoration: initial;" target="_blank"><span style="font-family: inherit;">http://www.juniper.net/techpubs/en_US/junos12.2/topics/example/port-mirroring-local-qfx-series.html</span></a></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">Note that depending on your environment, when your switch is under heavy load the priority of the port mirror process may be lower than traffic forwarding priority, this may mean the switch will not mirror all the traffic to your capture device from time to time.</span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">In situations where this is an issue for your network, or for where you would like a more dedicated solution we recommend a network tap.</span>
+            </div> 
+            <h2 style="background-color: white; font-size: 20px; margin: 0px; overflow: hidden; padding: 17px 0px 9px; word-wrap: break-word;"> <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">Network Taps</span></span></h2> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">Network taps are purpose built devices that will mirror all traffic passing between two devices such as your firewall and internet router. This is achieved by the connecting your internet router into the first port of the network tap and your firewall into the second port. The third port of the network tap is where you then attach your capture device. Most network taps operate in a failsafe method whereby if the network tap loses power it will stop mirroring the traffic to your capture device but will still pass the traffic between your firewall and internet router.<span style="line-height: 1.45em; margin: 0px; padding: 0px;">&nbsp;</span></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">Other models of network taps allow your to scale this out to allow you to perform this across multiple segments. eg. You have 10x100Mb connections that are mirrored to 1x1Gb capture device.</span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">Some vendors that sell these network taps are listed below.&nbsp;<strong style="color: #444444; margin: 0px; padding: 0px;">Note that we are not endorsing any of these products.</strong>&nbsp;If you have used alternative taps with success please let us know and we will add it to the list.</span>
+            </div> 
+            <h4> <span style="font-family: inherit; font-weight: normal;">Netoptics:&nbsp;<a href="http://www.netoptics.com/products/network-taps" style="color: #01a6ff; cursor: pointer; margin: 0px; padding: 0px; text-decoration: initial;" target="_blank">http://www.netoptics.com/products/network-taps</a></span></h4> 
+            <h4> <span style="font-family: inherit; font-weight: normal;">Network Critical:&nbsp;<a href="http://www.networkcritical.com/" style="color: #01a6ff; cursor: pointer; margin: 0px; padding: 0px; text-decoration: initial;" target="_blank">http://www.networkcritical.com/</a></span></h4> 
+            <h4> <span style="font-family: inherit; font-weight: normal;">Gigamon:&nbsp;<a href="http://www.gigamon.com/g-tap-a-series-always-on-network-taps" style="color: #01a6ff; cursor: pointer; margin: 0px; padding: 0px; text-decoration: initial;" target="_blank">http://www.gigamon.com/g-tap-a-series-always-on-network-taps</a></span></h4> 
+            <h2 style="background-color: white; font-size: 20px; margin: 0px; overflow: hidden; padding: 17px 0px 9px; word-wrap: break-word;"> <span style="font-family: inherit;">Storing the Data as a Full Packet Capture</span></h2> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">Now that you've configured your network to send a copy of your traffic down a port, the next decision you need to make is what do I use to actually capture this traffic. As per the port mirror options there are multiple solutions to performing this within your environment such as:</span>
+            </div> 
+            <ol style="background-color: white; color: #333333; margin: 0px; padding: 2px 0px 5px 36px;"> 
+             <li style="background-image: none; background-position: initial initial; background-repeat: initial initial; list-style-type: decimal; margin: 2px 0px 5px; padding: 0px;"><span style="line-height: 1.45em; margin: 0px; padding: 0px;"><span style="font-family: inherit;">Use an existing computer (laptop/desktop/server);</span></span></li> 
+             <li style="background-image: none; background-position: initial initial; background-repeat: initial initial; list-style-type: decimal; margin: 2px 0px 5px; padding: 0px;"><span style="line-height: 1.45em; margin: 0px; padding: 0px;"><span style="font-family: inherit;">Use a dedicated capture appliance.</span></span></li> 
+            </ol> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="line-height: 1.45em; margin: 0px; padding: 0px;"><span style="font-family: inherit;">If you want to start capturing right now, using an existing piece of equipment is most likely going to be your only option. Whilst the dedicated capture appliance is most likely the more robust method, it will incur additional cost and unless you have one lying about you won't be able to start capturing date until you receive and configure it.</span></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">&nbsp;<span style="line-height: 1.45em; margin: 0px; padding: 0px;">To get going with the first option you can use a device running Windows, UNIX or Mac OS X. If you are using UNIX or OS X you will just need the tcpdump application. If you are running Windows we recommend you get Wireshark and as part of the Wireshark installation, install WinPCAP.</span></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">Now before you start running these applications you need to determine the following:</span>
+            </div> 
+            <h4 style="background-color: white; color: #333333; margin: 12px 0px 0px; padding: 0px;"> <span style="line-height: 1.45em; margin: 0px; padding: 0px;"><span style="font-family: inherit;">How am I going to ensure the timestamps in my capture files are accurate?</span></span></h4> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">As your capture device is going to have at least one interface dedicated to capturing traffic, you are going to need a management interface on the device to allow you to sync with either an internal or external time source. To assist with correlation it's best if you use the same time source that your internal systems use.</span>
+            </div> 
+            <h4 style="background-color: white; color: #333333; margin: 12px 0px 0px; padding: 0px;"> <span style="line-height: 1.45em; margin: 0px; padding: 0px;"><span style="font-family: inherit;">Where am I going to save the data to?</span></span></h4> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">Depending on the network you are capturing traffic from your daily captures may be anywhere from less then 1Gb per day to more than 1Tb per day. Coupled with the rollover question discussed below you'll need to determine how you can ensure you don't run out of disk space on the local device. Options such as moving the data to a external USB device or a network share as a scheduled task/cron job will ensure you can capture local and then store remote. Once you've captured the data don't panic about the size of the files, you will be able to compress them for archival purposes. Depending on the exact traffic mix you should expect the compresses file size to be b/w 20%-30% of the original size. We recommend using and 7zip for Windows or lama for Linux (on CentOS / Fedora / RHEL / Redhat Linux known as xz)</span>
+            </div> 
+            <h4 style="background-color: white; color: #333333; margin: 12px 0px 0px; padding: 0px;"> <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">How often do I want to rollover to a new capture file?</span></span></h4> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">To make your capture files easy to move around we recommend you roll them over once they hit 1Gb of traffic. This also allows us to process them in parallel, getting you results back much faster.</span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">To do do this with tcpdump it's fairly easy using the -C parameter. Where the number after the -C is in millions of bytes. For example to run a tcpdump on eth1, saving the full packet size, a capture filename of Internet-Monitor (in the /var/captures directory) preceded by the date and time and a rollover of once every 1Gb the command would be:</span>
+            </div> 
+            <blockquote style="background-color: #f6f6f6; border: 1px solid rgb(230, 230, 230); color: #333333; margin: 5px 0px; padding: 10px 0px 10px 20px;"> 
+             <div style="clear: left; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+              <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">sudo nohup tcpdump -i eth1 -s 65535 -w /var/captures/`date +"%Y%m%d-%T"`-Internet-Monitor.pcap -C 100 &amp;</span></span>
+             </div> 
+            </blockquote> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">This will create a series of files as follows:</span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px 30px;"> 
+             <span style="font-family: inherit;">20130208-19:50:02-Internet-Monitor.pcap</span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px 30px;"> 
+             <span style="font-family: inherit;">20130208-21:08:53-Internet-Monitor.pcap1</span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px 30px;"> 
+             <span style="font-family: inherit;">20130208-21:47:39-Internet-Monitor.pcap2</span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px 30px;"> 
+             <span style="font-family: inherit;">and so on.</span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">We have run this with nohup to avoid the scenario where you've initiated the capture via a remote logon and want to ensure the capture continues after you logoff or get disconnected. To terminate the capture you'll need to manually kill the process via running:</span>
+            </div> 
+            <blockquote style="background-color: #f6f6f6; border: 1px solid rgb(230, 230, 230); color: #333333; margin: 5px 0px; padding: 10px 0px 10px 20px;"> 
+             <div style="clear: left; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+              <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">pkill -9 tcpdump</span></span>
+             </div> 
+            </blockquote> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">Alternatively if you wanted to roll the file over every 1 hour or every 1Gb (whichever comes first) we would run the following command:</span>
+            </div> 
+            <blockquote style="background-color: #f6f6f6; border: 1px solid rgb(230, 230, 230); color: #333333; margin: 5px 0px; padding: 10px 0px 10px 20px;"> 
+             <div style="clear: left; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+              <span style="font-family: inherit;">sudo nohup tcpdump -i eth1 -s 65535 -w /var/captures/<span style="margin: 0px; padding: 0px;">%Y-%m-%d-%H:%M:%S</span><span style="margin: 0px; padding: 0px;">-Internet-Monitor.pcap -C 100 -G 3600 &amp;</span></span>
+             </div> 
+            </blockquote> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">This will create a series of files as follows:</span></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px 30px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">20130208-20:08:53-Internet-Monitor.pcap</span></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px 30px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">20130208-21:08:53-Internet-Monitor.pcap</span></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px 30px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">20130208-21:08:53-Internet-Monitor.pcap1&nbsp;<strong style="color: #444444; margin: 0px; padding: 0px;">&lt;- Hourly file went over 1Gb, so tcpdump rolled to a new file</strong></span></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px 30px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">20130208-22:08:53-Internet-Monitor.pcap</span></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px 30px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">and so on.</span></span>
+            </div> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">As mentioned previously, Windows based systems will require Wireshark with WinPcap. Whilst Wireshark has a user interface to keep things simple we are going to stick with the dumpcap command that is much like tcpdump. It will most likely not be in your path so you'll need to cd into the directory you installed Wireshark into. Due to the way Windows works with network interface names you'll most likely need to run dumpcap with the -D option to determine which interface you wish to capture on.</span></span>
+            </div> 
+            <blockquote style="background-color: #f6f6f6; border: 1px solid rgb(230, 230, 230); color: #333333; margin: 5px 0px; padding: 10px 0px 10px 20px;"> 
+             <div style="clear: left; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+              <span style="font-family: inherit;"><span style="margin: 0px; padding: 0px;">C:\Program Files\Wireshark&gt;</span><span style="margin: 0px; padding: 0px;">dumpcap -D</span></span>
+             </div> 
+             <div style="clear: left; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+              <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">1. \Device\NPF_{1EDF5C06-F6BD-41C7-9D91-9257429754E4} (E1G607 Intel(R) PRO/1000 MT Network Connection)</span></span>
+             </div> 
+             <div style="clear: left; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+              <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">2. \Device\NPF_{08A648A7-21E2-4C45-A54A-E7BEFC3943AD} (E1G6015 Intel(R) PRO/1000 MT Network Connection)</span></span>
+             </div> 
+             <div style="clear: left; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+              <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">3. \Device\NPF_{883330D9-0FA9-42FA-A74B-19A40D8C74CC} (E1G6016 Intel(R) PRO/1000 MT Network Connection)</span></span>
+             </div> 
+            </blockquote> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">If you still aren't sure which interface is which run Wireshark and examine the interface details there (it gives the IP address and some other additional information) the names match up with what is supplied by dumpcap. Presuming device number 3 (3. \Device\NPF_{883330D9-0FA9-42FA-A74B-19A40D8C74CC} (E1G6016 Intel(R) PRO/1000 MT Network Connection)) from the above list is the interface we want to capture on we can just use the -i 3 value. So to rollover capture files with dumpcap once you get over 1Gb we'd run the following command:</span></span>
+            </div> 
+            <blockquote style="background-color: #f6f6f6; border: 1px solid rgb(230, 230, 230); color: #333333; margin: 5px 0px; padding: 10px 0px 10px 20px;"> 
+             <div style="clear: left; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+              <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">dumpcap -P -i 3 -b filesize:1048576 -w c:\captures\Internet-Monitor.pcap</span></span>
+             </div> 
+            </blockquote> 
+            <div style="background-color: white; clear: left; color: #333333; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+             <span style="font-family: inherit;">Alternatively if you wanted to roll the file over every 1 hour or every 1Gb (whichever comes first) we would run the following command:</span>
+            </div> 
+            <blockquote style="background-color: #f6f6f6; border: 1px solid rgb(230, 230, 230); color: #333333; margin: 5px 0px; padding: 10px 0px 10px 20px;"> 
+             <div style="clear: left; line-height: 1.45em; margin-bottom: 6px; padding: 2px 0px 1px;"> 
+              <span style="margin: 0px; padding: 0px;"><span style="font-family: inherit;">dumpcap -P -i 3 -b filesize:1048576 -b duration:3600 -w c:\captures\Internet-Monitor.pcap</span></span>
+             </div> 
+            </blockquote> 
+            <div style="clear: both;"></div> 
+           </div> 
+           <div class="post-footer"> 
+            <div class="post-footer-line post-footer-line-1"> 
+             <span class="post-icons"> <span class="item-control blog-admin pid-1075858920"> <a href="http://www.blogger.com/post-edit.g?blogID=768505746142801567&amp;postID=1965687178400658202&amp;from=pencil" title="Edit Post"> <img alt="" class="icon-action" height="18" src="http://img2.blogblog.com/img/icon18_edit_allbkg.gif" width="18"> </a> </span> </span> 
+             <div class="post-share-buttons goog-inline-block"> 
+              <a class="goog-inline-block share-button sb-email" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=1965687178400658202&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a>
+              <a class="goog-inline-block share-button sb-blog" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=1965687178400658202&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a>
+              <a class="goog-inline-block share-button sb-twitter" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=1965687178400658202&amp;target=twitter" target="_blank" title="Share to Twitter"><span class="share-button-link-text">Share to Twitter</span></a>
+              <a class="goog-inline-block share-button sb-facebook" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=1965687178400658202&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a>
+              <a class="goog-inline-block share-button sb-pinterest" href="http://www.blogger.com/share-post.g?blogID=768505746142801567&amp;postID=1965687178400658202&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+              <div class="goog-inline-block dummy-container">
+               <g:plusone source="blogger:blog:plusone" href="http://blog.packetloop.com/2013/02/how-to-create-full-packet-capture.html" size="medium" width="300" annotation="inline" />
+              </div> 
+             </div> 
+            </div> 
+            <div class="post-footer-line post-footer-line-2">
+             <span class="post-labels"> Labels: <a href="http://blog.packetloop.com/search/label/packet%20captures" rel="tag">packet captures</a> </span> 
+            </div> 
+            <div class="post-footer-line post-footer-line-3">
+             <span class="post-location"> </span> 
+            </div> 
+           </div> 
+          </div> 
+          <img class="post-divide" height="21" src="http://packetloop-blog.s3.amazonaws.com/post-divide.png" width="474"> 
+         </div> 
+        </div>
+       </div> 
+       <!-- google_ad_section_end --> 
+      </div> 
+      <div class="blog-pager" id="blog-pager"> 
+       <span id="blog-pager-older-link"> <a class="blog-pager-older-link" href="http://blog.packetloop.com/search?updated-max=2013-02-19T00:39:00-08:00&amp;max-results=7" id="Blog1_blog-pager-older-link" title="Older Posts">Older Posts</a> </span> 
+      </div> 
+      <div class="clear"></div> 
+      <script type="text/javascript">window.___gcfg = {'lang': 'en_GB'};</script> 
+     </div>
+    </div> 
+   </div> 
+  </div>  
+  <div class="footer"></div>  
+  <div class="foot section" id="footer-1"></div> 
+  <div class="foot section" id="footer-3">
+   <div class="widget Attribution" id="Attribution1"> 
+    <div class="widget-content" style="text-align: center;">
+      Powered by 
+     <a href="http://www.blogger.com" target="_blank">Blogger</a>. 
+    </div> 
+    <div class="clear"></div> 
+    <span class="widget-item-control"> <span class="item-control blog-admin"> <a class="quickedit" href="//www.blogger.com/rearrange?blogID=768505746142801567&amp;widgetType=Attribution&amp;widgetId=Attribution1&amp;action=editWidget&amp;sectionId=footer-3" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Attribution1&quot;));" target="configAttribution1" title="Edit"> <img alt="" height="18" src="http://img1.blogblog.com/img/icon18_wrench_allbkg.png" width="18"> </a> </span> </span> 
+    <div class="clear"></div> 
+   </div>
+  </div> 
+  <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29780788-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = (document.location.protocol == 'https:' ?
+                  'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script> 
+  <script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script>
+  <script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/2885176887-widgets.js"></script> 
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script> 
+  <script type="text/javascript">
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV2";window['blogger_blog_id'] = '768505746142801567';BLOG_attachCsiOnload(''); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d768505746142801567','//blog.packetloop.com/','768505746142801567');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '768505746142801567', 'bloggerUrl': 'http://www.blogger.com', 'title': 'Packetloop Blog', 'pageType': 'index', 'url': 'http://blog.packetloop.com/', 'canonicalUrl': 'http://blog.packetloop.com/', 'canonicalHomepageUrl': 'http://blog.packetloop.com/', 'homepageUrl': 'http://blog.packetloop.com/', 'blogspotFaviconUrl': 'http://blog.packetloop.com/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': 'UA-29780788-2', 'searchLabel': '', 'searchQuery': '', 'pageName': '', 'pageTitle': 'Packetloop Blog', 'encoding': 'UTF-8', 'locale': 'en_GB', 'localeUnderscoreDelimited': 'en_gb', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Packetloop Blog - Atom\42 href\75\42http://blog.packetloop.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42Packetloop Blog - RSS\42 href\75\42http://blog.packetloop.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42Packetloop Blog - Atom\42 href\75\42http://www.blogger.com/feeds/768505746142801567/posts/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '\74link rel\75\42openid.server\42 href\75\42http://www.blogger.com/openid-server.g\42 /\76\n\74link rel\75\42openid.delegate\42 href\75\42http://blog.packetloop.com/\42 /\76\n', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var b\75window,f\75\42chrome\42,g\75\42tick\42,k\75\42jstiming\42;(function(){function d(a){this.t\75{};this.tick\75function(a,d,c){var e\75void 0!\75c?c:(new Date).getTime();this.t[a]\75[e,d];if(void 0\75\75c)try{b.console.timeStamp(\42CSI/\42+a)}catch(h){}};this[g](\42start\42,null,a)}var a;b.performance\46\46(a\75b.performance.timing);var n\75a?new d(a.responseStart):new d;b.jstiming\75{Timer:d,load:n};if(a){var c\75a.navigationStart,h\75a.responseStart;0\74c\46\46h\76\75c\46\46(b[k].srt\75h-c)}if(a){var e\75b[k].load;0\74c\46\46h\76\75c\46\46(e[g](\42_wtsrt\42,void 0,c),e[g](\42wtsrt_\42,\42_wtsrt\42,h),e[g](\42tbsd_\42,\42wtsrt_\42))}try{a\75null,\nb[f]\46\46b[f].csi\46\46(a\75Math.floor(b[f].csi().pageT),e\46\0460\74c\46\46(e[g](\42_tbnd\42,void 0,b[f].csi().startE),e[g](\42tbnd_\42,\42_tbnd\42,c))),null\75\75a\46\46b.gtbExternal\46\46(a\75b.gtbExternal.pageT()),null\75\75a\46\46b.external\46\46(a\75b.external.pageT,e\46\0460\74c\46\46(e[g](\42_tbnd\42,void 0,b.external.startE),e[g](\42tbnd_\42,\42_tbnd\42,c))),a\46\46(b[k].pt\75a)}catch(p){}})();b.tickAboveFold\75function(d){var a\0750;if(d.offsetParent){do a+\75d.offsetTop;while(d\75d.offsetParent)}d\75a;750\76\75d\46\46b[k].load[g](\42aft\42)};var l\75!1;function m(){l||(l\75!0,b[k].load[g](\42firstScrollTime\42))}b.addEventListener?b.addEventListener(\42scroll\42,m,!1):b.attachEvent(\42onscroll\42,m);\n })();\74/script\076', 'mobileHeadScript': '', 'ieCssRetrofitLinks': '\74!--[if IE]\76\74script type\75\42text/javascript\42 src\75\42https://www.blogger.com/static/v1/jsbin/3204238090-ieretrofit.js\42\76\74/script\76\n\74![endif]--\076', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/76f25a6f2e06af76', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sf': 'n'}}, {'name': 'skin', 'data': {'vars': {}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar-left-1', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar-left-1', null, document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'footer-3', null, document.getElementById('Attribution1'), {'attribution': 'Powered by \74a href\75\47http://www.blogger.com\47 target\75\47_blank\47\76Blogger\74/a\76.'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', null, document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'viewType': 'FILTERED_POSTMOD', 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/146908720-lbx__en_gb.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/2392111094-lightbox_bundle.css'}, 'displayModeFull'));
+</script>  
+  <script>
+//<![CDATA[
+$(function() {
+  setInterval(200, function() { $('.magical-white-background').height($('.content').height()) })
+  var lastDate
+  $('.fancydate').each(function() {
+    var txt = $(this).text().split(' ')
+    if (txt.length == 1)
+      txt = lastDate
+    else
+      lastDate = txt
+    $(this).html('<div class="fd1">' + txt[0] + '</div><div class="fd2">' + txt[1].substring(0, 3) + '</div></div>')
+
+    $('a img').filter(function() { return $(this).width() >= 640 }).parent().css('margin', '0px')
+
+  })
+})
+//]]>
+</script> 
+ </body>
+</html>

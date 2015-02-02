@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fr-FR" class="no-js">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Hadoop 1.xx vs 2.xx | Big Data Foundation</title> 
+  <link rel="profile" href="//gmpg.org/xfn/11"> 
+  <link rel="pingback" href="xmlrpc.php"> 
+  <link rel="alternate" type="application/rss+xml" title="Big Data Foundation » Flux" href="feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Big Data Foundation » Flux des commentaires" href="comments/feed/"> 
+  <meta name="description" content="There's a big shift at the architecture level from Hadoop 1.X vs Hadoop 2.X. Discover the difference betwen hadoop 1.X and 2.X in this"> 
+  <meta name="keywords" content="difference betwen hadoop 1.x and 2.x,hadoop 1 vs hadoop 2,hadoop 1.0 vs hadoop 2.0,hadoop 1.x vs hadoop 2.x,hadoop v2"> 
+  <link rel="canonical" href="http://bigdatafoundation.com/blog/"> 
+  <link rel="alternate" type="application/rss+xml" title="Hadoop 1.xx vs 2.xx | Big Data Foundation" href="sitemap.xml"> 
+  <link rel="shortcut icon" type="image/png" href="favicon.ico"> 
+  <link rel="apple-touch-icon" type="image/png" href="favicon.ico"> 
+  <link rel="apple-touch-icon-precomposed" type="image/png" href="favicon.ico"> 
+  <meta name="copyright" content="Big Data Foundation"> 
+  <meta name="language" content="fr-FR"> 
+  <meta name="DC.Publisher" content="Big Data Foundation"> 
+  <meta name="DC.Title" content="Hadoop 1.xx vs 2.xx | Big Data Foundation"> 
+  <meta name="DC.Description" content="There's a big shift at the architecture level from Hadoop 1.X vs Hadoop 2.X. Discover the difference betwen hadoop 1.X and 2.X in this"> 
+  <meta name="DC.Date" content="2014-04-02"> 
+  <meta name="DC.date.issued" content="2014-04-02"> 
+  <meta property="og:url" content="http://bigdatafoundation.com/blog/"> 
+  <meta property="og:title" content="Hadoop 1.xx vs 2.xx | Big Data Foundation"> 
+  <meta property="og:description" content="There's a big shift at the architecture level from Hadoop 1.X vs Hadoop 2.X. Discover the difference betwen hadoop 1.X and 2.X in this"> 
+  <meta property="og:site_name" content="Big Data Foundation"> 
+  <meta property="og:type" content="website"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:title" content="Hadoop 1.xx vs 2.xx | Big Data Foundation"> 
+  <meta name="twitter:domain" content="Big Data Foundation"> 
+  <link rel="stylesheet" id="stf-adsense-css" href="wp-content/plugins/adsense-widget/adsense-widget.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="flick-css" href="wp-content/plugins/mailchimp/css/flick/flick.css?ver=4.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="mailchimpSF_main_css-css" href="?mcsf_action=main_css&amp;ver=4.0" type="text/css" media="all"> 
+  <!--[if IE]> <link rel='stylesheet' id='mailchimpSF_ie_css-css' href="wp-content/plugins/mailchimp/css/ie.css?ver=4.0" type='text/css' media='all' /> <![endif]--> 
+  <link rel="stylesheet" id="contact-form-7-css" href="wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.9" type="text/css" media="all"> 
+  <link rel="stylesheet" id="cntctfrm_stylesheet-css" href="wp-content/plugins/contact-form-plugin/css/style.css?ver=4.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wpbooster-speed-test-css" href="wp-content/plugins/wp-booster-speed-test/style.css?ver=1366552771" type="text/css" media="all"> 
+  <link rel="stylesheet" id="subscribe_me-css" href="wp-content/plugins/sem-subscribe-me/css/styles.css?ver=20140104" type="text/css" media="all"> 
+  <link rel="stylesheet" id="livingjournal_style-css" href="wp-content/themes/living-journal/style.css?ver=4.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="sq_frontend.css-css" href="wp-content/plugins/squirrly-seo/themes/default/css/sq_frontend.css?ver=3220" type="text/css" media="all"> 
+  <link rel="stylesheet" id="fwvvw_styles-css" href="wp-content/plugins/fw-vimeo-videowall/fw-vimeo-videowall.css?ver=4.0" type="text/css" media="all"> 
+  <script type="text/javascript">
+            var eppathtoscripts = "http://bigdatafoundation.com/blog/wp-content/plugins/youtube-embed-plus/scripts/";
+            var epresponsiveselector = ["iframe.__youtube_prefs_widget__"];
+        </script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/fw-vimeo-videowall//fw-vimeo-videowall.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/mailchimp/js/scrollTo.js?ver=1.4.1"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/bigdatafoundation.com\/blog\/"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/mailchimp/js/mailchimp.js?ver=1.4.1"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/mailchimp//js/datepicker.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/mailchimp-widget/js/mailchimp-widget-min.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/mj-contact-us/js/mjCon.js?ver=1.0"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/mj-contact-us/js/jquery.validate.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/themes/living-journal/library/js/modernizr-2.6.1.min.js?ver=2.6.1"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/themes/living-journal/library/js/scripts.js?ver=1.0.0"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 4.0"> 
+  <style type="text/css"> .ads { position: relative; text-align: center; clear: both; } </style> 
+  <script type="text/javascript">var fwvvw_ajax_handler = "http://bigdatafoundation.com/blog/wp-content/plugins/fw-vimeo-videowall//fw-vimeo-videowall-ajax-handler.php";</script> 
+  <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-38815812-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script> 
+  <script type="text/javascript">
+		jQuery(function($) {
+			$('.date-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd/yyyy';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: true,
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+			});
+			d = new Date();
+			$('.birthdate-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: false,
+					minDate: new Date(d.getFullYear(), 1-1, 1),
+					maxDate: new Date(d.getFullYear(), 12-1, 31),
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+
+			});
+
+		});
+	</script> 
+  <link rel="alternate" type="application/rss+xml" title="Podcast RSS feed" href="?post_type=podcast">
+  <script type="text/javascript">var ajaxurl = "http://bigdatafoundation.com/blog/wp-admin/admin-ajax.php";var schat_notify_file="http://bigdatafoundation.com/blog/wp-content/plugins/simple-chat/assets/notification1.wav";</script>
+  <link rel="shortcut icon" href="favicon.ico"> 
+  <meta name="title" value="Big Data Foundation | Hadoop YELLOW ELEPHANT OPENS NEW PERSPECTIVES IN BUSINESS INTELLIGENCE.Big Data Foundation | Hadoop YELLOW ELEPHANT OPENS NEW PERSPECTIVES IN BUSINESS INTELLIGENCE."> 
+  <meta itemprop="name" value="Big Data Foundation | Hadoop YELLOW ELEPHANT OPENS NEW PERSPECTIVES IN BUSINESS INTELLIGENCE.Big Data Foundation | Hadoop YELLOW ELEPHANT OPENS NEW PERSPECTIVES IN BUSINESS INTELLIGENCE."> 
+  <meta property="og:title" value="Big Data Foundation | Hadoop YELLOW ELEPHANT OPENS NEW PERSPECTIVES IN BUSINESS INTELLIGENCE.Big Data Foundation | Hadoop YELLOW ELEPHANT OPENS NEW PERSPECTIVES IN BUSINESS INTELLIGENCE."> 
+  <meta name="keywords" content="Big data,Hadopp,Hive,Pig,HBase,Mahout,Sqoop,ZooKeeper,HDFS,MapReduce,Business Intelligence,datawarehouse"> 
+  <meta name="description" content="Business intelligence and Big Data: Hadoop L’ÉLÉPHANT JAUNE OUVRE DE NOUVELLES PERSPECTIVES À LA BUSINESS INTELLIGENCE. Haddop ecosystem Hive Pig HBase Mahout Sqoop ZooKeeper Chukwa HDFS MapReduce"> 
+  <style type="text/css" id="custom-background-css"> body.custom-background { background-image: url('http://bigdatafoundation.com/blog/wp-content/themes/living-journal/library/images/bg.png'); background-repeat: repeat; background-position: top left; background-attachment: fixed; } </style> 
+ </head> 
+ <body class="home blog custom-background"> 
+  <div id="container"> 
+   <header id="branding" role="banner"> 
+    <div id="inner-header" class="clearfix"> 
+     <hgroup id="site-heading"> 
+      <h1 id="site-title"><a href="./" title="Big Data Foundation" rel="home">Big Data Foundation</a></h1> 
+      <h2 id="site-description">Hadoop YELLOW ELEPHANT OPENS NEW PERSPECTIVES IN BUSINESS INTELLIGENCE.</h2> 
+     </hgroup> 
+     <nav id="access" role="navigation"> 
+      <h1 class="assistive-text section-heading">Main menu</h1> 
+      <div class="skip-link screen-reader-text">
+       <a href="#content" title="Skip to content">Skip to content</a>
+      </div> 
+      <div class="menu">
+       <ul>
+        <li class="current_page_item"><a href="./">Accueil</a></li>
+        <li class="page_item page-item-248"><a href="contact-us-2/">Contact us</a></li>
+       </ul>
+      </div> 
+      <form role="search" method="get" id="searchform" class="searchform" action="./"> 
+       <div> 
+        <label class="screen-reader-text" for="s">Rechercher&nbsp;:</label> 
+        <input type="text" name="s" id="s"> 
+        <input type="submit" id="searchsubmit" value="Rechercher"> 
+       </div> 
+      </form> 
+     </nav> 
+    </div> 
+   </header> 
+   <div id="content" class="clearfix"> 
+    <div id="main" class="col620 clearfix" role="main"> 
+     <article id="post-811" class="post-811 post type-post status-publish format-standard hentry category-big-data tag-difference-betwen-hadoop-1-x-and-2-x tag-hadoop-1-vs-hadoop-2 tag-hadoop-1-0-vs-hadoop-2-0 tag-hadoop-1-x-vs-hadoop-2-x tag-hadoop-v2 tag-hive tag-yarn"> 
+      <header class="entry-header"> 
+       <h1 class="entry-title"><a href="hadoop-1-xx-vs-2-xx/" title="Permalink to Hadoop 1.xx vs 2.xx" rel="bookmark">Hadoop 1.xx vs 2.xx</a></h1> 
+       <div class="entry-meta"> 
+        <span class="sep">Posted on </span>
+        <a href="hadoop-1-xx-vs-2-xx/" title="2:44 " rel="bookmark"><time class="entry-date" datetime="2014-04-02T14:44:29+00:00">avril 2, 2014</time></a>
+        <span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="author/admin/" title="View all posts by admin" rel="author">admin</a></span></span> 
+       </div> 
+      </header> 
+      <div class="entry-content post_content"> 
+       <p>There’s a big shift at the architecture level from Hadoop 1.X vs Hadoop 2.X.<br> Discover the difference betwen hadoop 1.X and 2.X in this video.<br> <iframe id="_ytid_90291" width="550" height="441" src="//www.youtube.com/embed/TZ6BGyx3hIQ?enablejsapi=1&amp;autoplay=0&amp;cc_load_policy=0&amp;iv_load_policy=1&amp;loop=0&amp;modestbranding=0&amp;rel=1&amp;showinfo=1&amp;playsinline=0&amp;autohide=2&amp;theme=dark&amp;color=red&amp;wmode=opaque&amp;vq=&amp;controls=2&amp;" frameborder="0" type="text/html" class="__youtube_prefs__" allowfullscreen webkitallowfullscreen="" mozallowfullscreen=""></iframe></p> 
+      </div> 
+      <footer class="entry-meta"> 
+       <span class="cat-links"> Posted in <a href="category/big-data/" rel="tag">Big data</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="tag-links"> Tagged <a href="tag/difference-betwen-hadoop-1-x-and-2-x/" rel="tag">difference betwen hadoop 1.X and 2.X</a>, <a href="tag/hadoop-1-vs-hadoop-2/" rel="tag">Hadoop 1 vs Hadoop 2</a>, <a href="tag/hadoop-1-0-vs-hadoop-2-0/" rel="tag">Hadoop 1.0 vs Hadoop 2.0</a>, <a href="tag/hadoop-1-x-vs-hadoop-2-x/" rel="tag">Hadoop 1.X vs Hadoop 2.X</a>, <a href="tag/hadoop-v2/" rel="tag">hadoop v2</a>, <a href="tag/hive/" rel="tag">hive</a>, <a href="tag/yarn/" rel="tag">YARN</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="comments-link"><a href="hadoop-1-xx-vs-2-xx/#respond" title="Commentaire sur Hadoop 1.xx vs 2.xx">Leave a comment</a></span> 
+       <span class="sep"> | </span> 
+      </footer> 
+     </article> 
+     <div class="adsxpls" id="adsxpls1" style="padding:7px; display: block; margin-left: auto; margin-right: auto; text-align: center;">
+      <ins class="adsbygoogle" id="adsgoogle1" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-8347491442007544" data-ad-slot=""></ins> 
+      <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+     </div> 
+     <article id="post-784" class="post-784 post type-post status-publish format-standard hentry category-big-data tag-bigdata tag-datameer tag-fraud tag-hadoop tag-security"> 
+      <header class="entry-header"> 
+       <h1 class="entry-title"><a href="fight-fraud-with-big-data-analytics/" title="Permalink to Fight Fraud with Big Data Analytics" rel="bookmark">Fight Fraud with Big Data Analytics</a></h1> 
+       <div class="entry-meta"> 
+        <span class="sep">Posted on </span>
+        <a href="fight-fraud-with-big-data-analytics/" title="1:46 " rel="bookmark"><time class="entry-date" datetime="2013-11-29T13:46:46+00:00">novembre 29, 2013</time></a>
+        <span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="author/admin/" title="View all posts by admin" rel="author">admin</a></span></span> 
+       </div> 
+      </header> 
+      <div class="entry-content post_content"> 
+       <p>A consequence of living in a globalized, connected world &nbsp;is the unfortunate presence of online fraud. Fraud applies to all industries and affects businesses of all sizes. Given that we’re coming up on the holidays, and specifically with North America’s love of Black Friday and Cyber Monday, this week we partnered with&nbsp;<a href="//hortonworks.com/partner/datameer/">Datameer</a>&nbsp;on a very topical discussion &nbsp;about best practices on how to fight fraud using Hortonworks Data Platform to integrate Hadoop and Datameer.</p> 
+       <p><strong>You can catch the&nbsp;<a href="//www.datameer.com/learn/webinar/fighting-fraud-with-bigdata-analytics-this-holiday-season.html" target="_blank">recording of the webinar here</a>&nbsp;and read on for some of the detail, including resources and samples to get started.</strong></p> 
+       <p><img alt="DatameerMDA" src="//hortonworks.com/wp-content/uploads/2012/06/DatameerMDA-1024x622.png" width="430" height="261">In the webinar, John Kreisa, VP of Strategy Alliance from Hortonworks and Karen Hsu, Sr. Director Product Marketing at&nbsp;<a href="//www.datameer.com/" target="_blank">Datameer</a>&nbsp;walked us through a&nbsp;<a href="//hortonworks.com/hadoop-modern-data-architecture/">modern data architecture</a>&nbsp;as it relates to fraud prevention and responded to questions around how to get started, or details on a reference architecture to support fraud detection capabilities.</p> 
+       <p>Here, Karen Hsu provides a little more background from the webinar and how you can get started on creating your own fraud prevention application with Hadoop and Datameer:</p> 
+       <p>Fraud is especially rampant this time of year and growing each year.&nbsp;&nbsp;<strong>Retailers expect to make up to 40% of their revenue for the year during the holiday season. Yet last year eTailers lost $3.5B to online fraud</strong>.&nbsp; And retailers are not alone.&nbsp; Recent studies have found merchants paying $200B to $250B in fraud losses annually. Banks and financial organizations are losing $12B to $15B annually. Exacerbating the issue is the high data volumes—over 20B for credit card transactions alone annually.</p> 
+       <p>And the face of fraud is changing. Instead of stealing a credit card and using it to buy big screen TVs, credit card thieves have become more sophisticated. For example, they can now make numerous, small transactions that are seemingly benign. But if a single credit card holder is making 100 $5 margarita transactions at multiple locations at the same time, something is wrong. By analyzing large volumes of complex data—including point of sale, geolocation, authorization, and transaction data– with Datameer on Hadoop, companies were able to identify fraud patterns in historical data.</p> 
+       <p>The reference architecture required to support fraud detection in this new world needs to support business user focused big data analytics applications on top of a Hadoop based architecture.&nbsp; Types of analytics used to detect fraud include:</p> 
+       <ul> 
+        <li>Identifying outlying spend and affected vendors</li> 
+        <li>Data mining and machine learning on transaction data</li> 
+        <li>Predictive modeling (e.g. back-propagation)</li> 
+       </ul> 
+       <p><a href="//hortonworks.com/wp-content/uploads/2013/11/Datameer_Hortonworks.png"><img alt="Datameer_Hortonworks" src="//hortonworks.com/wp-content/uploads/2013/11/Datameer_Hortonworks-1024x457.png" width="717" height="320"></a></p> 
+       <p>&nbsp;</p> 
+       <p>Source:&nbsp;hortonworks</p> 
+       <p>&nbsp;</p> 
+      </div> 
+      <footer class="entry-meta"> 
+       <span class="cat-links"> Posted in <a href="category/big-data/" rel="tag">Big data</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="tag-links"> Tagged <a href="tag/bigdata/" rel="tag">bigdata</a>, <a href="tag/datameer/" rel="tag">datameer</a>, <a href="tag/fraud/" rel="tag">Fraud</a>, <a href="tag/hadoop/" rel="tag">hadoop</a>, <a href="tag/security/" rel="tag">security</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="comments-link"><a href="fight-fraud-with-big-data-analytics/#respond" title="Commentaire sur Fight Fraud with Big Data Analytics">Leave a comment</a></span> 
+       <span class="sep"> | </span> 
+      </footer> 
+     </article> 
+     <div class="adsxpls" id="adsxpls2" style="padding:7px; display: block; margin-left: auto; margin-right: auto; text-align: center;">
+      <ins class="adsbygoogle" id="adsgoogle2" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-8347491442007544" data-ad-slot=""></ins> 
+      <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+     </div>
+     <div class="adsxpls" id="adsxpls3" style="padding:7px; display: block; margin-left: auto; margin-right: auto; text-align: center;">
+      <ins class="adsbygoogle" id="adsgoogle3" style="display:inline-block;width:728px;height:15px" data-ad-client="ca-pub-8347491442007544" data-ad-slot=""></ins> 
+      <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+     </div> 
+     <article id="post-772" class="post-772 post type-post status-publish format-standard hentry category-big-data tag-big-data-2 tag-hadoop tag-hadoop-2 tag-hdp-2-0 tag-hortonworks tag-mapreduce-v2 tag-yran"> 
+      <header class="entry-header"> 
+       <h1 class="entry-title"><a href="how-to-migrate-your-hadoop-cluster-to-hortonworks-data-platform-2-0/" title="Permalink to How To Migrate Your Hadoop Cluster to Hortonworks Data Platform 2.0" rel="bookmark">How To Migrate Your Hadoop Cluster to Hortonworks Data Platform 2.0</a></h1> 
+       <div class="entry-meta"> 
+        <span class="sep">Posted on </span>
+        <a href="how-to-migrate-your-hadoop-cluster-to-hortonworks-data-platform-2-0/" title="10:17 " rel="bookmark"><time class="entry-date" datetime="2013-10-28T22:17:48+00:00">octobre 28, 2013</time></a>
+        <span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="author/admin/" title="View all posts by admin" rel="author">admin</a></span></span> 
+       </div> 
+      </header> 
+      <div class="entry-content post_content"> 
+       <p dir="ltr"> </p>
+       <p dir="ltr"><a href="wp-content/uploads/2013/06/hortonworks.png"><img class="alignnone size-medium wp-image-676" alt="hortonworks" src="wp-content/uploads/2013/06/hortonworks-300x137.png" width="300" height="137"></a></p> 
+       <p dir="ltr">Now that&nbsp;<a href="//hortonworks.com/products/hdp">Hortonworks Data Platform 2.0</a>&nbsp;is GA, you may be looking to migrate your Hadoop stack from another version to take advantage of Hadoop 2’s YARN-based architecture. Fortunately, our&nbsp;<a href="//hortonworks.com/products/hadoop-support/">Professional Services &amp; Support</a>&nbsp;teams are getting a lot of practice at migration from other distributions as&nbsp;<a href="//hortonworks.com/blog/3-reasons-to-choose-hortonworks-for-enterprise-apache-hadoop/">more and more customers</a>&nbsp;turn to&nbsp;<a href="//hortonworks.com/products/hdp">100% enterprise-hardened Apache Hadoop</a>&nbsp;for their big data platform.</p> 
+       <p>While any specific migration may have a few gotchas from a vendor lock-in, or business integration perspective, this high-level process overview is battle tested on large-scale production clusters and we hope it helps you plan for your own migration.</p> 
+       <h3 dir="ltr">Essential Migration Path</h3> 
+       <p>Depending on the source of your existing distribution, or intent, these are some obvious candidates for migration.</p> 
+       <p><img alt="migrate1" src="//hortonworks.com/wp-content/uploads/2013/10/migrate1.png" width="702" height="338"></p> 
+       <h3 dir="ltr">Essential Migration Steps</h3> 
+       <p>A Hadoop distribution has multiple Apache components, and possibly some vendor-specific components. This graphic shows best practice for the order in which to migrate the various components.&nbsp;The Hortonworks services team has automated some of the migration steps to simplify the process.</p> 
+       <p><img alt="migrate2" src="//hortonworks.com/wp-content/uploads/2013/10/migrate2.png" width="712" height="165"></p> 
+       <h3 dir="ltr">Risks and Mitigations</h3> 
+       <p dir="ltr">There are risks associated with any data center migration. Here are two key risks and their essential mitigations.</p> 
+       <h4 dir="ltr">RISK: Data Loss.</h4> 
+       <p dir="ltr">HDFS is very stable and reliable, and we’ve not seen any data loss in actual migrations. Use proactive measures such as config and fsimage backup to keep the risk at a minimum. To avoid data loss, use safemode for checks and balances at each step of the upgrade.</p> 
+       <h4 dir="ltr">RISK: Application Regression Issues</h4> 
+       <p dir="ltr">Early testing in development and test environments can help identify and implement config and code changes, with a final series of tests prior to production migration. Also refer to this guide on&nbsp;<a href="//hortonworks.com/blog/running-existing-applications-on-hadoop-2-yarn/">running existing applications on Hadoop 2 YARN.</a></p> 
+       <h3 dir="ltr">Here to Help</h3> 
+       <p dir="ltr">Hadoop migrations benefit from practice, and we’re getting good at them as more and more customers turn to 100% enterprise-hardened Apache Hadoop for their big data platform. In fact this essential guidance has been used with many customers to migrate thousands of nodes already this year. &nbsp;Of course, we anticipate that this will increase significantly with the availability of the YARN-based Hortonworks Data Platform 2.0.</p> 
+       <p>We hope this brief guide helps you plan for your own migration. For specific migration questions, feel free to<a href="//hortonworks.com/about-us/contact-sales/">contact Hortonworks</a>. Or visit our website to&nbsp;<a href="//hortonworks.com/products/hdp-2/">find out more about Hortonworks Data Platform 2.0</a></p> 
+       <p>&nbsp;</p> 
+       <p>source: hortonworks.com</p> 
+      </div> 
+      <footer class="entry-meta"> 
+       <span class="cat-links"> Posted in <a href="category/big-data/" rel="tag">Big data</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="tag-links"> Tagged <a href="tag/big-data-2/" rel="tag">big data</a>, <a href="tag/hadoop/" rel="tag">hadoop</a>, <a href="tag/hadoop-2/" rel="tag">hadoop 2</a>, <a href="tag/hdp-2-0/" rel="tag">HDP 2.0</a>, <a href="tag/hortonworks/" rel="tag">hortonworks</a>, <a href="tag/mapreduce-v2/" rel="tag">mapreduce v2</a>, <a href="tag/yran/" rel="tag">YRAN</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="comments-link"><a href="how-to-migrate-your-hadoop-cluster-to-hortonworks-data-platform-2-0/#respond" title="Commentaire sur How To Migrate Your Hadoop Cluster to Hortonworks Data Platform 2.0">Leave a comment</a></span> 
+       <span class="sep"> | </span> 
+      </footer> 
+     </article> 
+     <article id="post-764" class="post-764 post type-post status-publish format-standard hentry category-big-data tag-bigdata tag-hadoop-2-0 tag-hadoop2 tag-hortonworks tag-mapreduce-v2 tag-yarn"> 
+      <header class="entry-header"> 
+       <h1 class="entry-title"><a href="hadoop-2-0/" title="Permalink to Hadoop 2.0" rel="bookmark">Hadoop 2.0</a></h1> 
+       <div class="entry-meta"> 
+        <span class="sep">Posted on </span>
+        <a href="hadoop-2-0/" title="9:21 " rel="bookmark"><time class="entry-date" datetime="2013-10-28T21:21:54+00:00">octobre 28, 2013</time></a>
+        <span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="author/admin/" title="View all posts by admin" rel="author">admin</a></span></span> 
+       </div> 
+      </header> 
+      <div class="entry-content post_content"> 
+       <p style="text-align: center;"><a target="blank" href="wp-content/uploads/2013/10/Hadoop-2.jpg"><img class=" wp-image-766 aligncenter" alt="Hadoop-2" src="wp-content/uploads/2013/10/Hadoop-2.jpg" width="210" height="210"></a>The latest open source version of&nbsp;<a href="//hadoop.apache.org/">Apache Hadoop</a>, the iconic parallel, distributed,&nbsp;Big Data technology is finally ready to roll.</p> 
+       <p>This version of Hadoop includes the addition of&nbsp;<a href="//hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html">YARN</a>&nbsp;(sometimes called MapReduce 2.0 or MRv2) to the engine. &nbsp;YARN, a typically-silly open source acronym for «&nbsp;yet another resource negotiator&nbsp;» factors out the management components of Hadoop 1.0’s&nbsp;<a href="//wiki.apache.org/hadoop/MapReduce">MapReduce</a>&nbsp;engine from the MapReduce processing algorithm itself. &nbsp;The MapReduce algorithm is still there, but it is now effectively a plug-in to YARN that can be swapped out for other processing algorithms, including those that run interactively, rather than using a batch mode of operation.</p> 
+       <figure>
+        <img title="yarn_architecture" alt="yarn_architecture" src="//cdn-static.zdnet.com/i/r/story/70/00/022011/yarnarchitecture-v1-505x398.png?hash=LwRkZJDmAm&amp;upscale=1" width="505" height="398">
+       </figure> 
+       <p>Some major distributions of Hadoop, such as&nbsp;<a href="//www.cloudera.com/content/cloudera/en/products/cdh.html">Cloudera’s Distribution including Apache Hadoop (CDH)</a>&nbsp;already included YARN, but were in fact using what the Apache Software Foundation considered pre-release code. &nbsp;But YARN and Hadoop 2.0 are pre-release no more.</p> 
+       <p><a href="//www.linkedin.com/in/acmurthy">Arun C. Murthy</a>, the release manager of Apache Hadoop 2.0 and Founder of&nbsp;<a href="//hortonworks.com/">Hortonworks</a>, had this to say:&nbsp;«&nbsp;Hadoop 2 marks a major evolution of the open source project that has been built collectively by passionate and dedicated developers and committers in the Apache community who are committed to bringing greater usability and stability to the data platform.&nbsp;»</p> 
+       <p>Just yesterday, the&nbsp;<a href="//hive.apache.org/">Apache Hive</a>&nbsp;project also released a new version (0.12.0), for full compatibility with Hadoop 2.0. &nbsp;Hive, which allows for SQL queries against data in Hadoop, is currently based on the MapReduce algorithm. &nbsp;But now that Hadoop 2.0 is fully released, look for a corresponding production release of&nbsp;<a href="//tez.incubator.apache.org/">Apache Tez</a>&nbsp;(incubating) and Hortonworks’&nbsp;<a href="//hortonworks.com/blog/100x-faster-hive/">Stinger Initiative</a>&nbsp;(projects on which Murthy also provides leadership), which extend Hive to use YARN for direct SQL querying of Hadoop data, bypassing the MapReduce algorithm completely.</p> 
+       <p>It’s not&nbsp;<em>all</em>&nbsp;about YARN though. &nbsp;Hadoop 2.0 also sports the following features:</p> 
+       <ul> 
+        <li>High Availability for Apache Hadoop HDFS (the Hadoop Distributed File System)</li> 
+        <li>Federation for Apache Hadoop HDFS for significant scale compared to Apache Hadoop 1.x.</li> 
+        <li>Binary Compatibility for existing Apache Hadoop MapReduce applications built for Apache Hadoop 1.x.</li> 
+        <li>Support for Microsoft Windows.</li> 
+        <li>Snapshots for data in Apache Hadoop HDFS.</li> 
+        <li>NFS-v3 Access for Apache Hadoop HDFS.</li> 
+       </ul> 
+       <p>That’s not a bad manifest. &nbsp;Honestly, this is a very exciting day in the world of Big Data, as Hadoop will morph into more of a general-purpose Big Data operating platform and less of a rigid tool that must be programmed directly.</p> 
+       <p>And, hey, MapReduce, don’t let the door hit your butt on the way out!</p> 
+       <p>source:&nbsp;<a href="//www.zdnet.com/hadoop-2-0-goes-ga-7000022011/">http://www.zdnet.com/hadoop-2-0-goes-ga-7000022011/</a></p> 
+      </div> 
+      <footer class="entry-meta"> 
+       <span class="cat-links"> Posted in <a href="category/big-data/" rel="tag">Big data</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="tag-links"> Tagged <a href="tag/bigdata/" rel="tag">bigdata</a>, <a href="tag/hadoop-2-0/" rel="tag">hadoop 2.0</a>, <a href="tag/hadoop2/" rel="tag">hadoop2</a>, <a href="tag/hortonworks/" rel="tag">hortonworks</a>, <a href="tag/mapreduce-v2/" rel="tag">mapreduce v2</a>, <a href="tag/yarn/" rel="tag">YARN</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="comments-link"><a href="hadoop-2-0/#respond" title="Commentaire sur Hadoop 2.0">Leave a comment</a></span> 
+       <span class="sep"> | </span> 
+      </footer> 
+     </article> 
+     <div class="adsxpls" id="adsxpls5" style="padding:7px; display: block; margin-left: auto; margin-right: auto; text-align: center;">
+      <ins class="adsbygoogle" id="adsgoogle5" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-8347491442007544" data-ad-slot=""></ins> 
+      <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+     </div>
+     <div class="adsxpls" id="adsxpls6" style="padding:7px; display: block; margin-left: auto; margin-right: auto; text-align: center;">
+      <ins class="adsbygoogle" id="adsgoogle6" style="display:inline-block;width:728px;height:15px" data-ad-client="ca-pub-8347491442007544" data-ad-slot=""></ins> 
+      <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+     </div> 
+     <article id="post-744" class="post-744 post type-post status-publish format-standard hentry category-big-data tag-bigdata tag-consumer tag-marketing tag-product"> 
+      <header class="entry-header"> 
+       <h1 class="entry-title"><a href="big-data-and-marketing-why-the-publicis-omnicom-merge-is-historical/" title="Permalink to Big data and marketing: Why the PUBLICIS-OMNICOM merge is historical" rel="bookmark">Big data and marketing: Why the PUBLICIS-OMNICOM merge is historical</a></h1> 
+       <div class="entry-meta"> 
+        <span class="sep">Posted on </span>
+        <a href="big-data-and-marketing-why-the-publicis-omnicom-merge-is-historical/" title="1:21 " rel="bookmark"><time class="entry-date" datetime="2013-08-09T13:21:29+00:00">août 9, 2013</time></a>
+        <span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="author/admin/" title="View all posts by admin" rel="author">admin</a></span></span> 
+       </div> 
+      </header> 
+      <div class="entry-content post_content"> 
+       <p><a href="wp-content/uploads/2013/08/2013-07-28T171526Z_1_CBRE96R1BXU00_RTROPTP_3_OUKBS-UK-PUBLICIS-OMNICOM.jpg"><img class="alignnone size-full wp-image-745" alt="Publicis Chief executive Levy and Omnicom Group head Wren react during a joint news conference in Paris" src="wp-content/uploads/2013/08/2013-07-28T171526Z_1_CBRE96R1BXU00_RTROPTP_3_OUKBS-UK-PUBLICIS-OMNICOM.jpg" width="800" height="506"></a></p> 
+       <p>&nbsp;<br> «&nbsp;Half the money&nbsp;I spend on advertising is wasted; the trouble is I don’t know which half.&nbsp;» This was how John Wanamaker defined the challenge for advertisers way back in 1890. How can one know if consumers buy my brand from only seeing my ads on t.v., my website, or in the papers or simply because they enjoy my product? Marketers have been faced with this practically insoluble puzzle for over one hundred and twenty years because of&nbsp;the absence of tools and relevant data.</p> 
+       <p>The good news is that digital emergence is changing this reality.&nbsp;On the one hand, the Internet, mobile and TV continue to become more connected, and with this more data with which we can exploit. On the other, with cloud, along with NoSQL technologies, it is now possible to manage low costs; with monumental amounts of data in real time.</p> 
+       <p>With Big Data, advertisers will be able to know precisely what contributes to their buying decisions at large. These could be &nbsp;advertisements, marketing channels, exogenous factors, i.e. competition, the weather, the state of opinion, or even the intrinsic qualities of the product, such as price.&nbsp;This is a major revolution in the Copernican sense. It is an axis of change and of perspectives that reshape the way we think about brand communication.</p> 
+       <p>Marketing is no longer a cost center, but a profit center. Though campaigns begin a year in advance, they are organized and optimized in real-time. Technology is no longer a peripheral issue, and performance is at the heart of the process.&nbsp;In this new market, the new players are not just contacting Marketing consultants, but also (and especially) technology companies that provide solutions to reach the consumer directly and understand how they interact with brands.&nbsp;In a data-dominated Communication industry, the value is placed on the process of shifting from content creation to technology and dissemination of digital content.&nbsp;By simply looking at the market capitalization and profit rates of technology companies such as Google, Microsoft, Adobe and IBM, and traditional players like WPP, Interpublic and Havas, the results are quite convincing.</p> 
+       <p>In this context, it is imperative that one must understand the&nbsp;<em>merger</em>&nbsp;of Publicis and Omnicom.</p> 
+       <p>By joining forces, the new Publicis Omnicom Group will hit a critical mass that will allow them to confront the «&nbsp;pure players&nbsp;» technology method.&nbsp;Whether in terms of acquisition, with which 30 billion has been valuated, the new merged organization will be able to compete with the likes of Yahoo!’s R&amp;D, where synergies will free up resources to innovate and create proprietary solutions. Thanks to the diversity and strength of its clients, the now data efficient Publicis Omnicom will start off just like how Google or Facebook did, data omniscient.&nbsp;From Publicis’s skill at being a data processing conglomerate, and Omnicom’s networking expertise, the result of these achievements will determine the success, or not, of this merger.</p> 
+       <p>This fusion can be perceived only through the prism of the financial package, as errors remain within the analytics of the merger.&nbsp;The &nbsp;Omnicom-Publicis merger is the first intelligent and bold structural response in the era of post-marketing data.</p> 
+       <p>In this sense, it will remain a historical milestone in advertising and marketing.</p> 
+       <p>Source: captaindash.com via lesechos.fr</p> 
+      </div> 
+      <footer class="entry-meta"> 
+       <span class="cat-links"> Posted in <a href="category/big-data/" rel="tag">Big data</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="tag-links"> Tagged <a href="tag/bigdata/" rel="tag">bigdata</a>, <a href="tag/consumer/" rel="tag">consumer</a>, <a href="tag/marketing/" rel="tag">marketing</a>, <a href="tag/product/" rel="tag">product</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="comments-link"><a href="big-data-and-marketing-why-the-publicis-omnicom-merge-is-historical/#respond" title="Commentaire sur Big data and marketing: Why the PUBLICIS-OMNICOM merge is historical">Leave a comment</a></span> 
+       <span class="sep"> | </span> 
+      </footer> 
+     </article> 
+     <article id="post-719" class="post-719 post type-post status-publish format-standard hentry category-big-data tag-big-data-2 tag-flume tag-hadoop tag-hdfs tag-mapreduce tag-oozie tag-tutorial"> 
+      <header class="entry-header"> 
+       <h1 class="entry-title"><a href="hadoop-tutorial-analyzing-server-logs/" title="Permalink to Analyzing server logs using hadoop" rel="bookmark">Analyzing server logs using hadoop</a></h1> 
+       <div class="entry-meta"> 
+        <span class="sep">Posted on </span>
+        <a href="hadoop-tutorial-analyzing-server-logs/" title="5:43 " rel="bookmark"><time class="entry-date" datetime="2013-07-21T17:43:00+00:00">juillet 21, 2013</time></a>
+        <span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="author/admin/" title="View all posts by admin" rel="author">admin</a></span></span> 
+       </div> 
+      </header> 
+      <div class="entry-content post_content"> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>Big Data is the hotness, there is no doubt about it. Every year its just gotten bigger and bigger and shows no sign of slowing. There is a lot out there about big data, but despite the hype, there isn’t a lot of good technical content for those who want to get started. The lack of technical how-to info is made worse by the fact that many Hadoop projects have moved their documentation around over time and Google searches commonly point to obsolete docs. My intent here is to provide some solid guidance on how to actually get started with practical uses of Hadoop and to encourage others to do the same.</p> 
+       <p>This video explores how to use Hadoop and the Hortonworks Data Platform to analyze server log data and respond quickly to an enterprise security breach.<br> <iframe id="_ytid_16720" width="550" height="337" src="//www.youtube.com/embed/BPC_mClNSXk?enablejsapi=1&amp;autoplay=0&amp;cc_load_policy=0&amp;iv_load_policy=1&amp;loop=0&amp;modestbranding=0&amp;rel=1&amp;showinfo=1&amp;playsinline=0&amp;autohide=2&amp;theme=dark&amp;color=red&amp;wmode=opaque&amp;vq=&amp;controls=2&amp;" frameborder="0" type="text/html" class="__youtube_prefs__" allowfullscreen webkitallowfullscreen="" mozallowfullscreen=""></iframe></p> 
+      </div> 
+      <footer class="entry-meta"> 
+       <span class="cat-links"> Posted in <a href="category/big-data/" rel="tag">Big data</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="tag-links"> Tagged <a href="tag/big-data-2/" rel="tag">big data</a>, <a href="tag/flume/" rel="tag">flume</a>, <a href="tag/hadoop/" rel="tag">hadoop</a>, <a href="tag/hdfs/" rel="tag">HDFS</a>, <a href="tag/mapreduce/" rel="tag">mapreduce</a>, <a href="tag/oozie/" rel="tag">oozie</a>, <a href="tag/tutorial/" rel="tag">tutorial</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="comments-link"><a href="hadoop-tutorial-analyzing-server-logs/#respond" title="Commentaire sur Analyzing server logs using hadoop">Leave a comment</a></span> 
+       <span class="sep"> | </span> 
+      </footer> 
+     </article> 
+     <article id="post-713" class="post-713 post type-post status-publish format-standard hentry category-big-data category-social-media tag-big-data-2 tag-bigdata tag-flume tag-hadoop tag-hcatalog tag-sentiment-analytics tag-social-media tag-text-analytics"> 
+      <header class="entry-header"> 
+       <h1 class="entry-title"><a href="uncover-consumer-sentiment-with-hadoop/" title="Permalink to Uncover Consumer Sentiment with Hadoop" rel="bookmark">Uncover Consumer Sentiment with Hadoop</a></h1> 
+       <div class="entry-meta"> 
+        <span class="sep">Posted on </span>
+        <a href="uncover-consumer-sentiment-with-hadoop/" title="3:02 " rel="bookmark"><time class="entry-date" datetime="2013-07-11T15:02:33+00:00">juillet 11, 2013</time></a>
+        <span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="author/admin/" title="View all posts by admin" rel="author">admin</a></span></span> 
+       </div> 
+      </header> 
+      <div class="entry-content post_content"> 
+       <div> 
+        <div> 
+         <p><strong>How can you understand what your customers are thinking, and how can you respond to those sentiments?</strong></p> 
+         <p>Unstructured data from multiple sources such as social media, blogs, customer support transcripts and online reviews contain many data points related to consumer sentiment around products, services, brand and competitive position. Combining and analyzing these data sources uncovers sentiment information that, when understood, can assist with business decisions such as marketing and promotion spend.</p> 
+         <p>In this video, we demonstrate how&nbsp;Hadoop can be used to understand how the public feels after the release of a movie.</p> 
+        </div> 
+        <p><iframe src="//www.youtube.com/embed/y3nFfsTnY3M?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" height="390" width="640" frameborder="0"></iframe></p> 
+        <p>This demonstration shows how to:</p> 
+        <ul> 
+         <li>Stream twitter feeds into HDFS with Flume</li> 
+         <li>Use HCatalog to build a relational view of the data</li> 
+         <li>Use Hive to query and refine the data</li> 
+         <li>Use Elastic Search for high-level visualization</li> 
+         <li>Import the data into Microsoft Excel with the ODBC connector</li> 
+         <li>Visualize data with Powerview</li> 
+        </ul> 
+        <p>source: hortonworks</p> 
+       </div> 
+      </div> 
+      <footer class="entry-meta"> 
+       <span class="cat-links"> Posted in <a href="category/big-data/" rel="tag">Big data</a>, <a href="category/social-media/" rel="tag">social media</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="tag-links"> Tagged <a href="tag/big-data-2/" rel="tag">big data</a>, <a href="tag/bigdata/" rel="tag">bigdata</a>, <a href="tag/flume/" rel="tag">flume</a>, <a href="tag/hadoop/" rel="tag">hadoop</a>, <a href="tag/hcatalog/" rel="tag">hcatalog</a>, <a href="tag/sentiment-analytics/" rel="tag">sentiment analytics</a>, <a href="tag/social-media/" rel="tag">social media</a>, <a href="tag/text-analytics/" rel="tag">text analytics</a> </span> 
+       <span class="sep"> | </span> 
+       <span class="comments-link"><a href="uncover-consumer-sentiment-with-hadoop/#respond" title="Commentaire sur Uncover Consumer Sentiment with Hadoop">Leave a comment</a></span> 
+       <span class="sep"> | </span> 
+      </footer> 
+     </article> 
+     <div class="pagination">
+      <span>Page 1 of 13</span>
+      <span class="current">1</span>
+      <a href="page/2/" class="inactive">2</a>
+      <a href="page/3/" class="inactive">3</a>
+      <a href="page/4/" class="inactive">4</a>
+      <a href="page/5/" class="inactive">5</a>
+      <a href="page/2/">Next ›</a>
+      <a href="page/13/">Last »</a>
+     </div> 
+    </div> 
+    <div id="sidebar" class="widget-area col300" role="complementary"> 
+     <aside id="widget_sp_image-2" class="widget widget_sp_image">
+      <a href="//www.bigdatafoundation.com/" target="_blank" class="widget_sp_image-image-link" title="Big Data Foundation"><img width="193" height="145" alt="Big Data Foundation" class="attachment-full aligncenter" style="max-width: 100%;" src="wp-content/uploads/2013/02/BDF.png"></a>
+     </aside>
+     <aside id="mailchimpsf_widget-2" class="widget widget_mailchimpsf_widget">
+      <h2 class="widget-title">Sign up for our Newsletter</h2> 
+      <style> .widget_mailchimpsf_widget .widget-title { line-height: 1.4em; margin-bottom: 0.75em; } #mc_subheader { line-height: 1.25em; margin-bottom: 18px; } .mc_merge_var { margin-bottom: 1.0em; } .mc_var_label, .mc_interest_label { display: block; margin-bottom: 0.5em; } .mc_input { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; } .mc_input.mc_phone { width: auto; } select.mc_select { margin-top: 0.5em; width: 100%; } .mc_address_label { margin-top: 1.0em; margin-bottom: 0.5em; display: block; } .mc_address_label ~ select { width: 100%; } .mc_list li { list-style: none; background: none !important; } .mc_interests_header { margin-top: 1.0em; margin-bottom: 0.5em; } .mc_interest label, .mc_interest input { margin-bottom: 0.4em; } #mc_signup_submit { margin-top: 1.5em; width: 80%; } #mc_unsub_link a { font-size: 0.75em; } #mc_unsub_link { margin-top: 1.0em; } .mc_header_address, .mc_email_format { display: block; font-weight: bold; margin-top: 1.0em; margin-bottom: 0.5em; } .mc_email_options { margin-top: 0.5em; } .mc_email_type { padding-left: 4px; } </style> 
+      <div id="mc_signup"> 
+       <form method="post" action="#mc_signup" id="mc_signup_form"> 
+        <input type="hidden" id="mc_submit_type" name="mc_submit_type" value="html"> 
+        <input type="hidden" name="mcsf_action" value="mc_submit_signup_form"> 
+        <input type="hidden" id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" value="e42629ed0e"> 
+        <div class="mc_form_inside"> 
+         <div class="updated" id="mc_message"> 
+         </div> 
+         <div class="mc_merge_var"> 
+          <label for="mc_mv_EMAIL" class="mc_var_label mc_header mc_header_email">Email Address</label> 
+          <input type="text" size="18" name="mc_mv_EMAIL" id="mc_mv_EMAIL" class="mc_input"> 
+         </div> 
+         <div class="mc_signup_submit"> 
+          <input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Subscribe" class="button"> 
+         </div> 
+        </div> 
+       </form> 
+      </div> 
+     </aside>
+     <aside id="stf-adsense-3" class="widget stf-adsense">
+      <div class="adsense medium_rectangle">
+       <script type="text/javascript"><!--
+		google_ad_client = "8347491442007544";
+	 google_ad_width = 300; google_ad_height = 250; google_ad_format = "300x250_as"; 
+	
+	 /* ad slot is empty */ 
+	/* ad channel is empty */
+	 google_ad_type = "image"; 
+	
+	google_color_border = "#EEEEEE";
+	google_color_link = "#2277DD";
+	google_color_url = "#888888";
+	google_color_text = "#666666";
+	google_color_bg = "#FFFFFF";
+	 //-->
+		</script> 
+       <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+      </div>
+     </aside>
+     <aside id="categories-2" class="widget widget_categories">
+      <h2 class="widget-title">Categories</h2>
+      <select name="cat" id="cat" class="postform"> <option value="-1">Choisir une catégorie</option> <option class="level-0" value="2">Big data&nbsp;&nbsp;(84)</option> <option class="level-0" value="6">Business Intelligence&nbsp;&nbsp;(6)</option> <option class="level-0" value="3">social media&nbsp;&nbsp;(4)</option> </select> 
+      <script type="text/javascript">
+/* <![CDATA[ */
+	var dropdown = document.getElementById("cat");
+	function onCatChange() {
+		if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
+			location.href = "http://bigdatafoundation.com/blog/?cat="+dropdown.options[dropdown.selectedIndex].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+/* ]]> */
+</script> 
+     </aside> 
+     <aside id="recent-posts-2" class="widget widget_recent_entries"> 
+      <h2 class="widget-title">Articles récents</h2> 
+      <ul> 
+       <li> <a href="hadoop-1-xx-vs-2-xx/">Hadoop 1.xx vs 2.xx</a> </li> 
+       <li> <a href="fight-fraud-with-big-data-analytics/">Fight Fraud with Big Data Analytics</a> </li> 
+       <li> <a href="how-to-migrate-your-hadoop-cluster-to-hortonworks-data-platform-2-0/">How To Migrate Your Hadoop Cluster to Hortonworks Data Platform 2.0</a> </li> 
+       <li> <a href="hadoop-2-0/">Hadoop 2.0</a> </li> 
+       <li> <a href="big-data-and-marketing-why-the-publicis-omnicom-merge-is-historical/">Big data and marketing: Why the PUBLICIS-OMNICOM merge is historical</a> </li> 
+       <li> <a href="hadoop-tutorial-analyzing-server-logs/">Analyzing server logs using hadoop</a> </li> 
+       <li> <a href="uncover-consumer-sentiment-with-hadoop/">Uncover Consumer Sentiment with Hadoop</a> </li> 
+       <li> <a href="why-has-hadoop-been-such-a-major-force-in-the-big-data-scene/">Why has Hadoop been such a major force in the Big Data scene?</a> </li> 
+       <li> <a href="is-hadoop-right-for-you/">Is Hadoop Right for You?</a> </li> 
+       <li> <a href="how-does-hadoop-mapreduce-work-2/">How does hadoop MapReduce works</a> </li> 
+       <li> <a href="data-never-sleeps/">Data never sleeps</a> </li> 
+       <li> <a href="how-to-get-data-into-hdfs-from-mysql-in-real-time/">How to load data into HDFS from MySQL in real time</a> </li> 
+       <li> <a href="limiting-joins-in-apache-hive/">Limiting Joins in Apache Hive</a> </li> 
+       <li> <a href="get-started-with-node-js/">Get started with Node.js</a> </li> 
+       <li> <a href="nosql-graph-databases-orientdb/">NoSQL Graph databases OrientDB</a> </li> 
+       <li> <a href="learn-apache-hadoop-in-6-video/">Learn apache hadoop in 6 videos</a> </li> 
+       <li> <a href="513/">Hadoop User Group meeting recap, March 2011</a> </li> 
+       <li> <a href="510/">510</a> </li> 
+       <li> <a href="504/">Hadoop’s Great Potential Waiting for Exploitation</a> </li> 
+       <li> <a href="484/">Big data definition</a> </li> 
+       <li> <a href="deploying-and-managing-hadoop-clusters-with-ambari/">Deploying and Managing Hadoop Clusters with AMBARI</a> </li> 
+       <li> <a href="big-data-an-introduction-to-hive-and-hql/">Big Data – An Introduction to Hive and HQL</a> </li> 
+       <li> <a href="big-data-analytics-make-better-business-decisions/">Big Data Analytics: make better business decisions</a> </li> 
+       <li> <a href="nosql-in-two-minutes/">NoSQL in Two Minutes</a> </li> 
+       <li> <a href="hadoop-in-two-minutes/">Hadoop in Two Minutes</a> </li> 
+       <li> <a href="big-data-basics-in-two-minutes-2/">Big Data Basics in Two Minutes</a> </li> 
+       <li> <a href="the-age-of-big-data/">The Age of Big Data</a> </li> 
+       <li> <a href="what-is-zookeeper/">What is Zookeeper?</a> </li> 
+       <li> <a href="what-is-hive-2/">What is Hive?</a> </li> 
+       <li> <a href="what-is-text-analytics/">What is Text Analytics?</a> </li> 
+      </ul> 
+     </aside>
+     <aside id="archives-2" class="widget widget_archive">
+      <h2 class="widget-title">Archives</h2> 
+      <select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;"> <option>Choisir un mois</option> <option value="http://bigdatafoundation.com/blog/2014/04/"> avril 2014 &nbsp;(1)</option> <option value="http://bigdatafoundation.com/blog/2013/11/"> novembre 2013 &nbsp;(1)</option> <option value="http://bigdatafoundation.com/blog/2013/10/"> octobre 2013 &nbsp;(2)</option> <option value="http://bigdatafoundation.com/blog/2013/08/"> août 2013 &nbsp;(1)</option> <option value="http://bigdatafoundation.com/blog/2013/07/"> juillet 2013 &nbsp;(2)</option> <option value="http://bigdatafoundation.com/blog/2013/06/"> juin 2013 &nbsp;(2)</option> <option value="http://bigdatafoundation.com/blog/2013/05/"> mai 2013 &nbsp;(1)</option> <option value="http://bigdatafoundation.com/blog/2013/04/"> avril 2013 &nbsp;(12)</option> <option value="http://bigdatafoundation.com/blog/2013/03/"> mars 2013 &nbsp;(12)</option> <option value="http://bigdatafoundation.com/blog/2013/02/"> février 2013 &nbsp;(55)</option> </select> 
+     </aside>
+     <aside id="widget_sp_image-5" class="widget widget_sp_image">
+      <a href="484/" target="_self" class="widget_sp_image-image-link" title="what is bigdata"><img width="300" height="172" alt="what is bigdata" class="attachment-medium" style="max-width: 100%;" src="wp-content/uploads/2013/08/content-block-big-data-transforms-business-300x172.jpg"></a>
+     </aside>
+     <aside id="widget_sp_image-6" class="widget widget_sp_image">
+      <a href="big-data-spans-four-dimensions-volume-velocity-variety-and-veracity/" target="_self" class="widget_sp_image-image-link" title="big data volume velocity veracity"><img width="300" height="231" alt="big data volume velocity veracity" class="attachment-medium" style="max-width: 100%;" src="wp-content/uploads/2013/08/img_bigdata-300x231.png"></a>
+     </aside>
+     <aside id="widget_sp_image-4" class="widget widget_sp_image">
+      <a href="learn-apache-hadoop-in-6-video/" target="_self" class="widget_sp_image-image-link" title="learn hadoop"><img width="320" height="240" alt="learn hadoop" class="attachment-large" style="max-width: 100%;" src="wp-content/uploads/2013/08/hadoop-320x240.jpg"></a>
+     </aside>
+     <aside id="widget_sp_image-3" class="widget widget_sp_image">
+      <img width="350" height="232" alt="" class="attachment-350x232 alignright" style="max-width: 100%;" src="wp-content/uploads/2013/08/summer-big-data-12.gif">
+     </aside> 
+    </div> 
+   </div> 
+   <footer id="colophon" role="contentinfo"> 
+    <div class="footer-wrap"> 
+     <div id="site-generator"> 
+     </div> 
+    </div> 
+   </footer> 
+  </div> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/bigdatafoundation.com\/blog\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Envoi en cours ...","cached":"1"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.9"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://bigdatafoundation.com/blog/wp-content/plugins/sem-subscribe-me/js/scripts.js?ver=20090906"></script> 
+  <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?ver=4.0"></script>   
+  <!-- Quick Cache file path: wp-content/cache/quick-cache/cache/http/bigdatafoundation-com/blog.html --> 
+  <!-- Quick Cache file built for (http://bigdatafoundation.com/blog/) in 0.91985 seconds, on: Nov 30th, 2014 @ 7:44 pm UTC. --> 
+  <!-- This Quick Cache file will auto-expire (and be rebuilt) on: Dec 7th, 2014 @ 7:44 pm UTC (based on your configured expiration time). --> 
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ --> 
+  <!-- Quick Cache fully functional :-) Cache file served for (http://bigdatafoundation.com/blog/) in 0.00073 seconds, on: Dec 5th, 2014 @ 8:30 am UTC. -->
+ </body>
+</html>

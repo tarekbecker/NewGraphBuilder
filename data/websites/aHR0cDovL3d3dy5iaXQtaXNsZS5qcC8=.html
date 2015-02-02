@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="Content-Script-Type" content="text/javascript"> 
+  <meta http-equiv="Pragma" content="no-cache"> 
+  <meta http-equiv="Cache-Control" content="no-cache"> 
+  <meta http-equiv="Expires" content="0"> 
+  <link rel="stylesheet" type="text/css" href="/common/css/import.css" media="screen,print"> 
+  <script type="text/javascript" src="/common/js/heightLine.js"></script> 
+  <script type="text/javascript" src="/common/js/common.js"></script> 
+  <script type="text/javascript" src="/common/js/jquery-1.7.2.min.js"></script> 
+  <script type="text/javascript" src="/common/js/dd_menu.js" charset="utf-8"></script> 
+  <script type="text/javascript" src="/common/js/main_image.js" charset="utf-8"></script> 
+  <script type="text/javascript" src="/common/js/ro.js" charset="utf-8"></script> 
+  <script type="text/javascript" src="/common/js/jquery.center.js" charset="utf-8"></script> 
+  <!-- New Google Tag Manager --> 
+  <noscript></noscript>
+ </head>
+ <body>
+  <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK7TZ3" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PK7TZ3');</script> 
+  <!-- End New Google Tag Manager --> 
+  <!--[if IE 6]>
+<script type="text/javascript" src="/common/js/DD_belatedPNG.js"></script>
+<script>
+    DD_belatedPNG.fix('img, .sub01, .sub02, .sub03 a, li, span');
+</script>
+<![endif]--> 
+  <meta name="description" content="ビットアイルは長年のデータセンター運用実績・ノウハウをベースに、お客様のITアウトソーシングニーズに応える、データセンター・クラウドサービス提供しています。"> 
+  <meta name="keywords" content="ビットアイル,データセンター,クラウド,ビットアイルクラウド"> 
+  <meta name="robots" content="NOODP"> 
+  <title>ビットアイル｜データセンターとクラウドをハイブリッド提供</title>  
+  <!-- wrapper --> 
+  <div class="wrapper"> 
+   <!-- header zoon --> ﻿
+   <div class="header"> 
+    <div class="inner"> 
+     <p class="logo"><a href="/"><img src="/common/img/all/logo.jpg" alt="データセンターのビットアイル" width="159" height="73"></a></p> 
+     <h1 class="txt">データセンターのビットアイル</h1> 
+     <p class="tel"><img src="/common/img/all/header_tel.jpg" alt="03-5782-8724" width="209" height="22"></p> 
+     <div class="search"> 
+      <form action="/search/" id="cse-search-box"> 
+       <input type="hidden" name="cx" value="012515884257856072629:-bby3mirgds"> 
+       <input type="hidden" name="ie" value="UTF-8"> 
+       <input type="text" name="q" class="input">
+       <input type="image" name="sa" src="/common/img/all/btn_search.gif" alt="検索"> 
+      </form> 
+     </div> 
+     <ul class="hnav"> 
+      <li><a href="http://www.bit-isle.co.jp/" target="_blank">企業・IR情報</a><img src="/common/img/all/icon_link.gif" alt="icon" width="13" height="10"></li> 
+      <li><a href="/customer/">カスタマーサイト</a></li> 
+      <li><a href="http://www.bit-isle.co.jp/recruit/" target="_blank">採用情報</a><img src="/common/img/all/icon_link.gif" alt="icon" width="13" height="10"></li> 
+     </ul> 
+    </div> 
+    <div id="globalNavi" class="nav"> 
+     <ul class="clearfix"> 
+      <li class="nav01"> <a class="nav01_hover" href="/service/index.html"><img class="over ro" src="/common/img/all/btn_nav_01_off.jpg" alt="サービス紹介" width="204" height="45"></a> 
+       <ul class="drop"> 
+        <li class="sub01"><a href="/service/cloud/index.html" onfocus="this.blur()">クラウドサービス</a></li> 
+        <li class="sub02"><a href="/service/datacenter/index.html" onfocus="this.blur()">データセンターサービス</a></li> 
+        <li class="sub02"><a href="/service/management/index.html" onfocus="this.blur()">IT運用ソリューション</a></li> 
+        <li class="sub02"><a href="/service/solution/index.html" onfocus="this.blur()">ソリューション</a></li> 
+        <li class="sub03"><a href="/service/group/index.html" onfocus="this.blur()">ビットアイルグループ</a></li> 
+       </ul> </li> 
+      <li class="nav02"><a href="/issue/index.html"><img src="/common/img/all/btn_nav_02_off.jpg" alt="課題・目的別検索" width="160" height="45" class="ro"></a> 
+       <ul class="drop drop_2"> 
+        <li class="sub04"><a href="/issue/index.html" onfocus="this.blur()">情報システム部門</a></li> 
+        <li class="sub05"><a href="/issue/index2.html" onfocus="this.blur()">ISV,ソフトウェアベンダー</a></li> 
+        <li class="sub06"><a href="/issue/index3.html" onfocus="this.blur()">インターネットサービス</a></li> 
+       </ul> </li> 
+      <li class="nav03"><a href="/casestudies/index.html"><img src="/common/img/all/btn_nav_03_off.jpg" alt="事例" width="159" height="45" class="ro"></a></li> 
+      <li class="nav04"><a href="/partner/index.html"><img src="/common/img/all/btn_nav_04_off.jpg" alt="パートナー" width="159" height="45" class="ro"></a></li> 
+      <li class="nav05"><a href="/news/index.html"><img src="/common/img/all/btn_nav_05_off.jpg" alt="お知らせ" width="159" height="45" class="ro"></a></li> 
+      <li class="nav06"><a href="/contact/index.html"><img src="/common/img/all/btn_nav_06_off.jpg" alt="お問い合せ" width="159" height="45" class="ro"></a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <!-- /header zoon --> 
+   <!-- mainimg --> 
+   <div class="mainimg"> 
+    <div id="imgbox" class="inner clearfix"> 
+     <div id="mainImage" class="main">
+      <a href="http://cloud.bit-isle.jp/lp/n-series.html"><img src="/common/img/top/index_mainimg01.jpg" alt="ビットアイル" width="672" height="235"></a>
+     </div> 
+     <div class="submenu"> 
+      <ul> 
+       <li><a href="/service/cloud/index.html"><img onmouseover="changeImage('02');" src="/common/img/top/bitislecloud_off.jpg" alt="ビットアイルクラウド" width="312" height="68" class="ro"></a></li> 
+       <li><a href="/service/datacenter/index.html"><img onmouseover="changeImage('03');" src="/common/img/top/index_off.jpg" alt="ビットアイルデータセンター" width="312" height="68" class="ro"></a></li> 
+       <li><a href="/contact/index.html"><img onmouseover="changeImage('04');" src="/common/img/top/contact_off.jpg" alt="お問い合わせ" width="312" height="68" class="ro"></a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- //mainimg --> 
+   <!-- contents --> 
+   <div class="contents service_top"> 
+    <div class="inner"> 
+     <div class="main"> 
+      <div class="clearfix"> 
+       <div class="box01 left"> 
+        <div class="area heightLine-group1"> 
+         <h2>課題・目的別に探す</h2> 
+         <h3><a href="/issue/index.html">情報システム部門</a></h3> 
+         <ul class="list"> 
+          <li><a href="/issue/01.html">社内システムをクラウド環境へ移行したい</a></li> 
+          <li><a href="/issue/02.html">サーバを預けて運用管理をまかせたい</a></li> 
+          <li><a href="/issue/03.html">サーバを統合、集約したい</a></li> 
+          <li><a href="/issue/04.html">BCP対策に取り組みたい</a></li> 
+         </ul> 
+         <h3><a href="/issue/index2.html">ISV、ソフトウェアベンダー</a></h3> 
+         <ul class="list"> 
+          <li><a href="/issue/05.html">パッケージアプリケーションをクラウドサービスモデルで展開したい</a></li> 
+          <li><a href="/issue/06.html">お客様のサーバを預けたい、運用管理もまかせたい</a></li> 
+         </ul> 
+         <h3><a href="/issue/index3.html">インターネットサービス</a></h3> 
+         <ul class="list"> 
+          <li><a href="/issue/07.html">新たにサービスを立ち上げたい</a></li> 
+          <li><a href="/issue/08.html">アクセス増大に対応したい</a></li> 
+          <li><a href="/issue/09.html">クラウドサービスのパフォーマンスやコストに不満がある</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="box01 right"> 
+        <div class="area heightLine-group1"> 
+         <h2>サービスで探す</h2> 
+         <h3 class="other"><a href="/service/datacenter/index.html">データセンターサービス</a><span><img src="/common/img/top/index_image_03.png" alt="ビットアイルデータセンター" width="124" height="27"></span></h3> 
+         <ul class="list"> 
+          <li><a href="/service/datacenter/colocation1-2.html">品川エリア第1・第2データセンター</a></li> 
+          <li><a href="/service/datacenter/colocation3.html">品川エリア　第3データセンター</a></li> 
+          <li><a href="/service/datacenter/colocation4.html">文京エリア　第4データセンター</a></li> 
+          <li><a href="/5dc/" target="_blank">文京エリア　第5データセンター</a><img src="/common/img/all/icon_link.gif" alt="icon" width="13" height="10" class="new_window"></li> 
+          <li><a href="/service/datacenter/colocation_osaka.html">大阪データセンター</a></li> 
+         </ul> 
+         <p class="ml50 mb20 mr30"><span class="small">東京都品川区と文京区を中心に自社運営のデータセンターを展開しています。<br> 好立地、最新の設備、高いセキュリティ、ラックハウジングからケージスペースまで対応できる柔軟なコロケーションサービス、ネットワークサービス（インターネット接続・プライベート接続）、レンタルオフィス、運用サービス、IT機器（サーバ、ネットワーク機器等）レンタルなど幅広いサービスメニューを提供しています。</span></p> 
+         <h3 class="other"><a href="/service/cloud/index.html">ビットアイルクラウド</a><span><img src="/common/img/top/index_image_02.png" alt="ビットアイルクラウド" width="100" height="27"></span></h3> 
+         <ul class="list"> 
+          <li><a href="http://cloud.bit-isle.jp/" target="_blank">ビットアイルクラウド 特設サイト</a><img src="/common/img/all/icon_link.gif" alt="icon" width="13" height="10" class="new_window"></li> 
+         </ul> 
+         <p class="ml50 mb20 mr30"><span class="small">ビットアイルクラウドは、独立系データセンター事業者のビットアイルだから実現できるハイブリッドにご利用いただけるクラウドサービスです。<br> プライベートクラウドとパブリッククラウド、お客様拠点とデータセンター、クラウド化できるシステムとできないシステムなど、選択・組み合わせできるサービスで、あらゆるお客様のインフラニーズにお応えします。</span></p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="area_top"> 
+       <h2>ビットアイルのデータセンター</h2> 
+       <div class="inner"> 
+        <p class="read mb20 mt20">2000年の創業以来、独立系のデータセンター専業事業者として、東京都心に自社建設・自社運営のデータセンターを展開し、インターネットビジネス、企業情報システムを問わず、多種多様なシステムをお預かりしています。</p> 
+        <ul class="list_top"> 
+         <li>非常時にも駆けつけやすい立地と低レイテンシーなインターネット接続環境</li> 
+         <li>多くのミッションクリティカルシステム稼働実績が示す信頼性と、高品質なサービス</li> 
+         <li>独立系ならではのベンダー、キャリア、クラウドニュートラルのスタンス</li> 
+         <li>自社運営するデータセンターだから実現できている小規模から大規模システムまで幅広く対応できる柔軟性</li> 
+        </ul> 
+        <p class="read mb20 mt20">など、お客様の夢をかなえるパートナーとして、より高い顧客満足を実現するべく日々のサービス運用を行っています。<br> また、統合監視・運用のサイトロック、オフショア開発のセタ・インターナショナル、システムエンジニアリング・人材派遣のビットサーフ、クラウドインテグレーションのアクセルビットなど、「総合ITアウトソーシングサービス」を提供できる事業グループを形成しています。</p> 
+       </div> 
+      </div> 
+      <!-- お知らせ --> 
+      <div class="box02"> 
+       <div class="area"> 
+        <h2>お知らせ<span>News &amp; Topics</span> 
+         <div class="rss">
+          <a href="/news/rss.html">RSS</a>
+         </div> </h2> 
+        <dl class="news top clearfix"> 
+         <dt>
+          2014.12.04
+         </dt> 
+         <dd>
+          <a href="/news/service/92">クラウドファースト時代を牽引する 次世代型ハイブリッド・マルチクラウド接続サービスを提供</a>
+         </dd> 
+        </dl> 
+        <dl class="news clearfix"> 
+         <dt>
+          2014.11.18
+         </dt> 
+         <dd>
+          <a href="/news/seminar/58">【セミナー開催】大容量ファイルをメールやWEBブラウザから「簡単」「安全」に送信「eTransporter powered by AXLBOX」サービス紹介セミナー</a>
+         </dd> 
+        </dl> 
+        <dl class="news clearfix"> 
+         <dt>
+          2014.11.13
+         </dt> 
+         <dd>
+          <a href="/news/seminar/57">【イベント協賛】TechCrunch Tokyo 2014</a>
+         </dd> 
+        </dl> 
+        <dl class="news clearfix"> 
+         <dt>
+          2014.10.30
+         </dt> 
+         <dd>
+          <a href="/news/seminar/56">【セミナー開催】最大100倍速！動画/画像/図面等、ギガ単位の大容量ファイルを高速伝送かつセキュアに実現！「SilverBullet powered by Bit-isle」構築・事例・運用セミナー</a>
+         </dd> 
+        </dl> 
+        <dl class="news end clearfix"> 
+         <dt>
+          2014.10.27
+         </dt> 
+         <dd>
+          <a href="/news/seminar/53">【満員御礼】第5データセンター内覧会開催のお知らせ</a>
+         </dd> 
+        </dl> 
+        <p class="links"><a href="/news/index.html">&gt;&gt; お知らせ一覧へ</a></p> 
+       </div> 
+      </div> 
+      <!-- //お知らせ --> 
+      <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbitisle&amp;width=950&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=true&amp;appId=259441570900520" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:950px; height:258px; margin-top:16px;" allowtransparency="true"></iframe> 
+      <p class="pagetop"><a href=".header" onclick="backToTop(); return false;">▲このページのトップへ</a></p> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- //contents --> 
+   <!-- footer --> 
+   <div class="footer"> 
+    <div class="inner"> 
+     <div class="contact"> 
+      <div>
+       <img src="/common/img/all/footer_tel.jpg" alt="03-5782-8724" width="405" height="23">
+       <span class="links"><a href="/contact/index.html">お問い合せフォームはこちら</a></span>
+      </div> 
+     </div> 
+     <ul class="fnav clearfix"> 
+      <li><a href="http://www.bit-isle.co.jp/" target="_blank">企業・IR情報</a><img src="/common/img/all/icon_link02.jpg" alt="icon" width="12" height="11"></li> 
+      <li><a href="http://www.bit-isle.co.jp/attention/index.html" target="_blank">迷惑行為について</a><img src="/common/img/all/icon_link02.jpg" alt="icon" width="12" height="11"></li> 
+      <li><a href="http://www.bit-isle.co.jp/contact/index_pp.html" target="_blank">個人情報保護方針</a><img src="/common/img/all/icon_link02.jpg" alt="icon" width="12" height="11"></li> 
+      <li><a href="http://www.bit-isle.co.jp/info/sec.html" target="_blank">情報セキュリティ基本方針</a><img src="/common/img/all/icon_link02.jpg" alt="icon" width="12" height="11"></li> 
+      <li><a href="http://www.bit-isle.co.jp/info/link.html" target="_blank">リンクについて</a><img src="/common/img/all/icon_link02.jpg" alt="icon" width="12" height="11"></li> 
+      <li class="side"><a href="/sitemap.html">サイトマップ</a></li> 
+     </ul> 
+     <p class="copyright">Copyright(C) 2001-2014 Bit-isle inc. All rights reserved.</p> 
+    </div> 
+   </div> 
+   <!-- //footer --> 
+  </div> 
+  <!-- //wrapper -->  
+ </body>
+</html>

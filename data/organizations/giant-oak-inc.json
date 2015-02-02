@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "b92e5c0b62ee5225755fb2058e3d325d",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "short_description": "An Analytics-as-a-Service company applying social science to big data environments to identify illicit actions, actors and networks.",
+      "permalink": "giant-oak-inc",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://www.giantoak.com",
+      "name": "Giant Oak, Inc",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 6,
+      "founded_on_month": 5,
+      "founded_on_year": 2013,
+      "founded_on": "2013-05-01",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "created_at": 1398286179,
+      "updated_at": 1398286179,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "current_team": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/giant-oak-inc/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "Gary",
+            "last_name": "Shiffman",
+            "title": "Founder, President and CEO",
+            "started_on": "2009-05-01",
+            "path": "person/gary-shiffman",
+            "created_at": 1398286368,
+            "updated_at": 1398286368
+          }
+        ]
+      },
+      "founders": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/giant-oak-inc/founders",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Person",
+            "name": "Gary Shiffman",
+            "path": "person/gary-shiffman",
+            "created_at": 1398286368,
+            "updated_at": 1398286368
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/giant-oak-inc/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.linkedin.com/company/giant-oak",
+            "type": "WebPresence",
+            "title": "linkedin",
+            "created_at": 1406353354,
+            "updated_at": 1406353354
+          },
+          {
+            "url": "http://www.facebook.com/GiantOak",
+            "type": "WebPresence",
+            "title": "facebook",
+            "created_at": 1406353353,
+            "updated_at": 1406353353
+          },
+          {
+            "url": "http://www.giantoak.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1398286179,
+            "updated_at": 1398286179
+          }
+        ]
+      }
+    }
+  }
+}

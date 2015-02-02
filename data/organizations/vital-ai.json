@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "f7a9b5d4ac84330f14604b399bac3df9",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "email_address": "info@vital.ai",
+      "description": "Vital AI provides a Big Data Application platform.\n",
+      "short_description": "Big Data App Platform",
+      "permalink": "vital-ai",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://vital.ai",
+      "name": "Vital AI",
+      "num_employees_max": 10,
+      "num_employees_min": 1,
+      "founded_on_day": 18,
+      "founded_on_trust_code": 7,
+      "founded_on_month": 8,
+      "founded_on_year": 2011,
+      "founded_on": "2011-08-18",
+      "closed_on_year": null,
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on": null,
+      "created_at": 1349048108,
+      "updated_at": 1409878144,
+      "total_funding_usd": 0,
+      "number_of_investments": 0,
+      "number_of_employees": 2
+    },
+    "relationships": {
+      "current_team": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/vital-ai/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "Marc",
+            "last_name": "Hadfield",
+            "title": "Founder",
+            "started_on": "2011-12-01",
+            "path": "person/marc-hadfield",
+            "created_at": 1287445358,
+            "updated_at": 1397989537
+          }
+        ]
+      },
+      "offices": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/vital-ai/offices",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "New York City",
+            "street_1": "349 5th Avenue",
+            "street_2": null,
+            "postal_code": "10016",
+            "city": "New York",
+            "city_path": "location/new-york/d64b7615985cfbf44affaa89d70c4050",
+            "region": "New York",
+            "region_path": "location/new-york/83ead471332bd02e67b767279aed075b",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1349022908,
+            "updated_at": 1397991932
+          }
+        ]
+      },
+      "headquarters": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/vital-ai/headquarters",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "New York City",
+            "street_1": "349 5th Avenue",
+            "street_2": null,
+            "postal_code": "10016",
+            "city": "New York",
+            "city_path": "location/new-york/d64b7615985cfbf44affaa89d70c4050",
+            "region": "New York",
+            "region_path": "location/new-york/83ead471332bd02e67b767279aed075b",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1349022908,
+            "updated_at": 1397991932
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 6,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/vital-ai/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Artificial Intelligence",
+            "uuid": "c4d8caf35fe7359bf9f22d708378e4ee",
+            "path": "category/artificial intelligence/c4d8caf35fe7359bf9f22d708378e4ee",
+            "created_at": 1397980728,
+            "updated_at": 1416999691
+          },
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1417159419
+          },
+          {
+            "type": "Category",
+            "name": "Analytics",
+            "uuid": "99c5404c0ff58ee5d3344b944ddb8cd9",
+            "path": "category/analytics/99c5404c0ff58ee5d3344b944ddb8cd9",
+            "created_at": 1397980727,
+            "updated_at": 1417171293
+          },
+          {
+            "type": "Category",
+            "name": "Semantic Web",
+            "uuid": "ac34c4c6e430f66f44aeef8ca45b52bb",
+            "path": "category/semantic web/ac34c4c6e430f66f44aeef8ca45b52bb",
+            "created_at": 1397980727,
+            "updated_at": 1417073743
+          },
+          {
+            "type": "Category",
+            "name": "Software",
+            "uuid": "c08b5441a05b9777b7a6012728caddd9",
+            "path": "category/software/c08b5441a05b9777b7a6012728caddd9",
+            "created_at": 1397980727,
+            "updated_at": 1417191354
+          },
+          {
+            "type": "Category",
+            "name": "Neuroscience",
+            "uuid": "e37ada49ab155e460a49f0ce1a3c9128",
+            "path": "category/neuroscience/e37ada49ab155e460a49f0ce1a3c9128",
+            "created_at": 1397980726,
+            "updated_at": 1415727239
+          }
+        ]
+      },
+      "founders": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/vital-ai/founders",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Person",
+            "name": "Marc Hadfield",
+            "path": "person/marc-hadfield",
+            "created_at": 1287445358,
+            "updated_at": 1397989537
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/vital-ai/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1397751144/241e908acbc61911f6006d9a8a97f3a8.png",
+            "created_at": 1398018613,
+            "updated_at": 1398018613
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 5,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/vital-ai/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.linkedin.com/company/vital-ai",
+            "type": "WebPresence",
+            "title": "linkedin",
+            "created_at": 1397877760,
+            "updated_at": 2014
+          },
+          {
+            "url": "http://www.github.com/vital-ai/vital-overview",
+            "type": "WebPresence",
+            "title": "github",
+            "created_at": 1397877760,
+            "updated_at": 2014
+          },
+          {
+            "url": "http://www.facebook.com/vitaldotai",
+            "type": "WebPresence",
+            "title": "facebook",
+            "created_at": 1397877760,
+            "updated_at": 2014
+          },
+          {
+            "url": "http://twitter.com/vital_ai",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1349022908,
+            "updated_at": 1409413201
+          },
+          {
+            "url": "http://vital.ai",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1349022908,
+            "updated_at": 1397988490
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+  <title>InfoTrellis Home</title> 
+  <meta name="google-site-verification" content="zssw4mlv-BEHUtG-QVmTEiIzcrP0dGX7uYK8XVpN25M"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
+  <link rel="shortcut icon" type="image/x-icon" href="images/infotrellis-logo.ico"> 
+  <link rel="shortcut icon" type="image/x-icon" href="images/infotrellis-logo.ico"> 
+  <link rel="apple-touch-icon image_src" href="images/infotrellis-logo1.png"> 
+  <link href="css/ITLS-home.css" rel="stylesheet" type="text/css"> 
+  <link href="css/topnav.css" rel="stylesheet" type="text/css"> 
+  <link href="css/style.css" rel="stylesheet"> 
+  <link href="css/demo.css" rel="stylesheet"> 
+  <link rel="STYLESHEET" type="text/css" href="popup-contact.css"> 
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8"> 
+  <script src="js/jquery.min.js"></script> 
+  <script type="text/javascript" src="js/sliding_effect.js"></script> 
+  <script type="text/javascript" src="js/jbar.js"></script> 
+  <script type="text/javascript" src="js/twitter.js"></script> 
+  <style>
+  #xprt, .Twireadmore1{cursor:pointer;}
+  
+</style> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-31629725-1', 'infotrellis.com');
+  ga('send', 'pageview');
+
+</script> 
+  <script>
+$(document).ready(function(){
+	
+	$(".sliding-element").click(function(){	
+	$(".sliding-element1").siblings().children("a").removeClass("active1");	
+	jQuery(this).children("a").addClass("active");
+	$(this).siblings().children("a").removeClass("active");
+})
+$(".sliding-element1").click(function(){	
+	$(".sliding-element").siblings().children("a").removeClass("active");	
+	jQuery(this).children("a").addClass("active1");
+	$(this).siblings().children("a").removeClass("active1");
+})
+  getJson();
+  $("#xprt").click(function(){
+    window.location.href = "company.html#company";
+  })
+})
+		$(function() {
+
+			$("#slideshow > div:gt(0)").hide();
+
+			setInterval(function() {
+			  $('#slideshow > div:first')
+			    .fadeOut(0)
+			    .next()
+			    .fadeIn(0)
+			    .end()
+			    .appendTo('#slideshow');
+			},  8000);
+			
+			
+
+		});
+
+function showonlyone(thechosenone) {
+     $('.newboxes').each(function(index) {
+		    if ($(this).attr("id") == thechosenone) {
+			  
+			  $(this).show(10);
+          }
+          else {
+               $(this).hide(10);
+          }
+     });
+}
+
+</script> 
+ </head> 
+ <body topmargin="0" leftmargin="0"> 
+  <div class="jbar" data-init="jbar" data-jbar="{
+			&quot;message&quot; : &quot;Our newest product video explains the Power of AllSight to get big data working for you!&quot;,
+			&quot;button&quot;  : &quot;Watch Now&quot;,
+			&quot;url&quot;     : &quot;https://www.youtube.com/watch?v=Sl0QtA9T-ds&quot;,
+			&quot;state&quot;   : &quot;closed&quot;
+		}"></div> 
+  <div id="homecontain0"> 
+   <div id="toplognavh"> 
+    <div class="TopNavConth"> 
+     <div class="toplogoh">
+      <a href="index.html" style="outline:none;text-decoration:none;"><img src="images/Infotrellis-logo.png" width="156" height="45" border="0" alt="infoTrellis" longdesc="http://www.infotrellis.com"></a>
+     </div> 
+     <div style="width:700px; height:40px;float:left;"> 
+      <div id="centeredmenu" style="margin-top:10px;"> 
+       <ul> 
+        <li><a href="http://www.allsightedge.com/index.html">PRODUCTS</a> 
+         <ul> 
+          <li style="background: #000;background-color: rgba(0,0,0,.9); width:100%;">
+           <div class="arrow-down"></div></li> 
+          <li><a href="http://www.allsightedge.com/index-all.html#@AllSight">AllSight</a></li> 
+          <li><a href="http://www.allsightedge.com/index-sc.html#@SocialCue">Social Cue</a> </li>
+          <li><a href="http://www.allsightedge.com/index-cc.html#@ccid">Customer Connect Id</a></li> 
+          <li><a href="product.html#@MDMVeriscope">MDM Veriscope</a></li> 
+         </ul> </li> 
+        <li><a href="consulting.html">CONSULTING</a> 
+         <ul> 
+          <li style="background: #000;background-color: rgba(0,0,0,.9); width:100%;">
+           <div class="arrow-down"></div></li> 
+          <li><a href="consulting.html#@practices">Practices</a></li> 
+          <li><a href="consulting.html#@services">Services</a></li> 
+          <li><a href="consulting.html#@thoughtLeadership">Thought Leadership</a></li> 
+         </ul> </li> 
+        <li><a href="insight.php">INSIGHTS</a></li> 
+        <ul> 
+         <li style="background: #000;background-color: rgba(0,0,0,.9); width:100%;">
+          <div class="arrow-down"></div> </li>
+         <li><a href="insight-01.html">Blog Articles</a></li> 
+         <li><a href="insight-01.html">Downloads</a></li> 
+         <li><a href="insight-01.html">News Releases &amp; Interviews</a></li> 
+         <li><a href="insight-01.html">Success Stories</a></li> 
+         <li><a href="insight-01.html">Videos &amp; Webinars</a></li> 
+         <li><a href="insight-01.html">Whitepapers</a></li> 
+         <li><a href="insight-01.html">Subscribe Newsletter</a></li> 
+        </ul> 
+        <li><a href="company.html">COMPANY</a> 
+         <ul> 
+          <li style="background: #000;background-color: rgba(0,0,0,.9); width:100%;">
+           <div class="arrow-down"></div></li> 
+          <li><a href="company.html#clients">Clients &amp; Partners</a></li> 
+          <li><a href="company.html#leadership">Leadership Team</a></li> 
+          <li><a href="company.html#career">Careers</a></li> 
+          <li><a href="company.html#contact">Contact Us</a></li> 
+         </ul> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div style="width:100px; height:40px;float:left;"> 
+      <ul class="social" style="margin-top:10px; padding:0px;"> 
+       <li> <a href="http://www.facebook.com/infotrellis" target="_blank"> <img src="images/social_1.jpg" width="21" height="22" border="0" alt="Infotrellis" title="Facebook"> </a></li> 
+       <li> <a href="http://www.linkedin.com/company/infotrellis-inc.?trk=top_nav_home" target="_blank"> <img src="images/social_2.jpg" width="21" height="22" border="0" alt="Infotrellis" title="LinkedIn"></a></li> 
+       <li> <a href="https://twitter.com/#!/infotrellis" target="_blank"> <img src="images/social_4.jpg" width="21" height="22" border="0" alt="Infotrellis" title="Twitter"></a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="Innerpagetop" style="margin-top:20px; height:160px;"> 
+    <div class="InbanContain" style="height:160px;"> 
+     <div class="bannercontain1" style="margin-top:12px;"> 
+      <div id="slideshow"> 
+       <div class="text-01" onclick="location.href='product.html#@AllSight'">
+        InfoTrellis
+        <div class="text-02">
+         AllSight
+        </div> 
+        <div class="bancontext">
+         <strong>Hindsight, </strong> 
+         <strong>Foresight</strong> and 
+         <br>
+         <strong>Insight</strong> combined for a complete 
+         <br>and meaningful view of the customer 
+        </div> 
+       </div> 
+       <div class="text-01" onclick="location.href='product.html#@MDMVeriscope'">
+        MDM
+        <div class="text-02">
+         Veriscope
+        </div> 
+        <div class="bancontext">
+         <strong>A true MDM Hub dashboard </strong> 
+         <br> by the architects of 
+         <br> the original MDM platform 
+        </div> 
+       </div> 
+       <div class="text-01" onclick="location.href='consulting.html'">
+        MDM
+        <div class="text-02">
+         Expertise
+        </div> 
+        <div class="bancontext">
+         <strong> A track record of 100% success rate</strong> 
+         <br> with MDM implementations 
+         <br> across industries and geographies 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="homepagecontentpart"> 
+   <div id="contpart"> 
+    <div class="pro-con-cont"> 
+     <div class="product"> 
+      <div class="pro-box"> 
+       <ul id="sliding-navigation"> 
+        <p style="margin-top:20px; padding:0px;"><img src="images/product.png" width="147" height="26" alt="Infotrellis" border="0"></p> 
+        <li class="sliding-element" style="height:31px;"><a id="myHeader1" href="javascript:showonlyone('newboxes1');"> AllSight</a></li> 
+        <li class="sliding-element" style="height:31px;"><a id="myHeader2" href="javascript:showonlyone('newboxes2');"> Big Data Solutions</a></li> 
+        <li class="sliding-element" style="height:31px;"><a id="myHeader3" href="javascript:showonlyone('newboxes3');"> MDM Veriscope</a></li> 
+       </ul> 
+      </div> 
+      <div class="newboxes pro-cont" id="newboxes1" style="display:none;"> 
+       <div class="pro-01"> 
+        <p class="pro-title">AllSight</p> 
+        <p class="pro-content" style="margin-top:15px;"><strong>Refine</strong> raw ‘Big Data’ into trustworthy information ready for analysis.</p> 
+        <p class="pro-content"><strong>Unify</strong> internal data with unstructured, nontraditional forms of external data.</p> 
+        <p class="pro-content"><strong>Feed</strong> data into real-time applications for immediate high-value insights.</p> 
+        <p class="pro-readmore" style="margin-top:5px;"><a href="http://www.allsightedge.com/index-all.html" class="pro-readmore"><img src="images/readmore-02.png" width="12" height="11" alt="Infotrellis"> read more...</a></p> 
+       </div> 
+      </div> 
+      <div class="newboxes pro-cont" id="newboxes2" style="display:none;"> 
+       <div class="pro-01"> 
+        <p class="pro-title">Big Data Solutions </p>
+        <p class="pro-content" style="margin-top:15px;"><strong>Leverage</strong> and harness the ripple effect of social media for more powerful marketing</p> 
+        <p class="pro-content"><strong>Measure</strong> the impact of marketing campaigns with accuracy and sophistication</p> 
+        <p class="pro-content"><strong>Track</strong> and compare public sentiment between competing brands</p> 
+        <p class="pro-readmore" style="margin-top:5px;"><a href="http://www.allsightedge.com/index.html" class="pro-readmore"><img src="images/readmore-02.png" width="12" height="11" alt="Infotrellis"> read more...</a></p> 
+       </div> 
+      </div> 
+      <div class="newboxes pro-cont" id="newboxes3" style="display:none;"> 
+       <div class="pro-01"> 
+        <p class="pro-title">MDM Veriscope</p> 
+        <p class="pro-content" style="margin-top:15px;"><strong>Govern</strong> your MDM Hub’s health with an intuitive dashboard interface</p> 
+        <p class="pro-content"><strong>Maximize</strong> the value of your MDM investment by identifying bad data and its source</p> 
+        <p class="pro-content"><strong>Monitor</strong> high-level trends in MDM operation and SLA attainment</p> 
+        <p class="pro-readmore" style="margin-top:20px;"><a href="product.html#MDMVeriscope" class="pro-readmore"><img src="images/readmore-02.png" width="12" height="11" alt="Infotrellis"> read more...</a></p> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="xprt" id="xprt"> 
+      <p class="xprt1">The Experts That Other Experts Turn To</p>
+     </div> 
+    </div> 
+    <div class="pro-con-cont"> 
+     <div class="product"> 
+      <div class="ConsultingCont"> 
+       <div class="newboxes cons-cont" id="newboxes4"> 
+        <div class="cons-01"> 
+         <p class="pro-title">PRACTICES</p> 
+         <p class="pro-content" style="margin-top:6px;"><strong>Specialist Teams</strong> representing authority in specific areas of the MDM ecosystem deliver the exact expertise you need</p> 
+         <p class="pro-content"><strong>Master Data Management</strong> practices aide planning, architecture and implementation around any MDM platform</p> 
+         <p class="pro-content"><strong>Enterprise Data Integration</strong> practices help build solutions to discover, integrate and leverage your existing information assets</p> 
+         <p class="pro-readmore" style="margin-top:-1px;"><a href="consulting.html#practices" class="pro-readmore"><img src="images/readmore-02.png" width="12" height="11" alt="Infotrellis"> read more...</a></p> 
+        </div> 
+       </div> 
+       <div class="newboxes cons-cont" id="newboxes5" style="display:none;"> 
+        <div class="cons-01"> 
+         <p class="pro-title">SERVICES</p> 
+         <p class="pro-content" style="margin-top:4px;"><strong>Strategy</strong> services encompass assessment and planning - providing actionable insights and results-driven road maps</p> 
+         <p class="pro-content"><strong>Implementation</strong> services deliver superior solution architecture, design and development from the original MDM architects</p> 
+         <p class="pro-content"><strong>Support</strong> services include support for both upgrades and production from our best in class team of rigorous professionals</p> 
+         <p class="pro-readmore" style="margin-top:-1px;"><a href="consulting.html#services" class="pro-readmore"><img src="images/readmore-02.png" width="12" height="11" alt="Infotrellis"> read more...</a></p> 
+        </div> 
+       </div> 
+       <div class="newboxes cons-cont" id="newboxes6" style="display:none;"> 
+        <div class="cons-01"> 
+         <p class="pro-title">THOUGHT LEADERSHIP</p> 
+         <p class="pro-content" style="margin-top:5px;"><strong>Smart MDM</strong><sup>TM</sup> is our unique and proven methodology for MDM programs that ensures real business results early and often</p> 
+         <p class="pro-content"><strong>Smart Tools</strong> that accelerate service delivery, built on years of experience and industry best practices </p> 
+         <p class="pro-content"><strong>MDM Master Class Workshops </strong>to provide our clients’ in-house teams with the skills and knowledge needed for mastery of the latest MDM tools and concepts </p> 
+         <p class="pro-readmore" style="margin-top:-1px;"><a href="consulting.html#thoughtLeadership" class="pro-readmore"><img src="images/readmore-02.png" width="12" height="11" alt="Infotrellis"> read more...</a></p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="ConsBox"> 
+       <ul id="sliding-navigation1"> 
+        <p style="margin-top:20px; padding:0px;"><img src="images/consulting.png" width="172" height="26" alt="Infotrellis" border="0"></p> 
+        <li class="sliding-element1 " style="height:32px;width:150px;"><a id="myHeader4" href="javascript:showonlyone('newboxes4');" class="active1"> Practices</a></li> 
+        <li class="sliding-element1" style="height:32px;width:150px;"><a id="myHeader5" href="javascript:showonlyone('newboxes5');"> Services</a></li> 
+        <li class="sliding-element1" style="height:32px;width:150px;"><a id="myHeader6" href="javascript:showonlyone('newboxes6');"> Thought Leadership</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <!--  Start Tweeter!--> 
+     <div class="twitter"> 
+      <div class="twitter-box"> 
+       <div id="tw"></div> 
+      </div> 
+      <div class="twitter-cont"> 
+       <div class="TwiProContent"> 
+       </div> 
+      </div> 
+     </div> 
+     <!--  End Tweeter!--> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="footer1"> 
+   <div style="width:1000px; margin:0 auto;"> 
+    <div class="botnav1 botlink">
+     <a href="http://blog.infotrellis.com/" target="_blank" class="botlink">Blog</a> | 
+     <a href="company.html#contact" class="botlink">Contact Us</a> | 
+     <a href="company.html#career" class="botlink">Careers</a>
+    </div> 
+    <div class="botnav2 botlink" style="text-align:center; vertical-align:bottom;">
+     © 
+     <a href="http://www.infotrellis.com" class="botlink">InfoTrellis</a> 2013. All Rights Reserved. | 
+     <a href="legal.html" class="botlink">Legal </a>| 
+     <a href="privacy.html" class="botlink">Privacy Policy</a> | 
+     <a href="sitemap.html" class="botlink">Sitemap</a>
+    </div> 
+   </div> 
+  </div>   
+ </body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <title>Gruter</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+  <meta name="author" content="Gruter"> 
+  <meta name="keywords" content="gruter, big data, apache tajo, sql on hadoop, hadoop, hadoop management"> 
+  <meta name="description" content="gruter, big data, apache tajo, sql on hadoop, hadoop, hadoop management"> 
+  <link rel="shortcut icon" type="image/x-icon" href="/resources/images/gruter_favicon.png"> 
+  <!-- <script type="text/javascript">
+  (function() {
+    var config = {
+      kitId: 'lgh2udq',
+      scriptTimeout: 3000
+    };
+    var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+  })();
+</script> --> 
+  <script type="text/javascript" src="//use.typekit.net/lgh2udq.js"></script> 
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  <link rel="stylesheet" type="text/css" href="/resources/styles/default.css" title="default"> 
+  <script type="text/javascript" src="/resources/script/jquery-1.7.1.min.js"></script> 
+  <script type="text/javascript" src="/resources/script/jquery.blockUI.js"></script> 
+  <!-- <script type="text/javascript" src="/resources/script/jquery.slides.min.js" ></script> --> 
+  <script type="text/javascript" src="/resources/script/jquery.cycle2.min.js"></script> 
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/resources/script/jquery.backgroundSize.js"></script>
+<script type="text/javascript" src="/resources/script/ie.js"></script>
+<![endif]--> 
+  <script type="text/javascript" src="/resources/script/default.js"></script> 
+  <script>
+var menuDepth1 = "";
+var menuDepth2 = "";
+</script>
+ </head> 
+ <body> 
+  <div id="wrap"> 
+   <div id="header"> 
+    <div id="gnb"> 
+     <a href="/"><img src="/resources/images/gruter_logo.png" width="110" height="25" alt="GRUTER" id="logo"></a> 
+     <ul id="navbar"> 
+      <li class="depth1" id="gnb_technology"><a href="/technology/story/" class="font-semibold">TECHNOLOGY</a> 
+       <ul> 
+        <div class="sub"> 
+         <div class="path">
+          <a href="/" class="font-regular">HOME</a>
+          <span class="split">&gt;</span>
+          <a href="/technology/story/" class="font-regular">TECHNOLOGY</a>
+          <span class="split">&gt;</span>
+         </div> 
+         <div class="menu"> 
+          <li id="sub_technology_intro"><a href="/technology/story/" class="font-regular">The Story</a></li> 
+          <li id="sub_technology_tajo"><a href="/technology/tajo/" class="font-regular">Apache Tajo</a></li> 
+          <li id="sub_technology_platform"><a href="/technology/platform/" class="font-regular">Big Data Platform</a></li> 
+          <li id="sub_technology_usecases"><a href="/technology/fieldcases/" class="font-regular">Field Cases</a></li> 
+         </div> 
+         <div style="clear:both"></div> 
+        </div> 
+       </ul> </li> 
+      <li class="depth1" id="gnb_products"><a href="/products/taas/" class="font-semibold" id="gnb_products">PRODUCTS</a> 
+       <ul> 
+        <div class="sub"> 
+         <div class="path">
+          <a href="/" class="font-regular">HOME</a>
+          <span class="split">&gt;</span>
+          <a href="/products/taas/" class="font-regular">PRODUCTS</a>
+          <span class="split">&gt;</span>
+         </div> 
+         <div class="menu"> 
+          <li id="sub_products_taas"><a href="/products/taas/" class="font-regular">Tajo-as-a-Service</a></li> 
+          <li id="sub_products_qrytica"><a href="/products/qrytica/" class="font-regular">Qrytica</a></li> 
+          <li id="sub_products_appliance"><a href="/products/appliance/" class="font-regular">Tajo Enterprise Gear</a></li> 
+          <li id="sub_products_cloumon"><a href="/products/cloumon/" class="font-regular">Cloumon</a></li> 
+         </div> 
+         <div style="clear:both"></div> 
+        </div> 
+       </ul> </li> 
+      <li class="depth1" id="gnb_support"><a href="/support/" class="font-semibold">SUPPORT</a> </li> 
+      <li class="depth1" id="gnb_about"><a href="/about/gruter/" class="font-semibold">ABOUT</a> 
+       <ul> 
+        <div class="sub"> 
+         <div class="path">
+          <a href="/" class="font-regular">HOME</a>
+          <span class="split">&gt;</span>
+          <a href="/about/gruter/" class="font-regular">ABOUT</a>
+          <span class="split">&gt;</span>
+         </div> 
+         <div class="menu"> 
+          <li id="sub_about_gruter"><a href="/about/gruter/" class="font-regular">Meet Gruter</a></li> 
+          <li id="sub_about_team"><a href="/about/team/" class="font-regular">Our Team</a></li> 
+          <li id="sub_about_clients"><a href="/about/customers/" class="font-regular">Customers</a></li> 
+          <li id="sub_about_news"><a href="/about/news/" class="font-regular">News</a></li> 
+          <li id="sub_about_contacts"><a href="/about/contacts/" class="font-regular">Contacts</a></li> 
+         </div> 
+         <div style="clear:both"></div> 
+        </div> 
+       </ul> </li> 
+      <li class="depth1" id="gnb_blog"><a href="http://www.gruter.com/blog/" target="_blank" class="font-semibold">BLOG</a> </li> 
+      <li class="depth1" id="gnb_download"><a href="/download.html" class="font-semibold">DOWNLOAD</a> </li> 
+     </ul> 
+     <div style="clear:both"></div> 
+    </div> 
+   </div> 
+   <div id="container"> 
+    <div id="contents"> 
+     <!-- visual --> 
+     <div id="visual_main" class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="3000" data-cycle-pause-on-hover="true" data-cycle-slides="> div" data-cycle-pager=".visual_main_pager"> 
+      <!-- <div class="slide" id="slide05">
+				<div class="con">
+					<div class="txt">
+					<p class="i1 font-semibold">Gruter and Hortonworks <span class="color">take Big Data Warehousing mainstream</span> with Tajo on Hadoop.</p>
+					<p class="i2 font-light">By combining Apache Tajo’s query processing power with the stability and reliability of Hadoop,<br /> at unprecedented levels of scalability and enterprise-grade support, a new partnership between<br /> Gruter and Hortonworks is set to place the Apache Tajo Big DW solution at the forefront of<br /> enterprise data processing.</p>
+					<a href="/products/taas/"><button class="font-light">LEARN MORE</button></a>
+					</div>
+				</div>
+			</div> --> 
+      <div class="slide" id="slide01"> 
+       <div class="con"> 
+        <a href="http://tajo.apache.org/" target="_blank"><img src="/resources/images/tajo_logo.png"></a> 
+        <div class="txt"> 
+         <p class="i1 font-light">Got the need for <span class="font-semibold">data<br> processing speed?</span></p> 
+         <p class="i2 font-light">This ostrich really flies! The Tajo data query<br> engine turbocharges data analysis.</p> 
+         <a href="/technology/tajo/"><button class="font-light">LEARN MORE</button></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="slide" id="slide02"> 
+       <div class="con"> 
+        <p class="i1 font-light">Want to analyze massive data sets <br><span class="font-semibold">—like right now?</span></p> 
+        <p class="i2 font-light">Get started with Tajo on the Cloud <br>and be up and running in minutes!</p> 
+        <a href="/products/taas/"><button class="font-light">LEARN MORE</button></a> 
+       </div> 
+      </div> 
+      <div class="slide" id="slide03"> 
+       <div class="con"> 
+        <p class="i1 font-light">Need your own high-spec <span class="font-semibold">Massive Data Warehouse?</span></p> 
+        <p class="i2 font-light">Enterprise Tajo combines the latest data<br> technology in one super-fast stack.</p> 
+        <a href="/products/appliance/"><button class="font-light">LEARN MORE</button></a> 
+       </div> 
+      </div> 
+      <div class="slide" id="slide04"> 
+       <div class="con"> 
+        <p class="i1 font-light">Data analysis quality <span class="font-semibold">holding you back?</span></p> 
+        <p class="i2 font-light">Give the best and brightest in your organization<br> bigger and better data set.</p> 
+        <a href="/products/qrytica/"><button class="font-light">LEARN MORE</button></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="visual_main_pager"></div> 
+     <div id="visual_link"> 
+      <div class="con"> 
+       <a href="/about/gruter/"><button class="font-regular-italic">Gruter: Your Partner in the Big Data Revolution</button></a> 
+      </div> 
+     </div> 
+     <!-- /visual --> 
+     <!-- contents --> 
+     <div class="main_bx" id="bx1"> 
+      <div class="con"> 
+       <!-- <p class="tit1 font-semibold">GRUTERTECH SUPPORT</p> --> 
+       <div class="block left"> 
+        <div class="item"> 
+         <img src="/resources/images/ic_m_support_1.png"> 
+         <a href="/technology/tajo/"><img src="/resources/images/ic_add_2.png" class="more"></a> 
+         <p class="tit font-semibold">Enterprise Tajo</p> 
+         <ul> 
+          <li class="font-light">Powerful end-to-end Big DW stack</li> 
+          <li class="font-light">Petabyte-scale data warehousing at commodity prices</li> 
+          <li class="font-light">Fast installation, commissioning and integration</li> 
+         </ul> 
+         <div style="clear:both"></div> 
+        </div> 
+        <div class="item"> 
+         <img src="/resources/images/ic_m_support_3.png"> 
+         <a href="/support/"><img src="/resources/images/ic_add_2.png" class="more"></a> 
+         <p class="tit font-semibold">GruterTech Support</p> 
+         <ul> 
+          <li class="font-light">Highly-competitive support packages</li> 
+          <li class="font-light">Responsive, dedicated global experts</li> 
+          <li class="font-light">Proactive, advanced system monitoring</li> 
+         </ul> 
+         <div style="clear:both"></div> 
+        </div> 
+       </div> 
+       <div class="block right"> 
+        <div class="item"> 
+         <img src="/resources/images/ic_m_support_2.png"> 
+         <a href="/products/taas/"><img src="/resources/images/ic_add_2.png" class="more"></a> 
+         <p class="tit font-semibold">Tajo on the Cloud</p> 
+         <ul> 
+          <li class="font-light">Start running sophisticated analyses in minutes!</li> 
+          <li class="font-light">Outsource data infrastructure costs to the cloud</li> 
+          <li class="font-light">Seamless integration with existing infrastructure</li> 
+         </ul> 
+         <div style="clear:both"></div> 
+        </div> 
+        <div class="item"> 
+         <img src="/resources/images/ic_m_support_4.png"> 
+         <a href="/products/qrytica/"><img src="/resources/images/ic_add_2.png" class="more"></a> 
+         <p class="tit font-semibold">Coming early 2015: Qrytica</p> 
+         <ul> 
+          <li>Build and distribute massive HQ data sets</li> 
+          <li>Put big data analytics capabilities in more hands</li> 
+          <li>Give your organization an analytics advantage</li> 
+         </ul> 
+         <div style="clear:both"></div> 
+        </div> 
+       </div> 
+       <div style="clear:both"></div> 
+      </div> 
+     </div> 
+     <div class="main_bx" id="bx2"> 
+      <div class="con"> 
+       <p class="tit1 font-semibold">GRUTER IN THE FIELD</p> 
+       <div class="item i1 first"> 
+        <p class="tit font-semibold">Faster ETL Capabilities</p> 
+        <p class="font-light">The challenge was to remove data processing bottlenecks by upgrading to Tajo from a legacy Hive system, speeding up business analysis and reporting.</p> 
+        <a href="/technology/fieldcases/?menu=case1#"><img src="/resources/images/ic_add_2.png" class="more"></a> 
+       </div> 
+       <div class="item i2"> 
+        <p class="tit font-semibold">EDW Cost Savings</p> 
+        <p class="font-light">The challenge was to replace costly, commercial EDW infrastructure with the massively-scalable, open-source combination of Tajo on Hadoop.</p> 
+        <a href="/technology/fieldcases/?menu=case2#"><img src="/resources/images/ic_add_2.png" class="more"></a> 
+       </div> 
+       <div class="item i3"> 
+        <p class="tit font-semibold">Commerce Reco Engine</p> 
+        <p class="font-light">The challenge was to use the speed advantages Hadoop to power a highly-sophisticated recommendation engine and search services.</p> 
+        <a href="/technology/fieldcases/?menu=case3#"><img src="/resources/images/ic_add_2.png" class="more"></a> 
+       </div> 
+       <div class="item i4"> 
+        <p class="tit font-semibold">Music Insights Platform</p> 
+        <p class="font-light">The challenge was to use the speed advantages of Tajo-on-<br>Hadoop to power sets of highly-complex, predictive user algorithms in real time.</p> 
+        <a href="/technology/fieldcases/?menu=case4#"><img src="/resources/images/ic_add_2.png" class="more"></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="main_bx" id="bx3"> 
+      <div class="con"> 
+       <p class="tit1 font-semibold">GRUTER IN THE MEDIA</p> 
+       <div class="item left first"> 
+        <p class="tit"><a href="http://www.gruter.com/blog/?p=1106" target="_blank" class="font-semibold">APACHE TAJO™ v0.9 HAS ARRIVED!</a></p> 
+        <p class="font-light">The Apache Software Foundation announced the release of Apache Tajo v0.9 on Oct. 21. The release heralds significant enhancements to the enterprise “SQL-on-Hadoop” big data warehouse solution, including extended native SQL support and processing improvements across a spectrum of workloads, from common office analytics tasks to massive data queries.</p> 
+       </div> 
+       <div class="item right first"> 
+        <p class="tit"><a href="http://www.gruter.com/blog/?p=1160" target="_blank" class="font-semibold">Gruter TECHDAY 2014</a></p> 
+        <p class="font-light">Gruter Tech Day 2014, an open big data conference hosted by Gruter, was held on Oct. 29 at SpacePlus in Seoul, South Korea. Speakers from Loen Entertainment, SK Telecom and Gruter shared their experience working with the latest big data technologies, and discussed their field implementation in business areas as diverse as telecommunications, digital music provision, and e-commerce. </p> 
+       </div> 
+       <div style="clear:both"></div> 
+       <div class="bar"></div> 
+       <div class="item left"> 
+        <p class="tit"><a href="http://www.gruter.com/blog/?p=1038" target="_blank" class="font-semibold">Gruter at DEVIEW 2014</a></p> 
+        <p class="font-light">Gruter team actively involved the DeView 2014 conference held at the Lotte Hotel World in Seoul, South Korea, from September 30-31. Three Gruter members gave their talks on Vectorized processing, Hadoop security and Elasticsearch optimization and we made the most of the occasion, presenting, learning and making new connections. </p> 
+       </div> 
+       <div class="item right"> 
+        <p class="tit"><a href="http://www.gruter.com/blog/?p=960" target="_blank" class="font-semibold">High-tech Tajo at Hadoop Summit 2014</a></p> 
+        <p class="font-light">Gruter Research Director and Apache Tajo PMC Chair, Dr. Hyunsik Choi, was a presenter at Hadoop Summit 2014, held in San Jose on June 3-5. A highlight each year on the Hadoop calendar, the summit brings together big data experts from across the world to discuss new developments in Hadoop-related technologies.</p> 
+       </div> 
+       <div style="clear:both"></div> 
+      </div> 
+     </div> 
+     <!-- /contents --> 
+    </div> 
+   </div> 
+   <div id="footer"> 
+    <div id="footer_con"> 
+     <div class="site_map gnb1"> 
+      <div class="gnb_menu font-regular">
+       TECHNOLOGY
+      </div> 
+      <ul> 
+       <li><a href="/technology/story/">The Story</a></li> 
+       <li><a href="/technology/tajo/">Apache Tajo</a></li> 
+       <li><a href="/technology/platform/">Big Data Platform</a></li> 
+       <li><a href="/technology/fieldcases/">Field Cases</a></li> 
+      </ul> 
+     </div> 
+     <div class="site_map gnb2"> 
+      <div class="gnb_menu font-regular">
+       PRODUCTS
+      </div> 
+      <ul> 
+       <li><a href="/products/taas/">Tajo-as-a-Service</a></li> 
+       <li><a href="/products/qrytica/">Qrytica</a></li> 
+       <li><a href="/products/appliance/">Tajo Enterprise Gear</a></li> 
+       <li><a href="/products/cloumon/">Cloumon</a></li> 
+      </ul> 
+     </div> 
+     <div class="site_map gnb3"> 
+      <div class="gnb_menu font-regular">
+       SOLUTION
+      </div> 
+      <ul> 
+       <li><a href="/technology/fieldcases/?menu=case1#">Faster ETL</a></li> 
+       <li><a href="/technology/fieldcases/?menu=case2#">Replace EDW</a></li> 
+       <li><a href="/technology/fieldcases/?menu=case3#">E-commerce</a></li> 
+       <li><a href="/technology/fieldcases/?menu=case4#">Music Service</a></li> 
+      </ul> 
+      <ul class="third"> 
+       <li><a href="/technology/fieldcases/?menu=case7#">Bio Infor.</a></li> 
+       <li><a href="/technology/fieldcases/?menu=case5#">Security</a></li> 
+       <li><a href="/technology/fieldcases/?menu=case6#">Realtime</a></li> 
+       <li><a href="/technology/fieldcases/?menu=case8#">NoSQL</a></li> 
+      </ul> 
+     </div> 
+     <div class="site_map gnb4"> 
+      <div class="gnb_menu font-regular">
+       ABOUT
+      </div> 
+      <ul> 
+       <li><a href="/about/gruter/">Meet Gruter</a></li> 
+       <li><a href="/about/team/">Our Team</a></li> 
+       <li><a href="/about/customers/">Customers</a></li> 
+       <li><a href="/about/news/">News</a></li> 
+      </ul> 
+     </div> 
+     <div class="site_map gnb5"> 
+      <div class="gnb_menu font-regular">
+       <a href="/support/">SUPPORT</a>
+      </div> 
+      <div class="gnb_menu font-regular third">
+       <a href="/about/contacts/">CONTACT</a>
+      </div> 
+     </div> 
+     <div class="connect"> 
+      <div class="tit font-regular">
+       CONNECT WITH US
+      </div> 
+      <ul> 
+       <li><a href="https://twitter.com/GruterCorp" target="_blank"><img src="/resources/images/ic_twitter_off.png" class="rollover"></a></li> 
+       <li><a href="http://www.linkedin.com/company/gruter/" target="_blank"><img src="/resources/images/ic_linkedin_off.png" class="rollover"></a></li> 
+       <li><a href="https://www.facebook.com/GruterInc" target="_blank"><img src="/resources/images/ic_facebook_off.png" class="rollover"></a></li> 
+      </ul> 
+      <ul> 
+       <li><a href="http://www.youtube.com/user/GruterCorp" target="_blank"><img src="/resources/images/ic_youtube_off.png" class="rollover"></a></li> 
+       <li><a href="https://github.com/gruter" target="_blank"><img src="/resources/images/ic_github_off.png" class="rollover"></a></li> 
+       <li><a href="http://www.slideshare.net/gruter" target="_blank"><img src="/resources/images/ic_slideshard_off.png" class="rollover"></a></li> 
+      </ul> 
+     </div> 
+     <div style="clear:both"></div> 
+     <div class="copyright font-regular">
+      Copyright © 2014 Gruter, Inc. All rights reserved.
+     </div> 
+    </div> 
+   </div> 
+   <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25529540-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </div>   
+ </body>
+</html>

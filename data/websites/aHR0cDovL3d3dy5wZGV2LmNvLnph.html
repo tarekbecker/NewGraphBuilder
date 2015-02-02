@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>~pdev</title>
+  <link href="/style/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
+  <link href="/style/bootstrap-responsive.min.css" media="all" rel="stylesheet" type="text/css">
+  <link href="/style/screen.css" media="all" rel="stylesheet" type="text/css">
+  <link href="/style/colorbox.css" media="all" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis" rel="stylesheet" type="text/css">
+  <!--[if lte IE 8]><script src="/js/html5.js?1323858650" type="text/javascript"></script><![endif]-->
+  <!--[endif]-->
+  <script src="/js/namespace.js" type="text/javascript"></script>
+  <script src="/js/lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+  <script src="/js/lib/knockout-2.1.0.js" type="text/javascript"></script>
+  <script src="/js/lib/knockout.validation.js" type="text/javascript"></script>
+  <script src="/js/ko.bindingHandlers.clickWithParams.js" type="text/javascript"></script>
+  <script src="/js/lib/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.easyAccordion.js" type="text/javascript"></script>
+  <link href="/style/Accordian.css" rel="stylesheet" type="text/css">
+  <link href="/style/ClientsStyle.css" rel="stylesheet" type="text/css">
+  <script src="/js/frontpage.js" type="text/javascript"></script>
+  <script src="/js/jquery.colorbox-min.js" type="text/javascript"></script>
+  <script src="/js/cycle.js" type="text/javascript"></script>
+  <script src="/js/fittext.js" type="text/javascript"></script>
+  <script src="/js/sticky.js" type="text/javascript"></script>
+  <script src="/js/waypoints.js" type="text/javascript"></script>
+  <script src="/js/jquery.history.js" type="text/javascript"></script>
+  <script src="/js/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
+  <script src="/js/viewmodels/mainViewModel.js" type="text/javascript"></script>
+  <script language="javascript" type="text/javascript">$(function () {
+    $('#accordion-2').easyAccordion({
+        autoStart: false
+    });
+    var page = $('.ClientPage');
+    page.tinyscrollbar();
+    
+    $(".readmore").colorbox({ inline: true });
+    
+    ko.applyBindings(new my.mainViewModel());
+});
+
+</script>
+ </head>
+ <body>
+  <div id="wrapper" role="main" class="clearfix">
+   <section id="home" role="banner" class="section-active">
+    <div id="logo">
+     <a href="#home" tabindex="-1"><img src="/img/Logo/pdev_small.png"></a>
+     <a id="skip" href="#nav" style="display: none;">Skip to site navigation</a>
+    </div>
+    <div id="hgroup" class="clearfix">
+     <div style="margin-bottom: 60px; padding-top: 20px;">
+      <h1>INNOVATIVE SOFTWARE SOLUTIONS</h1>
+     </div>
+     <div>
+      <h3>~pdev delivers niche software development for Big Data and Mobile Systems</h3>
+     </div>
+    </div>
+    <div>
+     <a id="skip" href="#nav">Skip to site navigation</a>
+    </div>
+   </section>
+   <section id="services">
+    <h2>Our Services</h2>
+    <h3 class="hd">PDEV offers the following range of services:</h3>
+    <div class="col col1">
+     <img alt="Big Data" src="/img/Heading/BigData2.png">
+     <h4>Big Data Processing, Storage and Analytics</h4>
+     <p>What is Big Data?</p>
+     <p>"A buzzword, or catch-phrase, used to describe a massive volume of both structured and unstructured data that is so large that it's difficult to process with traditional database and software techniques."</p>
+     <p>- Webopedia</p>
+     <div style="display: none;">
+      <div id="BigDataContent" style="width: 600px; height: 500px;" class="InfoWindow">
+       <div class="Content">
+        <table width="100%">
+         <tbody>
+          <tr>
+           <td style="vertical-align: top;"><p>With the commoditization of processing power, storage capacity and cloud accessibility businesses are accumulating masses of data. Big Data data processes and analyzes this data quickly and cheaply without the need to invest in expensive infrastructure. Big Data Storage is moving over to NoSQL data-repositores.</p><p><br></p><p>We are a pioneer of of Hadoop Big Data in South Africa and are participating in Microsoft’s Azure Hadoop Trial programme by inivitation.</p><p><br></p><p>We are currently deploying Hadoop for the processing and analysis of petabytes of electricity consumption data.</p><p><br></p><p>We have deployed HBase, MongoDB and RavenDB NOSQL repositories.</p></td>
+           <td>
+            <table style="margin: 5px;">
+             <tbody>
+              <tr>
+               <td><a href="http://hadoop.apache.org/" target="_blank"><img src="/img/Technologies/hadoop.png"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://www.mongodb.org/" target="_blank"><img src="/img/Technologies/mongodb.png"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://ravendb.net/" target="_blank"><img src="/img/Technologies/ravendb.jpg"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://hbase.apache.org/" target="_blank"><img src="/img/Technologies/hbase.png"></a></td>
+              </tr>
+             </tbody>
+            </table></td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <a href="#BigDataContent" class="readmore">Learn more &nbsp;&nbsp;→</a>
+    </div>
+    <div class="col col2">
+     <img alt="Training" src="/img/Heading/Training2.png">
+     <h4>Training</h4>
+     <p>Since 2003 we have delivered Software Engineering courses to more than 3000 developers in South Africa, United Kingdom, Israel and Germany.</p>
+     <div style="display: none;">
+      <div id="TrainingContent" style="width: 600px; height: 500px;" class="InfoWindow">
+       <div class="Content">
+        <table width="100%">
+         <tbody>
+          <tr>
+           <td style="vertical-align: top;"><p>ITC and developer skills shortage is endemic within South Africa. We are partnering up with the Department of Education and FET’s to deliver advanced courses in practical software development skills. The ~pdev/FET Training Institute will be launched in 2012.</p><p><br></p><p>We also offer niche training to developers - the following courses will be on offer during 2012:</p><p><br></p>
+            <table>
+             <tbody>
+              <tr>
+               <td><span style="margin: 2px;">~</span></td>
+               <td>Programming for iPad and iPhone for experienced developers (Objective-C)<br><a href="/training">Click here for more information and the registration form</a></td>
+              </tr>
+              <tr>
+               <td><span style="margin: 2px;">~</span></td>
+               <td>Android Programming (Java)</td>
+              </tr>
+              <tr>
+               <td><span style="margin: 2px;">~</span></td>
+               <td>Introduction to Hadoop and NoSQL</td>
+              </tr>
+             </tbody>
+            </table></td>
+           <td>
+            <table style="margin: 5px;">
+             <tbody>
+              <tr>
+               <td><a href="https://developer.apple.com/" target="_blank" title="iOS Developer Program" alt="iOS Developer Program"><img src="/img/Misc/IosDeveloper.png"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://developer.android.com/index.html" target="_blank" title="Android Developer Program" alt="Android Developer Program"><img src="/img/Misc/AndroidDevelopment.jpg"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://nosql-database.org/" target="_blank" title="Next Generation Databases: being non-relational, distributed, open-source and horizontally scalable." alt="Next Generation Databases: being non-relational, distributed, open-source and horizontally scalable."><img src="/img/Technologies/NoSql.jpg"></a></td>
+              </tr>
+             </tbody>
+            </table></td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <a href="#TrainingContent" class="readmore">Learn more &nbsp;&nbsp;→</a>
+    </div>
+    <div class="col col3">
+     <img alt="Mobile" src="/img/Heading/Mobile2.png">
+     <h4>Mobile</h4>
+     <p>Mobile computing is emerging as the major front-end deliver platform for business and enterprise applications. Business application servers need to be designed with mobile connectivity in mind.</p>
+     <div style="display: none;">
+      <div id="MobileContent" style="width: 600px; height: 500px;" class="InfoWindow">
+       <div class="Content">
+        <table width="100%">
+         <tbody>
+          <tr>
+           <td style="vertical-align: top;"><p>Software is designed for mobile delivery in addition to web-delivery.</p><p><br></p><p>We have expertise and experience in Apple iOS, Google Android, Windows Phone and HTML5.</p></td>
+           <td>
+            <table style="margin: 5px;">
+             <tbody>
+              <tr>
+               <td><a href="https://developer.apple.com/" target="_blank" title="iOS Developer Program" alt="iOS Developer Program"><img src="/img/Misc/IosDeveloper.png"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://developer.android.com/index.html" target="_blank" title="Android Developer Program" alt="Android Developer Program"><img src="/img/Misc/AndroidDevelopment.jpg"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://www.microsoft.com/windowsphone/en-us/default.aspx" target="_blank" title="Windows Phone" alt="Windows Phone"><img src="/img/Technologies/WindowsPhone.png"></a></td>
+              </tr>
+             </tbody>
+            </table></td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <a href="#MobileContent" class="readmore">Learn more &nbsp;&nbsp;→</a>
+    </div>
+    <div class="col col4">
+     <img alt="Enterprise" src="/img/Heading/Corporate2.png">
+     <h4>Enterprise</h4>
+     <p>Enterprise software systems are required in large corporations with legacy and new systems. The legacy systems have to work in conjunction with new systems and have to be present in new , appealing, secure and rapid formats.</p>
+     <div style="display: none;">
+      <div id="CorporateContent" style="width: 600px; height: 500px;" class="InfoWindow">
+       <div class="Content">
+        <table width="100%">
+         <tbody>
+          <tr>
+           <td style="vertical-align: top;"><p>We have extensive experience in SOA and SAS with a firm coding competency in .NET, JAVA, Python and Objective-C and JQuery.</p><p><br></p><p>We are placing especial emphasis on real time enterprise messaging and search for the enterprise with experience in deployments of RabbitMQ, NServiceBUS, HTML 5 Web Sockets. PDEV is currently impementing a SOLR enterprise search server for global utility tariff registry.</p></td>
+           <td>
+            <table style="margin: 5px;">
+             <tbody>
+              <tr>
+               <td><a href="http://www.microsoft.com/net" target="_blank" title="Microsoft .Net" alt="Microsoft .Net"><img src="/img/Technologies/dotnet.jpg"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html" target="_blank" title="Objective C" alt="Objective C"><img src="/img/Technologies/objc.jpg"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://jquery.com/" target="_blank" title="jQuery" alt="jQuery"><img src="/img/Technologies/jquery-logo1.jpg"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://www.python.org/" target="_blank" title="Python" alt="Python"><img src="/img/Technologies/python.jpg"></a></td>
+              </tr>
+              <tr>
+               <td><a href="http://www.java.com" target="_blank" title="Java" alt="Java"><img src="/img/Technologies/java.jpg"></a></td>
+              </tr>
+             </tbody>
+            </table></td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <a href="#CorporateContent" class="readmore">Learn more &nbsp;&nbsp;→</a>
+    </div>
+   </section>
+   <section id="work">
+    <h2>Some of our work</h2>
+    <div id="project_trackmatic" class="project clearfix">
+     <a href="#work-open" class="block"><img alt="Trackmatic" height="84" src="/img/Work/Trackmatic.jpg" width="135"><h3>Trackmatic</h3><p>Vehicle tracking and reporting solution</p></a>
+    </div>
+    <div id="project_invirohub" class="project clearfix">
+     <a href="#work-open" class="block"><img alt="Invirohub" height="84" src="/img/Work/Invirohub.jpg" width="135"><h3>Invirohub</h3><p>Energy management solution</p></a>
+    </div>
+    <div id="project_forbes" class="project clearfix">
+     <a href="#work-open" class="block"><img alt="Alexander Forbes" height="84" src="/img/Work/Forbes.jpg" width="135"><h3>Alexander Forbes</h3><p>Financial Tools</p></a>
+    </div>
+    <div id="project_investec" class="project clearfix">
+     <a href="#work-open" class="block"><img alt="Investec" height="84" src="/img/Work/Investec.jpg" width="135"><h3>Investec</h3><p>Financial Services</p></a>
+    </div>
+    <div id="project_ces" class="project clearfix">
+     <a href="#work-open" class="block"><img alt="CES - Computerised Electrical Systems" height="84" src="/img/Work/CES.jpg" width="135"><h3>CES - Computerised Electricity Systems</h3><p>Smart Electricity and Automation</p></a>
+    </div>
+    <div id="work-open">
+     <div class="openproject project_trackmatic">
+      <a href="#work" title="Close project" class="close"></a>
+      <div class="slides"></div>
+      <div class="pagination"></div>
+      <div class="slidecontent">
+       <a href="http://www.trackmatic.co.za/" class="readmore">Visit website &nbsp;&nbsp;→</a>
+       <h3>Trackmatic Solutions</h3>
+       <div>
+        State of the art vehicle tracking, fleet management and routing enterprise application for Trackmatic.
+       </div>
+       <div>
+        First use internationally of HTML 5.0 Websockets and RabbitMQ for real time multi-vehicle tracking
+       </div>
+      </div>
+     </div>
+     <div class="openproject project_invirohub">
+      <a href="#work" title="Close project" class="close"></a>
+      <div class="slides"></div>
+      <div class="pagination"></div>
+      <div class="slidecontent">
+       <a href="http://www.invirohub.com/" class="readmore">Visit website &nbsp;&nbsp;→</a>
+       <h3>Invirohub</h3>
+       <div>
+        Virtual cloud based Utility. Monitors electricity consumption on circuit by circuits basis.
+       </div>
+       <div>
+        Open APIs for connectivity to all data transmitting devices.
+       </div>
+       <div></div>Big Data processing and analysis
+      </div>
+     </div>
+     <div class="openproject project_forbes">
+      <a href="#work" title="Close project" class="close"></a>
+      <div class="slides"></div>
+      <div class="pagination"></div>
+      <div class="slidecontent">
+       <a href="http://www.alexanderforbes.co.za/" class="readmore">Visit website &nbsp;&nbsp;→</a>
+       <h3>Alexander Forbes</h3>
+       <div>
+        Enterprise systems for Alexander Forbes over last seven years: Home Loan Management; Claims Management; Bulk Printing.
+       </div>
+      </div>
+     </div>
+     <div class="openproject project_investec">
+      <a href="#work" title="Close project" class="close"></a>
+      <div class="slides"></div>
+      <div class="pagination"></div>
+      <div class="slidecontent">
+       <a href="http://www.investec.co.za/" class="readmore">Visit website &nbsp;&nbsp;→</a>
+       <h3>Investec</h3>
+       <div>
+        Foreign Exchange Forward, Futures and Single Stock Trading platform
+       </div>
+      </div>
+     </div>
+     <div class="openproject project_ces">
+      <a href="#work" title="Close project" class="close"></a>
+      <div class="slides"></div>
+      <div class="pagination"></div>
+      <div class="slidecontent">
+       <a href="http://www.c-e-systems.com/" class="readmore">Visit website &nbsp;&nbsp;→</a>
+       <h3>CES - Computerised Electricity Systems</h3>
+       <div>
+        Computerized electricity for intelligent distribution board.
+       </div>
+       <div>
+        Cloud based system used in USA, Canada, South Africa and Israel
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="clients">
+    <h2>Our Clients</h2>
+    <h3 class="hd">PDEV’s past and current clients include a variety of known companies in South Africa and abroad.</h3>
+    <div id="accordion-2">
+     <dl>
+      <dt>
+       Financial Services
+      </dt>
+      <dd>
+       <div class="ClientPage">
+        <div class="scrollbar">
+         <div class="track">
+          <div class="thumb">
+           <div class="end"></div>
+          </div>
+         </div>
+        </div>
+        <div class="viewport">
+         <div class="overview">
+          <div>
+           <div class="client">
+            <a href="http://www.absa.co.za" target="_blank">
+             <div class="img ABSA"></div></a>
+            <h3>ABSA Bank</h3>
+            <span class="Description">Financial Institution</span>
+           </div>
+           <div class="client">
+            <a href="http://www.alexanderforbes.co.za/" target="_blank">
+             <div class="img AlexanderForbes"></div></a>
+            <h3>Alexander Forbes</h3>
+            <span class="Description">Financial Institution</span>
+           </div>
+           <div class="client">
+            <a href="http://www.investec.co.za" target="_blank">
+             <div class="img Investec"></div></a>
+            <h3>Investec</h3>
+            <span class="Description">Financial Institution</span>
+           </div>
+           <div class="client">
+            <a href="http://www.nedbank.co.za" target="_blank">
+             <div class="img Nedbank"></div></a>
+            <h3>Nedbank</h3>
+            <span class="Description">Financial Institution</span>
+           </div>
+           <div class="client">
+            <a href="http://www.metropolitan.co.za" target="_blank">
+             <div class="img Metropolitan"></div></a>
+            <h3>Metropolitan</h3>
+            <span class="Description">Financial Institution</span>
+           </div>
+           <div class="client">
+            <a href="http://www.sanlam.co.za" target="_blank">
+             <div class="img Sanlam"></div></a>
+            <h3>Sanlam</h3>
+            <span class="Description">Financial Institution</span>
+           </div>
+           <div class="client">
+            <a href="http://www.standardbank.co.za" target="_blank">
+             <div class="img STD"></div></a>
+            <h3>Standard Bank</h3>
+            <span class="Description">Financial Institution</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </dd>
+      <dt>
+       Telecoms
+      </dt>
+      <dd>
+       <div class="ClientPage">
+        <div class="scrollbar">
+         <div class="track">
+          <div class="thumb">
+           <div class="end"></div>
+          </div>
+         </div>
+        </div>
+        <div class="viewport">
+         <div class="overview">
+          <div>
+           <div class="client">
+            <a href="http://www.vodacom.co.za" target="_blank">
+             <div class="img Vodacom"></div></a>
+            <h3>Vodacom</h3>
+            <span class="Description">Telecommunications Company</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </dd>
+      <dt>
+       Energy
+      </dt>
+      <dd>
+       <div class="ClientPage">
+        <div class="scrollbar">
+         <div class="track">
+          <div class="thumb">
+           <div class="end"></div>
+          </div>
+         </div>
+        </div>
+        <div class="viewport">
+         <div class="overview">
+          <div>
+           <div class="client">
+            <a href="http://www.voltex.co.za" target="_blank" class="last">
+             <div class="img Voltex"></div></a>
+            <h3>Voltex</h3>
+            <span class="Description">Electrical Company</span>
+           </div>
+           <div class="client">
+            <a href="http://www.eskom.co.za" target="_blank">
+             <div class="img Eskom"></div></a>
+            <h3>Eskom</h3>
+            <span class="Description">Energy Company</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </dd>
+      <dt>
+       Other
+      </dt>
+      <dd>
+       <div class="ClientPage">
+        <div class="scrollbar">
+         <div class="track">
+          <div class="thumb">
+           <div class="end"></div>
+          </div>
+         </div>
+        </div>
+        <div class="viewport">
+         <div class="overview">
+          <div>
+           <div class="client">
+            <a href="http://www.sab.co.za" target="_blank">
+             <div class="img SAB"></div></a>
+            <h3>SAB</h3>
+            <span class="Description">Beverage Manufacturer</span>
+           </div>
+           <div class="client">
+            <a href="http://www.trackmatic.co.za" target="_blank">
+             <div class="img Trackmatic"></div></a>
+            <h3>Trackmatic</h3>
+            <span class="Description">Vehicle Tracking Solutions Provider</span>
+           </div>
+           <div class="client">
+            <a href="http://www.ram.co.za" target="_blank">
+             <div class="img Ram"></div></a>
+            <h3>Ram</h3>
+            <span class="Description">Courier Company</span>
+           </div>
+           <div class="client">
+            <a href="http://www.afrifocus.co.za" target="_blank">
+             <div class="img Afrifocus"></div></a>
+            <h3>Afrifocus</h3>
+            <span class="Description">Stock Broking Firm</span>
+           </div>
+           <div class="client">
+            <a href="https://www.agrista.co.za/" target="_blank">
+             <div class="img Agrista"></div></a>
+            <h3>Agrista</h3>
+            <span class="Description">Agricultural Investments</span>
+           </div>
+           <div class="client">
+            <a href="http://www.aptronics.co.za" target="_blank">
+             <div class="img Aptronics"></div></a>
+            <h3>Aptronics</h3>
+            <span class="Description">Corporate IT Service and Solution provider</span>
+           </div>
+           <div class="client">
+            <a href="http://www.bidvest.co.za" target="_blank">
+             <div class="img Bidvest"></div></a>
+            <h3>Bidvest</h3>
+            <span class="Description">International services, trading and distribution company</span>
+           </div>
+           <div class="client">
+            <a href="http://www.bmw.co.za" target="_blank">
+             <div class="img Bmw"></div></a>
+            <h3>BMW</h3>
+            <span class="Description">Car Manufacturer</span>
+           </div>
+           <div class="client">
+            <a href="http://www.cida.co.za" target="_blank">
+             <div class="img Cida"></div></a>
+            <h3>Cida</h3>
+            <span class="Description">Higher Education Institution</span>
+           </div>
+           <div class="client">
+            <a href="http://www.dimensiondata.com" target="_blank">
+             <div class="img DimensionData"></div></a>
+            <h3>Dimension Data</h3>
+            <span class="Description">IT Solutions</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </dd>
+     </dl>
+    </div>
+   </section>
+   <section id="about">
+    <h2>About us</h2>
+    <div class="col col1">
+     <h3 class="hd">PDEV has a solid grounding and experience in traditional technologies: OO and RDBMS. But the technology landscape is shifting and PDEV has acquired competencies and pioneering developments in Big Data and Mobile Application Development.</h3>
+     <p>PDEV was founded in 2003, with the advent of the Microsoft .NET platform. The PDEV founders had extensive previous experience in the IT industry both locally and globally. The initial focus was to introduce .NET to the Enterprise space within Southern Africa.</p>
+     <p>Since 2003, PDEV has delivered .NET Enterprise courses to more than 3000 developers in Southern Africa, and consulted to major corporations and developments houses (ISVs) within Southern Africa, the United Kingdom, Israel and Germany on developing projects for the enterprise using .NET.</p>
+    </div>
+   </section>
+   <section id="contact">
+    <h2>Contact us</h2>
+    <h3 class="hd">If you have any questions or you want to meet with us, you can contact us with following methods:</h3>
+    <div id="confirmation"></div>
+    <div>
+     <form id="ContactForm">
+      <fieldset>
+       <ul>
+        <li><input style="float:right;" placeholder="Name" data-bind="validationOptions: { insertMessages: false }, value: contactName, valueUpdate: 'afterkeydown', css: {'error': !contactName.isValid()}"></li>
+        <li><input style="float:right;" placeholder="Email" data-bind="validationOptions: { insertMessages: false }, value: email, valueUpdate: 'afterkeydown', css: {'error': !email.isValid()}"></li>
+        <li><textarea data-bind="value: message" style="float:right;" placeholder="Your Message" cols="30" rows="15"></textarea></li>
+       </ul>
+      </fieldset>
+      <div>
+       <span id="submitMessage" data-bind="text: information" style="color: orange; float:right;"></span>
+       <br>
+       <button id="submitButton" style="width: 200px; height: 50px;" data-bind="click: sendEmail, visible: !sending()" class="submitButton">Send</button>
+      </div>
+     </form>
+    </div>
+    <ul class="sidebar">
+     <li class="email"><h4>Email</h4>
+      <div>
+       <a href="mailto:info@pdev.co.za" title="Website Contact" rel="noreferrer">info@pdev.co.za</a>
+      </div></li>
+     <li class="phone"><h4>Call</h4>
+      <div>
+       <a href="skype:ayalrose?chat"></a>
+       <img src="http://mystatus.skype.com/smallclassic/ayalrose" style="border: none;" width="114" height="20" alt="My status">
+       <br>Ayal Rosenberg
+      </div>
+      <div class="margintop">
+       <a href="skype:loriengamaroff?chat"><img src="http://mystatus.skype.com/smallclassic/loriengamaroff" style="border: none;" width="114" height="20" alt="My status"></a>
+       <br>Lorien Gamaroff
+      </div></li>
+     <li class="address"><h4>Visit</h4>
+      <div>
+       88 Western Services Road
+       <br>Wendywood
+       <br>2144
+       <br>Johannesburg, South Africa
+      </div>
+      <div id="map_canvas" style="width: 200px; height: 200px"></div></li>
+    </ul>
+    <div id="social">
+     <a href="http://www.facebook.com/pdevsocial" target="_blank" title="Follow us on Facebook" class="fb ir">Facebook</a>
+     <a href="http://twitter.com/_pdev" target="_blank" title="Follow us on Twitter" class="tw ir">Twitter</a>
+    </div>
+   </section>
+   <nav id="nav" role="navigation">
+    <ul class="clearfix">
+     <li><a href="#home" tabindex="-1" class="selected">Home</a></li>
+     <li><a href="#services" tabindex="-1">Services</a></li>
+     <li><a href="#work" tabindex="-1">Work</a></li>
+     <li><a href="#clients" tabindex="-1">Clients</a></li>
+     <li><a href="#about" tabindex="-1">About</a></li>
+     <li><a href="#contact" tabindex="-1">Contact</a></li>
+    </ul>
+   </nav>
+   <section id="footer" role="contentinfo">
+    <span>© Copyright 2012<a href="http://www.pdev.co.za">~pdev</a></span>
+   </section>
+  </div>
+  <script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-30152621-1']);
+_gaq.push(['_trackPageview']);
+
+(function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script>
+ </body>
+</html>

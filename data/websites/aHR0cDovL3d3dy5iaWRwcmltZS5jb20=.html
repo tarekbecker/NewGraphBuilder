@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <link rel="stylesheet" type="text/css" href="/js/jquery-ui/jquery-ui-1.8.17.custom.css"> 
+  <link rel="stylesheet" type="text/css" href="/js/signup-lightbox/signup-lightbox.css"> 
+  <script type="text/javascript" src="/js/jquery/jquery-1.7.1.min.js"></script> 
+  <script type="text/javascript" src="/js/map/raphael-min.js"></script> 
+  <script type="text/javascript" src="/js/map/map.js"></script> 
+  <script type="text/javascript" src="/js/jquery-ui/jquery-ui-1.8.17.custom.min.js"></script> 
+  <script type="text/javascript" src="/js/signup-lightbox/signup-lightbox.js"></script> 
+  <title>Real-time Federal, State, and Local Government Bids and RFPs</title> 
+  <link rel="stylesheet" href="/css/main.css?v=1336593109"> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+  <meta name="description" content="Find government bids and contracts from over 90,000 government agencies, including US federal, state, cities, counties, and schools."> 
+  <meta name="keywords" content="government bids, rfp, government contracts, competitive intelligence, federal, military, bid opportunities, bid database, state bids, rfq, bidding, procurement, government leads"> 
+  <meta name="copyright" content="Copyright © 2014 BidPrime "> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="googlebot" content="index, follow"> 
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
+  <link rel="apple-touch-icon" href="/images/apple-icon.png"> 
+  <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1967472-4']);
+        _gaq.push(['_trackPageview']);
+    </script> 
+  <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="/css/ie.css" />
+        <script type="text/javascript" src="/js/pngFix/jquery.pngFix.pack.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){$(document).pngFix();});
+        </script>
+    <![endif]--> 
+ </head> 
+ <body> 
+  <div class="signup-dialog" style="background: url(/images/bg-texture.gif) repeat 0 0 transparent;"> 
+   <div onclick="$('.signup-dialog').dialog('close')" style="float:right;background: url(/images/icons/close.png) no-repeat 0 0 transparent; width:16px;"> 
+    <span onclick="$('.signup-dialog').dialog('close')" style="line-height:60px;margin-right:10px;color:#0faf13;cursor:pointer;float:right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
+   </div> 
+   <div style="text-align:left;color:#999;font-size:30px; margin-left:20px;" class="bold">
+    SETUP ONLY TAKES A MINUTE
+   </div> 
+   <div style="text-align:left;color:#0faf13;font-size:18px; margin-left:20px;"> 
+    <span class="bold">Free Trial.</span> NO CREDIT CARD REQUIRED 
+   </div> 
+   <div style="text-align: right;font-size:12px">
+    Already a member? 
+    <a style="color:#0faf13;text-decoration: underline" href="/login">Click here</a> to sign in. 
+   </div> 
+   <form autocomplete="off" id="registration-form" action="https://www.bidprime.com/subscribe/create" method="post"> 
+    <p style="color:red"></p> 
+    <div class="row"> 
+     <label class="text-bullet" for="UserModel_email">Email</label> 
+     <input class="bb text-bullet-input" name="UserModel[email]" id="UserModel_email" type="text"> 
+     <div class="errorMessage" id="UserModel_email_em_" style="display:none"></div> 
+    </div> 
+    <div class="row"> 
+     <label class="text-bullet" for="UserModel_password">Password</label> 
+     <input class="bb text-bullet-input" name="UserModel[password]" id="UserModel_password" type="password"> 
+     <div class="errorMessage" id="UserModel_password_em_" style="display:none"></div> 
+    </div> 
+    <div class="row"> 
+     <label class="text-bullet" for="UserModel_full_name">Name</label> 
+     <input class="bb text-bullet-input" name="UserModel[full_name]" id="UserModel_full_name" type="text"> 
+     <div class="errorMessage" id="UserModel_full_name_em_" style="display:none"></div> 
+    </div> 
+    <div class="row"> 
+     <label class="text-bullet" for="UserModel_phone1">Phone</label> 
+     <input class="bb text-bullet-input" name="UserModel[phone1]" id="UserModel_phone1" type="text"> 
+     <div class="errorMessage" id="UserModel_phone1_em_" style="display:none"></div> 
+    </div> 
+    <div class="row"> 
+     <label class="text-bullet" for="AccountModel_name">Company</label> 
+     <input class="bb text-bullet-input" name="AccountModel[name]" id="AccountModel_name" type="text"> 
+     <div class="errorMessage" id="AccountModel_name_em_" style="display:none"></div> 
+    </div> 
+    <div class="row"> 
+     <label class="text-bullet" for="AccountModel_state">State</label> 
+     <select class="text-bullet-select" name="AccountModel[state]" id="AccountModel_state"> <option value="">Select a state/province</option> <option value="AK">Alaska</option> <option value="AL">Alabama</option> <option value="AR">Arkansas</option> <option value="AZ">Arizona</option> <option value="CA">California</option> <option value="CO">Colorado</option> <option value="CT">Connecticut</option> <option value="DC">District Of Columbia</option> <option value="DE">Delaware</option> <option value="FL">Florida</option> <option value="GA">Georgia</option> <option value="GU">Guam</option> <option value="HI">Hawaii</option> <option value="IA">Iowa</option> <option value="ID">Idaho</option> <option value="IL">Illinois</option> <option value="IN">Indiana</option> <option value="KS">Kansas</option> <option value="KY">Kentucky</option> <option value="LA">Louisiana</option> <option value="MA">Massachusetts</option> <option value="MD">Maryland</option> <option value="ME">Maine</option> <option value="MI">Michigan</option> <option value="MN">Minnesota</option> <option value="MO">Missouri</option> <option value="MS">Mississippi</option> <option value="MT">Montana</option> <option value="NC">North Carolina</option> <option value="ND">North Dakota</option> <option value="NE">Nebraska</option> <option value="NH">New Hampshire</option> <option value="NJ">New Jersey</option> <option value="NM">New Mexico</option> <option value="NV">Nevada</option> <option value="NY">New York</option> <option value="OH">Ohio</option> <option value="OK">Oklahoma</option> <option value="OR">Oregon</option> <option value="PA">Pennsylvania</option> <option value="RI">Rhode Island</option> <option value="SC">South Carolina</option> <option value="SD">South Dakota</option> <option value="TN">Tennessee</option> <option value="TX">Texas</option> <option value="UT">Utah</option> <option value="VA">Virginia</option> <option value="VI">Virgin Islands</option> <option value="VT">Vermont</option> <option value="WA">Washington</option> <option value="WI">Wisconsin</option> <option value="WV">West Virginia</option> <option value="WY">Wyoming</option> <option value="AB">Alberta</option> <option value="BC">British Columbia</option> <option value="MB">Manitoba</option> <option value="NB">New Brunswick</option> <option value="NL">Newfoundland and Labrador</option> <option value="NS">Nova Scotia</option> <option value="NT">Northwest Territories</option> <option value="NU">Nunavut</option> <option value="ON">Ontario</option> <option value="PE">Prince Edward Island</option> <option value="QC">Quebec</option> <option value="SK">Saskatchewan</option> <option value="YT">Yukon</option> </select> 
+     <div class="errorMessage" id="AccountModel_state_em_" style="display:none"></div> 
+    </div> 
+    <input id="submit" class="green-button-medium" style="float:right;" type="submit" name="yt0" value="Sign Up"> 
+    <span onclick="$('.signup-dialog').dialog('close')" style="line-height:60px;margin-right:10px;color:#0faf13;cursor:pointer;float:right;margin-top:15px;">cancel</span> 
+   </form>
+  </div> 
+  <div id="page" class="guest"> 
+   <div id="notification" onclick="$('#notification').slideUp()">
+    <span></span> 
+    <button></button> 
+   </div> 
+   <style type="text/css">
+    .menu-item:hover{
+        background-color: #0FAF13 !important;
+    }
+</style> 
+   <div class="header"> 
+    <div style="width:920px; margin:auto; position:relative; height:100%;"> 
+     <a href="/"><img src="/images/bidprimelogo.png" style="float:left;"></a> 
+     <h2 id="bptag">Real-time government bid and contract database.</h2> 
+     <div style="float:right; margin-top:5px"> 
+      <a style="color:#0faf13; font-size: 14px;font-weight: bold;position: absolute;right: 80px;top: 8px;" class=" signup-lightbox-button" href="/subscribe/create">Take a Free Trial!</a> 
+      <a style="display:block; color:#FFFFFF; float:right" class="green-button-tiny" href="/login">Sign In</a> 
+      <div style="background:url(/images/call.png) no-repeat left center transparent; clear:right; margin:0px 10px; padding:5px 5px 5px 20px; font-weight:bold; color:#666">
+       1-888-808-5356
+      </div> 
+     </div> 
+     <div class="header-menu"> 
+      <ul class="menu-items"> 
+       <li class="menu-item "> <a href="/tour">TOUR</a> 
+        <ul class="sub-menu"> 
+         <li><a href="/tour">Quick Tour</a></li> 
+         <li><a href="/tour/demo">Video Demo</a></li> 
+         <li><a href="/tour/coverage">Coverage Overview</a></li> 
+        </ul> </li> 
+       <li class="menu-item "> <a href="/about/plans">PRICING</a> </li> 
+       <li class="menu-item "> <a href="/categories">SEARCH INDUSTRIES</a> 
+        <ul class="sub-menu"> 
+         <li><a style="width:300px" href="/bid/industry/defense">Aerospace and Defense</a></li> 
+         <li><a style="width:300px" href="/bid/industry/architecture-engineering">Architecture and Engineering</a></li> 
+         <li><a style="width:300px" href="/bid/industry/automobile-transportation">Automobile, Air, and Transportation</a></li> 
+         <li><a style="width:300px" href="/bid/industry/building-services">Building Operations, Cleaning, and Maintenance</a></li> 
+         <li><a style="width:300px" href="/bid/industry/clothing-textiles">Clothing, Textiles, and Uniforms</a></li> 
+         <li><a style="width:300px" href="/bid/industry/computer-network-hardware">Computer, Servers, and Network Hardware</a></li> 
+         <li><a style="width:300px" href="/bid/industry/construction">Construction, Renovation, and Site Work</a></li> 
+         <li><a style="width:300px" href="/bid/industry/professional-services">Consulting and Professional Services</a></li> 
+         <li><a style="width:300px" href="/bid/industry/energy-lighting">Energy and Lighting</a></li> 
+         <li><a style="width:300px" href="/bid/industry/environmental">Environmental</a></li> 
+         <li><a style="width:300px" href="/bid/industry/financial-insurance">Financial and Insurance</a></li> 
+         <li><a style="width:300px" href="/bid/industry/food-services">Food and Food Service</a></li> 
+         <li><a style="width:300px" href="/bid/industry/heavy-machinery">Heavy Machinery and Industrial Equipment</a></li> 
+         <li><a style="width:300px" href="/bid/industry/information-technology">Information Technology</a></li> 
+         <li><a style="width:300px" href="/bid/industry/medical-healthcare">Medical, Health, and Laboratory</a></li> 
+         <li><a style="width:300px" href="/bid/industry/office-supplies">Office Supplies, Imaging, and Technology</a></li> 
+         <li><a style="width:300px" href="/bid/industry/parks-recreation">Parks, Sports, and Recreation</a></li> 
+         <li><a style="width:300px" href="/bid/industry/public-works">Public Works, Water, and Sanitation</a></li> 
+         <li><a style="width:300px" href="/bid/industry/radio-communication">Radio, Communication, Telephone, and Telecom</a></li> 
+         <li><a style="width:300px" href="/bid/industry/rental-leasing">Rental &amp; Leasing of Equipment and Real Estate</a></li> 
+         <li><a style="width:300px" href="/bid/industry/security-safety">Security, Public Safety, Fire, and Police</a></li> 
+         <li><a style="width:300px" href="/bid/industry/software">Software</a></li> 
+         <li><a style="width:300px" href="/bid/industry/transportation-construction">Transportation and Highways</a></li> 
+        </ul> </li> 
+       <style type="text/css">
+                    .sub-right-menu{}
+                    .sub-right-menu ul{display:none;position:absolute;left:100%;background-color: #777777 !important;}
+                    .sub-right-menu:hover ul{display:block}
+
+                </style> 
+       <li class="menu-item "> <a href="/bid/search/region">SEARCH REGIONS</a> 
+        <ul class="sub-menu"> 
+         <li class="sub-right-menu"> <a>A through K</a> 
+          <ul> 
+           <li><a href="/bid/region/alabama">Alabama</a></li> 
+           <li><a href="/bid/region/alaska">Alaska</a></li> 
+           <li><a href="/bid/region/arizona">Arizona</a></li> 
+           <li><a href="/bid/region/arkansas">Arkansas</a></li> 
+           <li><a href="/bid/region/california">California</a></li> 
+           <li><a href="/bid/region/colorado">Colorado</a></li> 
+           <li><a href="/bid/region/connecticut">Connecticut</a></li> 
+           <li><a href="/bid/region/delaware">Delaware</a></li> 
+           <li><a href="/bid/region/district-of-columbia">District Of Columbia</a></li> 
+           <li><a href="/bid/region/florida">Florida</a></li> 
+           <li><a href="/bid/region/georgia">Georgia</a></li> 
+           <li><a href="/bid/region/hawaii">Hawaii</a></li> 
+           <li><a href="/bid/region/idaho">Idaho</a></li> 
+           <li><a href="/bid/region/illinois">Illinois</a></li> 
+           <li><a href="/bid/region/indiana">Indiana</a></li> 
+           <li><a href="/bid/region/iowa">Iowa</a></li> 
+           <li><a href="/bid/region/kansas">Kansas</a></li> 
+           <li><a href="/bid/region/kentucky">Kentucky</a></li> 
+          </ul> </li> 
+         <li class="sub-right-menu"> <a>L through N</a> 
+          <ul> 
+           <li><a href="/bid/region/louisiana">Louisiana</a></li> 
+           <li><a href="/bid/region/maine">Maine</a></li> 
+           <li><a href="/bid/region/maryland">Maryland</a></li> 
+           <li><a href="/bid/region/massachusetts">Massachusetts</a></li> 
+           <li><a href="/bid/region/michigan">Michigan</a></li> 
+           <li><a href="/bid/region/minnesota">Minnesota</a></li> 
+           <li><a href="/bid/region/mississippi">Mississippi</a></li> 
+           <li><a href="/bid/region/missouri">Missouri</a></li> 
+           <li><a href="/bid/region/montana">Montana</a></li> 
+           <li><a href="/bid/region/nebraska">Nebraska</a></li> 
+           <li><a href="/bid/region/nevada">Nevada</a></li> 
+           <li><a href="/bid/region/new-hampshire">New Hampshire</a></li> 
+           <li><a href="/bid/region/new-jersey">New Jersey</a></li> 
+           <li><a href="/bid/region/new-mexico">New Mexico</a></li> 
+           <li><a href="/bid/region/new-york">New York</a></li> 
+           <li><a href="/bid/region/north-carolina">North Carolina</a></li> 
+           <li><a href="/bid/region/north-dakota">North Dakota</a></li> 
+          </ul> </li> 
+         <li class="sub-right-menu"> <a>O through W</a> 
+          <ul> 
+           <li><a href="/bid/region/ohio">Ohio</a></li> 
+           <li><a href="/bid/region/oklahoma">Oklahoma</a></li> 
+           <li><a href="/bid/region/oregon">Oregon</a></li> 
+           <li><a href="/bid/region/pennsylvania">Pennsylvania</a></li> 
+           <li><a href="/bid/region/rhode-island">Rhode Island</a></li> 
+           <li><a href="/bid/region/south-carolina">South Carolina</a></li> 
+           <li><a href="/bid/region/south-dakota">South Dakota</a></li> 
+           <li><a href="/bid/region/tennessee">Tennessee</a></li> 
+           <li><a href="/bid/region/texas">Texas</a></li> 
+           <li><a href="/bid/region/utah">Utah</a></li> 
+           <li><a href="/bid/region/vermont">Vermont</a></li> 
+           <li><a href="/bid/region/virginia">Virginia</a></li> 
+           <li><a href="/bid/region/washington">Washington</a></li> 
+           <li><a href="/bid/region/west-virginia">West Virginia</a></li> 
+           <li><a href="/bid/region/wisconsin">Wisconsin</a></li> 
+           <li><a href="/bid/region/wyoming">Wyoming</a></li> 
+          </ul> </li> 
+         <li><a href="/bid/region/federal">Federal</a></li> 
+         <li class="sub-right-menu"> <a href="/bid/region/canada">Canada</a> 
+          <ul> 
+           <li><a href="/bid/region/alberta">Alberta</a></li> 
+           <li><a href="/bid/region/british-columbia">British Columbia</a></li> 
+           <li><a href="/bid/region/manitoba">Manitoba</a></li> 
+           <li><a href="/bid/region/new-brunswick">New Brunswick</a></li> 
+           <li><a href="/bid/region/newfoundland-and-labrador">Newfoundland and Labrador</a></li> 
+           <li><a href="/bid/region/nova-scotia">Nova Scotia</a></li> 
+           <li><a href="/bid/region/northwest-territories">Northwest Territories</a></li> 
+           <li><a href="/bid/region/nunavut">Nunavut</a></li> 
+           <li><a href="/bid/region/ontario">Ontario</a></li> 
+           <li><a href="/bid/region/prince-edward-island">Prince Edward Island</a></li> 
+           <li><a href="/bid/region/quebec">Quebec</a></li> 
+           <li><a href="/bid/region/saskatchewan">Saskatchewan</a></li> 
+           <li><a href="/bid/region/yukon">Yukon</a></li> 
+          </ul> </li> 
+        </ul> </li> 
+       <li class="menu-item "> <a href="/about">ABOUT</a> 
+        <ul class="sub-menu"> 
+         <li><a href="/about">About Us</a></li> 
+         <li><a href="/about/careers">Careers</a></li> 
+         <li><a href="/about/faq">Questions</a></li> 
+         <li><a href="/about/contact">Contact</a></li> 
+         <li><a href="/about/privacy">Privacy</a></li> 
+         <li><a href="/about/terms-of-service">Terms of Service</a></li> 
+        </ul> </li> 
+       <li class="menu-item "> <a href="/news">NEWS</a> 
+        <ul class="sub-menu"> 
+         <li><a href="/news/press">Press</a></li> 
+         <li><a href="/news/blog">Blog</a></li> 
+        </ul> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="clear"></div> 
+    <noscript>
+     Javascript must be enabled to properly navigate this site.
+    </noscript> 
+   </div> 
+   <div id="content"> 
+    <script type="text/javascript">
+    $(function () {
+        BP.Ticker.load();
+    });
+    function getRegionStats() {
+        return {"usal":{"name":"Alabama","tag":"alabama","active":246,"recent":33,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"High Speed Color Printer...","issuedate":"5 hours ago"},{"title":"Aci Furniture Components Contract...","issuedate":"5 hours ago"},{"title":"Software Renewel - 512737...","issuedate":"5 hours ago"},{"title":" E.V. Smith Research Center - John Deere 635 Side-...","issuedate":"5 hours ago"},{"title":"High Speed Color Printer...","issuedate":"5 hours ago"},{"title":"Aci Furniture Components Contract...","issuedate":"5 hours ago"},{"title":"Software Renewel - 512737...","issuedate":"5 hours ago"},{"title":"Transfer Switch Addendum #1...","issuedate":"5 hours ago"},{"title":"Sheraton Transfer Switch...","issuedate":"5 hours ago"},{"title":"Bid # 23-1214 - WAN, Internet & VOIP Services - Ed...","issuedate":"7 hours ago"}]},"usak":{"name":"Alaska","tag":"alaska","active":653,"recent":36,"industry":"Consulting and Professional Services","latest":"1 hour ago","leads":[{"title":"2014P047 Provide Computer Assisted Legal Research...","issuedate":"1 hour ago"},{"title":"ADA-72277 Proposal to Lease State Airport Land at ...","issuedate":"3 hours ago"},{"title":"Notice of Alaska Juvenile Advisory Committee (AJJA...","issuedate":"3 hours ago"},{"title":"Anchorage Fish and Game Advisory Committee Game Su...","issuedate":"3 hours ago"},{"title":"ADA-72220 Proposal to Lease State Airport Land at ...","issuedate":"3 hours ago"},{"title":"RFP 2015-2000-2818 Substance Abuse Treatment Servi...","issuedate":"3 hours ago"},{"title":"Notice of Pipeline Carrier Tariff Filings...","issuedate":"3 hours ago"},{"title":"Purchase Signage and Sign Material - Re-Bid...","issuedate":"3 hours ago"},{"title":"Downtown Waterfront Facilities Corrosion Control R...","issuedate":"5 hours ago"},{"title":"Sef-1962 Itb Telescopic Boom Material Handler 12\/1...","issuedate":"5 hours ago"}]},"usaz":{"name":"Arizona","tag":"arizona","active":360,"recent":22,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Sewer Maintenance Services...","issuedate":"5 hours ago"},{"title":"Science, Technology, Engineering, Arts, Mathematic...","issuedate":"5 hours ago"},{"title":"Replacement of the Broadcast Tower for KJZZ and KB...","issuedate":"5 hours ago"},{"title":"Backflow Prevention Device Purchase & Installation...","issuedate":"5 hours ago"},{"title":"Pinal County Administrative Parking Lot Florence, ...","issuedate":"7 hours ago"},{"title":"Asphalt Paving for New Helipad at Lost Dutchman St...","issuedate":"7 hours ago"},{"title":"Repair And\/or Replacement of the Electric & Comput...","issuedate":"7 hours ago"},{"title":"City of Chandler Old Price Road\/Queen Creek Road I...","issuedate":"7 hours ago"},{"title":"Project Name: Old Price Road\/Queen Creek Road Inte...","issuedate":"7 hours ago"},{"title":"Transit Spine Route Study Consulting Services...","issuedate":"7 hours ago"}]},"usar":{"name":"Arkansas","tag":"arkansas","active":179,"recent":7,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Professional Services Contracts...","issuedate":"5 hours ago"},{"title":"2015 Bulk Material Bids...","issuedate":"9 hours ago"},{"title":"City of Fayetteville, AR Invitation to Bid 2015 Bu...","issuedate":"15 hours ago"},{"title":"INVITATION TO BIDDERS The Housing Authority of the...","issuedate":"15 hours ago"},{"title":"INVITATION TO BID 1. Sealed Bids for Renovations &...","issuedate":"15 hours ago"},{"title":"ADVERTISEMENT FOR BIDS City of Hoxie P.O. Box 28 H...","issuedate":"15 hours ago"},{"title":"Local 911 Dispatch Services and Law Enforcement Ra...","issuedate":"19 hours ago"},{"title":"RFQ for 2015 Little Rock Marathon Shirts...","issuedate":"Dec 3, 2014 10:35 am"},{"title":"ADVERTISEMENT FOR BIDS Notice Is Hereby Given that...","issuedate":"Dec 3, 2014 8:52 am"},{"title":"REQUEST FOR QUALIFICATIONS (RFQ) for Professional ...","issuedate":"Dec 3, 2014 8:52 am"}]},"usca":{"name":"California","tag":"california","active":3411,"recent":229,"industry":"Construction, Renovation, and Site Work","latest":"1 hour ago","leads":[{"title":"Enterprise Vault Managed Services...","issuedate":"1 hour ago"},{"title":"Enterprise Vault Managed Services...","issuedate":"1 hour ago"},{"title":"114-091 As Needed Servicing for Street Sweeper Rec...","issuedate":"1 hour ago"},{"title":"Rental of Bare Non-Operated Self Propelled Asphalt...","issuedate":"2 hours ago"},{"title":"Certified Forensically Wiped Hard Drives...","issuedate":"2 hours ago"},{"title":"Orange Street Alley Pedestrian Enhancement Project...","issuedate":"3 hours ago"},{"title":"Rialto Airport Demolition Phase 1...","issuedate":"3 hours ago"},{"title":"Metrolink Parking Lot Expansion...","issuedate":"3 hours ago"},{"title":"RFQ El Cerrito Relief Line Project Pilot Tube Guid...","issuedate":"3 hours ago"},{"title":"Safety Glasses...","issuedate":"3 hours ago"}]},"usco":{"name":"Colorado","tag":"colorado","active":457,"recent":27,"industry":"Consulting and Professional Services","latest":"1 hour ago","leads":[{"title":"Water Conservation Toilets...","issuedate":"1 hour ago"},{"title":"Water Conservation Supplies...","issuedate":"1 hour ago"},{"title":"Arthur Ditch Bridge Replacement \u00c2\u20ac\u201c Canyon Avenue...","issuedate":"1 hour ago"},{"title":"Radiant Tube Heaters-Police Training Facility...","issuedate":"1 hour ago"},{"title":"Trunk 3 Temporary By-Pass Sewer Lift Station...","issuedate":"1 hour ago"},{"title":"Home Disinfection for Ebola Virus Disease Patients...","issuedate":"1 hour ago"},{"title":"Background Check and Credit Check Services...","issuedate":"1 hour ago"},{"title":"Three Police Patrol Vehicles...","issuedate":"5 hours ago"},{"title":"2015 Police Uniforms and Equipment...","issuedate":"7 hours ago"},{"title":"Arvada City Hall - Locker Room...","issuedate":"7 hours ago"}]},"usct":{"name":"Connecticut","tag":"connecticut","active":312,"recent":20,"industry":"Construction, Renovation, and Site Work","latest":"7 hours ago","leads":[{"title":"Development of Math & Science Boosters & Assessmen...","issuedate":"7 hours ago"},{"title":"RL4 Terex Light Towers...","issuedate":"7 hours ago"},{"title":"Borouggh of Naugatuck Equests Proposals From Quali...","issuedate":"7 hours ago"},{"title":"Esker Point Concession Stand Operation...","issuedate":"7 hours ago"},{"title":"REQUEST FOR QUALIFICATIONS-Environmental Consultan...","issuedate":"7 hours ago"},{"title":"Scrap Surplus Vehicle (Commodity)...","issuedate":"7 hours ago"},{"title":"Esker Point Concession Stand Operation...","issuedate":"9 hours ago"},{"title":"Small Cities Community Development Program Adminis...","issuedate":"11 hours ago"},{"title":"Sealed Bids to Excavate and Grade Benthic Maerial ...","issuedate":"11 hours ago"},{"title":"15% Liquid Membrane Grade Sodium Hypochlorite...","issuedate":"11 hours ago"}]},"usde":{"name":"Delaware","tag":"delaware","active":45,"recent":3,"industry":"Consulting and Professional Services","latest":"13 hours ago","leads":[{"title":"Building Management Services at the Emergency Oper...","issuedate":"13 hours ago"},{"title":"Replacing Repairing Heaters And Conserving Energy ...","issuedate":"23 hours ago"},{"title":"Replacing Repairing Heaters And Conserving Energy ...","issuedate":"23 hours ago"},{"title":"ISO Equipment Maintenance...","issuedate":"Dec 3, 2014 4:01 am"},{"title":"BR 2-100A On Denneys Road Over Fork Branch...","issuedate":"Dec 1, 2014 12:35 pm"},{"title":"BR 2-100A On Denneys Road Over Fork Branch...","issuedate":"Dec 1, 2014 12:35 pm"},{"title":"Holts Landing - Assawoman Canal Trail - Phase 1...","issuedate":"Dec 1, 2014 10:35 am"},{"title":"Coastal Management Assistance Grant...","issuedate":"Dec 1, 2014 12:35 am"},{"title":"Bowers Beach Truckfill Project...","issuedate":"Dec 1, 2014 12:35 am"},{"title":"Bowers Beach Truckfill Project...","issuedate":"Dec 1, 2014 12:35 am"}]},"usdc":{"name":"District Of Columbia","tag":"district-of-columbia","active":500,"recent":37,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"1-15-C019: Retirement Savings Plan Administrative ...","issuedate":"5 hours ago"},{"title":"Bid Opening Date: DECEMBER 8, 2014...","issuedate":"7 hours ago"},{"title":"WMATA Scrap Metal Recycling Services Revenue Gener...","issuedate":"9 hours ago"},{"title":"Bid Opening Date: December 4, 2014....","issuedate":"13 hours ago"},{"title":"Auditing FY2013 Cost Reports Submitted By Home Hea...","issuedate":"13 hours ago"},{"title":"The Government Is Seeking to Lease Space in Chicag...","issuedate":"19 hours ago"},{"title":"Install Surface Weather System (SWS) Goodyear Airp...","issuedate":"19 hours ago"},{"title":"Install Surface Weather System (SWS) Torrence Muni...","issuedate":"19 hours ago"},{"title":"Residential Reentry Center (RRC) Services and Home...","issuedate":"19 hours ago"},{"title":"Residential Reentry Center (RRC) and Home Confinem...","issuedate":"19 hours ago"}]},"usfl":{"name":"Florida","tag":"florida","active":1143,"recent":61,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Organizational Structure Review Consultant...","issuedate":"5 hours ago"},{"title":"EPW -12 A1A - Jupiter Beach Road to US Hwy 1 Bicyc...","issuedate":"5 hours ago"},{"title":"Copy Paper for Print Shop...","issuedate":"7 hours ago"},{"title":"Tapping Sleeves, Stainless Steel, MJ...","issuedate":"7 hours ago"},{"title":"Court Reporting Services...","issuedate":"7 hours ago"},{"title":".clearfix { Display: Inline-block; } \/* IE7xhtml*\/...","issuedate":"7 hours ago"},{"title":"Fiber Sensys Security System Components...","issuedate":"7 hours ago"},{"title":"Livescan Fingerprinting System Unit, Furnish and I...","issuedate":"9 hours ago"},{"title":"Parts, Service, & Inspections, JLG & Genie Work Pl...","issuedate":"9 hours ago"},{"title":"Reciprocating Compressor, Purchase, Delivery and I...","issuedate":"9 hours ago"}]},"usga":{"name":"Georgia","tag":"georgia","active":613,"recent":70,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"ISSS Circuit Card Assemblies...","issuedate":"5 hours ago"},{"title":"Student Background and Drug Screening Services...","issuedate":"5 hours ago"},{"title":"ISSS Circuit Card Assemblies...","issuedate":"5 hours ago"},{"title":"Design Svcs - Construction of Treatment Mall, CSH...","issuedate":"7 hours ago"},{"title":"Refrigeration Trucks...","issuedate":"7 hours ago"},{"title":"Rfq Door Hardware...","issuedate":"7 hours ago"},{"title":"O'Reilly Auto Parts...","issuedate":"9 hours ago"},{"title":"Golfsmith Store #135...","issuedate":"9 hours ago"},{"title":"Buffalo Brothers Restaurant...","issuedate":"9 hours ago"},{"title":"Clover Elementary School...","issuedate":"9 hours ago"}]},"usgu":{"name":"Guam","tag":"guam","active":2,"recent":0,"industry":"Energy and Lighting","latest":"Nov 12, 2014 8:44 pm","leads":[{"title":"Type \"V\" Center Break Group Operated Disconnect Sw...","issuedate":"Nov 12, 2014 8:44 pm"},{"title":"Janitorial Services...","issuedate":"Nov 12, 2014 8:44 pm"},{"title":"Pad Mounted Transformers...","issuedate":"Nov 12, 2014 6:52 pm"},{"title":"Pole Mounted Transformers...","issuedate":"Nov 12, 2014 6:52 pm"},{"title":"Fuse Cutout...","issuedate":"Nov 6, 2014 12:43 am"},{"title":"Fleet and Fuel Management Software...","issuedate":"Nov 5, 2014 8:44 pm"},{"title":"Executive Recruitment\/Executive Search Services...","issuedate":"Nov 5, 2014 8:44 pm"},{"title":"Diesel Fuel Oil No. 2 and Automotive Gasoline, Reg...","issuedate":"Nov 5, 2014 6:46 pm"},{"title":"Renewable Energy Resource Phase II...","issuedate":"Oct 29, 2014 1:46 am"},{"title":"Advisory, Training, Support and Professional Servi...","issuedate":"Oct 27, 2014 7:45 pm"}]},"ushi":{"name":"Hawaii","tag":"hawaii","active":270,"recent":15,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Hale Opio Kauai...","issuedate":"5 hours ago"},{"title":"Kalialinui Bridge Replacement for County of Maui, ...","issuedate":"7 hours ago"},{"title":"Configuration Enhancements to Longitudinal Data Sy...","issuedate":"7 hours ago"},{"title":"To be Determined...","issuedate":"9 hours ago"},{"title":"RFI - Evaluation, Training, and Placement Services...","issuedate":"9 hours ago"},{"title":"Hospital Food Service Insulated Trays...","issuedate":"19 hours ago"},{"title":"Disposable Tray Inserts Compat W\/ Aladdin Temp-Rit...","issuedate":"19 hours ago"},{"title":"Strategic Lending Partners For Native Hawaiian Cre...","issuedate":"19 hours ago"},{"title":"Strategic Lending Partner for Native Hawaiian Cred...","issuedate":"19 hours ago"},{"title":"RFI - Supported Employment Services for Consumers ...","issuedate":"19 hours ago"}]},"usid":{"name":"Idaho","tag":"idaho","active":46,"recent":4,"industry":"Construction, Renovation, and Site Work","latest":"5 hours ago","leads":[{"title":"Lock Hardware...","issuedate":"5 hours ago"},{"title":"Waterline Extension - Locust Grove, Blackrock to R...","issuedate":"13 hours ago"},{"title":"002- Key 12431,I-15, Devils Cr to Marsh Valley Rd ...","issuedate":"13 hours ago"},{"title":"004- Key 13394,SH-55, N Fk Payette Rv Br, Cascade ...","issuedate":"13 hours ago"},{"title":"Fire Training Facility Architectural Services...","issuedate":"Dec 3, 2014 2:47 pm"},{"title":"Cottonwood Janitorial Services...","issuedate":"Dec 3, 2014 4:01 am"},{"title":"Fire Station Architectural Services...","issuedate":"Dec 2, 2014 2:46 pm"},{"title":"Borah Pool Filter Replacement...","issuedate":"Dec 2, 2014 8:44 am"},{"title":"Wells 11, 17, & 25 Control Systems Upgrades - Cons...","issuedate":"Dec 1, 2014 10:40 am"},{"title":"Water Sewer Trenching Services D4 Shoshone Mainena...","issuedate":"Nov 26, 2014 2:41 pm"}]},"usil":{"name":"Illinois","tag":"illinois","active":968,"recent":35,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Tecan Robot Programming and Maintenace...","issuedate":"5 hours ago"},{"title":"DOT FY15 Crash Report Forms...","issuedate":"5 hours ago"},{"title":"THA 5698 Bridge Widening and Reconstruction-Jane A...","issuedate":"5 hours ago"},{"title":"SBE - Website Redesign...","issuedate":"7 hours ago"},{"title":"CHEMICAL HOODS MEDICAL EXAMINER, OFFICE OF THE Add...","issuedate":"7 hours ago"},{"title":"2015 Resurfacing Countywide...","issuedate":"7 hours ago"},{"title":"2015 Crack Sealing Contract Countywide...","issuedate":"7 hours ago"},{"title":"2015 Pavement Preservation Countywide...","issuedate":"7 hours ago"},{"title":"Psd Wearing Apparel Institutional Statewide Master...","issuedate":"7 hours ago"},{"title":"SBE - Website Redesign...","issuedate":"7 hours ago"}]},"usin":{"name":"Indiana","tag":"indiana","active":161,"recent":6,"industry":"Consulting and Professional Services","latest":"9 hours ago","leads":[{"title":"Rhino Liners or INDOT Approved Alternate for Ford ...","issuedate":"9 hours ago"},{"title":"Classroom Wing Additions to Eagle Creek ES...","issuedate":"11 hours ago"},{"title":"NW000A-New Parking Lot Near Sycamore Hall...","issuedate":"13 hours ago"},{"title":"TWO (2) T1s (24 CHANNELS) COMMERCIAL BUSINESS LINE...","issuedate":"19 hours ago"},{"title":"Pork Roast...","issuedate":"19 hours ago"},{"title":"Chicken BONELESS, SKINLESS...","issuedate":"19 hours ago"},{"title":"One (1) Year Contract for Service Processors for t...","issuedate":"Dec 3, 2014 4:47 pm"},{"title":"ISU Science Building Roof and Mechanical Replaceme...","issuedate":"Dec 3, 2014 2:47 pm"},{"title":"Marshall Illinois School District General Trades P...","issuedate":"Dec 3, 2014 12:46 pm"},{"title":"VU Handicapped Suite Room 164...","issuedate":"Dec 3, 2014 10:48 am"}]},"usia":{"name":"Iowa","tag":"iowa","active":277,"recent":18,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Traulsen Refrigeration System-Model 4T412 2-door o...","issuedate":"5 hours ago"},{"title":"Institutional Athletic Footwear...","issuedate":"5 hours ago"},{"title":"Traulsen Refrigeration System-Model 4T412 2-door o...","issuedate":"5 hours ago"},{"title":"Institutional Athletic Footwear...","issuedate":"5 hours ago"},{"title":"Sole Source for Data Master CDM or DMT...","issuedate":"7 hours ago"},{"title":"Covered Copper Wire...","issuedate":"7 hours ago"},{"title":"Sole Source for Data Master CDM or DMT...","issuedate":"7 hours ago"},{"title":"Misc Items for Electric Distribution Inventory...","issuedate":"7 hours ago"},{"title":"Overhead Doors-Misc. Locations...","issuedate":"11 hours ago"},{"title":"Towing Service Contract...","issuedate":"11 hours ago"}]},"usks":{"name":"Kansas","tag":"kansas","active":207,"recent":13,"industry":"Consulting and Professional Services","latest":"1 hour ago","leads":[{"title":"Dodge Durango Sport Utility Vehicles...","issuedate":"1 hour ago"},{"title":"Mobile X-Ray Services...","issuedate":"1 hour ago"},{"title":"Seeds, Corn & Soybean For KCI Lansing Farm...","issuedate":"1 hour ago"},{"title":"Trucks, One Ton...","issuedate":"1 hour ago"},{"title":"RFP - Welcome Sign...","issuedate":"5 hours ago"},{"title":"2015 On \u2013 Call Electrical Services...","issuedate":"7 hours ago"},{"title":"Bid Tabulation Sheet...","issuedate":"7 hours ago"},{"title":"Park ROW Rebid Groups 5, 8, 9, 20 & 21...","issuedate":"11 hours ago"},{"title":"Comcare Supported Housing...","issuedate":"11 hours ago"},{"title":"Bid 15-70 - Ball Field Supplies Contract...","issuedate":"11 hours ago"}]},"usky":{"name":"Kentucky","tag":"kentucky","active":208,"recent":8,"industry":"Consulting and Professional Services","latest":"7 hours ago","leads":[{"title":"Data Tapes...","issuedate":"7 hours ago"},{"title":"Treaty Office Facility...","issuedate":"9 hours ago"},{"title":"Painting at Community Corrections...","issuedate":"13 hours ago"},{"title":"High Pressure Air Lifting Bag System...","issuedate":"13 hours ago"},{"title":"To be Posted at a Later Date....","issuedate":"19 hours ago"},{"title":"Project 603-15-103 Replace AHU Ph 5 (A\/E)...","issuedate":"20 hours ago"},{"title":"Construction of An Unmanned Aircraft Systems (UAS)...","issuedate":"20 hours ago"},{"title":"LEGAL NOTICE The Kenton County Board of Education ...","issuedate":"21 hours ago"},{"title":"Chiller Replacement Benton Elementary School...","issuedate":"Dec 3, 2014 12:50 pm"},{"title":"Utility Billing System and IVR...","issuedate":"Dec 3, 2014 10:42 am"}]},"usla":{"name":"Louisiana","tag":"louisiana","active":474,"recent":43,"industry":"Public Works, Water, and Sanitation","latest":"5 hours ago","leads":[{"title":"5000111945 - Jefferson Parish Material Touch-up...","issuedate":"5 hours ago"},{"title":"5000112014 Comm Vault Simpana 10 Filw Protection...","issuedate":"5 hours ago"},{"title":"5000112013 Various Industrial Items...","issuedate":"5 hours ago"},{"title":"Phase I Bridge Repairs (boon Lasseigne and Divisio...","issuedate":"5 hours ago"},{"title":"Concession Supplies for Acadiana Fairgrounds...","issuedate":"5 hours ago"},{"title":"Campus Grounds Maintenance...","issuedate":"5 hours ago"},{"title":"Horse Trailer...","issuedate":"5 hours ago"},{"title":"Baseball Field Replacement Lighting for West Monro...","issuedate":"7 hours ago"},{"title":"Minor Arterial Asphalt Overlay Program-Phase Ll...","issuedate":"7 hours ago"},{"title":"5000112010 Lap Reach in Freezer...","issuedate":"7 hours ago"}]},"usme":{"name":"Maine","tag":"maine","active":29,"recent":4,"industry":"Consulting and Professional Services","latest":"11 hours ago","leads":[{"title":"Bid #15-15 Spin Relief Grinder...","issuedate":"11 hours ago"},{"title":"Indirect Cost Allocation Plans for Sub-recipients...","issuedate":"15 hours ago"},{"title":"Urgent Rental of Forklifts for Groton, CT...","issuedate":"19 hours ago"},{"title":"Third Floor Chamber Project at the E.T. Gignoux Fe...","issuedate":"19 hours ago"},{"title":"Financial Advisor - Debt Management Services...","issuedate":"Dec 3, 2014 12:37 pm"},{"title":"Replace Existing Humidifiers in Cultural Building...","issuedate":"Dec 3, 2014 12:37 pm"},{"title":"State Funded Independent Support Services...","issuedate":"Dec 2, 2014 4:37 pm"},{"title":"Roadmap to Change: Updating Maine's Response to th...","issuedate":"Dec 2, 2014 4:37 pm"},{"title":"Immunization Registry Support Services...","issuedate":"Dec 2, 2014 4:37 pm"},{"title":"Chiller and Cooling Tower Replacement at the Gigno...","issuedate":"Dec 2, 2014 1:51 am"}]},"usmd":{"name":"Maryland","tag":"maryland","active":574,"recent":55,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Equipment for STC...","issuedate":"5 hours ago"},{"title":"Rfp_81040-p...","issuedate":"5 hours ago"},{"title":"Ifb #15-003 Trailers, Walking Floor...","issuedate":"7 hours ago"},{"title":"Trailers, Walking Floor Bid Number: 15-003...","issuedate":"7 hours ago"},{"title":"Television Production and Broadcast - Provision fo...","issuedate":"7 hours ago"},{"title":"S15-017 Additional Veternarian Services for DoE An...","issuedate":"9 hours ago"},{"title":"MWE-822-14 HVAC Upgrade and Renovation at Overlea ...","issuedate":"9 hours ago"},{"title":"JNI-723-15 Special Education Services: Selection o...","issuedate":"9 hours ago"},{"title":"Bid No. 15-002 Television Production and Broadcast...","issuedate":"9 hours ago"},{"title":"15-135 Storm Drain Gunite Repair Program...","issuedate":"9 hours ago"}]},"usma":{"name":"Massachusetts","tag":"massachusetts","active":565,"recent":18,"industry":"Consulting and Professional Services","latest":"9 hours ago","leads":[{"title":"Pavement Management...","issuedate":"9 hours ago"},{"title":"Castings and Pipes, Water Dept., 2014...","issuedate":"9 hours ago"},{"title":"Gate Valves, Hydrant Accessories and Copper Tuibin...","issuedate":"9 hours ago"},{"title":"Reconstruction of Spruce St and Walnut St. Parking...","issuedate":"9 hours ago"},{"title":"Municipal Waste DISPOSAL...","issuedate":"9 hours ago"},{"title":"Replacement of The Beaver Street Culvert...","issuedate":"9 hours ago"},{"title":"Training Consulting Services...","issuedate":"9 hours ago"},{"title":"Research and Evaluation Consulting Services...","issuedate":"9 hours ago"},{"title":"2015 Transfer Station Stickers Are Available...","issuedate":"13 hours ago"},{"title":"Renovate Kitchen...","issuedate":"13 hours ago"}]},"usmi":{"name":"Michigan","tag":"michigan","active":238,"recent":18,"industry":"Consulting and Professional Services","latest":"7 hours ago","leads":[{"title":"Ford Motor Company Livonia, MI BP1111 Equipment In...","issuedate":"7 hours ago"},{"title":"Pre-Demolition Abatement...","issuedate":"9 hours ago"},{"title":"WGVK Tower Light Upgrade Project Attachment C Exhi...","issuedate":"9 hours ago"},{"title":"KIP C7800 Color Copier With Scanner Maintenance Ag...","issuedate":"11 hours ago"},{"title":"Spring Mechanic Jackets...","issuedate":"11 hours ago"},{"title":"Winter Mechanic Jackets...","issuedate":"11 hours ago"},{"title":"Progressive Cavity Pumps for Ferric Chloride and H...","issuedate":"11 hours ago"},{"title":"Rfp946-56-01...","issuedate":"11 hours ago"},{"title":"Ammunition, Duty and Practice Rounds...","issuedate":"13 hours ago"},{"title":"University of Michigan Ann Arbor, MI Stamps School...","issuedate":"15 hours ago"}]},"usmn":{"name":"Minnesota","tag":"minnesota","active":325,"recent":16,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"MPCA Electronic Data Flows to EPA (NEIN)...","issuedate":"5 hours ago"},{"title":"Rental: All-weather Entrance Mats...","issuedate":"5 hours ago"},{"title":"REBID - LED Retrofit Kits...","issuedate":"5 hours ago"},{"title":"Furnish\/Install Air Compressor - DHS St. Peter...","issuedate":"5 hours ago"},{"title":"Request for Bid for a Automatic Transmission Dynam...","issuedate":"7 hours ago"},{"title":"Rental: All-weather Entrance Mats...","issuedate":"7 hours ago"},{"title":"REBID - LED Retrofit Kits...","issuedate":"7 hours ago"},{"title":"Fort Ridgely State Park 2015 Golf Course Chemicals...","issuedate":"9 hours ago"},{"title":"Brooklyn Park Library-Best Value...","issuedate":"11 hours ago"},{"title":"(HE #6824-005) Minot Industrial Park Water Distrib...","issuedate":"11 hours ago"}]},"usms":{"name":"Mississippi","tag":"mississippi","active":77,"recent":2,"industry":"Consulting and Professional Services","latest":"11 hours ago","leads":[{"title":"Bid File 15-07 For Sale: Mobile Home Trailer...","issuedate":"11 hours ago"},{"title":"Dynamic Load Tester...","issuedate":"19 hours ago"},{"title":"Atv\/utv...","issuedate":"Dec 3, 2014 4:11 am"},{"title":"Shipboard Furniture...","issuedate":"Dec 3, 2014 4:08 am"},{"title":"Reverse Osmosis Maintenance...","issuedate":"Dec 3, 2014 3:59 am"},{"title":"City of Florence- Wastewater Treatment Facility Ex...","issuedate":"Dec 2, 2014 4:46 pm"},{"title":"ADVERTISEMENT FOR SALE Sealed Bids will be Receive...","issuedate":"Dec 1, 2014 4:37 am"},{"title":"SECTION 00101 ADVERTISEMENT FOR BIDS Notice Is Her...","issuedate":"Nov 30, 2014 4:37 am"},{"title":"Improvement of Wildlife and Fisheries Related Deve...","issuedate":"Nov 29, 2014 1:43 am"},{"title":"Hail Damage Repairs (EMER) - (Pkg F)...","issuedate":"Nov 26, 2014 12:42 pm"}]},"usmo":{"name":"Missouri","tag":"missouri","active":266,"recent":24,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Reinforced Concrete Pipe 2015...","issuedate":"5 hours ago"},{"title":"Data Transport Services...","issuedate":"7 hours ago"},{"title":"Data Transport Services...","issuedate":"7 hours ago"},{"title":"Pricing Page for MN 5 1219...","issuedate":"7 hours ago"},{"title":"Pricing Page for MN 5 1219...","issuedate":"7 hours ago"},{"title":"O'Fallon TV Control Room Upgrades...","issuedate":"7 hours ago"},{"title":"Carbide Snow Plow Blades...","issuedate":"7 hours ago"},{"title":"18 2015-041 Preparation of Ownership & Encumbrance...","issuedate":"7 hours ago"},{"title":"NE15-26Q-R2 Paint Separator Tanks Cleaning...","issuedate":"9 hours ago"},{"title":"Roof Replacement - Raytown Branch...","issuedate":"9 hours ago"}]},"usmt":{"name":"Montana","tag":"montana","active":305,"recent":1,"industry":"Consulting and Professional Services","latest":"19 hours ago","leads":[{"title":"Rights Adjudication Review...","issuedate":"19 hours ago"},{"title":"Mobile Mammography Services at NCSU...","issuedate":"Dec 2, 2014 2:02 am"},{"title":"Wilderness Outfitter Trips...","issuedate":"Dec 2, 2014 2:02 am"},{"title":"Bike Auction Winter 2014...","issuedate":"Nov 26, 2014 6:39 pm"},{"title":"CISCO SmartNet Subscription Renewal...","issuedate":"Nov 26, 2014 1:41 am"},{"title":"South Park Signature Play Feature...","issuedate":"Nov 25, 2014 6:38 pm"},{"title":"South Park Playground Replacement...","issuedate":"Nov 25, 2014 6:38 pm"},{"title":"Analog Input Modules, Sequence of Events Recorder ...","issuedate":"Nov 25, 2014 3:50 am"},{"title":"RFP\/Q Engineering and Other Services - Kim William...","issuedate":"Nov 23, 2014 4:42 pm"},{"title":"RFP\/Q Landscape Architecture for Playgrounds...","issuedate":"Nov 23, 2014 4:40 pm"}]},"usne":{"name":"Nebraska","tag":"nebraska","active":84,"recent":7,"industry":"Construction, Renovation, and Site Work","latest":"7 hours ago","leads":[{"title":"Norfolk Public Schools - Alternative Education\/Car...","issuedate":"7 hours ago"},{"title":"COLORADO AND WYOMING DESIGN-BUILD AND CONSTRUCTION...","issuedate":"20 hours ago"},{"title":"Madonna Rehabilitation Hospital - Food Service Equ...","issuedate":"23 hours ago"},{"title":"Nebraska Department of Roads ADA Facilities Upgrad...","issuedate":"23 hours ago"},{"title":"Gateway Early Childhood Center Bid Package #4...","issuedate":"23 hours ago"},{"title":"Lincoln Public Schools Security & Technology Ready...","issuedate":"23 hours ago"},{"title":"Centenary United Methodist Church...","issuedate":"23 hours ago"},{"title":"MPS - Rockwell Elementary Open to Closed Renovatio...","issuedate":"Dec 3, 2014 4:47 pm"},{"title":"Furnas County Courthouse Renovation...","issuedate":"Dec 3, 2014 4:47 pm"},{"title":"GIPS - Additions & Alterations to Shoemaker Elemen...","issuedate":"Dec 3, 2014 12:45 pm"}]},"usnv":{"name":"Nevada","tag":"nevada","active":77,"recent":9,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Detention Center South Tower Security Enclosures...","issuedate":"5 hours ago"},{"title":"Lone Mountain Park Phase V: Equestrian Park and Tr...","issuedate":"5 hours ago"},{"title":"A One-Year Open Term Contract for Assorted Fabric ...","issuedate":"11 hours ago"},{"title":"Annual Sanitary Sewer Rehabilitation...","issuedate":"11 hours ago"},{"title":"Led Fixture and Led Street Name Sign Lamps...","issuedate":"13 hours ago"},{"title":"Annual Requirements Contract for Full-Coverage Mai...","issuedate":"13 hours ago"},{"title":"Electrical Systems and Equipment Repairs, Replacem...","issuedate":"19 hours ago"},{"title":"Electrical Systems and Equipment Repairs, Replacem...","issuedate":"19 hours ago"},{"title":"Runway Maintenance, Rubber Removal, Striping...","issuedate":"20 hours ago"},{"title":"Consulting Services to Develop & Negotiate Facilit...","issuedate":"Dec 3, 2014 6:37 pm"}]},"usnh":{"name":"New Hampshire","tag":"new-hampshire","active":91,"recent":8,"industry":"Consulting and Professional Services","latest":"9 hours ago","leads":[{"title":"Sam's Club Remodel...","issuedate":"9 hours ago"},{"title":"Event Management Program...","issuedate":"9 hours ago"},{"title":"Scheduling - Detail...","issuedate":"9 hours ago"},{"title":"Adaptive Signal System - Supply & Install...","issuedate":"9 hours ago"},{"title":"PRINTING: Lucky for Life Horseshoe Counter Cards...","issuedate":"11 hours ago"},{"title":"Re-coating Primary & Secondary Clarifier Metalwork...","issuedate":"15 hours ago"},{"title":"MMFX-2 Rebar...","issuedate":"15 hours ago"},{"title":"Solar Power Mini RWIS - Supply & Install...","issuedate":"15 hours ago"},{"title":"Flint Hill Conservation Easement...","issuedate":"Dec 3, 2014 4:49 pm"},{"title":"PRINTING: Lucky for Life Counter Mat...","issuedate":"Dec 3, 2014 4:38 pm"}]},"usnj":{"name":"New Jersey","tag":"new-jersey","active":380,"recent":36,"industry":"Consulting and Professional Services","latest":"1 hour ago","leads":[{"title":"Foods: Seafood, Frozen - Dss...","issuedate":"1 hour ago"},{"title":"Foods: Seafood, Frozen - Dss...","issuedate":"3 hours ago"},{"title":"IFB 15-57 Desktop User Profile & User Environment ...","issuedate":"7 hours ago"},{"title":"Conduct An Information System Audit for Assessment...","issuedate":"7 hours ago"},{"title":"Request for Special PreQualification Related to De...","issuedate":"7 hours ago"},{"title":"Request for Special PreQualification Related to De...","issuedate":"7 hours ago"},{"title":"Click Here to See Information...","issuedate":"9 hours ago"},{"title":"RFP Professional Services Contracts Tax Appeal Con...","issuedate":"9 hours ago"},{"title":"(3) - Pavement Design\/Engineering Services Term Ag...","issuedate":"9 hours ago"},{"title":"Phase II Rockaway River Water Course Cleaning Proj...","issuedate":"11 hours ago"}]},"usnm":{"name":"New Mexico","tag":"new-mexico","active":119,"recent":3,"industry":"Consulting and Professional Services","latest":"19 hours ago","leads":[{"title":"FEMA Related Services...","issuedate":"19 hours ago"},{"title":"Legacy Archive Tape Management Services...","issuedate":"20 hours ago"},{"title":"Optical Hardware...","issuedate":"20 hours ago"},{"title":"Consultant Design Program RFP Schedule...","issuedate":"Dec 3, 2014 10:52 am"},{"title":"Paint, Interior and Exterior...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"Central New Mexico Correctional Facility Kitchen R...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"Inspection Testing and Aerial Bucket and Platform ...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"Gilsonite Pavement Sealer and Rejuvenator...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"Storage Boxes...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"Fabrication of Welded Pipe Gates...","issuedate":"Dec 3, 2014 10:42 am"}]},"usny":{"name":"New York","tag":"new-york","active":2166,"recent":112,"industry":"Consulting and Professional Services","latest":"3 hours ago","leads":[{"title":"Guide Railing Replacement Bronx River Pkwy & Vario...","issuedate":"3 hours ago"},{"title":"Copy Paper #15010...","issuedate":"3 hours ago"},{"title":"Canon Printer Rental...","issuedate":"3 hours ago"},{"title":"Sound Enclosure Room...","issuedate":"3 hours ago"},{"title":"SMD_Rental of Above Ground Fuel Oil Tank- Pelham P...","issuedate":"5 hours ago"},{"title":"Assessment of Homeless Education Programming for M...","issuedate":"7 hours ago"},{"title":"Supply, Installation and Repair of Structural Glas...","issuedate":"7 hours ago"},{"title":"A-36094 Renewal of Three Stations, Sea Beach Line ...","issuedate":"7 hours ago"},{"title":"C-31613R Yard Fencing Upgrade at 38th Street and L...","issuedate":"7 hours ago"},{"title":"CM6072 Consultant Construction Management Services...","issuedate":"7 hours ago"}]},"usnc":{"name":"North Carolina","tag":"north-carolina","active":645,"recent":47,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"McNair Hall Chiller Replacement Mandatory Conf\/Sit...","issuedate":"5 hours ago"},{"title":"Weld Camera Questions Can be Email to Mcstout@gtcc...","issuedate":"5 hours ago"},{"title":"Moravian Cookies...","issuedate":"5 hours ago"},{"title":"Tennis Shoe, White Canvas Oxford Submit Written Qu...","issuedate":"7 hours ago"},{"title":"Addendum 01--- Furnish & Deliver Change...","issuedate":"7 hours ago"},{"title":"Truck Mount, Highway Debris Remover...","issuedate":"7 hours ago"},{"title":"Addendum 1 --- Page 47 Replacement...","issuedate":"7 hours ago"},{"title":"Pork Rinds...","issuedate":"7 hours ago"},{"title":"Media Asset Management Solution Mandatory Conf\/Sit...","issuedate":"7 hours ago"},{"title":"Governors Office Advertisement for Mechanical Cont...","issuedate":"7 hours ago"}]},"usnd":{"name":"North Dakota","tag":"north-dakota","active":73,"recent":6,"industry":"Consulting and Professional Services","latest":"9 hours ago","leads":[{"title":"Business Process Modeling Services...","issuedate":"9 hours ago"},{"title":"Printing- ND Parks Byways & Backways...","issuedate":"9 hours ago"},{"title":"Printing-Prorate Decals...","issuedate":"11 hours ago"},{"title":"Compensation Study...","issuedate":"19 hours ago"},{"title":"Emulsion Oil Tank System...","issuedate":"19 hours ago"},{"title":"Crane Training...","issuedate":"20 hours ago"},{"title":"55th St. and 30th Ave. NE Trunk Waterline Ad for B...","issuedate":"Dec 3, 2014 4:38 pm"},{"title":"Civil Rights Software Solution...","issuedate":"Dec 2, 2014 4:38 pm"},{"title":"Ergonomic Initiative Program...","issuedate":"Dec 2, 2014 2:38 pm"},{"title":"Managed File Transfer System...","issuedate":"Dec 2, 2014 2:38 pm"}]},"usoh":{"name":"Ohio","tag":"ohio","active":1648,"recent":111,"industry":"Energy and Lighting","latest":"7 hours ago","leads":[{"title":"IFB 15011D Pre-Employment Medical Examination Serv...","issuedate":"7 hours ago"},{"title":"IFB 15011D Pre-Employment Medical Examination Serv...","issuedate":"7 hours ago"},{"title":"Canon Scanners Drc-125...","issuedate":"9 hours ago"},{"title":"Apple Macbook Air...","issuedate":"9 hours ago"},{"title":"Samsung Case Cover Tab S 10.5 Kybd...","issuedate":"9 hours ago"},{"title":"Disposable Hand Wipes...","issuedate":"9 hours ago"},{"title":"Large Tub Carts...","issuedate":"9 hours ago"},{"title":"Computer Cleaning Vacuum...","issuedate":"9 hours ago"},{"title":"Third Party Bus Operator Monitoring Services...","issuedate":"11 hours ago"},{"title":"Projector and Case...","issuedate":"11 hours ago"}]},"usok":{"name":"Oklahoma","tag":"oklahoma","active":401,"recent":19,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Cherokee Nation Entertainment, LLC, (CNE), a Wholl...","issuedate":"5 hours ago"},{"title":"Cherokee Nation Entertainment, LLC, (CNE), a Wholl...","issuedate":"5 hours ago"},{"title":"Cherokee Nation Entertainment, LLC, (CNE), a Wholl...","issuedate":"7 hours ago"},{"title":"Cherokee Nation Entertainment, LLC, (CNE), a Wholl...","issuedate":"7 hours ago"},{"title":"Cherokee Nation Entertainment, LLC, (CNE), a Wholl...","issuedate":"7 hours ago"},{"title":"Cherokee Nation Entertainment, LLC, (CNE), a Wholl...","issuedate":"9 hours ago"},{"title":"Cherokee Nation Entertainment, LLC, (CNE), a Wholl...","issuedate":"11 hours ago"},{"title":"Snow Plow Blades...","issuedate":"11 hours ago"},{"title":"Skid Steer Loader...","issuedate":"11 hours ago"},{"title":"Cherokee Nation Entertainment, LLC, (CNE), a Wholl...","issuedate":"13 hours ago"}]},"usor":{"name":"Oregon","tag":"oregon","active":295,"recent":11,"industry":"Consulting and Professional Services","latest":"7 hours ago","leads":[{"title":"Cannery Lofts Condominiums Building Envelope Rehab...","issuedate":"7 hours ago"},{"title":"Hwy 138 Water Main Improvements Specification Docu...","issuedate":"9 hours ago"},{"title":"Health Facility Relocation...","issuedate":"9 hours ago"},{"title":"Hwy 138 Water Main Improvements Specification Docu...","issuedate":"11 hours ago"},{"title":"Eugene City Hall Demolition - Phase 2...","issuedate":"11 hours ago"},{"title":"2015 Rogue Watershed Helicopter Elk Census Flights...","issuedate":"19 hours ago"},{"title":"On-Site Paper Records Confidential Shredding Servi...","issuedate":"19 hours ago"},{"title":"Ladd Marsh Boundary Curtain Drain Wet Well Improve...","issuedate":"19 hours ago"},{"title":"5096 3ABN Network Services...","issuedate":"19 hours ago"},{"title":"Banking Image Archie Conversion...","issuedate":"19 hours ago"}]},"uspa":{"name":"Pennsylvania","tag":"pennsylvania","active":1377,"recent":152,"industry":"Energy and Lighting","latest":"9 hours ago","leads":[{"title":"Single Ended Blower Motor GDY - 55 Overhaul for SL...","issuedate":"9 hours ago"},{"title":"29191 CIS Plus Modifications - POR Consolidated Bi...","issuedate":"9 hours ago"},{"title":"RACC Furnish 32 PTAC Units...","issuedate":"9 hours ago"},{"title":"Chicken Products Sci Dallas...","issuedate":"9 hours ago"},{"title":"Fish Pork Turkey Products Sci Dallas...","issuedate":"9 hours ago"},{"title":"Fresh Shell Eggs Sci Dallas...","issuedate":"9 hours ago"},{"title":"Poultry...","issuedate":"9 hours ago"},{"title":"January Produce Sci Dallas...","issuedate":"9 hours ago"},{"title":"Cheese Products Sci Dallas...","issuedate":"9 hours ago"},{"title":"Frozen Low Cholesterol Egg Product Sci Dallas...","issuedate":"9 hours ago"}]},"usri":{"name":"Rhode Island","tag":"rhode-island","active":182,"recent":18,"industry":"Building Operations, Cleaning, and Maintenance","latest":"15 hours ago","leads":[{"title":"Halliwell Roofing Replacement [Due 12\/19\/14]...","issuedate":"15 hours ago"},{"title":"Silver Spring and Central Avenue Playgrounds...","issuedate":"15 hours ago"},{"title":"Rfp-green Janitorial Products Mfg., Distribution, ...","issuedate":"19 hours ago"},{"title":"RFP- Medical Surveillance Occ. Health\/Clinical and...","issuedate":"19 hours ago"},{"title":"Lease of Classroom and Office Space, Community Col...","issuedate":"19 hours ago"},{"title":"RFP- WIC MIS Hosting and Maintenance (25 Pages) - ...","issuedate":"19 hours ago"},{"title":"New Portsmouth Maintenance Facility - Dot (35 Pgs)...","issuedate":"19 hours ago"},{"title":"Rfp - Educator Preparation Program Approval Suppor...","issuedate":"19 hours ago"},{"title":"Rfp-green Janitorial Products Mfg., Distribution, ...","issuedate":"19 hours ago"},{"title":"Ri Contract 2014-ch-071 Broadway Streetscape Impro...","issuedate":"19 hours ago"}]},"ussc":{"name":"South Carolina","tag":"south-carolina","active":143,"recent":8,"industry":"Consulting and Professional Services","latest":"7 hours ago","leads":[{"title":"Provide Cable Programming Services for The Univers...","issuedate":"7 hours ago"},{"title":"Stage Rigging, Inspection, Repair and Maintenance ...","issuedate":"9 hours ago"},{"title":"Website Design and Development - SCETV...","issuedate":"9 hours ago"},{"title":"Backgate Lighting Project - Mandatory PreBid Meeti...","issuedate":"9 hours ago"},{"title":"(RFI) Request for Information - Scanner...","issuedate":"9 hours ago"},{"title":"Furnish, Deliver, Install, and Provide Training fo...","issuedate":"13 hours ago"},{"title":"Play Equipment...","issuedate":"15 hours ago"},{"title":"Hawe Creek Park Attendant...","issuedate":"19 hours ago"},{"title":"Recumbent Exercise Bikes for Seven Oaks Elementary...","issuedate":"Dec 3, 2014 4:40 pm"},{"title":"District-Wide Painting Contract...","issuedate":"Dec 3, 2014 4:38 pm"}]},"ussd":{"name":"South Dakota","tag":"south-dakota","active":192,"recent":0,"industry":"Public Works, Water, and Sanitation","latest":"Dec 3, 2014 4:38 pm","leads":[{"title":"Quint Fire Apparatus With 75 Foot Ladder...","issuedate":"Dec 3, 2014 4:38 pm"},{"title":"Purchase and Delivery of No. 1 Fuel Oil for the BI...","issuedate":"Dec 3, 2014 4:01 am"},{"title":"Propane for the BIA, Turtle Mountain Agency...","issuedate":"Dec 3, 2014 4:01 am"},{"title":"Expressions of Interest Sought - Pierre, SD...","issuedate":"Dec 3, 2014 3:46 am"},{"title":"US Federal Courthouse & FPO...","issuedate":"Dec 2, 2014 2:49 pm"},{"title":"FEM Electric Coop Renovation...","issuedate":"Dec 2, 2014 2:49 pm"},{"title":"Electrical Circuit Repair...","issuedate":"Dec 2, 2014 2:16 am"},{"title":"Limited Seepage Collection and Metering System, Ri...","issuedate":"Nov 28, 2014 10:45 am"},{"title":"Water Main Pipe...","issuedate":"Nov 28, 2014 10:38 am"},{"title":"Removal of Dewatered Lime Sludge...","issuedate":"Nov 28, 2014 10:38 am"}]},"ustn":{"name":"Tennessee","tag":"tennessee","active":211,"recent":8,"industry":"Consulting and Professional Services","latest":"7 hours ago","leads":[{"title":"Sbi-000284 Addendum Acknowledgement Form Addendum ...","issuedate":"7 hours ago"},{"title":"Rfp 15-011-19 Addendum No. 1...","issuedate":"7 hours ago"},{"title":"Rfp 15-011-17 Questions and Answers...","issuedate":"9 hours ago"},{"title":"LEGAL NOTICE TO BIDDERS - Emergency Lighting Equip...","issuedate":"11 hours ago"},{"title":"LEGAL NOTICE TO BIDDERS - Diesel Parts...","issuedate":"11 hours ago"},{"title":"SWC 612 for Dairy Products...","issuedate":"15 hours ago"},{"title":"Entrust Software Maintenance...","issuedate":"15 hours ago"},{"title":"Calibration Services...","issuedate":"19 hours ago"},{"title":"Janitorial Service-Parks and Recreation...","issuedate":"Dec 3, 2014 4:39 pm"},{"title":"Bottled Water Service...","issuedate":"Dec 3, 2014 4:38 pm"}]},"ustx":{"name":"Texas","tag":"texas","active":1314,"recent":55,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Bid Opening for Dec. 4, 2014...","issuedate":"5 hours ago"},{"title":"Citibus ADA Paratransit Client Assessments...","issuedate":"7 hours ago"},{"title":"Rotten Pole Replacement Contract FY '15 (RE-BID)...","issuedate":"7 hours ago"},{"title":"ID\/IQ Construction Contracts...","issuedate":"7 hours ago"},{"title":"Approximately 600 \u00c2\u20ac\u201c 200a 3 Phase 2\u00e2\u20ac Oh (06) Met...","issuedate":"7 hours ago"},{"title":"School Bus Painting...","issuedate":"7 hours ago"},{"title":"School Bus Radiators...","issuedate":"7 hours ago"},{"title":"Talking Book Program System Modernization...","issuedate":"7 hours ago"},{"title":"Pre-Construction and Construction Manager Services...","issuedate":"7 hours ago"},{"title":"Roof Replacement in Terrell, Texas...","issuedate":"7 hours ago"}]},"usut":{"name":"Utah","tag":"utah","active":330,"recent":25,"industry":"Consulting and Professional Services","latest":"5 hours ago","leads":[{"title":"Park and Park Strip Maintenance...","issuedate":"5 hours ago"},{"title":"Automated Refuse Containers...","issuedate":"5 hours ago"},{"title":"Baseball Field Rain Cover...","issuedate":"6 hours ago"},{"title":"Attorney General for the State of Utah - Banking-R...","issuedate":"6 hours ago"},{"title":"New Lehi Fuel Island...","issuedate":"6 hours ago"},{"title":"Chip Seal Coat Type II...","issuedate":"7 hours ago"},{"title":"Vendor Hosted Solution For Web Contract Search...","issuedate":"7 hours ago"},{"title":"Engineering Document Reproduction Services...","issuedate":"8 hours ago"},{"title":"Financial Services...","issuedate":"8 hours ago"},{"title":"Statewide Contract for Kofax Products, Assurance,....","issuedate":"8 hours ago"}]},"usvt":{"name":"Vermont","tag":"vermont","active":111,"recent":11,"industry":"Consulting and Professional Services","latest":"7 hours ago","leads":[{"title":"Licensing Examinations for the Vermont Department ...","issuedate":"7 hours ago"},{"title":"Printing: Door Hangers for Cellular Project Outrea...","issuedate":"7 hours ago"},{"title":"Licensing Examinations for the Vermont Department ...","issuedate":"7 hours ago"},{"title":"Printing: Door Hangers for Cellular Project Outrea...","issuedate":"9 hours ago"},{"title":"Solid Waste Implementation Plan Grant...","issuedate":"9 hours ago"},{"title":"REQUEST FOR QUALIFICATIONS \u2013 Construction Manager ...","issuedate":"13 hours ago"},{"title":"Construction Manager - Mixed-Use Transit Center Pr...","issuedate":"13 hours ago"},{"title":"Used Vehicles...","issuedate":"13 hours ago"},{"title":"Used Vehicles...","issuedate":"13 hours ago"},{"title":"Dodge Police Pursuit Vehicles...","issuedate":"15 hours ago"}]},"usvi":{"name":"Virgin Islands","tag":"virgin-islands","active":2,"recent":0,"industry":"Construction, Renovation, and Site Work","latest":"Nov 17, 2014 2:48 pm","leads":[{"title":"RFP to Provide Taxi Services at the Ann E. Abramso...","issuedate":"Nov 17, 2014 2:48 pm"},{"title":"RFP-004-2014 (C) for the Central High School Gener...","issuedate":"Nov 14, 2014 10:54 am"},{"title":"The Virgin Islands Port Authority Is Seeking Reque...","issuedate":"Nov 12, 2014 10:50 am"},{"title":"Request for Proposals for Aerial Services for Fibe...","issuedate":"Nov 7, 2014 8:44 am"},{"title":"RFP-001-2015 (C) for the Renovations of the Vitran...","issuedate":"Oct 29, 2014 1:45 pm"},{"title":"RFP-002-2015 (C) for the ADA Improvements at # 10 ...","issuedate":"Oct 29, 2014 1:45 pm"},{"title":"The Economic Development Authority\u2019s Enterprise Zo...","issuedate":"Oct 28, 2014 5:50 pm"},{"title":"Miscellaneous Solicitation for 4 Ct Fiber for STX ...","issuedate":"Oct 28, 2014 7:44 am"},{"title":"Request for Proposals No RFP-003-2015(C) for the C...","issuedate":"Oct 21, 2014 11:44 am"},{"title":"Request for Proposals No RFP-002-2015(C) for the U...","issuedate":"Oct 21, 2014 11:44 am"}]},"usva":{"name":"Virginia","tag":"virginia","active":1868,"recent":272,"industry":"Energy and Lighting","latest":"1 hour ago","leads":[{"title":"Consulting Services - All Including Education Cons...","issuedate":"1 hour ago"},{"title":"Construction Services (Contractors and Related Ser...","issuedate":"1 hour ago"},{"title":"Canopy Replacement and Gantry Crane Installation f...","issuedate":"7 hours ago"},{"title":"SURPLUS SALE: Emergency Generators, VIP...","issuedate":"7 hours ago"},{"title":"ALL PLANS DOCUMENT #ID DOCUMENT NAME \/ DETAILS PLA...","issuedate":"7 hours ago"},{"title":"Bids Recieved Ifb 2015-05...","issuedate":"7 hours ago"},{"title":"Three (3) Variable Frequency Drives (VFDs) for the...","issuedate":"9 hours ago"},{"title":"Replace Primary Clarifier Drive Units - NTP...","issuedate":"9 hours ago"},{"title":"ALL PLANS DOCUMENT #ID DOCUMENT NAME \/ DETAILS PLA...","issuedate":"9 hours ago"},{"title":"Suchitas Home...","issuedate":"9 hours ago"}]},"uswa":{"name":"Washington","tag":"washington","active":597,"recent":58,"industry":"Consulting and Professional Services","latest":"1 hour ago","leads":[{"title":"Licensed Marks Management Services...","issuedate":"1 hour ago"},{"title":"RFP for GCCM Services New Burke Museum...","issuedate":"3 hours ago"},{"title":"AMI Smart Grid...","issuedate":"5 hours ago"},{"title":"Finding and Planning a Solution - Defense Industry...","issuedate":"5 hours ago"},{"title":"Saw Enabled Agency Portal (SEAP) Developer...","issuedate":"5 hours ago"},{"title":"Office, Schoool, and Other Workplace- Related Supp...","issuedate":"5 hours ago"},{"title":"Vehicle Decals Specification Register for the Bid ...","issuedate":"5 hours ago"},{"title":"Shelter Replacement Parts Ref #: 002...","issuedate":"5 hours ago"},{"title":"Post Point Wastewater Plant Mixing Zone Study for ...","issuedate":"5 hours ago"},{"title":"Gai-Tronic Free Standing Stanchion Ref #: 2770-YAC...","issuedate":"7 hours ago"}]},"uswv":{"name":"West Virginia","tag":"west-virginia","active":126,"recent":2,"industry":"Consulting and Professional Services","latest":"11 hours ago","leads":[{"title":"Printing of the College of Engineering Magazine...","issuedate":"11 hours ago"},{"title":"Project #581-12-101 Renovate BRAC Property...","issuedate":"20 hours ago"},{"title":"FWAATS Trench Drain & Concrete Apron Rehabilitatio...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"ARFQ - Quantity 100- HP ScanJet 1000 Mobile Scanne...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"Extruded Aluminum Sign Panels...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"Renovation of Holy Grove for BLDG #10...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"Integrated Document and Client Management System...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"Dale R Trasher- Reclamation Project DEP17025...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"Cabwaylingo State Forest, Fire Damage Repairs to C...","issuedate":"Dec 3, 2014 10:42 am"},{"title":"B.88 Line Distribution Panel Door...","issuedate":"Dec 3, 2014 10:42 am"}]},"uswi":{"name":"Wisconsin","tag":"wisconsin","active":203,"recent":5,"industry":"Consulting and Professional Services","latest":"7 hours ago","leads":[{"title":"Printing of \"TR-WM-147\", Inspector Label....","issuedate":"7 hours ago"},{"title":"2015 Annual Consultants...","issuedate":"9 hours ago"},{"title":"Vehicle Lease - Special Purpose Service Trucks Lea...","issuedate":"20 hours ago"},{"title":"Negative Air Filter Service and Maintenance Base Y...","issuedate":"20 hours ago"},{"title":"IN WLR Annual Radiation Inspection for Radiology D...","issuedate":"20 hours ago"},{"title":"New Service\/Office Building, Buena Vista Wildlife ...","issuedate":"Dec 3, 2014 4:44 pm"},{"title":"New Service\/Office Building, Buena Vista Wildlife ...","issuedate":"Dec 3, 2014 4:44 pm"},{"title":"13i1u Mep...","issuedate":"Dec 3, 2014 4:40 pm"},{"title":"13i1u Gpc...","issuedate":"Dec 3, 2014 4:40 pm"},{"title":"12140002 - Rubber Removal Machine...","issuedate":"Dec 3, 2014 4:40 pm"}]},"uswy":{"name":"Wyoming","tag":"wyoming","active":201,"recent":4,"industry":"Consulting and Professional Services","latest":"11 hours ago","leads":[{"title":"Delineator Posts...","issuedate":"11 hours ago"},{"title":"Delineator Buttons...","issuedate":"11 hours ago"},{"title":"New Drop Ceiling...","issuedate":"19 hours ago"},{"title":"Grte Hot Asphalt Contract Hauling...","issuedate":"19 hours ago"},{"title":"Sweetwater County School District #2 Special Rec B...","issuedate":"Dec 3, 2014 10:42 pm"},{"title":"Sweetwater County School District #2 School Board ...","issuedate":"Dec 3, 2014 10:42 pm"},{"title":"REQUEST FOR PROPOSALS FOR GENERAL CONSTRUCTION \/ C...","issuedate":"Dec 3, 2014 2:41 am"},{"title":"Left Hand Truck Mounted Extendable Snow Wing...","issuedate":"Dec 2, 2014 4:41 pm"},{"title":"Right Hand Truck Mounted Extendable Snow Plow...","issuedate":"Dec 2, 2014 4:41 pm"},{"title":"Right Hand Truck Mounted Patrol Type Snow Wing...","issuedate":"Dec 2, 2014 4:41 pm"}]},"uscv":{"industry":"Consulting and Professional Services","latest":"19 hours ago"},"usml":{"industry":"Heavy Machinery and Industrial Equipment","latest":"8 hours ago"}}    }
+</script> 
+    <style type="text/css">
+    #page {
+        background: url(/images/bg-landing.jpg) repeat-x scroll 0 105px #F7F7F8;
+    }
+</style> 
+    <div id="mapTooltip"> 
+     <div class="stats"></div> 
+     <div class="bid-ticker"> 
+      <div style="position:relative;top:0;"></div> 
+     </div> 
+    </div> 
+    <div id="home"> 
+     <div class="splash"> 
+      <div style="width:575px; height:370px" id="map"></div> 
+      <div class="right-panel"> 
+       <div class="info"> 
+        <h1 style="color:#0faf13; font-size:30px; font-weight:bold;">Find&nbsp;Federal,&nbsp;State,&nbsp;and&nbsp;Local&nbsp;<br>Government&nbsp;Bids&nbsp;and&nbsp;RFPs. </h1> 
+        <ul style="text-align: left; font-size:15px; margin-left:0px"> 
+         <li class="green-bullet" style="margin:0 30px 10px">Over 100,000 government agencies monitored in real-time. </li> 
+         <li class="green-bullet" style="margin:0 30px 10px">Simple, customizable User Interface.</li> 
+         <li class="green-bullet" style="margin:0 30px 10px">Bid/RFP documents delivered directly to your email. </li> 
+        </ul> 
+       </div> 
+       <br> 
+       <a style="display:block;color:#FFF;margin:auto;" class="red-button-medium marketing-signup-button signup-lightbox-button" href="/subscribe/create">Sign Up</a> 
+       <div style="font-weight:bold; margin:5px;">
+        No credit card required.
+       </div> 
+       <br> 
+       <a style="color:#FFFFFF" href="/tour/demo"> </a>
+       <div style="text-align:left;">
+        <a style="color:#FFFFFF" href="/tour/demo"> 
+         <div class="demo-button" style="margin-left:135px;"> 
+          <div style="margin-left:35px;">
+           Watch Demo
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <form method="POST" action="/bid/search" style="bottom: 0;left: 200px;position: absolute;"> 
+       <label for="qm" class="text-bullet" style="cursor:pointer" onclick="document.forms[0].submit()">Find Bids</label>
+       <input type="text" id="qm" name="s[qm]" placeholder="enter keywords" class="watermark text-bullet-input search-icon bb" style="width: 250px;color:#444;"> 
+       <input type="submit" class="green-button-small" value="Search"> 
+      </form> 
+     </div> 
+     <table style="width:100%"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div class="panel stats"> 
+          <h3 style="margin-top:5px;">REAL-TIME BIDS</h3> 
+          <table style="margin-left:25px"> 
+           <tbody>
+            <tr> 
+             <td>34,784</td> 
+             <td><a style="font-size:14px" href="/bid/search?s[range]=range_active">Open Bids</a> </td> 
+            </tr> 
+            <tr> 
+             <td>3,292</td> 
+             <td><a href="/bid/search?s[range]=range_active_3" style="font-size:14px">Last 24 Hours</a></td> 
+            </tr> 
+            <!--<tr>
+                    <td></td>
+                    <td><a href="/bid/search?BidSearchForm[range]=range_30" style="font-size:14px">Last 30 Days</a></td>
+                </tr>--> 
+           </tbody>
+          </table> 
+         </div> </td> 
+        <td> 
+         <div class="panel stats industry"> 
+          <h3 style="margin-top:5px;">MOST ACTIVE INDUSTRIES</h3> 
+          <table> 
+           <tbody>
+            <tr> 
+             <td>7,620</td> 
+             <td><a href="/bid/industry/professional-services">Professional Services</a> </td> 
+            </tr> 
+            <tr> 
+             <td>3,116</td> 
+             <td><a href="/bid/industry/construction">Building Construction</a> </td> 
+            </tr> 
+            <tr> 
+             <td>3,014</td> 
+             <td><a href="/bid/industry/energy-lighting">Energy and Lighting</a> </td> 
+            </tr> 
+            <tr> 
+             <td>2,476</td> 
+             <td><a href="/bid/industry/public-works">Public Works, Water, Sanitation</a> </td> 
+            </tr> 
+           </tbody>
+          </table> 
+         </div> </td> 
+        <td> 
+         <div class="panel stats pricing"> 
+          <h3 style="margin-top:5px;">TOUR BIDPRIME</h3> 
+          <table border="0" cellpadding="0" cellspacing="0" style="margin-left:20px;"> 
+           <tbody> 
+            <tr> 
+             <td valign="middle" width="29"> 
+              <div class="right-column-video"></div> </td> 
+             <td height="25"><a href="/tour/demo" style="font-size:1.2em;">Watch Video Demo</a></td> 
+            </tr> 
+            <tr> 
+             <td valign="middle"> 
+              <div class="right-column-document"></div> </td> 
+             <td height="25"><a href="/files/bidprime%20plan%20and%20price%20comparison.pdf" target="_blank" style="font-size:1.2em;">Features &amp; Coverage</a></td> 
+            </tr> 
+            <tr> 
+             <td valign="middle"> 
+              <div class="right-column-link"></div> </td> 
+             <td height="25"><a href="/about/plans" target="_blank" style="font-size:1.2em;">Plans &amp; Pricing</a> </td> 
+            </tr> 
+            <tr> 
+             <td valign="middle"> 
+              <div class="right-column-email"></div> </td> 
+             <td height="25"><a href="/about/contact" target="_blank" style="font-size:1.2em;">Email Us</a> </td> 
+            </tr> 
+            <tr> 
+             <td valign="middle"> </td> 
+             <td height="25"><h2 style="margin-top:15px;margin-left:10px;font-size:2em;">1-888-808-5356</h2> </td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> </td> 
+       </tr> 
+      </tbody>
+     </table> 
+    </div> 
+    <style type="text/css">
+    #industry-search-analytics {
+        clear: both;
+        margin: 0 auto;
+    }
+
+    #industry-search-analytics table {
+        border: none;
+        margin:auto;
+    }
+
+    #industry-search-analytics td {
+        padding:3px 5px;
+    }
+</style> 
+    <div id="industry-search-analytics"> 
+     <table> 
+      <tbody>
+       <tr>
+        <th colspan="8"><h5 style="text-align:left;color:#777;margin-bottom:0;">MOST ACTIVE CATEGORIES</h5></th>
+       </tr> 
+       <tr> 
+        <td></td>
+        <td rowspan="9"><img src="/images/vertical-shaded-divide.png"></td> 
+        <td></td>
+        <td rowspan="9"><img src="/images/vertical-shaded-divide.png"></td> 
+        <td></td>
+        <td rowspan="9"><img src="/images/vertical-shaded-divide.png"></td> 
+        <td></td> 
+       </tr> 
+       <tr>
+        <td><a href="/bid/category/general-construction">General Construction</a></td>
+        <td><a href="/bid/category/remodeling-and-renovation">Remodeling and Renovation</a></td>
+        <td><a href="/bid/category/building-construction">Building Construction</a></td>
+        <td><a href="/bid/category/valves-fittings-flange">Valves, Fittings, Flange</a></td>
+       </tr>
+       <tr>
+        <td><a href="/bid/category/remodeling-and-renovation">Remodeling and Renovation</a></td>
+        <td><a href="/bid/category/hvac-equipment-and-services">HVAC Maintenance and Services</a></td>
+        <td><a href="/bid/category/streets-and-roads">Streets and Roads</a></td>
+        <td><a href="/bid/category/automobiles-and-trucks">Automobiles and Trucks</a></td>
+       </tr>
+       <tr>
+        <td><a href="/bid/category/trash-collection">Trash Collection</a></td>
+        <td><a href="/bid/category/roofing">Roofing Services</a></td>
+        <td><a href="/bid/category/shuttle-and-transportation-services">Shuttle and Transportation Services</a></td>
+        <td><a href="/bid/category/lighting">Lighting</a></td>
+       </tr>
+       <tr>
+        <td><a href="/bid/category/hvac-supplies">HVAC Supplies</a></td>
+        <td><a href="/bid/category/sewers">Sewers</a></td>
+        <td><a href="/bid/category/engineering-services">Engineering Services</a></td>
+        <td><a href="/bid/category/first-aid-and-medical-kits">First Aid and Medical Kits</a></td>
+       </tr>
+       <tr>
+        <td><a href="/bid/category/vehicles">Vehicles</a></td>
+        <td><a href="/bid/category/misc-parts">Misc. Parts</a></td>
+        <td><a href="/bid/category/bridges">Bridges</a></td>
+        <td><a href="/bid/category/trucks-heavy-duty">Trucks (Heavy Duty)</a></td>
+       </tr>
+       <tr>
+        <td><a href="/bid/category/seeding-nursery-greenhouse">Seeding, Nursery, Greenhouse</a></td>
+        <td><a href="/bid/category/janitorial-and-custodial-services">Janitorial and Custodial Services</a></td>
+        <td><a href="/bid/category/printing-services">Printing Services</a></td>
+        <td><a href="/bid/category/radios-and-lmr">Radios and LMR</a></td>
+       </tr>
+       <tr>
+        <td><a href="/bid/category/gasoline">Gasoline</a></td>
+        <td><a href="/bid/category/furniture">Furniture</a></td>
+        <td><a href="/bid/category/sewer-improvements">Sewer Improvements</a></td>
+        <td><a href="/bid/category/flooring">Flooring</a></td>
+       </tr> 
+       <tr>
+        <td colspan="8" align="right" style="font-size:12px;">[<a href="/categories">view more</a>]</td>
+       </tr> 
+      </tbody>
+     </table> 
+    </div> 
+   </div> 
+   <div class="clear"></div> 
+   <div class="footer"> 
+    <div style="margin:15px auto" id="bpseal"></div> 
+    <div style="background: url(/images/footershadow.png) no-repeat scroll center 0 #DDDDDD;position:relative"> 
+     <div style="position:absolute;right:10px;top:10px"> 
+      <a target="_blank" href="https://plus.google.com/s/bidprime">
+       <div class="googleIcn socialIcn"></div></a> 
+      <a target="_blank" href="http://twitter.com/#!/bidprime">
+       <div class="twitterIcn socialIcn"></div></a> 
+      <a target="_blank" href="http://www.facebook.com/bidprime">
+       <div class="facebookIcn socialIcn"></div></a> 
+     </div> 
+     <ul style="border-top:2px solid #9a9a9a; padding:15px 0; margin:0" class="listMenu"> 
+      <li><a href="/sitemap">Site map</a></li> 
+      <li><a href="/tour">Tour BidPrime</a></li> 
+      <li><a href="/about/terms-of-service">Terms of service</a></li> 
+      <li><a href="/about/privacy">Privacy policy</a></li> 
+      <li style="border:none"><a href="/about/contact">Contact us</a></li> 
+     </ul> 
+     <div style="padding:10px 0 10px">
+      © 2014 BidPrime. All Rights Reserved.
+     </div> 
+    </div> 
+   </div> 
+   <script type="text/javascript">
+  (function() {
+    window._pa = window._pa || {};
+    // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+    // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+    // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/53f7dc766a1ff48c24000065.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script> 
+  </div> 
+  <form style="display:none" id="support-form" action="/about/support" method="POST"> 
+   <div style="height:30px">
+    <label class="text-bullet-small">Topic:</label>
+    <select style="border:1px solid #CCC;margin-left:10px" name="topic"> <option>Question</option> <option>Bid/RFP</option> <option>Billing</option> <option>Feature Request</option> <option>Other (please specify)</option> </select>
+   </div> 
+   <br> 
+   <label style="font-size:14px;font-weight:bold">Message:</label>
+   <br> 
+   <textarea name="message" style="width:410px;height:95px"></textarea> 
+  </form> 
+  <script type="text/javascript">
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script> 
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1040819045;
+    var google_conversion_label = "hsU_COurjwIQ5cam8AM";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script> 
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script> 
+  <noscript> 
+   <div style="display:inline;"> 
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1040819045/?value=0&amp;label=hsU_COurjwIQ5cam8AM&amp;guid=ON&amp;script=0"> 
+   </div> 
+  </noscript>   
+ </body>
+</html>

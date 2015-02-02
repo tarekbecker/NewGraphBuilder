@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "a453a16f1e0e8bee3c999ef60777f99d",
+    "type": "Organization",
+    "properties": {
+      "short_description": "Garnett Ventures invests in enterprise, big data, cloud and mobile applications.",
+      "permalink": "garnett-ventures",
+      "primary_role": "investor",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "name": "Garnett Ventures",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "role_investor": true,
+      "sectors": "[\"Education\",\"Social Media\",\"Sales and Marketing\"]",
+      "secondary_role_venture_capital": true,
+      "secondary_role_seed": true,
+      "created_at": 1377922692,
+      "updated_at": 1412785897,
+      "total_funding_usd": 0,
+      "number_of_investments": 3
+    },
+    "relationships": {
+      "investments": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/garnett-ventures/investments",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "InvestorInvestment",
+            "money_invested": null,
+            "money_invested_currency_code": "USD",
+            "money_invested_usd": null,
+            "funding_round": {
+              "path": "funding-round/66b2ec5bffb8567d18023d0dc4b82519"
+            },
+            "invested_in": {
+              "type": "Organization",
+              "name": "Stellar Loyalty",
+              "path": "organization/stellar-loyalty"
+            }
+          },
+          {
+            "type": "InvestorInvestment",
+            "money_invested": null,
+            "money_invested_currency_code": "USD",
+            "money_invested_usd": null,
+            "funding_round": {
+              "path": "funding-round/03068f376d2a9432ff207091318a8ec7"
+            },
+            "invested_in": {
+              "type": "Organization",
+              "name": "Curriculet",
+              "path": "organization/curriculet"
+            }
+          },
+          {
+            "type": "InvestorInvestment",
+            "money_invested": null,
+            "money_invested_currency_code": "USD",
+            "money_invested_usd": null,
+            "funding_round": {
+              "path": "funding-round/dcfceb971765c55b211b9de58290650d"
+            },
+            "invested_in": {
+              "type": "Organization",
+              "name": "Punchh",
+              "path": "organization/punchh"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

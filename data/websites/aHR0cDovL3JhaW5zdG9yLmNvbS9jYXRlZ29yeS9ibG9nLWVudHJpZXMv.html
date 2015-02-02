@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>
+Blog Entries Archives | RainStor</title> 
+  <!-- Mobile viewport optimized: j.mp/bplateviewport --> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> 
+  <meta name="viewport" content="width=1200"> 
+  <!-- Favicon and Feed --> 
+  <link rel="shortcut icon" type="image/png" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/favicon.ico"> 
+  <link rel="alternate" type="application/rss+xml" title="RainStor Feed" href="http://rainstor.com/feed/"> 
+  <link rel="stylesheet" media="all" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/css/menu.css" type="text/css"> 
+  <link rel="stylesheet" media="all" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/css/device.css" type="text/css"> 
+  <!--  iPhone Web App Home Screen Icon --> 
+  <link rel="apple-touch-icon" sizes="72x72" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/devices/reverie-icon-ipad.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/devices/reverie-icon-retina.png"> 
+  <link rel="apple-touch-icon" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/devices/reverie-icon.png"> 
+  <!-- Enable Startup Image for iOS Home Screen Web App --> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <link rel="apple-touch-startup-image" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/mobile-load.png"> 
+  <!-- Startup Image iPad Landscape (748x1024) --> 
+  <link rel="apple-touch-startup-image" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)"> 
+  <!-- Startup Image iPad Portrait (768x1004) --> 
+  <link rel="apple-touch-startup-image" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"> 
+  <!-- Startup Image iPhone (320x460) --> 
+  <link rel="apple-touch-startup-image" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)"> 
+  <!--[if lt IE 10]>
+	<link rel="stylesheet" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/css/normalize.css">
+	<link rel="stylesheet" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/css/foundation.css">
+	<link rel="stylesheet" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/css/app.css">
+<![endif]--> 
+  <!-- <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/js/css_browser_selector.js"></script>--> 
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+  <script type="text/javascript">
+
+
+
+$(function() {
+
+
+
+    $('.rollover').hover(function() {
+
+
+
+        var currentImg = $(this).attr('src');
+
+
+
+        $(this).attr('src', $(this).attr('hover'));
+
+
+
+        $(this).attr('hover', currentImg);
+
+
+
+    }, function() {
+
+
+
+        var currentImg = $(this).attr('src');
+
+
+
+        $(this).attr('src', $(this).attr('hover'));
+
+
+
+        $(this).attr('hover', currentImg);
+
+
+
+    });
+
+
+
+});
+
+
+
+</script> 
+  <script type="text/javascript">
+
+	var _gaq = _gaq || [];
+
+	_gaq.push(['_setAccount', 'UA-25094652-1']);
+
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+
+		var ga = document.createElement('script');
+
+		ga.type = 'text/javascript';
+
+		ga.async = true;
+
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+		var s = document.getElementsByTagName('script')[0];
+
+		s.parentNode.insertBefore(ga, s);
+
+	})(); 
+
+</script> 
+  <style type="text/css">
+div.item {
+	width:45% !important;
+	height:75px;
+	text-align:center;
+	border:solid 1px #DDD;
+	border-radius:10px;
+	float:left;
+	margin:15px 15px 15px 15px;
+	cursor:pointer;
+	padding:10px 10px 20px 10px;
+}
+div.item:hover {
+	border:solid 1px #135479;
+}
+div.item img {
+	max-height:60px;
+}
+
+/*
+			TOOLTIP
+		*/
+
+		#tooltip
+		{
+			font-family: Ubuntu, sans-serif;
+			font-size: 0.875em;
+			text-align: left;
+			text-shadow: 0 1px rgba( 0, 0, 0, .5 );
+			line-height: 1.5;
+			color: #fff;
+			background: #333;
+			background: -webkit-gradient( linear, left top, left bottom, from( rgba( 0, 0, 0, .6 ) ), to( rgba( 0, 0, 0, .8 ) ) );
+			background: -webkit-linear-gradient( top, rgba( 0, 0, 0, .6 ), rgba( 0, 0, 0, .8 ) );
+			background: -moz-linear-gradient( top, rgba( 0, 0, 0, .6 ), rgba( 0, 0, 0, .8 ) );
+			background: -ms-radial-gradient( top, rgba( 0, 0, 0, .6 ), rgba( 0, 0, 0, .8 ) );
+			background: -o-linear-gradient( top, rgba( 0, 0, 0, .6 ), rgba( 0, 0, 0, .8 ) );
+			background: linear-gradient( top, rgba( 0, 0, 0, .6 ), rgba( 0, 0, 0, .8 ) );
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			border-top: 1px solid #fff;
+			-webkit-box-shadow: 0 3px 5px rgba( 0, 0, 0, .3 );
+			-moz-box-shadow: 0 3px 5px rgba( 0, 0, 0, .3 );
+			box-shadow: 0 3px 5px rgba( 0, 0, 0, .3 );
+			position: absolute;
+			z-index: 100;
+			padding: 15px;
+		}
+		#tooltip a { color:#FFF;}
+			#tooltip:after
+			{
+		        width: 0;
+		        height: 0;
+		        border-left: 10px solid transparent;
+		        border-right: 10px solid transparent;
+				border-top: 10px solid #333;
+		        border-top-color: rgba( 0, 0, 0, .7 );
+				content: '';
+				position: absolute;
+				left: 50%;
+				bottom: -10px;
+				margin-left: -10px;
+			}
+				#tooltip.top:after
+				{
+			        border-top-color: transparent;
+					border-bottom: 10px solid #333;
+			        border-bottom-color: rgba( 0, 0, 0, .6 );
+					top: -20px;
+					bottom: auto;
+				}
+				#tooltip.left:after
+				{
+					left: 10px;
+					margin: 0;
+				}
+				#tooltip.right:after
+				{
+					right: 10px;
+					left: auto;
+					margin: 0;
+				}
+
+</style> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.13 - http://yoast.com/wordpress/seo/ --> 
+  <link rel="canonical" href="http://rainstor.com/category/blog-entries/"> 
+  <link rel="next" href="http://rainstor.com/category/blog-entries/page/2/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Blog Entries Archives - RainStor"> 
+  <meta property="og:url" content="http://rainstor.com/category/blog-entries/"> 
+  <meta property="og:site_name" content="RainStor"> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="alternate" type="application/rss+xml" title="RainStor » Feed" href="http://rainstor.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="RainStor » Comments Feed" href="http://rainstor.com/comments/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="RainStor » Blog Entries Category Feed" href="http://rainstor.com/category/blog-entries/feed/"> 
+  <!-- This site is powered by Shareaholic - https://shareaholic.com --> 
+  <script type="text/javascript" data-cfasync="false">
+  //<![CDATA[
+    (function() {
+      var shr = document.createElement('script');
+      shr.setAttribute('data-cfasync', 'false');
+      shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+      shr.type = 'text/javascript'; shr.async = 'true';
+      shr.onload = shr.onreadystatechange = function() {
+        var rs = this.readyState;
+        if (rs && rs != 'complete' && rs != 'loaded') return;
+        var site_id = 'b190e958f1e245067ecfeaf8a6ca7b3d';
+        var page_config = {"apps":{"share_buttons":{"get_share_counts":  function(url, services, cb) {
+    Shareaholic.Utils.ajax({
+      cache: true,
+      cache_ttl: '1 minute',
+      url: 'http://rainstor.com/2013_new/wp-admin/admin-ajax.php',
+      data: { action: 'shareaholic_share_counts_api', url: url, services: services },
+      success: function(res) {
+        if(res && res.data) {
+          cb(res.data, true);
+        }
+      }
+    })
+  }}}};
+        try { Shareaholic.init(site_id, page_config); } catch (e) {}
+      };
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(shr, s);
+    })();
+  //]]>
+</script> 
+  <!-- Shareaholic Content Tags --> 
+  <meta name="shareaholic:site_name" content="RainStor"> 
+  <meta name="shareaholic:language" content="en-US"> 
+  <meta name="shareaholic:site_id" content="b190e958f1e245067ecfeaf8a6ca7b3d"> 
+  <meta name="shareaholic:wp_version" content="7.5.0.0"> 
+  <!-- Shareaholic Content Tags End --> 
+  <link rel="stylesheet" id="jquery.prettyphoto-css" href="http://rainstor.com/2013_new/wp-content/plugins/wp-video-lightbox/css/prettyPhoto.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="video-lightbox-css" href="http://rainstor.com/2013_new/wp-content/plugins/wp-video-lightbox/wp-video-lightbox.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="layerslider_css-css" href="http://rainstor.com/2013_new/wp-content/plugins/LayerSlider/css/layerslider.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://rainstor.com/2013_new/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="RMFtooltip-css-css" href="http://rainstor.com/2013_new/wp-content/plugins/responsive-mobile-friendly-tooltip/responsive-tooltip.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wprssmi_template_styles-css" href="http://rainstor.com/2013_new/wp-content/plugins/wp-rss-multi-importer/templates/templates.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="reverie-stylesheet-css" href="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/css/style.css" type="text/css" media="all"> 
+  <!--[if lt IE 9]>
+<link rel='stylesheet' id='reverie-ie-only-css'  href='http://rainstor.com/2013_new/wp-content/themes/Theme2K13/css/ie.css' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="pcs-styles-css" href="http://rainstor.com/2013_new/wp-content/plugins/post-content-shortcodes/default-styles.css" type="text/css" media="screen"> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/plugins/wp-video-lightbox/js/jquery.prettyPhoto.js"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var vlpp_vars = {"prettyPhoto_rel":"wp-video-lightbox","animation_speed":"fast","slideshow":"5000","autoplay_slideshow":"false","opacity":"0.80","show_title":"true","allow_resize":"true","allow_expand":"true","default_width":"640","default_height":"480","counter_separator_label":"\/","theme":"pp_default","horizontal_padding":"20","hideflash":"false","wmode":"opaque","autoplay":"false","modal":"false","deeplinking":"false","overlay_gallery":"true","overlay_gallery_max":"30","keyboard_shortcuts":"true","ie6_fallback":"true"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/plugins/wp-video-lightbox/js/video-lightbox.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/plugins/LayerSlider/js/layerslider.kreaturamedia.jquery.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/plugins/LayerSlider/js/jquery-easing-1.3.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/plugins/LayerSlider/js/jquerytransit.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/plugins/LayerSlider/js/layerslider.transitions.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/uploads/layerslider.custom.transitions.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-includes/js/comment-reply.min.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/js/vendor/custom.modernizr.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/plugins/audio-player/assets/audio-player.js?ver=2.0.4.6"></script> 
+  <script type="text/javascript">AudioPlayer.setup("http://rainstor.com/2013_new/wp-content/plugins/audio-player/assets/player.swf?ver=2.0.4.6", {width:"100%",animation:"no",encode:"yes",initialvolume:"60",remaining:"yes",noinfo:"no",buffer:"5",checkpolicy:"no",rtl:"no",bg:"E5E5E5",text:"333333",leftbg:"CCCCCC",lefticon:"333333",volslider:"666666",voltrack:"FFFFFF",rightbg:"B4B4B4",rightbghover:"999999",righticon:"333333",righticonhover:"FFFFFF",track:"FFFFFF",loader:"009900",border:"CCCCCC",tracker:"DDDDDD",skip:"666666",pagebg:"FFFFFF",transparentpagebg:"yes"});</script> 
+ </head> 
+ <body class="archive category category-blog-entries category-8"> 
+  <div class="contain-to-grid sticky"> 
+   <!-- Starting the Top-Bar --> 
+   <!-- End of Top-Bar --> 
+  </div> 
+  <header class="row" role="banner"> 
+   <div class="small-12 columns header-logo"> 
+    <div class="small-12 large-2 columns" role="main"> 
+     <a href="http://rainstor.com/" title="RainStor" rel="home"><img src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/logo.jpg" border="0"></a>
+    </div> 
+    <div id="Slogan" class="small-12 large-3 columns" role="main">
+     <span>&gt;</span>Taking the Big out of Data™
+     <span>&lt;</span>
+    </div> 
+    <div id="ContactUsTop" class="small-12 large-4 columns" role="main"> 
+     <span style="color: #006699; font-weight: bold;">(855) 660-7246</span>&nbsp;&nbsp;&nbsp; 
+     <a href="http://rainstor.com/company/contact-us" class=" line_vert" style="padding-right:15px;">Contact Us</a> 
+     <a href="http://rainstor.com/blog" title="RainStor" class=" line_vert">Blog</a> 
+    </div> 
+    <div id="FollowusTop" class="small-12 large-3 columns" role="main"> 
+     <ul> 
+      <li class="line_vert">Follow Rainstor</li> 
+      <li style="margin-left:-5px;"> 
+       <ul style="padding:0px; margin:-25px 0 0 0px;"> 
+        <li style="display:inline-block; margin-right:5px;"><a href="http://www.facebook.com/pages/Rainstor/332984370144160?success=1" target="_blank"><img src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_facebook.png" hover="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_facebook_hover.png" class="rollover" border="0" style="right:99px;"></a> </li> 
+        <li style="display:inline-block; margin-right:5px;"><a href="http://www.linkedin.com/groups/RainStor-2557276?goback=.gmp_2557276" target="_blank"><img src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_linkedin.png" hover="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_linkedin_hover.png" class="rollover" border="0" style="right:69px;"></a> </li> 
+        <li style="display:inline-block; margin-right:5px;"> <a href="https://twitter.com/Rainstor" target="_blank"><img src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_twitter.png" hover="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_twitter_hover.png" class="rollover" border="0" style="right:42px;"></a></li> 
+        <li style="display:inline-block; margin-right:0px;"> <a href="http://feeds.feedburner.com/rainstor" target="_blank"> <img src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/rss_feed.png" hover="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/rss_feed_hover.png" class="rollover" border="0" style="right:15px;"></a> </li> 
+       </ul> </li> 
+     </ul> 
+    </div> 
+    <!--
+
+
+
+
+
+
+
+<h1><a href="http://rainstor.com" title="RainStor">RainStor</a></h1>
+
+
+
+		<h4 class="subheader"></h4>
+
+
+
+
+
+
+
+--> 
+   </div> 
+  </header> 
+  <div class="top_nav_bg"> 
+   <section class="container row" role="document"> 
+    <ul id="nav">
+     <li class="divider"></li>
+     <li id="menu-item-4186" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4186 has-dropdown"><a href="http://rainstor.com/products/">Products</a> 
+      <ul class="dropdown"> 
+       <li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="http://rainstor.com/products/rainstor-database/">RainStor Database</a></li> 
+       <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="http://rainstor.com/products/connectors/">Connectors</a></li> 
+       <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="http://rainstor.com/products/deployment-options/">Deployment Options</a></li> 
+      </ul> </li> 
+     <li class="divider"></li>
+     <li id="menu-item-5734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5734 has-dropdown"><a href="http://rainstor.com/solutions/">Solutions</a> 
+      <ul class="dropdown"> 
+       <li id="menu-item-5739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5739"><a href="http://rainstor.com/solutions/active-archive/">Active Archive</a></li> 
+       <li id="menu-item-6443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6443"><a href="http://rainstor.com/solutions/archive-app-on-hadoop/">Archive App on Hadoop</a></li> 
+       <li id="menu-item-5742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5742"><a href="http://rainstor.com/solutions/analytical-archive/">Analytical Archive</a></li> 
+       <li id="menu-item-5747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5747"><a href="http://rainstor.com/solutions/rainstor-for-teradata/">RainStor for Teradata</a></li> 
+       <li id="menu-item-5743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5743"><a href="http://rainstor.com/solutions/compliance-archive/">Compliance Archive</a></li> 
+       <li id="menu-item-5745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5745"><a href="http://rainstor.com/solutions/rainstor-for-cloud/">Rainstor for Cloud</a></li> 
+       <li id="menu-item-5748" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-5748"><a href="http://rainstor.com"></a></li> 
+       <li id="menu-item-5744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5744"><a href="http://rainstor.com/solutions/rainstor-for-isilon/">RainStor for Isilon</a></li> 
+      </ul> </li> 
+     <li class="divider"></li>
+     <li id="menu-item-5733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5733 has-dropdown"><a href="http://rainstor.com/industries/">Industries</a> 
+      <ul class="dropdown"> 
+       <li id="menu-item-5738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5738"><a href="http://rainstor.com/industries/banking-financial-services/">Banking &amp; Financial Services</a></li> 
+       <li id="menu-item-5737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5737"><a href="http://rainstor.com/industries/government/">Government</a></li> 
+       <li id="menu-item-5736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5736"><a href="http://rainstor.com/industries/communications-cable-media/">Communications, Cable &amp; Media</a></li> 
+       <li id="menu-item-5735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5735"><a href="http://rainstor.com/industries/utilities/">Utilities</a></li> 
+      </ul> </li> 
+     <li class="divider"></li>
+     <li id="menu-item-3333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3333 has-dropdown"><a href="http://rainstor.com/partners/partner-listing-bk/">Partners</a> 
+      <ul class="dropdown"> 
+       <li id="menu-item-6273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6273"><a href="http://rainstor.com/partners/partner-listing/">Partner Listing</a></li> 
+       <li id="menu-item-264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-264"><a href="http://rainstor.com/partners/partner-resources/">Partner Resources</a></li> 
+       <li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a href="http://rainstor.com/partners/rainstor-partner-program/">RainStor Partner Program</a></li> 
+      </ul> </li> 
+     <li class="divider"></li>
+     <li id="menu-item-4277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4277 has-dropdown"><a href="http://rainstor.com/resources/overview/">Resources</a> 
+      <ul class="dropdown"> 
+       <li id="menu-item-4321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4321"><a href="http://rainstor.com/resources/data-sheets/">Data Sheets</a></li> 
+       <li id="menu-item-4320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4320"><a href="http://rainstor.com/resources/surveys/">Surveys</a></li> 
+       <li id="menu-item-4322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4322"><a href="http://rainstor.com/resources/webcasts/">Webcasts</a></li> 
+       <li id="menu-item-4319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4319"><a href="http://rainstor.com/resources/case-studies/">Case Studies</a></li> 
+       <li id="menu-item-4318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4318"><a href="http://rainstor.com/resources/analyst-coverage/">Analyst Coverage</a></li> 
+       <li id="menu-item-4389" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4389"><a href="http://rainstor.com/video-library/">Video Library</a></li> 
+       <li id="menu-item-4542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4542"><a href="http://rainstor.com/resources/white-papers/">White Papers</a></li> 
+       <li id="menu-item-4630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4630"><a href="http://rainstor.com/resources/podcasts/">Podcasts</a></li> 
+      </ul> </li> 
+     <li class="divider"></li>
+     <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47 has-dropdown"><a href="http://rainstor.com/company/">Company</a> 
+      <ul class="dropdown"> 
+       <li id="menu-item-3399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3399"><a href="http://rainstor.com/company/vision/">Vision</a></li> 
+       <li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="http://rainstor.com/company/management/">Management</a></li> 
+       <li id="menu-item-249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249"><a href="http://rainstor.com/company/advisory-council/">Advisory Council</a></li> 
+       <li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-254"><a href="http://rainstor.com/company/news/">News</a></li> 
+       <li id="menu-item-255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="http://rainstor.com/company/resources/">Resources</a></li> 
+       <li id="menu-item-250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250"><a href="http://rainstor.com/company/careers/">Careers</a></li> 
+       <li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252"><a href="http://rainstor.com/company/events/">Events</a></li> 
+       <li id="menu-item-2936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2936"><a href="http://rainstor.com/company/press-releases/">Press Releases</a></li> 
+       <li id="menu-item-2935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2935"><a href="http://rainstor.com/company/contact-us/">Contact Us</a></li> 
+       <li id="menu-item-3792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3792"><a href="http://rainstor.com/company/locations/">Office Locations</a></li> 
+      </ul> </li> 
+    </ul> 
+   </section> 
+  </div> 
+  <div class="small-12 large-12 columns" role="main" style="height:147px; background:#135479;"> 
+   <img src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/blog_marquee_BG2.jpg" border="0"> 
+  </div> 
+  <!-- Row for main content area --> 
+  <!-- Start the main container --> 
+  <section class="container row" role="document"> 
+   <br>
+   <br> 
+   <div class="small-3 large-3 columns" role="main"> 
+    <div class="inside_sidebar" style="margin-top:25px !important;"> 
+     <aside id="sidebar" class="small-12 large-4 columns"> 
+      <div id="subpagenav"></div>
+      <br> 
+      <div id="archive">
+       <a href="http://rainstor.com/blog"><h6>Blog</h6></a>
+       <ul>
+        <li><a href="http://rainstor.com/?m=201409&amp;cat=8">September 2014</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201408&amp;cat=8">August 2014</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201407&amp;cat=8">July 2014</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201406&amp;cat=8">June 2014</a> (4)</li>
+        <li><a href="http://rainstor.com/?m=201405&amp;cat=8">May 2014</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201404&amp;cat=8">April 2014</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201403&amp;cat=8">March 2014</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201402&amp;cat=8">February 2014</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201401&amp;cat=8">January 2014</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201312&amp;cat=8">December 2013</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201311&amp;cat=8">November 2013</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201310&amp;cat=8">October 2013</a> (4)</li>
+        <li><a href="http://rainstor.com/?m=201309&amp;cat=8">September 2013</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201308&amp;cat=8">August 2013</a> (4)</li>
+        <li><a href="http://rainstor.com/?m=201307&amp;cat=8">July 2013</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201306&amp;cat=8">June 2013</a> (3)</li>
+        <li><a href="http://rainstor.com/?m=201305&amp;cat=8">May 2013</a> (4)</li>
+        <li><a href="http://rainstor.com/?m=201304&amp;cat=8">April 2013</a> (3)</li>
+        <li><a href="http://rainstor.com/?m=201303&amp;cat=8">March 2013</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201212&amp;cat=8">December 2012</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201211&amp;cat=8">November 2012</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201209&amp;cat=8">September 2012</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201208&amp;cat=8">August 2012</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201207&amp;cat=8">July 2012</a> (4)</li>
+        <li><a href="http://rainstor.com/?m=201206&amp;cat=8">June 2012</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201205&amp;cat=8">May 2012</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201203&amp;cat=8">March 2012</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201201&amp;cat=8">January 2012</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201112&amp;cat=8">December 2011</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201109&amp;cat=8">September 2011</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201105&amp;cat=8">May 2011</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201103&amp;cat=8">March 2011</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201102&amp;cat=8">February 2011</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201012&amp;cat=8">December 2010</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201011&amp;cat=8">November 2010</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201010&amp;cat=8">October 2010</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201008&amp;cat=8">August 2010</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201007&amp;cat=8">July 2010</a> (2)</li>
+        <li><a href="http://rainstor.com/?m=201006&amp;cat=8">June 2010</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201005&amp;cat=8">May 2010</a> (1)</li>
+        <li><a href="http://rainstor.com/?m=201003&amp;cat=8">March 2010</a> (1)</li>
+       </ul>
+      </div>
+      <br> 
+      <div id="tag"></div>
+      <br> 
+      <br>
+      <br> 
+      <div id="sidebar_video"></div> 
+      <div id="sidebar_video"></div> 
+      <br> 
+      <div id="sidebar_resources"> 
+       <div class="textwidget">
+        <br> 
+        <span style="color: #666 !important; padding: 10px 0 0px 0 !important; font-size: 18px !important; font-family: Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif; font-weight: bold; font-style: normal; text-rendering: optimizeLegibility; line-height: 1.4; margin-top: 0.2em; margin-bottom: 0.5em;">Video Library</span>
+        <br>
+        <br> 
+        <a href="http://www.youtube.com/watch?v=gxSONKlxqzs" rel="wp-video-lightbox" title="Don't Delete Data – RainStor"><img src="
+http://rainstor.com/2013_new/wp-content/uploads/2014/05/img-video-poster-overview.png" alt="Don't Delete Data – RainStor"></a> 
+        <br> 
+        <p>Don't Delete Data – RainStor Overview Video</p> 
+        <a href="http://rainstor.com/video-library/">View more »</a>
+       </div> 
+      </div>
+      <br> 
+      <div id="sidebar_awards"> 
+       <div class="textwidget">
+        <br> 
+        <span style="color: #666 !important; padding: 10px 0 0px 0 !important; font-size: 18px !important; font-family: Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif; font-weight: bold; font-style: normal; text-rendering: optimizeLegibility; line-height: 1.4; margin-top: 0.2em; margin-bottom: 0.5em;">Resource Library</span>
+        <br>
+        <br> 
+        <ul> 
+         <li><a href="http://rainstor.com/resources/analyst-coverage/">Analyst coverage</a></li> 
+         <li><a href="http://rainstor.com/resources/data-sheets/">Datasheets</a></li> 
+         <li><a href="http://rainstor.com/resources/case-studies/">Case Studies </a></li> 
+         <li><a href="http://rainstor.com/resources/white-papers/">White Papers</a></li> 
+         <li><a href="http://rainstor.com/resources/webcasts">Webcasts </a></li> 
+        </ul>
+       </div> 
+      </div>
+      <br>
+      <br> 
+     </aside>
+     <!-- /#sidebar --> 
+    </div> 
+   </div> 
+   <div class="small-9 large-9 columns" role="main"> 
+    <div class="bloglisting"> 
+     <article id="post-6645" class="post-6645 post type-post status-publish format-standard hentry category-blog-entries"> 
+      <header> 
+       <span class="updated">September 30, 2014</span> 
+       <h4><a href="http://rainstor.com/query-federation-the-rainstor-way/">Query Federation the RainStor Way</a></h4> 
+      </header> 
+      <div class="entry-content">
+        &nbsp; by Mark Cusack, Chief Architect, RainStor, @markcusack One of the questions I get asked most by prospects and customers is: ‘how can I federate queries across my data warehouse and RainStor archive?’ The archiving use-case is pretty straightforward.&nbsp; The data warehouse is kept topped up with the newest, hottest…&nbsp;
+       <a href="http://rainstor.com/query-federation-the-rainstor-way/">Read More »</a> 
+      </div> 
+      <footer> 
+      </footer> 
+      <div class="shareaholic-canvas" data-app-id="b190e958f1e245067ecfeaf8a6ca7b3d" data-app="share_buttons" data-title="Query Federation the RainStor Way" data-link="http://rainstor.com/query-federation-the-rainstor-way/" data-summary=""></div> 
+     </article> 
+    </div> 
+    <div class="bloglisting"> 
+     <article id="post-6619" class="post-6619 post type-post status-publish format-standard hentry category-blog-entries"> 
+      <header> 
+       <span class="updated">September 4, 2014</span> 
+       <h4><a href="http://rainstor.com/is-your-data-lake-looking-like-a-data-circus-data-compression-might-be-the-answer/">Is your Data Lake looking like a Data Circus? Data compression might be the answer.</a></h4> 
+      </header> 
+      <div class="entry-content">
+        by Jyothi Swaroop, Director, Product Marketing and Alliances What do you do when you have too much of something you need? You think about ways to store it more efficiently so that it takes up less space, time and money. It’s common sense. Digital devices are compacted for portability and…&nbsp;
+       <a href="http://rainstor.com/is-your-data-lake-looking-like-a-data-circus-data-compression-might-be-the-answer/">Read More »</a> 
+      </div> 
+      <footer> 
+      </footer> 
+      <div class="shareaholic-canvas" data-app-id="b190e958f1e245067ecfeaf8a6ca7b3d" data-app="share_buttons" data-title="Is your Data Lake looking like a Data Circus? Data compression might be the answer." data-link="http://rainstor.com/is-your-data-lake-looking-like-a-data-circus-data-compression-might-be-the-answer/" data-summary=""></div> 
+     </article> 
+    </div> 
+    <div class="bloglisting"> 
+     <article id="post-6575" class="post-6575 post type-post status-publish format-standard hentry category-blog-entries"> 
+      <header> 
+       <span class="updated">August 7, 2014</span> 
+       <h4><a href="http://rainstor.com/rainstor-embraces-hue/">RainStor Embraces HUE</a></h4> 
+      </header> 
+      <div class="entry-content">
+        by Ben Weiss, Systems Engineer I had the great pleasure of taking a test spin a few weeks back on some RainStor Data Analytics edition alpha software. And now I know the answer to the following question…What does RainStor share with the Hadoop applications Beeswax, HiveServer, Impala, HDFS, Oozie, JobTracker,…&nbsp;
+       <a href="http://rainstor.com/rainstor-embraces-hue/">Read More »</a> 
+      </div> 
+      <footer> 
+      </footer> 
+      <div class="shareaholic-canvas" data-app-id="b190e958f1e245067ecfeaf8a6ca7b3d" data-app="share_buttons" data-title="RainStor Embraces HUE " data-link="http://rainstor.com/rainstor-embraces-hue/" data-summary=""></div> 
+     </article> 
+    </div> 
+    <div class="bloglisting"> 
+     <article id="post-6514" class="post-6514 post type-post status-publish format-standard hentry category-blog-entries"> 
+      <header> 
+       <span class="updated">July 2, 2014</span> 
+       <h4><a href="http://rainstor.com/facts-of-life/">Facts of Life</a></h4> 
+      </header> 
+      <div class="entry-content">
+        by Ben Weiss, Systems Engineer How can busy compliance officers inside large banks and telcos rest easy and be assured that their organizations are meeting the widening range of external regulations to stay compliant? That question gets more difficult to answer with each passing day as data volumes grow from…&nbsp;
+       <a href="http://rainstor.com/facts-of-life/">Read More »</a> 
+      </div> 
+      <footer> 
+      </footer> 
+      <div class="shareaholic-canvas" data-app-id="b190e958f1e245067ecfeaf8a6ca7b3d" data-app="share_buttons" data-title="Facts of Life" data-link="http://rainstor.com/facts-of-life/" data-summary=""></div> 
+     </article> 
+    </div> 
+    <div class="bloglisting"> 
+     <article id="post-6458" class="post-6458 post type-post status-publish format-standard hentry category-blog-entries"> 
+      <header> 
+       <span class="updated">June 25, 2014</span> 
+       <h4><a href="http://rainstor.com/football-hadoop-isnt-a-matter-of-life-and-death-its-more-important-than-that/">“Football..er.. Hadoop isn’t a matter of life and death. It’s more important than that.”</a></h4> 
+      </header> 
+      <div class="entry-content">
+        by Mark Cusack, Chief Architect (@markcusack) As an England football supporter I’m used to regular disappointment.&nbsp; I’m also used to the regular clichés that are trotted out in regard to the England squad in the build up to a major tournament – ‘golden generation’, ‘EPL is the best league’, ‘world-class’…&nbsp;
+       <a href="http://rainstor.com/football-hadoop-isnt-a-matter-of-life-and-death-its-more-important-than-that/">Read More »</a> 
+      </div> 
+      <footer> 
+      </footer> 
+      <div class="shareaholic-canvas" data-app-id="b190e958f1e245067ecfeaf8a6ca7b3d" data-app="share_buttons" data-title="“Football..er.. Hadoop isn’t a matter of life and death. It’s more important than that.”" data-link="http://rainstor.com/football-hadoop-isnt-a-matter-of-life-and-death-its-more-important-than-that/" data-summary=""></div> 
+     </article> 
+    </div> 
+    <div class="bloglisting"> 
+     <article id="post-6283" class="post-6283 post type-post status-publish format-standard hentry category-blog-entries"> 
+      <header> 
+       <span class="updated">June 18, 2014</span> 
+       <h4><a href="http://rainstor.com/when-compliance-matters-use-the-proven-solution/">When Compliance Matters – Use The Proven Solution</a></h4> 
+      </header> 
+      <div class="entry-content">
+        by Alaric Snell-Pym, Sr. Architect,&nbsp;@alaric Retention of data is vital to the running of any business - from a small retailer that needs to keep sales records in order to accurately calculate taxes, all the way up to a global online retailer that needs to find better ways to predict…&nbsp;
+       <a href="http://rainstor.com/when-compliance-matters-use-the-proven-solution/">Read More »</a> 
+      </div> 
+      <footer> 
+      </footer> 
+      <div class="shareaholic-canvas" data-app-id="b190e958f1e245067ecfeaf8a6ca7b3d" data-app="share_buttons" data-title="When Compliance Matters – Use The Proven Solution" data-link="http://rainstor.com/when-compliance-matters-use-the-proven-solution/" data-summary=""></div> 
+     </article> 
+    </div> 
+    <div class="bloglisting"> 
+     <article id="post-6193" class="post-6193 post type-post status-publish format-standard hentry category-blog-entries"> 
+      <header> 
+       <span class="updated">June 11, 2014</span> 
+       <h4><a href="http://rainstor.com/rainstor-and-emc-isilon-together-form-a-winning-team/">RainStor and EMC Isilon Together Form a Winning Team</a></h4> 
+      </header> 
+      <div class="entry-content">
+        by Ben Weiss, Systems Engineer In the comic books, when super heroes team up, good things happen. Consider some well-known teams of super heroes, such as The Avengers, The Justice League or The X-Men, - on those teams, the special powers of each character complement those of the other members,…&nbsp;
+       <a href="http://rainstor.com/rainstor-and-emc-isilon-together-form-a-winning-team/">Read More »</a> 
+      </div> 
+      <footer> 
+      </footer> 
+      <div class="shareaholic-canvas" data-app-id="b190e958f1e245067ecfeaf8a6ca7b3d" data-app="share_buttons" data-title="RainStor and EMC Isilon Together Form a Winning Team" data-link="http://rainstor.com/rainstor-and-emc-isilon-together-form-a-winning-team/" data-summary=""></div> 
+     </article> 
+    </div> 
+    <div class="bloglisting"> 
+     <article id="post-6170" class="post-6170 post type-post status-publish format-standard hentry category-blog-entries"> 
+      <header> 
+       <span class="updated">June 6, 2014</span> 
+       <h4><a href="http://rainstor.com/rainstor-sql-access-is-the-right-tool-for-the-job/">RainStor SQL Access is the Right Tool for the Job</a></h4> 
+      </header> 
+      <div class="entry-content">
+        RainStor is a different kind of database than the traditional types that most database users "grew up with", and so many of their intuitions as to the best way to do things might lead them astray. So, as well as writing excellent documentation and providing lots of advice to new…&nbsp;
+       <a href="http://rainstor.com/rainstor-sql-access-is-the-right-tool-for-the-job/">Read More »</a> 
+      </div> 
+      <footer> 
+      </footer> 
+      <div class="shareaholic-canvas" data-app-id="b190e958f1e245067ecfeaf8a6ca7b3d" data-app="share_buttons" data-title="RainStor SQL Access is the Right Tool for the Job" data-link="http://rainstor.com/rainstor-sql-access-is-the-right-tool-for-the-job/" data-summary=""></div> 
+     </article> 
+    </div> 
+    <div class="bloglisting"> 
+     <article id="post-6144" class="post-6144 post type-post status-publish format-standard hentry category-blog-entries"> 
+      <header> 
+       <span class="updated">May 29, 2014</span> 
+       <h4><a href="http://rainstor.com/how-do-you-comply/">How Do You Comply?</a></h4> 
+      </header> 
+      <div class="entry-content">
+        By Deirdre Mahon, VP Marketing When you hear the words “big data”, you immediately think of analytics and then probably Hadoop (as the platform) and you start to imagine all the newly created data from a wide range of sources – network,&nbsp; machine generated data, in addition to all the…&nbsp;
+       <a href="http://rainstor.com/how-do-you-comply/">Read More »</a> 
+      </div> 
+      <footer> 
+      </footer> 
+      <div class="shareaholic-canvas" data-app-id="b190e958f1e245067ecfeaf8a6ca7b3d" data-app="share_buttons" data-title="How Do You Comply?" data-link="http://rainstor.com/how-do-you-comply/" data-summary=""></div> 
+     </article> 
+    </div> 
+    <div class="bloglisting"> 
+     <article id="post-6031" class="post-6031 post type-post status-publish format-standard hentry category-blog-entries category-uncategorized tag-archiving tag-compliance tag-hadoop-2 tag-savings"> 
+      <header> 
+       <span class="updated">May 13, 2014</span> 
+       <h4><a href="http://rainstor.com/rainstor-5-5-the-archiving-app-for-hdp-2-1/">RainStor 5.5: the archiving app for HDP 2.1</a></h4> 
+      </header> 
+      <div class="entry-content">
+        by Mark Cusack (@markcusack) Chief Architect, RainStor RainStor 5.5 is certified on Hortonworks HDP 2.1!&nbsp; Thanks to Hortonworks for providing RainStor with a fantastic platform for our data warehouse archiving application, and for actively supporting and encouraging certification.&nbsp; We firmly believe that the combination of RainStor and HDP together provides…&nbsp;
+       <a href="http://rainstor.com/rainstor-5-5-the-archiving-app-for-hdp-2-1/">Read More »</a> 
+      </div> 
+      <footer> 
+       <p>Tags: <a href="http://rainstor.com/tag/archiving/" rel="tag">archiving</a>, <a href="http://rainstor.com/tag/compliance/" rel="tag">compliance</a>, <a href="http://rainstor.com/tag/hadoop-2/" rel="tag">Hadoop</a>, <a href="http://rainstor.com/tag/savings/" rel="tag">savings</a></p> 
+      </footer> 
+      <div class="shareaholic-canvas" data-app-id="b190e958f1e245067ecfeaf8a6ca7b3d" data-app="share_buttons" data-title="RainStor 5.5: the archiving app for HDP 2.1" data-link="http://rainstor.com/rainstor-5-5-the-archiving-app-for-hdp-2-1/" data-summary=""></div> 
+     </article> 
+    </div> 
+    <div class="pagination-centered">
+     <ul class="page-numbers"> 
+      <li><span class="page-numbers current">1</span></li> 
+      <li><a class="page-numbers" href="http://rainstor.com/category/blog-entries/page/2/">2</a></li> 
+      <li><a class="page-numbers" href="http://rainstor.com/category/blog-entries/page/3/">3</a></li> 
+      <li><a class="page-numbers" href="http://rainstor.com/category/blog-entries/page/4/">4</a></li> 
+      <li><a class="page-numbers" href="http://rainstor.com/category/blog-entries/page/5/">5</a></li> 
+      <li><a class="page-numbers" href="http://rainstor.com/category/blog-entries/page/6/">6</a></li> 
+      <li><span class="page-numbers dots">…</span></li> 
+      <li><a class="page-numbers" href="http://rainstor.com/category/blog-entries/page/8/">8</a></li> 
+      <li><a class="next page-numbers" href="http://rainstor.com/category/blog-entries/page/2/">»</a></li> 
+     </ul> 
+    </div>
+    <!--// end .pagination --> 
+   </div> 
+  </section> 
+  <div class="bg_footer"> 
+   <section class="container row grid1200" role="document"> 
+    <div class="small-12 large-12 columns"> 
+     <div class="small-12 large-5 columns" role="main"> 
+      <div class="footer_text"> 
+       <ul class="footer_text"> 
+        <li style="padding-left:130px;" class="mobile_no_padding">© Copyright 2014. RainStor Inc. All Rights Reserved.</li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="small-12 large-7 columns" role="main"> 
+      <ul class="footer_text"> 
+       <li><a href="/company/careers/">WE ARE HIRING</a></li> 
+       <li class="mobile_hide">|</li> 
+       <li><a href="/company/contact-us/">CONTACT US</a></li> 
+       <li class="mobile_hide">|</li> 
+       <li>FOLLOW RAINSTOR</li> 
+       <li>&nbsp;&nbsp;<a href="http://www.facebook.com/pages/Rainstor/332984370144160?success=1" class="socialicon" target="_blank"><img src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_facebook_f.png" hover="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_facebook_f_hover.png" class="rollover" border="0"></a>&nbsp;&nbsp;</li> 
+       <li>&nbsp;&nbsp;<a href="http://www.linkedin.com/groups/RainStor-2557276?goback=.gmp_2557276" class="socialicon" target="_blank"> <img src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_linkedin_f.png" hover="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_linkedin_f_hover.png" class="rollover" border="0"></a>&nbsp;&nbsp;</li> 
+       <li>&nbsp;&nbsp;<a href="https://twitter.com/Rainstor" class="socialicon" target="_blank"><img src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_twitter_f.png" hover="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/social_icons_twitter_f_hover.png" class="rollover" border="0"></a>&nbsp;&nbsp;</li> 
+       <li>&nbsp;&nbsp;<a href="http://feeds.feedburner.com/rainstor" target="_blank" class="socialicon"> <img src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/rss_feed_f.png" hover="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/img/rss_feed_f_hover.png" class="rollover" border="0"></a>&nbsp;&nbsp;</li> 
+      </ul> 
+     </div> 
+    </div> 
+   </section> 
+   <div class="row full-width"> 
+    <section class="container row grid1200" role="document"> 
+     <div class="menu-topnav-container">
+      <ul id="menu-topnav-1" class="navmenu">
+       <li id="menu-item-4186" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4186"><a href="http://rainstor.com/products/">Products</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="http://rainstor.com/products/rainstor-database/">RainStor Database</a></li> 
+         <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="http://rainstor.com/products/connectors/">Connectors</a></li> 
+         <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="http://rainstor.com/products/deployment-options/">Deployment Options</a></li> 
+        </ul> </li> 
+       <li id="menu-item-5734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5734"><a href="http://rainstor.com/solutions/">Solutions</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-5739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5739"><a href="http://rainstor.com/solutions/active-archive/">Active Archive</a></li> 
+         <li id="menu-item-6443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6443"><a href="http://rainstor.com/solutions/archive-app-on-hadoop/">Archive App on Hadoop</a></li> 
+         <li id="menu-item-5742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5742"><a href="http://rainstor.com/solutions/analytical-archive/">Analytical Archive</a></li> 
+         <li id="menu-item-5747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5747"><a href="http://rainstor.com/solutions/rainstor-for-teradata/">RainStor for Teradata</a></li> 
+         <li id="menu-item-5743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5743"><a href="http://rainstor.com/solutions/compliance-archive/">Compliance Archive</a></li> 
+         <li id="menu-item-5745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5745"><a href="http://rainstor.com/solutions/rainstor-for-cloud/">Rainstor for Cloud</a></li> 
+         <li id="menu-item-5748" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-5748"><a href="http://rainstor.com"></a></li> 
+         <li id="menu-item-5744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5744"><a href="http://rainstor.com/solutions/rainstor-for-isilon/">RainStor for Isilon</a></li> 
+        </ul> </li> 
+       <li id="menu-item-5733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5733"><a href="http://rainstor.com/industries/">Industries</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-5738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5738"><a href="http://rainstor.com/industries/banking-financial-services/">Banking &amp; Financial Services</a></li> 
+         <li id="menu-item-5737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5737"><a href="http://rainstor.com/industries/government/">Government</a></li> 
+         <li id="menu-item-5736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5736"><a href="http://rainstor.com/industries/communications-cable-media/">Communications, Cable &amp; Media</a></li> 
+         <li id="menu-item-5735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5735"><a href="http://rainstor.com/industries/utilities/">Utilities</a></li> 
+        </ul> </li> 
+       <li id="menu-item-3333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3333"><a href="http://rainstor.com/partners/partner-listing-bk/">Partners</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-6273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6273"><a href="http://rainstor.com/partners/partner-listing/">Partner Listing</a></li> 
+         <li id="menu-item-264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-264"><a href="http://rainstor.com/partners/partner-resources/">Partner Resources</a></li> 
+         <li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a href="http://rainstor.com/partners/rainstor-partner-program/">RainStor Partner Program</a></li> 
+        </ul> </li> 
+       <li id="menu-item-4277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4277"><a href="http://rainstor.com/resources/overview/">Resources</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-4321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4321"><a href="http://rainstor.com/resources/data-sheets/">Data Sheets</a></li> 
+         <li id="menu-item-4320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4320"><a href="http://rainstor.com/resources/surveys/">Surveys</a></li> 
+         <li id="menu-item-4322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4322"><a href="http://rainstor.com/resources/webcasts/">Webcasts</a></li> 
+         <li id="menu-item-4319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4319"><a href="http://rainstor.com/resources/case-studies/">Case Studies</a></li> 
+         <li id="menu-item-4318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4318"><a href="http://rainstor.com/resources/analyst-coverage/">Analyst Coverage</a></li> 
+         <li id="menu-item-4389" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4389"><a href="http://rainstor.com/video-library/">Video Library</a></li> 
+         <li id="menu-item-4542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4542"><a href="http://rainstor.com/resources/white-papers/">White Papers</a></li> 
+         <li id="menu-item-4630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4630"><a href="http://rainstor.com/resources/podcasts/">Podcasts</a></li> 
+        </ul> </li> 
+       <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47"><a href="http://rainstor.com/company/">Company</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-3399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3399"><a href="http://rainstor.com/company/vision/">Vision</a></li> 
+         <li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="http://rainstor.com/company/management/">Management</a></li> 
+         <li id="menu-item-249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249"><a href="http://rainstor.com/company/advisory-council/">Advisory Council</a></li> 
+         <li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-254"><a href="http://rainstor.com/company/news/">News</a></li> 
+         <li id="menu-item-255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="http://rainstor.com/company/resources/">Resources</a></li> 
+         <li id="menu-item-250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250"><a href="http://rainstor.com/company/careers/">Careers</a></li> 
+         <li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252"><a href="http://rainstor.com/company/events/">Events</a></li> 
+         <li id="menu-item-2936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2936"><a href="http://rainstor.com/company/press-releases/">Press Releases</a></li> 
+         <li id="menu-item-2935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2935"><a href="http://rainstor.com/company/contact-us/">Contact Us</a></li> 
+         <li id="menu-item-3792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3792"><a href="http://rainstor.com/company/locations/">Office Locations</a></li> 
+        </ul> </li> 
+      </ul>
+     </div> 
+     <ul class="navmenu" style="display:none;"> 
+      <li> </li>
+      <li class="page_item page-item-21"><a href="http://rainstor.com/products/">Products</a> 
+       <ul class="children"> 
+        <li class="page_item page-item-27"><a href="http://rainstor.com/products/rainstor-database/">RainStor Database</a></li> 
+        <li class="page_item page-item-25"><a href="http://rainstor.com/products/connectors/">Connectors</a></li> 
+        <li class="page_item page-item-28"><a href="http://rainstor.com/products/deployment-options/">Deployment Options</a></li> 
+       </ul> </li> 
+      <li class="page_item page-item-23"><a href="http://rainstor.com/partners/">Partners</a> 
+       <ul class="children"> 
+        <li class="page_item page-item-97"><a href="http://rainstor.com/partners/partner-resources/">Partner Resources</a></li> 
+        <li class="page_item page-item-99"><a href="http://rainstor.com/partners/rainstor-partner-program/">RainStor Partner Program</a></li> 
+       </ul> </li> 
+      <li class="page_item page-item-24"><a href="http://rainstor.com/company/">Company</a> 
+       <ul class="children"> 
+        <li class="page_item page-item-3379"><a href="http://rainstor.com/company/vision/">Vision</a></li> 
+        <li class="page_item page-item-101"><a href="http://rainstor.com/company/management/">Management</a></li> 
+        <li class="page_item page-item-103"><a href="http://rainstor.com/company/advisory-council/">Advisory Council</a></li> 
+        <li class="page_item page-item-104"><a href="http://rainstor.com/company/news/">News</a></li> 
+        <li class="page_item page-item-106"><a href="http://rainstor.com/company/resources/">Resources</a></li> 
+        <li class="page_item page-item-107"><a href="http://rainstor.com/company/careers/">Careers</a></li> 
+        <li class="page_item page-item-109"><a href="http://rainstor.com/company/events/">Events</a></li> 
+        <li class="page_item page-item-2651"><a href="http://rainstor.com/company/press-releases/">Press Releases</a></li> 
+        <li class="page_item page-item-2698"><a href="http://rainstor.com/company/contact-us/">Contact Us</a></li> 
+        <li class="page_item page-item-3784"><a href="http://rainstor.com/company/locations/">Office Locations</a></li> 
+       </ul> </li> 
+      <li class="page_item page-item-4287"><a href="http://rainstor.com/resources/">Resources</a> 
+       <ul class="children"> 
+        <li class="page_item page-item-4492"><a href="http://rainstor.com/resources/overview/">Overview</a></li> 
+        <li class="page_item page-item-4540"><a href="http://rainstor.com/resources/white-papers/">White Papers</a></li> 
+        <li class="page_item page-item-4550"><a href="http://rainstor.com/resources/podcasts/">Podcasts</a></li> 
+        <li class="page_item page-item-4289"><a href="http://rainstor.com/resources/data-sheets/">Data Sheets</a></li> 
+        <li class="page_item page-item-4291"><a href="http://rainstor.com/resources/surveys/">Surveys</a></li> 
+        <li class="page_item page-item-4294"><a href="http://rainstor.com/resources/case-studies/">Case Studies</a></li> 
+        <li class="page_item page-item-4296"><a href="http://rainstor.com/resources/analyst-coverage/">Analyst Coverage</a></li> 
+       </ul> </li> 
+      <li class="page_item page-item-5625"><a href="http://rainstor.com/solutions/">Solutions</a> 
+       <ul class="children"> 
+        <li class="page_item page-item-5629"><a href="http://rainstor.com/solutions/analytical-archive/">Analytical Archive</a></li> 
+        <li class="page_item page-item-5639"><a href="http://rainstor.com/solutions/active-archive/">Active Archive</a></li> 
+        <li class="page_item page-item-5644"><a href="http://rainstor.com/solutions/compliance-archive/">Compliance Archive</a></li> 
+        <li class="page_item page-item-5705"><a href="http://rainstor.com/solutions/rainstor-for-teradata/">RainStor for Teradata</a></li> 
+        <li class="page_item page-item-6433"><a href="http://rainstor.com/solutions/archive-app-on-hadoop/">Archive App on Hadoop</a></li> 
+        <li class="page_item page-item-5711"><a href="http://rainstor.com/solutions/rainstor-for-cloud/">Rainstor for Cloud</a></li> 
+        <li class="page_item page-item-5714"><a href="http://rainstor.com/solutions/rainstor-for-isilon/">RainStor for Isilon</a></li> 
+        <li class="page_item page-item-5684"><a href="http://rainstor.com/solutions/analytics-data-hub/">Analytics Data Hub</a></li> 
+       </ul> </li> 
+      <li class="page_item page-item-5655"><a href="http://rainstor.com/industries/">Industries</a> 
+       <ul class="children"> 
+        <li class="page_item page-item-5659"><a href="http://rainstor.com/industries/banking-financial-services/">Banking &amp; Financial Services</a></li> 
+        <li class="page_item page-item-5665"><a href="http://rainstor.com/industries/government/">Government</a></li> 
+        <li class="page_item page-item-5670"><a href="http://rainstor.com/industries/communications-cable-media/">Communications, Cable &amp; Media</a></li> 
+        <li class="page_item page-item-5676"><a href="http://rainstor.com/industries/utilities/">Utilities</a></li> 
+       </ul> </li> 
+      <li class="page_item page-item-5774"><a href="http://rainstor.com/archive-rules-how-to-build-an-enterprise-archive-for-teradata/">Archive Rules! How to Build An Enterprise Archive for Teradata</a></li> 
+      <li class="page_item page-item-5925"><a href="http://rainstor.com/when-hadoop-grows-up-key-requirements-for-the-enterprise/">When Hadoop Grows Up: Key Requirements for the Enterprise</a></li> 
+      <li class="page_item page-item-5975"><a href="http://rainstor.com/rainstor-for-isilon-overview-video/">RainStor for Isilon Overview Video</a></li> 
+      <li class="page_item page-item-6303"><a href="http://rainstor.com/rainstor-emc-isilon-webcast/">Examine the real cost of storing and analyzing data – RainStor &amp; EMC Isilon Webcast</a></li> 
+      <li class="page_item page-item-6086"><a href="http://rainstor.com/rainstor-and-credit-suisse-video-regulatory-and-compliance-mandates/">Video – RainStor and Credit Suisse Check the Box on Regulatory and Compliance Mandates</a></li> 
+      <li class="page_item page-item-6316"><a href="http://rainstor.com/data-archiving-gartner-magic-quadrant-report-thank-you/">Gartner Magic Quadrant Report – Thank You</a></li> 
+      <li class="page_item page-item-6383"><a href="http://rainstor.com/data-archiving-gartner-magic-quadrant-report/">Gartner Magic Quadrant Report</a></li> 
+      <li class="page_item page-item-6386"><a href="http://rainstor.com/data-archiving-gartner-magic-quadrant/">RainStor Named A Visionary – Gartner Magic Quadrant Report</a></li> 
+      <li class="page_item page-item-6474"><a href="http://rainstor.com/rainstor-compliance-governance-facts-of-life-video/">Rainstor – Compliance &amp; Governance Facts of Life Video</a></li> 
+      <li class="page_item page-item-6530"><a href="http://rainstor.com/archive-app-for-hadoop-video/">Archive App for Hadoop Video</a></li> 
+      <li class="page_item page-item-6607"><a href="http://rainstor.com/rainstor-whiteboard-session-on-compression-video/">RainStor Whiteboard Session on Compression Video</a></li> 
+      <li class="page_item page-item-6669"><a href="http://rainstor.com/resources-form/">Resources Form</a></li> 
+      <li class="page_item page-item-6689"><a href="http://rainstor.com/thankyou/">White Paper and Videocasts</a></li>  
+     </ul> 
+    </section> 
+    <script type="text/javascript" language="javascript">llactid = 22254</script> 
+    <script type="text/javascript" language="javascript" src="http://t6.trackalyzer.com/trackalyze.js"></script> 
+    <script type="text/javascript">document.write(unescape("%3Cscript src='" + document.location.protocol + "//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));</script> 
+    <script>Munchkin.init('713-JHN-862');</script> 
+   </div> 
+   <footer class="row full-width" role="contentinfo"> 
+    <div class="small-3 large-12 columns"> 
+     <div class="menu-footernav" style="display:none;"> 
+      <ul id="menu-topnav-2" class="">
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4186"><a href="http://rainstor.com/products/">Products</a> 
+        <ul class="sub-menu"> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="http://rainstor.com/products/rainstor-database/">RainStor Database</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="http://rainstor.com/products/connectors/">Connectors</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="http://rainstor.com/products/deployment-options/">Deployment Options</a></li> 
+        </ul> </li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5734"><a href="http://rainstor.com/solutions/">Solutions</a> 
+        <ul class="sub-menu"> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5739"><a href="http://rainstor.com/solutions/active-archive/">Active Archive</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6443"><a href="http://rainstor.com/solutions/archive-app-on-hadoop/">Archive App on Hadoop</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5742"><a href="http://rainstor.com/solutions/analytical-archive/">Analytical Archive</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5747"><a href="http://rainstor.com/solutions/rainstor-for-teradata/">RainStor for Teradata</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5743"><a href="http://rainstor.com/solutions/compliance-archive/">Compliance Archive</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5745"><a href="http://rainstor.com/solutions/rainstor-for-cloud/">Rainstor for Cloud</a></li> 
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-5748"><a href="http://rainstor.com"></a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5744"><a href="http://rainstor.com/solutions/rainstor-for-isilon/">RainStor for Isilon</a></li> 
+        </ul> </li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5733"><a href="http://rainstor.com/industries/">Industries</a> 
+        <ul class="sub-menu"> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5738"><a href="http://rainstor.com/industries/banking-financial-services/">Banking &amp; Financial Services</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5737"><a href="http://rainstor.com/industries/government/">Government</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5736"><a href="http://rainstor.com/industries/communications-cable-media/">Communications, Cable &amp; Media</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5735"><a href="http://rainstor.com/industries/utilities/">Utilities</a></li> 
+        </ul> </li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3333"><a href="http://rainstor.com/partners/partner-listing-bk/">Partners</a> 
+        <ul class="sub-menu"> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6273"><a href="http://rainstor.com/partners/partner-listing/">Partner Listing</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-264"><a href="http://rainstor.com/partners/partner-resources/">Partner Resources</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a href="http://rainstor.com/partners/rainstor-partner-program/">RainStor Partner Program</a></li> 
+        </ul> </li> 
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4277"><a href="http://rainstor.com/resources/overview/">Resources</a> 
+        <ul class="sub-menu"> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4321"><a href="http://rainstor.com/resources/data-sheets/">Data Sheets</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4320"><a href="http://rainstor.com/resources/surveys/">Surveys</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4322"><a href="http://rainstor.com/resources/webcasts/">Webcasts</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4319"><a href="http://rainstor.com/resources/case-studies/">Case Studies</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4318"><a href="http://rainstor.com/resources/analyst-coverage/">Analyst Coverage</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4389"><a href="http://rainstor.com/video-library/">Video Library</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4542"><a href="http://rainstor.com/resources/white-papers/">White Papers</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4630"><a href="http://rainstor.com/resources/podcasts/">Podcasts</a></li> 
+        </ul> </li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47"><a href="http://rainstor.com/company/">Company</a> 
+        <ul class="sub-menu"> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3399"><a href="http://rainstor.com/company/vision/">Vision</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="http://rainstor.com/company/management/">Management</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249"><a href="http://rainstor.com/company/advisory-council/">Advisory Council</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-254"><a href="http://rainstor.com/company/news/">News</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="http://rainstor.com/company/resources/">Resources</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250"><a href="http://rainstor.com/company/careers/">Careers</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252"><a href="http://rainstor.com/company/events/">Events</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2936"><a href="http://rainstor.com/company/press-releases/">Press Releases</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2935"><a href="http://rainstor.com/company/contact-us/">Contact Us</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3792"><a href="http://rainstor.com/company/locations/">Office Locations</a></li> 
+        </ul> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </footer> 
+  </div> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/rainstor.com\/2013_new\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/plugins/responsive-mobile-friendly-tooltip/responsive-tooltip.js"></script> 
+  <script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/js/foundation.min.js"></script> 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+  <script type="text/javascript">//<![CDATA[ 
+
+$(window).load(function(){
+
+$(document).ready(function(){
+
+$(".flip").click(function(){
+
+    if($(".panel").css("display") == 'block') {
+
+      // alert('Visible');
+
+    } else {
+
+       //alert('Not visible');
+
+    }
+
+    $(".panel").slideToggle();
+
+  });
+
+});
+
+});//]]>  
+
+
+
+</script> 
+  <!-- Foundation 4 for IE 9 and later --> 
+  <!--[if lt IE 10]>
+
+<script src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/js/foundation.min.js"></script>
+
+<script>
+
+	$(document).foundation();
+
+</script>
+
+	<![endif]--> 
+  <!--<script type="text/javascript" src="http://rainstor.com/2013_new/wp-content/themes/Theme2K13/js/rjp4pzp.js"></script>--> 
+  <!--<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->  
+  <!-- Dynamic page generated in 2.048 seconds. --> 
+  <!-- Cached page generated by WP-Super-Cache on 2014-12-03 00:18:14 --> 
+  <!-- super cache -->
+ </body>
+</html>

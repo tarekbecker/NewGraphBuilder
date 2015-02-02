@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "723d7e1c91d929166449c40e19219704",
+    "type": "Organization",
+    "properties": {
+      "role_investor": true,
+      "short_description": "Privately held venture capital firm currently focused on seed investments in Mobile Broadband, Enterprise DevOps and Big Data Cloud.",
+      "permalink": "glen-hills-group-llc",
+      "primary_role": "investor",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "name": "Glen Hills Group LLC",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "created_at": 1414450611,
+      "updated_at": 1414450785,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "board_members_and_advisors": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/glen-hills-group-llc/board_members_and_advisors",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "first_name": "Jack",
+            "last_name": "Kudale",
+            "title": "Managing Director",
+            "started_on": "2014-07-01",
+            "path": "person/jack-kudale",
+            "created_at": 1414450783,
+            "updated_at": 1414513433
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/glen-hills-group-llc/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1414450313/lleyq7ysdgvbdy0fuect.jpg",
+            "created_at": 1414450611,
+            "updated_at": 1414450611
+          }
+        ]
+      }
+    }
+  }
+}

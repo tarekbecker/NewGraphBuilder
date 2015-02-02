@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html style="height:100%">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CrowdChat</title>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CrowdChat - a new way to host #hashtag parties">
+  <meta name="twitter:description" content="CrowdChat is one stop solution to host #hashtag chats across multiple social networks. It is more than just Tweet Chat. A beautiful card like this, is automatically appended to updates posted on Twitter. It comes packed with FREE analytics for early adopters.">
+  <meta name="twitter:site" content="@CrowdChatApp">
+  <meta name="twitter:image:src" content="https://s3-us-west-2.amazonaws.com/crowdchat-documents/HomeForYourHashtag.png">
+  <!-- OpenGraph Meta Tags-->
+  <meta name="og:title" content="CrowdChat">
+  <meta name="og:type" content="blog">
+  <meta name="og:description" content="CrowdChat is one stop solution to host #hashtag chats across multiple social networks. It is more than just Tweet Chat. A beautiful card like this, is automatically appended to updates posted on Twitter. It comes packed with FREE analytics for early adopters.">
+  <meta name="og:image" content="https://s3-us-west-2.amazonaws.com/crowdchat-documents/HomeForYourHashtag.png">
+  <!-- HTML Meta Tags-->
+  <meta name="description" content="CrowdChat is one stop solution to host #hashtag chats across multiple social networks.">
+  <meta name="keywords" content="CrowdChat, chat, twitter, crowdspot, social, data">
+  <link rel="stylesheet" href="/css/frameworks.min.css?v=1415396700000">
+  <link rel="stylesheet" href="/css/top_bar.css?v=1415396700000">
+  <link rel="stylesheet" href="/css/index.css?v=1415396700000">
+  <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+  <script type="text/javascript" src="/js/frameworks-min.js?v=1415396700000"></script>
+  <script type="text/javascript" src="/js/includeBundle.js?v=1415396700000"></script>
+  <script type="text/javascript" src="/js/common-min.js?v=1415396700000"></script>
+  <script type="text/javascript" src="/js/explore.js?v=1415396700000"></script>
+ </head>
+ <body style="height:100%">
+  <div class="hide">
+   <input id="server" type="hidden" value="https://www.crowdchat.net">
+   <input id="alert_sign_in_fail" type="hidden" value="false">
+   <input id="signedIn" type="hidden" value="false">
+  </div>
+  <div id="loginmodal" role="dialog" class="modal fade in">
+   <div id="signInModal" class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <a data-dismiss="modal" class="close"><i class="fa fa-times"></i></a>
+      <h2 class="lead"> 
+       <center>
+        Welcome to CrowdChat!
+       </center></h2>
+     </div>
+     <div class="modal-body text-center row">
+      <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+       <a id="twitterLoginLink" target="_self" href="/auth/twitter" class="btn-signup btn btn-info twitter_login"><i class="fa fa-twitter fa-lg"> </i><b> Continue with Twitter </b></a>
+      </div>
+      <div class="col-xs-12 col-sm-5">
+       <a target="_self" href="/auth/linkedin" class="btn-signup btn btn-primary linkedin_login"><i class="fa fa-linkedin-square fa-lg"></i><b> Continue with LinkedIn</b></a>
+      </div>
+      <a target="_self" href="/auth/facebook" class="btn-signup btn btn-primary facebook_login"><i class="fa fa-facebook-square fa-lg"></i><b> Continue with Facebook</b></a>
+     </div>
+     <div class="modal-body text-center row">
+      <b>We don't post anything without your permission!</b>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="embededModal" role="dialog" class="modal fade in">
+   <div id="embededModal" class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <a data-dismiss="modal" class="close"><i class="fa fa-times"></i></a>
+      <h2 class="lead">
+       <center>
+        Open CrowdChat
+       </center></h2>
+     </div>
+     <div class="modal-body text-center">
+      <h3 class="lead">Open the full conversation at CrowdChat.net</h3>
+      <a onclick="window.top.location.href = window.location;" class="btn btn-primary"><i class="fa fa-sign-in fa-lg"></i><b>View Now</b></a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="socialModal" role="dialog" class="modal fade in">
+   <div class="hndl-ttl"></div>
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <a data-dismiss="modal" class="close"><i class="fa fa-times"></i></a>
+      <h3 class="modal-title">Social Settings</h3>
+     </div>
+     <div class="modal-body"></div>
+    </div>
+   </div>
+  </div>
+  <div id="help_modal" role="dialog" style="height:95%;width:98%" class="modal fade in">
+   <div style="height:100%;" class="modal-dialog">
+    <div style="height:100%;" class="modal-content">
+     <div style="height:10%;padding:0px 20px;" class="modal-header">
+      <a data-dismiss="modal" onclick="clear_modal('help_modal');" class="close"><i class="fa fa-times"></i></a>
+      <h3>CrowdChat - Frequently Asked Questions</h3>
+     </div>
+     <div style="height:87%" class="modal-body">
+      <p>Loading...</p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="betamodal" role="dialog" class="modal fade in">
+   <div id="signInModal" class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <a data-dismiss="modal" class="close"><i class="fa fa-times"></i></a>
+      <h2 class="lead"> 
+       <center>
+        Welcome to CrowdChat!
+       </center></h2>
+     </div>
+     <div class="modal-body text-center row">
+      <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+       <a id="twitterLoginLink" target="_self" href="/auth/twitter" class="btn-signup btn btn-info twitter_login"><i class="fa fa-twitter fa-lg"> </i><b> Continue with Twitter </b></a>
+      </div>
+      <div class="col-xs-12 col-sm-5">
+       <a target="_self" href="/auth/linkedin" class="btn-signup btn btn-primary linkedin_login"><i class="fa fa-linkedin-square fa-lg"></i><b> Continue with LinkedIn</b></a>
+      </div>
+      <a target="_self" href="/auth/facebook" class="btn-signup btn btn-primary facebook_login"><i class="fa fa-facebook-square fa-lg"></i><b> Continue with Facebook</b></a>
+     </div>
+     <div class="modal-body text-center row">
+      <b>We don't post anything without your permission!</b>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="rememberModal" role="dialog" class="modal fade in">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div style="text-align:center" class="modal-body">
+      <h3 class="lead">Access Granted</h3>
+      <input id="rememberBox" type="checkbox" checked>
+      <label>Remember this passcode for 30 days.</label>
+      <p>Your chats are located via "Go Private"</p>
+      <a onclick="closeRememberModal()" class="btn btn-success">OK</a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="alert_container">
+   <div id="staticAlertBox" style="display:none" class="alert alert-warning">
+    <i onclick="$(&quot;#staticAlertBox&quot;).hide(); clientcode.dequeueMessage(); return false" class="fa fa-times discard-alert"></i>
+    <span id="staticAlertText">There was an error.</span>
+   </div>
+   <div id="wideAlertBox" style="display:none" class="alert alert-warning">
+    <span id="wideAlertText">There was an error.</span>
+   </div>
+   <div id="alertBox" style="display:none" class="alert alert-warning">
+    <span id="alertText">There was an error.</span>
+   </div>
+  </div>
+  <div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+   <div class="navbar-header">
+    <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    <div class="site_title">
+     <a href="/" class="nostyle"> <sup>β </sup><img width="130px" src="/img/crowdchat_logo_trans/crowdchat_logo_trans.png"></a>
+     <span class="top_hash"></span>
+    </div>
+   </div>
+   <div id="pageNav" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right">
+     <li><a id="signInLink" target="_self" onclick="openLoginModal()" class="rightSpace">Sign <i class="fa fa-sign-in fa-lg"></i></a></li>
+    </ul>
+    <ul class="nav navbar-nav"> 
+    </ul>
+   </div>
+  </div>
+  <a id="back-to-top" target="_self" href="javascript:;" onclick="scrollToVisibility('div.container');" style="display:none"><i class="fa fa-arrow-up fa-lg"></i></a>
+  <div style="height:100%;margin-top:-50px;padding-top:50px;" class="page">
+   <div style="padding-top:20px;height:40%;" class="imageContainer">
+    <div class="container">
+     <div class="row srchWrpr">
+      <div id="searchDiv" class="col-xs-12 col-sm-6 col-sm-offset-3">
+       <form action="/search/" method="get" class="search-form">
+        <input name="q" type="text" placeholder="Search CrowdChat" class="search-box form-control typeahead">
+        <input type="submit" value="Search" style="height:0;width:0;position:absolute;top:-1000px">
+        <a onclick="$('form.search-form').submit();" class="btn btn-link"><i class="search-icon fa fa-search"> </i></a>
+       </form>
+      </div>
+     </div>
+     <div class="row fixed_height200">
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+       <h3 class="white lead">Want to host engaging chats?</h3>
+       <div class="btn-wrapper">
+        <a onclick="createNewChat()" class="btn btn-default btn-lg wide-button">Create Chat</a>
+       </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+       <h3 class="white lead">Check out the Live chats now!</h3>
+       <div class="btn-wrapper">
+        <a href="/chats/explore" class="btn btn-primary btn-lg">Explore</a>
+       </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+       <h3 class="white lead">CrowdChat for your business</h3>
+       <div class="btn-wrapper">
+        <a href="http://platform.crowdchat.net/" class="btn btn-default btn-lg wide-button">CrowdChat Platform</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div style="margin-top:0px;height:60%;min-height:350px" class="greyContainer">
+    <div style="margin-top:20px;" class="container">
+     <div style="margin-left:0px;margin-right:0px" class="row fixed_height200">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+       <div style="text-align:center">
+        <div style="display:inline-block;text-align:left;margin:10px" class="infoBlock">
+         <h3 class="lead big text-center">What is CrowdChat?</h3>
+         <ul class="noBullets">
+          <li class="lead bullets"><i class="fa fa-check-square-o fa-lg"></i> New and innovative social chat platform where the crowd creates the content.</li>
+          <li class="lead bullets"><i class="fa fa-check-square-o fa-lg"></i> Host engaging conversations across multiple social networks with hashtags.</li>
+          <li class="lead bullets"><i class="fa fa-check-square-o fa-lg"></i> Amazing group experiences with an easy to use and advanced platform.</li>
+         </ul>
+         <a href="http://platform.crowdchat.net/#customers">
+          <div class="testimonial pull-right">
+           See CrowdChat testimonials 
+           <i class="fa fa-arrow-circle-right fa-lg"></i>
+          </div></a>
+        </div>
+       </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+       <div style="text-align:center;padding-top:20px">
+        <iframe style="display:inline-block" src="https://www.youtube.com/embed/UmC98s5D3Ns?showinfo=0&amp;rel=0&amp;fs=1&amp;vq=hd720&amp;wmode=transparent&amp;autoplay=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen class="concept-video-wrapper"></iframe>
+       </div>
+      </div>
+     </div>
+     <div style="margin-left:0px;margin-right:0px;margin-top:50px;margin-bottom:10px;" class="row">
+      <div style="border-top:1px black solid;margin-top:9px" class="col-xs-4 col-sm-4 col-md-5 col-lg-5"></div>
+      <div style="text-align:center" class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+       <p class="lead bullets">IN THE NEWS</p>
+      </div>
+      <div style="border-top:1px black solid;margin-top:9px" class="col-xs-4 col-sm-4 col-md-5 col-lg-5"></div>
+     </div>
+     <div style="margin-left:0px;margin-right:0px" class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4">
+       <a href="http://recode.net/2014/06/11/john-furrier-startup-crowdchat-nabs-small-seed-round-to-tame-social-media/" style="color:black" target="_blank" class="nostyle">
+        <div style="float:left;padding:5px">
+         <img src="/img/recode_logo.png" width="100px" height="70px">
+        </div>
+        <div style="margin-left:120px">
+         CrowdChat Nabs Seed Round to Tame Social Media
+         <br>
+         <span style="font-style:italic">June 11, 2014</span>
+        </div></a>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4">
+       <a href="http://www.forbes.com/sites/roberthof/2014/06/11/the-hashtag-is-the-social-network-crowdchat-launches-group-conversations-for-business/" style="color:black" target="_blank" class="nostyle">
+        <div style="float:left;padding:5px">
+         <img src="/img/forbes_logo.png" width="100px" height="70px">
+        </div>
+        <div style="margin-left:120px">
+         The Hashtag Is The Social Network: CrowdChat Launches Group Conversations For Business
+         <br>
+         <span style="font-style:italic">June 11, 2014</span>
+        </div></a>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4">
+       <a href="http://siliconangle.com/blog/2014/03/11/crowdchat-reinventing-the-way-people-communicate-bigdatasv/" style="color:black" target="_blank" class="nostyle">
+        <div style="float:left;padding:5px">
+         <img src="/img/Silicon-Angle.png" width="100px" height="70px">
+        </div>
+        <div style="margin-left:120px">
+         CrowdChat - Reinventing the way people communicate | #BigDataSV
+         <br>
+         <span style="font-style:italic">March 11, 2014</span>
+        </div></a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div style="width:100%;padding-bottom:5px;padding-top:3px;background-color:#222;margin-bottom:0px;" class="footer">
+   <div class="container footer text-center">
+    <a href="/about/index.html">About</a>
+    <a href="/about/index.html#work">Users</a>
+    <a href="http://platform.crowdchat.net/">Platform</a>
+    <a href="/about/index.html#about">Team</a>
+    <a href="http://blog.crowdchat.net/">Blog</a>
+    <a href="http://engineering.crowdchat.net">Engineering</a>
+    <a href="/about/jobs">Jobs</a>
+   </div>
+  </div>
+ </body>
+</html>

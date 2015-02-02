@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns="http://www.w3.org/1999/xhtml" lang="en-EN"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" xmlns="http://www.w3.org/1999/xhtml" lang="en-EN"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" xmlns="http://www.w3.org/1999/xhtml" lang="en-EN"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="en-EN">
+ <!--<![endif]-->
+ <head profile="http://gmpg.org/xfn/11"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <title>
+		   Stratio Big Data Pure Spark	</title> 
+  <!-- Set the viewport width to device width for mobile --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <link rel="shortcut icon" href="http://www.stratio.com/wp-content/themes/stratio-theme/favicon.png" type="image/x-icon"> 
+  <link rel="stylesheet" href="http://www.stratio.com/wp-content/themes/stratio-theme/css/normalize.css" type="text/css"> 
+  <link rel="stylesheet" href="http://www.stratio.com/wp-content/themes/stratio-theme/style.css?v=3.1" type="text/css"> 
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> 
+  <link rel="pingback" href="http://www.stratio.com/xmlrpc.php"> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.4.2 - https://yoast.com/wordpress/plugins/seo/ --> 
+  <meta name="description" content="Stratio is a Big Data platform based on Spark. It is 100% open source and enterprise - ready"> 
+  <link rel="canonical" href="http://www.stratio.com/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Stratio - Big data pure spark"> 
+  <meta property="og:description" content="Stratio is a Big Data platform based on Spark. It is 100% open source and enterprise - ready"> 
+  <meta property="og:url" content="http://www.stratio.com/"> 
+  <meta property="og:site_name" content="Stratio Big Data Pure Spark"> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="alternate" type="application/rss+xml" title="Stratio Big Data Pure Spark » Home Comments Feed" href="http://www.stratio.com/home/feed/"> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://www.stratio.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.8" type="text/css" media="all"> 
+  <link rel="stylesheet" id="dlm-frontend-css" href="http://www.stratio.com/wp-content/plugins/download-monitor/assets/css/frontend.css?ver=3.9" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://www.stratio.com/wp-content/themes/stratio-theme/js/vendor/jquery-1.11.0.js?ver=1.10.2"></script> 
+  <script type="text/javascript" src="http://www.stratio.com/wp-content/themes/stratio-theme/js/main.js?ver=1"></script> 
+  <link rel="shortlink" href="http://www.stratio.com/"> 
+  <style type="text/css" id="syntaxhighlighteranchor"></style> 
+  <!-- if page is content page --> 
+  <meta property="description" content="Stratio is a Big Data platform based on Spark. It is 100% open source and enterprise – ready. In Stratio we are Pure Spark, since it is the only technology in the market able to combine stored data analyses with real time streaming data, all in the same query."> 
+  <meta property="og:url" content="http://www.stratio.com"> 
+  <meta property="og:title" content="Stratio Big Data Pure Spark"> 
+  <meta property="og:site_name" content="Stratio Big Data Pure Spark"> 
+  <meta property="og:description" content="Stratio is a Big Data platform based on Spark. It is 100% open source and enterprise – ready. In Stratio we are Pure Spark, since it is the only technology in the market able to combine stored data analyses with real time streaming data, all in the same query."> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" content="http://www.stratio.com/wp-content/themes/stratio-theme/images/share_icon.png"> 
+  <!--twitter --> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:url" content="http://www.stratio.com/"> 
+  <!--fin twitter--> 
+  <script src="http://www.stratio.com/wp-content/themes/stratio-theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script> 
+  <script src="http://www.stratio.com/wp-content/themes/stratio-theme/js/vendor/jquery.rwdImageMaps.js"></script> 
+  <script src="http://www.stratio.com/wp-content/themes/stratio-theme/js/vendor/jquery.event.move.js"></script> 
+  <script src="http://www.stratio.com/wp-content/themes/stratio-theme/js/vendor/jquery.event.swipe.js"></script> 
+  <script src="http://www.stratio.com/wp-content/themes/stratio-theme/js/vendor/unslider.min.js"></script> 
+  <!--nuevo banner --> 
+  <script src="http://www.stratio.com/wp-content/themes/stratio-theme/js/vendor/jquery.easing-1.3.js"></script> 
+  <!-- iosSlider plugin --> 
+  <script src="http://www.stratio.com/wp-content/themes/stratio-theme/js/vendor/jquery.iosslider.js"></script> 
+  <!-- fin nuevo banner --> 
+  <!-- WebMaster tool --> 
+  <meta name="google-site-verification" content="V37byZNroQ87OtckhrQHGHhonB7gn7XX8e9oojQ0I1Q"> 
+ </head> 
+ <body class="home page page-id-164 page-template page-template-templateshome-php"> 
+  <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> 
+  <div class="header-container"> 
+   <!-- pagecustomers --> 
+   <header class="wrapper clearfix"> 
+    <div class="super clearfix"> 
+     <ul id="TopMenu">
+      <li id="menu-item-1592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1592"><a href="http://www.stratio.com/company/careers/">Careers</a></li> 
+      <li id="menu-item-1117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1117"><a href="http://www.stratio.com/company/contact/">Contact</a></li> 
+      <li id="menu-item-215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-215"><a href="http://blog.stratio.com/">Visit our BLOG</a></li> 
+     </ul> 
+    </div> 
+    <div class="clearfix menu"> 
+     <a href="http://www.stratio.com"><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/logo1.png" alt="statio.com" title="Stratio Big Data Pure Spark"><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/logo2.png" alt="statio.com" title="Stratio Big Data Pure Spark" class="logoTexto"></a> 
+     <nav> 
+      <ul id="MainMenu" class="menuprincipal">
+       <li id="menu-item-223" class="principalproductos menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" data-capa=""><a href="http://www.stratio.com/products-general/">Products</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-214" class="opcion opcion1 menu-item menu-item-type-post_type menu-item-object-page" data-capa="explicacion1"><a title="STRATIO OPEN DISTRIBUTION BASED ON SPARK" href="http://www.stratio.com/products/stratio/">OPEN</a></li> 
+         <li id="menu-item-213" class="opcion opcion2 menu-item menu-item-type-post_type menu-item-object-page" data-capa="explicacion2"><a title="STRATIO ENTERPRISE DISTRIBUTION BASED ON SPARK" href="http://www.stratio.com/products/sds-enterprise/">ENTERPRISE</a></li> 
+         <li id="menu-item-212" class="opcion opcion3 menu-item menu-item-type-post_type menu-item-object-page" data-capa="explicacion3"><a title="STRATIO OPEN DISTRIBUTION SANDBOX" href="http://www.stratio.com/products/stratio-sandbox/">SANDBOX</a></li> 
+        </ul> </li> 
+       <li id="menu-item-309" class="menu-item menu-item-type-post_type menu-item-object-page" data-capa=""><a href="http://www.stratio.com/data-consulting/">Data clinic</a></li> 
+       <li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page" data-capa=""><a href="http://www.stratio.com/customers/">Clients</a></li> 
+       <li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page" data-capa=""><a href="http://www.stratio.com/partners/">Partners</a></li> 
+       <li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page" data-capa=""><a href="http://www.stratio.com/training/">Training</a></li> 
+       <li id="menu-item-206" class="menu-item menu-item-type-post_type menu-item-object-page" data-capa=""><a href="http://www.stratio.com/resources/">Resources</a></li> 
+       <li id="menu-item-209" class="community menu-item menu-item-type-custom menu-item-object-custom" data-capa=""><a href="http://www.openstratio.org/">Community</a></li> 
+      </ul> 
+     </nav> 
+    </div> 
+    <div class="boton_menu clearfix" id="boton_menu"> 
+     <p class="boton_menu">MENU</p> 
+    </div> 
+    <script>
+            var ruta ='http://www.stratio.com/wp-content/themes/stratio-theme';
+           </script> 
+    <!-- NUEVO BANNER
+           <div class="slide">
+               <div class="content-slide content01">
+                    <img class="bg" src="http://www.stratio.com/wp-content/themes/stratio-theme/images/bg-cabecera-home-01.png" style="display:none;">
+                    <span class="ico-spark">Pure</span>
+                    <p style="text-transform:uppercase">Yes, we love Spark, and we have the first big data<br>platform running based on Spark.</p>
+                    <img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/ico-play.png" class="play">
+                    <iframe class="videoyoutube" width="" height="" src="http://player.vimeo.com/video/90310964" frameborder="0" allowfullscreen></iframe>
+               </div>
+               <div class="content-slide content03">
+                    <img class="bg" src="http://www.stratio.com/wp-content/themes/stratio-theme/images/bg-cabecera-home-03.png" style="display:none">
+                    <span>STRATIO</span>
+                    <p>STRATIO´S BIG DATA PLATFORM BASED ON SPARK.<br>100% OPEN SOURCE AND ENTERPRISE-READY</p>
+                    <a href="http://www.stratio.com/products/sds/" class="enlace flecha">Learn more and Download</a>
+               </div>
+               <div class="content-slide content02">
+                    <img class="bg" src="http://www.stratio.com/wp-content/themes/stratio-theme/images/bg-cabecera-home-02.png" style="display:none">
+                    <span>STRATIO IN ACTION</span>
+                    <p>BIG DATA TECHNOLOGY APPLIED TO THE TRAVEL INDUSTRY<br>IN A SUCCESSFUL USE CASE</p>
+                    
+                    <img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/ico-play.png" class="play">
+                    <iframe class="videoyoutube" width="" height="" src="http://player.vimeo.com/video/95745220" frameborder="0" allowfullscreen></iframe>
+               </div>
+
+                <p class="botones-slide"><a href="#" class="activo ball01 ball"></a><a href="#" class="no-activo ball02 ball"></a><a href="#" class="no-activo ball03 ball"></a></p>
+           </div>
+       --> 
+    <div id="iosSliderWrap"> 
+     <div class="iosSlider"> 
+      <div class="slider"> 
+       <div class="item" id="item1"> 
+        <img class="bg" src="http://www.stratio.com/wp-content/themes/stratio-theme/images/purespark.png" style="display:none;"> 
+        <!--<div class='text'>
+                <span class="ico-spark">Pure</span>
+                <p style="text-transform:uppercase">Yes, we love Spark, and we have the first big data<br>platform running based on Spark.</p>              
+            </div>
+            <div class="link">
+				<a href="http://databricks.com/certified-on-spark-distribution" class="nuevo-enlace" target="_blank"><div class="contenedor-enlace"><div class="newflecha"><div></div></div><div class="text-link">certified distribution info </div></div></a>
+            </div>--> 
+       </div> 
+       <div class="item" id="item5"> 
+        <img class="bg" src="http://www.stratio.com/wp-content/themes/stratio-theme/images/thx-polyglots-spark.jpg" style="display:none"> 
+        <div class="text"> 
+         <span>STRATIO</span> 
+         <p>THE ONLY "POLYGLOT" PLATFORM<br>CAPABLE OF INTEGRATING WITH<br>THE MAIN NoSQL DATABASES <br>IN THE MARKET</p> 
+        </div> 
+        <div class="link"> 
+         <!--  <a href="http://www.stratio.com/products/sds/" class="">Learn more and Download</a> --> 
+         <a href="http://www.stratio.com/products/stratio/database/" class="nuevo-enlace">
+          <div class="contenedor-enlace">
+           <div class="newflecha">
+            <div></div>
+           </div>
+           <div class="text-link">
+            Learn more 
+           </div>
+          </div></a> 
+        </div> 
+       </div> 
+       <div class="item item-video" id="item4"> 
+        <img class="bg" src="http://www.stratio.com/wp-content/themes/stratio-theme/images/reimagining-big-data.jpg" style="display:none"> 
+        <div class="text"> 
+         <span>REIMAGINING BIG DATA</span> 
+         <p> FOR ALL OF YOU WHO RECEIVED NO FOR AN ANSWER AND NEVER ABANDONED YOUR DREAMS </p> 
+        </div> 
+        <div class="link"> 
+         <div class="boton-play"></div> 
+         <!-- <img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/ico-play.png" class="play"> --> 
+         <iframe class="videoyoutube" width="" height="" src="http://player.vimeo.com/video/99820506" frameborder="0" allowfullscreen></iframe> 
+        </div> 
+       </div> 
+       <!-- <div class = 'item' id = 'item2'>
+            <img class="bg" src="http://www.stratio.com/wp-content/themes/stratio-theme/images/bg-cabecera-home-03.png" style="display:none">       
+            <div class = 'text'>
+                <span>STRATIO</span>
+                <p>STRATIO´S BIG DATA PLATFORM BASED ON SPARK.<br>100% OPEN SOURCE AND ENTERPRISE-READY</p>
+            </div>
+            <div class="link">
+                
+                <!-- <a href="http://www.stratio.com/products/sds/" class="">Learn more and Download</a> --> 
+       <!--          <a href="http://www.stratio.com/products/stratio/" class="nuevo-enlace"><div class="contenedor-enlace"><div class="newflecha"><div></div></div><div class="text-link">Learn more and Download</div></div></a>
+            </div>
+        </div>		--> 
+       <div class="item" id="item3"> 
+        <img class="bg" src="http://www.stratio.com/wp-content/themes/stratio-theme/images/bg-cabecera-home-02.png" style="display:none"> 
+        <div class="text"> 
+         <span>STRATIO IN ACTION</span> 
+         <p>BIG DATA TECHNOLOGY APPLIED TO THE TRAVEL INDUSTRY<br>IN A SUCCESSFUL USE CASE</p> 
+        </div> 
+        <div class="link"> 
+         <div class="boton-play"></div> 
+         <!-- <img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/ico-play.png" class="play"> --> 
+         <iframe class="videoyoutube" width="" height="" src="http://player.vimeo.com/video/95745220" frameborder="0" allowfullscreen></iframe> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="slideSelectors"> 
+     <div class="item selected"></div> 
+     <div class="item"></div> 
+     <div class="item"></div> 
+     <div class="item"></div> 
+    </div> 
+   </header> 
+  </div> 
+  <script>
+        $(function(){
+            $('#TopMenu li.downloads a').addClass('downloads');
+            $('#TopMenu li.downloads').removeClass('downloads');
+            $('.principalproductos > a').addClass('productos');
+            if ( $('#MainMenu .current-menu-item').parent().hasClass('menuprincipal') ) {
+                $('#MainMenu .current-menu-item > a').addClass('on')
+            } else {
+                $('#MainMenu .current-menu-ancestor > a').addClass('on')
+            }
+        })
+    </script> 
+  <div class="main-container inicio"> 
+   <div class="main wrapper clearfix logo"> 
+    <article> 
+     <header> 
+      <h1><a href="http://www.stratio.com/products/stratio/">STRATIO</a></h1> 
+      <p>STRATIO OPEN DISTRIBUTION BASED ON SPARK</p> 
+     </header> 
+     <section> 
+      <p> Stratio is a Big Data platform based on Spark. It is <strong>100% open source</strong> and <strong>enterprise - ready</strong>. In Stratio we are Pure Spark, since it is the only technology in the market able to combine stored data analyses with real time streaming data, all in the same query. </p> 
+      <p> We are unique in integrating <strong> Spark </strong> processing with the main <strong> NoSql </strong> databases: <strong> Cassandra, MongoDB, ElasticSearch, ...</strong> </p> 
+      <!--  
+                <a href="http://www.stratio.com?goto=http%3A%2F%2Frepository.stratio.com%2Fsds%2Flatest%2Fstratio-installer.sh" class="linkdownload"><p class="download downloadSDS">DOWNLOAD STRATIO<br><span>Ver. 0.9.0</span></p></a> 
+                --> 
+      <div class="contenedor-descarga"> 
+       <a href="#" class="newlinkdownload" onclick="sendDownloadFileGAEvent('http://www.stratio.com?goto=http%3A%2F%2Frepository.stratio.com%2Fsds%2Flatest%2Fstratio-installer.sh', 'Products', 'Download', 'SDS OPEN', 0);return false;"> 
+        <div class="nuevoboton"> 
+         <div class="ico-new-download"></div> 
+         <div class="texto-boton">
+          <p class="newdownload">DOWNLOAD STRATIO</p>
+          <p class="nuevaversion">Ver. 0.9.1</p>
+         </div> 
+        </div> </a> 
+      </div> 
+      <p class="legal">By downloading this product you are accepting our <a href="http://www.stratio.com/license/" target="_blank">Terms &amp; Conditions</a></p> 
+     </section> 
+    </article> 
+    <aside class="inicial"> 
+     <!-- <h3>WHAT IS... <strong>in a few words</strong></h3> --> 
+     <h4>A UNIFIER DATA HUB</h4> 
+     <p>Combine historical data and real-time data streaming in a single query.</p> 
+     <h4>MULTI-APPLICATION MULTI-DATA</h4> 
+     <p>Concentrate all and any type of data into a single Data Hub that allows the implementation of any use case or application.</p> 
+     <h4>BIG DATA CHILD'S PLAY</h4> 
+     <p>An easy SQL-like interface to access all the power and capabilities of the platform.</p> 
+     <!-- <p class="boton"><a href="http://www.stratio.com/products/sds/">GET MORE INFORMATION</a></p>--> 
+    </aside> 
+   </div> 
+   <!-- #main --> 
+   <div class="marco"> 
+    <div class="banner" style=""> 
+     <ul> 
+      <li><h4>A UNIFIER DATA HUB</h4><p>Combine historical data and real-time data streaming in a single query.</p></li> 
+      <li><h4>MULTI-APPLICATION MULTI-DATA</h4><p>Concentrate all and any type of data into a single Data Hub that allows the implementation of any use case or application.</p></li> 
+      <li><h4>BIG DATA CHILD'S PLAY</h4><p>An easy SQL-like interface to access all the power and capabilities of the platform.</p></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="wrapper customers"> 
+    <h2>CLIENTS USING OUR PRODUCTS</h2> 
+    <ul> 
+     <li><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/cliente01.png"></li> 
+     <li><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/cliente02.png"></li> 
+     <li><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/cliente03.png"></li> 
+     <li><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/cliente04.png"></li> 
+     <li><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/cliente05.png"></li> 
+     <li><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/cliente06.png"></li> 
+     <!-- <li><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/cliente07.png"></li> 
+            <li><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/cliente08.png"></li>--> 
+     <li><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/cliente09.png"></li> 
+     <li><img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/cliente10.png"></li> 
+    </ul> 
+    <!--<a href="http://www.stratio.com/customers/" class="enlace flecha">Use Cases</a>--> 
+    <a href="http://www.stratio.com/customers/" class="nuevo-enlace">
+     <div class="contenedor-enlace">
+      <div class="newflecha">
+       <div></div>
+      </div>
+      <div class="text-link">
+       Use Cases
+      </div>
+     </div></a> 
+   </div> 
+   <div class="main wrapper clearfix"> 
+    <div class="col1-1"> 
+     <div class="home poster"> 
+      <img src="http://www.stratio.com/wp-content/themes/stratio-theme/images/portada-video01-big.png"> 
+      <div class="cortinilla" style="text-align:center;"> 
+       <p style="">DO YOU KNOW WHY OUR CLIENTS CHOOSE STRATIO?<br><br>HERE’S WHY</p> 
+       <!--  <a href="#" class="play"></a> --> 
+      </div> 
+      <iframe class="videoyoutube" width="" height="" src="http://player.vimeo.com/video/94341465" frameborder="0" allowfullscreen></iframe> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- #main --> 
+   <div class="marco2"> 
+    <div class="titulonoticias"> 
+     <div class="contenedortitulo"> 
+      <h3>NEXT EVENTS</h3> 
+     </div> 
+     <div class="contenedor-arrow"> 
+      <div class="arrow-before"></div> 
+     </div> 
+     <div class="contenedorbanner2"> 
+      <div class="banner2"> 
+       <ul> 
+        <!-- before while -->
+        <!-- End while --> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="main wrapper clearfix columnas3_4"> 
+    <article> 
+     <section> 
+      <div class="col1_3"> 
+       <h3 class="training">TRAINING</h3> 
+       <p>Get ready for your Big Data challenge. Courses and Stratio certifications for developers and administrators. On-demand training. Courses designed by Big Data experts.</p> 
+       <!--<a href="http://www.stratio.com/training/" class="enlace flecha">Got to Training</a> --> 
+       <a href="http://www.stratio.com/training/" class="nuevo-enlace">
+        <div class="contenedor-enlace">
+         <div class="newflecha">
+          <div></div>
+         </div>
+         <div class="text-link">
+          Got to Training
+         </div>
+        </div></a> 
+      </div> 
+      <div class="col1_3"> 
+       <h3 class="resources">RESOURCES</h3> 
+       <p>Watch our videos, presentations and other recorded events. Read through the Stratio documentation for comprehensive information of the Stratio architecture.</p> 
+       <!-- <a href="http://www.stratio.com/resources/" class="enlace flecha">Go to Resources</a> --> 
+       <a href="http://www.stratio.com/resources/" class="nuevo-enlace">
+        <div class="contenedor-enlace">
+         <div class="newflecha">
+          <div></div>
+         </div>
+         <div class="text-link">
+          Go to Resources
+         </div>
+        </div></a> 
+      </div> 
+      <div class="col1_3 sinmargin"> 
+       <h3 class="community">COMMUNITY</h3> 
+       <p>Meet the developers and take part in the community. Technical documentation, forums, code repository, blog and other resources for developers and contributors.</p> 
+       <!-- <a href="http://www.openstratio.org/" target="_blank" class="enlace flecha">Visit Community site</a> --> 
+       <a href="http://www.openstratio.org/" class="nuevo-enlace" target="_blank">
+        <div class="contenedor-enlace">
+         <div class="newflecha">
+          <div></div>
+         </div>
+         <div class="text-link">
+          Visit Community site
+         </div>
+        </div></a> 
+      </div> 
+      <div class="col1_3"> 
+       <h3 class="talent">TALENT</h3> 
+       <p>We are always looking for new talent. If you are passionate about Big Data, we want to know you.</p> 
+       <!--<a href="http://www.stratio.com/company/careers" class="enlace flecha">Open positions</a>--> 
+       <a href="http://www.stratio.com/company/careers" class="nuevo-enlace">
+        <div class="contenedor-enlace">
+         <div class="newflecha">
+          <div></div>
+         </div>
+         <div class="text-link">
+          Open positions
+         </div>
+        </div></a> 
+      </div> 
+     </section> 
+    </article> 
+    <aside class="black"> 
+     <h3>NEXT EVENTS</h3> 
+     <h4>BIG DATA SPAIN 2014</h4> 
+     <p>Madrid 17 - 18 November 2014</p> 
+     <h4>Apache Cassandra meetup</h4> 
+     <p>Madrid 7 October 2014</p> 
+     <a href="http://www.stratio.com/company/events/" class="more">Events details</a> 
+    </aside> 
+   </div> 
+   <!-- #main --> 
+   <div class="main wrapper clearfix social"> 
+    <hr> 
+    <article class="blog"> 
+     <section> 
+      <h2>OUR BLOG</h2> 
+      <h3> <a style="color:#1AB7EA;text-decoration:none; line-height: 1.5; font-size: 20px;" href="http://www.stratio.com/deep-vs-datastax/" title="SPARK &amp; CASSANDRA INTEGRATION: Benchmark comparison: DataStax Vs. Stratio"> Spark &amp; Cassandra Integration. Benchmark comparison: DataStax Vs. Stratio </a> </h3>
+      <h3> </h3>
+      <h3> <a target="_blank" style="color:#1AB7EA;text-decoration:none; line-height: 1.5; font-size: 20px;" href="http://blog.stratio.com/post/98808962229" title="Posted 30 September 2014 | 2:59 pm"> A new Partner, Xeridia, joins us on our journey through Big Data. </a> </h3>
+      <h3> </h3>
+      <h3> <a target="_blank" style="color:#1AB7EA;text-decoration:none; line-height: 1.5; font-size: 20px;" href="http://blog.stratio.com/post/98808524974" title="Posted 30 September 2014 | 2:51 pm"> We were at the MongoDB meet-up on 18 September in Madrid (Mongodb + spark) </a> </h3>
+      <h3> </h3>
+      <h3> <a target="_blank" style="color:#1AB7EA;text-decoration:none; line-height: 1.5; font-size: 20px;" href="http://blog.stratio.com/post/98807987259" title="Posted 30 September 2014 | 2:41 pm"> We were at the Cassandra Summit, from 10 to 12 September in San Francisco </a> </h3>
+      <h3> </h3>
+      <h3> <a target="_blank" style="color:#1AB7EA;text-decoration:none; line-height: 1.5; font-size: 20px;" href="http://blog.stratio.com/post/94429841934" title="Posted 11 August 2014 | 12:31 pm"> When Stratio Met Spark: A True Love Story </a> </h3>
+      <h3> </h3>
+      <h3> <a target="_blank" style="color:#1AB7EA;text-decoration:none; line-height: 1.5; font-size: 20px;" href="http://blog.stratio.com/post/93199724644" title="Posted 29 July 2014 | 9:58 am"> Stratio sponsors Big Data Spain 2014 </a> </h3>
+      <h3> </h3>
+     </section> 
+    </article> 
+    <aside class="twitter"> 
+     <h2>TWITTER</h2> 
+     <h3><a href="https://twitter.com/StratioBD" target="_blank">@stratioBD</a></h3> 
+     <p>RT <a href="http://twitter.com/zcourts">@zcourts</a>: Impressive fulltext <a href="http://twitter.com/#!/search/%23search">#search</a> using <a href="http://twitter.com/#!/search/%23lucene"></a><a href="http://twitter.com/#!/search/%23lucene">#lucene</a> on cassandra <a href="http://twitter.com/#!/search/%23cassandrasummit"></a><a href="http://twitter.com/#!/search/%23cassandra">#cassandra</a>summit http://t.co/jfWGLm6OW3</p>
+     <p>RT <a href="http://twitter.com/calonso">@calonso</a>: One of the top3 tech <a href="http://twitter.com/#!/search/%23CassandraSummit">#CassandraSummit</a> talks is from <a href="http://twitter.com/StratioBD"></a><a href="http://twitter.com/StratioBD">@StratioBD</a> <a href="http://twitter.com/a_de_la_pena">@a_de_la_pena</a> <a href="http://twitter.com/dhiguero">@dhiguero</a> Congrats! <a href="http://twitter.com/#!/search/%23MarcaEspaña">#MarcaEspaña</a> <a href="http://twitter.com/DataStax">@DataStax</a> @Plane…</p>
+     <p>RT <a href="http://twitter.com/ashic">@ashic</a>: cool <a href="http://twitter.com/#!/search/%23lucene">#lucene</a> indexing for nice index queries in <a href="http://twitter.com/#!/search/%23cassandra">#cassandra</a> from <a href="http://twitter.com/StratioBD">@StratioBD</a></p> 
+     <!--h3>@stratioBD</h3>
+            <p>No te pierdas las OpenClass de <strong>@alvaroegea</strong> sobre <strong>#bigdata</strong> y su entrevista en <strong>@RevistaUNIR http://bit.ly/OHxuRG</strong></p>
+            <p><strong>@Borjaorquesta:</strong> "No te puedes quedar mirando. Hay que conseguir errar barato" <strong>@StratioBD @IDG_tv</strong></p>
+            <p>Oscar Méndez <strong>@omendezsoto</strong> hablando en el Big Data de IDG en Madrid hoy <strong>pic.twitter.com/EZP5faLTT9</strong></p--> 
+    </aside> 
+   </div> 
+   <!-- #main --> 
+  </div> 
+  <!-- #main-container --> 
+  <div class="footer-container"> 
+   <footer class="wrapper clearfix"> 
+    <div class="colum-izq-footer"> 
+     <p class="sales">Sales contact: +34 <strong>91 828 64 73</strong><span class="social"><a href="https://www.facebook.com/pages/Stratio/264828613656267?ref=hl" target="_blank" class="ico-face"></a><a href="https://twitter.com/StratioBD" target="_blank" class="ico-twi"></a><a href="https://www.linkedin.com/company/5122962?trk=tyah&amp;trkInfo=tarId%3A1399389101095%2Ctas%3Astratio%2Cidx%3A2-2-3" target="_blank" class="ico-link"></a></span></p> 
+     <a href="#boton_menu" class="gotomenu"><p class="gotomenu clearfix"><span>GO TO MENU</span></p></a> 
+     <a href="http://www.openstratio.org" target="_blank" class="botoncommunitymobile"> <p class="botoncommunitymobile"> <span class="community">COMMUNITY</span> </p> </a> 
+     <ul id="FooterMainMenu" class="principal">
+      <li id="menu-item-222" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-222"><a href="http://www.stratio.com/products-general/">Products</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="http://www.stratio.com/products/stratio/">Stratio</a></li> 
+        <li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a href="http://www.stratio.com/products/sds-enterprise/">Stratio Enterprise</a></li> 
+        <li id="menu-item-159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-159"><a href="http://www.stratio.com/products/stratio-sandbox/">Stratio Sandbox</a></li> 
+        <li id="menu-item-306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306"><a href="http://www.stratio.com/products/why-spark/">Why Spark</a></li> 
+       </ul> </li> 
+      <li id="menu-item-155" class="doble_fin menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a href="http://www.stratio.com/partners/">Partners</a></li> 
+      <li id="menu-item-154" class="doble_fin menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="http://www.stratio.com/customers/">Clients</a></li> 
+      <li id="menu-item-160" class="doble_ini menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="http://www.stratio.com/resources/">Resources</a></li> 
+      <li id="menu-item-161" class="doble_fin menu-item menu-item-type-post_type menu-item-object-page menu-item-161"><a href="http://www.stratio.com/training/">Training</a></li> 
+      <li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-192"><a>Company</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="http://www.stratio.com/company/careers/">Careers</a></li> 
+        <li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="http://www.stratio.com/company/events/">Events</a></li> 
+        <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="http://www.stratio.com/company/contact/">Contact</a></li> 
+       </ul> </li> 
+     </ul> 
+     <script>
+                $(function(){
+                    $('#FooterMainMenu .sub-menu').addClass('secundario').removeClass('sub-menu');
+                    $('.doble_fin').each(function(){
+                        $('<br>').appendTo($(anterior));
+                        var anterior = $(this).prev()
+                        var contenido = $(this).html();
+                        $(contenido).appendTo($(anterior))
+                        $(this).remove();
+                    })
+                })
+            </script> 
+     <p></p> 
+     <span class="logo-footer"></span> 
+     <ul class="allright"> 
+      <li><a href="http://www.stratio.com/privacy-policy/">Privacy Policy</a></li> 
+      <!-- <li><a href="#">Privacy Policy</a></li> --> 
+      <li>©2014 Stratio. All rights reserved</li> 
+     </ul> 
+    </div> 
+    <div class="colum-der-footer"> 
+     <h1>WE ARE IN...</h1> 
+     <ul>
+      <li>USA</li>
+      <li><span>718 University Avenue, Suite 210.</span></li>
+      <li><span>Los Gatos. CA 95032</span></li>
+     </ul> 
+     <ul>
+      <li>EUROPE</li>
+      <li><span>Avda. Europa, 26 Ática 5 2ª planta</span></li>
+      <li><span>28224 Pozuelo de Alarcón, Madrid</span></li>
+     </ul> 
+    </div> 
+   </footer> 
+  </div> 
+  <!--lightbox video --> 
+  <div class="black_overlay"></div> 
+  <div class="lightbox-video light"> 
+   <div class="contenedorvideo"> 
+    <iframe class="videoyoutube" width="" height="" src="" frameborder="0" allowfullscreen></iframe> 
+   </div> 
+  </div> 
+  <!--fin lightbox video --> 
+  <script type="text/javascript" src="http://www.stratio.com/wp-includes/js/comment-reply.min.js?ver=3.9"></script> 
+  <script type="text/javascript" src="http://www.stratio.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.50.0-2014.02.05"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.stratio.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.stratio.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.8"></script> 
+  <script type="text/javascript" src="http://www.stratio.com/wp-content/plugins/bj-lazy-load/js/combined.min.js?ver=0.7.1"></script> 
+  <!-- Don't forget analytics --> 
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41701261-1', 'stratio.com');
+      ga('send', 'pageview');
+
+    </script>   
+  <!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.stratio.com @ 2014-12-05 09:10:09 by W3 Total Cache -->
+ </body>
+</html>

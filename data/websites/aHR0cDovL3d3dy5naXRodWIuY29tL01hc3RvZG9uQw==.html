@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+ <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta http-equiv="Content-Language" content="en"> 
+  <title>Mastodon C · GitHub</title> 
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub"> 
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub"> 
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png"> 
+  <meta property="fb:app_id" content="1401488693436528"> 
+  <meta content="GitHub" property="og:site_name">
+  <meta content="profile" property="og:type">
+  <meta content="https://avatars1.githubusercontent.com/u/2911834?v=3&amp;s=280" property="og:image">
+  <meta content="Mastodon C" property="og:title">
+  <meta content="https://github.com/MastodonC" property="og:url">
+  <meta content="MastodonC" property="profile:username"> 
+  <meta name="browser-stats-url" content="/_stats"> 
+  <link rel="assets" href="https://assets-cdn.github.com/"> 
+  <link rel="conduit-xhr" href="https://ghconduit.com:25035"> 
+  <meta name="pjax-timeout" content="1000"> 
+  <meta name="msapplication-TileImage" content="/windows-tile.png"> 
+  <meta name="msapplication-TileColor" content="#ffffff"> 
+  <meta name="selected-link" value="/MastodonC" data-pjax-transient=""> 
+  <meta name="google-analytics" content="UA-3769691-2"> 
+  <meta content="collector.githubapp.com" name="octolytics-host">
+  <meta content="collector-cdn.github.com" name="octolytics-script-host">
+  <meta content="github" name="octolytics-app-id">
+  <meta content="9B382849:6D69:BD51A73:548176A1" name="octolytics-dimension-request_id"> 
+  <meta content="Rails, view, users#show" name="analytics-event"> 
+  <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"> 
+  <meta content="authenticity_token" name="csrf-param"> 
+  <meta content="ze6lwLSYPOfRRP51BHpNKESbH9H37NcS3GUqUdjkJlsVwR+TaXLkTEme4motWYKMtMluGqy52MWC0xhKilezIg==" name="csrf-token"> 
+  <link href="https://assets-cdn.github.com/assets/github-2a88a7bf0ff1b660d7ff29c3220a68751650b37fc53d40d3a7068e835fd213ec.css" media="all" rel="stylesheet" type="text/css"> 
+  <link href="https://assets-cdn.github.com/assets/github2-b36fcdb95993682cc6d5f175a21907c22d43c9149860bf5071a77ec0697a4eb6.css" media="all" rel="stylesheet" type="text/css"> 
+  <meta http-equiv="x-pjax-version" content="709dfe2f1afb76bb5ed2c62514721540"> 
+  <meta name="description" content="Build software better, together."> 
+ </head> 
+ <body class="logged_out  env-production   org"> 
+  <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a> 
+  <div class="wrapper"> 
+   <div class="header header-logged-out" role="banner"> 
+    <div class="container clearfix"> 
+     <a class="header-logo-wordmark" href="https://github.com/" ga-data-click="(Logged out) Header, go to homepage, icon:logo-wordmark"> <span class="mega-octicon octicon-logo-github"></span> </a> 
+     <div class="header-actions" role="navigation"> 
+      <a class="button primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a> 
+      <a class="button" href="/login?return_to=%2FMastodonC" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a> 
+     </div> 
+     <div class="site-search  js-site-search" role="search"> 
+      <form accept-charset="UTF-8" action="/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="" method="get">
+       <div style="margin:0;padding:0;display:inline">
+        <input name="utf8" type="hidden" value="✓">
+       </div> 
+       <input type="text" class="" data-hotkey="s" name="q" placeholder="Search GitHub" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" tabindex="1" autocapitalize="off"> 
+       <div class="scope-badge">
+        This repository
+       </div> 
+      </form> 
+     </div> 
+     <ul class="header-nav left" role="navigation"> 
+      <li class="header-nav-item"> <a class="header-nav-link" href="/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a> </li> 
+      <li class="header-nav-item"> <a class="header-nav-link" href="/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a> </li> 
+      <li class="header-nav-item"> <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a> </li> 
+      <li class="header-nav-item"> <a class="header-nav-link" href="/blog" data-ga-click="(Logged out) Header, go to blog, text:blog">Blog</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="start-of-content" class="accessibility-aid"></div> 
+   <div class="site clearfix" role="main"> 
+    <div id="site-container" class="context-loader-container" data-pjax-container=""> 
+     <div itemscope itemtype="http://schema.org/Organization"> 
+      <header class="org-header"> 
+       <div class="container"> 
+        <div class="org-header-wrapper"> 
+         <img alt="Mastodon C" class="avatar" data-user="2911834" height="100" itemprop="image" src="https://avatars1.githubusercontent.com/u/2911834?v=3&amp;s=200" width="100"> 
+         <div class="org-header-info"> 
+          <h1 class="org-name"> <span class="js-username" data-name="MastodonC">Mastodon C</span> </h1> 
+          <ul class="org-header-meta has-location has-blog has-email"> 
+           <li class="meta-item"> <span class="octicon octicon-location"></span> <span itemprop="location" title="The Greenest Data Centre and London">The Greenest Data Centre and London</span> </li> 
+           <li class="meta-item"> <span class="octicon octicon-link"></span> <a href="http://www.mastodonc.com" class="meta-link" itemprop="url" title="http://www.mastodonc.com">http://www.mastodonc.com</a> </li> 
+           <li class="meta-item"> <span class="octicon octicon-mail"></span> <a class="meta-link" href="mailto:theteam@mastodonc.com" itemprop="email">theteam@mastodonc.com</a> </li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div>
+      </header>
+      <!-- /.org-header --> 
+      <div class="container"> 
+       <div class="org-main"> 
+        <div class="subnav subnav-bordered subnav-flush org-toolbar"> 
+         <div class="subnav-search-context select-menu left js-menu-container js-select-menu"> 
+          <button class="button select-menu-button js-menu-target" type="button" aria-haspopup="true"> Filters </button> 
+          <div class="select-menu-modal-holder js-menu-content js-navigation-container" id="repository-search-filters"> 
+           <div class="select-menu-modal"> 
+            <div class="select-menu-list"> 
+             <div class="select-menu-item js-navigation-item js-repo-search-filter" data-filter="only:sources" data-negate="only:forks"> 
+              <span class="select-menu-item-icon octicon octicon-code"></span> 
+              <div class="select-menu-item-text">
+                Sources 
+              </div> 
+             </div> 
+             <div class="select-menu-item js-navigation-item js-repo-search-filter" data-filter="only:forks" data-negate="only:sources"> 
+              <span class="select-menu-item-icon octicon octicon-repo-forked"></span> 
+              <div class="select-menu-item-text">
+                Forks 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <form class="subnav-search left" action="/MastodonC" data-results-container="org-repositories"> 
+          <div class="auto-search-group"> 
+           <input class="subnav-search-input input-contrast auto-search-input js-repo-filter-field js-autosearch-field" type="text" name="query" value="" placeholder="Find a repository…" autocomplete="off" data-filter-dropdown="repository-search-filters" data-host="github.com" data-org="MastodonC"> 
+           <span class="octicon octicon-search"></span> 
+           <img class="spinner" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" alt=""> 
+          </div> 
+         </form> 
+        </div> 
+        <div class="org-repos repo-list context-loader-container" id="org-repositories" data-pjax-container=""> 
+         <div class="context-loader large-format-loader"> 
+          <p><img alt="" height="64" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="64"></p> 
+          <p>Loading…</p> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Clojure </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.hecuba/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 27 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.hecuba/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/kixi.hecuba" itemprop="name codeRepository"> kixi.hecuba</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-12-04T14:34:29Z" is="relative-time">Dec 4, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/kixi.hecuba/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Clojure </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.eventlog/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 1 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.eventlog/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/kixi.eventlog" itemprop="name codeRepository"> kixi.eventlog</a> </h3> 
+          <p class="repo-list-description" itemprop="description"> A kixi module to accept events and store them </p> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-12-03T11:53:04Z" is="relative-time">Dec 3, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/kixi.eventlog/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public fork" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Clojure </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/bifrost/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/bifrost/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 8 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/bifrost" itemprop="name codeRepository"> bifrost</a> </h3> 
+          <p class="repo-list-info"> <span class="octicon octicon-repo-forked"></span> forked from <a href="/uswitch/bifrost">uswitch/bifrost</a> </p> 
+          <p class="repo-list-description" itemprop="description"> Safely archive data from Apache Kafka to S3 with no Hadoop dependencies :) </p> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-12-02T22:57:36Z" is="relative-time">Dec 2, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/bifrost/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Shell </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-kafka/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-kafka/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/docker-kafka" itemprop="name codeRepository"> docker-kafka</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-11-19T15:58:25Z" is="relative-time">Nov 19, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/docker-kafka/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Shell </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-elasticsearch/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-elasticsearch/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/docker-elasticsearch" itemprop="name codeRepository"> docker-elasticsearch</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-11-06T15:12:09Z" is="relative-time">Nov 6, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/docker-elasticsearch/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Shell </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-zookeeper/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 1 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-zookeeper/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/docker-zookeeper" itemprop="name codeRepository"> docker-zookeeper</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-11-06T14:57:25Z" is="relative-time">Nov 6, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/docker-zookeeper/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Shell </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-logstash/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-logstash/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/docker-logstash" itemprop="name codeRepository"> docker-logstash</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-11-06T14:57:22Z" is="relative-time">Nov 6, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/docker-logstash/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Shell </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-kibana/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-kibana/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/docker-kibana" itemprop="name codeRepository"> docker-kibana</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-11-06T14:57:19Z" is="relative-time">Nov 6, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/docker-kibana/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Shell </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-cassandra/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-cassandra/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/docker-cassandra" itemprop="name codeRepository"> docker-cassandra</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-11-06T14:57:14Z" is="relative-time">Nov 6, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/docker-cassandra/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Shell </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-basejava/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/docker-basejava/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/docker-basejava" itemprop="name codeRepository"> docker-basejava</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-11-06T14:57:09Z" is="relative-time">Nov 6, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/docker-basejava/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Clojure </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.health-data/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.health-data/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/kixi.health-data" itemprop="name codeRepository"> kixi.health-data</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-11-03T11:16:52Z" is="relative-time">Nov 3, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/kixi.health-data/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Clojure </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.amon-schema/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.amon-schema/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/kixi.amon-schema" itemprop="name codeRepository"> kixi.amon-schema</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-10-24T16:29:28Z" is="relative-time">Oct 24, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/kixi.amon-schema/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public fork" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Clojure </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/clj-kafka/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 1 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/clj-kafka/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 30 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/clj-kafka" itemprop="name codeRepository"> clj-kafka</a> </h3> 
+          <p class="repo-list-info"> <span class="octicon octicon-repo-forked"></span> forked from <a href="/pingles/clj-kafka">pingles/clj-kafka</a> </p> 
+          <p class="repo-list-description" itemprop="description"> Wrapper to the Java API for interacting with Kafka </p> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-10-23T18:02:08Z" is="relative-time">Oct 23, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/clj-kafka/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public fork" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Clojure </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/liberator/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/liberator/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 79 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/liberator" itemprop="name codeRepository"> liberator</a> </h3> 
+          <p class="repo-list-info"> <span class="octicon octicon-repo-forked"></span> forked from <a href="/clojure-liberator/liberator">clojure-liberator/liberator</a> </p> 
+          <p class="repo-list-description" itemprop="description"> Liberator is a Clojure library for building RESTful applications. </p> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-09-17T15:06:13Z" is="relative-time">Sep 17, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/liberator/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Clojure </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.stentor/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 1 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.stentor/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/kixi.stentor" itemprop="name codeRepository"> kixi.stentor</a> </h3> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-09-15T10:54:01Z" is="relative-time">Sep 15, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/kixi.stentor/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public fork" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> CSS </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/cdec.openhealthdata/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/cdec.openhealthdata/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 17 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/cdec.openhealthdata" itemprop="name codeRepository"> cdec.openhealthdata</a> </h3> 
+          <p class="repo-list-info"> <span class="octicon octicon-repo-forked"></span> forked from <a href="/CDECatapult/cdec.openhealthdata">CDECatapult/cdec.openhealthdata</a> </p> 
+          <p class="repo-list-description" itemprop="description"> CDEC Open Health Data Platform </p> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-09-04T18:05:11Z" is="relative-time">Sep 4, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/cdec.openhealthdata/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public fork" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> CSS </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/CDECatapult.github.io/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/CDECatapult.github.io/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 7 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/CDECatapult.github.io" itemprop="name codeRepository"> CDECatapult.github.io</a> </h3> 
+          <p class="repo-list-info"> <span class="octicon octicon-repo-forked"></span> forked from <a href="/CDECatapult/CDECatapult.github.io">CDECatapult/CDECatapult.github.io</a> </p> 
+          <p class="repo-list-description" itemprop="description"> The CDECatapult Website </p> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-09-01T11:27:40Z" is="relative-time">Sep 1, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/CDECatapult.github.io/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Shell </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.sftp-server/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.sftp-server/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/kixi.sftp-server" itemprop="name codeRepository"> kixi.sftp-server</a> </h3> 
+          <p class="repo-list-description" itemprop="description"> Dockerfile to run an SFTP server on an Ubuntu image and associated vagrantfle to start it </p> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-08-20T15:23:27Z" is="relative-time">Aug 20, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/kixi.sftp-server/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Shell </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.cassandra/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.cassandra/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/kixi.cassandra" itemprop="name codeRepository"> kixi.cassandra</a> </h3> 
+          <p class="repo-list-description" itemprop="description"> Dockerfile to run Cassandra 2 on an Ubuntu image and associated Vagrantfile to start it </p> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-08-20T09:12:34Z" is="relative-time">Aug 20, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/kixi.cassandra/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code"> 
+          <div class="repo-list-stats"> 
+           <span itemprop="programmingLanguage"> Shell </span> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.elasticsearch/stargazers" aria-label="Stargazers"> <span class="octicon octicon-star"></span> 0 </a> 
+           <a class="repo-list-stat-item tooltipped tooltipped-s" href="/MastodonC/kixi.elasticsearch/network" aria-label="Forks"> <span class="octicon octicon-git-branch"></span> 0 </a> 
+          </div> 
+          <h3 class="repo-list-name"> <a href="/MastodonC/kixi.elasticsearch" itemprop="name codeRepository"> kixi.elasticsearch</a> </h3> 
+          <p class="repo-list-description" itemprop="description"> Dockerfile to run elasticsearch on an Ubuntu image and associated vagrantfle to start it </p> 
+          <p class="repo-list-meta"> Updated <time datetime="2014-08-20T09:12:19Z" is="relative-time">Aug 20, 2014</time> </p> 
+          <div class="participation-graph"> 
+           <canvas class="js-participation-graph bars" data-color-all="#f8f8f8" data-color-owner="#dedede" data-source="/MastodonC/kixi.elasticsearch/graphs/owner_participation" width="640" height="100"></canvas> 
+          </div> 
+         </div> 
+         <div class="paginate-container" data-pjax=""> 
+          <div class="pagination">
+           <span class="previous_page disabled">Previous</span> 
+           <em class="current">1</em> 
+           <a rel="next" href="/MastodonC?page=2">2</a> 
+           <a href="/MastodonC?page=3">3</a> 
+           <a class="next_page" rel="next" href="/MastodonC?page=2">Next</a>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="org-sidebar"> 
+        <div class="org-module simple-box"> 
+         <h3 class="org-module-title org-members-title"> <a class="org-module-link" href="/orgs/MastodonC/people"> <span class="org-stats"> 4 <span class="octicon octicon-chevron-right"></span> </span> People </a> </h3> 
+         <div class="member-avatar-group"> 
+          <a href="/annapawlicka" class="member-avatar tooltipped tooltipped-s" aria-label="annapawlicka"> <img alt="Anna Pawlicka" class="avatar" data-user="2522010" height="60" src="https://avatars0.githubusercontent.com/u/2522010?v=3&amp;s=120" width="60"> </a> 
+          <a href="/fhr" class="member-avatar tooltipped tooltipped-s" aria-label="fhr"> <img alt="Francine Bennett" class="avatar" data-user="710672" height="60" src="https://avatars1.githubusercontent.com/u/710672?v=3&amp;s=120" width="60"> </a> 
+          <a href="/otfrom" class="member-avatar tooltipped tooltipped-s" aria-label="otfrom"> <img alt="Bruce Durling" class="avatar" data-user="64839" height="60" src="https://avatars1.githubusercontent.com/u/64839?v=3&amp;s=120" width="60"> </a> 
+          <a href="/sw1nn" class="member-avatar tooltipped tooltipped-s" aria-label="sw1nn"> <img alt="Neale Swinnerton" class="avatar" data-user="373335" height="60" src="https://avatars0.githubusercontent.com/u/373335?v=3&amp;s=120" width="60"> </a> 
+         </div> 
+        </div> 
+        <a class="developer-program-badge" href="https://developer.github.com"><span class="octicon octicon-circuit-board"></span>Developer Program Member</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="modal-backdrop"></div> 
+   </div> 
+  </div>
+  <!-- /.wrapper --> 
+  <div class="container"> 
+   <div class="site-footer" role="contentinfo"> 
+    <ul class="site-footer-links right"> 
+     <li><a href="https://status.github.com/">Status</a></li> 
+     <li><a href="https://developer.github.com">API</a></li> 
+     <li><a href="http://training.github.com">Training</a></li> 
+     <li><a href="http://shop.github.com">Shop</a></li> 
+     <li><a href="/blog">Blog</a></li> 
+     <li><a href="/about">About</a></li> 
+    </ul> 
+    <a href="/" aria-label="Homepage"> <span class="mega-octicon octicon-mark-github" title="GitHub"></span> </a> 
+    <ul class="site-footer-links"> 
+     <li>© 2014 <span title="0.05313s from github-fe118-cp1-prd.iad.github.net">GitHub</span>, Inc.</li> 
+     <li><a href="/site/terms">Terms</a></li> 
+     <li><a href="/site/privacy">Privacy</a></li> 
+     <li><a href="/security">Security</a></li> 
+     <li><a href="/contact">Contact</a></li> 
+    </ul> 
+   </div>
+   <!-- /.site-footer --> 
+  </div>
+  <!-- /.container --> 
+  <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay"> 
+   <div class="fullscreen-container js-suggester-container"> 
+    <div class="textarea-wrap"> 
+     <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder=""></textarea> 
+     <div class="suggester-container"> 
+      <div class="suggester fullscreen-suggester js-suggester js-navigation-container"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="fullscreen-sidebar"> 
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode"> <span class="mega-octicon octicon-screen-normal"></span> </a> 
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w" aria-label="Switch themes"> <span class="octicon octicon-color-mode"></span> </a> 
+   </div> 
+  </div> 
+  <div id="ajax-error-message" class="flash flash-error"> 
+   <span class="octicon octicon-alert"></span> 
+   <a href="#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a> Something went wrong with that request. Please try again. 
+  </div> 
+  <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-153d6254b838872c8db73c8bd92905913f6f5b2164b7e40e5292286bd5a39403.js" type="text/javascript"></script> 
+  <script async crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-886fe84cd93793c0e83129f222d7621e25bd43d46a8da650ab27872729a03871.js" type="text/javascript"></script>   
+ </body>
+</html>

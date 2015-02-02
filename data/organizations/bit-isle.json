@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "de5936b604b90a57a416553e9235dd0d",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "description": "As a leading iDC provider in Japan, Bit-isle has been offering cutting edge iDC services and IT outsourcing services to over 650 customers since 2001.\n\nBit-isle operates four iDCs in Tokyo Metropolitan area and jointly operates iDCs in Osaka, Korea and China. The 5th State-of-the-Art green iDC is expected to open in summer 2014 in central Tokyo. Bit-isle iDC services offer highly secure and environmentally controlled facilities to keep customers&#39; IT system up and running 24 hours a day and 365 days a year. \n\nBit-isle iDC Services include;\n\n\nCollocation service\nNetwork connectivity\nRental service\nIntegrated 24/7\u3000Managed service\n\n",
+      "short_description": "A major Japanese independent data center provider",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 4,
+      "founded_on_month": 1,
+      "founded_on_year": 2001,
+      "founded_on": "2001-01-01",
+      "permalink": "bit-isle",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://www.bit-isle.jp/",
+      "name": "Bit-isle, Inc.",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "role_investor": true,
+      "total_students": null,
+      "school_type": null,
+      "stock_symbol": null,
+      "num_alumni": null,
+      "num_members": null,
+      "created_at": 1409435555,
+      "updated_at": 1409458419,
+      "total_funding_usd": 0,
+      "number_of_investments": 1
+    },
+    "relationships": {
+      "investments": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/bit-isle/investments",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "InvestorInvestment",
+            "money_invested": null,
+            "money_invested_currency_code": "USD",
+            "money_invested_usd": null,
+            "funding_round": {
+              "path": "funding-round/3b8564fafbb0e633e0db670384281077"
+            },
+            "invested_in": {
+              "type": "Organization",
+              "name": "Midokura",
+              "path": "organization/midokura"
+            }
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/bit-isle/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.bit-isle.jp/",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1409435556,
+            "updated_at": 1409435556
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "b00481b6b27739ef60bac4aa3ee1406f",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "description": "LumenData (www.lumendata.com) is a leading provider of Enterprise Information Management solutions with deep expertise in Master Data Management, Data Strategy, Data Quality, Data Governance, and Big Data.  Through a combination of highly trained consultants, strong partnerships, and relentless focus on quality and executive oversight, LumenData has successfully delivered planning, implementation, integration, maintenance, and training services to over 50 blue chip clients in industries including Financial Services, Higher Education, Life Sciences, Manufacturing, Retail, Telecom, and more.  Its clients include Autodesk, Bayer, Bausch &amp; Lomb, Citibank, Credit Suisse, Cummins, Gilead, HP, Nintendo, PC Connection, Starbucks, University of Colorado, University of Texas at Dallas, Weight Watchers, Westpac, and many other data dependent companies.  LumenData has offices in Santa Clara, New York, Denver, and Bangalore.\n",
+      "short_description": "A leading provider of EIM solutions with expertise in MDM, Data Quality, Data Governance, and Big Data.",
+      "permalink": "lumendata",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://www.lumendata.com",
+      "name": "LumenData",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 4,
+      "founded_on_month": 1,
+      "founded_on_year": 2007,
+      "founded_on": "2007-01-01",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "created_at": 1403307334,
+      "updated_at": 1415285126,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "board_members_and_advisors": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lumendata/board_members_and_advisors",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "first_name": "Rahul",
+            "last_name": "Sachdev",
+            "title": "Advisor",
+            "started_on": null,
+            "path": "person/rahul-sachdev-2",
+            "created_at": 1391649716,
+            "updated_at": 1411258941
+          }
+        ]
+      },
+      "current_team": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lumendata/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "Nimish",
+            "last_name": "Mehta",
+            "title": "CEO & Founder",
+            "started_on": "2008-07-01",
+            "path": "person/nimish-mehta",
+            "created_at": 1404951435,
+            "updated_at": 1405112341
+          }
+        ]
+      },
+      "acquisitions": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lumendata/acquisitions",
+          "sort_order": "announced_on? desc"
+        },
+        "items": [
+          {
+            "announced_on": "2013-12-01",
+            "type": "Acquisition",
+            "name": "Acquisition",
+            "path": "acquisition/f19cbdb7b2d4bdb533a4ccef150adf54",
+            "created_at": 1403308519,
+            "updated_at": 1403308519
+          }
+        ]
+      },
+      "offices": {
+        "paging": {
+          "total_items": 4,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lumendata/offices",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Branch Office",
+            "street_1": "41 Madison Avenue, 31st Floor",
+            "street_2": null,
+            "postal_code": "10010",
+            "city": "New York",
+            "city_path": "location/new-york/d64b7615985cfbf44affaa89d70c4050",
+            "region": "New York",
+            "region_path": "location/new-york/83ead471332bd02e67b767279aed075b",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1403308423,
+            "updated_at": 1406882527
+          },
+          {
+            "type": "Address",
+            "name": "Solution Center, Bangalore",
+            "street_1": "2nd Floor, D-Block",
+            "street_2": "RMZ Centennial, ITPL Road",
+            "postal_code": "560048",
+            "city": "Whitefield",
+            "city_path": "location/whitefield/ca19b53e16956e84d548cd6263a04292",
+            "region": "Karnataka",
+            "region_path": "location/karnataka/cd79504e3c0a954fa3c6094f46c0d524",
+            "country": "India",
+            "country_path": "location/india/44048bf7db640d7adb20fd3c1ebf47b0",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1403308386,
+            "updated_at": 1406901868
+          },
+          {
+            "type": "Address",
+            "name": "Solution Center, Denver",
+            "street_1": "1062 Delaware Street",
+            "street_2": null,
+            "postal_code": "80204",
+            "city": "Denver",
+            "city_path": "location/denver/b0630aa148bf61a36cd018b348571ea6",
+            "region": "Colorado",
+            "region_path": "location/colorado/056b6b3909ea2c8527aff54b58a28072",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1403308294,
+            "updated_at": 1406882526
+          },
+          {
+            "type": "Address",
+            "name": "Main Office",
+            "street_1": "5201 Great America Parkway #350",
+            "street_2": null,
+            "postal_code": "95054",
+            "city": "Santa Clara",
+            "city_path": "location/santa-clara/3fce50c4f3f9793d2f503fc145585090",
+            "region": "California",
+            "region_path": "location/california/eb879a83c91a121e0bb8829782dbcf04",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1403308120,
+            "updated_at": 1406882525
+          }
+        ]
+      },
+      "headquarters": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lumendata/headquarters",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Main Office",
+            "street_1": "5201 Great America Parkway #350",
+            "street_2": null,
+            "postal_code": "95054",
+            "city": "Santa Clara",
+            "city_path": "location/santa-clara/3fce50c4f3f9793d2f503fc145585090",
+            "region": "California",
+            "region_path": "location/california/eb879a83c91a121e0bb8829782dbcf04",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1403308120,
+            "updated_at": 1406882525
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 7,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lumendata/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Predictive Analytics",
+            "uuid": "ca8390d722c65bb5f87022f52f364b1b",
+            "path": "category/predictive analytics/ca8390d722c65bb5f87022f52f364b1b",
+            "created_at": 1397980728,
+            "updated_at": 1417107624
+          },
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1417159419
+          },
+          {
+            "type": "Category",
+            "name": "Internet of Things",
+            "uuid": "ed3a589dc9a73cbb9feb245f011e1d54",
+            "path": "category/internet of things/ed3a589dc9a73cbb9feb245f011e1d54",
+            "created_at": 1397980727,
+            "updated_at": 1417157184
+          },
+          {
+            "type": "Category",
+            "name": "Machine Learning",
+            "uuid": "5ea0cdb7c9a647fc50f8c9b0fac04863",
+            "path": "category/machine learning/5ea0cdb7c9a647fc50f8c9b0fac04863",
+            "created_at": 1397980727,
+            "updated_at": 1417171338
+          },
+          {
+            "type": "Category",
+            "name": "Big Data Analytics",
+            "uuid": "8a60151f6739dde3c98235fcef7a2db8",
+            "path": "category/big data analytics/8a60151f6739dde3c98235fcef7a2db8",
+            "created_at": 1397980727,
+            "updated_at": 1417155838
+          },
+          {
+            "type": "Category",
+            "name": "Cloud Data Services",
+            "uuid": "d0c29b4e27db3c4734fe94881a585836",
+            "path": "category/cloud data services/d0c29b4e27db3c4734fe94881a585836",
+            "created_at": 1397980726,
+            "updated_at": 1417149717
+          },
+          {
+            "type": "Category",
+            "name": "High Tech",
+            "uuid": "40e6d302c836892c85c9addeb69b654d",
+            "path": "category/high tech/40e6d302c836892c85c9addeb69b654d",
+            "created_at": 1397980726,
+            "updated_at": 1416870318
+          }
+        ]
+      },
+      "customers": {
+        "paging": {
+          "total_items": 40,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lumendata/customers",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Organization",
+            "name": "VMware",
+            "path": "organization/vmware",
+            "created_at": 1398010602,
+            "updated_at": 1416913968
+          },
+          {
+            "type": "Organization",
+            "name": "The University of Texas at Dallas",
+            "path": "organization/the-university-of-texas-at-dallas",
+            "created_at": 1397987819,
+            "updated_at": 1416179874
+          },
+          {
+            "type": "Organization",
+            "name": "James Madison University",
+            "path": "organization/james-madison-university",
+            "created_at": 1397987532,
+            "updated_at": 1417063376
+          },
+          {
+            "type": "Organization",
+            "name": "Humana",
+            "path": "organization/humana",
+            "created_at": 1392689520,
+            "updated_at": 1416915304
+          },
+          {
+            "type": "Organization",
+            "name": "Prudential Financial",
+            "path": "organization/prudential-financial",
+            "created_at": 1390114317,
+            "updated_at": 1413308332
+          },
+          {
+            "type": "Organization",
+            "name": "US Foods",
+            "path": "organization/us-foods",
+            "created_at": 1386685058,
+            "updated_at": 1397989460
+          },
+          {
+            "type": "Organization",
+            "name": "University of Colorado",
+            "path": "organization/university-of-colorado",
+            "created_at": 1385934899,
+            "updated_at": 1415475469
+          },
+          {
+            "type": "Organization",
+            "name": "Cricket Communications",
+            "path": "organization/cricket-communications",
+            "created_at": 1378124131,
+            "updated_at": 1405125386
+          }
+        ]
+      },
+      "founders": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lumendata/founders",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Person",
+            "name": "Nimish Mehta",
+            "path": "person/nimish-mehta",
+            "created_at": 1404951435,
+            "updated_at": 1405112341
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lumendata/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1403299585/zkliixuqm9zhhoatfrjx.png",
+            "created_at": 1403307335,
+            "updated_at": 1403307335
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 5,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lumendata/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://twitter.com/LumenData",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1406433375,
+            "updated_at": 1406433375
+          },
+          {
+            "url": "http://www.linkedin.com/company/lumendata",
+            "type": "WebPresence",
+            "title": "linkedin",
+            "created_at": 1406433374,
+            "updated_at": 1406433374
+          },
+          {
+            "url": "http://plus.google.com/u/0/111119114359832851004",
+            "type": "WebPresence",
+            "title": "google+",
+            "created_at": 1406433373,
+            "updated_at": 1406433373
+          },
+          {
+            "url": "http://www.facebook.com/pages/LumenData/426689927390650",
+            "type": "WebPresence",
+            "title": "facebook",
+            "created_at": 1406433373,
+            "updated_at": 1406433373
+          },
+          {
+            "url": "http://www.lumendata.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1403307334,
+            "updated_at": 1403307334
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Bayes Impact</title> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="author" content="themecube"> 
+  <meta property="og:title" content="Solve the World's Toughest Problems Using Data Science"> 
+  <meta property="og:url" content="http://www.bayesimpact.org"> 
+  <meta property="og:description" content="Bayes Impact is a nonprofit organization that deploys data science teams to work with civic and nonprofit organizations on solving big social impact challenges. Our belief is that true impact comes from combining insight with an absolute focus on execution. We work on a select number of high impact, high feasibility projects and rely on full-time fellows that focus on one project at a time, supported by leading industry and academic mentors, advisors, and volunteers."> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" content="http://www.bayesimpact.org/images/logo_sq.png"> 
+  <link href="/assets/favicon-e1f7f55eba9048e3fe7fad450ece837a.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"> 
+  <link href="/assets/application-b4e8a7ee33e320e16c53a6e48a2fd0af.css" media="all" rel="stylesheet"> 
+  <script src="/assets/application-b4edf21e6c92073ce06050444b3145e6.js"></script> 
+  <meta content="authenticity_token" name="csrf-param"> 
+  <meta content="UPOFopY9PnkQV4oNcGAzD+xqxx9IZnXhksWfcuovIrY=" name="csrf-token"> 
+  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css"> 
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic" rel="stylesheet" type="text/css"> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700,600,400" rel="stylesheet" type="text/css"> 
+  <!--link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'--> 
+  <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script--> 
+ </head> 
+ <body> 
+  <nav class="navbar navbar-custom navbar-static-top " role="navigation"> 
+   <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display --> 
+    <div class="navbar-header page-scroll"> 
+     <button type="button" class="navbar-toggle" id="mao" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <i class="fa fa-bars fa-lg"></i> <i class="fa fa-minus fa-lg"></i> </button> 
+     <a class="navbar-brand" href="/"></a> 
+    </div> 
+    <!-- Collect the nav links, forms, and other content for toggling --> 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+     <ul class="nav navbar-nav navbar-left"> 
+      <li> <a href="/projects" tabindex="-1">View projects</a> </li> 
+      <li> <a href="/how-it-works">How it works</a></li>  
+      <li class="dropdown"> <a class="dropdown-button" href="/about">Learn more <i class="fa fa-caret-down"></i></a> 
+       <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/about">About Us</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/blog/defending-microfinance-with-data-science.html">Blog</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/fellowship">Fellowship</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/contact">Contact us</a></li> 
+       </ul> </li> 
+     </ul> 
+     <ul class="nav navbar-nav navbar-right"> 
+      <li> <a class="hidden-sm" href="/hack" id="hackathon-link">Bayes Hackathon 2014</a> </li> 
+      <li> <a style="padding:0; margin:0;" href="https://donorbox.org/bayesimpact"> 
+        <btn class="btn btn-solid">
+          Support Us 
+        </btn> </a> </li> 
+     </ul> 
+     <div class="mobile-nav"> 
+      <ul> 
+       <li class="main-nav"> <a href="/projects" role="menuitem" tabindex="-1">Our Projects</a> </li> 
+       <li class="main-nav"> <a href="/how-it-works">How It Works</a> </li> 
+       <li class="main-nav"> <a href="/about">About Us</a> </li> 
+       <li class="main-nav"> <a href="/fellowship">Fellowship</a> </li> 
+       <li class="main-nav"> <a href="/blog/defending-microfinance-with-data-science.html">Blog</a> </li> 
+       <li class="main-nav"> <a href="/contact">Contact Us</a> </li> 
+       <li class="main-nav"> <a href="/hack" style="font-weight: bold;">Bayes Hackathon 2014</a> </li> 
+       <li class="main-nav"> <a href="https://donorbox.org/bayesimpact">Support Us</a> </li> 
+      </ul> 
+     </div>
+     <!-- /.navbar-collapse --> 
+    </div>
+    <!-- /.navbar-collapse --> 
+   </div>
+   <!-- /.container-fluid --> 
+  </nav> 
+  <div id="carousel-home" class="carousel slide" data-ride="carousel"> 
+   <!-- Indicators --> 
+   <!-- Wrapper for slides --> 
+   <div class="carousel-inner" style="height:100%; position:relative; text-align:center;"> 
+    <div class="item intro-home1 active" style="height:100%; background-color:black"> 
+     <div class="carousel-caption">
+       We use data science to 
+      <br>save lives
+      <br>
+      <br> 
+      <a href="/how-it-works"> 
+       <btn class="btn btn-line btn-huge">
+         How it works 
+       </btn> </a> 
+     </div> 
+    </div> 
+    <div class="item intro-home2" style="height:100%; background-color:blue"> 
+     <div class="carousel-caption">
+       We use data science to 
+      <br>detect disease
+      <br>
+      <br> 
+      <a href="/how-it-works"> 
+       <btn class="btn btn-line btn-huge">
+         How it works 
+       </btn> </a> 
+     </div> 
+    </div> 
+    <div class="item intro-home3" style="height:100%; background-color:red"> 
+     <div class="carousel-caption">
+       We use data science to 
+      <br>reduce poverty
+      <br>
+      <br> 
+      <a href="/how-it-works"> 
+       <btn class="btn btn-line btn-huge">
+         How it works 
+       </btn> </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="tile"></div> 
+  <div class="light-bg content-section"> 
+   <div id="projects" class="container narrow"> 
+    <div class="row"> 
+     <div class="col-xs-12 text-center"> 
+      <h2 class="inline no-padding" style="margin:60px 0px 40px; font-family:'Lato', sans-serif; font-weight:300;">Featured Fall Projects</h2> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-xs-12 project"> 
+      <div class="row row-0-padding"> 
+       <div class="summary-card"> 
+        <div class="contents"> 
+         <div class="col-sm-4 col-xs-12 project"> 
+          <a href="/projects/improving-organ-transplant-outcomes-in-the-us"> 
+           <div class="image"> 
+            <img alt="Organs" src="http://bayesimpactwebassets.s3.amazonaws.com/projects/images/000/000/012/full/organs.jpg?1412737429"> 
+           </div> </a> 
+         </div> 
+         <div class="col-sm-8 col-xs-12 project" style="height:320px;"> 
+          <div class="project-padding"> 
+           <div class="description"> 
+            <a href="/projects/improving-organ-transplant-outcomes-in-the-us"> 
+             <div class="title" style="display: -webkit-box;">
+               Improving Organ Transplant Outcomes 
+             </div> <h5 class="project-tags"> 
+              <div style="margin-right:15px;"> 
+               <i class="fa fa-tag fa-lg"></i> Health Care 
+              </div> 
+              <div style="margin-right:15px;"> 
+               <i class="fa fa-map-marker fa-lg"></i> United States 
+              </div> 
+              <div> 
+               <i class="fa fa-users"></i> Scientific Registry of Transplant Recipients 
+              </div></h5> </a> 
+            <p style="display: -webkit-box;">With the US Department of Health's Scientific Registry of Transplant recipients, Bayes Impact is developing a model that best explains the acceptance of deceased donor kidney offers</p> 
+           </div> 
+           <a href="/projects/improving-organ-transplant-outcomes-in-the-us"> 
+            <div class="status-bar-section status-research"> 
+             <div class="status "> 
+              <div class="stages stage1 reached"> 
+               <div class="status-text"> 
+                <h5>Scope</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage2 "> 
+               <div class="status-text"> 
+                <h5>Research</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage3 inactive"> 
+               <div class="status-text"> 
+                <h5>Evaluate</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage4 inactive"> 
+               <div class="status-text"> 
+                <h5>Implement</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage5 inactive"> 
+               <div class="status-text"> 
+                <h5>Completed</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+             </div> 
+            </div> </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-xs-12 project"> 
+      <div class="row row-0-padding"> 
+       <div class="summary-card"> 
+        <div class="contents"> 
+         <div class="col-sm-4 col-xs-12 project"> 
+          <a href="/projects/stratification-of-parkinson's-disease-patients"> 
+           <div class="image"> 
+            <img alt="Parkinsons brain" src="http://bayesimpactwebassets.s3.amazonaws.com/projects/images/000/000/011/full/parkinsons-brain.jpeg?1412737113"> 
+           </div> </a> 
+         </div> 
+         <div class="col-sm-8 col-xs-12 project" style="height:320px;"> 
+          <div class="project-padding"> 
+           <div class="description"> 
+            <a href="/projects/stratification-of-parkinson's-disease-patients"> 
+             <div class="title" style="display: -webkit-box;">
+               Stratification of Parkinson's Disease Patients 
+             </div> <h5 class="project-tags"> 
+              <div style="margin-right:15px;"> 
+               <i class="fa fa-tag fa-lg"></i> Health Care 
+              </div> 
+              <div style="margin-right:15px;"> 
+               <i class="fa fa-map-marker fa-lg"></i> United States 
+              </div> 
+              <div> 
+               <i class="fa fa-users"></i> Michael J. Fox Foundation 
+              </div></h5> </a> 
+            <p style="display: -webkit-box;">Working with the Michael J. Fox Foundation to stratify Parkinson's disease patients in search for biomarkers and better diagnostic methods</p> 
+           </div> 
+           <a href="/projects/stratification-of-parkinson's-disease-patients"> 
+            <div class="status-bar-section status-completed"> 
+             <div class="status "> 
+              <div class="stages stage1 reached"> 
+               <div class="status-text"> 
+                <h5>Scope</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage2 reached"> 
+               <div class="status-text"> 
+                <h5>Research</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage3 reached"> 
+               <div class="status-text"> 
+                <h5>Evaluate</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage4 reached"> 
+               <div class="status-text"> 
+                <h5>Implement</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage5 "> 
+               <div class="status-text"> 
+                <h5>Completed</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+             </div> 
+            </div> </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-xs-12 project"> 
+      <div class="row row-0-padding"> 
+       <div class="summary-card"> 
+        <div class="contents"> 
+         <div class="col-sm-4 col-xs-12 project"> 
+          <a href="/projects/dispath-optimization-for-emergency-responders"> 
+           <div class="image"> 
+            <img alt="Ambulance" src="http://bayesimpactwebassets.s3.amazonaws.com/projects/images/000/000/006/full/ambulance.jpg?1412561472"> 
+           </div> </a> 
+         </div> 
+         <div class="col-sm-8 col-xs-12 project" style="height:320px;"> 
+          <div class="project-padding"> 
+           <div class="description"> 
+            <a href="/projects/dispath-optimization-for-emergency-responders"> 
+             <div class="title" style="display: -webkit-box;">
+               Optimizing Ambulance Response Times in SF 
+             </div> <h5 class="project-tags"> 
+              <div style="margin-right:15px;"> 
+               <i class="fa fa-tag fa-lg"></i> Urban Planning 
+              </div> 
+              <div style="margin-right:15px;"> 
+               <i class="fa fa-map-marker fa-lg"></i> United States 
+              </div> 
+              <div> 
+               <i class="fa fa-users"></i> SFFD 
+              </div></h5> </a> 
+            <p style="display: -webkit-box;">Bayes Fellows are building a model to minimize overall response times and identifying the optimal number and placement of ambulances across San Francisco</p> 
+           </div> 
+           <a href="/projects/dispath-optimization-for-emergency-responders"> 
+            <div class="status-bar-section status-evaluate"> 
+             <div class="status "> 
+              <div class="stages stage1 reached"> 
+               <div class="status-text"> 
+                <h5>Scope</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage2 reached"> 
+               <div class="status-text"> 
+                <h5>Research</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage3 "> 
+               <div class="status-text"> 
+                <h5>Evaluate</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage4 inactive"> 
+               <div class="status-text"> 
+                <h5>Implement</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+              <div class="stages stage5 inactive"> 
+               <div class="status-text"> 
+                <h5>Completed</h5> 
+                <i class="fa fa-sort-desc"></i> 
+               </div> 
+               <div class="bar"></div> 
+              </div> 
+             </div> 
+            </div> </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-xs-12 text-center" id:="" "show-all-projects"=""> 
+     <br>
+     <a class="btn btn-solid btn-lg" href="/projects">See More Projects</a> 
+    </div> 
+   </div> 
+  </div>  
+  <div class="medium-bg content-section-thin"> 
+   <div class="container logos"> 
+    <img src="/images/thenextweb_logo.png" style=""> 
+    <img src="/images/techcrunch_logo.png" style=""> 
+    <img src="/images/wsj_logo.png" style=""> 
+    <img src="/images/venturebeat_logo.png" style=""> 
+    <img src="/images/entrepreneur_logo.png" style=""> 
+   </div> 
+  </div> 
+  <section id="download" class="img-bg content-section text-center"> 
+   <div class="container"> 
+    <div class="col-md-offset-1 col-md-4 col-sm-6"> 
+     <h2>Submit a project</h2> 
+     <p>Are you a civic or nonprofit organization looking to use data science to multiply your impact?</p>
+     <br> 
+     <a href="/contact" class="align-bottom btn btn-line btn-lg">Contact us</a> 
+    </div> 
+    <div class="mobile-spacer-lg"></div> 
+    <div class="col-md-offset-2 col-md-4 col-sm-6"> 
+     <h2>Become a fellow</h2> 
+     <p>Apply to become a Bayes Impact Fellow and work on data science solutions for big social problems!</p>
+     <br> 
+     <a href="/fellowship" class="align-bottom btn btn-line btn-lg">Learn more</a> 
+    </div> 
+   </div> 
+  </section> 
+  <div class="tile-dark"></div> 
+  <footer class="footer"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-6 col-sm-5"> 
+      <h4>Sign up for our mailing list to receive the latest updates.</h4> 
+      <!-- Begin MailChimp Signup Form --> 
+      <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"> 
+      <div id="mc_embed_signup"> 
+       <form action="//bayesimpact.us8.list-manage.com/subscribe/post?u=91cb7b976eca90a97f3549c12&amp;id=b101094712" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" style="padding:0;" target="_blank" novalidate> 
+        <div id="mc_embed_signup_scroll"> 
+         <div class="input-group"> 
+          <input type="email" style="border:none;" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Your email" required> 
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> 
+          <div style="position: absolute; left: -5000px;"> 
+           <input type="text" name="b_91cb7b976eca90a97f3549c12_b101094712" tabindex="-1" value=""> 
+          </div> 
+          <span class="input-group-btn"> <button type="submit" class="btn btn-solid" value="Stay Updated" name="subscribe" id="mc-embedded-subscribe">Stay Updated</button> </span> 
+         </div> 
+        </div> 
+       </form> 
+      </div> 
+      <!--End mc_embed_signup--> 
+     </div> 
+     <div class="col-sm-offset-1 col-xs-6 col-md-2 col-sm-3"> 
+      <ul> 
+       <li><a href="/projects" role="menuitem" tabindex="-1">Our projects</a></li> 
+       <li><a href="/how-it-works">How it works</a></li> 
+       <li><a href="/about">About us</a></li> 
+       <li><a href="/fellowship">Fellowship</a></li> 
+      </ul> 
+     </div> 
+     <div class="col-xs-6 col-sm-3 col-md-2"> 
+      <ul> 
+       <li> <a href="/contact"> <i style="margin:0px 4px 0px 0px;" class="fa fa-envelope"></i> Contact us </a> </li> 
+       <li> <a href="/blog/defending-microfinance-with-data-science.html"> <i style="margin:0px 4px 0px 2px;" class="fa fa-pencil-square-o"></i> Blog </a> </li> 
+       <li> <a href="https://twitter.com/bayesimpact/"> <i style="margin:0px 4px 0px 2px;" class="fa fa-twitter"></i> Twitter </a> </li> 
+       <li> <a href="https://www.facebook.com/bayesimpact"> <i style="margin:0px 7px 0px 4px;" class="fa fa-facebook"></i> Facebook </a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-sm-6 col-xs-12"> 
+      <div class="mobile-text-center">
+       © 2014 Bayes Impact
+      </div> 
+      <div class="mobile-text-center">
+       <a href="http://www.ycombinator.com/"> <img src="/images/yc_logo.png" style="height:18px; width:18px; margin-right:2px"> Supported by YC </a>
+      </div> 
+     </div> 
+     <div class="col-sm-6 col-xs-12"> 
+      <div class="mobile-spacer-sm"></div> 
+      <div class="mobile-text-center-right"> 
+       <iframe width="140" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fbayesimpact.org&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21&amp;appId=744992545542435" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowtransparency="true"></iframe> 
+       <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://www.bayesimpact.org">Tweet</a> 
+       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <div id="modal-background" class="hidden-by-height"></div> 
+  <div id="modal-body" class="hidden-by-height"> 
+   <div id="modal-content"> 
+    <div id="modal-close">
+     X
+    </div> 
+    <div id="modal-message"></div> 
+   </div> 
+  </div>   
+ </body>
+</html>

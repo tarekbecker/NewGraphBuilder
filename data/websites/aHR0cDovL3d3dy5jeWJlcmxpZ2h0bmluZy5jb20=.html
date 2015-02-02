@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9,chrome=1"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1"> 
+  <link href="http://fonts.googleapis.com/css?family=Cabin:400,500,400italic,600,700|Sanchez" rel="stylesheet" type="text/css"> 
+  <title>CyberLightning | 3D control &amp; monitoring of IoT-M2M-Industrial-Internet    </title> 
+  <meta name="description" content="Enabling open source &amp; standards based mobile 3D control &amp; monitoring of IoT / M2M / Industrial Internet big data sensor networks in the Smart City context"> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="stylesheet" type="text/css" media="all" href="http://cyberlightning.com/wp-content/themes/conexus-child/style.css"> 
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://cyberlightning.com/feed/"> 
+  <link rel="pingback" href="http://cyberlightning.com/xmlrpc.php"> 
+  <link rel="alternate" type="application/rss+xml" title="CyberLightning » Home Comments Feed" href="http://cyberlightning.com/home/feed/"> 
+  <link rel="stylesheet" id="flick-css" href="http://cyberlightning.com/wp-content/plugins/mailchimp//css/flick/flick.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="mailchimpSF_main_css-css" href="http://cyberlightning.com/?mcsf_action=main_css&amp;ver=3.9.3" type="text/css" media="all"> 
+  <!--[if IE]>
+<link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='http://cyberlightning.com/wp-content/plugins/mailchimp/css/ie.css?ver=3.9.3' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="screen_css-css" href="http://cyberlightning.com/wp-content/themes/conexus-child/screen.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="purple-css" href="http://cyberlightning.com/wp-content/themes/conexus-parent/styles/purple.css?ver=3.9.3" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="cusel-css" href="http://cyberlightning.com/wp-content/themes/conexus-parent/css/cusel.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="prettyPhoto-css" href="http://cyberlightning.com/wp-content/themes/conexus-parent/framework/static/css/prettyPhoto.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="shCore-css" href="http://cyberlightning.com/wp-content/themes/conexus-parent/css/shCore.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="shThemeDefault-css" href="http://cyberlightning.com/wp-content/themes/conexus-parent/css/shThemeDefault.css?ver=3.9.3" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-includes/js/jquery/jquery.js?ver=1.11.0"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/plugins/mailchimp/js/scrollTo.js?ver=1.4.2"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-includes/js/jquery/jquery.form.min.js?ver=3.37.0"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/cyberlightning.com\/"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/plugins/mailchimp/js/mailchimp.js?ver=1.4.2"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/plugins/mailchimp//js/datepicker.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/libs/modernizr.min.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/libs/respond.min.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/jquery.easing.1.3.min.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-child/js/general.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/jquery.carouFredSel.min.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/jquery.touchSwipe.min.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/cusel-min.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/jquery.tools.min.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/jquery.customInput.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/framework/static/javascript/jquery.prettyPhoto.js?ver=3.1.4"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cyberlightning.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cyberlightning.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="next" title="Industries" href="http://cyberlightning.com/industries/"> 
+  <meta name="generator" content="WordPress 3.9.3"> 
+  <link rel="canonical" href="http://cyberlightning.com/"> 
+  <link rel="shortlink" href="http://cyberlightning.com/"> 
+  <script language="JavaScript" type="text/javascript"><!--
+
+function expand(param) {
+ jQuery("div"+param).stop().slideToggle("slow", function() {
+    linkname = jQuery("a"+param).html();
+    if( jQuery("div"+param).is(":visible") ) {
+      jQuery("a"+param).html(expand_text+" "+linkname.substring(collapse_text_length));
+    }
+    else {
+        jQuery("a"+param).html(collapse_text+" "+linkname.substring(expand_text_length));
+    }
+  });
+
+}
+function expander_hide(param) {
+        jQuery("div"+param).hide();
+		linkname = jQuery("a"+param).html();
+        collapse_text  = "⇓ More...";
+        expand_text    = "⇑ Less...";
+        collapse_text_length = jQuery("<span />").html(collapse_text).text().length;
+        expand_text_length = jQuery("<span />").html(collapse_text).text().length;
+        jQuery("a"+param).html(collapse_text + " " + linkname);
+        jQuery("a"+param).show();
+}
+//--></script> 
+  <script type="text/javascript">
+		jQuery(function($) {
+			$('.date-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd/yyyy';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: true,
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+			});
+			d = new Date();
+			$('.birthdate-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: false,
+					minDate: new Date(d.getFullYear(), 1-1, 1),
+					maxDate: new Date(d.getFullYear(), 12-1, 31),
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+
+			});
+
+		});
+	</script> 
+  <link rel="shortcut icon" href="http://dev.cyberlightning.com/~cyberwp/wp-content/uploads/2014/01/fav_icon.png"> 
+  <style type="text/css">
+body {
+    font-family: "Arial", Helvetica, sans-serif;
+    color:#4f5e62;
+    font-size:14px;
+    line-height:1.6em;
+    overflow-x: hidden;
+    position:relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /*color: #26363d;
+    font-size:20px;*/
+    font-family: "Arial", Helvetica, sans-serif;
+    /*font-weight:400;
+    line-height:1.2em;
+    margin-bottom:1em*/
+}
+
+.header {
+    background-color: #5b4198;
+    background: -webkit-radial-gradient(50% 50%, circle, #714acb 0%,#5b4198 35%);
+
+    background: -moz-radial-gradient(50% 50%, circle, #714acb 0%, #5b4198 35%); 
+
+   background: -webkit-gradient(radial, 50% 50%, 0px, 50% 50%, 100%, color-stop(0%,#714acb), color-stop(35%,#5b4198)); 
+
+   background: -o-radial-gradient(50% 50%, circle, #714acb 0%,#5b4198 35%); 
+
+   background: -ms-radial-gradient(50% 50%, circle, #714acb 0%,#5b4198 35%); 
+
+   background: radial-gradient(circle at 50% 50%, #714acb 0%,#5b4198 35%); 
+}
+
+.hoverImage {
+   position: relative;
+    transition: all .5s ease;
+    transition-property: box-shadow, top;
+    -moz-transition:all .5s ease;
+    -moz-transition-property: -moz-box-shadow, box-shadow, top;
+   -webkit-transition:all .5s ease;
+   -webkit-transition-property: -webkit-box-shadow, bow-shadow, top;
+    top: 0;
+}
+
+.hoverImage:hover {
+-moz-box-shadow:  0 5px 10px #000000;
+   -webkit-box-shadow:  0 5px 10px #000000;
+   box-shadow: 0 5px 10px #000000;
+   top: -5px;
+}
+
+.img_centerWithin {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.dropdown li a {
+    display:block;
+    color:#575756;
+    height:20px;
+    text-decoration:none;
+}
+
+.dropdown li:hover a {
+    color:#FF9302;
+}
+.dropdown .current-menu-item a,
+.dropdown .current-menu-ancestor a {
+    color:#6C49BE;
+}
+
+.slider_medium{
+    margin: 0 auto !important;
+}
+
+.content .video {
+   text-align: center;
+}
+
+.oneByOne_item .slider_title {
+    font-family: "Arial", Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.slider_btn span {
+	color: #FFFFFF;
+	text-shadow:0 1px 1px #b3a1ce;
+	font-size:14px;
+	font-weight:600;
+}
+
+.btn_default span {
+	color:#FFFFFF;
+}
+
+.footer_widgetarea {
+    background: none #5A39A1 !important;
+}
+
+.footer_social {
+height: 0px;
+border: none;
+visibility: hidden;
+}
+
+.oneByOne_item .slider_subtitle {
+    color:#BBBBBB;
+}
+
+.f_col h3,
+.f_col h2,
+.f_col .widget_calendar table caption {
+    font-family: 'Cabin', sans-serif;
+    font-size:14px;
+    text-transform:uppercase;
+    color:#fff;
+}
+
+.widget_contact .inner {
+background: #f2f2f2;
+-webkit-border-radius: 0px;
+border-radius: 0px;
+padding: 20px;
+}
+
+
+
+.widget_recent_entries li {
+min-height:0px;
+}
+
+.widget_recent_entries .post-meta {
+display:none;
+height:0px;
+}
+
+.middle_row {
+padding: 0 0 0 0px;
+}
+
+.botmenu li a {
+    color: #fff;
+}
+
+.botmenu li a:hover,
+.botmenu .current-menu-item a,
+
+.copyright a:hover {
+    color:#e8750f;
+}
+
+blockquote{
+font-size:14px;
+font-style:normal;
+
+}
+
+.frame_quote {
+    background:#fff;
+    margin:5px 0 20px;
+    border:5px solid #fff;
+    padding:15px 20px;
+    border-radius:0px;
+    -webkit-border-radius:0px;
+}
+
+/* Conexus tables */
+.table_purple table, .sb_purple {
+    border:1px solid #4f5e62;
+}
+
+.table_purple table tr th, .sb_purple .box_title {
+background: #6C49BE;
+}
+
+#mc_signup_submit {
+  margin-top: 0;
+  width: 60%;
+  color: #6B6B6B;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family:" Arial", Helvetica, sans-serif;
+}
+
+.mc_input {
+  -webkit-border-radius: 0;
+  border-radius: 0 px;
+}
+
+#mc_signup_form .mc_input {
+border-radius: 0;
+}
+</style> 
+  <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> 
+  <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> 
+  <script type="text/javascript">/* <![CDATA[ */
+tf_script={"TF_THEME_PREFIX":"conexus","TFUSE_THEME_URL":"http:\/\/cyberlightning.com\/wp-content\/themes\/conexus-parent","ajaxurl":"http:\/\/cyberlightning.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */</script> 
+  <link rel="stylesheet" href="http://cyberlightning.com/wp-content/themes/conexus-parent/cache/min-css-7357a25561df337db809fd8640bdebc2.css?m=0" type="text/css" media="all">
+  <style type="text/css">
+                    #middle .widget_featured_posts .post-more a:hover {
+                        background-color:8877b1;}
+                    .dropdown .mega-nav .link-more,
+                    .dropdown .mega-nav .more-nav a,
+                    .dropdown .mega-nav .post-more a,
+                    .widget_recent_posts .post-meta a:hover,
+                    .widget_popular_posts .post-meta a:hover {
+                        color:8877b1 !important;}
+                    .dropdown .current-menu-item a,
+                    .dropdown .current-menu-ancestor a,
+                    .carousel_posts .post-more a,
+                    .sidebar .widget-container .current-menu-item a,
+                    .sidebar .widget-container .current-menu-ancestor a,
+                    .sidebar .widget-container .current-menu-item li a:hover,
+                    .sidebar .widget-container .current-menu-ancestor li a:hover,
+                    .sidebar .widget-container .current-menu-ancestor .current-menu-item a,
+                    .widget-container.widget_nav_menu a:hover,
+                    .widget-container.widget_nav_menu .current-menu-item a,
+                    .widget-container.widget_nav_menu .current-menu-item li a:hover,
+                    .widget-container.widget_categories a:hover,
+                    .widget-container.widget_categories .current-menu-item a,
+                    .widget-container.widget_categories .current-menu-item li a:hover,
+                    .widget-container.widget_archive a:hover,
+                    .widget-container.widget_links a:hover,
+                    .widget-container.widget_meta a:hover,
+                    .widget-container.widget_pages a:hover,
+                    .f_col .widget-container.widget_nav_menu a:hover,
+                    .f_col .widget-container.widget_nav_menu .current-menu-item a,
+                    .f_col .widget-container.widget_nav_menu .current-menu-item li a:hover,
+                    .f_col .widget-container.widget_categories a:hover,
+                    .f_col .widget-container.widget_categories .current-menu-item a,
+                    .f_col .widget-container.widget_categories .current-menu-item li a:hover,
+                    .f_col .widget-container.widget_archive a:hover,
+                    .f_col .widget-container.widget_links a:hover,
+                    .f_col .widget-container.widget_meta a:hover,
+                    .f_col .widget-container.widget_pages a:hover,
+                    .post_list li a:hover,
+                    .widget_recent_posts .post-meta a,
+                    .widget_popular_posts .post-meta a,
+                    .widget_recent_posts ul li .post-title:hover,
+                    .widget_popular_posts ul li .post-title:hover,
+                    .content .widget_recent_entries .post-meta a,
+                    .sidebar .widget_recent_entries .post-meta a,
+                    .f_col .widget_recent_entries a:hover,
+                    .f_col .widget_recent_entries .post-meta a:hover,
+                    .widget_login .forget_password a,
+                    .author-text h4,
+                    .entry .author-text h4,
+                    .gallery-item h2 a:hover,
+                    .link-add-comment,
+                    .f_col .widget-container .tweet_item .tweet_text a,
+                    .copyright a {
+                        color:8877b1;}
+                    a, a:visited,
+                    .carousel_posts .post-title a:hover,
+                    .carousel_posts .post-more a:hover,
+                    .content .widget_featured_posts .post-descr a,
+                    .widget_featured_posts .post-title a:hover,
+                    .post-item .post-meta a:hover,
+                    .entry .post-item .post-meta a:hover,
+                    .postlist .post-title h2 a:hover,
+                    .entry a,
+                    .tf_pagination .page-numbers:hover,
+                    .tf_pagination .page_current,
+                    a.link-author:hover,
+                    .link-reply:hover,
+                    .add-comment h3,
+                    .contact-form h3,
+                    .link-reset,
+                    .quote-author,
+                    .quote-author span,
+                    .sidebar .quote-author, .sidebar .quote-author span,
+                    .link-news-rss span,
+                    .content .link-arrow {
+                        color:8877b1;}
+                    a:hover, a:focus,
+                    .sidebar .widget-container li a:hover,
+                    .content .widget-container li a:hover,
+                    .widget_twitter .tweet_item a,
+                    .sidebar .widget_text .textwidget a,
+                    blockquote cite,
+                    .link-reset:hover {
+                        color:8877b1;}
+                    .tabs_framed .tabs {
+                        background-color:8877b1;}
+                    .content .cusel .cuselActive {
+                        color:8877b1;}
+                    .mega-nav-widget .widget_featured_posts ul li .post-author a,.mega-nav-widget .widget_featured_posts ul li .post-descr a{
+                        color: 8877b1 !important;
+                    }
+                 </style>
+  <style type="text/css">
+                    .dropdown .mega-nav .widget_featured_posts .post-author,
+                    #middle .post-author,
+                    .dropdown .mega-nav .widget_twitter .tweet_item a,
+                    .quote-text,
+                    .sidebar .quote-text,
+                    .content .widget-container .widget-title,
+                    .content .widget-container h3,
+                    .sidebar .widget-container .widget-title,
+                    .sidebar .widget-container h3,
+                    .widget_calendar table caption,
+                    .widget_calendar table th,
+                    .widget_recent_posts ul li .post-title,
+                    .widget_popular_posts ul li .post-title,
+                    .post-item .post-meta a,
+                    .entry .post-item .post-meta a,
+                    .postlist .post-date,
+                    .post-detail .post-date,
+                    .link-comments,
+                    .entry .subtitle,
+                    .author-contact,
+                    .link-author,
+                    .quote_right, .quote_left, .quote_center, blockquote,
+                    .faq_q,
+                    .faq_question.active {
+                        color:b0a6d1;}
+                 </style> 
+  <!-- Google Analytics --> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26131638-1', 'cyberlightning.com');
+  ga('send', 'pageview');
+
+</script> 
+ </head> 
+ <body class="unknown"> 
+  <div class="body_wrap"> 
+   <div class="header_top"> 
+    <div class="overheader"> 
+     <div class="uppercontainer"> 
+      <div class="botmenu"> 
+       <div class="menu-uppermenu-container">
+        <ul id="menu-uppermenu" class="menu">
+         <li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="http://cyberlightning.com/blog/"><span>Articles and News</span></a></li> 
+         <li id="menu-item-521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521"><a href="http://cyberlightning.com/partners/"><span>Partners</span></a></li> 
+         <li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a href="http://cyberlightning.com/company/"><span>Company</span></a></li> 
+         <li id="menu-item-520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520"><a href="http://cyberlightning.com/contact/"><span>Contact</span></a></li> 
+         <li id="menu-item-1221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221"><a href="http://cyberlightning.com/careers/"><span>Careers</span></a></li> 
+        </ul>
+       </div> 
+      </div> 
+      <!-- <nav id="topmenu" class="menu-mainmenu-container"><ul id="menu-mainmenu" class="dropdown"><li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398"><a href="http://cyberlightning.com/smart-city/"><span>3D Smart City</span></a></li>
+<li id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235"><a href="http://cyberlightning.com/energy/"><span>Energy Sector IoT</span></a></li>
+<li id="menu-item-237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-237"><a href="http://cyberlightning.com/cyberville/"><span>CyberVille® Technology</span></a></li>
+<li id="menu-item-534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-534"><a href="http://cyberlightning.com/demos/"><span>Demos</span></a></li>
+</ul></nav>--> 
+     </div> 
+    </div> 
+    <div class="container"> 
+     <div class="logo"> 
+      <a href="http://cyberlightning.com" title="Enabling open source &amp; standards based mobile 3D control &amp; monitoring of IoT / M2M / Industrial Internet big data sensor networks in the Smart City context"> <img src="http://cyberlightning.com/wp-content/uploads/2014/01/Cyberlightning-Logo-Landscape-140128-Uusi-e1398866908607.png" alt="CyberLightning" border="0"> </a> 
+     </div>
+     <!--/ .logo --> 
+     <nav id="topmenu" class="menu-mainmenu-container">
+      <ul id="menu-mainmenu-1" class="dropdown">
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398"><a href="http://cyberlightning.com/smart-city/"><span>3D Smart City</span></a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235"><a href="http://cyberlightning.com/energy/"><span>Energy Sector IoT</span></a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-237"><a href="http://cyberlightning.com/cyberville/"><span>CyberVille® Technology</span></a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-534"><a href="http://cyberlightning.com/demos/"><span>Demos</span></a></li> 
+      </ul>
+     </nav> 
+     <div class="topsearch"> 
+      <form id="searchForm" action="http://cyberlightning.com/" method="get"> 
+       <input type="text" name="s" id="s" value="" class="stext"> 
+       <input type="submit" id="searchSubmit" value="Search" class="btn-search"> 
+      </form> 
+     </div> 
+     <div class="clear"></div> 
+    </div>
+    <!--/ container --> 
+   </div>
+   <!--/ header_top --> 
+   <div class="header" style=""> 
+    <div class="header_inner"> 
+     <div class="container"> 
+      <!-- header slider --> 
+      <div class="header_slider"> 
+       <div class="oneByOne_item"> 
+        <div class="slider_title" data-animate="flipInY"> 
+         <a href="/cyberville/"><strong>CYBERVILLE™</strong></a> 
+         <p class="slider_subtitle">"CyberVille™ Combines Big Data Processing and 3D Internet Technology in Powerful Platform for Monitoring and Control of Energy Networks and Smart City Infrastructure"</p> 
+        </div> 
+        <a href="/cyberville/"><img width="940" src="http://cyberlightning.com/wp-content/uploads/2014/05/slide-cyberville_srgb.jpg" class="slider_image" data-animate="fadeInLeft" alt=""></a> 
+        <a href="/cyberville/" class="slider_btn" data-animate="fadeInDown"><span>CyberVille™ Technology</span></a> 
+       </div> 
+       <div class="oneByOne_item"> 
+        <div class="slider_title" data-animate="flipInY"> 
+         <a href="/energy/"><strong>ENERGY SECTOR IOT</strong></a> 
+         <p class="slider_subtitle">"Management and control of Advanced Metering Infrastructure (AMI) networks benefits from a visually-based interface with detailed imagery and real-time data feeds"</p> 
+        </div> 
+        <a href="/energy/"><img width="940" src="http://cyberlightning.com/wp-content/uploads/2014/05/slide-energy_srgb.jpg" class="slider_image" data-animate="fadeInLeft" alt=""></a> 
+        <a href="/energy/" class="slider_btn" data-animate="fadeInDown"><span>Energy Sector IoT</span></a> 
+       </div> 
+       <div class="oneByOne_item"> 
+        <div class="slider_title" data-animate="flipInY"> 
+         <a href="/smart-city/"><strong>3D SMART CITY</strong></a> 
+         <p class="slider_subtitle">"In a Smart City application such as facility management, baseline GIS data is merged with CAD models of a building and its multiple internal 'smart' networks, such as lighting, HVAC control, occupancy sensors, and security"</p> 
+        </div> 
+        <a href="/smart-city/"><img width="940" src="http://cyberlightning.com/wp-content/uploads/2014/05/slide-smartcity_srgb.jpg" class="slider_image" data-animate="fadeInLeft" alt=""></a> 
+        <a href="/smart-city/" class="slider_btn" data-animate="fadeInDown"><span>3D Smart City</span></a> 
+       </div> 
+      </div>
+      <!--/ header slider --> 
+     </div>
+     <!--/ container --> 
+    </div>
+    <!--/ header_inner --> 
+   </div>
+   <!--/ header --> 
+   <script>
+    jQuery(document).ready(function($) {
+        $('.header_slider').oneByOne({
+            className: 'oneByOne1',
+            slideShow: true,
+            width: 960,
+            height: 476,
+            slideShowDelay: 4000,
+            showButton: false,
+            autoHideButton: false,
+            enableDrag: false,
+            tolerance: 0
+        });
+    });
+</script> 
+   <div id="middle" class="full_width"> 
+    <div class="container clearfix"> 
+     <!-- .content --> 
+     <div class="content" role="main"> 
+      <article class="post-detail"> 
+       <div class="entry clearfix"> 
+        <h2 style="text-align:center; margin-top:0 !important;">BREAKING NEWS! <a href="/blog/2014/08/12/cyberlightning-announces-4-2-million-funding-round-accelerating-the-global-growth-of-industrial-internet-of-things-platform/">CyberLightning announces $4.2 million funding round</a>, accelerating the global growth of Industrial Internet of Things platform.</h2> 
+        <p><br></p> 
+        <div class="box_light_gray"> 
+         <div class="box_inner">
+          <strong>Cyberlightning is the leading 3D Internet Company with next generation controlling and monitoring solutions for the Internet of Things (IoT) networks in the Smart City context. At the moment we are developing real world and virtual world integration for European Union’s service portfolio and also at the same time enabling IoT networks to be controllable via mobile devices. Our future proof, open source and open standards based Internet technology solutions enable efficient big data manipulation in auto-generated 3D models with no vendor lock-in. <br><br>Cyberlightning’s new CyberVille™ solution is mainly aimed at Energy Sector system integrators, utilities and solution providers with empowering features for operations in logistics, power plants, smart grid and home area applications – Though our technology is also horizontally scalable through other IoT/big data verticals, such as traffic, infrastructure and health.</strong>
+         </div> 
+         <div class="clear"></div> 
+        </div> 
+        <div class="divider_space"></div> 
+        <div class="col col_1_3 "> 
+         <div class="inner"> 
+          <a href="/demos"> 
+           <div class="text-center hoverImage" style="background-image:url('http://cyberlightning.com/wp-content/uploads/2014/05/bg-pattern-3d.gif'); background-repeat:repeat;">
+            <img src="http://cyberlightning.com/wp-content/uploads/2014/05/home-demos.png" alt="3D Demos" width="300" height="180" class="alignnone size-full wp-image-927">
+           </div> </a>
+          <p><a href="/demos"></a><br> See our impressive 3D demos. 3D natively in new web browsers without any plug-ins. Automatically generated 3D objects &amp; infrastructure on top of next generation Cyberlightning 3D GIS/Map service. </p> 
+          <p><a href="/demos">Read more…</a> </p>
+         </div> 
+        </div> 
+        <div class="col col_1_3 "> 
+         <div class="inner"> 
+          <a href="/blog"> 
+           <div class="text-center hoverImage" style="background-image:url('http://cyberlightning.com/wp-content/uploads/2014/05/bg-pattern-3d.gif'); background-repeat:repeat;">
+            <img src="http://cyberlightning.com/wp-content/uploads/2014/05/home-news.png" alt="Articles and News" width="300" height="180" class="alignnone size-full wp-image-928">
+           </div> </a>
+          <p><a href="/blog"></a></p> 
+          <p>Read our newest articles and news. Stories on our domain areas and news on where we stand.</p> 
+          <p><a href="/blog">Read more…</a></p> 
+         </div> 
+        </div> 
+        <div class="col col_1_3 "> 
+         <div class="inner"> 
+          <a href="/partners"> 
+           <div class="text-center hoverImage" style="background-image:url('http://cyberlightning.com/wp-content/uploads/2014/05/bg-pattern-3d.gif'); background-repeat:repeat;">
+            <img src="http://cyberlightning.com/wp-content/uploads/2014/05/home-partners.png" alt="Partners" width="300" height="180" class="alignnone size-full wp-image-929">
+           </div> </a>
+          <p><a href="/partners"></a></p> 
+          <p>We are a member in IP for Smart Objects (IPSO) Alliance and a partner in Tizen Association. We influence all major standardization bodies and build the Future Internet in EC FP7 FI-WARE program.</p> 
+          <p><a href="/partners">Read more…</a></p> 
+         </div> 
+        </div> 
+       </div>
+       <!--/ .entry --> 
+      </article> 
+     </div>
+     <!--/ .content --> 
+     <div class="clear"></div> 
+    </div>
+    <!--/ .container --> 
+   </div>
+   <!--/ .middle --> 
+   <div class="footer_widgetarea"> 
+    <div class="container clearfix"> 
+     <div class="f_col f_col_1"> 
+      <div> 
+       <h3 class="widget-title">Contact</h3> 
+       <div class="textwidget">
+        <div class="frame_quote">
+         <blockquote> 
+          <strong>Cyberlightning Ltd.</strong> 
+          <strong>Phone:</strong>
+          <br> +358 10 271 2130
+          <br> 
+          <strong>Email:</strong> sales@cyberlightning.com 
+          <strong>Address:</strong> 
+          <br> Teknologiantie 2 
+          <br> FI-90590 Oulu Finland 
+         </blockquote>
+        </div>
+       </div> 
+      </div>
+      <div id="bra_social_media_widget-2" class="box bra-social-media-widget">
+       <h3></h3> 
+       <div class="social-bookmarks"> 
+        <ul> 
+         <li style="background-color: #FFFFFF" class="twitter"><a target="_blank" href="https://twitter.com/cyber_lightning">twitter</a></li> 
+         <li style="background-color: #FFFFFF" class="googleplus"><a target="_blank" href="https://plus.google.com/u/0/107028509563951870978">googleplus</a></li> 
+         <li style="background-color: #FFFFFF" class="facebook"><a target="_blank" href="https://www.facebook.com/CyberLightning">facebook</a></li> 
+         <li style="background-color: #FFFFFF" class="linkedin"><a target="_blank" href="http://www.linkedin.com/company/cyberlightning-ltd.">linkedin</a></li> 
+         <li style="background-color: #FFFFFF" class="youtube"><a target="_blank" href="https://www.youtube.com/channel/UCPFvhYUHr76gMq7iMZE-OfQ">youtube</a></li> 
+        </ul>
+        <!-- END UL--> 
+       </div>
+       <!--END SOCIAL BOOKMARKS--> 
+      </div> 
+     </div> 
+     <div class="f_col f_col_2"> 
+      <div class="widget-container widget_recent_entries"> 
+       <h3 class="widget-title">Articles &amp; News</h3> 
+       <ul> 
+        <li class="clearfix"> <a href="http://cyberlightning.com/blog/2014/11/21/cyberlightning-shows-industrial-internet-expertise-at-slush/"></a> <a href="http://cyberlightning.com/blog/2014/11/21/cyberlightning-shows-industrial-internet-expertise-at-slush/">CyberLightning shows industrial Internet expertise at Slush</a> 
+         <div class="post-meta"> 
+          <span class="post-date">November 21 2014</span> 
+          <a href="http://cyberlightning.com/blog/2014/11/21/cyberlightning-shows-industrial-internet-expertise-at-slush/">READ IT</a> 
+         </div> </li> 
+        <li class="clearfix"> <a href="http://cyberlightning.com/blog/2014/11/17/cyberlightnings-newsletter-autumn-2014/"></a> <a href="http://cyberlightning.com/blog/2014/11/17/cyberlightnings-newsletter-autumn-2014/">CyberLightning’s Newsletter, Autumn 2014</a> 
+         <div class="post-meta"> 
+          <span class="post-date">November 17 2014</span> 
+          <a href="http://cyberlightning.com/blog/2014/11/17/cyberlightnings-newsletter-autumn-2014/">READ IT</a> 
+         </div> </li> 
+        <li class="clearfix"> <a href="http://cyberlightning.com/blog/2014/10/28/open-positions-big-data-processing-specialist-director-vp-sales/"></a> <a href="http://cyberlightning.com/blog/2014/10/28/open-positions-big-data-processing-specialist-director-vp-sales/">Open Positions: Big Data Processing Specialist, Director / VP Sales</a> 
+         <div class="post-meta"> 
+          <span class="post-date">October 28 2014</span> 
+          <a href="http://cyberlightning.com/blog/2014/10/28/open-positions-big-data-processing-specialist-director-vp-sales/">READ IT</a> 
+         </div> </li> 
+        <li class="clearfix"> <a href="http://cyberlightning.com/blog/2014/10/08/cyberlightning-tekesin-verkkosivuilla/"></a> <a href="http://cyberlightning.com/blog/2014/10/08/cyberlightning-tekesin-verkkosivuilla/">CyberLightning Tekesin verkkosivuilla!</a> 
+         <div class="post-meta"> 
+          <span class="post-date">October 8 2014</span> 
+          <a href="http://cyberlightning.com/blog/2014/10/08/cyberlightning-tekesin-verkkosivuilla/">READ IT</a> 
+         </div> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="f_col f_col_3"> 
+      <div> 
+       <h3 class="widget-title">Tweets By CyberLightning</h3> 
+       <div class="textwidget">
+        <div style="position:relative; background:#fff; border: 1px solid #ebebeb;"> 
+         <div style="position: absolute; top: 31px; background: #ebebeb; height: 1px; width: 100%;"></div> 
+         <a class="twitter-timeline" height="270" href="https://twitter.com/cyber_lightning" data-widget-id="467246202195415040" data-chrome="nofooter noborders">Tweets by @cyber_lightning</a> 
+         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+        </div>
+       </div> 
+      </div> 
+     </div> 
+     <div class="f_col f_col_4"> 
+      <div class="widget-container widget_text"> 
+       <h3 class="widget-title">Subscribe for newsletter</h3> 
+       <div class="textwidget"> 
+        <style>
+	.widget_mailchimpsf_widget .widget-title {
+		line-height: 1.4em;
+		margin-bottom: 0.75em;
+	}
+	#mc_subheader {
+		line-height: 1.25em;
+		margin-bottom: 18px;
+	}
+	.mc_merge_var {
+		margin-bottom: 1.0em;
+	}
+	.mc_var_label,
+	.mc_interest_label {
+		display: block;
+		margin-bottom: 0.5em;
+	}
+	.mc_input {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 100%;
+	}
+	.mc_input.mc_phone {
+		width: auto;
+	}
+	select.mc_select {
+		margin-top: 0.5em;
+		width: 100%;
+	}
+	.mc_address_label {
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+		display: block;
+	}
+	.mc_address_label ~ select {
+		width: 100%;		
+	}
+	.mc_list li {
+		list-style: none;
+		background: none !important;
+	}
+	.mc_interests_header {
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+	}
+	.mc_interest label,
+	.mc_interest input {
+		margin-bottom: 0.4em;
+	}
+	#mc_signup_submit {
+		margin-top: 1.5em;
+		width: 80%;
+	}
+	#mc_unsub_link a {
+		font-size: 0.75em;
+	}
+	#mc_unsub_link {
+		margin-top: 1.0em;
+	}
+	.mc_header_address,
+	.mc_email_format {
+		display: block;
+		font-weight: bold;
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+	}
+	.mc_email_options {
+		margin-top: 0.5em;
+	}
+	.mc_email_type {
+		padding-left: 4px;
+	}
+</style> 
+        <div id="mc_signup"> 
+         <form method="post" action="#mc_signup" id="mc_signup_form"> 
+          <input type="hidden" id="mc_submit_type" name="mc_submit_type" value="html"> 
+          <input type="hidden" name="mcsf_action" value="mc_submit_signup_form"> 
+          <input type="hidden" id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" value="665a7ac11d"> 
+          <div class="mc_form_inside"> 
+           <div class="updated" id="mc_message"> 
+           </div>
+           <!-- /mc_message --> 
+           <div class="mc_merge_var"> 
+            <label for="mc_mv_EMAIL" class="mc_var_label mc_header mc_header_email">Email Address</label> 
+            <input type="text" size="18" placeholder="" name="mc_mv_EMAIL" id="mc_mv_EMAIL" class="mc_input"> 
+           </div>
+           <!-- /mc_merge_var --> 
+           <div class="mc_signup_submit"> 
+            <input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Subscribe" class="button"> 
+           </div>
+           <!-- /mc_signup_submit --> 
+          </div>
+          <!-- /mc_form_inside --> 
+         </form>
+         <!-- /mc_signup_form --> 
+        </div>
+        <!-- /mc_signup_container --> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+   <div class="footer_social"> 
+    <div class="container">
+     <a href="https://plus.google.com/u/0/107028509563951870978" class="social-google" hidefocus="true" style="outline: none;"><span>Google +1</span></a>
+     <a href="https://www.facebook.com/CyberLightning" class="social-fb" hidefocus="true" style="outline: none;"><span>Facebook</span></a>
+     <a href="https://twitter.com/cyber_lightning" class="social-twitter" hidefocus="true" style="outline: none;"><span>Twitter</span></a>
+     <a href="http://www.linkedin.com/company/cyberlightning-ltd." class="social-linkedin" hidefocus="true" style="outline: none;"><span>LinkedIn</span></a>
+    </div> 
+   </div> 
+   <div class="footer"> 
+    <div class="container clearfix"> 
+     <!--    <div class="botmenu">
+        <div class="menu-uppermenu-container"><ul id="menu-uppermenu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="http://cyberlightning.com/blog/"><span>Articles and News</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521"><a href="http://cyberlightning.com/partners/"><span>Partners</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a href="http://cyberlightning.com/company/"><span>Company</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520"><a href="http://cyberlightning.com/contact/"><span>Contact</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1221"><a href="http://cyberlightning.com/careers/"><span>Careers</span></a></li>
+</ul></div>    </div>
+    --> 
+     <div class="copyright">
+      Cyberlightning 2014 - All Rights Reserved
+     </div> 
+    </div> 
+   </div> 
+   <link rel="stylesheet" id="animate-css" href="http://cyberlightning.com/wp-content/themes/conexus-parent/css/animate.min.css?ver=3.9.3" type="text/css" media="all"> 
+   <link rel="stylesheet" id="bra_social_media_plugin_css-css" href="http://cyberlightning.com/wp-content/plugins/brankic-social-media-widget/bra_social_media.css?ver=3.9.3" type="text/css" media="all"> 
+   <script type="text/javascript" src="http://cyberlightning.com/wp-includes/js/comment-reply.min.js?ver=3.9.3"></script> 
+   <script type="text/javascript" src="http://cyberlightning.com/wp-includes/js/hoverIntent.min.js?ver=r7"></script> 
+   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;ver=1.0"></script> 
+   <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/jquery.gmap.min.js?ver=3.3.0"></script> 
+   <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/preloadCssImages.js?ver=5.0"></script> 
+   <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/js/jquery.onebyone.min.js?ver=1.0"></script> 
+   <!--script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26131638-1', 'cyberlightning.com');
+  ga('send', 'pageview');
+
+</script--> 
+   <script type="text/javascript" src="http://cyberlightning.com/wp-content/themes/conexus-parent/cache/min-js-f47d79b6a8e6f0dbad4fa31d5191e09a.js?m=0"></script>
+  </div>
+  <!-- /.body_wrap -->  
+ </body>
+</html>

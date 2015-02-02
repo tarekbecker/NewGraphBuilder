@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "56ac2e47bc63b3b3de12d71c1b695dfe",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "permalink": "moneylion",
+      "primary_role": "company",
+      "closed_on_trust_code": 0,
+      "name": "MoneyLion",
+      "homepage_url": "http://www.moneylion.com/",
+      "short_description": "MoneyLion is using big data to revolutionize consumer lending.",
+      "is_closed": false,
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "created_at": 1411757758,
+      "updated_at": 1411757903,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "funding_rounds": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/moneylion/funding_rounds",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "FundingRound",
+            "name": "MoneyLion Funding Round",
+            "path": "funding-round/289fe5ca679716464926458f65103dbb",
+            "created_at": 1411757902,
+            "updated_at": 1412565853
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/moneylion/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Financial Services",
+            "uuid": "90b4194f1d4fff5cd7a66b6f32ae4892",
+            "path": "category/financial services/90b4194f1d4fff5cd7a66b6f32ae4892",
+            "created_at": 1397980726,
+            "updated_at": 1417176372
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/moneylion/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1411757805/ts8pojt9a9acg7vmhesc.jpg",
+            "created_at": 1411757783,
+            "updated_at": 1411757806
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 4,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/moneylion/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.linkedin.com/company/moneylion",
+            "type": "WebPresence",
+            "title": "linkedin",
+            "created_at": 1411757852,
+            "updated_at": 1412116113
+          },
+          {
+            "url": "http://twitter.com/MoneyLionHQ",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1411757852,
+            "updated_at": 1412116112
+          },
+          {
+            "url": "http://www.facebook.com/MoneyLionInc",
+            "type": "WebPresence",
+            "title": "facebook",
+            "created_at": 1411757852,
+            "updated_at": 1412116112
+          },
+          {
+            "url": "http://www.moneylion.com/",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1411757758,
+            "updated_at": 1411757758
+          }
+        ]
+      }
+    }
+  }
+}

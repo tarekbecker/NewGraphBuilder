@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html style="margin-top:0 !important">
+ <head> 
+  <base href="/"> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="shortcut icon" href="http://zinniasystems.com/blog/wp-content/themes/the-bootstrap/favicon.ico"> 
+  <link href="css/custom.zinnia.min.css" rel="stylesheet"> 
+  <script src="js/custom.zinnia.min.js"></script> 
+  <script type="text/javascript">
+						$(document).ready(function header(){
+							$("#header").load("/decorators/header.html");
+							$("#custom-footer").load("/decorators/footer.html");
+									});
+				</script> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Zinnia Systems</title> 
+  <link rel="alternate" type="application/rss+xml" title="Zinnia Systems » Feed" href="http://zinniasystems.com/blog/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Zinnia Systems » Comments Feed" href="http://zinniasystems.com/blog/comments/feed/"> 
+  <link rel="stylesheet" id="the-bootstrap-css" href="http://zinniasystems.com/blog/wp-content/themes/the-bootstrap/style.min.css?ver=2.0.1" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://zinniasystems.com/blog/wp-includes/js/jquery/jquery.js?ver=1.10.2"></script> 
+  <script type="text/javascript" src="http://zinniasystems.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://zinniasystems.com/blog/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://zinniasystems.com/blog/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 3.7"> 
+  <link rel="stylesheet" type="text/css" href="http://zinniasystems.com/blog/wp-content/plugins/wp-recaptcha/recaptcha.css"> 
+  <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> 
+  <style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #FFFFFF; }
+</style> 
+  <!--[if lt IE 9]>
+		<script src="http://zinniasystems.com/blog/wp-content/themes/the-bootstrap/js/html5shiv.min.js" type="text/javascript"></script>
+		<script src="http://zinniasystems.com/blog/wp-content/themes/the-bootstrap/js/respond.min.js" type="text/javascript"></script>
+	<![endif]--> 
+  <style type="text/css" id="syntaxhighlighteranchor"></style> 
+ </head> 
+ <body class="home blog custom-background content-sidebar"> 
+  <div id="header"> 
+  </div> 
+  <div class="jumbotron page-heading"> 
+   <div class="container"> 
+    <div class="post-heading"> 
+     <h2><a href="/blog">Zinnia Systems Blog</a></h2> 
+     <p class="text-muted">Knowledge sharing destination</p> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="container"> 
+   <div id="page" class="hfeed row"> 
+    <!-- #branding --> 
+    <section id="primary home" class="col-md-12 indexspan"> 
+     <div id="content" role="main"> 
+      <article id="post-134" class="post-134 post type-post status-publish format-standard hentry category-big_data category-machine_learning category-movie category-recommendation category-review category-sentiment category-spark"> 
+       <div class="row"> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-3 col-md-3 col-xs-12 customheader"> 
+         <header class="page-header"> 
+          <h2 class="entry-title"><a href="http://zinniasystems.com/blog/2014/05/08/movie-recommendation-engine/" title="Permalink to Movie Recommendation Engine" rel="bookmark">Movie Recommendation Engine</a></h2> 
+          <div class="entry-meta"> 
+           <span class="sep">Posted on </span>
+           <a href="http://zinniasystems.com/blog/2014/05/08/movie-recommendation-engine/" title="2:55 pm" rel="bookmark"><time class="entry-date" datetime="2014-05-08T14:55:18+00:00" pubdate="">May 8, 2014</time></a>
+           <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://zinniasystems.com/blog/author/shashidhar/" title="View all posts by Shashidhar Eranti" rel="author">Shashidhar Eranti</a></span></span> 
+           <span class="sep"> | </span> 
+           <span class="comments-link"> <a href="http://zinniasystems.com/blog/2014/05/08/movie-recommendation-engine/#respond" title="Comment on Movie Recommendation Engine"><span class="leave-reply">Leave a reply</span></a> </span> 
+           <div class="sharebuttondivhome"> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-facebook"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-twitter fa-sm fa-md"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-sm fa-md fa-google-plus"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-rss"></i></a>
+           </div> 
+          </div>
+          <!-- .entry-meta --> 
+         </header>
+         <!-- .entry-header --> 
+        </div> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-6 col-md-6 col-xs-12 left-verticalrule"> 
+         <div class="entry-content clearfix left-part"> 
+          <p><span class="intro"><br> <em> </em></span></p>
+          <p><em> <strong>How many of you still like to watch old English movies? If yes, which one you want to start with? which suits to your interest? And many of us are uncertain which movies we may like to watch? Ever wondered you can have all the above issues addressed in one place, so here we come with the <a href="http://mlapps.zinniasystems.com/allaboutmovies" target="_blank">Recommendation Engine</a> which gives you the best match for your movie interest.</strong> </em></p>
+          <em> </em>
+          <p><em></em></p> 
+         </div>
+         <!-- .entry-content --> 
+         <footer class="entry-meta"> 
+          <a href="http://zinniasystems.com/blog/2014/05/08/movie-recommendation-engine/" class="pull-right">Continue Reading. . .</a> 
+         </footer>
+         <!-- #entry-meta --> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+	(function () {
+		$.each($('.sharebuttondivhome'),function(i,ele){
+			$.each(ele.children,function(j,elmt){
+			if($('.subtitle')[i]!=undefined && $('.subtitle')[i]!=null){
+		        subtitle=$('.subtitle')[i].innerHTML;
+       			 }else{
+		        subtitle="";
+		        }
+
+			if(j==0){	elmt.href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+$('.entry-title')[i].children[0].href+"&p[images][0]=/blog/wp-content/themes/the-bootstrap/img/download.jpg&p[title]="+$('.entry-title')[i].children[0].text.split('\n')[0]+"&p[summary]="+subtitle;}
+			else if(j==1){elmt.href="http://twitter.com/share?url="+$('.entry-title')[i].children[0].href+"&text="+$('.entry-title')[i].children[0].text.replace('\n',' ')+"&via=zinniasystems";}
+			else if(j==2){elmt.href="https://plus.google.com/share?url="+$('.entry-title')[i].children[0].href+"&t=how to share";}
+			else if(j==3){elmt.href="/blog/feed";}
+			});
+		});
+	})();
+	</script> 
+      </article>
+      <!-- #post-134 --> 
+      <hr> 
+      <article id="post-164" class="post-164 post type-post status-publish format-standard hentry category-big_data category-classification category-machine_learning category-naive-bayes category-rumor category-rumor-engine category-spark"> 
+       <div class="row"> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-3 col-md-3 col-xs-12 customheader"> 
+         <header class="page-header"> 
+          <h2 class="entry-title"><a href="http://zinniasystems.com/blog/2014/05/08/rumor-engine/" title="Permalink to Rumor Engine" rel="bookmark">Rumor Engine</a></h2> 
+          <div class="entry-meta"> 
+           <span class="sep">Posted on </span>
+           <a href="http://zinniasystems.com/blog/2014/05/08/rumor-engine/" title="2:52 pm" rel="bookmark"><time class="entry-date" datetime="2014-05-08T14:52:52+00:00" pubdate="">May 8, 2014</time></a>
+           <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://zinniasystems.com/blog/author/shashank/" title="View all posts by Shashank L" rel="author">Shashank L</a></span></span> 
+           <span class="sep"> | </span> 
+           <span class="comments-link"> <a href="http://zinniasystems.com/blog/2014/05/08/rumor-engine/#respond" title="Comment on Rumor Engine"><span class="leave-reply">Leave a reply</span></a> </span> 
+           <div class="sharebuttondivhome"> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-facebook"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-twitter fa-sm fa-md"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-sm fa-md fa-google-plus"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-rss"></i></a>
+           </div> 
+          </div>
+          <!-- .entry-meta --> 
+         </header>
+         <!-- .entry-header --> 
+        </div> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-6 col-md-6 col-xs-12 left-verticalrule"> 
+         <div class="entry-content clearfix left-part"> 
+          <p><span class="intro"></span></p> 
+          <p> <em><strong>What question strikes your mind when you are planning to buy a new gadget? There can be one common questions in everyone’s mind, how long this technology may sustain in the market? We will know the fate of todays technology only when we know what is coming next.</strong></em></p> 
+         </div>
+         <!-- .entry-content --> 
+         <footer class="entry-meta"> 
+          <a href="http://zinniasystems.com/blog/2014/05/08/rumor-engine/" class="pull-right">Continue Reading. . .</a> 
+         </footer>
+         <!-- #entry-meta --> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+	(function () {
+		$.each($('.sharebuttondivhome'),function(i,ele){
+			$.each(ele.children,function(j,elmt){
+			if($('.subtitle')[i]!=undefined && $('.subtitle')[i]!=null){
+		        subtitle=$('.subtitle')[i].innerHTML;
+       			 }else{
+		        subtitle="";
+		        }
+
+			if(j==0){	elmt.href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+$('.entry-title')[i].children[0].href+"&p[images][0]=/blog/wp-content/themes/the-bootstrap/img/download.jpg&p[title]="+$('.entry-title')[i].children[0].text.split('\n')[0]+"&p[summary]="+subtitle;}
+			else if(j==1){elmt.href="http://twitter.com/share?url="+$('.entry-title')[i].children[0].href+"&text="+$('.entry-title')[i].children[0].text.replace('\n',' ')+"&via=zinniasystems";}
+			else if(j==2){elmt.href="https://plus.google.com/share?url="+$('.entry-title')[i].children[0].href+"&t=how to share";}
+			else if(j==3){elmt.href="/blog/feed";}
+			});
+		});
+	})();
+	</script> 
+      </article>
+      <!-- #post-164 --> 
+      <hr> 
+      <article id="post-150" class="post-150 post type-post status-publish format-standard hentry category-big_data category-machine_learning category-naive-bayes category-sentiment category-spark category-twitter"> 
+       <div class="row"> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-3 col-md-3 col-xs-12 customheader"> 
+         <header class="page-header"> 
+          <h2 class="entry-title"><a href="http://zinniasystems.com/blog/2014/05/08/movie-rating-using-twitter-sentiment-analysis/" title="Permalink to Movie rating using twitter sentiment analysis" rel="bookmark">Movie rating using twitter sentiment analysis</a></h2> 
+          <div class="entry-meta"> 
+           <span class="sep">Posted on </span>
+           <a href="http://zinniasystems.com/blog/2014/05/08/movie-rating-using-twitter-sentiment-analysis/" title="2:47 pm" rel="bookmark"><time class="entry-date" datetime="2014-05-08T14:47:52+00:00" pubdate="">May 8, 2014</time></a>
+           <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://zinniasystems.com/blog/author/madhukaraphatakzinniasystems-com/" title="View all posts by Madhukara Phatak" rel="author">Madhukara Phatak</a></span></span> 
+           <span class="sep"> | </span> 
+           <span class="comments-link"> <a href="http://zinniasystems.com/blog/2014/05/08/movie-rating-using-twitter-sentiment-analysis/#respond" title="Comment on Movie rating using twitter sentiment analysis"><span class="leave-reply">Leave a reply</span></a> </span> 
+           <div class="sharebuttondivhome"> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-facebook"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-twitter fa-sm fa-md"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-sm fa-md fa-google-plus"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-rss"></i></a>
+           </div> 
+          </div>
+          <!-- .entry-meta --> 
+         </header>
+         <!-- .entry-header --> 
+        </div> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-6 col-md-6 col-xs-12 left-verticalrule"> 
+         <div class="entry-content clearfix left-part"> 
+          <p><span class="intro"></span></p> 
+          <p> <em><strong>Ever wondered whats the best way to get real audience opinions about the movie you are about to watch? Even we wondered. What we have now is all opinionated critic reviews or fan dominated IMDB.</strong></em></p> 
+         </div>
+         <!-- .entry-content --> 
+         <footer class="entry-meta"> 
+          <a href="http://zinniasystems.com/blog/2014/05/08/movie-rating-using-twitter-sentiment-analysis/" class="pull-right">Continue Reading. . .</a> 
+         </footer>
+         <!-- #entry-meta --> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+	(function () {
+		$.each($('.sharebuttondivhome'),function(i,ele){
+			$.each(ele.children,function(j,elmt){
+			if($('.subtitle')[i]!=undefined && $('.subtitle')[i]!=null){
+		        subtitle=$('.subtitle')[i].innerHTML;
+       			 }else{
+		        subtitle="";
+		        }
+
+			if(j==0){	elmt.href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+$('.entry-title')[i].children[0].href+"&p[images][0]=/blog/wp-content/themes/the-bootstrap/img/download.jpg&p[title]="+$('.entry-title')[i].children[0].text.split('\n')[0]+"&p[summary]="+subtitle;}
+			else if(j==1){elmt.href="http://twitter.com/share?url="+$('.entry-title')[i].children[0].href+"&text="+$('.entry-title')[i].children[0].text.replace('\n',' ')+"&via=zinniasystems";}
+			else if(j==2){elmt.href="https://plus.google.com/share?url="+$('.entry-title')[i].children[0].href+"&t=how to share";}
+			else if(j==3){elmt.href="/blog/feed";}
+			});
+		});
+	})();
+	</script> 
+      </article>
+      <!-- #post-150 --> 
+      <hr> 
+      <article id="post-128" class="post-128 post type-post status-publish format-standard hentry category-big_data category-machine_learning category-spark"> 
+       <div class="row"> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-3 col-md-3 col-xs-12 customheader"> 
+         <header class="page-header"> 
+          <h2 class="entry-title"><a href="http://zinniasystems.com/blog/2014/02/05/machine-learning-with-spark/" title="Permalink to Machine Learning with Spark Get equipped with basics of Machine Learning" rel="bookmark">Machine Learning with Spark <small class="subtitle">Get equipped with basics of Machine Learning</small></a></h2> 
+          <div class="entry-meta"> 
+           <span class="sep">Posted on </span>
+           <a href="http://zinniasystems.com/blog/2014/02/05/machine-learning-with-spark/" title="9:30 am" rel="bookmark"><time class="entry-date" datetime="2014-02-05T09:30:22+00:00" pubdate="">February 5, 2014</time></a>
+           <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://zinniasystems.com/blog/author/shashidhar/" title="View all posts by Shashidhar Eranti" rel="author">Shashidhar Eranti</a></span></span> 
+           <span class="sep"> | </span> 
+           <span class="comments-link"> <a href="http://zinniasystems.com/blog/2014/02/05/machine-learning-with-spark/#respond" title="Comment on Machine Learning with Spark Get equipped with basics of Machine Learning"><span class="leave-reply">Leave a reply</span></a> </span> 
+           <div class="sharebuttondivhome"> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-facebook"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-twitter fa-sm fa-md"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-sm fa-md fa-google-plus"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-rss"></i></a>
+           </div> 
+          </div>
+          <!-- .entry-meta --> 
+         </header>
+         <!-- .entry-header --> 
+        </div> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-6 col-md-6 col-xs-12 left-verticalrule"> 
+         <div class="entry-content clearfix left-part"> 
+          <p><span class="intro"></span></p> 
+          <p>In software industry with adoption of Hadoop, data scientists are in high demand. There is a well known fact that people from data science background always face difficulty to apply data science on bigdata due to lack of bigdata knowledge and people from programming background face the same when they try data science on bigdata due to lack of data science knowledge. Here we are seeing two different set of people whose end goal <strong>“Machine Learning on Big Data”</strong> appears similar. So we try to solve this and give you the correct steps to get started in this regard.</p> 
+         </div>
+         <!-- .entry-content --> 
+         <footer class="entry-meta"> 
+          <a href="http://zinniasystems.com/blog/2014/02/05/machine-learning-with-spark/" class="pull-right">Continue Reading. . .</a> 
+         </footer>
+         <!-- #entry-meta --> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+	(function () {
+		$.each($('.sharebuttondivhome'),function(i,ele){
+			$.each(ele.children,function(j,elmt){
+			if($('.subtitle')[i]!=undefined && $('.subtitle')[i]!=null){
+		        subtitle=$('.subtitle')[i].innerHTML;
+       			 }else{
+		        subtitle="";
+		        }
+
+			if(j==0){	elmt.href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+$('.entry-title')[i].children[0].href+"&p[images][0]=/blog/wp-content/themes/the-bootstrap/img/download.jpg&p[title]="+$('.entry-title')[i].children[0].text.split('\n')[0]+"&p[summary]="+subtitle;}
+			else if(j==1){elmt.href="http://twitter.com/share?url="+$('.entry-title')[i].children[0].href+"&text="+$('.entry-title')[i].children[0].text.replace('\n',' ')+"&via=zinniasystems";}
+			else if(j==2){elmt.href="https://plus.google.com/share?url="+$('.entry-title')[i].children[0].href+"&t=how to share";}
+			else if(j==3){elmt.href="/blog/feed";}
+			});
+		});
+	})();
+	</script> 
+      </article>
+      <!-- #post-128 --> 
+      <hr> 
+      <article id="post-119" class="post-119 post type-post status-publish format-standard hentry category-hackthon-series category-hadoop category-spark"> 
+       <div class="row"> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-3 col-md-3 col-xs-12 customheader"> 
+         <header class="page-header"> 
+          <h2 class="entry-title"><a href="http://zinniasystems.com/blog/2014/01/03/predicting-global-energy-demand-using-spark-part-4/" title="Permalink to Predicting Global Energy Demand using Spark : Part-4 Predicting revenue loss for a particular day next year." rel="bookmark">Predicting Global Energy Demand using Spark : Part-4 <small class="subtitle">Predicting revenue loss for a particular day next year.</small></a></h2> 
+          <div class="entry-meta"> 
+           <span class="sep">Posted on </span>
+           <a href="http://zinniasystems.com/blog/2014/01/03/predicting-global-energy-demand-using-spark-part-4/" title="2:09 pm" rel="bookmark"><time class="entry-date" datetime="2014-01-03T14:09:17+00:00" pubdate="">January 3, 2014</time></a>
+           <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://zinniasystems.com/blog/author/ganesh/" title="View all posts by Ganesh Yadiyala" rel="author">Ganesh Yadiyala</a></span></span> 
+           <span class="sep"> | </span> 
+           <span class="comments-link"> <a href="http://zinniasystems.com/blog/2014/01/03/predicting-global-energy-demand-using-spark-part-4/#respond" title="Comment on Predicting Global Energy Demand using Spark : Part-4 Predicting revenue loss for a particular day next year."><span class="leave-reply">Leave a reply</span></a> </span> 
+           <div class="sharebuttondivhome"> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-facebook"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-twitter fa-sm fa-md"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-sm fa-md fa-google-plus"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-rss"></i></a>
+           </div> 
+          </div>
+          <!-- .entry-meta --> 
+         </header>
+         <!-- .entry-header --> 
+        </div> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-6 col-md-6 col-xs-12 left-verticalrule"> 
+         <div class="entry-content clearfix left-part"> 
+          <p><span class="intro"></span></p> 
+          <h4>Problem:</h4> 
+          <p>Assuming there was full day of outage, Calculate the Revenue Loss for a particular day next year by finding the Average Revenue per day (ARPD) of the household(Use the below tariff plan).</p> 
+          <h4>Time of Use (TOU) tariff plan:</h4> 
+          <div class="row"> 
+           <div class="col-md-6"> 
+            <table class="table table-bordered"> 
+             <tbody>
+              <tr> 
+               <th>Time Period</th> 
+               <th>Tariff (Rupees per KWh)</th> 
+              </tr> 
+              <tr> 
+               <td>12 AM to 5 AM</td> 
+               <td>4</td> 
+              </tr> 
+              <tr> 
+               <td>5 AM to 7 AM</td> 
+               <td>6</td> 
+              </tr> 
+              <tr> 
+               <td>7 AM to 10 AM</td> 
+               <td>12</td> 
+              </tr> 
+              <tr> 
+               <td>10 AM to 4 PM</td> 
+               <td>4</td> 
+              </tr> 
+              <tr> 
+               <td>4 PM to 8 PM</td> 
+               <td>6</td> 
+              </tr> 
+              <tr> 
+               <td>8 PM to 10 PM</td> 
+               <td>10</td> 
+              </tr> 
+              <tr> 
+               <td>10 PM to 12 AM</td> 
+               <td>6</td> 
+              </tr> 
+             </tbody>
+            </table> 
+           </div> 
+          </div> 
+         </div>
+         <!-- .entry-content --> 
+         <footer class="entry-meta"> 
+          <a href="http://zinniasystems.com/blog/2014/01/03/predicting-global-energy-demand-using-spark-part-4/" class="pull-right">Continue Reading. . .</a> 
+         </footer>
+         <!-- #entry-meta --> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+	(function () {
+		$.each($('.sharebuttondivhome'),function(i,ele){
+			$.each(ele.children,function(j,elmt){
+			if($('.subtitle')[i]!=undefined && $('.subtitle')[i]!=null){
+		        subtitle=$('.subtitle')[i].innerHTML;
+       			 }else{
+		        subtitle="";
+		        }
+
+			if(j==0){	elmt.href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+$('.entry-title')[i].children[0].href+"&p[images][0]=/blog/wp-content/themes/the-bootstrap/img/download.jpg&p[title]="+$('.entry-title')[i].children[0].text.split('\n')[0]+"&p[summary]="+subtitle;}
+			else if(j==1){elmt.href="http://twitter.com/share?url="+$('.entry-title')[i].children[0].href+"&text="+$('.entry-title')[i].children[0].text.replace('\n',' ')+"&via=zinniasystems";}
+			else if(j==2){elmt.href="https://plus.google.com/share?url="+$('.entry-title')[i].children[0].href+"&t=how to share";}
+			else if(j==3){elmt.href="/blog/feed";}
+			});
+		});
+	})();
+	</script> 
+      </article>
+      <!-- #post-119 --> 
+      <hr> 
+      <article id="post-98" class="post-98 post type-post status-publish format-standard hentry category-hackthon-series category-hadoop category-spark"> 
+       <div class="row"> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-3 col-md-3 col-xs-12 customheader"> 
+         <header class="page-header"> 
+          <h2 class="entry-title"><a href="http://zinniasystems.com/blog/2014/01/02/predicting-global-energy-demand-using-spark-part-3/" title="Permalink to Predicting Global Energy Demand using Spark : Part-3 Predicting the household’s peak time load for the next month" rel="bookmark">Predicting Global Energy Demand using Spark : Part-3 <small class="subtitle">Predicting the household’s peak time load for the next month</small></a></h2> 
+          <div class="entry-meta"> 
+           <span class="sep">Posted on </span>
+           <a href="http://zinniasystems.com/blog/2014/01/02/predicting-global-energy-demand-using-spark-part-3/" title="7:16 am" rel="bookmark"><time class="entry-date" datetime="2014-01-02T07:16:53+00:00" pubdate="">January 2, 2014</time></a>
+           <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://zinniasystems.com/blog/author/shashank/" title="View all posts by Shashank L" rel="author">Shashank L</a></span></span> 
+           <span class="sep"> | </span> 
+           <span class="comments-link"> <a href="http://zinniasystems.com/blog/2014/01/02/predicting-global-energy-demand-using-spark-part-3/#respond" title="Comment on Predicting Global Energy Demand using Spark : Part-3 Predicting the household’s peak time load for the next month"><span class="leave-reply">Leave a reply</span></a> </span> 
+           <div class="sharebuttondivhome"> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-facebook"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-twitter fa-sm fa-md"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-sm fa-md fa-google-plus"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-rss"></i></a>
+           </div> 
+          </div>
+          <!-- .entry-meta --> 
+         </header>
+         <!-- .entry-header --> 
+        </div> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-6 col-md-6 col-xs-12 left-verticalrule"> 
+         <div class="entry-content clearfix left-part"> 
+          <p><span class="intro"> </span></p>
+          <p>This is a sequel of the previous blogs from our team members, where the solution for the problem related to energy consumption was explained. In this blog, let me explain our solution to another problem on the same data whose schema is mentioned <a href="blog/2013/12/12/predicting-global-energy-demand-using-spark-part-1/">here.</a></p> 
+          <h4>Problem</h4> 
+          <p>What would be household’s peak time load (Peak time is between 7 AM to 10 AM) for the next month.</p> 
+          <ul> 
+           <li>During Weekdays?</li> 
+           <li>During Weekends?</li> 
+          </ul> 
+         </div>
+         <!-- .entry-content --> 
+         <footer class="entry-meta"> 
+          <a href="http://zinniasystems.com/blog/2014/01/02/predicting-global-energy-demand-using-spark-part-3/" class="pull-right">Continue Reading. . .</a> 
+         </footer>
+         <!-- #entry-meta --> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+	(function () {
+		$.each($('.sharebuttondivhome'),function(i,ele){
+			$.each(ele.children,function(j,elmt){
+			if($('.subtitle')[i]!=undefined && $('.subtitle')[i]!=null){
+		        subtitle=$('.subtitle')[i].innerHTML;
+       			 }else{
+		        subtitle="";
+		        }
+
+			if(j==0){	elmt.href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+$('.entry-title')[i].children[0].href+"&p[images][0]=/blog/wp-content/themes/the-bootstrap/img/download.jpg&p[title]="+$('.entry-title')[i].children[0].text.split('\n')[0]+"&p[summary]="+subtitle;}
+			else if(j==1){elmt.href="http://twitter.com/share?url="+$('.entry-title')[i].children[0].href+"&text="+$('.entry-title')[i].children[0].text.replace('\n',' ')+"&via=zinniasystems";}
+			else if(j==2){elmt.href="https://plus.google.com/share?url="+$('.entry-title')[i].children[0].href+"&t=how to share";}
+			else if(j==3){elmt.href="/blog/feed";}
+			});
+		});
+	})();
+	</script> 
+      </article>
+      <!-- #post-98 --> 
+      <hr> 
+      <article id="post-91" class="post-91 post type-post status-publish format-standard hentry category-hackthon-series category-hadoop category-spark"> 
+       <div class="row"> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-3 col-md-3 col-xs-12 customheader"> 
+         <header class="page-header"> 
+          <h2 class="entry-title"><a href="http://zinniasystems.com/blog/2013/12/20/predicting-global-energy-demand-using-spark-part-2/" title="Permalink to Predicting Global Energy Demand using Spark : Part-2 Predicting next day energy demand" rel="bookmark">Predicting Global Energy Demand using Spark : Part-2 <small class="subtitle">Predicting next day energy demand</small></a></h2> 
+          <div class="entry-meta"> 
+           <span class="sep">Posted on </span>
+           <a href="http://zinniasystems.com/blog/2013/12/20/predicting-global-energy-demand-using-spark-part-2/" title="1:37 pm" rel="bookmark"><time class="entry-date" datetime="2013-12-20T13:37:16+00:00" pubdate="">December 20, 2013</time></a>
+           <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://zinniasystems.com/blog/author/shashidhar/" title="View all posts by Shashidhar Eranti" rel="author">Shashidhar Eranti</a></span></span> 
+           <span class="sep"> | </span> 
+           <span class="comments-link"> <a href="http://zinniasystems.com/blog/2013/12/20/predicting-global-energy-demand-using-spark-part-2/#comments" title="Comment on Predicting Global Energy Demand using Spark : Part-2 Predicting next day energy demand"><strong>2</strong> Replies</a> </span> 
+           <div class="sharebuttondivhome"> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-facebook"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-twitter fa-sm fa-md"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-sm fa-md fa-google-plus"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-rss"></i></a>
+           </div> 
+          </div>
+          <!-- .entry-meta --> 
+         </header>
+         <!-- .entry-header --> 
+        </div> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-6 col-md-6 col-xs-12 left-verticalrule"> 
+         <div class="entry-content clearfix left-part"> 
+          <p><span class="intro"> </span></p>
+          <p>Its our pleasure to share our approach in solving the hackathon problems briefly. So, lets start the exploration with details about the data we handled. The given data represents the energy consumption details recorded for each minute in household usage.The hourly data was having 2075259 measurements gathered between December 2008 and November 2012 (almost 4 years).You can find the schema for data <a href="/blog/2013/12/12/predicting-global-energy-demand-using-spark-part-1/">here.</a></p> 
+         </div>
+         <!-- .entry-content --> 
+         <footer class="entry-meta"> 
+          <a href="http://zinniasystems.com/blog/2013/12/20/predicting-global-energy-demand-using-spark-part-2/" class="pull-right">Continue Reading. . .</a> 
+         </footer>
+         <!-- #entry-meta --> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+	(function () {
+		$.each($('.sharebuttondivhome'),function(i,ele){
+			$.each(ele.children,function(j,elmt){
+			if($('.subtitle')[i]!=undefined && $('.subtitle')[i]!=null){
+		        subtitle=$('.subtitle')[i].innerHTML;
+       			 }else{
+		        subtitle="";
+		        }
+
+			if(j==0){	elmt.href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+$('.entry-title')[i].children[0].href+"&p[images][0]=/blog/wp-content/themes/the-bootstrap/img/download.jpg&p[title]="+$('.entry-title')[i].children[0].text.split('\n')[0]+"&p[summary]="+subtitle;}
+			else if(j==1){elmt.href="http://twitter.com/share?url="+$('.entry-title')[i].children[0].href+"&text="+$('.entry-title')[i].children[0].text.replace('\n',' ')+"&via=zinniasystems";}
+			else if(j==2){elmt.href="https://plus.google.com/share?url="+$('.entry-title')[i].children[0].href+"&t=how to share";}
+			else if(j==3){elmt.href="/blog/feed";}
+			});
+		});
+	})();
+	</script> 
+      </article>
+      <!-- #post-91 --> 
+      <hr> 
+      <article id="post-80" class="post-80 post type-post status-publish format-standard hentry category-hackthon-series category-hadoop category-spark"> 
+       <div class="row"> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-3 col-md-3 col-xs-12 customheader"> 
+         <header class="page-header"> 
+          <h2 class="entry-title"><a href="http://zinniasystems.com/blog/2013/12/12/predicting-global-energy-demand-using-spark-part-1/" title="Permalink to Predicting Global Energy Demand using Spark : Part-1" rel="bookmark">Predicting Global Energy Demand using Spark : Part-1</a></h2> 
+          <div class="entry-meta"> 
+           <span class="sep">Posted on </span>
+           <a href="http://zinniasystems.com/blog/2013/12/12/predicting-global-energy-demand-using-spark-part-1/" title="1:16 pm" rel="bookmark"><time class="entry-date" datetime="2013-12-12T13:16:11+00:00" pubdate="">December 12, 2013</time></a>
+           <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://zinniasystems.com/blog/author/shashidhar/" title="View all posts by Shashidhar Eranti" rel="author">Shashidhar Eranti</a></span></span> 
+           <span class="sep"> | </span> 
+           <span class="comments-link"> <a href="http://zinniasystems.com/blog/2013/12/12/predicting-global-energy-demand-using-spark-part-1/#comments" title="Comment on Predicting Global Energy Demand using Spark : Part-1"><strong>1</strong> Reply</a> </span> 
+           <div class="sharebuttondivhome"> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-facebook"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-twitter fa-sm fa-md"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-sm fa-md fa-google-plus"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-rss"></i></a>
+           </div> 
+          </div>
+          <!-- .entry-meta --> 
+         </header>
+         <!-- .entry-header --> 
+        </div> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-6 col-md-6 col-xs-12 left-verticalrule"> 
+         <div class="entry-content clearfix left-part"> 
+          <p><span class="intro"> </span></p>
+          <p>This series of blogs will walk you through our complete solution , designed and implemented for predicting future energy demand using spark.</p> 
+          <p>This problem was solved within 24hrs in <a href="/blog/2013/12/09/zinnia-systems-wins-big-data-hackathon/" target="_blank">hackathon.</a></p> 
+          <h3>Problem statement</h3> 
+          <p style="font-weight:bold;font-style:italic;"> Predict the global energy demand for next year using the energy usage data available for last four years, in order to enable utility companies effectively handle the energy demand.</p> 
+         </div>
+         <!-- .entry-content --> 
+         <footer class="entry-meta"> 
+          <a href="http://zinniasystems.com/blog/2013/12/12/predicting-global-energy-demand-using-spark-part-1/" class="pull-right">Continue Reading. . .</a> 
+         </footer>
+         <!-- #entry-meta --> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+	(function () {
+		$.each($('.sharebuttondivhome'),function(i,ele){
+			$.each(ele.children,function(j,elmt){
+			if($('.subtitle')[i]!=undefined && $('.subtitle')[i]!=null){
+		        subtitle=$('.subtitle')[i].innerHTML;
+       			 }else{
+		        subtitle="";
+		        }
+
+			if(j==0){	elmt.href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+$('.entry-title')[i].children[0].href+"&p[images][0]=/blog/wp-content/themes/the-bootstrap/img/download.jpg&p[title]="+$('.entry-title')[i].children[0].text.split('\n')[0]+"&p[summary]="+subtitle;}
+			else if(j==1){elmt.href="http://twitter.com/share?url="+$('.entry-title')[i].children[0].href+"&text="+$('.entry-title')[i].children[0].text.replace('\n',' ')+"&via=zinniasystems";}
+			else if(j==2){elmt.href="https://plus.google.com/share?url="+$('.entry-title')[i].children[0].href+"&t=how to share";}
+			else if(j==3){elmt.href="/blog/feed";}
+			});
+		});
+	})();
+	</script> 
+      </article>
+      <!-- #post-80 --> 
+      <hr> 
+      <article id="post-74" class="post-74 post type-post status-publish format-standard hentry category-hadoop category-spark tag-hadoop tag-spark"> 
+       <div class="row"> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-3 col-md-3 col-xs-12 customheader"> 
+         <header class="page-header"> 
+          <h2 class="entry-title"><a href="http://zinniasystems.com/blog/2013/12/09/zinnia-systems-wins-big-data-hackathon/" title="Permalink to Zinnia Systems wins Big Data hackathon" rel="bookmark">Zinnia Systems wins Big Data hackathon</a></h2> 
+          <div class="entry-meta"> 
+           <span class="sep">Posted on </span>
+           <a href="http://zinniasystems.com/blog/2013/12/09/zinnia-systems-wins-big-data-hackathon/" title="1:37 pm" rel="bookmark"><time class="entry-date" datetime="2013-12-09T13:37:58+00:00" pubdate="">December 9, 2013</time></a>
+           <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://zinniasystems.com/blog/author/madhukaraphatakzinniasystems-com/" title="View all posts by Madhukara Phatak" rel="author">Madhukara Phatak</a></span></span> 
+           <span class="sep"> | </span> 
+           <span class="comments-link"> <a href="http://zinniasystems.com/blog/2013/12/09/zinnia-systems-wins-big-data-hackathon/#comments" title="Comment on Zinnia Systems wins Big Data hackathon"><strong>1</strong> Reply</a> </span> 
+           <div class="sharebuttondivhome"> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-facebook"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-twitter fa-sm fa-md"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-sm fa-md fa-google-plus"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-rss"></i></a>
+           </div> 
+          </div>
+          <!-- .entry-meta --> 
+         </header>
+         <!-- .entry-header --> 
+        </div> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-6 col-md-6 col-xs-12 left-verticalrule"> 
+         <div class="entry-content clearfix left-part"> 
+          <p><span class="intro"><a class="thumbnail" href="/blog/wp-content/uploads/2013/12/Team.jpg"><img src="/blog/wp-content/uploads/2013/12/Team.jpg" alt="Team" class="alignnone size-full wp-image-86" style="width:100%"></a></span></p> 
+          <p>This weekend more than 20 companies came together at <a href="http://bigdataconclave.com/index1.php" target="_blank"> BigData conclave </a> to explore big ideas. It was two day event held at Sheraton hotel, Bangalore. Developers from all across country flew to Bangalore to participate in the event.</p> 
+          <p>Flutura, a bigdata company, hosted hackathon to crack big data problem within 24 hours. More than 53 teams from various companies had participated in the event.We were able to crack the problem and win the hackathon. It was a great team performance.</p> 
+         </div>
+         <!-- .entry-content --> 
+         <footer class="entry-meta"> 
+          <a href="http://zinniasystems.com/blog/2013/12/09/zinnia-systems-wins-big-data-hackathon/" class="pull-right">Continue Reading. . .</a> 
+         </footer>
+         <!-- #entry-meta --> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+	(function () {
+		$.each($('.sharebuttondivhome'),function(i,ele){
+			$.each(ele.children,function(j,elmt){
+			if($('.subtitle')[i]!=undefined && $('.subtitle')[i]!=null){
+		        subtitle=$('.subtitle')[i].innerHTML;
+       			 }else{
+		        subtitle="";
+		        }
+
+			if(j==0){	elmt.href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+$('.entry-title')[i].children[0].href+"&p[images][0]=/blog/wp-content/themes/the-bootstrap/img/download.jpg&p[title]="+$('.entry-title')[i].children[0].text.split('\n')[0]+"&p[summary]="+subtitle;}
+			else if(j==1){elmt.href="http://twitter.com/share?url="+$('.entry-title')[i].children[0].href+"&text="+$('.entry-title')[i].children[0].text.replace('\n',' ')+"&via=zinniasystems";}
+			else if(j==2){elmt.href="https://plus.google.com/share?url="+$('.entry-title')[i].children[0].href+"&t=how to share";}
+			else if(j==3){elmt.href="/blog/feed";}
+			});
+		});
+	})();
+	</script> 
+      </article>
+      <!-- #post-74 --> 
+      <hr> 
+      <article id="post-71" class="post-71 post type-post status-publish format-standard hentry category-hadoop tag-hadoop tag-hadoop-2-0 tag-spark tag-yarn"> 
+       <div class="row"> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-3 col-md-3 col-xs-12 customheader"> 
+         <header class="page-header"> 
+          <h2 class="entry-title"><a href="http://zinniasystems.com/blog/2013/11/29/hadoop-2-0-is-here-why-you-should-care/" title="Permalink to Hadoop 2.0  is here, Why you should care?" rel="bookmark">Hadoop 2.0 is here, Why you should care?</a></h2> 
+          <div class="entry-meta"> 
+           <span class="sep">Posted on </span>
+           <a href="http://zinniasystems.com/blog/2013/11/29/hadoop-2-0-is-here-why-you-should-care/" title="7:22 am" rel="bookmark"><time class="entry-date" datetime="2013-11-29T07:22:30+00:00" pubdate="">November 29, 2013</time></a>
+           <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://zinniasystems.com/blog/author/madhukaraphatakzinniasystems-com/" title="View all posts by Madhukara Phatak" rel="author">Madhukara Phatak</a></span></span> 
+           <span class="sep"> | </span> 
+           <span class="comments-link"> <a href="http://zinniasystems.com/blog/2013/11/29/hadoop-2-0-is-here-why-you-should-care/#respond" title="Comment on Hadoop 2.0  is here, Why you should care?"><span class="leave-reply">Leave a reply</span></a> </span> 
+           <div class="sharebuttondivhome"> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-facebook"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-twitter fa-sm fa-md"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-sm fa-md fa-google-plus"></i></a> 
+            <a href="#" target="_blank"><i class="socialpaddinghome fa fa-md fa-sm fa-rss"></i></a>
+           </div> 
+          </div>
+          <!-- .entry-meta --> 
+         </header>
+         <!-- .entry-header --> 
+        </div> 
+        <div class="col-lg-1 col-md-1 col-xs-0"> 
+        </div> 
+        <div class="col-lg-6 col-md-6 col-xs-12 left-verticalrule"> 
+         <div class="entry-content clearfix left-part"> 
+          <p><span class="intro"> </span></p>
+          <p>Hadoop 2.0 is here. After 5 ½ year of initial <a href="https://issues.apache.org/jira/browse/MAPREDUCE-279" target="_blank">proposal </a> hadoop community has delivered next major version update to the world’s most popular big data stack. Though it looks like single number upgrade, its going to redefine how we use Hadoop.</p> 
+          <p>It’s right time to get on the next generation platform. If you are still not convinced, the following reasons should get you excited.</p> 
+         </div>
+         <!-- .entry-content --> 
+         <footer class="entry-meta"> 
+          <a href="http://zinniasystems.com/blog/2013/11/29/hadoop-2-0-is-here-why-you-should-care/" class="pull-right">Continue Reading. . .</a> 
+         </footer>
+         <!-- #entry-meta --> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+	(function () {
+		$.each($('.sharebuttondivhome'),function(i,ele){
+			$.each(ele.children,function(j,elmt){
+			if($('.subtitle')[i]!=undefined && $('.subtitle')[i]!=null){
+		        subtitle=$('.subtitle')[i].innerHTML;
+       			 }else{
+		        subtitle="";
+		        }
+
+			if(j==0){	elmt.href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]="+$('.entry-title')[i].children[0].href+"&p[images][0]=/blog/wp-content/themes/the-bootstrap/img/download.jpg&p[title]="+$('.entry-title')[i].children[0].text.split('\n')[0]+"&p[summary]="+subtitle;}
+			else if(j==1){elmt.href="http://twitter.com/share?url="+$('.entry-title')[i].children[0].href+"&text="+$('.entry-title')[i].children[0].text.replace('\n',' ')+"&via=zinniasystems";}
+			else if(j==2){elmt.href="https://plus.google.com/share?url="+$('.entry-title')[i].children[0].href+"&t=how to share";}
+			else if(j==3){elmt.href="/blog/feed";}
+			});
+		});
+	})();
+	</script> 
+      </article>
+      <!-- #post-71 --> 
+      <hr> 
+      <nav class="pagination pagination-centered clearfix">
+       <ul class="page-numbers"> 
+        <li><span class="page-numbers current">1</span></li> 
+        <li><a class="page-numbers" href="http://zinniasystems.com/blog/page/2/">2</a></li> 
+        <li><a class="next page-numbers" href="http://zinniasystems.com/blog/page/2/">Next »</a></li> 
+       </ul> 
+      </nav> 
+     </div>
+     <!-- #content --> 
+    </section>
+    <!-- #primary --> 
+   </div> 
+  </div> 
+  <div id="custom-footer"> 
+  </div>   
+ </body>
+</html>

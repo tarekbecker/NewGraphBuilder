@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>9+ nineplus</title> 
+  <meta name="title" content="9+ nineplus"> 
+  <meta name="keywords" content="9plus nineplus"> 
+  <meta name="description" content="9plus nineplus"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
+  <link rel="icon" type="image/png" href="http://www.9plus.us/data_prod/other/favicon.png"> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" type="text/css" href="/css/front/class.css?v=1417797421"> 
+  <link rel="stylesheet" type="text/css" href="/css/front/colorbox.css"> 
+  <link rel="stylesheet" type="text/css" href="/css/front/responsivetabs.css"> 
+  <link rel="stylesheet" type="text/css" href="/css/front/selectbox.css"> 
+  <link rel="stylesheet" type="text/css" href="/css/front/responsive.css"> 
+  <link rel="stylesheet" type="text/css" href="/css/front/icon_font.css"> 
+  <link rel="stylesheet" type="text/css" href="/css/front/text_font.css"> 
+  <link rel="stylesheet" type="text/css" href="/css/front/flexslider.css"> 
+  <script type="text/javascript" src="/js/front/jquery-1.7.2.min.js"></script> 
+  <script type="text/javascript" src="/js/front/jquery.colorbox.js"></script> 
+  <script type="text/javascript" src="/js/front/modernizr.js"></script> 
+  <script type="text/javascript" src="/js/front/responsivetabs.js"></script> 
+  <script type="text/javascript" src="/js/front/select.js"></script> 
+  <script type="text/javascript" src="/js/front/jquery-ui.js"></script> 
+  <script type="text/javascript" src="/js/front/selectbox-0.2.js"></script> 
+  <script type="text/javascript" src="/js/front/front_js.js"></script> 
+  <script type="text/javascript" src="/js/front/jquery.flexslider.js"></script> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42392273-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  <script type="text/javascript">
+var siteUrl = "http://www.9plus.us/";
+    $(document).ready(function () {
+        $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion           
+            width: 'auto', //auto or any width like 600px
+            fit: true,   // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#tabInfo');
+                var $name = $('span', $info);
+
+                $name.text($tab.text());
+
+                $info.show();
+            }
+        });  
+		/*****************This is writen by nishant mathur*************************/
+		/*
+		$('.link a').live('click',function(e){
+			var id = $(this).attr('id');
+			if(!$('#'+id).parent().hasClass('drop_arrow'))
+			  {
+				  $('.link').removeClass('drop_arrow');
+			  }
+			$('.bio_gray_box').stop().slideUp();
+			$('.bio_boxblock'+id).stop().animate({height:'toggle',opacity:'toggle'},500);	
+			$('#'+id).parent().stop().toggleClass('drop_arrow', 70, "easeInOutBounce");
+		});	
+		*/
+	 /*ScrollTop to Bottom */		
+		$('.people_tab ul li a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+		var target = this.hash,
+	    $target = $(target);
+		$('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 500, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+	
+	/*Bottom to ScrollTop*/
+	$('.page_top a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+		var target = this.hash,
+	    $target = $(target);
+		$('html, body').stop().animate({
+	        'scrollTop': '0px'
+	    }, 1500, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+/***************************************************************************/				 
+	$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390}); 	
+	 
+	$(function () {
+	$("#rolein_company01").selectbox();
+	}); 
+	
+	$(function () {
+		$("#rolein_company02").selectbox();
+	}); 
+	
+	$("#nav_icon").click(function(){
+		$("#menus").slideToggle("500");
+	});	 
+
+	}); 
+</script> 
+  <script type="text/javascript"> 
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script> 
+ </head> 
+ <body class=""> 
+  <div id="loading_image" style="display:none"> 
+   <span class="loader"><img src="/img/front/loader.gif" alt=""></span> 
+  </div> 
+  <section class="main_contener_part"> 
+   <section class="content_main_wrap"> 
+    <header class="header_wrap_without_shadow"> 
+     <section class="header_inside"> 
+      <div class="header-massage">
+       <p>
+        <!-- { incubate messaging to go here! } -->&nbsp;</p>
+      </div> 
+      <div class="logo"> 
+       <a href="/"><img src="http://www.9plus.us/data_prod/other/9plus_logo.png" alt="9plus"></a> 
+      </div> 
+      <div class="header-right"> 
+       <div class="social_icon"> 
+        <ol> 
+         <li><a href="https://twitter.com/9PlusIncubator" class="twitter" target="_blank"></a></li> 
+         <li><a href="https://www.linkedin.com/company/9-?trk=company_logo" class="linkedin" target="_blank"></a></li> 
+        </ol> 
+       </div> 
+       <nav class="menu"> 
+        <a href="#" id="nav_icon" class="navgation_grid_icon"><img src="/img/front/icon_nav_toggle.gif" alt=""></a> 
+        <ul id="menus"> 
+         <li> <a href="/people" target="_self" class="">People</a> </li> 
+         <li> <a href="/program" target="_self" class="">Program</a> </li> 
+         <li> <a href="http://www.studio9plus.com/application" target="_self" class="">Application</a> </li> 
+         <li> <a href="/about" target="_self" class="">About</a> </li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="clr"></div> 
+     </section> 
+    </header> 
+    <script language="javascript" type="text/javascript">
+$(document).ready(function(){
+	/*
+	jq_bio
+	jq_bio_listitem
+	*/
+	var link_index = -1;
+	$('.link').removeClass('drop_arrow');
+	$( window ).resize(function() {
+		$('.link').removeClass('drop_arrow');
+		$("#temp_div").css('display','none');
+		link_index = -1;
+	});
+	
+	$("a.twitter_link").each(function(){
+		if( $(this).text().trim() == '' ){									  
+			$(this).parent('li').remove();
+		}
+	});
+	$("a.jq_bio").each(function(){
+		if( $(this).parents('.jq_bio_listitem').find(".bio_gray_box").text().trim() == '' ){								  
+			$(this).parent('li').remove();
+		}
+	});
+	$("ul").each(function(){
+		if( $(this).text().trim() == '' ){								  
+			$(this).remove();
+		}
+	});
+	$("div.bio_link").each(function(){
+		if( $(this).text().trim() == '' ){								  
+			$(this).remove();
+		}
+	});
+	
+	
+	$('a.jq_bio').on('click',function(){
+		
+		//$("#temp_div")
+		if( parseInt( $(this).index('a.jq_bio') ) == link_index) {
+			
+			$("#temp_div").slideUp(100);
+			$('.link').removeClass('drop_arrow');
+			link_index = -1;
+			return false;
+		}else{
+			$("#temp_div").slideUp(100);
+			$('.link').removeClass('drop_arrow');
+			link_index = parseInt( $(this).index('a.jq_bio') );
+		}
+		
+		$(".close_popup").live('click',function(){
+			$(this).parents("#temp_div").slideUp(100);
+		});
+		
+		if( $(this).parents('.jq_bio_listitem').find(".bio_gray_box").length > 0 ){
+			
+			if( $(this).parents('.jq_bio_listitem').find(".bio_gray_box").text().trim() != '' ){
+				/*
+				alert( "LEFT : " + $(".content_main_wrap").offset().left );
+				alert( $(this).offset().top );
+				*/
+				$(this).parent('li.link').addClass('drop_arrow');
+				$("#temp_div").removeClass('bio_gray_box');
+				$("#temp_div").css('display','none');
+				$("#temp_div").html('<div style="float:right; padding:10px; margin-bottom:10px;"><a href="javascript:void(0)" class="close_popup"><img src="'+siteUrl+'img/front/close.png" width="24" /></a></div><div style="padding:20px;">' +  $(this).parents('.jq_bio_listitem').find(".bio_gray_box").html() + '</div>' );
+				$("#temp_div").addClass('bio_gray_box');
+				var dw = parseInt( $("body").css('width')  );
+				var w = parseInt($(".content_main_wrap").css('width') );
+				var l = parseInt($(".content_main_wrap").offset().left);
+				var p = parseInt(w /100);
+				
+				$("#temp_div").css({
+					/*'width' : w + 'px',
+					'width' : '90%',*/
+					'width' : (w*100/dw)+'%',
+					'left' : l +'px',
+					'top' : (parseInt($(this).offset().top) + 38 )+'px',
+					'position':'absolute',
+					/*'display' : 'block',*/
+					'padding': '0px 0px 0px 0px'
+				}).slideDown(150);
+				//$(this).parents('.jq_bio_listitem').find(".bio_gray_box").css('display','block');
+			}
+			
+		}
+	});
+	
+});
+</script> 
+    <div class="rows left white-bg"> 
+     <div class="slider-sec02"> 
+      <div class="main-inner-sec"> 
+       <div class="slider-inner"> 
+        <img src="http://www.9plus.us/data_prod/media/orginal/banner-home-latest-0720.png"> 
+        <div class="text_content"> 
+         <h2>Get Traction</h2> 
+         <p>9+ gives you 9 months,<br> plenty of money, and the<br> mentorship you deserve!</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div>
+     <div class="rows"> 
+      <div class="title-block margin_top70"> 
+       <h2>How We're Different</h2> 
+       <p>9+ is for founders who want personalized and deeper mentoring, plus hands-on help with product, sales or marketing.</p> 
+      </div> 
+      <div class="more-info-section margin_top70"> 
+       <div class="info-block block1"> 
+        <span class="icon1"> <img src="http://www.9plus.us/data_prod/media/orginal/icon-yellow-1555.png"></span> 
+        <h2>More Time</h2> 
+        <p>We dedicate 9 months of our time and effort for MVP Development, Product Market Fit Tuning, and Fund Raising. We accept fewer start-ups, so you get much more from us.</p> 
+       </div> 
+       <div class="info-block block2"> 
+        <h2>more Money </h2> 
+        <p>We provide 120K of initial funding. Plus, instead of a demo day, you get access to our Angel List Syndicate for up to 500K additional funding during the program. These angels have pre-committed to our program companies.</p> 
+       </div> 
+       <div class="info-block block3"> 
+        <span class="icon2"><img src="http://www.9plus.us/data_prod/media/orginal/icon-light-1624.png"></span> 
+        <h2>More advice</h2> 
+        <p>Peter and the partners are full time, dedicated to 9+ start-ups. You get on-demand access to us. No need for brief office hours.</p> 
+       </div> 
+      </div> 
+     </div>
+     <div class="rows light-gray-bg margin_top80 left"> 
+      <div class="user-info-sec"> 
+       <div class="left-sec"> 
+        <h2>Apply Anytime</h2> 
+        <p>Rolling admissions means you can apply when you and your team are ready.<br> </p> 
+        <p class="margin_top10"><strong>No deadlines! Up to 2 start-ups each quarter can join our program.</strong></p> 
+       </div> 
+       <div class="right-sec"> 
+        <div class="sign-up-button margin_top20"> 
+         <a href="http://www.9plus.us/application">Sign Up Today </a>
+        </div> 
+       </div> 
+      </div> 
+     </div>
+     <div class="rows left"> 
+      <div class="title-block margin_top70"> 
+       <h2 class="blue_text">the benefits</h2> 
+       <p> The 9+ Program offers more engaging and useful benefits than any other <br> incubator. </p> 
+      </div> 
+      <div class="benefit-info-section margin_top70"> 
+       <ul> 
+        <li> 
+         <div class="info-boxes gray-bg"> 
+          <div class="img-sec" style="min-height:95px;">
+           <div style="margin-top:18px;">
+            <img src="http://www.9plus.us/data_prod/media/orginal/home-bottom-icon-9422.png">
+           </div>
+          </div> 
+          <div class="text-sec">
+           Shared Working Space
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="info-boxes blue-bg"> 
+          <div class="img-sec">
+           <img src="http://www.9plus.us/data_prod/media/orginal/icon02-9308.png">
+          </div> 
+          <div class="text-sec">
+           Founder
+           <br> Dinners
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="info-boxes yellow-bg" style="background-color:#FBE04D;"> 
+          <div class="img-sec">
+           <img src="http://www.9plus.us/data_prod/media/orginal/icon03-9309.png">
+          </div> 
+          <div class="text-sec">
+           Genuine 
+           <br> Mentorship
+          </div> 
+         </div> </li> 
+        <li> <a href="http://www.9plus.us/application"> <span class="info-boxes black-bg"> 
+           <div class="img-sec">
+            <img src="http://www.9plus.us/data_prod/media/orginal/icon04-9309.png">
+           </div> 
+           <div class="text-sec margin_top16">
+            Learn More
+           </div> </span> </a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <a href="https://plus.google.com/u/0/b/109278584302789949468/109278584302789949468/about" rel="publisher"></a> 
+   </section> 
+  </section> 
+  <footer> 
+   <section class="content_main_wrap"> 
+    <div class="footer-left-sec"> 
+     <div class="footer_logo"> 
+      <img src="http://www.9plus.us/data_prod/other/9plus_footer_logo.png" alt="9plus"> 
+     </div> 
+     <div class="footer_copy">
+       © 2014 Studio 9+ LLC | All rights reserved
+     </div> 
+    </div> 
+    <div class="footer_menu_sec"> 
+     <ul class="left-sec box-sizing"> 
+      <li> <a href="http://www.9plus.us/people" target="_self">People</a> </li> 
+      <li> <a href="http://www.9plus.us/program" target="_self">The Program</a> </li> 
+      <li> <a href="http://www.9plus.us/application" target="_self">Application</a> </li> 
+      <li> <a href="http://www.9plus.us/about" target="_self">About</a> </li> 
+     </ul> 
+     <ul class="right-sec box-sizing"> 
+      <li> <a href="http://www.9plus.us/contact-us" target="_self">Contact Us</a> </li> 
+      <li> <a href="http://www.9plus.us/press" target="_self">Press Room</a> </li> 
+      <li> <a href="http://www.9plus.us/faq" target="_self">FAQS</a> </li> 
+     </ul> 
+    </div> 
+    <div class="clear"></div> 
+   </section> 
+  </footer> 
+  <div id="temp_div"></div>   
+  <div style="color:#fff; clear:both;"> 
+  </div>
+ </body>
+</html>

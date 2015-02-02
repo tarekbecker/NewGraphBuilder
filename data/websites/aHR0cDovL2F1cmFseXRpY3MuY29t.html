@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Auralytics</title> 
+  <meta name="author" content="iltaen"> 
+  <meta http-equiv="X-UA-Compatible" content="edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <!-- CSS --> 
+  <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css"> 
+  <!--<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>--> 
+  <!--<link rel="stylesheet" type="text/css" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/css/bootstrap.css" />--> 
+  <!--<link rel="stylesheet" type="text/css" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/css/bootstrap-theme.min.css" />--> 
+  <!--<link rel="stylesheet" type="text/css" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/css/bootstrap-grid.css" />--> 
+  <link rel="stylesheet" type="text/css" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/font-awesome/css/font-awesome.css"> 
+  <link rel="stylesheet" type="text/css" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/style.css"> 
+  <!--[if IE 8]><link href="http://auralytics.com/wp-content/themes/pandoraboxtheme/styles/ie.css" rel="stylesheet" type="text/css"/><![endif]--> 
+  <!--JavaScript--> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> 
+  <script src="http://auralytics.com/wp-content/themes/pandoraboxtheme/js/script.js" type="text/javascript"></script> 
+  <!--<script src="http://auralytics.com/wp-content/themes/pandoraboxtheme/js/bootstrap.min.js" type="text/javascript"></script>--> 
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> 
+  <script src="http://auralytics.com/wp-content/themes/pandoraboxtheme/js/map.js" type="text/javascript"></script> 
+  <!--<script src="http://auralytics.com/wp-content/themes/pandoraboxtheme/js/et_shortcodes_frontend.js" type="text/javascript"></script>--> 
+  <!--<script src="http://auralytics.com/wp-content/themes/pandoraboxtheme/js/jquery.cookie.js"></script>--> 
+  <!-- Uncomment it for pattern background
+    <link rel="stylesheet" type="text/css" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/styles/background-pattern.css" />
+    --> 
+  <!-- OR Uncomment it for image background--> 
+  <link rel="stylesheet" type="text/css" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/styles/background-image.css"> 
+  <style>
+                    .colorblock {
+                      background: url('http://auralytics.com/wp-content/uploads/2014/07/BG1.jpg') no-repeat;
+                      background-size: cover;
+                    }
+                    .mainmenu {
+                      background: url('http://auralytics.com/wp-content/uploads/2014/07/BG1.jpg') no-repeat;
+                      background-size: cover;
+                    }
+    </style> 
+  <!-- вывод фавикона --> 
+  <link rel="apple-touch-icon" sizes="57x57" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/apple-touch-icon-57x57.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon" sizes="60x60" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/apple-touch-icon-60x60.png"> 
+  <link rel="apple-touch-icon" sizes="120x120" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon" sizes="76x76" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/apple-touch-icon-76x76.png"> 
+  <link rel="apple-touch-icon" sizes="152x152" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="icon" type="image/png" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/favicon-196x196.png" sizes="196x196"> 
+  <link rel="icon" type="image/png" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/favicon-160x160.png" sizes="160x160"> 
+  <link rel="icon" type="image/png" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/favicon-96x96.png" sizes="96x96"> 
+  <link rel="icon" type="image/png" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/favicon-16x16.png" sizes="16x16"> 
+  <link rel="icon" type="image/png" href="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/favicon-32x32.png" sizes="32x32"> 
+  <meta name="msapplication-TileColor" content="#2d89ef"> 
+  <meta name="msapplication-TileImage" content="http://auralytics.com/wp-content/themes/pandoraboxtheme/favicons/mstile-144x144.png"> 
+  <meta name="robots" content="noindex,follow"> 
+  <link rel="stylesheet" id="mailchimp-for-wp-checkbox-css" href="http://auralytics.com/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.css?ver=2.0.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="mailchimp-for-wp-form-css" href="http://auralytics.com/wp-content/plugins/mailchimp-for-wp/assets/css/form.css?ver=2.0.4" type="text/css" media="all"> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://auralytics.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://auralytics.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 3.9.3"> 
+  <style type="text/css">
+		#wp_native_dashboard_language {padding: 2px;border-width: 1px;border-style: solid;height: 2em;vertical-align:top;margin-top: 2px;font-size:16px;width:100%; }
+		#wp_native_dashboard_language option { padding-left: 4px; }
+		</style> 
+ </head> 
+ <body> 
+  <div class="auralytics_prime_block colorblock block" id="home-2">
+   <div class="block-container" id="home_auralytics"> 
+    <img src="http://auralytics.com/wp-content/uploads/2014/07/Logo_aura.png" alt="Logo_aura" width="294" height="254" class="aligncenter size-full wp-image-140 logo_aura">
+    <p></p> 
+    <h1>A personal touch to analytics and Big Data.</h1> 
+    <h2>Know exactly how your customers are shopping.</h2> 
+    <div class="description">
+     Auralytics is a new device that takes Big Data to the next level. Using Near Body Communication Technology (NBC), we deliver brands and retailers a transparent look into the precise moves of consumers, giving brick-and-mortar stores the same data offered to online retailers. Cheers to the new way of exploring analytics.
+    </div> 
+    <h2>Subscribe for updates</h2> 
+    <!-- Form by MailChimp for WordPress plugin v2.0.4 - https://dannyvankooten.com/mailchimp-for-wordpress/ --> 
+    <form method="post" action="http://auralytics.com/" id="mc4wp-form-1" class="form mc4wp-form">
+     <div class="form_style">
+      <input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter e-mail" required>
+      <input type="submit" id="mc4wp_submit" value="Subscribe"> 
+      <div style="clear:both;"></div>
+     </div> 
+     <textarea name="_mc4wp_required_but_not_really" style="display: none !important;"></textarea>
+     <input type="hidden" name="_mc4wp_form_submit" value="1">
+     <input type="hidden" name="_mc4wp_form_instance" value="1">
+     <input type="hidden" name="_mc4wp_form_nonce" value="006a817f25">
+    </form> 
+    <!-- / MailChimp for WP Plugin --> 
+    <div class="socialblock"> 
+     <!-- Place your social links here -->
+     <br> 
+     <a href="https://www.facebook.com/auralytics" title="Facebook" class="socialicon"><i class="facebook"></i></a>
+     <a href="https://twitter.com/auralytics" title="Twitter" class="socialicon"><i class="twitter"></i></a>
+     <a href="http://instagram.com/auralytics" title="Instagram" class="socialicon"><i class="instagram"></i></a>
+     <a href="http://www.pinterest.com/auralytics/" title="Pinterest" class="socialicon"><i class="pinterest"></i></a> 
+    </div> 
+    <div class="copyright">
+     Auralytics, 2014 ©
+    </div> 
+   </div> 
+  </div> 
+  <!--JavaScript--> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> 
+  <script src="http://auralytics.com/wp-content/themes/pandoraboxtheme/js/script.js" type="text/javascript"></script> 
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> 
+  <script src="http://auralytics.com/wp-content/themes/pandoraboxtheme/js/map.js" type="text/javascript"></script>  
+ </body>
+</html>

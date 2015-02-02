@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>DesignMind   Business Intelligence, Big Data, SQL Server, and .NET</title>
+  <meta name="description" content="Business Intelligence, Big Data, SQL Server, and .NET"> 
+  <meta name="robots" content="noodp,noydir"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1" id="viewport-meta">
+  <meta name="author" content="DesignMind">
+  <meta name="geography" content="San Francisco, CA">
+  <meta name="copyright" content="(c) 2014, DesignMind. All rights reserved.">
+  <meta name="designer" content="Take Flight Graphics: http://www.takeflightgraphics.com">
+  <meta name="distribution" content="global">
+  <link rel="alternate" type="application/rss+xml" title="DesignMind » Feed" href="http://www.designmind.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="DesignMind » Comments Feed" href="http://www.designmind.com/comments/feed/"> 
+  <link rel="canonical" href="http://www.designmind.com/"> 
+  <link rel="stylesheet" id="designmind-css" href="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/style.css?ver=1.0.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="ubermenu-basic-css" href="http://www.designmind.com/wordpress/wp-content/plugins/ubermenu/standard/styles/basic.css?ver=2.3.2.2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="webfonts-css" href="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/lib/fonts/webfonts.css?ver=1.023" type="text/css" media="all"> 
+  <link rel="stylesheet" id="squelch_taas-css" href="http://www.designmind.com/wordpress/wp-content/plugins/squelch-tabs-and-accordions-shortcodes/css/squelch-tabs-and-accordions.css?ver=0.3.4" type="text/css" media="all"> 
+  <!-- This site uses the Yoast Google Analytics plugin v5.1.3 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ --> 
+  <script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-6014281-2']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script> 
+  <!-- / Yoast Google Analytics --> 
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script> 
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.designmind.com/wordpress/xmlrpc.php?rsd"> 
+  <link rel="Shortcut Icon" href="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/favicon.ico" type="image/x-icon"> 
+  <link rel="pingback" href="http://www.designmind.com/wordpress/xmlrpc.php"> 
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+  <!-- UberMenu CSS - Controlled through UberMenu Options Panel 
+================================================================ --> 
+  <style type="text/css" id="ubermenu-style-generator-css">
+/* Image Text Padding */
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > a > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > a > .wpmega-item-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-item-description{
+  padding-left: 23px;
+}	
+</style> 
+  <!-- end UberMenu CSS --> 
+ </head> 
+ <body class="home blog header-image full-width-content" itemscope itemtype="http://schema.org/WebPage">
+  <div class="site-container">
+   <div class="above-site-header">
+    <div class="wrap">
+     <section id="nav_menu-2" class="widget widget_nav_menu">
+      <div class="widget-wrap">
+       <div class="menu-top-menu-container">
+        <ul id="menu-top-menu" class="menu">
+         <li id="menu-item-99" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-99"><a href="http://www.designmind.com/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/', 'Home']);">Home</a></li> 
+         <li id="menu-item-517" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-517"><a href="http://www.designmind.com/contact/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/contact/', 'Contact']);">Contact</a></li> 
+         <li id="menu-item-104" class="linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-104"><a href="http://www.linkedin.com/company/designmind" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://www.linkedin.com/company/designmind', 'Connect with us']);" target="_blank">Connect with us</a></li> 
+         <li id="menu-item-105" class="phone menu-item menu-item-type-custom menu-item-object-custom menu-item-105"><a>1.415.538.8484</a></li> 
+        </ul>
+       </div>
+      </div>
+     </section> 
+    </div>
+   </div>
+   <header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="wrap">
+     <div class="title-area">
+      <h1 class="site-title" itemprop="headline"><a href="http://www.designmind.com/">DesignMind</a></h1>
+      <h2 class="site-description" itemprop="description">Business Intelligence, Big Data, SQL Server, and .NET</h2>
+     </div>
+     <aside class="widget-area header-widget-area">
+      <nav class="nav-primary" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+       <nav id="megaMenu" class="megaMenuContainer megaMenu-nojs megaResponsive megaResponsiveToggle wpmega-withjs megaMenuOnHover megaFullWidth megaMenuHorizontal wpmega-noconflict megaMinimizeResiduals megaResetStyles">
+        <div id="megaMenuToggle" class="megaMenuToggle">
+          &nbsp; 
+         <span class="megaMenuToggle-icon"></span>
+        </div>
+        <ul id="megaUber" class="megaMenu">
+         <li id="menu-item-339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children mega-with-sub ss-nav-menu-item-0 ss-nav-menu-item-depth-0 ss-nav-menu-reg um-flyout-align-center"><a href="http://www.designmind.com/about/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/about/', 'About']);"><span class="wpmega-link-title">About</span></a> 
+          <ul class="sub-menu sub-menu-1"> 
+           <li id="menu-item-340" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/team/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/team/', 'Leadership Team']);"><span class="wpmega-link-title">Leadership Team</span></a></li>
+           <li id="menu-item-800" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/clients/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/clients/', 'Clients']);"><span class="wpmega-link-title">Clients</span></a></li>
+           <li id="menu-item-1380" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/partners/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/partners/', 'Partners']);"><span class="wpmega-link-title">Partners</span></a></li>
+           <li id="menu-item-342" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/jobs/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/jobs/', 'Jobs']);"><span class="wpmega-link-title">Jobs</span></a></li>
+           <li id="menu-item-343" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/news/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/news/', 'News']);"><span class="wpmega-link-title">News</span></a></li>
+           <li id="menu-item-344" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/events/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/events/', 'Upcoming Events']);"><span class="wpmega-link-title">Upcoming Events</span></a></li>
+           <li id="menu-item-1592" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/resources/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/resources/', 'Resources']);"><span class="wpmega-link-title">Resources</span></a></li>
+           <li id="menu-item-1648" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/white-papers/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/white-papers/', 'White Papers']);"><span class="wpmega-link-title">White Papers</span></a></li>
+          </ul> </li>
+         <li id="menu-item-345" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children mega-with-sub ss-nav-menu-item-1 ss-nav-menu-item-depth-0 ss-nav-menu-reg um-flyout-align-center"><a href="http://www.designmind.com/services-overview/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/services-overview/', 'Services']);"><span class="wpmega-link-title">Services</span></a> 
+          <ul class="sub-menu sub-menu-1"> 
+           <li id="menu-item-347" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/big-data-solutions/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/big-data-solutions/', 'Big Data Solutions']);"><span class="wpmega-link-title">Big Data Solutions</span></a></li>
+           <li id="menu-item-346" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/business-intelligence/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/business-intelligence/', 'Business Intelligence']);"><span class="wpmega-link-title">Business Intelligence</span></a></li>
+           <li id="menu-item-922" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/cloudera/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/cloudera/', 'Cloudera Integration']);"><span class="wpmega-link-title">Cloudera Integration</span></a></li>
+           <li id="menu-item-1548" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/services-overview/data-science/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/services-overview/data-science/', 'Data Science']);"><span class="wpmega-link-title">Data Science</span></a></li>
+           <li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/sql-server-and-database-services/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sql-server-and-database-services/', 'SQL Server and Database Services']);"><span class="wpmega-link-title">SQL Server and Database Services</span></a></li>
+           <li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/software-development/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/software-development/', 'Software Development']);"><span class="wpmega-link-title">Software Development</span></a></li>
+           <li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/sharepoint-development/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sharepoint-development/', 'SharePoint Development']);"><span class="wpmega-link-title">SharePoint Development</span></a></li>
+           <li id="menu-item-1344" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/technical-staffing/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/technical-staffing/', 'Technical Staffing']);"><span class="wpmega-link-title">Technical Staffing</span></a></li>
+           <li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/247-dba-support/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/247-dba-support/', '24/7 DBA Support']);"><span class="wpmega-link-title">24/7 DBA Support</span></a></li>
+          </ul> </li>
+         <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children mega-with-sub ss-nav-menu-item-2 ss-nav-menu-item-depth-0 ss-nav-menu-reg um-flyout-align-center"><a href="http://www.designmind.com/technologies-overview/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/technologies-overview/', 'Technologies']);"><span class="wpmega-link-title">Technologies</span></a> 
+          <ul class="sub-menu sub-menu-1"> 
+           <li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/net/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/net/', '.NET']);"><span class="wpmega-link-title">.NET</span></a></li>
+           <li id="menu-item-355" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/sql-server/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sql-server/', 'SQL Server']);"><span class="wpmega-link-title">SQL Server</span></a></li>
+           <li id="menu-item-356" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/azure-cloud/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/azure-cloud/', 'Azure / Cloud']);"><span class="wpmega-link-title">Azure / Cloud</span></a></li>
+           <li id="menu-item-357" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/sharepoint/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sharepoint/', 'SharePoint']);"><span class="wpmega-link-title">SharePoint</span></a></li>
+           <li id="menu-item-358" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/big-data-tools/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/big-data-tools/', 'Big Data']);"><span class="wpmega-link-title">Big Data</span></a></li>
+           <li id="menu-item-359" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/power-bi/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/power-bi/', 'Power BI']);"><span class="wpmega-link-title">Power BI</span></a></li>
+           <li id="menu-item-497" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1"><a href="http://www.designmind.com/tableau/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/tableau/', 'Tableau']);"><span class="wpmega-link-title">Tableau</span></a></li>
+          </ul> </li>
+         <li id="menu-item-744" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-3 ss-nav-menu-item-depth-0 ss-nav-menu-reg um-flyout-align-center"><a href="http://www.designmind.com/clients/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/clients/', 'Clients']);"><span class="wpmega-link-title">Clients</span></a></li>
+         <li id="menu-item-362" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-4 ss-nav-menu-item-depth-0 ss-nav-menu-reg um-flyout-align-center"><a href="http://www.designmind.com/jobs/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/jobs/', 'Jobs']);"><span class="wpmega-link-title">Jobs</span></a></li>
+         <li id="menu-item-363" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-5 ss-nav-menu-item-depth-0 ss-nav-menu-reg um-flyout-align-center"><a href="http://www.designmind.com/news/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/news/', 'DesignMind News']);"><span class="wpmega-link-title">DesignMind News</span></a></li>
+         <li id="menu-item-364" class="menu-item menu-item-type-custom menu-item-object-custom ss-nav-menu-item-6 ss-nav-menu-item-depth-0 ss-nav-menu-reg um-flyout-align-center"><a href="http://www.designmind.com/blog/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/blog/', 'Blog']);" target="_blank"><span class="wpmega-link-title">Blog</span></a></li>
+        </ul>
+       </nav>
+      </nav>
+     </aside>
+    </div>
+   </header>
+   <div class="site-inner">
+    <div class="wrap">
+     <div class="content-sidebar-wrap">
+      <main class="content" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+       <section class="banner">
+        <section id="dsmd_banner-2" class="widget dsmd-banner desktop-only">
+         <div class="widget-wrap">
+          <div class="banner-1 tile150 first">
+           <div class="tile">
+            <span class="widget-title">Big Data</span>
+            <img width="31" height="30" alt="Big Data" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/icon-bigData.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/big-data-tools/" title="Unlock the value of your data"><p>Unlock the value of your data</p></a>
+          </div>
+          <div class="banner-2 tile150">
+           <div class="tile">
+            <img alt="" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/logo-sqlsvr.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/sql-server-and-database-services/" title="Optimize your reporting, analysis, and data management"><p>Optimize your reporting, analysis, and data management</p></a>
+          </div>
+          <div class="banner-3 tile310">
+           <div class="tile">
+            <span class="widget-title">Our Approach</span>
+            <img width="31" height="30" alt="Our Approach" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/icon-video.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/about/" title="Learn about the DesignMind philosophy"><p>Learn about the DesignMind philosophy</p></a>
+          </div>
+          <div class="banner-4 tile310">
+           <div class="tile">
+            <span class="widget-title"></span>
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/clients/" title="Our Clients"><p>Our Clients</p></a>
+          </div>
+          <div class="banner-5 tile150">
+           <div class="tile">
+            <span class="widget-title">Clients</span>
+            <img width="31" height="30" alt="Clients" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/icon-clients.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/clients/" title="See how DesignMind helps our clients thrive"><p>See how DesignMind helps our clients thrive</p></a>
+          </div>
+          <div class="banner-6 tile150 first">
+           <div class="tile">
+            <span class="widget-title">Business Intelligence</span>
+            <img width="31" height="30" alt="Business Intelligence" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/icon-bi.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/business-intelligence/" title="Discover what your data can do for you"><p>Discover what your data can do for you</p></a>
+          </div>
+          <div class="banner-7 tile150">
+           <div class="tile">
+            <img width="118" height="24" alt="" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/logo-sharepoint.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/sharepoint/" title="Share, manage, organize and store"><p>Share, manage, organize and store</p></a>
+          </div>
+          <div class="banner-8 tile310">
+           <div class="tile">
+            <span class="widget-title">Resources</span>
+            <img width="31" height="30" alt="Resources" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/icon-events.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/resources/" title="See our white papers, blog posts, news, and videos"><p>See our white papers, blog posts, news, and videos</p></a>
+          </div>
+          <div class="banner-9 tile310">
+           <div class="tile">
+            <span class="widget-title"></span>
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/about/" title="About DesignMind"><p>About DesignMind</p></a>
+          </div>
+          <div class="banner-10 tile150">
+           <div class="tile">
+            <span class="widget-title">Partners</span>
+            <img width="31" height="30" alt="Partners" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/icon-partners.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/partners/" title="Learn about our technology partners"><p>Learn about our technology partners</p></a>
+          </div>
+         </div>
+        </section> 
+        <section id="dsmd_mobile_banner-2" class="widget dsmd-banner mobile-only">
+         <div class="widget-wrap">
+          <div class="banner-1 tile150 first">
+           <div class="tile">
+            <span class="widget-title">Big Data</span>
+            <img width="31" height="30" alt="Big Data" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/icon-bigData.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/big-data-tools/" title=""></a>
+          </div>
+          <div class="banner-5 tile150">
+           <div class="tile">
+            <span class="widget-title">Clients</span>
+            <img width="31" height="30" alt="Clients" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/icon-clients.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/clients/" title=""></a>
+          </div>
+          <div class="banner-6 tile150 first">
+           <div class="tile">
+            <span class="widget-title">Business Intelligence</span>
+            <img width="31" height="30" alt="Business Intelligence" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/icon-bi.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/business-intelligence/" title=""></a>
+          </div>
+          <div class="banner-10 tile150">
+           <div class="tile">
+            <span class="widget-title">Partners</span>
+            <img width="31" height="30" alt="Partners" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/images/icon-partners.png">
+           </div>
+           <a class="caption fade" href="http://www.designmind.com/partners/" title=""></a>
+          </div>
+         </div>
+        </section> 
+       </section>
+       <section class="ggb-image"></section>
+       <section class="home-top-mobile">
+        <div class="first-area">
+         <h1 class="widget-title widgettitle">Microsoft .NET, SharePoint, SQL Server, Business Intelligence, and Big Data Solutions</h1> 
+         <div class="textwidget">
+          <p>DesignMind leverages the latest technologies, including SQL Server, SharePoint, .NET, Tableau, Hadoop, and Platfora to develop database, data warehousing solutions, and custom applications. Our clients are in San Francisco, Silicon Valley, and the West.</p> 
+         </div> 
+        </div>
+       </section>
+       <section class="home-top">
+        <div class="columns one">
+         <h1 class="widget-title widgettitle"><span class="titlespan">Services</span></h1> 
+         <div class="textwidget">
+          <ul> 
+           <li><a href="http://www.designmind.com/business-intelligence/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/business-intelligence/', 'Business Intelligence']);">Business Intelligence</a></li> 
+           <li><a href="http://www.designmind.com/big-data-solutions/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/big-data-solutions/', 'Big Data Solutions']);">Big Data Solutions</a></li> 
+           <li><a href="http://www.designmind.com/software-development/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/software-development/', 'Custom Software Development']);">Custom Software Development</a></li> 
+           <li><a href="http://www.designmind.com/sql-server-and-database-services/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sql-server-and-database-services/', 'SQL Server and Database Services']);">SQL Server and Database Services</a></li> 
+           <li><a href="http://www.designmind.com/sharepoint-development/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sharepoint-development/', 'SharePoint Development']);">SharePoint Development</a></li> 
+           <li><a href="http://www.designmind.com/technical-staffing/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/technical-staffing/', 'Technical Staffing']);">Technical Staffing</a></li> 
+          </ul>
+         </div> 
+        </div>
+        <div class="columns two">
+         <h1 class="widget-title widgettitle"><span class="titlespan">Technologies</span></h1> 
+         <div class="textwidget">
+          <ul> 
+           <li><a href="http://www.designmind.com/net/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/net/', 'NET - C#, VB.NET, ASP.NET']);">NET - C#, VB.NET, ASP.NET</a></li> 
+           <li><a href="http://www.designmind.com/sql-server/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sql-server/', 'SQL Server']);">SQL Server</a></li> 
+           <li><a href="http://www.designmind.com/azure-cloud/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/azure-cloud/', 'Azure / Cloud']);">Azure / Cloud</a></li> 
+           <li><a href="http://www.designmind.com/sharepoint/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sharepoint/', 'SharePoint']);">SharePoint</a></li> 
+           <li><a href="http://www.designmind.com/big-data-tools/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/big-data-tools/', 'Big Data Tools']);">Big Data Tools</a></li> 
+           <li><a href="http://www.designmind.com/power-bi/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/power-bi/', 'Power BI']);">Power BI</a></li> 
+          </ul>
+         </div> 
+        </div>
+        <div class="columns three">
+         <h1 class="widget-title widgettitle"><span class="titlespan">Industries</span></h1> 
+         <div class="textwidget">
+          <ul> 
+           <li>Biotech / Healthcare</li> 
+           <li>High Tech / Internet</li> 
+           <li>Financial Services</li> 
+           <li>Food and Beverage</li> 
+           <li>Non-Profits / Public Sector</li> 
+           <li>Commercial Real Estate</li> 
+          </ul>
+         </div> 
+        </div>
+       </section>
+       <section class="home-middle">
+        <div class="first-area">
+         <h1 class="widget-title widgettitle">Microsoft .NET, SharePoint, SQL Server, Business Intelligence, and Big Data Solutions</h1> 
+         <div class="textwidget">
+          <p>DesignMind leverages leading edge technologies, including SQL Server, SharePoint, .NET, Tableau, Hadoop, and Platfora to develop database, data warehousing solutions, and custom applications that are both powerful and cost-effective. Our clients are in San Francisco, Silicon Valley, and the West.</p> 
+          <p>DesignMind is a Microsoft Certified Partner specializing in Business Intelligence, Data Platform, Data Science, Portals and Collaboration, Custom Development, and Technical Staffing. Our Business Intelligence team specializes in Enterprise Data Warehouses, Data Marts, Mobile Business Intelligence, Self-Service BI, and Big Data Solutions.</p> 
+         </div> 
+        </div>
+        <div class="partners-quad badge"> 
+         <div class="textwidget">
+          <a href="http://www.designmind.com/partners/" class="nBG"><img src="http://www.designmind.com/wordpress/wp-content/uploads/2014/03/logo-partner-msft.png"><img src="http://www.designmind.com/wordpress/wp-content/uploads/2014/03/logo-partner-platfora.png"> <img src="http://www.designmind.com/wordpress/wp-content/uploads/2014/03/logo-partner-cloudera.png"><img src="http://www.designmind.com/wordpress/wp-content/uploads/2014/03/logo-partner-tableau.png"></a>
+         </div> 
+        </div>
+       </section>
+      </main>
+     </div>
+     <section class="home-lower">
+      <div class="wrap">
+       <section id="soliloquy-2" class="widget soliloquy">
+        <div class="widget-wrap">
+         <h4 class="widget-title widgettitle">Our Clients</h4> 
+         <link id="soliloquy-style-css" rel="stylesheet" type="text/css" href="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/soliloquy.css?ver=2.3.9.3" media="all">
+         <link id="soliloquyclassic-theme-style-css" rel="stylesheet" type="text/css" href="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/themes/classic/style.css?ver=2.3.9.3" media="all">
+         <div id="soliloquy-container-158" class="soliloquy-container soliloquy-transition-horizontal soliloquy-slide-horizontal soliloquy-arrows-active  soliloquy-theme-classic" style="max-width:1100px;max-height:79px;margin:0 auto 20px;">
+          <ul id="soliloquy-158" class="soliloquy-slider soliloquy-slides soliloquy-wrap soliloquy-clear">
+           <li class="soliloquy-item soliloquy-item-1 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/annies-naturals/" class="soliloquy-link" title="logo-slider-annies"><img id="soliloquy-image-683" class="soliloquy-image soliloquy-image-1" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-annies.gif" alt="Annie's Naturals" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-annies.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-2 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/autodesk/" class="soliloquy-link" title="logo-slider-autodesk"><img id="soliloquy-image-684" class="soliloquy-image soliloquy-preload soliloquy-image-2" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-autodesk.gif" alt="logo-slider-autodesk" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-autodesk.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-3 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/columbus-foods/" class="soliloquy-link" title="logo-slider-columbusFoods"><img id="soliloquy-image-686" class="soliloquy-image soliloquy-preload soliloquy-image-3" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-columbusFoods.gif" alt="logo-slider-columbusFoods" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-columbusFoods.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-4 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/east-bay-municipal-utility-district/" class="soliloquy-link" title="logo-slider-ebmud"><img id="soliloquy-image-687" class="soliloquy-image soliloquy-preload soliloquy-image-4" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-ebmud.gif" alt="logo-slider-ebmud" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-ebmud.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-5 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/e-fuel/" class="soliloquy-link" title="logo-slider-eFuel"><img id="soliloquy-image-688" class="soliloquy-image soliloquy-preload soliloquy-image-5" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-eFuel.gif" alt="logo-slider-eFuel" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-eFuel.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-6 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/exponential/" class="soliloquy-link" title="logo-slider-exponential"><img id="soliloquy-image-689" class="soliloquy-image soliloquy-preload soliloquy-image-6" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-exponential.gif" alt="logo-slider-exponential" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-exponential.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-7 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-690" class="soliloquy-image soliloquy-preload soliloquy-image-7" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-fiserv.gif" alt="Fiserv" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-fiserv.gif"></li>
+           <li class="soliloquy-item soliloquy-item-8 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-691" class="soliloquy-image soliloquy-preload soliloquy-image-8" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-genomicHealth.gif" alt="logo-slider-genomicHealth" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-genomicHealth.gif"></li>
+           <li class="soliloquy-item soliloquy-item-9 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-692" class="soliloquy-image soliloquy-preload soliloquy-image-9" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-glenborough.gif" alt="logo-slider-glenborough" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-glenborough.gif"></li>
+           <li class="soliloquy-item soliloquy-item-10 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-693" class="soliloquy-image soliloquy-preload soliloquy-image-10" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-honeywell.gif" alt="logo-slider-honeywell" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-honeywell.gif"></li>
+           <li class="soliloquy-item soliloquy-item-11 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/intuit/" class="soliloquy-link" title="logo-slider-intuit"><img id="soliloquy-image-695" class="soliloquy-image soliloquy-preload soliloquy-image-11" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-intuit.gif" alt="logo-slider-intuit" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-intuit.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-12 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-696" class="soliloquy-image soliloquy-preload soliloquy-image-12" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-ironMountain.gif" alt="logo-slider-ironMountain" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-ironMountain.gif"></li>
+           <li class="soliloquy-item soliloquy-item-13 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/jamba-juice/" class="soliloquy-link" title="logo-slider-jambaJuice"><img id="soliloquy-image-697" class="soliloquy-image soliloquy-preload soliloquy-image-13" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-jambaJuice.gif" alt="logo-slider-jambaJuice" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-jambaJuice.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-14 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-698" class="soliloquy-image soliloquy-preload soliloquy-image-14" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-kaplan.gif" alt="logo-slider-kaplan" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-kaplan.gif"></li>
+           <li class="soliloquy-item soliloquy-item-15 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/kendall-jackson/" class="soliloquy-link" title="logo-slider-kj"><img id="soliloquy-image-699" class="soliloquy-image soliloquy-preload soliloquy-image-15" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-kj.gif" alt="logo-slider-kj" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-kj.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-16 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-700" class="soliloquy-image soliloquy-preload soliloquy-image-16" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-littler.gif" alt="logo-slider-littler" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-littler.gif"></li>
+           <li class="soliloquy-item soliloquy-item-17 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/mcafee/" class="soliloquy-link" title="logo-slider-mcafee"><img id="soliloquy-image-701" class="soliloquy-image soliloquy-preload soliloquy-image-17" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-mcafee.gif" alt="logo-slider-mcafee" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-mcafee.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-18 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/one/" class="soliloquy-link" title="logo-slider-oneMed"><img id="soliloquy-image-702" class="soliloquy-image soliloquy-preload soliloquy-image-18" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-oneMed.gif" alt="logo-slider-oneMed" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-oneMed.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-19 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/prosper/" class="soliloquy-link" title="logo-slider-prosper"><img id="soliloquy-image-703" class="soliloquy-image soliloquy-preload soliloquy-image-19" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-prosper.gif" alt="Prosper San Francisco" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-prosper.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-20 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-704" class="soliloquy-image soliloquy-preload soliloquy-image-20" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-restorationHardware.gif" alt="logo-slider-restorationHardware" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-restorationHardware.gif"></li>
+           <li class="soliloquy-item soliloquy-item-21 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/rodan-fields/" class="soliloquy-link" title="logo-slider-rodanFields"><img id="soliloquy-image-705" class="soliloquy-image soliloquy-preload soliloquy-image-21" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-rodanFields.gif" alt="logo-slider-rodanFields" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-rodanFields.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-22 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-706" class="soliloquy-image soliloquy-preload soliloquy-image-22" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-siemens.gif" alt="logo-slider-siemens" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-siemens.gif"></li>
+           <li class="soliloquy-item soliloquy-item-23 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-682" class="soliloquy-image soliloquy-preload soliloquy-image-23" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-zeiss.gif" alt="logo-slider-zeiss" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-zeiss.gif"></li>
+           <li class="soliloquy-item soliloquy-item-24 soliloquy-image-slide" draggable="false" style="list-style:none;"><img id="soliloquy-image-707" class="soliloquy-image soliloquy-preload soliloquy-image-24" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-sumtotal.gif" alt="logo-slider-sumtotal" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-sumtotal.gif"></li>
+           <li class="soliloquy-item soliloquy-item-25 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/tethys-bioscience/" class="soliloquy-link" title="logo-slider-tethys"><img id="soliloquy-image-708" class="soliloquy-image soliloquy-preload soliloquy-image-25" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-tethys.gif" alt="Tethys" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-tethys.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-26 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/u-s-communities/" class="soliloquy-link" title="logo-slider-usComm"><img id="soliloquy-image-709" class="soliloquy-image soliloquy-preload soliloquy-image-26" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-usComm.gif" alt="US Communities" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-usComm.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-27 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/world-vision/" class="soliloquy-link" title="logo-slider-worldVision"><img id="soliloquy-image-1059" class="soliloquy-image soliloquy-preload soliloquy-image-27" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2014/01/logo-slider-worldVision.gif" alt="World Vision" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2014/01/logo-slider-worldVision.gif"></a></li>
+           <li class="soliloquy-item soliloquy-item-28 soliloquy-image-slide" draggable="false" style="list-style:none;"><a href="http://www.designmind.com/clients/yottamark/" class="soliloquy-link" title="logo-slider-yottaMark"><img id="soliloquy-image-711" class="soliloquy-image soliloquy-preload soliloquy-image-28" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-yottaMark.gif" alt="YottaMark" data-soliloquy-src-mobile="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-yottaMark.gif"></a></li>
+          </ul>
+         </div>
+         <noscript>
+          <style type="text/css">#soliloquy-container-158{opacity:1}#soliloquy-container-158 li > .soliloquy-caption{display:none}#soliloquy-container-158 li:first-child > .soliloquy-caption{display:block}</style>
+          <div class="soliloquy-no-js" style="display:none;visibility:hidden;height:0;line-height:0;opacity:0;">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-annies.gif" alt="Annie's Naturals">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-autodesk.gif" alt="logo-slider-autodesk">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-columbusFoods.gif" alt="logo-slider-columbusFoods">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-ebmud.gif" alt="logo-slider-ebmud">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-eFuel.gif" alt="logo-slider-eFuel">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-exponential.gif" alt="logo-slider-exponential">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-fiserv.gif" alt="Fiserv">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-genomicHealth.gif" alt="logo-slider-genomicHealth">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-glenborough.gif" alt="logo-slider-glenborough">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-honeywell.gif" alt="logo-slider-honeywell">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-intuit.gif" alt="logo-slider-intuit">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-ironMountain.gif" alt="logo-slider-ironMountain">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-jambaJuice.gif" alt="logo-slider-jambaJuice">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-kaplan.gif" alt="logo-slider-kaplan">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-kj.gif" alt="logo-slider-kj">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-littler.gif" alt="logo-slider-littler">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-mcafee.gif" alt="logo-slider-mcafee">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-oneMed.gif" alt="logo-slider-oneMed">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-prosper.gif" alt="Prosper San Francisco">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-restorationHardware.gif" alt="logo-slider-restorationHardware">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-rodanFields.gif" alt="logo-slider-rodanFields">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-siemens.gif" alt="logo-slider-siemens">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-zeiss.gif" alt="logo-slider-zeiss">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-sumtotal.gif" alt="logo-slider-sumtotal">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-tethys.gif" alt="Tethys">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-usComm.gif" alt="US Communities">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2014/01/logo-slider-worldVision.gif" alt="World Vision">
+           <img class="soliloquy-image soliloquy-no-js-image" src="http://www.designmind.com/wordpress/wp-content/uploads/2013/11/logo-slider-yottaMark.gif" alt="YottaMark">
+          </div>
+         </noscript>
+        </div>
+       </section> 
+      </div>
+     </section>
+    </div>
+   </div>
+   <footer class="site-footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+    <div class="footer-widgets">
+     <div class="wrap">
+      <div class="footer-widgets-quad">
+       <div class="footer-widgets-1">
+        <section id="nav_menu-4" class="widget widget_nav_menu">
+         <div class="widget-wrap">
+          <h2 class="widget-title widgettitle">Services</h2>
+          <div class="menu-footer-1-container">
+           <ul id="menu-footer-1" class="menu">
+            <li id="menu-item-305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305"><a href="http://www.designmind.com/services-overview/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/services-overview/', 'Services Overview']);">Services Overview</a></li> 
+            <li id="menu-item-306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306"><a href="http://www.designmind.com/business-intelligence/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/business-intelligence/', 'Business Intelligence']);">Business Intelligence</a></li> 
+            <li id="menu-item-307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307"><a href="http://www.designmind.com/big-data-solutions/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/big-data-solutions/', 'Big Data Solutions']);">Big Data Solutions</a></li> 
+            <li id="menu-item-308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308"><a href="http://www.designmind.com/software-development/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/software-development/', 'Software Development']);">Software Development</a></li> 
+            <li id="menu-item-309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309"><a href="http://www.designmind.com/sql-server-and-database-services/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sql-server-and-database-services/', 'SQL Server and Database Services']);">SQL Server and Database Services</a></li> 
+            <li id="menu-item-310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-310"><a href="http://www.designmind.com/sharepoint-development/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sharepoint-development/', 'SharePoint Development']);">SharePoint Development</a></li> 
+            <li id="menu-item-1382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1382"><a href="http://www.designmind.com/technical-staffing/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/technical-staffing/', 'Technical Staffing']);">Technical Staffing</a></li> 
+            <li id="menu-item-311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-311"><a href="http://www.designmind.com/247-dba-support/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/247-dba-support/', '24/7 DBA Support']);">24/7 DBA Support</a></li> 
+           </ul>
+          </div>
+         </div>
+        </section> 
+       </div>
+       <div class="footer-widgets-2">
+        <section id="nav_menu-5" class="widget widget_nav_menu">
+         <div class="widget-wrap">
+          <h2 class="widget-title widgettitle">Technologies</h2>
+          <div class="menu-footer-2-container">
+           <ul id="menu-footer-2" class="menu">
+            <li id="menu-item-312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312"><a href="http://www.designmind.com/technologies-overview/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/technologies-overview/', 'Technologies Overview']);">Technologies Overview</a></li> 
+            <li id="menu-item-313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313"><a href="http://www.designmind.com/net/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/net/', '.NET']);">.NET</a></li> 
+            <li id="menu-item-314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-314"><a href="http://www.designmind.com/sql-server/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sql-server/', 'SQL Server']);">SQL Server</a></li> 
+            <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315"><a href="http://www.designmind.com/azure-cloud/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/azure-cloud/', 'Azure / Cloud']);">Azure / Cloud</a></li> 
+            <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="http://www.designmind.com/sharepoint/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/sharepoint/', 'SharePoint']);">SharePoint</a></li> 
+            <li id="menu-item-321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-321"><a href="http://www.designmind.com/big-data-tools/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/big-data-tools/', 'Big Data']);">Big Data</a></li> 
+            <li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-322"><a href="http://www.designmind.com/power-bi/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/power-bi/', 'Power BI']);">Power BI</a></li> 
+            <li id="menu-item-496" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-496"><a href="http://www.designmind.com/tableau/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/tableau/', 'Tableau']);">Tableau</a></li> 
+           </ul>
+          </div>
+         </div>
+        </section> 
+       </div>
+       <div class="footer-widgets-3">
+        <section id="nav_menu-6" class="widget widget_nav_menu">
+         <div class="widget-wrap">
+          <h2 class="widget-title widgettitle">About</h2>
+          <div class="menu-footer-3-container">
+           <ul id="menu-footer-3" class="menu">
+            <li id="menu-item-323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323"><a href="http://www.designmind.com/about/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/about/', 'About']);">About</a></li> 
+            <li id="menu-item-324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324"><a href="http://www.designmind.com/team/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/team/', 'Leadership Team']);">Leadership Team</a></li> 
+            <li id="menu-item-743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="http://www.designmind.com/clients/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/clients/', 'Clients']);">Clients</a></li> 
+            <li id="menu-item-1381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1381"><a href="http://www.designmind.com/partners/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/partners/', 'Partners']);">Partners</a></li> 
+            <li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327"><a href="http://www.designmind.com/jobs/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/jobs/', 'Jobs']);">Jobs</a></li> 
+            <li id="menu-item-1721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1721"><a href="http://www.designmind.com/news/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/news/', 'News']);">News</a></li> 
+            <li id="menu-item-1722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="http://www.designmind.com/events/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/events/', 'Upcoming Events']);">Upcoming Events</a></li> 
+            <li id="menu-item-1650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1650"><a href="http://www.designmind.com/resources/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/resources/', 'Resources']);">Resources</a></li> 
+            <li id="menu-item-1649" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1649"><a href="http://www.designmind.com/white-papers/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/white-papers/', 'White Papers']);">White Papers</a></li> 
+           </ul>
+          </div>
+         </div>
+        </section> 
+       </div>
+       <div class="footer-widgets-4">
+        <section id="nav_menu-7" class="widget widget_nav_menu">
+         <div class="widget-wrap">
+          <div class="menu-footer-4-container">
+           <ul id="menu-footer-4" class="menu">
+            <li id="menu-item-330" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-330"><a href="http://www.designmind.com/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/', 'Home']);">Home</a></li> 
+            <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="http://www.designmind.com/contact/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/contact/', 'Contact']);">Contact</a></li> 
+            <li id="menu-item-334" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-334"><a href="http://www.designmind.com/blog/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.designmind.com/blog/', 'Blog']);" target="_blank">Blog</a></li> 
+           </ul>
+          </div>
+         </div>
+        </section> 
+       </div>
+      </div>
+      <div class="footer-widgets-5">
+       <section id="dsmd_contact-2" class="widget dsmd-contact-widget">
+        <div class="widget-wrap">
+         <h2 class="widget-title widgettitle">Contact Us</h2>
+         <span class="address">150 Spear Street, #700<br>San Francisco CA 94105</span>
+         <span class="phone">1.415.538.8484</span>
+         <span class="email"><a href="/cdn-cgi/l/email-protection#e0898e868fa084859389878e8d898e84ce838f8d" title="Mail info@designmind.com"><span class="__cf_email__" data-cfemail="1970777f76597d7c6a707e777470777d377a7674">[email&nbsp;protected]</span><script cf-hash="f9e31" type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></a></span>
+         <span class="connect"><a href="http://www.linkedin.com/company/designmind" title="Connect with us" target="_blank">Connect with us</a></span>
+        </div>
+       </section> 
+      </div>
+     </div>
+    </div>
+    <div class="wrap">
+     <div class="one-half first footer-left">
+      <p>Site created by <a href="http://www.takeflightgraphics.com/" title="Take Flight Graphics" target="_blank">Take Flight Graphics</a><span class="tfg-logo"></span></p>
+     </div>
+     <div class="one-half footer-right">
+      <p>©&nbsp;2014 DesignMind. All rights reserved.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-content/plugins/ubermenu/core/js/hoverIntent.js?ver=4.0.1"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var uberMenuSettings = {"speed":"300","trigger":"hoverIntent","orientation":"horizontal","transition":"slide","hoverInterval":"20","hoverTimeout":"400","removeConflicts":"on","autoAlign":"off","noconflict":"off","fullWidthSubs":"off","androidClick":"on","iOScloseButton":"off","loadGoogleMaps":"off","repositionOnLoad":"on"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-content/plugins/ubermenu/core/js/ubermenu.min.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-content/themes/designmindRWD/lib/js/viewport-js.js?ver=1.0.5"></script> 
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-includes/js/jquery/ui/jquery.ui.accordion.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-content/plugins/squelch-tabs-and-accordions-shortcodes/js/squelch-tabs-and-accordions.js?ver=0.3.4"></script> 
+  <script type="text/javascript" src="http://www.designmind.com/wordpress/wp-content/plugins/soliloquy/assets/js/soliloquy.js?ver=2.3.9.3"></script> 
+  <script type="text/javascript">if ( typeof soliloquy_slider === 'undefined' || false === soliloquy_slider ) {soliloquy_slider = {};}var soliloquy_width_158 = jQuery('#soliloquy-container-158').width() < 1100 ? 1100 : jQuery('#soliloquy-container-158').width();jQuery('#soliloquy-container-158').css('height', Math.round(soliloquy_width_158/(1100/79))).fadeTo(300, 1);jQuery(document).ready(function($){var soliloquy_container_158 = $('#soliloquy-container-158'),soliloquy_158 = $('#soliloquy-158'),soliloquy_holder_158 = $('#soliloquy-158').find('.soliloquy-preload');if ( 0 !== soliloquy_holder_158.length ) {var soliloquy_mobile = soliloquyIsMobile(),soliloquy_src_attr = soliloquy_mobile ? 'data-soliloquy-src-mobile' : 'data-soliloquy-src';$.each(soliloquy_holder_158, function(i, el){var soliloquy_src = $(this).attr(soliloquy_src_attr);if ( typeof soliloquy_src === 'undefined' || false === soliloquy_src ) {return;}var soliloquy_image = new Image();soliloquy_image.src = soliloquy_src;$(this).attr('src', soliloquy_src).removeAttr(soliloquy_src_attr);});}soliloquy_slider['158'] = soliloquy_158.soliloquy({slideSelector: '.soliloquy-item',speed: 600,pause: 7000,auto: 1,keyboard: 1,useCSS: 0,startSlide: 0,autoHover: 1,autoDelay: 0,adaptiveHeight: 1,adaptiveHeightSpeed: 400,infiniteLoop: 1,mode: 'horizontal',pager: 0,controls: 1,autoControls: 0,autoControlsCombine: 0,nextText: '',prevText: '',startText: '',stopText: '',slideWidth: 275,slideMargin: 10,minSlides: 3,maxSlides: 4,moveSlides: 4,onSliderLoad: function(currentIndex){soliloquy_container_158.find('.soliloquy-active-slide').removeClass('soliloquy-active-slide');soliloquy_container_158.css({'height':'auto','background-image':'none'});if ( soliloquy_container_158.find('.soliloquy-slider li').size() > 1 ) {soliloquy_container_158.find('.soliloquy-controls').fadeTo(300, 1);} else {soliloquy_container_158.find('.soliloquy-controls').addClass('soliloquy-hide');}soliloquy_158.find('.soliloquy-item:not(.soliloquy-clone):eq(' + currentIndex + ')').addClass('soliloquy-active-slide');soliloquy_container_158.find('.soliloquy-clone').find('*').removeAttr('id');$(window).trigger('resize');},onSlideBefore: function(element, oldIndex, newIndex){soliloquy_container_158.find('.soliloquy-active-slide').removeClass('soliloquy-active-slide');$(element).addClass('soliloquy-active-slide');},onSlideAfter: function(element, oldIndex, newIndex){}});});</script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>   
+ </body>
+</html>

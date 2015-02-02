@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:fb="http://ogp.me/ns/fb#" xmlns:addthis="http://www.addthis.com/help/api-spec" prefix="og: http://ogp.me/ns#">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <title>Blog - Mintigo</title> 
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width"> 
+  <link rel="shortcut icon" href="http://www.mintigo.com/wp-content/themes/mintigo/images/favico.png?a06b8a"> 
+  <link rel="stylesheet" type="text/css" href="http://www.mintigo.com/wp-content/themes/mintigo/style.css?v=2014120507&amp;a06b8a"> 
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css?a06b8a" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="http://www.mintigo.com/wp-content/themes/mintigo/styles/responsive.css?v=2014120507&amp;a06b8a"> 
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic|Dosis:400,500|Roboto+Condensed:400"> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+  <script type="text/javascript" src="http://jquerypp.com/release/latest/jquerypp.js"></script> 
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script> 
+  <script>
+
+  document.domain = "mintigo.com";
+
+  var $j = jQuery.noConflict();
+ 
+  $j(function() {
+    
+    var url = $j.url();  // Parsing current URL
+
+    /************/
+    
+    /* Logging to the console should never be left for a production site. Not all browsers have the console object. 
+	These need to be disabled or wrapped in a conditional. Disabling for now. */
+	
+    /************/
+    // First run, should only be filled if cookies exist previous to page load
+    //console.log("Parent: pre/utm_source: "+$j.cookie('utm_source'));
+    //console.log("Parent: pre/utm_medium: "+$j.cookie('utm_medium'));
+    //console.log("Parent: pre/utm_campaign: "+$j.cookie('utm_campaign'));
+    
+    // If this URL string is not empty, set cookie to match URL string
+    if (typeof url.param('utm_source') != null) { $j.cookie('utm_source', url.param('utm_source'), { path: '/' }); }
+    if (typeof url.param('utm_medium') != null) { $j.cookie('utm_medium', url.param('utm_medium'), { path: '/' }); }
+    if (typeof url.param('utm_campaign') != null) { $j.cookie('utm_campaign', url.param('utm_campaign'), { path: '/' }); }
+
+    // Second run, should reflect updated cookies
+    //console.log("Parent: post/utm_source: "+$j.cookie('utm_source'));
+    //console.log("Parent: post/utm_medium: "+$j.cookie('utm_medium'));
+    //console.log("Parent: post/utm_campaign: "+$j.cookie('utm_campaign'));
+
+	/* If these are meant as variables they should be declared. */
+    window.utm_source = $j.cookie('utm_source');
+    window.utm_medium = $j.cookie('utm_medium');
+    window.utm_campaign = $j.cookie('utm_campaign');
+    
+  });
+
+</script> 
+  <!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+  <meta name="OBKey" content="nXFPKWPbFxYXm76GO+6buQ=="> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.5.1 - https://yoast.com/wordpress/plugins/seo/ --> 
+  <link rel="canonical" href="http://www.mintigo.com/blog/"> 
+  <link rel="next" href="http://www.mintigo.com/blog/page/2/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="object"> 
+  <meta property="og:title" content="Blog Archive - Mintigo"> 
+  <meta property="og:url" content="http://www.mintigo.com/blog/"> 
+  <meta property="og:site_name" content="Mintigo"> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="stylesheet" id="output-css" href="http://www.mintigo.com/wp-content/plugins/addthis/css/output.css?a06b8a" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://www.mintigo.com/wp-content/themes/mintigo/scripts/twitter.js?a06b8a"></script> 
+  <script type="text/javascript" src="http://www.mintigo.com/wp-content/themes/mintigo/scripts/mediaqueries.js?a06b8a"></script> 
+  <script type="text/javascript" src="http://www.mintigo.com/wp-content/plugins/cforms/js/cforms.js?a06b8a"></script> 
+  <!-- Marketo Script --> 
+  <script type="text/javascript">
+document.write(unescape("%3Cscript src='" + document.location.protocol +
+  "//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+  <script>Munchkin.init('817-EZO-781');</script> 
+  <!-- End Marketo Script --> 
+  <!-- Begin Inspectlet Embed Code --> 
+  <script type="text/javascript" id="inspectletjs">
+  var __insp = __insp || [];
+  __insp.push(['wid', 2408744573]);
+  (function() {
+    var a = window.onload;
+    function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspect/2408744573.js'; document.getElementsByTagName("head")[0].appendChild(insp); }
+    window.onload = (typeof window.onload != 'function') ? __ldinsp : function() { a(); __ldinsp(); };
+  })();
+</script> 
+  <!-- End Inspectlet Embed Code --> 
+ </head> 
+ <body class="archive post-type-archive post-type-archive-blog_posts boxed unknown"> 
+  <div id="wrapper"> 
+   <div id="home-video-hidden" style="z-index:10; position: fixed; "></div> 
+   <header> 
+    <div id="header-content"> 
+     <div id="header-contained"> 
+      <div class="sub-menu right"> 
+       <a href="#" class="sub-menu-toggle"><i class="fa fa-th"></i></a> 
+       <div class="menu-header-sub-menu-container">
+        <ul id="menu-header-sub-menu" class="menu">
+         <li id="menu-item-7085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7085"><a href="http://www.mintigo.com/about-us/">About Us</a></li> 
+         <li id="menu-item-7086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7086"><a href="http://www.mintigo.com/trust/">Trust</a></li> 
+         <li id="menu-item-7087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7087"><a href="http://www.mintigo.com/about-us/news/">Mintigo In The News</a></li> 
+         <li id="menu-item-7088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7088"><a href="http://www.mintigo.com/resources/">Resources</a></li> 
+         <li id="menu-item-7089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7089"><a href="http://www.mintigo.com/blog/">Blog</a></li> 
+        </ul>
+       </div> 
+      </div> 
+      <a href="http://login.mintigo.com" id="login-btn" class="cta sub-cta right" title="Customer Login">Login</a> 
+      <div id="logo"> 
+       <div id="m-logo"> 
+        <a href="http://www.mintigo.com"><img src="http://www.mintigo.com/wp-content/themes/mintigo/images/homepage/m.png?a06b8a" alt="mintigo logo" width="51" height="50"></a> 
+       </div> 
+       <div id="logo-mintigo"> 
+        <a href="http://www.mintigo.com"><img src="http://www.mintigo.com/wp-content/themes/mintigo/images/homepage/mintigo-text.png?a06b8a" alt="mintigo" width="107" height="18"></a> 
+        <div></div> 
+       </div> 
+      </div> 
+      <menu> 
+       <ul id="menu-main" class="sf-menu">
+        <li id="menu-item-1518" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1518"><a href="http://www.mintigo.com/why-mintigo/">Why Mintigo?</a></li> 
+        <li id="menu-item-430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-430"><a href="http://www.mintigo.com/product/">Product</a></li> 
+        <li id="menu-item-7101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7101"><a href="http://www.mintigo.com/predictive-lead-scoring/">Predictive Lead Scoring</a></li> 
+        <li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="http://www.mintigo.com/customers/">Customers</a></li> 
+       </ul> 
+      </menu> 
+     </div> 
+    </div> 
+    <div id="mainmenu"> 
+     <div class="container"> 
+      <div id="togglemenu">
+       <a href="#">Navigation <i class="icon-reorder"></i></a>
+      </div> 
+      <nav> 
+       <ul id="menu-main-1" class="sf-menu">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1518"><a href="http://www.mintigo.com/why-mintigo/">Why Mintigo?</a></li> 
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-430"><a href="http://www.mintigo.com/product/">Product</a></li> 
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7101"><a href="http://www.mintigo.com/predictive-lead-scoring/">Predictive Lead Scoring</a></li> 
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="http://www.mintigo.com/customers/">Customers</a></li> 
+       </ul> 
+       <form method="get" id="searchbox" action="http://www.mintigo.com/" role="search"> 
+        <input type="text" class="field" name="s" id="s" placeholder="Search …"> 
+        <input type="hidden" id="searchsubmit"> 
+       </form> 
+      </nav> 
+     </div> 
+    </div> 
+   </header> 
+   <div class="container"> 
+    <div class="row"> 
+     <!-- content --> 
+     <div id="content" class="column ninecol"> 
+      <article id="post-7696" class="post-7696 blog_posts type-blog_posts status-publish hentry"> 
+       <h1>Blog</h1> 
+       <div class="entry-content f97"> 
+        <div class="imgholder"> 
+         <img src="http://www.mintigo.com/wp-content/uploads/userphoto/24.jpeg?a06b8a" alt="Viktoria Tsukanov" width="150" height="150" class="photo"> 
+        </div> 
+        <h4><a href="http://www.mintigo.com/blog/recap-mintigos-predictive-marketing-forum-boston/">Recap: Mintigo’s Predictive Marketing Forum in Boston</a></h4> 
+        <small>November 11, 2014 | by: Viktoria Tsukanov</small> 
+        <p>We were thrilled to host our latest marketing forum several weeks ago in the beautiful city of Boston, Massachusetts. With the gorgeous view of the Charles River in the background, it was hard to think of a more outstanding venue than the office of OpenView Venture Partners. We were joined …</p> 
+        <p><a href="http://www.mintigo.com/blog/recap-mintigos-predictive-marketing-forum-boston/" class="cta sub-cta">Read More</a></p> 
+        <hr> 
+       </div> 
+       <div class="entry-content f97"> 
+        <div class="imgholder"> 
+         <img src="http://www.mintigo.com/wp-content/uploads/userphoto/23.jpg?a06b8a" alt="John Bara" width="150" height="150" class="photo"> 
+        </div> 
+        <h4><a href="http://www.mintigo.com/blog/mintigo-data-brain-oracle-marketing-cloud-eloqua-system/">Mintigo Is The Data Brain For Your Oracle Marketing Cloud &amp; Eloqua System</a></h4> 
+        <small>October 31, 2014 | by: John Bara</small> 
+        <p>Mintigo’s Predictive Lead Scoring and Data Enrichment for Eloqua, an Oracle Marketing AppCloud application, makes it easy for you to get real time predictive lead scoring and data enrichment for all of your contacts directly in Eloqua. Using predictive analytics and big data from all over the web, Mintigo helps …</p> 
+        <p><a href="http://www.mintigo.com/blog/mintigo-data-brain-oracle-marketing-cloud-eloqua-system/" class="cta sub-cta">Read More</a></p> 
+        <hr> 
+       </div> 
+       <div class="entry-content f97"> 
+        <div class="imgholder"> 
+         <img src="http://www.mintigo.com/wp-content/uploads/userphoto/25.png?a06b8a" alt="Brianna Hansen" width="150" height="150" class="photo"> 
+        </div> 
+        <h4><a href="http://www.mintigo.com/blog/predictive-marketing-thought-leaders-corner-kevin-scott-cisco/">Predictive Marketing Thought Leaders Corner: Kevin Scott, Cisco</a></h4> 
+        <small>October 28, 2014 | by: Brianna Hansen</small> 
+        <p>Kevin Scott, Cisco I spoke with Cisco’s Director of Strategic Planning and Analytics for Digital Marketing, Kevin Scott. Working at one of the first firms to develop a marketing operations role within its corporate marketing organization, Kevin has played various roles in building Cisco’s brand and marketing strategy. He is …</p> 
+        <p><a href="http://www.mintigo.com/blog/predictive-marketing-thought-leaders-corner-kevin-scott-cisco/" class="cta sub-cta">Read More</a></p> 
+        <hr> 
+       </div> 
+       <div class="entry-content f97"> 
+        <div class="imgholder"> 
+         <img src="http://www.mintigo.com/wp-content/uploads/userphoto/25.png?a06b8a" alt="Brianna Hansen" width="150" height="150" class="photo"> 
+        </div> 
+        <h4><a href="http://www.mintigo.com/blog/mintigos-predictive-marketing-mountain-recap/">Mintigo’s Predictive Marketing On The Mountain Recap</a></h4> 
+        <small>October 20, 2014 | by: Brianna Hansen</small> 
+        <p>Wine and marketing. What could be better? We recently hosted a thought leadership forum at the Mountain Winery in Saratoga, CA. The goal was to round up Silicon Valley’s top thought leaders and marketing executives to discuss the need for predictive marketing and how it will play a role in …</p> 
+        <p><a href="http://www.mintigo.com/blog/mintigos-predictive-marketing-mountain-recap/" class="cta sub-cta">Read More</a></p> 
+        <hr> 
+       </div> 
+       <div class="entry-content f97"> 
+        <div class="imgholder"> 
+         <img src="http://www.mintigo.com/wp-content/uploads/userphoto/7.png?a06b8a" alt="Tal Segalov" width="50" height="50" class="photo"> 
+        </div> 
+        <h4><a href="http://www.mintigo.com/blog/set-predictive-marketing-goals-part-2/">How To Set Predictive Marketing Goals (Part 2)</a></h4> 
+        <small>October 7, 2014 | by: Tal Segalov</small> 
+        <p>The most important step in implementing a predictive marketing solution is defining what the business goal you’re trying to achieve is. Implementing a predictive score in your marketing automation is like implementing a JavaScript with jQuery framework on a PHP backend – you need a landing page, not a bunch …</p> 
+        <p><a href="http://www.mintigo.com/blog/set-predictive-marketing-goals-part-2/" class="cta sub-cta">Read More</a></p> 
+        <hr> 
+       </div> 
+       <div class="entry-content f97"> 
+        <div class="imgholder"> 
+         <img src="http://www.mintigo.com/wp-content/uploads/userphoto/7.png?a06b8a" alt="Tal Segalov" width="50" height="50" class="photo"> 
+        </div> 
+        <h4><a href="http://www.mintigo.com/blog/select-predictive-marketing-solution/">Why Select A Predictive Marketing Solution? (Introduction)</a></h4> 
+        <small>September 25, 2014 | by: Tal Segalov</small> 
+        <p>Modern marketers realize the challenge of updating their database. With hundreds, thousands, and even millions of leads flowing through their platform many marketers are realizing they need to score leads. But traditional lead scoring isn’t enough since it’s based on limited information and assumptions. Rather than hiring a data scientist …</p> 
+        <p><a href="http://www.mintigo.com/blog/select-predictive-marketing-solution/" class="cta sub-cta">Read More</a></p> 
+        <hr> 
+       </div> 
+       <div class="entry-content f97"> 
+        <div class="imgholder"> 
+         <img src="http://www.mintigo.com/wp-content/uploads/userphoto/25.png?a06b8a" alt="Brianna Hansen" width="150" height="150" class="photo"> 
+        </div> 
+        <h4><a href="http://www.mintigo.com/blog/predictive-marketing-thought-leaders-corner-katja-gagen-general-catalyst-partners/">Predictive Marketing Thought Leaders Corner: Katja Gagen, General Catalyst Partners</a></h4> 
+        <small>September 9, 2014 | by: Brianna Hansen</small> 
+        <p>Katja Gagen, General Catalyst Partners As a marketer, there are tons of technologies and data at our fingertips, and the demand is growing for a data-driven approach that helps us become more effective and targeted with our marketing efforts. Here at Mintigo, we want to start a conversation with today’s …</p> 
+        <p><a href="http://www.mintigo.com/blog/predictive-marketing-thought-leaders-corner-katja-gagen-general-catalyst-partners/" class="cta sub-cta">Read More</a></p> 
+        <hr> 
+       </div> 
+       <div class="entry-content f97"> 
+        <div class="imgholder"> 
+         <img src="http://www.mintigo.com/wp-content/uploads/userphoto/27.png?a06b8a" alt="Moran Lechtman" width="144" height="150" class="photo"> 
+        </div> 
+        <h4><a href="http://www.mintigo.com/blog/deconstructing-a-predictive-score-2/">Deconstructing a Predictive Score</a></h4> 
+        <small>August 28, 2014 | by: Moran Lechtman</small> 
+        <p>Let’s say that you want to decide which movie to watch tonight-your favorites may include thrillers and action movies directed by Scorsese or Tarantino. However, the list of potential movies is quite short (and are more comedies than horror flicks). Instead of looking solely at genre, you now look at …</p> 
+        <p><a href="http://www.mintigo.com/blog/deconstructing-a-predictive-score-2/" class="cta sub-cta">Read More</a></p> 
+        <hr> 
+       </div> 
+       <div class="entry-content f97"> 
+        <div class="imgholder"> 
+         <img src="http://www.mintigo.com/wp-content/uploads/userphoto/26.png?a06b8a" alt="Steven Moody" width="150" height="150" class="photo"> 
+        </div> 
+        <h4><a href="http://www.mintigo.com/blog/how-to-tell-if-your-lead-scoring-works/">How To Tell If Your Lead Scoring Works</a></h4> 
+        <small>July 31, 2014 | by: Steven Moody</small> 
+        <p>Clients often ask me whether their lead scoring model works as intended. In this post, I’ll walk through some common problems I see with lead scoring models, and what you should look for when evaluating your model. How often should you review your model? Done right, lead scoring can be …</p> 
+        <p><a href="http://www.mintigo.com/blog/how-to-tell-if-your-lead-scoring-works/" class="cta sub-cta">Read More</a></p> 
+        <hr> 
+       </div> 
+       <div class="entry-content f97"> 
+        <div class="imgholder"> 
+         <img src="http://www.mintigo.com/wp-content/uploads/userphoto/4.png?a06b8a" alt="Jacob Shama" width="50" height="50" class="photo"> 
+        </div> 
+        <h4><a href="http://www.mintigo.com/blog/20-reasons-why-b2b-marketers-need-predictive-marketing/">20 Reasons Why B2B Marketers Need Predictive Marketing</a></h4> 
+        <small>July 17, 2014 | by: Jacob Shama</small> 
+        <p>Predictive Analytics is the next frontier for marketers and here are 20 reasons why. The most cutting edge companies are spending more on analytics and using it to drive more revenue. With only limited data at hand, are B2B marketers ready? &nbsp; &nbsp; Share this Image On Your Site Please …</p> 
+        <p><a href="http://www.mintigo.com/blog/20-reasons-why-b2b-marketers-need-predictive-marketing/" class="cta sub-cta">Read More</a></p> 
+        <hr> 
+       </div> 
+      </article> 
+      <div class="prevnext-nav"> 
+       <div class="alignright">
+        <p></p>
+       </div> 
+       <div class="alignleft">
+        <p><a href="http://www.mintigo.com/blog/page/2/">« Older entries</a></p>
+       </div> 
+      </div> 
+     </div>
+     <!-- /content --> 
+     <aside class="widget widget_categoryposts"> 
+      <h3>Recent Posts</h3> 
+      <ul> 
+       <li><a href="http://www.mintigo.com/blog/recap-mintigos-predictive-marketing-forum-boston/">Recap: Mintigo’s Predictive Marketing Forum in Boston</a></li> 
+       <li><a href="http://www.mintigo.com/blog/mintigo-data-brain-oracle-marketing-cloud-eloqua-system/">Mintigo Is The Data Brain For Your Oracle Marketing Cloud &amp; Eloqua System</a></li> 
+       <li><a href="http://www.mintigo.com/blog/predictive-marketing-thought-leaders-corner-kevin-scott-cisco/">Predictive Marketing Thought Leaders Corner: Kevin Scott, Cisco</a></li> 
+       <li><a href="http://www.mintigo.com/blog/mintigos-predictive-marketing-mountain-recap/">Mintigo’s Predictive Marketing On The Mountain Recap</a></li> 
+       <li><a href="http://www.mintigo.com/blog/set-predictive-marketing-goals-part-2/">How To Set Predictive Marketing Goals (Part 2)</a></li> 
+      </ul> 
+     </aside> 
+    </div>
+    <!-- /row --> 
+   </div>
+   <!-- /container --> 
+   <!-- footer --> 
+   <footer> 
+    <div class="row upper-footer"> 
+     <div class="twelvecol cf"> 
+      <div class="float25 right text-center footer-mintigo"> 
+       <h4>Learn More About Mintigo</h4> 
+       <p><a href="/request-trial" class="cta">Request A Trial</a></p> 
+       <p><a href="#" class="cta sub-cta">Watch Video</a></p> 
+      </div> 
+      <nav class="float25"> 
+       <ul id="menu-footer" class="menu">
+        <li id="menu-item-7090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7090"><a href="http://www.mintigo.com/">Home</a></li> 
+        <li id="menu-item-7091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7091"><a href="http://www.mintigo.com/why-mintigo/">Why Mintigo?</a></li> 
+        <li id="menu-item-1434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1434"><a href="http://www.mintigo.com/product/">Product</a></li> 
+        <li id="menu-item-7092" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7092"><a href="http://www.mintigo.com/predictive-lead-scoring/">Predictive Lead Scoring</a> 
+         <ul class="sub-menu"> 
+          <li id="menu-item-7685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7685"><a href="http://www.mintigo.com/predictive-lead-scoring-for-eloqua/">Predictive Lead Scoring for Eloqua</a></li> 
+          <li id="menu-item-7695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7695"><a href="http://www.mintigo.com/predictive-lead-scoring-for-marketo/">Predictive Lead Scoring for Marketo</a></li> 
+         </ul> </li> 
+       </ul> 
+      </nav> 
+      <nav class="float25"> 
+       <ul id="menu-footer-links-about" class="menu">
+        <li id="menu-item-7094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7094"><a href="http://www.mintigo.com/about-us/">About Us</a></li> 
+        <li id="menu-item-7095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7095"><a href="http://www.mintigo.com/customers/">Customers</a></li> 
+        <li id="menu-item-7096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7096"><a href="http://www.mintigo.com/about-us/news/">Mintigo In The News</a></li> 
+        <li id="menu-item-7093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7093"><a href="http://www.mintigo.com/trust/">Trust</a></li> 
+       </ul> 
+      </nav> 
+      <nav class="float25"> 
+       <ul id="menu-footer-links-goods" class="menu">
+        <li id="menu-item-7097" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7097"><a href="http://www.mintigo.com/blog/">Blog</a></li> 
+        <li id="menu-item-7098" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7098"><a href="http://www.mintigo.com/resources/">Resources</a></li> 
+        <li id="menu-item-7099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7099"><a href="http://www.mintigo.com/about-us/careers/">Careers</a></li> 
+        <li id="menu-item-7100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7100"><a href="http://www.mintigo.com/contact-us/">Contact Us</a></li> 
+       </ul> 
+      </nav> 
+     </div> 
+    </div> 
+    <div class="row lower-footer"> 
+     <div class="twelvecol cf boxed"> 
+      <p class="right social-icons"> Follow Us <a target="_blank" href="https://twitter.com/mintigo"><i class="fa fa-twitter"></i></a> <a target="_blank" href="https://www.facebook.com/Mintigo"><i class="fa fa-facebook-square"></i></a> <a target="_blank" href="http://www.linkedin.com/company/mintigo"><i class="fa fa-linkedin"></i></a> <a target="_blank" href="/blog/"><i class="fa fa-rss-square"></i></a> <a target="_blank" href="http://www.pinterest.com/mintigo/"><i class="fa fa-pinterest-square"></i></a> <a target="_blank" href="https://plus.google.com/114017950977372401653" rel="publisher"><i class="fa fa-google-plus-square"></i></a> </p> 
+      <p>© Copyright 2014 Mintigo. All Rights Reserved. <a href="http://www.mintigo.com/company/privacy-policy/">Our Privacy Policy.</a></p> 
+     </div> 
+    </div> 
+   </footer> 
+   <!-- /footer --> 
+  </div> 
+  <script type="text/javascript">if (typeof(addthis_share) == "undefined"){ addthis_share = {"passthrough":{"twitter":{"via":"mintigo"}},"url_transforms":{"shorten":{"twitter":"bitly"}},"shorteners":{"bitly":{"login":"tones810","apiKey":"R_d59f91291d2c35d2b37bf81813033e23"}}};}
+
+var addthis_config = {"data_track_clickback":false,"data_track_addressbar":false,"data_track_textcopy":false,"ui_atversion":"300","ui_508_compliant":true};
+var addthis_product = 'wpp-3.1';
+</script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-518c2bc84822b2e1"></script>
+  <script type="text/javascript" src="http://www.mintigo.com/wp-content/themes/mintigo/scripts/jquery.fancybox.js?a06b8a"></script> 
+  <script type="text/javascript" src="http://www.mintigo.com/wp-content/themes/mintigo/scripts/theme.js?a06b8a"></script> 
+  <!-- Start Of Script Generated By cforms v14.6 [Oliver Seidel | www.deliciousdays.com] --> 
+  <!-- End Of Script Generated By cforms --> 
+  <!--wp_footer--> 
+  <script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22244036-1']);
+  _gaq.push(['_setDomainName', 'mintigo.com']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+</script> 
+  <!-- Mintigo Script --> 
+  <script type="text/javascript">
+document.write(unescape('%3Cimg%20class%3D%22hidden%22%20src%3D%22https%3A//mintigollg.appspot.com/client/sc.gif%3Fcid%3D')+'5dcb7cb3b4d4486cae360c4d3e34e4a7'+unescape('%26ref%3D')+escape(document.referrer)+unescape('%22%20width%3D%220%22%20height%3D%220%22/%3E'));
+</script> 
+  <noscript> 
+   <img src="http://mintigollg.appspot.com/client/sc.gif?cid=5dcb7cb3b4d4486cae360c4d3e34e4a7" width="0" height="0"> 
+  </noscript> 
+  <!-- End Mintigo Script --> 
+  <!-- AdRoll Pixel --> 
+  <script type="text/javascript">
+adroll_adv_id = "LXIAE4LLUJDW3K4WMI4QAJ";
+adroll_pix_id = "DIRRGAFRUFEL7HV2GYTMLB";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script> 
+  <!-- End AdRoll Pixel --> 
+  <!-- Bizo tracking --> 
+  <script type="text/javascript">
+  _bizo_data_partner_id = "7075";
+</script> 
+  <script type="text/javascript">
+(function() {
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";
+  b.async = true;
+  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+  s.parentNode.insertBefore(b, s);
+})();
+</script> 
+  <noscript> 
+   <img height="1" width="1" alt="" style="display:none;" src="//www.bizographics.com/collect/?pid=7075&amp;fmt=gif"> 
+  </noscript>   
+  <!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Database Caching 3/109 queries in 0.027 seconds using disk
+Object Caching 2343/2612 objects using disk
+
+ Served from: www.mintigo.com @ 2014-12-05 07:36:37 by W3 Total Cache -->
+ </body>
+</html>

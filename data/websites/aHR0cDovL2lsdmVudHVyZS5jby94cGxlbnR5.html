@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta charset="utf-8"> 
+  <!-- Title and other stuffs --> 
+  <title>Xplenty - ILVenture</title> 
+  <meta name="google-site-verification" content="qjktTDHli5Xc2mWM86BjA489x8h0yl97H8GsbFAa9Xs"> 
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet" type="text/css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content=""> 
+  <meta name="author" content=""> 
+  <script src="/js/jquery.js"></script> 
+  <!-- jQuery --> 
+  <script src="/js/jquery.history.js"></script> 
+  <meta property="og:image" content="http://ilventure.co/image/AMIfv96xSW_s5CtzYi5TokJmnNumTZ-IvwWvZzBp8a-KvgqXpV_I-HXjrkruUD3K0S2rJKUbfP55jVvg5eWJGCKzPRT5Th_1JRo1OyDAbC4HeZMr1WU-VzdnZSYi3cbBS-H_a1ruwm0jilUu3imyYCDULbX2VMSegg"> 
+  <meta property="og:image" content="http://ilventure.co/img/default_thumbnail.png"> 
+  <meta property="og:title" content="Xplenty @ ILVenture - Israeli startup network"> 
+  <meta property="og:site_name" content="Xplenty @ ILVenture"> 
+  <!-- ShareThis javascripts
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "33488e41-cd30-4ce6-8914-46a7c211b02f", doNotHash: false, doNotCopy: false, hashAddressBar: false,shorten:false});</script>
+--> 
+  <link href="http://fonts.googleapis.com/css?family=Nunito:400,300,700" rel="stylesheet" type="text/css"> 
+  <link href="/css/bootstrap.css" rel="stylesheet"> 
+  <link href="/css/bootstrap-responsive.css" rel="stylesheet"> 
+  <link href="/css/font-awesome/font-awesome.css" rel="stylesheet"> 
+  <link href="/css/icomoon.css" rel="stylesheet"> 
+  <link href="/css/select2.css" rel="stylesheet"> 
+  <link href="/css/style.css" rel="stylesheet"> 
+  <script>
+        window['_fs_debug'] = false;
+        window['_fs_host'] = 'www.fullstory.com';
+        window['_fs_org'] = 'vX2';
+        (function(m,n,e,t,l,o,g,y){
+          g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+          o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+          y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+          g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){FS(l,v)};
+          g.setSessionVars=function(v){FS('session',v)};g.setPageVars=function(v){FS('page',v)};
+        })(window,document,'FS','script','user');
+
+        
+
+    </script> 
+  <script>
+      var user;
+      
+      user = false;
+      
+  </script> 
+  <script type="text/javascript">var _kmq = _kmq || [];
+    var _kmk = _kmk || '59b39e969c2b84701106a8116e2a1d885d096b2a';
+    function _kms(u){
+      setTimeout(function(){
+        var d = document, f = d.getElementsByTagName('script')[0],
+        s = d.createElement('script');
+        s.type = 'text/javascript'; s.async = true; s.src = u;
+        f.parentNode.insertBefore(s, f);
+      }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+   </script> 
+  <!-- HTML5 Support for IE --> 
+  <!--[if lt IE 9]>
+  <script src="/js/html5shim.js"></script>
+  <![endif]--> 
+  <script>
+      function startupSearch(element, callback) {
+          element.select2({
+              minimumInputLength: 3,
+              openOnEnter: true,
+              ajax : {
+                  url : "/api/quicksearch",
+                  method : "post",
+                  dataType: "json",
+                  data : function(term) {
+                      return {
+                          q : term
+                      }
+                  },
+                  results : function(data) {
+                      return {
+                          results : data.startups
+                      }
+                  }
+              },
+              formatResult : function(company) {
+                  var result = $("<div>").addClass("company-search-result").attr("data", company.id);
+                  var companyImage = $("<div>").addClass("company-image");
+                  if (company.logo_key) {
+                      companyImage.css("background-image", "url(/image/" + company.logo_key + ")");
+                  } else {
+                      companyImage.css("background-image", "url(/img/default_thumbnail.png)");
+                  }
+                  result.append(companyImage);
+                  result.append($("<span>").text(company.name));
+                  return result;
+              },
+              formatSelection : function(company) {
+                  return company.name;
+              },
+
+              id : function(company) {
+
+                  element.attr("url",company.url_name);
+
+                  return company.url_name;
+
+              }
+          }).on("change", callback).on("select2-loaded", function() {
+
+          });
+      }
+
+      $(function() {
+          startupSearch($("#top-search-bar"), function(data) {
+              document.location.href = "/" + $(this).attr("url");
+          });
+
+          setTimeout(function() {
+              $("header .select2-choice div").addClass("select2-search-header")
+                      .html("<div " + "class='fa fa-search'></div>");
+          }, 0);
+
+      });
+  </script> 
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("c3f1f2c4057f75d7f573b5baa63264a9");
+if ((location.host.indexOf('localhost') > -1) || (location.host.indexOf('127.0.0.1') > -1)) {
+    console.log('Found localhost, telling MixPanel to ignore dada');
+    mixpanel.register({"$ignore":"true"});
+}
+</script>
+  <!-- end Mixpanel --> 
+  <script type="text/javascript" src="//plugin.reactful.com/Input/loader.ijs?sid=7702b7ee2663763e1a20336310c09613" async defer></script> 
+  <link type="text/css" rel="stylesheet" href="/css/social-buttons.css"> 
+  <link type="text/css" rel="stylesheet" href="/css/xeditable.css"> 
+ </head> 
+ <body> 
+  <!-- Header starts --> 
+  <div id="wrap"> 
+   <header> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="span2"> 
+       <!-- Logo. Use class "color" to add color to the text. --> 
+       <div class="logo"> 
+        <h1> <img src="/img/ilventure.png" style2="height: 36px; display: inline-block; position: relative; top: -25px"> <a href="/"><span class="color">IL</span>Venture</a> </h1> 
+       </div> 
+      </div> 
+      <!--div class="span3">
+              <small>Find and follow the best Israeli startups.</small>
+          </div--> 
+      <div class="span10"> 
+       <div class="pull-left"> 
+        <form class="form-inline search-bar-form" style="vertical-align: middle; display: inline-block" action="/startups" method="get"> 
+         <button class="btn" type="submit" style="visibility: hidden"></button> 
+         <input class="input-xxlarge" type="text" name="q" id="top-search-bar"> 
+        </form> 
+       </div> 
+       <div class="pull-right"> 
+        <button onclick="document.location.href = '/login'" class="btn btn-info" style="display: inline-block; vertical-align: middle; margin-top: 10px;">Log in</button> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </header> 
+   <header style="background: #f2f2f2"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="span12"> 
+       <!-- Navigation --> 
+       <div class="navbar"> 
+        <div class="navbar-inner"> 
+         <div class="container"> 
+          <ul class="nav"> 
+           <li class=""><a href="/">Home</a></li> 
+           <li class=""><a href="/startups">Companies</a></li> 
+           <li class=""><a href="/programs">Programs</a></li> 
+           <li class=""><a href="/service_providers">Services</a></li> 
+           <li class=""><a href="/people">People</a></li> 
+           <li class="hidden  "><a href="/founders_resources">Resources</a></li> 
+           <li class=""><a href="/investors">Investors</a></li> 
+           <!--<li class=""><a href="/service_providers">Services</a></li>--> 
+           <li class=""><a href="/jobs">Job Board</a></li> 
+           <li class="hidden "><a href="/apps">Apps</a></li> 
+           <li class=""><a href="/me/profile">Add a Startup</a></li> 
+           <li class=""><a href="/ilventure">About</a></li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </header> 
+   <!-- Header ends --> 
+   <script>
+            window.loggedIn = false;
+        </script> 
+   <script>
+
+
+
+    $(function() {
+
+        
+
+        $('#tags a').click(function(){
+            document.location.href = "/startups?tag=" + $(this).text();
+
+        });
+
+
+        <!-- notification script -->
+        $("#text").keyup(function(e) {
+            while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
+                $(this).height($(this).height()+1);
+            };
+        });
+
+        $("#text").click(function(e) {
+
+        });
+        $("#url-notif").hide();
+        $("#image-notif").hide();
+        $("#video-notif").hide();
+
+        $("#link-notification").click(function(e) {
+            $("#link-notification").fadeTo("fast", 1);
+            $("#video-notification").fadeTo("fast", 0.33);
+            $("#image-notification").fadeTo("fast", 0.33);
+            $("#url-notif").show();
+            $("#image-notif").hide();
+            $("#video-notif").hide();
+            $("#notification-type").val(2);
+
+
+        });
+        $("#video-notification").click(function(e) {
+            $("#video-notification").fadeTo("fast", 1);
+            $("#link-notification").fadeTo("fast", 0.33);
+            $("#image-notification").fadeTo("fast", 0.33);
+            $("#url-notif").hide();
+            $("#image-notif").hide();
+            $("#video-notif").show();
+            $("#notification-type").val(3);
+        });
+
+        $("#image-notification").click(function(e) {
+            $("#image-notification").fadeTo("fast", 1);
+            $("#video-notification").fadeTo("fast", 0.33);
+            $("#link-notification").fadeTo("fast", 0.33);
+            $("#url-notif").hide();
+            $("#image-notif").show();
+            $("#video-notif").hide();
+            $("#notification-type").val(4);
+        });
+
+
+        <!-- end of notification script -->
+
+        $("#resource_type").change(function() {
+            switch($("#resource_type").val()) {
+                case "1":
+                    $(".screenshot-group").show();
+                    $(".video-group").hide();
+                    break;
+                case "2":
+                    $(".screenshot-group").hide();
+                    $(".video-group").show();
+                    break;
+            }
+        });
+
+
+
+
+        $(".resources li").click(function() {
+            var $this = $(this);
+
+            var title = $(".resource-title");
+            var body = $(".resource-preview");
+            body.data("title", $this.data("title")).data("type", $this.data("type")).data("image-id", $this.data("image-id")).data("video-id", $this.data("video-id"));
+
+            title.text($this.data("title"));
+            switch($this.data("type")) {
+                case 1:
+                    body.html($("<div>").addClass("image").css("background-image", "url(/image/" + $this.data("image-id") + "?h=250&w=350)"));
+                    break;
+                case 2:
+                    var videoWidth = 350;
+                    var videoHeight = 250;
+                    body.html($("<iframe>")
+                            .width(videoWidth)
+                            .height(videoHeight)
+                            .attr("src", "http://www.youtube.com/embed/" + $this.data("video-id")) //  + "?autoplay=1"
+                            .attr("frameborder", 0)
+                            .prop("allowfullscreen", true));
+                    break;
+            }
+
+        });
+        $(".resources li:first-child").click();
+
+
+        $(".resource-preview").click(function() {
+            var $this = $(this);
+            var modal = $("#modal-template").clone().appendTo(document.body);
+            if (!$this.data("title")) {
+                switch($this.data("type")) {
+                    case 1:
+                        modal.find("h3").text("Screenshot");
+                        break;
+                    case 2:
+                        modal.find("h3").text("Video");
+                        break;
+                }
+            }
+            modal.find("h3").text($this.data("title"));
+            modal.modal("show");
+            modal.on("hidden", function() {
+                $(this).remove();
+            });
+            modal.on("shown", function() {
+                switch($this.data("type")) {
+                    case 1:
+                        modal.find(".modal-body").html($("<img>").attr("src", "/image/" + $this.data("image-id") + "?full=1"));
+                        break;
+                    case 2:
+                        var videoWidth = modal.find(".modal-body").width();
+                        var videoHeight = videoWidth * 3/4;
+                        console.log(videoWidth, videoHeight);
+                        modal.find(".modal-body").html($("<iframe>")
+                                .width(videoWidth)
+                                .height(videoHeight)
+                                .attr("src", "http://www.youtube.com/embed/" + $this.data("video-id") + "?autoplay=1")
+                                .attr("frameborder", 0)
+                                .prop("allowfullscreen", true));
+                        break;
+                }
+            });
+
+        });
+
+
+
+        $("#notes").click(function() {
+            if (loggedIn) {
+                $("#notes-modal").modal("show");
+                $.get('/startup/agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAw/notes', function(data) {
+                    $('#the_notes').val(data);
+                });
+            } else {
+                document.location.href = "/login?redirect=" + document.location.href;
+            }
+        });
+
+        $("#notes-button").click(function() {
+            $.ajax({
+                url: $("#notes-form").attr("action"),
+                type: "post",
+                data: $("#notes-form").serialize(),
+                success: function() {
+                    $("#notes-modal").modal("hide");
+                }
+            });
+
+        });
+
+        $("#notes-form").submit(function() {
+            return false;
+        });
+
+
+        $("#intro").click(function() {
+            if (loggedIn) {
+                $("#intro-modal").modal("show");
+            } else {
+                document.location.href = "/login?redirect=" + document.location.href;
+            }
+        });
+
+        $("#introduce-button").click(function() {
+            $.ajax({
+                url: $("#intro-form").attr("action"),
+                type: "post",
+                data: $("#intro-form").serialize(),
+                success: function() {
+                    $("#intro-modal").modal("hide");
+                }
+            });
+
+        });
+
+        $("#intro-form").submit(function() {
+            return false;
+        });
+
+        $('#delete-startup').click (function (e) {
+            var shouldDelete = confirm('Danger Will Robinson! Are you sure you want to delete Xplenty? NO UNDO!');
+            if (!shouldDelete) {
+                alert('Good call!');
+                e.preventDefault();
+            } else {
+                alert('If you insist.');
+            }
+        });
+    });
+
+
+    </script> 
+   <div class="content" ng-app="startupApp"> 
+    <div class="container"> 
+     <div class="row" style="min-height: 200px"> 
+      <div class="span9"> 
+       <div class="startup-header"> 
+        <img src="/image/AMIfv96xSW_s5CtzYi5TokJmnNumTZ-IvwWvZzBp8a-KvgqXpV_I-HXjrkruUD3K0S2rJKUbfP55jVvg5eWJGCKzPRT5Th_1JRo1OyDAbC4HeZMr1WU-VzdnZSYi3cbBS-H_a1ruwm0jilUu3imyYCDULbX2VMSegg" class="pull-right" style="max-height: 80px;"> 
+        <h1>Xplenty</h1> 
+        <h4>Data Integration-as-a-Service</h4> 
+        <div class="social big-social"> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="span9"> 
+         <p> <span style="white-space: pre-wrap; margin-top: 10px">Xplenty’s Data Integration-as-a-Service harnesses the power of Hadoop to provide an easy-to-use, scalable ETL service that makes it a snap to prepare your structured and semi-structured data for analytics. With Xplenty, you can process data in your favorite cloud storage, such as AWS, Rackspace, Google or IBM SoftLayer. Xplenty can join data from multiple sources, including MySQL, PostgreSQL and MongoDB, and provides a wide range of out-of-the-box data transformation tasks, from simple sorting and aggregation to sophisticated functions and data manipulations.&nbsp; When finished, place your transformed data in analytics stores such as AWS Redshift, SAP HANA, or back in your favorite relational database, cloud storage or NoSQL data store. Give it a try for 14 days for free! http://goo.gl/PsE0be</span> </p> 
+         <div class="row"> 
+          <div class="span5"> 
+           <h5 class="website">Homepage: <a target="new" href="https://www.xplenty.com">https://www.xplenty.com</a></h5> 
+           <h5 class="sector">Sector: <b>Software Applications</b></h5> 
+           <h5 class="address">Address: <b>Gershon Shatz 15 Tel Aviv</b></h5> 
+           <h5 class="founded">Founded: <b>2011</b></h5> 
+           <p id="tags"> Tags: <a class="label label-info" style="margin: 5px">hadoop</a><a class="label label-info" style="margin: 5px">cloud</a><a class="label label-info" style="margin: 5px">big-data</a><a class="label label-info" style="margin: 5px">cyber</a><a class="label label-info" style="margin: 5px">etl</a><a class="label label-info" style="margin: 5px">data-security</a><a class="label label-info" style="margin: 5px">software-applications</a><a class="label label-info" style="margin: 5px">saas</a> <br> </p> 
+          </div> 
+          <div class="span4"> 
+           <h5 class="address">Funding Stage: <b>A</b></h5> 
+           <h5 class="address">Employees: <b>1-10</b></h5> 
+           <h5 class="address">Geographical Markets: <b>US</b></h5> 
+           <h5 class="company-detail">Status: <strong>Active</strong></h5> 
+          </div> 
+         </div> 
+         <p style="margin: 15px 0;"> </p>
+         <div class="fb-like" data-href="http://www.ilventure.co/xplenty" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div> 
+         <g:plusone size="medium" href="http://www.ilventure.co/xplenty"></g:plusone> 
+         <p></p> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="span9"> 
+         <img class="map" style="margin-top: 10px; width: 100%; margin-bottom: 20px" src="http://maps.googleapis.com/maps/api/staticmap?center=Gershon+Shatz+15+Tel+Aviv&amp;zoom=15&amp;size=700x200&amp;maptype=roadmap&amp;sensor=false&amp;markers=color:blue|Gershon+Shatz+15+Tel+Aviv"> 
+        </div> 
+       </div> 
+       <div id="funding-rounds" ng-controller="FundingRoundCtrl"> 
+        <h3 class="title"> 
+         <div class="row"> 
+          <div class="span3"> 
+           <span class="fa fa-calendar" style="padding-right: 10px; color: #aaa"></span> Funding Rounds 
+          </div> 
+          <div class="span6"> 
+          </div> 
+         </div> </h3> 
+        <div ng-init="init('xplenty', '[{&quot;name&quot;: &quot; PLUS Ventures&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoNO2Cgw&quot;}, {&quot;name&quot;: &quot;Aleph&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoMOhCgw&quot;}, {&quot;name&quot;: &quot;BRM Group&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAgJi3sgkMCxIHU3RhcnR1cBiAgICAgOyaCgw&quot;}, {&quot;name&quot;: &quot;Battery Ventures&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAiOLSmwoMCxIHU3RhcnR1cBiAgICAgPKICgw&quot;}, {&quot;name&quot;: &quot;Bessemer&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoPeACgw&quot;}, {&quot;name&quot;: &quot;Canaan&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoOeYCQw&quot;}, {&quot;name&quot;: &quot;Carmel Ventures&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoO2VCgw&quot;}, {&quot;name&quot;: &quot;Earthbound LLC&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAwLzWmgoMCxIHU3RhcnR1cBiAgICAwPqTCww&quot;}, {&quot;name&quot;: &quot;Entr\u00e9e Capital&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICA7NajCgw&quot;}, {&quot;name&quot;: &quot;Explore. Dream. Discover.&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICA-PC9Cgw&quot;}, {&quot;name&quot;: &quot;Gemini&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoOuSCQw&quot;}, {&quot;name&quot;: &quot;Genesis&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoOuSCgw&quot;}, {&quot;name&quot;: &quot;Giza&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAuISZCgw&quot;}, {&quot;name&quot;: &quot;ICV&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAmJnHnAkMCxIHU3RhcnR1cBiAgICAwPqTCgw&quot;}, {&quot;name&quot;: &quot;Innovation Endeavors&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoK-XCgw&quot;}, {&quot;name&quot;: &quot;JVP&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoPWDCQw&quot;}, {&quot;name&quot;: &quot;Jumpspeed Ventures&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICA9MOgCgw&quot;}, {&quot;name&quot;: &quot;Kaedan Capital&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICA5I-9Cgw&quot;}, {&quot;name&quot;: &quot;Krypton VC&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCm4xa182aTFMUVIMCxIHU3RhcnR1cBiAgICAwLXbCAw&quot;}, {&quot;name&quot;: &quot;LionBird&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAsOHOgQkMCxIHU3RhcnR1cBiAgICAwN-XCQw&quot;}, {&quot;name&quot;: &quot;Magma&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoKmoCww&quot;}, {&quot;name&quot;: &quot;OurCrowd&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAzISzCgw&quot;}, {&quot;name&quot;: &quot;Pirveli Ventures&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAgL6nkwoMCxIHU3RhcnR1cBiAgICA4MGcCgw&quot;}, {&quot;name&quot;: &quot;Pitango Venture Capital &quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoJmQCww&quot;}, {&quot;name&quot;: &quot;Pix Vine Capital&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAyPKngQoMCxIHU3RhcnR1cBiAgICAoJKfCgw&quot;}, {&quot;name&quot;: &quot;Rhodium&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAuIKcCgw&quot;}, {&quot;name&quot;: &quot;Samurai Incubate,Inc.&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAoNOm2AgMCxIHU3RhcnR1cBiAgICAwOGKCQw&quot;}, {&quot;name&quot;: &quot;SeedIL&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAgIDVzwgMCxIHU3RhcnR1cBiAgICAgPSOCgw&quot;}, {&quot;name&quot;: &quot;Sequoia Israel&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAoMWnCQw&quot;}, {&quot;name&quot;: &quot;StageOne Ventures&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAgOjdrwoMCxIHU3RhcnR1cBiAgICAgPWnCQw&quot;}, {&quot;name&quot;: &quot;TerraLab Ventures&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyIQsSBFVzZXIY-bqGAQwLEgdTdGFydHVwGICAgID4rqEKDA&quot;}, {&quot;name&quot;: &quot;Teuza&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICArNqwCgw&quot;}, {&quot;name&quot;: &quot;The Trendlines Group&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICA4OHcywgMCxIHU3RhcnR1cBiAgICA3JeECQw&quot;}, {&quot;name&quot;: &quot;Tmura&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAuJSBCgw&quot;}, {&quot;name&quot;: &quot;U.S. Venture Partners&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICA4Irh2wgMCxIHU3RhcnR1cBiAgICAwIjdCww&quot;}, {&quot;name&quot;: &quot;Wadi Ventures&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAuJyKCgw&quot;}, {&quot;name&quot;: &quot;lool ventures&quot;, &quot;key&quot;: &quot;agxzfmlsbGlzdHNpdGVyKAsSBFVzZXIiCjE5dkYxRGVuVHYMCxIHU3RhcnR1cBiAgICAuLCrCgw&quot;}]')" class="ng-cloak"> 
+         <ul id="funding-round-list"> 
+          <li class="funding-round" ng-repeat="round in rounds | orderBy:'-date'"> 
+           <div class="round-header"> 
+            <span class="round-amount">{{ round.amount | prefixedCurrency:"$" }}</span> 
+            <span ng-if="round.amount"> - </span> 
+            <span class="round-type" ng-bind="round.type" ng-if="round.type"></span> 
+           </div> <span class="round-date" ng-if="round.date">{{ round.date | date }}</span> <span ng-if="round.investors.length > 0">Investors: <span class="round-investor" ng-repeat="investor in round.investors"> <a target="_blank" ng-href="/i/{{ investor.url_name }}" ng-if="!!investor.url_name"> {{ investor.name }} </a> <span ng-if="!investor.url_name"> {{ investor.name }} </span> <span ng-if="!$last">, </span> </span> </span> </li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div id="news" ng-app="NewsModule" ng-controller="newsCtrl" ng-init="init('xplenty',
+    '[&quot;http://techcrunch.com/2014/10/20/pitching-a-means-to-automate-data-processing-xplenty-raises-3-million/\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&quot;]')" class="ng-cloak"> 
+        <div class="row"> 
+         <div class="span3"> 
+          <h3 class="title"><span class="fa fa-calendar" style="padding-right: 10px; color: #aaa"></span>In the News</h3> 
+         </div> 
+         <div class="span6"> 
+         </div> 
+        </div> 
+        <ul id="news-list"> 
+         <li class="news-item" ng-repeat="newsItem in Items"> <a href="{{ newsItem.original_url }}" target="_blank"> 
+           <article> 
+            <header> 
+             <div class="news-img-wrapper"> 
+              <img src="{{ newsItem.imageUrl }}" class="pull-right"> 
+             </div> 
+             <span class="publisher">{{ newsItem.provider_name }}</span> 
+             <h4> {{newsItem.title}} </h4> 
+            </header> 
+           </article> </a> </li> 
+        </ul> 
+        <span ng-if="Items.length == 0"> <p class="empty-filler"> No news yet. </p> </span> 
+       </div> 
+       <h3 class="title"><span class="fa fa-calendar" style="padding-right: 10px; color: #aaa"></span>Updates</h3> 
+       <ul class="notifications"> 
+        <li> <p class="text" style="white-space: pre-wrap; margin-top: 10px">We showed you how to scale your data collecting like a champ, the next step is collecting Big Data with S3/CloudFront Logging. The next in the series by VP R&amp;D Moty Michaely. </p> Related link - <a target="new" href="http://www.xplenty.com/blog/2014/01/collecting-big-data-s3cloudfront-logging/?utm_source=ILVenture&amp;utm_medium=post&amp;utm_campaign=blog">http://www.xplenty.com/blog/2014/01/collecting-big-data-s3cloudfront-logging/?utm_source=ILVenture&amp;utm_medium=post&amp;utm_campaign=blog</a> <p class="date">2014-02-06 10:36:27.821630</p> <p style="margin-top: 15px;"> </p>
+         <div class="fb-like" data-href="http://www.ilventure.co/show/notification/agxzfmlsbGlzdHNpdGVyPgsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAwLEgxOb3RpZmljYXRpb24YgICAgLiviAoM" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div> 
+         <g:plusone size="medium" href="http://www.ilventure.co/show/notification/agxzfmlsbGlzdHNpdGVyPgsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAwLEgxOb3RpZmljYXRpb24YgICAgLiviAoM"></g:plusone> <p></p> </li> 
+        <li> <p class="text" style="white-space: pre-wrap; margin-top: 10px">Hortonworks HDP provides stability reliability. Xplenty's Hadoop-as-a-Service uses HDP to meet our platform's security and performance needs. This allows us to provide people with a robust SaaS that makes using Hadoop easy as pie. Xplenty CEO Yaniv Mor writes a guest post for Hortonworks' blog about using HDP for our platform. </p> Related link - <a target="new" href="http://hortonworks.com/blog/using-hdp-hadoop-platform-service/">http://hortonworks.com/blog/using-hdp-hadoop-platform-service/</a> <p class="date">2014-02-04 14:15:53.314540</p> <p style="margin-top: 15px;"> </p>
+         <div class="fb-like" data-href="http://www.ilventure.co/show/notification/agxzfmlsbGlzdHNpdGVyPgsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAwLEgxOb3RpZmljYXRpb24YgICAgJjVmAoM" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div> 
+         <g:plusone size="medium" href="http://www.ilventure.co/show/notification/agxzfmlsbGlzdHNpdGVyPgsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAwLEgxOb3RpZmljYXRpb24YgICAgJjVmAoM"></g:plusone> <p></p> </li> 
+        <li> <p class="text" style="white-space: pre-wrap; margin-top: 10px">As your company grows, the data will inevitably thicken, and the ETL process will take progressively longer. Have a look at these steps to see what you can do to make the process run faster and more smoothly. Here are 7 tips from Xplenty CEO Yaniv Mor to help make your process run more quickly and smoothly. </p> Related link - <a target="new" href="http://www.xplenty.com/blog/2014/01/7-tips-improve-etl-performance/?utm_source=ilventure&amp;utm_medium=social&amp;utm_campaign=blog">http://www.xplenty.com/blog/2014/01/7-tips-improve-etl-performance/?utm_source=ilventure&amp;utm_medium=social&amp;utm_campaign=blog</a> <p class="date">2014-01-29 08:59:58.663300</p> <p style="margin-top: 15px;"> </p>
+         <div class="fb-like" data-href="http://www.ilventure.co/show/notification/agxzfmlsbGlzdHNpdGVyPgsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAwLEgxOb3RpZmljYXRpb24YgICAgPDUnwoM" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div> 
+         <g:plusone size="medium" href="http://www.ilventure.co/show/notification/agxzfmlsbGlzdHNpdGVyPgsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAwLEgxOb3RpZmljYXRpb24YgICAgPDUnwoM"></g:plusone> <p></p> </li> 
+        <li> <p class="text" style="white-space: pre-wrap; margin-top: 10px">Trying to figure out the best way to scale your data collecting? Our VP R&amp;D Moty Michaely has some suggestions. </p> Related link - <a target="new" href="http://www.xplenty.com/blog/2014/01/scale-data-collection-cloud-like-champ/?utm_source=ILVenture&amp;utm_medium=post&amp;utm_campaign=blog">http://www.xplenty.com/blog/2014/01/scale-data-collection-cloud-like-champ/?utm_source=ILVenture&amp;utm_medium=post&amp;utm_campaign=blog</a> <p class="date">2014-01-22 12:38:41.708920</p> <p style="margin-top: 15px;"> </p>
+         <div class="fb-like" data-href="http://www.ilventure.co/show/notification/agxzfmlsbGlzdHNpdGVyPgsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAwLEgxOb3RpZmljYXRpb24YgICAgJDHgAoM" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div> 
+         <g:plusone size="medium" href="http://www.ilventure.co/show/notification/agxzfmlsbGlzdHNpdGVyPgsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAwLEgxOb3RpZmljYXRpb24YgICAgJDHgAoM"></g:plusone> <p></p> </li> 
+       </ul> 
+      </div> 
+      <div class="span3"> 
+       <h3 class="title"><span class="fa fa-arrow-down" style="padding-right: 10px; color: #aaa"></span>My Actions</h3> 
+       <p style="margin-bottom: 20px"> <a id="intro" class="btn btn-info btn-block title">Get Introduced</a> <a id="notes" class="btn btn-info btn-block title">My notes</a> <a href="/follow/agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAw" class="btn btn-block btn-info">Follow this startup</a> </p> 
+       <h3 class="title" style="margin-top: 30px;"><span class="fa fa-users" style="padding-right: 10px; color: #aaa"></span>The Team</h3> 
+       <div id="members-div"> 
+        <ul class="member-list"> 
+         <li> <a href="/profile/agxzfmlsbGlzdHNpdGVyEQsSBFVzZXIYgICAgLiUgQsM"> <img title="Yaniv Mor" alt="Yaniv Mor" src="/image/AMIfv9784RWVrcX9jJvJIy8Ap08iAreh2B9T0YcW0U_9H3orq92no8fSaWcBcE71fMfmb1t_YM0PmjMrwYjgIf-hTHSHmSKw6wlA-dO3P40eV7gfLrJqpmnQJFvudbdsHycK_0ZuEiftkd2Ozz6coZbCSc7PXunvbw"> <h4 title="Yaniv Mor">Yaniv Mor</h4> <p class="member-title">Co-founder</p> </a> </li> 
+         <li> <a href="/profile/agxzfmlsbGlzdHNpdGVyEQsSBFVzZXIYgICAgPjnlAkM"> <img title="Moty Michaely" alt="Moty Michaely" src="/image/AMIfv96WnB3VwXMU8cJvqyrxQQFwZSSMteO9LMMXlRmZyHiMT5UD3LXn6e3YY-aMEG1PBg_p3gbAb7AO82Xyuwx9qTD8t4sK6EqP7k9PTnRExnjLGOhVOqHQdsz-KUBRxX6yVB51ifF0cAWc-n1zf22xMxNUHuW-NQ"> <h4 title="Moty Michaely">Moty Michaely</h4> <p class="member-title">VP R&amp;amp;D</p> </a> </li> 
+         <li> <a href="/profile/agxzfmlsbGlzdHNpdGVyEQsSBFVzZXIYgICAgPjzjgsM"> <img title="Joshua Polsky" alt="Joshua Polsky" src="/image/AMIfv96iXwFfQvElP1Z-XcH10g7S_pgK24VYUM7CBU4LjjstpfNfoz78cdXfma08A1V9XN62h7e3LAS_KlUOhVM9KRUXrSrsHfAOjl_APf1A9Q1dTahpke4QPflKcGh6bJGN4K-1OizNFhNzrGS7X7Mxw-eP8nIutQ"> <h4 title="Joshua Polsky">Joshua Polsky</h4> <p class="member-title">Head of Marketing</p> </a> </li> 
+         <li> <a href="/profile/agxzfmlsbGlzdHNpdGVyEQsSBFVzZXIYgICAgPjDqQsM"> <img title="Saggi Neumann" alt="Saggi Neumann" src="/image/AMIfv96arIM7TAMpDGtE0fCzpLASJyi1jr2jv50DAeR_LutXRy17M5G8hrayp5ADnnHy50nX6oW3LjJLQid9supo-tU8sr7gq59VTdBypZuuYZ2m8Uw9nnHBHUTocrleanTKHf5U-wrF2HsR7c8RDcNh6PP8yAYnXA"> <h4 title="Saggi Neumann">Saggi Neumann</h4> <p class="member-title">Co-founder</p> </a> </li> 
+        </ul> 
+       </div> 
+       <div id="unclaimed"> 
+       </div> 
+       <p></p> 
+       <h3 class="title" style="margin-top: 30px"><span class="fa fa-thumbs-up" style="padding-right: 10px; color: #aaa"></span>Endorsements</h3> 
+       <h3 class="title" style="margin-top: 30px"><span class="fa fa-star" style="padding-right: 10px; color: #aaa"></span>Followers (5)</h3> 
+       <ul class="member-list"> 
+        <li><a href="/profile/agxzfmlsbGlzdHNpdGVyEQsSBFVzZXIYgICAgPjnlAkM"> <img title="Moty Michaely" alt="Moty Michaely" src="/image/AMIfv96WnB3VwXMU8cJvqyrxQQFwZSSMteO9LMMXlRmZyHiMT5UD3LXn6e3YY-aMEG1PBg_p3gbAb7AO82Xyuwx9qTD8t4sK6EqP7k9PTnRExnjLGOhVOqHQdsz-KUBRxX6yVB51ifF0cAWc-n1zf22xMxNUHuW-NQ"> <h4>Moty Michaely</h4> </a></li> 
+        <li><a href="/profile/agxzfmlsbGlzdHNpdGVyEQsSBFVzZXIYgICAwI7BjAoM"> <img title="Zvi Avraham" alt="Zvi Avraham" src="/image/AMIfv95sWol76fW6PWs7jQzkBKwJPZKUmvgUjXrJ0cpJJKVOmuZL1GX6D6Yndv1VND-WaGqClpCyTnNqqm1GrEQV-9ysXpWl46Ew2dv06DGl2sNkA5RKjSodhGRrHW6zFTjiPQbS1ejKXuxNThpnw4bjuGenn2EChA"> <h4>Zvi Avraham</h4> </a></li> 
+        <li><a href="/profile/agxzfmlsbGlzdHNpdGVyEQsSBFVzZXIYgICAgPjrmgoM"> <img title="Frederic Aknin" alt="Frederic Aknin" src="/image/AMIfv94YSNzoHFkSDIXH7BsyF1Eq8x84aQuurxuImRj3wPyYUrEF1j1ZFmCspOmAgh6cSjMpi4foYPjOckdISK0TTZ9cSm-J8lElY6_kE7NBen7oRMs2evgbg-p7lfPYnjtrKMd2FJDvSDxjnXfTVfxhBXZiTU7NYA"> <h4>Frederic Aknin</h4> </a></li> 
+        <li><a href="/profile/agxzfmlsbGlzdHNpdGVyEQsSBFVzZXIYgICAgPjzjgsM"> <img title="Joshua Polsky" alt="Joshua Polsky" src="/image/AMIfv96iXwFfQvElP1Z-XcH10g7S_pgK24VYUM7CBU4LjjstpfNfoz78cdXfma08A1V9XN62h7e3LAS_KlUOhVM9KRUXrSrsHfAOjl_APf1A9Q1dTahpke4QPflKcGh6bJGN4K-1OizNFhNzrGS7X7Mxw-eP8nIutQ"> <h4>Joshua Polsky</h4> </a></li> 
+        <li><a href="/profile/agxzfmlsbGlzdHNpdGVyEQsSBFVzZXIYgICAgPjDqQsM"> <img title="Saggi Neumann" alt="Saggi Neumann" src="/image/AMIfv96arIM7TAMpDGtE0fCzpLASJyi1jr2jv50DAeR_LutXRy17M5G8hrayp5ADnnHy50nX6oW3LjJLQid9supo-tU8sr7gq59VTdBypZuuYZ2m8Uw9nnHBHUTocrleanTKHf5U-wrF2HsR7c8RDcNh6PP8yAYnXA"> <h4>Saggi Neumann</h4> </a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="modal hide fade" id="modal-template"> 
+    <div class="modal-header"> 
+     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+     <h3></h3> 
+    </div> 
+    <div class="modal-body"></div> 
+    <div class="modal-footer"> 
+     <button type="button" class="btn btn-info" data-dismiss="modal" aria-hidden="true">Close</button> 
+    </div> 
+   </div> 
+   <div id="intro-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true"> 
+    <div class="modal-header"> 
+     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+     <h3 id="myModalLabel">Get introduced to Xplenty</h3> 
+    </div> 
+    <div class="modal-body"> 
+     <form class="form-horizontal" id="intro-form" action="/startup/agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAw/intro"> 
+      <div class="control-group"> 
+       <label class="control-label">From</label> 
+       <div class="controls"> 
+        <input type="text" disabled value="  ()"> 
+       </div> 
+      </div> 
+      <div class="control-group"> 
+       <label class="control-label">Subject</label> 
+       <div class="controls"> 
+        <input name="subject" type="text" class="input-xlarge" value="Xplenty - Introduction"> 
+       </div> 
+      </div> 
+      <div class="control-group"> 
+       <label class="control-label">Message</label> 
+       <div class="controls"> 
+        <textarea name="message" class="input-xlarge" rows="10">
+                            Hello team!
+                            My name is   and I would like to introduce myself.
+
+                            Please feel free to contact me at: .
+
+                            Thank you.
+                        </textarea> 
+       </div> 
+      </div> 
+     </form> 
+    </div> 
+    <div class="modal-footer"> 
+     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button> 
+     <button id="introduce-button" class="btn btn-info">Get introduced</button> 
+    </div> 
+   </div> 
+   <div id="notes-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true"> 
+    <div class="modal-header"> 
+     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+     <h3>Your notes regarding Xplenty</h3> 
+    </div> 
+    <div class="modal-body"> 
+     <form class="form-horizontal" id="notes-form" action="/startup/agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAw/notes"> 
+      <div class="control-group"> 
+       <textarea name="the_notes" id="the_notes" class="input-xlarge" rows="10" style="width: 95%;">Loading notes...</textarea> 
+      </div> 
+     </form> 
+    </div> 
+    <div class="modal-footer"> 
+     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button> 
+     <button id="notes-button" class="btn btn-info">Save</button> 
+    </div> 
+   </div> 
+   <div id="resource-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true"> 
+    <div class="modal-header"> 
+     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+     <h3>Add Screenshot or Video</h3> 
+    </div> 
+    <div class="modal-body"> 
+     <form class="form form-horizontal" action="/startup/agxzfmlsbGlzdHNpdGVyJQsSBFVzZXIYgICAgLiUgQsMCxIHU3RhcnR1cBiAgICAgOTRCAw/resource" method="post" enctype="multipart/form-data"> 
+      <div class="row"> 
+       <div class="control-group"> 
+        <label class="control-label" for="resource_type">Type</label> 
+        <select name="resource_type" class="input-medium" id="resource_type" style="margin-top: 5px"> <option value="1">Screenshot</option> <option value="2">Video (YouTube only)</option> </select> 
+       </div> 
+       <div class="control-group screenshot-group"> 
+        <label class="control-label" for="screenshot">Screenshot</label> 
+        <input type="file" class="input-xlarge" name="screenshot" id="screenshot"> 
+       </div> 
+       <div class="control-group video-group" style="display: none"> 
+        <label class="control-label" for="video_url">Video URL</label> 
+        <input type="text" class="input-xlarge" name="video_url" id="video_url" style="width: 220px"> 
+       </div> 
+       <div class="control-group"> 
+        <label class="control-label" for="title">Title</label> 
+        <input type="text" class="input-xlarge" name="title" id="title" style="width: 220px" placeholder="(Optional)"> 
+       </div> 
+      </div> 
+     </form> 
+    </div> 
+    <div class="modal-footer"> 
+     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button> 
+     <button id="resources-button" class="btn btn-info" onclick="$('#resource-modal').find('form').submit()">Save</button> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Footer starts --> 
+  <footer> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span12"> 
+      <div class="row"> 
+       <div class="span4"> 
+        <div class="widget"> 
+         <h5>Contact</h5> 
+         <hr> 
+         <p>Please feel free to contact us anytime </p> 
+         <hr> 
+         <i class="fa fa-envelope"></i> &nbsp; Editorial team 
+         <a href="/cdn-cgi/l/email-protection#781d1c110c170a1119143811140e1d160c0d0a1d561b17"><span class="__cf_email__" data-cfemail="aecbcac7dac1dcc7cfc2eec7c2d8cbc0dadbdccb80cdc1">[email&nbsp;protected]</span><script cf-hash="f9e31" type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></a> 
+         <hr> 
+         <div class="social"> 
+          <a href="https://www.facebook.com/ilventure"><i class="fa fa-facebook facebook"></i></a> 
+          <!--a href="#"><i class="fa fa-linkedin linkedin"></i></a>--> 
+          <a href="https://twitter.com/ilventure"><i class="fa fa-twitter twitter" style="padding-bottom: 1px; padding-right: 1px"></i></a> 
+          <a href="https://plus.google.com/u/0/b/103038078681666721069"><i class="fa fa-google-plus google-plus"></i></a> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="span4"> 
+        <div class="widget"> 
+         <h5>Latest Tweets</h5> 
+         <hr> 
+         <!-- Below line is produce acutal output --> 
+         <div class="tweet"></div> 
+        </div> 
+       </div> 
+       <div class="span4"> 
+        <div class="widget"> 
+         <h5>ILVenture</h5> 
+         <hr> 
+         <div class="two-col"> 
+          <div class="col-left"> 
+           <ul> 
+            <li><a href="/api/1/doc">API</a></li> 
+            <li><a href="/me/profile">Add a Startup</a></li> 
+            <li><a href="/tos">Terms of Service</a></li> 
+           </ul> 
+          </div> 
+          <div class="col-right"> 
+           <ul> 
+            <li><a href="/privacy">Privacy Policy</a></li> 
+            <li><a href="/login">Register</a></li> 
+           </ul> 
+          </div> 
+          <div class="clearfix"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <hr> 
+      <!-- Copyright info  | <a href="/">Home</a> | <a href="/tos">Terms of Service</a> | <a href="/privacy">Privacy Policy</a> | <a href="/contact">Contact Us</a> --> 
+      <p class="copy">Copyright © 2014</p> 
+     </div> 
+    </div> 
+    <div class="clearfix"></div> 
+   </div> 
+  </footer> 
+  <!-- Footer ends --> 
+  <!-- Scroll to top --> 
+  <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
+  <!-- JS --> 
+  <script src="/js/bootstrap.js"></script> 
+  <!-- Bootstrap --> 
+  <script src="/js/bootstrap-tabs.js"></script> 
+  <!-- Bootstrap tabs, used in search --> 
+  <!--script src="/js/select2.min.js"></script> <!-- Custom codes --> 
+  <script src="/js/select2.js"></script> 
+  <!-- Custom codes --> 
+  <script>
+        mixpanel.track('Startup View', { 'startup': 'xplenty' });
+    </script> 
+  <script src="/js/bootbox.min.js"></script> 
+  <script src="/js/date.js"></script> 
+  <script src="http://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script> 
+  <script>
+        
+    </script> 
+  <script src="/js/select2.min.js"></script> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script> 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script> 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.7.1/angular-moment.min.js"></script> 
+  <script src="/js/ui-select2.js"></script> 
+  <script src="/js/angular-flash.min.js"></script> 
+  <script src="/js/angular-embedly.js"></script> 
+  <script src="/js/utils.js"></script> 
+  <script src="/js/angular/startup-app.js"></script> 
+  <script src="/js/angular/startups/startup-resource.js"></script> 
+  <script src="/js/angular/startups/startup-controller.js"></script> 
+  <script src="/js/angular/fundingrounds/fundinground-module.js"></script> 
+  <script src="/js/angular/fundingrounds/prefixedcurrency-filter.js"></script> 
+  <script src="/js/angular/fundingrounds/fundinground-service.js"></script> 
+  <script src="/js/angular/fundingrounds/fundinground-controller.js"></script> 
+  <script src="/js/angular/news/news-module.js"></script> 
+  <script src="/js/angular/news/news-controller.js"></script> 
+  <script src="/js/angular-elastic-2.3.5.js"></script> 
+  <script src="/js/angular/notes/app.js"></script> 
+  <script src="/js/angular/notes/services.js"></script> 
+  <script src="/js/angular/notes/controllers.js"></script> 
+  <script src="/js/angular/notes/directives.js"></script> 
+  <script src="/js/xeditable.min.js"></script> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52152918-2', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script> 
+  <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bxv6429e';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>  
+ </body>
+</html>

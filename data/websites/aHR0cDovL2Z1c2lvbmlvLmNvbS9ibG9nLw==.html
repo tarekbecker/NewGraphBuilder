@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Blog :: Fusion-io</title> 
+  <meta name="msvalidate.01" content="9A13610A9FF33E8BA50E205BDBEAA3DA"> 
+  <meta name="description" content="The Fusion-io storage memory platform significantly reduces latency and improves the processing capabilities within a datacenter by relocating active data from centralized storage to the server where it is processed."> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="google-site-verification" content="YAmWblEdRffxoynUhrDTgelxMbWhWIlYo3dmxpDt5G4"> 
+  <!-- TWITTER META --> 
+  <meta name="twitter:site" content="@fusionio"> 
+  <!-- FACEBOOK META --> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="http://www.fusionio.com"> 
+  <meta property="og:title" content="Application Acceleration – Enterprise Flash Memory Platform"> 
+  <meta property="og:image" content="/images/fio-facebook.jpg"> 
+  <meta property="og:site_name" content="Fusion-io"> 
+  <meta property="og:description" content="#Delivering the world's data. Faster."> 
+  <link rel="image_src" href="//www.fusionio.com/images/fusion-logo.jpg"> 
+  <link rel="canonical" href="http://www.fusionio.com/blog"> 
+  <link rel="alternate" type="application/rss+xml" title="Fusion-io in the Press." href="https://www.fusionio.com/rss/press/"> 
+  <link rel="alternate" type="application/rss+xml" title="Recent media on Fusion-io." href="https://www.fusionio.com/rss/recentmedia/"> 
+  <link rel="alternate" type="application/rss+xml" title="The Fusion-io Blog." href="https://www.fusionio.com/rss/blog/"> 
+  <link rel="alternate" type="application/rss+xml" title="Upcoming Events for Fusion-io." href="https://www.fusionio.com/rss/events/"> 
+  <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"> 
+  <noscript>
+   <link href="/icons-output/icons.fallback.css" rel="stylesheet">
+  </noscript> 
+  <!--[if lt IE 9]>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<script>
+		document.createElement('section');
+	</script>
+	<![endif]--> 
+  <link rel="stylesheet" type="text/css" media="all" href="/css/main.css"> 
+  <link rel="stylesheet" type="text/css" media="all" href="//s3.amazonaws.com/icomoon.io/37433/FioCorporate/style.css"> 
+  <link rel="alternate" type="application/rss+xml" title="Fusion-io Blog" href="http://www.fusionio.com/rss/blog/"> 
+  <!--[if lt IE 9]>
+		<link href="/css/ie8.css" rel="stylesheet" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="/js/html5shiv.js"></script>
+	<![endif]--> 
+  <script type="text/javascript">
+		window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+		window.analytics.load("qoc1vyihp1");
+		window.analytics.page();
+	</script> 
+  <script>
+		/* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
+		window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var r=t.document.createElement("link"),a=t.document.getElementsByTagName("script")[0];r.rel="stylesheet",r.href=e[o&&n?0:o?1:2],a.parentNode.insertBefore(r,a)},r=new t.Image;r.onerror=function(){o(!1)},r.onload=function(){o(1===r.width&&1===r.height)},r.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+		grunticon(["/icons-output/icons.data.svg.css", "/icons-output/icons.data.png.css", "/icons-output/icons.fallback.css"]);
+	</script> 
+ </head> 
+ <body> 
+  <nav id="main-menu" class="menu-click-default">
+   <div class="html5-nav">
+    <ul>
+     <li>
+      <form action="/search/">
+       <input type="hidden" name="content_type[]" value="all">
+       <span id="main-menu-sidebar-search"><span class="fio fio2-search"></span><input data-placeholder="Search" type="text" name="q"></span>
+      </form></li>
+     <li><a href="/"><span class="fio fio2-home"></span>Home</a></li>
+     <li><a href="/products/"><span class="fio fio2-server-virt"></span>Products</a></li>
+     <li><a href="/solutions/"><span class="fio fio2-target"></span>Solutions</a></li>
+     <li><a href="/partners/"><span class="fio fio2-partner"></span>Partners</a></li>
+     <li><a href="http://www.sandisk.com/about-sandisk/corporate/"><span class="fio fio2-office"></span>Company</a></li>
+     <li><a href="/blog/"><span class="fio fio2-file-med"></span>Blog</a></li>
+     <li class="menu-click-default"><a href="#" class="collapsible trigger"><span class="fio fio2-newspaper"></span>News<i class="fio-dropdown-arrow trigger-icon"></i></a>
+      <ul class="collapsible drawer">
+       <li><a href="/press-releases/"><span class="fio 2"></span>Press Releases</a></li>
+       <li><a href="/events/"><span class="fio 2"></span>Events</a></li>
+       <li><a href="/insights/"><span class="fio 2"></span>Insights</a></li>
+       <li><a href="/awards/"><span class="fio 2"></span>Awards</a></li>
+      </ul></li>
+     <li class="menu-click-default"><a href="#" class="collapsible trigger"><span class="fio fio2-film"></span>Multimedia<i class="fio-dropdown-arrow trigger-icon"></i></a>
+      <ul class="collapsible drawer">
+       <li><a href="/videos/"><span class="fio 2"></span>Videos</a></li>
+       <li><a href="/photos/"><span class="fio 2"></span>Photos</a></li>
+       <li><a href="/webinars/"><span class="fio 2"></span>Webinars</a></li>
+      </ul></li>
+     <li class="menu-click-default"><a href="#" class="collapsible trigger"><span class="fio fio2-stack"></span>Resource Library<i class="fio-dropdown-arrow trigger-icon"></i></a>
+      <ul class="collapsible drawer">
+       <li><a href="/case-studies/"><span class="fio 2"></span>Case Studies</a></li>
+       <li><a href="/white-papers/"><span class="fio 2"></span>White Papers</a></li>
+       <li><a href="/data-sheets/"><span class="fio 2"></span>Data Sheets</a></li>
+       <li><a href="/overviews/"><span class="fio 2"></span>Overviews</a></li>
+       <li><a href="/faq/"><span class="fio 2"></span>FAQ</a></li>
+      </ul></li>
+     <li><a href="http://support.fusionio.com/"><span class="fio fio2-support"></span>Customer Support</a></li>
+     <li><a href="/contact/"><span class="fio fio2-phone"></span>Contact Us</a></li>
+    </ul>
+   </div>
+   <!-- .html5-nav -->
+  </nav> 
+  <header id="site-header" class="sticky"> 
+   <div class="html5-header sticky" id="site-header"> 
+    <nav class="fixed-menu"> 
+     <div class="html5-nav fixed-menu"> 
+      <div id="menu-trigger" class="toggle menu-click-default" data-target="#main-menu"> 
+       <div class="fio2-menu-icon-white2"></div> 
+       <span class="menu-text">Menu</span> 
+      </div> 
+      <ul class="title-area left"> 
+       <li id="logo-position"> <a href="/"> 
+         <div id="fusion-io-logo" class="fio2-fusionio-sandisk-logo show-for-medium-up"></div> 
+         <div id="fusion-io-emblem" class="fio2-fusionio-sandisk-emblem hide-for-medium-up hide-for-ie8"></div> </a> </li> 
+      </ul> 
+      <ul class="sub-navigation left show-for-large-up"> 
+       <li><a href="/blog/">Blog</a></li>
+      </ul> 
+      <div id="nav-bar-wrapper"> 
+       <section id="contact-actions"> 
+        <div class="html5-section" id="contact-actions"> 
+         <ul class="ca-icons show-for-xlarge-down hide-for-ie8 right"> 
+          <li> <a href="tel:+1-800-578-6007"> <i class="fio-phone"></i> </a> </li> 
+          <li> <a href="/contact/"> <i class="fio-envelope"></i> </a> </li> 
+         </ul> 
+         <ul class="show-for-xlarge-up hide-for-long-menu right"> 
+          <li> <span class="descriptor hide-for-xlarge-down hide-for-ie8">Quick Answers:</span> <span class="set-like-anchor highlight">800.578.6007</span> </li> 
+          <li> <a href="/contact/"> <span>Email Us</span> </a> </li> 
+          <li> <a href="#" class="chat-online" style="display:none;" onclick="startChat(event);">Chat With Us</a> <span class="chat-offline"></span> </li> 
+         </ul> 
+        </div>
+        <!-- .html5-section --> 
+       </section>
+       <!-- #contact-actions --> 
+      </div>
+      <!-- .nav-bar-wrapper --> 
+     </div>
+     <!-- .html5-nav --> 
+    </nav>
+    <!-- .fixed-menu --> 
+    <nav id="sub-nav" class="blue cf hide-for-small"> 
+     <div class="html5-nav blue cf hide-for-small" id="sub-nav"> 
+      <div class="wrap right"> 
+       <ul class="left"> 
+        <li><a class="blue" href="/products/">Flash Product Portfolio</a></li> 
+        <li><a class="blue-sub-1" href="/solutions/">Application and Industry Solutions</a></li> 
+        <li><a class="blue-sub-2" href="http://www.sandisk.com/about-sandisk/corporate/">Corporate Information</a></li> 
+        <li><a class="blue-sub-3" href="/partners/">Server Partners</a></li> 
+        <li><a class="blue-sub-4" href="/blog/">Blog</a></li> 
+       </ul> 
+       <!--========== SEARCH ==========--> 
+       <div class="header-search blue-sub-5"> 
+        <form action="/search/" method="get" id="header-search-form"> 
+         <input type="hidden" name="content_type[]" value="all"> 
+         <input type="text" name="q"> 
+         <!-- JS-less way of accepting return as submit, but not taking over a user pressing return to select an auto-complete results --> 
+         <div class="hidden-submit">
+          <input type="submit" tabindex="-1">
+         </div> 
+         <button id="search-close" class="blue-sub-5 right"> 
+          <div id="search-close-glyph" class="fio2-search-close-mini"></div> </button> 
+         <button class="blue-sub-5 search-trigger right" id="header-search-submit"> <i class="fio-search-mini"></i> </button> 
+        </form> 
+       </div>
+       <!-- .header-search --> 
+      </div>
+      <!-- .wrap --> 
+     </div>
+     <!-- .html5-nav --> 
+    </nav> 
+   </div>
+   <!-- .htm5-header --> 
+  </header> 
+  <div id="container"> 
+   <div id="blog" class="fio-body"> 
+    <div class="row"> 
+     <div class="medium-12 columns"> 
+      <section class="list-item"> 
+       <div class="row"> 
+        <div class="thumb medium-3 columns"> 
+         <a href="/blog/fusion-iomemory-from-sandisk-boosts-oracle-vm-performance/"><img class="list-thumb" src="/load/-media-/32ztip/imagesBlog/thumb.260x96.ioMemory-Oracle-VM-virtualization-1416426644.jpg"></a> 
+         <div class="blog-img medium-text-right">
+           Posted: 
+          <span>19 Nov 2014</span>
+          <br> By: 
+          <span><a href="/blog/?a=377">Dan Baigent</a></span> 
+         </div> 
+        </div> 
+        <div class="medium-9 columns"> 
+         <h3><a href="/blog/fusion-iomemory-from-sandisk-boosts-oracle-vm-performance/">Fusion ioMemory from SanDisk boosts Oracle VM performance</a></h3> 
+         <p></p>
+         <p> Higher transaction throughput, increased I/O performance and greater server utilization: SanDisk's Fusion ioMemory virtualization for Oracle VM.</p> 
+         <p></p> 
+         <br> 
+         <div class="row"> 
+          <div class="medium-12 columns"> 
+           <a href="#" class="addthis_button_twitter " addthis:url="http://www.fusionio.com/blog/fusion-iomemory-from-sandisk-boosts-oracle-vm-performance/" addthis:title="Fusion ioMemory from SanDisk boosts Oracle VM performance"><img src="/images/new-stuff/square-twitter-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_facebook" addthis:url="http://www.fusionio.com/blog/fusion-iomemory-from-sandisk-boosts-oracle-vm-performance/" addthis:title="Fusion ioMemory from SanDisk boosts Oracle VM performance"><img src="/images/new-stuff/square-facebook-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_linkedin" addthis:url="http://www.fusionio.com/blog/fusion-iomemory-from-sandisk-boosts-oracle-vm-performance/" addthis:title="Fusion ioMemory from SanDisk boosts Oracle VM performance"><img src="/images/new-stuff/square-linkedin-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_email   " addthis:url="http://www.fusionio.com/blog/fusion-iomemory-from-sandisk-boosts-oracle-vm-performance/" addthis:title="Fusion ioMemory from SanDisk boosts Oracle VM performance"><img src="/images/new-stuff/square-email-icon.png" width="32" height="32"></a> 
+           <a href="http://www.fusionio.com/blog/fusion-iomemory-from-sandisk-boosts-oracle-vm-performance/" class="action-btn blue right" style="height: 32px;"> Read More </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <hr> 
+      <section class="list-item"> 
+       <div class="row"> 
+        <div class="thumb medium-3 columns"> 
+         <a href="/blog/in-a-battle-of-hardware-software-innovation-comes-out-on-top/"><img class="list-thumb" src="/load/-media-/32vv5v/imagesBlog/thumb.260x93.blog-sandisk-software-innovation-wins-1415996607.jpg"></a> 
+         <div class="blog-img medium-text-right">
+           Posted: 
+          <span>17 Nov 2014</span>
+          <br> By: 
+          <span><a href="/blog/?a="></a></span> 
+         </div> 
+        </div> 
+        <div class="medium-9 columns"> 
+         <h3><a href="/blog/in-a-battle-of-hardware-software-innovation-comes-out-on-top/">In a Battle of Hardware, Software Innovation Comes Out On Top</a></h3> 
+         <p></p>
+         <p> In a battle of hardware, it was SanDisk and Fusion ioMemory software innovation that won. Learn about NVMFS, a new POSIX compliant file system for new-gen flash &amp; NVM devices</p> 
+         <p></p> 
+         <br> 
+         <div class="row"> 
+          <div class="medium-12 columns"> 
+           <a href="#" class="addthis_button_twitter " addthis:url="http://www.fusionio.com/blog/in-a-battle-of-hardware-software-innovation-comes-out-on-top/" addthis:title="In a Battle of Hardware, Software Innovation Comes Out On Top"><img src="/images/new-stuff/square-twitter-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_facebook" addthis:url="http://www.fusionio.com/blog/in-a-battle-of-hardware-software-innovation-comes-out-on-top/" addthis:title="In a Battle of Hardware, Software Innovation Comes Out On Top"><img src="/images/new-stuff/square-facebook-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_linkedin" addthis:url="http://www.fusionio.com/blog/in-a-battle-of-hardware-software-innovation-comes-out-on-top/" addthis:title="In a Battle of Hardware, Software Innovation Comes Out On Top"><img src="/images/new-stuff/square-linkedin-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_email   " addthis:url="http://www.fusionio.com/blog/in-a-battle-of-hardware-software-innovation-comes-out-on-top/" addthis:title="In a Battle of Hardware, Software Innovation Comes Out On Top"><img src="/images/new-stuff/square-email-icon.png" width="32" height="32"></a> 
+           <a href="http://www.fusionio.com/blog/in-a-battle-of-hardware-software-innovation-comes-out-on-top/" class="action-btn blue right" style="height: 32px;"> Read More </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <hr> 
+      <section class="list-item"> 
+       <div class="row"> 
+        <div class="thumb medium-3 columns"> 
+         <a href="/blog/better-together-thoughts-on-flash-big-data-and-the-cloud/"><img class="list-thumb" src="/load/-media-/327s8e/imagesBlog/thumb.260x108.blog-better-together-1415057131.jpg"></a> 
+         <div class="blog-img medium-text-right">
+           Posted: 
+          <span>04 Nov 2014</span>
+          <br> By: 
+          <span><a href="/blog/?a=269">Pankaj Mehra</a></span> 
+         </div> 
+        </div> 
+        <div class="medium-9 columns"> 
+         <h3><a href="/blog/better-together-thoughts-on-flash-big-data-and-the-cloud/">Better Together: Thoughts on Flash, Big Data and the Cloud as Fusion ioMemory Joins the SanDisk Family</a></h3> 
+         <p></p>
+         <p> Fusion ioMemory technology fits perfectly with SanDisk’s vision of the flash-transformed data center. SanDisk is committed to delivering innovative solutions for new IT demands, enabled by the benefits of NAND technology while maintaining lower costs, superior efficiencies, and delivering the performance and endurance required for critical applications.</p> 
+         <p></p> 
+         <br> 
+         <div class="row"> 
+          <div class="medium-12 columns"> 
+           <a href="#" class="addthis_button_twitter " addthis:url="http://www.fusionio.com/blog/better-together-thoughts-on-flash-big-data-and-the-cloud/" addthis:title="Better Together: Thoughts on Flash, Big Data and the Cloud as Fusion ioMemory Joins the SanDisk Family"><img src="/images/new-stuff/square-twitter-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_facebook" addthis:url="http://www.fusionio.com/blog/better-together-thoughts-on-flash-big-data-and-the-cloud/" addthis:title="Better Together: Thoughts on Flash, Big Data and the Cloud as Fusion ioMemory Joins the SanDisk Family"><img src="/images/new-stuff/square-facebook-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_linkedin" addthis:url="http://www.fusionio.com/blog/better-together-thoughts-on-flash-big-data-and-the-cloud/" addthis:title="Better Together: Thoughts on Flash, Big Data and the Cloud as Fusion ioMemory Joins the SanDisk Family"><img src="/images/new-stuff/square-linkedin-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_email   " addthis:url="http://www.fusionio.com/blog/better-together-thoughts-on-flash-big-data-and-the-cloud/" addthis:title="Better Together: Thoughts on Flash, Big Data and the Cloud as Fusion ioMemory Joins the SanDisk Family"><img src="/images/new-stuff/square-email-icon.png" width="32" height="32"></a> 
+           <a href="http://www.fusionio.com/blog/better-together-thoughts-on-flash-big-data-and-the-cloud/" class="action-btn blue right" style="height: 32px;"> Read More </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <hr> 
+      <section class="list-item"> 
+       <div class="row"> 
+        <div class="thumb medium-3 columns"> 
+         <a href="/blog/flash-enable-your-microsoft-environment-visit-sandisk-at-teched-europe/"><img class="list-thumb" src="/load/-media-/31x37e/imagesBlog/thumb.260x38.TechEd2014-1414620604.png"></a> 
+         <div class="blog-img medium-text-right">
+           Posted: 
+          <span>29 Oct 2014</span>
+          <br> By: 
+          <span><a href="/blog/?a=70">Grant Jacobson</a></span> 
+         </div> 
+        </div> 
+        <div class="medium-9 columns"> 
+         <h3><a href="/blog/flash-enable-your-microsoft-environment-visit-sandisk-at-teched-europe/">Flash-Enable Your Microsoft Environment: Visit SanDisk at TechEd Europe in Barcelona – Booth #219</a></h3> 
+         <p></p>
+         <p> <span>Get to know our three new Microsoft-certified SQL Server 2014 Data Warehouse Fast Track Reference Architecture solutions built on HP ProLiant servers and accelerated with Fusion ioMemory.&nbsp;</span></p> 
+         <p></p> 
+         <br> 
+         <div class="row"> 
+          <div class="medium-12 columns"> 
+           <a href="#" class="addthis_button_twitter " addthis:url="http://www.fusionio.com/blog/flash-enable-your-microsoft-environment-visit-sandisk-at-teched-europe/" addthis:title="Flash-Enable Your Microsoft Environment: Visit SanDisk at TechEd Europe in Barcelona – Booth #219"><img src="/images/new-stuff/square-twitter-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_facebook" addthis:url="http://www.fusionio.com/blog/flash-enable-your-microsoft-environment-visit-sandisk-at-teched-europe/" addthis:title="Flash-Enable Your Microsoft Environment: Visit SanDisk at TechEd Europe in Barcelona – Booth #219"><img src="/images/new-stuff/square-facebook-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_linkedin" addthis:url="http://www.fusionio.com/blog/flash-enable-your-microsoft-environment-visit-sandisk-at-teched-europe/" addthis:title="Flash-Enable Your Microsoft Environment: Visit SanDisk at TechEd Europe in Barcelona – Booth #219"><img src="/images/new-stuff/square-linkedin-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_email   " addthis:url="http://www.fusionio.com/blog/flash-enable-your-microsoft-environment-visit-sandisk-at-teched-europe/" addthis:title="Flash-Enable Your Microsoft Environment: Visit SanDisk at TechEd Europe in Barcelona – Booth #219"><img src="/images/new-stuff/square-email-icon.png" width="32" height="32"></a> 
+           <a href="http://www.fusionio.com/blog/flash-enable-your-microsoft-environment-visit-sandisk-at-teched-europe/" class="action-btn blue right" style="height: 32px;"> Read More </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <hr> 
+      <section class="list-item"> 
+       <div class="row"> 
+        <div class="thumb medium-3 columns"> 
+         <a href="/blog/sas-analytics-and-fusion-iomemory/"><img class="list-thumb" src="/load/-media-/30qcsm/imagesBlog/thumb.260x88.blog-sas-analytics-1410971825.jpg"></a> 
+         <div class="blog-img medium-text-right">
+           Posted: 
+          <span>06 Oct 2014</span>
+          <br> By: 
+          <span><a href="/blog/?a=407">Mauricio Borgen</a></span> 
+         </div> 
+        </div> 
+        <div class="medium-9 columns"> 
+         <h3><a href="/blog/sas-analytics-and-fusion-iomemory/">Bust the Bottleneck: SAS Analytics and Fusion ioMemory</a></h3> 
+         <p></p>
+         <p> Tackle the I/O offenders in your SAS Analytics grid. Cut costs and increase performance by taking advantage of Fusion ioMemory.</p> 
+         <p></p> 
+         <br> 
+         <div class="row"> 
+          <div class="medium-12 columns"> 
+           <a href="#" class="addthis_button_twitter " addthis:url="http://www.fusionio.com/blog/sas-analytics-and-fusion-iomemory/" addthis:title="Bust the Bottleneck: SAS Analytics and Fusion ioMemory"><img src="/images/new-stuff/square-twitter-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_facebook" addthis:url="http://www.fusionio.com/blog/sas-analytics-and-fusion-iomemory/" addthis:title="Bust the Bottleneck: SAS Analytics and Fusion ioMemory"><img src="/images/new-stuff/square-facebook-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_linkedin" addthis:url="http://www.fusionio.com/blog/sas-analytics-and-fusion-iomemory/" addthis:title="Bust the Bottleneck: SAS Analytics and Fusion ioMemory"><img src="/images/new-stuff/square-linkedin-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_email   " addthis:url="http://www.fusionio.com/blog/sas-analytics-and-fusion-iomemory/" addthis:title="Bust the Bottleneck: SAS Analytics and Fusion ioMemory"><img src="/images/new-stuff/square-email-icon.png" width="32" height="32"></a> 
+           <a href="http://www.fusionio.com/blog/sas-analytics-and-fusion-iomemory/" class="action-btn blue right" style="height: 32px;"> Read More </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <hr> 
+      <section class="list-item"> 
+       <div class="row"> 
+        <div class="thumb medium-3 columns"> 
+         <a href="/blog/accelerating-applications-in-the-world-of-flash-dram-and-persistent-memory-and-the-emergence-of-software-defined-memory/"><img class="list-thumb" src="/load/-media-/30f270/imagesBlog/thumb.260x77.blog-in-a-world-1412026792.jpg"></a> 
+         <div class="blog-img medium-text-right">
+           Posted: 
+          <span>30 Sep 2014</span>
+          <br> By: 
+          <span><a href="/blog/?a=87">Nisha Talagala</a></span> 
+         </div> 
+        </div> 
+        <div class="medium-9 columns"> 
+         <h3><a href="/blog/accelerating-applications-in-the-world-of-flash-dram-and-persistent-memory-and-the-emergence-of-software-defined-memory/">The Emergence of Software-Defined Memory: Accelerating Applications in the World of Flash, DRAM and Persistent Memory</a></h3> 
+         <p></p>
+         <p> In the past several years our industry has seen the emergence of the “Software-Defined” concept. SanDisk Fellow, Nisha Talagala, shows you how SanDisk's software-defined memory is optimizing applications.</p> 
+         <p></p> 
+         <br> 
+         <div class="row"> 
+          <div class="medium-12 columns"> 
+           <a href="#" class="addthis_button_twitter " addthis:url="http://www.fusionio.com/blog/accelerating-applications-in-the-world-of-flash-dram-and-persistent-memory-and-the-emergence-of-software-defined-memory/" addthis:title="The Emergence of Software-Defined Memory: Accelerating Applications in the World of Flash, DRAM and Persistent Memory"><img src="/images/new-stuff/square-twitter-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_facebook" addthis:url="http://www.fusionio.com/blog/accelerating-applications-in-the-world-of-flash-dram-and-persistent-memory-and-the-emergence-of-software-defined-memory/" addthis:title="The Emergence of Software-Defined Memory: Accelerating Applications in the World of Flash, DRAM and Persistent Memory"><img src="/images/new-stuff/square-facebook-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_linkedin" addthis:url="http://www.fusionio.com/blog/accelerating-applications-in-the-world-of-flash-dram-and-persistent-memory-and-the-emergence-of-software-defined-memory/" addthis:title="The Emergence of Software-Defined Memory: Accelerating Applications in the World of Flash, DRAM and Persistent Memory"><img src="/images/new-stuff/square-linkedin-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_email   " addthis:url="http://www.fusionio.com/blog/accelerating-applications-in-the-world-of-flash-dram-and-persistent-memory-and-the-emergence-of-software-defined-memory/" addthis:title="The Emergence of Software-Defined Memory: Accelerating Applications in the World of Flash, DRAM and Persistent Memory"><img src="/images/new-stuff/square-email-icon.png" width="32" height="32"></a> 
+           <a href="http://www.fusionio.com/blog/accelerating-applications-in-the-world-of-flash-dram-and-persistent-memory-and-the-emergence-of-software-defined-memory/" class="action-btn blue right" style="height: 32px;"> Read More </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <hr> 
+      <section class="list-item"> 
+       <div class="row"> 
+        <div class="thumb medium-3 columns"> 
+         <a href="/blog/partners-in-performance-dell-sandisk-combine-to-accelerate-oracle-databases/"><img class="list-thumb" src="/load/-media-/30ddsr/imagesBlog/thumb.260x77.blog-dell-and-sandisk-deliver-1412022807.jpg"></a> 
+         <div class="blog-img medium-text-right">
+           Posted: 
+          <span>29 Sep 2014</span>
+          <br> By: 
+          <span><a href="/blog/?a=267">Adam Bacia</a></span> 
+         </div> 
+        </div> 
+        <div class="medium-9 columns"> 
+         <h3><a href="/blog/partners-in-performance-dell-sandisk-combine-to-accelerate-oracle-databases/">Partners In Performance: Dell &amp; SanDisk Combine to Accelerate Oracle Databases</a></h3> 
+         <p></p>
+         <p> Dell and SanDisk have combined to deliver the Acceleration Applicance for Databases.&nbsp;What makes this collaboration between Dell and SanDisk such a compelling one is not just the industry leading hardware and support from Dell, but the unique capabilities that the ION Accelerator brings to both physical and virtual environments.</p> 
+         <p></p> 
+         <br> 
+         <div class="row"> 
+          <div class="medium-12 columns"> 
+           <a href="#" class="addthis_button_twitter " addthis:url="http://www.fusionio.com/blog/partners-in-performance-dell-sandisk-combine-to-accelerate-oracle-databases/" addthis:title="Partners In Performance: Dell &amp; SanDisk Combine to Accelerate Oracle Databases"><img src="/images/new-stuff/square-twitter-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_facebook" addthis:url="http://www.fusionio.com/blog/partners-in-performance-dell-sandisk-combine-to-accelerate-oracle-databases/" addthis:title="Partners In Performance: Dell &amp; SanDisk Combine to Accelerate Oracle Databases"><img src="/images/new-stuff/square-facebook-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_linkedin" addthis:url="http://www.fusionio.com/blog/partners-in-performance-dell-sandisk-combine-to-accelerate-oracle-databases/" addthis:title="Partners In Performance: Dell &amp; SanDisk Combine to Accelerate Oracle Databases"><img src="/images/new-stuff/square-linkedin-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_email   " addthis:url="http://www.fusionio.com/blog/partners-in-performance-dell-sandisk-combine-to-accelerate-oracle-databases/" addthis:title="Partners In Performance: Dell &amp; SanDisk Combine to Accelerate Oracle Databases"><img src="/images/new-stuff/square-email-icon.png" width="32" height="32"></a> 
+           <a href="http://www.fusionio.com/blog/partners-in-performance-dell-sandisk-combine-to-accelerate-oracle-databases/" class="action-btn blue right" style="height: 32px;"> Read More </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <hr> 
+      <section class="list-item"> 
+       <div class="row"> 
+        <div class="thumb medium-3 columns"> 
+         <a href="/blog/sandisk-at-oracle-openworld-2014-enabling-the-flash-transformed-data-center/"><img class="list-thumb" src="/load/-media-/307ngn/imagesBlog/thumb.260x67.OOW-680x177-1411675290.jpg"></a> 
+         <div class="blog-img medium-text-right">
+           Posted: 
+          <span>25 Sep 2014</span>
+          <br> By: 
+          <span><a href="/blog/?a=70">Grant Jacobson</a></span> 
+         </div> 
+        </div> 
+        <div class="medium-9 columns"> 
+         <h3><a href="/blog/sandisk-at-oracle-openworld-2014-enabling-the-flash-transformed-data-center/">Unlock Opportunity at Oracle OpenWorld - SanDisk and Fusion-io in Booth #1429</a></h3> 
+         <p></p>
+         <p> Fusion-io and SanDisk will be at Oracle OpenWorld 2014 to show you how to transform your data center with flash. Find out what to expect during the show in booth #1429.&nbsp;</p> 
+         <p></p> 
+         <br> 
+         <div class="row"> 
+          <div class="medium-12 columns"> 
+           <a href="#" class="addthis_button_twitter " addthis:url="http://www.fusionio.com/blog/sandisk-at-oracle-openworld-2014-enabling-the-flash-transformed-data-center/" addthis:title="Unlock Opportunity at Oracle OpenWorld - SanDisk and Fusion-io in Booth #1429"><img src="/images/new-stuff/square-twitter-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_facebook" addthis:url="http://www.fusionio.com/blog/sandisk-at-oracle-openworld-2014-enabling-the-flash-transformed-data-center/" addthis:title="Unlock Opportunity at Oracle OpenWorld - SanDisk and Fusion-io in Booth #1429"><img src="/images/new-stuff/square-facebook-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_linkedin" addthis:url="http://www.fusionio.com/blog/sandisk-at-oracle-openworld-2014-enabling-the-flash-transformed-data-center/" addthis:title="Unlock Opportunity at Oracle OpenWorld - SanDisk and Fusion-io in Booth #1429"><img src="/images/new-stuff/square-linkedin-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_email   " addthis:url="http://www.fusionio.com/blog/sandisk-at-oracle-openworld-2014-enabling-the-flash-transformed-data-center/" addthis:title="Unlock Opportunity at Oracle OpenWorld - SanDisk and Fusion-io in Booth #1429"><img src="/images/new-stuff/square-email-icon.png" width="32" height="32"></a> 
+           <a href="http://www.fusionio.com/blog/sandisk-at-oracle-openworld-2014-enabling-the-flash-transformed-data-center/" class="action-btn blue right" style="height: 32px;"> Read More </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <hr> 
+      <section class="list-item"> 
+       <div class="row"> 
+        <div class="thumb medium-3 columns"> 
+         <a href="/blog/databases-run-the-world-we-live-in-infographic/"><img class="list-thumb" src="/load/-media-/2z1cey/imagesBlog/thumb.260x88.blog-databases-run-the-world-1409758665.jpg"></a> 
+         <div class="blog-img medium-text-right">
+           Posted: 
+          <span>03 Sep 2014</span>
+          <br> By: 
+          <span><a href="/blog/?a=367">Jake Spencer</a></span> 
+         </div> 
+        </div> 
+        <div class="medium-9 columns"> 
+         <h3><a href="/blog/databases-run-the-world-we-live-in-infographic/">Databases Run the World We Live In [Infographic]</a></h3> 
+         <p></p>
+         <p> Checking tonight’s movie listings on your smartphone? Thank a database! See how your daily activities are enhanced by databases.</p> 
+         <p></p> 
+         <br> 
+         <div class="row"> 
+          <div class="medium-12 columns"> 
+           <a href="#" class="addthis_button_twitter " addthis:url="http://www.fusionio.com/blog/databases-run-the-world-we-live-in-infographic/" addthis:title="Databases Run the World We Live In [Infographic]"><img src="/images/new-stuff/square-twitter-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_facebook" addthis:url="http://www.fusionio.com/blog/databases-run-the-world-we-live-in-infographic/" addthis:title="Databases Run the World We Live In [Infographic]"><img src="/images/new-stuff/square-facebook-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_linkedin" addthis:url="http://www.fusionio.com/blog/databases-run-the-world-we-live-in-infographic/" addthis:title="Databases Run the World We Live In [Infographic]"><img src="/images/new-stuff/square-linkedin-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_email   " addthis:url="http://www.fusionio.com/blog/databases-run-the-world-we-live-in-infographic/" addthis:title="Databases Run the World We Live In [Infographic]"><img src="/images/new-stuff/square-email-icon.png" width="32" height="32"></a> 
+           <a href="http://www.fusionio.com/blog/databases-run-the-world-we-live-in-infographic/" class="action-btn blue right" style="height: 32px;"> Read More </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <hr> 
+      <section class="list-item"> 
+       <div class="row"> 
+        <div class="thumb medium-3 columns"> 
+         <a href="/blog/sandisk-showcases-brave-new-vdi-solutions-at-vmworld/"><img class="list-thumb" src="/load/-media-/2ymjab/imagesBlog/thumb.260x88.blog-be-brave-it2-1409087726.jpg"></a> 
+         <div class="blog-img medium-text-right">
+           Posted: 
+          <span>26 Aug 2014</span>
+          <br> By: 
+          <span><a href="/blog/?a=385">Patric Chang</a></span> 
+         </div> 
+        </div> 
+        <div class="medium-9 columns"> 
+         <h3><a href="/blog/sandisk-showcases-brave-new-vdi-solutions-at-vmworld/">SanDisk Showcases "Brave" New VDI Solutions at VMworld</a></h3> 
+         <p></p>
+         <p> SanDisk and VMware have announced three new reference architectures that deliver notable performance imporvements to virtual environments. These architectures are based on SanDisk's Fusion ioMemory and ULLtraDIMM technology. These innovative solutions are taking you into the brave new world of IT.</p> 
+         <p></p> 
+         <br> 
+         <div class="row"> 
+          <div class="medium-12 columns"> 
+           <a href="#" class="addthis_button_twitter " addthis:url="http://www.fusionio.com/blog/sandisk-showcases-brave-new-vdi-solutions-at-vmworld/" addthis:title="SanDisk Showcases " brave"="" new="" vdi="" solutions="" at="" vmworld"=""><img src="/images/new-stuff/square-twitter-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_facebook" addthis:url="http://www.fusionio.com/blog/sandisk-showcases-brave-new-vdi-solutions-at-vmworld/" addthis:title="SanDisk Showcases " brave"="" new="" vdi="" solutions="" at="" vmworld"=""><img src="/images/new-stuff/square-facebook-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_linkedin" addthis:url="http://www.fusionio.com/blog/sandisk-showcases-brave-new-vdi-solutions-at-vmworld/" addthis:title="SanDisk Showcases " brave"="" new="" vdi="" solutions="" at="" vmworld"=""><img src="/images/new-stuff/square-linkedin-icon.png" width="32" height="32"></a> 
+           <a href="#" class="addthis_button_email   " addthis:url="http://www.fusionio.com/blog/sandisk-showcases-brave-new-vdi-solutions-at-vmworld/" addthis:title="SanDisk Showcases " brave"="" new="" vdi="" solutions="" at="" vmworld"=""><img src="/images/new-stuff/square-email-icon.png" width="32" height="32"></a> 
+           <a href="http://www.fusionio.com/blog/sandisk-showcases-brave-new-vdi-solutions-at-vmworld/" class="action-btn blue right" style="height: 32px;"> Read More </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <hr> 
+      <br>
+      <br>
+      <br> 
+      <div class="row"> 
+       <div class="small-6 columns"> 
+        <div class="right action-btn disabled">
+         «Prev
+        </div> 
+       </div> 
+       <div class="small-6 columns"> 
+        <a href="http://www.fusionio.com/blog/?page=2" class="action-btn dark">Next»</a> 
+       </div> 
+      </div> 
+      <br>
+      <br>
+      <br> 
+     </div> 
+    </div> 
+   </div> 
+   <footer class="blue"> 
+    <div class="html5-footer blue"> 
+     <div id="mainBlock" class="row"> 
+      <div class="large-12 columns"> 
+       <div class="wrap footer-padding"> 
+        <a href="/" class="footer-logo"> 
+         <div id="fusionio-sandisk-logo" class="fio2-fusionio-sandisk-logo-footer  show-for-medium-up"></div> 
+         <div id="fusion-io-logo-footer" class="fio2-fusionio-sandisk-logo  hide-for-medium-up"></div> </a> 
+        <form id="footer-search-field" action="/search/" method="get" class="cf"> 
+         <input type="hidden" name="content_type[]" value="all"> 
+         <label for="search_term" class="hide">Search</label> 
+         <input type="text" name="q" placeholder="What are you searching for?" class="left"> 
+         <input type="submit" value="Find It" class="left"> 
+        </form> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="horizontal-divider outside"></div> 
+      <div class="xlarge-7 large-8 medium-12 small-12 column"> 
+       <div class="row"> 
+        <div id="columns-of-links" class="wrap footer-padding cf"> 
+         <div class="large-4 medium-4 columns"> 
+          <h3>Company</h3> 
+          <ul> 
+           <li><a href="http://www.sandisk.com/about-sandisk/corporate/">About Us</a></li> 
+           <li><a href="/press-releases/">Press Releases</a></li> 
+           <li><a href="http://investor.sandisk.com/phoenix.zhtml?c=86495&amp;p=irol-irhomemain">Investor Relations</a></li> 
+           <li><a href="http://www.sandisk.com/about-sandisk/careers/">Employment</a></li> 
+          </ul> 
+         </div> 
+         <div class="large-4 medium-4 columns"> 
+          <h3>Resources</h3> 
+          <ul> 
+           <li><a href="/case-studies/">Case Studies</a></li> 
+           <li><a href="/solutions/">Solutions</a></li> 
+           <li><a href="/white-papers/">White Papers</a></li> 
+           <li><a href="/faq/">Flash FAQ</a></li> 
+           <li><a href="/awards/">Awards</a></li> 
+          </ul> 
+         </div> 
+         <div class="large-4 medium-4 columns"> 
+          <h3>Support</h3> 
+          <ul> 
+           <li><a href="/contact/">Contact</a></li> 
+           <li><a href="http://support.fusionio.com/downloads">Downloads</a></li> 
+           <li><a href="http://support.fusionio.com/knowledgebase">Knowledgebase</a></li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="horizontal-divider hide-for-medium-up"></div> 
+      </div> 
+      <div class="xlarge-5 large-4 medium-12 small-12 columns"> 
+       <div id="latest"> 
+        <div class="row"> 
+         <h3>Latest updates</h3> 
+         <ul data-orbit="" data-options="animation:slide; pause_on_hover:true; animation_speed:300; navigation_arrows:false; bullets:false; slide_number:false; timer:true; timer_speed:7000;"> 
+          <li> 
+           <div class="thumb large-3 medium-2 small-2 columns"> 
+            <img src="/load/-media-/32zthz/imagesBlog/thumb.100x100.ioMemory-Oracle-VM-virtualization-1416426644.jpg"> 
+           </div> 
+           <div class="desc large-9 medium-10 small-10 columns">
+            Blog: 
+            <br> 
+            <a href="/blog/fusion-iomemory-from-sandisk-boosts-oracle-vm-performance/"> Fusion ioMemory from SanDisk boosts Oracle VM performance </a> 
+           </div> </li> 
+          <li> 
+           <div class="thumb large-3 medium-2 small-2 columns"> 
+            <img src="/load/-media-/2vqrdn/imagesRecentmedia/thumb.100x100.CRN_ITN-1403821671.png"> 
+           </div> 
+           <div class="desc large-9 medium-10 small-10 columns">
+            In the News: 
+            <br> 
+            <a target="_blank" href="http://www.crn.com/news/data-center/300073229/dell-steps-up-enterprise-play-with-integrated-oracle-12c-cloudera-hadoop-appliances.htm"> Dell Steps Up Enterprise Play with Integrated Oracle 12c, Cloudera Hadoop Appliances </a> 
+           </div> </li> 
+          <li> 
+           <div class="thumb large-3 medium-2 small-2 columns"> 
+            <img src="/load/-media-/2ucspa/imagesInsight/thumb.100x100.Datacenter_Journal-1396299327.png"> 
+           </div> 
+           <div class="desc large-9 medium-10 small-10 columns">
+            Insights: 
+            <br> 
+            <a target="_blank" href="http://www.datacenterjournal.com/it/saving-time-money-energy-data-center-transformation/"> Saving Time, Money and Energy Through Datacenter Transformation </a> 
+           </div> </li> 
+         </ul> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="large-12 columns"> 
+       <div class="horizontal-divider"></div> 
+       <ul id="help-options" class="cf"> 
+        <li> <span class="link-style"><span class="show-for-large-up">For More Information: </span>801.424.5500</span></li> 
+        <li class="hide-for-small-only"> <span> <a class="chat-online" style="display: none; cursor:pointer;" onclick="openChatSession('573700000004CLb')">Chat with a Solutions Expert</a> <span class="chat-offline link-style">Chat Offline</span> </span> </li> 
+        <li><a href="/contact/#direct-sales">International Sales</a></li> 
+        <li><a href="/partners/">Partner Programs</a></li> 
+       </ul> 
+       <div class="horizontal-divider"></div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="large-12 columns"> 
+       <div class="wrap footer-padding"> 
+        <ul id="copyright-etc" class="cf"> 
+         <li>Copyright © 2014 SanDisk Corporation. All rights reserved. </li> 
+         <li><a href="http://sandisk.com/about-sandisk/terms-of-use/" title="Terms of Use">Terms of Use</a></li> 
+         <li><a href="http://sandisk.com/about-sandisk/trademarks/" title="Trademarks">Trademarks</a></li> 
+         <li><a href="http://sandisk.com/about-sandisk/privacy-policy/" title="Privacy">Privacy</a></li> 
+         <li><a href="http://sandisk.com/about-sandisk/cookie-policy/" title="Cookies">Cookies</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div>
+    <!-- .html5-footer --> 
+   </footer> 
+   <div class="login-dialog" style="display: none;"></div> 
+  </div> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+  <script type="text/javascript">
+var gFioConfig = {
+	// Data Properties
+	"path_prefix": "/",
+	"is_IE_8": false,
+	
+	// Method Properties
+	"buildPath": function(path) {
+		return this['path_prefix']+path.replace(/^\/|\/$/g, '');
+	}
+}
+</script> 
+  <!--[if IE 8]><script type="text/javascript">gFioConfig['is_IE_8'] = true;</script><![endif]--> 
+  <script type="text/javascript" src="/js/global.min.js"></script> 
+  <script type="text/javascript" src="/load/-static-/2fcpzq/js/jquery.google-analytics.js"></script> 
+  <script type="text/javascript" src="/js/jquery.ga-rules.js?t=1391555642"></script> 
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=fusionio"></script> 
+  <script type="text/javascript" src="/js/libs/addthis-global-settings.js?t=1344286258"></script> 
+  <script type="text/javascript">
+	// Google Analytics
+	gFioConfig["google_analytics_acctid"] = "UA-4766468-1";
+	// LeadLander
+	gFioConfig["leadlander_llactid"] = "13148";
+</script> 
+  <script type="text/javascript">
+	var	BUTTON_ID	= '573700000004CLb',
+		DEPLOYMENT	= '57270000000Gmie',
+		ID			= '00D700000008yYZ';
+
+  	if (typeof _laq == 'undefined' || !_laq) { _laq = []; }
+
+  	// temporary fix: in future, find state and then pass that as a variable/class, rather than looping through every element
+  	$('.chat-online').each(function(i) {
+  		var myItem = $(this).get(0);
+  		if (myItem != null)
+		{
+			_laq.push(
+				function(){
+					liveagent.showWhenOnline(BUTTON_ID, myItem);
+				}
+			);
+		}
+  	});
+  	$('.chat-offline').each(function(i) {
+		var myItem = $(this).get(0);
+  		if (myItem != null)
+		{  	
+			_laq.push(
+				function(){
+					liveagent.showWhenOffline(BUTTON_ID, myItem);
+				}
+			);
+		}
+  	});
+
+  	// this chunk of code is kept to support existing international sites
+  	var chatOnlineObj = document.getElementById("chatOnline");
+  	var chatOfflineObj = document.getElementById("chatOffline");
+
+	if (chatOnlineObj != null && chatOfflineObj != null)
+	{  	
+		_laq.push(
+			function(){
+				liveagent.showWhenOnline(BUTTON_ID, chatOnlineObj);
+				liveagent.showWhenOffline(BUTTON_ID, chatOfflineObj);
+			}
+		);
+	}
+
+	var chatOnlineSideObj = document.getElementById("chatOnlineSide");
+  	var chatOfflineSideObj = document.getElementById("chatOfflineSide");
+
+	if (chatOnlineSideObj != null && chatOfflineSideObj != null)
+	{  	
+		_laq.push(
+			function(){
+				liveagent.showWhenOnline(BUTTON_ID, chatOnlineSideObj);
+				liveagent.showWhenOffline(BUTTON_ID, chatOfflineSideObj);
+			}
+		);
+	}	
+	// == end of international sites stuff
+  	
+	fioAsyncLoad('https://c.la1s1.salesforceliveagent.com/content/g/deployment.js',function() {
+		liveagent.addCustomDetail('chat-location', window.location.href);
+		liveagent.init('https://d.la1s1.salesforceliveagent.com/chat', DEPLOYMENT, ID);	
+	});
+
+	openChatSession = function(buttonId)
+	{
+		if (typeof liveagent == 'undefined' || !liveagent || typeof liveagent.startChat == 'undefined' || !liveagent.startChat) {
+			return false;
+		}
+		
+		if (!buttonId) {
+			buttonId = BUTTON_ID;
+		}
+		else if (buttonId != BUTTON_ID) {
+			//console.warn("Salesforce chat button ID doesn't match.");
+		}
+		
+		//liveagent.details.preChatInit(window.location.href);
+		
+		liveagent.startChat(buttonId);
+		return true;
+	}
+</script> 
+  <!-- begin Pardot Website Tracking code --> 
+  <script type="text/javascript">
+piAId = '26522';
+piCId = '1004';
+
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script> 
+  <!-- end Pardot Website Tracking code --> 
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/load/-static-/1n7j7d/js/jquery/jquery.placeholder.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$('input, textarea').placeholder();
+	});
+</script>
+<![endif]--> 
+  <noscript>
+   <div id="noscript_container"> 
+    <div id="noscript_block"> 
+     <p><img src="/images/404-logo.gif" alt="Fusion-io" height="130" width="200"></p> 
+     <h1>Oops, you must have JavaScript enabled in order to view this webpage.</h1> 
+     <br> 
+     <p> <br> Corporate Headquarters<br> 2855 E. Cottonwood Parkway<br> Suite 100<br> Salt Lake City, UT 84121<br> 800.578.6007<br> </p> 
+    </div> 
+   </div> 
+  </noscript>  
+ </body>
+</html>

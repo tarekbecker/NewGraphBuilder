@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Head --> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>Continuum Analytics</title> 
+  <meta name="description" content="Continuum Analytics provides software, training, and consulting for high performance computing and data visualization using Python.  "> 
+  <meta name="keywords" content="python, big data, data exploration, data analysis, data visualization, high performance computing, consulting, training, anaconda, developer resources, open source"> 
+  <!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+  <link href="/media/css/bootstrap.css" rel="stylesheet" type="text/css"> 
+  <link href="/media/css/custom.css" rel="stylesheet" type="text/css"> 
+  <link href="/media/css/blog_custom.css" rel="stylesheet" type="text/css"> 
+  <link href="/media/css/pygments.css" rel="stylesheet" type="text/css"> 
+  <link href="/media/js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" -=""> 
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic|Open+Sans:400,700,600;" rel="stylesheet" type="text/css"> 
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> 
+  <script type="text/javascript" src="/media/js/google-code-prettify/prettify.js"></script> 
+  <!--[if IE]>
+		<link href="/media/css/ie.css" rel="stylesheet" type="text/css" />
+	<![endif]--> 
+  <link rel="shortcut icon" href="/media/img/favicon.ico"> 
+  <link rel="icon" type="image/ico" href="/media/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="/media/img/apple-touch-icon.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="/media/img/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="/media/img/apple-touch-icon-114x114.png"> 
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> 
+  <script type="text/javascript">
+		$(document).ready(function(){
+			prettyPrint();
+		})
+	</script> 
+  <!-- end Head --> 
+ </head> 
+ <body> 
+  <header class="header"> 
+   <section class="container"> 
+    <img class="header_logo" src="/media/img/continuum_analytics_logo.png" alt="Continuum Analytics" border="0" usemap="#spacerMap" id="spacer"> 
+    <map name="spacerMap" id="spacerMap"> <area shape="rect" coords="0,0,187,83" href="http://www.continuum.io" target="" alt="Continuum Analytics"> </map> 
+    <div class="pull-right header-social"> 
+     <a class="social" href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/media/img/gplus_header.png" alt="Circle Continuum Analytics on Google+"></a> 
+     <a class="social" href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/media/img/twitter_header.png" alt="Follow @continuumio on Twitter"></a> 
+     <a class="social" href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/media/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn"></a> 
+     <a class="social" href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/media/img/facebook_header.png" alt="Like Continuum Analytics on Facebook"></a> 
+     <a href="/press/feed" title="Subscribe to Conintuum Analytics RSS Press Feed" target="_blank"> <img id="prss" src="/media/img/rssds.png" alt="Subscribe to Continuum Analytics RSS Press Feed" width="20" height="20"></a> 
+     <a href="/blog/feed" title="Subscribe to Continuum Analytics RSS Blog Feed" target="_blank"> <img id="brss" src="/media/img/rssds.png" alt="Subscribe to Continuum Analytics RSS Blog Feed" width="20" height="20">  </a>
+     <a href="https://store.continuum.io/cshop/viewcart" class="btn btn-disabled"><img src="/media/img/shopping-cart.png" alt="shopping cart"> View Your Cart</a> 
+    </div> 
+    <nav class="navbar"> 
+     <section class="navbar-inner"> 
+      <section class="container"> 
+       <ul class="nav"> 
+        <li class="dropdown"><a href="/" title="Continuum Analytics">Home</a></li> 
+        <li class="dropdown">
+         <!-- Products --> <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Products&nbsp; <b class="caret"></b></a> 
+         <ul class="dropdown-menu" role="menu"> 
+          <li><a href="https://store.continuum.io/cshop/products" title="Overview">Overview</a></li> 
+          <li><a href="https://store.continuum.io/cshop/anaconda" title="Anaconda">Anaconda</a></li> 
+          <li><a href="/anaconda-server" title="Anaconda Server">Anaconda Server</a></li> 
+          <li><a href="/anaconda-addons" title="Anaconda Add-Ons">Anaconda Add-Ons</a></li> 
+          <li><a href="/anaconda-cluster" title="Anaconda Cluster">Anaconda Cluster</a></li> 
+          <li><a href="http://binstar.org" target="_blank">Binstar.org</a></li> 
+          <li><a href="/wakari" title="Wakari">Wakari</a></li> 
+          <li><a href="/developer-resources" title="For Developers">Open Source</a></li> 
+          <li class="dropdown"><a href="http://docs.continuum.io" title="">Documentation</a></li> 
+          <li class="dropdown"><a href="/support" title="">Support</a></li> 
+         </ul> </li> 
+        <li class="dropdown">
+         <!-- Consulting --> <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Consulting&nbsp; <b class="caret"></b></a> 
+         <ul class="dropdown-menu"> 
+          <li class="dropdown"><a href="/consulting" title="Consulting">Overview</a></li> 
+          <li class="dropdown"><a href="/consulting/app-development" title="Web, Native, &amp; Desktop App Development">App Development</a></li> 
+          <li class="dropdown"><a href="/consulting/optimization" title="System Optimization &amp; Performance">System Optimization</a></li> 
+          <li class="dropdown"><a href="/consulting/data-insights" title="Big Data Insights">Big Data Insights</a></li> 
+         </ul> </li> 
+        <li class="dropdown">
+         <!-- Training --> <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Training&nbsp; <b class="caret"></b></a> 
+         <ul class="dropdown-menu"> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/training" title="Overview">Overview</a></li> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/practical python programming" title="Practical Python Programming">Practical Python Programming</a></li> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/python for finance" title="Python for Finance">Python for Finance</a></li> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/python for science" title="Python for Science">Python for Science</a></li> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/course-philosophy" title="Course Philosophy">Course Philosophy</a></li> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/course-trainer-bios" title="Trainer Bios">Trainer Bios</a></li> 
+         </ul> </li> 
+        <li class="dropdown"><a data-target="#" title="Company" class="dropdown-toggle" data-toggle="dropdown">Company&nbsp; <b class="caret"></b></a> 
+         <ul class="dropdown-menu">
+          <!-- Company --> 
+          <li><a href="/about-continuum" title="About Continuum">About Us</a></li> 
+          <li><a href="/our-team" title="Team">Our Team</a></li> 
+          <li><a href="http://boards.greenhouse.io/continuum" title="Careers">Careers</a></li> 
+          <li><a href="/blog">Blog</a></li> 
+          <li><a href="/press" title="News &amp; Events">News &amp; Events</a></li> 
+          <li><a href="/webinars" title="Webinars">Webinars</a></li> 
+          <li><a href="/video" title="Video">Video</a></li> 
+          <li><a href="/news" title="In the Press">In the Press</a></li> 
+          <li><a href="http://www.numfocus.org" title="NumFocus" target="_blank">NumFocus</a></li> 
+          <li><a href="/python-for-big-data" title="Python for Big Data">Python for Big Data</a></li> 
+          <li><a href="/selling-open-source" title="Open Source">Open Source</a></li> 
+         </ul> </li> 
+        <li class="dropdown"><a href="/contact-us">Contact Us</a></li> 
+       </ul> 
+      </section> 
+     </section> 
+    </nav> 
+   </section> 
+  </header> 
+  <section class="content home"> 
+   <section class="tab-content"> 
+    <!-- Tabs --> 
+    <div id="myTabContent" class="tab-content"> 
+     <!-- Anaconda Server Banner --> 
+     <!--div class="webinar_container container" style="position: relative;">
+    </div--> 
+     <div class="tab-pane fade active in" id="anaconda"> 
+      <div class="container" style="position: relative;"> 
+       <div> 
+        <a class="banner_announcement" href="/webinars/getting-started-with-blaze"> Blaze Intro Webinar<br> <span>Review It Here</span> </a> 
+       </div> 
+       <img class="product_logo" src="/media/img/anaconda_server_logo.png" alt="Anaconda Server Product Icon"> 
+       <h1>Anaconda <span>Server</span></h1> 
+       <h2>Deploy and Manage Python and Other Packages Internally</h2> 
+       <h3> 
+        <ul> 
+         <li>Private Package Repository</li> 
+         <li>Long-Term Support for Anaconda</li> 
+         <li>GPU/Multi-Core Processing</li> 
+         <li>Installation Support</li> 
+        </ul> </h3> 
+       <btn> 
+        <a href="/anaconda-server" class="btn btn-success">Learn More</a> 
+       </btn> 
+       <p>Did you know the Anaconda Python distribution is FREE? <a href="https://store.continuum.io/cshop/anaconda"> Get it now.</a></p> 
+      </div> 
+     </div> 
+     <!-- Wakari Banner --> 
+     <div class="tab-pane fade " id="wakari"> 
+      <div class="container"> 
+       <div> 
+        <a class="banner_announcement" href="/webinars/getting-started-with-blaze"> Blaze Intro Webinar<br> <span>Review It Here</span> </a> 
+       </div> 
+       <img class="product_logo" src="/media/img/wakari_logo.png" alt="Wakari Product Icon"> 
+       <h1 class="product_title wakari">Wakari</h1> 
+       <h2 class="banner_text">Collaborate Instantly on a Browser-based Data Analytics Platform</h2> 
+       <h4 class="banner_text">IPython Notebooks, Full Anaconda Distribution, Cloud and Private Installs</h4> 
+       <btn> 
+        <a href="/wakari" class="btn btn-success">Try it Now</a> 
+       </btn> 
+      </div> 
+     </div> 
+     <!-- Training Banner --> 
+     <div class="tab-pane fade " id="training"> 
+      <div class="container"> 
+       <div> 
+        <a class="banner_announcement" href="/webinars/getting-started-with-blaze"> Blaze Intro Webinar<br> <span>Review It Here</span> </a> 
+       </div> 
+       <h1 class="product_title"><span>Python</span> Training</h1> 
+       <h2 class="banner_text">Expand your Python Skills with Classes from Continuum's Experienced Developers</h2> 
+       <div class="training_offers"> 
+        <div> 
+         <img class="training_icons" src="/media/img/training-practical.png" alt="Practical Python Programming"> 
+         <h3 class="banner_text first">Practical Python Programming</h3> 
+        </div> 
+        <div> 
+         <img class="training_icons" src="/media/img/training-finance.png" alt="Python for Finance"> 
+         <h3 class="banner_text">Python for Finance</h3> 
+        </div> 
+        <div> 
+         <img class="training_icons" src="/media/img/training-science.png" alt="Python for Science"> 
+         <h3 class="banner_text">Python for Science</h3> 
+        </div> 
+       </div> 
+       <btn> 
+        <a href="https://store.continuum.io/cshop/training" class="btn btn-success">Sign Up Now</a> 
+       </btn> 
+      </div> 
+     </div> 
+     <!-- Consulting Banner --> 
+     <div class="tab-pane fade " id="consulting"> 
+      <div class="container"> 
+       <div> 
+        <a class="banner_announcement" href="/webinars/getting-started-with-blaze"> Blaze Intro Webinar<br> <span>Review It Here</span> </a> 
+       </div> 
+       <h1 class="product_title consulting">Consulting</h1> 
+       <h2 class="banner_text">Custom Solutions to Connect your Team to your Data</h2> 
+       <div class="consulting_offers"> 
+        <img src="/media/img/Consulting-screen1.png" alt="Bokeh plot consulting screen"> 
+        <img src="/media/img/Consulting-screen2.png" alt="Consulting-screen2"> 
+        <img src="/media/img/Consulting-screen3.png" alt="Consulting-screen3"> 
+       </div> 
+       <h3 class="banner_text">Web and Native Apps, Data Science, Optimization and Performance</h3> 
+       <btn> 
+        <a href="/consulting" class="btn btn-success">Learn More</a> 
+       </btn> 
+      </div> 
+     </div> 
+     <!-- Open Source Banner --> 
+     <div class="tab-pane fade" id="open-source"> 
+      <div class="container"> 
+       <div> 
+        <a class="banner_announcement" href="/webinars/getting-started-with-blaze"> Blaze Intro Webinar<br> <span>Review It Here</span> </a> 
+       </div> 
+       <img class="product_logo" src="/media/img/opensource_logo.png"> 
+       <h1 class="product_title" alt="Continuum's Open Source Projects and Collaborations">Open Source</h1> 
+       <table class="our-projects"> 
+        <tbody>
+         <tr> 
+          <th colspan="2">Our Projects</th> 
+         </tr> 
+         <tr class="numba"> 
+          <td class="project">Numba</td> 
+          <td> <a href="http://numba.pydata.org/">Python compiler</a> </td> 
+         </tr> 
+         <tr class="bokeh"> 
+          <td class="project"> <img src="/media/img/bokeh_logo_sm.png" alt="Bokeh Plotting Library Logo">Bokeh </td> 
+          <td> <a href="http://bokeh.pydata.org/">Interactive web visualization</a> </td> 
+         </tr> 
+         <tr class="blaze"> 
+          <td class="project"> <img src="/media/img/blaze_logo.png" alt="Blaze Project Logo">Blaze</td> 
+          <td> <a href="http://blaze.pydata.org/">Distributed, out-of-core NumPy</a> </td> 
+         </tr> 
+         <tr class="conda"> 
+          <td class="project">Conda</td> 
+          <td> <a href="http://conda.pydata.org/">Package manager tool</a> </td> 
+         </tr> 
+         <tr class="pyparallel"> 
+          <td class="project">PyParallel</td> 
+          <td> <a href="https://speakerdeck.com/trent/pyparallel-how-we-removed-the-gil-and-exploited-all-cores">Scalable Python 3 without the GIL</a> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+       <table class="other-projects"> 
+        <tbody>
+         <tr> 
+          <th colspan="2">Other Projects From Our Devs</th> 
+         </tr> 
+         <tr class="numpy"> 
+          <td class="project"> <img src="/media/img/numpy_logo_sm.png" alt="NumPy Library Logo">NumPy </td> 
+          <td> <a href="http://www.numpy.org/">High performance array library</a> </td> 
+         </tr> 
+         <tr class="scipy"> 
+          <td class="project"> <img src="/media/img/scipy_logo_sm.png" alt="SciPy scientific libraries collection logo"> SciPy</td> 
+          <td> <a href="http://www.scipy.org/">Rich collection of scientific libraries</a> </td> 
+         </tr> 
+         <tr class="pytables"> 
+          <td class="project"> <img src="/media/img/pytables_logo.png" alt="PyTables logo"> PyTables</td> 
+          <td> <a href="http://www.pytables.org/moin">Powerful HDF5 interface</a> </td> 
+         </tr> 
+         <tr class="numexpr"> 
+          <td class="project">NumExpr</td> 
+          <td> <a href="https://github.com/pydata/numexpr/blob/master/README.rst">Efficient out-of-core and parallel processing</a> </td> 
+         </tr> 
+         <tr class="sympy"> 
+          <td class="project"> <img src="/media/img/sympy_logo.png" alt="SymPy Project logo">SymPy</td> 
+          <td> <a href="http://sympy.org/en/index.html">Symbolic math library</a> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+       <p class="proud-sponsor"> Proud Sponsors of <a href="http://numfocus.org/"><img src="/media/img/numfocus_logo_retina.png" alt="NumFocus Python Project"></a> and <a href="http://pydata.org/"><img src="/media/img/pydata_logo_sm.png" alt="PyData Python Project"></a> </p> 
+       <btn> 
+        <a href="/open-source/" class="btn btn-success">Learn More</a> 
+       </btn> 
+      </div> 
+     </div> 
+     <script type="text/javascript">
+      $(document).ready(function(){
+        $('.nav-tabs li a').click(function(e){
+            parentTab = $(this).parent('li');
+            if(parentTab.hasClass('active')) {
+              parentTab.removeClass('active');
+              newUrl = $(this).attr('data-alt-uri');
+              window.location.href=newUrl;
+            }
+        })
+      })
+    </script> 
+     <section class="nav_tabs"> 
+      <ul id="myTab" class="nav nav-tabs"> 
+       <li class="active"> <a class="anaconda" href="#anaconda" data-alt-uri="/anaconda-server" data-toggle="tab"> <h4>Anaconda</h4> <h5>Simplified Python Packaging and Deployment for your Team</h5> </a> </li> 
+       <li> <a class="wakari" href="#wakari" data-alt-uri="/wakari" data-toggle="tab"> <h4>Wakari</h4> <h5>Full-featured Interactive Python Analytics in the Browser</h5> </a> </li> 
+       <li> <a class="training" href="#training" data-alt-uri="https://store.continuum.io/cshop/training" data-toggle="tab"> <h4>Training</h4> <h5>Python Courses from Continuum's Experienced Developers</h5> </a> </li> 
+       <li> <a class="consulting" href="#consulting" data-alt-uri="/consulting" data-toggle="tab"> <h4>Consulting</h4> <h5>World-Class Experts to Solve Your Python Problems</h5> </a> </li> 
+       <li> <a class="open-source" href="#open-source" data-alt-uri="/open-source" data-toggle="tab"> <h4>Open Source</h4> <h5>New and Innovative Packages from the Continuum Team</h5> </a> </li> 
+      </ul> 
+     </section> 
+    </div>
+   </section> 
+   <!-- Close Tabs --> 
+   <!-- Customers --> 
+   <div class="container our_customers"> 
+    <div class="first"> 
+     <h6><span>Some of</span>Our Customers</h6> 
+    </div> 
+    <div class="customer_images"> 
+     <img class="linkedIn" src="/media/img/LinkedIn.png" alt="Continuum Client - LinkedIn"> 
+     <img class="boeing padded" src="/media/img/Boeing.png" alt="Continuum Client - Boeing"> 
+     <img class="nasa padded" src="/media/img/NASA.png" alt="Continuum Client - Nasa"> 
+     <img class="jpMorgan" src="/media/img/JPMorgan.png" alt="Continuum Client - JPMorgan"> 
+     <a href="/customers.html">Our Customers</a> 
+    </div> 
+   </div> 
+   <hr> 
+   <!-- Close Customers --> 
+   <!-- Blog & News --> 
+   <article class="container info"> 
+    <section class="info_span" style="padding-right: 40px;"> 
+     <h2 style="padding-bottom: 10px;"> <a href="/press" title="News">News</a> &amp; <a href="/blog" title="Blog">Blog</a> </h2> 
+     <script language="JavaScript" src="http://continuum.io:7777//feed2js.php?src=http%3A%2F%2Fcontinuum.io%2Fall_feed&amp;num=2&amp;desc=200&amp;utf=y" charset="UTF-8" type="text/javascript"></script> 
+     <noscript> 
+      <a href="http://continuum.io:7777//feed2js.php?src=http%3A%2F%2Fcontinuum.io%2Fall_feed&amp;chan=y&amp;num=2&amp;desc=200&amp;utf=y&amp;html=y">View RSS feed</a> 
+     </noscript> 
+     <section class="mailchimp"> 
+      <!-- Close Blog & News --> 
+      <!-- Begin MailChimp Signup Form --> 
+      <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"> 
+      <form action="http://continuum.us4.list-manage.com/subscribe/post?u=2d93c878c488c4fc88ec0a27a&amp;id=128aa29ac3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate> 
+       <h3 style="padding-bottom: 10px; font-weight: 300; font-size: 17px;">Subscribe to Continuum Announcements</h3> 
+       <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required> 
+       <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success" style="vertical-align: top;"> 
+      </form> 
+     </section> 
+    </section> 
+    <!--End mc_embed_signup--> 
+    <!-- Events --> 
+    <section class="info_span"> 
+     <h2 style="padding-bottom: 15px; ">Upcoming Events</h2> 
+     <!--table id="gcal-events" class="event_table">
+        <tr>
+          <td class='event_date_span'></td>
+          <td class='event_detail_span'></td>
+        </tr>
+      </table>
+
+      <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+      <script src="/media/js/GCalEvents.js"></script>
+      <script type="text/javascript" charset="UTF-8">
+        // url of json data 
+        // here, instead of pointing to the google calendar link that you'll want to use,
+        // I'm pointing to a static file so that this example doesn't break in the future even
+        // if the calendar it was based upon changes.
+        // you'll want to use a link in the form of: 
+        // http://www.google.com/calendar/feeds/your-calendar@gmail.com/public/full?orderby=starttime&sortorder=ascending&max-results=3&futureevents=true&alt=json
+        var calendar_json_url = "http://www.google.com/calendar/feeds/continuum.io_1t81ivcaoro94ljt7i0q6valjo%40group.calendar.google.com/public/full?orderby=starttime&sortorder=ascending&max-results=4&futureevents=true&singleevents=true&alt=json&callback=?";
+        $(document).ready(function(){
+          GCalEvents(calendar_json_url);
+        });
+      </script--> 
+     <iframe src="https://www.google.com/calendar/embed?src=continuum.io_1t81ivcaoro94ljt7i0q6valjo%40group.calendar.google.com&amp;ctz=America/Chicago" style="border: 0" width="400" height="400" frameborder="0" scrolling="no"></iframe> 
+    </section> 
+   </article> 
+  </section> 
+  <footer class="footer"> 
+   <section class="container"> 
+    <section class="row"> 
+     <!-- Address --> 
+     <article class="span4 footer_left"> 
+      <figure>
+       <a href="" title="Continuum Analytics"><img src="/media/img/continuum_analytics_logo.png" class="footer_logo" alt="Continuum Analytics"></a>
+      </figure> 4301 Westbank Dr
+      <br> Suite A-100
+      <br> Austin, TX 78746
+      <br> USA
+      <br> +1 512.222.5440
+      <br> 
+      <br> 
+      <a class="footer_links" href="mailto:info@continuum.io">info@continuum.io</a>
+      <br> 
+      <br> 28865 Lilienthal
+      <br> Germany
+      <br> 
+      <section class="footer_social_media"> 
+       <a class="social" href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/media/img/gplus_header.png" alt="Circle Continuum Analytics on Google+"></a> 
+       <a class="social" href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/media/img/twitter_header.png" alt="Follow @continuumio on Twitter"></a> 
+       <a class="social" href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/media/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn"></a> 
+       <a class="social" href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/media/img/facebook_header.png" alt="Like Continuum Analytics on Facebook"></a> 
+       <!--<a href="http://www.youtube.com/user/ContinuumIO" title="Check out Continuum's support videos on YouTube" target="_blank"><img src="/img/youtube_header.png') }}" alt="Check out Continuum's support videos on YouTube" width="33" height="33"></a>--> 
+      </section> 
+      <section class="footer_copyright">
+       2014 Continuum Analytics®
+      </section> 
+     </article> 
+     <!-- Site Map --> 
+     <article class="span4 footer_center" background-image:="" url=""> 
+      <article class="span2 footer_align_left"> 
+       <b><a href="https://store.continuum.io/cshop/products" title="Products" class="footer_links">Products</a></b>
+       <br> 
+       <a href="http://store.continuum.io/cshop/anaconda" title="Anaconda">Anaconda</a>
+       <br> 
+       <a href="/anaconda-server" title="Anaconda Server">Anaconda Server</a>
+       <br> 
+       <a href="/anaconda-addons" title="Anaconda Add-Ons">Anaconda Add-Ons</a>
+       <br> 
+       <a href="/anaconda-cluster" title="Anaconda Cluster">Anaconda Cluster</a>
+       <br> 
+       <a href="/wakari" title="Wakari">Wakari</a>
+       <br> 
+       <!--<a href="/downloads" title="Downloads" class="footer_links">Downloads</a><br/>--> 
+       <a href="/developer-resources" title="Open Source">Open Source</a>
+       <br> 
+       <a href="http://docs.continuum.io" title="Documentation">Documentation</a>
+       <br> 
+       <a href="/support" title="Support">Support</a>
+       <br>
+       <br> 
+       <b><a href="/consulting" title="Consulting" class="footer_links">Consulting</a></b>
+       <br> 
+      </article> 
+      <article class="span2 footer_align_right"> 
+       <b><a href="/training" title="Training" class="footer_links">Training</a></b>
+       <br>
+       <br> 
+       <b><a href="/developer-resources" title="Developer Resources" class="footer_links">Developers</a></b>
+       <br>
+       <br> 
+       <b><a href="/about-continuum" title="Company" class="footer_links">Company</a></b>
+       <br> 
+       <a href="/our-team" title="Our Team">Our Team</a>
+       <br> 
+       <a href="http://boards.greenhouse.io/continuum" title="Careers">Careers</a>
+       <br> 
+       <a href="/blog" title="Blog">Blog</a>
+       <br> 
+       <a href="/press" title="News &amp; Events">News &amp; Events</a>
+       <br> 
+       <a href="/video" title="Video">Video</a>
+       <br> 
+       <a href="/news" title="In the Press">In the Press</a>
+       <br> 
+       <a href="http://www.numfocus.org" title="NumFocus">NumFocus</a>
+       <br>
+       <br> 
+       <b><a href="/contact-us" title="Contact Us" class="footer_links">Contact Us</a></b> 
+      </article> 
+     </article>  
+     <!-- Social Media --> 
+     <article class="span4"> 
+      <section class="footer_right"> 
+       <section class="footer_twitter"> 
+        <a href="http://www.twitter.com/continuumio" class="footer_links" target="_blank">Follow us on Twitter!</a> 
+        <a class="social" href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"> <img style="float: right; padding-right: 10px;" src="/media/img/twitter_header.png" alt="Follow @continuumio on Twitter"> </a> 
+       </section> 
+       <section id="jstwitter">
+        <a class="twitter-timeline" theme="light" data-chrome="nofooter noscrollbar noheader noborders transparent" data-tweet-limit="2" data-cards="hidden" href="https://twitter.com/ContinuumIO" data-widget-id="369911646115749888"> Tweets by @ContinuumIO</a> 
+       </section> 
+       <script>
+                        !function(d,s,id){
+                            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                            if(!d.getElementById(id)){js=d.createElement(s);
+                                js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js,fjs);
+                                }
+                        }
+                        (document,"script","twitter-wjs");
+                    </script> 
+       <script type="text/javascript">
+                        $('.dropdown-toggle').click(function(e) {
+                          e.preventDefault();
+                          setTimeout($.proxy(function() {
+                            if ('ontouchstart' in document.documentElement) {
+                              $(this).siblings('.dropdown-backdrop').off().remove();
+                            }
+                          }, this), 0);
+                        });
+                    </script> 
+      </section> 
+     </article> 
+    </section> 
+   </section> 
+  </footer> 
+  <!-- Javascripts --> 
+  <!-- Javascript --> 
+  <script type="text/javascript" src="/media/js/jquery.ebcaptcha.js"></script> 
+  <script src="/media/js/rss_script.js"></script> 
+  <script type="text/javascript" src="http://datejs.googlecode.com/files/date.js"></script> 
+  <script src="/media/js/bootstrap.js"></script> 
+  <script src="/media/js/libs/bootstrap-collapse.js"></script> 
+  <script src="/media/js/libs/bootstrap-dropdown.js"></script> 
+  <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"> </script> 
+  <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$','$$'], ['\\(','\\)']]},
+          "SVG": { scale: 125}
+        });
+    </script> 
+  <script type="text/javascript">
+        $(function(){
+            $('#contact_form').ebcaptcha();
+        });
+    </script> 
+  <script src="/media/js/prettify.js"></script> 
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27761864-1']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script> 
+  <!--[if lt IE 7 ]>
+      <script src="/media/js/libs/dd_belatedpng.js"></script>
+      <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+    <![endif]--> 
+  <!-- Google Analytics --> 
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27761864-1'],['_setDomainName', 'continuum.io']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+  <!-- close Google Analytics --> 
+  <!-- HelpOnClick --> 
+  <script async type="text/javascript" src="//traffic4.helponclick.com/assist?lang=en&amp;a=510be6b48fc04ca1812005d2b86abfd4&amp;mode=widget&amp;widget=l"></script>
+  <div style="display:none">
+   <a href="http://www.helponclick.com">Live Chat</a>
+  </div> 
+  <!-- /HelpOnClick --> 
+  <!-- end Javascripts -->  
+ </body>
+</html>

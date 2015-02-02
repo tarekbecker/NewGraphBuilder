@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "7aab11d29b355f9a2cefc3c921f4bb19",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "email_address": "hello@quarry.io",
+      "short_description": "PaaS for Big Data",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 7,
+      "founded_on_month": 3,
+      "founded_on_year": 2014,
+      "founded_on": "2014-03-01",
+      "permalink": "quarryio",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://quarry.io",
+      "name": "QuarryIO",
+      "created_at": 1396681983,
+      "updated_at": 1397989162,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "categories": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/quarryio/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Analytics",
+            "uuid": "99c5404c0ff58ee5d3344b944ddb8cd9",
+            "path": "category/analytics/99c5404c0ff58ee5d3344b944ddb8cd9",
+            "created_at": 1397980727,
+            "updated_at": 1417171293
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/quarryio/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://twitter.com/quarryio",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1396681983,
+            "updated_at": 1409386565
+          },
+          {
+            "url": "http://blog.quarry.io/",
+            "type": "WebPresence",
+            "title": "blog",
+            "created_at": 1396681983,
+            "updated_at": 1397989162
+          },
+          {
+            "url": "http://quarry.io",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1396681983,
+            "updated_at": 1397989162
+          }
+        ]
+      }
+    }
+  }
+}

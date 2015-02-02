@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head> 
+  <meta http-equiv="content-type" content="text/html;charset=utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=9"> 
+  <meta name="description" content="Bright Computing - Advanced Linux Cluster Management Made Easy"> 
+  <meta name="keywords" content="linux clusters,hpc clusters,supercomputers,cluster management,cluster manager,beowulf cluster,mpi,message passing interface,infiniband,high performance computing,queuing system,workload manager,monitoring"> 
+  <title>Bright Computing - Advanced Linux Cluster Management Made Easy</title> 
+  <link rel="stylesheet" type="text/css" href="/style.css"> 
+  <link rel="stylesheet" type="text/css" href="/fonts.css"> 
+  <link rel="icon" href="pics/favicon.ico"> 
+  <!-- Start of HubSpot Logging Code  --> 
+  <script type="text/javascript" language="javascript">
+var hs_portalid=143457; 
+var hs_salog_version = "2.00";
+var hs_ppa = "brightcomputing.app11.hubspot.com";
+document.write(unescape("%3Cscript src='" + document.location.protocol + "//" + hs_ppa + "/salog.js.aspx' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+  <!-- End of HubSpot Logging Code -->
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script> 
+  <!-- Begin Stylesheets --> 
+  <link rel="stylesheet" href="coda-slider-2.0/stylesheets/coda-slider-2.0.css" type="text/css" media="screen"> 
+  <!-- End Stylesheets --> 
+  <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.18/jquery.min.js"></script>--> 
+  <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>--> 
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> 
+  <script type="text/javascript" src="js/jquery-ui-1.9.2.min.js"></script> 
+  <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>--> 
+  <script type="text/javascript" src="js/cjar.js"></script> 
+  <script type="text/javascript" src="js/jquery.form.js"></script> 
+  <!--script type="text/javascript" src="wowwindow/js/jquery.wowwindow.min.js"></script--> 
+  <!--link rel="stylesheet" type="text/css" href="wowwindow/css/wowwindow.css"--> 
+  <link rel="stylesheet" type="text/css" href="css/custom-grey/jquery-ui-1.8.19.custom.css"> 
+  <script type="text/javascript" src="coda-slider-2.0/javascripts/jquery.easing.1.3.js"></script> 
+  <script type="text/javascript" src="coda-slider-2.0/javascripts/jquery.coda-slider-2.0.js"></script> 
+  <script type="text/javascript" src="js/qtip/jquery.qtip.min.js"></script> 
+  <link rel="stylesheet" type="text/css" href="js/qtip/jquery.qtip.min.css"> 
+  <script type="text/javascript">
+$().ready(function() {
+       $('#coda-slider-1').codaSlider({
+           autoSlide: true,
+           autoSlideInterval: 4000,
+           autoSlideStopWhenClicked: true,
+           dynamicArrows:false
+       });
+       /* this is just some last minute styling fro  hubspot newsletter subscription and manuals download */
+       /* just in time styling with jQuery */
+       $('.ContactFormItems >Table').attr({cellpadding:0});
+       $('.ContactFormItems select').css({width:'20em'})
+       $('.ContactFormItems input[type=\'text\']').css({width:'20em'});
+       
+		   });
+		 </script> 
+ </head> 
+ <body class="homepage">
+  <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"> 
+   <tbody>
+    <tr valign="top">
+     <td align="center"> 
+      <table width="970" cellspacing="0" cellpadding="0" border="0"> 
+       <tbody>
+        <tr>
+         <td style="height:96px;" align="left">&nbsp;<br><a href="index.php" style="position:absolute;top:22px;"><img src="pics/Bright-Logo.png" width="299" height="54" border="0" alt="Bright Computing Logo"></a> </td> 
+         <td align="right" valign="top">
+          <div class="topnav"> 
+           <!-- !!! index.php = http://info.brightcomputing.com/Bright-demo-request -->
+           <!-- !!! index.php = Where-to-Buy -->
+           <!-- !!! index.php = Partner-Login -->
+           <!-- !!! index.php = http://info.brightcomputing.com/customer-support -->
+           <!-- !!! index.php = Customer-Login -->
+           <div class="menubar">
+            <div class="viewport">
+             <ul>
+              <li class="first"><a href="http://info.brightcomputing.com/Bright-demo-request"><span>Request a demo</span></a></li>
+              <li><a href="Where-to-Buy"><span>Where to Buy</span></a></li>
+              <li><a href="Partner-Login"><span>Partner</span></a></li>
+              <li><a href="http://info.brightcomputing.com/customer-support"><span>Support</span></a></li>
+              <li><a href="Customer-Login"><span>Login</span></a></li>
+             </ul>
+            </div>
+           </div>
+          </div> </td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr> 
+    <tr> 
+     <td style="height:101px" bgcolor="" valign="top"> 
+      <table width="974" align="center" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:-31px">
+       <tbody>
+        <tr>
+         <td class="menutd">
+          <div class="menuholder">
+           <div id="tabs" class="navmain"> 
+            <ul> 
+             <li class="first" id="current"><a href="index"><span>HOME</span></a></li> 
+             <li><a href="Bright-Cluster-Manager"><span>PRODUCTS</span></a></li> 
+             <li><a href="Solutions"><span>SOLUTIONS</span></a></li> 
+             <li><a href="Bright-Computing-Testimonials"><span>CUSTOMERS</span></a></li> 
+             <li><a href="Resources"><span>RESOURCES</span></a></li> 
+             <li><a href="Contact"><span>CONTACT</span></a></li> 
+             <li><a href="About"><span>ABOUT</span></a></li> 
+             <li><a href="http://info.brightcomputing.com/Blog"><span>BLOG</span></a></li> 
+            </ul> 
+            <a href="Search.php" style="float:right;padding-right:15px;padding-bottom:21px;background:none;"><img src="pics/search-icon.png" style="position:relative;top:13px;border:0;"></a> 
+           </div> 
+          </div></td>
+        </tr>
+        <tr>
+         <td class="paneltd" id="paneltd">
+          <div class="coda-slider-wrapper"> 
+           <div class="coda-slider preload" id="coda-slider-1" style="height: 308px;"> 
+            <div class="panel" style="display: block;"> 
+             <div class="panel-wrapper"> 
+              <h2 class="title"></h2> 
+              <div style="height:308px;display:table-cell;overflow: hidden;vertical-align:bottom;">
+               <img style="" src="pics/panels/bright.png">
+              </div>
+             </div> 
+            </div>
+            <div class="panel" style="display: block;"> 
+             <div class="panel-wrapper"> 
+              <h2 class="title"></h2> 
+              <div style="height:308px;display:table-cell;overflow: hidden;vertical-align:bottom;">
+               <img style="" src="pics/panels/complete.png">
+              </div>
+             </div> 
+            </div>
+            <div class="panel" style="display: block;"> 
+             <div class="panel-wrapper"> 
+              <h2 class="title"></h2> 
+              <div style="height:308px;display:table-cell;overflow: hidden;vertical-align:bottom;">
+               <img style="" src="pics/panels/elastic.png">
+              </div>
+             </div> 
+            </div>
+            <div class="panel" style="display: block;"> 
+             <div class="panel-wrapper"> 
+              <h2 class="title"></h2> 
+              <div style="height:308px;display:table-cell;overflow: hidden;vertical-align:bottom;">
+               <img style="" src="pics/panels/intuitive.png">
+              </div>
+             </div> 
+            </div>
+            <div class="panel" style="display: block;"> 
+             <div class="panel-wrapper"> 
+              <h2 class="title"></h2> 
+              <div style="height:308px;display:table-cell;overflow: hidden;vertical-align:bottom;">
+               <img style="" src="pics/panels/powerful.png">
+              </div>
+             </div> 
+            </div>
+            <div class="panel" style="display: block;"> 
+             <div class="panel-wrapper"> 
+              <h2 class="title"></h2> 
+              <div style="height:308px;display:table-cell;overflow: hidden;vertical-align:bottom;">
+               <img style="" src="pics/panels/productive.png">
+              </div>
+             </div> 
+            </div>
+            <div class="panel" style="display: block;"> 
+             <div class="panel-wrapper"> 
+              <h2 class="title"></h2> 
+              <div style="height:308px;display:table-cell;overflow: hidden;vertical-align:bottom;">
+               <img style="" src="pics/panels/proven.png">
+              </div>
+             </div> 
+            </div>
+            <div class="panel" style="display: block;"> 
+             <div class="panel-wrapper"> 
+              <h2 class="title"></h2> 
+              <div style="height:308px;display:table-cell;overflow: hidden;vertical-align:bottom;">
+               <a href="Careers"><img style="" src="pics/panels/we-are-hiring.png"></a>
+              </div>
+             </div> 
+            </div>
+           </div>
+          </div></td>
+        </tr>
+       </tbody>
+      </table>
+      <div class="menuholder2"> 
+       <table width="970" cellspaceing="0" cellpadding="0" align="center">
+        <tbody>
+         <tr>
+          <td id="panelnav2"></td>
+         </tr>
+        </tbody>
+       </table> 
+      </div></td> 
+    </tr> 
+    <style type="text/css">
+	.coda-nav > ul, .coda-nav > ul > li {
+		height: 31px;
+	}
+	.coda-nav > ul {
+		float: right;
+	}
+	#coda-slider-1 {
+		height: 308px !important;
+	}
+</style> 
+    <tr style="">
+     <td> 
+      <table align="center" width="970" cellspacing="0" cellpadding="0" border="0">
+       <tbody>
+        <tr>
+         <td height="45" colspan="3" valign="middle"> 
+          <table width="100%" class="buttontable" cellspacing="0" cellpadding="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="center"><a class="button" href="Solutions-HPC">
+               <div class="buttonbox box_cluster">
+                <h1>HPC Clusters</h1>
+                <p class="homebox">Complete cluster management solution</p>
+               </div></a></td> 
+             <td align="center"><a class="button" href="Solutions-Hadoop">
+               <div class="buttonbox box_standard">
+                <h1>Hadoop Clusters</h1>
+                <p class="homebox">Complete big data solution for Apache Hadoop</p>
+               </div></a></td> 
+             <td align="center"><a class="button" href="Solutions-OpenStack">
+               <div class="buttonbox box_cloud">
+                <h1>OpenStack</h1>
+                <p class="homebox">Complete solution for private clouds</p>
+               </div></a></td> 
+            </tr> 
+            <tr>
+             <td colspan="3"><br><br></td>
+            </tr> 
+           </tbody>
+          </table> 
+          <table width="100%" cellspacing="0" cellpadding="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td colspan="3"> <h1>What We Do</h1> <p class="homebox" style="padding-bottom:15px;">Bright Computing provides comprehensive software solutions for provisioning and managing HPC clusters, Hadoop clusters, and OpenStack private clouds in your data center or in the cloud.<br></p> </td> 
+             <td align="center">
+              <!--<a href="#"><img alt="See What's New in Bright Cluster Manager 7 For HPC" src="pics/Whats-new-Bright7-spotlight.png" style="width:312px;height:127px;margin:0px 0px 20px 20px;border:0;"></a>--> 
+              <!--HubSpot Call-to-Action Code --> <span class="hs-cta-wrapper" id="hs-cta-wrapper-7188ee8b-57a0-41e0-889d-30acc408e2ef"> <span class="hs-cta-node hs-cta-7188ee8b-57a0-41e0-889d-30acc408e2ef" id="hs-cta-7188ee8b-57a0-41e0-889d-30acc408e2ef"> 
+                <!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--> <a href="http://cta-redirect.hubspot.com/cta/redirect/143457/7188ee8b-57a0-41e0-889d-30acc408e2ef"><img class="hs-cta-img" id="hs-cta-img-7188ee8b-57a0-41e0-889d-30acc408e2ef" style="border-width:0px;width:312px;height:127px;margin:0px 0px 0px 0px;border:0;" src="https://no-cache.hubspot.com/cta/default/143457/7188ee8b-57a0-41e0-889d-30acc408e2ef.png"></a> </span> <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script> <script type="text/javascript">
+            hbspt.cta.load(143457, '7188ee8b-57a0-41e0-889d-30acc408e2ef');
+        </script> </span> 
+              <!-- end HubSpot Call-to-Action Code --> </td> 
+            </tr> 
+            <tr class="frontpage"> 
+             <td width="312"> <h1>News</h1> 
+              <table cellspacing="0" cellpadding="0" border="0" width="100%" style="padding-top:5px;"> 
+               <tbody>
+                <tr>
+                 <td><b>November 18, 2014</b><br><a href="News-Bright-Computing-To-Demonstrate-Latest-Software-at-SC14">Bright Computing To Demonstrate Latest Software at SC14</a><br>&nbsp;</td>
+                 <td align="center"><img width="42" style="margin-left:10px;margin-top:0px;margin-bottom:0px" alt="SC14 logo" src="pics/SC14-icon-grey42.png"></td>
+                </tr>
+                <tr>
+                 <td><b>November 17, 2014</b><br><a href="News-Bright-Cluster-Manager-Adds-Support-for-the-NVIDIA-Tesla-K80-Dual-GPU-Accelerator">Bright Cluster Manager Adds Support for the NVIDIA Tesla K80 Dual-GPU Accelerator</a><br>&nbsp;</td>
+                 <td align="center"><img width="48" style="margin-left:10px;margin-top:0px;margin-bottom:0px" alt="Bright Computing logo" src="pics/Nvidia-Tesla-grey48.png"></td>
+                </tr>
+                <tr>
+                 <td><b>November 12, 2014</b><br><a href="News-Bright-Cluster-Manager-Now-Supports-RHEL-7-and-CentOS-7">Bright Cluster Manager Now Supports RHEL 7 and CentOS 7</a><br>&nbsp;</td>
+                 <td align="center"><img width="42" style="margin-left:10px;margin-top:0px;margin-bottom:0px" alt="Bright Computing logo" src="pics/Bright-icon-grey42.png"></td>
+                </tr>
+                <tr>
+                 <td><b>November 11, 2014</b><br><a href="News-Bright-Computing-Appoints-Industry-Veteran-Clement-Lau-as-Director-for-Asia-Pacific">Bright Computing Appoints Industry Veteran Clement Lau as Director for Asia Pacific</a><br>&nbsp;</td>
+                 <td align="center"><img width="48" style="margin-left:10px;margin-top:0px;margin-bottom:0px" alt="Bright Computing logo" src="pics/Clement_Lau-grey48.png"></td>
+                </tr>
+               </tbody>
+              </table> </td> 
+             <td style="width: 15px;"></td> 
+             <td width="312"> <h1>Blog</h1> 
+              <table cellspacing="0" cellpadding="0" border="0" width="100%" style="padding-top:5px;"> 
+               <tbody>
+                <tr>
+                 <td><b>17 November 2014</b><br><a href="http://info.brightcomputing.com/blog/0-day-support-for-the-nvidia-tesla-k80-dual-gpu-accelerator">0-Day Support for the NVIDIA® Tesla® K80 Dual-GPU Accelerator</a><br>&nbsp;</td>
+                 <td align="center"><img width="50" style="margin-left:10px;margin-top:0px;border:1px solid #ddd;padding:1px;" alt="Portrait of Ian Lumb" src="pics/portraits/portrait_ian_lumb_50.jpg"></td>
+                </tr>
+                <tr>
+                 <td><b>13 November 2014</b><br><a href="http://info.brightcomputing.com/blog/monitoring-hpc-clusters-is-it-time-for-an-extreme-makeover">Monitoring HPC Clusters: Is It Time for an Extreme Makeover?</a><br>&nbsp;</td>
+                 <td align="center"><img width="50" style="margin-left:10px;margin-top:0px;border:1px solid #ddd;padding:1px;" alt="Portrait of Ian Lumb" src="pics/portraits/portrait_ian_lumb_50.jpg"></td>
+                </tr>
+                <tr>
+                 <td><b>12 November 2014</b><br><a href="http://info.brightcomputing.com/blog/important-questions-to-consider-what-does-your-hpc-cluster-require-now-and-in-the-future">Important questions to consider: What does your HPC cluster require now and in the future?</a><br>&nbsp;</td>
+                 <td align="center"><img width="50" style="margin-left:10px;margin-top:0px;border:1px solid #ddd;padding:1px;" alt="Bright Staff" src="pics/Bright-icon-color50.png"></td>
+                </tr>
+                <tr>
+                 <td><b>9 November 2014</b><br><a href="http://info.brightcomputing.com/blog/hadoop-the-other-elephant-in-the-room">Hadoop: The Other Elephant in the Room</a><br>&nbsp;</td>
+                 <td align="center"><img width="50" style="margin-left:10px;margin-top:0px;border:1px solid #ddd;padding:1px;" alt="Portrait of Brady Black" src="pics/portraits/portrait_brady_black_50.jpg"></td>
+                </tr>
+               </tbody>
+              </table> </td> 
+             <td width="312" style="padding-left: 15px;"> 
+              <div style="padding-top: 35px"> 
+               <div style="position: absolute;"> 
+                <a href="http://info.brightcomputing.com/download-pharmaceutical-company-case-study"> <img src="pics/CaseStudy.png" style="border: none;"> </a> 
+               </div> 
+              </div> </td> 
+            </tr> 
+            <tr> 
+             <td colspan="4" class="extranavtd"> 
+              <div class="menuholder"> 
+               <div class="extranav"> 
+                <div class="viewport" id="extranavstage"> 
+                 <div class="stage"> 
+                  <span style="margin-left: 15px; vertical-align: middle;"><a href="Bright-Computing-Testimonials.php">Bright&nbsp;customers:</a></span> 
+                  <img src="pics/client_logos/ing.png"> 
+                  <img src="pics/client_logos/tacc.png"> 
+                  <img src="pics/client_logos/cdadapco.png"> 
+                  <img src="pics/client_logos/goethe.png"> 
+                  <img src="pics/client_logos/merck.png"> 
+                  <img src="pics/client_logos/oak_ridge.png"> 
+                  <img src="pics/client_logos/roche.png"> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> </td> 
+            </tr> 
+           </tbody>
+          </table> 
+          <!-- Footer start --> </td>
+        </tr>   
+       </tbody>
+      </table> </td>
+    </tr> 
+    <tr>
+     <td><br>&nbsp;<br></td>
+    </tr>
+    <tr>
+     <td class="footerbg">
+      <table class="footerbgtable" cellspacing="0" cellpadding="0" border="0" align="center" width="970">
+       <tbody>
+        <tr>
+         <td class="sitemapcolumn" style="padding-right:5px"><h2>Product Features</h2><a href="Bright-Cluster-Manager.php">Overview</a><br><a href="Linux-Cluster-Editions.php">Editions</a><br><a href="Linux-Cluster.php">Based on Linux</a><br><a href="Intel-Cluster-Ready.php">Intel Cluster Ready</a><br><a href="Linux-Cluster-Installation.php">Installation</a><br><a href="Linux-Cluster-Management-GUI.php">Cluster Management GUI</a><br><a href="Linux-Cluster-Node-Provisioning.php">Node Provisioning</a><br><a href="Linux-Cluster-Monitoring.php">Monitoring</a><br><a href="Linux-Cluster-Cloud-Bursting.php">Cloud Utilization</a><br><a href="NVIDIA-GPU-Cluster-Management-Monitoring.php">GPU Management</a><br><a href="ScaleMP.php">ScaleMP Management</a><br><a href="Linux-Cluster-Workload-Management.php">Workload Management</a><br><a href="Linux-Cluster-Health.php">Cluster Health Management</a><br><a href="Advanced-Linux-Cluster-Features.php">Advanced Features</a><br><a href="Linux-Cluster-User-Portal.php">User Portal</a><br><a href="NVIDIA-CUDA-OpenCL.php">NVIDIA CUDA &amp; OpenCL</a><br></td>
+         <td class="sitemapcolumn" style="padding-right:5px"><h2>Solutions</h2><a href="Solutions-HPC">HPC Cluster</a><br><a href="Solutions-Hadoop">Hadoop Cluster</a><br><a href="Solutions-OpenStack">OpenStack</a><br></td>
+         <td class="sitemapcolumn" style="padding-right:5px"><h2>Customers</h2><a href="Customer-Testimonials.php">Customer Testimonials</a><br><a href="Analyst-Testimonials.php">Analyst Testimonials</a><br><a href="Partner-Testimonials.php">Partner Testimonials</a><br></td>
+         <td class="sitemapcolumn" style="padding-right:5px"><h2>Resources</h2><a href="About">About Bright</a><br><a href="http://info.brightcomputing.com/case-studies/">Case Studies</a><br><a href="Resources-Brochures">Data Sheets</a><br><a href="http://info.brightcomputing.com/white-papers/">White Papers</a><br><a href="Resources-Analyst-Reports">Analyst Reports</a><br><a href="Resources-ROI">Bright ROI Calculator</a><br><a href="Bright-Cluster-Manager">Bright Cluster Manager</a><br><a href="Solutions-HPC">HPC</a><br><a href="Solutions-Hadoop">Hadoop</a><br><a href="Solutions-OpenStack">OpenStack</a><br><a href="support">Support</a><br><a href="http://info.brightcomputing.com/Bright-demo-request">Product Demos</a><br><a href="http://info.brightcomputing.com/bright-computing-webinar-program">Webinars</a><br><a href="Resources-Videos">Videos</a><br><a href="javascript:manuals()">Manuals</a><br></td>
+         <td class="sitemapcolumn" style="padding-right:5px"><h2>About</h2><a href="About">Bright</a><br><a href="News">News</a><br><a href="http://info.brightcomputing.com/events/">Events</a><br><a href="http://info.brightcomputing.com/bright-computing-webinar-program">Webinars</a><br><a href="http://info.brightcomputing.com/awards">Awards</a><br><a href="Press-Center">Press Center</a><br><a href="Careers">Careers</a><br><a href="Contact-Us">Contact Us</a><br></td>
+         <td class="sitemapcolumn" style="padding-right:5px"><h2>Where to Buy</h2><a href="Where-to-Buy.php">Where to Buy</a><br><a href="Resellers_Africa.php">Resellers Africa</a><br><a href="Resellers_Asia.php">Resellers Asia</a><br><a href="Resellers_Canada.php">Resellers Canada</a><br><a href="Resellers_Europe.php">Resellers Europe</a><br><a href="Resellers_MiddleEast.php">Resellers Middle East</a><br><a href="Resellers_Russia.php">Resellers Russia</a><br><a href="Resellers_SouthAmerica.php">Resellers South America</a><br><a href="Resellers_USA.php">Resellers USA</a><br></td>
+         <td class="sitemapcolumn" style="padding-right:5px"><h2>Contact us</h2><p>+1&nbsp;408&nbsp;300&nbsp;9448<br><a href="mailto:info@brightcomputing.com">info@brightcomputing.com</a><br><a href="http://twitter.com/BrightComputing">Twitter: @BrightComputing</a></p><h2>Connect</h2><script src="http://platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="right"></script><br><a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-via="brightcomputing">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script><br>
+          <div class="plusone">
+           <g:plusone size="small"></g:plusone>
+          </div></td>
+        </tr>
+       </tbody>
+      </table>&nbsp;<br>&nbsp;<br>
+      <table class="copyrightTable" width="970]" align="center">
+       <tbody>
+        <tr>
+         <td align="right"><a class="footer" href="Sitemap.php">Site Map</a> <span class="footertext">|</span> <a class="footer" href="Legal-Notice.php">Legal</a> <span class="footertext">|</span> <span class="footertext">©&nbsp;2009–2014&nbsp;Bright Computing, Inc. All rights reserved.</span> </td>
+        </tr>
+       </tbody>
+      </table>&nbsp;<br></td>
+    </tr>
+   </tbody>
+  </table> 
+  <script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-10862580-1', 'auto');
+		ga('require', 'displayfeatures');
+		ga('send', 'pageview');
+		
+		</script> 
+  <!-- LeadFormix --> 
+  <a href="https://www.leadformix.com" title="Marketing Automation" onclick="window.open(this.href);return(false);"> <script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://vlog.leadformix.com/" : "https://vlog.leadformix.com/");
+<!--
+bf_action_name = '';
+bf_idsite = 8190;
+bf_url = pkBaseURL+'bf/bf.php';
+(function() {
+var lfh = document.createElement('script'); lfh.type = 'text/javascript'; lfh.async = true;
+lfh.src = pkBaseURL+'bf/lfx.js';
+var s = document.getElementsByTagName('head')[0]; s.appendChild(lfh);
+})();
+//-->
+</script> 
+   <noscript>
+    <p>Marketing Automation Platform <img src="https://vlog.leadformix.com/bf/bf.php" style="border:0" alt="Marketing Automation Tool"></p> 
+   </noscript> </a> 
+  <!-- /LeadFormix --> 
+  <div id="manuals" style="display:none">
+   <script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script> 
+   <script>
+  hbspt.forms.create({ 
+    portalId: '143457',
+    formId: '172a775b-63f5-40cd-af8e-dd6db6136745'
+  });
+</script> 
+  </div> 
+  <script>
+			function manuals(){
+				$('#manuals').dialog({title:'Manual download',width:294});
+			}
+		</script>  
+  <!-- Footer end --> 
+ </body>
+</html>

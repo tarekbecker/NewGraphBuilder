@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="домосайт, социальная сеть, соседи, тсж">
+  <meta name="description" content="твой дом on-line">
+  <meta name="robots" content="index,nofollow">
+  <link rel="image_src" href="//domosite.ru/img/ds_link_image.jpg">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/old_general.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/bootstrap.fix.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/base.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/grid.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/page.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/tools.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/jquery.min.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/fullcalendar.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/mccalendar.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/toolbar.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/select2.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/common.css">
+  <script>
+				var ds={
+					dev_mode: !!false,
+					user: {
+						auth: !!parseInt("0")
+					}
+				};
+				</script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/jquery.min.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/jquery.base64.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/jquery-ui-1.8.24.custom.min.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/fullcalendar.min.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/billing_admin.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/Window.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/Core.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/modules/System/Utils.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/modules/Functions.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/modules/System/Query.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/Request.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/bb/underscore.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/bb/backbone-min.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/bb/backbone-relational.js"></script>
+  <script type="text/javascript">
+				bb = _.clone(Backbone);
+				bb.sync = function(){};
+			</script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/tiny_mce/tiny_mce.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/bootstrap.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/functions.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/old.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/page.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/mccalendar.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/invoices_and_acts_report.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/bookkeeper.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/billing.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/printElement.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/oferta.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/Label.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/main.js"></script>
+  <script type="text/javascript" src="/xsl/XSL_MAIN/scripts/select2.min.js"></script>
+  <script type="text/javascript" src="//api-maps.yandex.ru/2.0-stable/?load=package.full&amp;coordorder=longlat&amp;lang=ru-RU"></script>
+  <!--[if ie]>
+		<link rel="stylesheet" type="text/css" href="/xsl/XSL_MAIN/styles/ie_fix.css" />
+		<script type="text/javascript" src="/xsl/XSL_MAIN/scripts/ie_fix.js"></script>
+		<![endif]-->
+  <meta name="yandex-verification" content="5bc5ca30753f583c">
+  <script id="window_script" type="text/javascript"></script>
+  <title>ДомоСайт - твой дом онлайн</title>
+ </head>
+ <body onunload="Core.System.Events.Create('document_unload')" onload="Core.System.Events.Create('document_ready')">
+  <script type="text/javascript">
+						SetTimezone();
+						
+						Require("System/Query");
+						OnReady();
+						Do(function(){
+							Query({method:"auth.isauthorized"});
+						});
+					</script>
+  <div xmlns="" id="oldbrowser" style="display:none">
+   <div>
+     Вы используете устаревший браузер. Рекомендуем 
+    <a href="http://www.google.com/chrome/"><i class="ico-browser-chrome"></i> Chrome </a>, 
+    <a href="http://mozilla-russia.org/"><i class="ico-browser-firefox"></i> Firefox </a> или 
+    <a href="http://www.opera.com/"><i class="ico-browser-opera"></i> Opera </a> 
+   </div>
+  </div> 
+  <script xmlns="">
+			Require("System/Utils");
+			Do(function(){
+				function show(){document.getElementById("oldbrowser").style.display='block';}
+				var browser = Utils.browser(), name = browser.name, ver = browser.version;
+				
+				if(name == "msie" && ver < 9) {
+					show();
+				} else if(name == "firefox" && ver < 4) {
+					show();
+				}
+			});
+		</script>
+  <div id="window_script"></div>
+  <div id="Wrapper" style="background:none;">
+   <div style="width:960px;margin:auto">
+    <div style="position:fixed;top:0;height:0;overflow:visible;z-index:3">
+     <div id="Notice" style="display:none" class="transparent-white-75"></div>
+    </div>
+   </div>
+   <div id="Toolbar">
+    <div style="line-height:50px">
+     <div id="Logotype" class="inline">
+      <a href="/welcome" tabindex="1"><img alt="Логотип ДомоСайт" title="ДомоСайт" src="/xsl/XSL_MAIN/images/design/logo.png"></a>
+     </div>
+     <div class="inline" style="position:absolute;right:50px">
+      <a class="btn btn-link anyreg-link" style="margin-right: 20px;" onclick="$Win.load('total_registration');">Регистрация</a>
+      <button tabindex="3" class="btn btn-danger login-btn" style="padding:6px 18px" onclick="$Win.load('auth');">Войти</button>
+     </div>
+    </div>
+    <div></div>
+   </div>
+   <div id="Header">
+    <h2 class="white" style="margin-top:45px"> Уже подключено <b id="houses_count">5839</b> домов </h2>
+    <h1 style="font-size: 68px;"> Твой дом онлайн! </h1>
+    <h2>Улучшаем отношения между Управляющей организацией и жителями</h2>
+    <div>
+     <a id="VideoButton" href="javascript:;" onclick="$Win.load('video');"><img src="/xsl/XSL_MAIN/images/design/pic.png"><br>
+      <div class="inline" style="margin-top:7px">
+        ПОСМОТРЕТЬ 
+       <br> ВИДЕО-ПРЕЗЕНТАЦИЮ 
+      </div></a>
+    </div>
+   </div>
+   <script>
+		$("#ShowAllHouses").domosearch({
+			showMap: true,
+			onshow: function(){
+				domosearch_SwitchLayer('all');
+			}
+			
+		});
+		</script>
+   <div id="SearchPanel">
+    <div id="SearchPanel-Block">
+     <h3>Проверьте, подключен ли ваш дом к ДомоСайту?</h3>
+     <form id="House-Check-Form" class="clear" action="/reg" method="get" style="text-align:center">
+      <input id="House-Check-City" type="text" name="city" placeholder="Город" style="width:160px" autofocus="false" value="">
+      <input id="House-Check-Street" type="text" name="street" placeholder="Улица" style="width:200px" autofocus="true">
+      <input id="House-Check-Number" type="text" name="number" placeholder="Дом" style="width:80px">
+      <button type="submit" class="btn btn-success"><i class="icon-search icon-white"></i></button>
+     </form>
+     <div id="House-Check-Invalid" style="padding:20px;display:none">
+       Укажите город, улицу и номер дома который хотите проверить 
+     </div>
+     <div id="House-Check-Result" style="padding:20px;display:none">
+       Не удалось найти ваш дом. Попробуйте 
+      <a style="text-decoration:underline" href="javascript:;" id="search-house">определить его место положение на карте</a>
+     </div>
+    </div>
+    <div id="SearchPanel-Shadow"></div>
+    <script>
+			Require("System/YandexMap");
+			Require("System/Query");
+			Do(function(){
+				
+				var $form = $("#House-Check-Form");
+				var $city = $form.children("[name=city]");
+				var $street = $form.children("[name=street]");
+				var $number = $form.children("[name=number]");
+				var $result = $("#House-Check-Result");
+				var $invalid = $("#House-Check-Invalid");
+				var $button = $form.children("button");
+				
+				/*
+				$form.on("submit", function(){
+					
+					var city = $city.val();
+					var street = $street.val();
+					var number = $number.val();
+					
+					if(city && street && number) {
+						$Request.send({
+							method: "House.Check",
+							city: city,
+							street: street,
+							house: number
+						}, function(data){
+							var id = data-0;
+							if(!id) {
+								$result.show();
+								$invalid.hide();
+							} else {
+								location.href="/subscribe/" + id;
+							}
+						});
+					} else {
+						$result.hide();
+						$invalid.show();
+					}
+					
+					return false;
+				});
+				*/
+				
+				$("#search-house").domosearch({
+					caption: "Найти дом",
+					onselect: function(id){
+						window.location.href = '/subscribe/'+id;
+					},
+					actionCaption: 'Выбрать',
+					closeOnCallback: true,
+					showMap: true,
+					showNewHouseDialog: true
+				});
+				
+				$("#simple-search-house").domosearch({
+					caption: "Найти дом",
+					onselect: function(id){
+						window.location.href = '/dom'+id;
+					},
+					actionCaption: 'Перейти',
+					closeOnCallback: true,
+					showMap: false
+				});
+				
+			});
+			</script>
+   </div>
+   <div id="Content">
+    <div class="CFC" id="CFUS">
+     <div style="font-size: 24px;">
+       Жителю 
+     </div>
+     <div style="width:320px;color:#9d9d9d;font-size:13px;margin-top:10px">
+       Бесплатная 
+      <a class="reguser-link" href="/reg" style="text-decoration: underline;">регистрация</a> за 1,5 минуты 
+     </div>
+     <div id="CanvasUser" style="margin-top:40px">
+      <div style="text-align:center;margin-bottom:50px;display:none">
+       <a id="btn-register-user" href="javascript:;" class="btn btn-success" style="margin:auto;padding:10px 20px;">Зарегистрироваться</a>
+       <script>
+					$('#btn-register-user').click(function(){
+						$Request.send({
+							method:'tools.log',
+							type:'button_click_registration_user_2'},
+						function(){
+							top.location.href="/reg";
+						});
+					})
+				</script>
+       <div style="color:#9d9d9d;font-size:13px;margin-top:10px">
+        Это бесплатно и займет всего 1,5 минуты
+       </div>
+      </div>
+      <div id="PersonalNews" class="ContentBlock">
+       <div>
+        <div class="head-icon1 pull-left"></div>
+        <h2>Личная лента новостей</h2>
+        <ul>
+         <li>Новости дома</li>
+         <li>Новости УК и ТСЖ</li>
+         <li>Новости Ваших соседей</li>
+         <li>E-mail уведомления</li>
+        </ul>
+       </div>
+      </div>
+      <div id="OnlineServices" class="ContentBlock">
+       <div>
+        <div class="head-icon2 pull-left"></div>
+        <h2>Онлайн сервисы от вашей УК/ТСЖ</h2>
+        <ul>
+         <li>Сдача показаний</li>
+         <li>SMS-напоминания</li>
+         <li>История и отчеты</li>
+        </ul>
+       </div>
+      </div>
+      <div id="Connected" class="ContentBlock">
+       <div>
+        <div class="head-icon3 pull-left"></div>
+        <h2>Знакомство и общение с соседями</h2>
+        <ul>
+         <li>Форум</li>
+         <li>Фотоальбом</li>
+         <li>Онлайн опросы</li>
+         <li>Сервисы для мам</li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="CFC" id="CFUK">
+     <div style="font-size: 24px;">
+       УК и ТСЖ 
+     </div>
+     <div style="width:310px;color:#9d9d9d;font-size:13px;margin-top:10px">
+      Бесплатная 
+      <a class="regmc-link" href="/wizard" style="text-decoration: underline;">регистрация</a> за 3 минуты
+     </div>
+     <div id="CanvasCompany" style="margin-top:40px">
+      <div id="ContentForUk">
+       <div>
+        <h1 style="padding-left:20px">Бесплатно</h1>
+        <ul>
+         <li> Официальный сайт УК/ТСЖ и СМД 
+          <div style="margin-left:17px">
+           Страницы домов для общения соседей
+          </div></li>
+         <li>Раскрытие информации для жильцов</li>
+         <li>Публикация и рассылка новостей</li>
+        </ul>
+       </div>
+       <div>
+        <h1 style="padding-left:20px">От 2000р./месяц</h1>
+        <ul>
+         <li>Выставление квитанций с SMS-уведомлениями</li>
+         <li>Сбор показаний приборов, SMS-напоминания</li>
+         <li>Онлайн голосование жильцов по закону</li>
+        </ul>
+        <div class="separator"></div>
+        <a class="pricelist-link" style="margin-left:40px" href="/price">Подробнее (прайс-лист)</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="Empty"> 
+   </div>
+  </div>
+  <div id="Footer">
+   <div>
+    <div>
+     <ul>
+      <li><a href="javascript:;" id="house_searches">Поиск дома</a></li>
+      <li><a href="/villages">Коттеджные поселки</a></li>
+      <li><a href="javascript:;" onclick="$Win.load('invite_neighbors');">Пригласить соседей</a></li>
+     </ul>
+    </div>
+    <div>
+     <ul>
+      <li><a href="/knowhow?id=1&amp;level=level_subgroups">Инструкции</a></li>
+      <li><a href="/knowhow?id=2&amp;level=level_subgroups">Нормативные акты</a></li>
+      <li><a href="/mc_complain">Шаблоны документов</a></li>
+     </ul>
+    </div>
+    <div>
+     <ul>
+      <li><a href="/welcome">Главная</a></li>
+      <li><a href="/rules">Правила</a></li>
+      <li><a href="/dev">Разработчикам</a></li>
+     </ul>
+    </div>
+    <div style="width:auto">
+     <div>
+      <a href="javascript:;" class="ql" id="call-feedback">Контакты и обратная связь</a>
+      <script>
+							$('#call-feedback').on("click", function(){
+								$Win.load('feedback', function(){
+									set_data(
+										' ',
+										'',
+										'error',
+										''
+									);
+								});
+							})
+						</script>
+     </div>
+     <div>
+      <a href="/price">Прайс услуг</a>
+     </div>
+     <div style="margin-bottom:11px">
+      <a href="/wizard">Создать сайт организации</a>
+     </div>
+     <div>
+       ООО «Домосайт» 
+     </div>
+     <a target="_blank" href="/usr1078">© Коробейников И.С., 2011—2014</a>
+    </div>
+   </div>
+  </div>
+  <script>
+		$("#house_searches").domosearch({
+			caption: "Подписаться на дом",
+			onselect: function(id){
+				window.location.href = '/dom'+id;
+			},
+			actionCaption: 'Войти',
+			closeOnCallback: true,
+			showMap: false
+		});
+		</script>
+  <div id="window">
+   <table>
+    <tbody>
+     <tr>
+      <td style="vertical-align:top;padding-top:50px">
+       <div id="window_content" class="inline">
+        <div id="window_body">
+         <div id="window_title">
+          <i class="pull-right close">×</i>
+          <span></span>
+         </div>
+         <div style="border-bottom: 1px solid #ccc;"></div>
+         <div id="window_inner"></div>
+         <div id="window_control" class="clearfix"></div>
+        </div>
+       </div></td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div id="Layout" class="transparent-black-75">
+   <div id="Layout-Wrapper" data-width-normalize="body">
+    <table id="Layout-Content">
+     <tbody>
+      <tr>
+       <td></td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <script xmlns="" type="text/javascript">
+			
+			
+			$(function(){
+				
+					$("#domosearch-input").val(''+', ');
+					$("#domosearch-newhouse-city").val('');
+					setCurrentCity('');				
+				
+				
+				$('#domosearch').dialog({
+					autoOpen: false,
+					width: 760,
+					height: 200,
+					minHeight: 50,
+					position: ['center', 'top'],
+					resizable: false,
+					zIndex: 999,
+					modal: true
+				});
+				
+			    $(window).resize(function() {
+			    	if ( $('#domosearch').dialog('isOpen') )
+			    		alignDomosearchDialog();	
+			    });
+			
+			    $(window).scroll(function() {
+			    	if ( $('#domosearch').dialog('isOpen') )
+			    		alignDomosearchDialog();	
+			    });
+				
+			    $("form[id='domosearch-form']").ajaxForm({
+			    	success: function(html){
+			    		
+				    	if ( ( $('#domosearch-map').css('display') == 'none' ) || 
+				    	     ( !domosearchMapIsInitialized ) ) {
+				    		$('#left_bottom_x').val('');
+				    		$('#left_bottom_y').val('');
+				    		$('#right_top_x').val('');
+				    		$('#right_top_y').val('');
+				    	} else {
+				    	
+				    		var bounds = domosearchMap.getBounds();
+				    		//var leftBottom = bounds.getLeftBottom();
+				    		//var rightTop = bounds.getRightTop();
+				    		
+				    		$('#left_bottom_x').val(bounds[0][0]);
+				    		$('#left_bottom_y').val(bounds[0][1]);
+				    		$('#right_top_x').val(bounds[1][0]);
+				    		$('#right_top_y').val(bounds[1][1]);
+				    	}
+				    
+				      	$('#domosearch-wait').css('display', 'none');
+				      	$('#domosearch-hint').css('display', 'block');
+				      	$('#domosearch-results').html(html);
+				      	
+				      	/*if ( $("a[id*='domosearch-result-']").length == 1 ) {
+					      	ShowDomosearchMap();
+					      	domosearchAllowShowOnMap = true;
+				      	}*/
+				      	
+				      	$('#add-new-house-proposal').css('display', 'block');
+				      	
+				      	alignDomosearchDialog();        
+				      	
+				      	if ( domosearchAllowShowOnMap )
+				      	if ( $('#domosearch-map').css('display') == 'block' )
+				      	if ( $("a[id*='domosearch-result-']").length > 0 ) {
+	   						domosearchShowOnMap(0, true);
+	   					}
+	   					
+	   					
+	   					domosearchAllowShowOnMap = true;
+				   	}
+			   	
+			   	});
+
+			   	
+			   	$("#domosearch-input").change(function(){
+			   		domosearchAllowShowOnMap = true;
+			   		_ajax_domosearch(true);			   		
+			   	});
+			   	
+			   	
+			   	$("#domosearch-submit-button").click(function(){
+			   		domosearchAllowShowOnMap = true;
+			   		_ajax_domosearch(true);			   		
+			   	});
+
+			   	$("#domosearch-close").click(function(){
+			   		$('#domosearch').dialog('close');
+			   	});
+
+				$('#authorization-toremember-dialog').dialog({
+					autoOpen: false,
+					height: 350,
+					width: 350,
+					position: ['center', 'center'],
+					resizable: false,
+					modal: true
+				});			
+
+				$('#authorization-toremember-form-auth').ajaxForm({
+					success: function(json){
+						$('#authorization-toremember-submit-auth').removeAttr('disabled');
+						var resp = eval( "(" + json + ")" );
+	        	
+	        			if ( resp ) {
+	        				if ( resp["authorized"] ){
+	        					window.location.reload();
+	        				} else {
+	        					$('#authorization-toremember-note').html(resp['message']);
+	        				}
+	        			}
+					}
+				});			
+
+				$('#authorization-toremember-backtoregistration').click(function(){
+					$('#authorization-toremember-note').html('');
+					$('#authorization-toremember-backtoregistration').css('display', 'none');
+					$('#authorization-toremember-registration').css('display', 'block');
+				});
+				
+				$('#authorization-toremember-form-reg').ajaxForm({
+					success: function(json){
+						$('#authorization-toremember-submit-reg').removeAttr('disabled');
+						var resp = eval( "(" + json + ")" );
+	        	
+	        			if ( resp ) {
+	        				if ( resp["registered"] ){
+	        					$('#authorization-toremember-registration').css('display', 'none');
+	        					$('#authorization-toremember-backtoregistration').css('display', 'block');
+	        					$('#authorization-toremember-note').html(resp['message']);
+	        				} else {
+	        					$('#authorization-toremember-note').html(resp['message']);
+	        				}
+	        			}
+					}
+				});
+
+				$('#authorization-toremember-submit-auth').click(function(){
+					$('#authorization-toremember-submit-auth').attr('disabled', 'disabled');
+					$('#authorization-toremember-form-auth').submit();
+				});
+				
+				$('#authorization-toremember-submit-reg').click(function(){
+					$('#authorization-toremember-submit-reg').attr('disabled', 'disabled');
+					$('#authorization-toremember-form-reg').submit();
+				});
+				
+				$('#authorization-toremember-reg').click(function(){
+					$('#authorization-toremember-registration').css('display', 'block');
+					$('#authorization-toremember-authorization').css('display', 'none');
+				});
+				$('#authorization-toremember-auth').click(function(){
+					$('#authorization-toremember-registration').css('display', 'none');
+					$('#authorization-toremember-authorization').css('display', 'block');
+				});
+
+				$('#authorization-toremember-cancel').click(function(){
+					$('#authorization-toremember-dialog').dialog('close');
+				});
+
+				$('#authorization-toaction-dialog').dialog({
+					autoOpen: false,
+					height: 220,
+					width: 320,
+					position: ['center', 'center'],
+					resizable: false,
+					modal: true
+				});			
+
+				$('#authorization-toaction-submit').click(function(){
+					window.location.href = 'http://domosite.ru/auth';
+				});
+
+				$('#authorization-toaction-cancel').click(function(){
+					$('#authorization-toaction-dialog').dialog('close');
+				});
+
+				$('#authorization-toaccess-dialog').dialog({
+					autoOpen: false,
+					height: 220,
+					width: 320,
+					position: ['center', 'center'],
+					resizable: false,
+					modal: true
+				});			
+
+				$('#authorization-toaccess-submit').click(function(){
+					window.location.href = 'https://domosite.ru/auth';
+				});
+
+				$('#authorization-toaccess-cancel').click(function(){
+					$('#authorization-toaccess-dialog').dialog('close');
+				});
+
+				$('#authorization-tomakefeed-dialog').dialog({
+					autoOpen: false,
+					height: 220,
+					width: 320,
+					position: ['center', 'center'],
+					resizable: false,
+					modal: true
+				});			
+
+				$('#authorization-tomakefeed-submit').click(function(){
+					window.location.href = 'http://domosite.ru/auth';
+				});
+
+				$('#authorization-tomakefeed-cancel').click(function(){
+					$('#authorization-tomakefeed-dialog').dialog('close');
+				});
+
+				$('#pickplace-tomakefeed-dialog').dialog({
+					autoOpen: false,
+					height: 220,
+					width: 320,
+					position: ['center', 'center'],
+					resizable: false,
+					modal: true
+				});			
+				
+				$('#pickplace-tomakefeed-submit').domosearch({
+					caption: "Карта на ДомоСайт",
+					actionCaption: "Добавить дом в закладки",
+					onselect: function(id){
+						_ajax_addPlace(id);
+						window.location.href = 'http://domosite.ru/dom'+id;
+					}, 
+					showMap: true					
+				});	
+				
+				$('#pickplace-tomakefeed-cancel').click(function(){
+					$('#pickplace-tomakefeed-dialog').dialog('close');
+				});
+
+
+				$("#domosearch-newhouse-street").focus(function(){
+					if ( $(this).val() == 'улица' ) {
+						$(this).val('');
+						$(this).css('color', 'black');
+					} 
+					domosearch_checkNewHouseDialog();
+				});
+				
+				$("#domosearch-newhouse-street").blur(function(){
+					if ( $(this).val() == '' ) {
+						$(this).val('улица');
+						$(this).css('color', 'grey');
+					};
+					domosearch_checkNewHouseDialog();
+					
+				});		
+			
+				$("#domosearch-newhouse-number").focus(function(){
+					if ( $(this).val() == 'дом' ) {
+						$(this).val('');
+						$(this).css('color', 'black');
+					} 
+					domosearch_checkNewHouseDialog();
+				});
+				
+				$("#domosearch-newhouse-number").blur(function(){
+					if ( $(this).val() == '' ) {
+						$(this).val('дом');
+						$(this).css('color', 'grey');
+					} 
+					domosearch_checkNewHouseDialog();
+				});
+				$("#domosearch-newhouse-city").keyup(function(){
+					domosearch_checkNewHouseDialog();
+				});				
+				$("#domosearch-newhouse-admarea").keyup(function(){
+					domosearch_checkNewHouseDialog();
+				});
+				$("#domosearch-newhouse-street").keyup(function(){
+					domosearch_checkNewHouseDialog();
+				});
+				$("#domosearch-newhouse-number").keyup(function(){
+					domosearch_checkNewHouseDialog();
+				});
+				
+				$('#whatispremium-dialog').dialog({
+					autoOpen: false,
+					height: 350,
+					width: 350,
+					position: ['center', 'center'],
+					resizable: false,
+					modal: true
+				});			
+
+				$('#whatispremium-close').click(function(){
+					$('#whatispremium-dialog').dialog("close");
+				});
+				
+				$('#approve-contacts-dialog').dialog({
+					autoOpen: false,
+					height: 300,
+					width: 370,
+					position: ['center', 'center'],
+					resizable: false,
+					modal: true
+				});			
+				
+				$('#approve-contacts-dialog-close').click(function(){
+					window.location.reload();
+				});
+				
+			});
+		
+		</script>
+  <div xmlns="" id="domosearch" style="display: none;">
+   <table id="domosearch-table" border="0" cellspacing="0" cellpadding="0" width="100%"> 
+    <tbody>
+     <tr>
+      <td colspan="5" align="right" style="padding-bottom: 20px;"> <a id="domosearch-newhouse" onclick="domosearch_closeNewHouseDialog();" class="hrefable" style="color: grey; margin-right: 10px; display: none;">Поиск</a><a class="hrefable" id="domosearch-close">Закрыть</a> </td>
+     </tr> 
+     <tr id="domosearch-row"> 
+      <td width="50px"></td> 
+      <td align="right" width="50px">
+       <div class="houses_find_text">
+        Поиск:
+       </div></td> 
+      <td colspan="2">
+       <form method="POST" id="domosearch-form" action="/ajax.php?method=domosearch"> 
+        <input type="hidden" name="left_bottom_x" id="left_bottom_x">
+        <input type="hidden" name="left_bottom_y" id="left_bottom_y">
+        <input type="hidden" name="right_top_x" id="right_top_x">
+        <input type="hidden" name="right_top_y" id="right_top_y">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+         <tbody>
+          <tr> 
+           <td align="center" style="padding-left: 10px;padding-right: 10px;">
+            <div style="position:relative;width:100%;"> 
+             <input style="margin-bottom:0px;" id="domosearch-input" type="text" name="address">
+             <div id="domosearch-input-autocomplete"></div> 
+            </div></td> 
+           <td align="left" width="70px"><input type="button" value="Найти" id="domosearch-submit-button" class="houses_find"></td> 
+          </tr>
+         </tbody>
+        </table> 
+       </form></td> 
+      <td width="50px"></td> 
+     </tr> 
+     <tr id="domosearch-hint-row"> 
+      <td></td> 
+      <td align="center" valign="top" colspan="3"> 
+       <div id="domosearch-wait">
+        <img border="0" src="/img/wait-bar.gif">
+       </div> 
+       <div id="domosearch-hint">
+        <span style="font-size: 10px; color: grey;">* «город, улица, дом» или «город, название» или «город»...</span>
+       </div> </td> 
+      <td></td> 
+     </tr> 
+     <tr id="new-house-dialog-caption-row" style="display: none;"> 
+      <td width="50px"></td> 
+      <td colspan="3" align="center"><h3 style="margin: 0px; padding: 0px;">Добавление нового дома</h3></td> 
+      <td width="50px"></td> 
+     </tr> 
+     <tr> 
+      <td></td> 
+      <td align="left" valign="middle" colspan="3"> 
+       <div id="domosearch-tools">
+        <table border="0" height="40px" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+          <tr> 
+           <td valign="middle" id="domosearch-tools-td"> 
+            <div id="domosearch-tools-map" style="display: none;">
+             <a id="domosearch-switch-list" class="button-attention-blue" onclick="ToggleDomosearchMap();"> Список </a>
+            </div> 
+            <div id="domosearch-tools-list">
+             <a id="domosearch-switch-map" class="button-attention-blue" onclick="ToggleDomosearchMap();"> Карта </a>
+            </div> </td> 
+           <td valign="middle" align="right" id="domosearch-menumap-td">
+            <div id="domosearch-menu-map" style="display: none;">
+              Показать на карте: 
+             <a class="hrefable" onclick="domosearch_SwitchLayer('villages');" id="domosearch-villages-switch"> Коттеджные поселки </a>&nbsp;
+             <a class="hrefable" onclick="domosearch_SwitchLayer('stroyka');" id="domosearch-stroyka-switch"> Строящиеся дома </a>&nbsp;
+             <a class="hrefable" onclick="domosearch_SwitchLayer('all');" id="domosearch-all-switch"> Все места </a> 
+            </div></td> 
+          </tr>
+         </tbody>
+        </table>
+       </div> 
+       <div id="new-house-dialog" style="display: none; margin: 5px;">
+        <form method="POST" action="../?act=registernewhouse"> 
+         <input type="hidden" name="x" id="current_x">
+         <input type="hidden" name="y" id="current_y">
+         <input type="hidden" name="mc_id" value="">
+         <table border="0" align="center"> 
+          <tbody>
+           <tr> 
+            <td>
+             <table border="0" width="550px">
+              <tbody>
+               <tr> 
+                <td align="right" width="50px"> Город </td> 
+                <td width="210px"><input id="domosearch-newhouse-city" type="text" name="city" style="width: 200px;" value=""></td> 
+                <td align="right"> Область </td> 
+                <td width="210px"><input id="domosearch-newhouse-admarea" type="text" name="adm_area" style="width: 200px;" value=""></td> 
+               </tr>
+              </tbody>
+             </table></td> 
+            <td rowspan="2" valign="middle"><input id="new-house-submit" type="submit" value="Добавить" disabled style="height: 60px;"></td> 
+           </tr> 
+           <tr>
+            <td>
+             <table border="0" align="center" width="580px" class="add_house_adress_table">
+              <tbody>
+               <tr> 
+                <td align="right" width="50px">Адрес</td> 
+                <td><input id="domosearch-newhouse-street" type="text" name="street" style="width: 275px; color: grey;" class="add_house_adress_width" value="улица"></td> 
+                <td> , <input id="domosearch-newhouse-number" type="text" name="house" size="6" style="color: grey;" value="дом"> </td> 
+               </tr>
+              </tbody>
+             </table></td>
+           </tr> 
+           <tr>
+            <td colspan="3" align="center" style="padding-top: 5px;"><span class="look_at_me">Чтобы добавить новый дом, необходимо указать его положение на карте</span></td>
+           </tr> 
+          </tbody>
+         </table> 
+        </form>
+       </div> </td> 
+      <td></td> 
+     </tr> 
+     <tr> 
+      <td></td> 
+      <td colspan="3" align="center" style="border-top: 1px solid Gainsboro;">
+       <div id="domosearch-map">
+        <div id="domosearch-ymap" style="width:100%; height:400px"></div>
+       </div></td> 
+      <td></td> 
+     </tr> 
+     <tr> 
+      <td></td> 
+      <td colspan="3">
+       <div id="domosearch-results" class="msg_div"> 
+       </div></td> 
+      <td></td> 
+     </tr> 
+     <tr>
+      <td colspan="5" align="center">
+       <div style="margin-top: 10px; display: none;" id="add-new-house-proposal">
+         Нужного дома нет? 
+        <button class="btn btn-danger" onclick="domosearch_newHouseDialog();">Зарегистрировать новый дом</button> 
+       </div></td>
+     </tr> 
+    </tbody>
+   </table>
+  </div> 
+  <div xmlns="" id="authorization-toremember-dialog" style="display: none;">
+   <table border="0" width="330px" height="200px" align="center"> 
+    <tbody>
+     <tr> 
+      <td align="center" width="50%"></td> 
+      <td align="right"><a class="hrefable" id="authorization-toremember-cancel">закрыть</a></td> 
+     </tr> 
+     <tr>
+      <td align="left" valign="bottom" colspan="2"> <h2 style="margin-bottom: 10px;">Авторизуйтесь, пожалуйста *</h2> 
+       <div style="background-color: LimeGreen; width: 150px; height: 3px;"> 
+       </div> </td>
+     </tr> 
+     <tr>
+      <td colspan="2" align="center" style="padding-top: 10px; padding-bottom: 10px;"> 
+       <div id="authorization-toremember-authorization"> 
+        <table border="0" style="margin-top: 10px;">
+         <tbody>
+          <tr>
+           <td> <a title="ВКонтакте" style="margin-right: 3px;" href="http://api.vk.com/oauth/authorize?client_id=2397180&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Fdomosite.ru%2F%3Fact%3Dlogin_vk%26rememberme%3D1"><img border="0" src="/img/vkontakte-20.png"></a><a title="Facebook" style="margin-right: 3px;" href="https://www.facebook.com/dialog/oauth?client_id=129084640506783&amp;scope=user_checkins,email,publish_stream&amp;read_stream&amp;redirect_uri=http%3A%2F%2Fdomosite.ru%2F%3Fact%3Dlogin_fb&amp;state=fcddb3968a9cd1e103e4b87e7affcb62"><img border="0" src="/img/facebook-20.png"></a><a title="Odnoklassniki" style="margin-right: 3px;" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=2588928&amp;response_type=code&amp;scope=VALUABLE%20ACCESS&amp;redirect_uri=http%3A%2F%2Fdomosite.ru%2F%3Fact%3Dlogin_ok"><img border="0" src="/img/odnoklassniki-20.png"></a><a title="GMail" style="margin-right: 3px;" href="https://accounts.google.com/o/oauth2/auth?client_id=94306501461.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Fdomosite.ru%2F%3Fact%3Dlogin_gm&amp;scope=https%3A%2F%2Fwww.google.com%2Fm8%2Ffeeds%2F&amp;response_type=code"><img border="0" src="/img/google-20.png"></a> </td>
+          </tr>
+         </tbody>
+        </table> 
+        <div style="margin-bottom: 10px;">
+          или 
+        </div> 
+        <form method="POST" action="/ajax.php?method=authandremember" id="authorization-toremember-form-auth"> 
+         <input tabindex="1" value="E-mail" type="text" id="email" onfocus="cleanLoginPass('email', 'E-mail');" onblur="restoreLoginPass('email', 'E-mail');" name="email" class="text-login">
+         <input tabindex="2" type="password" name="password" class="text-login" title="Пароль">
+         <table border="0" width="100%">
+          <tbody>
+           <tr> 
+            <td align="center" width="50%"><input type="button" value="Авторизоваться" id="authorization-toremember-submit-auth"></td> 
+            <td align="center"><a class="hrefable" id="authorization-toremember-reg">Регистрация</a></td> 
+           </tr>
+          </tbody>
+         </table> 
+        </form> 
+       </div> 
+       <div id="authorization-toremember-registration" style="display: none;">
+        <form method="POST" action="/ajax.php?method=regandremember" id="authorization-toremember-form-reg"> 
+         <table border="0" style="margin-top: 10px;" cellpadding="0" cellspacing="0"> 
+          <tbody>
+           <tr> 
+            <td align="right" style="padding-right: 5px;"> Ваше имя <span style="color: red;">*</span> </td> 
+            <td><input tabindex="1" type="text" id="name" name="name" class="text-login"></td> 
+           </tr> 
+           <tr> 
+            <td align="right" style="padding-right: 5px;"> E-mail <span style="color: red">*</span> </td> 
+            <td><input tabindex="1" type="text" id="email" name="email" class="text-login"></td> 
+           </tr> 
+           <tr> 
+            <td align="right" style="padding-right: 5px;"> Придумайте пароль <span style="color: red">*</span> </td> 
+            <td><input tabindex="2" type="password" name="password" class="text-login" title="Пароль"></td> 
+           </tr> 
+           <tr> 
+            <td align="right" style="padding-right: 5px;"> Подтвердите пароль <span style="color: red">*</span> </td> 
+            <td><input tabindex="2" type="password" name="password2" class="text-login" title="Пароль"></td> 
+           </tr> 
+          </tbody>
+         </table> 
+         <table border="0" width="100%">
+          <tbody>
+           <tr> 
+            <td align="center" width="50%"><input type="button" value="Зарегистрироваться" id="authorization-toremember-submit-reg"></td> 
+            <td align="center"><a class="hrefable" id="authorization-toremember-auth">Уже есть учетная запись</a></td> 
+           </tr>
+          </tbody>
+         </table> 
+        </form>
+       </div> </td>
+     </tr> 
+     <tr>
+      <td colspan="2" style="padding-top: 10px; color: grey;"> 
+       <div id="authorization-toremember-note">
+         * авторизация нужна чтобы получать уведомления о новостях дома и района, участвовать в обсуждениях и голосованиях, оформить 
+        <a class="hrefable" onclick="WhatIsPremiumDialog()">Подтверждённый профиль</a> 
+       </div> <a id="authorization-toremember-backtoregistration" style="display: none;" class="hrefable">Вернуться к регистрации</a> </td>
+     </tr> 
+    </tbody>
+   </table>
+  </div> 
+  <div xmlns="" id="authorization-toaccess-dialog" style="display: none;">
+   <table border="0" width="300px" height="200px" align="center"> 
+    <tbody>
+     <tr>
+      <td align="left" valign="bottom" colspan="2"> <h2 style="margin-bottom: 10px;">Авторизуйтесь, пожалуйста</h2> 
+       <div style="background-color: LimeGreen; width: 150px; height: 3px;"> 
+       </div> </td>
+     </tr> 
+     <tr>
+      <td valign="middle" align="left" colspan="2"> для анонимных посетителей<br> сведения о пользователях не доступны </td>
+     </tr> 
+     <tr> 
+      <td align="center" width="50%"><input type="button" value="Авторизоваться" id="authorization-toaccess-submit"></td> 
+      <td align="center"><a class="hrefable" id="authorization-toaccess-cancel">Отмена</a></td> 
+     </tr> 
+    </tbody>
+   </table>
+  </div> 
+  <div xmlns="" id="authorization-toaction-dialog" style="display: none;">
+   <table border="0" width="300px" height="200px" align="center"> 
+    <tbody>
+     <tr>
+      <td align="left" valign="bottom" colspan="2"> <h2 style="margin-bottom: 10px;">Авторизуйтесь, пожалуйста</h2> 
+       <div style="background-color: LimeGreen; width: 150px; height: 3px;"> 
+       </div> </td>
+     </tr> 
+     <tr>
+      <td valign="middle" align="left" colspan="2"> это действие не доступно<br> для анонимных посетителей </td>
+     </tr> 
+     <tr> 
+      <td align="center" width="50%"><input type="button" value="Авторизоваться" id="authorization-toaction-submit"></td> 
+      <td align="center"><a class="hrefable" id="authorization-toaction-cancel">Отмена</a></td> 
+     </tr> 
+    </tbody>
+   </table>
+  </div> 
+  <div xmlns="" id="authorization-tomakefeed-dialog" style="display: none;">
+   <table border="0" width="300px" height="200px" align="center"> 
+    <tbody>
+     <tr>
+      <td align="left" valign="bottom" colspan="2"> <h2 style="margin-bottom: 10px;">Авторизуйтесь, пожалуйста</h2> 
+       <div style="background-color: LimeGreen; width: 150px; height: 3px;"> 
+       </div> </td>
+     </tr> 
+     <tr>
+      <td valign="middle" align="left" colspan="2"> чтобы мы смогли сформировать для Вас<br> персональную ленту новостей </td>
+     </tr> 
+     <tr> 
+      <td align="center" width="50%"><input type="button" value="Авторизоваться" id="authorization-tomakefeed-submit"></td> 
+      <td align="center"><a class="hrefable" id="authorization-tomakefeed-cancel">Отмена</a></td> 
+     </tr> 
+    </tbody>
+   </table>
+  </div> 
+  <div xmlns="" id="pickplace-tomakefeed-dialog" style="display: none;">
+   <table border="0" width="300px" height="200px" align="center"> 
+    <tbody>
+     <tr>
+      <td align="left" valign="bottom" colspan="2"> <h2 style="margin-bottom: 10px;">Пожалуйста, <br> укажите интересующие Вас дома</h2> 
+       <div style="background-color: #3079ED; width: 150px; height: 3px;"> 
+       </div> </td>
+     </tr> 
+     <tr>
+      <td valign="middle" align="left" colspan="2"> чтобы мы смогли сформировать для Вас<br> персональную ленту новостей </td>
+     </tr> 
+     <tr> 
+      <td align="center" width="50%"><input type="button" value="Указать дом" id="pickplace-tomakefeed-submit"></td> 
+      <td align="center"><a class="hrefable" id="pickplace-tomakefeed-cancel">Отмена</a></td> 
+     </tr> 
+    </tbody>
+   </table>
+  </div> 
+  <div xmlns="" id="whatispremium-dialog" style="display: none;">
+   <table border="0" width="300px" height="200px" align="center"> 
+    <tbody>
+     <tr>
+      <td align="left" valign="bottom" colspan="2"> <h2 style="margin-bottom: 10px;">Подтверждённый профиль</h2> 
+       <div style="background-color: #3079ED; width: 150px; height: 3px;"> 
+       </div> </td>
+     </tr> 
+     <tr>
+      <td valign="middle" align="left" colspan="2"> <p> Подтверждённый профиль получают пользователи, личность которых подтверждена членом УК / ТСЖ либо СМД (совет многоквартирного дома). </p> <p> Пользователи с Подтверждённым профилем получают доступ к дополнительным функциям: журнал заявок, сдача показаний приборов учета, получение счетов за квартиру, а также возможность принимать участие в электронных голосованиях (официальных). </p> </td>
+     </tr> 
+     <tr> 
+      <td align="center" width="50%"></td> 
+      <td align="center"><a class="hrefable" id="whatispremium-close">Закрыть</a></td> 
+     </tr> 
+    </tbody>
+   </table>
+  </div> 
+  <div xmlns="" id="approve-contacts-dialog" style="display: none;">
+   <table border="0" width="100%" height="200px" align="center"> 
+    <tbody>
+     <tr>
+      <td align="right"><a class="hrefable" id="approve-contacts-dialog-close">Закрыть</a></td>
+     </tr> 
+     <tr>
+      <td align="left" valign="bottom"> <h2 style="margin-bottom: 10px;">СМС-уведомления</h2> 
+       <div style="background-color: #3079ED; width: 150px; height: 3px;"> 
+       </div> </td>
+     </tr> 
+     <tr>
+      <td> <b>Важно!</b> Если Вы получаете или хотите получать СМС-уведомления от своей управляющей организации через DomoSite.ru, тогда обязательно укажите свой телефон. </td>
+     </tr> 
+     <tr>
+      <td align="center"> <input id="phone-confirmation-phone" type="text" name="phone" onchange="ProfileEdit_CheckPhone()" onkeyup="ProfileEdit_CheckPhone()"><span id="phone-confirmation-success" style="margin-left:10px; display: none;">телефон подтверждён!</span><br><input type="text" id="phone-confirmation-input" style="width: 50px; display: none;" name="code"><input type="button" value="Выслать код подтверждения" id="phone-confirmation-submit" class="hrefable" onclick="ApproveContacts_ConfirmPhone();" disabled> </td>
+     </tr> 
+     <tr>
+      <td align="center"><a id="phone-confirmation-resubmit" style="display: none;" class="hrefable" onclick="ProfileEdit_SendPhoneConfirmation();">Выслать код повторно</a></td>
+     </tr> 
+     <tr>
+      <td align="center" style="display: none;" id="phone-confirmation-notfound"><span style="color: red;">такой телефон не найден</span></td>
+     </tr> 
+     <tr>
+      <td>
+       <div style="display: none; margin-top: 5px;" id="phone-confirmation-mergeinfo"> 
+       </div></td>
+     </tr> 
+    </tbody>
+   </table>
+  </div> 
+  <script xmlns="" type="text/javascript">
+		
+			$(function(){
+
+				$('#peoplesearch').dialog({
+					autoOpen: false,
+					width: 800,
+					height: 200,
+					minHeight: 50,
+					position: ['center', 'top'],
+					resizable: false,
+					zIndex: 999,
+					modal: true
+				});
+				
+			    $(window).resize(function() {
+			    	if ( $('#peoplesearch').dialog('isOpen') )
+			    		alignPeoplesearchDialog();	
+			    });
+			
+			    $(window).scroll(function() {
+			    	if ( $('#peoplesearch').dialog('isOpen') )
+			    		alignPeoplesearchDialog();	
+			    });
+				
+			   	$("#peoplesearch-close").click(function(){
+			   		$('#peoplesearch').dialog('close');
+			   	});
+			   	
+			    $("form[id='peoplesearch-form']").ajaxForm(function(html){
+			    	$('#peoplesearch-wait').css('display', 'none');
+			    	$('#peoplesearch-results').html(html);
+			      	alignPeoplesearchDialog();
+			      	
+			      	if ( peoplesearchMapIsInitialized ) {
+			      		peoplesearchShowResultsOnMap();
+			      	} else {
+			      		peoplesearchShowResultsAfterMapInit = true;
+			      	} 
+			      	
+			   	});
+			   	
+			   	$("#peoplesearch-input").change(function(){
+			   		_ajax_peoplesearch(true);			   		
+			   	});
+			   	
+			   	$("#peoplesearch-submit-button").click(function(){
+			   		_ajax_peoplesearch(true);			   		
+			   	});
+			})
+		</script>
+  <div xmlns="" id="peoplesearch" style="display: none;">
+   <form method="POST" id="peoplesearch-form" action="/ajax.php?method=peoplesearch">
+    <table id="peoplesearch-table" border="0" cellspacing="0" cellpadding="0" width="100%"> 
+     <tbody>
+      <tr colspan="5">
+       <td colspan="5" align="right"><a class="hrefable" id="peoplesearch-close">Закрыть</a></td>
+      </tr> 
+      <tr colspan="5">
+       <td height="50px" colspan="5" valign="middle">
+        <div id="peoplesearch-caption">
+         <h2>Поиск на ДомоСайте...</h2>
+        </div></td>
+      </tr> 
+      <tr> 
+       <td width="50px"></td> 
+       <td align="right" width="50px">Поиск:</td> 
+       <td align="center" style="padding: 10px;"><input id="peoplesearch-input" type="text" name="request"></td> 
+       <td align="left" width="70px"><input type="button" value="Найти" id="peoplesearch-submit-button"></td> 
+       <td width="50px"></td> 
+      </tr> 
+      <tr> 
+       <td width="50px"></td> 
+       <td colspan="3">
+        <table border="0" width="100%"> 
+         <tbody>
+          <tr>
+           <td align="center" width="70%" valign="top">
+            <div id="peoplesearch-map">
+             <div id="peoplesearch-ymap" style="width:100%; height:400px"></div>
+            </div></td> 
+           <td valign="top" style="padding: 5px;" align="center"> 
+            <div id="peoplesearch-wait">
+             <img border="0" src="/img/wait-bar.gif">
+            </div> 
+            <div id="peoplesearch-results"> 
+            </div> </td> 
+          </tr>
+         </tbody>
+        </table></td> 
+       <td width="50px"></td> 
+      </tr> 
+     </tbody>
+    </table>
+   </form>
+  </div> 
+  <script xmlns="" type="text/javascript">
+			
+			$(document).ready(function(){
+			
+				$('#invitephone-input').text('');
+				$('#invite-users').dialog({
+					autoOpen: false,
+					width: 550,
+					minHeight: 50,
+					position: ['center', 40],
+					resizable: false,
+					zIndex: 999,
+					modal: true
+				});
+				
+				//InviteUsersDialog_UpdateHeight();
+				UsersInvite_UpdateMsg();
+				
+				$("#send_email_invite").ajaxForm({
+					beforeSubmit: function(arr, $form, options){
+						$('#invitedialog-submit').attr('disabled', 'disabled');
+						$('#send_result').css('display', 'none');
+					}, 
+					success: function(json){
+						$('#invitedialog-submit').removeAttr('disabled');
+						var result =  eval( "(" + json + ")" );
+						$('#send_result').css('display', 'block');
+						$('#send_result').html('Отправлено приглашений: '+result['send_count']);
+					}
+				});
+				
+				MakeYaShareGuestInviteBlock();
+			});
+			
+			function InviteUsersDialog_UpdateHeight(){
+				if ( $('#send_email_invite').css('display') == 'block' ){
+					var ht1 = $('#invitedialog-addresses-input').height();
+					var ht2 = $('#invitedialog-msg-input').height();
+					var ht3 = $('#invitephone-input').height();
+					
+					var baseHt = 450;
+					$('#invite-users').dialog('option', 'height', ht1 + ht2 + ht3 +baseHt);
+				} else {
+					var ht3 = $('#invitephone-input').height();
+					var baseHt = 400;
+					$('#invite-users').dialog('option', 'height', ht3 + baseHt);
+				}
+			}
+			
+			function UsersInvite_UpdateMsg(){
+			
+				if ( $('#invite_use_address').is(':checked') ) {
+					var msg = 'Подключайтесь к своему дому:  , domosite.ru/dom';
+				} else {
+					var msg = 'Подключайтесь к своему дому на DomoSite.ru'; 
+				}				 
+				
+				$('#invitephone-msg-input').text(msg);
+			}
+			
+			function UsersInvite_SendDialog(){
+			
+				if ( $('#invite_use_address').is(':checked') ) {
+					var msg = 'Подключайтесь к своему дому:  , domosite.ru/dom';
+				} else {
+					var msg = 'Подключайтесь к своему дому на DomoSite.ru'; 
+				}		
+				msg = $('#invitephone-msg-input').text();
+				
+				var v = (msg.length - msg.length % 71) / 71;
+				
+				if ( v == 0 ){
+					var translit = 0;
+				} else {
+					var translit = 1;
+				}
+				
+				MCSms_SendDialog(
+					0, msg, 
+					$('#invitephone-input').val(), translit, 0, 
+					function(resp){
+						$('#invite-users-phone-result').css('display', 'block').text('Приглашения отправлены');
+					}
+				);
+			}
+			
+		</script>
+  <div xmlns="" id="invite-users" style="display: none;height:auto"> 
+   <table border="0" width="100%">
+    <tbody>
+     <tr> 
+      <td> <h2>Пригласить соседей</h2> 
+       <div style="background-color: gainsboro; width: 150px; height: 3px;"> 
+       </div> </td> 
+      <td align="right" valign="top"><a class="hrefable" onclick="$('#invite-users').dialog('close');"> Закрыть </a></td> 
+     </tr>
+    </tbody>
+   </table> 
+   <div>
+    <ul style="margin-bottom:0px;"> 
+     <li> Объявления: скачать <a href="http://domosite.ru/files/domosite_invite.pdf"><img border="0" src="/img/ico/pdf.gif" title="Загрузить в формате Acrobat Reader (.pdf)"> в формате PDF </a> или <a href="http://domosite.ru/files/domosite_invite.doc"><img border="0" src="/img/ico/word.gif" title="Загрузить в формате Microsoft Word (.doc)"> в формате MS Word </a> </li> 
+     <li> Переименовать свою Wi-Fi сеть: например, "I_love_DomoSite_ru" :) </li> 
+    </ul>
+   </div> 
+   <div> 
+    <h2>Пригласить друзей</h2> 
+    <div style="background-color: #F16150; width: 150px; height: 3px;"> 
+    </div> 
+    <ul style="margin-bottom: 0px;"> 
+     <li style="list-style:none;"><span id="yashare-invite">-</span></li> 
+     <li> <a class="hrefable" style="text-decoration: underline;" onclick="SwitchDisplay('send_email_invite'); InviteUsersDialog_UpdateHeight();">Отправить приглашение по почте <small>▼</small></a><br>
+      <form id="send_email_invite" method="POST" style="padding-left: 20px; display: none;" action="/ajax.php/?method=sendEmailInvite&amp;houseID=">
+       <table border="0"> 
+        <tbody>
+         <tr> 
+          <td align="left"> Укажите адреса эл. почты, через запятую<br><textarea id="invitedialog-addresses-input" name="addresses" rows="2" style="height: 35px; width: 350px;" onkeyup="InviteUsersDialog_UpdateHeight();"> </textarea><br> Текст приглашения<br><textarea id="invitedialog-msg-input" name="msg" rows="2" style="height: 35px; width: 350px;" onkeyup="InviteUsersDialog_UpdateHeight();">Приглашаю присоединиться к соседям на DomoSite.ru!</textarea> </td> 
+          <td valign="bottom"><input type="submit" value="Отправить" id="invitedialog-submit"></td> 
+         </tr> 
+         <tr> 
+          <td align="right"><span align="center" id="send_result" style="display: none;"> Отправлено приглашений: </span></td> 
+          <td></td> 
+         </tr> 
+        </tbody>
+       </table>
+      </form> </li> 
+     <li> <span title="Приглашение будет отправлено по указанным Вами номерам телефонов от Вашего имени ">Через СМС</span>
+      <div style="padding-left: 20px; margin-top: 5px; margin-bottom: 10px;">
+       <i>чтобы воспользоваться этим способом приглашения, необходимо <a href="/my/profile"> подтвердить свой номер телефона </a></i>
+      </div> </li> 
+    </ul> 
+   </div> 
+  </div> 
+  <a id="textwidth" class="hide clear"></a>
+  <input id="editable-input" type="text" class="clear small">
+  <script>Trigger("EditableInputFieldReady");</script>
+  <script type="text/javascript">
+				$(document).ready(function() {
+				
+					if($('#show_feedback').val() == 1)
+						send_feedback(' ','');
+				});	
+				
+				(function (d, w, c) {
+				    (w[c] = w[c] || []).push(function() {
+				        try {
+				            w.yaCounter4937671 = new Ya.Metrika({id:4937671,
+				                    clickmap:true,
+				                    trackLinks:true, webvisor:true});
+				        } catch(e) { }
+				    });
+				    
+				    var n = d.getElementsByTagName("link")[0],
+				        s = d.createElement("script"),
+				        f = function () { n.parentNode.insertBefore(s, n); };
+				    s.type = "text/javascript";
+				    s.async = true;
+				    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+				
+				    if (w.opera == "[object Opera]") {
+				    } else { f(); }
+				})(document, window, "yandex_metrika_callbacks");
+				</script>
+  <noscript>
+   <div>
+    <img src="//mc.yandex.ru/watch/4937671" style="position:absolute; left:-9999px;" alt="">
+   </div>
+  </noscript>
+  <div style="width:0;height:0;margin:0;padding:0;overflow:hidden;border:0;position:absolute">
+   <iframe id="at-iframe" name="at-iframe"></iframe>
+   <form id="at-form" method="post" target="at-iframe" enctype="multipart/form-data" action="/ajax.api.php?method=file.upload">
+    <input id="at-input" type="file" name="file" multiple>
+   </form>
+  </div> 
+ </body>
+</html>

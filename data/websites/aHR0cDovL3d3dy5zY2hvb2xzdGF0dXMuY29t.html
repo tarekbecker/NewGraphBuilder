@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="not-ie" lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="description" content="Powerful data management engine for K-12 education"> 
+  <meta name="keywords" content="SchoolStatus, StudentStatus, student data, student, k-12, app, reporting, data warehouse"> 
+  <meta name="author" content="SchoolStatus, LLC."> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <meta name="robots" content="noarchive"> 
+  <title>SchoolStatus: Changing Education, Forever</title> 
+  <!--Fav and touch icons--> 
+  <link rel="shortcut icon" href="img/icons/favicon.ico"> 
+  <link rel="shortcut icon" href="img/icons/16x16.png"> 
+  <link rel="apple-touch-icon" href="img/icons/54x54.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="img/icons/72x72.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="img/icons/114x114.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="img/icons/144x144.png"> 
+  <!--google web font--> 
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet" type="text/css"> 
+  <!--style sheet--> 
+  <link rel="stylesheet" media="screen" href="css/bootstrap.css"> 
+  <link rel="stylesheet" media="screen" href="css/bootstrap-responsive.css"> 
+  <link rel="stylesheet" media="screen" href="css/style.css"> 
+  <!--fontawesome--> 
+  <!--[if IE 7 ]><link rel="stylesheet" media="screen" href="css/font-awesome-ie7.min.css"/> <![endif]--> 
+  <link rel="stylesheet" media="screen" href="css/font-awesome.min.css"> 
+  <!--jquery libraries / others are at the bottom--> 
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> 
+  <script src="js/modernizr.js" type="text/javascript"></script> 
+  <script src="js/retina.js" type="text/javascript"></script> 
+  <script src="js/smoothscroll.js" type="text/javascript"></script> 
+  <!--elastislide carousel script starts--> 
+  <link rel="stylesheet" media="screen" href="css/elastislide.css"> 
+  <script type="text/javascript" src="js/jquery.elastislide.js"></script> 
+  <script type="text/javascript">
+$(document).ready(function() {
+$('#carousel').elastislide({
+		imageW 		: 300,
+		margin		: 20,
+		border		: 0,
+		easing		: 'easeInBack'
+});
+});
+</script> 
+  <!--elastislide carousel script ends--> 
+  <!--prettyphoto scripts starts--> 
+  <link rel="stylesheet" media="screen" href="css/prettyPhoto.css"> 
+  <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+$(document).ready(function() {	
+		$('a[data-rel]').each(function() {
+		$(this).attr('rel', $(this).data('rel'));
+		});
+		$("a[rel^='prettyPhoto[gallery1]']").prettyPhoto({
+		animation_speed: 'fast',
+		slideshow: 5000,
+		autoplay_slideshow: false,
+		opacity: 0.80,
+		show_title: false,
+		theme: 'pp_default', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+		overlay_gallery: false,
+		social_tools: false,
+		changepicturecallback: function(){
+		var $pp = $('.pp_default');
+		if( parseInt( $pp.css('left') ) < 0 ){
+		$pp.css('left', 0 );
+		}
+		}
+		});	
+});
+</script> 
+  <!--prettyphoto scripts ends--> 
+  <!--flexslider scripts starts--> 
+  <link rel="stylesheet" media="screen" href="css/flexslider.css"> 
+  <script src="js/jquery.flexslider-min.js" type="text/javascript"></script> 
+  <script type="text/javascript"> 
+// Slider with thumbnail
+$(document).ready(function() {
+		$('#thumb-slider').flexslider({
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: true,
+		directionNav: false,
+		controlNav: false,
+		itemWidth: 180,
+		itemMargin: 0,
+		asNavFor: '#slider'
+		});
+		$('#slider').flexslider({
+		animation: "slide",
+		controlNav: false,
+		directionNav: false,
+		animationLoop: true,
+		slideshow: true,
+		sync: "#thumb-slider"
+        });
+});
+</script> 
+  <!--flexslider scripts ends--> 
+ </head> 
+ <body> 
+  <!-- header starts
+================================================== --> 
+  <section id="header" class="clearfix"> 
+   <div class="container"> 
+    <div class="row"> 
+     <!--logo starts--> 
+     <div class="span4 logo">
+      <a href="index.html"><img src="img/logo.png" width="148" height="41" alt="logo"></a>
+     </div> 
+     <!--logo ends--> 
+     <div class="span8 clearfix"> 
+      <!--menu starts--> 
+      <div id="smoothmenu" class="ddsmoothmenu"> 
+       <ul> 
+        <li><a href="index.html" class="selected">Home</a></li> 
+        <li><a href="about.html">About</a> </li> 
+        <li><a href="index.html#features" class="smoothScroll">Features</a></li> 
+        <li><a href="contact.html">Contact</a></li> 
+        <a href="https://secure.schoolstatus.com/logout/" class="btn btn-danger"> Login </a> 
+       </ul> 
+      </div> 
+      <!--menu ends--> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- header ends
+================================================== --> 
+  <!-- content starts
+================================================== --> 
+  <section id="content" class="clearfix"> 
+   <!--slider-bg starts--> 
+   <div id="slider-bg"> 
+    <div class="container"> 
+     <div class="row content-top"> 
+      <!--slides starts--> 
+      <div class="span12"> 
+       <div id="slider" class="flexslider"> 
+        <ul class="slides"> 
+         <!--slide one starts--> 
+         <li> 
+          <div class="row"> 
+           <div class="span6"> 
+            <h2>All district learning<br> data, up-to-date &amp; in one place</h2> 
+            <p>By creating a data framework designed around the needs of K-12 education, SchoolStatus is poised to help districts tackle their data challenges. Our framework connects to district learning and data systems to import all available instructional &amp; operational data in one interface.</p> 
+           </div> 
+           <div class="span6"> 
+            <img src="img/preview/tab-slide1.png" alt="slide"> 
+           </div> 
+          </div> </li> 
+         <!--slide one ends--> 
+         <!--slide two starts--> 
+         <li> 
+          <div class="row"> 
+           <div class="span6"> 
+            <h2>Empowering teachers<br> to make smart instructional decisions</h2> 
+            <p>While most K-12 districts collect ample amounts of educational data, that data rarely flows to teachers in real-time. SchoolStatus collects data from the disjointed data systems in a school district, normalizes and organizes it, and then makes it available to those who truly affect student outcomes: <span class="color">classroom teachers</span>.</p> 
+           </div> 
+           <div class="span6"> 
+            <img src="img/preview/tab-analytics.png" alt="slide"> 
+           </div> 
+          </div> </li> 
+         <!--slide two ends--> 
+         <!--slide three starts--> 
+         <li> 
+          <div class="row"> 
+           <div class="span6"> 
+            <h2>Automatically download the latest data from all district apps</h2> 
+            <p>Import, export, save, upload, format. If you work in a school, these terms all engender a common feeling: hassle. Our framework uses a proprietary process that connects to almost any web-based or database-based app. We automatically connect on a schedule you set to download the data you need. We make this look easy.</p> 
+           </div> 
+           <div class="span6"> 
+            <img src="img/preview/tab-automatic.png" alt="slide"> 
+           </div> 
+          </div> </li> 
+         <!--slide three ends--> 
+         <!--slide four starts--> 
+         <li> 
+          <div class="row"> 
+           <div class="span6"> 
+            <h2>Designed by veterans<br> of K-12 school districts, public &amp; private</h2> 
+            <p><span class="color">Ours is a labor of love.</span> Having worked in K-12 education for most of their professional careers, our team created SchoolStatus organically. Frustrated from making instructional decisions using limited data, we ventured to create a system to change the way we look at data. <br><br> Our team brings the creativity, passion, and vision to realize your district's goals.</p> 
+           </div> 
+           <div class="span6"> 
+            <img src="img/preview/tab-circles.png" alt="slide"> 
+           </div> 
+          </div> </li> 
+         <!--slide four ends--> 
+         <!--slide five starts--> 
+         <li> 
+          <div class="row"> 
+           <div class="span6"> 
+            <h2>Our cloud-based <br> solution creates unlimited possibilities</h2> 
+            <p>When you eliminate the burdens of capacity and storage requirements from school districts, they're able to focus on what matters: educating students. Our extensive resources are located in the cloud to prevent the sort of headaches our team had to contend with when they worked in their own districts. We bring the power of the cloud to any device, personal or district-owned, to allow districts to make the most of their data.</p> 
+           </div> 
+           <div class="span6"> 
+            <img src="img/preview/tab-infinite.png" alt="slide"> 
+           </div> 
+          </div> </li> 
+         <!--slide five ends--> 
+        </ul> 
+       </div> 
+      </div> 
+      <!--slides ends--> 
+      <!--thumbnails starts--> 
+      <div class="span12"> 
+       <div id="thumb-slider" class="flexslider"> 
+        <ul class="slides"> 
+         <li> 
+          <div class="thumb-text clearfix">
+           <i class="icon-cogs icon-64"></i> 
+           <p>All Data in One Place</p> 
+          </div> </li> 
+         <li> 
+          <div class="thumb-text clearfix">
+           <i class="icon-bolt icon-64"></i> 
+           <p>Empower your teachers</p> 
+          </div> </li> 
+         <li> 
+          <div class="thumb-text clearfix">
+           <i class="icon-magic icon-64"></i> 
+           <p>Automatic Data Import</p> 
+          </div> </li> 
+         <li> 
+          <div class="thumb-text clearfix">
+           <i class="icon-beaker icon-64"></i> 
+           <p>Designed by school veterans</p> 
+          </div> </li> 
+         <li> 
+          <div class="thumb-text clearfix">
+           <i class="icon-cloud icon-64"></i> 
+           <p>Cloud-based</p> 
+          </div> </li> 
+        </ul> 
+       </div> 
+      </div> 
+      <!--thumbnails ends--> 
+     </div> 
+    </div> 
+   </div> 
+   <!--slider-bg ends--> 
+   <div class="container"> 
+    <!--features starts--> 
+    <div class="row"> 
+     <div class="span12"> 
+      <h1>Make <span class="color">incredibly</span> informed <span class="color">decisions</span></h1> 
+      <ul class="list-3col text-center"> 
+       <li> 
+        <div class="icon-bg">
+         <i class="icon-spinner icon-120"></i>
+        </div> <h2>Amazing Technology</h2> SchoolStatus was designed using the latest web technologies. No longer are K-12 institutions forced to wait on the sidelines for the latest in analytics &amp; big data. </li> 
+       <li> 
+        <div class="icon-bg">
+         <i class="icon-lock icon-120"></i>
+        </div> <h2>Highly Secure</h2> Our framework is housed in a SAS70 facility and uses banking-grade encryption. We have designed SchoolStatus with strict FERPA compliance as the baseline rule.</li> 
+       <li> 
+        <div class="icon-bg">
+         <i class="icon-bar-chart icon-120"></i>
+        </div> <h2>Powerful Reporting</h2> Not only are our dashboards incredibly easy to use, but we marry that with a powerful drag-and-drop reporting engine. SchoolStatus allows for fast reporting like you've never seen.</li> 
+      </ul> 
+     </div> 
+    </div> 
+    <!--features ends--> 
+    <!--spacer here--> 
+    <div class="spacer-40px"></div> 
+    <!--carousel starts--> 
+    <div class="row"> 
+     <div class="span12"> 
+      <!--icon and heading--> 
+      <a name="features"></a> 
+      <h4 class="heading-icon clearfix"><img src="img/icons/heading-icon-1.png" width="40" height="40" alt="icon" class="icon-small-bg"> What makes SchoolStatus different</h4> 
+      <!--carousel list starts--> 
+      <div id="carousel" class="es-carousel-wrapper"> 
+       <div class="es-carousel"> 
+        <ul> 
+         <li> 
+          <div class="folio-thumb">
+           <img src="img/preview/thumb-tagging.png" alt="image"> 
+           <a href="img/preview/thumb-tagging.png" data-rel="prettyPhoto[gallery1]" title="This is title of Image" class="icon-zoom"></a>
+          </div> <h5>Customized Tagging</h5> <p>Need to keep an eye on a student? Creating a list of students receiving special services? We've created a unique system for tagging students who need extra attention.</p> </li> 
+         <li> 
+          <div class="folio-thumb">
+           <img src="img/preview/thumb-support.png" alt="image"> 
+           <a href="img/preview/thumb-support.png" data-rel="prettyPhoto[gallery1]" title="This is title of Image" class="icon-zoom"></a>
+          </div> <h5>24x7 support</h5> <p>Working late? No problem. When you have a question, we're here to help. We operate 24x7 to ensure we're always here to help when you need us.</p> </li> 
+         <li> 
+          <div class="folio-thumb">
+           <img src="img/preview/thumb-pd.png" alt="image"> 
+           <a href="img/preview/thumb-pd.png" data-rel="prettyPhoto[gallery1]" title="This is title of Image" class="icon-zoom"></a>
+          </div> <h5>Unlimited Training</h5> <p>Unlike other software vendors, we provide unlimited onsite or online training at no cost. We want you happy, educated, and using SchoolStatus to its fullest.</p> </li> 
+         <li> 
+          <div class="folio-thumb">
+           <img src="img/preview/thumb-cost.png" alt="image"> 
+           <a href="img/preview/thumb-cost.png" data-rel="prettyPhoto[gallery1]" title="This is title of Image" class="icon-zoom"></a>
+          </div> <h5>Cost Effective</h5> <p>No software to buy, no hardware to buy. Our flat pricing model is based upon the number of schools you have, not the number of students. This saves most districts a bundle.</p> </li> 
+         <li> 
+          <div class="folio-thumb">
+           <img src="img/preview/thumb-easy.png" alt="image"> 
+           <a href="img/preview/thumb-1.jpg" data-rel="prettyPhoto[gallery1]" title="This is title of Image" class="icon-zoom"></a>
+          </div> <h5>Easy to use interface</h5> <p>Our average user takes around 15 minutes to acclimate themselves to our dead-simple interface. If you need a complicated web-tutorial, we haven't designed it right.</p> </li> 
+         <li> 
+          <div class="folio-thumb">
+           <img src="img/preview/thumb-reporting.png" alt="image"> 
+           <a href="img/preview/thumb-reporting.png" data-rel="prettyPhoto[gallery1]" title="This is title of Image" class="icon-zoom"></a>
+          </div> <h5>Powerful Reporting</h5> <p>Coming from K-12 districts ourselves, we know the paperwork put in place by state &amp; federal requirements can be challenging. Our drag-and-drop reporting engine helps you quickly create reports.</p> </li> 
+        </ul> 
+       </div> 
+      </div> 
+      <!--carousel list ends--> 
+     </div> 
+    </div> 
+    <!--carousel ends--> 
+    <!--spacer here--> 
+    <div class="spacer-40px"></div> 
+    <!--row starts--> 
+    <div class="row"> 
+     <!--column one starts--> 
+     <div class="span6"> 
+      <h4 class="heading-icon clearfix"><img src="img/icons/heading-icon-2.png" width="40" height="40" alt="icon" class="icon-small-bg"> Powerful analytics built right in</h4> 
+      <p>We strive to create solutions that are both elegant and powerful. We provide, out of the box, incredibly powerful statistical analysis at the tap of your finger.</p> 
+      <!--two column list (nested columns) starts--> 
+      <div class="row"> 
+       <ul class="span3 list-checkmark"> 
+        <li>Attendance &amp; Discipline</li> 
+        <li>Absenteeism</li> 
+        <li>3rd party learning systems</li> 
+        <li>Regression Analysis</li> 
+       </ul> 
+       <ul class="span3 list-checkmark"> 
+        <li>Correlation Coefficients</li> 
+        <li>Geographic Data Mapping</li> 
+        <li>Point-and-click reporting</li> 
+        <li>Elegant &amp; simple interface</li> 
+       </ul> 
+      </div> 
+      <!--two column list starts--> 
+      <a href="mailto:answers@schoolstatus.com">Sign up for a demo today »</a> 
+     </div> 
+     <!--column one ends--> 
+     <!--column two starts--> 
+     <div class="span6"> 
+      <img src="img/preview/img-features.png" alt="image"> 
+     </div> 
+     <!--column two ends--> 
+    </div> 
+    <!--row ends--> 
+    <!--spacer here--> 
+    <div class="spacer-30px"></div> 
+    <!--box starts--> 
+    <div class="row"> 
+     <div class="span12"> 
+      <div class="dark-box"> 
+       <h1><span class="color">Get started</span> today with a free demo!</h1> 
+       <ul class="list-separator"> 
+        <li>Use <span class="color">your</span> district's data <span class="separator">|</span></li> 
+        <li> <span class="color">No</span> financial commitment <span class="separator">|</span> </li> 
+        <li> <span class="color">No hardware</span> to purchase</li> 
+       </ul> 
+       <a href="#" class="mybtn">Get Started</a> 
+      </div> 
+     </div> 
+    </div> 
+    <!--box ends--> 
+   </div> 
+  </section> 
+  <!-- content ends
+================================================== --> 
+  <!-- footer starts
+================================================== --> 
+  <footer id="footer" class="clearfix"> 
+   <div class="container"> 
+    <!--row starts--> 
+    <div class="row"> 
+     <!--column one / social icon list starts--> 
+     <div class="span2"> 
+      <ul class="social clearfix"> 
+       <li><a href="http://linkedin.com/company/schoolstatus"><img src="img/icons/social-icon-linkedin.png" width="28" height="28" alt="icon"></a></li> 
+       <li><a href="http://facebook.com/schoolstatus/"><img src="img/icons/social-icon-facebook.png" width="28" height="28" alt="icon"></a></li> 
+       <li><a href="http://twitter.com/schoolstatusapp"><img src="img/icons/social-icon-twitter.png" width="28" height="28" alt="icon"></a></li> 
+      </ul> 
+     </div> 
+     <!--column one ends--> 
+     <!--column two starts--> 
+     <div class="span2 text-center">
+       Follow on Twitter 
+      <h5><a href="http://twitter.com/schoolstatusapp">@schoolstatusapp</a></h5> 
+     </div> 
+     <!--column two ends--> 
+     <!--column three / twitter feed starts--> 
+     <div class="span8"> 
+      <div id="twitter"></div> 
+     </div> 
+     <!--column three / twitter feed ends--> 
+    </div> 
+    <!--row ends--> 
+    <!--spacer here--> 
+    <div class="spacer-30px"></div> 
+    <!--row starts--> 
+    <div class="row"> 
+     <!--column one starts--> 
+     <div class="span4"> 
+      <h5>About SchoolStatus</h5> 
+      <p>SchoolStatus is a data framework for K-12 education that combines a district's disjointed data systems in one place. Our web-based interface allows Superintendents, Principals, and Teachers to make intelligent, data-driven decisions.</p> 
+      <img src="img/logo.png" width="148" height="41" alt="logo"> 
+     </div> 
+     <!--column one ends--> 
+     <!--column two starts--> 
+     <div class="span4"> 
+      <h5>&nbsp;</h5> 
+      <ul class="list-unstyled"> 
+      </ul> 
+     </div> 
+     <!--column two ends--> 
+     <!--column three starts--> 
+     <div class="span4"> 
+      <h5>Get in touch</h5> 
+      <ul class="list-info"> 
+       <li><img src="img/icons/icon-18-address.png" alt="icon" style="margin-bottom:30px;">SchoolStatus, LLC.<br> PO Box 18938<br> Hattiesburg, MS 39402 </li> 
+       <li><img src="img/icons/icon-18-phone.png" alt="icon"><a href="tel:+16016200613">+1 601.620.0613</a></li> 
+       <li><img src="img/icons/icon-18-mail.png" alt="icon"><a href="mailto:answers@schoolstatus.com">answers@schoolstatus.com</a></li> 
+       <li><img src="img/icons/icon-18-skype.png" alt="icon" class="mar-btm"><a href="http://skype.com/schoolstatus">http://skype.com/schoolstatus</a></li> 
+      </ul> 
+     </div> 
+     <!--column three ends--> 
+    </div> 
+    <!--row ends--> 
+   </div> 
+  </footer> 
+  <!-- footer ends
+================================================== --> 
+  <!-- copyright starts
+================================================== --> 
+  <section id="copyright" class="clearfix"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span12"> 
+      <p> © Copyright 2013</p> 
+      <!--copyright menu starts--> 
+      <ul class="copyright-menu"> 
+       <li><a href="/">Home</a></li> 
+       <li><a href="/about.html">About</a></li> 
+       <li><a href="contact.html">Contact</a></li> 
+      </ul> 
+      <!--copyright menu ends--> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- copyright ends
+================================================== --> 
+  <!--other jqueries required--> 
+  <script src="js/bootstrap.js" type="text/javascript"></script> 
+  <script src="js/ddsmoothmenu.js" type="text/javascript"></script> 
+  <script src="js/twitter.js" type="text/javascript"></script> 
+  <script src="js/jquery.easing.1.3.js" type="text/javascript"></script> 
+  <script src="js/custom.js" type="text/javascript"></script> 
+  <!-- begin olark code --> 
+  <script data-cfasync="false" type="text/javascript">/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('8457-940-10-5909');/*]]>*/</script>
+  <noscript>
+   <a href="https://www.olark.com/site/8457-940-10-5909/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by 
+   <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a>
+  </noscript> 
+  <!-- end olark code --> 
+  <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5037c59a613f5d33f0000047');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script> 
+  <script>
+var _prum = [['id', '518d2ef2abe53d1667000000'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>  
+ </body>
+</html>

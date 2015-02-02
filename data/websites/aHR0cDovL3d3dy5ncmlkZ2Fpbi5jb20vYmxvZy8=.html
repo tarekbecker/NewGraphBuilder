@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<!--// OPEN HTML //-->
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+ <!--// OPEN HEAD //-->
+ <head> 
+  <!--// SITE TITLE //--> 
+  <title>Blog - GridGain</title> 
+  <!--// SITE META //--> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"> 
+  <!--// PINGBACK & FAVICON //--> 
+  <link rel="pingback" href="http://gridgain.com/xmlrpc.php"> 
+  <link rel="shortcut icon" href="http://gridgain.com/wp-content/uploads/2014/09/favicon.ico"> 
+  <!--// GOOGLE FONT LOADER //--> 
+  <script>
+			var html = document.getElementsByTagName('html')[0];
+			html.className += '  wf-loading';
+			setTimeout(function() {
+			  html.className = html.className.replace(' wf-loading', '');
+			}, 3000);
+			
+			WebFontConfig = {
+			    google: { families: ['Montserrat',  'Vidaloka'] }
+			};
+			
+			(function() {
+				document.getElementsByTagName("html")[0].setAttribute("class","wf-loading")
+				//  NEEDED to push the wf-loading class to your head
+				document.getElementsByTagName("html")[0].setAttribute("className","wf-loading")
+				// for IE…
+			
+			var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				 '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'false';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			})();
+		</script> 
+  <!--// LEGACY HTML5 SUPPORT //--> 
+  <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://gridgain.com/wp-content/themes/flexform/js/excanvas.compiled.js"></script>
+		<![endif]--> 
+  <!--// WORDPRESS HEAD HOOK //--> 
+  <script>
+        writeCookie();
+        function writeCookie()
+        {
+            the_cookie = document.cookie;
+            if( the_cookie ){
+                if( window.devicePixelRatio >= 2 ){
+                    the_cookie = "pixel_ratio="+window.devicePixelRatio+";"+the_cookie;
+                    document.cookie = the_cookie;
+                    //location = '';
+                }
+            }
+        }
+    </script> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.7.1 - https://yoast.com/wordpress/plugins/seo/ --> 
+  <link rel="canonical" href="http://gridgain.com/blog/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:title" content="Blog - GridGain"> 
+  <meta property="og:url" content="http://gridgain.com/blog/"> 
+  <meta property="og:site_name" content="GridGain"> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="alternate" type="application/rss+xml" title="GridGain » Feed" href="http://gridgain.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="GridGain » Comments Feed" href="http://gridgain.com/comments/feed/"> 
+  <link rel="alternate" type="text/calendar" title="GridGain » iCal Feed" href="http://gridgain.com/events/?ical=1"> 
+  <link rel="stylesheet" id="js_composer_front-css" href="http://gridgain.com/wp-content/themes/flexform/includes/page-builder/assets/js_composer_front.css?ver=3.0.2" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="jquery.prettyphoto-css" href="http://gridgain.com/wp-content/plugins/wp-video-lightbox/css/prettyPhoto.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="video-lightbox-css" href="http://gridgain.com/wp-content/plugins/wp-video-lightbox/wp-video-lightbox.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="codenegar-tooltip-style-css" href="http://gridgain.com/wp-content/plugins/content-tooltip/css/smallipop.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="codenegar-tooltip-animate-css" href="http://gridgain.com/wp-content/plugins/content-tooltip/css/animate.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="rs-plugin-settings-css" href="http://gridgain.com/wp-content/plugins/revslider/rs-plugin/css/settings.css?rev=4.3.8&amp;ver=4.0.1" type="text/css" media="all"> 
+  <style type="text/css">
+.tp-caption a {
+color: #ed1c24 !important;;
+padding: 8px 14px;
+background-color: #000000;
+border: 6px solid #000000;
+text-shadow: none;
+text-decoration: none;
+-webkit-transition: all 0.2s ease-out;
+-moz-transition: all 0.2s ease-out;
+-o-transition: all 0.2s ease-out;
+-ms-transition: all 0.2s ease-out;
+}
+
+.tp-caption a:hover {
+color: #000000 !important;
+border: 4px solid #ed1c24;
+background-color: #ed1c24;
+}
+</style> 
+  <link rel="stylesheet" id="rs-plugin-captions-css" href="http://gridgain.com/wp-content/plugins/revslider/rs-plugin/css/captions.php?rev=4.3.8&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="tribe-events-full-calendar-style-css" href="http://gridgain.com/wp-content/plugins/the-events-calendar/resources/tribe-events-full.min.css?ver=3.8.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="tribe-events-calendar-style-css" href="http://gridgain.com/wp-content/plugins/the-events-calendar/resources/tribe-events-theme.min.css?ver=3.8.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="tribe-events-calendar-full-mobile-style-css" href="http://gridgain.com/wp-content/plugins/the-events-calendar/resources/tribe-events-full-mobile.min.css?ver=3.8.1" type="text/css" media="only screen and (max-width: 768px)"> 
+  <link rel="stylesheet" id="tribe-events-calendar-mobile-style-css" href="http://gridgain.com/wp-content/plugins/the-events-calendar/resources/tribe-events-theme-mobile.min.css?ver=3.8.1" type="text/css" media="only screen and (max-width: 768px)"> 
+  <link rel="stylesheet" id="logooos-style-css" href="http://gridgain.com/wp-content/plugins/wp_logooos_plugin/css/logos.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="bootstrap-css" href="http://gridgain.com/wp-content/themes/flexform/css/bootstrap.min.css" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="bootstrap-responsive-css" href="http://gridgain.com/wp-content/themes/flexform/css/bootstrap-responsive.min.css" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="fontawesome-css-css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="main-css-css" href="http://gridgain.com/wp-content/themes/gridgain/style.css" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="responsive-css-css" href="http://gridgain.com/wp-content/themes/flexform/css/responsive.css" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="jetpack_css-css" href="http://gridgain.com/wp-content/plugins/jetpack/css/jetpack.css?ver=3.2.1" type="text/css" media="all"> 
+  <!-- This site uses the Yoast Google Analytics plugin v5.1.4 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ --> 
+  <script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-1382082-1']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script> 
+  <!-- / Yoast Google Analytics --> 
+  <script type="text/javascript" src="http://gridgain.com/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script>
+  <script>jQueryWP = jQuery;</script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/wp-video-lightbox/js/jquery.prettyPhoto.js?ver=3.1.5"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var vlpp_vars = {"prettyPhoto_rel":"wp-video-lightbox","animation_speed":"fast","slideshow":"5000","autoplay_slideshow":"false","opacity":"0.80","show_title":"true","allow_resize":"true","allow_expand":"true","default_width":"640","default_height":"480","counter_separator_label":"\/","theme":"pp_default","horizontal_padding":"20","hideflash":"false","wmode":"opaque","autoplay":"false","modal":"false","deeplinking":"false","overlay_gallery":"true","overlay_gallery_max":"30","keyboard_shortcuts":"true","ie6_fallback":"true"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/wp-video-lightbox/js/video-lightbox.js?ver=3.1.5"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?rev=4.3.8&amp;ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?rev=4.3.8&amp;ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/wp_logooos_plugin/js/helper-plugins/jquery.ba-throttle-debounce.min.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/wp_logooos_plugin/js/helper-plugins/jquery.mousewheel.min.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/wp_logooos_plugin/js/helper-plugins/jquery.touchSwipe.min.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/wp_logooos_plugin/js/helper-plugins/jquery.transit.min.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/wp_logooos_plugin/js/jquery.carouFredSel-6.2.1.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/wp_logooos_plugin/js/logos.js?ver=4.0.1"></script> 
+  <link rel="shortlink" href="http://wp.me/P4HfjY-9W"> 
+  <style type="text/css">img#wpstats{display:none}</style> 
+  <style type="text/css">
+    body {
+    margin-top: -28px;
+    padding-bottom: 28px;
+    }
+    body.admin-bar #wphead {
+       padding-top: 0;
+    }
+    body.admin-bar #footer {
+       padding-bottom: 28px;
+    }
+    #wpadminbar {
+        top: auto !important;
+        bottom: 0;
+    }
+    #wpadminbar .quicklinks .menupop ul {
+        bottom: 28px;
+    }
+     #wpadminbar ul ul {
+        display:none;
+    }
+    </style>
+  <style type="text/css">
+/*========== Web Font Styles ==========*/
+body, h6, #sidebar .widget-heading h3, #header-search input, .header-items h3.phone-number, .related-wrap h4, #comments-list > h3, .item-heading h1, .sf-button, button, input[type="submit"], input[type="reset"], input[type="button"], .wpb_accordion_section h3, #header-login input, #mobile-navigation > div, .search-form input {font-family: "Helvetica", Arial, Helvetica, Tahoma, sans-serif;}
+h1, h2, h3, h4, h5, .custom-caption p, span.dropcap1, span.dropcap2, span.dropcap3, span.dropcap4, .wpb_call_text, .impact-text, .testimonial-text, .header-advert {font-family: "Helvetica", Arial, Helvetica, Tahoma, sans-serif;}
+nav .menu li {font-family: "Helvetica", Arial, Helvetica, Tahoma, sans-serif;}
+body, p, .masonry-items .blog-item .quote-excerpt, #commentform label, .contact-form label {font-size: 16px;line-height: 26px;}
+h1, .wpb_impact_text .wpb_call_text, .impact-text {font-size: 29px;line-height: 36px;}
+h2 {font-size: 28px;line-height: 32px;}
+h3 {font-size: 22px;line-height: 28px;}
+h4, .body-content.quote, #respond-wrap h3 {font-size: 16px;line-height: 20px;}
+h5 {font-size: 14px;line-height: 18px;}
+h6 {font-size: 12px;line-height: 16px;}
+nav .menu li {font-size: 16px;}
+
+/*========== Accent Styles ==========*/
+::selection, ::-moz-selection {background-color: #ee2b27; color: #fff;}
+.recent-post figure, span.highlighted, span.dropcap4, .loved-item:hover .loved-count, .flickr-widget li, .portfolio-grid li, .wpcf7 input.wpcf7-submit[type="submit"] {background-color: #ee2b27!important;}
+.sf-button.accent {background-color: #ee2b27!important;}
+a:hover, #sidebar a:hover, .pagination-wrap a:hover, .carousel-nav a:hover, .portfolio-pagination div:hover > i, #footer a:hover, #copyright a, .beam-me-up a:hover span, .portfolio-item .portfolio-item-permalink, .read-more-link, .blog-item .read-more, .blog-item-details a, .author-link, .comment-meta .edit-link a, .comment-meta .comment-reply a, #reply-title small a, ul.member-contact, ul.member-contact li a, #respond .form-submit input:hover, span.dropcap2, .wpb_divider.go_to_top a, love-it-wrapper:hover .love-it, .love-it-wrapper:hover span, .love-it-wrapper .loved, .comments-likes a:hover i, .comments-likes .love-it-wrapper:hover a i, .comments-likes a:hover span, .love-it-wrapper:hover a i, .item-link:hover, #header-translation p a, #swift-slider .flex-caption-large h1 a:hover, .wooslider .slide-title a:hover, .caption-details-inner .details span > a, .caption-details-inner .chart span, .caption-details-inner .chart i, #swift-slider .flex-caption-large .chart i, #breadcrumbs a:hover, .ui-widget-content a:hover {color: #ee2b27;}
+.carousel-wrap > a:hover {color: #ee2b27!important;}
+.comments-likes a:hover span, .comments-likes a:hover i {color: #ee2b27!important;}
+.read-more i:before, .read-more em:before {color: #ee2b27;}
+.bypostauthor .comment-wrap .comment-avatar,.search-form input:focus,.wpcf7 input[type="text"]:focus,.wpcf7 textarea:focus {border-color: #ee2b27!important;}
+nav .menu ul li:first-child:after,.navigation a:hover > .nav-text {border-bottom-color: #ee2b27;}
+nav .menu ul ul li:first-child:after {border-right-color: #ee2b27;}
+.wpb_impact_text .wpb_button span {color: #fff;}
+article.type-post #respond .form-submit input#submit {background-color: #2e2e36;}
+
+/*========== Main Styles ==========*/
+body {color: #000000;}
+.pagination-wrap a, .search-pagination a {color: #000000;}
+body {background-color: #e4e4e4;}
+#main-container, .tm-toggle-button-wrap a {background-color: #ffffff;}
+a, .ui-widget-content a {color: #ee2b27;}
+.pagination-wrap li span.current, .pagination-wrap li a:hover {color: #ffffff;background: #ee2b27;border-color: #ee2b27;}
+.pagination-wrap li a, .pagination-wrap li span.expand {color: #000000;border-color: #e4e4e4;}
+.pagination-wrap li a, .pagination-wrap li span {background-color: #ffffff;}
+input[type="text"], input[type="password"], input[type="email"], textarea, select, input[type="tel"] {border-color: #e4e4e4;background: #f7f7f7;}
+textarea:focus, input:focus {border-color: #999!important;}
+
+/*========== Header Styles ==========*/
+#top-bar {background: #f7f7f7;border-bottom-color: #e4e4e4;}
+#top-bar-social {color: #999999;}
+#top-bar .menu li {border-left-color: #e4e4e4; border-right-color: #e4e4e4;}
+#top-bar .menu > li > a, #top-bar .menu > li.parent:after {color: #999999;}
+#top-bar .menu > li > a:hover {color: #222222;}
+#top-bar .show-menu {background-color: #e4e4e4;color: #2e2e36;}
+#header-languages .current-language span {color: #222222;}
+#header-section, #mini-header {border-bottom-color: #e4e4e4;}
+#header-section, #mini-header {background-color: #ffffff;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#ffffff));background: -webkit-linear-gradient(top, #ffffff, #ffffff);background: -moz-linear-gradient(top, #ffffff, #ffffff);background: -ms-linear-gradient(top, #ffffff, #ffffff);background: -o-linear-gradient(top, #ffffff, #ffffff);}
+#logo img {padding-top: 0px;padding-bottom: 0px;}
+#logo img, #logo img.retina, #mini-logo img, #mini-logo img.retina {width: 297px;}
+#nav-section {margin-top: 13px;}
+.page-content {border-bottom-color: #e4e4e4;}
+
+/*========== Navigation Styles ==========*/
+#nav-pointer {background-color: #ee2b27;}
+.show-menu {background-color: #2e2e36;color: #ffffff;}
+nav .menu > li:before {background: #ee2b27;}
+nav .menu .sub-menu .parent > a:after {border-left-color: #ee2b27;}
+nav .menu ul {background-color: #ffffff;border-color: #cccccc;}
+nav .menu ul li {border-bottom-color: #cccccc;border-bottom-style: none;}
+nav .menu > li a, #menubar-controls a {color: #666666;}
+nav .menu > li:hover > a {color: #ee2b27;}
+nav .menu ul li a {color: #666666;}
+nav .menu ul li:hover > a {color: #ee2b27;}
+nav .menu li.parent > a:after, nav .menu li.parent > a:after:hover {color: #aaa;}
+nav .menu li.current-menu-ancestor > a, nav .menu li.current-menu-item > a {color: #ee2b27;}
+nav .menu ul li.current-menu-ancestor > a, nav .menu ul li.current-menu-item > a {color: #222222;}
+#nav-search, #mini-search {background: #f7f7f7;}
+#nav-search a, #mini-search a {color: #999999;}
+
+/*========== Page Heading Styles ==========*/
+.page-heading {background-color: #f7f7f7;border-bottom-color: #e4e4e4;}
+.page-heading h1, .page-heading h3 {color: #222222;}
+#breadcrumbs {color: #999999;}
+#breadcrumbs a, #breadcrumb i {color: #999999;}
+
+/*========== Body Styles ==========*/
+body, input[type="text"], input[type="password"], input[type="email"], textarea, select {color: #000000;}
+h1, h1 a {color: #000000;}
+h2, h2 a {color: #000000;}
+h3, h3 a {color: #000000;}
+h4, h4 a, .carousel-wrap > a {color: #000000;}
+h5, h5 a {color: #000000;}
+h6, h6 a {color: #000000;}
+.wpb_impact_text .wpb_call_text, .impact-text {color: #000000;}
+.read-more i, .read-more em {color: transparent;}
+
+/*========== Content Styles ==========*/
+.pb-border-bottom, .pb-border-top {border-color: #e4e4e4;}
+h3.wpb_heading {border-color: #000000;}
+.flexslider ul.slides {background: #2e2e36;}
+#swift-slider .flex-caption .flex-caption-headline {background: #ffffff;}
+#swift-slider .flex-caption .flex-caption-details .caption-details-inner {background: #ffffff; border-bottom: #e4e4e4}
+#swift-slider .flex-caption-large, #swift-slider .flex-caption-large h1 a {color: #ffffff;}
+#swift-slider .flex-caption h4 i {line-height: 20px;}
+#swift-slider .flex-caption-large .comment-chart i {color: #ffffff;}
+#swift-slider .flex-caption-large .loveit-chart span {color: #ee2b27;}
+#swift-slider .flex-caption-large a {color: #ee2b27;}
+#swift-slider .flex-caption .comment-chart i, #swift-slider .flex-caption .comment-chart span {color: #2e2e36;}
+figure .overlay {background-color: #ee2b27;color: #fff;}
+.overlay .thumb-info h4 {color: #fff;}
+figure:hover .overlay {box-shadow: inset 0 0 0 500px #ee2b27;}
+
+/*========== Sidebar Styles ==========*/
+.sidebar .widget-heading h4 {color: #000000; border-bottom-color: #000000;}
+.widget ul li {border-color: #e4e4e4;}
+.widget_search form input {background: #f7f7f7;}
+.widget .wp-tag-cloud li a {border-color: #e4e4e4;}
+.widget .tagcloud a:hover, .widget ul.wp-tag-cloud li:hover > a {background: #ee2b27; color: #ffffff;}
+.loved-item .loved-count {color: #ffffff;background: #2e2e36;}
+.subscribers-list li > a.social-circle {color: #ffffff;background: #2e2e36;}
+.subscribers-list li:hover > a.social-circle {color: #fbfbfb;background: #ee2b27;}
+.sidebar .widget_categories ul > li a, .sidebar .widget_archive ul > li a, .sidebar .widget_nav_menu ul > li a, .sidebar .widget_meta ul > li a, .sidebar .widget_recent_entries ul > li, .widget_product_categories ul > li a {color: #ee2b27;}
+.sidebar .widget_categories ul > li a:hover, .sidebar .widget_archive ul > li a:hover, .sidebar .widget_nav_menu ul > li a:hover, .widget_nav_menu ul > li.current-menu-item a, .sidebar .widget_meta ul > li a:hover, .sidebar .widget_recent_entries ul > li a:hover, .widget_product_categories ul > li a:hover {color: #ee2b27;}
+#calendar_wrap caption {border-bottom-color: #2e2e36;}
+.sidebar .widget_calendar tbody tr > td a {color: #ffffff;background-color: #2e2e36;}
+.sidebar .widget_calendar tbody tr > td a:hover {background-color: #ee2b27;}
+.sidebar .widget_calendar tfoot a {color: #2e2e36;}
+.sidebar .widget_calendar tfoot a:hover {color: #ee2b27;}
+.widget_calendar #calendar_wrap, .widget_calendar th, .widget_calendar tbody tr > td, .widget_calendar tbody tr > td.pad {border-color: #e4e4e4;}
+.widget_sf_infocus_widget .infocus-item h5 a {color: #2e2e36;}
+.widget_sf_infocus_widget .infocus-item h5 a:hover {color: #ee2b27;}
+
+/*========== Portfolio Styles ==========*/
+.filter-wrap .select:after {background: #ffffff;}
+.filter-wrap ul li a {color: #ffffff;}
+.filter-wrap ul li a:hover {color: #ee2b27;}
+.filter-wrap ul li.selected a {color: #ffffff;background: #ee2b27;}
+.filter-slide-wrap {background-color: #222;}
+.portfolio-item {border-bottom-color: #e4e4e4;}
+.masonry-items .portfolio-item-details {border-color: #e4e4e4;background: #f7f7f7;}
+.wpb_portfolio_carousel_widget .portfolio-item {background: #ffffff;}
+.wpb_portfolio_carousel_widget .portfolio-item h4.portfolio-item-title a > i {line-height: 20px;}
+.masonry-items .blog-item .blog-details-wrap:before {background-color: #f7f7f7;}
+.masonry-items .portfolio-item figure {border-color: #e4e4e4;}
+.portfolio-details-wrap span span {color: #666;}
+.share-links > a:hover {color: #ee2b27;}
+
+/*========== Blog Styles ==========*/
+.blog-aux-options li a, .blog-aux-options li form input {background: #f7f7f7;}
+.blog-aux-options li.selected a {background: #ee2b27;color: #ffffff;}
+.blog-filter-wrap .aux-list li:hover {border-bottom-color: transparent;}
+.blog-filter-wrap .aux-list li:hover a {color: #ffffff;background: #ee2b27;}
+.blog-item {border-color: #e4e4e4;}
+.standard-post-details .standard-post-author {border-color: #e4e4e4;}
+.masonry-items .blog-item {background: #f7f7f7;}
+.mini-items .blog-item-details, .author-info-wrap, .related-wrap, .tags-link-wrap, .comment .comment-wrap, .share-links, .single-portfolio .share-links, .single .pagination-wrap {border-color: #e4e4e4;}
+.related-wrap h4, #comments-list h4, #respond-wrap h3 {border-bottom-color: #000000;}
+.related-item figure {background-color: #2e2e36;}
+.required {color: #ee3c59;}
+article.type-post #respond .form-submit input#submit {color: #fff;}
+#respond {background: #f7f7f7; border-color: #e4e4e4}
+#respond input[type="text"], #respond input[type="email"], #respond textarea {background: #ffffff}
+.comments-likes a i, .comments-likes a span, .comments-likes .love-it-wrapper a i {color: #000000;}
+#respond .form-submit input:hover {color: #fff!important;}
+.recent-post {background: #ffffff;}
+.recent-post .post-item-details {border-top-color: #e4e4e4;color: #e4e4e4;}
+.post-item-details span, .post-item-details a, .post-item-details .comments-likes a i, .post-item-details .comments-likes a span {color: #999;}
+
+/*========== Shortcode Styles ==========*/
+.sf-button.accent {color: #fff;}
+a.sf-button:hover, #footer a.sf-button:hover {background-image: none;color: #fff!important;}
+a.sf-button.green:hover, a.sf-button.lightgrey:hover, a.sf-button.limegreen:hover {color: #111!important;}
+a.sf-button.white:hover {color: #ee2b27!important;}
+.wpcf7 input.wpcf7-submit[type="submit"] {color: #fff;}
+.sf-icon {color: #000000;}
+.sf-icon-cont {background-color: #a8c5eb;}
+span.dropcap3 {background: #000;color: #fff;}
+span.dropcap4 {color: #fff;}
+.wpb_divider, .wpb_divider.go_to_top_icon1, .wpb_divider.go_to_top_icon2, .testimonials > li, .jobs > li, .wpb_impact_text, .tm-toggle-button-wrap, .tm-toggle-button-wrap a, .portfolio-details-wrap, .wpb_divider.go_to_top a {border-color: #e4e4e4;}
+.wpb_divider.go_to_top_icon1 a, .wpb_divider.go_to_top_icon2 a {background: #ffffff;}
+.wpb_accordion .wpb_accordion_section, .wpb_tabs .ui-tabs .ui-tabs-panel, .wpb_content_element .ui-tabs .ui-tabs-nav, .ui-tabs .ui-tabs-nav li {border-color: #e4e4e4;}
+.widget_categories ul, .widget_archive ul, .widget_nav_menu ul, .widget_recent_comments ul, .widget_meta ul, .widget_recent_entries ul, .widget_product_categories ul {border-color: #e4e4e4;}
+.wpb_accordion_section, .wpb_tabs .ui-tabs .ui-tabs-panel, .wpb_accordion .wpb_accordion_section, .wpb_accordion_section .ui-accordion-content, .wpb_accordion .wpb_accordion_section > h3.ui-state-active a, .ui-tabs .ui-tabs-nav li.ui-tabs-active a {background: #ffffff!important;}
+.wpb_accordion h3.ui-accordion-header.ui-state-active:hover a, .wpb_content_element .ui-widget-header li.ui-tabs-active:hover a {background: #ffffff;color: #ee2b27;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .wpb_accordion .wpb_accordion_section > h3.ui-state-active a {color: #ee2b27;}
+.wpb_tour .ui-tabs .ui-tabs-nav li.ui-state-active {border-color: #e4e4e4!important; border-right-color: transparent!important; color: #ffffff;}
+.wpb_tour.span3 .ui-tabs .ui-tabs-nav li {border-color: #e4e4e4!important;}
+.ui-accordion h3.ui-accordion-header .ui-icon {color: #000000;}
+.ui-accordion h3.ui-accordion-header.ui-state-active .ui-icon, .ui-accordion h3.ui-accordion-header.ui-state-active:hover .ui-icon {color: #ee2b27;}
+.wpb_accordion h3.ui-accordion-header:hover a, .wpb_content_element .ui-widget-header li:hover a {background: #ee2b27;color: #ffffff;}
+.wpb_accordion h3.ui-accordion-header:hover .ui-icon {color: #ffffff;}
+blockquote.pullquote {border-color: #e4e4e4;}
+.borderframe img {border-color: #eeeeee;}
+.labelled-pricing-table .column-highlight {background-color: #fff;}
+.labelled-pricing-table .pricing-table-label-row, .labelled-pricing-table .pricing-table-row {background: #eeeeee;}
+.labelled-pricing-table .alt-row {background: #f7f7f7;}
+.labelled-pricing-table .pricing-table-price {background: #999999;}
+.labelled-pricing-table .pricing-table-package {background: #bbbbbb;}
+.labelled-pricing-table .lpt-button-wrap {background: #e4e4e4;}
+.labelled-pricing-table .lpt-button-wrap a.accent {background: #222!important;}
+.labelled-pricing-table .column-highlight .lpt-button-wrap {background: transparent!important;}
+.labelled-pricing-table .column-highlight .lpt-button-wrap a.accent {background: #ee2b27!important;}
+.column-highlight .pricing-table-price {color: #fff;background: #ee2b27;border-bottom-color: #ee2b27;}
+.column-highlight .pricing-table-package {background: #eda09e;}
+.column-highlight .pricing-table-details {background: #edd2d0;}
+.wpb_box_text.coloured .box-content-wrap {background: #ee2b27;color: #fff;}
+.wpb_box_text.whitestroke .box-content-wrap {background-color: #fff;border-color: #e4e4e4;}
+.client-item figure {border-color: #e4e4e4;}
+.client-item figure:hover {border-color: #333;}
+ul.member-contact li a:hover {color: #333;}
+.testimonials.carousel-items li {border-color: #e4e4e4;}
+.testimonials.carousel-items li:after {border-left-color: #e4e4e4;border-top-color: #e4e4e4;}
+.team-member .team-member-bio {border-bottom-color: #e4e4e4;}
+.horizontal-break {background-color: #e4e4e4;}
+.progress .bar {background-color: #ee2b27;}
+.progress.standard .bar {background: #ee2b27;}
+
+/*========== Footer Styles ==========*/
+#footer {background-color: #414141;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#323232), to(#414141));background: -webkit-linear-gradient(top, #414141, #323232);background: -moz-linear-gradient(top, #414141, #323232);background: -ms-linear-gradient(top, #414141, #323232);background: -o-linear-gradient(top, #414141, #323232);border-top-color: ;}
+#footer, #footer h5, #footer p {color: ;}
+#footer h5 {border-bottom-color: ;}
+#footer a:not(.sf-button) {color: #ee2b27;}
+#footer .widget ul li, #footer .widget_categories ul, #footer .widget_archive ul, #footer .widget_nav_menu ul, #footer .widget_recent_comments ul, #footer .widget_meta ul, #footer .widget_recent_entries ul, #footer .widget_product_categories ul {border-color: ;}
+#copyright {background-color: ;border-top-color: ;}
+#copyright p {color: ;}
+#copyright a {color: #b3b3b3;}
+#copyright a:hover {color: #ee2b27;}
+#footer .widget_calendar #calendar_wrap, #footer .widget_calendar th, #footer .widget_calendar tbody tr > td, #footer .widget_calendar tbody tr > td.pad {border-color: ;}
+
+/*========== WooCommerce Styles ==========*/
+.woocommerce-account p.myaccount_address, .woocommerce-account .page-content h2 {border-bottom-color: #e4e4e4;}
+.woocommerce .products ul, .woocommerce ul.products, .woocommerce-page .products ul, .woocommerce-page ul.products {border-top-color: #e4e4e4;}
+
+/*========== Asset Background Styles ==========*/
+.alt-bg {border-color: #e4e4e4;}
+.alt-bg.alt-one {background-color: #f2f2f2;}
+.alt-bg.alt-one {background-image: url(http://gridgain.com/wp-content/uploads/2014/09/header-pattern-single.png); background-repeat: repeat; background-position: center top; background-size:auto;}
+.alt-bg.alt-one, .alt-bg.alt-one h1, .alt-bg.alt-one h2, .alt-bg.alt-one h3, .alt-bg.alt-one h3, .alt-bg.alt-one h4, .alt-bg.alt-one h5, .alt-bg.alt-one h6, .alt-one .carousel-wrap > a {color: #414141;}
+.alt-one.full-width-text:after {border-top-color:#f2f2f2;}
+.alt-one h3.wpb_heading {border-bottom-color:#414141;}
+.alt-bg.alt-two {background-color: #f2f2f2;}
+.alt-bg.alt-two {background-image: url(http://gridgain.com/wp-content/uploads/2014/06/grey-honeycomb.png); background-repeat: repeat; background-position: center top; background-size:auto;}
+.alt-bg.alt-two, .alt-bg.alt-two h1, .alt-bg.alt-two h2, .alt-bg.alt-two h3, .alt-bg.alt-two h3, .alt-bg.alt-two h4, .alt-bg.alt-two h5, .alt-bg.alt-two h6, .alt-two .carousel-wrap > a {color: #0a0a0a;}
+.alt-two.full-width-text:after {border-top-color:#f2f2f2;}
+.alt-two h3.wpb_heading {border-bottom-color:#0a0a0a;}
+.alt-bg.alt-three {background-color: #FFFFFF;}
+.alt-bg.alt-three {background-image: url(http://gridgain.com/wp-content/uploads/2014/06/white_tiles.png); background-repeat: repeat; background-position: center top; background-size:auto;}
+.alt-bg.alt-three, .alt-bg.alt-three h1, .alt-bg.alt-three h2, .alt-bg.alt-three h3, .alt-bg.alt-three h3, .alt-bg.alt-three h4, .alt-bg.alt-three h5, .alt-bg.alt-three h6, .alt-three .carousel-wrap > a {color: #414141;}
+.alt-three.full-width-text:after {border-top-color:#FFFFFF;}
+.alt-three h3.wpb_heading {border-bottom-color:#414141;}
+.alt-bg.alt-four {background-color: #414141;}
+.alt-bg.alt-four {background-image: url(http://gridgain.com/wp-content/uploads/2014/06/midgrey-squares-small.png); background-repeat: repeat; background-position: center top; background-size:auto;}
+.alt-bg.alt-four, .alt-bg.alt-four h1, .alt-bg.alt-four h2, .alt-bg.alt-four h3, .alt-bg.alt-four h3, .alt-bg.alt-four h4, .alt-bg.alt-four h5, .alt-bg.alt-four h6, .alt-four .carousel-wrap > a {color: #ffffff;}
+.alt-four.full-width-text:after {border-top-color:#414141;}
+.alt-four h3.wpb_heading {border-bottom-color:#ffffff;}
+.alt-bg.alt-five {background-color: #a8c5eb;}
+.alt-bg.alt-five, .alt-bg.alt-five h1, .alt-bg.alt-five h2, .alt-bg.alt-five h3, .alt-bg.alt-five h3, .alt-bg.alt-five h4, .alt-bg.alt-five h5, .alt-bg.alt-five h6, .alt-five .carousel-wrap > a {color: #494949;}
+.alt-five.full-width-text:after {border-top-color:#a8c5eb;}
+.alt-five h3.wpb_heading {border-bottom-color:#494949;}
+.alt-bg.alt-six {background-color: #FFFFFF;}
+.alt-bg.alt-six, .alt-bg.alt-six h1, .alt-bg.alt-six h2, .alt-bg.alt-six h3, .alt-bg.alt-six h3, .alt-bg.alt-six h4, .alt-bg.alt-six h5, .alt-bg.alt-six h6, .alt-six .carousel-wrap > a {color: #222222;}
+.alt-six.full-width-text:after {border-top-color:#FFFFFF;}
+.alt-six h3.wpb_heading {border-bottom-color:#222222;}
+.alt-bg.alt-seven {background-color: #FFFFFF;}
+.alt-bg.alt-seven, .alt-bg.alt-seven h1, .alt-bg.alt-seven h2, .alt-bg.alt-seven h3, .alt-bg.alt-seven h3, .alt-bg.alt-seven h4, .alt-bg.alt-seven h5, .alt-bg.alt-seven h6, .alt-seven .carousel-wrap > a {color: #222222;}
+.alt-seven.full-width-text:after {border-top-color:#FFFFFF;}
+.alt-seven h3.wpb_heading {border-bottom-color:#222222;}
+.alt-bg.alt-eight {background-color: #FFFFFF;}
+.alt-bg.alt-eight, .alt-bg.alt-eight h1, .alt-bg.alt-eight h2, .alt-bg.alt-eight h3, .alt-bg.alt-eight h3, .alt-bg.alt-eight h4, .alt-bg.alt-eight h5, .alt-bg.alt-eight h6, .alt-eight .carousel-wrap > a {color: #222222;}
+.alt-eight.full-width-text:after {border-top-color:#FFFFFF;}
+.alt-eight h3.wpb_heading {border-bottom-color:#222222;}
+.alt-bg.alt-nine {background-color: #FFFFFF;}
+.alt-bg.alt-nine, .alt-bg.alt-nine h1, .alt-bg.alt-nine h2, .alt-bg.alt-nine h3, .alt-bg.alt-nine h3, .alt-bg.alt-nine h4, .alt-bg.alt-nine h5, .alt-bg.alt-nine h6, .alt-nine .carousel-wrap > a {color: #222222;}
+.alt-nine.full-width-text:after {border-top-color:#FFFFFF;}
+.alt-nine h3.wpb_heading {border-bottom-color:#222222;}
+.alt-bg.alt-ten {background-color: #FFFFFF;}
+.alt-bg.alt-ten, .alt-bg.alt-ten h1, .alt-bg.alt-ten h2, .alt-bg.alt-ten h3, .alt-bg.alt-ten h3, .alt-bg.alt-ten h4, .alt-bg.alt-ten h5, .alt-bg.alt-ten h6, .alt-ten .carousel-wrap > a {color: #222222;}
+.alt-ten.full-width-text:after {border-top-color:#FFFFFF;}
+.alt-ten h3.wpb_heading {border-bottom-color:#222222;}
+
+/*========== Custom Font Styles ==========*/
+h1, h2, h3, h4, h5, .heading-font, .custom-caption p, span.dropcap1, span.dropcap2, span.dropcap3, span.dropcap4, .wpb_call_text, .impact-text, .testimonial-text, .header-advert, .wpb_call_text, .impact-text {font-family: "Montserrat", sans-serif;font-weight: regular;}
+
+/*========== Responsive Coloured Styles ==========*/
+@media only screen and (max-width: 767px) {#top-bar nav .menu > li {border-top-color: #e4e4e4;}
+nav .menu > li {border-top-color: #e4e4e4;}
+}
+</style> 
+  <style type="text/css" id="syntaxhighlighteranchor"></style> 
+  <!--// ETRIGUE TRACKING CODE //--> 
+  <script type="text/javascript">
+			var _etgq = _etgq || [];
+			_etgq.push(['_etg_o',1273]);
+			(function() {
+				var etgs = document.createElement('script'); etgs.type = 'text/javascript'; etgs.async = true;
+				etgs.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'trk.etrigue.com/etriguelive.js';
+				var etst = document.getElementsByTagName('script')[0]; etst.parentNode.insertBefore(etgs, etst);
+			})();
+		</script> 
+  <!--// CLOSE HEAD //--> 
+ </head> 
+ <!--// OPEN BODY //--> 
+ <body class="page page-id-616 page-template-default page-shadow responsive-fluid  tribe-theme-parent-flexform tribe-theme-child-gridgain page-template-page-php"> 
+  <!--// NO JS ALERT //--> 
+  <noscript> 
+   <div class="no-js-alert">
+    Please enable JavaScript to view this website.
+   </div> 
+  </noscript> 
+  <!--// OPEN #container //--> 
+  <div id="container"> 
+   <!--// OPEN TOP BAR //--> 
+   <div id="top-bar" class="top-bar-menu-right"> 
+    <div class="container"> 
+     <div class="row"> 
+      <a href="#" class="visible-phone show-menu">Select a page<i class="icon-angle-down"></i></a> 
+      <nav id="top-bar-menu" class="top-menu span8 clearfix"> 
+       <div id="aux-nav"> 
+        <ul class="menu"> 
+        </ul> 
+       </div> 
+       <div class="menu-top-bar-container">
+        <ul id="menu-top-bar" class="menu">
+         <li id="menu-item-6900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6900 template-developer"><a href="http://gridgain.com/developer-central/in-memory-data-fabric/high-performance-computing/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/developer-central/in-memory-data-fabric/high-performance-computing/', 'Developer Central']);" title="Developer Central">Developer Central</a></li> 
+         <li id="menu-item-622" class="nav-support menu-item menu-item-type-post_type menu-item-object-page menu-item-622 default"><a href="http://gridgain.com/developer-central/support/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/developer-central/support/', 'Support']);" title="Support">Support</a></li> 
+         <li id="menu-item-621" class="nav-documentation menu-item menu-item-type-post_type menu-item-object-page menu-item-621 template-developer"><a href="http://gridgain.com/developer-central/documentation/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/developer-central/documentation/', 'Documentation']);" title="Documentation">Documentation</a></li> 
+         <li id="menu-item-623" class="nav-blog menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-616 current_page_item menu-item-623 default"><a href="http://gridgain.com/blog/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/blog/', 'Blog']);" title="Blog">Blog</a></li> 
+         <li id="menu-item-5907" class="nav-download menu-item menu-item-type-post_type menu-item-object-page menu-item-5907 default"><a href="http://gridgain.com/download/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/download/', 'Download']);" title="Download">Download</a></li> 
+        </ul>
+       </div> 
+      </nav> 
+      <div id="top-bar-social" class="span4 clearfix"> 
+       <ul class="social-icons small dark"> 
+        <li class="twitter"><a href="http://www.twitter.com/gridgain" target="_blank">Twitter</a></li> 
+        <li class="vimeo"><a href="http://www.vimeo.com/gridgain" target="_blank">Vimeo</a></li> 
+        <li class="youtube"><a href="http://www.youtube.com/user/gridgain" target="_blank">YouTube</a></li> 
+        <li class="googleplus"><a href="https://plus.google.com/101084158514011491168/posts" target="_blank">Google+</a></li> 
+        <li class="linkedin"><a href="https://www.linkedin.com/company/249196" target="_blank">LinkedIn</a></li> 
+        <li class="yelp"><a href="http://www.meetup.com/Bay-Area-In-Memory-Computing" target="_blank">Yelp</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <!--// CLOSE TOP BAR //--> 
+   </div> 
+   <!--// OPEN #header-section //--> 
+   <div id="header-section" class="logo-left  clearfix"> 
+    <div class="container"> 
+     <header class="row"> 
+      <div id="logo" class="span3 clearfix"> 
+       <a href="http://gridgain.com"> <img class="standard" src="http://gridgain.com/wp-content/uploads/2014/09/gridgain-red-logo-standard.png" alt="GridGain"> <img class="retina" src="http://gridgain.com/wp-content/uploads/2014/09/gridgain-red-logo-retina.png" alt="GridGain"> </a> 
+      </div> 
+      <!--// OPEN NAV SECTION //--> 
+      <div id="nav-section" class=" span9 clearfix"> 
+       <div class="nav-wrap clearfix"> 
+        <!--// OPEN MAIN NAV //--> 
+        <a href="#" class="visible-phone show-menu">Select a page<i class="icon-angle-down"></i></a> 
+        <nav id="main-navigation"> 
+         <div class="menu-top-menu-main-container">
+          <ul id="menu-top-menu-main" class="menu">
+           <li id="menu-item-6437" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6437 default"><a href="http://gridgain.com/why-in-memory/changing-the-game/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/why-in-memory/changing-the-game/', 'Why In-Memory']);" title="Why In-Memory">Why In-Memory</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-6438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6438 default"><a href="http://gridgain.com/why-in-memory/changing-the-game/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/why-in-memory/changing-the-game/', 'Changing the Game']);" title="Changing the Game">Changing the Game</a> 
+              <ul class="sub-menu"> 
+               <li id="menu-item-6439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6439"><a href="http://gridgain.com/why-in-memory/changing-the-game/#high-performance-transactions" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/why-in-memory/changing-the-game/#high-performance-transactions', 'High-Performance Transactions']);" title="High-Performance Transactions">High-Performance Transactions</a></li> 
+               <li id="menu-item-6440" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6440"><a href="http://gridgain.com/why-in-memory/changing-the-game/#real-time-analytics" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/why-in-memory/changing-the-game/#real-time-analytics', 'Real-Time Analytics']);" title="Real-Time Analytics">Real-Time Analytics</a></li> 
+              </ul> </li> 
+             <li id="menu-item-6441" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6441 default"><a href="http://gridgain.com/why-in-memory/why-gridgain/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/why-in-memory/why-gridgain/', 'Why GridGain']);" title="Why GridGain">Why GridGain</a> 
+              <ul class="sub-menu"> 
+               <li id="menu-item-6442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6442"><a href="http://gridgain.com/why-in-memory/why-gridgain/#open-source-commitment" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/why-in-memory/why-gridgain/#open-source-commitment', 'Open Source Commitment']);" title="Open Source Commitment">Open Source Commitment</a></li> 
+               <li id="menu-item-6443" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6443"><a href="http://gridgain.com/why-in-memory/why-gridgain/#optimized-for-speed-and-scale" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/why-in-memory/why-gridgain/#optimized-for-speed-and-scale', 'Optimized for Speed and Scale']);" title="Optimized For Speed And Scale">Optimized for Speed and Scale</a></li> 
+               <li id="menu-item-6444" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6444"><a href="http://gridgain.com/why-in-memory/why-gridgain/#comprehensive-platform" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/why-in-memory/why-gridgain/#comprehensive-platform', 'Comprehensive Platform']);" title="Comprehensive Platform">Comprehensive Platform</a></li> 
+              </ul> </li> 
+            </ul> </li> 
+           <li id="menu-item-7934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7934 default"><a href="http://gridgain.com/products/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/products/', 'Products']);">Products</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-8259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8259 default"><a href="http://gridgain.com/products/in-memory-data-fabric/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/products/in-memory-data-fabric/', 'In-Memory Data Fabric']);">In-Memory Data Fabric</a> 
+              <ul class="sub-menu"> 
+               <li id="menu-item-8284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8284 default"><a href="http://gridgain.com/products/in-memory-data-fabric/features/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/products/in-memory-data-fabric/features/', 'Features']);">Features</a></li> 
+               <li id="menu-item-8285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8285 default"><a href="http://gridgain.com/products/in-memory-data-fabric/editions/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/products/in-memory-data-fabric/editions/', 'Editions']);">Editions</a></li> 
+              </ul> </li> 
+             <li id="menu-item-6805" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6805 default"><a href="http://gridgain.com/products/hadoop-accelerator/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/products/hadoop-accelerator/', 'Hadoop Accelerator']);" title="Hadoop Accelerator">Hadoop Accelerator</a> 
+              <ul class="sub-menu"> 
+               <li id="menu-item-7016" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7016"><a href="http://gridgain.com/products/hadoop-accelerator/#features" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/products/hadoop-accelerator/#features', 'Features']);" title="Features">Features</a></li> 
+               <li id="menu-item-7015" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7015"><a href="http://gridgain.com/products/hadoop-accelerator/#performance" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/products/hadoop-accelerator/#performance', 'Performance']);" title="Performance">Performance</a></li> 
+               <li id="menu-item-7017" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7017"><a href="http://gridgain.com/products/hadoop-accelerator/#plug-and-play" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/products/hadoop-accelerator/#plug-and-play', 'Plug-and-Play']);" title="Plug-and-Play">Plug-and-Play</a></li> 
+              </ul> </li> 
+             <li id="menu-item-7268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7268 default"><a href="http://gridgain.com/products/management-console-2/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/products/management-console-2/', 'Management Console']);" title="Management Console">Management Console</a> 
+              <ul class="sub-menu"> 
+               <li id="menu-item-7269" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7269"><a title="Overview" href="/products/management-console-2/#overview">Overview</a></li> 
+               <li id="menu-item-7270" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7270"><a title="Dashboard" href="/products/management-console-2/#dashboard">Dashboard</a></li> 
+              </ul> </li> 
+            </ul> </li> 
+           <li id="menu-item-6858" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6858 default"><a href="http://gridgain.com/solutions/database-caching/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/solutions/database-caching/', 'Solutions']);" title="Solutions">Solutions</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-6446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6446 default"><a href="http://gridgain.com/solutions/database-caching/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/solutions/database-caching/', 'Database Caching']);" title="Database Caching">Database Caching</a></li> 
+             <li id="menu-item-6447" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6447 default"><a href="http://gridgain.com/solutions/web-session-clustering/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/solutions/web-session-clustering/', 'Web Session Clustering']);" title="Web Session Clustering">Web Session Clustering</a></li> 
+             <li id="menu-item-6448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6448 default"><a href="http://gridgain.com/solutions/application-scaling/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/solutions/application-scaling/', 'Application Scaling']);" title="Application Scaling">Application Scaling</a></li> 
+             <li id="menu-item-6449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6449 default"><a href="http://gridgain.com/solutions/real-time-streaming/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/solutions/real-time-streaming/', 'Real-Time Streaming']);" title="Real-Time Streaming">Real-Time Streaming</a></li> 
+            </ul> </li> 
+           <li id="menu-item-6483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6483 default"><a href="http://gridgain.com/featured-customers/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/featured-customers/', 'Customers']);" title="Customers">Customers</a></li> 
+           <li id="menu-item-6514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6514 default"><a href="http://gridgain.com/partners/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/partners/', 'Partners']);" title="Partners">Partners</a></li> 
+           <li id="menu-item-6643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6643 default"><a href="http://gridgain.com/download/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/download/', 'Resources']);" title="Resources">Resources</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-6478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6478 default"><a href="http://gridgain.com/download/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/download/', 'Download']);" title="Download">Download</a></li> 
+             <li id="menu-item-6479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6479 template-developer"><a href="http://gridgain.com/developer-central/documentation/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/developer-central/documentation/', 'Documentation']);" title="Documentation">Documentation</a></li> 
+             <li id="menu-item-6759" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6759 default"><a href="http://gridgain.com/resources/feature-comparisons/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/resources/feature-comparisons/', 'Feature Comparisons']);" title="Feature Comparisons">Feature Comparisons</a></li> 
+             <li id="menu-item-7485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7485 template-developer"><a href="http://gridgain.com/developer-central/benchmarks/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/developer-central/benchmarks/', 'Benchmarks']);" title="Benchmarks">Benchmarks</a></li> 
+             <li id="menu-item-7853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7853 default"><a href="http://gridgain.com/resources/professional-services/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/resources/professional-services/', 'Professional Services']);">Professional Services</a></li> 
+             <li id="menu-item-7894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7894 default"><a href="http://gridgain.com/resources/training/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/resources/training/', 'Training']);">Training</a></li> 
+             <li id="menu-item-6480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6480 default"><a href="http://gridgain.com/resources/papers/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/resources/papers/', 'Papers']);" title="Papers">Papers</a></li> 
+             <li id="menu-item-7527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7527 default"><a href="http://gridgain.com/resources/videos/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/resources/videos/', 'Videos']);" title="Videos">Videos</a></li> 
+             <li id="menu-item-6482" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6482"><a title="Events" href="/events">Events</a></li> 
+             <li id="menu-item-6481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6481 default"><a href="http://gridgain.com/resources/forum/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/resources/forum/', 'Forum']);" title="Forum">Forum</a></li> 
+            </ul> </li> 
+           <li id="menu-item-6484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6484 default"><a href="http://gridgain.com/company/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/company/', 'Company']);" title="Company">Company</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-7038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7038 default"><a href="http://gridgain.com/company/about-us/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/company/about-us/', 'About Us']);" title="About Us">About Us</a></li> 
+             <li id="menu-item-6486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6486 default"><a href="http://gridgain.com/company/management/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/company/management/', 'Management']);" title="Management">Management</a></li> 
+             <li id="menu-item-6487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6487 default"><a href="http://gridgain.com/company/board-of-directors/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/company/board-of-directors/', 'Board of Directors']);" title="Board of Directors">Board of Directors</a></li> 
+             <li id="menu-item-6488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6488 default"><a href="http://gridgain.com/company/advisory-board/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/company/advisory-board/', 'Advisory Board']);" title="Advisory Board">Advisory Board</a></li> 
+             <li id="menu-item-7758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7758 default"><a href="http://gridgain.com/company/investors/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/company/investors/', 'Investors']);">Investors</a></li> 
+             <li id="menu-item-6489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6489 default"><a href="http://gridgain.com/company/press-releases/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/company/press-releases/', 'Press Releases']);" title="Press Releases">Press Releases</a></li> 
+             <li id="menu-item-6490" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6490"><a title="In the News" href="/in-the-news">In the News</a></li> 
+             <li id="menu-item-6492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6492 default"><a href="http://gridgain.com/company/careers/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/company/careers/', 'Careers']);" title="Careers">Careers</a></li> 
+             <li id="menu-item-9309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9309 template-withform"><a href="http://gridgain.com/company/contact-us/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://gridgain.com/company/contact-us/', 'Contact Us']);">Contact Us</a></li> 
+            </ul> </li> 
+          </ul>
+         </div> 
+         <!--// CLOSE MAIN NAV //--> 
+        </nav> 
+        <div id="nav-search"> 
+         <a href="#" class="nav-search-link"><i class="icon-search"></i></a> 
+         <form method="get" action="http://gridgain.com/"> 
+          <input type="text" name="s" autocomplete="off"> 
+         </form> 
+        </div> 
+       </div> 
+       <!--// CLOSE NAV SECTION //--> 
+      </div> 
+     </header> 
+    </div> 
+   </div> 
+   <!--// OPEN #main-container //--> 
+   <div id="main-container" class="clearfix"> 
+    <div id="header-shadow"></div> 
+    <!--// OPEN .container //--> 
+    <div class="container"> 
+     <!--// OPEN #page-wrap //--> 
+     <div id="page-wrap"> 
+      <div class="row"> 
+       <div class="page-heading span12 clearfix alt-bg alt-one"> 
+        <h1>Blog</h1> 
+       </div> 
+      </div> 
+      <div class="breadcrumbs-wrap row">
+       <div id="breadcrumbs" class="span12 alt-bg">
+        <a title="Go to GridGain." href="http://gridgain.com" class="home">GridGain</a> &gt; Blog
+       </div>
+      </div> 
+      <div class="inner-page-wrap has-no-sidebar clearfix"> 
+       <!-- OPEN page --> 
+       <div class="post-616 page type-page status-publish hentry clearfix" id="616"> 
+        <div class="page-content clearfix"> 
+         <div class="row"> 
+          <div class="wpb_blog_widget wpb_content_element span12"> 
+           <div class="wpb_wrapper blog-wrap"> 
+            <div class="blog-aux-wrap row">
+             <ul class="blog-aux-options span12">
+              <li><a href="#" class="blog-slideout-trigger" data-aux="categories"><i class="icon-list"></i>Categories</a></li>
+              <li><a href="#" class="blog-slideout-trigger" data-aux="tags"><i class="icon-tags"></i>Tags</a></li>
+              <li class="blog-aux-search">
+               <form method="get" class="search-form" action="http://gridgain.com/">
+                <input type="text" placeholder="Search" name="s">
+               </form></li>
+              <li><a href="#" class="blog-slideout-trigger" data-aux="archives"><i class="icon-list"></i>Archives</a></li>
+              <li><a href="?feed=rss2" class="rss-link" target="_blank"><i class="icon-rss"></i>RSS</a></li>
+             </ul>
+            </div>
+            <div class="filter-wrap blog-filter-wrap row clearfix">
+             <div class="filter-slide-wrap span12 alt-bg alt-one">
+              <ul class="aux-list aux-categories row clearfix"> 
+               <li class="cat-item cat-item-74"><a href="http://gridgain.com/category/archives/">Archives <span>(123)</span></a> </li> 
+               <li class="cat-item cat-item-78"><a href="http://gridgain.com/category/blog/">Blog <span>(63)</span></a> </li> 
+               <li class="cat-item cat-item-77"><a href="http://gridgain.com/category/events/">Events and Meetups <span>(76)</span></a> </li> 
+               <li class="cat-item cat-item-75"><a href="http://gridgain.com/category/fyi/">For Your Information <span>(78)</span></a> </li> 
+               <li class="cat-item cat-item-79"><a href="http://gridgain.com/category/press-releases/">Press Releases <span>(24)</span></a> </li> 
+               <li class="cat-item cat-item-76"><a href="http://gridgain.com/category/product-releases/">Product Releases <span>(34)</span></a> </li> 
+              </ul>
+              <ul class="aux-list aux-tags row clearfix">
+               <ul class="wp-tag-cloud"> 
+                <li><a href="http://gridgain.com/tag/analytics/" class="tag-link-82" title="1 topic" style="font-size: 12px;">analytics</a></li> 
+                <li><a href="http://gridgain.com/tag/apache/" class="tag-link-106" title="1 topic" style="font-size: 12px;">apache</a></li> 
+                <li><a href="http://gridgain.com/tag/bi/" class="tag-link-83" title="1 topic" style="font-size: 12px;">bi</a></li> 
+                <li><a href="http://gridgain.com/tag/bigdata/" class="tag-link-84" title="3 topics" style="font-size: 12px;">bigdata</a></li> 
+                <li><a href="http://gridgain.com/tag/big-data/" class="tag-link-80" title="15 topics" style="font-size: 12px;">big data</a></li> 
+                <li><a href="http://gridgain.com/tag/big-data-innovation-summit/" class="tag-link-100" title="1 topic" style="font-size: 12px;">big data innovation summit</a></li> 
+                <li><a href="http://gridgain.com/tag/clustered-web-sessions/" class="tag-link-107" title="1 topic" style="font-size: 12px;">clustered web sessions</a></li> 
+                <li><a href="http://gridgain.com/tag/clustering/" class="tag-link-108" title="1 topic" style="font-size: 12px;">clustering</a></li> 
+                <li><a href="http://gridgain.com/tag/conference/" class="tag-link-101" title="1 topic" style="font-size: 12px;">conference</a></li> 
+                <li><a href="http://gridgain.com/tag/data-grid/" class="tag-link-102" title="1 topic" style="font-size: 12px;">data grid</a></li> 
+                <li><a href="http://gridgain.com/tag/distributed-acid-transactions/" class="tag-link-109" title="1 topic" style="font-size: 12px;">distributed ACID Transactions</a></li> 
+                <li><a href="http://gridgain.com/tag/distributed-caching/" class="tag-link-8" title="2 topics" style="font-size: 12px;">distributed caching</a></li> 
+                <li><a href="http://gridgain.com/tag/distributed-data-queries/" class="tag-link-110" title="1 topic" style="font-size: 12px;">distributed data queries</a></li> 
+                <li><a href="http://gridgain.com/tag/distributed-data-structures/" class="tag-link-111" title="1 topic" style="font-size: 12px;">distributed data structures</a></li> 
+                <li><a href="http://gridgain.com/tag/distributed-event-notifications/" class="tag-link-112" title="1 topic" style="font-size: 12px;">distributed event notifications</a></li> 
+                <li><a href="http://gridgain.com/tag/distributed-messaging/" class="tag-link-113" title="1 topic" style="font-size: 12px;">distributed messaging</a></li> 
+                <li><a href="http://gridgain.com/tag/flash/" class="tag-link-92" title="1 topic" style="font-size: 12px;">flash</a></li> 
+                <li><a href="http://gridgain.com/tag/funding/" class="tag-link-90" title="1 topic" style="font-size: 12px;">funding</a></li> 
+                <li><a href="http://gridgain.com/tag/grid/" class="tag-link-85" title="1 topic" style="font-size: 12px;">grid</a></li> 
+                <li><a href="http://gridgain.com/tag/gridgain/" class="tag-link-13" title="31 topics" style="font-size: 12px;">gridgain</a></li> 
+                <li><a href="http://gridgain.com/tag/hadoop/" class="tag-link-89" title="2 topics" style="font-size: 12px;">hadoop</a></li> 
+                <li><a href="http://gridgain.com/tag/hana/" class="tag-link-91" title="2 topics" style="font-size: 12px;">hana</a></li> 
+                <li><a href="http://gridgain.com/tag/in-memory/" class="tag-link-88" title="5 topics" style="font-size: 12px;">in-memory</a></li> 
+                <li><a href="http://gridgain.com/tag/in-memory-big-data/" class="tag-link-87" title="1 topic" style="font-size: 12px;">in-memory big data</a></li> 
+                <li><a href="http://gridgain.com/tag/in-memory-computing/" class="tag-link-22" title="9 topics" style="font-size: 12px;">In-Memory Computing</a></li> 
+                <li><a href="http://gridgain.com/tag/in-memory-database/" class="tag-link-23" title="1 topic" style="font-size: 12px;">In-Memory Database</a></li> 
+                <li><a href="http://gridgain.com/tag/in-memory-data-grid/" class="tag-link-99" title="1 topic" style="font-size: 12px;">in-memory data grid</a></li> 
+                <li><a href="http://gridgain.com/tag/las-vegas/" class="tag-link-103" title="1 topic" style="font-size: 12px;">las vegas</a></li> 
+                <li><a href="http://gridgain.com/tag/mapreduce/" class="tag-link-81" title="14 topics" style="font-size: 12px;">mapreduce</a></li> 
+                <li><a href="http://gridgain.com/tag/mci/" class="tag-link-93" title="1 topic" style="font-size: 12px;">mci</a></li> 
+                <li><a href="http://gridgain.com/tag/meetup/" class="tag-link-104" title="1 topic" style="font-size: 12px;">meetup</a></li> 
+                <li><a href="http://gridgain.com/tag/mysql/" class="tag-link-114" title="1 topic" style="font-size: 12px;">Mysql</a></li> 
+                <li><a href="http://gridgain.com/tag/nand/" class="tag-link-94" title="1 topic" style="font-size: 12px;">nand</a></li> 
+                <li><a href="http://gridgain.com/tag/open-source/" class="tag-link-40" title="1 topic" style="font-size: 12px;">open source</a></li> 
+                <li><a href="http://gridgain.com/tag/oracle/" class="tag-link-97" title="1 topic" style="font-size: 12px;">oracle</a></li> 
+                <li><a href="http://gridgain.com/tag/pci-e/" class="tag-link-95" title="1 topic" style="font-size: 12px;">pci-e</a></li> 
+                <li><a href="http://gridgain.com/tag/persistent-database-support/" class="tag-link-115" title="1 topic" style="font-size: 12px;">persistent database support</a></li> 
+                <li><a href="http://gridgain.com/tag/release/" class="tag-link-96" title="1 topic" style="font-size: 12px;">release</a></li> 
+                <li><a href="http://gridgain.com/tag/sap/" class="tag-link-98" title="1 topic" style="font-size: 12px;">sap</a></li> 
+                <li><a href="http://gridgain.com/tag/streaming/" class="tag-link-86" title="1 topic" style="font-size: 12px;">streaming</a></li> 
+                <li><a href="http://gridgain.com/tag/tradeshow/" class="tag-link-105" title="1 topic" style="font-size: 12px;">tradeshow</a></li> 
+               </ul> 
+              </ul>
+              <ul class="aux-list aux-archives row clearfix"> 
+               <li><a href="http://gridgain.com/2014/12/">December 2014</a></li> 
+               <li><a href="http://gridgain.com/2014/11/">November 2014</a></li> 
+               <li><a href="http://gridgain.com/2014/10/">October 2014</a></li> 
+               <li><a href="http://gridgain.com/2014/09/">September 2014</a></li> 
+               <li><a href="http://gridgain.com/2014/08/">August 2014</a></li> 
+               <li><a href="http://gridgain.com/2014/07/">July 2014</a></li> 
+               <li><a href="http://gridgain.com/2014/06/">June 2014</a></li> 
+               <li><a href="http://gridgain.com/2014/05/">May 2014</a></li> 
+               <li><a href="http://gridgain.com/2014/04/">April 2014</a></li> 
+               <li><a href="http://gridgain.com/2014/03/">March 2014</a></li> 
+               <li><a href="http://gridgain.com/2014/01/">January 2014</a></li> 
+               <li><a href="http://gridgain.com/2013/12/">December 2013</a></li> 
+               <li><a href="http://gridgain.com/2013/11/">November 2013</a></li> 
+               <li><a href="http://gridgain.com/2013/10/">October 2013</a></li> 
+               <li><a href="http://gridgain.com/2013/09/">September 2013</a></li> 
+               <li><a href="http://gridgain.com/2013/08/">August 2013</a></li> 
+               <li><a href="http://gridgain.com/2013/07/">July 2013</a></li> 
+               <li><a href="http://gridgain.com/2013/04/">April 2013</a></li> 
+               <li><a href="http://gridgain.com/2013/02/">February 2013</a></li> 
+               <li><a href="http://gridgain.com/2013/01/">January 2013</a></li> 
+               <li><a href="http://gridgain.com/2012/11/">November 2012</a></li> 
+               <li><a href="http://gridgain.com/2012/10/">October 2012</a></li> 
+               <li><a href="http://gridgain.com/2012/09/">September 2012</a></li> 
+               <li><a href="http://gridgain.com/2012/08/">August 2012</a></li> 
+               <li><a href="http://gridgain.com/2012/07/">July 2012</a></li> 
+               <li><a href="http://gridgain.com/2012/06/">June 2012</a></li> 
+               <li><a href="http://gridgain.com/2012/05/">May 2012</a></li> 
+               <li><a href="http://gridgain.com/2012/04/">April 2012</a></li> 
+               <li><a href="http://gridgain.com/2012/03/">March 2012</a></li> 
+               <li><a href="http://gridgain.com/2012/02/">February 2012</a></li> 
+               <li><a href="http://gridgain.com/2012/01/">January 2012</a></li> 
+               <li><a href="http://gridgain.com/2011/12/">December 2011</a></li> 
+               <li><a href="http://gridgain.com/2011/11/">November 2011</a></li> 
+               <li><a href="http://gridgain.com/2011/10/">October 2011</a></li> 
+               <li><a href="http://gridgain.com/2011/08/">August 2011</a></li> 
+               <li><a href="http://gridgain.com/2011/07/">July 2011</a></li> 
+               <li><a href="http://gridgain.com/2011/05/">May 2011</a></li> 
+               <li><a href="http://gridgain.com/2011/03/">March 2011</a></li> 
+               <li><a href="http://gridgain.com/2011/02/">February 2011</a></li> 
+               <li><a href="http://gridgain.com/2011/01/">January 2011</a></li> 
+               <li><a href="http://gridgain.com/2010/12/">December 2010</a></li> 
+               <li><a href="http://gridgain.com/2010/11/">November 2010</a></li> 
+               <li><a href="http://gridgain.com/2010/10/">October 2010</a></li> 
+               <li><a href="http://gridgain.com/2010/09/">September 2010</a></li> 
+               <li><a href="http://gridgain.com/2010/08/">August 2010</a></li> 
+               <li><a href="http://gridgain.com/2010/07/">July 2010</a></li> 
+               <li><a href="http://gridgain.com/2010/06/">June 2010</a></li> 
+               <li><a href="http://gridgain.com/2010/05/">May 2010</a></li> 
+               <li><a href="http://gridgain.com/2010/04/">April 2010</a></li> 
+               <li><a href="http://gridgain.com/2010/02/">February 2010</a></li> 
+               <li><a href="http://gridgain.com/2009/11/">November 2009</a></li> 
+               <li><a href="http://gridgain.com/2009/08/">August 2009</a></li> 
+               <li><a href="http://gridgain.com/2009/07/">July 2009</a></li> 
+               <li><a href="http://gridgain.com/2009/06/">June 2009</a></li> 
+               <li><a href="http://gridgain.com/2009/05/">May 2009</a></li> 
+               <li><a href="http://gridgain.com/2009/04/">April 2009</a></li> 
+               <li><a href="http://gridgain.com/2009/03/">March 2009</a></li> 
+               <li><a href="http://gridgain.com/2009/02/">February 2009</a></li> 
+               <li><a href="http://gridgain.com/2009/01/">January 2009</a></li> 
+               <li><a href="http://gridgain.com/2008/11/">November 2008</a></li> 
+               <li><a href="http://gridgain.com/2008/10/">October 2008</a></li> 
+               <li><a href="http://gridgain.com/2008/09/">September 2008</a></li> 
+               <li><a href="http://gridgain.com/2008/08/">August 2008</a></li> 
+               <li><a href="http://gridgain.com/2008/06/">June 2008</a></li> 
+               <li><a href="http://gridgain.com/2008/05/">May 2008</a></li> 
+               <li><a href="http://gridgain.com/2008/04/">April 2008</a></li> 
+               <li><a href="http://gridgain.com/2008/03/">March 2008</a></li> 
+               <li><a href="http://gridgain.com/2008/02/">February 2008</a></li> 
+               <li><a href="http://gridgain.com/2008/01/">January 2008</a></li> 
+               <li><a href="http://gridgain.com/2007/12/">December 2007</a></li> 
+               <li><a href="http://gridgain.com/2007/10/">October 2007</a></li> 
+               <li><a href="http://gridgain.com/2007/09/">September 2007</a></li> 
+               <li><a href="http://gridgain.com/2007/08/">August 2007</a></li> 
+               <li><a href="http://gridgain.com/2007/07/">July 2007</a></li> 
+               <li><a href="http://gridgain.com/2007/05/">May 2007</a></li> 
+               <li><a href="http://gridgain.com/2006/10/">October 2006</a></li> 
+               <li><a href="http://gridgain.com/2006/07/">July 2006</a></li> 
+               <li><a href="http://gridgain.com/2006/06/">June 2006</a></li> 
+               <li><a href="http://gridgain.com/2006/05/">May 2006</a></li> 
+              </ul>
+             </div>
+            </div> 
+            <ul class="blog-items row mini-items clearfix">
+             <li class="blog-item span12 format-standard">
+              <div class="blog-details-wrap">
+               <h3><a href="http://www.infoq.com/news/2014/12/gridgain-ignite">GridGain Becomes Apache Ignite</a></h3>
+               <div class="blog-item-details">
+                <span class="blog-item-byline">By <a href="http://gridgain.com/author/dchristensen/">Dane Christensen</a> on </span>December 4, 2014
+               </div>
+               <div class="comments-likes">
+                <div class="love-it-wrapper">
+                 <a href="#" class="love-it" data-post-id="9322" data-user-id="0"><i class="icon-heart"></i></a> 
+                 <span class="love-count">0</span>
+                </div>
+               </div>
+               <div class="excerpt">
+                <p>GridGain’s In-Memory Data Fabric entered Apache Incubator last October under the name of Apache Ignite. The company donated its flagship in-memory computing (IMC) platform to the Apache Software Foundation (ASF) with the intention of attracting external developers and growing...</p>
+               </div>
+              </div></li>
+             <li class="blog-item span12 format-standard">
+              <div class="blog-details-wrap">
+               <h3><a href="http://gridgain.com/fast-data-world-needs-proven-mature-memory-data-fabric-backed-apache-software-foundation/">Why the Fast Data world needs a proven and mature In-Memory Data Fabric backed by the Apache Software Foundation</a></h3>
+               <div class="blog-item-details">
+                <span class="blog-item-byline">By <a href="http://gridgain.com/author/nikita/">Nikita Ivanov</a> on </span>November 3, 2014
+               </div>
+               <div class="comments-likes">
+                <div class="love-it-wrapper">
+                 <a href="#" class="love-it" data-post-id="8941" data-user-id="0"><i class="icon-heart"></i></a> 
+                 <span class="love-count">0</span>
+                </div>
+               </div>
+               <div class="excerpt">
+                <p>Much of what human beings experience as commonplace today — social networking, on-line gaming, mobile and wearable computing — was impossible a decade ago. One thing is certain: we’re going to see even more impressive advances in the next...</p>
+               </div>
+              </div></li>
+             <li class="blog-item span12 format-standard">
+              <div class="blog-details-wrap">
+               <h3><a href="http://gridgain.com/enabling-real-time-enterprise-gridgain-memory-data-fabric/">Enabling the Real-Time Enterprise with the GridGain In-Memory Data Fabric</a></h3>
+               <div class="blog-item-details">
+                <span class="blog-item-byline">By <a href="http://gridgain.com/author/max/">Max Herrmann</a> on </span>September 25, 2014
+               </div>
+               <div class="comments-likes">
+                <div class="love-it-wrapper">
+                 <a href="#" class="love-it" data-post-id="8368" data-user-id="0"><i class="icon-heart"></i></a> 
+                 <span class="love-count">0</span>
+                </div>
+               </div>
+               <div class="excerpt">
+                <p>Hi, this is Max Herrmann from GridGain Systems, and today is a big day as in-memory computing as you know it is about&nbsp;to be redefined. Sure, in-memory computing technologies have been around for many years in one form or...</p>
+               </div>
+              </div></li>
+             <li class="blog-item span12 format-standard">
+              <div class="blog-details-wrap">
+               <h3><a href="http://gridgain.blogspot.com/2014/09/one-phase-commit-fast-transactions-for.html">One-Phase-Commit – Fast Transactions For In-Memory Caches</a></h3>
+               <div class="blog-item-details">
+                <span class="blog-item-byline">By <a href="http://gridgain.com/author/dmitriy/">Dmitriy Setrakyan</a> on </span>September 16, 2014
+               </div>
+               <div class="comments-likes">
+                <div class="love-it-wrapper">
+                 <a href="#" class="love-it" data-post-id="7677" data-user-id="0"><i class="icon-heart"></i></a> 
+                 <span class="love-count">0</span>
+                </div>
+               </div>
+               <div class="excerpt">
+                <p>In this blog we cover a very important optimization that can be utilized for in-memory caches, specifically for cases where data is partitioned across the network.</p>
+               </div>
+              </div></li>
+             <li class="blog-item span12 format-standard">
+              <div class="blog-details-wrap">
+               <h3><a href="http://gridgain.blogspot.com/2014/09/two-phase-commit-for-in-memory-caches.html">Two-Phase-Commit for In-Memory Caches – Part II</a></h3>
+               <div class="blog-item-details">
+                <span class="blog-item-byline">By <a href="http://gridgain.com/author/dmitriy/">Dmitriy Setrakyan</a> on </span>September 9, 2014
+               </div>
+               <div class="comments-likes">
+                <div class="love-it-wrapper">
+                 <a href="#" class="love-it" data-post-id="7679" data-user-id="0"><i class="icon-heart"></i></a> 
+                 <span class="love-count">0</span>
+                </div>
+               </div>
+               <div class="excerpt">
+                <p>In this blog we will cover a case when an in-memory cache serves as a layer on top of a persistent database. In this case the database serves as a primary system of records, and distributed in-memory cache is...</p>
+               </div>
+              </div></li>
+             <li class="blog-item span12 format-standard">
+              <div class="blog-details-wrap">
+               <h3><a href="http://gridgain.blogspot.com/2014/09/two-phase-commit-for-distributed-in.html">Two-Phase-Commit for Distributed In-Memory Caches</a></h3>
+               <div class="blog-item-details">
+                <span class="blog-item-byline">By <a href="http://gridgain.com/author/dmitriy/">Dmitriy Setrakyan</a> on </span>September 2, 2014
+               </div>
+               <div class="comments-likes">
+                <div class="love-it-wrapper">
+                 <a href="#" class="love-it" data-post-id="7681" data-user-id="0"><i class="icon-heart"></i></a> 
+                 <span class="love-count">0</span>
+                </div>
+               </div>
+               <div class="excerpt">
+                <p>2-Phase-Commit is probably one of the oldest consensus protocols and is known for its deficiencies when it comes to handling failures, as it may indefinitely block the servers waiting in prepare state. To mitigate this, a 3-Phase-Commit protocol was...</p>
+               </div>
+              </div></li>
+             <li class="blog-item span12 format-standard">
+              <div class="blog-details-wrap">
+               <h3><a href="http://gridgain.blogspot.com/2014/08/gridgain-620-released-with-portable.html">GridGain 6.2.0 Released with Portable Objects and Distributed Services</a></h3>
+               <div class="blog-item-details">
+                <span class="blog-item-byline">By <a href="http://gridgain.com/author/dmitriy/">Dmitriy Setrakyan</a> on </span>August 27, 2014
+               </div>
+               <div class="comments-likes">
+                <div class="love-it-wrapper">
+                 <a href="#" class="love-it" data-post-id="7683" data-user-id="0"><i class="icon-heart"></i></a> 
+                 <span class="love-count">0</span>
+                </div>
+               </div>
+               <div class="excerpt">
+                <p>We are pleased to announce the release of GridGain Open Source In-Memory Computing Platform 6.2.0. The main components of the platform are: compute grid, data grid (or in-memory distributed cache), and CEP streaming. This release revolves primarily around Portable...</p>
+               </div>
+              </div></li>
+             <li class="blog-item span12 format-standard">
+              <div class="blog-details-wrap">
+               <h3><a href="http://gridgain.blogspot.com/2014/07/gridgain-619-one-click-installation-one.html">GridGain 6.1.9 – One Click Installation – One Jar Dependency</a></h3>
+               <div class="blog-item-details">
+                <span class="blog-item-byline">By <a href="http://gridgain.com/author/dmitriy/">Dmitriy Setrakyan</a> on </span>July 3, 2014
+               </div>
+               <div class="comments-likes">
+                <div class="love-it-wrapper">
+                 <a href="#" class="love-it" data-post-id="7685" data-user-id="0"><i class="icon-heart"></i></a> 
+                 <span class="love-count">0</span>
+                </div>
+               </div>
+               <div class="excerpt">
+                <p>With release 6.1.9, GridGain significantly simplified its installation and deployment. GridGain now allows for: One Click Installation: The product simply has to be downloaded and unzipped. After that it is ready to be used. One Jar Dependency: GridGain now...</p>
+               </div>
+              </div></li>
+             <li class="blog-item span12 format-standard">
+              <div class="blog-details-wrap">
+               <h3><a href="http://gridgain.blogspot.com/2014/06/jdk-g1-garbage-collector-pauses-for.html">G1 Garbage Collector Thrashes On Larger Heaps</a></h3>
+               <div class="blog-item-details">
+                <span class="blog-item-byline">By <a href="http://gridgain.com/author/dmitriy/">Dmitriy Setrakyan</a> on </span>June 16, 2014
+               </div>
+               <div class="comments-likes">
+                <div class="love-it-wrapper">
+                 <a href="#" class="love-it" data-post-id="7687" data-user-id="0"><i class="icon-heart"></i></a> 
+                 <span class="love-count">0</span>
+                </div>
+               </div>
+               <div class="excerpt">
+                <p>At GridGain, having worked on a distributed caching (data grid) product for many years, we constantly benchmark with various Garbage Collectors to find the optimal configuration for larger heap sizes. From conducting numerous tests, we have concluded that unless...</p>
+               </div>
+              </div></li>
+             <li class="blog-item span12 format-standard">
+              <div class="blog-details-wrap">
+               <h3><a href="http://gridgain.com/distributed-caching-in-5-minutes/">Distributed Caching In 5 Minutes</a></h3>
+               <div class="blog-item-details">
+                <span class="blog-item-byline">By <a href="http://gridgain.com/author/dmitriy/">Dmitriy Setrakyan</a> on </span>June 10, 2014
+               </div>
+               <div class="comments-likes">
+                <div class="love-it-wrapper">
+                 <a href="#" class="love-it" data-post-id="5749" data-user-id="0"><i class="icon-heart"></i></a> 
+                 <span class="love-count">0</span>
+                </div>
+               </div>
+               <div class="excerpt">
+                <p>If you prefer a video demo with coding examples, visit the original blog post at gridgain.blogspot.com. Distributed In-Memory Caching generally allows you to replicate or partition your data in memory across your cluster. Memory provides a much faster access...</p>
+               </div>
+              </div></li>
+            </ul>
+            <div class="pagination-wrap">
+             <ul class="pagenavi"> 
+              <li><span class="current">1</span></li>
+              <li><a href="http://gridgain.com/blog/page/2/" class="single_page" title="2">2</a></li>
+              <li><a href="http://gridgain.com/blog/page/3/" class="single_page" title="3">3</a></li>
+              <li><a href="http://gridgain.com/blog/page/4/" class="single_page" title="4">4</a></li>
+              <li><a href="http://gridgain.com/blog/page/5/" class="single_page" title="5">5</a></li>
+              <li><span class="expand">...</span></li>
+              <li><a href="http://gridgain.com/blog/page/7/" class="last" title="Last Page">7</a></li>
+              <li class="next"><a href="http://gridgain.com/blog/page/2/">Next <i class="icon-angle-right"></i></a></li>
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="link-pages"></div> 
+        </div> 
+        <!-- CLOSE page --> 
+       </div> 
+      </div> 
+      <!--// WordPress Hook //--> 
+      <!--// CLOSE #page-wrap //--> 
+     </div> 
+     <!--// CLOSE .container //--> 
+    </div> 
+    <!--// CLOSE #main-container //--> 
+   </div> 
+   <!--// OPEN #footer //--> 
+   <section id="footer" class="footer-divider"> 
+    <div class="container"> 
+     <div id="footer-widgets" class="row clearfix"> 
+      <div class="span4"> 
+       <section id="black-studio-tinymce-2" class="widget widget_black_studio_tinymce clearfix">
+        <div class="textwidget">
+         <p class="footer-contact"><a href="https://twitter.com/gridgain" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://twitter.com/gridgain', '']);" target="_blank"><img class="footer-socialicon" title="Twitter" src="http://gridgain.com/wp-content/themes/gridgain/images/social-icons/twitter.jpg" alt="Twitter" width="48px"></a><a href="http://vimeo.com/gridgain" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://vimeo.com/gridgain', '']);" target="_blank"><img class="footer-socialicon" title="Vimeo" src="http://gridgain.com/wp-content/themes/gridgain/images/social-icons/vimeo.jpg" alt="Vimeo" width="48px"></a><a href="https://www.youtube.com/user/https%3A//www.youtube.com/channel/UChYD3lCEnzHlWioUb2sNgSg" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://www.youtube.com/user/https%3A//www.youtube.com/channel/UChYD3lCEnzHlWioUb2sNgSg', '']);" target="_blank"><img class="footer-socialicon" title="YouTube" src="http://gridgain.com/wp-content/themes/gridgain/images/social-icons/youtube.jpg" alt="YouTube" width="48px"></a><a href="https://plus.google.com/101084158514011491168/posts" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://plus.google.com/101084158514011491168/posts', '']);" target="_blank"><img class="footer-socialicon" title="Google+" src="http://gridgain.com/wp-content/themes/gridgain/images/social-icons/googleplus.jpg" alt="Google+" width="48px"></a><a href="https://www.linkedin.com/company/249196" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://www.linkedin.com/company/249196', '']);" target="_blank"><img class="footer-socialicon" title="LinkedIn" src="http://gridgain.com/wp-content/themes/gridgain/images/social-icons/linkedin.jpg" alt="LinkedIn" width="48px"></a><a href="http://www.meetup.com/Bay-Area-In-Memory-Computing" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://www.meetup.com/Bay-Area-In-Memory-Computing', '']);" target="_blank"><img class="footer-socialicon" title="Meetup" src="http://gridgain.com/wp-content/themes/gridgain/images/social-icons/meetup.jpg" alt="Meetup" width="48px"></a> <iframe src="http://marketing.gridgain.com/acton/form/6039/001b:d-0001/0/index.htm" width="300" height="150" frameborder="no" scrolling="no"></iframe> </p>
+        </div>
+       </section> 
+      </div> 
+      <div class="span4"> 
+       <section id="twitter_timeline-2" class="widget widget_twitter_timeline clearfix">
+        <a class="twitter-timeline" data-widget-id="476788936509898752" data-theme="dark" data-link-color="#f96e5b" data-border-color="#e8e8e8" data-chrome="noheader nofooter noborders noscrollbar transparent" data-tweet-limit="2" width="370" height="200" lang="EN">My Tweets</a>
+       </section> 
+      </div> 
+      <div class="span4"> 
+       <section id="black-studio-tinymce-3" class="widget widget_black_studio_tinymce clearfix">
+        <div class="textwidget">
+         <h5 style="text-align: center;"><a title="Upcoming Events" href="/events">Upcoming Events</a></h5>
+        </div>
+       </section>
+       <section id="tribe-events-list-widget-2" class="widget tribe-events-list-widget clearfix"> 
+        <ol class="hfeed vcalendar"> 
+         <li class="tribe-events-list-widget-events hentry vevent type-tribe_events post-8993 tribe-clearfix tribe-events-venue-8994 tribe-events-first tribe-events-last"> 
+          <!-- Event Title --> <h4 class="entry-title summary"> <a href="http://www.meetup.com/Chicago-In-Memory-Computing-Meetup/" rel="bookmark">Meetup: Achieve Real-time Results with In-Memory Data Fabric</a> </h4> 
+          <!-- Event Time --> 
+          <div class="duration"> 
+           <span class="date-start dtstart">December 9 @ 6:30 am<span class="value-title" title="2014-12-09PST06:30"></span></span> - 
+           <span class="end-time dtend">9:00 pm<span class="value-title" title="2014-12-09PST09:00"></span></span> 
+          </div> </li> 
+        </ol>
+        <!-- .hfeed --> 
+        <p class="tribe-events-widget-link"> <a href="http://gridgain.com/events/" rel="bookmark">View All Events</a> </p> 
+       </section> 
+      </div> 
+     </div> 
+    </div> 
+    <!--// CLOSE #footer //--> 
+   </section> 
+   <!--// OPEN #copyright //--> 
+   <footer id="copyright" class=""> 
+    <div class="container"> 
+     <p class="twelve columns">Copyright © 2014 GridGain Systems, Inc. All Rights Reserved.</p> 
+     <div class="copyright-footer-menu three columns offset-by-one">
+      <a href="/sitemap/" title="View Sitemap">Sitemap</a> 
+      <span class="copyright-bar">|</span> 
+      <a href="/contact-us" title="Contact">Contact</a> 
+      <span class="copyright-bar">|</span> 
+      <a href="/legal-notices/" title="Legal Notices" target="_blank">Legal Notices</a> 
+      <span class="copyright-bar">|</span> 
+      <a href="/privacy-policy/" title="Privacy Policy" target="_blank">Privacy Policy</a> 
+      <span class="copyright-bar">|</span> 
+      <span class="beam-me-up"><a href="#"><i class="icon-arrow-up"></i></a></span>
+     </div> 
+    </div> 
+    <!--// CLOSE #copyright //--> 
+   </footer> 
+   <!--// CLOSE #container //--> 
+  </div> 
+  <!--// FRAMEWORK INCLUDES //--> 
+  <div id="sf-included" class="has-blog "></div> 
+  <!--// WORDPRESS FOOTER HOOK //--> 
+  <script type="text/javascript">
+			!function(d,s,id){
+				var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+				if(!d.getElementById(id)){
+					js=d.createElement(s);
+					js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js,fjs);
+				}
+			}(document,"script","twitter-wjs");
+		</script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/content-tooltip/js/modernizr.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/content-tooltip/js/smallipop.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/content-tooltip/js/easing.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/plugins/content-tooltip/js/script.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201449"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/includes/page-builder/assets/js_composer_front.js?ver=4.0.1"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var love_it_vars = {"ajaxurl":"http:\/\/gridgain.com\/wp-admin\/admin-ajax.php","nonce":"3214d77aee","already_loved_message":"You have already loved this item.","error_message":"Sorry, there was a problem processing your request.","logged_in":"false"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/includes/plugins/love-it-pro/includes/js/love-it.js"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/includes/plugins/love-it-pro/includes/js/jquery.cookie.js"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/js/jquery.hoverIntent.min.js"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/js/jquery.easing.1.3.js"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/js/jquery.flexslider-min.js"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/js/jquery.prettyPhoto.js"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/js/jquery.fitvids.js"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/js/view.min.js?auto"></script> 
+  <script type="text/javascript" src="http://gridgain.com/wp-content/themes/flexform/js/functions.js"></script> 
+  <script src="http://stats.wp.com/e-201449.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+	st_go({v:'ext',j:'1:3.2.1',blog:'69412346',post:'616',tz:'-8'});
+	var load_cmc = function(){linktracker_init(69412346,616,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script>
+  <script>var pltNewTabURLs = ["http:\/\/www.infoq.com\/news\/2014\/12\/gridgain-ignite","http:\/\/gridgain.blogspot.com\/2014\/09\/one-phase-commit-fast-transactions-for.html","http:\/\/gridgain.blogspot.com\/2014\/09\/two-phase-commit-for-in-memory-caches.html","http:\/\/gridgain.blogspot.com\/2014\/09\/two-phase-commit-for-distributed-in.html","http:\/\/gridgain.blogspot.com\/2014\/08\/gridgain-620-released-with-portable.html","http:\/\/gridgain.blogspot.com\/2014\/07\/gridgain-619-one-click-installation-one.html","http:\/\/gridgain.blogspot.com\/2014\/06\/jdk-g1-garbage-collector-pauses-for.html","http:\/\/www.meetup.com\/Chicago-In-Memory-Computing-Meetup\/"];(function(){(function(e){var t;t=e.jQueryWP||e.jQuery;return t(function(e){return typeof e.fn.on=="function"?e("body").on("click","a",function(t){var n;n=e(this);if(e.inArray(n.attr("href"),pltNewTabURLs)>-1)return n.attr("target","_blank")}):typeof console!="undefined"&&console!==null?console.log("Page Links To: Some other code has overridden the WordPress copy of jQuery. This is bad. Because of this, Page Links To cannot open links in a new window."):void 0})})(window)}).call(this);</script> 
+  <!--// CLOSE BODY //-->  
+  <!--// CLOSE HTML //--> 
+ </body>
+</html>

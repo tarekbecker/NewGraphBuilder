@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <title>Huckabuy | Your Online Shopping Savings Source</title> 
+  <meta content="The best deals on the products you love, all in one place. Huckabuy is your online shopping savings source. A web service and “savings engine,” Huckabuy brings together the best products and coupons and creates the richest savings experience for online shoppers." name="description"> 
+  <link href="/assets/application-031f1b2df726fbdc0d30a2c52fc26632.css" media="all" rel="stylesheet" type="text/css"> 
+  <script src="/assets/application-cefb9692cc5549477d29d919a2b96f1e.js" type="text/javascript"></script> 
+  <meta content="authenticity_token" name="csrf-param"> 
+  <meta content="OAS+LYVHeQu6owpiA3byjMMhOIzv+as9IwvJrgn1buY=" name="csrf-token"> 
+  <meta name="alexaVerifyID" content="hKRvae65z5GT57m7_SZ1MeTqApI"> 
+  <meta name="p:domain_verify" content="04337e9ef0fe732c8b729c158f343144"> 
+  <!-- Start Alexa Certify Javascript --> 
+  <script type="text/javascript">
+_atrk_opts = { atrk_acct:"sFerk1aklw000A", domain:"huckabuy.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script> 
+  <noscript></noscript>
+ </head>
+ <body>
+  <img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=sFerk1aklw000A" style="display:none" height="1" width="1" alt=""> 
+  <!-- End Alexa Certify Javascript --> 
+  <!-- Google Analytics Tracking Code to Be Placed on each page or application.html.erb --> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29095907-1', 'auto');
+  ga('send', 'pageview');
+</script>        
+  <!-- Header --> 
+  <!-- Header Content --> 
+  <header> 
+   <div class="container"> 
+    <div class="row"> 
+     <!-- Logo --> 
+     <div class="col-lg-2 col-md-3 hidden-sm hidden-xs"> 
+      <div class="well logo"> 
+       <a href="/"><img alt="Huckabuy | Your Online Shopping Savings Source" src="/assets/huckabuy-logo-icon-e9148e37d6529f157503f67241044c78.jpg"></a>
+       <br> 
+      </div> 
+     </div> 
+     <!-- End Logo --> 
+     <!--      Search Form -->  
+     <style>
+  .ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+  }
+  </style> 
+     <script>
+  $.widget( "custom.catcomplete", $.ui.autocomplete, {
+    _create: function() {
+      this._super();
+      this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+    },
+    _renderMenu: function( ul, items ) {
+      var that = this,
+        currentCategory = "";
+      $.each( items, function( index, item ) {
+        var li;
+        if ( item.category != currentCategory ) {
+          ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+          currentCategory = item.category;
+        }
+        li = that._renderItemData( ul, item );
+        if ( item.category ) {
+          li.attr( "aria-label", item.category + " : " + item.label );
+        }
+      });
+    }
+  });
+  </script> 
+     <script>
+  $(document).ready(function(){ $
+  	( "#keywords" ).catcomplete({ 
+  		source: get_results, 
+  		minLength: 2,
+          select: function( event, ui ) { 
+              window.location.href = ui.item.value;
+          }
+  	}); 
+  }); 
+  function get_results(request, response){ 
+  	var params = {keywords: request.term}; 
+  	$.get("/queries/json_completion", params, function(data){ 
+  		response(data); 
+  	}, "json"); 
+  } 
+  </script>  
+     <!-- Search Form --> 
+     <div> 
+      <div class="well"> 
+       <form action="/search"> 
+        <div class="input-group"> 
+         <input type="text" name="query" class="form-control input-search ui-widget" id="keywords" placeholder="Seach Coupons, Retailers, and Products"> 
+         <span class="input-group-btn"> <button class="btn btn-default no-border-left" type="submit"><i class="fa fa-search"></i></button> </span> 
+        </div> 
+       </form> 
+      </div> 
+     </div> 
+     <!-- End Search Form --> 
+     <!--   End Search Form --> 
+    </div> 
+   </div> 
+  </header> 
+  <!--  Navigation  --> 
+  <!-- Navigation --> 
+  <nav class="navbar navbar-inverse" role="navigation"> 
+   <div class="container"> 
+    <div class="navbar-header"> 
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <!-- text logo on mobile view --> 
+     <a href="/" class="navbar-brand visible-xs">Huckabuy</a> 
+    </div> 
+    <div class="collapse navbar-collapse navbar-ex1-collapse"> 
+     <ul class="nav navbar-nav"> 
+      <li><a href="/" class="active">Home</a></li> 
+      <li><a href="/coupons">Coupons and Promo Codes</a> 
+       <ul class="dropdown"> 
+        <div class="top-nav-dropdown" style="width: 410px"> 
+         <div class="row" style="margin-bottom:10px"> 
+          <div style="float:left; width: 200px; border-right: 1px solid #eaeaea;"> 
+           <ul style="margin:0px; padding: 0px"> 
+            <div style="font-weight:bold; font-size:11px; color:white; text-align: left">
+              Browse Coupons by Retailer 
+            </div> 
+            <li style="list-style:none;"> <a href="/coupons/retailers/fresh-fragrances-and-cosmetics/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">Fresh Fragrances and Cosmetics</a> </li> 
+            <li style="list-style:none;"> <a href="/coupons/retailers/goldenmine-and-jewelry-vortex/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">Goldenmine and Jewelry Vortex</a> </li> 
+            <li style="list-style:none;"> <a href="/coupons/retailers/lexington-law-lead-and-pay-per-call-program/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">Lexington Law Lead and Pay Per Call Program</a> </li> 
+            <li style="list-style:none;"> <a href="/coupons/retailers/black-co-uk/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">Black. co. uk</a> </li> 
+            <li style="list-style:none;"> <a href="/coupons/retailers/team-express/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">Team Express</a> </li> 
+            <li style="list-style:none;"> <a href="/coupons/retailers/fanatics/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">Fanatics</a> </li> 
+            <li style="list-style:none;"> <a href="/coupons/retailers/cilantro-the-cooks-shop-inc/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">Cilantro, The Cooks Shop Inc.</a> </li> 
+            <li style="list-style:none;"> <a href="/coupons/retailers/h2o-plus/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">H2O Plus</a> </li> 
+            <li style="list-style:none;"> <a href="/coupons/retailers/dollar-rent-a-car-inc/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">Dollar Rent-a-Car, Inc.</a> </li> 
+            <li style="list-style:none;"> <a href="/coupons/retailers/accents-in-the-garden/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">Accents in the Garden</a> </li> 
+            <li style="text-align:right; padding-right:10px"> <a href="/merchants" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">See more retailers</a> </li> 
+           </ul> 
+          </div> 
+          <div style="float:left; width: 200px; padding-left: 10px"> 
+           <ul style="margin:0px; padding: 0px"> 
+            <div style="font-weight:bold; font-size:11px; color:white; text-align: left">
+              Browse Coupons by Brand 
+            </div> 
+            <li style="list-style:none; "> <a href="/coupons/categories/free-fly/browse" style="margin-left: 10px; font-size:11px">Free Fly</a><br> </li> 
+            <li style="list-style:none; "> <a href="/coupons/categories/chimney-free/browse" style="margin-left: 10px; font-size:11px">Chimney Free</a><br> </li> 
+            <li style="list-style:none; "> <a href="/coupons/categories/left-on-houston/browse" style="margin-left: 10px; font-size:11px">Left on Houston</a><br> </li> 
+            <li style="list-style:none; "> <a href="/coupons/categories/on/browse" style="margin-left: 10px; font-size:11px">On</a><br> </li> 
+            <li style="list-style:none; "> <a href="/coupons/categories/a-chip-and-pepper-production/browse" style="margin-left: 10px; font-size:11px">A Chip And Pepper Production</a><br> </li> 
+            <li style="list-style:none; "> <a href="/coupons/categories/lisa-b-and-co/browse" style="margin-left: 10px; font-size:11px">Lisa B. And Co.</a><br> </li> 
+            <li style="list-style:none; "> <a href="/coupons/categories/raven-maps-and-images/browse" style="margin-left: 10px; font-size:11px">Raven Maps And Images</a><br> </li> 
+            <li style="list-style:none; "> <a href="/coupons/categories/comstock-and-co/browse" style="margin-left: 10px; font-size:11px">Comstock And Co.</a><br> </li> 
+            <li style="list-style:none; "> <a href="/coupons/categories/bay-and-gable-home-interiors/browse" style="margin-left: 10px; font-size:11px">Bay And Gable Home Interiors</a><br> </li> 
+            <li style="list-style:none; "> <a href="/coupons/categories/boys-and-arrows/browse" style="margin-left: 10px; font-size:11px">Boys and Arrows</a><br> </li> 
+            <li style="text-align:right; padding-right:10px"> <a href="/brands" style="margin-left: 10px; font-size:11px; color: white; text-transform: none;">See more brands</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+         <div style="position: absolute; bottom: 10px; right: 10px;"> 
+          <a href="/coupons" style="font-size:11px">View all Coupons</a> 
+         </div> 
+        </div> 
+       </ul> </li> 
+      <li> <a href="/products">Products</a> 
+       <ul class="dropdown"> 
+        <div class="top-nav-dropdown"> 
+         <div style="float:left; width: 150px; border-right: 1px solid #eaeaea;"> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/animals-and-pet-supplies/browse" style="font-weight:bold; font-size:12px;">Animals &amp; Pet Supplies</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/pet-supplies/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Pet Supplies</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/live-animals/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Live Animals</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/apparel-and-accessories/browse" style="font-weight:bold; font-size:12px;">Apparel &amp; Accessories</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/clothing/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Clothing</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/jewelry/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Jewelry</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/arts-and-entertainment/browse" style="font-weight:bold; font-size:12px;">Arts &amp; Entertainment</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/hobbies-and-creative-arts/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Hobbies &amp; Creative Arts</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/baby-and-toddler/browse" style="font-weight:bold; font-size:12px;">Baby &amp; Toddler</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/swaddling-blankets/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Swaddling Blankets</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/baby-and-toddler-gift-sets/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Baby &amp; Toddler Gift Sets</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/business-and-industrial/browse" style="font-weight:bold; font-size:12px;">Business &amp; Industrial</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/forestry-and-logging/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Forestry &amp; Logging</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/hotel-and-hospitality/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Hotel &amp; Hospitality</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/cameras-and-optics/browse" style="font-weight:bold; font-size:12px;">Cameras &amp; Optics</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/optics/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Optics</a> </li> 
+          </ul> 
+         </div> 
+         <div style="float:left; width: 150px; border-right: 1px solid #eaeaea; padding-left: 10px"> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/electronics/browse" style="font-weight:bold; font-size:12px">Electronics</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/print-copy-scan-and-fax-accessories/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Print, Copy, Scan &amp; Fax Accessories</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/networking/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Networking</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/food-beverages-and-tobacco/browse" style="font-weight:bold; font-size:12px">Food, Beverages &amp; Tobacco</a>
+           <br> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/furniture/browse" style="font-weight:bold; font-size:12px">Furniture</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/sofas/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Sofas</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/futons/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Futons</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/hardware/browse" style="font-weight:bold; font-size:12px">Hardware</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/painting-and-wall-covering-supplies/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Painting &amp; Wall Covering Supplies</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/hardware-torches/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Hardware Torches</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/health-and-beauty/browse" style="font-weight:bold; font-size:12px">Health &amp; Beauty</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/jewelry-cleaning-and-care/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Jewelry Cleaning &amp; Care</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/home-and-garden/browse" style="font-weight:bold; font-size:12px">Home &amp; Garden</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/lighting-accessories/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Lighting Accessories</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/fireplaces/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Fireplaces</a> </li> 
+          </ul> 
+         </div> 
+         <div style="float:left; width: 150px; border-right: 1px solid #eaeaea; padding-left: 10px"> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/home-and-garden/browse" style="font-weight:bold; font-size:12px">Home &amp; Garden</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/lighting-accessories/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Lighting Accessories</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/fireplaces/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Fireplaces</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/luggage-and-bags/browse" style="font-weight:bold; font-size:12px">Luggage &amp; Bags</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/backpacks/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Backpacks</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/diaper-bags/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Diaper Bags</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/mature/browse" style="font-weight:bold; font-size:12px">Mature</a>
+           <br> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/media/browse" style="font-weight:bold; font-size:12px">Media</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/music/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Music</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/magazines-and-newspapers/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Magazines &amp; Newspapers</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/office-supplies/browse" style="font-weight:bold; font-size:12px">Office Supplies</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/shipping-supplies/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Shipping Supplies</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/paper-handling/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Paper Handling</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/religious-and-ceremonial/browse" style="font-weight:bold; font-size:12px">Religious &amp; Ceremonial</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/memorial-ceremony-supplies/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Memorial Ceremony Supplies</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/wedding-ceremony-supplies/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Wedding Ceremony Supplies</a> </li> 
+          </ul> 
+         </div> 
+         <div style="float:left; width: 150px; padding-left: 10px; "> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/software/browse" style="font-weight:bold; font-size:12px">Software</a>
+           <br> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/sporting-goods/browse" style="font-weight:bold; font-size:12px">Sporting Goods</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/air-sports/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Air Sports</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/dancing/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Dancing</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/toys-and-games/browse" style="font-weight:bold; font-size:12px">Toys &amp; Games</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/game-timers/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Game Timers</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/vehicles-and-parts/browse" style="font-weight:bold; font-size:12px">Vehicles &amp; Parts</a>
+           <br> 
+          </ul> 
+         </div> 
+         <div style="position: absolute; bottom: 10px; right: 10px;"> 
+          <a href="/products" style="font-size:11px">View all Products</a> 
+         </div> 
+        </div> 
+       </ul> </li> 
+      <li> <a href="/retailers">Retailers</a> 
+       <ul class="dropdown"> 
+        <div class="top-nav-dropdown" style="width: 310px"> 
+         <div class="row" style="margin-bottom: 10px"> 
+          <div style="float:left; width: 150px; border-right: 1px solid #eaeaea;"> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/buy-dba-rakuten-shopping/browse" style="font-weight:bold; font-size:11px">Buy.com (dba Rakuten.com Shopping)</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/accents-in-the-garden/browse" style="font-weight:bold; font-size:11px">Accents in the Garden</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/backcountry/browse" style="font-weight:bold; font-size:11px">Backcountry.com</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/black-co-uk/browse" style="font-weight:bold; font-size:11px">Black. co. uk</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/fragrance-x-usa/browse" style="font-weight:bold; font-size:11px">Fragrance X USA</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/1-800-flowers-ca/browse" style="font-weight:bold; font-size:11px">1-800-FLOWERS. CA</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/house-of-holland/browse" style="font-weight:bold; font-size:11px">House of Holland</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/goldenmine-and-jewelry-vortex/browse" style="font-weight:bold; font-size:11px">Goldenmine and Jewelry Vortex</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/lexington-law-lead-and-pay-per-call-program/browse" style="font-weight:bold; font-size:11px">Lexington Law Lead and Pay Per Call Program</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/2-fore-1golf/browse" style="font-weight:bold; font-size:11px">2-fore-1golf</a> 
+           </ul> 
+          </div> 
+          <div style="float:left; width: 150px; padding-left: 10px"> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/fresh-fragrances-and-cosmetics/browse" style="font-weight:bold; font-size:11px">Fresh Fragrances and Cosmetics</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/4-fitness-gear/browse" style="font-weight:bold; font-size:11px">4 Fitness Gear</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/the-california-wine-club/browse" style="font-weight:bold; font-size:11px">The California Wine Club</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/cilantro-the-cooks-shop-inc/browse" style="font-weight:bold; font-size:11px">Cilantro, The Cooks Shop Inc.</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/lose-the-back-pain/browse" style="font-weight:bold; font-size:11px">Lose The Back Pain</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/phil-the-thrill-llc/browse" style="font-weight:bold; font-size:11px">Phil The Thrill LLC</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/the-jewel-hut/browse" style="font-weight:bold; font-size:11px">The Jewel Hut</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/the-ipage-affiliate-program/browse" style="font-weight:bold; font-size:11px">The iPage Affiliate Program</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/the-credit-pros-ppcall/browse" style="font-weight:bold; font-size:11px">The Credit Pros PPCall</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/retailers/the-dungeons/browse" style="font-weight:bold; font-size:11px">The Dungeons</a> 
+           </ul> 
+          </div> 
+         </div> 
+         <div style="position: absolute; bottom: 10px; right: 10px;"> 
+          <a href="/retailers" style="font-size:11px">View all Retailers</a> 
+         </div> 
+        </div> 
+       </ul> </li> 
+      <li> <a href="/brands">Brands</a> 
+       <ul class="dropdown"> 
+        <div class="top-nav-dropdown" style="width: 370px"> 
+         <div class="row" style="margin-bottom: 10px"> 
+          <div style="float:left; width: 180px; border-right: 1px solid #eaeaea;"> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/in-the-breeze/browse" style="font-weight:bold; font-size:11px">In The Breeze</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/pull-in/browse" style="font-weight:bold; font-size:11px">Pull-In</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/artistry-in-motion/browse" style="font-weight:bold; font-size:11px">Artistry In Motion</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/a-chip-and-pepper-production/browse" style="font-weight:bold; font-size:11px">A Chip And Pepper Production</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/twisted-x-boots/browse" style="font-weight:bold; font-size:11px">Twisted X Boots</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/canterbury-of-new-zealand/browse" style="font-weight:bold; font-size:11px">Canterbury Of New Zealand</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/c-and-f-enterprises/browse" style="font-weight:bold; font-size:11px">C And F Enterprises</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/c-and-f/browse" style="font-weight:bold; font-size:11px">C And F</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/7-for-all-mankind/browse" style="font-weight:bold; font-size:11px">7 For All Mankind</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/bay-and-gable-home-interiors/browse" style="font-weight:bold; font-size:11px">Bay And Gable Home Interiors</a> 
+           </ul> 
+          </div> 
+          <div style="float:left; width: 180px;  padding-left: 10px"> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/boys-and-arrows/browse" style="font-weight:bold; font-size:11px">Boys and Arrows</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/lisa-b-and-co/browse" style="font-weight:bold; font-size:11px">Lisa B. And Co.</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/2-bamboo/browse" style="font-weight:bold; font-size:11px">2 Bamboo</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/rainbow-of-california/browse" style="font-weight:bold; font-size:11px">Rainbow Of California</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/rock-and-roll-cowboy/browse" style="font-weight:bold; font-size:11px">Rock And Roll Cowboy</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/polar-king-of-keys/browse" style="font-weight:bold; font-size:11px">Polar King Of Keys</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/friends-of-dupont/browse" style="font-weight:bold; font-size:11px">Friends Of Dupont</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/parsley-and-sage/browse" style="font-weight:bold; font-size:11px">Parsley And Sage</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/white-industries/browse" style="font-weight:bold; font-size:11px">White Industries</a> 
+           </ul> 
+           <ul style="margin:0px; padding: 0px"> 
+            <a href="/products/brands/wild-and-cozy/browse" style="font-weight:bold; font-size:11px">Wild And Cozy</a> 
+           </ul> 
+          </div> 
+         </div> 
+         <div style="position: absolute; bottom: 10px; right: 10px;"> 
+          <a href="/brands" style="font-size:11px">View all Brands</a> 
+         </div> 
+        </div> 
+       </ul> </li> 
+      <li> <a href="/categories">Categories</a> 
+       <ul class="dropdown"> 
+        <div class="top-nav-dropdown" style="width: 490px"> 
+         <div style="float:left; width: 150px; border-right: 1px solid #eaeaea;"> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/animals-and-pet-supplies/browse" style="font-weight:bold; font-size:12px;">Animals &amp; Pet Supplies</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/pet-supplies/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Pet Supplies</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/live-animals/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Live Animals</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/apparel-and-accessories/browse" style="font-weight:bold; font-size:12px;">Apparel &amp; Accessories</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/clothing/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Clothing</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/jewelry/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Jewelry</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/arts-and-entertainment/browse" style="font-weight:bold; font-size:12px;">Arts &amp; Entertainment</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/hobbies-and-creative-arts/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Hobbies &amp; Creative Arts</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/baby-and-toddler/browse" style="font-weight:bold; font-size:12px;">Baby &amp; Toddler</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/swaddling-blankets/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Swaddling Blankets</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/baby-and-toddler-gift-sets/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Baby &amp; Toddler Gift Sets</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/business-and-industrial/browse" style="font-weight:bold; font-size:12px;">Business &amp; Industrial</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/forestry-and-logging/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Forestry &amp; Logging</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/hotel-and-hospitality/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Hotel &amp; Hospitality</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/cameras-and-optics/browse" style="font-weight:bold; font-size:12px;">Cameras &amp; Optics</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/optics/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Optics</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/electronics/browse" style="font-weight:bold; font-size:12px;">Electronics</a> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/print-copy-scan-and-fax-accessories/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Print, Copy, Scan &amp; Fax Accessories</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/networking/browse" style="margin-left: 10px; font-size:11px; color: white; text-transform: none; text-align:right;">Networking</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/food-beverages-and-tobacco/browse" style="font-weight:bold; font-size:12px;">Food, Beverages &amp; Tobacco</a> 
+          </ul> 
+         </div> 
+         <div style="float:left; width: 150px; border-right: 1px solid #eaeaea; padding-left: 10px"> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/furniture/browse" style="font-weight:bold; font-size:12px">Furniture</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/sofas/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Sofas</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/futons/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Futons</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/hardware/browse" style="font-weight:bold; font-size:12px">Hardware</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/painting-and-wall-covering-supplies/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Painting &amp; Wall Covering Supplies</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/hardware-torches/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Hardware Torches</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/health-and-beauty/browse" style="font-weight:bold; font-size:12px">Health &amp; Beauty</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/jewelry-cleaning-and-care/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Jewelry Cleaning &amp; Care</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/home-and-garden/browse" style="font-weight:bold; font-size:12px">Home &amp; Garden</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/lighting-accessories/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Lighting Accessories</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/fireplaces/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Fireplaces</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/luggage-and-bags/browse" style="font-weight:bold; font-size:12px">Luggage &amp; Bags</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/backpacks/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Backpacks</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/diaper-bags/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Diaper Bags</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/mature/browse" style="font-weight:bold; font-size:12px">Mature</a>
+           <br> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/media/browse" style="font-weight:bold; font-size:12px">Media</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/music/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Music</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/magazines-and-newspapers/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Magazines &amp; Newspapers</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/office-supplies/browse" style="font-weight:bold; font-size:12px">Office Supplies</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/shipping-supplies/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Shipping Supplies</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/paper-handling/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Paper Handling</a> </li> 
+          </ul> 
+         </div> 
+         <div style="float:left; width: 150px; border-right: 1px solid #eaeaea; padding-left: 10px"> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/religious-and-ceremonial/browse" style="font-weight:bold; font-size:12px">Religious &amp; Ceremonial</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/memorial-ceremony-supplies/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Memorial Ceremony Supplies</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/wedding-ceremony-supplies/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Wedding Ceremony Supplies</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/software/browse" style="font-weight:bold; font-size:12px">Software</a>
+           <br> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/sporting-goods/browse" style="font-weight:bold; font-size:12px">Sporting Goods</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/air-sports/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Air Sports</a> </li> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/dancing/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Dancing</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/toys-and-games/browse" style="font-weight:bold; font-size:12px">Toys &amp; Games</a>
+           <br> 
+           <li style="list-style:none; text-align: left; "> <a href="/products/categories/game-timers/browse" style="margin-left: 10px; font-size:11px; text-align:right;">Game Timers</a> </li> 
+          </ul> 
+          <ul style="margin:0px; padding: 0px; text-align: left;"> 
+           <a href="/products/categories/vehicles-and-parts/browse" style="font-weight:bold; font-size:12px">Vehicles &amp; Parts</a>
+           <br> 
+          </ul> 
+         </div> 
+         <div style="position: absolute; bottom: 10px; right: 10px;"> 
+          <a href="/products" style="font-size:11px">View all Products</a> 
+         </div> 
+        </div> 
+       </ul> </li> 
+     </ul> 
+     <!--     SOCIAL LINKS --> 
+     <div class="navbar-text pull-right"> 
+      <!--  Facebook    --> 
+      <a href="https://www.facebook.com/huckabuy"> <i class="fa fa-facebook-square fa-2x"></i> </a> 
+      <!--  Twitter   --> 
+      <a href="https://twitter.com/HuckabuySavings"> <i class="fa fa-twitter fa-2x"></i> </a> 
+      <!--  Google Plus    --> 
+      <a href="https://plus.google.com/110926913725434753055"> <i class="fa fa-google-plus fa-2x"></i> </a> 
+     </div> 
+     <!--       END SOCIAL LINKS --> 
+    </div> 
+   </div> 
+  </nav> 
+  <!-- End Navigation --> 
+  <div class="container main-container"> 
+   <div class="row"> 
+    <!-- Slider --> 
+    <div class="col-lg-9 col-md-12"> 
+     <div class="slider"> 
+      <ul class="bxslider"> 
+       <!--  |||| ACTIVATE FOR STATIC ||||   --> 
+       <!-- <div class="thumbnail">
+
+</div> --> 
+       <!--  |||| END ACTIVATE FOR STATIC ||||   --> 
+       <!--  |||| ACTIVATE FOR CAROUSEL ||||   --> 
+       <li> 
+        <div class="carousel-images"> 
+         <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=91917&amp;pw=162795"><img alt="Sierra-trading-post-home" src="/assets/sierra-trading-post-home-227954df01e872f0c197c329431cc87d.jpg"></a> 
+        </div> 
+        <div class="carousel-text"> 
+         <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=91917&amp;pw=162795" style="color:#FFFFFF">20% Off at Sierra Trading Post</a> 
+         <br> 
+         <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=91917&amp;pw=162795" style="color:#FFFFFF">Promo Code: AVORANGE4</a> 
+        </div> </li> 
+       <li> 
+        <div class="carousel-images"> 
+         <a href="http://www.anrdoezrs.net/click-7489795-11680044"><img alt="Apc_large" src="/assets/apc_large-8712ce9b05603cc87cf8a74fdcb0c2ac.jpg"></a> 
+        </div> 
+        <div class="carousel-text"> 
+         <a href="http://www.anrdoezrs.net/click-7489795-11680044" style="color:#FFFFFF">25% Off at AllPosters.com</a> 
+         <br> 
+         <a href="http://www.anrdoezrs.net/click-7489795-11680044" style="color:#FFFFFF">Promo Code: 25TRICK</a> 
+        </div> </li> 
+       <li> 
+        <div class="carousel-images"> 
+         <a href="http://click.linksynergy.com/fs-bin/click?id=kAc7PuCWL9o&amp;offerid=302525.6&amp;subid=0&amp;type=4"><img alt="Payless" src="/assets/payless-ec5cedcac41840d10d807dc358962c76.jpg"></a> 
+        </div> 
+        <div class="carousel-text"> 
+         <a href="http://click.linksynergy.com/fs-bin/click?id=kAc7PuCWL9o&amp;offerid=302525.6&amp;subid=0&amp;type=4" style="color:#FFFFFF">40% Off at Payless Shoesource</a> 
+         <br> 
+         <a href="http://click.linksynergy.com/fs-bin/click?id=kAc7PuCWL9o&amp;offerid=302525.6&amp;subid=0&amp;type=4" style="color:#FFFFFF">Entire Stock!</a> 
+        </div> </li> 
+       <!--  |||| END ACTIVATE FOR CAROUSEL ||||   --> 
+      </ul> 
+     </div> 
+    </div> 
+    <!-- End Slider --> 
+    <!-- HOME RIGHT BANNERS --> 
+    <!-- HOME RIGHT BANNERS --> 
+    <div class="col-lg-3 visible-lg"> 
+     <div class="row text-center"> 
+      <div class="col-lg-12 col-md-12 hero-feature"> 
+       <div class="thumbnail"> 
+        <a href="http://www.kqzyfj.com/click-7489795-8800275" target="_top"> <img src="http://www.lduhtrp.net/image-7489795-8800275" width="300" height="250" alt="Backcountry.com - Semi-Annual Sale" border="0"></a> 
+       </div> 
+       <div class="thumbnail"> 
+        <script type="text/javascript" src="http://www.avantlink.com/link.php?ml=320913&amp;p=134531&amp;pw=162795"></script> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- END HOME RIGHT BANNERS --> 
+   </div> 
+   <div class="row"> 
+    <div class="clearfix visible-sm"></div> 
+    <!-- Featured --> 
+    <div class="col-lg-12 col-md-12 col-sm-12"> 
+     <div class="col-lg-12 col-sm-12"> 
+      <span class="title">Handpicked for You</span> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=135557&amp;pw=162795"><img alt="Rock/Creek" src="http://www.avantlink.com/gbi/10049/135557/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=135745&amp;pw=162795"><img alt="Fishwest" src="http://www.avantlink.com/gbi/10713/135745/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=174217&amp;pw=162795"><img alt="LifeProof" src="http://www.avantlink.com/gbi/11565/174217/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=184745&amp;pw=162795"><img alt="Mountain Gear" src="http://www.avantlink.com/gbi/11419/184745/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- End Featured --> 
+    <!-- Featured --> 
+    <div class="col-lg-12 col-md-12 col-sm-12"> 
+     <div class="col-lg-12 col-sm-12"> 
+      <span class="title">Today's Top Deals</span> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=385429&amp;pw=162795"><img alt="100 Percent Pure" src="http://www.avantlink.com/gbi/11935/385429/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=311883&amp;pw=162795"><img alt="AppOutdoors.com" src="http://www.avantlink.com/gbi/10260/311883/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=387502&amp;pw=162795"><img alt="Backcountry.com" src="http://www.avantlink.com/gbi/10060/387502/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=135195&amp;pw=162795"><img alt="CampGear.com" src="http://www.avantlink.com/gbi/11617/135195/134531/162795/image.gif"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- End Featured --> 
+    <!-- Featured --> 
+    <div class="col-lg-12 col-md-12 col-sm-12"> 
+     <div class="col-lg-12 col-sm-12"> 
+      <span class="title">Coupons Expiring Soon</span> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=13881&amp;pw=162795"><img alt="CampSaver.com" src="http://www.avantlink.com/gbi/10008/13881/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=274355&amp;pw=162795"><img alt="Fanatics" src="http://www.avantlink.com/gbi/11081/274355/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=367409&amp;pw=162795"><img alt="OMCgear" src="http://www.avantlink.com/gbi/10068/367409/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=227427&amp;pw=162795"><img alt="REI.com" src="http://www.avantlink.com/gbi/10248/227427/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- End Featured --> 
+    <!-- Featured --> 
+    <div class="col-lg-12 col-md-12 col-sm-12"> 
+     <div class="col-lg-12 col-sm-12"> 
+      <span class="title">Top Deals in Sports</span> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=13925&amp;pw=162795"><img alt="CampSaver.com" src="http://www.avantlink.com/gbi/10008/13925/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=227419&amp;pw=162795"><img alt="REI.com" src="http://www.avantlink.com/gbi/10248/227419/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- End Featured --> 
+    <!-- Featured --> 
+    <div class="col-lg-12 col-md-12 col-sm-12"> 
+     <div class="col-lg-12 col-sm-12"> 
+      <span class="title">Top Deals in Clothing in Apparel</span> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=392863&amp;pw=162795"><img alt="Carhartt" src="http://www.avantlink.com/gbi/11317/392863/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=271889&amp;pw=162795"><img alt="Patagonia" src="http://www.avantlink.com/gbi/10083/271889/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=277077&amp;pw=162795"><img alt="OMCgear" src="http://www.avantlink.com/gbi/10068/277077/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 col-sm-3 hero-feature text-center"> 
+      <div class="thumbnail"> 
+       <a href="http://www.avantlink.com/click.php?tt=ml&amp;ti=274087&amp;pw=162795"><img alt="Fanatics" src="http://www.avantlink.com/gbi/11081/274087/134531/162795/image.jpg"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- End Featured --> 
+    <div class="clearfix visible-sm"></div> 
+   </div> 
+  </div> 
+  <!-- FOOTER CONTENT --> 
+  <footer> 
+   <div class="container"> 
+    <div class="col-lg-3 col-md-3 col-sm-6"> 
+     <div class="column"> 
+      <h4>Information</h4> 
+      <ul> 
+       <li><a href="/about">About Us</a></li> 
+       <li><a href="/team">Team</a></li> 
+       <li><a href="/jobs">Jobs</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="col-lg-3 col-md-3 col-sm-6"> 
+     <div class="column"> 
+      <h4>Categories</h4> 
+      <ul> 
+       <li><a href="/coupons">Coupons and Promo Codes</a></li> 
+       <li><a href="/coupons/coupon-types/expiring-soon">Daily Deals</a></li> 
+       <li><a href="/products">Products</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="col-lg-3 col-md-3 col-sm-6"> 
+     <div class="column"> 
+      <h4>Contact</h4> 
+      <ul> 
+       <li><a href="/contact">Contact Us</a></li> 
+       <li><a href="http://blog.huckabuy.com">Blog</a></li> 
+       <li><a href="mailto:contact@huckabuy.com?Subject=Site%20Contact">Email: contact@huckabuy.com</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="col-lg-3 col-md-3 col-sm-6"> 
+     <div class="column"> 
+      <h4>Follow Us</h4> 
+      <ul class="social"> 
+       <li><a href="http://www.crunchbase.com/organization/huckabuy-com">Crunchbase</a></li> 
+       <li><a href="https://www.facebook.com/huckabuy">Facebook</a></li> 
+       <li><a href="https://twitter.com/HuckubuyWeb">Twitter</a></li> 
+       <li><a href="http://www.crunchbase.com/organization/huckabuy-com">Instagram</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="navbar-inverse text-center copyright">
+     Copyright © 2013-2014. Huckabuy, LLC. All Rights Reserved. 
+   </div> 
+  </footer>   
+ </body>
+</html>

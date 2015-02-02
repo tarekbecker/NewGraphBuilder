@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cloudbash">
+ <head> 
+  <title>CloudBash-Linux Power tools for Big Data</title> 
+  <!-- meta --> 
+  <meta charset="utf-8"> 
+  <meta name="description" content="CloudBash - a command-line cloud data/log processor."> 
+  <meta name="author" content="Team CloudBash"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <script id="status-template" type="text/html">
+      <div class="alert alert-error status-bar fade in">
+        <a class="close" data-dismiss="alert">×</a>
+        <span><%= message %></span>
+      </div>
+    </script> 
+  <link rel="shortcut icon" href="assets/icons/favicon.ico"> 
+  <script src="//code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script> 
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script> 
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> 
+  <script src="/assets/javascripts/angular-file-upload-shim.js" type="text/javascript"></script> 
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js" type="text/javascript"></script> 
+  <script src="/assets/javascripts/angular-ui-router.js" type="text/javascript"></script> 
+  <script src="/assets/javascripts/ui-bootstrap-tpls.js" type="text/javascript"></script> 
+  <script src="/assets/javascripts/searchS3.js" type="text/javascript"></script> 
+  <script src="/assets/javascripts/angularFileUpload.js" type="text/javascript"></script> 
+  <script src="/assets/javascripts/uploadFile.js" type="text/javascript"></script> 
+  <script src="/assets/javascripts/jquery.terminal-0.8.7.js" type="text/javascript"></script> 
+  <link href="/assets/stylesheets/jquery.terminal.css" rel="stylesheet"> 
+  <script src="/assets/javascripts/cloudbash_jqterminal.js" type="text/javascript"></script> 
+ </head> 
+ <body ng-controller="global"> 
+  <!--<a href="#top" id="toTop"></a--> 
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+   <div class="container"> 
+    <div class="navbar-header"> 
+     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <!--<img src="/assets/images/CloudInfraLogo-transparent-bg.png"
+           alt="CloudBash"
+           style="height:48px;padding-right:3px; padding-left:3px;background-color: white;border-radius: 2px;" />
+        --> 
+     <a href="/"> <img src="/assets/images/cloudbash.png" alt="CloudBash" style="height:35px;border-radius:4px;padding-right:10px;width: 180px;padding-top: 13px"></a> 
+    </div> 
+    <nav class="navbar-collapse collapse bs-navbar-collapse" style="height: 1px;"> 
+     <ul id="navbar_left" class="nav navbar-nav"> 
+      <li>&nbsp;&nbsp;</li> 
+      <li id="additemhome"><a id="home" href="/">Home</a></li> 
+      <li id="activeHelpTab"><a id="help" href="/help">Help</a></li> 
+      <li id="additemabout"><a id="about_us" href="http://cloudinfra.in/">About Us</a></li> 
+      <li id="demoterminal"><a id="demo" href="/demoterminal">Live Demo</a></li> 
+      <!--li id="demoterminal"><a href="/downloadcb">Download CLI</a></li--> 
+     </ul> 
+     <ul id="navbar_right" class="nav navbar-nav navbar-right"> 
+      <li><a href="/authenticate/google" id="login"><span class="label label-primary" style="font-size:medium"> Login </span> </a></li> 
+     </ul> 
+    </nav> 
+   </div> 
+  </div> 
+  <!-- Script for google analytics on the website --> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-46872345-1', 'cloudbash.sh');
+  ga('send', 'pageview');
+  
+  </script> 
+  <script src="/assets/javascripts/underscore.js" type="text/javascript"></script> 
+  <script src="/assets/javascripts/cloudbash.js" type="text/javascript"></script> 
+  <script src="/assets/javascripts/cloudbash_ascii.js" type="text/javascript"></script> 
+  <link href="/assets/stylesheets/main.css" rel="stylesheet"> 
+  <script src="/assets/javascripts/jquery.mousewheel-min.js" type="text/javascript"></script> 
+  <script src="/assets/javascripts/config_deduction.js" type="text/javascript"></script> 
+  <script src="//cloudbash.sh/cl-min.js" type="text/javascript"></script> 
+  <script src="/assets/javascripts/logger.js" type="text/javascript"></script> 
+  <script>   
+      $(window).on('load resize', function(){
+  	    $('#terminaltab').height($(this).height() - 50);
+  	    $('#terminal').height($(this).height() - 75);
+  	});
+  </script> 
+  <!--link href="/assets/stylesheets/rotate.css" rel="stylesheet"--> 
+  <script type="text/javascript">
+ $('#additemhome').addClass('active');
+  </script> 
+  <div class="tab-pane container in active" id="index" style="border-radius: 4px;"> 
+   <!--script>
+  $(".container").click(function(){
+ $(this).toggleClass("rotator")  ; 
+})
+</script--> 
+   <div class="techHomePage"> 
+    <div class="row"> 
+     <div class="col-md-6 col-xs-12" id="top_screen" style="margin-top:90px"> 
+      <span style="font-size: 2.7em;">&gt;man cloudbash</span> 
+      <img src="/assets/images/terminal.gif" width="17" height="2" style="margin-left:-5px; margin-top:4px;opacity: 0.7;"> 
+     </div> 
+     <!--div class=" col-md-3 alert alert-success  pull-right" style="margin-top:70px">
+              <a href="http://cloudbash.sh/signup?group=cloudbash">Signup</a> and get $128 credit!
+          </div--> 
+     <div class="col-xs-9 col-md-3 alert alert-success  pull-right" style="margin-top:70px">
+       Want to try! &nbsp;&nbsp;&nbsp;
+      <a href="/authenticate/google">Request Access</a> 
+     </div> 
+    </div> 
+    <div class="row" id="top_screen"> 
+     <div class="col-xs-12 col-md-12" id="top_screen"> 
+      <br>
+      <br> 
+      <div class="row"> 
+       <div class="col-xs-12 col-md-6 well circle_div"> 
+        <center>
+         <h3>CloudBash &gt;_</h3> 
+         <p> Worlds fastest MapReduce platform!<br> Simplest way to write a mapreduce (few minutes).<br> Mix &amp; Match your linux power tools, perl, python ...<br> Quick to run (seconds to a few minutes).<br> Getting quicker every day. </p>
+        </center> 
+       </div> 
+       <div class="col-xs-12 col-md-6 well circle_div"> 
+        <center>
+         <h3>CloudBash Premium</h3> 
+         <p> We offer Quality Data Scientists on hire!<br> Get all your tough questions answered easily.<br> Articulate your data problem in plain english and get them done the same day.<br> Starts from $10/question. </p>
+        </center> 
+       </div> 
+      </div> 
+      <br>
+      <br>
+      <br> 
+      <center>
+       <div id="screen"> 
+       </div>
+      </center> 
+      <br> 
+      <div> 
+       <center> 
+        <font face="Arial" size="3"> <a href="#" onclick="Start()" title="Start"> |&lt;</a>&nbsp;&nbsp; <a href="#" onclick="Stop()" title="Stop"> #</a>&nbsp;&nbsp; <a href="#" onclick="Play()" title="Play"> &gt;</a>&nbsp;&nbsp; <a href="#" onclick="End()" title="End"> &gt;|</a>&nbsp;&nbsp;&nbsp; </font>
+       </center> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="nonTechHomePage"> 
+   </div> 
+  </div> 
+  <!-- id="index" --> 
+  <!-- FOOTER --> 
+  <!--div class="footer navbar-default navbar-fixed-bottom" style="background-color: #f2f2f2;padding-left:10%; bottom:0px; padding-top:10px;">
+        <p style="color:#BDBDBD">&copy; Cloud Infra, LLC.</p>
+      </div-->   
+ </body>
+</html>

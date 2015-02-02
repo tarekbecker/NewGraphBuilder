@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+ <!--<![endif]-->
+ <head>
+  <link rel="stylesheet" type="text/css" href="http://www.zettaset.com/wp-content/cache/minify/000000/dcrBDcIwDIXhhRpMTwzACEzguq4U5MQhdihheorggBCcnvS9fwTSlDh7uKLEGT1q_kHDCKvWuVQ2C0VLE6zbmhuYd2FYS9ka0uxIHhatKRwgZpI2swHZu7NhD3d2R2N_ySc8M8Guzb_1fGlc-27BTH3S2587HZu5phNVFZmwPgA.css" media="all"> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=1000"> 
+  <title>Blog</title> 
+  <link rel="shortcut icon" href="http://www.zettaset.com/wp-content/themes/zettaset/favicon.ico"> 
+  <!--[if lt IE 9]>
+<script src="http://www.zettaset.com/wp-content/themes/zettaset/js/html5.js" type="text/javascript"></script>
+<![endif]--> 
+  <link rel="stylesheet" id="twentytwelve-fonts-css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext" type="text/css" media="all"> 
+  <!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.zettaset.com/wp-content/themes/zettaset/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="wp-pagenavi-css" href="http://www.zettaset.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://www.zettaset.com/wp-content/cache/minify/000000/jYrRCoAgDAB_KB190tBRKzfN1NHf14MfEBwcHDewgpnB3iSBFccaUo90w_FxdarP1DL-nk54q9jIC-uyQsgipM0NTByxcdb5-VnIFwznCw.js"></script> 
+  <script type="text/javascript" src="http://www.zettaset.com/wp-content/plugins/comment-validation/comment-validation.js?ver=3.9.1"></script> 
+  <!-- Plugin: Open external links a new window. Plugin by Kristian Risager Larsen, http://kristianrisagerlarsen.dk . Download it at http://wordpress.org/extend/plugins/open-external-links-in-a-new-window/ --> 
+  <script type="text/javascript">//<![CDATA[
+	function external_links_in_new_windows_loop() {
+		if (!document.links) {
+			document.links = document.getElementsByTagName('a');
+		}
+		var change_link = false;
+		var force = '';
+		var ignore = 'http://www.slideshare.net/Hadoop_Summit/th-210p230-avogt';
+
+		for (var t=0; t<document.links.length; t++) {
+			var all_links = document.links[t];
+			change_link = false;
+			
+			if(document.links[t].hasAttribute('onClick') == false) {
+				// forced if the address starts with http (or also https), but does not link to the current domain
+				if(all_links.href.search(/^http/) != -1 && all_links.href.search('www.zettaset.com') == -1) {
+					// alert('Changeda '+all_links.href);
+					change_link = true;
+				}
+					
+				if(force != '' && all_links.href.search(force) != -1) {
+					// forced
+					// alert('force '+all_links.href);
+					change_link = true;
+				}
+				
+				if(ignore != '' && all_links.href.search(ignore) != -1) {
+					// alert('ignore '+all_links.href);
+					// ignored
+					change_link = false;
+				}
+
+				if(change_link == true) {
+					// alert('Changed '+all_links.href);
+					document.links[t].setAttribute('onClick', 'javascript:window.open(\''+all_links.href+'\'); return false;');
+					document.links[t].removeAttribute('target');
+				}
+			}
+		}
+	}
+	
+	// Load
+	function external_links_in_new_windows_load(func)
+	{	
+		var oldonload = window.onload;
+		if (typeof window.onload != 'function'){
+			window.onload = func;
+		} else {
+			window.onload = function(){
+				oldonload();
+				func();
+			}
+		}
+	}
+
+	external_links_in_new_windows_load(external_links_in_new_windows_loop);
+	//]]></script> 
+  <!-- All in One SEO Pack 2.1.7 by Michael Torbert of Semper Fi Web Design[305,329] --> 
+  <link rel="next" href="http://www.zettaset.com/index.php/news/blog/page/2/"> 
+  <link rel="canonical" href="http://www.zettaset.com/index.php/news/blog/"> 
+  <!-- /all in one seo pack --> 
+  <style type="text/css"></style> 
+  <style type="text/css">
+.synved-social-resolution-single {
+display: inline-block;
+}
+.synved-social-resolution-normal {
+display: inline-block;
+}
+.synved-social-resolution-hidef {
+display: none;
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx),
+only screen and (min-resolution: 192dpi) {
+	.synved-social-resolution-normal {
+	display: none;
+	}
+	.synved-social-resolution-hidef {
+	display: inline-block;
+	}
+}
+</style> 
+  <style>
+header nav li.menu-item-18 a {
+	background: #47c5f7; /* Old browsers */
+	background: -moz-linear-gradient(top, #47c5f7 0%, #26b1e9 100%, #0aa1dd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #47c5f7), color-stop(100%, #26b1e9), color-stop(100%, #0aa1dd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #47c5f7 0%, #26b1e9 100%, #0aa1dd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #47c5f7 0%, #26b1e9 100%, #0aa1dd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #47c5f7 0%, #26b1e9 100%, #0aa1dd 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #47c5f7 0%, #26b1e9 100%, #0aa1dd 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47c5f7', endColorstr='#0aa1dd', GradientType=0 ); /* IE6-9 */
+	text-decoration:none;
+}
+</style> 
+ </head> 
+ <body class="blog custom-background custom-font-enabled"> 
+  <header class="clearfix"> 
+   <div class="head-top-section clearfix"> 
+    <div class="wrapper"> 
+     <nav class="clearfix"> 
+      <ul id="menu-main-menu" class="">
+       <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5"><a href="http://www.zettaset.com/">Home</a></li> 
+       <li id="menu-item-4572" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4572"><a href="#">Products</a>
+        <div class="dd-menu">
+         <div class="top-curve"></div>
+         <div class="dd-menu-inside">
+          <ul> 
+           <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="http://www.zettaset.com/index.php/products/enterprise-hadoop-cluster-management/">Orchestrator 7</a></li> 
+           <li id="menu-item-4558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4558"><a href="http://www.zettaset.com/index.php/products/fast-path-hadoop-installation-management/">Fast-PATH Hadoop Installation Management</a></li> 
+          </ul>
+         </div>
+         <div class="bottom-curve"></div>
+        </div> </li> 
+       <li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-16"><a href="#">Solutions</a>
+        <div class="dd-menu">
+         <div class="top-curve"></div>
+         <div class="dd-menu-inside">
+          <ul> 
+           <li id="menu-item-3220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3220"><a href="http://www.zettaset.com/index.php/solutions/secure-enrterprise-hadoop/">Secure Enterprise <br>Hadoop</a></li> 
+           <li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="http://www.zettaset.com/index.php/solutions/secure-hadoop-bi-connector/">Secure Hadoop <br>BI Connector</a></li> 
+           <li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114"><a href="http://www.zettaset.com/index.php/solutions/secure-hadoop-encryption/">Secure Hadoop <br>Encryption</a></li> 
+           <li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="http://www.zettaset.com/index.php/solutions/secure-data-warehouse/">Secure Data <br>Warehouse</a></li> 
+           <li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="http://www.zettaset.com/index.php/solutions/cloudera-management/">Cloudera CDH <br>Management</a></li> 
+           <li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="http://www.zettaset.com/index.php/products/secure-hortonworks-hadoop/">Hortonworks HDP <br>Management</a></li> 
+           <li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="http://www.zettaset.com/index.php/products/big-data-management-use-cases/">Use <br>Cases</a></li> 
+          </ul>
+         </div>
+         <div class="bottom-curve"></div>
+        </div> </li> 
+       <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17"><a href="#">Partners</a>
+        <div class="dd-menu">
+         <div class="top-curve"></div>
+         <div class="dd-menu-inside">
+          <ul> 
+           <li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="http://www.zettaset.com/index.php/partners/partner-overview/">Partner Overview</a></li> 
+           <li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="http://www.zettaset.com/index.php/partners/partner-inquiries/">Partner Inquiries</a></li> 
+          </ul>
+         </div>
+         <div class="bottom-curve"></div>
+        </div> </li> 
+       <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-18"><a href="#">News</a>
+        <div class="dd-menu">
+         <div class="top-curve"></div>
+         <div class="dd-menu-inside">
+          <ul> 
+           <li id="menu-item-3839" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3837 current_page_item current_page_parent menu-item-3839"><a href="http://www.zettaset.com/index.php/news/blog/">Blog</a></li> 
+           <li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="http://www.zettaset.com/index.php/news/press-releases/">Press Releases</a></li> 
+           <li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="http://www.zettaset.com/index.php/news/media-coverage/">Media Coverage</a></li> 
+           <li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="http://www.zettaset.com/index.php/news/awards/">Awards</a></li> 
+           <li id="menu-item-3718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3718"><a href="http://www.zettaset.com/index.php/news/media-contacts/">Media Contacts</a></li> 
+          </ul>
+         </div>
+         <div class="bottom-curve"></div>
+        </div> </li> 
+       <li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19"><a href="#">Info Center</a>
+        <div class="dd-menu">
+         <div class="top-curve"></div>
+         <div class="dd-menu-inside">
+          <ul> 
+           <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="http://www.zettaset.com/index.php/info-center/what-is-big-data/">What is Big Data?</a></li> 
+           <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="http://www.zettaset.com/index.php/info-center/what-is-a-hadoop-cluster/">What is a Hadoop Cluster?</a></li> 
+           <li id="menu-item-3588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3588"><a href="http://www.zettaset.com/index.php/info-center/webinars/">Webinars</a></li> 
+           <li id="menu-item-3585" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3585"><a href="http://www.zettaset.com/index.php/info-center/secure-hadoop-resources/">Secure Hadoop Resources</a></li> 
+           <li id="menu-item-3581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3581"><a href="http://www.zettaset.com/index.php/info-center/videos/">Videos</a></li> 
+          </ul>
+         </div>
+         <div class="bottom-curve"></div>
+        </div> </li> 
+       <li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-20"><a href="#">Company</a>
+        <div class="dd-menu">
+         <div class="top-curve"></div>
+         <div class="dd-menu-inside">
+          <ul> 
+           <li id="menu-item-152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"><a href="http://www.zettaset.com/index.php/company/vision/">Vision</a></li> 
+           <li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="http://www.zettaset.com/index.php/company/management-team/">Management Team</a></li> 
+           <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="http://www.zettaset.com/index.php/company/board-of-directors/">Board of Directors</a></li> 
+           <li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="http://www.zettaset.com/index.php/company/careers/">Careers</a></li> 
+           <li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a href="http://www.zettaset.com/index.php/company/contact-us/">Contact Us</a></li> 
+           <li id="menu-item-3680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3680"><a href="http://www.zettaset.com/index.php/company/big-data-simplified/">Signup for Demo</a></li> 
+          </ul>
+         </div>
+         <div class="bottom-curve"></div>
+        </div> </li> 
+      </ul> 
+      <div class="video-post">
+       <a href="http://www.zettaset.com/index.php/info-center/videos/"><img src="http://www.zettaset.com/wp-content/themes/zettaset/images/video-posted.jpg" alt="" height="42" width="154"></a>
+      </div> 
+     </nav> 
+     <figure class="logo"> 
+      <a href="http://www.zettaset.com/" title="Zettaset" rel="home"><img src="http://198.61.167.104/wp-content/uploads/2014/04/logo.png" alt="Zettaset" height="53" width="168"></a> 
+     </figure> 
+     <div class="right-sm-icon"> 
+      <ul class="clearfix"> 
+       <li><a href="http://www.zettaset.com/index.php/news/press-releases/">Press Releases</a></li> 
+       <li><a href="http://www.zettaset.com/index.php/company/contact-us/">Contact</a></li> 
+       <li><a href="http://www.zettaset.com/index.php/news/blog/">Blog</a></li> 
+       <li> <a href="https://twitter.com/#!/zettaset" rel="nofollow" target="_blank"><img src="http://www.zettaset.com/wp-content/themes/zettaset/images/twitter-icon.jpg" alt="twitter" height="20" width="20"></a> <a href="http://www.linkedin.com/company/zettaset?trk=hb_tab_compy_id_2468998" rel="nofollow" target="_blank"><img src="http://www.zettaset.com/wp-content/themes/zettaset/images/in-icon.jpg" alt="linkedin" height="20" width="20"></a> <a rel="nofollow" href="https://www.youtube.com/channel/UCIgYEwhic7IdGofFZ9ZJxOA" target="_blank"><img src="http://www.zettaset.com/wp-content/themes/zettaset/images/utube-icon.jpg" alt="youtube" height="20" width="20"></a> <a rel="nofollow" href="https://www.facebook.com/Zettaset" target="_blank"><img src="http://www.zettaset.com/wp-content/themes/zettaset/images/facebook-icon.jpg" alt="facebook" height="20" width="20"></a></li> 
+      </ul> 
+      <ul class="with-sm"> 
+       <li><strong>Quick Support: </strong> +1-650-314-7927</li> 
+       <li><a href="mailto:sales@zettaset.com">sales@zettaset.com</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div>  
+  </header> 
+  <section class="banner-area-inside clearfix"> 
+   <div class="wrapper"> 
+    <div class="banner-text"> 
+     <h2>Zettaset Blog</h2> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="inner-breadcrum"> 
+   <div class="breadcrum"> 
+    <div class="wrapper clearfix">
+     <ul id="menu-main-menu-1" class="cmw-fellback-to-parent">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3837 current_page_item current_page_parent cmw-level-1 menu-item-3839"><a href="http://www.zettaset.com/index.php/news/blog/">Blog</a></li> 
+      <li class="menu-item menu-item-type-post_type menu-item-object-page cmw-level-1 menu-item-146"><a href="http://www.zettaset.com/index.php/news/press-releases/">Press Releases</a></li> 
+      <li class="menu-item menu-item-type-post_type menu-item-object-page cmw-level-1 menu-item-145"><a href="http://www.zettaset.com/index.php/news/media-coverage/">Media Coverage</a></li> 
+      <li class="menu-item menu-item-type-post_type menu-item-object-page cmw-level-1 menu-item-144"><a href="http://www.zettaset.com/index.php/news/awards/">Awards</a></li> 
+      <li class="menu-item menu-item-type-post_type menu-item-object-page cmw-level-1 menu-item-3718"><a href="http://www.zettaset.com/index.php/news/media-contacts/">Media Contacts</a></li> 
+     </ul>
+    </div> 
+   </div> 
+  </section> 
+  <section class="inner-content"> 
+   <div class="wrapper"> 
+    <div class="menu clearfix"> 
+     <ul>
+      <li><a href="http://www.zettaset.com">Home</a></li> 
+      <li><a href="javascript:void(0);">News</a></li> 
+      <li>Blog</li>
+     </ul> 
+    </div> 
+    <div class="great-relation clearfix"> 
+     <div class="left-section"> 
+      <div class="blog"> 
+       <h2>Zettaset Blog</h2> 
+       <ul> 
+        <li> 
+         <div class="blog-post"> 
+          <span class="date">August 21, 2014 , Written by John Armstrong</span> 
+          <p><span>Comprehensive Security Across the Hadoop Infrastructure</span></p> 
+          <p></p>
+          <p> As big data technologies like Hadoop become widely deployed in production environments, the expectation is that they will meet the enterprise requirements in data governance, operations and security while integrating with existing data center infrastructure. The technology is not contained within a relatively …</p> 
+          <p></p> 
+          <div class="read-more-box clearfix"> 
+           <div class="read-more-blog">
+            <a href="http://www.zettaset.com/index.php/blog/comprehensive-security-across-the-hadoop-infrastructure/">READ MORE</a>
+           </div> 
+           <div class="read-more-blog-icon">
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fcomprehensive-security-across-the-hadoop-infrastructure%2F&amp;t=Comprehensive%20Security%20Across%20the%20Hadoop%20Infrastructure&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fcomprehensive-security-across-the-hadoop-infrastructure%2F&amp;p[images][0]=http%3A%2F%2Fwww.zettaset.com%2Fwp-content%2Fuploads%2F2014%2F08%2FScreen-Shot-2014-08-11-at-1_07_49-PM.jpg&amp;p[title]=Comprehensive%20Security%20Across%20the%20Hadoop%20Infrastructure" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fcomprehensive-security-across-the-hadoop-infrastructure%2F&amp;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fcomprehensive-security-across-the-hadoop-infrastructure%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Share on Google+" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/google_plus.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fcomprehensive-security-across-the-hadoop-infrastructure%2F&amp;title=Comprehensive%20Security%20Across%20the%20Hadoop%20Infrastructure" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fcomprehensive-security-across-the-hadoop-infrastructure%2F&amp;media=http%3A%2F%2Fwww.zettaset.com%2Fwp-content%2Fuploads%2F2014%2F08%2FScreen-Shot-2014-08-11-at-1_07_49-PM.jpg&amp;description=Comprehensive%20Security%20Across%20the%20Hadoop%20Infrastructure" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fcomprehensive-security-across-the-hadoop-infrastructure%2F&amp;title=Comprehensive%20Security%20Across%20the%20Hadoop%20Infrastructure" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Comprehensive%20Security%20Across%20the%20Hadoop%20Infrastructure&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fcomprehensive-security-across-the-hadoop-infrastructure%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png"></a>
+           </div> 
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="blog-post"> 
+          <span class="date">June 24, 2014 , Written by John Armstrong</span> 
+          <p><span>Conversations at Hadoop Summit: Hadoop Production on the Horizon</span></p> 
+          <p></p>
+          <p> Zettaset recently participated as an exhibitor at the Hadoop Summit in San Jose, California.&nbsp;This is one of a handful of major events in the Big Data industry that focuses on all-things Hadoop, and it did not disappoint.&nbsp;The Summit was bustling with …</p> 
+          <p></p> 
+          <div class="read-more-box clearfix"> 
+           <div class="read-more-blog">
+            <a href="http://www.zettaset.com/index.php/blog/conversations-at-hadoop-summit-hadoop-production-on-the-horizon/">READ MORE</a>
+           </div> 
+           <div class="read-more-blog-icon">
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fconversations-at-hadoop-summit-hadoop-production-on-the-horizon%2F&amp;t=Conversations%20at%20Hadoop%20Summit%3A%20Hadoop%20Production%20on%20the%20Horizon&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fconversations-at-hadoop-summit-hadoop-production-on-the-horizon%2F&amp;p[images][0]=&amp;p[title]=Conversations%20at%20Hadoop%20Summit%3A%20Hadoop%20Production%20on%20the%20Horizon" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fconversations-at-hadoop-summit-hadoop-production-on-the-horizon%2F&amp;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fconversations-at-hadoop-summit-hadoop-production-on-the-horizon%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Share on Google+" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/google_plus.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fconversations-at-hadoop-summit-hadoop-production-on-the-horizon%2F&amp;title=Conversations%20at%20Hadoop%20Summit%3A%20Hadoop%20Production%20on%20the%20Horizon" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fconversations-at-hadoop-summit-hadoop-production-on-the-horizon%2F&amp;media=&amp;description=Conversations%20at%20Hadoop%20Summit%3A%20Hadoop%20Production%20on%20the%20Horizon" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fconversations-at-hadoop-summit-hadoop-production-on-the-horizon%2F&amp;title=Conversations%20at%20Hadoop%20Summit%3A%20Hadoop%20Production%20on%20the%20Horizon" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Conversations%20at%20Hadoop%20Summit%3A%20Hadoop%20Production%20on%20the%20Horizon&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fconversations-at-hadoop-summit-hadoop-production-on-the-horizon%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png"></a>
+           </div> 
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="blog-post"> 
+          <span class="date">May 13, 2014 , Written by John Armstrong</span> 
+          <p><span>One Hadoop, Two Partnerships: Zettaset partners with Revelytix and Simba Technologies</span></p> 
+          <p></p>
+          <p> Do you remember Babe Ruth’s famous called shot? The amazing moment during the 1932 World Series when he pointed to the center field bleachers at bat and followed up to hit a home run to center field? Maybe you’re not a baseball fan, but …</p> 
+          <p></p> 
+          <div class="read-more-box clearfix"> 
+           <div class="read-more-blog">
+            <a href="http://www.zettaset.com/index.php/blog/one-hadoop-two-partnerships-zettaset-partners-with-revelytix-and-simba-technologies/">READ MORE</a>
+           </div> 
+           <div class="read-more-blog-icon">
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fone-hadoop-two-partnerships-zettaset-partners-with-revelytix-and-simba-technologies%2F&amp;t=One%20Hadoop%2C%20Two%20Partnerships%3A%20Zettaset%20partners%20with%20Revelytix%20and%20Simba%20Technologies&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fone-hadoop-two-partnerships-zettaset-partners-with-revelytix-and-simba-technologies%2F&amp;p[images][0]=&amp;p[title]=One%20Hadoop%2C%20Two%20Partnerships%3A%20Zettaset%20partners%20with%20Revelytix%20and%20Simba%20Technologies" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fone-hadoop-two-partnerships-zettaset-partners-with-revelytix-and-simba-technologies%2F&amp;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fone-hadoop-two-partnerships-zettaset-partners-with-revelytix-and-simba-technologies%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Share on Google+" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/google_plus.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fone-hadoop-two-partnerships-zettaset-partners-with-revelytix-and-simba-technologies%2F&amp;title=One%20Hadoop%2C%20Two%20Partnerships%3A%20Zettaset%20partners%20with%20Revelytix%20and%20Simba%20Technologies" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fone-hadoop-two-partnerships-zettaset-partners-with-revelytix-and-simba-technologies%2F&amp;media=&amp;description=One%20Hadoop%2C%20Two%20Partnerships%3A%20Zettaset%20partners%20with%20Revelytix%20and%20Simba%20Technologies" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fone-hadoop-two-partnerships-zettaset-partners-with-revelytix-and-simba-technologies%2F&amp;title=One%20Hadoop%2C%20Two%20Partnerships%3A%20Zettaset%20partners%20with%20Revelytix%20and%20Simba%20Technologies" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=One%20Hadoop%2C%20Two%20Partnerships%3A%20Zettaset%20partners%20with%20Revelytix%20and%20Simba%20Technologies&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fone-hadoop-two-partnerships-zettaset-partners-with-revelytix-and-simba-technologies%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png"></a>
+           </div> 
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="blog-post"> 
+          <span class="date">April 8, 2014 , Written by John Armstrong</span> 
+          <p><span>TechNavio Recognizes Zettaset as Top Hadoop Technology Company in 2014</span></p> 
+          <p></p>
+          <p>It’s been almost a decade since Hadoop’s inception in 2005 at Yahoo! as an open-source software framework for storage and large-scale processing of data-sets on clusters of commodity hardware.<br> As Hadoop evolved, it eventually spurred a new eco-system of technology companies that are putting the …</p> 
+          <p></p> 
+          <div class="read-more-box clearfix"> 
+           <div class="read-more-blog">
+            <a href="http://www.zettaset.com/index.php/blog/technavio-recognizes-zettaset-top-hadoop-technology-company-2014/">READ MORE</a>
+           </div> 
+           <div class="read-more-blog-icon">
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Ftechnavio-recognizes-zettaset-top-hadoop-technology-company-2014%2F&amp;t=TechNavio%20Recognizes%20Zettaset%20as%20Top%20Hadoop%20Technology%20Company%20in%202014&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Ftechnavio-recognizes-zettaset-top-hadoop-technology-company-2014%2F&amp;p[images][0]=&amp;p[title]=TechNavio%20Recognizes%20Zettaset%20as%20Top%20Hadoop%20Technology%20Company%20in%202014" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Ftechnavio-recognizes-zettaset-top-hadoop-technology-company-2014%2F&amp;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Ftechnavio-recognizes-zettaset-top-hadoop-technology-company-2014%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Share on Google+" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/google_plus.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Ftechnavio-recognizes-zettaset-top-hadoop-technology-company-2014%2F&amp;title=TechNavio%20Recognizes%20Zettaset%20as%20Top%20Hadoop%20Technology%20Company%20in%202014" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Ftechnavio-recognizes-zettaset-top-hadoop-technology-company-2014%2F&amp;media=&amp;description=TechNavio%20Recognizes%20Zettaset%20as%20Top%20Hadoop%20Technology%20Company%20in%202014" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Ftechnavio-recognizes-zettaset-top-hadoop-technology-company-2014%2F&amp;title=TechNavio%20Recognizes%20Zettaset%20as%20Top%20Hadoop%20Technology%20Company%20in%202014" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=TechNavio%20Recognizes%20Zettaset%20as%20Top%20Hadoop%20Technology%20Company%20in%202014&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Ftechnavio-recognizes-zettaset-top-hadoop-technology-company-2014%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png"></a>
+           </div> 
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="blog-post"> 
+          <span class="date">March 12, 2014 , Written by Seshadri Ramaswami</span> 
+          <p><span>Getting Real About Hadoop at RSA Peer-to-Peer</span></p> 
+          <p></p>
+          <p> RSA Conference is the leading security conference where both vendors and users can discuss where the market is going and how the newest trends fit in. One of the most exciting takeaways from this conference is the opportunity to exchange ideas and converse with …</p> 
+          <p></p> 
+          <div class="read-more-box clearfix"> 
+           <div class="read-more-blog">
+            <a href="http://www.zettaset.com/index.php/blog/getting-real-about-hadoop-at-rsa/">READ MORE</a>
+           </div> 
+           <div class="read-more-blog-icon">
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fgetting-real-about-hadoop-at-rsa%2F&amp;t=Getting%20Real%20About%20Hadoop%20at%20RSA%20Peer-to-Peer&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fgetting-real-about-hadoop-at-rsa%2F&amp;p[images][0]=&amp;p[title]=Getting%20Real%20About%20Hadoop%20at%20RSA%20Peer-to-Peer" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fgetting-real-about-hadoop-at-rsa%2F&amp;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fgetting-real-about-hadoop-at-rsa%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Share on Google+" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/google_plus.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fgetting-real-about-hadoop-at-rsa%2F&amp;title=Getting%20Real%20About%20Hadoop%20at%20RSA%20Peer-to-Peer" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fgetting-real-about-hadoop-at-rsa%2F&amp;media=&amp;description=Getting%20Real%20About%20Hadoop%20at%20RSA%20Peer-to-Peer" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fgetting-real-about-hadoop-at-rsa%2F&amp;title=Getting%20Real%20About%20Hadoop%20at%20RSA%20Peer-to-Peer" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Getting%20Real%20About%20Hadoop%20at%20RSA%20Peer-to-Peer&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fgetting-real-about-hadoop-at-rsa%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png"></a>
+           </div> 
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="blog-post"> 
+          <span class="date">February 24, 2014 , Written by John Armstrong</span> 
+          <p><span>Strata 2014 Recap: Hadoop + Commercial Software for Success in the Enterprise</span></p> 
+          <p></p>
+          <p>Last week, media, analysts, vendors and customers alike gathered for a sold- out Strata conference at the Santa Clara Convention Center in California.&nbsp; This was Zettaset’s debut at the Santa Clara event, so we rolled up our sleeves and prepared to talk about security and …</p> 
+          <p></p> 
+          <div class="read-more-box clearfix"> 
+           <div class="read-more-blog">
+            <a href="http://www.zettaset.com/index.php/blog/strata-2014-recap-hadoop-commercial-software-for-success-in-the-enterprise/">READ MORE</a>
+           </div> 
+           <div class="read-more-blog-icon">
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fstrata-2014-recap-hadoop-commercial-software-for-success-in-the-enterprise%2F&amp;t=Strata%202014%20Recap%3A%20Hadoop%20%2B%20Commercial%20Software%20for%20Success%20in%20the%20Enterprise&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fstrata-2014-recap-hadoop-commercial-software-for-success-in-the-enterprise%2F&amp;p[images][0]=http%3A%2F%2Fwww.zettaset.com%2Fwp-content%2Fuploads%2F2014%2F02%2Fzsetatstrata1.jpg&amp;p[title]=Strata%202014%20Recap%3A%20Hadoop%20%2B%20Commercial%20Software%20for%20Success%20in%20the%20Enterprise" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fstrata-2014-recap-hadoop-commercial-software-for-success-in-the-enterprise%2F&amp;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fstrata-2014-recap-hadoop-commercial-software-for-success-in-the-enterprise%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Share on Google+" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/google_plus.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fstrata-2014-recap-hadoop-commercial-software-for-success-in-the-enterprise%2F&amp;title=Strata%202014%20Recap%3A%20Hadoop%20%2B%20Commercial%20Software%20for%20Success%20in%20the%20Enterprise" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fstrata-2014-recap-hadoop-commercial-software-for-success-in-the-enterprise%2F&amp;media=http%3A%2F%2Fwww.zettaset.com%2Fwp-content%2Fuploads%2F2014%2F02%2Fzsetatstrata1.jpg&amp;description=Strata%202014%20Recap%3A%20Hadoop%20%2B%20Commercial%20Software%20for%20Success%20in%20the%20Enterprise" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fstrata-2014-recap-hadoop-commercial-software-for-success-in-the-enterprise%2F&amp;title=Strata%202014%20Recap%3A%20Hadoop%20%2B%20Commercial%20Software%20for%20Success%20in%20the%20Enterprise" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Strata%202014%20Recap%3A%20Hadoop%20%2B%20Commercial%20Software%20for%20Success%20in%20the%20Enterprise&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fstrata-2014-recap-hadoop-commercial-software-for-success-in-the-enterprise%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png"></a>
+           </div> 
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="blog-post"> 
+          <span class="date">January 28, 2014 , Written by Jim Vogt</span> 
+          <p><span>Making Hadoop More Accessible for Analytics Applications</span></p> 
+          <p></p>
+          <p> Much of the talk around big data and Hadoop still revolves around the pure-play distribution vendors that essentially brand Apache open-source Hadoop, and derive revenues from support and training. There is still a tremendous amount of marketing hype, a sort of “happy talk” about …</p> 
+          <p></p> 
+          <div class="read-more-box clearfix"> 
+           <div class="read-more-blog">
+            <a href="http://www.zettaset.com/index.php/blog/making-hadoop-accessible-analytics-applications/">READ MORE</a>
+           </div> 
+           <div class="read-more-blog-icon">
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fmaking-hadoop-accessible-analytics-applications%2F&amp;t=Making%20Hadoop%20More%20Accessible%20for%20Analytics%20Applications&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fmaking-hadoop-accessible-analytics-applications%2F&amp;p[images][0]=&amp;p[title]=Making%20Hadoop%20More%20Accessible%20for%20Analytics%20Applications" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fmaking-hadoop-accessible-analytics-applications%2F&amp;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fmaking-hadoop-accessible-analytics-applications%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Share on Google+" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/google_plus.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fmaking-hadoop-accessible-analytics-applications%2F&amp;title=Making%20Hadoop%20More%20Accessible%20for%20Analytics%20Applications" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fmaking-hadoop-accessible-analytics-applications%2F&amp;media=&amp;description=Making%20Hadoop%20More%20Accessible%20for%20Analytics%20Applications" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fmaking-hadoop-accessible-analytics-applications%2F&amp;title=Making%20Hadoop%20More%20Accessible%20for%20Analytics%20Applications" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Making%20Hadoop%20More%20Accessible%20for%20Analytics%20Applications&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fmaking-hadoop-accessible-analytics-applications%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png"></a>
+           </div> 
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="blog-post"> 
+          <span class="date">January 8, 2014 , Written by Jim Vogt</span> 
+          <p><span>Data Encryption, Many Methods, Common Goal</span></p> 
+          <p></p>
+          <p>When it comes to the security of Hadoop databases, we’ve developed our software, Zettaset Orchestrator, to include fine-grained role-based access control, AD/LDAP policy enforcement, and centralized logging for compliance support. By making Hadoop more secure, we are enabling greater acceptance and adoption by enterprise customers.&nbsp; …</p> 
+          <p></p> 
+          <div class="read-more-box clearfix"> 
+           <div class="read-more-blog">
+            <a href="http://www.zettaset.com/index.php/blog/data-encryption-many-methods-common-goal/">READ MORE</a>
+           </div> 
+           <div class="read-more-blog-icon">
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fdata-encryption-many-methods-common-goal%2F&amp;t=Data%20Encryption%2C%20Many%20Methods%2C%20Common%20Goal&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fdata-encryption-many-methods-common-goal%2F&amp;p[images][0]=&amp;p[title]=Data%20Encryption%2C%20Many%20Methods%2C%20Common%20Goal" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fdata-encryption-many-methods-common-goal%2F&amp;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fdata-encryption-many-methods-common-goal%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Share on Google+" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/google_plus.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fdata-encryption-many-methods-common-goal%2F&amp;title=Data%20Encryption%2C%20Many%20Methods%2C%20Common%20Goal" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fdata-encryption-many-methods-common-goal%2F&amp;media=&amp;description=Data%20Encryption%2C%20Many%20Methods%2C%20Common%20Goal" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fdata-encryption-many-methods-common-goal%2F&amp;title=Data%20Encryption%2C%20Many%20Methods%2C%20Common%20Goal" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Data%20Encryption%2C%20Many%20Methods%2C%20Common%20Goal&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fdata-encryption-many-methods-common-goal%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png"></a>
+           </div> 
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="blog-post"> 
+          <span class="date">November 21, 2013 , Written by Jim Vogt</span> 
+          <p><span>Secure Big Data Management is the Path to a Better Enterprise</span></p> 
+          <p></p>
+          <p> Introduction:<br> Zettaset was founded in 2009 with the goal of becoming the undisputed leader in secure Big Data management within the Hadoop environment. Since we are an ISV, distribution-agnostic, and compatible with Cloudera, Hortonworks, as well as with analytics partners including Actian and Informatica, …</p> 
+          <p></p> 
+          <div class="read-more-box clearfix"> 
+           <div class="read-more-blog">
+            <a href="http://www.zettaset.com/index.php/blog/secure-big-data-management-path-better-enterprise/">READ MORE</a>
+           </div> 
+           <div class="read-more-blog-icon">
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fsecure-big-data-management-path-better-enterprise%2F&amp;t=Secure%20Big%20Data%20Management%20is%20the%20Path%20to%20a%20Better%20Enterprise&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fsecure-big-data-management-path-better-enterprise%2F&amp;p[images][0]=&amp;p[title]=Secure%20Big%20Data%20Management%20is%20the%20Path%20to%20a%20Better%20Enterprise" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fsecure-big-data-management-path-better-enterprise%2F&amp;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fsecure-big-data-management-path-better-enterprise%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Share on Google+" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/google_plus.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fsecure-big-data-management-path-better-enterprise%2F&amp;title=Secure%20Big%20Data%20Management%20is%20the%20Path%20to%20a%20Better%20Enterprise" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fsecure-big-data-management-path-better-enterprise%2F&amp;media=&amp;description=Secure%20Big%20Data%20Management%20is%20the%20Path%20to%20a%20Better%20Enterprise" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fsecure-big-data-management-path-better-enterprise%2F&amp;title=Secure%20Big%20Data%20Management%20is%20the%20Path%20to%20a%20Better%20Enterprise" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Secure%20Big%20Data%20Management%20is%20the%20Path%20to%20a%20Better%20Enterprise&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fsecure-big-data-management-path-better-enterprise%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png"></a>
+           </div> 
+          </div> 
+         </div> </li> 
+        <li> 
+         <div class="blog-post"> 
+          <span class="date">November 20, 2013 , Written by John Armstrong</span> 
+          <p><span>With Zettaset Orchestrator Your Hadoop Data is now Encrypted and Safe</span></p> 
+          <p></p>
+          <p> Today we are announcing data-at-rest encryption capabilities for the Zettaset Orchestrator software suite. Orchestrator is a distribution-agnostic Hadoop Cluster Management platform that enable the enterprise to securely manage their Big Data distributions and the underlying data files. By adding encryption to Orchestrator, organizations with …</p> 
+          <p></p> 
+          <div class="read-more-box clearfix"> 
+           <div class="read-more-blog">
+            <a href="http://www.zettaset.com/index.php/blog/zettaset-orchestrator-hadoop-data-now-encrypted-safe/">READ MORE</a>
+           </div> 
+           <div class="read-more-blog-icon">
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fzettaset-orchestrator-hadoop-data-now-encrypted-safe%2F&amp;t=With%20Zettaset%20Orchestrator%20Your%20Hadoop%20Data%20is%20now%20Encrypted%20and%20Safe&amp;s=100&amp;p[url]=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fzettaset-orchestrator-hadoop-data-now-encrypted-safe%2F&amp;p[images][0]=&amp;p[title]=With%20Zettaset%20Orchestrator%20Your%20Hadoop%20Data%20is%20now%20Encrypted%20and%20Safe" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fzettaset-orchestrator-hadoop-data-now-encrypted-safe%2F&amp;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fzettaset-orchestrator-hadoop-data-now-encrypted-safe%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Share on Google+" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/google_plus.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fzettaset-orchestrator-hadoop-data-now-encrypted-safe%2F&amp;title=With%20Zettaset%20Orchestrator%20Your%20Hadoop%20Data%20is%20now%20Encrypted%20and%20Safe" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fzettaset-orchestrator-hadoop-data-now-encrypted-safe%2F&amp;media=&amp;description=With%20Zettaset%20Orchestrator%20Your%20Hadoop%20Data%20is%20now%20Encrypted%20and%20Safe" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fzettaset-orchestrator-hadoop-data-now-encrypted-safe%2F&amp;title=With%20Zettaset%20Orchestrator%20Your%20Hadoop%20Data%20is%20now%20Encrypted%20and%20Safe" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png"></a>
+            <a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=With%20Zettaset%20Orchestrator%20Your%20Hadoop%20Data%20is%20now%20Encrypted%20and%20Safe&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fwww.zettaset.com%2Findex.php%2Fblog%2Fzettaset-orchestrator-hadoop-data-now-encrypted-safe%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.zettaset.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png"></a>
+           </div> 
+          </div> 
+         </div> </li> 
+        <div class="wp-pagenavi"> 
+         <span class="current">1</span>
+         <a class="page larger" href="http://www.zettaset.com/index.php/news/blog/page/2/">2</a>
+         <a class="nextpostslink" href="http://www.zettaset.com/index.php/news/blog/page/2/">Next &gt;</a> 
+        </div> 
+       </ul> 
+      </div>
+     </div> 
+     <div class="right-section"> 
+      <!-- Wordpress Popular Posts Plugin v2.3.7 [W] [all] [avg] [custom] --> 
+      <div class="most-commented archives"> 
+       <h2>Most Commented</h2>
+       <ul class="no-bullets"> 
+        <li><p><a href="http://www.zettaset.com/index.php/blog/one-hadoop-two-partnerships-zettaset-partners-with-revelytix-and-simba-technologies/" title="One Hadoop, Two Partnerships: Zettaset partners with Revelytix and Simba Technologies">One Hadoop, Two Partnerships: Zettaset partners with…</a></p></li> 
+        <li><p><a href="http://www.zettaset.com/index.php/blog/comprehensive-security-across-the-hadoop-infrastructure/" title="Comprehensive Security Across the Hadoop Infrastructure">Comprehensive Security Across the Hadoop Infrastructure</a></p></li> 
+        <li><p><a href="http://www.zettaset.com/index.php/blog/conversations-at-hadoop-summit-hadoop-production-on-the-horizon/" title="Conversations at Hadoop Summit: Hadoop Production on the Horizon">Conversations at Hadoop Summit: Hadoop Production on…</a></p></li> 
+        <li><p><a href="http://www.zettaset.com/index.php/blog/technavio-recognizes-zettaset-top-hadoop-technology-company-2014/" title="TechNavio Recognizes Zettaset as Top Hadoop Technology Company in 2014">TechNavio Recognizes Zettaset as Top Hadoop Technology…</a></p></li> 
+       </ul> 
+      </div> 
+      <!-- End Wordpress Popular Posts Plugin v2.3.7 --> 
+      <div class="most-commented archives">
+       <h2>Archives</h2>
+       <ul class="jaw_widget"> 
+        <li class="jaw_years expanded"><a class="jaw_years" href="http://www.zettaset.com/index.php/2014/"><span class="jaw_symbol"> </span> 2014 (8)</a>
+         <ul> 
+          <li class="jaw_months" style="display:list-item;"><a class="jaw_months" href="http://www.zettaset.com/index.php/2014/08/">August (1)</a></li> 
+          <li class="jaw_months" style="display:list-item;"><a class="jaw_months" href="http://www.zettaset.com/index.php/2014/06/">June (1)</a></li> 
+          <li class="jaw_months" style="display:list-item;"><a class="jaw_months" href="http://www.zettaset.com/index.php/2014/05/">May (1)</a></li> 
+          <li class="jaw_months" style="display:list-item;"><a class="jaw_months" href="http://www.zettaset.com/index.php/2014/04/">April (1)</a></li> 
+          <li class="jaw_months" style="display:list-item;"><a class="jaw_months" href="http://www.zettaset.com/index.php/2014/03/">March (1)</a></li> 
+          <li class="jaw_months" style="display:list-item;"><a class="jaw_months" href="http://www.zettaset.com/index.php/2014/02/">February (1)</a></li> 
+          <li class="jaw_months" style="display:list-item;"><a class="jaw_months" href="http://www.zettaset.com/index.php/2014/01/">January (2)</a></li>
+         </ul></li> 
+        <li class="jaw_years"><a class="jaw_years" href="http://www.zettaset.com/index.php/2013/"><span class="jaw_symbol"> </span> 2013 (3)</a>
+         <ul> 
+          <li class="jaw_months" style="display:none;"><a class="jaw_months" href="http://www.zettaset.com/index.php/2013/11/">November (3)</a></li>
+         </ul></li>
+       </ul>
+       <input type="hidden" id="widget-jal_widget-2-fx_in" name="widget-jal_widget[2][fx_in]" class="fx_in" value="slideDown">
+       <input type="hidden" id="widget-jal_widget-2-ex_sym" name="widget-jal_widget[2][ex_sym]" class="ex_sym" value=" ">
+       <input type="hidden" id="widget-jal_widget-2-con_sym" name="widget-jal_widget[2][con_sym]" class="con_sym" value=" ">
+       <input type="hidden" id="widget-jal_widget-2-only_sym_link" name="widget-jal_widget[2][only_sym_link]" class="only_sym_link" value="0">
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <div class="our-partner"> 
+   <div class="wrapper clearfix"> 
+    <h5>Our Resources</h5> 
+    <div class="outer-area"> 
+     <div class="rows" id="video"> 
+      <h6>Videos</h6> 
+      <ul class="arrow-btn"> 
+       <li><a class="fancybox" href="#inline_content1"> Hadoop Making it Work for the Business Unit </a></li> 
+       <li><a class="fancybox" href="#inline_content2"> Orchestrator – Activity Monitor and Centralized Logging for Compliance </a></li> 
+       <li><a class="fancybox" href="#inline_content3"> Orchestrator – True High Availability for All Critical Hadoop Services </a></li> 
+       <li><a class="fancybox" href="#inline_content4"> Orchestrator Installer – Simplify and Accelerate Hadoop Installation and Management for Big Data Deployments </a></li> 
+       <li><a href="http://www.zettaset.com/index.php/info-center/videos/" class="gray-button"> <img src="http://www.zettaset.com/wp-content/themes/zettaset/images/grey-button.png" alt=""></a></li> 
+      </ul> 
+     </div> 
+     <div class="rows" id="solution"> 
+      <h6>Solution Briefs</h6> 
+      <ul class="o-resouece"> 
+       <li> <a href="http://www.zettaset.com/wp-content/uploads/2014/05/sb-sdw.pdf" target="_blank">Secure Data Warehouse</a> </li> 
+       <li> <a href="http://www-304.ibm.com/partnerworld/wps/servlet/ContentHandler/stg_ast_sys_zettaset-orchestrator" target="_blank">Zettaset Orchestrator on IBM PowerLinux Servers</a> </li> 
+       <li> <a href="http://www.zettaset.com/wp-content/uploads/2014/05/zettaset_sb-orch-hd_1013.pdf" target="_blank">Orchestrator High Availability</a> </li> 
+       <li> <a href="http://www.zettaset.com/wp-content/uploads/2014/05/sb_actian_zettaset_sept13.pdf" target="_blank">Actian ParAccel Hadoop Analytics and Zettaset Orchestrator</a> </li> 
+       <li> <a href="http://www.zettaset.com/wp-content/uploads/2014/11/zettaset_sb_thales-encryption_v1d.pdf" target="_blank">Thales e-Security and Zettaset Delivering Enterprise-Class Encryption for Big Data Environments</a> </li> 
+      </ul> 
+     </div> 
+     <div class="rows" id="solution"> 
+      <h6>White Papers</h6> 
+      <ul class="o-resouece"> 
+       <li> <a href="http://www.zettaset.com/wp-content/uploads/2014/11/GigaomResearch-ManagingHadoop.pdf" target="_blank">Managing Hadoop: what’s the best approach?</a> </li> 
+       <li> <a href="http://www.zettaset.com/wp-content/uploads/2014/09/ESG-WP-Zettaset-Oct-2014.pdf" target="_blank">Closing the Big Data Management &amp; Security Gap</a> </li> 
+       <li> <a href="http://www.zettaset.com/wp-content/uploads/2014/04/zettaset_wp_security_0413.pdf" target="_blank">The Big Data Security Gap: Protecting the Hadoop Cluster</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <footer> 
+   <section class="top-footer clearfix"> 
+    <div class="wrapper"> 
+     <div class="column-area"> 
+      <h6><a href="http://www.zettaset.com/">Home</a></h6> 
+      <h6><a href="http://www.zettaset.com/index.php/products/enterprise-hadoop-cluster-management/">Products</a></h6> 
+     </div> 
+     <div class="column-area"> 
+      <h6>Solutions</h6> 
+      <ul>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3220"><a href="http://www.zettaset.com/index.php/solutions/secure-enrterprise-hadoop/">Secure Enterprise <br>Hadoop</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="http://www.zettaset.com/index.php/solutions/secure-hadoop-bi-connector/">Secure Hadoop <br>BI Connector</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114"><a href="http://www.zettaset.com/index.php/solutions/secure-hadoop-encryption/">Secure Hadoop <br>Encryption</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="http://www.zettaset.com/index.php/solutions/secure-data-warehouse/">Secure Data <br>Warehouse</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="http://www.zettaset.com/index.php/solutions/cloudera-management/">Cloudera CDH <br>Management</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="http://www.zettaset.com/index.php/products/secure-hortonworks-hadoop/">Hortonworks HDP <br>Management</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="http://www.zettaset.com/index.php/products/big-data-management-use-cases/">Use <br>Cases</a></li> 
+      </ul> 
+     </div> 
+     <div class="column-area"> 
+      <h6>Partners </h6> 
+      <ul>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="http://www.zettaset.com/index.php/partners/partner-overview/">Partner Overview</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="http://www.zettaset.com/index.php/partners/partner-inquiries/">Partner Inquiries</a></li> 
+      </ul> 
+     </div> 
+     <div class="column-area"> 
+      <h6>News </h6> 
+      <ul>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3837 current_page_item current_page_parent menu-item-3839"><a href="http://www.zettaset.com/index.php/news/blog/">Blog</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="http://www.zettaset.com/index.php/news/press-releases/">Press Releases</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="http://www.zettaset.com/index.php/news/media-coverage/">Media Coverage</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="http://www.zettaset.com/index.php/news/awards/">Awards</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3718"><a href="http://www.zettaset.com/index.php/news/media-contacts/">Media Contacts</a></li> 
+      </ul> 
+     </div> 
+     <div class="column-area"> 
+      <h6>Info Center</h6> 
+      <ul>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="http://www.zettaset.com/index.php/info-center/what-is-big-data/">What is Big Data?</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="http://www.zettaset.com/index.php/info-center/what-is-a-hadoop-cluster/">What is a Hadoop Cluster?</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3588"><a href="http://www.zettaset.com/index.php/info-center/webinars/">Webinars</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3585"><a href="http://www.zettaset.com/index.php/info-center/secure-hadoop-resources/">Secure Hadoop Resources</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3581"><a href="http://www.zettaset.com/index.php/info-center/videos/">Videos</a></li> 
+      </ul> 
+     </div> 
+     <div class="column-area"> 
+      <h6>Company </h6> 
+      <ul>
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"><a href="http://www.zettaset.com/index.php/company/vision/">Vision</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="http://www.zettaset.com/index.php/company/management-team/">Management Team</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="http://www.zettaset.com/index.php/company/board-of-directors/">Board of Directors</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="http://www.zettaset.com/index.php/company/careers/">Careers</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a href="http://www.zettaset.com/index.php/company/contact-us/">Contact Us</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3680"><a href="http://www.zettaset.com/index.php/company/big-data-simplified/">Signup for Demo</a></li> 
+       <li><a href="/index.php/sitemap/">Sitemap</a></li>
+      </ul> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="bottom-footer"> 
+    <div class="wrapper"> 
+     <ul class="social-media"> 
+      <li><a href="https://twitter.com/#!/zettaset" rel="nofollow" target="_blank"><img src="http://www.zettaset.com/wp-content/themes/zettaset/images/f-twitter-icon.png" alt="" width="27" height="26"></a></li> 
+      <li><a href="http://www.linkedin.com/company/zettaset?trk=hb_tab_compy_id_2468998" rel="nofollow" target="_blank"><img src="http://www.zettaset.com/wp-content/themes/zettaset/images/f-linkedin-icon.png" alt="" width="27" height="26"></a></li> 
+      <li><a href="https://www.youtube.com/channel/UCIgYEwhic7IdGofFZ9ZJxOA" rel="nofollow" target="_blank"><img src="http://www.zettaset.com/wp-content/themes/zettaset/images/f-vid-icon.png" alt="" width="27" height="26"></a></li> 
+      <li><a href="https://www.facebook.com/Zettaset" rel="nofollow" target="_blank"><img src="http://www.zettaset.com/wp-content/themes/zettaset/images/f-facebook-icon.png" alt="" width="27" height="26"></a></li> 
+     </ul> 
+     <p>© Copyright 2008-2014 Zettaset.</p> 
+     <div style="text-align:center; color: #4a6d99; display: block; font-size: 11px; line-height: 20px;"> 
+      <address>Zettaset, Inc. 1945 Landings Drive Mountain View, CA 94043, USA Phone: 1-888-511-3736 Email: <a href="mailto:sales@zettaset.com">sales@zettaset.com</a></address> 
+     </div> 
+     <p>Use of this site signifies your acceptance of Zettaset's Terms of Use and Privacy Policy. Zettaset, the Zettaset logos, and other Zettaset marks<br> are trademarks or registered trademarks of Zettaset, Inc. in the U.S. and/or certain other countries. All other logos are copyrights of their respective owners.</p> 
+    </div> 
+   </section> 
+  </footer> 
+  <div style="height:0; overflow:hidden;">
+   <div id="inline_content1">
+    <section class="lightbox-area clearfix">
+     <div class="vid-area"> 
+      <video width="519" height="316" controls="controls" preload="none" poster="http://www.zettaset.com/wp-content/uploads/video/hadoop/0605-hadoop.gif">
+       <source src="http://www.zettaset.com/wp-content/uploads/video/hadoop/0605-hadoop.mp4" type="video/mp4">
+       <source src="http://www.zettaset.com/wp-content/uploads/video/hadoop/0605-hadoop.ogg" type="video/ogg">
+       <source src="http://www.zettaset.com/wp-content/uploads/video/hadoop/0605-hadoop.webm" type="video/webm">
+       <object width="519" height="316" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="true"></object>
+      </video>
+     </div> 
+     <div class="text-area">
+      <div class="inside" id="content_1"> 
+       <span>Hadoop Making it Work for the Business Unit</span> 
+       <p>If business intelligence and analytics users are going to successfully leverage Hadoop, then now is the time to address the challenges. This presentation reviews real-world scenarios in which organizations using Hadoop experience data center downtime or access problems, examines the impact on business, and discusses how these can be avoided. It will also take a look at how enterprise vendors in 2014 can move the visibility and value of Hadoop beyond the data center and into the business unit. </p>
+       <div>
+        <a href="http://www.slideshare.net/Hadoop_Summit/th-210p230-avogt" target="_blank">View the Slides</a>
+       </div>
+       <p></p> 
+      </div>
+     </div>
+    </section>
+   </div>
+  </div>
+  <div style="height:0; overflow:hidden;">
+   <div id="inline_content2">
+    <section class="lightbox-area clearfix">
+     <div class="vid-area"> 
+      <video width="519" height="316" controls="controls" preload="none" poster="http://www.zettaset.com/wp-content/uploads/video/video-cl/zettaset_1.gif">
+       <source src="http://www.zettaset.com/wp-content/uploads/video/video-cl/zettaset_1.mp4" type="video/mp4">
+       <source src="http://www.zettaset.com/wp-content/uploads/video/video-cl/zettaset_1.ogv" type="video/ogv">
+       <source src="http://www.zettaset.com/wp-content/uploads/video/video-cl/zettaset_1.webm" type="video/webm">
+       <object width="519" height="316" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="true"></object>
+      </video>
+     </div> 
+     <div class="text-area">
+      <div class="inside" id="content_2"> 
+       <span>Orchestrator – Activity Monitor and Centralized Logging for Compliance</span> 
+       <p>For enterprises in regulated industries, or any organization with compliance auditing and reporting requirements, Zettaset Orchestrator includes an Activity Monitor which is supported by a centralized logging function. The logging function consolidates activity logs from multiple sources into a centralized location for administrative access. An easy-to-use interface enables an admin to selectively search Hadoop logs, system logs and security logs. This approach eliminates the need to track down multiple log files across multiple nodes, greatly simplifying the process of managing a Hadoop cluster.</p> 
+      </div>
+     </div>
+    </section>
+   </div>
+  </div>
+  <div style="height:0; overflow:hidden;">
+   <div id="inline_content3">
+    <section class="lightbox-area clearfix">
+     <div class="vid-area"> 
+      <video width="519" height="316" controls="controls" preload="none" poster="http://www.zettaset.com/wp-content/uploads/video/video-ha/zts_ha.gif">
+       <source src="http://www.zettaset.com/wp-content/uploads/video/video-ha/Zettaset_High_Availability_FINAL_1.mp4" type="video/mp4">
+       <source src="http://www.zettaset.com/wp-content/uploads/video/video-ha/ztas_ha.ogv" type="video/ogv">
+       <source src="http://www.zettaset.com/wp-content/uploads/video/video-ha/zts_ha.webm" type="video/webm">
+       <object width="519" height="316" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="true"></object>
+      </video>
+     </div> 
+     <div class="text-area">
+      <div class="inside" id="content_3"> 
+       <span>Orchestrator – True High Availability for All Critical Hadoop Services</span> 
+       <p>When is high-availability not high-availability? When it only covers NameNode and JobTracker. Hadoop includes many other critical services that are subject to failure, including Kerberos, and those services should be protected as well. Orchestrator High Availability ensures that all critical services within a Hadoop cluster are protected with automatic failover, and eliminates single-points of failure. The result is a more reliable Hadoop ecosystem that meets enterprise requirements for uptime. This benefit is especially important for BI or analytics users who are running jobs in a Hadoop database.</p> 
+      </div>
+     </div>
+    </section>
+   </div>
+  </div>
+  <div style="height:0; overflow:hidden;">
+   <div id="inline_content4">
+    <section class="lightbox-area clearfix">
+     <div class="vid-area"> 
+      <video width="519" height="316" controls="" preload="none" poster="http://www.zettaset.com/wp-content/uploads/video/demo/orchestrator_intaller-320.gif"> 
+       <source src="http://www.zettaset.com/wp-content/uploads/video/demo/Orchestrator_11_020413_qtp.mp4" type="video/mp4"> 
+       <source src="http://www.zettaset.com/wp-content/uploads/video/demo/Orchestrator_11_020413_qtp.ogv" type="video/ogv"> 
+       <source src="http://www.zettaset.com/wp-content/uploads/video/demo/Orchestrator_11_020413_qtp.webm" type="video/webm"> 
+       <object width="519" height="316" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" data="" type=""> <param name="allowfullscreen" value="true"> <param name="allowscriptaccess" value="true"> </object> 
+      </video> 
+     </div> 
+     <div class="text-area">
+      <div class="inside" id="content_4"> 
+       <span>Orchestrator Installer – Simplify and Accelerate Hadoop Installation and Management for Big Data Deployments</span> 
+       <p></p>
+       <ul> 
+        <li>Take the complexity out of Hadoop installation and cluster management</li> 
+        <li>Automate installation of Hadoop distributions on any sized cluster</li> 
+        <li>Enterprise-hardened for security, performance, and high availability</li> 
+       </ul> Watch the video and see how Zettaset Orchestrator makes Hadoop easier to install and manage.
+       <p></p> 
+      </div>
+     </div>
+    </section>
+   </div>
+  </div>
+  <script type="text/javascript" src="http://www.zettaset.com/wp-content/cache/minify/000000/M9RPzs8rSUwu0U3LL8rVNdfPzEvOKU1JLdbPAqLC0tSiSj2QjF5uZh4A.js"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.zettaset.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.zettaset.com/wp-content/cache/minify/000000/bczBDYMwDEDRhUhMTwzAJFZwi1Fwiu00KtNDxQ31-r70H5CKOCYPz6JrGIAl5TqRwWJgSfnt1vWwkzsa-U8FP_xC5yK3sGyV9HtDy3ze4soS__YLY0MnbTNRHlFLNcoH.js"></script> 
+  <script type="text/javascript" src="http://www.zettaset.com/wp-content/themes/zettaset/js/jquery.fancybox.js?v=2.1.5&amp;ver=2.1.5"></script> 
+  <script type="text/javascript" src="http://www.zettaset.com/wp-content/cache/minify/000000/M9CvSi0pSSxOLdHPKtZPTizKLy1OzdExQBHOKixNLarUy3UuLS7Jzw1OLsrPyUlKLMKuKquwpCgxrzgtvygXTQGMrZsMNgcA.js"></script> 
+  <script type="text/javascript" src="http://www.zettaset.com/wp-content/plugins/jquery-archive-list-widget/jal.js?ver=3.9.1"></script> 
+  <!-- GA Code --> 
+  <script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34370065-1']);
+  _gaq.push(['_setDomainName', 'zettaset.com']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script> 
+  <!-- LeadFormix --> 
+  <a href="https://www.leadformix.com" title="Marketing Automation" onclick="window.open(this.href);return(false);"> <script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://vlog.leadformix.com/" : "https://vlog.leadformix.com/");
+<!--
+bf_action_name = '';
+bf_idsite = 7994;
+bf_url = pkBaseURL+'bf/bf.php';
+(function() {
+    var lfh = document.createElement('script'); lfh.type = 'text/javascript'; lfh.async = true;
+    lfh.src = pkBaseURL+'bf/lfx.js';
+    var s = document.getElementsByTagName('head')[0]; s.appendChild(lfh);
+  })();
+//-->
+</script> 
+   <noscript>
+    <p>Marketing Automation Platform <img src="https://vlog.leadformix.com/bf/bf.php" style="border:0" alt="Marketing Automation Tool"></p> 
+   </noscript> </a> 
+  <!-- /LeadFormix -->   
+  <!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk
+Page Caching using disk: enhanced (Requested URI is rejected)
+Object Caching 0/0 objects using disk
+
+ Served from: www.zettaset.com @ 2014-12-05 00:51:47 by W3 Total Cache -->
+ </body>
+</html>

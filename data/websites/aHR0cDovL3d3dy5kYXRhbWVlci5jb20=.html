@@ -1,0 +1,740 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <link type="text/css" rel="stylesheet" href="assets/css/style222.css"> 
+  <link type="text/css" rel="stylesheet" href="assets/css/slider222.css"> 
+  <!-- Optimizely Experiment code --> 
+  <script src="//cdn.optimizely.com/js/213809133.js"></script> 
+  <!-- Google Analytics Content Experiment code --> 
+  <script>function utmx_section(){}function utmx(){}(function(){var
+k='31549877-51',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script>
+  <script>utmx('url','A/B');</script> 
+  <!-- End of Google Analytics Content Experiment code --> 
+  <link rel="canonical" href="http://www.datameer.com/"> 
+  <link rel="shortcut icon" type="image/ico" href="favicon.ico"> 
+  <link rel="shortlink" href="http://www.datameer.com/"> 
+  <meta property="og:site_name" content="Datameer"> 
+  <meta property="og:title" content="Datameer | Big Data Analytics"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="http://www.datameer.com/"> 
+  <meta property="og:description" content="Datameer is the only end-to-end Big Data Analytics for Hadoop that empowers business users to directly integrate, analyze, and visualize any data."> 
+  <meta property="og:image" content="http://www.datameer.com/images/img-home-integrate.png"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta name="twitter:url" content="http://www.datameer.com/"> 
+  <meta name="twitter:description" content="Datameer is the only end-to-end Big Data Analytics for Hadoop that empowers business users to directly integrate, analyze, and visualize any data."> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:title" content="Datameer, Big Data Analytics, Big Data Hadoop"> 
+  <meta name="twitter:site" content="@datameer"> 
+  <title>Datameer | Big Data Analytics | Big Data Hadoop</title> 
+  <meta name="description" content="Datameer is the only end-to-end Big Data Analytics for Hadoop that empowers business users to directly integrate, analyze, and visualize any data."> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="Content-Style-Type" content="text/css"> 
+  <meta http-equiv="Content-Script-Type" content="text/javascript"> 
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script> 
+  <style type="text/css">
+
+#info { position:absolute; top:30px; left: 50%; }
+
+#info .heading1 {  font-size:48px; font-family: Helvetica, Arial; font-weight:600; }
+
+#info .quote {  font-size:30px; line-height:36px; font-family: Helvetica, Arial; font-weight:normal; }
+
+#info .slogan {  font-size:28px; font-family: Helvetica,Arial; font-weight:300; padding-bottom: 20px; }
+
+#info .tagline p{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 'helvetica-neue', Helvetica, Arial, "Lucida Grande", sans-serif;
+	line-height:30px;
+	font-size: 24px;
+	color:#fff;
+}
+
+#info.leftside {
+	float:left;
+	width:480px;
+	margin-left:80px;
+}
+
+#info .speakers p{
+	font-family: Helvetica, Arial sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	line-height:24px;
+	color: #fff;
+}
+
+#info img {
+	display: block;
+	position: absolute;
+	z-index: 999;
+}
+.buttoncenter{
+	position: absolute;
+	top: 320px;
+	left: 36%;
+	width: 2560px;
+}
+
+
+a.toprightcta {
+	width: 120px;
+	padding: 12px 25px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	border-bottom: 3px solid #5d8c0a;
+	position: absolute;
+	top: 58px;
+	margin-left: 60px;
+	font-family: Helvetica, Arial;
+	font-weight: 400;
+	text-decoration: none !important;
+	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+	background: #77b800; /* Old browsers */
+}
+
+a.toprightcta:hover {
+	border-bottom: 2px solid #5d8c0a;
+	position: absolute;
+	top:59px;
+}
+
+a.toprightcta:active {
+	border-bottom: 0;
+	position: absolute;
+	top:61px;
+}
+
+a.greeny_btn{
+	display: block;
+	width: 240px;
+	text-align: center;
+	font-size: 19px;
+	color: #fff;
+	position: relative;
+	font-family: Helvetica, Arial;
+	font-weight: bold;
+	border-bottom: 3px solid #5d8c0a;
+	text-decoration: none !important;
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	background: #77b800; /* Old browsers */
+	cursor:pointer;
+}
+
+a.bluey_btn{
+	display: block;
+	padding:15px 30px;
+	width: 240px;
+	text-align: center;
+	font-size: 19px;
+	color: #fff;
+	position: relative;
+	font-family: Helvetica, Arial;
+	font-weight: bold;
+	border-bottom: 3px solid #006996;
+	text-decoration: none !important;
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	background: #0091d0; /* Old browsers */
+	cursor:pointer;
+}
+
+a.orangey_btn{
+	display: block;
+	padding:16px 30px;
+	width: 240px;
+	text-align: center;
+	font-size: 21px;
+	color: #fff;
+	position: relative;
+	font-family: Helvetica, Arial;
+	font-weight: 400;
+	border-bottom: 3px solid #c36601;
+	text-decoration: none !important;
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	background: #f78e1e; /* Old browsers */
+	cursor:pointer;
+}
+
+a.orangey_btn:hover {
+	border-bottom: 2px solid #c36601;
+	top: 1px;
+}
+
+a.orangey_btn:active {
+	border-bottom: 0;
+	top: 3px;
+}
+		
+
+ul.blocks li .mini-block {
+	width:280px;
+	float:left;
+	margin-right:20px;
+}
+
+ul#menu_top { display:block; float:right; margin-right:10px; }
+ul#menu_top li { position:relative; display:inline-block; min-width:20px; padding:10px 10px 11px; margin:0 0 10px; height:40px; background: none; }
+ul#menu_top li.current { display:inline-block; }
+ul#menu_top li.home a { background-position:0 0}
+
+#social{  position:absolute; top:6px; width:400px; }
+#social ul{  float:left; margin:13px 0 0; padding:0}
+#social ul li{  padding:0px !important; background:none; }
+
+a.tw, a.bl, a.ml, a.fblike, a.sh, a.gplus{  display:block;   float:left;   padding:0 5px !important;   width:30px;   height:29px}
+
+input.submit_btn{
+	display: block;
+	height: 30px;
+	width: 190px;
+	font-size: 15px;
+	color: #fff;
+	position: relative;
+	font-family: Helvetica, Arial;
+	font-weight: 600;
+	border-bottom: 1px solid #005e87;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: #0090ce; /* Old browsers */
+}
+	
+input[type=text], input[type=password], select, textarea{ width:180px; height:21px;  background-color:#fff;  border-radius:3px;  -moz-border-radius:3px;  -webkit-border-radius:3px; padding:2px 5px; }
+
+textarea{ height:100px}
+
+ul.blocks li p.quote {
+	font-family: 'OpenSans-Regular', Helvetica, Arial, sans-serif;
+	line-height:normal;
+	font-size: 18px;
+	color:#888;
+}
+
+.module {
+	display:block;
+	float: left;
+	width: 355px;
+	height: 200px;
+	padding:0 12px 25px 0;
+	position:relative;
+}
+
+.module h3 { font-size: 22px; font-weight:300; line-height: 27px; margin: 20px 10px 0 30px; }
+
+.module p { margin-left: 30px; }
+
+.module a.cta { 
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #f78e1e;
+	position:absolute;
+	bottom:55px;
+	left:30px;
+	color: #fff;
+	font-size: 14px;
+	padding: 5px 15px;
+	width:auto;
+	border-radius: 4px;
+	border-bottom: 2px solid #c36601;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.ribbon {
+	position:absolute;
+	z-index:101;
+	width:150px;
+	top:0;
+	left:0;
+	}
+	
+a.close{
+    background:transparent url(images/close-btn.png) no-repeat top left;
+    width:13px;
+    height:13px;
+    position:absolute;
+    cursor:pointer;
+    top:15px;
+    right:15px;
+}
+
+#info .play{
+	display: block;
+	background: url(images/play_btn.png) 0 0 no-repeat;
+	width: 132px;
+	height: 132px;
+	position: absolute;
+	left: 719px;
+	top: 70px;
+}
+
+@media only screen{  #info .play{    background-image:url(images/play_btn.png)}
+}
+
+#info a:hover .play{  background-position:0 100%;   opacity:1}	
+
+#info2 {position:absolute; top:30px; left: 50%; }
+</style> 
+  <script type="text/javascript" src="assets/js/jquery.cycle.all.min.js"></script> 
+  <script type="text/javascript">
+
+    $(function () {
+      if (window.PIE) {
+        $('#blue_btn, ul#tabs li a, ul.submenu li a, a.blue_btn').each(function () {
+          PIE.attach(this);
+        });
+      }
+    });
+
+    $().ready(function () {
+
+      jQuery('#tabs').css('paddingLeft', ($('#wrapp-content').width() - $('#tabs').width()) / 2);
+
+      //put position fixed on menu
+      $('#menu').css('position', 'fixed');
+      $('#logo_menu').css({'display':'block', 'marginLeft':'0'});
+    });
+ 
+//position fixed for menu END
+	
+	
+$(document).ready(function(){
+	
+	
+	
+	
+	//tickbox
+	$('#tickbox .open').click(function() {
+		if ($('#tickbox .desc').is(':hidden')) {
+			jQuery('#tickbox').animate({'width': 250}, 'medium', function() {
+					$('#tickbox .desc').fadeIn('fast');
+				});
+		} else {
+			jQuery('#tickbox .desc').fadeOut('fast', function() {
+					jQuery('#tickbox').animate({'width': 35}, 'slow');
+				});
+		}
+	});
+	
+	
+	$('body').css('background', '#fff');
+	
+});
+
+
+	$(function() {
+		if (window.PIE) {
+			$('#blue_btn, ul#tabs li a, ul.submenu li a, a.blue_btn').each(function() {
+				PIE.attach(this);
+			});
+		}
+	});
+	
+	$().ready(function() {
+		
+		jQuery('#tabs').css('paddingLeft', ($('#wrapp-content').width() - $('#tabs').width())/2);
+		
+		
+	});
+	
+</script> 
+  <script type="text/javascript">
+		
+$(function() {
+    $('#slideshow').cycle({
+        fx:     'fade',
+        speed:  500,
+        timeout: 10000,
+        cleartypeNoBg: true,
+        pager:  '#nav',
+        pagerAnchorBuilder: function paginate(idx, el) {
+			return '<a class="service' + idx + '" href="#" >&bull;</a>';
+}
+    });
+});
+</script> 
+  <script charset="ISO-8859-1" src="https://fast.wistia.com/static/popover-v1.js"></script> 
+  <script type="text/javascript" language="javascript" src="http://www.datameer.com/assets/js/paramCookie.js"></script> 
+ </head> 
+ <body> 
+  <!-- Google Tag Manager --> 
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PVV3XV" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVV3XV');</script> 
+  <!-- End Google Tag Manager --> 
+  <div id="header"> 
+   <div id="content_h"> 
+    <div id="menu"> 
+     <div id="topnavbar"> 
+      <ul> 
+       <span class="phone">+1.800.874.0569</span> 
+       <li><a href="https://twitter.com/#!/datameer" target="_blank" rel="nofollow"><img src="images/icon-tw.svg" width="24"></a></li> 
+       <li><a href="http://www.linkedin.com/company/datameer" target="_blank" rel="nofollow"><img src="images/icon-in.svg" width="24"></a></li> 
+       <li><a href="https://plus.google.com/116962480690693314126/posts" target="_blank" rel="nofollow"><img src="images/icon-g+.svg" width="24"></a></li> 
+       <li><a href="http://www.datameer.com/blog/"><img src="images/icon-blog.svg" width="24"></a></li> 
+      </ul> 
+     </div> 
+     <ul> 
+      <a class="logo_top" href="index.html"><img src="images/logo/logo.png" width="254" alt="Datameer - Big Data Analytics on Hadoop"></a> 
+      <li style="background:none;"> <a href="product/index.html">Product</a> 
+       <ul id="product_menu"> 
+        <div style="float:left; width:180px; position:relative;"> 
+         <li><a href="http://www.datameer.com/product/index.html">Overview</a></li> 
+         <li><a href="http://www.datameer.com/product/data-integration.html">Data Integration</a></li> 
+         <li><a href="http://www.datameer.com/product/data-analytics.html">Data Analytics</a></li> 
+         <li><a href="http://www.datameer.com/product/data-visualization.html">Data Visualization</a></li> 
+         <li><a href="http://www.datameer.com/product/smart-execution.html">Smart Execution</a></li> 
+         <li><a href="http://www.datameer.com/product/smart-analytics.html">Smart Analytics</a></li> 
+         <li><a href="http://www.datameer.com/product/technology.html">Technology</a></li> 
+         <li><a href="http://www.datameer.com/product/app-market.html">App Market</a></li> 
+         <li><a href="http://www.datameer.com/product/big-data-analytics-in-the-cloud.html">Cloud Version</a></li> 
+        </div> 
+       </ul> </li> 
+      <li> <a href="solutions/index.html">Solutions</a> 
+       <ul id="solutions_menu"> 
+        <div style="float:left; width:150px; position:relative; text-align:left;"> 
+         <li><a href="http://www.datameer.com/solutions/index.html"><strong>By Industry</strong></a></li> 
+         <li><a href="http://www.datameer.com/solutions/industries/financial-services.html">Financial Services Industry</a></li> 
+         <li><a href="http://www.datameer.com/solutions/industries/healthcare.html">Healthcare</a></li> 
+         <li><a href="http://www.datameer.com/solutions/industries/gaming.html">Gaming</a></li> 
+         <li><a href="http://www.datameer.com/solutions/industries/retail.html">Retail</a></li> 
+         <li><a href="http://www.datameer.com/solutions/industries/telecommunications.html">Telecommunications</a></li> 
+         <li><a href="http://www.datameer.com/solutions/industries/high-tech.html">High Tech</a></li> 
+        </div> 
+        <div style="overflow:visible; text-align:left;"> 
+         <li><a href="http://www.datameer.com/solutions/index.html"><strong>Use Cases</strong></a></li> 
+         <li><a href="http://www.datameer.com/solutions/use-cases/customer-analytics.html">Customer Analytics</a></li> 
+         <li><a href="http://www.datameer.com/solutions/use-cases/data-driven-products-services.html">Data-Driven Products<br>and Services</a></li> 
+         <li><a href="http://www.datameer.com/solutions/use-cases/operational-analytics.html">Operational Analytics</a></li> 
+         <li><a href="http://www.datameer.com/solutions/use-cases/fraud-compliance.html">Fraud and Compliance</a></li> 
+         <li><a href="http://www.datameer.com/solutions/use-cases/edw-optimization.html">EDW Optimization</a></li> 
+        </div> 
+       </ul> </li> 
+      <li><a href="customers/index.html">Customers</a></li> 
+      <li> <a href="learn/index.html">Learn</a> 
+       <ul id="learn_menu"> 
+        <li><a href="http://www.datameer.com/learn/index.html">Resources</a></li> 
+        <li><a href="http://www.datameer.com/learn/tutorials/index.html">Tutorials</a></li> 
+        <li><a href="http://www.datameer.com/learn/webinar/index.html">Webinars</a></li> 
+        <li><a href="http://www.datameer.com/learn/videos/index.html">Videos</a></li> 
+        <li><a href="http://www.datameer.com/documentation/current/Home" target="_blank">Documentation</a></li> 
+       </ul> </li> 
+      <li> <a href="support/index.html">Support</a> 
+       <ul id="support_menu"> 
+        <li><a href="http://www.datameer.com/support/index.html">Help Center</a></li> 
+        <li><a href="http://www.datameer.com/community">Community</a></li> 
+        <li><a href="http://www.datameer.com/support/certification/certification_program.html">Certification</a></li> 
+        <li><a href="http://www.datameer.com/support/download-faq.html">FAQ</a></li> 
+       </ul> </li> 
+      <li> <a href="company/index.html">Company</a> 
+       <ul id="company_menu"> 
+        <div style="float:left; width:150px; position:relative; text-align:left;"> 
+         <li><a href="http://www.datameer.com/company/index.html"><strong>Company</strong></a></li> 
+         <li><a href="http://www.datameer.com/company/core-values.html">Core Values</a></li> 
+         <li><a href="http://www.datameer.com/company/team/index.html">Team</a></li> 
+         <li><a href="http://www.datameer.com/company/board.html">Board</a></li> 
+         <li><a href="http://www.datameer.com/company/investors.html">Investors</a></li> 
+         <li><a href="http://www.datameer.com/company/news/index.html">News</a></li> 
+         <li><a href="http://www.datameer.com/company/events/index.html">Events</a></li> 
+         <li><a href="http://www.datameer.com/company/careers/index.html">Careers</a></li> 
+        </div> 
+        <div style="overflow:visible; text-align:left;"> 
+         <li><a href="http://www.datameer.com/blog">Blog</a></li> 
+         <li><a href="http://www.datameer.com/ceoblog/">CEO Blog</a></li> 
+         <li><a href="http://www.datameer.com/company/partners/index.html">Partners</a></li> 
+         <li><a href="http://www.datameer.com/company/contact.html">Contact Us</a></li> 
+        </div> 
+       </ul> </li> 
+      <a class="toprightcta" href="http://www.datameer.com/Datameer-trial.html" style="color:#fff;">Try for FREE</a> 
+     </ul> 
+     <div> 
+      <!-- menu --> 
+     </div> 
+     <!-- content_h --> 
+     <div class="shadow_header"></div> 
+    </div> 
+    <div class="clear"></div> 
+   </div> 
+  </div> 
+  <div id="banner"> 
+   <div id="main"> 
+    <ul id="nav"></ul> 
+    <div id="slideshow" class="pics"> 
+     <div class="unicusSlides" style="background:url(images/carousel/bg-50se.jpg) repeat-x;"> 
+      <img class="centerimg" width="1680" height="400" src="images/carousel/banner-50smartexecution.jpg" alt="Datameer 5.0 Smart Execution"> 
+      <div id="info" style="width: 580px; margin-left:-540px;"> 
+       <div class="tagline" style="margin-bottom:-15px;">
+        <p style="color:#5a6771; font-size:30px;">Introducing Datameer 5.0</p>
+       </div> 
+       <p class="heading1" style="font-size: 48px; line-height:normal; color: #5a6771;">Smart Execution<sup style="font-weight:normal; font-size:0.75em;">™</sup></p> 
+       <div class="tagline" style="margin-top:-10px;">
+        <p style="color:#5a6771;">The analytics execution engine that dynamically<br>selects the optimal compute framework. </p>
+       </div> 
+       <p><a class="orangey_btn" href="product/smart-execution.html">Learn More</a></p> 
+       <a href="http://fast.wistia.net/embed/iframe/dx1wpsk9qk?popover=true" class="play wistia-popover[height=659,playerColor=0091d0,width=1122]"></a> 
+       <script charset="ISO-8859-1" src="http://fast.wistia.com/assets/external/popover-v1.js"></script> 
+      </div> 
+     </div> 
+     <!--//unicusSlides// --> 
+     <div class="unicusSlides" style="background-color: #2e7ea3;"> 
+      <img class="centerimg" width="1680" height="400" src="images/carousel/banner-company.jpg" alt="Big Data Analytics Application on Hadoop"> 
+      <div id="info" style="width: 800px; margin:20px 0 0 -540px;"> 
+       <p class="heading1" style="font-size: 48px; color:#fff; line-height:normal;">The Only End-to-End Big Data<br>Analytics Application for Hadoop</p> 
+       <div class="tagline">
+        <p style="color:#fff;font-size:30px;">Discover New Insights Faster</p>
+       </div> 
+       <p><a class="orangey_btn" style="width:150px;" href="company/index.html" title="Find out how Datameer is Easy for everyone to use">Find Out How</a></p> 
+      </div> 
+     </div>
+     <!-- /unicusSlides --> 
+     <div class="unicusSlides" style="background-color: #696b5e;"> 
+      <img class="centerimg" width="1680" height="400" src="images/carousel/banner-customer_trustev.jpg" alt="Trustev"> 
+      <div id="info" style="width: 540px; margin:24px 0 0 0;"> 
+       <p class="quote" style="color:#fff;">“I really feel that our choice of Datameer as a tool to help us in this process has been one of our best decisions to date.”</p> 
+       <div class="tagline" style="margin-top:-10px;">
+        <p style="color:#fff; font-size:18px;"><strong>– Chris Kennedy,</strong> CTO and Founder, Trustev</p>
+       </div> 
+       <p><a class="greeny_btn" style="width:180px;" href="learn/videos/customers-trustev.html">Watch Video</a> </p> 
+      </div> 
+     </div> 
+     <!--// unicusSlides //--> 
+     <div class="unicusSlides" style="background: url(images/carousel/bg-5usecases.jpg) repeat-x;"> 
+      <img class="centerimg" width="1680" height="400" src="images/carousel/banner-5usecases.jpg" alt="Top Five Use Cases of Big Data"> 
+      <div id="info" style="width: 640px; margin:20px 0 0 -540px;"> 
+       <p class="heading1" style="font-size: 46px; color:#fff; line-height:normal;">Top Five High-Impact Use Cases for Big Data Analytics</p> 
+       <div class="tagline">
+        <p style="color:#fff;font-size:24px;">You’ve been collecting data for years. Learn how to use it to grow your business and gain a competitive edge.</p>
+       </div> 
+       <p><a class="orangey_btn" style="width:150px;" href="http://info.datameer.com/Five_Top_Use_Case_Web.html" target="_blank">Get the eBook</a></p> 
+      </div> 
+     </div>
+     <!-- /unicusSlides --> 
+     <!--<div class="unicusSlides" style="background:url(images/carousel/banner-vivint2.jpg) no-repeat center center; background-size: cover; height: 400px;">
+        	
+        <div id="info" style="width: 640px; margin-left:-540px;">
+       		  <div class="tagline" style="margin-bottom:-15px;"><p style="font-size:30px">Internet of Things</p></div>
+              <p class="heading1" style="line-height:normal;">Driving Smart Home Automation With Datameer</p>
+              
+              
+          
+       	  <a class="orangey_btn" href="customers/vivint-casestudy.html" target="_blank" style="width: 150px; float:left;">Find Out How</a>
+          <img src="images/logo/vivint-logo.png" alt="Vivint" width="100" style="margin:10px 0 0 230px;" />
+              
+          <a href="http://fast.wistia.net/embed/iframe/l13cuwaba1?popover=true" class="play wistia-popover[height=659,playerColor=0091d0,width=1122]"></a>
+             <script charset="ISO-8859-1" src="http://fast.wistia.com/assets/external/popover-v1.js"></script>   
+		  </div>
+          
+      </div> //unicusSlides// --> 
+    </div>
+    <!-- /slideshow --> 
+   </div>
+   <!-- /main --> 
+  </div>
+  <!-- /banner --> 
+  <div id="content"> 
+   <div class="clear"> 
+    <div class="content"> 
+     <div class="top_info" style="padding: 0;"> 
+      <div class="section"> 
+       <a href="http://info.datameer.com/Web-Why-Big-Data-Analytics-eBook.html" target="_blank" rel="nofollow"></a> 
+       <div class="module" style="background: url(images/modules/mod-whybigdata.png) no-repeat top;"> 
+        <p style="margin:15px 0 0 30px; color:#666">eBook</p> 
+        <h3 style="margin:-10px 10px 0 30px;">Why Big Data<br>Analytics?</h3> 
+        <p><a class="sim_btn" href="http://info.datameer.com/Web-Why-Big-Data-Analytics-eBook.html" target="_blank">Get Yours Today</a></p> 
+       </div> 
+       <!--<a href="http://info.datameer.com/Ref-Card-People-Process-Tech.html" target="_blank" rel="nofollow" /><div class="module" style="background: url(images/modules/mod_refcard.png) no-repeat top;">
+            	<p style="margin:15px 0 0 30px;">Reference Card</p>
+                <h3 style="margin:-10px 10px 0 30px;"><Strong style="font-weight:300;">Big Data Analytics</Strong><br />
+                Center of Excellence<br />Series</h3>
+                <p><a class="sim_btn" href="http://info.datameer.com/Ref-Card-People-Process-Tech.html" target="_blank">Get Yours Today</p></div></a>
+            </a>  --> 
+       <a href="http://info.datameer.com/3-Top-Big-Data-Use-Cases-in-Financial-Services.html" target="_blank"> </a>
+       <div class="module" style="background: url(images/modules/mod_top3fins.jpg) no-repeat top; background-size: 355px 200px;">
+        <a href="http://info.datameer.com/3-Top-Big-Data-Use-Cases-in-Financial-Services.html" target="_blank"> <p style="margin:15px 0 0 30px; color:#666">eBook</p> <h3 style="margin:-10px 10px 0 30px;">3 Top Big Data <br> Use Cases in <br> Financial Services</h3> <p><a class="sim_btn" href="http://info.datameer.com/3-Top-Big-Data-Use-Cases-in-Financial-Services.html" target="_blank">Get Yours Today</a></p></a> 
+       </div>  
+       <a href="http://info.datameer.com/Ovum_How-to-Get-Started-with-Big-Data-on-Hadoop.html" target="_blank"> </a>
+       <div class="module" style="background: url(images/modules/mod_ovum.jpg) no-repeat top; background-size: 355px 200px;">
+        <a href="http://info.datameer.com/Ovum_How-to-Get-Started-with-Big-Data-on-Hadoop.html" target="_blank"> <p style="margin:15px 0 0 30px; color:#666">Analyst Report</p> <h3 style="margin: -10px 10px 0 30px;">How to Get<br> Started with <br> Big Data on Hadoop</h3> <p><a class="sim_btn" href="http://info.datameer.com/Ovum_How-to-Get-Started-with-Big-Data-on-Hadoop.html" target="_blank">View Report</a></p></a> 
+       </div>  
+      </div> 
+      <!--section--> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="line"></div> 
+     <!--// CUSTOMERS LOGO //--> 
+     <div class="top_info"> 
+      <div class="section"> 
+       <h1 class="center">Our Customer Success Stories</h1> 
+       <br> 
+       <ul class="customers"> 
+        <li><img src="images/index/citi-logo.svg"></li> 
+        <li><img src="images/index/visa-logo.svg"></li> 
+        <li><img src="images/index/bofa-logo.svg"></li> 
+        <li><img src="images/index/sears-logo.svg"></li> 
+        <li><img src="images/index/opower-logo.svg"></li> 
+        <li><img src="images/index/comcast-logo.svg"></li> 
+        <li><img src="images/index/telefonica-logo.svg"></li> 
+        <li><img src="images/index/machinezone-logo.svg"></li> 
+        <li><img src="images/index/att-logo.svg"></li> 
+        <li><img src="images/index/britishtel-logo.svg"></li> 
+        <li><img src="images/index/vivint-logo.svg"></li> 
+        <li><img src="images/index/workday-logo.svg"></li> 
+       </ul> 
+       <br> 
+       <p align="center"><a href="customers/index.html" class="sim_btn">See More</a></p> 
+      </div> 
+      <!--section--> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="line" style="margin-top:10px;"></div> 
+     <div class="top_info"> 
+      <div class="section"> 
+       <h1 class="center">Big Data Analytics for Big Data Discovery</h1> 
+       <p align="center" class="intro">Datameer is the only end-to-end big data analytics application purpose-built for Hadoop<br> that enables the fastest time from raw data to new insights</p> 
+       <p align="center">Our mission is to simplify the complexity of big data analytics and empower everyone to make data-driven decisions in minutes, not months.<br>We believe you shouldn’t need a data scientist or multiple, technical tools to model, integrate, cleanse, prepare, analyze and visualize your data.<br>Datameer is the one-stop-shop for getting all your data into Hadoop, analyzing that data, and visualizing your results. </p>
+       <br> 
+      </div> 
+      <!--section--> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="top_info" style="background: #f5f5f5;"> 
+      <div class="section"> 
+       <img src="images/img-home-integrate.png" alt="Big Data Integration" width="540" style="float: right; padding:0 0 30px 30px;"> 
+       <h3>Integrate All Your Data</h3> 
+       <p>You have a lot of data, in lots of different formats, in lots of different locations. Some of it is in the cloud, some of it is in various legacy databases, some of it is in spreadsheets on your desktop. You’ve got big data. Hadoop can help, but you don’t speak Hadoop, and you don’t have the time or resources to find someone who does. That’s where Datameer comes in. Datameer makes integrating all your data into Hadoop as easy as following a wizard.</p> 
+       <p>With built-in connectors to all common structured and unstructured data sources, big data integration is an easy, three step process of where, what and when. Once you tell Datameer what data you want brought in to Hadoop, all you need to do is decide how you want it brought in, whether it’s a one-time import or streamed in as new data is added or on a schedule determined by you. Say goodbye to ETL and pre-defined schemas. This is the new data integration reality for Hadoop big data analytics.</p> 
+       <p><a class="sim_btn" href="product/index.html">Learn More</a></p> 
+      </div> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="top_info"> 
+      <div class="section"> 
+       <img src="images/img-home-analyze.jpg" alt="Big Data Analytics" width="500" style="float:left; margin:0 50px 50px 0;"> 
+       <h3>Analyze All Your Data — Smarter and Faster</h3> 
+       <p>With Datameer, big data analytics is as simple as using a spreadsheet. Our data integration wizards make it easy to integrate all of your data into Hadoop. And once it’s in Hadoop, there’s no limit to what you can do with analytics. We don’t use pre-defined schemas, so you can ask any question about any data at any time. Building an analysis is as simple as selecting which data to work with in a spreadsheet, choosing from over 250 pre-built analytic functions available in Datameer, and iterating at the speed of thought, using Datameer’s patented Smart Sampling™ technology. This flexibility and ease of use makes Datameer the ideal application for big data discovery in Hadoop.</p> 
+       <p>When you’re ready to run your workbook, Datameer’s patent pending Smart Execution™ technology intelligently and dynamically selects and combines computation frameworks to achieve maximum performance for your analytics task. Smart Execution™ improves performance and cluster utilization by selecting the most appropriate and efficient compute framework for each step of your analysis, and using in-memory technology to process smaller data sets.</p> 
+       <p style="overflow:hidden;">At any time, you can click to view the “flip side” of your spreadsheet for an instant, visual profile of your data. This allows you to instantly detect data quality issues, understand the effect of every transformation you make, adjust your analysis as you go, and ensure there are no surprises in your final visualization.<br><br> <a class="sim_btn" href="product/smart-execution.html">Learn More</a> </p> 
+      </div> 
+      <!--//--section  --> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="top_info" style="background: #f5f5f5;"> 
+      <div class="section"> 
+       <img src="images/img-home-visualization.png" alt="Big Data Visualization" width="540" style="float: right; padding:0 0 30px 25px;"> 
+       <h3>Visualize All Your Data</h3> 
+       <p>Communicating the results of your Hadoop big data analysis is easy in Datameer’s WYSIWYG Business Infographic Designer. Instead of being constrained to box after box of charts and graphs, Datameer provides you with a blank HTML5 canvas to design beautiful infographics or reports that will automatically update every time your data updates. You can import any image, embed a video, write free-form text, and customize to no end. Even better, thanks to HTML5, your visualizations are consumable on any device. Gone are the days when you had to take a screenshot of your dashboard and annotate in PowerPoint. </p> 
+       <p><a class="sim_btn" href="product/index.html" title="Big Data Visualization">Learn More</a></p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+      </div> 
+      <!--//--section  --> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="top_info"> 
+      <div class="section"> 
+       <h1 class="center">Datameer: Making Big Data + Hadoop Simple From End-to-End</h1> 
+       <br> 
+       <p align="center"><iframe src="http://fast.wistia.net/embed/iframe/nf62yz3wzx" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" width="720" height="433"></iframe></p> 
+      </div> 
+      <!--//--section  --> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="line"></div> 
+     <!--// STEFAN'S BLOG //--> 
+     <div class="top_info"> 
+      <div class="section"> 
+       <div style="float: right; margin: 30px 30px 0 0;">
+        <a href="http://www.datameer.com/ceoblog" target="_blank" class="orangey_btn" style="width: 200px;">Read Stefan's Blog</a>
+       </div> 
+       <a href="http://www.datameer.com/ceoblog/" target="_blank"><img src="images/icon-stefan-blog.png" alt="Stefan's Blog" style="float: left; padding:0 50px; margin-top: -20px;"></a> 
+       <br> 
+       <a href="http://www.datameer.com/ceoblog/" target="_blank" style="font-family: Helvetica, Arial; font-weight:300; color: #0091d0; font-size: 36px;">Stefan’s Blog </a> 
+       <div style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-weight:300; color: #666; line-height: 48px;">
+        Big Data Musings from Datameer's CEO
+       </div> 
+      </div> 
+      <!--//--section  --> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="line"></div> 
+     <!--// FOOTER START //--> 
+     <div class="top_info" style="padding-top:0;"> 
+      <div class="section"> 
+       <ul class="blocks"> 
+        <li class="wid150"> <p class="smalltext"><strong>Products</strong><br> <a href="http://www.datameer.com/product/data-integration.html">Big Data Integration</a><br> <a href="http://www.datameer.com/product/data-analytics.html">Big Data Analytics</a><br> <a href="http://www.datameer.com/product/data-visualization.html">Big Data Visualization</a><br> <a href="http://www.datameer.com/product/smart-execution.html">Smart Execution</a><br> <a href="http://www.datameer.com/product/smart-analytics.html">Smart Analytics</a><br> <a href="http://www.datameer.com/product/app-market.html">App Market</a><br> <a href="http://www.datameer.com/product/technology.html">Big Data Technology</a><br> <a href="http://www.datameer.com/product/big-data-analytics-in-the-cloud.html">Big Data Analytics<br>&nbsp;&nbsp;&nbsp;in the Cloud</a><br> </p></li> 
+        <li class="wid200"> <p class="smalltext"><strong>Solutions</strong><br> <a href="http://www.datameer.com/solutions/industries/financial-services.html">Big Data in Financial Services</a><br> <a href="http://www.datameer.com/solutions/industries/healthcare.html">Big Data in Healthcare</a><br> <a href="http://www.datameer.com/solutions/industries/high-tech.html">Big Data in Technology</a><br> <a href="http://www.datameer.com/solutions/industries/telecommunications.html">Big Data in Telecommunications</a><br> <a href="http://www.datameer.com/solutions/use-cases/customer-analytics.html">Big Data for Customer Analytics</a><br> <a href="http://www.datameer.com/solutions/use-cases/data-driven-products-services.html">Data-driven Products and Services</a><br> <a href="http://www.datameer.com/solutions/use-cases/fraud-compliance.html">Fraud and Compliance</a><br> <a href="http://www.datameer.com/solutions/use-cases/edw-optimization.html">Enterprise Data Warehouse<br>&nbsp;&nbsp;&nbsp;Optimization</a><br> <a href="http://www.datameer.com/solutions/use-cases/operational-analytics.html">Big Data for Operational Analytics</a><br> </p> </li> 
+        <li class="wid150"> <p class="smalltext"><strong>Resources</strong><br> <a href="http://www.datameer.com/learn/tutorials/index.html">Tutorials</a><br> <a href="http://www.datameer.com/community">Community</a><br> <a href="http://datameer.com/documentation/current/Home" target="_blank">Documentation</a><br> <a href="http://www.datameer.com/support/certification/certification_program.html">Certification Program</a><br> <a href="http://www.datameer.com/support/download-faq.html">FAQs</a><br> </p> </li> 
+        <li class="wid130"> <p class="smalltext"><strong>News &amp; Events</strong><br> <a href="http://www.datameer.com/company/news/index.html">News</a><br> <a href="http://www.datameer.com/company/news/press-releases/index.html">Press Releases</a><br> <a href="http://www.datameer.com/learn/webinar/index.html">Webinars</a><br> <a href="http://www.datameer.com/learn/videos/index.html">Videos</a><br> </p> </li> 
+        <li class="wid130"> <p class="smalltext"><strong>Company</strong><br> <a href="http://www.datameer.com/company/team/index.html">Management Team</a><br> <a href="http://www.datameer.com/company/board.html">Board</a><br> <a href="http://www.datameer.com/blog">Blog</a><br> <a href="http://www.datameer.com/partners/index.html">Partners</a><br> <a href="http://www.datameer.com/company/events/index.html">Events</a><br> <a href="http://www.datameer.com/company/careers/index.html">Careers</a><br> <a href="http://www.datameer.com/company/contact.html">Contact Us</a> </p> </li> 
+        <li class="widauto"> <img src="http://www.datameer.com/images/datameer_logo_grey.png" alt="Datameer"> <address style="padding-left:23px;"><strong>Datameer, Inc.</strong><br> 1550 Bryant St., Suite 490<br> San Francisco, CA 94103<br> Tel: +1 415 817 9558<br> Fax: +1 415 814 1243<br> <strong>www.datameer.com</strong> </address> </li> 
+       </ul> 
+      </div> 
+      <!--//--section  --> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="line"></div> 
+     <div class="footer"> 
+      <div class="section"> 
+       <div id="copyright">
+        © 2014 Datameer, Inc. All rights reserved. Datameer is a trademark of Datameer, Inc. Hadoop and the Hadoop elephant
+        <br>logo are trademarks of the Apache Software Foundation. Other names may be trademarks of their respective owners. 
+       </div> 
+      </div> 
+      <!--//--section  --> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- analytics --> 
+   <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+   <script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15829911-1");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+   <script type="text/javascript" language="javascript">llactid=17071</script> 
+   <script type="text/javascript" language="javascript" src="assets/js/trackalyze.js"></script> 
+   <!-- /analytics --> 
+   <!-- Google Code for Remarketing Tag --> 
+   <!--
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+---------------------------------------------------> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1023079040;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script> 
+   <noscript> 
+    <div style="display:inline;"> 
+     <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1023079040/?value=0&amp;guid=ON&amp;script=0"> 
+    </div> 
+   </noscript> 
+   <script type="text/javascript" src="assets/js/modules/advertisementToCookie.js"></script>   
+  </div>
+ </body>
+</html>

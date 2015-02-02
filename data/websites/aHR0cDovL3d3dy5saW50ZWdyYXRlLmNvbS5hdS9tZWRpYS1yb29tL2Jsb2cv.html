@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta charset="utf-8"> 
+  <title>Lintegrate - Media Room</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Lintegrate - "> 
+  <meta name="author" content="Lintegrate"> 
+  <link href="/css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico"> 
+  <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+      padding-top: 0px;
+      padding-bottom: 40px;
+   }
+   
+   .bitcoin img {
+    opacity: 0.8;
+   }
+   .bitcoin a {
+    padding-top:8px;
+    padding-bottom:5px;
+    padding-right:5px;
+    padding-left:5px;
+   }
+
+   .bitcoin img:hover {
+    opacity: 1;
+   }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 5px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+/* Experimental */   
+
+   .navbar-search .search-query {
+    background-repeat: no-repeat;
+    background-position: 12px 8px;
+    padding-left: 40px !important;
+    margin-top: 4px;
+    width:inherit;
+    line-height:2;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ5JREFUeNpi+P//PwMQMANxERCfAeI/UBrEZwbJQ9WAFR0A4u1AbAnEbFB6O1ScGaawGoi3wHQiYyBYDZKHKbwHxLo4FOqC5GEKf4Ksw6EQ5IyfIDYTkPEUiNUZsAOQ+F9GRkYJEKcFiDficSOIcRjE4QTiY0C8DuRbqAJLKP8/FP9kQArHUiA+jySJjA8w4LAS5KZd0MAHhaccQIABALsMiBZy4YLtAAAAAElFTkSuQmCC);
+}
+
+.navbar-search .search-query:focus, .navbar-search .search-query.focused {
+    background-position: 12px 8px;
+    padding-left: 40px !important;
+    background-image: none;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ5JREFUeNpi+P//PwMQMANxERCfAeI/UBrEZwbJQ9WAFR0A4u1AbAnEbFB6O1ScGaawGoi3wHQiYyBYDZKHKbwHxLo4FOqC5GEKf4Ksw6EQ5IyfIDYTkPEUiNUZsAOQ+F9GRkYJEKcFiDficSOIcRjE4QTiY0C8DuRbqAJLKP8/FP9kQArHUiA+jySJjA8w4LAS5KZd0MAHhaccQIABALsMiBZy4YLtAAAAAElFTkSuQmCC);
+}
+
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      /*margin-bottom: 60px; */
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 30px; padding-left:0px; padding-right:0px;
+      margin-top: 100px;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 9;
+    }
+
+    .carousel .item {
+      height: 400px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 160px;
+      left: 0;
+      min-width: 100%;
+      height: 200px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 170px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -20px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+      min-height:10%;
+      min-width:60%;
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+      .headerimg {
+	margin-bottom:18px;
+      }
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+	width: auto;
+        height: 300px;
+      }
+      .carousel img {
+        width: auto;
+        height: 150px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 100%;
+        margin: 0 auto 20px;
+      }
+      .navbar-search .search-query {
+        margin-left:0px;
+
+
+      }
+
+      .navbar-search {
+	margin-bottom:5px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        width:auto;
+        height: 200px;
+      }
+      .carousel img {
+	width: auto;
+        height: auto;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 200px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+      .carousel-control {
+	margin-top: 75px;
+	font-size: 60px;
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .nav-bar .brand {
+	font-size: 14px;
+      }
+
+    .navbar-search .search-query {
+    margin-left:0px;
+
+
+    }
+
+    .navbar-search {
+	margin-bottom:5px;
+    }
+    </style> 
+  <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]--> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144-precomposed.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114-precomposed.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72-precomposed.png"> 
+  <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-57-precomposed.png"> 
+  <link rel="shortcut icon" href="/favicon.ico"> 
+  <style id="holderjs-style" type="text/css">.holderjs-fluid{font-size:16px;font-weight:bold;text-align:center;font-family:sans-serif;margin:0}</style> 
+  <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-39288471-1']);_gaq.push(['_setDomainName','lintegrate.com.au']);_gaq.push(['_setAllowLinker',true]);var pluginUrl='//www.google-analytics.com/plugins/ga/inpage_linkid.js';_gaq.push(['_require','inpage_linkid',pluginUrl]);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();</script> 
+ </head> 
+ <body> 
+  <div class="navbar-wrapper"> 
+   <div class="container"> 
+    <a href="/"><img style="padding: 5px" src="/images/lintegrate-logo.png" class="headerimg"></a>
+    <div class="navbar navbar-inverse"> 
+     <div class="navbar-inner"> 
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      <a class="brand hidden-desktop">Media Room</a> 
+      <div class="nav-collapse collapse"> 
+       <ul class="nav"> 
+        <li class=""><a href="/">Home</a></li> 
+        <li class="dropdown"> <a href="/about/" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a> 
+         <ul class="dropdown-menu"> 
+          <li><a href="/about/history">History</a></li> 
+          <li><a href="/about/partners">Partners</a></li> 
+          <li><a href="/about/sustainability">Sustainability</a></li> 
+          <li><a href="/about/social-responsibility">Social responsibility</a></li> 
+          <li><a href="/about/careers">Careers</a></li> 
+         </ul> </li> 
+        <li class=""><a href="/products/">Products</a></li> 
+        <li class="dropdown"> <a href="/services/" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a> 
+         <ul class="dropdown-menu"> 
+          <li class="nav-header">Professional Services</li> 
+          <li><a href="/services/solutions/cloud-computing/">Cloud Computing</a></li> 
+          <li><a href="/services/solutions/big-data/">Big Data</a></li> 
+          <li><a href="/services/solutions/devops/">DevOps</a></li> 
+          <li><a href="/services/solutions/gnu-linux/">GNU/Linux</a></li> 
+          <li><a href="/services/solutions/clustering/">Clustering</a></li> 
+          <li><a href="/services/solutions/it-security/">IT Security</a></li> 
+         </ul> </li> 
+        <li class=""><a href="/contact/">Contact</a></li> 
+        <li class="active "><a href="/media-room/">Media Room</a></li> 
+        <form class="navbar-search pull-left" id="searchbox_demo" action="/search/"> 
+         <input name="q" type="text" class="search-query" placeholder="Search "> 
+        </form> 
+       </ul> 
+       <ul class="nav pull-right"> 
+        <li class="dropdown"><a href="/about/bitcoin/" class="bitcoin dropdown-toggle" data-toggle="dropdown" style=" padding-top:8px; padding-bottom:5px; padding-right:5px; padding-left:5px;"><img height="34" width="90" src="/images/WeAcceptBitcoin.png" alt="We accept BitCoin"><b class="caret"></b></a> 
+         <ul class="dropdown-menu"> 
+          <li><a href="/about/bitcoin/">About BitCoin</a></li> 
+         </ul> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <style type="text/css">@media (max-width:767px){body{padding-top:150px}}.post{padding:15px 0px;border-bottom:1px dotted #ccc}img{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.widget h3{display:block;text-transform:capitalize;border-radius:5px;margin-bottom:10px;text-align:center;padding:5px 0px;background-color:#1b1b1b;background-image:-moz-linear-gradient(top,#222,#111);background-image:-webkit-gradient(linear,0 0,0 100%,from(#222),to(#111));background-image:-webkit-linear-gradient(top,#222,#111);background-image:-o-linear-gradient(top,#222,#111);background-image:linear-gradient(to bottom,#222,#111);background-repeat:repeat-x;border-color:#252525;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0)}.feat-img img{padding:5px;border:1px solid #ccc}.feat-img{text-align:center}.post:first-of-type{padding-top:0px}.widget ul{margin-left:0px}.widget ul li{list-style:none;font-size:14px}.widget ul li a{display:block;padding:5px 0px;color:#888;border-top:1px dotted #ccc}.widget ul li a:hover{background:#fff;text-decoration:none;padding-left:5px}</style> 
+  <div class="container"> 
+   <div id="myCarousel" class="carousel slide hidden-phone"> 
+    <div class="carousel-inner"> 
+     <div class="active item">
+      <img src="/images/slider/1.jpg">
+     </div> 
+     <div class="item">
+      <img src="/images/slider/2.jpg">
+     </div> 
+     <div class="item">
+      <img src="/images/slider/3.jpg">
+     </div> 
+    </div> 
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a> 
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a> 
+   </div> 
+   <div class="row"> 
+    <div class="span6"> 
+     <a name="nav-pills"></a> 
+     <ul class="nav nav-pills"> 
+      <li> <a href="/media-room/news/">News</a> </li> 
+      <li class="active"> <a href="/media-room/blog/">Blog</a> </li> 
+      <li> <a href="/media-room/downloads/">Downloads</a> </li> 
+      <li> <a href="/media-room/tutorials/">Tutorials</a> </li> 
+      <li> <a href="/media-room/whitepapers/">Whitepapers</a> </li> 
+      <li> <a href="/media-room/library/">Library</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="span8"> 
+     <div class="post"> 
+      <div class="row"> 
+       <div class="feat-img span2"> 
+        <img src="http://www.linuxfoundation.org/sites/main/files/imagecache/sponsor_logo_platinum/sponsor_logos/samsung.png" alt="Samsung joins Linux Foundation"> 
+       </div> 
+       <div class="details span6"> 
+        <h2>Samsung becomes Platinum Linux Foundation member</h2> 
+        <p> Samsung have recently become a platinum sponsor of the Linux Foundation, which is the highest level of support offered by the organisation. The sponsorship comes as no surpise to industry analysts, have seen Samsung rip the crown from Nokia as the top mobile handset vendor according to Garnter Research.According to outspoken Linux Foundation executive director Jim Zemlin "..the world’s largest device maker is investing so much in Linux because it understands the power of collaborative development and its role in today’s technology market.... </p> 
+        <b>Troy Rose</b> @ Mon Jul 15 11:08:15 2013 
+       </div> 
+       <a class="btn pull-right" href="/media-room/2013/07/samsung-becomes-platinum-linux#post">Read More!</a> 
+      </div> 
+     </div> 
+     <div class="post"> 
+      <div class="row"> 
+       <div class="feat-img span2"> 
+        <img src="http://www.lernstift.com/img/lernstift_tech_captions.jpg" alt="Linux Powered Pen"> 
+       </div> 
+       <div class="details span6"> 
+        <h2>Linux powered pen - tells you when you make a mistake</h2> 
+        <p> In a definite world first for pens, German inventors have created a pen that houses a small embedded linux computer with a WiFi chip inside it, designed to recognise movements, shaps and a list of known words. It can let the user know of a misspelling or illegible handwriting by sending a quick vibration to the user.But by far, the coolest thing is that you don't even need paper to write (could this herald in the promised paperless office?) !... </p> 
+        <b>Troy Rose</b> @ Mon Jul 15 10:43:22 2013 
+       </div> 
+       <a class="btn pull-right" href="/media-room/2013/07/linux-powered-pen-tells-you-when-you#post">Read More!</a> 
+      </div> 
+     </div> 
+     <div class="post"> 
+      <div class="row"> 
+       <div class="feat-img span2"> 
+        <img src="http://lh4.ggpht.com/-FaGuappH2pM/UaR322r874I/AAAAAAAAemY/khQ-cEIhfuY/%25255BUNSET%25255D.jpg" alt="Google Glass - The Future Awaits"> 
+       </div> 
+       <div class="details span6"> 
+        <h2>Google Glass now runs Linux!</h2> 
+        <p> Every day we hear about a new high-tech gadget that integrates with business, personal life and crosses the bridges between networks, servers, desktops and users more and more. From mesh-enabled Bluetooth devices, to intelligent clothing and watches, and even the ever-popular mobile phone. But what is in store around the corner may be even more revolutionary than we ever imagined.Google have been releasing crumbs of information on their revolutionary new product, with a tentative release schedule of later this year,&nbsp;Google Glass&nbsp;now for quite some time.... </p> 
+        <b>Leandro Brun</b> @ Wed Jun 26 06:42:02 2013 
+       </div> 
+       <a class="btn pull-right" href="/media-room/2013/05/google-glass-now-runs-linux_28#post">Read More!</a> 
+      </div> 
+     </div> 
+     <div class="pagination"> 
+      <ul> 
+       <li class="disabled"><a>«</a></li> 
+       <li class="disabled"><a href="/media-room/blog/2/">»</a></li> 
+       <li class="active"><a>1</a></li> 
+       <li><a href="/media-room/blog/2/">2</a></li> 
+       <li><a href="/media-room/blog/3/">3</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <aside class="span4"> 
+     <div class="row"> 
+      <div class="widget span4"> 
+       <h3>Ubuntu AMIs</h3> 
+       <script type="text/javascript">//<![CDATA[
+var ON=function(region){document.getElementById('ami-comments').style.display='block';document.getElementById('tab-us-east-1').style.display=(region=='us-east-1'?'block':'none');document.getElementById('tab-us-west-1').style.display=(region=='us-west-1'?'block':'none');document.getElementById('tab-us-west-2').style.display=(region=='us-west-2'?'block':'none');document.getElementById('tab-eu-west-1').style.display=(region=='eu-west-1'?'block':'none');document.getElementById('tab-ap-northeast-1').style.display=(region=='ap-northeast-1'?'block':'none');document.getElementById('tab-ap-southeast-1').style.display=(region=='ap-southeast-1'?'block':'none');document.getElementById('tab-ap-southeast-2').style.display=(region=='ap-southeast-2'?'block':'none');document.getElementById('tab-sa-east-1').style.display=(region=='sa-east-1'?'block':'none');}
+//]]></script> 
+       <div class="widget-content"> 
+        <form>
+          Ubuntu AMIs for EC2: 
+         <select name="selectregion" onchange="ON(this.form.selectregion.value);"> <option value="">Select EC2 Region</option> <option value="us-east-1">us-east-1</option> <option value="us-west-1">us-west-1</option> <option value="us-west-2">us-west-2</option> <option value="eu-west-1">eu-west-1</option> <option value="ap-northeast-1">ap-northeast-1</option> <option value="ap-southeast-1">ap-southeast-1</option> <option value="ap-southeast-2">ap-southeast-2</option> <option value="sa-east-1">sa-east-1</option> </select> 
+        </form> 
+        <div id="tab-us-east-1" style="display: none;"> 
+         <table class="amis"> 
+          <tbody> 
+           <tr> 
+            <th class="first">Ubuntu Release</th> 
+            <th>server<br>64-bit</th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> EBS boot</td> 
+            <td><tt>ami-77147f1e&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-77147f1e" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> instance-store</td> 
+            <td><tt>ami-a9167dc0&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-a9167dc0" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> HVM (cluster compute)</td> 
+            <td><tt>ami-49147f20&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-49147f20" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> EBS boot</td> 
+            <td><tt>ami-8f513ae6&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-8f513ae6" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> instance-store</td> 
+            <td><tt>ami-77513a1e&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-77513a1e" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> HVM (cluster compute)</td> 
+            <td><tt>ami-81513ae8&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-81513ae8" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> EBS boot</td> 
+            <td><tt>ami-9b85eef2&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-9b85eef2" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> instance-store</td> 
+            <td><tt>ami-ed86ed84&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-ed86ed84" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> HVM (cluster compute)</td> 
+            <td><tt>ami-9d85eef4&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-9d85eef4" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> EBS boot</td> 
+            <td><tt>ami-21e47148&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-21e47148" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> instance-store</td> 
+            <td><tt>ami-bffa6fd6&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-bffa6fd6" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> 
+        <div id="tab-us-west-1" style="display: none;"> 
+         <table class="amis"> 
+          <tbody> 
+           <tr> 
+            <th class="first">Ubuntu Release</th> 
+            <th>server<br>64-bit</th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> EBS boot</td> 
+            <td><tt>ami-5f5a741a&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-5f5a741a" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> instance-store</td> 
+            <td><tt>ami-9b5d73de&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-9b5d73de" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> EBS boot</td> 
+            <td><tt>ami-2f527c6a&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-2f527c6a" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> instance-store</td> 
+            <td><tt>ami-1f527c5a&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-1f527c5a" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> EBS boot</td> 
+            <td><tt>ami-9b2d03de&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-9b2d03de" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> instance-store</td> 
+            <td><tt>ami-832d03c6&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-832d03c6" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> EBS boot</td> 
+            <td><tt>ami-e63013a3&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-e63013a3" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> instance-store</td> 
+            <td><tt>ami-30301375&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-30301375" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> 
+        <div id="tab-us-west-2" style="display: none;"> 
+         <table class="amis"> 
+          <tbody> 
+           <tr> 
+            <th class="first">Ubuntu Release</th> 
+            <th>server<br>64-bit</th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> EBS boot</td> 
+            <td><tt>ami-4f8b1a7f&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-4f8b1a7f" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> instance-store</td> 
+            <td><tt>ami-45881975&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-45881975" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> HVM (cluster compute)</td> 
+            <td><tt>ami-b18b1a81&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-b18b1a81" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> EBS boot</td> 
+            <td><tt>ami-9db425ad&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-9db425ad" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> instance-store</td> 
+            <td><tt>ami-a3b42593&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-a3b42593" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> HVM (cluster compute)</td> 
+            <td><tt>ami-9fb425af&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-9fb425af" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> EBS boot</td> 
+            <td><tt>ami-77be2f47&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-77be2f47" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> instance-store</td> 
+            <td><tt>ami-3fbe2f0f&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-3fbe2f0f" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> HVM (cluster compute)</td> 
+            <td><tt>ami-79be2f49&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-79be2f49" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> EBS boot</td> 
+            <td><tt>ami-6ec8425e&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-6ec8425e" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> instance-store</td> 
+            <td><tt>ami-04c84234&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=us-west-2#launchAmi=ami-04c84234" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> 
+        <div id="tab-eu-west-1" style="display: none;"> 
+         <table class="amis"> 
+          <tbody> 
+           <tr> 
+            <th class="first">Ubuntu Release</th> 
+            <th>server<br>64-bit</th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> EBS boot</td> 
+            <td><tt>ami-7fadbc0b&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-7fadbc0b" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> instance-store</td> 
+            <td><tt>ami-e3aabb97&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-e3aabb97" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> HVM (cluster compute)</td> 
+            <td><tt>ami-79adbc0d&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-79adbc0d" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> EBS boot</td> 
+            <td><tt>ami-eb5f4f9f&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-eb5f4f9f" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> instance-store</td> 
+            <td><tt>ami-5f5f4f2b&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-5f5f4f2b" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> HVM (cluster compute)</td> 
+            <td><tt>ami-d55f4fa1&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-d55f4fa1" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> EBS boot</td> 
+            <td><tt>ami-f5736381&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-f5736381" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> instance-store</td> 
+            <td><tt>ami-d17262a5&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-d17262a5" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> HVM (cluster compute)</td> 
+            <td><tt>ami-f7736383&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-f7736383" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> EBS boot</td> 
+            <td><tt>ami-ca1a14be&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-ca1a14be" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> instance-store</td> 
+            <td><tt>ami-881d13fc&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=eu-west-1#launchAmi=ami-881d13fc" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> 
+        <div id="tab-ap-northeast-1" style="display: none;"> 
+         <table class="amis"> 
+          <tbody> 
+           <tr> 
+            <th class="first">Ubuntu Release</th> 
+            <th>server<br>64-bit</th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> EBS boot</td> 
+            <td><tt>ami-896ce588&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-896ce588" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> instance-store</td> 
+            <td><tt>ami-4d6ce54c&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-4d6ce54c" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> EBS boot</td> 
+            <td><tt>ami-9f0b829e&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-9f0b829e" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> instance-store</td> 
+            <td><tt>ami-a70881a6&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-a70881a6" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> EBS boot</td> 
+            <td><tt>ami-57109956&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-57109956" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> instance-store</td> 
+            <td><tt>ami-db1198da&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-db1198da" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> EBS boot</td> 
+            <td><tt>ami-0366e302&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-0366e302" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> instance-store</td> 
+            <td><tt>ami-b567e2b4&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-b567e2b4" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> 
+        <div id="tab-ap-southeast-1" style="display: none;"> 
+         <table class="amis"> 
+          <tbody> 
+           <tr> 
+            <th class="first">Ubuntu Release</th> 
+            <th>server<br>64-bit</th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> EBS boot</td> 
+            <td><tt>ami-e44907b6&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-e44907b6" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> instance-store</td> 
+            <td><tt>ami-2849077a&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-2849077a" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> EBS boot</td> 
+            <td><tt>ami-32400e60&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-32400e60" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> instance-store</td> 
+            <td><tt>ami-64400e36&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-64400e36" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> EBS boot</td> 
+            <td><tt>ami-085b155a&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-085b155a" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> instance-store</td> 
+            <td><tt>ami-1a5b1548&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-1a5b1548" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> EBS boot</td> 
+            <td><tt>ami-42e1a310&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-42e1a310" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> instance-store</td> 
+            <td><tt>ami-52e1a300&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#launchAmi=ami-52e1a300" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> 
+        <div id="tab-ap-southeast-2" style="display: none;"> 
+         <table class="amis"> 
+          <tbody> 
+           <tr> 
+            <th class="first">Ubuntu Release</th> 
+            <th>server<br>64-bit</th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> EBS boot</td> 
+            <td><tt>ami-17da492d&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#launchAmi=ami-17da492d" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> instance-store</td> 
+            <td><tt>ami-13da4929&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#launchAmi=ami-13da4929" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> EBS boot</td> 
+            <td><tt>ami-33dd4e09&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#launchAmi=ami-33dd4e09" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> instance-store</td> 
+            <td><tt>ami-c5de4dff&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#launchAmi=ami-c5de4dff" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> EBS boot</td> 
+            <td><tt>ami-37c0530d&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#launchAmi=ami-37c0530d" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> instance-store</td> 
+            <td><tt>ami-33c05309&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#launchAmi=ami-33c05309" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> EBS boot</td> 
+            <td><tt>ami-eebd2bd4&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#launchAmi=ami-eebd2bd4" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> instance-store</td> 
+            <td><tt>ami-eabd2bd0&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#launchAmi=ami-eabd2bd0" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> 
+        <div id="tab-sa-east-1" style="display: none;"> 
+         <table class="amis"> 
+          <tbody> 
+           <tr> 
+            <th class="first">Ubuntu Release</th> 
+            <th>server<br>64-bit</th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> EBS boot</td> 
+            <td><tt>ami-94f35689&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-94f35689" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 13.04 Raring<br> instance-store</td> 
+            <td><tt>ami-68f35675&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-68f35675" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> EBS boot</td> 
+            <td><tt>ami-f6ff5aeb&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-f6ff5aeb" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.10 Quantal<br> instance-store</td> 
+            <td><tt>ami-c4ff5ad9&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-c4ff5ad9" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> EBS boot</td> 
+            <td><tt>ami-a4fb5eb9&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-a4fb5eb9" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 12.04 LTS Precise<br> instance-store</td> 
+            <td><tt>ami-bcfb5ea1&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-bcfb5ea1" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> EBS boot</td> 
+            <td><tt>ami-2f6ab232&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-2f6ab232" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <td class="first">Ubuntu 10.04 LTS Lucid<br> instance-store</td> 
+            <td><tt>ami-016ab21c&nbsp;<a title="Launch EC2 Instance on AWS Console" href="https://console.aws.amazon.com/ec2/home?region=sa-east-1#launchAmi=ami-016ab21c" target="_blank"><img src="/images/aws-launch-13x15.png" width="13" height="15" style="vertical-align:text-bottom"></a></tt></td> 
+           </tr> 
+           <tr> 
+            <th colspan="5"></th> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> 
+        <p><br></p> 
+        <div id="ami-comments" style="display: block;"> 
+         <p> The Ubuntu AMIs listed above are published by Canonical. </p> 
+         <p> <a href="http://cloud.ubuntu.com/ami/">32-bit Ubuntu AMIs</a> are also available, but <a href="http://alestic.com/2012/03/ec2-64-bit">not recommended</a>. </p> If you're looking for Debian AMIs, here are some being created by the community: 
+         <a href="http://wiki.debian.org/Cloud/AmazonEC2Image">http://wiki.debian.org/Cloud/AmazonEC2Image</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="widget span4"> 
+       <h3>Stay Social!</h3> 
+       <p class="text-center"><em>LinkedIn Connections</em> » » » <script src="//platform.linkedin.com/in.js" type="text/javascript"></script> <script type="IN/CompanyProfile" data-id="2177015" data-format="hover"></script> </p> 
+       <a class="twitter-timeline" href="https://twitter.com/Lintegrate" data-widget-id="338617495214780416">Tweets by @Lintegrate</a> 
+       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+      </div> 
+     </div> 
+    </aside> 
+   </div> 
+   <footer> 
+    <p class="pull-right"><a href="#">Back to top</a></p> 
+    <p>© 2013 Lintegrate · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p> 
+   </footer> 
+  </div> 
+  <script src="/js/jquery.js"></script> 
+  <script src="/js/bootstrap.js"></script> 
+  <script>!function($){$(function(){$('#myCarousel').carousel()})}(window.jQuery)</script>  
+ </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Verify Anybody     |     Friend Verifier</title> 
+  <!-- SET: FAVICON --> 
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"> 
+  <!-- END: FAVICON --> 
+  <!-- SET: STYLESHEET --> 
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all"> 
+  <!-- END: STYLESHEET --> 
+  <!-- SET: SCRIPTS --> 
+  <script type="text/javascript"></script> 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script> 
+  <!-- END: SCRIPTS --> 
+  <!--[if lt IE 9]>
+<style type="text/css">
+.updates-list-left .form{padding:14px 5px 0 5px; height:34px;}
+</style>
+<![endif]--> 
+ </head> 
+ <body> 
+  <!-- wrapper starts --> 
+  <div class="wrapper"> 
+   <!-- maincontent Starts --> 
+   <div class="content"> 
+    <div class="logo">
+     <a href="#"><img src="images/logo.png" width="95" height="95" alt="logo"></a>
+    </div> 
+    <h1>You haven’t <span>verified</span> like this before.</h1> 
+    <h2>Verify <span>Anybody </span>2.0 coming soon!</h2> 
+    <div class="updates-list"> 
+     <div class="updates-list-left"> 
+      <form action="" method="post" enctype="multipart/form-data" id="form"> 
+       <label>Sign up for updates</label> 
+       <input class="form" name="femail" id="femail" type="text" value="" onclick="if(this.value==''){this.value=''}" onblur="if(this.value==''){this.value=''}"> 
+       <a href="#" class="ok">OK</a> 
+      </form> 
+      <span class="f_error">Required: please enter valid email id</span> 
+      <span class="f_success"></span> 
+     </div> 
+     <div class="updates-list-right"> 
+      <label>Scan Facebook Friends for Sex Offenders</label> 
+      <a href="https://www.facebook.com/friendverifierapp" target="_blank">FRIENDVERIFIER</a> 
+     </div> 
+     <div class="clear"></div> 
+    </div> 
+    <!-- copyright starts --> 
+    <div class="copy-right"> 
+     <p>Copyright 2012 - 2014 &nbsp;&nbsp;&nbsp;&nbsp; All Rights Reserved</p> 
+    </div> 
+    <!-- copyright ends --> 
+    <!-- maincontent ends --> 
+   </div> 
+  </div> 
+  <!-- wrapper ends --> 
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('.ok').click(function(){
+            var femail			= $('#femail').val();
+			
+			var error				= 0;	
+					
+            $('#femail').css('border','');				
+			
+			
+			
+			 var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+			if(femail == '' || !emailPattern.test(femail)) {           
+				$('#femail').css('border','1px red solid');                 
+				error = 1;
+			}
+			
+            
+     
+            
+			if(error==1) {
+				$('.f_error').show();
+				return false;
+			}else {
+				$('.f_error').hide();
+				
+			}
+
+			$.ajax({
+			url: 'submit.php',
+			type : 'POST',
+			data : $('#form').serialize(),
+			cache: false,
+			success: function (data) {	
+							$('.f_success').html(data);
+							$('.f_success').show();	
+							$('#form').hide();
+				}
+			});	
+			
+				
+		 
+			  
+		    $('#femail').val();
+		    
+								
+			return false;
+			
+			
+		
+
+                         
+        });
+    });
+  </script>   
+ </body>
+</html>

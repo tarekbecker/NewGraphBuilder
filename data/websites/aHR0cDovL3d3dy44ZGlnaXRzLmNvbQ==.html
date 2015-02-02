@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <title>8digits | Marketing Automation Made Simpler and Smarter</title> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <meta name="description" content="8digits is an analytics powered marketing automation software and a platform that enables monitoring, analyzing and responding with actions to user behaviours in realtime."> 
+  <meta name="keyword" content="8digits, scenarios, actions, trigger, gamification, marketing automation, smarter, simpler, realtime, tags, badges, game mechanics, reports and metrics, SaaS, e-commerce, 8digits enterprise, big data"> 
+  <script type="text/javascript" src="/lib/jquery-1.9.1.js"></script> 
+  <script type="text/javascript" src="/lib/jquery.validate.min.js"></script> 
+  <script type="text/javascript" src="/js/web/modernizr.custom.79639.js"></script> 
+  <script type="text/javascript" src="/index/eightdigits_label"></script> 
+  <script type="text/javascript" src="/js/app.js?v=1"></script> 
+  <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.js"></script> 
+  <link href="//fonts.googleapis.com/css?family=Oxygen:400,300,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" type="text/css" href="/css/master.css?v=1" media="screen"> 
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css?v=1" media="screen"> 
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+  <script>
+		$(document).ready(function(){
+			$('.problem-select').click(function(){
+				$('.problem-select').each(function(){
+					$(this).find('img').attr('src',$(this).data('passive-image'));
+					$(this).data('active','false');
+					$(this).find('span').css({'textDecoration':'none'});
+					$(this).removeClass('active-item');
+				});
+				
+				
+				bringSlide($('#'+$(this).attr('rel')));
+				/*
+				$('.slide').hide();
+				$('#'+$(this).attr('rel')).show();
+				*/
+				
+				
+				$(this).data('active','true');
+				$(this).addClass('active-item');
+				$(this).find('img').attr('src',$(this).data('active-image'));
+				$(this).find('span').css({'textDecoration':'underline'});
+				scrollTo('#problem-list',-50);
+			});
+			$('.problem-select')
+				.mouseenter(function(){
+					if ( $(this).data('active') != "true" ) {
+						$(this).find('img').attr('src',$(this).data('active-image'));
+						$(this).find('span').css({'textDecoration':'underline'});
+					}
+				})
+				.mouseleave(function(){
+					if ( $(this).data('active') != "true" ) {
+						$(this).find('img').attr('src',$(this).data('passive-image'));
+						$(this).find('span').css({'textDecoration':'none'});
+					}
+				});
+			function scrollTo(el,extraOffset){
+				$('html, body').animate({
+			        scrollTop: ($(el).offset().top) + extraOffset
+			    }, 500);
+		    }
+		    function bringSlide(slide){
+		    	//hide previous.
+		    	oldImage = $('.active-slide').find('img');
+		    	oldTexts = $('.active-slide').find('.info');
+		    	oldImage.animate({opacity:0},100);
+		    	oldTexts.each(function(){
+		    		$(this).animate({opacity:0},100);
+		    	});
+		    	
+		    	newImage = slide.find('img');
+		    	newTexts = slide.find('.info');
+		    	newImage.css({left:-1000});
+		    	newTexts.each(function(){
+		    		$(this).css({right:-2000});
+		    	});
+		    	
+		    	clearTimeout(swithcerTimeout);
+		    	var swithcerTimeout = window.setTimeout(function(){
+		    		$('.active-slide').hide();
+		    		slide.show();
+		    		$('.active-slide').removeClass('active-slide');
+		    		slide.addClass('active-slide');
+		    	},100);
+		    
+		    	
+		    	newImage.delay(200).animate({left:0,opacity: 1},500)
+		    	extraDelay = 100;
+		    	newTexts.each(function(){
+		    		$(this).delay(200+extraDelay).animate({right:0,opacity:1},500);
+		    		extraDelay += 100
+		    	});
+		    	
+		    }
+		});
+	</script> 
+  <style type="text/css">
+		a.btn{
+			font-size:17px !important;
+			padding:10px 31px !important;
+		}
+		ul.problem-list li:hover img {
+            -webkit-border-radius: 63px;
+            -moz-border-radius: 63px;
+            border-radius: 63px;
+            border-color: #fff; /*rgba(82, 168, 236, 0.8);*/
+            outline: 0;
+            outline: thin dotted 9;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 14px rgba(82, 168, 236, 1);
+            -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 14px rgba(82, 168, 236, 1);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 14px rgba(82, 168, 236, 1)
+        }
+        .slide .info,.slide img{
+        	position:relative;
+        }
+        .problem-select{
+        	position:relative;
+        }
+        .active-item .conversion:after{
+        	content:'';
+        	position:absolute;
+        	width:98px;
+        	height:49px;
+        	background:red;
+        	top:125px;
+        	left:27px;
+        	background:url('/images/focusArrow.png') 0 0 no-repeat transparent;
+        }
+        .active-item .basket:after{
+        	content:'';
+        	position:absolute;
+        	width:98px;
+        	height:49px;
+        	background:red;
+        	top:125px;
+        	left:10px;
+        	background:url('/images/focusArrow.png') 0 0 no-repeat transparent;
+        }
+        .active-item .member:after{
+        	content:'';
+        	position:absolute;
+        	width:98px;
+        	height:49px;
+        	background:red;
+        	top:125px;
+        	left:37px;
+        	background:url('/images/focusArrow.png') 0 0 no-repeat transparent;
+        }
+         .active-item .bounce:after{
+        	content:'';
+        	position:absolute;
+        	width:98px;
+        	height:49px;
+        	background:red;
+        	top:125px;
+        	left:20px;
+        	background:url('/images/focusArrow.png') 0 0 no-repeat transparent;
+        }
+	</style> 
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
+  <!--[if lt IE 9]>
+	  		<script src="/lib/html5shiv.js"></script>
+		<![endif]--> 
+  <meta name="layout" content="main"> 
+ </head> 
+ <body id="pageBody" data-page="home"> 
+  <div class="masterWrapper"> 
+   <header id="masterHeader" class="stickyTop"> 
+    <div class="averageWrapper" style="position:relative;"> 
+     <a href="/index" style="float:left"><img src="/images/logo.png"></a> 
+     <ul class="topNavigation"> 
+      <li><a href="/index/why8digits">WHY 8DIGITS</a></li> 
+      <li><a href="/index/about">COMPANY</a></li> 
+      <li><a href="/index/pricing">PRICING</a></li> 
+      <li class="seperator"></li> 
+      <li><a href="https://www.8digits.com/index/login">LOGIN</a></li> 
+      <li><a href="https://www.8digits.com/index/signup">SIGN UP</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <div id="body"> 
+    <div class="backgroundWrapper creamBg"> 
+     <div class="averageWrapper"> 
+      <div class="scenario_store"> 
+       <div class="wrap"> 
+        <div class="store_content_narrow"> 
+         <h1 style="font-size:42px !important;"> Turn Visitors into Customers with Ease. </h1> 
+         <a href="/index/howitworks" class="btn learn_more">Learn More</a> 
+         <a href="/index/signup?r=2" class="btn browse_scenearios greenbutton">Start For Free</a> 
+         <small style="position: relative;top: 12px;left: 172px;width: 200px;display: block;font-size: 15px;">No credit card required!</small> 
+        </div> 
+        <div class="store_screenshot_narrow"> 
+         <iframe src="https://player.vimeo.com/video/103502740" width="470" height="265" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe> 
+        </div> 
+       </div> 
+       <!-- end.wrap --> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="backgroundWrapper creamBg" style="padding-bottom:10px;"> 
+     <div style="background-color:white;width:100%"> 
+      <div class="slider-buttons"> 
+       <h3 style="text-align:center;">Select a focus to see some of our easy set-up marketing campaigns</h3> 
+       <div class="panel-content clearfix"> 
+        <ul class="problem-list clearfix" id="problem-list" style="width:940px;margin:0 auto !important;padding-bottom:40px;cursor:pointer;"> 
+         <li class="pull-left problem-select active-item" style="margin-right:100px;text-align:center;" rel="slide-1" data-active="true" data-active-image="/images/advisor/increaseconversionrate.png" data-passive-image="/images/advisor/increaseconversionrateP.png"> <img src="/images/advisor/increaseconversionrate.png"> <br><br><span class="conversion" style="text-decoration:underline">Increase Conversion Rate</span> </li> 
+         <li class="pull-left problem-select" style="margin-right:100px;text-align:center;cursor:pointer;" rel="slide-2" data-active-image="/images/advisor/increasebasketsize.png" data-passive-image="/images/advisor/increasebasketsizeP.png"> <img class="arrower" src="/images/advisor/increasebasketsizeP.png"> <br><br><span class="basket">Increase Basket Size</span> </li> 
+         <li class="pull-left problem-select" style="text-align:center;cursor:pointer;margin-right:100px;" rel="slide-3" data-active-image="/images/advisor/convertvisitorstomembers.png" data-passive-image="/images/advisor/convertvisitorstomembersP.png"> <img src="/images/advisor/convertvisitorstomembersP.png"> <br><br><span class="member">Convert Visitors To Members</span> </li> 
+         <li class="pull-left problem-select" style="text-align:center;cursor:pointer;" rel="slide-4" data-active-image="/images/advisor/decreasebouncerate.png" data-passive-image="/images/advisor/decreasebouncerateP.png"> <img src="/images/advisor/decreasebouncerateP.png"> <br><br><span class="bounce">Decrease Bounce Rate</span> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="averageWrapper"> 
+      <div class="campaign_advisor" style="padding-top:35px;min-height:510px !important;"> 
+       <div class="wrap"> 
+        <div class="slide clearfix active-slide" id="slide-1"> 
+         <div class="campaign_content" style="top:110px"> 
+          <div class="campaign_title_wrapper" style="width:360px !important;"> 
+           <span class="info" style="font-weight:bold;"> If a basket is between 50-100, offer 20% off order over 150 </span> 
+          </div> 
+          <span class="info" style="font-weight:bold;"> Why it works: </span>
+          <br> 
+          <span class="info">An easy upsell offer! We've seen 20% of customers opt-in and increase their basket size when a discount is offered. Works great with a free shipping threshold as well.</span> 
+         </div> 
+         <div class="campaign_screenshot"> 
+          <img src="/images/UpsellSlide.png"> 
+         </div> 
+        </div> 
+        <div class="slide clearfix" id="slide-2" style="display:none"> 
+         <div class="campaign_content" style="top:120px"> 
+          <div class="campaign_title_wrapper" style="width:360px !important;"> 
+           <span class="info" style="font-weight:bold;"> If a visitor visits the site for the 2 time in one day, offer free shipping </span> 
+          </div> 
+          <span class="info" style="font-weight:bold;"> Why it works: </span>
+          <br> 
+          <span class="info">A customer coming back twice in one day may be on the fence about making the purchase. Free shipping or another discount can help push them to convert.</span> 
+         </div> 
+         <div class="campaign_screenshot"> 
+          <img src="/images/conversionSlide.png"> 
+         </div> 
+        </div> 
+        <div class="slide clearfix" id="slide-3" style="display:none"> 
+         <div class="campaign_content" style="top:60px"> 
+          <div class="campaign_title_wrapper" style="width:360px !important;"> 
+           <span class="info" style="font-weight:bold;"> If a visitor lands on 3rd page on the site, ask them to sign-up for the e-mail bulletin.<br> </span> 
+          </div> 
+          <span class="info" style="font-weight:bold;"> Why it works: </span>
+          <br> 
+          <span class="info">Asking for an email address when a person first comes onto your site is annoying, asking once the customer is engaged leads to higher conversion rates, higher email engagement rates, and better click-through and sale performance. Figure out your average pageviews per visit, and show the pop +/-1 page view around the average.</span> 
+         </div> 
+         <div class="campaign_screenshot"> 
+          <img src="/images/memberSlide.png"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="slide clearfix" id="slide-4" style="display:none"> 
+        <div class="campaign_content" style="top:60px"> 
+         <div class="campaign_title_wrapper" style="width:360px !important;"> 
+          <span class="info" style="font-weight:bold;"> If a fan visits from Facebook, show them a pop-up.<br> </span> 
+         </div> 
+         <span class="info" style="font-weight:bold;"> Why it works: </span>
+         <br> 
+         <span class="info">When you know where a visitors coming from, you'll have a better idea of why they are on your site. You can give special treatment to Facebook fans, Twitter followers, or Google Adwords helping you better optimize ad budgets, increase you customer engagement, and decrease your bounce rate.</span> 
+        </div> 
+        <div class="campaign_screenshot"> 
+         <img src="/images/bounceSlide.png"> 
+        </div> 
+       </div> 
+      </div> 
+      <!-- end.wrap --> 
+     </div> 
+    </div> 
+    <div class="averageWrapper" style="width:1000px!important;"> 
+     <div class="integrations"> 
+      <h3>"Works seamlessly with <strong>Woocommerce, Shopify</strong> &amp; <strong>Magento</strong>"</h3> 
+      <ul> 
+       <li class="logo woocommerce"><img src="/images/woocommerce-logo.png"></li> 
+       <li class="seperator"></li> 
+       <li class="logo shopify"><img src="/images/shopify-logo.png"></li> 
+       <li class="seperator"></li> 
+       <li class="logo magento"><img src="/images/magento-logo.png"></li> 
+      </ul> 
+      <div class="clear"></div> 
+     </div> 
+    </div> 
+    <div class="averageWrapper"> 
+     <div class="references"> 
+      <h3>REFERENCES</h3> 
+      <ul> 
+       <li class="sahibinden-logo">sahibinden.com</li> 
+       <li class="teknosa-logo">Teknosa</li> 
+       <li class="turkcell-logo">Turkcell</li> 
+       <li class="markaaldim-logo">MARKAALDIM.com</li> 
+       <li class="turknet-logo">turk.net</li> 
+       <li class="spxshop-logo">SPXSHOP</li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <footer id="masterFooter" class="footer"> 
+    <div class="averageWrapper"> 
+     <div class="links" style="float:right !important;"> 
+      <div class="box"> 
+       <h3>Company</h3> 
+       <ul> 
+        <li><a href="/index/about">About Us</a></li> 
+        <li><a href="mailto:support@8digits.com">Contact</a></li> 
+       </ul> 
+      </div> 
+      <div class="box"> 
+       <h3>Support</h3> 
+       <ul> 
+        <li><a href="/index/support">Support Request</a></li> 
+        <li><a href="/index/privacy">Privacy</a></li> 
+        <li><a href="/index/terms">Terms</a></li> 
+        <li><a href="/index/terms#Refunds">Refunds</a></li> 
+       </ul> 
+      </div> 
+      <div class="box"> 
+       <h3>Stay in Touch</h3> 
+       <ul> 
+        <li><a href="http://blog.8digits.com" target="_blank" id="blog-link">Blog</a></li> 
+        <li><a href="https://twitter.com/8digitscom" target="_blank" id="twitter-link">Twitter</a></li> 
+       </ul> 
+      </div> 
+      <div class="clear"></div> 
+     </div> 
+     <!-- end.links --> 
+     <div class="newsletter"> 
+      <a href="/index"><img src="/images/logo-dark.png"></a> 
+      <br>
+      <br> 
+      <span style="color: #16a085;font-size:14px;margin-top:15px;" q="">Copyright 2014 8digits.com</span> 
+     </div> 
+     <!-- DEV-377
+		<div class="newsletter">
+			<h3>Stay up to date</h3>
+			<br>
+			<div class="subscribe_area">
+				<div class="email_box" style="margin-bottom: 10px;">
+					<form action="http://8digits.us2.list-manage.com/subscribe/post?u=89d3c8a30c6df714390de7c7c&amp;id=6adcbe76d6" method="post" target="_blank" id="newsletter-form">
+						<input type="text" id="newsletter-email" name="EMAIL" class="email_area" placeholder="E-mail address" style="outline: none;" /> <input type="submit" value="Subscribe" class="btn signup" id="subscribeToMailList"/>
+					</form>
+				</div>
+		 	</div>
+			<small class="subscribe_text" style="font-size: 12px; color: #292929;">Subscribe to our newsletter and learn about new features before everyone else.</small>
+		</div>
+		 --> 
+     <div class="clear" style="clear:both;"></div> 
+    </div> 
+    <!-- end.wrap --> 
+   </footer> 
+  </div> 
+  <script type="text/javascript">
+		var _trackingCode = '4ah1r9ym';
+		(function() {
+			var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+		    wa.src = '//cdn.8digits.com/automation.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+		})();
+	</script> 
+  <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  
+	  ga('create', 'UA-42111505-1', '8digits.com');
+	  ga('send', 'pageview');
+	</script> 
+  <!-- Google Tag Manager --> 
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5WSTX7" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5WSTX7');</script>  
+ </body>
+</html>

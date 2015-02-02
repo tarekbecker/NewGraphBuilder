@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>BIME | SAAS Business Intelligence (Cloud BI)</title>
+  <script type="text/javascript">var _kmq = _kmq || [];
+    var _kmk = _kmk || '103eb43c2f93dd7eda0d88aa2626af39adcc734b';
+    function _kms(u){
+      setTimeout(function(){
+        var d = document, f = d.getElementsByTagName('script')[0],
+        s = d.createElement('script');
+        s.type = 'text/javascript'; s.async = true; s.src = u;
+        f.parentNode.insertBefore(s, f);
+      }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+
+    var isMobile = function() {
+        return (navigator.userAgent.match(/Android/i) ||
+                navigator.userAgent.match(/BlackBerry/i) ||
+                navigator.userAgent.match(/iPhone|iPod/i) ||
+                navigator.userAgent.match(/iPad/i) ||
+                navigator.userAgent.match(/Opera Mini/i) ||
+                navigator.userAgent.match(/IEMobile/i) );
+    };
+
+    navigator.sayswho = (function(){
+    var ua= navigator.userAgent, tem,
+    M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+    if(/trident/i.test(M[1])){
+        tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+        return 'IE '+(tem[1] || '');
+    }
+    if(M[1]=== 'Chrome'){
+        tem= ua.match(/\bOPR\/(\d+)/)
+        if(tem!= null) return 'Opera '+tem[1];
+    }
+    M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+    if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+    return M.join(' ');
+    })();
+
+    if(location.pathname == '/' || location.pathname == '/index.html') {
+        if (isMobile()) _kmq.push(['set', {'Mobile Session' : 'Yes' }]);
+
+        _kmq.push(['set', {'Screen Resolution': screen.width + " x " + screen.height }]);
+        _kmq.push(['set', {'Browser' : navigator.sayswho }]);
+    }
+
+    </script>
+  <script type="text/javascript" src="https://use.typekit.net/wcr7ywg.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <link rel="stylesheet" href="bime.css">
+  <link rel="shortcut icon" href="/img/favicons/favicon.ico">
+ </head>
+ <body ng-app="bime" ng-controller="MainController">
+  <header class="navbar navbar-default navbar-fixed-top" ng-controller="HeaderController" role="navigation">
+   <div class="container">
+    <div class="navbar-header">
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> 
+     <a class="navbar-brand" href="./index.html"><img src="/img/header/logo_bime.png"></a>
+    </div>
+    <div class="collapse navbar-collapse">
+     <ul class="nav navbar-nav navbar-left">
+      <li class="dropdown"><a href="./product.html" id="nav-product" class="dropdown-toggle" data-toggle="dropdown" ng-class="{'nav-active': isActive('product')}">Product</a>
+       <ul class="dropdown-menu" role="menu">
+        <li><a href="./product.html">Features</a></li>
+        <li><a href="./security.html">Security</a></li>
+        <li><a href="./showcase.html">Showcase</a></li>
+       </ul></li>
+      <li><a href="./pricing.html" id="nav-pricing" ng-class="{'nav-active': isActive('pricing')}">Pricing</a></li>
+      <li><a href="./customers.html" id="nav-customers" ng-class="{'nav-active': isActive('customers')}">Customers</a></li>
+      <li class="dropdown"><a href="./company.html" id="nav-company" class="dropdown-toggle" data-toggle="dropdown" ng-class="{'nav-active': isActive('company')}">Company</a>
+       <ul class="dropdown-menu" role="menu">
+        <li><a href="./company.html">About us</a></li>
+        <li><a href="./events.html">Events</a></li>
+        <li><a href="./press.html">Press</a></li>
+        <li ng-if="isFrench"><a href="http://blog.bimeanalytics.com/french">Company blog</a></li>
+        <li ng-if="isFrench === false"><a href="http://blog.bimeanalytics.com">Company blog</a></li>
+        <li><a href="http://www.bimeanalytics.com/engineering-blog">Engineering blog</a></li>
+        <li><a href="./partnership.html">Partners</a></li>
+        <li><a href="./career.html">careers</a></li>
+        <li><a href="./contact-us.html">contact us</a></li>
+       </ul></li>
+      <li><a href="./support.html" id="nav-support" ng-class="{'nav-active': isActive('support')}">Support</a></li>
+     </ul>
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href="./login.html"><span>Log in</span></a></li>
+      <li><a href="./signup.html" id="signup-link-header" class="btn-menu"><span>TRY BIME FREE</span></a></li>
+     </ul>
+    </div>
+   </div>
+  </header>
+  <script type="text/javascript">
+    var lang = navigator.language || navigator.userLanguage;
+
+    if (location.host == 'www.bimeanalytics.com' && lang.substr(0, 2).toLowerCase() == 'fr' &&
+            location.search.substr(1).split('&').indexOf('lang=en') == -1) {
+        location.href = 'http://fr.bimeanalytics.com';
+    }
+</script>
+  <div class="content">
+   <section id="cover-header">
+    <div class="hero-bg"></div>
+    <div class="container">
+     <div class="hero-content">
+      <div class="hero">
+       <h1 class="main-pitch en-us">Explore, understand and communicate data with style</h1>
+       <h2 class="sub-pitch">The data analysis &amp; dashboard cloud platform for modern organizations</h2>
+       <a href="signup.html?origin=index" class="btn btn-1">TRY BIME FREE</a>
+      </div>
+      <div class="slide-image-bottom img-responsive wow fadeIn animated">
+       <img src="/img/bg/hero-unit-screen-01.png">
+      </div>
+     </div>
+    </div>
+    <div class="customers-home small medium ">
+     <div class="container">
+      <div class="row">
+       <div class="col-xs-4">
+        <div class="table-cell">
+         <img src="/img/customers/Randstad-home.png" alt="">
+        </div>
+       </div>
+       <div class="col-xs-4">
+        <div class="table-cell">
+         <img src="/img/customers/Royal-Canin-home.png" alt="">
+        </div>
+       </div>
+       <div class="col-xs-4">
+        <div class="table-cell">
+         <img src="/img/customers/Lenovo-home.png" alt="">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="customers-home large">
+     <div class="container">
+      <div class="row">
+       <div class="col-xs-2">
+        <div class="table-cell">
+         <img src="/img/customers/Randstad-home.png" alt="">
+        </div>
+       </div>
+       <div class="col-xs-2">
+        <div class="table-cell">
+         <img src="/img/customers/Royal-Canin-home.png" alt="">
+        </div>
+       </div>
+       <div class="col-xs-2">
+        <div class="table-cell">
+         <img src="/img/customers/Lenovo-home.png" alt="">
+        </div>
+       </div>
+       <div class="col-xs-2">
+        <div class="table-cell">
+         <img src="/img/customers/McAfee-home.png" alt="">
+        </div>
+       </div>
+       <div class="col-xs-2">
+        <div class="table-cell">
+         <img src="/img/customers/GDF-Suez-home.png" alt="">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="freedom-expression">
+    <div class="container">
+     <div class="hero-content">
+      <div class="hero">
+       <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+         <h1 class="main-pitch">Freedom of data expression</h1>
+        </div>
+        <div class="col-xs-1"></div>
+       </div>
+       <div class="row">
+        <div class="col-xs-12">
+         <h2 class="sub-pitch">Query at the speed of thought to perform complex analysis simply and quickly. Beauty by default, customization by design. We know that the beauty of BIME lies in what you can produce with it. With smart defaults, your visualizations and dashboards will not only be efficient but they will also look gorgeous.</h2>
+        </div>
+       </div>
+      </div>
+      <div class="vbigspacer"></div>
+      <div class="video-vignette video-vignette wow fadeInDown animated">
+       <iframe src="//player.vimeo.com/video/107808153" width="900" height="506" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="quote" class="section bg-grey">
+    <div class="container">
+     <div class="quote-content grid effect-1">
+      <div class="quote-text">
+       <h2>GARTNER COOL VENDORS in PAAS 2014 report.</h2>
+      </div>
+      <div class="quote-autor">
+       <img src="/img/home/gartner-cool.png" alt="">
+       <p></p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="sharing">
+    <div class="background"></div>
+    <div class="container">
+     <div class="hero-content">
+      <div class="hero">
+       <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+         <h1 class="main-pitch">Sharing interactive dashboards at web scale</h1>
+        </div>
+        <div class="col-xs-1"></div>
+       </div>
+       <div class="row">
+        <div class="col-xs-12">
+         <h2 class="sub-pitch">We think getting your whole team on BIME is a good thing. Enabling a data-driven culture in your company is a good thing. You'll get the smallest cost per user on the BI market using BIME. The dashboards you will build with BIME offer breadth of interactivity and depth of customization. They are also automatically optimized to run on any device and can be embedded anywhere.</h2>
+        </div>
+       </div>
+      </div>
+      <div class="vbigspacer"></div>
+      <div class="row">
+       <div class="slide-image-bottom absolute">
+        <img src="/img/home/responsive.png">
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="quote" class="section bg-grey">
+    <div class="container">
+     <div class="quote-content grid effect-1">
+      <div class="quote-text">
+       <h2>“We get better access to our data and get answers faster"</h2>
+      </div>
+      <div class="quote-autor">
+       <p><span>Matt Malament</span> City of Atlanta, Manager Citywide Performance Delivery</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="datasources">
+    <div class="container">
+     <div class="hero-content ">
+      <div class="hero">
+       <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+         <h1 class="main-pitch">Connect all your data</h1>
+        </div>
+        <div class="col-xs-1"></div>
+       </div>
+       <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+         <h2 class="sub-pitch">The cloud is a data warehouse. Imagine that you can query all your company data from a single place. Connect and blend on-premise and online data sources with a curated but ever growing list of connectors.</h2>
+        </div>
+        <div class="col-xs-1"></div>
+       </div>
+      </div>
+      <div class="vbigspacer"></div>
+      <div class="datasources-img">
+       <ul>
+        <li><img src="/img/icons/connectors/datasources/ds-redshift.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-hana.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-bigquery.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-vertica.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-vectorwise.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-omniture.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-googleanalytics.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-salesforce.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-facebook.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-twitter.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-alfresco.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-github.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-gmail.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-dailymotion.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-youtubeanalytics.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-google.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-zendesk.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-quickbooks.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-skydrive.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-webdav.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-ftp.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-csv.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-box.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-url.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-drive.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-excel.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-dropbox.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-sqlserver.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-msaccess.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-postgresql.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-mysql.png"></li>
+        <li><img src="/img/icons/connectors/datasources/ds-oracle.png"></li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="press" class="bg-grey section">
+    <div class="press-home small medium">
+     <div class="container">
+      <div class="row">
+       <div class="col-sm-3">
+        <div class="table-cell">
+         <img src="/img/press/mashable-logo.png" alt="">
+        </div>
+       </div>
+       <div class="col-sm-3">
+        <div class="table-cell">
+         <img src="/img/press/venturebeat.png" alt="">
+        </div>
+       </div>
+       <div class="col-sm-3">
+        <div class="table-cell">
+         <img src="/img/press/forrester-logo.png" alt="">
+        </div>
+       </div>
+       <div class="col-sm-3">
+        <div class="table-cell">
+         <img src="/img/press/research-logo.png" alt="">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="press-home large">
+     <div class="container">
+      <div class="row hidden-xs">
+       <div class="col-sm-2">
+        <div class="table-cell">
+         <img src="/img/press/mashable-logo.png" alt="">
+        </div>
+       </div>
+       <div class="col-sm-2">
+        <div class="table-cell">
+         <img src="/img/press/venturebeat.png" alt="">
+        </div>
+       </div>
+       <div class="col-sm-2">
+        <div class="table-cell">
+         <img src="/img/press/forrester-logo.png" alt="">
+        </div>
+       </div>
+       <div class="col-sm-2">
+        <div class="table-cell">
+         <img src="/img/press/research-logo.png" alt="">
+        </div>
+       </div>
+       <div class="col-sm-2">
+        <div class="table-cell">
+         <img src="/img/press/cloud-computing-logo.png" alt="">
+        </div>
+       </div>
+       <div class="col-sm-2">
+        <div class="table-cell">
+         <img src="/img/press/readwriteweb.png" alt="">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="storage">
+    <div class="container">
+     <div class="hero-content hero2">
+      <div class="hero">
+       <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+         <h1 class="main-pitch">Faster, better, smarter storage</h1>
+        </div>
+        <div class="col-xs-1"></div>
+       </div>
+       <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+         <h2 class="sub-pitch">Bring your own storage. Use the database of your choice wherever it runs. There isn't even any need to move your data in the cloud to use BIME. We also offer a range of integrated analytic storages. They'll offer blazing fast performance no matter what data volume you inject. Just relax: data warehouses are now easy to set up, operate, and scale.</h2>
+        </div>
+       </div>
+      </div>
+      <div class="quote-customers absolute phone">
+       <div class="row">
+        <div class="col-xs-12">
+         <div class="quote-content-home en-us-quote-customers">
+          <p>“I am leaving my data in our in-house SQL Server and use BIME as a modern front end”</p>
+         </div>
+         <div class="arrow-down"></div>
+        </div>
+       </div>
+      </div>
+      <div class="quote-customers absolute small">
+       <div class="row">
+        <div class="col-sm-6">
+         <div class="quote-content-home en-us-quote-customers">
+          <p>“I am leaving my data in our in-house SQL Server and use BIME as a modern front end”</p>
+         </div>
+         <div class="arrow-down"></div>
+        </div>
+        <div class="col-sm-6">
+         <div class="quote-content-home en-us-quote-customers">
+          <p>“ I use BIME and BigQuery to analyze interactively 500 GB of data ”</p>
+         </div>
+         <div class="arrow-down"></div>
+        </div>
+       </div>
+      </div>
+      <div class="quote-customers absolute medium">
+       <div class="row">
+        <div class="col-md-4">
+         <div class="quote-content-home en-us-quote-customers">
+          <p>“I am leaving my data in our in-house SQL Server and use BIME as a modern front end”</p>
+         </div>
+         <div class="arrow-down"></div>
+        </div>
+        <div class="col-md-4">
+         <div class="quote-content-home en-us-quote-customers">
+          <p>“ I use BIME and BigQuery to analyze interactively 500 GB of data ”</p>
+         </div>
+         <div class="arrow-down"></div>
+        </div>
+        <div class="col-md-4">
+         <div class="quote-content-home en-us-quote-customers">
+          <p>“ Simple: I put my files in Google Drive and my dashboards are always up to date “</p>
+         </div>
+         <div class="arrow-down"></div>
+        </div>
+       </div>
+      </div>
+      <div class="quote-customers absolute large ">
+       <div class="row">
+        <div class="col-md-3">
+         <div class="quote-content-home en-us-quote-customers">
+          <p>“I am leaving my data in our in-house SQL Server and use BIME as a modern front end”</p>
+         </div>
+         <div class="arrow-down"></div>
+        </div>
+        <div class="col-md-3">
+         <div class="quote-content-home en-us-quote-customers">
+          <p>“ I use BIME and BigQuery to analyze interactively 500 GB of data ”</p>
+         </div>
+         <div class="arrow-down"></div>
+        </div>
+        <div class="col-md-3">
+         <div class="quote-content-home en-us-quote-customers">
+          <p>“ Simple: I put my files in Google Drive and my dashboards are always up to date “</p>
+         </div>
+         <div class="arrow-down"></div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+         <div class="quote-content-home en-us-quote-customers">
+          <p>“ I solved instantly my database latency issue using BIME's integrated data warehouse ”</p>
+         </div>
+         <div class="arrow-down"></div>
+        </div>
+       </div>
+      </div>
+      <div class="row phone">
+       <div class="col-xs-12">
+        <div class="slide-image-bottom absolute">
+         <img src="/img/customers/customer-people-phone.png">
+        </div>
+       </div>
+      </div>
+      <div class="row small">
+       <div class="col-xs-12">
+        <div class="slide-image-bottom absolute">
+         <img src="/img/customers/customer-people-small.png">
+        </div>
+       </div>
+      </div>
+      <div class="row medium">
+       <div class="col-xs-12">
+        <div class="slide-image-bottom absolute">
+         <img src="/img/customers/customer-people-medium.png">
+        </div>
+       </div>
+      </div>
+      <div class="row large">
+       <div class="col-xs-12">
+        <div class="slide-image-bottom absolute">
+         <img src="/img/customers/customer-people-01.png">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <bime-signup></bime-signup>
+  </div>
+  <footer>
+   <div class="site-footer">
+    <div class="container">
+     <div class="social-network">
+      <a href="https://www.facebook.com/BIME.Analytics" class="icon"><img src="/img/icons/facebook-icon.png"></a> 
+      <a href="https://twitter.com/bimeanalytics" class="icon"><img src="/img/icons/twitter-icon.png"></a> 
+      <a href="http://www.linkedin.com/groups?gid=2796704" class="icon"><img src="/img/icons/linkedin-icon.png"></a> 
+      <a href="https://plus.google.com/+BimeAnalyticsBI" class="icon"><img src="/img/icons/googleplus-icon.png"></a> 
+      <a href="https://www.youtube.com/user/bimeapp" class="icon"><img src="/img/icons/youtube-icon.png"></a> 
+      <a href="https://vimeo.com/bimeanalytics" class="icon"><img src="/img/icons/vimeo-icon.png"></a>
+     </div>
+     <div class="footer-nav">
+      <ul>
+       <li><a href="/product.html">Product</a></li>
+       <li><a href="/pricing.html">Pricing</a></li>
+       <li><a href="/customers.html">Customers</a></li>
+       <li><a href="/company.html">Company</a></li>
+       <li><a href="/support.html">Support</a></li>
+       <li ng-if="isFrench"><a href="/conditions-utilisation.html">Terms of use</a></li>
+       <li ng-if="isFrench === false"><a href="/terms-of-use.html">Terms of use</a></li>
+      </ul>
+     </div>
+     <div class="footer-bottom clearfix">
+      <p class="copyright">© 2014 We Are Cloud, inc. All Rights Reserved</p>
+      <p class="language"><a href="http://www.bimeanalytics.com/?lang=en">English</a> | <a href="http://fr.bimeanalytics.com/">French</a></p>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script type="text/javascript" src="https://apis.google.com/js/client:plusone.js"></script>
+  <script src="bime.js"></script>
+  <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  if (App.isFrench === true) {
+    ga('create', 'UA-3790801-10', 'bimeanalytics.com');
+  }
+  else {
+    ga('create', 'UA-3790801-9', 'bimeanalytics.com');
+  }
+  ga('send', 'pageview');
+</script>
+  <script>
+
+    jQuery(function() {
+        jQuery('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+                var target = jQuery(this.hash);
+                target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    jQuery('html,body').animate({
+                        scrollTop: target.offset().top - 80
+                    }, 500);
+                    return false;
+                }
+            }
+        });
+    });
+
+</script>
+ </body>
+</html>

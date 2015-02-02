@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Operational Intelligence, Log Management, Application Management, Enterprise Security and Compliance | Logscape</title> 
+  <meta content="logscape, big data, hadoop, analytics,Log management, log management software, manage logs, analyze logs, log analyzer, security log analysis, log management intelligence, log management compliance, compliance, log management operations, operations, operational intelligence, splunk" name="keywords"> 
+  <meta content="Logscape indexes and makes searchable data from any app, server or network device in real time including logs, config files, messages, alerts, scripts and metrics." name="description"> 
+  <meta content="width=device-width" name="viewport"> 
+  <meta content="Logscape | Search Without Limits" property="og:title"> 
+  <meta content="website" property="og:type"> 
+  <meta content="http://www.logscape.com" property="og:url"> 
+  <meta content="Logscape Big Data Analytics" property="og:site_name"> 
+  <meta content="Big Data Analytics for System Monitoring and DevOps." property="og:description"> 
+  <!-- Styles --> 
+  <link href="/css/flexslider.css" rel="stylesheet"> 
+  <link href="/css/font-awesome.min.css" rel="stylesheet"> 
+  <link href="/css/animate.css" rel="stylesheet"> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css"> 
+  <link href="/css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="/css/main.css" rel="stylesheet"> 
+  <link href="/css/custom-styles.css" rel="stylesheet"> 
+  <script src="/js/modernizr-2.6.2-respond-1.1.0.min.js"></script> 
+  <script src="/js/jquery-1.9.1.js"></script> 
+  <script src="https://js.stripe.com/v2"></script> 
+  <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet"> 
+  <script src="http://vjs.zencdn.net/c/video.js"></script> 
+  <!-- Fav and touch icons --> 
+  <link href="/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"> 
+  <link href="/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"> 
+  <link href="/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"> 
+  <link href="/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed"> 
+  <link href="/favicon.ico" rel="shortcut icon"> 
+ </head> 
+ <body data-spy="scroll" data-target=".navbar" id="top"> 
+  <div class="navbar navbar-inverse navbar-fixed-top"> 
+   <div class="navbar-inner"> 
+    <div class="container"> 
+     <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse"> <span class="icon-bar"> </span></a>
+     <div class="span3 offset1" style="padding:0px;margin-left:0px;">
+      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse"> </a>
+      <a class="brand brand2" href="/index.html" style="background-color: #111;border-radius:2px;height:28px;width:40px"> <img alt="logo" src="/images/logo-small.png"> </a> 
+      <a class="brand" href="/index.html" style="margin-top:1px; padding:29px; font-family:Arial; text-transform:none; font-size:36px; font-weight:100;"> Logscape </a> 
+     </div>   
+     <div class="nav-collapse collapse"> 
+      <ul class="nav pull-right"> 
+       <li> <a class="scroll" href="/index.html#header">Home</a> </li> 
+       <li> <a class="scroll" href="/index.html#analyze-log-files">Product</a> </li> 
+       <li> <a class="scroll" href="/index.html#apps">Apps</a> </li> 
+       <li> <a class="scroll" href="/index.html#pricing">Buy</a> </li> 
+       <li> <a class="scroll" href="/index.html#news">News</a> </li> 
+       <li> <a class="scroll">&nbsp;|&nbsp;</a> </li> 
+       <li> <a href="http://blog.logscape.com" target="_blank">Blog</a> </li> 
+       <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#support"> About <b class="caret"></b> </a> 
+        <ul class="dropdown-menu"> 
+         <li> <a href="about_us.html">Who We Are</a> </li> 
+         <li> <a href="contact.html">Contact Us</a> </li> 
+        </ul> </li> 
+       <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#support"> Support <b class="caret"></b> </a> 
+        <ul class="dropdown-menu"> 
+         <li> <a href="/get_help.html">Get Help</a> </li> 
+         <li> <a href="http://support.logscape.com" target="_blank">Documentation</a> </li> 
+         <li> <a href="http://forums.logscape.com" target="_blank">Forums</a> </li> 
+        </ul> </li> 
+       <li> <a class="btn btn-main" href="/get.html" style="background:#5BB75B; padding: 18px 20px; margin-top: 16px"> Free Download </a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="carousel slide animated fadeIn" id="header"> 
+   <div class="carousel-inner" style="height: 600px"> 
+    <div class="item one active"> 
+     <div class="container animated fadeInUp"> 
+      <div class="carousel-caption"> 
+       <h1>Search without limits</h1> 
+       <p class="lead margin-40" style="color: #FFFFFF;"> <em>Search, visualize and analyze unlimited amounts of operational data</em> </p> 
+       <a class="scroll btn-main" href="#analyze-log-files"> <i class="icon-chevron-right"></i> More </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="item two"> 
+     <div class="container"> 
+      <div class="carousel-caption"> 
+       <h1>Not All Data is Created Equal</h1> 
+       <p class="lead margin-40" style="color: #FFFFFF;"> <em>Discover a holistic, cost-effective and massively scalable approach to operational analytics</em> </p> 
+       <a class="btn-main" href="product.html#centralized-log-management"> <i class="icon-chevron-right"></i> More </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="item three"> 
+     <div class="container"> 
+      <div class="carousel-caption"> 
+       <h1>Logscape 2.0 is here</h1> 
+       <p class="lead margin-40" style="color: #FFFFFF;"> <em>Discover log files and operational data on-the-fly</em> </p> 
+       <a class="btn-main" href="http://blog.logscape.com/?p=34" target="_blank"> <i class="icon-chevron-right"></i> More </a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <a class="icon-angle-left icon-large left carousel-control hidden-phone" data-slide="prev" href="#header"></a> 
+   <a class="icon-angle-right icon-large right carousel-control hidden-phone" data-slide="next" href="#header"></a> 
+  </div> 
+  <section id="analyze-log-files"> 
+   <div class="container"> 
+    <div class="row allowNavBar"> 
+     <h2>Search, visualize and analyze log files and operational data</h2> 
+     <br> 
+     <br> 
+    </div> 
+    <div class="row text-center"> 
+     <!-- Section 1 --> 
+     <div class="span4"> 
+      <h4>Interactive Search and Discovery</h4> 
+      <div class="thumbs"> 
+       <img alt="Image Size 430x280" src="/images/guestmem_scatter.jpg"> 
+       <a href="product.html#log-file-analysis"> <span class="title"> <span> <i class="icon-link icon-2x"></i> </span> </span> </a> 
+      </div> 
+      <p><i class="icon-search icon-2x light-gray"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search real-time streaming and historical data </p> 
+     </div> 
+     <!-- Section 2 --> 
+     <div class="span4"> 
+      <h4>Application and Infrastructure Monitoring</h4> 
+      <div class="thumbs"> 
+       <img alt="Image Size 430x280" src="images/tob_web_traffic_stacked.jpg"> 
+       <a href="product.html#infrastructure-monitoring"> <span class="title"> <span> <i class="icon-link icon-2x"></i> </span> </span> </a> 
+      </div> 
+      <p><i class="icon-wrench icon-2x light-gray"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Monitor your entire technology stack </p> 
+     </div> 
+     <!-- Section 3 --> 
+     <div class="span4"> 
+      <h4>Customized Real-time Visibility</h4> 
+      <div class="thumbs"> 
+       <img alt="Image Size 430x280" src="images/workspace.jpg"> 
+       <a href="product.html#log-monitoring"> <span class="title"> <span> <i class="icon-link icon-2x"></i> </span> </span> </a> 
+      </div> 
+      <p><i class="icon-dashboard icon-2x light-gray"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create custom workspaces and workflows </p> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="span12"> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="message"> 
+   <div class="container"> 
+    <div class="row-fluid text-center"> 
+     <div class="span12"> 
+      <h3>Index unlimited data volumes at <strong>fixed costs</strong> and <strong>massive scale</strong></h3> 
+      <br> 
+      <br> 
+      <a class="btn-main" href="how_it_works.html"> <i class="icon-chevron-right"></i> See How it works </a> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="logos"> 
+   <div class="container"> 
+    <div class="row-fluid text-center"> 
+     <div class="span12"> 
+      <br> 
+     </div> 
+    </div> 
+    <div class="row-fluid text-center"> 
+     <div class="span3" style="padding-top: 20px; padding-left: -10px"> 
+      <a href="http://www.sportingbet.com" target="_blank"> <img height="67px" src="/images/sportingbet-logo-rgb-large.jpg" width="318px"> </a> 
+     </div> 
+     <div class="span2" style="padding-top: 20px;"> 
+      <a href="http://www.centrisag.ch" target="_blank"> <img height="66px" src="/images/centris-ag-logo.png" width="155px"> </a> 
+     </div> 
+     <div class="span2" style="padding-top: 20px;"> 
+      <a href="http://www.aegon.com" target="_blank"> <img height="60px" src="/images/aegon-nv.jpeg" width="143px"> </a> 
+     </div> 
+     <div class="span2" style="padding-top: 20px;"> 
+      <a href="https://www.rabobank.com" target="_blank"> <img height="61px" src="/images/rabobank.jpeg" width="215px"> </a> 
+     </div> 
+     <div class="span2"> 
+      <a href="http://www.int.sc.mufg.jp/" target="_blank"> <img height="1px" src="/images/MUSI-logo.jpg" width="155px"> </a> 
+     </div> 
+    </div> 
+    <div class="row-fluid text-center"> 
+     <div class="span12"> 
+      <br> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- Testimonial Section --> 
+  <section id="testimonial"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span12"> 
+      <h3>“Logscape allows us to work out and rationalize where our bandwidth costs are going…[and] come up with roadmaps in terms of what is going to save us the most money first.”</h3> 
+      <div class="testimonial-source pull-right">
+        Andy Coates Enterprise Architect, Sportingbet | case study 
+       <a class="icon-download icon-2x white" href="/download/Logscape-Sportingbet-Case-Study.pdf"></a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="apps"> 
+   <div class="container"> 
+    <div class="row allowNavBar"> 
+     <div class="span5"> 
+      <div class="thumbs"> 
+       <img alt="Image Size 480x280" src="/images/apps_screenshots.jpg"> 
+       <a href="apps.html"> <span class="title"> <span> <i class="icon-link icon-2x"></i> </span> </span> </a> 
+      </div> 
+     </div> 
+     <div class="span6 offset1"> 
+      <br> 
+      <h2>Apps for system and log monitoring</h2> 
+      <p class="lead">Analyze and troubleshoot on common platforms</p> 
+      <p>Search, visualize and analyze log files and operational data from common setups out of the box.</p> 
+      <p>Apps extend the capabilities of Logscape and make it even easier to get up and running quickly.</p> 
+      <br> 
+      <a class="btn-main" href="apps.html"> <i class="icon-chevron-right"></i> More </a> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="span12"> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- Stories Section --> 
+  <!--  --> 
+  <hr class="style-fade"> 
+  <section id="videos"> 
+   <div class="container text-left"> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <h2>Stories...</h2> 
+    <br> 
+    <div class="row margin-40"> 
+     <!-- Video Thumbnail --> 
+     <div class="span4"> 
+      <div class="project-title margin-30"> 
+       <h4>Logscape CTO, Neil Avery</h4> 
+       <p>What motivates us and shapes our vision</p> 
+       <div class="thumbs"> 
+        <img height="266px" src="/images/Neil-Avery-video.jpg" width="473px"> 
+        <a data-toggle="modal" href="#playNeilAveryInterviewVideo"> <span class="title"> <span> <i class="icon-play icon-4x"></i> </span> </span> </a> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- Video Thumbnail --> 
+     <div class="span4"> 
+      <div class="project-title margin-30"> 
+       <h4>Maarten D'Haese, Head of IS&amp;D, Rabobank</h4> 
+       <p>Logscape and its growth</p> 
+       <div class="thumbs"> 
+        <img height="266px" src="/images/rabobank-video.jpg" style="height:210px !important;" width="473px"> 
+        <a data-toggle="modal" href="#playRabobankVideo"> <span class="title"> <span> <i class="icon-play icon-4x"></i> </span> </span> </a> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- Video Thumbnail --> 
+     <div class="span4"> 
+      <div class="project-title margin-30"> 
+       <h4>Andy Coates, Sportingbet Enterprise Architect</h4> 
+       <p>How Logscape helped us optimize our platform</p> 
+       <div class="thumbs"> 
+        <img height="266px" src="/images/Andy-Coates-video.jpg" width="473px"> 
+        <a data-toggle="modal" href="#playAndyCoatesInterviewVideo"> <span class="title"> <span> <i class="icon-play icon-4x"></i> </span> </span> </a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="span12"> 
+      <br> 
+      <p>More case studies to come from Mitsubishi Securities and Aegon NV</p> 
+      <br> 
+      <br> 
+      <br> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <div class="modal hide" id="playLogscapeOverviewVideo" style="width: 575px;"> 
+   <div class="modal-header"> 
+    <button class="close" data-dismiss="modal" type="button"> × </button> 
+   </div> 
+   <div class="modal-body" style="padding-right: 0px; padding-left: 15px;"> 
+    <video class="video-js vjs-default-skin" controls="controls" height="297" id="the_video_playLogscapeOverviewVideo" preload="auto" width="528"> 
+     <source src="/videos/LogscapeOverview.webm" type="video/webm"> 
+     <source src="/videos/LogscapeOverview.m4v" type="video/mp4"> 
+     <source src="/videos/LogscapeOverview.mp4" type="video/mp4"> 
+    </video> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+  //<![CDATA[
+    var myPlayer_playLogscapeOverviewVideo = _V_("the_video_playLogscapeOverviewVideo");
+    $(document).ready(function() {
+      $('#playLogscapeOverviewVideo').on('shown', function() {
+        myPlayer_playLogscapeOverviewVideo.play();
+      });
+      $('#playLogscapeOverviewVideo').on('hide', function () {
+        myPlayer_playLogscapeOverviewVideo.pause();
+      });
+    });
+  //]]>
+</script> 
+  <div class="modal hide" id="playAndyCoatesInterviewVideo" style="width: 575px;"> 
+   <div class="modal-header"> 
+    <button class="close" data-dismiss="modal" type="button"> × </button> 
+   </div> 
+   <div class="modal-body" style="padding-right: 0px; padding-left: 15px;"> 
+    <video class="video-js vjs-default-skin" controls="controls" height="297" id="the_video_playAndyCoatesInterviewVideo" preload="auto" width="528"> 
+     <source src="/videos/AndyCoatesInterview.webm" type="video/webm"> 
+     <source src="/videos/AndyCoatesInterview.m4v" type="video/mp4"> 
+     <source src="/videos/AndyCoatesInterview.mp4" type="video/mp4"> 
+    </video> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+  //<![CDATA[
+    var myPlayer_playAndyCoatesInterviewVideo = _V_("the_video_playAndyCoatesInterviewVideo");
+    $(document).ready(function() {
+      $('#playAndyCoatesInterviewVideo').on('shown', function() {
+        myPlayer_playAndyCoatesInterviewVideo.play();
+      });
+      $('#playAndyCoatesInterviewVideo').on('hide', function () {
+        myPlayer_playAndyCoatesInterviewVideo.pause();
+      });
+    });
+  //]]>
+</script> 
+  <div class="modal hide" id="playNeilAveryInterviewVideo" style="width: 575px;"> 
+   <div class="modal-header"> 
+    <button class="close" data-dismiss="modal" type="button"> × </button> 
+   </div> 
+   <div class="modal-body" style="padding-right: 0px; padding-left: 15px;"> 
+    <video class="video-js vjs-default-skin" controls="controls" height="297" id="the_video_playNeilAveryInterviewVideo" preload="auto" width="528"> 
+     <source src="/videos/NeilAveryInterview.webm" type="video/webm"> 
+     <source src="/videos/NeilAveryInterview.m4v" type="video/mp4"> 
+     <source src="/videos/NeilAveryInterview.mp4" type="video/mp4"> 
+    </video> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+  //<![CDATA[
+    var myPlayer_playNeilAveryInterviewVideo = _V_("the_video_playNeilAveryInterviewVideo");
+    $(document).ready(function() {
+      $('#playNeilAveryInterviewVideo').on('shown', function() {
+        myPlayer_playNeilAveryInterviewVideo.play();
+      });
+      $('#playNeilAveryInterviewVideo').on('hide', function () {
+        myPlayer_playNeilAveryInterviewVideo.pause();
+      });
+    });
+  //]]>
+</script> 
+  <div class="modal hide" id="playRabobankVideo" style="width: 575px;"> 
+   <div class="modal-header"> 
+    <button class="close" data-dismiss="modal" type="button"> × </button> 
+   </div> 
+   <div class="modal-body" style="padding-right: 0px; padding-left: 15px;"> 
+    <video class="video-js vjs-default-skin" controls="controls" height="297" id="the_video_playRabobankVideo" preload="auto" width="528"> 
+     <source src="/videos/LogscapeRabo.webm" type="video/webm"> 
+     <source src="/videos/LogscapeRabo.m4v" type="video/mp4"> 
+     <source src="/videos/LogscapeRabo.mp4" type="video/mp4"> 
+    </video> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+  //<![CDATA[
+    var myPlayer_playRabobankVideo = _V_("the_video_playRabobankVideo");
+    $(document).ready(function() {
+      $('#playRabobankVideo').on('shown', function() {
+        myPlayer_playRabobankVideo.play();
+      });
+      $('#playRabobankVideo').on('hide', function () {
+        myPlayer_playRabobankVideo.pause();
+      });
+    });
+  //]]>
+</script> 
+  <div class="modal hide" id="playCyndiMitchellInterviewVideo" style="width: 575px;"> 
+   <div class="modal-header"> 
+    <button class="close" data-dismiss="modal" type="button"> × </button> 
+   </div> 
+   <div class="modal-body" style="padding-right: 0px; padding-left: 15px;"> 
+    <video class="video-js vjs-default-skin" controls="controls" height="297" id="the_video_playCyndiMitchellInterviewVideo" preload="auto" width="528"> 
+     <source src="/videos/CyndiMitchellInterview.webm" type="video/webm"> 
+     <source src="/videos/CyndiMitchellInterview.m4v" type="video/mp4"> 
+     <source src="/videos/CyndiMitchellInterview.mp4" type="video/mp4"> 
+    </video> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+  //<![CDATA[
+    var myPlayer_playCyndiMitchellInterviewVideo = _V_("the_video_playCyndiMitchellInterviewVideo");
+    $(document).ready(function() {
+      $('#playCyndiMitchellInterviewVideo').on('shown', function() {
+        myPlayer_playCyndiMitchellInterviewVideo.play();
+      });
+      $('#playCyndiMitchellInterviewVideo').on('hide', function () {
+        myPlayer_playCyndiMitchellInterviewVideo.pause();
+      });
+    });
+  //]]>
+</script> 
+  <hr class="style-fade"> 
+  <section id="pricing"> 
+   <div class="container"> 
+    <h2>Pricing</h2> 
+    <p class="lead">Get started for free, add indexers to scale. Analyze unlimited data volumes</p> 
+    <br> 
+    <br> 
+    <div class="row"> 
+     <div class="span4"> 
+      <ul class="unstyled pricing-table text-center"> 
+       <li class="headline"> <h2 style="color: #FFFFFF;">1. Get Started</h2> </li> 
+       <li class="price"> FREE </li> 
+       <li class="info" style="color: #31363a">Deploy the Logscape Manager and start indexing, searching and analyzing data absolutely free</li> 
+       <li class="features first">Data on local and network file systems</li> 
+       <li class="features">Data from syslog and any network input</li> 
+       <li class="features">Custom dashboards, workspaces and reports</li> 
+       <li class="features">Real-time event detection, triggers and alerts</li> 
+       <li class="features">LDAP for user and role-based access control</li> 
+       <li class="features">Support via online forums</li> 
+       <li class="features"> <h4>Unlimited data volumes<sup>***</sup></h4> </li> 
+       <li class="features last btn-main"> <a href="get.html"> <span class="white">Download Now</span> </a> </li> 
+      </ul> 
+     </div> 
+     <div class="span4"> 
+      <ul class="unstyled pricing-table active text-center"> 
+       <li class="headline"> <h2 style="color: #FFFFFF;">2. Licensed Support</h2> </li> 
+       <li class="price"> Contact us <small>/ year **</small> </li> 
+       <li class="info" style="color: #31363a"> License the <a href="how_it_works.html"> Manager </a> to get bug tracking, patches and deployment assistance </li> 
+       <li class="features first"> <i class="icon-ok icon-large"></i> </li> 
+       <li class="features"> <i class="icon-ok icon-large"></i> </li> 
+       <li class="features"> <i class="icon-ok icon-large"></i> </li> 
+       <li class="features"> <i class="icon-ok icon-large"></i> </li> 
+       <li class="features"> <i class="icon-ok icon-large"></i> </li> 
+       <li class="features">Support via our customer portal, webex, phone and email</li> 
+       <li class="features"> <h4> Scale on existing infrastructure &nbsp; <a href="product.html#centralized-log-management"> <i class="icon-chevron-sign-right"></i> </a> </h4> </li> 
+       <li class="features last btn-main"> <a href="contact.html"> <span class="white">Contact us</span> </a> </li> 
+      </ul> 
+     </div> 
+     <div class="span4"> 
+      <ul class="unstyled pricing-table text-center"> 
+       <li class="headline"> <h2 style="color: #FFFFFF;">3. Central Index Store</h2> </li> 
+       <li class="price"> Contact us <small>/ year **</small> </li> 
+       <li class="info" style="color: #31363a"> Next, add <a href="how_it_works.html"> Central Indexers </a> to scale data volumes. Collect and search data forwarded from any location and any number of servers </li> 
+       <li class="features first"> <i class="icon-ok icon-large"></i> </li> 
+       <li class="features"> <i class="icon-ok icon-large"></i> </li> 
+       <li class="features"> <i class="icon-ok icon-large"></i> </li> 
+       <li class="features"> <i class="icon-ok icon-large"></i> </li> 
+       <li class="features"> <i class="icon-ok icon-large"></i> </li> 
+       <li class="features">Support via our customer portal, webex, phone and email</li> 
+       <li class="features"> <h4> Scale on dedicated infrastructure &nbsp; <a href="product.html#centralized-log-management"> <i class="icon-chevron-sign-right"></i> </a> </h4> </li> 
+       <li class="features last btn-main"> <a href="contact.html"> <span class="white">Contact us</span> </a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="span12"> 
+     <p style="font-size: 14px"> <em> <sup>**</sup> A %20 discount is available where a Case Study / Reference is possible <a href="buy.html"> <i class="icon-chevron-sign-right"></i> </a> <br> <sup>***</sup> Actual volumes dependent upon hardware specification <a href="how_it_works.html#singleindexer"> <i class="icon-chevron-sign-right"></i> </a> </em> </p> 
+    </div> 
+   </div> 
+   <div class="container"> 
+    <div class="row margin40"> 
+     <div class="span12 text-center"> 
+      <br> 
+      <br> 
+      <br> 
+      <h2> Interested in an <strong>unlimited enterprise license</strong>? <a href="contact.html"> &nbsp; Contact Us. <i class="icon-chevron-sign-right" style="line-height: 34px"></i> </a> </h2> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- Latest News --> 
+  <hr class="style-fade"> 
+  <section id="news"> 
+   <div class="container"> 
+    <div class="row margin-40"> 
+     <div class="span12 dark-gray"> 
+      <h2>News</h2> 
+     </div> 
+    </div> 
+    <div class="row-fluid"> 
+     <!-- News Article --> 
+     <div class="span3 text-center latest-article"> 
+      <h4>Logscape 2.4.2 Released</h4> 
+      <p style="text-align: center; font-size: 12px">July 19th</p> 
+      <ul style="text-align: left; font-family: 'Open Sans', sans-serif; font-size: 14px;color: #626C72;font-weight: 300;"> 
+       <li style="line-height: 20px">New HTML5 interface provides support for mobile devices</li> 
+       <br> 
+       <li style="line-height: 20px">Dynamic field extraction to discover log files and operational data on-the-fly</li> 
+       <br> 
+       <li style="line-height: 20px">Freemium licensing model to get up and running free of charge</li> 
+      </ul> 
+      <br> 
+      <br> 
+      <a class="more" href="http://blog.logscape.com/2014/07/logscape-2-4-2-now-available/" target="_blank"> <i class="icon-chevron-sign-right icon-2x margin-20 gray"></i> </a> 
+     </div> 
+     <!-- News Article --> 
+     <div class="span3 text-center latest-article"> 
+      <h4>TechWorld</h4> 
+      <p style="text-align: center; font-size: 12px">February 12th</p> 
+      <p style="text-align: center"><strong>Attention start-ups: Big Data does not end with Hadoop</strong></p> 
+      <p>For many people, the phrase Big Data has become almost synonymous with Apache Hadoop - the open source framework originally developed by Yahoo. But as organisations become increasingly familiar with the nuances...</p> 
+      <br> 
+      <a class="more" href="http://blogs.techworld.com/incubator/2013/02/big-data-is-about-so-much-more-than-hadoop/index.htm" target="_blank"> <i class="icon-chevron-sign-right icon-2x margin-20 gray"></i> </a> 
+     </div> 
+     <!-- News Article --> 
+     <div class="span3 text-center latest-article"> 
+      <h4>Rabobank Operational Efficiency</h4> 
+      <p style="text-align: center; font-size: 12px">July 22nd</p> 
+      <ul style="text-align: left; font-family: 'Open Sans', sans-serif; font-size: 14px;color: #626C72;font-weight: 300;">
+        Excelian is pleased to announce that as the managed service provider for the Rabobank’s compute grid infrastructure, we have successfully deployed Logscape as the monitoring platform of choice across the multi-thousand core compute grid to provide greater operational efficiency. 
+       <br> 
+      </ul> 
+      <br> 
+      <br> 
+      <a class="more" href="http://www.excelian.com/news/excelian-improve-rabobanks-operational-efficiency-using-logscape#.U86KE_ldWW0" target="_blank"> <i class="icon-chevron-sign-right icon-2x margin-20 gray"></i> </a> 
+     </div> 
+     <!-- News Article --> 
+     <div class="span3 text-center latest-article"> 
+      <h4>ComputerWorld</h4> 
+      <p style="text-align: center; font-size: 12px">January 19th</p> 
+      <p style="text-align: center"><strong>Sportingbet decides against Hadoop to analyse 60Tb of data</strong></p> 
+      <p>Online gaming site Sportingbet has decided against using popular big data analytics software Hadoop in favour of technology provided by British-born SME Logscape, in order to analyse up to 60 TB of data within one year...</p> 
+      <br> 
+      <a class="more" href="http://news.idg.no/cw/art.cfm?id=33454676-060E-6531-75B135CD69E5820B" target="_lbank"> <i class="icon-chevron-sign-right icon-2x margin-20 gray"></i> </a> 
+     </div> 
+    </div> 
+   </div> 
+  </section>  
+  <!-- Bottom Section --> 
+  <section id="bottom"> 
+   <div class="container"> 
+    <div class="row margin-40" id="contact"> 
+     <div class="span10 offset1 text-center"> 
+      <p> 44 Featherstone Street<br> London EC1Y 8RN, United Kingdom<br> Telephone: +44 (0) 20 7336 9640<br> <a href="contact.html"> <i class="icon-envelope-alt"> Contact Us </i> </a> </p> 
+      <hr> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="span10 offset1 text-center"> 
+      <!-- Social Icons --> 
+      <ul class="social-icons"> 
+       <li> <a class="twitter" href="http://www.twitter.com/logscape" target="_blank"> <i class="icon-twitter icon-3x"></i> </a> </li> 
+       <li> <a class="linkedin" href="http://www.linkedin.com/company/2806713?trk=tyah" target="_blank"> <i class="icon-linkedin icon-3x"></i> </a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="footer"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span12 text-center"> 
+      <p> @ Copyright LiquidLabs Ltd. All Rights Reserved. </p> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <a class="scrollToTop hidden-phone" href="#top"> <i class="icon-chevron-up"></i> </a> 
+  <!--
+Javascript
+==================================================
+--> 
+  <!-- Placed at the end of the document so the pages load faster --> 
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> --> 
+  <!-- :javascript --> 
+  <!-- window.jQuery || document.write('<script src="js/jquery-1.9.1.js"><\/script>') --> 
+  <script src="/js/bootstrap.min.js"></script> 
+  <script src="/js/main.js"></script> 
+  <script src="/js/jquery.flexslider-min.js"></script> 
+  <script src="/js/rotate.js"></script> 
+  <script src="/js/twitter-feed.js"></script> 
+  <script src="/javascripts/payment.js"></script> 
+  <script src="/javascripts/application.js"></script> 
+  <script src="/javascripts/google-analytics.js"></script> 
+  <script src="https://checkout.stripe.com/v2/checkout.js"></script> 
+  <script type="text/javascript">
+  //<![CDATA[
+    !function ($) {
+      $(function(){
+        $('#header').carousel()
+      })
+    }
+    $('.flexslider').flexslider({
+      animation: "slide"
+    });
+  //]]>
+</script>  
+ </body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <title></title> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+  <meta name="Deducere is a big data visualization tool with ineractive charts and graphs." content=""> 
+  <meta name="deducere, data visialization, data, big data" content=""> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet"> 
+  <script src="../../Content/themes/mytheme/js/jquery-1.8.2.min.js"></script> 
+  <script src="../../Content/themes/mytheme/css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script> 
+  <script src="../../Content/themes/mytheme/js/jquery.dropotron-1.2.js"></script> 
+  <script src="../../Content/themes/mytheme/js/init.js"></script> 
+  <noscript> 
+   <link rel="stylesheet" href="../../Content/themes/mytheme/css/5grid/core.css"> 
+   <link rel="stylesheet" href="../../Content/themes/mytheme/css/5grid/core-desktop.css"> 
+   <link rel="stylesheet" href="../../Content/themes/mytheme/css/5grid/core-1200px.css"> 
+   <link rel="stylesheet" href="../../Content/themes/mytheme/css/5grid/core-noscript.css"> 
+   <link rel="stylesheet" href="../../Content/themes/mytheme/css/style.css"> 
+   <link rel="stylesheet" href="../../Content/themes/mytheme/css/style-desktop.css"> 
+  </noscript> 
+  <!--[if lte IE 8]><link rel="stylesheet" href="../../Content/themes/mytheme/css/ie8.css" /><![endif]--> 
+  <!--[if lte IE 7]><link rel="stylesheet" href="../../Content/themes/mytheme/css/ie7.css" /><![endif]--> 
+ </head> 
+ <body class="homepage"> 
+  <div id="wrapper"> 
+   <!-- Header Wrapper --> 
+   <div id="header-wrapper"> 
+    <!-- Header --> 
+    <header id="header"> 
+     <div class="5grid-layout"> 
+      <div class="row"> 
+       <!-- Logo --> 
+       <div class="4u" id="logo"> 
+        <section> 
+         <h1><a href="#" class="mobileUI-site-name">Deducere<span></span></a></h1> 
+        </section> 
+       </div> 
+       <!-- Nav --> 
+       <div class="8u"> 
+        <nav id="nav" class="mobileUI-site-nav"> 
+         <ul> 
+          <li class="current_page_item"><a href="/Home/index">Home</a></li> 
+          <li><a href="/Home/contact">Contact</a></li> 
+          <li><a href="/Home/Blog">Blog</a></li> 
+         </ul> 
+        </nav> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <!-- Banner Wrapper --> 
+    <div id="banner-wrapper"> 
+     <div class="5grid-layout" id="banner"> 
+      <!-- Banner --> 
+      <div class="row"> 
+       <div class="5u"> 
+        <section> 
+         <a href="#" class="image image-full"><img src="../../Content/themes/mytheme/images/pic01.png" alt=""></a> 
+        </section> 
+       </div> 
+       <div class="7u"> 
+        <section> 
+         <h2>Data Visualization</h2> 
+         <p class="subtitle">For everyone. Big and small businesses, and the everyday data geek.</p> 
+         <p><a href="#" class="button button-style2">Learn More</a></p> 
+        </section> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Feature Wrapper --> 
+  <section class="featured"> 
+   <div id="feature-wrapper"> 
+    <div class="5grid-layout" id="feature-content"> 
+     <div class="row"> 
+      <div class="4u"> 
+       <section> 
+        <h2><span>Create Account</span></h2> 
+        <p>Start by creating an account.<br>&nbsp;</p> 
+        <p><a href="/Account/Register" class="button button-style1">Create Account</a></p> 
+       </section> 
+      </div> 
+      <!-- Feature Box 2 --> 
+      <div class="4u"> 
+       <section> 
+        <h2><span>Upload your data</span></h2> 
+        <p>Follow some easy steps to upload data that you want to analyze. See examples provided to help you along the process.</p> 
+        <p><a href="#" class="button button-style1">See Examples</a></p> 
+       </section> 
+      </div> 
+      <!-- Feature Box 3 --> 
+      <div class="4u"> 
+       <section> 
+        <h2><span>Choose your charts</span></h2> 
+        <p>Choose from a wide array of visualizations that give you insight into all the data.<br>&nbsp; </p> 
+        <p><a href="#" class="button button-style1">More Info</a></p> 
+       </section> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- Main Wrapper --> 
+  <link href="http://cdn.kendostatic.com/2013.1.319/styles/kendo.common.min.css" rel="stylesheet" type="text/css"> 
+  <link href="http://cdn.kendostatic.com/2013.1.319/styles/kendo.dataviz.min.css" rel="stylesheet" type="text/css"> 
+  <link href="http://cdn.kendostatic.com/2013.1.319/styles/kendo.default.min.css" rel="stylesheet" type="text/css"> 
+  <link href="http://cdn.kendostatic.com/2013.1.319/styles/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css"> 
+  <script src="http://cdn.kendostatic.com/2013.1.319/js/kendo.all.min.js"></script> 
+  <script src="http://cdn.kendostatic.com/2013.1.319/js/kendo.aspnetmvc.min.js"></script> 
+  <style>
+		.chart-wrapper {
+			width: 480px;
+			height: 100%;
+			margin: 0 auto 30px auto;
+			padding: 0 0 30px 0;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.climate, .temperature, .conditioner {
+			margin: 0 30px;
+			padding: 30px 0 0 0;
+		}
+		h1 {
+			margin-bottom: 20px;
+			font-size: 1.2em;
+		}
+		.history {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		.history td {
+			padding: 0;
+		}
+		.history td.item {
+			text-align: right;
+			line-height: normal;
+			vertical-align: bottom;
+		}
+		.history td.spark {
+			text-align: center;
+			line-height: 50px;
+			padding: 0 5px;
+		}
+		.history td.value {
+			font-size: 2em;
+			font-weight: normal;
+			line-height: normal;
+			vertical-align: bottom;
+		}
+		.history td.value span {
+			font-size: .5em;
+			vertical-align: top;
+		}
+		.stats {
+			text-align: center;
+		}
+		.pie-list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		.pie-list li {
+			display: inline-block;
+			width: 54px;
+		}
+		#stats-mon,
+		#stats-tue,
+		#stats-wed,
+		#stats-thu,
+		#stats-fri,
+		#stats-sat,
+		#stats-sun {
+			display: block;
+			width: 54px;
+			line-height: 50px;
+		}
+		#temp-range {
+			width: 400px;
+			line-height: 50px;
+		}
+	</style> 
+  <div id="main-wrapper"> 
+   <div class="5grid-layout"> 
+    <div class="row"> 
+     <!-- Content --> 
+     <div id="content" class="8u"> 
+      <article class="box"> 
+       <div class="image-border"> 
+        <a href="#" class="image image-left"></a> 
+       </div> 
+       <h2>How can Deducere help me?</h2> 
+       <p class="subtitle">Deducere is a data visualization tool.</p> 
+       <p>If you have access to a lot of data, and you are looking for a better way to analyze it all, Deducere can help you. Simply upload the data and let Deducere take care of creating the big picture for you.</p> 
+       <p><a href="#" class="button">More Info</a></p> 
+      </article> 
+      <!-- Two Column Content --> 
+      <div class="5grid" id="two-column"> 
+       <div class="row"> 
+        <!-- Two Column Content --> 
+        <div class="6u"> 
+         <section class="box tbox"> 
+          <h2>Who we are</h2> 
+          <p class="subtitle">A team that loves data</p> 
+          <div class="image-border"> 
+           <a href="#" class="image image-full"></a> 
+          </div> 
+          <p>Deducere is a growing company with a passion for big data and visualization. We strongly believe in usability. And we work hard to provide the best user experience possible.</p> 
+          <p><a href="#" class="button">More Info</a></p> 
+         </section> 
+        </div> 
+        <!-- Two Column Content --> 
+        <div class="6u"> 
+         <section class="box tbox"> 
+          <h2>What is big data?</h2> 
+          <p class="subtitle">Why do I need to visualize it?</p> 
+          <p>There's more data than we know what to do with these days! But is all this data any good to anyone? We have some interesting articles below about big data, and what if anything we can learn from it. For your reading pleasure....</p> 
+          <ul class="style1"> 
+           <li class="first"><a href="http://en.wikipedia.org/wiki/Big_data">What is Big Data - Wikipedia</a></li> 
+           <li><a href="http://www.amazon.com/gp/search/ref=as_li_qf_sp_sr_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;index=aps&amp;keywords=Big%20Data&amp;linkCode=as2&amp;tag=deducere-20">Big Data Revolution - on Amazon</a></li> 
+           <li><a href="http://www.sas.com/news/feature/smallbusiness-bigdata.html">Small business - Big Data</a></li> 
+          </ul> 
+         </section> 
+        </div> 
+       </div> 
+      </div> 
+      <!-- Two Column Content --> 
+     </div> 
+     <!-- Content Ends Here --> 
+     <!-- Sidebar --> 
+     <div id="sidebar" class="4u"> 
+      <section class="box"> 
+       <h2>What does Deducere offer?</h2> 
+       <p class="subtitle"></p> 
+       <p>Deducere offers a rich set of interactive charts, graphs, maps, and data storage</p> 
+       <ul class="style2"> 
+        <li class="first"> 
+         <div class="image-border"> 
+          <a href="#" class="image image-left"></a> 
+         </div> <h3><a href="#">Upload and store data</a></h3> <p>Try free for 30 days. Store upto 100mb of data with free trial. Flexible subscription plans coming soon.</p> </li> 
+        <li> 
+         <div class="image-border"> 
+          <a href="#" class="image image-left"></a> 
+         </div> <h3><a href="#">Generate Charts</a></h3> <p>Select specific information from your data sets and generate charts with a single click.</p> </li> 
+        <li> 
+         <div class="image-border"> 
+          <a href="#" class="image image-left"></a> 
+         </div> <h3><a href="#">Use Maps</a></h3> <p>Have data that is tied to specific locations? Use maps (provided) to navigate through your data.</p> </li> 
+        <li> 
+         <div class="image-border"> 
+          <a href="#" class="image image-left"></a> 
+         </div> <h3><a href="#">Use public data</a></h3> <p>We have public data sets that are slowly growing in size and number. Use them to create your very own mashups.</p> </li> 
+       </ul> 
+       <p><a href="#" class="button">More Info</a></p> 
+      </section> 
+     </div> 
+     <!-- Sidebar Ends Here --> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Copyright Wrapper --> 
+  <div id="copyright-wrapper"> 
+   <div class="5grid-layout"> 
+    <div class="row"> 
+     <div class="12u"> 
+      <!-- Copyright --> 
+      <div id="copyright">
+        © Deducere.com. All rights reserved. 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Copyright Wrapper -->  
+ </body>
+</html>

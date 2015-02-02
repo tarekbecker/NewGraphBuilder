@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Entity Resolution, Record Linkage and Deduplication for Big Data</title> 
+  <meta name="description" content="identity resolution, entity linkage, fuzzy match, deduplicate, match, similar records"> 
+  <meta name="author" content="sonal"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <!-- Google Webfonts - Roboto Slab & Nunito --> 
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto+Slab:400,700" rel="stylesheet"> 
+  <!--[if IE]>
+  <script src="src="http://nubetech.co/wp-content/themes/ccthemeNew/js/html5shiv.js"></script>
+  <![endif]--> 
+  <!-- A few scripts that need to be in the head section --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+  <script src="http://nubetech.co/wp-content/themes/ccthemeNew/js/respond.min.js"></script> 
+  <!-- FlexSlider --> 
+  <script src="http://nubetech.co/wp-content/themes/ccthemeNew/js/jquery.flexslider.js"></script> 
+  <script type="text/javascript">
+    $(window).load(function() {
+      $('.flexslider').flexslider();
+    })
+  </script> 
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1627417-6']);
+  _gaq.push(['_setDomainName', 'nubetech.co']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+  <!--////////// CSS Stylesheet - Change here for your desired stlye (style2.css, style3.css, etc..) ///////////--> 
+  <link rel="stylesheet" href="http://nubetech.co/wp-content/themes/ccthemeNew/css/style1.css" id="colors"> 
+ </head> 
+ <body id="section-home" data-spy="scroll" data-target="#main-nav" data-offset="72"> 
+  <!--////////// 3-LEVEL PARALLAX BACKGROUND - images can be changed in CSS //////////--> 
+  <div id="parallax-1" class="parallax"></div> 
+  <div id="parallax-2" class="parallax"></div> 
+  <div id="parallax-3" class="parallax"></div> 
+  <!--/////////// HEADER SECTION //////////--> 
+  <header id="morph-header" class="morph-header-large"> 
+   <nav role="navigation"> 
+    <div class="container"> 
+     <!-- Brand and toggle get grouped for better mobile display --> 
+     <div class="navbar-header"> 
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span data-icon="" aria-hidden="true"></span> </button> 
+      <a class="navbar-brand" href="index.php#section-slider"><img src="http://nubetech.co/wp-content/themes/ccthemeNew/css/img/logo-color-1.png" alt=""></a> 
+     </div> 
+     <div id="main-nav" class="collapse navbar-collapse navbar-collapse"> 
+      <ul class="nav navbar-nav fancy-nav navbar-right"> 
+       <!--////////// NAVIGATION MENU //////////--> 
+       <li class="active"><a href="index.php#section-home"><span data-hover="home">Home</span></a></li> 
+       <li><a href="index.php#section-tour"><span data-hover="tour">Tour</span></a></li> 
+       <li><a href="index.php#section-portfolio"><span data-hover="Technology">Technology</span></a></li> 
+       <li><a href="index.php?page_id=498"><span data-hover="product">Product</span></a></li> 
+       <li><a href="index.php#section-contact"><span data-hover="contact">Contact</span></a></li> 
+      </ul> 
+     </div>
+     <!-- /navbar-collapse --> 
+    </div>
+    <!-- /container --> 
+   </nav> 
+  </header> 
+  <!--////////// SLIDER SECTION ////////// --> 
+  <section id="section-slider"> 
+   <div class="container"> 
+    <div class="row clearfix morph-waypoint" data-animate-down="morph-header-small" data-animate-up="morph-header-large"> 
+     <!-- ////////// FLEX SLIDER STARTS HERE ////////// --> 
+     <div id="main-slider" class="flexslider"> 
+      <ul class="slides"> 
+       <li> 
+        <div class="col-md-6 col-md-offset-1 slider-text"> 
+         <h1 class="animated bounceInDown">Increase business revenue by discovering opportunities to cross sell and upsell </h1> 
+         <!-- <p class="animated bounceInDown">Provide optimized customer experience through improved engagement across marketing, sales, customer service, e-commerce and all other customer-facing channels.</p>
+                --> 
+         <a class="btn btn-info btn-large animated bounceInLeft" href="#features">Check Use Cases</a> 
+         <a class="btn btn-primary btn-large animated bounceInLeft" href="#section-contact">Contact Us</a> 
+        </div>
+        <!-- /slider-text --> 
+        <div class="col-md-4"> 
+         <img class="img-responsive animated fadeInDownBig" src="http://nubetech.co/wp-content/themes/ccthemeNew/images/color-cloud.png" alt="" title=""> 
+        </div> </li> 
+       <li> 
+        <div class="col-md-5 col-md-offset-1" style="padding-top: 24px;"> 
+         <img class="img-responsive animated flipInY" src="http://nubetech.co/wp-content/themes/ccthemeNew/images/slider-imac.png" alt="" title=""> 
+        </div> 
+        <div class="col-md-5 slider-text"> 
+         <h1 class="animated bounceInDown">Gain single, golden 360 view of all business entites - customer, products, vendors and others</h1> 
+         <!--                <p class="animated bounceInDown"> 
+Merge in house data with external information to identify target leads. Find which records in different source systems are same. Personalize individualized offers and campaigns by knowing your target users.</p>
+    --> 
+         <a class="btn btn-primary btn-large animated bounceInRight" href="#section-tour">Take the Tour!</a> 
+        </div>
+        <!-- /slider-text --> </li> 
+       <li> 
+        <div class="col-md-5 col-md-offset-1 slider-text"> 
+         <h1 class="animated bounceInDown">Cut operational and customer acquisition costs through improved inventory and customer lists</h1> 
+         <!--         <p class="animated bounceInDown">Improve business efficiency and reduce multiple wasteful reachout to the customer through the same channel.</p> --> 
+         <!--a class="btn btn-primary btn-large animated bounceInLeft" href="font-demo.html" target="_blank">Full Icon List (external link)</a--> 
+        </div>
+        <!-- /slider-text --> 
+        <div class="col-md-6"> 
+         <img class="img-responsive animated bounceInRight" src="http://nubetech.co/wp-content/themes/ccthemeNew/images/slider-ipad.png" alt="" title=""> 
+        </div> </li> 
+      </ul> 
+     </div>
+     <!-- /#main-slider --> 
+    </div>
+    <!-- /row --> 
+   </div>
+   <!-- /container --> 
+  </section> 
+  <!--////////// FEATURES SECTION //////////--> 
+  <section id="features"> 
+   <div class="container"> 
+    <div class="row"> 
+     <p class="lead">Discover, Enhance and Consolidate Business Data at a never seen before scale!</p> 
+    </div>
+    <!-- /row --> 
+    <hr> 
+    <div class="row"> 
+     <div class="col-md-4 feature"> 
+      <span data-icon="" aria-hidden="true"></span> 
+      <h2>Discover</h2>
+      <p>A leading HR company is building a data warehouse to have a uniform view of their data and processes. Data fed from its regional offices has overlaps. Reifier helps the HR company to remove these overlaps and discover new leads.</p> 
+     </div>
+     <!-- /feature --> 
+     <div class="col-md-4 feature"> 
+      <span data-icon="" aria-hidden="true"></span> 
+      <h2>Enhance</h2>
+      <p>A local search company lists millions of regional businesses, restaurants and contacts. They periodically crawl the web to update their listing database. Information crawled from the web will have similar entries found from different websites and also with pre-existing entries in the database. Reifier helps the search company compare their existing listings with potential listings from the crawled data, and keeps their directory up to date and free from duplicate data.</p> 
+     </div>
+     <!-- /feature --> 
+     <div class="col-md-4 feature"> 
+      <span data-icon="" aria-hidden="true"></span> 
+      <h2>Consolidate</h2>
+      <p>An advertising company maintains a listing of brands and advertising campaigns. Minor local variations in brand/company name create duplicate entries. This results in poor consolidation of size of each campaign. Reifier helps consolidate dupilicate entries into a single view and thus provide a correct view of campaign size.</p> 
+     </div>
+     <!-- /feature --> 
+    </div>
+    <!-- /row --> 
+   </div>
+   <!-- /container --> 
+  </section> 
+  <!--////////// TOUR SECTION //////////--> 
+  <section id="section-tour"> 
+   <div class="container"> 
+    <div class="row"> 
+     <h1 class="text-center">Take Our Tour</h1> 
+     <ul class="media-list"> 
+      <!--///// STEP 1 ///// --> 
+      <li class="media col-md-12" id="step-1"> 
+       <div class="tour-step-icon">
+        1
+       </div> <span class="tour-line-half"></span> 
+       <div class="row"> 
+        <div class="col-md-1"> 
+         <span class="tour-line-vert"></span> 
+        </div> 
+        <div class="tour-step-container"> 
+         <div class="col-md-2 icon">
+          <span data-icon="" aria-hidden="true"></span>
+         </div> 
+         <div class="media-body col-md-8"> 
+          <h3 class="media-heading">Label small sets of similar and dissimilar records</h3> 
+          <p class="media-desc">Identify few duplicate and non duplicate records and give them same labels</p> 
+         </div>
+         <!-- /media-body --> 
+        </div>
+        <!-- /tour-step-container --> 
+       </div>
+       <!-- /row --> </li> 
+      <!-- ///// STEP 2 ///// --> 
+      <li class="media col-md-12" id="step-2"> 
+       <div class="tour-step-icon">
+        2
+       </div> <span class="tour-line-full"></span> 
+       <div class="row"> 
+        <div class="col-md-1 col-md-push-11"> 
+         <span class="tour-line-vert pull-right"></span> 
+        </div> 
+        <div class="tour-step-container"> 
+         <div class="col-md-2 col-md-push-8 icon">
+          <span data-icon="" aria-hidden="true"></span>
+         </div> 
+         <div class="media-body col-md-8 col-md-pull-2"> 
+          <h3 class="media-heading">Train</h3> 
+          <p class="media-desc">Let Reifier learn the hidden patterns and rules by running over the labeled data. Reifier selects the appropriate machine learning algorithms specific to the data and creates custom models</p> 
+         </div>
+         <!-- /media-body --> 
+        </div>
+        <!-- /tour-step-container --> 
+       </div>
+       <!-- /row --> </li> 
+      <!--///// STEP 3 ///// --> 
+      <li class="media col-md-12" id="step-3"> 
+       <div class="tour-step-icon">
+        3
+       </div> <span class="tour-line-full"></span> 
+       <div class="row"> 
+        <div class="col-md-1"> 
+         <span class="tour-line-vert"></span> 
+        </div> 
+        <div class="tour-step-container"> 
+         <div class="col-md-2 icon final">
+          <span data-icon="" aria-hidden="true"></span>
+         </div> 
+         <div class="media-body col-md-8"> 
+          <h3 class="media-heading">Run</h3> 
+          <p class="media-desc">Reifier now runs over your complete dataset and applies its trained models to identify and link duplicates</p> 
+         </div>
+         <!-- /media-body --> 
+        </div>
+        <!-- /tour-step-container --> 
+       </div>
+       <!-- /row --> </li> 
+      <!-- ///// TOUR END ///// --> 
+      <li class="media last-step col-md-12" id="tour-end"> 
+       <div class="tour-step-icon final">
+        <span data-icon="" aria-hidden="true"></span>
+       </div> <span class="tour-line-half"></span> <p class="lead launch col-md-5 col-md-push-7">Take off!</p> </li> 
+     </ul> 
+    </div>
+    <!-- /row --> 
+   </div>
+   <!-- /container --> 
+  </section> 
+  <!--////////// PORTFOLIO SECTION //////////--> 
+  <section id="section-portfolio"> 
+   <div class="container"> 
+    <div class="row"> 
+     <h1 class="text-center">Technology</h1> 
+     <nav role="navigation"> 
+      <div class="filters-header"> 
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".filters-collapse"> <span data-icon="" aria-hidden="true"></span> </button> 
+      </div>
+      <!-- /filters-header --> 
+      <!--            <div id="filters-nav" class="collapse navbar-collapse filters-collapse clearfix">
+              <!-- Isotope Filters --> 
+      <!--              <ul class="filters">
+                <li><a href="#filter" data-filter="*">all</a></li>
+                <li><a href="#filter" data-filter=".web-design">web design</a></li>
+                <li><a href="#filter" data-filter=".illustration">illustration</a></li>
+                <li><a href="#filter" data-filter=".video">video</a></li>
+                <li><a href="#filter" data-filter=".photography">photography</a></li>
+              </ul>
+            </div><!-- /filters-nav --> 
+     </nav> 
+    </div>
+    <!-- /row --> 
+    <!-- ////////// PORTFOLIO ITEMS ////////// --> 
+    <div class="portfolio-items clearfix"> 
+     <div class="col-md-4 col-sm-6 all web-design"> 
+      <!-- ///// PORTFOLIO ITEM 1 ///// --> 
+      <div class="folio-item"> 
+       <a href="#folioItem1" data-toggle="modal"> 
+        <div class="folio-desc"> 
+         <p>Apache Spark</p> 
+        </div> <img src="http://nubetech.co/wp-content/themes/ccthemeNew/images/spark.png" alt="" title=""> </a> 
+      </div>
+      <!-- /folio-item --> 
+     </div>
+     <!-- /col-md-4 col-sm-6 --> 
+     <div class="col-md-4 col-sm-6 all photography"> 
+      <!-- ///// PORTFOLIO ITEM 2 ///// --> 
+      <div class="folio-item"> 
+       <a href="#folioItem2" data-toggle="modal"> 
+        <div class="folio-desc"> 
+         <p>Apache Hadoop</p> 
+        </div> <img src="http://nubetech.co/wp-content/themes/ccthemeNew/images/hadoop-1.png" alt="" title=""> </a> 
+      </div>
+      <!-- /folio-item --> 
+     </div> 
+     <div class="col-md-4 col-sm-6 all video"> 
+      <!-- ///// PORTFOLIO ITEM 3 ///// --> 
+      <div class="folio-item"> 
+       <a href="#folioItem3" data-toggle="modal"> 
+        <div class="folio-desc"> 
+         <p>Machine Learning</p> 
+        </div> <img src="http://nubetech.co/wp-content/themes/ccthemeNew/images/ml-1.png" alt="" title=""> </a> 
+      </div>
+      <!-- /folio-item --> 
+     </div> 
+    </div>
+    <!-- /portfolio-items --> 
+   </div>
+  </section> 
+  <!--////////// QUOTE SECTION //////////--> 
+  <section id="quote"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-10 col-md-offset-1"> 
+      <p class="lead text-center">By combining machine learning with big data technologies, Reifier intelligently selects the closest matches while highlighting duplicates.</p> 
+     </div>
+     <!-- /col-md-10 --> 
+    </div>
+    <!-- /row --> 
+   </div>
+   <!-- /container --> 
+  </section> 
+  <!--////////// PRICING SECTION ///////////--> 
+  <section id="section-pricing"> 
+   <div class="container"> 
+    <div class="row"> 
+     <h1 class="text-center">Available for a spin on your local machine, private or public cloud</h1> 
+    </div>
+    <!-- end pricing-box --> 
+   </div>
+   <!-- end col-md-4 --> 
+  </section> 
+  <!--/////////// CONTACT SECTION ////////// --> 
+  <section id="section-contact"> 
+   <div class="container"> 
+    <h1 class="text-center">Let's Talk</h1> 
+    <div class="row"> 
+     <div class="col-md-5 col-sm-7"> 
+      <h2 class="hidden-xs">We're here to help!</h2> 
+      <p>Write to us if you would like to run Reifier or know more about it.</p> 
+      <hr class="visible-xs"> 
+      <h2>Contact Details</h2> 
+      <div class="row"> 
+       <div class="col-md-4 col-xs-6 text-left"> 
+        <strong>Address</strong> 
+       </div> 
+       <div class="col-md-8 col-xs-6"> 
+        <address> <strong>Nube Technologies</strong><br> Ananda, Sector 48<br> Noida, UP, India<br> </address> 
+       </div> 
+      </div>
+      <!-- /row --> 
+      <div class="row"> 
+       <div class="col-md-4 col-xs-6 text-left"> 
+        <strong>Phone Number</strong> 
+       </div> 
+       <div class="col-md-8 col-xs-6"> 
+        <address> +91 880 054 1717<br> </address> 
+       </div> 
+      </div>
+      <!-- /row --> 
+      <div class="row"> 
+       <div class="col-md-4 col-xs-6 text-left"> 
+        <strong>Email</strong> 
+       </div> 
+       <div class="col-md-8 col-xs-6"> 
+        <address> <a href="mailto:info@nubetech.co">info@nubetech.co</a><br> </address> 
+       </div> 
+      </div>
+      <!-- /row --> 
+     </div>
+     <!-- /col-md-5 --> 
+     <div class="col-md-7 col-sm-5"> 
+      <!--////////// CONTACT FORM STARTS HERE ///////////--> 
+      <div class="contact-form"> 
+       <form method="post" id="cntctfrm_contact_form" action="http://nubetech.co/" enctype="multipart/form-data">
+        <div style="text-align: left; padding-top: 5px;"> 
+         <label for="cntctfrm_contact_name">Name:<span class="required"> *</span></label> 
+        </div>
+        <div style="text-align: left;"> 
+         <input class="text" type="text" size="40" value="" name="cntctfrm_contact_name" id="cntctfrm_contact_name" style="text-align: left; margin: 0;"> 
+        </div> 
+        <div style="text-align: left;"> 
+         <label for="cntctfrm_contact_email">Email Address:<span class="required"> *</span></label> 
+        </div>
+        <div style="text-align: left;"> 
+         <input class="text" type="text" size="40" value="" name="cntctfrm_contact_email" id="cntctfrm_contact_email" style="text-align: left; margin: 0;"> 
+        </div> 
+        <div style="text-align: left;"> 
+         <label for="cntctfrm_contact_phone">Phone number:<span class="required"> *</span></label> 
+        </div>
+        <div style="text-align: left;"> 
+         <input class="text" type="text" size="40" value="" name="cntctfrm_contact_phone" id="cntctfrm_contact_phone" style="text-align: left; margin: 0;"> 
+        </div> 
+        <div style="text-align: left;"> 
+         <label for="cntctfrm_contact_subject">Subject:</label> 
+        </div>
+        <div style="text-align: left;"> 
+         <input class="text" type="text" size="40" value="" name="cntctfrm_contact_subject" id="cntctfrm_contact_subject" style="text-align: left; margin: 0;"> 
+        </div> 
+        <div style="text-align: left;"> 
+         <label for="cntctfrm_contact_message">Message:<span class="required"> *</span></label> 
+        </div>
+        <div style="text-align: left;"> 
+         <textarea rows="5" cols="30" name="cntctfrm_contact_message" id="cntctfrm_contact_message"></textarea> 
+        </div>
+        <div style="text-align: left; padding-top: 8px;"> 
+         <input type="hidden" value="send" name="cntctfrm_contact_action">
+         <input type="hidden" value="Version: 3.30"> 
+         <input type="hidden" value="en" name="cntctfrm_language"> 
+         <input type="submit" value="Submit" style="cursor: pointer; margin: 0pt; text-align: center;margin-bottom:10px;"> 
+        </div> 
+       </form> 
+      </div>
+      <!-- /contact-form --> 
+      <!-- ////////// END CONTACT FORM --> 
+     </div>
+     <!-- /col-md-7 --> 
+    </div>
+    <!-- /row --> 
+   </div>
+   <!-- end container --> 
+  </section> 
+  <!--////////// FOOTER SECTION ///////////--> 
+  <section id="footer"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-lg-4 col-md-3 col-sm-4"> 
+      <div class="footer-logo">
+       <a href="#"><img src="http://nubetech.co/wp-content/themes/ccthemeNew/css/img/logo-color-1.png" class="img-responsive" alt=""></a>
+      </div> 
+     </div> 
+     <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 links"> 
+      <h3>Other Work</h3> 
+      <ul class="footer-links text-center"> 
+       <li><a href="http://github.com/sonalgoyal/hiho">HIHO</a></li> 
+       <li><a href="http://github.com/sonalgoyal/crux">Crux</a></li> 
+      </ul> 
+     </div>
+     <!-- /links --> 
+     <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 links"> 
+      <h3>Team</h3> 
+      <ul class="footer-links text-center"> 
+       <li><a href="http://in.linkedin.com/in/sonalgoyal">Founder</a></li> 
+      </ul> 
+     </div>
+     <!-- /links --> 
+     <div class="col-lg-4 col-md-3 col-xs-12"> 
+      <h3 class="hidden-xs hidden-sm">Latest Tweets</h3> 
+      <div class="twitter-feed"> 
+       <div class="row"> 
+        <a class="twitter-timeline" href="https://twitter.com/nubetech" data-widget-id="416219845810589696" height="30" data-link-color="#22c5ac" data-chrome="noborders transparent">Tweets by @nubetech</a> 
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+       </div>
+       <!-- /row --> 
+      </div>
+      <!-- /twitter-feed --> 
+     </div>
+     <!-- /col-lg-4 --> 
+    </div>
+    <!-- end row --> 
+   </div>
+   <!-- end container --> 
+  </section>
+  <!-- end FOOTER SECTION --> 
+  <!--////////// SUBFOOTER SECTION //////////--> 
+  <section id="sub-footer"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-lg-8"> 
+      <p class="copyright">Copyright © 2014 <a href="index.html">Nube Technologies</a>. All Rights Reserved. </p> 
+     </div> 
+     <div class="col-lg-4"> 
+      <ul class="social-links"> 
+       <li><a href="https://www.facebook.com/pages/Nube-Technologies/131796970216098"><span data-icon="" aria-hidden="true"></span></a></li>
+       <!-- Facebook Link --> 
+       <li><a href="http://www.twitter.com/nubetech"><span data-icon="" aria-hidden="true"></span></a></li>
+       <!-- Twitter Link --> 
+       <!--<li><a href="#"><span data-icon="&#xe178;" aria-hidden="true"></span></a></li><!-- YouTube Link --> 
+       <!--<li><a href="#"><span data-icon="&#xe17a;" aria-hidden="true"></span></a></li><!-- Vimeo Link --> 
+       <!--<li><a href="#"><span data-icon="&#xe184;" aria-hidden="true"></span></a></li><!-- Dribbble Link --> 
+      </ul> 
+     </div>
+     <!-- /col-lg-4 --> 
+    </div>
+    <!-- /row --> 
+   </div>
+   <!-- /container --> 
+  </section> 
+  <!--////////// JAVASCRIPT FILES INCLUDES //////////--> 
+  <script src="http://nubetech.co/wp-content/themes/ccthemeNew/js/jquery.fitvids.min.js"></script> 
+  <script src="http://nubetech.co/wp-content/themes/ccthemeNew/js/bootstrap.min.js"></script> 
+  <script src="http://nubetech.co/wp-content/themes/ccthemeNew/js/waypoints.min.js"></script> 
+  <script src="http://nubetech.co/wp-content/themes/ccthemeNew/js/jquery.isotope.min.js"></script> 
+  <script src="http://nubetech.co/wp-content/themes/ccthemeNew/js/jquery.fitvids.min.js"></script> 
+  <script src="http://nubetech.co/wp-content/themes/ccthemeNew/assets/twitter/jquery.tweet.js"></script> 
+  <script src="http://nubetech.co/wp-content/themes/ccthemeNew/js/baseline.js"></script> 
+  <script src="http://nubetech.co/wp-content/themes/ccthemeNew/js/custom.js"></script>   
+ </body>
+</html>

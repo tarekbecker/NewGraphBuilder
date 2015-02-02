@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Econodata</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="bootstrap.min.css" rel="stylesheet"> 
+  <link href="sticky-footer.css" rel="stylesheet"> 
+  <!-- Custom styles for this template --> 
+  <link href="carousel.css" rel="stylesheet"> 
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]--> 
+  <style>
+body{
+	color:#666666;	
+	
+}
+
+.navbar_style{
+	background-color:#8A94B7;
+	border: none;
+	margin-bottom:0px;
+	
+}
+.navbar-inverse .navbar-nav>li>a{
+	color:#ffffff;		
+}
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus{
+	color:#8A94B7;	
+	background-color:#ffffff;		
+}
+
+
+body .carousel, body .carousel-inner, body .carousel .item{
+	height:300px;	
+	margin-bottom:0px;
+}
+
+.carousel .container,
+.carousel-control,
+.carousel .item,
+.carousel-caption h1,
+.carousel-caption .lead,
+.carousel-control.left,.carousel-control.right
+ {
+	background: #ededed;
+}
+body .navbar-nav>li>a{
+	padding-bottom: 0px;
+	padding-top: 3px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.carousel-control .icon-prev:before { content: '\2039'; }
+.carousel-control .icon-next:before { content: '\203a'; }
+
+.subheader{
+	height:90px;
+	background-color:#ffffff;
+	width:100%;	
+}
+.subheader .col-md-4{
+	padding-top:15px;
+} 
+.subheader .col-md-8{
+	padding-top:25px;	
+}
+.subheader .col-md-8 a,
+.subheader .col-md-8 a:hover,
+.subheader .col-md-8 a:focus
+{
+	color:#858585;
+	font-family:tahoma;
+	font-size:16px;
+	
+} 
+.navbar_font{
+	font-family:arial;
+	font-size:11px;
+	
+}
+
+.subheader .col-md-8 div
+{
+	float:right;
+	padding: 0 7px;
+}
+.footer_container{
+	color: #E0E5F4;
+	font-family:tahoma;
+	font-size:12px;	
+}
+.footer_container span{
+	font-family:tahoma;
+	font-size:16px;	
+	
+}
+.footer_map{
+	height:40px;
+	background-color:#787E9E;
+	width:100%;
+	padding-top:10px;
+
+	
+}
+.footer_map a{
+		color: #E0E5F4;
+	font-family:tahoma;
+	font-size:12px;	
+}
+.footer_contact{
+	height:140px;
+	background-color:#8A94B7;
+	width:100%;
+}
+.footer_address{
+	padding-top:30px;
+	text-align:left;
+}
+.footer_row{
+	width:1024px;
+}
+.footer_copyright{
+	height:40px;
+	background-color:#787E9E;
+	width:100%;
+	padding-top:10px;
+	color: #C9CFDF;
+}
+.header_menu{
+	height:25px;
+	width:1024px;
+}
+.subheader_menu{
+	width:1024px;
+	padding-right:40px;
+}
+.main_content{
+	width:1024px;
+}
+.content_title{
+	width:80%;text-align: left;
+}
+.box_title{
+	font-size:25px;
+	text-align: left;
+	
+}
+
+.box_main{
+	width:80%;
+	border-color:#ffffff;
+	background-color:#F2F2F2;
+	position:relative;
+	background-image:url(box_bg.jpg);
+	background-repeat:repeat-x;
+	background-position: bottom;
+	text-align: left;
+}
+.box_funciona_img{
+	padding-left: 0px;
+	padding-right: 0px;
+	width:110px;
+}
+.box_funciona_txt{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top:18px;
+}
+.box_vantagens{
+	text-align: center;
+	padding-left: 0px;
+	padding-right: 0px;
+	width:155px;
+}
+.box_button{
+
+	position:relative;
+	top:25px;
+	margin: 0px 10px;	
+	width:500px;
+	background-image:url(btn_bg.jpg);
+	background-repeat:repeat-x; 
+	color:#4B5B91; 
+	font-family:tahoma;
+	font-size:20px;	
+	font-weight:bold;
+}
+.box_img{
+	float:left;margin-right:15px;
+}
+.box_btn_atendimento{
+	position:relative;top:49px;cursor:default;
+}
+.form_input{
+	width:400px;
+}
+
+</style> 
+ </head> 
+ <!-- facebook code --> 
+ <body style="background-color:#F2F2F2;font-family:tahoma;">
+  <div id="fb-root"></div> 
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>  
+  <div class="navbar_style navbar navbar-inverse " role="navigation"> 
+   <div class="container header_menu"> 
+    <div class="collapse navbar-collapse"> 
+     <ul class="nav navbar-nav pull-right navbar_font"> 
+      <li><a href="trabalhe_conosco.php" class="link_menu">TRABALHE CONOSCO</a></li> 
+      <li><a href="colaboracao_academica.php" class="link_menu"><p>COLABORAÇÃO ACADÊMICA</p></a></li> 
+      <li><a href="http://app.econodata.com.br" class="link_menu">ACESSO À FERRAMENTA</a></li> 
+     </ul> 
+    </div>
+    <!--/.nav-collapse --> 
+   </div> 
+   <div class="subheader"> 
+    <center> 
+     <div class="subheader_menu"> 
+      <div class="row"> 
+       <div class="col-md-4" style=""> 
+        <a href="index.php"><img height="50" src="logo_econodata.png"></a> 
+       </div> 
+       <div class="col-md-8" style=""> 
+        <!--<div style="" >
+								<a href="white_papers.php" >White Papers</a>
+							</div>--> 
+        <div style=""> 
+         <a href="fale_conosco.php">Fale Conosco</a> 
+        </div> 
+        <div style=""> 
+         <a href="realizacoes.php">Realizações</a> 
+        </div> 
+        <div style=""> 
+         <a href="landing_default.php">Produto</a> 
+        </div> 
+        <div style=""> 
+         <a href="empresa.php">A Empresa</a> 
+        </div> 
+        <div style=""> 
+         <a href="como_funciona.php">Como Funciona</a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </center> 
+   </div> 
+  </div> 
+  <div> 
+   <!-- Carousel
+================================================== --> 
+   <div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+    <div class="carousel-inner carousel-style"> 
+     <div class="item active"> 
+      <div class="container"> 
+       <center> 
+        <img src="banner2.jpg" height="300"> 
+       </center> 
+      </div> 
+     </div> 
+     <div class="item"> 
+      <div class="container"> 
+       <center> 
+        <img src="Image30.jpg" height="300"> 
+       </center> 
+      </div> 
+     </div> 
+     <div class="item"> 
+      <div class="container"> 
+       <center> 
+        <img src="banner3.jpeg" width="815"> 
+       </center> 
+      </div> 
+     </div> 
+    </div> 
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> 
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> 
+   </div>
+   <!-- /.carousel --> 
+  </div> 
+  <br>
+  <br> 
+  <center> 
+   <div class="main_content"> 
+    <br> 
+    <center> 
+     <div class="panel panel-default box_main"> 
+      <div class="panel-body"> 
+       <div class="box_title">
+        Cadastre-se na Plataforma
+       </div> 
+       <br> A Econodata fornece informações detalhadas sobre empresas de capital fechado, incluindo balanços e demonstrativos financeiros. 
+       <center> 
+        <button style="top:40px;" type="button" class="box_button btn btn-default btn-lg" onclick="window.location='http://app.econodata.com.br/cadastro.jsf'">CADASTRE-SE</button> 
+       </center> 
+      </div> 
+     </div> 
+     <br> 
+     <br> 
+     <div class="panel panel-default box_main"> 
+      <div class="panel-body"> 
+       <div class="box_title">
+        Conheça as vantagens Econodata
+       </div> 
+       <br> 
+       <div class="row"> 
+        <div class="col-md-4" style="text-align: center;"> 
+         <a href="landing_qualificacao.php"><img src="figura3.jpg" height="60"> <br> <u style="color:#666666;">Geração e Qualificação de Leads</u> </a> 
+        </div> 
+        <div class="col-md-4" style="text-align: center;"> 
+         <a href="landing_market.php"><img src="figura1.jpg" height="60"> <br> <u style="color:#666666;">Inteligência de Mercado</u> </a> 
+        </div> 
+        <!--<div class="col-md-3" style="text-align: center;">
+						<img src="figura4.jpg" height="60" />
+						<br/>                    
+						Para Análise de Crédito
+					</div>--> 
+        <div class="col-md-4" style="text-align: center;"> 
+         <a href="landing_equity.php"> <img src="figura2.jpg" height="60"> <br> <u style="color:#666666;">Para Fundos de Private Equity e Venture Capital</u> </a> 
+        </div> 
+       </div> 
+      </div> 
+      <center> 
+       <button type="button" class="box_button btn btn-default btn-lg" onclick="window.location='como_funciona.php'">SAIBA COMO FUNCIONA</button> 
+      </center> 
+     </div> 
+     <br> 
+     <br> 
+     <div class="panel panel-default box_main"> 
+      <div class="panel-body"> 
+       <div class="box_title">
+        Suporte
+       </div> 
+       <br> Acesse aqui nossa Página de Suporte para esclarecimento de dúvidas, sugestões e contato com nossa equipe de atendimento. 
+       <center> 
+        <button style="top:40px;" type="button" class="box_button btn btn-default btn-lg" onclick="window.location='fale_conosco.php'">CLIQUE AQUI</button> 
+       </center> 
+      </div> 
+     </div> 
+    </center> 
+   </div> 
+  </center> 
+  <div id="footer"> 
+   <div class="footer_container"> 
+    <div class="footer_map"> 
+     <center> 
+      <!-- Facebook Plus code --> 
+      <div class="fb-like" data-href="https://www.facebook.com/econodata" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div> 
+      <!-- Linkedin code --> 
+      <script src="//platform.linkedin.com/in.js" type="text/javascript">
+						lang: en_US
+					</script> 
+      <script type="IN/FollowCompany" data-id="3186904" data-counter="none"></script> 
+      <!-- Google Plus code --> 
+      <div class="g-follow" data-annotation="none" data-height="20" data-href="//plus.google.com/u/0/116832042759786888396" data-rel="publisher"></div> 
+      <script type="text/javascript">
+						(function() {
+							var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+							po.src = 'https://apis.google.com/js/platform.js';
+							var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+						})();
+					</script> 
+     </center> 
+    </div> 
+    <div class="footer_map"> 
+     <center> 
+      <a href="empresa.php">A Empresa</a>&nbsp;|&nbsp; 
+      <a href="realizacoes.php">Realizações</a>&nbsp;|&nbsp; 
+      <a href="fale_conosco.php">Fale Conosco</a>
+      <a></a>&nbsp;|&nbsp; 
+      <a href="trabalhe_conosco.php">Trabalhe Conosco</a>&nbsp;|&nbsp; 
+      <a href="colaboracao_academica.php">Colaboração Acadêmica</a>&nbsp;|&nbsp; 
+      <a href="http://app.econodata.com.br">Acesso à Ferramenta</a> 
+     </center> 
+    </div> 
+    <div class="footer_contact"> 
+     <center> 
+      <div class="row footer_row"> 
+       <div class="col-md-4 col-md-offset-1" style="padding-top:45px;text-align:center;"> 
+        <img src="logo-inv.jpg" width="220"> 
+       </div> 
+       <div class="col-md-4 footer_address" style="width:300px;"> 
+        <span>São Paulo - SP</span>
+        <br> Business Headquarters
+        <br> Av. das Nações Unidas, 12399, 14º Andar
+        <br> +55 (11) 5111-8267 
+       </div> 
+       <div class="col-md-3 footer_address"> 
+        <span>Porto Alegre - RS</span>
+        <br> Development Center
+        <br> Av. Montenegro, 186, conjunto 505
+        <br> +55 (51) 3024-5688 
+       </div> 
+      </div> 
+     </center> 
+    </div> 
+    <div class="footer_copyright"> 
+     <center>
+      (c) Copyright 2014 - Todos os direitos reservados
+     </center> 
+    </div> 
+   </div> 
+  </div>  
+  <script type="text/javascript" src="jquery-1.10.2.min.js"></script> 
+  <script type="text/javascript" src="bootstrap.min.js"></script> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47179888-1', 'econodata.com.br');
+  ga('send', 'pageview');
+
+</script>  
+ </body>
+</html>

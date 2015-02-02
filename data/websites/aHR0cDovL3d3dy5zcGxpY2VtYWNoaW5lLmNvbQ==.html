@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Splice Machine - The Only Hadoop RDBMS</title> 
+  <link rel="shortcut icon" href="http://www.splicemachine.com/wp-content/themes/SpliceMachine/_/img/favicon.png"> 
+  <!-- This is the traditional favicon. - size: 16x16 or 32x32 - transparency is OK --> 
+  <link rel="apple-touch-icon" href="http://www.splicemachine.com/wp-content/themes/SpliceMachine/_/img/apple-touch-icon.png"> 
+  <!-- should be 114 x 114 - transparency not recommended --> 
+  <link rel="pingback" href="http://www.splicemachine.com/xmlrpc.php"> 
+  <!-- Enqued CSS will be output here --> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.6.1 - https://yoast.com/wordpress/plugins/seo/ --> 
+  <meta name="description" content="Splice Machine, the only Hadoop RDBMS, is designed to scale real-time applications using commodity hardware without application rewrites."> 
+  <link rel="canonical" href="http://www.splicemachine.com/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Splice Machine - The Only Hadoop RDBMS"> 
+  <meta property="og:description" content="Splice Machine, the only Hadoop RDBMS, is designed to scale real-time applications using commodity hardware without application rewrites."> 
+  <meta property="og:url" content="http://www.splicemachine.com/"> 
+  <meta property="og:site_name" content="Splice Machine"> 
+  <meta property="og:image" content="http://www.splicemachine.com/wp-content/uploads/bannerImage.png"> 
+  <meta name="google-site-verification" content="5kHLkDuBlZu1TqFyQDw0yIxPz3gkpibUXDjjPRFS2hk"> 
+  <script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "http://www.splicemachine.com/", "potentialAction": { "@type": "SearchAction", "target": "http://www.splicemachine.com/?s={search_term}", "query-input": "required name=search_term" } }</script> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="alternate" type="application/rss+xml" title="Splice Machine » Home Comments Feed" href="http://www.splicemachine.com/home/feed/"> 
+  <link rel="stylesheet" id="googlefonts-css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C600&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="bootstrap-css" href="http://www.splicemachine.com/wp-content/themes/SpliceMachine/_/css/bootstrap.min.css?dev=54816dd333a91&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="bootstrap-responsive-css" href="http://www.splicemachine.com/wp-content/themes/SpliceMachine/_/css/bootstrap-theme.min.css?dev=54816dd333a91&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="bootstrap-fix-css" href="http://www.splicemachine.com/wp-content/themes/SpliceMachine/_/css/bootstrap.row.fix.css?dev=54816dd333a91&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="featherlight-css" href="http://www.splicemachine.com/wp-content/themes/SpliceMachine/_/css/featherlight.min.css?dev=54816dd333a91&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="stylesheet-css" href="http://www.splicemachine.com/wp-content/themes/SpliceMachine/style.css?dev=54816dd333a91&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="simple-pagination-css-css" href="http://www.splicemachine.com/wp-content/plugins/simple-pagination/css/default.css?ver=2.1.7" type="text/css" media="screen"> 
+  <script type="text/javascript" src="http://www.splicemachine.com/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script> 
+  <script type="text/javascript" src="http://www.splicemachine.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/_/js/bootstrap.row.fix.js?dev=54816dd3312c6&amp;ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/_/js/featherlight.min.js?dev=54816dd3312c6&amp;ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/_/js/jquery.jcarousel.js?dev=54816dd3312c6&amp;ver=4.0.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.splicemachine.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.splicemachine.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 4.0.1"> 
+  <link rel="shortlink" href="http://www.splicemachine.com/"> 
+  <script type="text/javascript">
+	  //Change the kit ID for each client - this is the asynchronous Typekit Load
+	  TypekitConfig = {
+		kitId: 'ehg3ozu',
+		scriptTimeout: 3000
+	  };
+	  (function() {
+		var h = document.getElementsByTagName('html')[0];
+		h.className += ' wf-loading';
+		var t = setTimeout(function() {
+		  h.className = h.className.replace(/(\s|^)wf-loading(\s|$)/g, '');
+		  h.className += ' wf-inactive';
+		}, TypekitConfig.scriptTimeout);
+		var tk = document.createElement('script');
+		tk.src = '//use.typekit.com/' + TypekitConfig.kitId + '.js';
+		tk.type = 'text/javascript';
+		tk.async = 'true';
+		tk.onload = tk.onreadystatechange = function() {
+		  var rs = this.readyState;
+		  if (rs && rs != 'complete' && rs != 'loaded') return;
+		  clearTimeout(t);
+		  try { Typekit.load(TypekitConfig); } catch (e) {}
+		};
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(tk, s);
+	  })();
+	</script>
+ </head> 
+ <body class="home page page-id-5 page-template page-template-template-home-php"> 
+  <a href="#" data-featherlight="#featherLightContentTemp" id="featherlight-trigger" style="display: none;"></a>
+  <div id="featherLightContentTemp" style="display: none;"></div> 
+  <header id="masthead" class="site-header" role="banner"> 
+   <div id="header"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-xs-16 col-nav"> 
+       <div class="auxNav-wrapper"> 
+        <a href="http://www.splicemachine.com/company/contact-us/" class="contactus"> <p>Contact Us</p> </a> 
+        <a href="http://www.splicemachine.com/product/download/" class="download"> <p>Download</p> </a> 
+        <div class="search"> 
+         <form action="http://www.splicemachine.com" id="searchform" class="searchform" method="get"> 
+          <div> 
+           <label for="s" class="screen-reader-text">Search for:</label> 
+           <input type="submit" value="Go" id="searchsubmit"> 
+           <input type="search" id="s" name="s" value="" placeholder="SEARCH"> 
+           <input type="hidden" value="post" name="post_type"> 
+           <div class="clear"></div> 
+          </div> 
+         </form> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+       <div class="nav-wrapper"> 
+        <nav class="navbar navbar-default" role="navigation"> 
+         <!-- Brand and toggle get grouped for better mobile display --> 
+         <div class="navbar-header"> 
+          <div class="headermobile"> 
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+          </div> 
+         </div> 
+         <!-- Collect the nav links, forms, and other content for toggling --> 
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+          <ul class="nav header-nav"> 
+           <li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.splicemachine.com/why-splice/" data-id="7" data-slug="why-splice">Why Splice</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-760669" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/why-splice/" data-id="7" data-slug="why-splice">Overview</a></li> 
+             <li id="menu-item-760735" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/why-splice/use-cases/" data-id="760731" data-slug="use-cases">Use Cases</a></li> 
+             <li id="menu-item-760765" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/why-splice/differentiators/" data-id="760763" data-slug="differentiators">Differentiators</a></li> 
+            </ul> </li> 
+           <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.splicemachine.com/product/" data-id="9" data-slug="product">Product</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-760668" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/product/" data-id="9" data-slug="product">Overview</a></li> 
+             <li id="menu-item-760824" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/product/features/" data-id="760822" data-slug="features">Features</a></li> 
+             <li id="menu-item-760794" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/product/how-it-works/" data-id="760789" data-slug="how-it-works">How It Works</a></li> 
+             <li id="menu-item-760863" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/product/pricing/" data-id="760853" data-slug="pricing">Pricing</a></li> 
+             <li id="menu-item-760864" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/product/resources/" data-id="760855" data-slug="resources">Resources</a></li> 
+             <li id="menu-item-760861" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/product/demo/" data-id="760857" data-slug="demo">Demo</a></li> 
+             <li id="menu-item-760862" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/product/download/" data-id="760859" data-slug="download">Download</a></li> 
+            </ul> </li> 
+           <li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.splicemachine.com/applications/" data-id="11" data-slug="applications">Applications</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/applications/" data-id="11" data-slug="applications">Overview</a></li> 
+             <li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/applications/digital-marketing/" data-id="19" data-slug="digital-marketing">Digital Marketing</a></li> 
+             <li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/applications/operational-data-lake/" data-id="23" data-slug="operational-data-lake">Data Lake</a></li> 
+             <li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/applications/operational-applications/" data-id="25" data-slug="operational-applications">Operational Apps</a></li> 
+             <li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/applications/operational-analytics/" data-id="27" data-slug="operational-analytics">Operational Analytics</a></li> 
+             <li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/applications/internet-of-things/" data-id="21" data-slug="internet-of-things">Internet of Things</a></li> 
+            </ul> </li> 
+           <li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.splicemachine.com/services/" data-id="13" data-slug="services">Services</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-760667" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/services/" data-id="13" data-slug="services">Overview</a></li> 
+             <li id="menu-item-760879" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/services/training/" data-id="760865" data-slug="training">Training</a></li> 
+             <li id="menu-item-760876" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/services/kickstart-program/" data-id="760867" data-slug="kickstart-program">Kickstart Program</a></li> 
+             <li id="menu-item-760878" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/services/technical-account-manager/" data-id="760869" data-slug="technical-account-manager">Technical Account Manager</a></li> 
+             <li id="menu-item-760875" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/services/consult-on-demand/" data-id="760871" data-slug="consult-on-demand">Consult On Demand</a></li> 
+             <li id="menu-item-760877" class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" href="https://splicemachine.zendesk.com/hc/en-us" data-id="760873" data-slug="en-us">Support</a></li> 
+            </ul> </li> 
+           <li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.splicemachine.com/company/" data-id="15" data-slug="company">Company</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-760666" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/company/" data-id="15" data-slug="company">About Us</a></li> 
+             <li id="menu-item-762020" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/company/team/" data-id="761991" data-slug="team">Team</a></li> 
+             <li id="menu-item-760892" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/company/investors/" data-id="760882" data-slug="investors">Investors</a></li> 
+             <li id="menu-item-760893" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/company/partners/" data-id="760884" data-slug="partners">Partners</a></li> 
+             <li id="menu-item-761990" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/company/careers/" data-id="761967" data-slug="careers">Careers</a></li> 
+             <li id="menu-item-760891" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/company/contact-us/" data-id="760888" data-slug="contact-us">Contact Us</a></li> 
+            </ul> </li> 
+           <li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.splicemachine.com/newsroom/" data-id="17" data-slug="newsroom">Newsroom</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-760665" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/newsroom/" data-id="17" data-slug="newsroom">Overview</a></li> 
+             <li id="menu-item-760911" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/newsroom/press-releases/" data-id="760895" data-slug="press-releases">Press Releases</a></li> 
+             <li id="menu-item-760910" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/newsroom/in-the-news/" data-id="760897" data-slug="in-the-news">In the News</a></li> 
+             <li id="menu-item-760912" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/newsroom/recognition/" data-id="760899" data-slug="recognition">Recognition</a></li> 
+             <li id="menu-item-760909" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/newsroom/events/" data-id="760901" data-slug="events">Events</a></li> 
+             <li id="menu-item-760907" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/newsroom/big-data-news/" data-id="760903" data-slug="big-data-news">Big Data News</a></li> 
+             <li id="menu-item-760908" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/newsroom/blog/" data-id="760905" data-slug="blog">Blog</a></li> 
+            </ul> </li> 
+          </ul> 
+         </div>
+         <!-- /.navbar-collapse --> 
+        </nav> 
+       </div> 
+      </div> 
+      <div class="col-xs-4 col-logo"> 
+       <a class="logo-brand" href="http://www.splicemachine.com"><img src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/header-logo-2x.png" alt="Splice Machine"></a> 
+      </div> 
+      <div class="col-xs-4 col-tagline"> 
+       <p>The Only <br>Hadoop RDBMS</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </header>
+  <!-- #masthead --> 
+  <div class="homepage"> 
+   <div class="banner-header-wrapper"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-24 banner-header"> 
+       <h1>The Only Hadoop<sup>®</sup> RDBMS</h1> 
+       <h2>Replace your Oracle<sup>®</sup> and MySQL<sup>®</sup> databases to power operational applications and analytics.</h2> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="banner-wrapper"> 
+    <div class="banner-bg-gradient"> 
+     <div class="container"> 
+      <div class="row"> 
+       <!-- Get Featured Image --> 
+       <div class="bannerImage" style="position: relative; background: transparent url('http://www.splicemachine.com/wp-content/uploads/bannerImage.png') right bottom no-repeat; background-size: 606px 670px;	height: 670px;"> 
+        <a class="released" href="http://www.splicemachine.com/product/download/"></a> 
+        <div class="col-md-14 banner-content"> 
+         <h1>Scale Out with the Only Hadoop RDBMS</h1> 
+         <p><strong>Harte Hanks Chooses Splice Machine to Replace Oracle</strong></p> 
+         <p>“Our data exploded and our Oracle<sup>®</sup> RAC<sup>®</sup> databases hit the wall. We chose Splice Machine to affordably scale out our digital marketing and campaign management apps.”</p> 
+         <p class="author"><span class="description"><em>Rob Fuller, Managing Director of Product Innovation, Harte Hanks</em></span></p> 
+         <a href="http://www.splicemachine.com/wp-content/uploads/Splice-Machine-Harte-Hanks-Case-Study1.pdf" class="caseStudy-button" target="_blank">Read Case Study</a> 
+         <div class="image-desc"></div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="banner-links-wrapper"> 
+     <div class="container"> 
+      <div class="row"> 
+       <div class="inner-wrapper"> 
+        <!-- Button 1 --> 
+        <div class="col-sm-8 banner-link-1 banner-link"> 
+         <a href="http://info.splicemachine.com/Scale-Out-vs-Up-WP-Web.html" target="_blank"> 
+          <div class="container-button"> 
+           <div class="col-xs-5 col-button-icon"> 
+            <img src="http://www.splicemachine.com/wp-content/uploads/2014/08/bannericon-2.png" alt="Product Image">
+            <br>
+            <br> 
+           </div> 
+           <div class="col-xs-19 col-button-text"> 
+            <h4>Oracle Database Users:</h4> 
+            <h3>Scale Up or Out?</h3> 
+            <p>Learn More</p> 
+           </div> 
+          </div> </a> 
+        </div> 
+        <!-- Button 2 --> 
+        <div class="col-sm-8 banner-link-2 banner-link"> 
+         <a href="http://event.on24.com/r.htm?e=851582&amp;s=1&amp;k=82D321EC8921CEE2F36A64396FA6C069" target="_blank"> 
+          <div class="col-xs-5 col-button-icon"> 
+           <img src="http://www.splicemachine.com/wp-content/uploads/bannericon-webinar.jpg" alt="Product Image">
+           <br>
+           <br> 
+          </div> 
+          <div class="col-xs-19 col-button-text"> 
+           <h4>Hadoop Operational</h4> 
+           <h3>Data Lake</h3> 
+           <p>On-Demand Webinar</p> 
+          </div> </a> 
+        </div> 
+        <!-- Button 3 --> 
+        <div class="col-sm-8 banner-link-3 banner-link"> 
+         <a href="http://www.splicemachine.com/product/download/"> 
+          <div class="col-xs-5 col-button-icon"> 
+           <img src="http://www.splicemachine.com/wp-content/uploads/2014/08/bannericon-3.png" alt="Product Image">
+           <br>
+           <br> 
+          </div> 
+          <div class="col-xs-19 col-button-text"> 
+           <h4>The Only Hadoop RDBMS</h4> 
+           <h3>Version 1.0</h3> 
+           <p>Now Available</p> 
+          </div> </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="tabbed-header"> 
+    <h2><p>About the Only Hadoop<sup>®</sup> RDBMS</p> </h2> 
+   </div> 
+   <div class="tabbed-wrapper"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="tabbed-wrapper-desktop"> 
+       <div class="col-xs-1"> 
+       </div> 
+       <div class="col-md-22 container-tabs"> 
+        <div class="tabbed-content"> 
+         <div class="btn-group btn-1"> 
+          <button type="button" data-trigger="tab1" class="btn btn-default btn1 tabbutton active-tab">Features</button> 
+         </div> 
+         <div class="tab" id="tab1"> 
+          <div class="col-md-8 tc-left"> 
+           <p>The features of an RDBMS.<br> The scalability of NoSQL. All in<br> one Hadoop-powered package.</p> 
+           <a href="http://www.splicemachine.com/product/features/" class="caseStudy-button tab-button">More</a> 
+          </div> 
+          <div class="col-md-16 tc-right"> 
+           <img src="http://www.splicemachine.com/wp-content/uploads/splice-machine-distributed-architecture-home.png"> 
+           <a class="view-larger featherbox-image" data-img-large="http://www.splicemachine.com/wp-content/uploads/2014/08/unnamed-6.jpg"> <span>View Larger &nbsp;</span> <img class="icon-plus" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/icon-plus.png" alt=""> </a> 
+          </div> 
+         </div> 
+         <div class="btn-group btn-2"> 
+          <button type="button" data-trigger="tab2" class="btn btn-default btn2 tabbutton">How It Works</button> 
+         </div> 
+         <div class="tab" id="tab2" style="display: none;"> 
+          <div class="col-md-8 tc-left"> 
+           <p>Built on HBase and Derby to create a scalable operational database with real-time transactions.</p> 
+           <a href="http://www.splicemachine.com/product/how-it-works/" class="caseStudy-button tab-button">More</a> 
+          </div> 
+          <div class="col-md-16 tc-right"> 
+           <img src="http://www.splicemachine.com/wp-content/uploads/splice-machine-solution-stack-home.png"> 
+           <a class="view-larger featherbox-image" data-img-large="http://www.splicemachine.com/wp-content/uploads/2014/08/unnamed-9.jpg"> <span>View Larger &nbsp;</span> <img class="icon-plus" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/icon-plus.png" alt=""> </a> 
+          </div> 
+         </div> 
+         <div class="btn-group btn-3"> 
+          <button type="button" data-trigger="tab3" class="btn btn-default btn3 tabbutton">Pricing</button> 
+         </div> 
+         <div class="tab" id="tab3" style="display: none;"> 
+          <div class="col-md-8 tc-left"> 
+           <p>Affordable per node pricing for enterprises with support included. Free usage for startups. </p> 
+           <a href="http://www.splicemachine.com/product/pricing/" class="caseStudy-button tab-button">More</a> 
+          </div> 
+          <div class="col-md-16 tc-right"> 
+           <img src="http://www.splicemachine.com/wp-content/uploads/splice-machine-pricing-chart.jpg"> 
+           <a class="view-larger featherbox-image" data-img-large="http://www.splicemachine.com/wp-content/uploads/2014/08/unnamed-7.jpg"> <span>View Larger &nbsp;</span> <img class="icon-plus" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/icon-plus.png" alt=""> </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-xs-1"> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="threebox-wrapper"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-24 three-box-header"> 
+       <h2>Performance. Scalability. Flexibility.</h2> 
+       <p>Power your applications with Splice Machine</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="boxes-wrapper"> 
+     <div class="container"> 
+      <div class="row"> 
+       <!-- Box 1 --> 
+       <div class="col-sm-8 box1-wrapper" style="background: url('http://www.splicemachine.com/wp-content/uploads/2014/08/square-1.jpg') center center no-repeat; background-size: cover;"> 
+        <div class="box-content-wrapper box1-content-wrapper"> 
+         <h2 class="desktop">Digital Marketing</h2> 
+         <a class="mobile" href="http://www.splicemachine.com/applications/digital-marketing/"><h2>Digital Marketing</h2></a> 
+         <p>Capitalize on a 360° view of your customers.</p> 
+        </div> 
+        <a href="http://www.splicemachine.com/applications/digital-marketing/" class="threebox-button caseStudy-button">Learn More</a> 
+       </div> 
+       <!-- Box 2 --> 
+       <div class="col-sm-8 box2-wrapper" style="background: url('http://www.splicemachine.com/wp-content/uploads/2014/08/square-22.jpg') center center no-repeat;background-size: cover;"> 
+        <div class="box-content-wrapper box2-content-wrapper"> 
+         <h2 class="desktop">Operational Data Lake</h2> 
+         <a class="mobile" href="http://www.splicemachine.com/applications/operational-data-lake/"><h2>Operational Data Lake</h2></a> 
+         <p>Offload reporting from expensive Data Warehouses.</p> 
+        </div> 
+        <a href="http://www.splicemachine.com/applications/operational-data-lake/" class="threebox-button caseStudy-button">Learn More</a> 
+       </div> 
+       <!-- Box 3 --> 
+       <div class="col-sm-8 box3-wrapper" style="background: url('http://www.splicemachine.com/wp-content/uploads/2014/08/square-3.jpg') center center no-repeat;background-size: cover;"> 
+        <div class="box-content-wrapper box3-content-wrapper"> 
+         <h2 class="desktop">Operational Applications</h2> 
+         <a class="mobile" href="http://www.splicemachine.com/applications/operational-applications/"><h2>Operational Applications</h2></a> 
+         <p>Scale real-time applications affordably on Hadoop.</p> 
+        </div> 
+        <a href="http://www.splicemachine.com/applications/operational-applications/" class="threebox-button caseStudy-button">Learn More</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="vs-wrapper"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-24 vs-header"> 
+       <h2>Industry Leaders Choose Scale Out</h2> 
+       <p>Rather than scale up on costly proprietary hardware, companies are scaling out on commodity hardware to increase query performance and lower their TCO.</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="container vs-padding"> 
+     <div class="row"> 
+      <div class="col-sm-2"></div> 
+      <div class="col-sm-20 vs-wrapper-border"> 
+       <div class="col-xs-9 scaleup vs-box"> 
+        <div class="scaleup-title vs-title"> 
+         <p>Costly Scale Up</p> 
+        </div> 
+        <div class="scaleup-image"> 
+         <img class="desktop" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/image-scaleup.png"> 
+         <img class="mobile" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/image-scaleup-mobile.png"> 
+        </div> 
+       </div> 
+       <div class="col-xs-6 vs-text"> 
+        <span>VS.</span> 
+       </div> 
+       <div class="col-xs-9 scaleout vs-box"> 
+        <div class="scaleout-title vs-title"> 
+         <p>Cost-Effective Scale Out</p> 
+        </div> 
+        <div class="scaleout-image"> 
+         <img class="desktop" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/image-scaleout.png"> 
+         <img class="mobile" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/image-scaleout-mobile.png"> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-sm-2"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="container download-width"> 
+    <div class="row"> 
+     <div class="col-xs-24"> 
+      <div class="download-big-wrapper"> 
+       <a href="http://www.splicemachine.com/product/download/" class="contactus download-big" target="_self"> <p>Download</p> </a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="nr-wrapper"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-24"> 
+       <div class="nr-header"> 
+        <h2>Splice Machine Newsroom</h2> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-24"> 
+       <div class="nr-slider"> 
+        <div class="nr-slider-header"> 
+         <h3>Awards &amp; Recognition</h3> 
+         <div class="jcarousel-wrapper"> 
+          <div class="jcarousel"> 
+           <ul> 
+            <li>
+             <div class="img-table">
+              <a href="http://www.ventanaresearch.com/LeadershipAwardAnnouncement2014/" target="_blank" title="2014 Ventana Research Technology Leadership Awards"><img src="http://www.splicemachine.com/wp-content/uploads/VR2014_Leadership_AwardWinner.jpeg"></a>
+             </div></li> 
+            <li>
+             <div class="img-table">
+              <a href="http://www.forbes.com/sites/brucerogers/2014/06/24/monte-zwebens-splice-machine-introduces-new-hadoop-rdbms/" target="_blank" title="Monte Zweben’s Splice Machine Introduces New Hadoop RDBMS"><img src="http://www.splicemachine.com/wp-content/uploads/forbes-logo.jpg"></a>
+             </div></li> 
+            <li>
+             <div class="img-table">
+              <a href="http://www.dbta.com/Editorial/News-Flashes/DBTA-100-2014---The-Companies-That-Matter-Most-in-Data-97199.aspx" target="_blank" title="DBTA 100 2014 – The Companies That Matter Most in Data"><img src="http://www.splicemachine.com/wp-content/uploads/2014/06/DBTA100-award.jpg"></a>
+             </div></li> 
+            <li>
+             <div class="img-table">
+              <a href="http://www.splicemachine.com/gartner-names-splice-machine-2014-cool-vendor-2/" target="_blank" title="Gartner Cool Vendors in DBMS 2014"><img src="http://www.splicemachine.com/wp-content/uploads/2014/04/gartner-coolvendor-125.jpg"></a>
+             </div></li> 
+            <li>
+             <div class="img-table">
+              <a href="http://tech.fortune.cnn.com/2014/05/21/how-a-scrappy-young-startup-plans-to-turn-the-massive-database-market-on-its-ear/" target="_blank" title="How a Scrappy Young Startup Plans to Turn the Massive Database Market on its Ear"><img src="http://www.splicemachine.com/wp-content/uploads/fortune-full-logo.jpg"></a>
+             </div></li> 
+            <li>
+             <div class="img-table">
+              <a href="http://www.businessinsider.com/12-hottest-data-center-startups-2014-5" target="_blank" title="12 Hot Data Center Startups To Watch"><img src="http://www.splicemachine.com/wp-content/uploads/business-insider-full-logo.jpg"></a>
+             </div></li> 
+            <li>
+             <div class="img-table">
+              <a href="http://www.redherring.com/events/rhna/2014-red-herring-north-america-winners/" target="_blank" title="Red Herring Top 100 North America"><img src="http://www.splicemachine.com/wp-content/uploads/2014/05/red-herring-top-100-north-america.jpg"></a>
+             </div></li> 
+            <li>
+             <div class="img-table">
+              <a href="http://www.cio.com/article/751572/10_Hot_Hadoop_Startups_to_Watch_" target="_blank" title="10 Hot Hadoop Startups to Watch"><img src="http://www.splicemachine.com/wp-content/uploads/CIO-full-logo.jpg"></a>
+             </div></li> 
+           </ul> 
+          </div> 
+          <a href="#" class="jcarousel-control-prev"></a> 
+          <a href="#" class="jcarousel-control-next"></a> 
+          <p class="jcarousel-pagination"></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="container nr-cat"> 
+     <div class="row"> 
+      <div class="col-md-8"> 
+       <div class="nr-news-wrapper nr-box"> 
+        <a href="http://www.splicemachine.com/newsroom/"> 
+         <div class="news-title"> 
+          <h3>News</h3> 
+         </div> </a> 
+        <div class="news-content nr-box-content"> 
+         <!--				                <p><a href="http://searchdatamanagement.techtarget.com/news/2240235464/Splice-Machine-goes-GA-joins-SQL-on-Hadoop-database-fray"><strong>SEARCHDATAMANAGEMENT</strong> / Splice Machine Goes GA, Joins SQL-on-Hadoop Database Fray</a></p>--> 
+         <p> <a href="http://searchdatamanagement.techtarget.com/news/2240235464/Splice-Machine-goes-GA-joins-SQL-on-Hadoop-database-fray"><strong>SEARCHDATAMANAGEMENT</strong>&nbsp;Splice Machine Goes GA, Joins SQL-on-Hadoop Database...</a> </p> 
+         <!--				                <p><a href="http://searchnetworking.techtarget.com/news/2240235395/Mobile-commerce-expected-to-increase-during-holiday-season"><strong>SEARCHNETWORKING</strong> / Hadoop Splice Machine Offers Affordable RDBMS</a></p>--> 
+         <p> <a href="http://searchnetworking.techtarget.com/news/2240235395/Mobile-commerce-expected-to-increase-during-holiday-season"><strong>SEARCHNETWORKING</strong>&nbsp;Hadoop Splice Machine Offers Affordable RDBMS</a> </p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-8"> 
+       <div class="nr-events-wrapper nr-box"> 
+        <a href="http://www.splicemachine.com/newsroom/events/"> 
+         <div class="events-title"> 
+          <h3>Events</h3> 
+         </div> </a> 
+        <div class="events-content nr-box-content"> 
+         <!--				                <p><a href="http://www.sfdama.org/DAMADay2014/damadayhome/damadayhome.html"><strong>DAMA Day 2014</strong>: Dec. 10-11, Sponsoring</a></p>		--> 
+         <p> <a href="http://www.sfdama.org/DAMADay2014/damadayhome/damadayhome.html"><strong>DAMA Day 2014</strong>&nbsp;Dec. 10-11, Sponsoring</a> </p> 
+         <!--				                <p><a href="http://strataconf.com/big-data-conference-ca-2015"><strong>Strata Hadoop World San Jose</strong>: Feb. 17-20; Exhibiting, booth 1019; Speaking</a></p>		--> 
+         <p> <a href="http://strataconf.com/big-data-conference-ca-2015"><strong>Strata Hadoop World San Jose</strong>&nbsp;Feb. 17-20; Exhibiting, booth 1019; Speaking</a> </p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-8"> 
+       <div class="nr-blog-wrapper nr-box"> 
+        <a href="http://www.splicemachine.com/newsroom/blog/"> 
+         <div class="blog-title"> 
+          <h3>Blog</h3> 
+         </div> </a> 
+        <div class="blog-content nr-box-content"> 
+         <!-- <p><a href="http://www.splicemachine.com/extra-read-splice-machine-version-1-0/">Extra! Read All About It – Our 1.0 is Here</a></p> --> 
+         <p> <a href="http://www.splicemachine.com/extra-read-splice-machine-version-1-0/"><strong>Extra! Read All About It – Our 1.0 is Here</strong></a> </p> 
+         <!-- <p><a href="http://www.splicemachine.com/lucidworks-partnership-brings-full-text-search-splice-machine-customers/"><strong>Lucidworks Partnership</strong> Brings Full-Text Search to Splice Machine Customers</a></p> --> 
+         <p> <a href="http://www.splicemachine.com/lucidworks-partnership-brings-full-text-search-splice-machine-customers/"><strong>Lucidworks Partnership Brings Full-Text Search to Splice</strong>...</a> </p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="footer"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-14 footer-menu"> 
+      <div> 
+       <ul class="nav"> 
+        <li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/why-splice/" data-id="7" data-slug="why-splice">Why Splice</a></li> 
+        <li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/product/" data-id="9" data-slug="product">Product</a></li> 
+        <li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/applications/" data-id="11" data-slug="applications">Applications</a></li> 
+        <li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/services/" data-id="13" data-slug="services">Services</a></li> 
+        <li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/company/" data-id="15" data-slug="company">Company</a></li> 
+        <li id="menu-item-152" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.splicemachine.com/newsroom/" data-id="17" data-slug="newsroom">Newsroom</a></li> 
+       </ul> 
+      </div> 
+      <div class="footer-copyright"> 
+       <p>© 2014 Splice Machine, Inc. All rights reserved.<br> <a href="http://www.splicemachine.com/company/terms-of-use/">Terms of Use</a> &nbsp; · &nbsp; <a href="http://www.splicemachine.com/company/privacy-statement/">Privacy Statement</a></p> 
+      </div> 
+     </div> 
+     <div class="col-md-10 footer-social"> 
+      <ul> 
+       <li class="social-download"> <a href="http://www.splicemachine.com/product/download/" class="footer-download"> <p>Download</p> </a> </li> 
+       <li class="social-linkedin"> <a href="http://www.linkedin.com/company/splice-machine" class="footer-linkedin" target="_blank"> <img class="desktop" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/footer-icon-linkenin-2x.png" alt="Linked In" height="20" width="21"> <img class="mobile" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/mobile-footer-icon-linkenin-2x.png" alt="Linked In" height="40" width="40"> </a> </li> 
+       <li class="social-twitter"> <a href="https://twitter.com/splicemachine" class="footer-twitter" target="_blank"> <img class="desktop" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/footer-icon-twitter-2x.png" alt="Twitter" height="20" width="21"> <img class="mobile" src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/mobile-footer-icon-twitter-2x.png" alt="Twitter" height="40" width="40"> </a> </li> 
+       <li class="social-logo"> <a href="http://www.splicemachine.com" class="footer-logo"> <img src="http://www.splicemachine.com/wp-content/themes/SpliceMachine/images/footer-logo-2x.png" alt="Splice Machine" height="46" width="119"> </a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="mediaJS"></div> 
+  <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/5552.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script> 
+  <script>var jquery_placeholder_url = 'http://www.splicemachine.com/wp-content/plugins/gravity-forms-placeholder-support-add-on/jquery.placeholder-1.0.1.js';</script>
+  <script type="text/javascript" src="http://www.splicemachine.com/wp-includes/js/comment-reply.min.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.splicemachine.com/wp-content/plugins/gravity-forms-placeholder-support-add-on/gfplaceholderaddon.js?ver=1.0"></script> 
+  <script type="text/javascript" src="https://ssl-munchkin.marketo.net/js/munchkin.js?ver=44633"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var marketo_vars = {"munchkin_id":"331-FEU-348"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.splicemachine.com/wp-content/plugins/marketo/includes/marketo.js?ver=4.0.1"></script> 
+  <script>var pltNewTabURLs = ["https:\/\/splicemachine.zendesk.com\/hc\/en-us","http:\/\/www.ventanaresearch.com\/LeadershipAwardAnnouncement2014\/","http:\/\/www.splicemachine.com\/gartner-names-splice-machine-2014-cool-vendor-2\/","http:\/\/tech.fortune.cnn.com\/2014\/05\/21\/how-a-scrappy-young-startup-plans-to-turn-the-massive-database-market-on-its-ear\/","http:\/\/www.businessinsider.com\/12-hottest-data-center-startups-2014-5","http:\/\/www.redherring.com\/events\/rhna\/2014-red-herring-north-america-winners\/","http:\/\/www.cio.com\/article\/751572\/10_Hot_Hadoop_Startups_to_Watch_","http:\/\/searchdatamanagement.techtarget.com\/news\/2240235464\/Splice-Machine-goes-GA-joins-SQL-on-Hadoop-database-fray","http:\/\/www.sfdama.org\/DAMADay2014\/damadayhome\/damadayhome.html","http:\/\/strataconf.com\/big-data-conference-ca-2015"];(function(){jQuery(function(e){return e("body").on("click","a",function(t){var n;n=e(this);if(e.inArray(n.attr("href"),pltNewTabURLs)>-1)return n.attr("target","_blank")})})}).call(this);</script>
+  <!-- here comes the javascript --> 
+  <script type="text/javascript">
+	var menuQue = [];
+	var windowWidth = jQuery(window).width();
+	function ztf_resized_window() {
+		if(windowWidth == jQuery(window).width()) return true;
+		windowWidth = jQuery(window).width();
+
+		jQuery('.team-dynamic').remove();
+		clearTimeout(jQuery.data(this, 'resizeTimer'));
+  		jQuery.data(this, 'resizeTimer', setTimeout(function() {
+							//For only homepage resize
+				jQuery('.nr-box > a').unbind('click');
+				if (parseInt(jQuery(".mediaJS").css("max-width")) <= 767 ){
+					//Bind our accordions manually
+					jQuery('.nr-box-content').hide();
+					jQuery('.nr-box > a').bind("click", function(e) {
+						e.preventDefault();
+						jQuery('.nr-box-content').toggle().not(jQuery(this).closest('.nr-box').find('.nr-box-content')).hide();
+					});
+					jQuery('.tab').hide();
+					jQuery('.tabbutton').removeClass('active-tab');
+				}
+				else {
+					jQuery('.tab').hide();
+					jQuery('.tab').first().show();
+					jQuery('.tabbutton').removeClass('active-tab');
+					jQuery('.tabbutton').first().addClass('active-tab');
+					jQuery('.nr-box-content').show();
+				}
+						//For all pages resize
+			//Fix Menu for mobile sizes 
+			jQuery('#header .navbar a').unbind('click'); 
+			if (parseInt(jQuery(".mediaJS").css("max-width")) <= 767 ){ 
+				jQuery('#header .navbar a').bind("click touchstart", debounce(250, function(e) { 
+					//alert('clicked'); 
+					if (jQuery(this).data('clicked_once')) { 
+						// this is the second click - let it link out 
+						return true; 
+					} else { 
+						//Return true if only one link - (no submenus) 
+						if(!jQuery(this).parent().find('ul').length) 
+							return true; e.preventDefault(); 
+						//Remove closeable states from submenus & outside menus but NOT parents (so we can go deeper) 
+						jQuery(this).closest('.navbar-collapse').find('li')
+							.not(jQuery(this).closest('li'))
+							.not(jQuery(this).closest('li').parent().closest('li'))
+							.not(jQuery(this).closest('li').parent().closest('li').parent().closest('li'))
+							.find('a').removeClass('iscloseable').data('clicked_once', false).parent().removeClass('hovered'); 
+						if(jQuery(this).hasClass('iscloseable') && parseInt(jQuery(".mediaJS").css("min-width")) >= 768) { 
+							return true; // full tablet - return true for reg menu 
+						} else if (jQuery(this).hasClass('iscloseable')) { 
+							//Close it by: 
+							//Remove closable style 
+							//Reset clickable status 
+							//Remove hover from parent 
+							jQuery(this).removeClass('iscloseable').data('clicked_once', false).parent().removeClass('hovered'); 
+							//Clear the que of accordions 
+							menuQue = []; 
+							return false;; 
+						} else { 
+							// element has not been tapped (hovered) yet so: 
+							//Set clickable status for next click 
+							//Add hover to parent 
+							jQuery(this).data('clicked_once', true).parent().addClass('hovered'); 
+							//Timeout to reset accordion functionality 
+							menuQue.push(jQuery(this)); 
+							setTimeout(function(){ 
+								if(menuQue[0].parent().hasClass('hovered')) { 
+									menuQue[0].data('clicked_once', false).addClass('iscloseable'); 
+								} menuQue.shift(); 
+							},4000); //For 4 Seconds the link will be active 
+							return false; 
+						} 
+					} 
+				})); 
+			} else { 
+				jQuery('#header .navbar a').unbind("touchstart click"); 
+			}
+		}, 0));
+	}
+
+	function scrollToElement(ele) {
+		if (parseInt(jQuery(".mediaJS").css("max-width")) <= 767 ){ 
+	    	jQuery(window).scrollTop(ele.offset().top - 20).scrollLeft(ele.offset().left);
+	    }
+	    else {
+	    	jQuery(window).scrollTop(ele.offset().top - 175).scrollLeft(ele.offset().left);
+	    }
+	}
+
+	jQuery(window).load(function() {
+    	if(window.location.href.indexOf("#webinars") >= 0) {
+	        setTimeout(function(){ scrollToElement(jQuery('.scroll-webinar')); }, 50);
+	    }
+	});
+
+	jQuery(document).ready(function ($){
+		$( ".tabbutton" ).click(function(e) {
+			e.preventDefault();
+			//hide all tabs
+			if (parseInt(jQuery(".mediaJS").css("max-width")) <= 767 ) {
+				$('.tab').toggle().not($('#'+jQuery(this).attr('data-trigger'))).hide();
+				$('.tabbutton').removeClass('active-tab');
+				if($('#'+jQuery(this).attr('data-trigger')).is(':visible')) $(this).addClass('active-tab');
+			} else {	
+				$('.tab').hide();
+				$('#'+jQuery(this).attr('data-trigger')).show();
+				$('.tabbutton').addClass('active-tab').not($(this)).removeClass('active-tab');
+			}
+		});
+		$( "#header .navbar-toggle" ).click(function() {
+			//show or hide menu
+			$('#header .navbar-collapse').toggle();
+		});
+		$('.featherbox-image').click(function() {
+			ztf_show_lightbox('<img src="'+$(this).attr('data-img-large')+'" alt="large-image" />');
+		});
+		$('#header .navbar .sub-menu').parent().addClass('hasSubMenu');
+		$('#sidebar form input[type="search"]').attr( 'placeholder','SEARCH BLOG');
+		$('#pagination span.pages').text('Pages');
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (parseInt(jQuery(".mediaJS").css("max-width")) <= 767 ) {
+		      	var hOffset = 20;
+		      } else {
+		      	var hOffset = 170;
+		      }
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: ((target.offset().top)-hOffset)
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+
+
+								//$( ".sp-default .default-mainContent img" ).wrap( "<div class='image-wrapper'></div>" );
+		//$( ".sp-default .default-newsroom img" ).unwrap( "<div class='image-wrapper'></div>" );
+		/*-- Resize Timeout --*/
+		jQuery(window).resize(function() {
+			ztf_resized_window();
+		});
+		ztf_resized_window();
+		setTimeout(function(){ ztf_resized_window(); },100);
+				/*-- Carousel --*/
+		var jcarousel = $('.jcarousel');
+        jcarousel
+            .on('jcarousel:reload jcarousel:create', function () {
+                var width = jcarousel.innerWidth();
+                if (width >= 600) {
+                    width = width / 6;
+                } else if (width >= 550) {
+                    width = width / 4;
+                } else if (width >= 400) {
+                    width = width / 1;
+                }
+                jcarousel.jcarousel('items').css('width', width + 'px');
+            })
+            .jcarousel({
+                wrap: 'circular'
+            });
+        $('.jcarousel-control-prev')
+            .jcarouselControl({
+                target: '-=1'
+            });
+        $('.jcarousel-control-next')
+            .jcarouselControl({
+                target: '+=1'
+            });
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function() {
+                $(this).removeClass('active');
+            })
+            .on('click', function(e) {
+                e.preventDefault();
+            })
+            .jcarouselPagination({
+                perPage: 1,
+                item: function(page) {
+                    return '<a href="#' + page + '">' + page + '</a>';
+                }
+            });
+        /*-- End Carousel --*/
+         /* -- End if Front Page -- */
+	});
+	function ztf_show_lightbox (content) {
+		jQuery('#featherLightContentTemp').html(content);
+		jQuery('#featherlight-trigger').trigger('click');
+		jQuery('.featherlight-content .featherlight-inner').show();
+	}
+	function debounce(guardTime, func) { 
+		var last = 0; if (typeof guardTime === "function") { func = guardTime; guardTime = 100; } if (!guardTime) { throw "No function given to debounce"; } if (!func) { throw "No func given to debounce"; } return function() { var now = +new Date(); if (!last || (now - last) > guardTime) { last = now; return func.apply(this, arguments); } }; 
+	}
+			
+</script> 
+  <script type="text/javascript">
+document.write(unescape("%3Cscript src='//munchkin.marketo.net/munchkin-beta.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+  <script>Munchkin.init('331-FEU-348');</script> 
+  <script type="text/javascript" language="javascript">llactid=22884</script> 
+  <script type="text/javascript" language="javascript" src="http://t1.trackalyzer.com/trackalyze.js"></script> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-35630173-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+  <!-- Google Code for Remarketing Tag --> 
+  <!--
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+---------------------------------------------------> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 980692398;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script> 
+  <noscript> 
+   <div style="display:none;"> 
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/980692398/?value=0&amp;guid=ON&amp;script=0 <http://googleads.g.doubleclick.net/pagead/viewthroughconversion/980692398/?value=0&amp;guid=ON&amp;script=0> "> 
+   </div> 
+  </noscript> 
+  <script src="//platform.twitter.com/oct.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+twttr.conversion.trackPid('l4prx');
+</script> 
+  <noscript> 
+   <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4prx&amp;p_id=Twitter"> 
+   <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l4prx&amp;p_id=Twitter"> 
+  </noscript> 
+  <script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '524676447662324']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script> 
+  <noscript>
+   <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=524676447662324&amp;ev=PixelInitialized">
+  </noscript> 
+  <!--[if lt IE 9]>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+		
+    });
+</script>
+<style type="text/css">
+  body {min-width: 980px !important; }
+</style>
+<![endif]-->  
+ </body>
+</html>

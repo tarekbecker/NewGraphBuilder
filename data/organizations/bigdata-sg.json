@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "f69604be314df9aa3f5cdfca888f76b3",
+    "type": "Organization",
+    "properties": {
+      "permalink": "bigdata-sg",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": null,
+      "name": "Bigdata.sg",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "total_students": null,
+      "school_type": null,
+      "role_company": true,
+      "short_description": "Bigdata.sg",
+      "stock_symbol": null,
+      "num_members": null,
+      "num_alumni": null,
+      "created_at": 1403468198,
+      "updated_at": 1412051598,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "current_team": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/bigdata-sg/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "John",
+            "last_name": "Berns",
+            "title": "Co-Founder & Organizer",
+            "started_on": null,
+            "path": "person/john-berns",
+            "created_at": 1403467688,
+            "updated_at": 1412051602
+          }
+        ]
+      },
+      "founders": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/bigdata-sg/founders",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Person",
+            "name": "John Berns",
+            "path": "person/john-berns",
+            "created_at": 1403467688,
+            "updated_at": 1412051602
+          }
+        ]
+      }
+    }
+  }
+}

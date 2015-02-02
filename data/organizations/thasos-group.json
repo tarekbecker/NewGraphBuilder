@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "f36d9a411486675e5fdebe8630e48ad8",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "permalink": "thasos-group",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "name": "Thasos Group",
+      "short_description": "Thasos Group provides big data analyzing solutions that measure real-time company fundamentals and macro-economic developments.",
+      "homepage_url": "http://www.thasosgroup.com",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "created_at": 1324651360,
+      "updated_at": 1414488765,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "current_team": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/thasos-group/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "Alex",
+            "last_name": "Pentland",
+            "title": "Co-founder and Chief Sociometrician",
+            "started_on": "2012-01-01",
+            "path": "person/alex-pentland",
+            "created_at": 1212924464,
+            "updated_at": 1397989228
+          },
+          {
+            "first_name": "Greg",
+            "last_name": "Skibiski",
+            "title": "Founder & CEO",
+            "started_on": null,
+            "path": "person/greg-skibiski",
+            "created_at": 1212924464,
+            "updated_at": 1397989228
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/thasos-group/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Business Analytics",
+            "uuid": "2eecf11d5b07d3d2a042643c5025e4ec",
+            "path": "category/business analytics/2eecf11d5b07d3d2a042643c5025e4ec",
+            "created_at": 1397980728,
+            "updated_at": 1417157152
+          },
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1417159419
+          },
+          {
+            "type": "Category",
+            "name": "Enterprises",
+            "uuid": "2397e6774223ced07231fe0b643204f9",
+            "path": "category/enterprises/2397e6774223ced07231fe0b643204f9",
+            "created_at": 1397980727,
+            "updated_at": 1417173615
+          }
+        ]
+      },
+      "founders": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/thasos-group/founders",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Person",
+            "name": "Greg Skibiski",
+            "path": "person/greg-skibiski",
+            "created_at": 1212924464,
+            "updated_at": 1397989228
+          },
+          {
+            "type": "Person",
+            "name": "Alex Pentland",
+            "path": "person/alex-pentland",
+            "created_at": 1212924464,
+            "updated_at": 1397989228
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/thasos-group/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.thasosgroup.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1324651360,
+            "updated_at": 1397987610
+          }
+        ]
+      }
+    }
+  }
+}

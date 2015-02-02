@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "77b50393a0bfaf812e55feaa3cdc7b92",
+    "type": "Organization",
+    "properties": {
+      "short_description": "Early-stage investors, Company builders. Focus on mobile, robots & big-data.",
+      "founded_on_day": 15,
+      "founded_on_trust_code": 7,
+      "founded_on_month": 1,
+      "founded_on_year": 2013,
+      "founded_on": "2013-01-15",
+      "permalink": "jtdk",
+      "primary_role": "investor",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://www.jtdk.net",
+      "name": "JTDK Corporation",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "email_address": "jtdk.corp@gmail.com",
+      "description": "JTDK is an early-stage seed fund and incubator program. They invest primarily in B2C internet startups, big-data services and mobile games. Their initial investment size is typically $20K-$50K.\n",
+      "role_investor": null,
+      "secondary_role_venture_capital": null,
+      "secondary_role_seed": true,
+      "secondary_role_incubator": true,
+      "investment_size_currency_code": null,
+      "created_at": 1401379517,
+      "updated_at": 1412713569,
+      "total_funding_usd": 0,
+      "number_of_investments": 1
+    },
+    "relationships": {
+      "investments": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/jtdk/investments",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "InvestorInvestment",
+            "money_invested": null,
+            "money_invested_currency_code": "USD",
+            "money_invested_usd": null,
+            "funding_round": {
+              "path": "funding-round/0f356f6276628c534fce33365ff3e2a1"
+            },
+            "invested_in": {
+              "type": "Organization",
+              "name": "Red Carrots Studio",
+              "path": "organization/red-carrots-studio"
+            }
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/jtdk/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1400524408/flncurzfju49l6uqpwpv.png",
+            "created_at": 1400524379,
+            "updated_at": 1400524379
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/jtdk/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.jtdk.net",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1400523622,
+            "updated_at": 1400523622
+          }
+        ]
+      }
+    }
+  }
+}

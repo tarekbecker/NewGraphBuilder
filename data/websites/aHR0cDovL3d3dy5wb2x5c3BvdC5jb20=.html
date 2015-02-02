@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="fr" lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Language" content="fr"> 
+  <title>PolySpot, infrastructure d'accès unifié à l'information basée sur Lucene Solr</title> 
+  <meta name="keywords" content="PolySpot, Accès unifié à l'information, Infrastructure de recherche, Lucene, Apache, Solr, Search Engine, moteur de recherche, enterprise search,Search Based Applications, SBA"> 
+  <meta name="description" content="Infrastructure d'accès unifié à l'information, basée sur Apache Lucene Solr."> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="content-language" content="fr"> 
+  <meta http-equiv="Cache-Control" content="max-age=604800, public"> 
+  <meta name="msvalidate.01" content="A6CD33710E312C506C30AFE330EE45F7"> 
+  <meta name="google-site-verification" content="LIoRSqTjUWr7tmXa6DYVy2jDAGoepKNv6Z1rmiL1q_k"> 
+  <meta name="bitly-verification" content="71dc23687ec7"> 
+  <link rel="stylesheet" type="text/css" href="css/global.css"> 
+  <link rel="stylesheet" type="text/css" href="css/caroussel.css"> 
+  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+  <link rel="shortcut icon" type="image/x-icon" href="theme/favicon.ico"> 
+  <script type="text/javascript" src="js/jquery.tools.min.js"></script> 
+  <script type="text/javascript" src="js/jScrollPane.js"></script> 
+  <script type="text/javascript" src="js/global.js"></script> 
+  <script type="text/javascript" src="js/index.js"></script> 
+ </head> 
+ <body onkeydown="detectTouche(event, 'fr')"> 
+  <div id="contain"> 
+   <div class="aRight" id="flag"> 
+    <select class="input_select" id="select_langue" style="width:80px;" onchange="select_language('fr')"><option selected value="fr">Français</option><option value="en">English</option></select> 
+   </div> 
+   <div class="toLeft">
+    <a href="./"><img src="theme/polyspot-logo.png" alt="PolySpot" title="PolySpot"></a>
+   </div> 
+   <div>
+    <img src="theme/open-search-solutions.png" alt="Open Search Solutions">
+   </div> 
+   <div id="mask1"></div> 
+   <div id="mask2"></div> 
+   <div id="mainNav"> 
+    <ul class="first"> 
+     <li class="actif"><a class="home" href="./"><img src="theme/home.png" alt="Accueil" width="10" height="10"></a></li> 
+     <li><a href="http://www.polyspot.com/produits/infowarehouse.html">Produits</a> 
+      <ul class="second hide"> 
+       <li><a href="http://www.polyspot.com/produits/infowarehouse.html">InfoWarehouse</a></li> 
+       <li><a href="http://www.polyspot.com/produits/polyspot-enterprise-search.html">PolySpot Enterprise Search</a></li> 
+       <li><a href="http://www.polyspot.com/produits/connecteurs-polyspot.html">Connecteurs</a></li> 
+       <li><a href="http://www.polyspot.com/produits/universal-information-access.html">Universal Information Access</a></li> 
+       <li><a href="http://www.polyspot.com/produits/technologies-lucene-solr.html">Technologies Lucene Solr</a></li> 
+       <li><a href="http://www.polyspot.com/produits/customermatrix.html">CustomerMatrix</a></li> 
+      </ul> </li> 
+     <li><a href="http://www.polyspot.com/solutions/recherche-en-entreprise.html">Solutions</a> 
+      <ul class="second hide"> 
+       <li><a href="http://www.polyspot.com/solutions/recherche-en-entreprise.html">Recherche en entreprise</a></li> 
+       <li><a href="http://www.polyspot.com/solutions/management-de-l-information.html">Management de l'information</a></li> 
+       <li><a href="http://www.polyspot.com/solutions/recherche-site-internet.html">Recherche pour site Internet</a></li> 
+       <li><a href="http://www.polyspot.com/solutions/helpdesk-et-support-client.html">Helpdesk et Support Client</a></li> 
+       <li><a href="http://www.polyspot.com/solutions/veille-informationnelle.html">Veille Informationnelle</a></li> 
+      </ul> </li> 
+     <li><a href="http://www.polyspot.com/services/accompagnement-polyspot.html">Services</a> 
+      <ul class="second hide"> 
+       <li><a href="http://www.polyspot.com/services/accompagnement-polyspot.html">Conseil</a></li> 
+       <li><a href="http://www.polyspot.com/services/formation.html">Formation</a></li> 
+       <li><a href="http://www.polyspot.com/services/support-polyspot.html">Support</a></li> 
+      </ul> </li> 
+     <li><a href="http://www.polyspot.com/partenaires/integrateurs-polyspot.html">Partenaires</a> 
+      <ul class="second hide"> 
+       <li><a href="http://www.polyspot.com/partenaires/integrateurs-polyspot.html">Partenaires intégrateurs</a></li> 
+       <li><a href="http://www.polyspot.com/partenaires/partenaires-technologiques.html">Partenaires technologiques</a></li> 
+       <li><a href="http://www.polyspot.com/partenaires/ecosysteme-partenaires-de-polyspot.html">Devenir Partenaire</a></li> 
+      </ul> </li> 
+     <li><a href="http://www.polyspot.com/clients/clients-polyspot.html">Clients</a> 
+      <ul class="second hide"> 
+       <li><a href="http://www.polyspot.com/clients/clients-polyspot.html">Clients PolySpot</a></li> 
+       <li><a href="http://www.polyspot.com/clients/industrie-production-et-services.html">Industrie, Production et Services</a></li> 
+       <li><a href="http://www.polyspot.com/clients/administration-publique-et-territoriale.html">Administration</a></li> 
+       <li><a href="http://www.polyspot.com/clients/banque-assurance.html">Banque Assurance</a></li> 
+       <li><a href="http://www.polyspot.com/clients/service-en-ligne-publishing.html">Services en ligne, Publishing</a></li> 
+       <li><a href="http://www.polyspot.com/clients/temoignages-de-clients-polyspot.html">Témoignages</a></li> 
+       <li><a href="http://www.polyspot.com/clients/benefices-clients.html">Bénéfices clients</a></li> 
+      </ul> </li> 
+     <li><a href="http://www.polyspot.com/ressources/documentation.html">Ressources</a> 
+      <ul class="second hide"> 
+       <li><a href="http://www.polyspot.com/ressources/documentation.html">Documentation</a></li> 
+      </ul> </li> 
+     <li><a href="http://www.polyspot.com/societe/contactez-nous.html">Société</a> 
+      <ul class="second hide"> 
+       <li><a href="http://www.polyspot.com/societe/contactez-nous.html">Contact</a></li> 
+       <li><a href="http://www.polyspot.com/societe/a-propos-de-polyspot.html">A propos de PolySpot</a></li> 
+       <li><a href="http://www.polyspot.com/societe/actualites-polyspot.html">Actualités</a></li> 
+       <li><a href="http://www.polyspot.com/societe/revue-de-presse-polyspot.html">Revue de presse</a></li> 
+       <li><a href="http://www.polyspot.com/societe/evenements.html">Evénements</a></li> 
+       <li><a href="http://www.polyspot.com/societe/notre-vision.html">Vision</a></li> 
+       <li><a href="http://www.polyspot.com/societe/equipe-polyspot.html">Equipe</a></li> 
+       <li><a href="http://www.polyspot.com/societe/offres-d-emploi.html">Offres d'emploi</a></li> 
+      </ul> </li> 
+     <li><a href="blog/" target="_blank"> BLOG </a></li> 
+    </ul>
+   </div> 
+   <div class="pAbsolute mTop27"> 
+    <div id="scroll" class="scrollable"> 
+     <div id="scroll_index" class="items"> 
+      <div> 
+       <div style="width:855px;">
+        <img width="855" height="228" src="images/polyspot1ab.jpg" alt="">
+       </div> 
+       <div class="texte_banniere" style="padding:10px; width:300px;"></div> 
+      </div>
+      <div> 
+       <div style="width:855px;">
+        <img width="855" height="228" src="images/infowarehouse-structured-unstructured.png" alt="infowarehouse structured unstructured">
+       </div> 
+       <div class="texte_banniere" style="padding:10px; width:300px;"></div> 
+      </div>
+      <div> 
+       <div style="width:855px;">
+        <img width="855" height="228" src="images/big-data-enterprise-search.png" alt="big data enterprise search">
+       </div> 
+       <div class="texte_banniere" style="padding:10px; width:300px;"></div> 
+      </div>
+      <div> 
+       <div style="width:855px;">
+        <img width="855" height="228" src="images/solr-mongodb.png" alt="solr mongo db">
+       </div> 
+       <div class="texte_banniere" style="padding:10px; width:300px;"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="scroll_navigation"> 
+     <div id="scroll_navigation_content" class="toLeft"> 
+      <div id="flowtabs" class="mTop3 mLeft5 toLeft"> 
+       <a id="t1" class="liste" href="#">&nbsp;</a>&nbsp;
+       <a id="t2" class="liste" href="#">&nbsp;</a>&nbsp;
+       <a id="t3" class="liste" href="#">&nbsp;</a>&nbsp;
+       <a id="t4" class="liste" href="#">&nbsp;</a>&nbsp; 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="home_contain"> 
+    <div id="home_contain_left"> 
+     <div class="mTop10 cadre15 p10" style="line-height:16px; width:685px;"> 
+      <strong><span style="font-size: 16px; color: #525051;"><span><span>Introduction CustomerMatrix in France - An application of Commercial Excellence in exclusive agreement with PolySpot </span></span><br><br></span></strong>
+      <span style="color: #525051; font-size: 16px;"><a href="http://www.customermatrix.com" target="_blank"><span><span>CustomerMatrix</span></span></a><span><span> PolySpot and form an exclusive agreement for the introduction in France of an application of business excellence, taking advantage of two technologies: flat the research Big Data PolySpot, and predictive analytics technology CustomerMatrix. </span><span>This new application eliminates empiricism business decisions by converting historical data into smart choice and suggesting the optimal choices to the seller, step-by-step. </span><span>The customer experience points to a minimum sales growth of 7%.&nbsp; </span></span><br><br></span>
+      <strong><em style="color: #525051; font-size: 16px;"><span><span>Visit </span></span><a href="http://www.customermatrix.com/" target="_blank"><span><span>CustomerMatrix.com</span></span></a><span><span> for more.</span></span></em></strong> 
+     </div> 
+     <div class="toLeft mTop12 aCenter" style="width:142px;" id="quick_lien_1"> 
+      <div>
+       <a href="http://www.polyspot.com/clients/clients-polyspot.html"><img width="136" height="121" src="theme/business_case_off.png" alt="Business Case" onmouseover="this.src='theme/business_case_on.png'" onmouseout="this.src='theme/business_case_off.png'"></a>
+      </div> 
+      <div class="mTop-25">
+       <a class="quicklinks" href="http://www.polyspot.com/clients/clients-polyspot.html">BUSINESS CASE</a>
+      </div> 
+     </div> 
+     <div class="toLeft mTop12 aCenter" style="width:141px;" id="quick_lien_2"> 
+      <div>
+       <a href="http://www.polyspot.com/partenaires/ecosysteme-partenaires-de-polyspot.html"><img width="135" height="121" onmouseover="this.src='theme/partner_on.png'" onmouseout="this.src='theme/partner_off.png'" src="theme/partner_off.png" alt="DEVENIR PARTENAIRE"></a>
+      </div> 
+      <div class="mTop-25">
+       <a class="quicklinks" href="http://www.polyspot.com/partenaires/ecosysteme-partenaires-de-polyspot.html">DEVENIR PARTENAIRE</a>
+      </div> 
+     </div> 
+     <div class="toLeft mTop12 aCenter" style="width:142px;" id="quick_lien_3"> 
+      <div>
+       <a href="http://www.polyspot.com/solutions/recherche-en-entreprise.html"><img width="136" height="121" onmouseover="this.src='theme/solutions_on.png'" onmouseout="this.src='theme/solutions_off.png'" src="theme/solutions_off.png" alt="Solutions"></a>
+      </div> 
+      <div class="mTop-25">
+       <a class="quicklinks" href="http://www.polyspot.com/solutions/recherche-en-entreprise.html">SOLUTIONS</a>
+      </div> 
+     </div> 
+     <div class="toLeft mTop12 aCenter" style="width:141px;" id="quick_lien_4"> 
+      <div>
+       <a href="http://www.polyspot.com/clients/benefices-clients.html"><img width="136" height="121" src="theme/immediate_off.png" alt="BÉNÉFICES CLIENTS" onmouseover="this.src='theme/immediate_on.png'" onmouseout="this.src='theme/immediate_off.png'"></a>
+      </div> 
+      <div class="mTop-25">
+       <a class="quicklinks" href="http://www.polyspot.com/clients/benefices-clients.html">BÉNÉFICES CLIENTS</a>
+      </div> 
+     </div> 
+     <div class="toLeft mTop12 aCenter" id="quick_lien_5" style="width:142px;"> 
+      <div>
+       <a href="http://www.polyspot.com/societe/contactez-nous.html"><img width="136" height="121" onmouseover="this.src='theme/contact_on.png'" onmouseout="this.src='theme/contact_off.png'" src="theme/contact_off.png" alt="Contact"></a>
+      </div> 
+      <div class="mTop-25">
+       <a class="quicklinks" href="http://www.polyspot.com/societe/contactez-nous.html">CONTACT</a>
+      </div> 
+     </div> 
+     <div class="clear">
+      &nbsp;
+     </div> 
+     <br> 
+     <div id="temoignage" class="cadre15 mTop20" style="height:200px;"> 
+      <p style="text-align: left;"><span style="font-size: x-small;"><strong><span style="font-size: small;"><strong><a class="lien_orange" title="PolySpot Agile Enterprise Search Infrastructure " href="/ressources/documentation/polyspot-agile-enterprise-search-infrastructure.html">PolySpot Agile Enterprise Search Infrastructure</a></strong></span><br></strong></span></p> 
+      <p><a class="lien_orange" title="PolySpot Agile Enterprise Search Infrastructure " href="/ressources/documentation/polyspot-agile-enterprise-search-infrastructure.html"><img style="float: left; border-right: 5px solid white;" src="/images/agile-enterprise-search-infrastructure-100.png" alt="Agile Enterprise Search Infrastructure"></a></p> 
+      <p style="text-align: left;"><span style="font-size: small;">A l'heure du Big Data,&nbsp;l'infrastructure agile PolySpot permet à chaque collaborateur d’accéder facilement à l’information dont il a besoin au bon moment et de déceler les signaux faibles, sources d'opportunités non décelables à l'oeil nu.</span></p> 
+      <p style="text-align: left;"><span style="font-size: x-small;"><span style="font-size: small;">Cette fiche produit décrit les réponses de PolySpot aux challenges du Big Data et les différents modules d'accès, de traitement et d'enrichissement sémantiques.</span><br></span></p> 
+      <p style="text-align: right;"><span style="font-size: small;"><strong><a class="lien_orange" title="PolySpot Agile Enterprise Search Infrastructure " href="/ressources/documentation/polyspot-agile-enterprise-search-infrastructure.html">Télécharger</a></strong></span></p> 
+      <div class="clear">
+       &nbsp;
+      </div> 
+     </div> 
+     <div style="width:332px; margin-left:373px; "> 
+      <a id="lien_news" class="lien_home_on cadreTopLeft10" href="javascript:afficher_news();">&nbsp;&nbsp;ACTUALITÉS&nbsp;&nbsp;</a>
+      <a id="lien_events" class="lien_home_off cadreTopRight10" href="javascript:afficher_events();">&nbsp;ÉVÉNEMENTS&nbsp;</a>
+      <div class="cadre_1" style=" height:205px;">
+       <div id="news">
+        <div class="mTop5">
+         <div class="toLeft mTop5">
+          <img src="theme/puce.png" alt="">
+         </div>
+         <div class="mLeft20">
+          <h2><b><a class="news_titre" href="societe/actualites/polyspot-lance-infowarehouse.html">PolySpot lance InfoWarehouse</a></b></h2> 
+          <a class="news_texte" href="societe/actualites/polyspot-lance-infowarehouse.html">et favorise l’exploitation du Big Data avec une vision unifiée et globale de l’information d’entreprise</a>
+         </div>
+        </div>
+        <div class="mTop5">
+         <div class="toLeft mTop5">
+          <img src="theme/puce.png" alt="">
+         </div>
+         <div class="mLeft20">
+          <h2><b><a class="news_titre" href="societe/actualites/les-scouts-francophones-de-belgique-ont-choisi-la-solution-polyspot-.html">Les Scouts francophones de Belgique ont choisi la solution PolySpot </a></b></h2> 
+          <a class="news_texte" href="societe/actualites/les-scouts-francophones-de-belgique-ont-choisi-la-solution-polyspot-.html">PolySpot dévoile la richesse du patrimoine des Scouts ASBL </a>
+         </div>
+        </div>
+        <div class="mTop5">
+         <div class="toLeft mTop5">
+          <img src="theme/puce.png" alt="">
+         </div>
+         <div class="mLeft20">
+          <h2><b><a class="news_titre" href="societe/actualites/nexans-selectionne-le-moteur-de-recherche-polyspot-pour-son-intranet.html">Nexans sélectionne le moteur de recherche PolySpot pour son Intranet</a></b></h2> 
+          <a class="news_texte" href="societe/actualites/nexans-selectionne-le-moteur-de-recherche-polyspot-pour-son-intranet.html">PolySpot favorise le travail collaboratif au sein de l’écosystème industriel du Groupe</a>
+         </div>
+        </div>
+        <div class="mTop5">
+         <img src="theme/puce.png" alt="">&nbsp;&nbsp;&nbsp;
+         <a href="http://www.polyspot.com/societe/actualites-polyspot.html" class="news_titre">Voir d'autres actualités...</a>
+        </div>
+       </div>
+       <div id="events" class="hide">
+        <div class="mTop5">
+         <div class="toLeft mTop5">
+          <img src="theme/puce.png" alt="">
+         </div>
+         <div class="mLeft20">
+          <h2><b><a class="news_titre" href="societe/evenements/journee-de-rencontre--vision-360-des-moteurs-de-recherche-d-entreprise.html">Journée de rencontre : Vision 360 des moteurs de recherche d'entreprise</a></b></h2> 
+          <a class="news_texte" href="societe/evenements/journee-de-rencontre--vision-360-des-moteurs-de-recherche-d-entreprise.html">Le 30 mai au CNAM à Paris</a>
+         </div>
+        </div>
+        <div class="mTop5">
+         <div class="toLeft mTop5">
+          <img src="theme/puce.png" alt="">
+         </div>
+         <div class="mLeft20">
+          <h2><b><a class="news_titre" href="societe/evenements/decideurs--tv-big-data-big-revolution--interview-de-gilles-andre.html">Decideurs : TV Big Data, Big Révolution ? Interview de Gilles André</a></b></h2> 
+          <a class="news_texte" href="societe/evenements/decideurs--tv-big-data-big-revolution--interview-de-gilles-andre.html">Pour surnager dans cet océan, une seule solution : trouver un moyen de collecter et de traiter ces données à très grande échelle</a>
+         </div>
+        </div>
+        <div class="mTop5">
+         <div class="toLeft mTop5">
+          <img src="theme/puce.png" alt="">
+         </div>
+         <div class="mLeft20">
+          <h2><b><a class="news_titre" href="societe/evenements/a-la-recherche-du-big-data---video.html">A la recherche du Big Data - Vidéo</a></b></h2> 
+          <a class="news_texte" href="societe/evenements/a-la-recherche-du-big-data---video.html">Conférence avec Noopsis au salon Documation</a>
+         </div>
+        </div>
+        <div class="mTop5">
+         <img src="theme/puce.png" alt="">&nbsp;&nbsp;&nbsp;
+         <a href="http://www.polyspot.com/societe/evenements.html" class="news_titre">Voir d'autres évènements...</a>
+        </div>
+       </div>
+      </div> 
+     </div> 
+    </div> 
+    <div id="home_contain_right"> 
+     <!-- Newsletter
+		<div class="bloc_page mTop10 mLeft5">
+			<img src="../theme/bloc_haut_gris.png" alt="" width="130" />
+			<div class="bloc_page_content_gris" style="width:126px;">
+				<div class="titre" style="padding-top:5px;">Newsletter</div>
+					 
+				<div style="padding:12px 5px 10px 5px;">
+						<input type='text' id="mail_newsletter" name="mail_newsletter" class="txt1"style="width:110px; font-size:11px;"  value="Votre e-mail" onfocus="this.value=''" />
+				</div>
+						
+				<div class="aCenter pointer" onclick="subscribe_newsletter('fr')"><img src="theme/inscription.png" alt="Inscription" width="100" height="28" /></div>
+				<div id="newsletter_log" style="color: #f2971d; padding:5px;" >
+							<div id="msg_loading" class="hide"><img src="theme/load.gif" alt="" width="16" height="16" /> Chargement ...</div>
+				</div>  	 
+			</div>
+			<img src="../theme/bloc_bas_gris.png" alt="" width="130" />
+		</div>
+--> 
+     <div class="mTop10"> 
+      <p style="text-align: center;"><a title="One Percent for the Planet" href="http://www.onepercentfortheplanet.org/fr/" target="_blank"><img src="/images/polyspot-membre-1ftp.png" alt="PolySpot Membre 1% For The Planet"></a><br><br><a title="Greencross" href="http://www.gci.ch/" target="_blank"><img src="/images/green-cross.png" alt="Green Cross"></a></p> 
+      <p style="text-align: center;">&nbsp;</p> 
+      <p style="text-align: center;"><span style="font-size: 11px;">Suivez-nous</span></p> 
+      <p style="text-align: center;"><span style="font-size: 11px;"><a href="http://www.twitter.com/PolySpot" target="_blank"><img src="http://twitter-badges.s3.amazonaws.com/twitter-a.png" alt="Suivre PolySpot sur Twitter"></a></span></p> 
+     </div> 
+    </div> 
+    <div class="clear">
+     &nbsp;
+    </div> 
+   </div> 
+   <div id="our_clients"> 
+    <div class="aCenter pTop15 toLeft " style="width:105px; padding-top:32px; color:#808080;">
+     Nos clients
+    </div> 
+    <div class="pointer toLeft">
+     <img width="19" src="theme/clients_prev.png" alt="Previous" onmouseover="moveLayer(1);" onmouseout="clearTimeout(Timer);">
+    </div> 
+    <div id="support" style="position:relative; width:705px; height:77px; overflow:hidden; float:left; " onmouseover="stopLayer();" onmouseout="playLayer();"> 
+     <div id="contenu_logo" style="position:absolute; left:5px; margin-left:0px; width:5300px; padding:8px 15px 15px 15px;">
+       &nbsp;&nbsp;
+      <a href="http://www.eutelsat.com/" target="_blank"><img src="http://www.polyspot.com/images/Eutelsat-Client-PolySpot.png" alt="Eutelsat client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.mediametrie.fr/" target="_blank"><img src="http://www.polyspot.com/images/Mediametrie-client-polyspot.png" alt="Eutelsat client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.eads.com" target="_blank"><img src="http://www.polyspot.com/images/eads-client-polyspot.png" alt="EADS"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.vinci.com/" target="_blank"><img src="http://www.polyspot.com/images/vinci-client-polyspot.png" alt="Vinci client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.elior.com/" target="_blank"><img src="http://www.polyspot.com/images/Elior-Client-PolySpot.png" alt="Elior client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.embraer.com" target="_blank"><img src="http://www.polyspot.com/images/Embraer-Client-PolySpot.png" alt="Embraer client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.bnpparibas.com/" target="_blank"><img src="http://www.polyspot.com/images/BNP-Paribas-Client-PolySpot.png" alt="BNP Paribas client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.schlumberger.com/" target="_blank"><img src="http://www.polyspot.com/images/Schlumberger-Client-PolySpot.png" alt="Schlumberger client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.oseo.fr/" target="_blank"><img src="http://www.polyspot.com/images/Oseo-Client-PolySpot.png" alt="Oseo client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.trinitymirror.com/" target="_blank"><img src="http://www.polyspot.com/images/Trinity-Mirror-Client-PolySpot.png" alt="Trinity Mirror client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.colas.com/" target="_blank"><img src="http://www.polyspot.com/images/Colas-Client-PolySpot.png" alt="Colas client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.eurovia.com/" target="_blank"><img src="http://www.polyspot.com/images/Eurovia-client-PolySpot.png" alt="Eurovia client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.caissedesdepots.fr" target="_blank"><img src="http://www.polyspot.com/images/Caisse-des-depots-client-polyspot.png" alt="Caisse des dépôts client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.bureauveritas.fr/" target="_blank"><img src="http://www.polyspot.com/images/Bureau-Veritas-Client-PolySpot.png" alt="Bureau Veritas client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.natixis.com/" target="_blank"><img src="http://www.polyspot.com/images/Natixis-Client-PolySpot.png" alt="Natixis client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.suez-environnement.fr/" target="_blank"><img src="http://www.polyspot.com/images/Suez-Environnement-Client-PolySpot.png" alt="Suez Environnement client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.allianz.com" target="_blank"><img src="http://www.polyspot.com/images/Allianz-Client-PolySpot.png" alt="Allianz client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.veolia.fr/" target="_blank"><img src="http://www.polyspot.com/images/Veolia-Environnement-Client-PolySpot.png" alt="Veolia Environnement client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.carabinieri.it/" target="_blank"><img src="http://www.polyspot.com/images/Carabinieri-client-PolySpot.png" alt="Carabinieri client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.polfed-fedpol.be/" target="_blank"><img src="http://www.polyspot.com/images/Police-Federale-Belge-Client-PolySpot.png" alt="Police Fédérale Belge client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.banquepopulaire.fr/" target="_blank"><img src="http://www.polyspot.com/images/Banque-Populaire-Client-PolySpot.png" alt="Banque Populaire client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.shiseido.com" target="_blank"><img src="http://www.polyspot.com/images/Shiseido-Client-PolySpot.png" alt="Shiseido client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.berner.fr/" target="_blank"><img src="http://www.polyspot.com/images/Berner-Client-PolySpot.png" alt="Berner client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.eramet.com/" target="_blank"><img src="http://www.polyspot.com/images/Eramet-Client-PolySpot.png" alt="Eramet client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.credit-agricole.fr/" target="_blank"><img src="http://www.polyspot.com/images/Credit-Agricole-Client-PolySpot.png" alt="Crédit Agricole client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.ifremer.fr" target="_blank"><img src="http://www.polyspot.com/images/Ifremer-Client-PolySpot.png" alt="Ifremer client PolySpot"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://www.cr-bourgogne.fr/" target="_blank"><img src="http://www.polyspot.com/images/Conseil-Regional-Bourgogne-Client-PolySpot.png" alt="Conseil Regional Bourgogne client PolySpot"></a>&nbsp;&nbsp; 
+     </div> 
+    </div> 
+    <div class="pointer toLeft" style="padding-top:2px;">
+     <img width="25" src="theme/clients_next.png" alt="Next" onmouseover="moveLayer(-1);" onmouseout="clearTimeout(Timer);">
+    </div> 
+    <div class="clear">
+     &nbsp;
+    </div> 
+   </div> 
+   <div id="footer">
+    <p><br><br></p> 
+    <table border="0" cellspacing="2" cellpadding="5"> 
+     <tbody> 
+      <tr> 
+       <td style="text-align: justify;"><span style="font-size: x-small;">Les solutions de PolySpot sont utilisées chaque jour par des millions de personnes. Les <a class="lien_bleu" title="Clients PolySpot" href="/clients/clients-polyspot.html">clients PolySpot</a>&nbsp;tels que EADS, Allianz, BNP Paribas, Vinci, Bureau Veritas, Nexans, Caisse des Dépôts, Crédit Agricole, Eramet, Eurovia, Eutelsat, Natixis, Oseo, Police Fédérale Belge, Schlumberger, Shiseido, Suez Environnement, Trinity Mirror, Veolia, Sacred Heart University (...) ont implémenté avec succès leurs solutions de recherche et d'accès aux Big Data.</span><span style="font-size: xx-small;"><span style="font-size: x-small;">&nbsp;</span><br></span></td> 
+      </tr> 
+      <tr> 
+       <td style="text-align: justify;"> <p><span style="font-size: x-small;">Valoriser l’information en entreprise, fédérer les collaborateurs, unifier l’accès à l’information structurée et non structurée, construire des applications de recherche&nbsp;: big data, e-discovery, enterprise search, support client, archivage, dématérialisation ou business intelligence. PolySpot est une infrastructure de recherche construite autour des technologies de référence Solr et MongoDB. L’engagement de PolySpot autour des technologies open source permet aux clients PolySpot de bénéficier des technologiques les plus avancées de gestion de l’information.</span></p> </td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <table id="tableau_footer" style="background-color: #ffffff; width: 865px; border: 0pt solid #ffffff; height: 173px;" border="0" cellspacing="2" cellpadding="5" align="center"> 
+     <tbody> 
+      <tr style="height: 35px; font-size: 12px;"> 
+       <td style="border: 1px solid #ffffff; background-color: #f6f6f6;" colspan="5">&nbsp;&nbsp; <a style="color: #808080;" title="A propos de PolySpot" href="/societe/a-propos-de-polyspot.html">A PROPOS</a>&nbsp; |&nbsp; <a title="PolySpot Sitemap" href="/sitemap.xml">PLAN DU SITE</a>&nbsp; |&nbsp; <a title="Twitter PolySpot" href="http://twitter.com/polyspot/"><img style="margin-top: -3px; margin-bottom: -3px;" src="/images/twitter.png" alt="twitter" width="16" height="15"></a>&nbsp;<span><a style="color: #42baf1;" title="Twitter PolySpot" href="http://twitter.com/polyspot/">TWITTER</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a title="english website" href="/en/"><img style="margin-top: -3px; margin-bottom: -3px;" title="PolySpot English Website" src="/images/polyspot-english.png" alt="PolySpot English Website" width="16" height="16"></a>&nbsp; <a title="english website" href="/en/">ENGLISH WEBSITE</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a title="PolySpot Blog" href="/blog/"><img style="margin-top: -3px; margin-bottom: -3px;" title="PolySpot Blog" src="/images/polyspot-blog-icon.png" alt="PolySpot Blog" width="16" height="16"></a>&nbsp; <a title="PolySpot Blog" href="/blog/">BLOG</a>&nbsp;|&nbsp; <a title="Contact PolySpot" href="/societe/contactez-nous.html">CONTACT</a><br></td> 
+      </tr> 
+      <tr style="font-size: 10px;"> 
+       <td style="background-color: #f6f6f6; border: 1px solid #ffffff; width: 20%;" valign="top"><span style="color: #99cc00;"><strong><a title="PolySpot Information At Work" href="/produits/polyspot-information-at-work.html">Produits</a></strong></span><br><a title="PolySpot InforWarehouse" href="/produits/infowarehouse.html">PolySpot InfoWarehouse</a><br><a title="PolySpot Sense Builder" href="/produits/polyspot-information-at-work/polyspot-sense-builder.html">PolySpot Sense Builder</a><br><a title="PolySpot SearchMart" href="/produits/polyspot-information-at-work/polyspot-searchmart.html">PolySpot SearchMart</a><br><a title="PolySpot Enterprise Search" href="/produits/polyspot-enterprise-search.html">PolySpot Enterprise Search</a> <br><a title="Universal Information Access" href="/produits/universal-information-access.html">Universal Information Access</a><br><a title="Liste des connecteurs PolySpot" href="/produits/polyspot-information-access/liste-des-connecteurs-polyspot.html">Liste connecteurs PolySpot</a><br><a title="PolySpot Document Viewer" href="/produits/polyspot-information-access/polyspot-document-viewer.html">Document Viewer</a><br><a title="PolySpot Connectors SDK" href="/produits/universal-information-access/polyspot-connectors-sdk.html">PolySpot Connectors SDK</a></td> 
+       <td style="border: 1px solid #ffffff; background-color: #f6f6f6; text-align: left; width: 20%;" align="center" valign="top"> <p><span style="color: #99cc00;"><strong><a title="Solutions recherche en entreprise" href="/solutions/recherche-en-entreprise.html">Solutions</a></strong></span><br><a title="Solutions recherche en entreprise" href="/solutions/recherche-en-entreprise.html">Recherche en entreprise</a><br><a title="Recherche pour site internet" href="/solutions/recherche-site-internet.html">Recherche pour site Internet<br></a><a title="Management de l'information" href="/solutions/management-de-l-information.html">Management de l'information</a><br><a title="Recherche pour helpdesk et support client" href="/solutions/helpdesk-et-support-client.html">Helpdesk et support client<br></a><a title="Veille informationnelle" href="/solutions/veille-informationnelle.html">Veille informationnelle</a></p> <p><strong><a title="Recherche GED ECM" href="http://ww3.polyspot.com/recherche-ged-ecm.html">Recherche GED ECM</a></strong></p> </td> 
+       <td style="border: 1px solid #ffffff; background-color: #f6f6f6; text-align: left; width: 20%;" align="center" valign="top"><span style="color: #99cc00;"><a title="Technologie" href="/produits/technologie-lucene-solr.html"><strong>Technologie</strong></a><br><a title="Lucene Solr" href="/produits/technologie-lucene-solr.html">Lucene Solr</a><br><br><a title="Accompagnement PolySpot" href="/services/accompagnement-polyspot.html"><strong>Services</strong></a></span><br><a title="Accompagnement PolySpot" href="/services/accompagnement-polyspot.html">Conseil</a><br><a title="Formation PolySpot" href="/services/formation.html">Formation PolySpot</a><br><a title="Support PolySpot" href="/services/support-polyspot.html">Support</a></td> 
+       <td style="background-color: #f6f6f6; border: 1px solid #ffffff; width: 20%;" valign="top"><span style="color: #99cc00;"><a title="Partenaires" href="/partenaires/integrateurs-polyspot.html"><strong>Partenaires</strong></a><br><a title="Partenaires Intégrateurs PolySpot" href="/partenaires/integrateurs-polyspot.html">Partenaires intégrateurs</a><br><a title="Partenaires intégrateurs" href="/partenaires/partenaires-technologiques.html">Partenaires technologiques</a><br><a title="Devenir Partenaire PolySpot" href="/partenaires/ecosysteme-partenaires-de-polyspot.html">Devenir Partenaire PolySpot</a> <p><strong><a title="Clients PolySpot" href="/clients/clients-polyspot.html">Clients</a></strong><br><a title="Clients PolySpot" href="/clients/clients-polyspot.html">Clients PolySpot</a><br><a title="Bénéfices clients PolySpot" href="/clients/benefices-clients.html">Bénéfices clients</a><br><a title="Témoignages clients PolySpot" href="/clients/temoignages-de-clients-polyspot.html">Témoignages clients PolySpot</a></p> </span></td> 
+       <td style="border: 1px solid #ffffff; background-color: #f6f6f6; text-align: left;" align="center" valign="top"> <p><a href="#"></a><span style="color: #99cc00;"><a title="Société" href="/societe/a-propos-de-polyspot.html"><strong>Société</strong></a></span><br><a title="A propos de PolySpot" href="/societe/a-propos-de-polyspot.html">A propos de PolySpot</a><br><a title="Notre vision" href="/societe/notre-vision.html">Vision</a><br><a title="Equipe PolySpot" href="/societe/equipe-polyspot.html">Equipe</a><br><a title="Offres d'emploi" href="/societe/offres-d-emploi.html">Offres d'emploi</a><br><a title="Actualités PolySpot" href="/societe/actualites-polyspot.html">Actualités</a><br><a title="Evénements PolySpot" href="/societe/evenements.html">Evénements</a></p> <p><a title="PolySpot Blog" href="/blog"><strong>Blog</strong></a></p> </td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <p style="text-align: right;"><span style="font-size: x-small;">Copyright © 2013 PolySpot. Tous droits réservés | <a title="Mentions Légales" href="/mentions-legales.html">Mentions Légales</a>.</span></p>
+   </div> 
+  </div> 
+  <script type="text/javascript">
+var _gaq = _gaq || [];
+
+_gaq.push(['_setAccount', 'UA-13105002-1']);
+
+_gaq.push(['_trackPageview']);
+
+(function() {
+
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+})();
+</script> 
+  <script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+  <script>mktoMunchkin("747-NPG-599");</script>  
+ </body>
+</html>

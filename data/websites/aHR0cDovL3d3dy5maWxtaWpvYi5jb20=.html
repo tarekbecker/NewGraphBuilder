@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta name="viewport" content="width=1250"> 
+  <link type="text/css" rel="stylesheet" href="/themes/filmijob/css/estilo.css?v=1"> 
+  <link type="text/css" rel="stylesheet" href="/themes/filmijob/css/jquery.fancybox-1.3.4.css"> 
+  <link type="text/css" rel="stylesheet" href="/themes/bxslider/jquery.bxslider.css"> 
+  <link rel="stylesheet" type="text/css" href="/assets/9d7d181b/css/zocial.css"> 
+  <link rel="stylesheet" type="text/css" href="/assets/bc6d2c16/jui/css/base/jquery-ui.css"> 
+  <link rel="stylesheet" type="text/css" href="/assets/8614cb80/css/jquery.fileupload-ui.css"> 
+  <script type="text/javascript" src="/assets/bc6d2c16/jquery.min.js"></script> 
+  <title>Filmijob, entrevista de trabajo online</title> 
+  <meta name="description" content="Plataforma de entrevista de trabajo online que facilita la conexión entre candidatos y empresas ."> 
+  <meta name="keywords" content="Filmijob, entrevista de trabajo, entrevista de trabajo online"> 
+ </head> 
+ <body> 
+  <div id="page"> 
+   <header id="cabecera-aplicacion"> 
+    <nav id="navegacion-web"> 
+     <ul class="center1180"> 
+      <li class="nav-link"><a href="http://www.filmijob.com/blog">Blog</a></li> 
+      <li class="nav-link"><a href="http://www.filmijob.com/site/menu/contacto">Contacto</a></li> 
+      <li class="nav-link"><a href="http://www.filmijob.com/blog/inversores">Inversores</a></li> 
+      <li></li> 
+     </ul> 
+    </nav> 
+    <div class="center"> 
+     <div class="bk-cabecera bk-izq"> 
+      <ul id="redes-cab"> 
+       <li class="red-cab" id="red-cab-fb"><a href="https://www.facebook.com/pages/FilmiJob/507269289301014?ref=hl" target="_blank"></a></li> 
+       <li class="red-cab " id="red-cab-tw"><a href="http://www.twitter.com/filmijob" target="_blank"></a></li> 
+       <li class="red-cab " id="red-cab-gp"><a href="https://plus.google.com/b/116854310794489478079/116854310794489478079/posts" target="_blank"></a></li> 
+       <li class="red-cab " id="red-cab-in"><a href="http://www.linkedin.com/company/2951015?trk=tyah" target="_blank"></a></li> 
+      </ul> 
+     </div> 
+     <div class="bk-cabecera bk-central"> 
+      <a href="http://www.filmijob.com">
+       <div id="logo"></div></a> 
+     </div> 
+     <div class="bk-cabecera bk-der"> 
+      <a href="javascript:void(0);" class="btn-peq gris texto-botones" id="entrar-empresa-home">Soy empresa</a> 
+      <a href="#cliente_registro" class="btn-peq azulclaro texto-botones fancybox" id="btn-registrame">Registrarme</a> 
+      <a class="btn-peq azuloscuro texto-botones" id="entrar-home">Entrar</a> 
+     </div> 
+     <div id="contenedor-form-entrar"> 
+      <span id="flecha-form-entrar"></span> 
+      <a href="/site/oauth?provider=Facebook&amp;m=1&amp;conf=&amp;oferta=-1" id="log-facebook" class="btn-grande"><span class="icon-fb-blanco"></span><span class="btn-grande-texto">Entrar con Facebook</span></a> 
+      <a href="/site/oauth?provider=LinkedIn&amp;m=1&amp;conf=&amp;oferta=-1" id="log-linkedin" class="btn-grande"><span class="icon-in-blanco"></span><span class="btn-grande-texto">Entrar con LinkedIn</span></a> 
+      <div> 
+       <div class="sep_blanco"></div> 
+       <span class="span_form">or</span> 
+       <div class="sep_blanco"></div> 
+      </div> 
+      <form action="http://www.filmijob.com/site/login" id="login" method="POST"> 
+       <label for="email">Email</label> 
+       <input type="text" name="email" id="email" class="input-login"> 
+       <label for="password">Contraseña</label> 
+       <input type="password" name="password" id="password" class="input-login"> 
+       <input type="submit" id="login-btn" class="azulclaro" value="Entrar"> 
+      </form> 
+     </div> 
+     <div id="contenedor-form-entrar-empresa"> 
+      <span id="flecha-form-entrar-empresa"></span> 
+      <a href="http://www.filmijob.com/empresa/registro" class="btn-peq azulclaro texto-botones" style="display: block; margin: 0 auto 15px auto;" id="btn-registrame">Registrarme</a> 
+      <div> 
+       <div class="sep_blanco"></div> 
+       <span class="span_form">or</span> 
+       <div class="sep_blanco"></div> 
+      </div> 
+      <form action="http://www.filmijob.com/site/login" id="loginEmpresa" method="POST"> 
+       <label for="email">Email</label> 
+       <input type="text" name="email" id="email" class="input-login"> 
+       <label for="password">Contraseña</label> 
+       <input type="password" name="password" id="password" class="input-login"> 
+       <input type="submit" id="login-btn" class="azulclaro" value="Entrar"> 
+      </form> 
+     </div> 
+     <div style="display:none"> 
+      <div id="cliente_registro" class="cliente_registro-fancy2 ovh"> 
+       <div id="mf578" class="titulo-seccion2 width"> 
+        <span id="Titulo-div" class="titulo">Registro</span> 
+       </div> 
+       <div class="registro-con-redes popup"> 
+        <a href="/site/oauth?provider=Facebook&amp;m=2&amp;conf=&amp;oferta=-1" id="log-facebook" class="btn-grande"><span class="icon-fb-blanco"></span><span class="btn-grande-texto">Registro con Facebook</span></a> 
+        <a href="/site/oauth?provider=LinkedIn&amp;m=2&amp;conf=&amp;oferta=-1" id="log-linkedin" class="btn-grande"><span class="icon-in-blanco"></span><span class="btn-grande-texto">Registro con LinkedIn</span></a> 
+       </div> 
+       <form action="http://www.filmijob.com/cliente/registro/3" id="registro_empresa" method="POST"> 
+        <div class="contenedor-campo-medio popup mr18"> 
+         <label for="Nombre" class="tx16">Nombre<span style="color: rgb(67,164,199);"> *</span></label> 
+         <input type="text" name="Nombre" id="nombre" class="campo-medio popup"> 
+        </div> 
+        <div class="contenedor-campo-medio popup"> 
+         <label for="Apellidos" class="tx16">Apellidos<span style="color: rgb(67,164,199);"> *</span></label> 
+         <input type="text" name="Apellidos" id="apellidos" class="campo-medio popup"> 
+        </div> 
+        <div class="contenedor-campo-medio popup mr18"> 
+         <label for="Sexo" class="tx16">Sexo<span style="color: rgb(67,164,199);"> *</span></label> 
+         <div class="select-medio popup"> 
+          <span class="flecha-select popup" id="flecha-sexo">-</span> 
+          <select name="Sexo" id="sexo" class="select-form popup"> <option value="">-</option> <option value="1">Masculino</option> <option value="2">Femenino</option> </select> 
+         </div> 
+        </div> 
+        <div class="contenedor-campo-medio popup"> 
+         <label class="tx16">Fecha de nacimiento<span style="color: rgb(67,164,199);"> *</span></label> 
+         <div class="select-80 popup"> 
+          <span id="flecha-dia" class="flecha-select-80 popup">-</span> 
+          <select name="Dia" id="dia" class="select-form-80 popup"> <option value="">-</option> <option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option> </select> 
+         </div> 
+         <div class="select-160 popup"> 
+          <span id="flecha-mes" class="flecha-select-160 popup">-</span> 
+          <select name="Mes" id="mes" class="select-form-160 popup"> <option value="">-</option> <option value="01">Enero</option><option value="02">Febrero</option><option value="03">Marzo</option><option value="04">Abril</option><option value="05">Mayo</option><option value="06">Junio</option><option value="07">Julio</option><option value="08">Agosto</option><option value="09">Septiembre</option><option value="10">Octubre</option><option value="11">Noviembre</option><option value="12">Diciembre</option> </select> 
+         </div> 
+         <div class="select-80 popup"> 
+          <span id="flecha-anyo" class="flecha-select-80 popup">-</span> 
+          <select name="Anyo" id="anyo" class="select-form-80 popup"> <option value="">-</option> <option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option> </select> 
+         </div> 
+        </div> 
+        <div class="contenedor-campo-medio popup mr18"> 
+         <label for="Pais" class="tx16">País<span style="color: rgb(67,164,199);"> *</span></label> 
+         <div class="select-medio popup"> 
+          <span class="flecha-select popup" id="flecha-Pais">-</span> 
+          <select name="Pais" id="Pais" class="select-form popup"> <option value="">-</option> <option value="3">Afganistán</option><option value="4">Albania</option><option value="5">Alemania</option><option value="6">Algeria</option><option value="7">Andorra</option><option value="8">Angola</option><option value="9">Anguilla</option><option value="10">Antigua y Barbuda</option><option value="11">Antillas Holandesas</option><option value="12">Arabia Saudita</option><option value="13">Argentina</option><option value="14">Armenia</option><option value="15">Aruba</option><option value="16">Australia</option><option value="17">Austria</option><option value="18">Azerbaiyán</option><option value="19">Bahamas</option><option value="20">Bahrein</option><option value="21">Bangladesh</option><option value="22">Barbados</option><option value="23">Bélgica</option><option value="24">Belice</option><option value="25">Benín</option><option value="26">Bermudas</option><option value="27">Bielorrusia</option><option value="28">Bolivia</option><option value="29">Bosnia y Herzegovina</option><option value="30">Botsuana</option><option value="31">Brasil</option><option value="32">Brunéi</option><option value="33">Bulgaria</option><option value="34">Burkina Faso</option><option value="35">Burundi</option><option value="36">Bután</option><option value="37">Cabo Verde</option><option value="38">Camboya</option><option value="39">Camerún</option><option value="40">Canadá</option><option value="41">Chad</option><option value="42">Chile</option><option value="43">China</option><option value="44">Chipre</option><option value="45">Colombia</option><option value="46">Comores</option><option value="47">Congo (Brazzaville)</option><option value="48">Congo (Kinshasa)</option><option value="49">Cook, Islas</option><option value="50">Corea del Norte</option><option value="51">Corea del Sur</option><option value="52">Costa de Marfil</option><option value="53">Costa Rica</option><option value="54">Croacia</option><option value="55">Cuba</option><option value="56">Dinamarca</option><option value="57">Djibouti, Yibuti</option><option value="58">Ecuador</option><option value="59">Egipto</option><option value="60">El Salvador</option><option value="61">Emiratos Árabes Unidos</option><option value="62">Eritrea</option><option value="63">Eslovaquia</option><option value="64">Eslovenia</option><option value="1">España</option><option value="65">Estados Unidos</option><option value="66">Estonia</option><option value="67">Etiopía</option><option value="68">Feroe, Islas</option><option value="69">Filipinas</option><option value="70">Finlandia</option><option value="71">Fiyi</option><option value="72">Francia</option><option value="73">Gabón</option><option value="74">Gambia</option><option value="75">Georgia</option><option value="76">Ghana</option><option value="77">Gibraltar</option><option value="78">Granada</option><option value="79">Grecia</option><option value="80">Groenlandia</option><option value="81">Guadalupe</option><option value="82">Guatemala</option><option value="83">Guernsey</option><option value="84">Guinea</option><option value="85">Guinea Ecuatorial</option><option value="86">Guinea-Bissau</option><option value="87">Guyana</option><option value="88">Haiti</option><option value="89">Honduras</option><option value="90">Hong Kong</option><option value="91">Hungría</option><option value="92">India</option><option value="93">Indonesia</option><option value="94">Irak</option><option value="95">Irán</option><option value="96">Irlanda</option><option value="97">Isla Pitcairn</option><option value="98">Islandia</option><option value="99">Islas Salomón</option><option value="100">Islas Turcas y Caicos</option><option value="101">Islas Virgenes Británicas</option><option value="102">Israel</option><option value="103">Italia</option><option value="104">Jamaica</option><option value="105">Japón</option><option value="106">Jersey</option><option value="107">Jordania</option><option value="108">Kazajstán</option><option value="109">Kenia</option><option value="110">Kirguistán</option><option value="111">Kiribati</option><option value="112">Kuwait</option><option value="113">Laos</option><option value="114">Lesotho</option><option value="115">Letonia</option><option value="116">Líbano</option><option value="117">Liberia</option><option value="118">Libia</option><option value="119">Liechtenstein</option><option value="120">Lituania</option><option value="121">Luxemburgo</option><option value="122">Macedonia</option><option value="123">Madagascar</option><option value="124">Malasia</option><option value="125">Malawi</option><option value="126">Maldivas</option><option value="127">Malí</option><option value="128">Malta</option><option value="129">Man, Isla de</option><option value="130">Marruecos</option><option value="131">Martinica</option><option value="132">Mauricio</option><option value="133">Mauritania</option><option value="134">México</option><option value="135">Moldavia</option><option value="136">Mónaco</option><option value="137">Mongolia</option><option value="138">Mozambique</option><option value="139">Myanmar</option><option value="140">Namibia</option><option value="141">Nauru</option><option value="142">Nepal</option><option value="143">Nicaragua</option><option value="144">Níger</option><option value="145">Nigeria</option><option value="146">Norfolk Island</option><option value="147">Noruega</option><option value="148">Nueva Caledonia</option><option value="149">Nueva Zelanda</option><option value="150">Omán</option><option value="151">Países Bajos, Holanda</option><option value="152">Pakistán</option><option value="153">Panamá</option><option value="154">Papúa-Nueva Guinea</option><option value="155">Paraguay</option><option value="156">Perú</option><option value="157">Polinesia Francesa</option><option value="158">Polonia</option><option value="159">Portugal</option><option value="160">Puerto Rico</option><option value="161">Qatar</option><option value="162">Reino Unido</option><option value="163">República Checa</option><option value="164">República Dominicana</option><option value="165">Reunión</option><option value="166">Ruanda</option><option value="167">Rumanía</option><option value="168">Rusia</option><option value="169">Sáhara Occidental</option><option value="170">Samoa</option><option value="171">San Cristobal y Nevis</option><option value="172">San Marino</option><option value="173">San Pedro y Miquelón</option><option value="174">San Tomé y Príncipe</option><option value="175">San Vincente y Granadinas</option><option value="176">Santa Elena</option><option value="177">Santa Lucía</option><option value="178">Senegal</option><option value="179">Serbia y Montenegro</option><option value="180">Seychelles</option><option value="181">Sierra Leona</option><option value="182">Singapur</option><option value="183">Siria</option><option value="184">Somalia</option><option value="185">Sri Lanka</option><option value="186">Sudáfrica</option><option value="187">Sudán</option><option value="188">Suecia</option><option value="189">Suiza</option><option value="190">Surinam</option><option value="191">Swazilandia</option><option value="192">Tadjikistan</option><option value="193">Tailandia</option><option value="194">Taiwan</option><option value="195">Tanzania</option><option value="196">Timor Oriental</option><option value="197">Togo</option><option value="198">Tokelau</option><option value="199">Tonga</option><option value="200">Trinidad y Tobago</option><option value="201">Túnez</option><option value="202">Turkmenistan</option><option value="203">Turquía</option><option value="204">Tuvalu</option><option value="205">Ucrania</option><option value="206">Uganda</option><option value="207">Uruguay</option><option value="208">Uzbekistán</option><option value="209">Vanuatu</option><option value="210">Venezuela</option><option value="211">Vietnam</option><option value="212">Wallis y Futuna</option><option value="213">Yemen</option><option value="214">Zambia</option><option value="215">Zimbabwe</option> </select> 
+         </div> 
+        </div> 
+        <div class="contenedor-campo-medio popup"> 
+         <label for="Localidad" class="tx16">Localidad <span style="color: rgb(67,164,199);"> *</span> <span style="color:#B00000;" id="labelLocalidad" name="labelLocalidad"></span> </label> 
+         <input class="campo-medio popup" id="Localidad" name="Localidad" type="text"> 
+        </div> 
+        <div class="contenedor-campo-medio popup mr18"> 
+         <label for="Email" class="tx16">Email<span style="color: rgb(67,164,199);"> *</span></label> 
+         <input type="text" name="Email" id="Email" class="campo-medio popup"> 
+        </div> 
+        <div class="contenedor-campo-medio popup"> 
+         <label for="Password" class="tx16">Contraseña<span style="color: rgb(67,164,199);"> *</span></label> 
+         <input type="password" name="Password" id="password" class="campo-medio popup"> 
+        </div> 
+        <div class="contenedor-campo-medio popup mr18"> 
+         <label for="Password2" class="tx16">Repita Contraseña<span style="color: rgb(67,164,199);"> *</span></label> 
+         <input type="password" name="Password2" id="Password2" class="campo-medio popup"> 
+        </div> 
+        <div class="contenedor-campo-medio popup contenedor-lopd"> 
+         <div class="caja-lopd"> 
+          <label for="lopd" class="lopd_checkbox"></label> 
+          <input type="hidden" id="lopd" name="lopd" value="0"> 
+          <label for="lopd" class="lopd-texto popup"><span style="color: rgb(67,164199);">*&nbsp;</span>He leído y acepto las <a target="_blank" href="http://www.filmijob.com/site/menu/condiciones_generales">Cond. de uso</a></label> 
+         </div> 
+         <a href="javascript: void(0);" id="btn-siguiente" class="btn-azuloscuro">Siguiente <span class="flecha-siguiente"></span></a> 
+        </div> 
+        <div class="contenedor-campo-largo popup mr18" id="SubirPDF" style="display: none;position: relative;"> 
+         <input type="hidden" id="isFichero" name="isFichero" value="0"> 
+         <input type="hidden" id="nombreFichero" name="nombreFichero" value=""> 
+         <input type="hidden" id="nombreDestino" name="nombreDestino" value=""> 
+         <input type="hidden" id="idOferta" name="idOferta" value=""> 
+         <!-- The template to display files available for upload --> 
+         <script id="template-upload" type="text/x-tmpl">
+
+</script> 
+         <!-- The template to display files available for download --> 
+         <script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        {% if (file.error) { %}
+            <td></td>
+            <td class="name"><span>{%=file.name%}</span></td>
+            <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+            <td class="error" colspan="2"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
+        {% } else { %}
+            <td class="preview">{% if (file.thumbnail_url) { %}
+                <a href="{%=file.url%}" title="{%=file.name%}" rel="gallery" download="{%=file.name%}"><img src="{%=file.thumbnail_url%}"></a>
+            {% } %}</td>
+            <td class="name">
+                <a href="{%=file.url%}" title="{%=file.name%}" rel="{%=file.thumbnail_url&&'gallery'%}" download="{%=file.name%}">{%=file.name%}</a>
+            </td>
+            <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+            <td colspan="2"></td>
+        {% } %}
+        <td class="delete">
+            <button class="btn btn-danger" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}">
+                <i class="icon-trash icon-white"></i>
+                <span>{%=locale.fileupload.destroy%}</span>
+            </button>
+            <input type="checkbox" name="delete" value="1">
+                    </td>
+    </tr>
+{% } %}
+</script> 
+         <div class="row fileupload-buttonbar">
+          <div class="span7">
+           <input type="hidden" name="tipoFichero" value="4">
+           <input type="hidden" name="modelId" value="">
+           <input type="hidden" name="tabla" value="FMJ_Cliente">
+           <span class="btn btn-success fileinput-button"><i class="icon-plus icon-white"></i><span class="btn-subir-cv btn-azulclaro">Subir curriculum en PDF</span><input id="ytXUploadForm-form" type="hidden" value="" name="XUploadForm[file]"><input multiple enctype="multipart/form-data" id="XUploadForm-form" name="XUploadForm[file]" type="file"></span>
+          </div>
+         </div>
+         <span id="nameFile" style=" left: 255px;position: absolute;top: 10px; "></span>
+         <span id="icon-loader"></span> 
+        </div>
+       </form>  
+       <div style="display:none"> 
+        <div id="avisoLOPD"> 
+         <p style="text-align: center;"><span style="text-decoration: underline; font-size: small;"><strong>Condiciones Generales de uso</strong></span></p> 
+         <p><span style="text-decoration: underline;"><strong><br></strong></span></p> 
+         <p><strong>1. Datos identificativos de la empresa.</strong></p> 
+         <p>En aplicación del artículo 10 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico., respecto al deber de información de los prestadores de este tipo de servicios, se dispone lo siguiente:</p> 
+         <p>- Nombre o denominación social: FILMIJOB.</p> 
+         <p>- Residencia o domicilio: Calle Del Gobernador, 26. Madrid, 28014. España</p> 
+         <p>- Dirección de correo electrónico: info@filijob.com</p> 
+         <p>- CIF: B86755030.</p> 
+         <p>- Inscrita en el Registro Mercantil de Madrid, Tomo 31.204 folio 41, Inscripción 1, Hoja M-561661</p> 
+         <p>&nbsp;</p> 
+         <p>Página web principal de Filmijob: www.filmijob.com</p> 
+         <p>Páginas web secundarias:</p> 
+         <p>• Blog</p> 
+         <p>• Facebook</p> 
+         <p>• Twitter</p> 
+         <p>• Google+</p> 
+         <p>• Linkedin</p> 
+         <p>&nbsp;</p> 
+         <p><strong>2. Condiciones Generales de uso del sitio.</strong></p> 
+         <p>Las presentes condiciones de uso regulan el acceso y uso del sitio www.filmijob.com, debiendo ser aceptadas necesariamente por el usuario para su utilización. El usuario otorga su consentimiento y afirma ser mayor de 18 años y tener capacidad legal suficiente para contratar al visitar el sitio web, usar sus servicios y/o registrar una cuenta de usuario.</p> 
+         <p>FILMIJOB se reserva el derecho a modificar estas Condiciones Generales comunicando dichos cambios a los usuarios con anterioridad a su entrada en vigor, debiendo ser aceptados por estos en el primer acceso a la web tras la implantación de los mismos. Dicha eventual modificación no afectará a los contratos efectuados con anterioridad a la fecha de modificación respecto de las acciones llevadas a cabo por el usuario en FILMIJOB durante la vigencia de las mismas. <br>FILMIJOB podrá, igualmente, denegar el acceso a aquellos usuarios que incumplan cualquiera de las Condiciones Generales vigentes en cualquier momento sin que se genere, por ello, derecho de indemnización o resarcimiento alguno a su favor.</p> 
+         <p>Si algún apartado de las presentes Condiciones Generales resultara nulo o anulable en todo o parte, será omitido del mismo sin afectar a la validez del resto del documento.</p> 
+         <p>&nbsp;</p> 
+         <p><strong>3. Objeto.</strong></p> 
+         <p>FILMIJOB se configura como una plataforma de servicios de empleo y reclutamiento, que busca establecer un punto de encuentro común entre candidatos y empresas, aprovechando las ventajas que el uso los medios audiovisuales, las tecnologías de visualización de datos y la inteligencia artificial ofrecen. <br>A través de este sitio web, FILMIJOB proporciona a los candidatos que así lo soliciten acceso a ofertas de trabajo facilitadas por terceras empresas y acceso, a su vez, a estas empresas a los currículum de los candidatos registrados en sus ofertas.</p> 
+         <p>Para ello, después del correspondiente registro, la empresa publica una oferta, estableciendo, al mismo tiempo, cinco preguntas para su respuesta por parte de los candidatos, previamente registrados en FILMIJOB que decidan optar a ella. A estas respuestas tiene acceso la empresa reclutadora, que dispone del listado con todos los candidatos suscritos ordenados en base a criterios de empleabilidad e idoneidad. Los reclutadores pueden, al mismo tiempo, consultar los currículums, test de competencia y vídeos de los candidatos, así como plantearles nuevas preguntas. Finalmente, la empresa reclutadora puede contactar, personalmente, con el candidato que considere oportuno.</p> 
+         <p>&nbsp;</p> 
+         <p><strong>4. Propiedad intelectual</strong></p> 
+         <p>Este sitio web es propiedad exclusiva de FILMIJOB. La marca FILMIJOB se encuentra debidamente registrada. Los textos, elementos gráficos y el diseño web son, igualmente, de titularidad exclusiva de FILMIJOB, con independencia de que las imágenes, logos y marcas pudieran pertenecer a otras terceras empresas. Su reproducción, edición o publicación, en parte o en su totalidad, está terminantemente prohibida sin consentimiento expreso y previo de FILMIJOB.</p> 
+         <p>&nbsp;</p> 
+         <p><strong>5. Obligaciones de los usuarios.</strong></p> 
+         <p>Con la aceptación de las presentes Condiciones Generales, el usuario se obliga a:</p> 
+         <p>- Cumplir las presentes Condiciones y obrar conforme a la ley y a la buena fe, absteniéndose de utilizar el sitio web www.filmijob.com de forma que pueda impedir, dañar o deteriorar el normal funcionamiento del mismo, así como los bienes y derechos de FILMIJOB, del resto de usuarios o de terceros.</p> 
+         <p>- Custodiar diligentemente sus credenciales de acceso al servicio así como a no ceder su uso ni permitir dicho acceso a terceros, asumiendo, en su caso, la responsabilidad derivada que el uso indebido del sitio web pudiera ocasionar.</p> 
+         <p>- Facilitar información actualizada, exacta y veraz para el uso del servicio proporcionado, garantizando este extremo respecto de la cumplimentación de los distintos formularios exigibles tanto para el registro en la plataforma como para la presentación de posibles candidaturas.</p> 
+         <p>- Respetar las leyes que resulten de aplicación, así como no introducir, almacenar o difundir desde el sitio web, cualquier información o contenido que pudiera ser contrario a la legalidad o al orden público. FILMIJOB se reserva, en este sentido, la facultad para eliminar este tipo de contenidos, así como bloquear las cuentas de los usuarios que incurran en este tipo de conductas.</p> 
+         <p>- No introducir, almacenar o difundir a través de este sitio web programa de ordenador, datos, virus, código o cualquier otro fichero, que sea susceptible de causar daños o cualquier tipo de alteración en este plataforma, impidiendo su normal funcionamiento o produciendo algún tipo de perjuicio para el resto de usuarios o terceros.</p> 
+         <p>&nbsp;</p> 
+         <p>El usuario que incumpla lo dispuesto en este apartado responderá por los daños y perjuicios ocasionados a FILMIJOB, así como al resto de usuarios, empresas y demás partes. FILMIJOB queda, en cualquier caso, excluida de responsabilidad por el posible mal uso llevado a cabo por los usuarios de los servicios prestados en esta plataforma.</p> 
+         <p>&nbsp;</p> 
+         <p><strong>6. Contenidos facilitados por los candidatos.</strong></p> 
+         <p>El usuario se compromete a aportar información veraz sobre su persona de cara a posibles procesos de selección planteados por las empresas reclutadoras, haciéndose responsable de los daños y perjuicios ocasionados a estas en caso de que tal información resultara ser falsa.</p> 
+         <p>La información proporcionada por el usuario ha de reunir, igualmente, los requisitos de calidad exigidos por FILMIJOB, evitando subir contenido que pueda resultar ofensivo o inadecuado.</p> 
+         <p>El usuario autoriza el uso de su imagen y voz para fines exclusivamente relacionados con los procesos de selección planteados por las empresas reclutadoras, sin que la misma pueda ser utilizada para otros fines.</p> 
+         <p><br><strong>7. Obligaciones particulares de las empresas.</strong></p> 
+         <p>Las empresas que opten por utilizar el servicio proporcionado por FILMIJOB, están obligadas a facilitar aquella información necesaria para la prestación de dicho servicio.</p> 
+         <p>Los datos proporcionados por las empresas reclutadoras han de ser veraces y exactos, resultando, en caso de que no fuera así, responsable de los daños y perjuicios ocasionados.</p> 
+         <p>Las empresas reclutadoras están obligadas a tratar la información personal de los candidatos diligentemente, cumpliendo con la normativa vigente en materia de protección de datos de carácter personal y con fines únicamente relacionados con el proceso de selección que mantengan abierto.</p> 
+         <p>Las condiciones económicas y laborales de las ofertas de empleo publicadas por las empresas reclutadoras han de cumplir con los requisitos legales del país para el que se oferta el empleo garantizando por la propia oferta el mantenimiento de los mínimos indicados en las mismas una vez sea seleccionado el candidato.</p> 
+         <p>Por el hecho de publicar una oferta la empresa se compromete a llevar a cabo el proceso de selección de candidatos, considerando a aquellos que se registren en la misma a través de FILMIJOB.</p> 
+         <p>&nbsp;</p> 
+         <p><strong>8. Política de privacidad.</strong></p> 
+         <p>• Política de tratamiento de datos.</p> 
+         <p>Con la aceptación de la presente política de privacidad, el usuario autoriza el tratamiento de sus datos personales por parte de FILMIJOB.</p> 
+         <p>De conformidad con la Ley Orgánica de Protección de Datos (LOPD) y su normativa de desarrollo, FILMIJOB informa a todos los usuarios de esta plataforma que sus datos serán incorporados a un fichero automatizado titularidad de FILMIJOB debidamente inscrito en la Agencia Española de Protección de Datos.</p> 
+         <p>Los datos serán utilizados para la correcta prestación de los servicios y gestión de los servicios a usuarios además de fines estadísticos y publicitarios a solicitud del usuario.</p> 
+         <p>Los usuarios tienen la posibilidad de ejercitar el derecho de acceso, rectificación, cancelación y oposición a sus datos personales ante el responsable del fichero. Para ello, deberán solicitarlo por escrito, a través de la siguiente dirección de correo electrónico: privacidad@filmijob.com</p> 
+         <p>&nbsp;</p> 
+         <p>• Confidencialidad de los datos.</p> 
+         <p>FILMIJOB garantiza la confidencialidad de los datos de carácter personal facilitados por los usuarios, así como su tratamiento, de acuerdo con lo establecido al respecto en esta política de privacidad y la legislación vigente en materia de protección de datos de carácter personal. A tal efecto, han sido habilitados los medios técnicos necesarios para evitar la pérdida, mal uso, alteración, acceso no autorizado y robo de los datos personales facilitados por los usuarios.</p> 
+         <p>FILMIJOB no compartirá ni cederá datos personales con terceras empresas. Si bien, FILMIJOB sí podrá proporcionar una información estadística segmentada de los usuarios activos de su sitio web con la finalidad de ofrecer publicidad relacional a estos.&nbsp;</p> 
+         <p>La solicitud de baja en la base de datos por parte de los usuarios, supondrá la eliminación automática de toda la información referente a su persona.</p> 
+         <p>&nbsp;</p> 
+         <p>• Cookies</p> 
+         <p>El Sitio Web utiliza cookies. Las cookies son ficheros creados en el navegador del usuario para registrar su actividad en el Sitio Web y permitirle una navegación más fluida y personalizada.</p> 
+         <table style="border: 1px solid #000000;" border="1" frame="border"> 
+          <tbody> 
+           <tr> 
+            <td style="text-align: center;"><strong>Cookie</strong></td> 
+            <td style="text-align: center;"><strong>Nombre&nbsp;</strong></td> 
+            <td style="text-align: center;"><strong>Propósito</strong></td> 
+            <td style="text-align: center;"><strong>Más información</strong></td> 
+           </tr> 
+           <tr> 
+            <td>Google Analytics</td> 
+            <td>_utma<br>_utmb<br>_utmc<br>_utmc</td> 
+            <td>Recopila información anónima sobre la navegación de los usuarios por el sitio web con el fin de conocer el origen de las visitas y otros datos estadísticos similares.&nbsp;</td> 
+            <td>- <a title="Centro de privacidad de Google" href="http://www.google.com/intl/es/analytics/privacyoverview.html" target="_blank">Centro de privacidad de Google</a>.<br>- <a title="Complemento de inhabilitación de Google Analytics" href="http://tools.google.com/dlpage/gaoptout?hl=es" target="_blank">Complemento de inhabilitación de Google Analytics</a>.</td> 
+           </tr> 
+          </tbody> 
+         </table> 
+         <p>&nbsp;</p> 
+         <p>Para utilizar este Sitio Web no resulta necesaria la instalación de cookies. El usuario puede no aceptarlas o configurar su navegador para bloquearlas y, en su caso, eliminarlas.</p> 
+         <p>&nbsp;</p> 
+         <p>• Redes sociales.</p> 
+         <p>FILMIJOB cuenta con perfil en las principales redes sociales de Internet (Facebook, Twitter, Google+, LinkedIn, etc.), considerándose responsable del tratamiento de sus seguidores, fans, suscriptores, comentaristas y otros perfiles de usuarios (en adelante, seguidores). El tratamiento que FILMIJOB lleve a cabo respecto de los datos personales de sus seguidores será el permitido por la red social correspondiente.&nbsp;</p> 
+         <p>FILMIJOB podrá informar a sus seguidores por cualquier vía permitida por la red social en cuestión de sus actividades, ofertas, así como prestar servicio personalizado de atención al cliente.&nbsp;</p> 
+         <p>En ningún caso, FILMIJOB extraerá datos de las redes sociales, al menos que, para tal finalidad, haya obtenido un consentimiento expreso por parte del usuario.</p> 
+         <p>&nbsp;</p> 
+         <p><strong>9. Enlaces a terceros.</strong></p> 
+         <p>FILMIJOB puede proporcionar, a través de su sitio web, enlaces a otras páginas web pertenecientes y/o gestionadas por terceros, con una finalidad eminentemente informativa, complementando la información ya contenida en www.filmijob.com. A este respecto, FILMIJOB no se hace responsable de la información contenida en estos enlaces.</p> 
+         <p>&nbsp;</p> 
+         <p><strong>10. Legislación aplicable.</strong></p> 
+         <p>Las presentes Condiciones Generales de uso, así como las cuestiones que pudieran plantearse en torno a ella se regirán por las leyes españolas en vigor. <br>Toda disputa planteada entre FILMIJOB y cualquier otra persona jurídica, que no pudiera resolverse de forma amistosa, quedará sometida a la jurisdicción de los Juzgados y Tribunales de Madrid.&nbsp;</p> 
+         <p>La resolución de los conflictos en los que los usuarios sean parte quedará sometida al fuero jurisdiccional que corresponda, en aplicación de la normativa procesal vigente.</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </header>
+   <div class="fondo_negro"> 
+    <div id="home-videocv"> 
+     <div class="sombreado-home" id="contenedor-videocv"> 
+      <h2 class="titular-home">El mejor candidato para cada oferta,</h2> 
+      <p class="desc-home">y la mejor propuesta para cada persona</p> 
+      <form action="http://www.filmijob.com/oferta/ofertaPublica" id="form-busqueda" method="GET"> 
+       <div id="search_wrapper"> 
+        <div class="div_buscartrabajo"> 
+         <input autocomplete="off" type="text" tabindex="2" id="buscartrabajo" name="buscartrabajo" placeholder="¿De qué quieres trabajar?"> 
+        </div> 
+        <button type="submit" id="search_button"></button> 
+       </div> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="home-slider"> 
+    <div class="slidertitulo">
+     ¿De qué te gustaría trabajar?
+    </div> 
+    <ul class="bxslider"> 
+     <li> 
+      <div class="sliderpart"> 
+       <div class="sliderpartImage"> 
+        <img src="http://intranet.filmijob.com/uploads/993237821df7e7447150a8cecb3a5eef.jpg" alt="Imagen">
+        <br> 
+       </div> 
+       <div class="sliderpartUrl"> 
+        <a id="mfa34" class="editar sliderpartUrlText" title="Programador" href="http://www.filmijob.com/oferta/ofertaPublica?buscartrabajo=Programador"> Programador </a> 
+       </div> 
+      </div> </li> 
+     <li> 
+      <div class="sliderpart"> 
+       <div class="sliderpartImage"> 
+        <img src="http://intranet.filmijob.com/uploads/d38d5ebdb02876ee86573d4c4e62be62.jpg" alt="Imagen">
+        <br> 
+       </div> 
+       <div class="sliderpartUrl"> 
+        <a id="mfa34" class="editar sliderpartUrlText" title="Diseño Gráfico" href="http://www.filmijob.com/oferta/ofertaPublica?buscartrabajo=Dise%C3%B1o+Gr%C3%A1fico"> Diseño Gráfico </a> 
+       </div> 
+      </div> </li> 
+     <li> 
+      <div class="sliderpart"> 
+       <div class="sliderpartImage"> 
+        <img src="http://intranet.filmijob.com/uploads/fd25df51081437fe15abef455758ac7d.jpg" alt="Imagen">
+        <br> 
+       </div> 
+       <div class="sliderpartUrl"> 
+        <a id="mfa34" class="editar sliderpartUrlText" title="Social Media" href="http://www.filmijob.com/oferta/ofertaPublica?buscartrabajo=Social+Media"> Social Media </a> 
+       </div> 
+      </div> </li> 
+     <li> 
+      <div class="sliderpart"> 
+       <div class="sliderpartImage"> 
+        <img src="http://intranet.filmijob.com/uploads/b9d27e16c4b97feaa47152a49ed1820f.jpg" alt="Imagen">
+        <br> 
+       </div> 
+       <div class="sliderpartUrl"> 
+        <a id="mfa34" class="editar sliderpartUrlText" title="Abogado" href="http://www.filmijob.com/oferta/ofertaPublica?buscartrabajo=Abogado"> Abogado </a> 
+       </div> 
+      </div> </li> 
+    </ul> 
+    <div class="sliderUrlOferta">
+     <a id="mfa34" class="editar slider-edit" href="http://www.filmijob.com/oferta/ofertaPublica">Ver todas las ofertas publicadas en filmijob</a>
+    </div> 
+   </div> 
+   <div id="home-ventajas"> 
+    <div class="centrar-img"> 
+     <div class="div-ventaja"> 
+      <a href="http://www.filmijob.com/site/menu/ventajasParaEmpresas#serviciosIncluidos" onclick="funcion"><img src="/themes/filmijob/img/ventaja_empresa.png"></a> 
+      <div class="text-ventajas">
+       Ventajas para empresas
+      </div> 
+     </div> 
+    </div> 
+    <div class="centrar-img"> 
+     <div class="div-ventaja"> 
+      <a href="javascript:void(0);" onclick="funcion"><img src="/themes/filmijob/img/ventaja_candidato.png"></a> 
+      <div class="text-ventajas">
+       Ventajas para candidatos
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <footer id="pie-web"> 
+    <nav id="navegacion-web-pie" class="center"> 
+     <ul> 
+      <li class="nav-link-pie"><a href="http://www.filmijob.com/blog">Blog</a></li> 
+      <li class="nav-link-pie"><a href="http://www.filmijob.com/site/menu/equipo">Equipo</a></li> 
+      <li class="nav-link-pie"><a href="http://www.filmijob.com/site/menu/preguntas_frecuentes">Preguntas frecuentes</a></li> 
+      <li class="nav-link-pie"><a href="http://www.filmijob.com/site/menu/contacto">Contacto</a></li> 
+      <li class="nav-link-pie"><a href="http://www.filmijob.com/site/menu/ventajasParaEmpresas">Tarifas</a></li> 
+      <li class="nav-link-pie"><a href="http://www.filmijob.com/blog/inversores">Inversores</a></li> 
+      <li class="nav-link-pie"><a href="http://www.filmijob.com/site/menu/condiciones_generales">Condiciones Generales</a></li> 
+      <li class="nav-link-pie"><a href="http://www.filmijob.com/site/menu/cookies">Cookies</a></li> 
+      <li class="nav-link-pie"><a href="http://www.filmijob.com/site/menu/ofertas">Ofertas</a></li> 
+     </ul> 
+    </nav> 
+    <div class="center"> 
+     <p class="texto-info-empresa">2013 Filmijob. Todos los derechos reservados</p> 
+     <ul id="redes-footer"> 
+     </ul> 
+    </div> 
+   </footer> 
+   <script type="text/javascript">
+	
+			  				var _gaq = _gaq || [];
+			
+			  _gaq.push(['_setAccount', 'UA-38906518-1				']);
+
+				_gaq.push(['_trackPageview']);
+
+				(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+
+			</script> 
+   <script src="/themes/filmijob/js/jquery-1.8.3.min.js"></script> 
+   <script src="/themes/filmijob/js/jquery.fancybox-1.3.4.js"></script> 
+   <script src="/themes/filmijob/js/filmijob.js"></script> 
+   <script src="/themes/filmijob/js/stickyMojo.js"></script> 
+   <script src="/themes/filmijob/js/jquery.nicescroll.min.js"></script> 
+   <script>
+				// Include the UserVoice JavaScript SDK (only needed once on a page)
+				UserVoice = window.UserVoice || [];
+				(function() {
+					var uv = document.createElement('script');
+					uv.type = 'text/javascript';
+					uv.async = true;
+					uv.src = '//widget.uservoice.com/24MWHHswIrMSfP4tnF6nQ.js';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(uv, s)
+				})();
+
+				//
+				// UserVoice Javascript SDK developer documentation:
+				// https://www.uservoice.com/o/javascript-sdk
+				//
+
+				// Set colors
+				UserVoice.push(['set', {
+					accent_color : '#448dd6',
+					trigger_color : 'white',
+					trigger_background_color : 'rgba(46, 49, 51, 0.6)'
+				}]);
+
+				// Identify the user and pass traits
+				// To enable, replace sample data with actual user traits and uncomment the line
+				UserVoice.push(['identify', {
+					//email:      'john.doe@example.com', // User’s email address
+					//name:       'John Doe', // User’s real name
+					//created_at: 1364406966, // Unix timestamp for the date the user signed up
+					//id:         123, // Optional: Unique id of the user (if set, this should not change)
+					//type:       'Owner', // Optional: segment your users by type
+					//account: {
+					//  id:           123, // Optional: associate multiple users with a single account
+					//  name:         'Acme, Co.', // Account name
+					//  created_at:   1364406966, // Unix timestamp for the date the account was created
+					//  monthly_rate: 9.99, // Decimal; monthly rate of the account
+					//  ltv:          1495.00, // Decimal; lifetime value of the account
+					//  plan:         'Enhanced' // Plan name for the account
+					//}
+				}]);
+
+				// Add default trigger to the bottom-right corner of the window:
+				UserVoice.push(['addTrigger', {
+					mode : 'smartvote',
+					trigger_position : 'bottom-right'
+				}]);
+
+				// Or, use your own custom trigger:
+				//UserVoice.push(['addTrigger', '#id', { mode: 'smartvote' }]);
+
+				// Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+				UserVoice.push(['autoprompt', {}]);
+				</script> 
+  </div> 
+  <script type="text/javascript">
+	var _mfq = _mfq || [];
+	(function() {
+		var mf = document.createElement("script");
+		mf.type = "text/javascript";
+		mf.async = true;
+		mf.src = "//cdn.mouseflow.com/projects/71bb466e-a198-4a79-b037-51546172453a.js ";
+		document.getElementsByTagName("head")[0].appendChild(mf);
+	})(); 
+</script> 
+  <script type="text/javascript" src="/themes/filmijob/js/jquery-ui-1.10.4.custom.min.js"></script> 
+  <script type="text/javascript" src="/themes/bxslider/jquery.bxslider.min.js"></script> 
+  <script type="text/javascript" src="/themes/filmijob/js/jquery.validate.min.js"></script> 
+  <script type="text/javascript" src="/assets/bc6d2c16/jui/js/jquery-ui.min.js"></script> 
+  <script type="text/javascript" src="/assets/8614cb80/js/tmpl.min.js"></script> 
+  <script type="text/javascript" src="/assets/8614cb80/js/jquery.fileupload.js"></script> 
+  <script type="text/javascript" src="/assets/8614cb80/js/load-image.min.js"></script> 
+  <script type="text/javascript" src="/assets/8614cb80/js/canvas-to-blob.min.js"></script> 
+  <script type="text/javascript" src="/assets/8614cb80/js/jquery.iframe-transport.js"></script> 
+  <script type="text/javascript" src="/assets/8614cb80/js/jquery.fileupload-ip.js"></script> 
+  <script type="text/javascript" src="/assets/8614cb80/js/jquery.fileupload-ui.js"></script> 
+  <script type="text/javascript">
+/*<![CDATA[*/
+window.locale = {'fileupload':{'errors':{'maxFileSize':'File is too big','minFileSize':'File is too small','acceptFileTypes':'Filetype not allowed','maxNumberOfFiles':'Max number of files exceeded','uploadedBytes':'Uploaded bytes exceed file size','emptyResult':'Empty file upload result'},'error':'Error','start':'Start','cancel':'Cancel','destroy':'Delete'}}
+
+							$('#XUploadForm-form').on('fileuploaddone', function( e, data ){
+								var parametros = data.form.serializeArray();
+								var fichero = data.result[0].name;
+							
+								$.post('/cliente/uploadPdf2',
+									{f: fichero},
+									function(postData){
+										respuesta = postData.split('#');
+					                    if(respuesta[0] == 'OK')
+					                    {
+					                    	$('#nameFile').html(respuesta[4]);
+					                    	$('#nombreFichero').attr('value',respuesta[2]);											
+					                    	$('#nombreDestino').attr('value',respuesta[1]);							
+					                    }
+					                    else
+					                        alert(respuesta[0]);
+					                    
+					                    $('#icon-loader').removeClass('iconLoader');
+									}
+								);
+							});
+							$('#XUploadForm-form').on('change', function( e, data ){								
+									 $('#icon-loader').addClass('iconLoader');
+							});
+							
+						
+jQuery(function($) {
+
+$(document).ready(function(){
+  $(".bxslider").bxSlider( { 
+  minSlides: 3,
+  maxSlides: 3,
+  slideWidth: 235,
+  slideMargin: 10,
+  pager: false,
+  });
+});
+
+					$.validator.addMethod("loginCorrecto", function(value, element) {
+				        var isSuccess = false;
+						var email = $("#login #email").val();
+						if(email == "")
+							email = $("#loginEmpresa #email").val(); 
+					
+						if(email != ""){
+					        $.ajax({ url: "http://www.filmijob.com/cliente/loginCorrecto",
+					            data: "e="+email+"&p="+value,
+					            async: false,
+					            success:
+					                function(msg) {
+					                    isSuccess=false;
+					                    if(msg == "OK"){
+					                        isSuccess=true;
+					                    }else{
+											$.ajax({ url: "http://www.filmijob.com/empresa/loginCorrecto",
+									            data: "e="+email+"&p="+value,
+									            async: false,
+									            success:
+									                function(msg) {
+									                    isSuccess=false;
+									                    if(msg == "OK"){
+									                        isSuccess=true;
+									                    }
+									                }
+									        });
+										}
+					                }
+					        });
+						}
+			
+				        return isSuccess;
+				    });
+			
+					var mensajeAlert = "";
+			
+					$("#login").validate({
+				        errorPlacement: function(error, element) {
+				            mensajeAlert += "-"+error.text()+"\n";
+				        },
+				        showErrors: function(errorMap, errorList){
+				            this.defaultShowErrors();
+				            if(mensajeAlert != "")
+				                alert(mensajeAlert);
+				            mensajeAlert = "";
+				        },
+				        onfocusout: false,
+				        onkeyup: false,
+				        onclick: false,
+						ignore: "",
+				        rules: {
+				            email: {required: true, email: true},
+				            password: {required: true, loginCorrecto: true},
+				        },
+				        messages: {
+		            		email: {required: "El campo Email es requerido",
+									email: "El formato del email no es correcto"},
+		            		password: {required: "El campo Contraseña es requerido",
+										loginCorrecto: "La contraseña no es correcta"},
+				        }
+				    });
+				
+
+					$("#loginEmpresa").validate({
+				        errorPlacement: function(error, element) {
+				            mensajeAlert += "-"+error.text()+"\n";
+				        },
+				        showErrors: function(errorMap, errorList){
+				            this.defaultShowErrors();
+				            if(mensajeAlert != "")
+				                alert(mensajeAlert);
+				            mensajeAlert = "";
+				        },
+				        onfocusout: false,
+				        onkeyup: false,
+				        onclick: false,
+						ignore: "",
+				        rules: {
+				            email: {required: true, email: true},
+				            password: {required: true, loginCorrecto: true},
+				        },
+				        messages: {
+		            		email: {required: "El campo Email es requerido",
+									email: "El formato del email no es correcto"},
+		            		password: {required: "El campo Contraseña es requerido",
+										loginCorrecto: "La contraseña no es correcta"},
+				        }
+				    });
+				
+
+							$('#Pais').change(function(){
+								jQuery('#Localidad').autocomplete({'minLength':'1','source':'/cliente/localidadAjax/'+$('#Pais').val()+'/'});	
+							});
+							
+							function validarFormLocal()
+							{
+								$.getJSON('http://www.filmijob.com/cliente/validarLocalidad?nombre='+$('#Localidad').val()+'&pais='+$('#Pais').val(),function(data) {
+									if(data['existLocal'] == false){
+										$('#labelLocalidad').html('Localidad Invalida');
+									}else{
+										$('#labelLocalidad').html('');
+										$('#registro_empresa').submit();
+									}
+								});	
+							}
+							$('#btn-siguiente').click(function(){
+								validarFormLocal();
+							});
+							
+						
+jQuery('#Localidad').autocomplete({'minLength':'1','source':'/cliente/localidadAjax'});
+jQuery('#XUploadForm-form').fileupload({'url':'/site/upload','autoUpload':true});
+
+			$.validator.addMethod("caracteresPermitidos", function(value, element) {
+		        var filtro = /^([0-9]|[a-z]|[A-Z]|[-]|[_])*$/;
+		        if(filtro.test(value))
+		            return true
+		        else
+		            return false
+		    });
+				
+			$.validator.addMethod("emailYaCreado", function(value, element) {
+		        var isSuccess = false;
+				
+		        $.ajax({ url: "http://www.filmijob.com/cliente/emailRegistrado",
+		            data: "e="+value,
+		            async: false,
+		            success:
+		                function(msg) {
+		                    isSuccess=false;
+		                    if(msg == "NO"){
+		                        $.ajax({ url: "http://www.filmijob.com/empresa/emailRegistrado",
+						            data: "e="+value,
+						            async: false,
+						            success:
+						                function(msg) {
+						                    isSuccess=false;
+						                    if(msg == "NO"){
+						                        isSuccess=true;
+						                    }
+						                }
+						        });
+		                    }
+		                }
+		        });
+				
+		        return isSuccess;
+		    });
+				
+			$.validator.addMethod("desplegable", function(value, element) {
+		        if(value != "")
+					return true;
+				else
+					return false;
+		    });
+				
+			$.validator.addMethod("checkbox", function(value, element) {
+		        if(value == 1)
+					return true;
+				else
+					return false;
+		    });
+		        		
+		    $.validator.addMethod("contrasenasIguales", function(value, element) {
+		        if(value == $("#registro_empresa #password").val())
+					return true;
+				else
+					return false;
+		    });
+				
+			$.validator.addMethod("fechaValida", function(value, element) {
+				var dia = $("#dia").val();
+				var mes = $("#mes").val();
+				var anyo = $("#anyo").val();
+				if(dia != "" && mes != "" && anyo != ""){
+					var fecha = dia+"/"+mes+"/"+anyo;
+			
+			        var dtCh= "/";
+					var minYear=1900;
+					var maxYear=2100;
+					function isInteger(s){
+						var i;
+						for (i = 0; i < s.length; i++){
+							var c = s.charAt(i);
+							if (((c < "0") || (c > "9"))) return false;
+						}
+						return true;
+					}
+					function stripCharsInBag(s, bag){
+						var i;
+						var returnString = "";
+						for (i = 0; i < s.length; i++){
+							var c = s.charAt(i);
+							if (bag.indexOf(c) == -1) returnString += c;
+						}
+						return returnString;
+					}
+					function daysInFebruary (year){
+						return (((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0))) ? 29 : 28 );
+					}
+					function DaysArray(n) {
+						for (var i = 1; i <= n; i++) {
+							this[i] = 31
+							if (i==4 || i==6 || i==9 || i==11) {this[i] = 30}
+							if (i==2) {this[i] = 29}
+						}
+						return this
+					}
+					function isDate(dtStr){
+						var daysInMonth = DaysArray(12)
+						var pos1=dtStr.indexOf(dtCh)
+						var pos2=dtStr.indexOf(dtCh,pos1+1)
+						var strDay=dtStr.substring(0,pos1)
+						var strMonth=dtStr.substring(pos1+1,pos2)
+						var strYear=dtStr.substring(pos2+1)
+						strYr=strYear
+						if (strDay.charAt(0)=="0" && strDay.length>1) strDay=strDay.substring(1)
+						if (strMonth.charAt(0)=="0" && strMonth.length>1) strMonth=strMonth.substring(1)
+						for (var i = 1; i <= 3; i++) {
+							if (strYr.charAt(0)=="0" && strYr.length>1) strYr=strYr.substring(1)
+						}
+						month=parseInt(strMonth)
+						day=parseInt(strDay)
+						year=parseInt(strYr)
+						if (pos1==-1 || pos2==-1){
+							return false
+						}
+						if (strMonth.length<1 || month<1 || month>12){
+							return false
+						}
+						if (strDay.length<1 || day<1 || day>31 || (month==2 && day>daysInFebruary(year)) || day > daysInMonth[month]){
+							return false
+						}
+						if (strYear.length != 4 || year==0 || year<minYear || year>maxYear){
+							return false
+						}
+						if (dtStr.indexOf(dtCh,pos2+1)!=-1 || isInteger(stripCharsInBag(dtStr, dtCh))==false){
+							return false
+						}
+						return true
+					}
+					if(isDate(fecha)){
+						return true;
+					}else{
+						return false;
+					}
+				}else{
+					return true;
+				}
+		    });
+		                        		
+		    
+		    $.validator.addMethod("edad", function(value, element) {
+				var dia = $("#dia").val();
+				var mes = $("#mes").val();
+				var anyo = $("#anyo").val();
+		                        		
+		        var edad = calcular_edad(dia+"/"+mes+"/"+anyo);
+		        if(edad < 16)
+		            return false;
+		        else
+		            return true;
+		    });
+			                 		
+		    function calcular_edad(fecha){ 
+		        hoy=new Date() 
+		    
+		        var array_fecha = fecha.split("/")  
+		        if (array_fecha.length!=3) 
+		             return false 
+		    
+		        var ano 
+		        ano = parseInt(array_fecha[2]); 
+		        if (isNaN(ano)) 
+		            return false 
+		    
+		        var mes 
+		        mes = parseInt(array_fecha[1]); 
+		        if (isNaN(mes)) 
+		            return false 
+		    
+		        var dia 
+		        dia = parseInt(array_fecha[0]);	
+		        if (isNaN(dia)) 
+		            return false 
+		    
+		        edad=hoy.getFullYear()- ano - 1; //-1 porque no se si ha cumplido años ya este año
+		     
+		        if (hoy.getMonth() + 1 - mes < 0) //+ 1 porque los meses empiezan en 0 
+		            return edad 
+		        if (hoy.getMonth() + 1 - mes > 0) 
+		            return edad+1 
+		    
+		        if (hoy.getUTCDate() - dia >= 0) 
+		            return edad + 1 
+		    
+		        return edad 
+		    }
+		                        		
+		    var mensajeAlert = "";
+				
+			$("#registro_empresa").validate({
+		        errorPlacement: function(error, element) {
+		            mensajeAlert += "-"+error.text()+"\n";
+		        },
+		        showErrors: function(errorMap, errorList){
+		            this.defaultShowErrors();
+		            if(mensajeAlert != "")
+		                alert(mensajeAlert);
+		            mensajeAlert = "";
+		        },
+		        onfocusout: false,
+		        onkeyup: false,
+		        onclick: false,
+				ignore: "",
+		        rules: {
+		            Nombre: {required: true},
+		            Apellidos: {required: true},
+					Sexo: {desplegable: true},
+					Dia: {required: true, fechaValida: true, edad: true},
+            		Mes: {required: true},
+            		Anyo: {required: true},
+					Pais: {desplegable: true},
+					Localidad: {desplegable: true},
+		            Email: {required: true, email: true, emailYaCreado: true },
+		            Password: {required: true, caracteresPermitidos: true, minlength: 8, maxlength: 18},
+		            Password2: {required: true, contrasenasIguales: true},
+					lopd: {checkbox: true}
+		        },
+		        messages: {
+		            Nombre: {required: "El campo Nombre es requerido"},
+            		Apellidos: {required: "El campo Apellidos es requerido"},
+            		Sexo: {desplegable: "El campo Sexo es requerido"},
+            		Dia: {required: "El campo Dia de la Fecha de Nacimiento es requerido",
+							fechaValida: "La Fecha de Nacimiento no es correcta",
+							edad: "La edad mínima es de 16 años"},
+            		Mes: {required: "El campo Mes de la Fecha de Nacimiento es requerido"},
+            		Anyo: {required: "El campo Año de la Fecha de Nacimiento es requerido"},
+            		Pais: {desplegable: "El campo Pais es requerido"},
+            		Localidad: {desplegable: "El campo Localidad es requerido"},
+            		Direccion: {required: "El campo Direccion es requerido"},
+            		Email: {required: "El campo Email es requerido",
+							email: "El formato del email no es correcto",
+							emailYaCreado: "El email ya está registrado"},
+            		Password: {required: "El campo Contraseña es requerido",
+								caracteresPermitidos: "Sólo se admiten caracteres alfanuméricos, _ y -",
+								minlength: "La longitud mínima de la contraseña es de 8 caracteres",
+								maxlength: "La longitud máxima de la contraseña es de 18 caracteres"},
+					Password2: {required: "El campo Repetir contraseña es requerido",
+								contrasenasIguales: "Las contraseñas deben ser iguales"},
+					lopd: {checkbox: "Debes aceptar las Condiciones de Uso para continuar"},
+		        }
+		    });
+				
+			
+			jQuery.fn.extend({
+				propAttr: $.fn.prop || $.fn.attr
+			});
+			jQuery.curCSS = jQuery.css;
+		
+});
+/*]]>*/
+</script>   
+ </body>
+</html>

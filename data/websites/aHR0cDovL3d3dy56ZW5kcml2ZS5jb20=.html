@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="icon" type="image/png" href="/static/img/favicon/favicon-160x160.png" sizes="192x192"> 
+  <link rel="icon" type="image/png" href="/static/img/favicon/favicon-160x160.png" sizes="160x160"> 
+  <link rel="icon" type="image/png" href="/static/img/favicon/favicon-96x96.png" sizes="96x96"> 
+  <link rel="icon" type="image/png" href="/static/img/favicon/favicon-32x32.png" sizes="16x16"> 
+  <link rel="icon" type="image/png" href="/static/img/favicon/favicon-16x16.png" sizes="32x32"> 
+  <title>Zendrive</title> 
+  <link href="/static/css/styles.css" media="screen, projection" rel="stylesheet" type="text/css"> 
+  <!-- HACK --> 
+  <style type="text/css">
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                section.banner div.container {
+                        margin-top: 200px;
+                        margin-left: -50px;
+                }
+                footer div.container {
+                        margin-left:50px;
+                }
+            }
+        </style> 
+ </head> 
+ <body>
+  <header> 
+   <nav class="navbar navbar-default" role="navigation"> 
+    <div class="navbar-header"> 
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="navbar-brand" href="/home/">Zendrive</a> 
+    </div> 
+    <div class="collapse navbar-collapse" id="zd-header-collapse"> 
+     <span class="visible-xs" id="zd-header-close"><i class="glyphicon glyphicon-remove"></i></span> 
+     <div class="pull-right"> 
+      <ul class="nav navbar-nav "> 
+       <li class="active visible-xs"><a href="/home/">Home</a></li> 
+       <li class=""><a href="/how-it-works/">How It Works</a></li> 
+       <li class=""><a href="/services/">Services</a></li> 
+       <li class=""><a href="/pricing/">Pricing</a></li> 
+       <li class=""><a href="/developers/">Developers</a></li> 
+       <li class=""><a href="/about/">About</a></li> 
+      </ul> 
+      <ul class="nav navbar-nav access hidden-sm"> 
+       <li><button class="btn btn-gray btn-hollow-sm" onclick="window.location.href='http://developers.zendrive.com/login'">Log In</button></li> 
+       <li><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#signup-modal">Sign Up 
+         <!-- TODO (needs fix) --> </button></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </nav> 
+  </header>  
+  <main id="content"> 
+   <section class="feature banner home"> 
+    <div class="container"> 
+     <p>Improving driving for everyone<br> through better data and analytics</p> 
+     <a class="btn btn-primary btn-lg" href="/services">Start Here</a> 
+    </div> 
+   </section> 
+   <section class="feature no-pad-vert bg-gray border static-news"> 
+    <div class="container"> 
+     <div class="col-xs-12"> 
+      <div class="col-xs-3"> 
+       <a href="https://gigaom.com/2014/11/25/zendrive-wants-to-help-on-demand-car-services-find-better-drivers/" target="_blank"> <i class="gigaom"></i> </a> 
+      </div> 
+      <div class="col-xs-3"> 
+       <a href="http://techcrunch.com/2014/11/25/zendrive-lets-ridesharing-and-delivery-companies-know-if-their-drivers-are-distracted/?ncid=rss" target="_blank"> <i class="techcrunch"></i> </a> 
+      </div> 
+      <div class="col-xs-3"> 
+       <a href="http://venturebeat.com/2014/11/25/attention-unsafe-drivers-of-on-demand-car-services-zenfleets-will-be-watching-you/" target="_blank"> <i class="venturebeat"></i> </a> 
+      </div> 
+      <div class="col-xs-3"> 
+       <a href="http://blogs.wsj.com/venturecapital/2014/11/25/zendrive-parks-financing-to-make-ride-sharing-car-sharing-safer/" target="_blank"> <i class="wsj"></i> </a> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <!-- <section class="feature no-pad-vert bg-gray border press">
+        <div class="container">
+            <div id="press-list" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                    	<div class="col-md-12 hidden-xs">
+                    		<div class="col-md-3 press-logo large-flex">
+                    			<img src="/static/img/logo-monochrome.png" />
+                    		</div>
+                    		<div class="col-md-9 large-flex press-quote">
+                    			<p class="font-normal">"Lorem ipsum dolor sit amet"</p>
+                    		</div>
+                    	</div>
+                    	<div class="col-md-12 visible-xs small-flex">
+                    		<div class="col-xs-12 small-flex press-quote">
+                    			<p class="font-normal">"Lorem ipsum dolor sit amet"</p>
+                    		</div>
+                    		<div class="col-xs-12 press-logo small-flex">
+                    			<img src="/static/img/logo-monochrome.png" />
+                    		</div>
+                    	</div>
+                    </div>
+                   <div class="item">
+                    	<div class="col-md-12 hidden-xs">
+                    		<div class="col-md-3 press-logo large-flex">
+                    			<img src="/static/img/logo-monochrome.png" />
+                    		</div>
+                    		<div class="col-md-9 large-flex press-quote">
+                    			<p class="font-normal">"Lorem ipsum dolor sit amet"</p>
+                    		</div>
+                    	</div>
+                    	<div class="col-md-12 visible-xs small-flex">
+                    		<div class="col-xs-12 small-flex press-quote">
+                    			<p class="font-normal">"Lorem ipsum dolor sit amet"</p>
+                    		</div>
+                    		<div class="col-xs-12 press-logo small-flex">
+                    			<img src="/static/img/logo-monochrome.png" />
+                    		</div>
+                    	</div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#press-list" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+                <a class="right carousel-control" href="#press-list" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </section> --> 
+   <section class="feature"> 
+    <div class="container"> 
+     <div class="col-md-3 col-xs-12 pad-bottom-xs no-pad small-flex"> 
+      <div class="col-xs-4 col-md-12 no-pad"> 
+       <img class="center-image" src="/static/img/home/safe.png"> 
+      </div> 
+      <div class="col-md-12 col-xs-8"> 
+       <h3 class="center-label-md left-label-xs green font-normal">Safe</h3> 
+       <p class="center-para-md left-para-xs font-para font-normal">Monitors <em>Caution</em>, <em>Control</em>, and <em>Focus</em> on the road</p> 
+      </div> 
+     </div> 
+     <div class="col-md-3 col-xs-12 no-pad pad-bottom-xs small-flex"> 
+      <div class="col-xs-4 col-md-12 no-pad "> 
+       <img class="center-image" src="/static/img/home/easy.png"> 
+      </div> 
+      <div class="col-md-12 col-xs-8"> 
+       <h3 class="center-label-md left-label-xs green font-normal">Easy</h3> 
+       <p class="center-para-md left-para-xs font-normal">Works with your app - no pricey hardware</p> 
+      </div> 
+     </div> 
+     <div class="col-md-3 col-xs-12 pad-bottom-xs no-pad small-flex"> 
+      <div class="col-xs-4 col-md-12 no-pad "> 
+       <img class="center-image" src="/static/img/home/efficient.png"> 
+      </div> 
+      <div class="col-md-12 col-xs-8 "> 
+       <h3 class="center-label-md left-label-xs green font-normal">Efficient</h3> 
+       <p class="center-para-md left-para-xs font-normal">Optimizes for fuel efficiency and insurance savings</p> 
+      </div> 
+     </div> 
+     <div class="col-md-3 col-xs-12 pad-bottom-xs no-pad small-flex"> 
+      <div class="col-xs-4 col-md-12 no-pad"> 
+       <img class="center-image" src="/static/img/home/smart.png"> 
+      </div> 
+      <div class="col-md-12 col-xs-8"> 
+       <h3 class="center-label-md left-label-xs green font-normal">Smart</h3> 
+       <p class="center-para-md left-para-xs font-normal">Gets better insights, including driver cell phone use</p> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="feature bleed"> 
+    <div class="container"> 
+     <div class="col-md-6 bg-green col-sm-12 col-xs-12"> 
+      <div class="left-bleed bg-green"></div> 
+      <div class="col-md-10 pad-top"> 
+       <h2 class="font-xlarge caps">Zenfleets</h2> 
+       <p class="font-normal sub-title">Focus on building your business - we’ll <br>help keep your fleet safe</p> 
+       <a class="btn btn-lg btn-gray hidden-xs" href="/pricing">Get Your Free Trial</a> 
+       <a class="btn btn-lg btn-gray visible-xs" href="/pricing">Get Started</a> 
+      </div> 
+      <div class="col-md-10 "> 
+       <img src="/static/img/home/dashboard_graphic.png"> 
+      </div> 
+     </div> 
+     <div class="col-md-6 bg-gray col-sm-12 col-xs-12"> 
+      <div class="right-bleed bg-gray"></div> 
+      <div class="col-md-10 pad-top pull-right-md"> 
+       <h2 class="font-xlarge caps">Developer Toolkit</h2> 
+       <p class="font-normal sub-title">30 Minutes to a Smarter Fleet</p> 
+       <a class="btn btn-lg btn-primary bg-green" href="/pricing">Start Now</a> 
+      </div> 
+      <div class="col-md-10 pull-right-md"> 
+       <img src="/static/img/home/dev_console.png"> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="feature testimonial hidden-xs"> 
+    <div class="container"> 
+     <h3 class="font-xlarge">What people are saying</h3> 
+     <div class="divider"></div> 
+     <div id="testimonial" class="carousel" data-ride="carousel" data-interval="5000"> 
+      <!-- Wrapper for slides --> 
+      <div class="full-width-wrapper"> 
+       <div class="carousel-inner container"> 
+        <div class="item"> 
+         <p> “Zendrive helps us deliver on our promise to our parents to get their kids where they need to go safely and reliably.” </p> 
+         <div class="sign"> 
+          <div class="pic"> 
+           <img class="center-image" src="/static/img/testimonial/person/hopskip.jpg"> 
+          </div> 
+          <span class="name">&nbsp;Joanna Newman McFarland,&nbsp;</span> 
+          <span class="firm">&nbsp;HopSkipDrive,&nbsp;CEO</span> 
+         </div> 
+        </div> 
+        <div class="item"> 
+         <p> “ By integrating Zendrive’s technology, we will have much greater visibility into what's happening on the road during every RedCap trip.” </p> 
+         <div class="sign"> 
+          <div class="pic"> 
+           <img class="center-image" src="/static/img/testimonial/person/redcap.jpg"> 
+          </div> 
+          <span class="name">&nbsp;David Zwick,&nbsp;</span> 
+          <span class="firm">&nbsp;RedCap,&nbsp;Co-founder</span> 
+         </div> 
+        </div> 
+        <div class="item active"> 
+         <p> “On Demand services are becoming so widespread and complex that we need analytics layers like Zendrive to enable the next level of innovation and efficiency.” </p> 
+         <div class="sign"> 
+          <div class="pic"> 
+           <img class="center-image" src="/static/img/testimonial/person/firstround.jpg"> 
+          </div> 
+          <span class="name">Bill Trenchard,&nbsp;</span> 
+          <span class="firm">First Round Capital,&nbsp;Partner</span> 
+         </div> 
+        </div> 
+        <div class="item"> 
+         <p> “Improving access to data and analytics through new technologies will be vital in transforming the mobility ecosystem.” </p> 
+         <div class="sign"> 
+          <div class="pic"> 
+           <img class="center-image" src="/static/img/testimonial/person/fontinalis.jpg"> 
+          </div> 
+          <span class="name">Bill Ford,&nbsp;</span> 
+          <span class="firm">Fontinalis,&nbsp;Co-founder</span> 
+         </div> 
+        </div> 
+        <div class="item"> 
+         <p> “Zendrive technology measures and describes driver behavior in useful ways which lend themselves to easy risk analysis.” </p> 
+         <div class="sign"> 
+          <div class="pic"> 
+           <img class="center-image" src="/static/img/testimonial/person/trueaccord.jpg"> 
+          </div> 
+          <span class="name">Ohad Samet,&nbsp;</span> 
+          <span class="firm">TrueAccord,&nbsp;CEO</span> 
+         </div> 
+        </div> 
+        <div class="item"> 
+         <p> “Zendrive lets us provide critical driver behavior analytics to our last-mile-delivery customers, which lets them compare their fleets to others in terms of safety and eco-friendliness.” </p> 
+         <div class="sign"> 
+          <div class="pic"> 
+           <img class="center-image" src="/static/img/testimonial/person/trak.jpg"> 
+          </div> 
+          <span class="name">Khaled Naim,&nbsp;</span> 
+          <span class="firm">Trak,&nbsp;CEO</span> 
+         </div> 
+        </div> 
+        <div class="item"> 
+         <p> “Advances like Driver-Centric Analytics and other telematics measurements are probably the biggest break through since the seat belt.” </p> 
+         <div class="sign"> 
+          <div class="pic"> 
+           <img class="center-image" src="/static/img/testimonial/person/genre.jpg"> 
+          </div> 
+          <span class="name">Tad Montross,&nbsp;</span> 
+          <span class="firm">Gen-Re Insurance,&nbsp;CEO</span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="li-wrapper"> 
+       <ul class="nav nav-pills nav-justified small-flex" id="testimonial-nav"> 
+        <li class="" data-target="#testimonial" data-slide-to="0" data-index="0"> 
+         <div class="item-container"> 
+          <a href=""><img src="/static/img/testimonial/logo/hopskip.png"> </a> 
+         </div> </li> 
+        <li class="" data-target="#testimonial" data-slide-to="1" data-index="1"> 
+         <div class="item-container"> 
+          <a href=""><img src="/static/img/testimonial/logo/redcap.png"> </a> 
+         </div> </li>
+        <li class="active" data-target="#testimonial" data-slide-to="2" data-index="2"> 
+         <div class="item-container"> 
+          <a href=""><img src="/static/img/testimonial/logo/firstround.png"> </a> 
+         </div> </li> 
+        <li class="" data-target="#testimonial" data-slide-to="3" data-index="3"> 
+         <div class="item-container"> 
+          <a href=""><img src="/static/img/testimonial/logo/fontinalis.png"> </a> 
+         </div> </li> 
+        <li class="" data-target="#testimonial" data-slide-to="4" data-index="4"> 
+         <div class="item-container"> 
+          <a href=""><img src="/static/img/testimonial/logo/trueaccord.png"> </a> 
+         </div> </li> 
+        <li class="" data-target="#testimonial" data-slide-to="5" data-index="5"> 
+         <div class="item-container"> 
+          <a href=""><img src="/static/img/testimonial/logo/trak.png"> </a> 
+         </div> </li> 
+        <li class="" data-target="#testimonial" data-slide-to="6" data-index="6"> 
+         <div class="item-container"> 
+          <a href=""><img src="/static/img/testimonial/logo/genre.png"> </a> 
+         </div> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <!-- End Carousel --> 
+    </div> 
+   </section> 
+  </main>  
+  <footer> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-3 col-xs-6"> 
+      <ul class="footer-list"> 
+       <li>Services</li> 
+       <li><a href="/services/">ZenFleets</a></li> 
+       <li><a href="/how-it-works/">How It Works</a></li> 
+       <li><a href="/pricing/">Pricing</a></li> 
+      </ul> 
+     </div> 
+     <div class="col-md-3 col-xs-6"> 
+      <ul class="footer-list"> 
+       <li>Developer</li> 
+       <li><a href="/developers/#sdk">SDK</a></li> 
+       <li><a href="/developers/#apis">API</a></li> 
+       <li><a href="http://developers.zendrive.com/docs" target="_blank">Documentation</a></li> 
+      </ul> 
+     </div> 
+     <div class="col-md-3  col-xs-6"> 
+      <ul class="footer-list"> 
+       <li>About</li> 
+       <li><a href="/about/#zdteam">Team</a></li> 
+       <li><a href="/about/#zdinvestors">Investors</a></li> 
+       <li><a href="/about/#zdcareers">Careers</a></li> 
+      </ul> 
+     </div> 
+     <div class="col-md-3 col-xs-6"> 
+      <ul class="footer-list"> 
+       <li>Contact</li> 
+       <li><a href="https://twitter.com/zendrive" target="_blank">Twitter</a></li> 
+       <li><a href="https://www.facebook.com/getzendrive?ref=wb" target="_blank">Facebook</a></li> 
+       <li><a href="http://zendriveblog.tumblr.com/" target="_blank">Blog</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <hr class="footer-divider"> 
+    </div> 
+    <span class="pull-left"> </span> 
+    <span class="pull-right"> <a href="/policy/">Privacy</a> | <a href="/terms_website/">Legal</a> </span> 
+   </div> 
+  </footer> 
+  <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+   <div class="modal-dialog signup-modal"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+     </div> 
+     <div id="signup-form" class="modal-body"> 
+      <h2 class="caps font-xlarge center-label-md">SIGN UP<span id="loader-icon"></span></h2> 
+      <p class="font-normal center-para-md">Get started with a <strong class="green">60 day free trial</strong> of our SDK. <br> Integrate with your driver app and start improving safety in about 30 minutes! </p> 
+      <div class="row" style="margin-bottom: -10px;"> 
+       <div class="col-xs-12 col-sm-6 col-md-6"> 
+        <input type="text" id="first-name" class="form-control" placeholder="First Name" data-toggle="popover" data-placement="left" data-content="First Name is required"> 
+       </div> 
+       <div id="signin-lastname" class="col-xs-12 col-sm-6 col-md-6"> 
+        <input type="text" id="last-name" class="form-control" placeholder="Last Name" data-toggle="popover" data-placement="right" data-content="Last Name is required"> 
+       </div> 
+      </div> 
+      <input type="text" id="company" class="form-control" placeholder="Company" data-toggle="popover" data-placement="left" data-content="Company is required"> 
+      <input type="text" id="email" class="form-control" placeholder="Email" data-toggle="popover" data-placement="left" data-content="Invalid email address"> 
+      <input type="password" id="password" class="form-control" placeholder="Password" data-toggle="popover" data-placement="left" data-content="Password should be atleast 6 characters"> 
+      <p style="text-align:center;"> <button id="create-account" class="btn btn-primary btn-lg">Create Account</button> </p> 
+      <p class="form-error">Oops! Unexpected error. Please try again.</p> 
+      <div class="center-label center-label-xs"> 
+       <div classname="checkbox"> 
+        <label> <input type="checkbox" id="terms-check" checked="true"> I agree to <a href="/terms" target="_blank">Zendrive terms</a> </label> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="thankyou-form" class="modal-body"> 
+      <h5 class="center center-label-xs">Thank you for signing up. To get started, follow the activation link sent to your email.</h5> 
+     </div> 
+    </div> 
+   </div> 
+   <script src="/static/bower_components/jquery/dist/jquery.min.js"></script> 
+   <script src="/static/js/bootstrap/collapse.js"></script> 
+   <script src="/static/js/bootstrap/transition.js"></script> 
+   <script src="/static/js/bootstrap/carousel.js"></script> 
+   <script src="/static/js/bootstrap/modal.js"></script> 
+   <script src="/static/js/bootstrap/tooltip.js"></script> 
+   <script src="/static/js/bootstrap/popover.js"></script> 
+   <script src="/static/js/bootstrap/affix.js"></script> 
+   <script src="/static/js/script.js"></script> 
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56852068-2', 'auto');
+  ga('send', 'pageview');
+</script> 
+  </div>
+ </body>
+</html>

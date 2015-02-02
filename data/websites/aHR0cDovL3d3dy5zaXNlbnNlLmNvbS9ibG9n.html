@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+ <head> 
+  <meta charset="utf-8"> 
+  <title>
+Blog | Sisense Business Intelligence &amp; Dashboard Software </title> 
+  <style type="text/css">Avada_3.3.1{color:green;}</style> 
+  <script type="text/javascript">
+    WebFontConfig = {
+                custom: { families: ['FontAwesome'], urls: ['http://www.sisense.com/blog/wp-content/themes/Avada/fonts/fontawesome.css'] }
+    };
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+    </script> 
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://www.sisense.com/blog/wp-content/themes/Avada/css/ie8.css" />
+    <![endif]--> 
+  <!--[if IE]>
+    <link rel="stylesheet" href="http://www.sisense.com/blog/wp-content/themes/Avada/css/ie.css" />
+    <![endif]--> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <style type="text/css">@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait){#wrapper .ei-slider{width:100%!important;}}@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape){#wrapper .ei-slider{width:100%!important;}}</style> 
+  <style type="text/css">.animated{visibility:hidden;}</style> 
+  <!--[if lt IE 10]>
+    <style type="text/css">
+    .animated { visibility:visible;}
+    </style>
+    <![endif]--> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <style type="text/css">#toTop{display:none!important;}</style> 
+  <meta name="description" content="See the latest data news, dashboards and insights from Sisense-the only business analytics software that lets non-techies join, analyze and visualize large data"> 
+  <link rel="canonical" href="http://www.sisense.com/blog"> 
+  <link rel="next" href="http://www.sisense.com/blog/page/2/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Blog | Sisense Business Intelligence &amp; Dashboard Software"> 
+  <meta property="og:description" content="See the latest data news, dashboards and insights from Sisense-the only business analytics software that lets non-techies join, analyze and visualize large data"> 
+  <meta property="og:url" content="http://www.sisense.com/blog"> 
+  <meta property="og:site_name" content="Sisense | The Big Data Analytics Blog"> 
+  <script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "http://www.sisense.com/blog/", "potentialAction": { "@type": "SearchAction", "target": "http://www.sisense.com/blog/?s={search_term}", "query-input": "required name=search_term" } }</script> 
+  <link rel="stylesheet" id="style-css-css" href="http://www.sisense.com/blog/wp-content/themes/Avada/style.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="media-css-css" href="http://www.sisense.com/blog/wp-content/themes/Avada/css/media.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="animate-css-css" href="http://www.sisense.com/blog/wp-content/themes/Avada/css/animate-custom.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://www.sisense.com/blog/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-polls-css" href="http://www.sisense.com/blog/wp-content/themes/Avada/polls-css.css?ver=2.67" type="text/css" media="all"> 
+  <link rel="stylesheet" id="scroll-triggered-boxes-css" href="http://www.sisense.com/blog/wp-content/plugins/scroll-triggered-boxes/assets/css/styles.min.css?ver=1.4.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="avada-dynamic-css-css" href="http://www.sisense.com/blog/wp-content/uploads/avada.css?ver=4.0.1" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <meta name="generator" content="WordPress 4.0.1"> 
+  <style type="text/css">.wp-polls .pollbar{margin:1px;font-size:6px;line-height:8px;height:8px;background:#108bb4;border:1px solid #333333;}</style> 
+  <!--[if lte IE 8]>
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+    var imgs, i, w;
+    var imgs = document.getElementsByTagName( 'img' );
+    for( i = 0; i < imgs.length; i++ ) {
+        w = imgs[i].getAttribute( 'width' );
+        imgs[i].removeAttribute( 'width' );
+        imgs[i].removeAttribute( 'height' );
+    }
+    });
+    </script>
+    <![endif]--> 
+  <script type="text/javascript">
+    /*@cc_on
+      @if (@_jscript_version == 10)
+        document.write('<style type="text/css">.search input{padding-left:5px;}header .tagline{margin-top:3px !important;}.star-rating span:before {letter-spacing: 0;}.avada-select-parent .avada-select-arrow,.gravity-select-parent .select-arrow,.wpcf7-select-parent .select-arrow,.select-arrow{background: #fff;}.star-rating{width: 5.2em!important;}.star-rating span:before {letter-spacing: 0.1em!important;}</style>');
+      @end
+    @*/
+        </script> 
+  <style type="text/css">#wrapper{width:100%;}//.wrapper_blank { display: block; }
+    @media only screen and (min-width: 801px) and (max-width: 1014px){
+        #wrapper{
+            width:auto;
+        }
+    }
+    @media only screen and (min-device-width: 801px) and (max-device-width: 1014px){
+        #wrapper{
+            width:auto;
+        }
+    }
+    
+    
+    
+    
+        .page-title-container{
+        background-image:url(/blog/wp-content/themes/Avada/images/page_title_bg.png) !important;
+    }
+    
+        .page-title-container{
+        background-color:#F6F6F6;
+    }
+    
+    #header{
+            }
+
+    #header{
+                    }
+
+    #main{
+        
+                padding-top: 55px !important;
+        
+                padding-bottom: 40px !important;
+            }
+
+    #main{
+                
+        
+        
+    }
+
+    .page-title-container{
+                -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        
+        
+        
+        
+    }
+
+        .page-title-container{
+        height:87px !important;
+    }
+    
+    
+    
+    
+        .width-100 .fullwidth-box {
+        margin-left: -20px; margin-right: -20px;
+    }
+    
+            </style> 
+  <!--[if lte IE 8]>
+    <script type="text/javascript" src="http://www.sisense.com/blog/wp-content/themes/Avada/js/respond.js"></script>
+    <![endif]--> 
+ </head> 
+ <body class="home blog light "> 
+  <div id="wrapper"> 
+   <div class="header-wrapper"> 
+    <div class="header-v3"> 
+     <header id="header"> 
+      <div class="avada-row" style="margin-top:0px;margin-bottom:0px;"> 
+       <div class="logo" style="margin-right:0px;margin-top:31px;margin-left:0px;margin-bottom:31px;"> 
+        <a href="http://www.sisense.com/blog"> <img src="/blog/wp-content/uploads/2014/02/blog-logo.png" alt="Sisense | The Big Data Analytics Blog" class="normal_logo"> </a> 
+       </div> 
+       <nav id="nav" class="nav-holder"> 
+        <ul id="navigation" class="menu"> 
+         <li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="http://www.sisense.com">Sisense Home</a></li> 
+         <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="http://www.sisense.com/company">About Us</a></li> 
+         <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="http://www.sisense.com/get/in-contact/">Contact Us</a></li> 
+         <li class="main-nav-search"> <a id="nav-search-link" class="search-link"></a> 
+          <div id="nav-search-form" class="main-nav-search-form"> 
+           <form role="search" id="searchform" method="get" action="http://www.sisense.com/blog/"> 
+            <input type="text" value="" name="s" id="s"> 
+            <input type="submit" id="searchsubmit" value=""> 
+           </form> 
+          </div> </li> 
+        </ul> 
+       </nav> 
+       <div class="mobile-nav-holder main-menu"></div> 
+      </div> 
+     </header> 
+    </div> 
+   </div> 
+   <header id="header" class="sticky-header"> 
+    <div class="sticky-shadow"> 
+     <div class="avada-row"> 
+      <div class="logo"> 
+       <a href="http://www.sisense.com/blog"> <img src="/blog/wp-content/uploads/2014/02/blog-logo.png" alt="Sisense | The Big Data Analytics Blog" data-max-width="340" class="normal_logo"> </a> 
+      </div> 
+      <nav id="sticky-nav" class="nav-holder"> 
+       <ul id="navigation" class="menu"> 
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="http://www.sisense.com">Sisense Home</a></li> 
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="http://www.sisense.com/company">About Us</a></li> 
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="http://www.sisense.com/get/in-contact/">Contact Us</a></li> 
+        <li class="main-nav-search"> <a id="nav-search-link" class="search-link"></a> 
+         <div id="nav-search-form" class="main-nav-search-form"> 
+          <form role="search" id="searchform" method="get" action="http://www.sisense.com/blog/"> 
+           <input type="text" value="" name="s" id="s"> 
+           <input type="submit" id="searchsubmit" value=""> 
+          </form> 
+         </div> </li> 
+       </ul> 
+      </nav> 
+      <div class="mobile-nav-holder"></div> 
+     </div> 
+    </div> 
+   </header> 
+   <div id="sliders-container"> 
+   </div> 
+   <div id="main" class="clearfix " style=""> 
+    <div class="avada-row" style=""> 
+     <div id="content" class="" style="float:left;"> 
+      <h1 class="home-title">Sisense Business Intelligence Blog</h1> 
+      <div id="posts-container" class=" clearfix"> 
+       <div id="post-1399" class="post-1399 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-bi-in-real-life tag-big-data tag-business-intelligence tag-data-visualization  align-left clearfix"> 
+        <style type="text/css">
+			
+			
+			
+			
+						</style> 
+        <div class="flexslider post-slideshow"> 
+         <ul class="slides"> 
+          <li> 
+           <div class="image" aria-haspopup="true"> 
+            <a href="http://www.sisense.com/blog/buyers-beware-data-visualization-not-data-analytics/"><img width="610" height="250" src="http://www.sisense.com/blog/wp-content/uploads/2014/12/unnamed.png" class="attachment-blog-large wp-post-image" alt="unnamed"></a> 
+            <div class="image-extras"> 
+             <div class="image-extras-content"> 
+              <a style="display:inline-block;" class="icon link-icon" href="http://www.sisense.com/blog/buyers-beware-data-visualization-not-data-analytics/">Permalink</a> 
+              <a style="display:inline-block;" class="icon gallery-icon" href="http://www.sisense.com/blog/wp-content/uploads/2014/12/unnamed.png" rel="prettyPhoto[gallery1399]" title=""><img style="display:none;" alt="">Gallery</a> 
+              <h3><a href="http://www.sisense.com/blog/buyers-beware-data-visualization-not-data-analytics/">Buyers Beware: Data Visualization is Not Data Analytics</a></h3> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+        <div class="post-content-container"> 
+         <h2 class="entry-title"><a href="http://www.sisense.com/blog/buyers-beware-data-visualization-not-data-analytics/">Buyers Beware: Data Visualization is Not Data Analytics</a></h2> 
+         <div class="post-content"> 
+          <div class="content-sep"></div> 
+          <div class="excerpt-container">
+           <p>The term Business Intelligence solution can be a deceiving one. Many software solutions that call themselves BI can actually only offer you half of what you need.</p> 
+           <p>Here it’s important to make the distinction between two types of business analysis and intelligence tools: end-to-end solutions and ones that are merely front-end. An end-to-end solution is […]</p> 
+          </div> 
+         </div> 
+         <div style="clear:both;"></div> 
+         <div class="meta-info"> 
+          <div class="alignleft vcard">
+            By 
+           <span class="fn"><a href="http://www.sisense.com/blog/author/aya/" title="Posts by Aya Ephrati" rel="author">Aya Ephrati</a></span>
+           <span class="sep">|</span>
+           <span class="updated">December 4th, 2014</span>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/category/blog/" rel="category tag">blog</a>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/buyers-beware-data-visualization-not-data-analytics/#respond" title="Comment on Buyers Beware: Data Visualization is Not Data Analytics"><span class="dsq-postid" data-dsqidentifier="1399 http://www.sisense.com/blog/?p=1399">0 Comments</span></a>
+           <span class="sep">|</span> 
+          </div> 
+          <div class="alignright"> 
+           <a href="http://www.sisense.com/blog/buyers-beware-data-visualization-not-data-analytics/" class="read-more">Read More</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="post-1388" class="post-1388 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-bi-in-real-life tag-business-intelligence tag-sisense-updates  align-right clearfix"> 
+        <style type="text/css">
+			
+			
+			
+			
+						</style> 
+        <div class="flexslider post-slideshow"> 
+         <ul class="slides"> 
+          <li> 
+           <div class="image" aria-haspopup="true"> 
+            <a href="http://www.sisense.com/blog/stop-running-analytics-marathon/"><img width="610" height="250" src="http://www.sisense.com/blog/wp-content/uploads/2014/11/sprint-bi-blog.png" class="attachment-blog-large wp-post-image" alt="sprint-bi-blog"></a> 
+            <div class="image-extras"> 
+             <div class="image-extras-content"> 
+              <a style="display:inline-block;" class="icon link-icon" href="http://www.sisense.com/blog/stop-running-analytics-marathon/">Permalink</a> 
+              <a style="display:inline-block;" class="icon gallery-icon" href="http://www.sisense.com/blog/wp-content/uploads/2014/11/sprint-bi-blog.png" rel="prettyPhoto[gallery1388]" title=""><img style="display:none;" alt="">Gallery</a> 
+              <h3><a href="http://www.sisense.com/blog/stop-running-analytics-marathon/">Why You Should Stop Running the Analytics Marathon</a></h3> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+        <div class="post-content-container"> 
+         <h2 class="entry-title"><a href="http://www.sisense.com/blog/stop-running-analytics-marathon/">Why You Should Stop Running the Analytics Marathon</a></h2> 
+         <div class="post-content"> 
+          <div class="content-sep"></div> 
+          <div class="excerpt-container">
+           <p>It is well known that one of the toughest parts of running a marathon is the mental toll that the seemingly never-ending race takes on runners. Okay, so we can’t compete with the physical fatigue that a marathon entails, but sometimes deploying a business analytics software and even running a query can feel psychologically […]</p> 
+          </div> 
+         </div> 
+         <div style="clear:both;"></div> 
+         <div class="meta-info"> 
+          <div class="alignleft vcard">
+            By 
+           <span class="fn"><a href="http://www.sisense.com/blog/author/Itay/" title="Posts by Itay Erez" rel="author">Itay Erez</a></span>
+           <span class="sep">|</span>
+           <span class="updated">November 25th, 2014</span>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/category/blog/" rel="category tag">blog</a>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/stop-running-analytics-marathon/#respond" title="Comment on Why You Should Stop Running the Analytics Marathon"><span class="dsq-postid" data-dsqidentifier="1388 http://www.sisense.com/blog/?p=1388">0 Comments</span></a>
+           <span class="sep">|</span> 
+          </div> 
+          <div class="alignright"> 
+           <a href="http://www.sisense.com/blog/stop-running-analytics-marathon/" class="read-more">Read More</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="post-1375" class="post-1375 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-bi-in-real-life tag-big-data tag-business-intelligence  align-left clearfix"> 
+        <style type="text/css">
+			
+			
+			
+			
+						</style> 
+        <div class="flexslider post-slideshow"> 
+         <ul class="slides"> 
+          <li> 
+           <div class="image" aria-haspopup="true"> 
+            <a href="http://www.sisense.com/blog/internet-things-big-data-business-analytics/"><img width="610" height="250" src="http://www.sisense.com/blog/wp-content/uploads/2014/11/Featured1.png" class="attachment-blog-large wp-post-image" alt="Featured"></a> 
+            <div class="image-extras"> 
+             <div class="image-extras-content"> 
+              <a style="display:inline-block;" class="icon link-icon" href="http://www.sisense.com/blog/internet-things-big-data-business-analytics/">Permalink</a> 
+              <a style="display:inline-block;" class="icon gallery-icon" href="http://www.sisense.com/blog/wp-content/uploads/2014/11/Featured1.png" rel="prettyPhoto[gallery1375]" title=""><img style="display:none;" alt="">Gallery</a> 
+              <h3><a href="http://www.sisense.com/blog/internet-things-big-data-business-analytics/">The Internet of Things, Big Data, and Business Analytics</a></h3> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+        <div class="post-content-container"> 
+         <h2 class="entry-title"><a href="http://www.sisense.com/blog/internet-things-big-data-business-analytics/">The Internet of Things, Big Data, and Business Analytics</a></h2> 
+         <div class="post-content"> 
+          <div class="content-sep"></div> 
+          <div class="excerpt-container">
+           <p>You’ve probably seen the trending discussions around the Internet of Things (IoT), starting to pop up everywhere from tech magazines to Tumblr. You’ve also probably had to look it up, and thought, wow this is some Nineteen Eighty Four stuff. But you also may have realized that there is huge potential in the trend […]</p> 
+          </div> 
+         </div> 
+         <div style="clear:both;"></div> 
+         <div class="meta-info"> 
+          <div class="alignleft vcard">
+            By 
+           <span class="fn"><a href="http://www.sisense.com/blog/author/eran/" title="Posts by Eran Levy" rel="author">Eran Levy</a></span>
+           <span class="sep">|</span>
+           <span class="updated">November 20th, 2014</span>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/category/blog/" rel="category tag">blog</a>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/internet-things-big-data-business-analytics/#respond" title="Comment on The Internet of Things, Big Data, and Business Analytics"><span class="dsq-postid" data-dsqidentifier="1375 http://www.sisense.com/blog/?p=1375">0 Comments</span></a>
+           <span class="sep">|</span> 
+          </div> 
+          <div class="alignright"> 
+           <a href="http://www.sisense.com/blog/internet-things-big-data-business-analytics/" class="read-more">Read More</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="post-1362" class="post-1362 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-big-data tag-business-intelligence tag-how-tos-guides  align-right clearfix"> 
+        <style type="text/css">
+			
+			
+			
+			
+						</style> 
+        <div class="flexslider post-slideshow"> 
+         <ul class="slides"> 
+          <li> 
+           <div class="image" aria-haspopup="true"> 
+            <a href="http://www.sisense.com/blog/quick-guide-database-technologies/"><img width="610" height="250" src="http://www.sisense.com/blog/wp-content/uploads/2014/11/Featured.png" class="attachment-blog-large wp-post-image" alt="Featured"></a> 
+            <div class="image-extras"> 
+             <div class="image-extras-content"> 
+              <a style="display:inline-block;" class="icon link-icon" href="http://www.sisense.com/blog/quick-guide-database-technologies/">Permalink</a> 
+              <a style="display:inline-block;" class="icon gallery-icon" href="http://www.sisense.com/blog/wp-content/uploads/2014/11/Featured.png" rel="prettyPhoto[gallery1362]" title=""><img style="display:none;" alt="">Gallery</a> 
+              <h3><a href="http://www.sisense.com/blog/quick-guide-database-technologies/">Quick Guide to Database Technologies</a></h3> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+        <div class="post-content-container"> 
+         <h2 class="entry-title"><a href="http://www.sisense.com/blog/quick-guide-database-technologies/">Quick Guide to Database Technologies</a></h2> 
+         <div class="post-content"> 
+          <div class="content-sep"></div> 
+          <div class="excerpt-container">
+           <p>This is an abbreviated version of our new guide, Innovation in Business Intelligence Database Technologies. Download the full guide<br> Database technology has seen rapid developments in the past two decades. Online Analytical Processing (OLAP), which gained prominence in the 1990s, gradually lost altitude in favor of in-memory databases at the start of the 21st century.</p> 
+           <p>However, […]</p> 
+          </div> 
+         </div> 
+         <div style="clear:both;"></div> 
+         <div class="meta-info"> 
+          <div class="alignleft vcard">
+            By 
+           <span class="fn"><a href="http://www.sisense.com/blog/author/eran/" title="Posts by Eran Levy" rel="author">Eran Levy</a></span>
+           <span class="sep">|</span>
+           <span class="updated">November 13th, 2014</span>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/category/blog/" rel="category tag">blog</a>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/quick-guide-database-technologies/#respond" title="Comment on Quick Guide to Database Technologies"><span class="dsq-postid" data-dsqidentifier="1362 http://www.sisense.com/blog/?p=1362">0 Comments</span></a>
+           <span class="sep">|</span> 
+          </div> 
+          <div class="alignright"> 
+           <a href="http://www.sisense.com/blog/quick-guide-database-technologies/" class="read-more">Read More</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="post-1356" class="post-1356 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-bi-in-real-life tag-business tag-business-intelligence  align-left clearfix"> 
+        <style type="text/css">
+			
+			
+			
+			
+						</style> 
+        <div class="flexslider post-slideshow"> 
+         <ul class="slides"> 
+          <li> 
+           <div class="image" aria-haspopup="true"> 
+            <a href="http://www.sisense.com/blog/putting-end-ill-get-back-analytic/"><img width="610" height="250" src="http://www.sisense.com/blog/wp-content/uploads/2014/11/I-will-get-bac-to-you-analytics.png" class="attachment-blog-large wp-post-image" alt="I-will-get-bac--to-you-analytics"></a> 
+            <div class="image-extras"> 
+             <div class="image-extras-content"> 
+              <a style="display:inline-block;" class="icon link-icon" href="http://www.sisense.com/blog/putting-end-ill-get-back-analytic/">Permalink</a> 
+              <a style="display:inline-block;" class="icon gallery-icon" href="http://www.sisense.com/blog/wp-content/uploads/2014/11/I-will-get-bac-to-you-analytics.png" rel="prettyPhoto[gallery1356]" title=""><img style="display:none;" alt="">Gallery</a> 
+              <h3><a href="http://www.sisense.com/blog/putting-end-ill-get-back-analytic/">Putting an End to “I’ll Get Back to You” Analytics</a></h3> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+        <div class="post-content-container"> 
+         <h2 class="entry-title"><a href="http://www.sisense.com/blog/putting-end-ill-get-back-analytic/">Putting an End to “I’ll Get Back to You” Analytics</a></h2> 
+         <div class="post-content"> 
+          <div class="content-sep"></div> 
+          <div class="excerpt-container">
+           <p>Imagine this scenario: You’re at an important meeting discussing next quarter’s upcoming sales strategy. One of the team members is presenting your company’s performance in the previous quarter, and tells you that telemarketing was on average 20% more effective than web sales in Germany, France and Italy. Intrigued, you want to learn more and […]</p> 
+          </div> 
+         </div> 
+         <div style="clear:both;"></div> 
+         <div class="meta-info"> 
+          <div class="alignleft vcard">
+            By 
+           <span class="fn"><a href="http://www.sisense.com/blog/author/Itay/" title="Posts by Itay Erez" rel="author">Itay Erez</a></span>
+           <span class="sep">|</span>
+           <span class="updated">November 11th, 2014</span>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/category/blog/" rel="category tag">blog</a>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/putting-end-ill-get-back-analytic/#respond" title="Comment on Putting an End to “I’ll Get Back to You” Analytics"><span class="dsq-postid" data-dsqidentifier="1356 http://www.sisense.com/blog/?p=1356">0 Comments</span></a>
+           <span class="sep">|</span> 
+          </div> 
+          <div class="alignright"> 
+           <a href="http://www.sisense.com/blog/putting-end-ill-get-back-analytic/" class="read-more">Read More</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="post-1344" class="post-1344 post type-post status-publish format-standard has-post-thumbnail hentry category-blog  align-right clearfix"> 
+        <style type="text/css">
+			
+			
+			
+			
+						</style> 
+        <div class="flexslider post-slideshow"> 
+         <ul class="slides"> 
+          <li> 
+           <div class="image" aria-haspopup="true"> 
+            <a href="http://www.sisense.com/blog/leveraging-cpu-cache-columnar-storage-high-speed-bi/"><img width="600" height="272" src="http://www.sisense.com/blog/wp-content/uploads/2014/11/Eldad-on-in-chip-technology-600x272.png" class="attachment-blog-large wp-post-image" alt="Eldad-on-in-chip-technology"></a> 
+            <div class="image-extras"> 
+             <div class="image-extras-content"> 
+              <a style="display:inline-block;" class="icon link-icon" href="http://www.sisense.com/blog/leveraging-cpu-cache-columnar-storage-high-speed-bi/">Permalink</a> 
+              <a style="display:inline-block;" class="icon gallery-icon" href="http://www.sisense.com/blog/wp-content/uploads/2014/11/Eldad-on-in-chip-technology.png" rel="prettyPhoto[gallery1344]" title=""><img style="display:none;" alt="Eldad-on-in-chip-technology">Gallery</a> 
+              <h3><a href="http://www.sisense.com/blog/leveraging-cpu-cache-columnar-storage-high-speed-bi/">Leveraging the CPU Cache and Columnar Storage for High Speed BI</a></h3> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+        <div class="post-content-container"> 
+         <h2 class="entry-title"><a href="http://www.sisense.com/blog/leveraging-cpu-cache-columnar-storage-high-speed-bi/">Leveraging the CPU Cache and Columnar Storage for High Speed BI</a></h2> 
+         <div class="post-content"> 
+          <div class="content-sep"></div> 
+          <div class="excerpt-container">
+           <p>Watch co-founder and CTO Eldad Farkash explain some of the ingredients in Sisense’s Secret Sauce – the groundbreaking technology that allows&nbsp;Sisense BI Software to achieve unparalleled performance on commodity hardware (e.g. crunching 10 terabytes of data in 10 seconds on a single server node).</p> 
+           <p>Eldad’s lecture covers 3 of the main bottlenecks currently impeding the […]</p> 
+          </div> 
+         </div> 
+         <div style="clear:both;"></div> 
+         <div class="meta-info"> 
+          <div class="alignleft vcard">
+            By 
+           <span class="fn"><a href="http://www.sisense.com/blog/author/eran/" title="Posts by Eran Levy" rel="author">Eran Levy</a></span>
+           <span class="sep">|</span>
+           <span class="updated">November 6th, 2014</span>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/category/blog/" rel="category tag">blog</a>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/leveraging-cpu-cache-columnar-storage-high-speed-bi/#respond" title="Comment on Leveraging the CPU Cache and Columnar Storage for High Speed BI"><span class="dsq-postid" data-dsqidentifier="1344 http://www.sisense.com/blog/?p=1344">0 Comments</span></a>
+           <span class="sep">|</span> 
+          </div> 
+          <div class="alignright"> 
+           <a href="http://www.sisense.com/blog/leveraging-cpu-cache-columnar-storage-high-speed-bi/" class="read-more">Read More</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="post-1334" class="post-1334 post type-post status-publish format-standard has-post-thumbnail hentry category-blog  align-left clearfix"> 
+        <style type="text/css">
+			
+			
+			
+			
+						</style> 
+        <div class="flexslider post-slideshow"> 
+         <ul class="slides"> 
+          <li> 
+           <div class="image" aria-haspopup="true"> 
+            <a href="http://www.sisense.com/blog/zombies-calories-halloween-2014-stats/"><img width="610" height="250" src="http://www.sisense.com/blog/wp-content/uploads/2014/10/sisense-halloween.jpg" class="attachment-blog-large wp-post-image" alt="sisense-halloween"></a> 
+            <div class="image-extras"> 
+             <div class="image-extras-content"> 
+              <a style="display:inline-block;" class="icon link-icon" href="http://www.sisense.com/blog/zombies-calories-halloween-2014-stats/">Permalink</a> 
+              <a style="display:inline-block;" class="icon gallery-icon" href="http://www.sisense.com/blog/wp-content/uploads/2014/10/sisense-halloween.jpg" rel="prettyPhoto[gallery1334]" title=""><img style="display:none;" alt="">Gallery</a> 
+              <h3><a href="http://www.sisense.com/blog/zombies-calories-halloween-2014-stats/">Zombies and Calories: Halloween 2014 Stats</a></h3> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+        <div class="post-content-container"> 
+         <h2 class="entry-title"><a href="http://www.sisense.com/blog/zombies-calories-halloween-2014-stats/">Zombies and Calories: Halloween 2014 Stats</a></h2> 
+         <div class="post-content"> 
+          <div class="content-sep"></div> 
+          <div class="excerpt-container">
+           <p>Halloween is upon us!</p> 
+           <p>Nearly 221 million Americans are expected to take part in Halloween related activities this year – more than ever before. We hope you’ve got your costumes ready and your pumpkins carved.</p> 
+           <p>Data lovers that we are, we’ve collected some fun Halloween stats to get you in the holiday spirit. You can view […]</p> 
+          </div> 
+         </div> 
+         <div style="clear:both;"></div> 
+         <div class="meta-info"> 
+          <div class="alignleft vcard">
+            By 
+           <span class="fn"><a href="http://www.sisense.com/blog/author/eran/" title="Posts by Eran Levy" rel="author">Eran Levy</a></span>
+           <span class="sep">|</span>
+           <span class="updated">October 30th, 2014</span>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/category/blog/" rel="category tag">blog</a>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/zombies-calories-halloween-2014-stats/#respond" title="Comment on Zombies and Calories: Halloween 2014 Stats"><span class="dsq-postid" data-dsqidentifier="1334 http://www.sisense.com/blog/?p=1334">0 Comments</span></a>
+           <span class="sep">|</span> 
+          </div> 
+          <div class="alignright"> 
+           <a href="http://www.sisense.com/blog/zombies-calories-halloween-2014-stats/" class="read-more">Read More</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="post-1319" class="post-1319 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-bi-in-real-life tag-big-data  align-right clearfix"> 
+        <style type="text/css">
+			
+			
+			
+			
+						</style> 
+        <div class="flexslider post-slideshow"> 
+         <ul class="slides"> 
+          <li> 
+           <div class="image" aria-haspopup="true"> 
+            <a href="http://www.sisense.com/blog/didnt-know-jeff-bezoss-gut-instincts/"><img width="610" height="250" src="http://www.sisense.com/blog/wp-content/uploads/2014/10/jeff-bezos-article.jpg" class="attachment-blog-large wp-post-image" alt="jeff-bezos-article"></a> 
+            <div class="image-extras"> 
+             <div class="image-extras-content"> 
+              <a style="display:inline-block;" class="icon link-icon" href="http://www.sisense.com/blog/didnt-know-jeff-bezoss-gut-instincts/">Permalink</a> 
+              <a style="display:inline-block;" class="icon gallery-icon" href="http://www.sisense.com/blog/wp-content/uploads/2014/10/jeff-bezos-article.jpg" rel="prettyPhoto[gallery1319]" title=""><img style="display:none;" alt="">Gallery</a> 
+              <h3><a href="http://www.sisense.com/blog/didnt-know-jeff-bezoss-gut-instincts/">What You Didn’t Know About Jeff Bezos’s Gut Instincts</a></h3> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+        <div class="post-content-container"> 
+         <h2 class="entry-title"><a href="http://www.sisense.com/blog/didnt-know-jeff-bezoss-gut-instincts/">What You Didn’t Know About Jeff Bezos’s Gut Instincts</a></h2> 
+         <div class="post-content"> 
+          <div class="content-sep"></div> 
+          <div class="excerpt-container">
+           <p>”For every leader in the company, not just for me, there are decisions that can be made by analysis.These are the best kinds of decisions!”<br> How often do you find yourself relying on your intuition to make important business decisions? Do you think managing is about having sharp instincts, the ‘magic touch’, or a knack […]</p> 
+          </div> 
+         </div> 
+         <div style="clear:both;"></div> 
+         <div class="meta-info"> 
+          <div class="alignleft vcard">
+            By 
+           <span class="fn"><a href="http://www.sisense.com/blog/author/eran/" title="Posts by Eran Levy" rel="author">Eran Levy</a></span>
+           <span class="sep">|</span>
+           <span class="updated">October 29th, 2014</span>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/category/blog/" rel="category tag">blog</a>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/didnt-know-jeff-bezoss-gut-instincts/#respond" title="Comment on What You Didn’t Know About Jeff Bezos’s Gut Instincts"><span class="dsq-postid" data-dsqidentifier="1319 http://www.sisense.com/blog/?p=1319">0 Comments</span></a>
+           <span class="sep">|</span> 
+          </div> 
+          <div class="alignright"> 
+           <a href="http://www.sisense.com/blog/didnt-know-jeff-bezoss-gut-instincts/" class="read-more">Read More</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="post-1288" class="post-1288 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-bi-in-real-life tag-business-intelligence tag-how-tos-guides  align-left clearfix"> 
+        <style type="text/css">
+			
+			
+			
+			
+						</style> 
+        <div class="flexslider post-slideshow"> 
+         <ul class="slides"> 
+          <li> 
+           <div class="image" aria-haspopup="true"> 
+            <a href="http://www.sisense.com/blog/make-business-intelligence-software-fit-2015-budget/"><img width="610" height="250" src="http://www.sisense.com/blog/wp-content/uploads/2014/10/fit-BI-2015-budget.jpg" class="attachment-blog-large wp-post-image" alt="fit-business-intelligence-2015-budget"></a> 
+            <div class="image-extras"> 
+             <div class="image-extras-content"> 
+              <a style="display:inline-block;" class="icon link-icon" href="http://www.sisense.com/blog/make-business-intelligence-software-fit-2015-budget/">Permalink</a> 
+              <a style="display:inline-block;" class="icon gallery-icon" href="http://www.sisense.com/blog/wp-content/uploads/2014/10/fit-BI-2015-budget.jpg" rel="prettyPhoto[gallery1288]" title=""><img style="display:none;" alt="">Gallery</a> 
+              <h3><a href="http://www.sisense.com/blog/make-business-intelligence-software-fit-2015-budget/">Your 2015 Budget: How Much Should Business Intelligence Cost</a></h3> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+        <div class="post-content-container"> 
+         <h2 class="entry-title"><a href="http://www.sisense.com/blog/make-business-intelligence-software-fit-2015-budget/">Your 2015 Budget: How Much Should Business Intelligence Cost</a></h2> 
+         <div class="post-content"> 
+          <div class="content-sep"></div> 
+          <div class="excerpt-container">
+           <p>With the new year just around the corner, it’s time to start preparing for a productive 2015–which for many businesses means confronting their big and scary data. In fact, “organizing scattered and large data sets” is one of the top business challenges that companies are desperate to resolve in the upcoming year.</p> 
+           <p>Problem is: while […]</p> 
+          </div> 
+         </div> 
+         <div style="clear:both;"></div> 
+         <div class="meta-info"> 
+          <div class="alignleft vcard">
+            By 
+           <span class="fn"><a href="http://www.sisense.com/blog/author/Elana/" title="Posts by Elana Roth Katzor" rel="author">Elana Roth Katzor</a></span>
+           <span class="sep">|</span>
+           <span class="updated">October 27th, 2014</span>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/category/blog/" rel="category tag">blog</a>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/make-business-intelligence-software-fit-2015-budget/#respond" title="Comment on Your 2015 Budget: How Much Should Business Intelligence Cost"><span class="dsq-postid" data-dsqidentifier="1288 http://www.sisense.com/blog/?p=1288">0 Comments</span></a>
+           <span class="sep">|</span> 
+          </div> 
+          <div class="alignright"> 
+           <a href="http://www.sisense.com/blog/make-business-intelligence-software-fit-2015-budget/" class="read-more">Read More</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="post-1275" class="post-1275 post type-post status-publish format-standard has-post-thumbnail hentry category-blog tag-big-data tag-business-intelligence tag-how-tos-guides  align-right clearfix"> 
+        <style type="text/css">
+			
+			
+			
+			
+						</style> 
+        <div class="flexslider post-slideshow"> 
+         <ul class="slides"> 
+          <li> 
+           <div class="image" aria-haspopup="true"> 
+            <a href="http://www.sisense.com/blog/business-intelligence-cant-handle-large-amount-queries/"><img width="610" height="250" src="http://www.sisense.com/blog/wp-content/uploads/2014/10/5-most-common-5.png" class="attachment-blog-large wp-post-image" alt="Business Intelligence Can’t Handle a Large Amount of Queries"></a> 
+            <div class="image-extras"> 
+             <div class="image-extras-content"> 
+              <a style="display:inline-block;" class="icon link-icon" href="http://www.sisense.com/blog/business-intelligence-cant-handle-large-amount-queries/">Permalink</a> 
+              <a style="display:inline-block;" class="icon gallery-icon" href="http://www.sisense.com/blog/wp-content/uploads/2014/10/5-most-common-5.png" rel="prettyPhoto[gallery1275]" title=""><img style="display:none;" alt="">Gallery</a> 
+              <h3><a href="http://www.sisense.com/blog/business-intelligence-cant-handle-large-amount-queries/">When Business Intelligence Can’t Handle a Large Amount of Queries</a></h3> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+        <div class="post-content-container"> 
+         <h2 class="entry-title"><a href="http://www.sisense.com/blog/business-intelligence-cant-handle-large-amount-queries/">When Business Intelligence Can’t Handle a Large Amount of Queries</a></h2> 
+         <div class="post-content"> 
+          <div class="content-sep"></div> 
+          <div class="excerpt-container">
+           <p>So you’ve finally found a business intelligence tool that seems perfect for your needs: It’s agile, it can join multiple data sources, it’s simple and it runs reasonably fast. The vendor carries out a successful proof of concept and everything appears to be running smoothly. At this stage you’re convinced that you’ve found the […]</p> 
+          </div> 
+         </div> 
+         <div style="clear:both;"></div> 
+         <div class="meta-info"> 
+          <div class="alignleft vcard">
+            By 
+           <span class="fn"><a href="http://www.sisense.com/blog/author/eran/" title="Posts by Eran Levy" rel="author">Eran Levy</a></span>
+           <span class="sep">|</span>
+           <span class="updated">October 19th, 2014</span>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/category/blog/" rel="category tag">blog</a>
+           <span class="sep">|</span>
+           <a href="http://www.sisense.com/blog/business-intelligence-cant-handle-large-amount-queries/#respond" title="Comment on When Business Intelligence Can’t Handle a Large Amount of Queries"><span class="dsq-postid" data-dsqidentifier="1275 http://www.sisense.com/blog/?p=1275">0 Comments</span></a>
+           <span class="sep">|</span> 
+          </div> 
+          <div class="alignright"> 
+           <a href="http://www.sisense.com/blog/business-intelligence-cant-handle-large-amount-queries/" class="read-more">Read More</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="pagination infinite-scroll clearfix">
+       <span class="current">1</span>
+       <a href="http://www.sisense.com/blog/page/2/" class="inactive">2</a>
+       <a href="http://www.sisense.com/blog/page/3/" class="inactive">3</a>
+       <a class="pagination-next" href="http://www.sisense.com/blog/page/2/">Next<span class="page-next"></span></a>
+      </div> 
+     </div> 
+     <div id="sidebar" style="float:right;"> 
+      <div id="text-4" class="widget widget_text"> 
+       <div class="textwidget">
+        <div style="border: 1px solid #ddd; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); padding: 10px 20px; text-align: center;"> 
+         <div style="padding: 0; margin:20px 0 40px 0;"> 
+          <h2><span style="color: #108bb4; font-weight:bold;">SUBSCRIBE</span></h2> 
+          <script src="//app-abb.marketo.com/js/forms2/js/forms2.js"></script> 
+          <form id="mktoForm_373"></form> 
+          <script>MktoForms2.loadForm("//app-abb.marketo.com", "601-OXE-081", 373);</script> 
+         </div> 
+         <p> <a title="Rss Feed" href="/blog/feed" target="_blank"><img alt="rss" src="/blog/wp-content/uploads/2014/02/rss.png" width="34" height="34"></a> <a title="LinkedIn" href="http://www.linkedin.com/company/sisense" target="_blank"><img alt="LinkedIn" src="/blog/wp-content/uploads/2014/02/ln.png" width="34" height="34"></a> <a title="Twitter" href="https://twitter.com/sisense" target="_blank"><img class="" alt="Twitter" src="/blog/wp-content/uploads/2014/02/tw.png" width="34" height="34"></a> <a title="Facebook" href="https://www.facebook.com/Sisense" target="_blank"><img alt="Facebook" src="/blog/wp-content/uploads/2014/02/fb.png" width="34" height="34"></a> </p> 
+        </div> 
+       </div> 
+      </div>
+      <div id="polls-widget-2" class="widget widget_polls-widget">
+       <div id="polls-2" class="wp-polls"> 
+        <form id="polls_form_2" class="wp-polls-form" action="/blog/index.php" method="post"> 
+         <p style="display: none;"><input type="hidden" id="poll_2_nonce" name="wp-polls-nonce" value="594b0ee96e"></p> 
+         <p style="display: none;"><input type="hidden" name="poll_id" value="2"></p> 
+         <p style="text-align: center; color: #09759e;"><strong>SEE HOW YOU MEASURE UP: <br>What is the budget for your BI project?</strong></p> 
+         <div id="polls-2-ans" class="wp-polls-ans"> 
+          <ul class="wp-polls-ul"> 
+           <li><input type="radio" id="poll-answer-6" name="poll_2" value="6"> <label for="poll-answer-6">Up to $5,000</label></li> 
+           <li><input type="radio" id="poll-answer-7" name="poll_2" value="7"> <label for="poll-answer-7">$5,000 to $10,000</label></li> 
+           <li><input type="radio" id="poll-answer-8" name="poll_2" value="8"> <label for="poll-answer-8">$10,000 to $20,000</label></li> 
+           <li><input type="radio" id="poll-answer-9" name="poll_2" value="9"> <label for="poll-answer-9">$30,000 to $50,000</label></li> 
+           <li><input type="radio" id="poll-answer-10" name="poll_2" value="10"> <label for="poll-answer-10">$50,000 to $100,000</label></li> 
+           <li><input type="radio" id="poll-answer-11" name="poll_2" value="11"> <label for="poll-answer-11">More than $100,000</label></li> 
+          </ul> 
+          <p style="text-align: center;"><input type="button" name="vote" value="Vote to see results" class="Buttons" onclick="poll_vote(2);"></p> 
+         </div> 
+        </form> 
+       </div> 
+       <div id="polls-2-loading" class="wp-polls-loading">
+        <img src="http://www.sisense.com/blog/wp-content/plugins/wp-polls/images/loading.gif" width="16" height="16" alt="Loading ..." title="Loading ..." class="wp-polls-image">&nbsp;Loading ...
+       </div> 
+      </div> 
+      <div id="recent-posts-3" class="widget widget_recent_entries"> 
+       <div class="heading">
+        <h3>Recent Posts</h3>
+       </div> 
+       <ul> 
+        <li> <a href="http://www.sisense.com/blog/buyers-beware-data-visualization-not-data-analytics/">Buyers Beware: Data Visualization is Not Data Analytics</a> </li> 
+        <li> <a href="http://www.sisense.com/blog/stop-running-analytics-marathon/">Why You Should Stop Running the Analytics Marathon</a> </li> 
+        <li> <a href="http://www.sisense.com/blog/internet-things-big-data-business-analytics/">The Internet of Things, Big Data, and Business Analytics</a> </li> 
+        <li> <a href="http://www.sisense.com/blog/quick-guide-database-technologies/">Quick Guide to Database Technologies</a> </li> 
+        <li> <a href="http://www.sisense.com/blog/putting-end-ill-get-back-analytic/">Putting an End to “I’ll Get Back to You” Analytics</a> </li> 
+       </ul> 
+      </div>
+      <div id="taxonomy_list_widget-2" class="widget widget_taxonomy_list_widget">
+       <div class="heading">
+        <h3>Filter by Category</h3>
+       </div>
+       <ul class="tlw-list" id="taxonomy_list_widget_list_2">
+        <li><a href="http://www.sisense.com/blog/tag/bi-in-real-life/" rel="nofollow">BI in Real Life</a></li>
+        <li><a href="http://www.sisense.com/blog/tag/big-data/" rel="nofollow">Big Data</a></li>
+        <li><a href="http://www.sisense.com/blog/tag/business/" rel="nofollow">business</a></li>
+        <li><a href="http://www.sisense.com/blog/tag/business-intelligence/" rel="nofollow">Business Intelligence</a></li>
+        <li><a href="http://www.sisense.com/blog/tag/data-visualization/" rel="nofollow">Data Visualization</a></li>
+        <li><a href="http://www.sisense.com/blog/tag/how-tos-guides/" rel="nofollow">How To’s &amp; Guides</a></li>
+        <li><a href="http://www.sisense.com/blog/tag/interactive-dashboards/" rel="nofollow">Interactive Dashboards</a></li>
+        <li><a href="http://www.sisense.com/blog/tag/sisense-updates/" rel="nofollow">SiSense Updates</a></li>
+       </ul>
+       <!-- .tlw-list -->
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <footer class="footer-area"> 
+   <div class="avada-row"> 
+    <section class="columns columns-3"> 
+     <article class="col"> 
+      <div id="nav_menu-2" class="footer-widget-col widget_nav_menu">
+       <h3>Sisense</h3>
+       <div class="menu-sisense-container">
+        <ul id="menu-sisense" class="menu">
+         <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="http://www.sisense.com/">Home</a></li> 
+         <li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="http://www.sisense.com/company">About Us</a></li> 
+         <li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="http://www.sisense.com/customers">Customers</a></li> 
+         <li id="menu-item-66" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66"><a href="http://www.sisense.com/press-room">News &amp; Buzz</a></li> 
+         <li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a href="http://www.sisense.com/get/in-contact/">Contact Us</a></li> 
+        </ul>
+       </div>
+       <div style="clear:both;"></div>
+      </div> 
+     </article> 
+     <article class="col"> 
+      <div id="nav_menu-3" class="footer-widget-col widget_nav_menu">
+       <h3>Resources</h3>
+       <div class="menu-resources-container">
+        <ul id="menu-resources" class="menu">
+         <li id="menu-item-1144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1144"><a href="http://www.sisense.com/blog/archives/">Blog Archives</a></li> 
+         <li id="menu-item-77" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="http://www.sisense.com/demo">Product Demo</a></li> 
+         <li id="menu-item-446" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-446"><a href="http://pages.sisense.com/sisense-try-free.html">Free Trial</a></li> 
+         <li id="menu-item-445" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-445"><a href="http://pages.sisense.com/live-webinar.html">Weekly Webinar</a></li> 
+         <li id="menu-item-444" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-444"><a href="http://www.sisense.com/online-resources">Whitepapers</a></li> 
+        </ul>
+       </div>
+       <div style="clear:both;"></div>
+      </div> 
+     </article> 
+     <article class="col"> 
+      <div id="text-5" class="footer-widget-col widget_text">
+       <h3>Follow Us On:</h3> 
+       <div class="textwidget">
+        <a title="RSS Feed" href="/blog/feed" target="_blank"><img alt="rss" src="/blog/wp-content/uploads/2014/02/rss.png" width="34" height="34"></a> 
+        <a title="LinkedIn" href="http://www.linkedin.com/company/sisense" target="_blank"><img alt="LinkedIn" src="/blog/wp-content/uploads/2014/02/ln.png" width="34" height="34"></a> 
+        <a title="Twitter" href="https://twitter.com/sisense" target="_blank"><img alt="Twitter" src="/blog/wp-content/uploads/2014/02/tw.png" width="34" height="34"></a> 
+        <a title="Facebook" href="http://www.facebook.com/Sisense" target="_blank"><img alt="Facebook" src="/blog/wp-content/uploads/2014/02/fb.png" width="34" height="34"></a> 
+        <br>
+        <br>
+        <br> 
+        <h3 style="text-align: left;">Contact Sisense:</h3> 
+        <p style="text-align: left;"> +1.212.608.4041 (New York Office)<br> +972.3.546.2266 (Tel-Aviv Office) </p>
+       </div> 
+       <div style="clear:both;"></div>
+      </div> 
+     </article> 
+     <article class="col last"> 
+     </article> 
+    </section> 
+   </div> 
+  </footer> 
+  <footer id="footer"> 
+   <div class="avada-row"> 
+    <ul class="copyright"> 
+     <li>
+      <blockquote>
+       Copyright 2014 
+       <a title="Sisense" href="http://www.sisense.com" target="_blank"><strong><span style="color: #0987b1;">Sisense</span></strong></a> | All Rights Reserved
+      </blockquote></li> 
+    </ul> 
+   </div> 
+  </footer> 
+  <!-- wrapper --> 
+  <!-- W3TC-include-js-head --> 
+  <!-- Scroll Triggered Boxes v1.4.1 - http://wordpress.org/plugins/scroll-triggered-boxes/--> 
+  <style type="text/css">
+				#stb-681 {
+					background: white;
+															max-width: auto;
+				}
+
+							</style> 
+  <div class="stb-container stb-bottom-right-container"> 
+   <div class="scroll-triggered-box stb stb-bottom-right" id="stb-681" style="display: none;" data-box-id="681" data-trigger="percentage" data-trigger-percentage="65" data-trigger-element="" data-animation="slide" data-cookie="0" data-test-mode="0" data-auto-hide="1"> 
+    <div class="stb-content">
+     <h3>On-Demand Webinar:</h3> 
+     <h2 style="line-height: 26px;"><a style="color:#F85E12;" href="http://pages.sisense.com/v5-webinar-on-demand-recorded.html">WHAT MAKES A KILLER<br>BUSINESS INTELLIGENCE TOOL</a></h2> 
+     <p style="text-align:center;"><a href="http://pages.sisense.com/v5-webinar-on-demand-recorded.html"><img src="http://www.sisense.com/blog/wp-content/uploads/2014/05/unnamed.png" alt="WHAT MAKES A KILLER BUSINESS INTELLIGENCE TOOL" width="245" height="134" class="alignnone size-full wp-image-682"></a><br> <a style="font-weight:bold;text-align:center;padding:10px 5px;color:#fff;background-color:#F85E12;margin-top:15px;font-size:16px;display:block;" href="http://pages.sisense.com/v5-webinar-on-demand-recorded.html">WATCH NOW!</a></p> 
+    </div> 
+    <span class="stb-close">×</span> 
+   </div> 
+  </div> 
+  <!-- / Scroll Triggered Box --> 
+  <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'sisense-blog';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); 
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.sisense.com\/blog\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.2"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/www.sisense.com\/blog\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-content/plugins/wp-polls/polls-js.js?ver=2.67"></script> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-content/themes/Avada/js/modernizr-min.js"></script> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-content/themes/Avada/js/jquery.carouFredSel-6.2.1-min.js"></script> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-content/themes/Avada/js/jquery.fitvids-min.js"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var js_local_vars = {"dropdown_goto":"Go to...","mobile_nav_cart":"Shopping Cart","page_smoothHeight":"false","flex_smoothHeight":"false","language_flag":"ICL_LANGUAGE_CODE","infinte_blog_finished_msg":"<em>All posts displayed<\/em>","infinite_blog_text":"<em>Loading the next set of posts...<\/em>","portfolio_loading_text":"<em>Loading Portfolio Items...<\/em>","faqs_loading_text":"<em>Loading FAQ Items...<\/em>"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-content/themes/Avada/js/main.js"></script> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-content/uploads/avada.js"></script> 
+  <script type="text/javascript" src="http://www.sisense.com/blog/wp-content/plugins/scroll-triggered-boxes/assets/js/script.min.js?ver=1.4.1"></script> 
+  <!-- GOOGLE ANALYTICS - ASYNC --> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-48636635-1', 'auto');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+/* ]]> */
+</script> 
+  <!-- MARKETO - ASYNC --> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+var didInit = false;
+function initMunchkin() {
+if(didInit === false) {
+didInit = true;
+Munchkin.init('601-OXE-081');
+}
+}
+var s = document.createElement('script');
+s.type = 'text/javascript';
+s.async = true;
+s.src = '//munchkin.marketo.net/munchkin.js';
+s.onreadystatechange = function() {
+if (this.readyState == 'complete' || this.readyState == 'loaded') {
+initMunchkin();
+}
+};
+s.onload = initMunchkin;
+document.getElementsByTagName('head')[0].appendChild(s);
+})();
+/* ]]> */
+</script> 
+  <!-- ADROLL - ASYNC --> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+adroll_adv_id = '424LDQXV55EFPA6KGEP2KW';
+adroll_pix_id = 'GZQWR2NJLVEG7JSUW5E5SK';
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+__adroll_loaded=true;
+var scr = document.createElement('script');
+var host = (('https:' == document.location.protocol) ? 'https://s.adroll.com' : 'http://a.adroll.com');
+scr.setAttribute('async', 'true');
+scr.type = 'text/javascript';
+scr.src = host + '/j/roundtrip.js';
+((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+if(oldonload){oldonload()}};
+}());
+/* ]]> */
+</script> 
+  <!-- ADDTHIS - ASYNC --> 
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5360c01d1787893b" async></script> 
+  <!-- GOOGLE REMARKETING --> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1015230893,
+google_conversion_label = '5_4UCPOGygQQreOM5AM',
+google_custom_params = window.google_tag_params,
+google_remarketing_only = true;
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script> 
+  <noscript> 
+   <img height="1" width="1" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1015230893/?value=0&amp;label=5_4UCPOGygQQreOM5AM&amp;guid=ON&amp;script=0"> 
+  </noscript> 
+ </body>
+</html>

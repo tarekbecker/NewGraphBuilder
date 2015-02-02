@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+  <html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+  <html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width"> 
+  <title>
+      Redshift Integration in Minutes | FlyData    </title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://www.flydata.com/xmlrpc.php"> 
+  <link href="http://www.flydata.com/wp-content/themes/flydata/css/bootstrap.min.css" rel="stylesheet"> 
+  <!-- Custom CSS --> 
+  <link href="http://www.flydata.com/wp-content/themes/flydata/style.css" rel="stylesheet"> 
+  <link href="http://www.flydata.com/wp-content/themes/flydata/css/font-awesome.min.css" rel="stylesheet"> 
+  <!-- Custom Fonts --> 
+  <script src="//use.typekit.net/gev6fea.js"></script> 
+  <script>try{Typekit.load();}catch(e){}</script> 
+  <link href="http://www.flydata.com/wp-content/themes/flydata/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+  <!--[if lt IE 9]>
+      <script src="http://www.flydata.com/wp-content/themes/flydata/js/html5.js" type="text/javascript"></script>
+    <![endif]--> 
+  <!-- mapbox --> 
+  <script src="http://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js"></script> 
+  <link href="http://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css" rel="stylesheet"> 
+  <!-- Start of Async HubSpot Analytics Code --> 
+  <script type="text/javascript">
+      (function(d,s,i,r) {
+        if (d.getElementById(i)){return;}
+        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+        n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/423691.js';
+        e.parentNode.insertBefore(n, e);
+      })(document,"script","hs-analytics",300000);
+    </script> 
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-22701570-3', 'auto');
+      ga('send', 'pageview');
+    </script> 
+  <!--Start of Zopim Live Chat Script--> 
+  <script type="text/javascript">
+      window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+      d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+      _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+      $.src='//v2.zopim.com/?2YLblZY4yWntpHJ8LfY0SzG6fHwiOCFU';z.t=+new Date;$.
+      type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+    </script> 
+  <!--End of Zopim Live Chat Script--> 
+  <link rel="alternate" type="application/rss+xml" title="FlyData » Home Comments Feed" href="https://www.flydata.com/home/feed/"> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.flydata.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.flydata.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="prev" title="2013-06-21" href="https://www.flydata.com/media/press-releases/2013-06-21/"> 
+  <link rel="next" title="Products" href="https://www.flydata.com/products/"> 
+  <link rel="canonical" href="https://www.flydata.com/"> 
+  <link rel="shortlink" href="https://www.flydata.com/?p=4"> 
+  <meta http-equiv="Content-Language" content="en-US"> 
+  <style type="text/css" media="screen">
+.qtrans_flag span { display:none }
+.qtrans_flag { height:12px; width:18px; display:block }
+.qtrans_flag_and_text { padding-left:20px }
+.qtrans_flag_en { background:url(http://www.flydata.com/wp-content/plugins/qtranslate/flags/gb.png) no-repeat }
+.qtrans_flag_ja { background:url(http://www.flydata.com/wp-content/plugins/qtranslate/flags/jp.png) no-repeat }
+</style> 
+  <link hreflang="ja" href="https://www.flydata.com/ja/" rel="alternate"> 
+  <script src="//load.sumome.com/" data-sumo-site-id="bcd310d854568e9f033cf8b7f5404382ae265c9fcac7934c36f55e6bfe5f3cfa" async></script>
+  <meta name="keywords" content="amazon redshift, mysql, json, flydata, integration, data, rds, mongodb"> 
+  <meta name="description" content="The FlyData platform allows you to integrate your data to Redshift continuously and automatically, so that your data is always ready for your queries."> 
+ </head> 
+ <body id="page-top" class="index"> 
+  <!-- Navigation --> 
+  <nav class="navbar navbar-default navbar-fixed-top eng"> 
+   <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display --> 
+    <div class="navbar-header page-scroll"> 
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a href="https://www.flydata.com"> <img src="http://www.flydata.com/wp-content/themes/flydata/images/logo.png" class="logo-image" title="Welcome to FlyData!"> </a> 
+    </div> 
+    <!-- Collect the nav links, forms, and other content for toggling --> 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+     <div id="menu" class="menu-main-menu-container">
+      <ul class="nav navbar-nav navbar-right">
+       <li id="menu-item-1613" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1613"><a href="https://www.flydata.com/products/">Products</a></li> 
+       <li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590"><a href="https://www.flydata.com/resources/">Resources</a></li> 
+       <li id="menu-item-1653" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1653"><a href="https://www.flydata.com/about/">About</a></li> 
+       <li id="menu-item-1617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a href="https://www.flydata.com/media/">Media</a></li> 
+       <li id="menu-item-1612" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1612"><a href="https://www.flydata.com/contact/">Contact</a></li> 
+       <li> <a href="https://console.flydata.com/users/sign_in" target="_blank">Sign in</a> </li> 
+       <li class="header-demo"> <button data-toggle="modal" href="#header_demo_form" class="btn btn-green cta">Get Started</button> </li> 
+      </ul>
+     </div> 
+    </div> 
+    <!-- /.navbar-collapse --> 
+   </div> 
+   <!-- /.container-fluid --> 
+  </nav> 
+  <!-- Header --> 
+  <header> 
+   <div id="herobackground" class="clearfix container"> 
+    <div class="row"> 
+     <div class="title col-md-12 text-center"> 
+      <h1> Redshift Integration in Minutes </h1> 
+      <p> FlyData™ automatically loads your data to Amazon Redshift, continuously, securely and with integrity. </p> 
+     </div> 
+     <div id="stages" class="container"> 
+      <div class="stage"> 
+       <img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/hero_server_2.png" width="125" height="100"> 
+       <h5 class="how-it-works-header">SERVER</h5> 
+      </div> 
+      <div class="spacer"> 
+       <i class="fa fa-chevron-right"></i> 
+       <i class="fa fa-chevron-down"></i> 
+      </div> 
+      <div class="stage"> 
+       <img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/hero_flydata_2.png" width="125" height="100"> 
+       <h5 class="how-it-works-header">FLYDATA</h5> 
+      </div> 
+      <div class="spacer"> 
+       <i class="fa fa-chevron-right"></i> 
+       <i class="fa fa-chevron-down"></i> 
+      </div> 
+      <div class="stage"> 
+       <img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/hero_redshift_2.png" width="125" height="100"> 
+       <h5 class="how-it-works-header">AMAZON REDSHIFT</h5> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="text-center learnmore"> 
+     <a class="btn btn-lg text-center page-scroll" href="#index_products"> Learn More </a> 
+    </div> 
+   </div> 
+  </header> 
+  <!-- CTA --> 
+  <!-- 
+<div id="ctapanel">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-offset-1 col-sm-4"><input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"></div>
+            <div class="col-sm-4"><input type="password" class="form-control" placeholder="Password"></div>
+            <div class="col-sm-4 col-lg-2" ><button class="btn">Sign up for free</button></div>
+        </div>
+        <div class="row"></div>
+    </div>
+</div>
+--> 
+  <!--Start Products Section --> 
+  <section id="index_products"> 
+   <div class="container"> 
+    <h2 class="text-center">Three Products to Choose From</h2> 
+    <div class="row row_buttom_border"> 
+     <div class="col-sm-4 col-lg-4"> 
+      <img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/synsillustration.png"> 
+     </div> 
+     <div class="col-sm-7 col-lg-8"> 
+      <h3 class="eng"> FlyData Sync <small> ~ MySQL to Amazon Redshift</small> </h3> 
+      <p> Has your data outgrown your MySQL database? Do you have multiple RDS instances you want to query all at once in one single place? FlyData Sync automatically captures data changes in your relational database and continuously replicates changes to your Redshift cluster. Realize Redshift Integration through FlyData Sync. </p> 
+      <a class="btn btn-blue cta" role="button" href="https://www.flydata.com/product/#sync"> Learn More </a> 
+     </div> 
+    </div> 
+    <div class="index_products_autoload row row_buttom_border"> 
+     <div class="col-sm-4 col-sm-push-8 col-lg-4 col-lg-push-8 text-center"> 
+      <img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/flydataautoload.png"> 
+     </div> 
+     <div class="col-sm-7 col-sm-pull-4 col-lg-8 col-lg-pull-4"> 
+      <h3 class="eng"> FlyData Autoload <small> ~ Logs to Amazon Redshift</small> </h3> 
+      <p> Setup once, and have your log data uploaded to Amazon Redshift automatically! Using efficient change data capture (CDC), FlyData will automatically detect, capture, transform, and load your data so that your data is ready for your queries at any given time. Data is transferred in near real-time, so that you don’t have to worry about writing scripts or batch uploading. Error handling is taken care of so that you can forget about monitoring, or Redshift maintenance windows. Your data will simply be there. </p> 
+      <a class="btn btn-blue cta" role="button" href="https://www.flydata.com/product/#autoload"> Learn More </a> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-sm-4 col-lg-4 text-center"> 
+      <img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/herokuillustration.png"> 
+     </div> 
+     <div class="col-sm-7 col-lg-8"> 
+      <h3 class="eng"> FlyData for Heroku <small> ~ Automate Heroku Log Management</small> </h3> 
+      <p> Using FlyData Heroku, you can extract valuable insight from your Heroku application logs. FlyData Heroku will continuously capture and save your Heroku logs to your S3 bucket, so that you can perform log analysis on your Heroku apps. With further features such as error notification and Redshift loading, FlyData Heroku is a must-have, cost-effective tool for taking advantage of Heroku logs. </p> 
+      <a class="btn btn-blue cta" role="button" href="https://www.flydata.com/product/#heroku"> Learn More </a> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- End Products Section --> 
+  <!-- Start Feature Section --> 
+  <section id="features"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-4 text-center"> 
+      <img src="http://www.flydata.com/wp-content/themes/flydata/images/illustrationsimple.png" alt="" class="smooth"> 
+      <h3 class="eng">Intuitive Integration</h3> 
+      <p> Simple setup allows you to start integrating your data in minutes instead of days. Once setup, data flow is on autopilot. </p> 
+     </div> 
+     <div class="col-md-4 text-center"> 
+      <img src="http://www.flydata.com/wp-content/themes/flydata/images/illustrationstreamline.png" alt="" class="smooth"> 
+      <h3 class="eng">Streamline Your Data Flow</h3> 
+      <p> Load your Apache, JSON, CSV, TSV log files, or MySQL data directly into Redshift as they are being generated. No need for custom scripts, daily batch uploads, or monitoring for errors. FlyData takes care of it all. </p> 
+     </div> 
+     <div class="col-md-4 text-center"> 
+      <img src="http://www.flydata.com/wp-content/themes/flydata/images/illustrationrealtime.png" alt="" class="smooth"> 
+      <h3 class="eng">Manage Data in Real-Time</h3> 
+      <p> Data in Amazon Redshift is continuously kept up-to-date through our automatic updates. Your data will always be there, ready for your queries. Get instant value out of your big data. </p> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- End Feature Section --> 
+  <!-- Customers Section --> 
+  <section id="testimonials" class="blue_honeycomb"> 
+   <div class="gradient"> 
+    <div class="container"> 
+     <h2 class="text-center"> What Our Customers Are Saying </h2> 
+     <div class="row"> 
+      <div class="col-sm-6"> 
+       <div class="box"> 
+        <div class="customer_info"> 
+         <img src="http://www.flydata.com/wp-content/themes/flydata/images/testimonial1imageavtar.png"> 
+         <div class="customer_name"> 
+          <h4>Masashi Sekine, CTO</h4> 
+          <p>TokyoOtakuMode Inc.</p> 
+         </div> 
+        </div> 
+        <div class="clearfix"></div> 
+        <div class="says"> 
+         <p> We encountered performance issues with MongoDB, so we migrated to Amazon Redshift using FlyData. Now we have the performance that we need to analyze our data in real-time! </p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-sm-6"> 
+       <div class="box"> 
+        <div class="customer_info"> 
+         <img src="http://www.flydata.com/wp-content/themes/flydata/images/testimonial2imageavtar.png"> 
+         <div class="customer_name"> 
+          <h4>Norihito Nakae, Engineering Manager</h4> 
+          <p>Enish Inc.</p> 
+         </div> 
+        </div> 
+        <div class="clearfix"></div> 
+        <div class="says"> 
+         <p> The continuous data load from our MySQL database servers allowed our analytics to be more accurate, which in-turn let our organization focus on our product. </p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- End Customers Section --> 
+  <!-- partner Section --> 
+  <section class="partners"> 
+   <div class="container"> 
+    <div class="row text-center"> 
+     <h2>FlyData Partners</h2> 
+     <div class="col-md-offset-1 col-md-2">
+      <a href="http://aws.amazon.com/" target="_blank"><img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/parnerts_aws.png"></a>
+     </div> 
+     <div class="col-md-2">
+      <a href="https://www.heroku.com/" target="_blank"><img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/partners_heroku.png"></a>
+     </div> 
+     <div class="col-md-2">
+      <a href="http://upswell.jp/" target="_blank"><img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/partners_upswell_logo.png"></a>
+     </div> 
+     <div class="col-md-2">
+      <a href="https://cloudpack.jp/" target="_blank"><img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/partners_cloudpack_logo.png"></a>
+     </div> 
+     <div class="col-md-2">
+      <a href="http://www.serverworks.co.jp/" target="_blank"><img class="img-responsive" src="http://www.flydata.com/wp-content/themes/flydata/images/partners_serverworks_logo.png"></a>
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- End partner Section --> 
+  <!-- lower CTA Section --> 
+  <!-- lower CTA Section --> 
+  <section class="graybg lowercta"> 
+   <div class="container"> 
+    <div class="row text-center"> 
+     <h3> Ready to integrate to Redshift? </h3> 
+     <p> </p> 
+     <button class="btn btn-green text-center cta" data-toggle="modal" href="#schedule_form" data-dismiss="modal"> Start your free Trial </button> 
+    </div> 
+   </div> 
+  </section> 
+  <!-- End lower CTA Section --> 
+  <!-- Footer --> 
+  <footer class="text-center"> 
+   <div class="container footer-above text-left"> 
+    <div class="row"> 
+     <div class="col-xs-6 col-sm-4 col-md-2"> 
+      <h4> PRODUCTS </h4> 
+      <div id="menu1" class="menu-footer-products-container">
+       <ul>
+        <li id="menu-item-1819" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1819"><a href="/products/#autoload">FlyData Autoload</a></li> 
+        <li id="menu-item-1820" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1820"><a href="/products/#sync">FlyData Sync</a></li> 
+        <li id="menu-item-1821" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1821"><a href="/products/#heroku">FlyData Heroku</a></li> 
+       </ul>
+      </div> 
+     </div> 
+     <div class="col-xs-6 col-sm-4 col-md-2"> 
+      <h4> RESOURCES </h4> 
+      <div id="menu2" class="menu-footer-resources-container">
+       <ul>
+        <li id="menu-item-1887" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1887"><a href="https://www.flydata.com/resources/flydata-autoload">FlyData Autoload</a></li> 
+        <li id="menu-item-1869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1869"><a href="https://www.flydata.com/resources/flydata-sync/sync-mysql-to-redshift/">FlyData Sync</a></li> 
+        <li id="menu-item-1888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1888"><a href="https://www.flydata.com/resources/flydata-heroku/flydata-gem-for-heroku/">FlyData Heroku</a></li> 
+        <li id="menu-item-1882" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1882"><a href="https://www.flydata.com/resources/about-amazon-redshift/">About Amazon Redshift</a></li> 
+       </ul>
+      </div> 
+     </div> 
+     <div class="clearfix visible-xs-block"></div> 
+     <div class=" col-xs-6 col-sm-4 col-md-2"> 
+      <h4> MEDIA </h4> 
+      <div id="menu3" class="menu-footer-media-container">
+       <ul>
+        <li id="menu-item-1635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1635"><a href="https://www.flydata.com/media/">Media</a></li> 
+        <li id="menu-item-1823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1823"><a href="/media/#blog">Blog</a></li> 
+        <li id="menu-item-1824" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1824"><a href="/media/#press-releases">Press Releases</a></li> 
+        <li id="menu-item-1825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1825"><a href="/media/#news-articles">News</a></li> 
+       </ul>
+      </div> 
+     </div> 
+     <div class="clearfix visible-sm-block "></div> 
+     <div class="col-xs-6 col-sm-4 col-md-2"> 
+      <h4>FLYDATA</h4> 
+      <div id="menu4" class="menu-footer-flydata-container">
+       <ul>
+        <li id="menu-item-1718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1718"><a href="https://www.flydata.com/about/">About</a></li> 
+        <li id="menu-item-1621" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a href="https://www.flydata.com/terms-of-use/">Terms of Use</a></li> 
+        <li id="menu-item-1623" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a href="https://www.flydata.com/oss-licenses/">OSS Licenses</a></li> 
+       </ul>
+      </div> 
+     </div> 
+     <div class="clearfix visible-xs-block"></div> 
+     <div class="col-xs-6 col-sm-4 col-md-2"> 
+      <h4> CONTACT </h4> 
+      <ul> 
+       <li><a href="mailto:info@flydata.com"><i class="fa fa-fw fa-envelope contact_icon text-center"></i>info@flydata.com</a></li> 
+       <li><a href="tel:+1-855-427-9787"> <i class="fa fa-fw fa-phone contact_icon text-center"></i>855-427-9787</a></li> 
+      </ul> 
+     </div> 
+     <div class="col-xs-6 col-sm-4 col-md-2"> 
+      <h4>SOCIAL</h4> 
+      <ul class="social_list"> 
+       <li> <a href="https://www.facebook.com/flydatainc" target="_blank"><i class="social_icon fa fa-fw fa-facebook"></i></a> </li> 
+       <li> <a href="https://twitter.com/FlyDataInc" target="_blank"><i class="social_icon fa fa-fw fa-twitter"></i></a> </li> 
+       <li> <a href="http://www.linkedin.com/company/flydata" target="_blank"><i class="social_icon fa fa-fw fa-linkedin"></i></a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="container footer-below"> 
+    <div class="row"> 
+     <div class="footer_logo col-sm-2">
+      <img src="http://www.flydata.com/wp-content/themes/flydata/images/footerlogo.png">
+     </div> 
+     <div class="clearfix visible-xs-block"></div> 
+     <div class="footer_copyright col-sm-offset-4 col-sm-6"> 
+      <span>© 2011-2014 FlyData Inc. All rights reserved.</span> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <!-- All Modal --> 
+  <!-- start sign up--> 
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="signup-modal"> 
+   <div class="modal-dialog modal-sm"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+     </div> 
+     <div class="modal-body"> 
+      <h2 class="modal-title text-center" id="myModalLabel">Sign Up</h2> 
+      <p class="text-center">Signing up is completely free - no credit card is required. By signing up you agree to our <a href="#">Terms of use</a></p> 
+      <form role="form"> 
+       <div class="form-group"> 
+        <label for="exampleInputEmail1">Email address</label> 
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> 
+       </div> 
+       <div class="form-group"> 
+        <label for="exampleInputPassword1">Password</label> 
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> 
+       </div> 
+       <button type="submit" class="btn btn-green" id="sign-btn">Sign Up</button> 
+      </form> 
+      <p class="text-center">or</p> 
+      <button class="btn github-button"><i class="fa fa-github"></i>&nbsp;&nbsp;&nbsp;&nbsp;Sign up with Github</button> 
+      <button class="btn linkedin-button"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;Sign up with Linkedin</button> 
+      <button class="btn facebook-button"><i class="fa fa-facebook"></i>&nbsp;&nbsp;&nbsp;&nbsp;Sign up with Facebook</button> 
+     </div> 
+     <div class="modal-footer"> 
+      <p class="text-center"> Already have an account? <a data-toggle="modal" href="#signin-modal" data-dismiss="modal"> Sign In </a> </p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- end sign up --> 
+  <!-- start login--> 
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="signin-modal"> 
+   <div class="modal-dialog modal-sm"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+     </div> 
+     <div class="modal-body"> 
+      <h2 class="modal-title text-center" id="myModalLabel">Sign In</h2> 
+      <form role="form"> 
+       <div class="form-group"> 
+        <label for="exampleInputEmail1">Email address</label> 
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> 
+       </div> 
+       <div class="form-group"> 
+        <label for="exampleInputPassword1">Password</label> 
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> 
+       </div> 
+       <div class="checkbox"> 
+        <label> <input type="checkbox"> Keep me logged in </label> 
+       </div> 
+       <button type="submit" class="btn btn-green" id="sign-btn">Sign Up</button> 
+      </form> 
+     </div> 
+     <div class="modal-footer"> 
+      <p class="text-center">Forgot your password?<a data-toggle="modal" href="#password-modal" data-dismiss="modal"> Click here</a></p> 
+      <p class="text-center">Don't have an account?<a data-toggle="modal" href="#signup-modal" data-dismiss="modal"> Sign up for FREE</a></p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- end login --> 
+  <!-- start Forgot Password--> 
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="password-modal"> 
+   <div class="modal-dialog modal-sm"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+     </div> 
+     <div class="modal-body"> 
+      <h2 class="modal-title text-center" id="myModalLabel">Forgot Password</h2> 
+      <p class="text-center">Enter the email address associated with your account and we’ll send you a link to reset your password.</p> 
+      <form role="form"> 
+       <div class="form-group"> 
+        <label for="exampleInputEmail1">Email address</label> 
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> 
+       </div> 
+       <button type="submit" class="btn btn-defult" id="sign-btn">Submit</button> 
+      </form> 
+     </div> 
+     <div class="modal-footer"> 
+      <p class="text-center">Have your password?<a data-toggle="modal" href="#signin-modal" data-dismiss="modal">Sign In</a></p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- end Forgot Password --> 
+  <!-- keep --> 
+  <!-- start Header Request DEMO form modal--> 
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="header_demo_form"> 
+   <div class="modal-dialog modal-sm"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+      <h2 class="modal-title text-center" id="myModalLabel"> Get Started Today </h2> 
+      <p class="text-center"> Sign Up for Your Free Demo of FlyData </p> 
+     </div> 
+     <div class="modal-body"> 
+      <script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script> 
+      <script>
+                    hbspt.forms.create({ 
+                        portalId: '423691',
+                        formId: '0ce6e4e8-da6a-45ac-bbb7-0e50670b0c81',
+                        submitButtonClass: 'btn btn-blue',
+                        css: 'form#hsForm_0ce6e4e8-da6a-45ac-bbb7-0e50670b0c81 .hs-form-field label{display:none}hs-form.stacked label{font-size:16px;font-family: "proxima-nova",sans-serif;}input.hs-input:focus,textarea.hs-input:focus{outline:0;border-color:#2c3e50;box-showdow:none;}form#hsForm_0ce6e4e8-da6a-45ac-bbb7-0e50670b0c81 input.hs-input,form#hsForm_0ce6e4e8-da6a-45ac-bbb7-0e50670b0c81 textarea.hs-input,form#hsForm_0ce6e4e8-da6a-45ac-bbb7-0e50670b0c81 select.hs-input,form#hsForm_0ce6e4e8-da6a-45ac-bbb7-0e50670b0c81 .hs-input.uneditable-input{width:100%;margin-bottom:20px;height:43px;font-family: "proxima-nova",sans-serif;font-size:16px;font-weight:400;color:#7d848f;border:2px solid #dce4ec;padding:10px;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;}.hs-form fieldset.form-columns-1 .hs-input {width: 100%!important;}.hs-form fieldset.form-columns-2 input.hs-input{width:100%;}.hs-form fieldset{margin-bottom:20px!important;}.hbspt-form{margin: 0 auto!important;width: auto;}.hsformerror{background-color: transparent!important;border: none!important;background-image: none!important;border-radius: 0!important;box-shadow: none!important;color: red!important;padding:0!important;line-height:10px!important;}.hsformerror em{display:none!important}form#hsForm_0ce6e4e8-da6a-45ac-bbb7-0e50670b0c81 textarea.hs-input{height:100px!important;}form#hsForm_0ce6e4e8-da6a-45ac-bbb7-0e50670b0c81 .hs_submit input{width: 100%;}',
+                        validationOptions: {
+                            position:'bottom left'
+                        }
+                    });
+                </script> 
+     </div> 
+     <div class="modal-footer"> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- keep --> 
+  <!-- start lowercta schedule form modal--> 
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="schedule_form"> 
+   <div class="modal-dialog modal-sm"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+      <h2 class="modal-title text-center" id="myModalLabel"> Start Free Trial </h2> 
+      <p class="text-center"> Try out FlyData free today. </p> 
+     </div> 
+     <div class="modal-body"> 
+      <script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script> 
+      <script>
+                    hbspt.forms.create({ 
+                        portalId: '423691',
+                        formId: 'ead27c8e-1145-48b6-8229-13cd9b40432e',
+                        submitButtonClass: 'btn btn-blue',
+                        css: 'form#hsForm_ead27c8e-1145-48b6-8229-13cd9b40432e .hs-form-field label{display:none}hs-form.stacked label{font-size:16px;font-family: "proxima-nova",sans-serif;}input.hs-input:focus,textarea.hs-input:focus{outline:0;border-color:#2c3e50;box-showdow:none;}form#hsForm_ead27c8e-1145-48b6-8229-13cd9b40432e input.hs-input,form#hsForm_ead27c8e-1145-48b6-8229-13cd9b40432e textarea.hs-input,form#hsForm_ead27c8e-1145-48b6-8229-13cd9b40432e select.hs-input,form#hsForm_ead27c8e-1145-48b6-8229-13cd9b40432e .hs-input.uneditable-input{width:100%;margin-bottom:20px;height:43px;font-family: "proxima-nova",sans-serif;font-size:16px;font-weight:400;color:#7d848f;border:2px solid #dce4ec;padding:10px;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;}.hs-form fieldset.form-columns-1 .hs-input {width: 100%!important;}.hs-form fieldset.form-columns-2 input.hs-input{width:100%;}.hs-form fieldset{margin-bottom:20px!important;}.hbspt-form{margin: 0 auto!important;width: auto;}.hsformerror{background-color: transparent!important;border: none!important;background-image: none!important;border-radius: 0!important;box-shadow: none!important;color: red!important;padding:0!important;line-height:10px!important;}.hsformerror em{display:none!important}form#hsForm_ead27c8e-1145-48b6-8229-13cd9b40432e textarea.hs-input{height:100px!important;}form#hsForm_ead27c8e-1145-48b6-8229-13cd9b40432e .hs_submit input{width: 100%;}',
+                        validationOptions: {
+                            position:'bottom left'
+                        }
+                    });
+                </script> 
+     </div> 
+     <div class="modal-footer"> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- start price table form modal for sm,xs screen--> 
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="plan_requst_form"> 
+   <div class="modal-dialog modal-sm"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+      <h2 class="modal-title text-center" id="myModalLabel"> Start Free Trial </h2> 
+      <p class="text-center"> Try out FlyData free today. </p> 
+     </div> 
+     <div class="modal-body"> 
+      <script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script> 
+      <script>
+                    hbspt.forms.create({ 
+                        portalId: '423691',
+                        formId: 'f8ca42ba-e409-4700-b594-079feece48c0',
+                        submitButtonClass: 'btn btn-blue',
+                        css: 'form#hsForm_f8ca42ba-e409-4700-b594-079feece48c0 .hs-form-field label{display:none}hs-form.stacked label{font-size:16px;font-family: "proxima-nova",sans-serif;}input.hs-input:focus,textarea.hs-input:focus{outline:0;border-color:#2c3e50;box-showdow:none;}form#hsForm_f8ca42ba-e409-4700-b594-079feece48c0 input.hs-input,form#hsForm_f8ca42ba-e409-4700-b594-079feece48c0 textarea.hs-input,form#hsForm_f8ca42ba-e409-4700-b594-079feece48c0 select.hs-input,form#hsForm_f8ca42ba-e409-4700-b594-079feece48c0 .hs-input.uneditable-input{width:100%;margin-bottom:20px;height:43px;font-family: "proxima-nova",sans-serif;font-size:16px;font-weight:400;color:#7d848f;border:2px solid #dce4ec;padding:10px;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;}.hs-form fieldset.form-columns-1 .hs-input {width: 100%!important;}.hs-form fieldset.form-columns-2 input.hs-input{width:100%;}.hs-form fieldset{margin-bottom:20px!important;}.hbspt-form{margin: 0 auto!important;width: auto;}.hsformerror{background-color: transparent!important;border: none!important;background-image: none!important;border-radius: 0!important;box-shadow: none!important;color: red!important;padding:0!important;line-height:10px!important;}.hsformerror em{display:none!important}form#hsForm_f8ca42ba-e409-4700-b594-079feece48c0 textarea.hs-input{height:100px!important;}form#hsForm_f8ca42ba-e409-4700-b594-079feece48c0 .hs_submit input{width: 100%;}',
+                        validationOptions: {
+                            position:'bottom left'
+                        }
+                    });
+                </script> 
+     </div> 
+     <div class="modal-footer"> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- jQuery Version 1.11.0 --> 
+  <script src="http://www.flydata.com/wp-content/themes/flydata/js/jquery-1.11.0.js" type="text/javascript"></script> 
+  <!-- Bootstrap Core JavaScript --> 
+  <script src="http://www.flydata.com/wp-content/themes/flydata/js/bootstrap.min.js" type="text/javascript"></script> 
+  <!-- Plugin JavaScript --> 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script> 
+  <!-- Contact Form JavaScript --> 
+  <script src="http://www.flydata.com/wp-content/themes/flydata/js/jqBootstrapValidation.js" type="text/javascript"></script> 
+  <!-- Custom Theme JavaScript --> 
+  <script src="http://www.flydata.com/wp-content/themes/flydata/js/flydata.js" type="text/javascript"></script> 
+  <!-- Landing page signup form JavaScript --> 
+  <script src="http://www.flydata.com/wp-content/themes/flydata/js/signup.js" type="text/javascript"></script> 
+  <script src="http://www.flydata.com/wp-content/themes/flydata/js/flydata_console.js" type="text/javascript"></script> 
+  <script src="http://www.flydata.com/wp-content/themes/flydata/js/sync_rds_mysql_to_redshift.js" type="text/javascript"></script>   
+ </body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <title>cortical.io</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css"> 
+  <link href="http://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css"> 
+  <link href="static/css/bootstrap3.min.css" rel="stylesheet"> 
+  <link href="styles.css" rel="stylesheet"> 
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
+  <!--[if lt IE 9]>
+  <script src="static/js/html5shiv.js"></script>
+  <script src="static/js/respond.min.js"></script>
+<![endif]--> 
+  <!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]--> 
+  <!-- Le fav and touch icons --> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/ico/icon_144.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/ico/icon_114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/ico/icon_72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="static/ico/icon_57.png"> 
+  <link rel="shortcut icon" href="static/ico/favicon.png"> 
+  <meta name="description" content="cortical.io's approach is inspired by the latest findings on the way the human cortex works. Our technology, the Cortical Engine for Processing Text, breaks with traditional methods based on pure word count statistics or linguistic rule engines. Its central component, cortical.io's Retina, encodes words in the same way as sensorial information is fed into the brain, using a SDR (sparse-distributed representation). While traditional systems are based on counting words, cortical.io's Retina uses a substantially finer-grained representation for every word: 16,000 semantic features are captured for every term. The Retina then generates semantic fingerprints of language elements like words, sentences, or whole documents. These semantic fingerprints help to identify the meaning behind natural language and allow direct computational comparison between any pieces of text."> 
+  <meta name="keywords" content="The Cortical Engine for Processing Text,semantics,Natural Language Processing,Semantic Fingerprint,Language intelligence,Retina API,CEPT API,CEPT Systems,Keyword extraction,Keyword generation,Word disambiguation,Enterprise search,document classification,semantic processing,social media filter,SaaS,Text analytics,Artificial intelligence,Machine Learning,Neurocomputing,Computational neuroscience,Big Data,Cognitive Computing,Deep Learning,Neural Networks,Predictive analytics,Numenta,Sparse Distributed Representations,Hierarchical Temporary Memory,Cortical Learning Algorithms"> 
+  <meta name="author" content="cortical.io"> 
+  <!-- page specific styles
+	========================== --> 
+  <style type="text/css">
+		body > .container-fluid {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.tile-nested {
+			padding: 0px;
+		}
+		.row {
+			margin: 0px;
+		}
+		
+		/*remove padding for tiles container*/
+		#wrap {
+			margin-bottom: 0px;
+		}
+		#wrap .container-fluid {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	</style> 
+ </head> 
+ <body> 
+  <div id="wrap" class="home center-block"> 
+   <!-- Fixed navbar --> 
+   <nav id="topnav" class="navbar navbar-default navbar-static-top" role="navigation"> 
+    <div class="container-fluid"> 
+     <div class="navbar-header"> 
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      <a class="navbar-brand" href="index.html"><img src="static/img/cortical-io_logo_homepage.png"></a> 
+     </div> 
+     <div class="collapse navbar-collapse"> 
+      <ul class="nav navbar-nav"> 
+       <li id="demos"><a href="demos.html">demos</a></li> 
+       <li id="contexts"><a href="contexts.html">contexts</a></li> 
+       <li id="technology"><a href="technology.html">technology</a></li> 
+       <li id="developers"><a href="developers.html">developers</a></li> 
+       <li id="business"><a href="business.html">business</a></li> 
+       <li id="company"><a href="company.html">company</a></li> 
+      </ul> 
+     </div>
+     <!--/.nav-collapse --> 
+    </div>
+    <!--/.container --> 
+   </nav> 
+   <div class="container-fluid"> 
+    <div class="row"> 
+     <div class="col col-sm-8 tiles tile01">
+      <h1><a href="contexts.html">The Cortical Engine<br> for Processing Text.</a></h1> 
+      <h2>Natural Language Processing made easy and<br> intuitive: Add language intelligence to your<br> application now!</h2> 
+     </div> 
+     <div class="col col-sm-4 tile-nested"> 
+      <div class="row"> 
+       <div class="col col-sm-6 tiles tile02"> 
+        <div class="circle-container"> 
+         <div class="circle circle-blue"> 
+          <h3><a href="demos.html">Try our Demos</a></h3> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col col-sm-6 tiles tile03"> 
+        <div class="circle-container"> 
+         <div class="circle circle-cyan"> 
+          <h3><a href="developers.html">Free<br> API Key</a></h3> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col col-sm-12 tiles tile04"> 
+        <h2>This is how<br> cortical.io makes language computable</h2> 
+        <p><a href="#video-modal" role="button" data-toggle="modal"><img src="static/img/transparent.png" width="100%" height="200" alt="Jaguar - Porsche = Tiger" class="center-block"></a></p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col col-sm-5 tiles tile05">
+      <p><a href="technology_disciplines.html"><img src="static/img/12_disciplines_NEW01_503x503.png" alt="12 Disciplines of Languages" class="center-block img-responsive"></a> <img id="icon01" style="top: 68px;left: 190px;" class="tooltip-icons tooltip-top" src="static/img/transparent.png" data-toggle="tooltip" title="Enterprise search"> <img id="icon02" style="top: 62px;left: 290px;" class="tooltip-icons tooltip-top" src="static/img/transparent.png" data-toggle="tooltip" title="Website search"> <img id="icon03" style="top: 108px;left: 366px;" class="tooltip-icons tooltip-top" src="static/img/transparent.png" data-toggle="tooltip" title="Profile Matching"> <img id="icon04" style="top: 188px;left: 412px;" class="tooltip-icons tooltip-right" src="static/img/transparent.png" data-toggle="tooltip" title="Product search"> <img id="icon05" style="top: 284px;left: 406px;" class="tooltip-icons tooltip-right" src="static/img/transparent.png" data-toggle="tooltip" title="Alerting Systems"> <img id="icon06" style="top: 360px;left: 368px;" class="tooltip-icons tooltip-right" src="static/img/transparent.png" data-toggle="tooltip" title="Content Classification"> <img id="icon07" style="top: 405px;left: 284px;" class="tooltip-icons tooltip-bottom" src="static/img/transparent.png" data-toggle="tooltip" title="Information Discovery"> <img id="icon08" style="top: 405px;left: 198px;" class="tooltip-icons tooltip-bottom" src="static/img/transparent.png" data-toggle="tooltip" title="Opinion Mining"> <img id="icon09" style="top: 360px;left: 102px;" class="tooltip-icons tooltip-bottom" src="static/img/transparent.png" data-toggle="tooltip" title="Office Automation"> <img id="icon10" style="top: 282px;left: 76px;" class="tooltip-icons tooltip-bottom" src="static/img/transparent.png" data-toggle="tooltip" title="Keyword Generation"> <img id="icon11" style="top: 194px;left: 72px;" class="tooltip-icons tooltip-top" src="static/img/transparent.png" data-toggle="tooltip" title="Forensic Text Analytics"> <img id="icon12" style="top: 110px;left: 110px;" class="tooltip-icons tooltip-top" src="static/img/transparent.png" data-toggle="tooltip" title="Intelligence &amp; Security"></p> 
+     </div> 
+     <div class="col col-sm-5 tile-nested"> 
+      <div class="row"> 
+       <div class="col col-sm-12 tiles tile06">
+        <h2><a href="technology.html">Create your<br> services once.<br> See them work<br> automatically in<br> all languages.</a></h2> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col col-sm-12 tiles tile07"> 
+        <div class="row"> 
+         <div class="col col-sm-4 home-news-header text-right">
+          <h1><a href="company_news.html">News</a></h1> 
+         </div> 
+        </div> 
+        <span style="display:none" ;="">0</span> 
+        <div class="row home-news"> 
+         <div class="col col-sm-4 home-news-date text-right">
+          NOVEMBER 2014
+         </div> 
+         <div class="col col-sm-8 home-news-title">
+          <a href="company_news.html#news-19">Discover twistiller.com </a>
+         </div> 
+        </div> 
+        <span style="display:none" ;="">1</span> 
+        <div class="row home-news"> 
+         <div class="col col-sm-4 home-news-date text-right">
+          NOVEMBER 2014
+         </div> 
+         <div class="col col-sm-8 home-news-title">
+          <a href="company_news.html#news-18">Cross-Language Contextualizer demo now online </a>
+         </div> 
+        </div> 
+        <span style="display:none" ;="">2</span> 
+        <div class="row home-news-more"> 
+         <div class="col col-sm-12 text-right">
+          <a href="company_news.html">MORE...</a>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col col-sm-2 tiles tile08">
+      <h2>Visit us on</h2> 
+      <p><br></p> 
+      <p><a target="_new" href="http://www.linkedin.com/company/cortical-io"><img class="social-icons" src="static/img/icon_in.png"></a></p> 
+      <p><a target="_new" href="https://www.facebook.com/cortical.io"><img class="social-icons" src="static/img/icon_fb.png"></a></p> 
+      <p><a target="_new" href="https://twitter.com/cortical_io"><img class="social-icons" src="static/img/icon_tw.png"></a></p> 
+      <p><a target="_new" href="https://plus.google.com/u/0/b/112709038426018976764/+CeptAtsystems/posts"><img class="social-icons" src="static/img/icon_gp.png"></a></p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="center-block"> 
+   <div class="container-fluid"> 
+    <div class="row"> 
+     <div class="col col-md-2"> 
+      <div class="input-group" style="display:none;"> 
+       <label for="newsletter">Keep me updated</label> 
+       <input type="text" id="newsletter" class="form-control" placeholder="user@example.com"> 
+      </div> 
+     </div> 
+     <div class="col col-md-2"> 
+      <!-- demos submenus --> 
+      <a href="demos.html"><h5>demos</h5> 
+       <ul> 
+       </ul> </a>
+     </div>
+     <a href="demos.html"> </a>
+     <div class="col col-md-2">
+      <a href="demos.html"> 
+       <!-- contexts submenus --> </a>
+      <a href="contexts.html"><h5>contexts</h5> </a>
+      <ul>
+       <a href="contexts.html"> <li id="contexts_semantic"><a href="contexts_semantic.html">semantic fingerprinting</a></li></a> 
+       <li id="contexts_representations"><a href="contexts_representations.html">sparse distributed representations</a></li> 
+       <li id="contexts_background"><a href="contexts.html#head_1">background</a></li> 
+       <li id="contexts_numenta"><a href="contexts.html#head_3">numenta</a></li> 
+      </ul> 
+      <!-- technology submenus --> 
+      <a href="technology.html"><h5>technology</h5> </a>
+      <ul>
+       <a href="technology.html"> <li id="technology_retina"><a href="technology.html#head_1">the retina</a></li></a> 
+       <li id="technology_cortical_engine"><a href="technology.html#head_2">the cortical engine</a></li> 
+       <li id="technology_api"><a href="technology.html#head_3">retina api</a></li> 
+       <li id="technology_disciplines"><a href="technology_disciplines.html">12 disciplines</a></li> 
+       <li id="technology_documentation"><a href="developers_tutorials.html">documentation</a></li> 
+      </ul> 
+     </div> 
+     <div class="col col-md-2"> 
+      <!-- developers submenus --> 
+      <a href="developers.html"><h5>developers</h5> </a>
+      <ul>
+       <a href="developers.html"> <li id="developers_freeapi"><a href="developers_apikey.html">free api key</a></li></a> 
+       <li id="developers_tutorials"><a href="developers_tutorials.html">tutorials</a></li> 
+       <li id="developers_apidocumentation"><a href="developers_apidocumentation.html">interactive api</a></li> 
+       <li id="developers_forum"><a href="developers_forum.html">forum</a></li> 
+       <li id="developers_faqs"><a href="developers_faqs.html">faqs</a></li> 
+       <li id="developers_roadmap"><a href="developers_roadmap.html">roadmap</a></li> 
+       <li id="developers_github"><a href="http://github.com/cortical-io/Public" target="_blank">gitHub</a></li> 
+       <li id="developers_documentation"><a href="developers_tutorials.html">documentation</a></li> 
+      </ul> 
+      <!-- business submenus --> 
+      <a href="business.html"><h5>business</h5> </a>
+      <ul>
+       <a href="business.html"> <li id="business_startown"><a href="business.html#head_1">start your own business</a></li></a> 
+       <li id="business_submit"><a href="mailto:projects@cortical.io?subject=Project submission">submit your project</a></li> 
+       <li id="business_pricing"><a href="business.html#head_3">pricing</a></li> 
+      </ul> 
+     </div> 
+     <div class="col col-md-2"> 
+      <!-- company submenus --> 
+      <a href="company.html"><h5>company</h5> </a>
+      <ul>
+       <a href="company.html"> <li id="company_management"><a href="company.html#head_1">management team</a></li></a> 
+       <li id="company_clients"><a href="company.html#head_2">clients</a></li> 
+       <li id="company_media"><a href="company_media.html">media</a></li> 
+       <li id="company_news"><a href="company_news.html">news</a></li> 
+       <li id="contact"><a href="contact.html">contact</a></li> 
+      </ul> 
+     </div> 
+     <div class="col col-md-2 text-center"> 
+      <h5>JOIN US</h5> 
+      <a target="_blank" href="https://www.facebook.com/cortical.io"><img class="social-icons" src="static/img/icon_fb.png"></a> 
+      <a target="_blank" href="http://www.linkedin.com/company/cortical-io"><img class="social-icons" src="static/img/icon_in.png"></a> 
+      <br> 
+      <a target="_blank" href="https://twitter.com/cortical_io"><img class="social-icons" src="static/img/icon_tw.png"></a> 
+      <a target="_blank" href="https://plus.google.com/u/0/b/112709038426018976764/+CeptAtsystems/posts"><img class="social-icons" src="static/img/icon_gp.png"></a> 
+     </div> 
+    </div> 
+    <div class="row footer-contacts"> 
+     <div class="col col-md-2">
+       cortical.io 
+     </div> 
+     <div class="col col-md-4">
+       Mariahilfer Strasse 4, 1070 Vienna - Austria 
+     </div> 
+     <div class="col col-md-2">
+       E-Mail: 
+      <a href="mailto:info@cortical.io">info@cortical.io</a> 
+     </div> 
+     <div class="col col-md-2"> 
+      <a href="terms.html">Terms of Service</a> 
+     </div> 
+     <div class="col col-md-1 text-center"> 
+      <a href="privacy.html">Privacy</a> 
+     </div> 
+    </div> 
+   </div>
+   <!--/.container--> 
+  </div> 
+  <!-- Le javascript (load libraries)
+================================================== --> 
+  <script src="static/js/jquery-1.11.0.min.js"></script> 
+  <script src="static/js/bootstrap3.min.js"></script> 
+  <!-- Le javascript (custom scripts)
+================================================== --> 
+  <!-- gauges tracker --> 
+  <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5300d1a45dd0531cf5003229');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script> 
+  <!-- crazy egg integration --> 
+  <script type="text/javascript">
+  setTimeout(function(){var a=document.createElement("script");
+  var b=document.getElementsByTagName("script")[0];
+  a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0020/7086.js?"+Math.floor(new Date().getTime()/3600000);
+  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script> 
+  <!-- Le javascript (page specific scripts)
+================================================== --> 
+  <script type="text/javascript">
+	$(document).ready(function() {
+		$('.tooltip-top').tooltip({'placement': 'top'});
+		$('.tooltip-bottom').tooltip({'placement': 'bottom'});
+		$('.tooltip-left').tooltip({'placement': 'left'});
+		$('.tooltip-right').tooltip({'placement': 'right'});
+	});
+</script> 
+  <div id="video-modal" class="modal fade"> 
+   <div class="modal-dialog"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+      <h3>This is how cortical.io makes language computable</h3> 
+     </div> 
+     <div class="modal-body"> 
+      <p style="text-align:center;"><iframe width="600" height="400" src="http://www.youtube.com/embed/g3ZxJokDpds" frameborder="0" allowfullscreen></iframe></p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--
+<script type="text/javascript">
+  setTimeout(function(){var a=document.createElement("script");
+  var b=document.getElementsByTagName("script")[0];
+  a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0020/7086.js?"+Math.floor(new Date().getTime()/3600000);
+  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script> -->   
+ </body>
+</html>

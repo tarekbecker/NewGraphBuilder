@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <title>Real-Time Analytics Platform | Data Science Services</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="alternate" type="application/rss+xml" title="Perceivant RSS2 Feed" href="http://perceivant.com/feed/"> 
+  <link rel="pingback" href="http://perceivant.com/xmlrpc.php"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="http://perceivant.com/wp-content/themes/perceivant-1.0/assets/images/ico/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon" sizes="120x120" href="http://perceivant.com/wp-content/themes/perceivant-1.0/assets/images/ico/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="http://perceivant.com/wp-content/themes/perceivant-1.0/assets/images/ico/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon" href="http://perceivant.com/wp-content/themes/perceivant-1.0/assets/images/ico/apple-touch-icon.png"> 
+  <link rel="shortcut icon" href="http://perceivant.com/wp-content/themes/perceivant-1.0/assets/images/ico/favicon.png"> 
+  <!-- <link rel="shortcut icon" href="/assets/images/ico/favicon.ico"> --> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.6.3 - https://yoast.com/wordpress/plugins/seo/ --> 
+  <meta name="description" content="Perceivant's real-time data analytics platform combined with a data science team processes, correlates &amp; delivers terabytes of info in real time."> 
+  <link rel="canonical" href="http://perceivant.com/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Real-Time Analytics Platform | Data Science Services"> 
+  <meta property="og:description" content="Perceivant's real-time data analytics platform combined with a data science team processes, correlates &amp; delivers terabytes of info in real time."> 
+  <meta property="og:url" content="http://perceivant.com/"> 
+  <meta property="og:site_name" content="Perceivant"> 
+  <meta property="og:image" content="http://perceivant.com/wp-content/uploads/2014/05/report.jpg"> 
+  <meta property="og:image" content="http://perceivant.com/wp-content/uploads/2014/01/hippa_blue_orange.png"> 
+  <meta property="og:image" content="http://perceivant.com/wp-content/uploads/2014/05/analyze.jpg"> 
+  <meta property="og:image" content="http://perceivant.com/wp-content/uploads/2014/01/Lightening-bolt.png"> 
+  <meta property="og:image" content="http://perceivant.com/wp-content/uploads/2014/01/OLAP.png"> 
+  <meta property="og:image" content="http://perceivant.com/wp-content/uploads/2014/01/Alerts.png"> 
+  <meta name="google-site-verification" content="xSEqLtnM_JgeNUDbMigEImHdmYvSpZUpCNU2xAVtIXA"> 
+  <script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "http://perceivant.com/", "potentialAction": { "@type": "SearchAction", "target": "http://perceivant.com/?s={search_term}", "query-input": "required name=search_term" } }</script> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="alternate" type="application/rss+xml" title="Perceivant » Home Comments Feed" href="http://perceivant.com/home/feed/"> 
+  <link rel="stylesheet" id="rs-settings-css" href="http://perceivant.com/wp-content/plugins/revslider/rs-plugin/css/settings.css?ver=4.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="rs-captions-css" href="http://perceivant.com/wp-content/plugins/revslider/rs-plugin/css/captions.css?ver=4.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="social-widget-css" href="http://perceivant.com/wp-content/plugins/social-media-widget/social_widget.css?ver=4.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="main-style-css" href="http://perceivant.com/wp-content/themes/perceivant-1.0/style.css?ver=4.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="hubspot-css" href="http://perceivant.com/wp-content/plugins/hubspot/css/hubspot.css?ver=4.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-paginate-css" href="http://perceivant.com/wp-content/plugins/wp-paginate/wp-paginate.css?ver=1.2.5" type="text/css" media="screen"> 
+  <!-- This site uses the Yoast Google Analytics plugin v5.1.1 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ --> 
+  <script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-30034452-1']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script> 
+  <!-- / Yoast Google Analytics --> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+  <script type="text/javascript" src="http://perceivant.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://perceivant.com/wp-content/themes/perceivant-1.0/assets/javascripts/libs/modernizr-2.6.2.min.js?ver=2.6.2"></script> 
+  <script type="text/javascript" src="http://perceivant.com/wp-content/themes/perceivant-1.0/assets/javascripts/libs/bootstrap-2.3.2.min.js?ver=2.3.2"></script> 
+  <script type="text/javascript" src="http://perceivant.com/wp-content/themes/perceivant-1.0/assets/javascripts/main-ck.js?ver=1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://perceivant.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://perceivant.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="shortlink" href="http://perceivant.com/"> 
+  <script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+_gaq.push(['_setAccount', 'UA-30034452-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+gga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script> 
+  <!-- BEGIN GADWP v4.3.6 Classic Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ --> 
+  <script type="text/javascript">
+(function($){
+    $(window).load(function() {
+        if (this._gat) {
+            tks = this._gat._getTrackers();
+            ga_track = function(p) {
+                for (i=0; i < tks.length; i++) {
+                    var n = tks[i]._getName() !== "" ? tks[i]._getName()+"." : "";
+                    a = [];
+                    for (i2=0; i2 < p.length; i2++) {
+                        var b = i2===0 ? n+p[i2] : p[i2];
+                        a.push(b);
+                    }
+                    _gaq.push(a);
+                }
+            };
+            $('a').filter(function() {
+                return this.href.match(/.*\.(zip|mp3|mpeg|pdf|doc*|ppt*|xls*|jpeg|png|gif|tiff)(\?.*)?$/);
+            }).click(function(e) {
+                ga_track(['_trackEvent', 'download', 'click', this.href]);
+            });
+            $('a[href^="mailto"]').click(function(e) {
+                ga_track(['_trackSocial', 'email', 'send', this.href]);
+             });
+            var loc = location.host.split('.');
+            while (loc.length > 2) { loc.shift(); }
+            loc = loc.join('.');
+            var localURLs = [
+                              loc,
+                              'http://perceivant.com'
+                            ];
+            $('a[href^="http"]').filter(function() {
+                for (var i = 0; i < localURLs.length; i++) {
+                    if (this.href.indexOf(localURLs[i]) == -1) return this.href;
+                }
+            }).click(function(e) {
+                ga_track(['_trackEvent', 'outbound', 'click', this.href]);
+            });
+        }
+    });
+})(jQuery);
+</script> 
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30034452-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+  <!-- END GADWP Classic Tracking --> 
+  <style type="text/css"></style> 
+  <style type="text/css">
+.synved-social-resolution-single {
+display: inline-block;
+}
+.synved-social-resolution-normal {
+display: inline-block;
+}
+.synved-social-resolution-hidef {
+display: none;
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx),
+only screen and (min-resolution: 192dpi) {
+	.synved-social-resolution-normal {
+	display: none;
+	}
+	.synved-social-resolution-hidef {
+	display: inline-block;
+	}
+}
+</style> 
+  <!-- Responsive Select CSS 
+================================================================ --> 
+  <style type="text/css" id="responsive-select-css">
+.responsiveSelectContainer select.responsiveMenuSelect, select.responsiveMenuSelect{
+	display:none;
+}
+
+@media (max-width: 960px) {
+	.responsiveSelectContainer{
+		border:none !important;
+		background:none !important;
+		box-shadow:none !important;
+		height:auto !important;
+		max-height:none !important;
+		visibility:visible !important;
+	}
+	.responsiveSelectContainer ul, ul.responsiveSelectFullMenu, #megaMenu ul.megaMenu.responsiveSelectFullMenu{
+		display: none !important;
+	}
+	.responsiveSelectContainer select.responsiveMenuSelect, select.responsiveMenuSelect { 
+		display: inline-block; 
+		width:100%;
+	}
+}	
+</style> 
+  <!-- end Responsive Select CSS --> 
+  <!-- Responsive Select JS
+================================================================ --> 
+  <script type="text/javascript">
+jQuery(document).ready( function($){
+	$( '.responsiveMenuSelect' ).change(function() {
+		var loc = $(this).find( 'option:selected' ).val();
+		if( loc != '' && loc != '#' ) window.location = loc;
+	});
+	//$( '.responsiveMenuSelect' ).val('');
+});
+</script> 
+  <!-- end Responsive Select JS --> 
+ </head> 
+ <body class="home page page-id-4 page-template page-template-home-php"> 
+  <header role="header"> 
+   <div class="container"> 
+    <a class="logo" href="/"><img src="http://perceivant.com/wp-content/themes/perceivant-1.0/assets/images/perceivant.png" alt="Perceivant"></a> 
+    <nav class="main" role="navigation"> 
+     <div class="responsiveSelectContainer">
+      <ul id="menu-main-1" class="main responsiveSelectFullMenu">
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="http://perceivant.com/features/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/features/', 'Platform Features']);" title="Features">Platform Features</a></li> 
+       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-474"><a href="http://perceivant.com/case-studies/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/case-studies/', 'Case Studies']);">Case Studies</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="http://perceivant.com/blog/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/blog/', 'Blog']);" title="Blog">Blog</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="http://perceivant.com/about-perceivant/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/about-perceivant/', 'About Perceivant']);" title="About Us">About Perceivant</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="http://perceivant.com/press-releases/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/press-releases/', 'News &amp; Events']);">News &amp; Events</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-292"><a href="http://perceivant.com/contact-us/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/contact-us/', 'Contact Us']);" title="Contact Us">Contact Us</a></li> 
+       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-826"><a href="http://perceivant.com/request-a-demo/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/request-a-demo/', 'Request a Demo']);" title="Request a Demo">Request a Demo</a></li> 
+      </ul>
+      <select class="responsiveMenuSelect"><option value="">-</option><option id="menu-item-41" value="http://perceivant.com/features/">Platform Features</option> <option id="menu-item-474" value="http://perceivant.com/case-studies/">Case Studies</option> <option id="menu-item-42" value="http://perceivant.com/blog/">Blog</option> <option id="menu-item-39" value="http://perceivant.com/about-perceivant/">About Perceivant</option> <option id="menu-item-166" value="http://perceivant.com/press-releases/">News &amp; Events</option> <option id="menu-item-292" value="http://perceivant.com/contact-us/">Contact Us</option> <option id="menu-item-826" value="http://perceivant.com/request-a-demo/">Request a Demo</option> </select>
+     </div> 
+    </nav> 
+    <a class="logo-2" href="http://perceivant.com/real-time-data-analytics-for-healthcare/"><img width="50" height="40" src="http://perceivant.com/wp-content/themes/perceivant-1.0/assets/images/hippa_blue_orange.png" alt="Perceivant"></a> 
+   </div> 
+  </header> 
+  <div id="main" role="main"> 
+   <!--  <div id="banner">
+    
+        <div class="container"> 
+      <div class="row-fluid">
+        <div class="span7">
+          <h1>Decisions Driven by Insight.</h1>
+          <p>You have the data. Now it’s time to connect it and correlate it to discover breakthroughs and make insight-driven decisions that could change the face of your business. Perceivant is the real-time analytics platform with the tools to do it.</p>
+          <a class="btn btn-primary" href="/request-a-demo">Request a Demo</a>
+        </div>
+      </div>
+    </div>
+  </div> --> 
+   <div class="content"> 
+    <div class="container"> 
+     <!-- START REVOLUTION SLIDER 3.0.95 fullwidth mode --> 
+     <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:#E9E9E9;padding:0px;margin-top:0px;margin-bottom:0px;max-height:1700px;"> 
+      <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;max-height:1700px;height:1700;"> 
+       <ul> 
+        <li data-transition="slideleft" data-slotamount="7" data-masterspeed="300" data-link="http://perceivant.com/features/"> <img src="http://perceivant.com/wp-content/uploads/2014/10/ooSlider-3-Platform.jpg" alt="ooSlider-3-Platform" data-fullwidthcentering="on"> </li> 
+        <li data-transition="slideleft" data-slotamount="7" data-masterspeed="300" data-link="http://perceivant.com/data-scientists/"> <img src="http://perceivant.com/wp-content/uploads/2014/10/ooSlider-2-Data-Sciences.jpg" alt="ooSlider-2-Data-Sciences" data-fullwidthcentering="on"> </li> 
+        <li data-transition="slideleft" data-slotamount="7" data-masterspeed="300" data-link="http://perceivant.com/real-time-data-analytics-for-healthcare/"> <img src="http://perceivant.com/wp-content/uploads/2014/10/ooSlider-1-Hippa-Compliant.jpg" alt="ooSlider-1-Hippa-Compliant" data-fullwidthcentering="on"> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <script type="text/javascript">
+
+				var tpj=jQuery;
+				
+									tpj.noConflict();
+								
+				var revapi1;
+				
+				tpj(document).ready(function() {
+				
+				if (tpj.fn.cssOriginal != undefined)
+					tpj.fn.css = tpj.fn.cssOriginal;
+				
+				if(tpj('#rev_slider_1_1').revolution == undefined)
+					revslider_showDoubleJqueryError('#rev_slider_1_1');
+				else
+				   revapi1 = tpj('#rev_slider_1_1').show().revolution(
+					{
+						delay:7000,
+						startwidth:5000,
+						startheight:1700,
+						hideThumbs:200,
+						
+						thumbWidth:100,
+						thumbHeight:50,
+						thumbAmount:3,
+						
+						navigationType:"bullet",
+						navigationArrows:"none",
+						navigationStyle:"round-old",
+						
+						touchenabled:"on",
+						onHoverStop:"off",
+						
+						navigationHAlign:"center",
+						navigationVAlign:"bottom",
+						navigationHOffset:0,
+						navigationVOffset:20,
+
+						soloArrowLeftHalign:"left",
+						soloArrowLeftValign:"center",
+						soloArrowLeftHOffset:20,
+						soloArrowLeftVOffset:0,
+
+						soloArrowRightHalign:"right",
+						soloArrowRightValign:"center",
+						soloArrowRightHOffset:20,
+						soloArrowRightVOffset:0,
+								
+						shadow:0,
+						fullWidth:"on",
+						fullScreen:"off",
+
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+
+						shuffle:"off",
+						
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						startWithSlide:0,
+						videoJsPath:"http://perceivant.com/wp-content/plugins/revslider/rs-plugin/videojs/",
+						fullScreenOffsetContainer: ""	
+					});
+				
+				});	//ready
+				
+			</script> 
+     <!-- END REVOLUTION SLIDER --> 
+     <div class="su-row"> 
+      <div class="su-column su-column-size-1-3">
+       <div class="su-column-inner su-clearfix"> 
+        <h3 style="text-align: center;"><strong><a href="http://perceivant.com/features/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://perceivant.com/features/', 'Real-Time Analytics Platform']);" style="text-decoration: none;" title="Real-Time Data Analytics Platform Features">Real-Time Analytics Platform</a></strong></h3> 
+        <p><a title="Real-Time Data Analytics Platform Features" href="http://perceivant.com/features/"><img class="aligncenter size-full wp-image-950" src="http://perceivant.com/wp-content/uploads/2014/05/report.jpg" alt="Report Your Data" width="53" height="47"><br> </a>Perceivant’s real-time data analytics platform correlates data in easy-to-read, easy-to-digest dashboards making quick decisions possible across job functions. <a href="http://perceivant.com/features/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://perceivant.com/features/', 'Review Platform Features.']);" title="Real-Time Data Analytics Platform Features"><strong>Review Platform Features.</strong></a></p> 
+       </div>
+      </div> 
+      <div class="su-column su-column-size-1-3">
+       <div class="su-column-inner su-clearfix"> 
+        <h3 style="text-align: center;"><strong><a style="text-decoration: none;" title="Perceivant is HIPPA Compliant" href="/real-time-data-analytics-for-healthcare/">HIPAA-Compliant</a></strong></h3> 
+        <p><a title="Perceivant is HIPPA Compliant" href="/real-time-data-analytics-for-healthcare/"><img class="aligncenter wp-image-1181" title="Perceivant is HIPPA Compliant" src="http://perceivant.com/wp-content/uploads/2014/01/hippa_blue_orange.png" alt="HIPPA Compliant" width="66" height="50"></a></p> 
+        <p>Perceivant is HIPAA-Compliant. Check out how our real-time data analytics for healthcare is helping to drive business decisions. <a title="Perceivant is HIPPA Compliant" href="/real-time-data-analytics-for-healthcare/"><strong>Read Case Study.</strong></a><br> </p>
+       </div>
+      </div> 
+      <div class="su-column su-column-size-1-3">
+       <div class="su-column-inner su-clearfix"> 
+        <h3 style="text-align: center;"><a href="http://perceivant.com/data-scientists/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://perceivant.com/data-scientists/', 'Top Gun Data Science Team']);" style="text-decoration: none;" title="Perceivant's Data Science Team">Top Gun Data Science Team</a></h3> 
+        <p><a href="http://perceivant.com/data-scientists/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://perceivant.com/data-scientists/', '']);" title="Perceivant's Data Science Team"><img class="aligncenter size-full wp-image-949" src="http://perceivant.com/wp-content/uploads/2014/05/analyze.jpg" alt="Analyze Your Data" width="51" height="46"></a><br> Perceivant’s data scientists can help your company define, analyze and correlate your data, ultimately uncovering insights that allow your organizations to make impactful decisions. <a href="http://perceivant.com/data-scientists/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://perceivant.com/data-scientists/', 'Learn More.']);" title="Perceivant's Data Science Team"><strong>Learn More.</strong></a></p> 
+       </div>
+      </div> 
+     </div> 
+     <hr> 
+     <div class="row-fluid"> 
+      <div class="span6"> 
+       <h3>Query speeds up to 100x Hadoop.</h3> 
+       <p>We’re fast.&nbsp;<em>Really fast</em>. Set-up takes days/weeks, not months and requires minimal involvement from your internal IT team. But that is just the warm-up. Perceivant’s query processing <a title="Case Study: Why Perceivant’s Platform Can Be Faster and Cheaper than Open-Source Software" href="/case-studies/case-study-chacha/"><span style="color: #f38533;"> is up to 100 times faster than Hadoop.</span></a></p> 
+      </div> 
+      <div class="span6 widget"> 
+       <div id="graph-widget" class="carousel slide"> 
+        <p>
+         <!-- Carousel items --></p> 
+        <div class="carousel-inner"> 
+         <div class="active item"> 
+          <div class="span2">
+           <img class="pull-left size-full wp-image-132" src="http://perceivant.com/wp-content/uploads/2014/01/Lightening-bolt.png" alt="Lightening bolt" width="100" height="100">
+          </div> 
+          <div class="span10"> 
+           <p><em>Step 1:</em> Integrate Your Data</p> 
+           <h4>Grab data from multiple sources and bring it together in one place. <a href="/features"><em> Find Out More</em></a></h4> 
+          </div> 
+         </div> 
+         <div class="item"> 
+          <div class="span2">
+           <img class="pull-left size-full wp-image-133" src="http://perceivant.com/wp-content/uploads/2014/01/OLAP.png" alt="OLAP &amp; Data Mining" width="100" height="100">
+          </div> 
+          <div class="span10"> 
+           <p><em>Step 2:</em> Slice &amp; Dice Your Data</p> 
+           <h4>Find the answers you need by digging directly into your data.<a href="/features"><em> Find Out More</em></a></h4> 
+          </div> 
+         </div> 
+         <div class="item"> 
+          <div class="span2">
+           <img class="pull-left size-full wp-image-134" src="http://perceivant.com/wp-content/uploads/2014/01/Alerts.png" alt="Alerts" width="100" height="100">
+          </div> 
+          <div class="span10"> 
+           <p><em>Step 3:</em> Visualize Your Data</p> 
+           <h4>Graph a query and get it to your dashboard in a couple of clicks. <a href="/features"><em> Find Out More</em></a></h4> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <hr> 
+     <div id="detail-list"> 
+      <div class="row-fluid"> 
+       <div class="span1 application-of-insight"></div> 
+       <div class="span5"> 
+        <h4>Application of Insights</h4> 
+        <p>When a relationship between data points is made, Perceivant gives companies the ability to continually and automatically monitor data for records that fit those criteria and either manually or automatically follows up with an action.</p> 
+       </div> 
+       <div class="span1 security"></div> 
+       <div class="span5"> 
+        <h4>Security</h4> 
+        <p>We are a cloud-based application which is customizable to fit your data security requirements. All measures, in terms of secure access, are in place with every Perceivant engagement. We also offer extra security through private or regulation-specific clouds.</p> 
+       </div> 
+      </div> 
+      <div class="row-fluid"> 
+       <div class="span1 scalability"></div> 
+       <div class="span5"> 
+        <h4>Scalability</h4> 
+        <p>Perceivant can process and correlate terabytes of data in seconds, but is also a good fit for organizations who have far less data.</p> 
+       </div> 
+       <div class="span1 ease-of-use"></div> 
+       <div class="span5"> 
+        <h4>Ease of Use</h4> 
+        <p>You do not need to be a data scientist or have formal training to use Perceivant. The system is designed to be used throughout an organization by people who want access to data to influence decisions.</p> 
+       </div> 
+      </div> 
+      <div class="row-fluid"> 
+       <div class="span1 simple-access"></div> 
+       <div class="span5"> 
+        <h4>Simple Access</h4> 
+        <p>Perceivant requires no servers, software licenses, or expensive consultants. It was designed as a simple, yet highly powerful, way to start collecting, and harnessing data in the fastest time possible.</p> 
+       </div> 
+      </div> 
+     </div> 
+     <hr> 
+     <div class="row-fluid"> 
+      <div id="home-footer-links"> 
+       <div class="center span4"> 
+        <div class="banner">
+         <a title="Read Perceivant Blog" href="/blog/"><img class="alignnone size-full wp-image-129" src="http://perceivant.com/wp-content/uploads/2013/08/breakthroughs.png" alt="Breakthroughs" width="64" height="105"></a>
+        </div> 
+        <h3><a title="Read Perceivant's Blog" href="/blog/">Blog</a></h3> 
+        <p>From Star Trek to NFL Football to Hosted R (oooh!), Perceivant’s blog highlights real-life applications of data science. Plus, it’s just cool.</p> 
+        <div class="btn-container">
+         <a class="btn" title="Read Perceivant's Blog" href="/blog">Read Blog</a>
+        </div> 
+       </div> 
+       <div class="center span4"> 
+        <div class="banner">
+         <a title="Read Real-Time Data Analytics Case Studies" href="/case-studies"><img class="alignnone size-full wp-image-130" src="http://perceivant.com/wp-content/uploads/2013/08/case-study.png" alt="Case Study" width="106" height="105"></a>
+        </div> 
+        <h3><a title="Perceivant Case Studies" href="/case-studies">Case Studies</a></h3> 
+        <p>Learn how Perceivant’s real-time data analytics platform and data science team is helping to increase efficiencies and real-time responses.</p> 
+        <div class="btn-container">
+         <a class="btn" title="Perceivant Case Studies" href="/case-studies">Learn More</a>
+        </div> 
+       </div> 
+       <div class="center span4"> 
+        <div class="banner">
+         <a href="http://perceivant.com/wp-content/uploads/2013/08/Perceivant-Facebook-Profile-Pic1.png" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://perceivant.com/wp-content/uploads/2013/08/Perceivant-Facebook-Profile-Pic1.png', '']);"><img class="alignnone wp-image-1203 size-full" src="http://perceivant.com/wp-content/uploads/2013/08/Perceivant-Facebook-Profile-Pic1.png" alt="Perceivant Partners" width="112" height="105"></a>
+        </div> 
+        <h3><a href="/partners/">Partners</a></h3> 
+        <p>Perceivant has partnered with successful companies to provide real-time analytics and services to a variety of clients.</p> 
+        <div class="btn-container">
+         <a class="btn" href="/partners/">See Partners</a>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="modal" class="modal hide fade"> 
+    <div class="modal-body"> 
+     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+     <iframe width="532" height="315" src="//www.youtube.com/embed/PfZIy4POnpg?autoplay=0" frameborder="0" allowfullscreen></iframe> 
+    </div> 
+   </div> 
+  </div> 
+  <footer role="footer"> 
+   <div class="container"> 
+    <div class="row-fluid"> 
+     <div class="span5 links"> 
+      <h5>Browse</h5> 
+      <div class="span3"> 
+       <strong>Product</strong> 
+       <nav class="product" role="navigation"> 
+        <div class="responsiveSelectContainer">
+         <ul id="menu-product-1" class="product responsiveSelectFullMenu">
+          <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-36"><a href="http://perceivant.com/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/', 'Home']);" title="Home">Home</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="http://perceivant.com/features/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/features/', 'Platform Features']);" title="Features">Platform Features</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="http://perceivant.com/breakthroughs/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/breakthroughs/', 'Breakthroughs']);" title="Breakthroughs">Breakthroughs</a></li> 
+         </ul>
+         <select class="responsiveMenuSelect"><option value="">-</option><option id="menu-item-36" value="http://perceivant.com/" selected>Home</option> <option id="menu-item-34" value="http://perceivant.com/features/">Platform Features</option> <option id="menu-item-33" value="http://perceivant.com/breakthroughs/">Breakthroughs</option> </select>
+        </div> 
+       </nav> 
+      </div> 
+      <div class="span5"> 
+       <strong>Services</strong> 
+       <nav class="services" role="navigation"> 
+        <div class="responsiveSelectContainer">
+         <ul id="menu-services-1" class="services responsiveSelectFullMenu">
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1001"><a href="http://perceivant.com/data-scientists/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/data-scientists/', 'Data Scientists']);">Data Scientists</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1002"><a href="http://perceivant.com/smart-segments/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/smart-segments/', 'Smart Segments by Perceivant']);">Smart Segments by Perceivant</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184"><a href="http://perceivant.com/real-time-data-analytics-for-healthcare/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/real-time-data-analytics-for-healthcare/', 'Real-Time Data Analytics for Healthcare']);">Real-Time Data Analytics for Healthcare</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1004"><a href="http://perceivant.com/real-time-data-analytics-for-marketing/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/real-time-data-analytics-for-marketing/', 'Real-Time Data Analytics for Marketing']);">Real-Time Data Analytics for Marketing</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1000"><a href="http://perceivant.com/real-time-data-analytics-finance/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/real-time-data-analytics-finance/', 'Real Time Data Analytics for Finance']);">Real Time Data Analytics for Finance</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003"><a href="http://perceivant.com/real-time-data-analytics-education/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/real-time-data-analytics-education/', 'Real Time Data Analytics for Education']);">Real Time Data Analytics for Education</a></li> 
+         </ul>
+         <select class="responsiveMenuSelect"><option value="">-</option><option id="menu-item-1001" value="http://perceivant.com/data-scientists/">Data Scientists</option> <option id="menu-item-1002" value="http://perceivant.com/smart-segments/">Smart Segments by Perceivant</option> <option id="menu-item-1184" value="http://perceivant.com/real-time-data-analytics-for-healthcare/">Real-Time Data Analytics for Healthcare</option> <option id="menu-item-1004" value="http://perceivant.com/real-time-data-analytics-for-marketing/">Real-Time Data Analytics for Marketing</option> <option id="menu-item-1000" value="http://perceivant.com/real-time-data-analytics-finance/">Real Time Data Analytics for Finance</option> <option id="menu-item-1003" value="http://perceivant.com/real-time-data-analytics-education/">Real Time Data Analytics for Education</option> </select>
+        </div> 
+       </nav> 
+      </div> 
+      <div class="span3"> 
+       <strong>Information</strong> 
+       <nav class="support" role="navigation"> 
+        <div class="responsiveSelectContainer">
+         <ul id="menu-support-1" class="support responsiveSelectFullMenu">
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46"><a title="Jobs" href="/employment">Jobs</a></li> 
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="http://perceivant.com/contact-us/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/contact-us/', 'Contact Us']);" title="Contact Us">Contact Us</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-751"><a href="http://perceivant.com/about-perceivant/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/about-perceivant/', 'About Perceivant']);">About Perceivant</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-871"><a href="http://perceivant.com/partners/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/partners/', 'Real-Time Data Analytics Partners']);">Real-Time Data Analytics Partners</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"><a href="http://perceivant.com/blog/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/blog/', 'Blog']);">Blog</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1006"><a href="http://perceivant.com/press-releases/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://perceivant.com/press-releases/', 'News &amp; Events']);">News &amp; Events</a></li> 
+         </ul>
+         <select class="responsiveMenuSelect"><option value="">-</option><option id="menu-item-46" value="/employment">Jobs</option> <option id="menu-item-62" value="http://perceivant.com/contact-us/">Contact Us</option> <option id="menu-item-751" value="http://perceivant.com/about-perceivant/">About Perceivant</option> <option id="menu-item-871" value="http://perceivant.com/partners/">Real-Time Data Analytics Partners</option> <option id="menu-item-1005" value="http://perceivant.com/blog/">Blog</option> <option id="menu-item-1006" value="http://perceivant.com/press-releases/">News &amp; Events</option> </select>
+        </div> 
+       </nav> 
+      </div> 
+     </div> 
+     <div class="span4 newsletter"> 
+      <h5>Newsletter</h5> 
+      <p>Subscribe to our newsletter!! Get Perceivant tips, product updates and special offers.</p> 
+      <!-- Begin HubSpot Signup Form --> 
+      <script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script> 
+      <script>
+  hbspt.forms.create({ 
+    portalId: '415717',
+    formId: '809878b6-a5bf-4c31-b8c8-458a96739cd5'
+  });
+</script> 
+      <!--End HubSpot_embed_signup--> 
+     </div> 
+     <div class="span3 chat"> 
+      <h5>Let's Chat</h5> 
+      <ul id="social" class="unstyled clearfix"> 
+       <li><a title="Facebook" class="facebook" href="https://www.facebook.com/perceivant"></a></li> 
+       <li><a title="Twitter" class="twitter" href="https://twitter.com/@perceivant"></a></li> 
+       <li><a title="LinkedIn" class="linkedin" href="http://www.linkedin.com/company/2918465?trk=prof-0-ovw-curr_pos"></a></li> 
+       <li><a title="RSS" class="rss" href="http://perceivant.com/feed/"></a></li> 
+      </ul> 
+      <p> <a href="mailto:info@perceivant.com">Contact Us</a> </p> 
+      <address itemtype="http://schema.org/PostalAddress" itemscope> <span itemprop="streetAddress"> 5255 Winthrop Ave <br> <span itemprop="addressLocality">Indianapolis</span>, <abbr itemprop="addressRegion" title="Indiana">IN</abbr> <span itemprop="postalCode">46220</span><br><span itemprop="telephone">317.721.9582</span> </span></address> 
+     </div> 
+    </div> 
+    <div class="row-fluid center copyright"> 
+     <small role="contentinfo"> © All rights reserved 2014. <span itemprop="name">Perceivant</span> </small> 
+    </div> 
+   </div> 
+  </footer> 
+  <!-- Start of Async HubSpot Analytics Code for WordPress v1.9.4 --> 
+  <script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "standard-page"]);
+(function(d,s,i,r) {
+  if (d.getElementById(i)){return;}
+  var n = d.createElement(s),e = document.getElementsByTagName(s)[0];
+  n.id=i;n.src = '//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/415717.js';
+  e.parentNode.insertBefore(n, e);
+})(document, "script", "hs-analytics", 300000);
+</script> 
+  <!-- End of Async HubSpot Analytics Code --> 
+  <link rel="stylesheet" id="su-box-shortcodes-css" href="http://perceivant.com/wp-content/plugins/shortcodes-ultimate/assets/css/box-shortcodes.css?ver=4.9.3" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://perceivant.com/wp-includes/js/comment-reply.min.js?ver=4.0"></script> 
+  <!-- Universal Custom Script to Override Plugins/Widgets --> 
+  <script>
+    jQuery(document).ready(function ($) {
+      $('.mc_signup_submit input').removeClass('button');
+    });
+  </script> 
+  <!-- Carousel Initializer --> 
+  <script>
+    jQuery(document).ready(function ($) {
+      $('.carousel').carousel();
+    });
+  </script> 
+  <!-- Start of Async HubSpot Analytics Code --> 
+  <script type="text/javascript">
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/415717.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script> 
+  <!-- End of Async HubSpot Analytics Code -->  
+ </body>
+</html>

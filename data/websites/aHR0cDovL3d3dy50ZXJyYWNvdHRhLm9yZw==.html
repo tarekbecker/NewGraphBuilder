@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=1050, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+  <meta name="keywords" content="In-Memory Data Management,Enterprise Big Data"> 
+  <meta name="description" content="Terracotta provides leading in-memory data management and Big Data solutions for the enterprise, including BigMemory, Universal Messaging, and more."> 
+  <title>In-Memory Data Management for the Enterprise | Terracotta</title> 
+  <meta name="title" content="In-Memory Data Management for the Enterprise | Terracotta"> 
+  <link rel="icon" href="/favicon.ico?2013-09-11-14-25"> 
+  <link rel="stylesheet" href="/ui/stylesheets/core.min.css?2013-09-11-14-25"> 
+  <link rel="stylesheet" href="/stylesheets/terracotta.min.css?2013-09-11-14-25"> 
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+  <script src="/ui/javascripts/application.min.js?2013-09-11-14-25"></script> 
+  <!--[if (gte IE 5.5)&(lte IE 8)]>
+<script type="text/javascript" src="/ui/javascripts/selectivizr.js?2013-09-11-14-25"></script>
+<![endif]--> 
+  <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-131151-7']);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_setAccount', 'UA-131151-4']);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_setAccount', 'UA-131151-14']);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script> 
+  <script type="text/javascript">
+$(document).ready(function(){
+
+    $('#logos ul li span').vAlign();
+
+});
+</script> 
+ </head> 
+ <body id="home-page" class="terracotta-site home-page home-controller home-controller_home-page in_unknown"> 
+  <div id="the-grid"></div> 
+  <!-- :: SITE TAB NAVIGATION :: --> 
+  <div class="site-tab wrapper"> 
+   <div class="container"> 
+    <section id="siteTabs" class="terracotta"> 
+     <div class="row"> 
+      <div class="ten columns"> 
+      </div>
+      <!-- .ten.columns --> 
+      <div class="six columns"> 
+       <p class="right"> Call us: +1-415-738-4000 </p> 
+      </div>
+      <!-- .six.columns --> 
+     </div>
+     <!-- .row --> 
+    </section>
+    <!-- #siteTabs --> 
+   </div>
+   <!-- .container --> 
+  </div>
+  <!-- .site-tab.wrapper --> 
+  <div class="wrapper top"> 
+   <div class="container logo"> 
+    <!-- :: BRANDING BAR & PAGE SECONDARY NAVIGATION :: --> 
+    <div class="row"> 
+     <div id="sag" class="three columns"> 
+      <a href="http://softwareag.com"> <img src="/images/homepage/logo/sag.png" alt="Software AG"> </a> 
+     </div> 
+     <div id="brand" class="two columns"> 
+      <a href="/"> <img src="/images/homepage/logo/terracotta.png" alt="Terracotta"> </a> 
+     </div> 
+     <div class="eleven columns"> 
+      <nav id="secondaryNav"> 
+       <ul> 
+        <li><a href="/community">Community</a></li> 
+        <li><a class="_blank" href="http://forums.terracotta.org/forums/forums/list.page">Forums</a></li> 
+        <li><a href="http://blog.terracotta.org">Blog</a></li> 
+        <li><a href="/contact">Contact Us</a></li> 
+        <li><a href="/account">My Account</a></li> 
+        <li><a href="/press-center/universal-messaging">Press Center</a></li> 
+        <li><a href="/company/locations">Locations</a></li> 
+        <li> 
+         <form id="googlesearch" action="/search" class="nice"> 
+          <!-- <input type="hidden" value="010355699337749778899:687m-r-bfmy" name="cx"/> --> 
+          <!-- <input type="hidden" value="FORID:11" name="cof"/> --> 
+          <input value="" id="box" name="q" type="text" class="small input-text"> 
+          <button type="submit" name="sa" value="Search"><img src="/ui/images/search-button.png" alt="Search"></button> 
+         </form> </li> 
+       </ul> 
+      </nav>
+      <!-- #secondaryNav --> 
+     </div>
+     <!-- .nine.columns --> 
+    </div>
+    <!-- .row --> 
+    <!-- :: MAIN NAVIGATION AND DOWNLOAD BUTTON :: --> 
+    <div class="row"> 
+     <div class="sixteen columns"> 
+      <nav id="mainNav" class=""> 
+       <ul> 
+        <li> <a href="/big-data-lab">Products</a> 
+         <ul> 
+          <li class="first"><a href="/big-data-lab">Overview</a></li> 
+          <li><a href="/products/bigmemorymax">BigMemory Max</a></li> 
+          <li><a href="/products/bigmemorygo">BigMemory Go</a></li> 
+          <!--             <li><a href="/products/adaptive-intelligence">Adaptive Intelligence</a></li> --> 
+          <li><a href="/products/universal-messaging">Universal Messaging</a></li> 
+          <li><a href="/products/web-sessions">Web Sessions</a></li> 
+          <li><a href="/products/quartz-scheduler">Quartz Scheduler</a></li> 
+          <li><a href="/products/enterprise-suite">Terracotta Enterprise Suite</a></li> 
+          <li><a href="/products/enterprise-ehcache">Enterprise Ehcache</a></li> 
+          <li class="last"><a href="/downloads/open-source">Open Source</a></li> 
+         </ul> </li> 
+        <li> <a href="/services">Services</a> 
+         <ul> 
+          <li class="first"><a href="/services">Overview</a></li> 
+          <li><a href="/services/consulting">Consulting</a></li> 
+          <li><a href="/services/support">Support</a></li> 
+          <li class="last"><a href="/services/training">Training</a></li> 
+         </ul> </li> 
+        <li> <a href="/customers">Customers</a> 
+         <ul> 
+          <li class="first"><a href="/customers">Overview</a></li> 
+          <li class="last"><a href="/industries">Industries</a></li> 
+         </ul> </li> 
+        <li> <a href="/partners/overview">Partners</a> 
+         <ul> 
+          <li class="first"><a href="/partners/overview">Overview</a></li> 
+          <li><a href="/partners">Our Partners</a></li> 
+          <li><a href="/partners/system-integrators">Systems Integrators</a></li> 
+          <li><a href="/partners/reselling-partners">Reselling</a></li> 
+          <li class="last"><a href="/partners/isv-oem-partner">ISV/OEM</a></li> 
+         </ul> </li> 
+        <li> <a href="/company/locations">Company</a> 
+         <ul> 
+          <li class="first"><a href="/company/management">Management</a></li> 
+          <li><a href="/company/careers">Careers</a></li> 
+          <li><a href="/news">News</a></li> 
+          <li><a href="/company/locations">Locations</a></li> 
+          <li class="last"><a href="http://blog.terracotta.org">Blog</a></li> 
+         </ul> </li> 
+        <li> <a href="/resources">Resources</a> 
+         <ul> 
+          <li class="first"><a href="/resources/video">Videos</a></li> 
+          <li><a href="/resources/success-stories">Success Stories</a></li> 
+          <li><a href="/resources/whitepapers">White Papers</a></li> 
+          <li><a href="/resources/datasheets">Datasheets</a></li> 
+          <!-- <li><a href="/resources/solution-briefs">Solution Briefs</a></li> --> 
+          <li><a href="/resources/webcasts">Webcasts</a></li> 
+          <!--<li><a href="/resources/screencasts">Screencasts</a></li>--> 
+          <li><a href="/resources/analyst-reports">Analyst Reports</a></li> 
+          <li class="last"><a href="/resources/industry-articles">Industry Articles</a></li> 
+         </ul> </li> 
+        <li> <a href="/documentation">Documentation</a> </li> 
+        <li> <a href="/news">News</a> 
+         <ul> 
+          <li class="first"><a href="/news">Overview</a></li> 
+          <li><a href="/press-center/universal-messaging">Press Center</a></li> 
+          <li><a href="/news/press-releases">Press Releases</a></li> 
+          <!--<li><a href="/news/events">Events</a></li>--> 
+          <li class="last"><a href="http://blog.terracotta.org">Blog</a></li> 
+         </ul> </li> 
+       </ul> 
+       <a href="/downloads">Download</a> 
+      </nav>
+      <!-- #mainNav --> 
+     </div>
+     <!-- .sixteen.columns --> 
+    </div>
+    <!-- .row --> 
+   </div>
+   <!-- .container.logo --> 
+  </div>
+  <!--.wrapper--> 
+  <div id="home-heroes"> 
+   <div class="bigmemory hero"> 
+    <div class="hero-item hero-bigmemory-facts"> 
+     <a href="/products"> 
+      <!--<h1>Terracotta: the leading in-memory platform for big data.</h1>--> <h1>Get instance access to and take intelligent action on high-value, high-velocity enterprise data.</h1> <span>Get the Facts about BigMemory »</span> </a> 
+     <div id="header-rotator"> 
+      <div id="homepage-featured-items" class="clearfix"> 
+       <script type="text/javascript">
+
+    $(document).ready(function(){
+
+        var animTime = 150;
+        var time = 5000;
+        var current   = 0;
+        var numItems  = 4;
+
+    
+
+        function getRandomInt(min, max)
+        {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function onSwitch()
+        {
+            clearInterval(interval);
+
+
+            if (numItems > 1)
+            {
+                var $itemLeft = $("#item-" + current + ".homepage-featured-item").css('display', 'block');
+                $itemLeft.animate({opacity:0.2}, animTime, 'swing', function(){
+                    $itemLeft.css('display', 'none');
+                    current++;
+                    current = (current >= numItems) ? 0 : current;
+                    var $new = $("#item-" + current + ".homepage-featured-item");
+                    $new.css('display', 'block').css('opacity', 0.2);
+                    $new.animate({opacity:1}, animTime, 'swing', function(){
+                        // See: http://stackoverflow.com/questions/1079613/font-anti-aliasing-issues-with-jquery-fadein-in-ie8
+                        if ($.browser.msie){this.style.removeAttribute('filter');}
+                    });
+                });
+            }
+
+            interval = setInterval(onSwitch, time);
+        }
+
+        var interval = setInterval(onSwitch, time);
+
+        $("#item-0.homepage-featured-item").css('display', 'block');
+    });
+    
+
+    </script> 
+       <div id="homepage-header"> 
+        <div id="item-0" class="homepage-featured-item clearfix"> 
+         <a href="/products/bigmemorymax?tc_source=hp_banner" onclick="_gaq.push(['_trackEvent', 'Home Page Banners', 'Clickthrough', 'BigMemory 4.2 Release']);"> <h5>BigMemory 4.2</h5> <p class="subhead">Now Available</p> <p class="link">Learn More »</p> </a> 
+        </div>
+        <div id="item-1" class="homepage-featured-item clearfix"> 
+         <a href="/resources/success-stories/financial-services/better-faster-fraud-detection-drives-higher-profits?tc_source=hp_banner" onclick="_gaq.push(['_trackEvent', 'Home Page Banners', 'Clickthrough', 'Success Story: Financial Services']);"> <h5>Success Story:<br> Financial Services</h5> <p class="subhead">Better, Faster Fraud Detection Drives Higher Profits</p> <p class="link">Read Now »</p> </a> 
+        </div>
+        <div id="item-2" class="homepage-featured-item clearfix"> 
+         <a href="/resources/webcasts/hadoop-in-memory?tc_source=hp_banner" onclick="_gaq.push(['_trackEvent', 'Home Page Banners', 'Clickthrough', 'Hadoop and In-Memory On-Demand Webcast']);"> <h5>On-Demand Webcast</h5> <p class="subhead">Hadoop &amp; In-Memory:<br>Real-time Big Data Intelligence</p> <p class="link">Watch Now »</p> </a> 
+        </div>
+        <div id="item-3" class="homepage-featured-item clearfix"> 
+         <a href="/resources/whitepapers/bigmemory-hadoop?tc_source=hp_banner" onclick="_gaq.push(['_trackEvent', 'Home Page Banners', 'Clickthrough', 'BigMemory and Hadoop White Paper']);"> <h5>White Paper:<br>BigMemory and Hadoop</h5> <p class="subhead">Powering the Real-time Intelligent Enterprise</p> <p class="link">Download Now »</p> </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="template-two-column-right-sidebar container interior"> 
+   <div class="row"> 
+    <div class="sixteen columns content-column"> 
+     <!-- :: LOGOS AND TESTIMONIALS :: --> 
+     <div class="testimony container"> 
+      <div class="featured row"> 
+       <div class="sixteen columns"> 
+        <div class="featured-item four columns first"> 
+         <div class="hover"> 
+         </div> 
+         <a href="/products/bigmemory"> <h2 class="bigmemory">BigMemory</h2> <p>The world's premier in-memory data management platform.</p> </a> 
+        </div> 
+        <div class="featured-item four columns"> 
+         <div class="hover"> 
+         </div> 
+         <a href="/products/universal-messaging"> <h2 class="universal-messaging">Universal Messaging</h2> <p>Simple. Scalable. Real-time messaging.</p> </a> 
+        </div> 
+        <div class="featured-item four columns"> 
+         <div class="hover"> 
+         </div> 
+         <a href="/products/quartz-scheduler"> <h2 class="quartz-scheduler">Quartz Scheduler</h2> <p>Control when and where jobs execute.</p> </a> 
+        </div> 
+        <div class="featured-item four columns last"> 
+         <div class="hover"> 
+         </div> 
+         <a href="/products/enterprise-suite"> <h2 class="enterprise-suite">Enterprise Suite</h2> <p>Includes BigMemory Max, Quartz Scheduler and Web Sessions.</p> </a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="sixteen columns numbers"> 
+        <div class="eight columns first"> 
+         <h3>2.1 Million</h3> 
+         <p>Developers in more than 190 countries worldwide.</p> 
+        </div> 
+        <div class="eight columns"> 
+         <h3>2.5 Million</h3> 
+         <p>Deployments including most of the Global 1000.</p> 
+        </div> 
+       </div> 
+      </div> 
+      <hr style="margin-top: 47px; margin-bottom: 53px;"> 
+      <div class="row"> 
+       <div class="sixteen columns resources"> 
+        <div class="resource-item four columns" id="buzz-section" style="padding-left: 5px;"> 
+         <h3 style="padding-left: 5px;">Buzz</h3> 
+         <div id="buzz-homepage-rotate" class="clearfix"> 
+          <script type="text/javascript">
+
+    $(document).ready(function(){
+
+        var animTime = 250;
+        var time = 5000;
+        var currentItem = 0;
+        var numItems = 20;
+
+    
+
+        function onSwitch()
+        {
+            clearInterval(interval);
+            if (numItems > 1)
+            {
+                var $item = $("#buzz-homepage-rotate .item-" + currentItem).css('display', 'block');
+                $item.animate({opacity:0.2}, animTime, 'swing', function(){
+                    $item.css('display', 'none');
+                    currentItem++;
+                    currentItem = (currentItem >= numItems) ? 0 : currentItem;
+                    var $new = $("#buzz-homepage-rotate .item-" + currentItem);
+                    $new.css('display', 'block').css('opacity', 0.2);
+                    $new.vAlign()
+                    $new.animate({opacity:1}, animTime, 'swing', function(){
+                        // See: http://stackoverflow.com/questions/1079613/font-anti-aliasing-issues-with-jquery-fadein-in-ie8
+                        if ($.browser.msie){this.style.removeAttribute('filter');}
+                    });
+                });
+            }
+
+            interval = setInterval(onSwitch, time);
+        }
+
+        var interval = setInterval(onSwitch, time);
+        $("#buzz-homepage-rotate .item-0").css('display', 'block').vAlign();
+    });
+    
+
+    </script> 
+          <div class="item-0 item">
+           <article class="buzz clearfix homepage-quote">
+            <p class="quote"><span>"BigMemory fits into our futuristic architectural vision. It gives us the speed at which we can work."</span><span class="attribution">Top five online gaming company</span></p>
+           </article>
+          </div>
+          <div class="item-1 item">
+           <article class="buzz clearfix" id="homepage-blog">
+            <h4>Blog Post:</h4>
+            <a href="http://blog.terracotta.org/2014/11/20/research-paper-leverages-bigmemory-to-win-first-prize-at-iot-conference/">Research paper leverages BigMemory to win first prize at IoT Conference »</a>
+           </article>
+          </div>
+          <div class="item-2 item">
+           <article class="buzz clearfix homepage-quote">
+            <p class="quote"><span>"Terracotta's service is outstanding. I have a contact who understands my technical environment and makes my life easy."</span><span class="attribution">Lead Software Engineer, Top five credit card company</span></p>
+           </article>
+          </div>
+          <div class="item-3 item">
+           <article class="buzz clearfix homepage-quote">
+            <p class="quote"><span>"Terracotta Brings Real-Time Analytics to the (Java) Masses... Enter Ehcache Search."</span><span class="attribution">Derrick Harris, The New York Times</span></p>
+           </article>
+          </div>
+          <div class="item-4 item">
+           <article class="buzz clearfix homepage-quote">
+            <p class="quote"><span>"Java developers might want to think about hoisting Terracotta on their shoulders..."</span><span class="attribution">Maureen O'Gara, JDJ</span></p>
+           </article>
+          </div>
+          <div class="item-5 item">
+           <article class="buzz clearfix homepage-quote">
+            <p class="quote"><span>"It's almost ridiculous how easy it is to deploy... and the scalability is awesome."</span><span class="attribution">Shane Shelton, Director of IT Operations, Archipelago Learning</span></p>
+           </article>
+          </div>
+          <div class="item-6 item">
+           <article class="buzz clearfix" id="homepage-press-release">
+            <h4>Press Release:</h4> 
+            <a href="/news/press-releases/2014/2014-10-24-In-Memory-Data-Fabric">In-Memory Data Fabric Release Announcement » </a>
+           </article>
+          </div>
+          <div class="item-7 item">
+           <article class="buzz clearfix" id="homepage-blog">
+            <h4>Blog Post:</h4>
+            <a href="http://blog.terracotta.org/2014/10/22/unlocking-big-data-at-cern-strata-hadoop-world-2014-event-report/">Unlocking Big Data at CERN: Strata + Hadoop World 2014 Event Report »</a>
+           </article>
+          </div>
+          <div class="item-8 item">
+           <article class="buzz clearfix homepage-quote">
+            <p class="quote"><span>"Garbage collection has long been Java's Achilles' heel... Users will welcome structural solutions to this universal challenge."</span><span class="attribution">Massimo Pezzini, Vice-president and Gartner Fellow at Gartner, Inc.</span></p>
+           </article>
+          </div>
+          <div class="item-9 item">
+           <article class="buzz clearfix homepage-quote">
+            <p class="quote"><span>"Terracotta has been the easiest enterprise solution I have ever integrated."</span><span class="attribution">Nicholas Tuck, Web Developer</span></p>
+           </article>
+          </div>
+          <div class="item-10 item">
+           <article class="buzz clearfix" id="homepage-blog">
+            <h4>Blog Post:</h4>
+            <a href="http://blog.terracotta.org/2014/10/09/accelerate-application-scalability-with-bigmemory-hybrid/">Accelerate Application Scalability with BigMemory Hybrid »</a>
+           </article>
+          </div>
+          <div class="item-11 item">
+           <article class="buzz clearfix homepage-quote">
+            <p class="quote"><span>"BigMemory is a big deal at Sabre."</span><span class="attribution">Kevin Bomar, Director of enterprise architecture at Sabre Holdings</span></p>
+           </article>
+          </div>
+          <div class="item-12 item">
+           <article class="buzz clearfix" id="homepage-blog">
+            <h4>Blog Post:</h4>
+            <a href="http://blog.terracotta.org/2014/07/01/european-shopping-club-deploys-bigmemory/">European Shopping Club deploys BigMemory »</a>
+           </article>
+          </div>
+          <div class="item-13 item">
+           <article class="buzz clearfix" id="homepage-blog">
+            <h4>Blog Post:</h4>
+            <a href="http://blog.terracotta.org/2014/06/13/in-memory-internet-of-things-together-they-can-do-wonders/">In-Memory &amp; Internet of Things: Together they can do wonders »</a>
+           </article>
+          </div>
+          <div class="item-14 item">
+           <article class="buzz clearfix" id="homepage-blog">
+            <h4>Blog Post:</h4>
+            <a href="http://blog.terracotta.org/2014/05/29/bigmemory-supports-99-999-availability/">BigMemory supports 99.999% availability »</a>
+           </article>
+          </div>
+          <div class="item-15 item">
+           <article class="buzz clearfix" id="homepage-blog">
+            <h4>Blog Post:</h4>
+            <a href="http://blog.terracotta.org/2014/05/15/seamless-in-memory-data-management-across-ram-and-ssds/">Seamless In-Memory Data Management across RAM and SSDs »</a>
+           </article>
+          </div>
+          <div class="item-16 item">
+           <article class="buzz clearfix" id="homepage-blog">
+            <h4>Blog Post:</h4>
+            <a href="http://blog.terracotta.org/2014/04/29/run-your-applications-100-times-faster/">Run your applications 100 times faster »</a>
+           </article>
+          </div>
+          <div class="item-17 item">
+           <article class="buzz clearfix" id="homepage-press-release">
+            <h4>Press Release:</h4> 
+            <a href="/news/press-releases/2014/2014-04-17-bigmemory-4-1-launch-announcement">BigMemory 4.1 Launch Announcement » </a>
+           </article>
+          </div>
+          <div class="item-18 item">
+           <article class="buzz clearfix" id="homepage-blog">
+            <h4>Blog Post:</h4>
+            <a href="http://blog.terracotta.org/2014/03/24/terracotta-bigmemory-dramatically-improves-performance-and-availability-for-webmethods-onedata/">Terracotta BigMemory Dramatically Improves Performance and Availability for webMethods OneData »</a>
+           </article>
+          </div>
+          <div class="item-19 item">
+           <article class="buzz clearfix" id="homepage-blog">
+            <h4>Blog Post:</h4>
+            <a href="http://blog.terracotta.org/2014/03/17/webmethods-and-bigmemory-turbocharging-tomorrows-digital-enterprises/">webMethods and BigMemory – Turbocharging Tomorrow’s Digital Enterprises »</a>
+           </article>
+          </div> 
+         </div> 
+        </div> 
+        <div class="eight columns" style="margin-left: 10px;"> 
+         <h3 style="padding-left: 20px;">Resources</h3> 
+         <div class="resource-btn"> 
+          <div class="hover"></div> 
+          <a href="/resources/video"> <h2 class="video">Videos</h2> <p class="video">Watch how Terracotta delivers Big Fast Data solutions</p> </a> 
+         </div> 
+         <div class="resource-btn"> 
+          <div class="hover"></div> 
+          <a href="/resources/whitepapers"> <h2 class="whitepapers">White Papers</h2> <p class="whitepapers">Download now to gain insight and a competitive advantage</p> </a> 
+         </div> 
+         <div class="resource-btn"> 
+          <div class="hover"></div> 
+          <a href="/resources/webcasts"> <h2 class="webcasts">Webcasts</h2> <p class="webcasts">View on-demand topics that the industry is buzzing about</p> </a> 
+         </div> 
+        </div> 
+        <div class="four columns" style="margin-left: 25px;"> 
+         <h3>Our Customers</h3> 
+         <section id="logos"> 
+          <div class="logo-column"> 
+           <!--
+                        <div>
+                            <img class="logo-color" src="/images/homepage/logo/rollover/adjuggler.png" alt="AdJuggler" />
+                            <img class="logo-gray" src="/images/homepage/logo/normal/adjuggler.png" alt="AdJuggler" />
+                        </div>
+--> 
+           <div> 
+            <img class="logo-color" src="/images/homepage/logo/rollover/advanced.png" alt="AdvancEd"> 
+            <img class="logo-gray" src="/images/homepage/logo/normal/advanced.png" alt="AdvancEd"> 
+           </div> 
+           <div> 
+            <img class="logo-color" src="/images/homepage/logo/rollover/peoplenet.png" alt="PeopleNet"> 
+            <img class="logo-gray" src="/images/homepage/logo/normal/peoplenet.png" alt="PeopleNet"> 
+           </div> 
+           <div> 
+            <img class="logo-color" src="/images/homepage/logo/rollover/smc3.png" alt="SMC3"> 
+            <img class="logo-gray" src="/images/homepage/logo/normal/smc3.png" alt="SMC3"> 
+           </div> 
+          </div> 
+          <div class="logo-column"> 
+           <div> 
+            <img class="logo-color" src="/images/homepage/logo/rollover/UMUC.png" alt="University of Maryland University College"> 
+            <img class="logo-gray" src="/images/homepage/logo/normal/UMUC.png" alt="University of Maryland University College"> 
+           </div> 
+           <div> 
+            <img class="logo-color" src="/images/homepage/logo/rollover/Monster-Gov-Solutions-logo.png" alt="Monster"> 
+            <img class="logo-gray" src="/images/homepage/logo/normal/Monster-Gov-Solutions-logo.png" alt="Monster"> 
+           </div> 
+           <div> 
+            <img class="logo-color" src="/images/homepage/logo/rollover/wowcher.png" alt="Wowcher"> 
+            <img class="logo-gray" src="/images/homepage/logo/normal/wowcher.png" alt="Wowcher"> 
+           </div> 
+          </div> 
+         </section> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- :: MAIN FOOTER AREA AND INFO TABS :: --> 
+  <div class="wrapper footer"> 
+   <div class="container"> 
+    <a id="footer-callout" href="/contact">Want to hear more? Don’t hesitate to contact us. | Feel like talking? Give us a call. 877-724-4965.</a> 
+    <footer> 
+     <div class="row"> 
+      <div class="six columns"> 
+       <nav> 
+        <h5>Products</h5> 
+        <ul class="left"> 
+         <li><a href="/products/bigmemory" title="BigMemory">BigMemory</a></li> 
+         <li><a href="/products/enterprise-ehcache" title="Enterprise Ehcache">Enterprise Ehcache</a></li> 
+         <li><a href="/products/quartz-scheduler" title="Quartz Scheduler">Quartz Scheduler</a></li> 
+        </ul> 
+        <ul class="right"> 
+         <li><a href="/products/web-sessions" title="Web Sessions">Web Sessions</a></li> 
+         <li><a href="/products/enterprise-suite" title="Terracotta Enterprise Suite">Terracotta Enterprise Suite</a></li> 
+         <li><a href="/products/universal-messaging" title="Universal Messaging">Universal Messaging</a></li> 
+        </ul> 
+       </nav> 
+      </div>
+      <!-- .four.columns --> 
+      <div class="six offset-by-one columns"> 
+       <nav> 
+        <h5>How to get it</h5> 
+        <ul class="left"> 
+         <li><a href="/downloads">Download Now</a></li> 
+         <li><a href="/contact">Email Sales</a></li> 
+         <li>Call Sales: +1-415-738-4000</li> 
+        </ul> 
+        <ul class="right"> 
+         <li><a href="/contact">Request More Information</a></li> 
+         <li><a href="/community">Join the Community</a></li> 
+         <li><a href="/services/training">Sign Up for Training</a></li> 
+        </ul> 
+       </nav> 
+      </div>
+      <!-- .four.columns --> 
+      <div class="two offset-by-one columns"> 
+       <nav> 
+        <h5>Follow Us</h5> 
+        <ul id="followUsPlz"> 
+         <li> <a href="http://www.linkedin.com/company/terracotta"> <img src="/ui/images/icon-linkedin.png" alt="LinkedIn">Linkedin </a> </li> 
+         <li> <a href="http://www.facebook.com/Terracotta"> <img src="/ui/images/icon-facebook.png" alt="Facebook">Facebook </a> </li> 
+         <li> <a href="http://twitter.com/#!/terracottatech"> <img src="/ui/images/icon-twitter.png" alt="Twitter">Twitter </a> </li> 
+        </ul> 
+       </nav> 
+      </div> 
+     </div>
+     <!-- .row --> 
+    </footer> 
+   </div>
+   <!-- .container --> 
+  </div>
+  <!-- .wrapper --> 
+  <!-- :: SECONDARY PAGE FOOTER :: --> 
+  <div class="wrapper sub-footer"> 
+   <div class="container"> 
+    <footer id="sub"> 
+     <div class="row without"> 
+      <div class="columns"> 
+       <nav> 
+        <ul> 
+         <li>©Terracotta, Inc., a wholly-owned subsidiary of Software AG USA, Inc. All rights reserved.</li> 
+         <li><a href="http://terracotta.org/contact">Contact Us</a> | </li> 
+         <li><a href="http://terracotta.org/legal">Copyright</a> | </li> 
+         <li><a href="http://terracotta.org/legal">Privacy Policy</a> | </li> 
+         <li><a href="http://terracotta.org/legal">Legal</a></li> 
+        </ul> 
+       </nav> 
+      </div>
+      <!-- .ten.columns --> 
+     </div>
+     <!-- .row --> 
+    </footer>
+    <!-- #sub --> 
+   </div>
+   <!-- .container --> 
+  </div>
+  <!-- .wrapper --> 
+  <script type="text/javascript">
+document.write(unescape("%3Cscript src='//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+  <script>Munchkin.init('858-DJP-749');</script>  
+ </body>
+</html>

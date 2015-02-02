@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "51a4f53e08d821376c456fd110a5ada7",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "permalink": "melio-corp",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "name": "MELIO CORP",
+      "short_description": "Advisory information data big provider",
+      "founded_on_day": 15,
+      "founded_on_trust_code": 7,
+      "founded_on_month": 1,
+      "founded_on_year": 2014,
+      "founded_on": "2014-01-15",
+      "closed_on_year": null,
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on": null,
+      "created_at": 1399716491,
+      "updated_at": 1399716491,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "current_team": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/melio-corp/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "Franck",
+            "last_name": "Picard",
+            "title": "CEO",
+            "started_on": "2012-01-01",
+            "path": "person/franck-picard",
+            "created_at": 1399716855,
+            "updated_at": 1411709129
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/melio-corp/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1399716476/pgpctv557gtus9ybytoy.jpg",
+            "created_at": 1399716492,
+            "updated_at": 1399716492
+          }
+        ]
+      }
+    }
+  }
+}

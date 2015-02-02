@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "aae8df0820995687dca3c93307b43aa0",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "short_description": "Big Data Monitoring",
+      "permalink": "trudera",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "name": "Trudera",
+      "email_address": "info@trudera.com",
+      "description": "Make business sense of IT\n",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 6,
+      "founded_on_month": 8,
+      "founded_on_year": 2010,
+      "founded_on": "2010-08-01",
+      "homepage_url": "http://trudera.com",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "num_employees_max": 10,
+      "num_employees_min": 1,
+      "created_at": 1383696824,
+      "updated_at": 1409885202,
+      "total_funding_usd": 0,
+      "number_of_investments": 0,
+      "number_of_employees": 6
+    },
+    "relationships": {
+      "past_team": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/trudera/past_team",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "first_name": "Colin",
+            "last_name": "Paterson",
+            "title": "CTO",
+            "started_on": null,
+            "ended_on": null,
+            "path": "person/colin-paterson",
+            "created_at": 1371577859,
+            "updated_at": 1397989671
+          }
+        ]
+      },
+      "offices": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/trudera/offices",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Sydney",
+            "street_1": "Suite 8, Level 12",
+            "street_2": "101 Bathurst St",
+            "postal_code": "2000",
+            "city": "Sydney",
+            "city_path": "location/sydney/cb843159b286d32003a7ce36d6764f21",
+            "region": "New South Wales",
+            "region_path": "location/new-south-wales/77c6ba3a1ceb046a4567fc3d755c2d79",
+            "country": "Australia",
+            "country_path": "location/australia/973b2306d32e3a70263ef1de1e0068f6",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1383668025,
+            "updated_at": 1397991783
+          },
+          {
+            "type": "Address",
+            "name": "London",
+            "street_1": "145-157 St John St",
+            "street_2": null,
+            "postal_code": "EC1V 4PW",
+            "city": "London",
+            "city_path": "location/london/aad17950576b8c448fd4f44dbeb59220",
+            "region": "London, City of",
+            "region_path": "location/london-city-of/79eb923b9e93e0db2fe075f0c430c2cb",
+            "country": "United Kingdom",
+            "country_path": "location/united-kingdom/a30e342c17426b1c66e9461de680e54b",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1383668024,
+            "updated_at": 1407432818
+          }
+        ]
+      },
+      "headquarters": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/trudera/headquarters",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "London",
+            "street_1": "145-157 St John St",
+            "street_2": null,
+            "postal_code": "EC1V 4PW",
+            "city": "London",
+            "city_path": "location/london/aad17950576b8c448fd4f44dbeb59220",
+            "region": "London, City of",
+            "region_path": "location/london-city-of/79eb923b9e93e0db2fe075f0c430c2cb",
+            "country": "United Kingdom",
+            "country_path": "location/united-kingdom/a30e342c17426b1c66e9461de680e54b",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1383668024,
+            "updated_at": 1407432818
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/trudera/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1417159419
+          },
+          {
+            "type": "Category",
+            "name": "Security",
+            "uuid": "4c6005cd347635d2ceabb7d4f1d89e8b",
+            "path": "category/security/4c6005cd347635d2ceabb7d4f1d89e8b",
+            "created_at": 1397980727,
+            "updated_at": 1417171076
+          },
+          {
+            "type": "Category",
+            "name": "Enterprise Software",
+            "uuid": "d38b3f26abc46f7bb29db952021a1b14",
+            "path": "category/enterprise software/d38b3f26abc46f7bb29db952021a1b14",
+            "created_at": 1397980726,
+            "updated_at": 1417194274
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/trudera/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1397181119/37ff97de1245c4d0a4476c5e23ad3dab.png",
+            "created_at": 1398018621,
+            "updated_at": 1398018621
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/trudera/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://twitter.com/trudera",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1383668024,
+            "updated_at": 1409426131
+          },
+          {
+            "url": "http://trudera.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1383668024,
+            "updated_at": 1397988224
+          }
+        ]
+      }
+    }
+  }
+}

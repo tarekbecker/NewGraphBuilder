@@ -1,0 +1,795 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+ <!--
+	generated in 0.343 seconds
+	91017 bytes batcached for 300 seconds
+-->
+ <head profile="http://gmpg.org/xfn/11"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>Sematext Blog | Monitoring, Log Management, Search, Big Data Analytics</title> 
+  <link rel="pingback" href="http://blog.sematext.com/xmlrpc.php"> 
+  <script src="//r-login.wordpress.com/remote-login.php?action=js&amp;host=blog.sematext.com&amp;id=7678707&amp;t=1417768412&amp;back=http%3A%2F%2Fblog.sematext.com%2F" type="text/javascript"></script> 
+  <script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script> 
+  <link rel="alternate" type="application/rss+xml" title="Sematext Blog » Feed" href="http://blog.sematext.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Sematext Blog » Comments Feed" href="http://blog.sematext.com/comments/feed/"> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script> 
+  <link rel="stylesheet" id="all-css-0" href="http://s1.wp.com/_static/??-eJx9kdFuwyAMRX9ozIqUtdrDtG+hxCFODUbgKMrfj7RaqqobL+heONcYA2syTqJiVAiLSbx4igVKIMYtZZnR6bN7d6W8wd8xpisWmFGTdVdzcy/4hcU/AuI9DrKoGYVZVlhp8Ni8g+JIkXQ7RAsuk2R1MtSuKgWFqcpJVnMctNJOMtb9kKzuRMCBLDKGirViIZ1+U7uc6ixex6BTrVMgLReoFnPKVBCKbtxsCYPMdF/vGEEUpUqWQ7TyHsWwOKsk8cmYkS3lVjTj/nVV+tssH/a/t009eJaL5R34Dl9d353708f5s5t/AL5I7fU=" type="text/css" media="all"> 
+  <link rel="stylesheet" id="print-css-0" href="http://s0.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1387483371g" type="text/css" media="print"> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://s0.wp.com/_static/??-eJyFkNsOwiAMQH9IxrZo4ovxW3bpSBEoUhjRrxeTGTXO7KlNe9LTVmYvBnIRXJSapaUeDYjEEDpVagLdRJXmnSwcusGkEfgJ6muCcFvCJiAsqtBFqCy6F/xh9cTRAnNRrnS/VehmhLyJaYi+Gy4iAOP9Z2pvSAlvkkLHsuQKRkpRTGQMZZlxVBDXjmL/3v//NxbqbE/Nvq4Px6atW/0AiPqGzQ=="></script> 
+  <link rel="stylesheet" id="all-css-0" href="http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1377793621g" type="text/css" media="all"> 
+  <!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sematext.wordpress.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress.com"> 
+  <link rel="shortlink" href="http://wp.me/wdA7"> 
+  <!-- Jetpack Open Graph Tags --> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Sematext Blog"> 
+  <meta property="og:description" content="Monitoring, Log Management, Search, Big Data Analytics"> 
+  <meta property="og:url" content="http://blog.sematext.com/"> 
+  <meta property="og:site_name" content="Sematext Blog"> 
+  <meta property="og:image" content="https://s0.wp.com/i/blank.jpg"> 
+  <meta name="twitter:site" content="@wordpressdotcom"> 
+  <meta property="article:author" content="https://www.facebook.com/profile.php?id=100004369218832"> 
+  <link rel="shortcut icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1405977958g" sizes="16x16 24x24 32x32 48x48"> 
+  <link rel="icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1405977958g" sizes="16x16 24x24 32x32 48x48"> 
+  <link rel="apple-touch-icon-precomposed" href="http://s0.wp.com/i/webclip.png?m=1391188133g"> 
+  <link rel="openid.server" href="http://sematext.wordpress.com/?openidserver=1"> 
+  <link rel="openid.delegate" href="http://sematext.wordpress.com/"> 
+  <link rel="search" type="application/opensearchdescription+xml" href="http://blog.sematext.com/osd.xml" title="Sematext Blog"> 
+  <link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com"> 
+  <style type="text/css">
+.widget_twitter li {
+	word-wrap: break-word;
+}
+</style> 
+  <meta name="application-name" content="Sematext Blog">
+  <meta name="msapplication-window" content="width=device-width;height=device-height">
+  <meta name="msapplication-tooltip" content="Monitoring, Log Management, Search, Big Data Analytics">
+  <meta name="msapplication-task" content="name=Subscribe;action-uri=http://blog.sematext.com/feed/;icon-uri=http://s2.wp.com/i/favicon.ico">
+  <meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico">
+  <meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico">
+  <meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico">
+  <meta name="title" content="Sematext Blog on WordPress.com"> 
+  <meta name="description" content="Monitoring, Log Management, Search, Big Data Analytics"> 
+  <style type="text/css">
+			#header h1,
+			#header h1 a,
+			#header h1 a:visited,
+			#header h4,
+			#header h4 a,
+			#header h4 a:visited,
+			.header-left {
+				color: #333333;
+			}
+		</style> 
+  <style type="text/css" id="syntaxhighlighteranchor"></style> 
+ </head> 
+ <body class="home blog mp6 highlander-enabled highlander-light infinite-scroll neverending"> 
+  <div id="header"> 
+   <div class="header-left"> 
+    <h1><a href="http://blog.sematext.com/">Sematext Blog</a></h1> 
+    <p id="description">Monitoring, Log Management, Search, Big Data Analytics</p> 
+   </div> 
+   <div class="header-right"> 
+    <form method="get" id="searchform" action="http://blog.sematext.com/"> 
+     <div>
+      <label class="hidden" for="s">Search:</label> 
+      <input type="text" value="" name="s" id="s"> 
+      <input type="submit" id="searchsubmit" value="Go">
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+  <div id="access"> 
+   <div id="nav"> 
+    <div id="supernav" class="navleft nav"> 
+     <div class="menu">
+      <ul>
+       <li class="current_page_item"><a href="http://blog.sematext.com/">Home</a></li>
+      </ul>
+     </div> 
+    </div> 
+    <div class="navright"> 
+     <a class="rsslink" rel="nofollow" href="http://blog.sematext.com/feed/">Posts</a> 
+     <a class="rsslink" rel="nofollow" href="http://blog.sematext.com/comments/feed/">Comments</a> 
+    </div> 
+   </div> 
+   <div id="subnav" class="subnav nav"> 
+    <div class="menu"> 
+     <ul> 
+      <li class="cat-item cat-item-1"><a href="http://blog.sematext.com/category/uncategorized/">Uncategorized</a> </li> 
+      <li class="cat-item cat-item-36212622"><a href="http://blog.sematext.com/category/monitoring-2/">Monitoring</a> </li> 
+      <li class="cat-item cat-item-35934248"><a href="http://blog.sematext.com/category/logging-2/">Logging</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="wrap"> 
+   <div id="content"> 
+    <div id="content-left"> 
+     <div class="post-4273 post type-post status-publish format-standard hentry category-uncategorized tag-conference tag-event tag-logging tag-presentation tag-solr tag-solrcloud tag-talk"> 
+      <div class="entry"> 
+       <h2><a href="http://blog.sematext.com/2014/11/17/solr-presentations-lucene-solr-revolution/">Solr Presentations from Lucene/Solr Revolution&nbsp;2014</a></h2> 
+       <div class="post-info"> 
+        <p> <span class="time">November 17, 2014</span> <span class="author">by <a href="http://blog.sematext.com/author/mickemmett/" title="Posts by MICK EMMETT" rel="author">MICK EMMETT</a></span> <span class="post-comments"><a href="http://blog.sematext.com/2014/11/17/solr-presentations-lucene-solr-revolution/#comments" title="Comment on Solr Presentations from Lucene/Solr Revolution&nbsp;2014">1 Comment</a></span> </p> 
+       </div> 
+       <p>Thanks to everyone who stopped by the <a href="http://sematext.com/">Sematext</a> booth at last week’s Lucene/Solr Revolution event in Washington, DC and attended our two talks:</p> 
+       <ul> 
+        <li><strong><a href="http://www.slideshare.net/sematext/tuning-solr-for-logging">Tuning Solr for Logs</a></strong> by <a href="https://twitter.com/radu0gheorghe">Radu Gheorghe</a></li> 
+        <li><strong><a href="http://www.slideshare.net/sematext/solr-anti-patterns-41622612">Solr Anti-Patterns</a></strong> by <a href="https://twitter.com/kucrafal">Rafal Kuc</a></li> 
+       </ul> 
+       <p>The attendance, questions and interest are very much appreciated. &nbsp;As a company that prides itself on its <a href="http://sematext.com/consulting/solr-consulting.html">Solr expertise</a> (and <a href="http://sematext.com/consulting/elasticsearch-consulting.html">Elasticsearch expertise</a> too, for that matter), it was nice to spend a couple days talking about search and Big Data challenges, <a href="http://sematext.com/spm/index.html">performance monitoring</a> and <a href="http://sematext.com/logsene/index.html">logging</a> with fellow experts from around the world. Here are the slides for the two talks we gave (summaries of the talks can be found <a href="http://blog.sematext.com/2014/11/05/lucene-solr-revolution-2014/">here</a>): </p>
+       <div class="embed-slideshare">
+        <iframe src="https://www.slideshare.net/slideshow/embed_code/41622462" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
+        <div style="margin-bottom:5px"> 
+         <strong> <a href="https://www.slideshare.net/sematext/tuning-solr-for-logging" title="Tuning Solr for Logs" target="_blank">Tuning Solr for Logs</a> </strong> from 
+         <strong><a href="http://www.slideshare.net/sematext" target="_blank">Sematext Group, Inc. </a></strong> 
+        </div> 
+       </div> 
+       <p> &nbsp; </p>
+       <div class="embed-slideshare">
+        <iframe src="https://www.slideshare.net/slideshow/embed_code/41622612" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
+        <div style="margin-bottom:5px"> 
+         <strong> <a href="https://www.slideshare.net/sematext/solr-anti-patterns-41622612" title="Solr Anti Patterns" target="_blank">Solr Anti Patterns</a> </strong> from 
+         <strong><a href="http://www.slideshare.net/sematext" target="_blank">Sematext Group, Inc. </a></strong> 
+        </div> 
+       </div> 
+       <p> &nbsp; Videos of the talks will be posted here soon.&nbsp; Hope to see everyone again next year!</p> 
+       <div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled">
+        <div class="sd-block sd-rating">
+         <h3 class="sd-title">Rate this:</h3>
+         <div class="pd-rating" id="pd_rating_holder_96363_post_4273" data-settings="{&quot;id&quot;:96363,&quot;item_id&quot;:&quot;_post_4273&quot;,&quot;settings&quot;:&quot;{\&quot;id\&quot;:96363,\&quot;unique_id\&quot;:\&quot;wp-post-4273\&quot;,\&quot;title\&quot;:\&quot;Solr%20Presentations%20from%20Lucene%2FSolr%20Revolution%26nbsp%3B2014\&quot;,\&quot;permalink\&quot;:\&quot;http:\\\/\\\/blog.sematext.com\\\/2014\\\/11\\\/17\\\/solr-presentations-lucene-solr-revolution\\\/\&quot;,\&quot;item_id\&quot;:\&quot;_post_4273\&quot;}&quot;}"></div>
+        </div>
+       </div>
+       <div class="clear"></div> 
+      </div> 
+      <div class="post-meta"> 
+       <p> <span class="categories">Filed under <a href="http://blog.sematext.com/category/uncategorized/" rel="category tag">Uncategorized</a></span> <span class="tags">Tagged with <a href="http://blog.sematext.com/tag/conference/" rel="tag">conference</a>, <a href="http://blog.sematext.com/tag/event/" rel="tag">event</a>, <a href="http://blog.sematext.com/tag/logging/" rel="tag">logging</a>, <a href="http://blog.sematext.com/tag/presentation/" rel="tag">presentation</a>, <a href="http://blog.sematext.com/tag/solr/" rel="tag">solr</a>, <a href="http://blog.sematext.com/tag/solrcloud/" rel="tag">solrcloud</a>, <a href="http://blog.sematext.com/tag/talk/" rel="tag">talk</a></span> </p> 
+      </div> 
+     </div> 
+     <div class="post-4269 post type-post status-publish format-standard hentry category-uncategorized tag-event tag-lucene tag-solr tag-talk"> 
+      <div class="entry"> 
+       <h2><a href="http://blog.sematext.com/2014/11/05/lucene-solr-revolution-2014/">Sematext at Lucene/Solr Revolution&nbsp;2014</a></h2> 
+       <div class="post-info"> 
+        <p> <span class="time">November 5, 2014</span> <span class="author">by <a href="http://blog.sematext.com/author/mickemmett/" title="Posts by MICK EMMETT" rel="author">MICK EMMETT</a></span> <span class="post-comments"><a href="http://blog.sematext.com/2014/11/05/lucene-solr-revolution-2014/#respond" title="Comment on Sematext at Lucene/Solr Revolution&nbsp;2014">Leave a comment</a></span> </p> 
+       </div> 
+       <p>Going to <a href="http://lucenerevolution.org/">Lucene/Solr Revolution</a> next week — November 11-14 — in Washington, DC? &nbsp;If so…<a href="http://sematext.com/">Sematext</a> will be there exhibiting AND giving two talks! &nbsp;If you are going, stop by our table to say hello. &nbsp;We can show you the latest versions of <a href="http://sematext.com/spm/index.html">SPM Performance Monitoring</a>, <a href="http://sematext.com/logsene/index.html">Logsene Log Management and Analytics</a>, <a href="http://sematext.com/search-analytics/index.html">Site Search Analytics</a>, and, of course, talk about metrics, centralized log management, <a href="http://sematext.com/services/index.html">Lucene, Solr, Elasticsearch, and just about any other search-related topic</a> you might be interested in. &nbsp;After all, not only have we blogged, given talks and spread the word in all sorts of ways, we’ve also <a href="http://sematext.com/about/index.html">written books</a> on these subjects!</p> 
+       <p>Both of the Sematext engineer talks take place on Friday, November 14. &nbsp;They are:</p> 
+       <p><a href="https://twitter.com/radu0gheorghe"><b>Radu Gheorghe</b></a><b> will talk about “Tuning Solr for Logs” at 10:15 am</b></p> 
+       <p><i>Summary:</i> <b>&nbsp;</b>Performance tuning is always nice for keeping your applications snappy and your costs down. This is especially the case for logs, social media and other stream-like data that can easily grow into terabyte territory. While you can always use SolrCloud to scale out of performance issues, this talk is about optimizing. The following questions about Solr settings will be answered. How often should you commit and merge? How can you have one collection per day/month/year/etc? What are the performance trade-offs for these options? &nbsp;There will also be a discussion around choosing the appropriate hardware. &nbsp;Radu will talk about optimizing the infrastructure when pushing logs to Solr. This includes tuning Apache Flume to handle large flows of logs and overall design options that also apply to other shippers, like Logstash.</p> 
+       <p><a href="https://twitter.com/kucrafal"><b>Rafal Kuc</b></a><b> will talk about “Solr Anti-Patterns” at 10:55 am</b></p> 
+       <p><i>Summary: </i>&nbsp;Working as a consultant, software engineer and helping people in various ways, Rafał has seen multiple patterns in how Solr is used and how it should be used. Consulting on best practices is common, but talking about what NOT to do is not. This talk will point out common mistakes and roads that should be avoided at all costs, covering use cases and guidelines around general configuration pitfalls, data modeling and what to avoid when making your data indexable, and mistakes made when it comes to queries and searching for indexed data. Each use case will be illustrated by a before and after analysis where changes in metrics will be shown to bring a know-how worth remembering.</p> 
+       <p><b>20% Discount Code</b></p> 
+       <p>If you currently use a Sematext product or have been a client in the past and want to go, <a href="mailto:info@sematext.com">drop us a line</a> for more info.</p> 
+       <p>Hope to see you in DC!</p> 
+       <div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled">
+        <div class="sd-block sd-rating">
+         <h3 class="sd-title">Rate this:</h3>
+         <div class="pd-rating" id="pd_rating_holder_96363_post_4269" data-settings="{&quot;id&quot;:96363,&quot;item_id&quot;:&quot;_post_4269&quot;,&quot;settings&quot;:&quot;{\&quot;id\&quot;:96363,\&quot;unique_id\&quot;:\&quot;wp-post-4269\&quot;,\&quot;title\&quot;:\&quot;Sematext%20at%20Lucene%2FSolr%20Revolution%26nbsp%3B2014\&quot;,\&quot;permalink\&quot;:\&quot;http:\\\/\\\/blog.sematext.com\\\/2014\\\/11\\\/05\\\/lucene-solr-revolution-2014\\\/\&quot;,\&quot;item_id\&quot;:\&quot;_post_4269\&quot;}&quot;}"></div>
+        </div>
+       </div>
+       <div class="clear"></div> 
+      </div> 
+      <div class="post-meta"> 
+       <p> <span class="categories">Filed under <a href="http://blog.sematext.com/category/uncategorized/" rel="category tag">Uncategorized</a></span> <span class="tags">Tagged with <a href="http://blog.sematext.com/tag/event/" rel="tag">event</a>, <a href="http://blog.sematext.com/tag/lucene/" rel="tag">lucene</a>, <a href="http://blog.sematext.com/tag/solr/" rel="tag">solr</a>, <a href="http://blog.sematext.com/tag/talk/" rel="tag">talk</a></span> </p> 
+      </div> 
+     </div> 
+     <div class="post-4213 post type-post status-publish format-standard hentry category-monitoring-2 tag-monitoring tag-performance-monitoring tag-spm"> 
+      <div class="entry"> 
+       <h2><a href="http://blog.sematext.com/2014/10/22/performance-monitoring-comparison-build-vs-buy/">Performance Monitoring Comparison: Build vs.&nbsp;Buy</a></h2> 
+       <div class="post-info"> 
+        <p> <span class="time">October 22, 2014</span> <span class="author">by <a href="http://blog.sematext.com/author/mickemmett/" title="Posts by MICK EMMETT" rel="author">MICK EMMETT</a></span> <span class="post-comments"><a href="http://blog.sematext.com/2014/10/22/performance-monitoring-comparison-build-vs-buy/#respond" title="Comment on Performance Monitoring Comparison: Build vs.&nbsp;Buy">Leave a comment</a></span> </p> 
+       </div> 
+       <p>Using a performance monitoring system that you built yourself? You are not alone! &nbsp;Many organizations monitor their applications and IT infrastructure with a bolted-together and often incompatible assortment of tools. &nbsp;With larger organizations this can number to a dozen or more different tools. &nbsp;Seriously. &nbsp;Build vs. Buy, Do-It-Yourself (DIY), homegrown, in-house, Not Invented Here (NIH) — there are almost as many terms to describe this approach as there are products to do the monitoring.</p> 
+       <p>There’s a good chance you’re using tools like Statsd, Graphite, Nagios and others to stay on top of things. &nbsp;But that’s a LOT of work. &nbsp;And why spend all the time doing all that work yourself? &nbsp;Life, as we all know, is too short. &nbsp;Is glueing together N tools or building yet another custom monitoring tool really a good use of (y)our (life)time? &nbsp;This also leads to the next obvious question:</p> 
+       <p><b>Why Not Use One Monitoring Solution to Do It All?</b></p> 
+       <p><a href="http://sematext.com/spm/index.html">SPM Performance Monitoring, Alerting and Anomaly Detection</a> is a comprehensive solution that does the work of many individual monitoring tools in one powerful package. &nbsp;Applications, servers, other key IT devices — even logs! — are all covered. &nbsp;A partial list of monitored apps includes Elasticsearch, Solr, Hadoop, HBase, <a href="http://blog.sematext.com/2014/10/07/apache-spark-monitoring/">Spark</a>, <a href="http://blog.sematext.com/2014/06/02/announcement-cassandra-performance-monitoring-in-spm/">Cassandra</a>, Kafka, <a href="http://blog.sematext.com/2014/01/30/announcement-apache-storm-monitoring-in-spm/">Storm</a>, <a href="http://blog.sematext.com/2014/01/30/announcement-redis-monitoring-in-spm/">Redis</a>, <a href="http://blog.sematext.com/2014/07/28/nginx-and-nginx-plus-monitoring/">NGINX Plus and NGINX</a>. &nbsp;You can even see what I’m talking about right now by checking out our <a href="https://apps.sematext.com/demo">SPM live demo</a>.</p> 
+       <p>In fact, as one SPM user recently told us:</p> 
+       <p><i>“I don’t want to be a data ape and consume your data to build other reports. &nbsp;I think that is one of the attractions with SPM — I can push the data to Graphite or another monitoring tool, but you already have the reports done. So my time to insight is much faster.”</i></p> 
+       <p><b>There Are Some Huge Differences Between Building and Buying</b></p> 
+       <p>If your Building approach is draining engineer time that could be better spent elsewhere, then you should consider some of the key differences between building your own monitoring “system” and using SPM, including:</p> 
+       <ul> 
+        <li><a href="http://blog.sematext.com/2014/09/23/correlating-metrics-and-logs-use-case-elasticsearch-indexing/"><b>Log &amp; Event Correlation</b></a>: SPM can aggregate, graph and correlate logs with performance metrics and alerts (via integration with<a href="http://sematext.com/logsene/index.html"> Logsene Log Management and Analytics</a>). &nbsp;If you are managing your logs then you are using a separate solution that does not integrate with your “Build” monitoring system. &nbsp;Being able to see logs along with performance metrics is essential for effective troubleshooting.</li> 
+       </ul> 
+       <ul> 
+        <li><b>On Premises or in Cloud</b>: SPM offers an On Premises version in addition to SaaS. &nbsp;Most app-specific monitoring tools are SaaS-only, but some organizations like their metrics and logs close to home base.</li> 
+       </ul> 
+       <ul> 
+        <li><b>Native App Monitoring vs. 3rd Party Plugins</b>: SPM monitors all apps natively. &nbsp;If you are monitoring a number of individual apps via a range of 3rd party plugins then you have to deal with multiple installation and data collection mechanisms, various levels of maturity, and widely varying qualities of implementation and of reporting.</li> 
+       </ul> 
+       <ul> 
+        <li><b>Anomaly Detection</b>: SPM has support not only for heartbeat alerts and threshold-based alerts, but also for automatic machine learning based<a href="http://blog.sematext.com/2013/10/15/introducing-algolerts-anomaly-detection-alerts/"> anomaly detection</a>. &nbsp;A Build system most likely does not have comprehensive anomaly detection capabilities.</li> 
+       </ul> 
+       <p><b>And Then There is the Cost of Using All Those Different Monitoring Tools…</b></p> 
+       <p>Cost comparisons between Building your own monitoring system and Buying a solution like SPM are not linear. &nbsp;While some monitoring tools are open-source and free (though the time to configure them can be costly in its own right), commercial tools run a wide gamut of costs, infrastructure limits, data limits, time limits, pricing schemes, etc. &nbsp;Just keeping track of the costs is often a job in itself. &nbsp;<b>In general, the more tools you have, the more value SPM delivers.<br> </b></p> 
+       <p>Here’s one scenario that will give you an idea of potential Build costs:</p> 
+       <p><b>Build Your Own Monitoring System — Cost Scenario</b></p> 
+       <ul> 
+        <li>Hourly rate: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $100 (ballpark figure; could be much higher)</li> 
+        <li>Installation: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 hours (very optimistic)</li> 
+        <li>Configuration: &nbsp; 8 hours (very optimistic)</li> 
+        <li>Maintenance: &nbsp;&nbsp; 2 hours/month (optimistic)</li> 
+        <li>Upgrading: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 days (i.e., ~20 hours)/year (IF all goes well!)</li> 
+        <li># of servers to run this configuration: &nbsp;3 (monitoring 10 total servers*)</li> 
+        <li>Cost per server (hardware): $1,000 each (i.e., $3,000 total)</li> 
+       </ul> 
+       <p>___________________________________________________________</p> 
+       <ul> 
+        <li>Total Cost in Year 1: &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <b>$6,200 </b></li> 
+        <li>Total Cost in Year 2:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <b>$3,200</b> (not including any additional server purchases)</li> 
+        <li>Total Cost in Year 3: <b>&nbsp;</b><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b><b>$3,200 </b>(at least, though most likely higher)</li> 
+       </ul> 
+       <p>And we didn’t even count the time cost to actually learn how to use all these tools!</p> 
+       <p>Moreover, we used very optimistic numbers, assumed nothing will go wrong, assumed no issues like backwards incompatibilities, problems around dependencies, etc. etc. – all issues that are actually very common and can consume days and make the above costs <b>much</b> higher. &nbsp;We do a ton of DevOps work at Sematext and, like everyone in this field, know how common this is.</p> 
+       <p><i>* this number can vary widely, but for example purposes, if you want a </i><b><i>complete</i></b><i> monitoring solution that can do everything SPM can do — monitoring, alerting, anomaly detection, graph emailing, embedding, etc. — then the total servers that can be monitored with 3 monitoring servers will be lower than it would with a bare bones, </i><b><i>incomplete</i></b><i> monitoring tool.</i></p> 
+       <p><b>SPM — Cost Scenario</b></p> 
+       <ul> 
+        <li># of servers: 10 servers (for example purposes)</li> 
+        <li>Standard plan (our lowest cost plan beyond Free): $25/server/month</li> 
+        <li>Time to Register and Install N agents: 1 hour (or $100 at hourly rate)</li> 
+       </ul> 
+       <p>________________________________________________________________</p> 
+       <ul> 
+        <li>Total Cost in Year 1:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <b>$3,100</b></li> 
+        <li>Total Cost in Year 2:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <b>$3,000</b></li> 
+        <li>Total Cost in Year 3: &nbsp; &nbsp; &nbsp; &nbsp;<b>$3,000</b></li> 
+       </ul> 
+       <p>And these costs don’t even include any Volume Discounts that we would offer!</p> 
+       <p>You can find <a href="http://sematext.com/spm/index.html#plans-and-pricing">clear, simple pricing plans for SPM right here</a>.</p> 
+       <p><b>Conclusion</b></p> 
+       <p>While it’s great that there are many tools available for monitoring — some of them free — and communities built around those tools, in the DevOps world it still comes back to time. &nbsp;Time to learn these tools. &nbsp;Time to stay up-to-date on them. &nbsp;Time to deploy. &nbsp;Time to configure. &nbsp;Time to maintain. &nbsp;Time to assemble a bunch of disparate tools so you can monitor more than just one app. &nbsp;You get the picture. &nbsp;And time, as we all know, carries a cost. &nbsp;With DevOps this is typically a significant cost. &nbsp;So before undertaking a long and neverending “Build” journey, it makes sense to look at all the costs — in money and time — of buying a complete monitoring solution like SPM vs. building your own system. The closer you look, the more value a tool like SPM offers you and your organization.</p> 
+       <p><b>Try SPM for Free for 30 Days</b></p> 
+       <p>Tired of building, and building, and building…&nbsp; Try SPM Performance Monitoring for Free for 30 days<a href="https://apps.sematext.com/users-web/register.do"> by registering here</a>. &nbsp;There’s no commitment and <b>no credit card required</b>.</p> 
+       <div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled">
+        <div class="sd-block sd-rating">
+         <h3 class="sd-title">Rate this:</h3>
+         <div class="pd-rating" id="pd_rating_holder_96363_post_4213" data-settings="{&quot;id&quot;:96363,&quot;item_id&quot;:&quot;_post_4213&quot;,&quot;settings&quot;:&quot;{\&quot;id\&quot;:96363,\&quot;unique_id\&quot;:\&quot;wp-post-4213\&quot;,\&quot;title\&quot;:\&quot;Performance%20Monitoring%20Comparison%3A%20Build%20vs.%26nbsp%3BBuy\&quot;,\&quot;permalink\&quot;:\&quot;http:\\\/\\\/blog.sematext.com\\\/2014\\\/10\\\/22\\\/performance-monitoring-comparison-build-vs-buy\\\/\&quot;,\&quot;item_id\&quot;:\&quot;_post_4213\&quot;}&quot;}"></div>
+        </div>
+       </div>
+       <div class="clear"></div> 
+      </div> 
+      <div class="post-meta"> 
+       <p> <span class="categories">Filed under <a href="http://blog.sematext.com/category/monitoring-2/" rel="category tag">Monitoring</a></span> <span class="tags">Tagged with <a href="http://blog.sematext.com/tag/monitoring/" rel="tag">monitoring</a>, <a href="http://blog.sematext.com/tag/performance-monitoring/" rel="tag">performance monitoring</a>, <a href="http://blog.sematext.com/tag/spm/" rel="tag">spm</a></span> </p> 
+      </div> 
+     </div> 
+     <div class="post-4114 post type-post status-publish format-standard hentry category-logging-2 tag-conference tag-elasticsearch tag-logs tag-logsene tag-logstash tag-presentation tag-talk"> 
+      <div class="entry"> 
+       <h2><a href="http://blog.sematext.com/2014/10/08/centralized-logging-with-logstash-elasticsearch/">Video and Slides: Centralized Logging with Logstash and&nbsp;Elasticsearch</a></h2> 
+       <div class="post-info"> 
+        <p> <span class="time">October 8, 2014</span> <span class="author">by <a href="http://blog.sematext.com/author/mickemmett/" title="Posts by MICK EMMETT" rel="author">MICK EMMETT</a></span> <span class="post-comments"><a href="http://blog.sematext.com/2014/10/08/centralized-logging-with-logstash-elasticsearch/#respond" title="Comment on Video and Slides: Centralized Logging with Logstash and&nbsp;Elasticsearch">Leave a comment</a></span> </p> 
+       </div> 
+       <p>Sematext engineer and<a href="http://blog.sematext.com/tag/elasticsearch/"> Elasticsearch</a> /<a href="http://blog.sematext.com/tag/logstash/"> Logstash</a> expert<a href="https://twitter.com/kucrafal"> Rafal Kuc</a> gave a well-received talk at the recent DevOps Days Warsaw event. &nbsp;The talk was titled “<b>From Zero to Hero – Centralized Logging with Logstash &amp; Elasticsearch</b>” and you can watch the video here:</p> 
+       <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="630" height="385" src="http://www.youtube.com/embed/GKvyt4z5dE0?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0" allowfullscreen="true"></iframe></span></p> 
+       <p><strong>And check out the slides here:</strong></p> 
+       <iframe src="https://www.slideshare.net/slideshow/embed_code/39679077" width="630" height="516" allowfullscreen webkitallowfullscreen="" mozallowfullscreen=""></iframe> 
+       <p><b>Brief Summary</b></p> 
+       <p>Rafal talked about the common problem of digging through logs to find one particular event — or group of them. &nbsp;And going even further into this pain point — what if you have lots of servers and you don’t have a single place to look for logs? &nbsp;Do you really want to ssh to one or more servers and grep log files? &nbsp;Of course not! &nbsp;It’s 2014 and there are tools and services that help you spend less time hunting around for problems and more time actually fixing them.</p> 
+       <p>To help solve this problem Rafal guided the audience through the basics of using Logstash and Elasticsearch together as the perfect combination for handling logs from multiple applications. &nbsp;Attendees also learned how to set up Logstash, how to configure it to parse logs and, finally, how to send them to an Elasticsearch cluster.</p> 
+       <p>Rafal also discussed tuning Elasticsearch for log management and centralized logging purposes, and showed how to easily switch between shipping logs to a self-hosted solution like Elasticsearch / Logstash / Kibana (aka ELK) and instead ship logs to<a href="http://sematext.com/logsene/index.html"> Logsene Log Management and Analytics</a> by changing a single line in Logstash configuration.</p> 
+       <p>See also:</p> 
+       <ul> 
+        <li><a href="http://blog.sematext.com/2013/12/19/getting-started-with-logstash/">Getting Starting with Logstash in 5-minutes: Parsing and Sending a Log File</a></li> 
+        <li><a href="http://blog.sematext.com/2013/07/01/recipe-rsyslog-elasticsearch-kibana/">Recipe: Rsyslog Elasticsearch Kibana</a></li> 
+       </ul> 
+       <p>Enjoy! &nbsp;And thanks to everyone who attended Rafal’s talk in person and stopped by the Sematext booth.</p> 
+       <div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled">
+        <div class="sd-block sd-rating">
+         <h3 class="sd-title">Rate this:</h3>
+         <div class="pd-rating" id="pd_rating_holder_96363_post_4114" data-settings="{&quot;id&quot;:96363,&quot;item_id&quot;:&quot;_post_4114&quot;,&quot;settings&quot;:&quot;{\&quot;id\&quot;:96363,\&quot;unique_id\&quot;:\&quot;wp-post-4114\&quot;,\&quot;title\&quot;:\&quot;Video%20and%20Slides%3A%20Centralized%20Logging%20with%20Logstash%20and%26nbsp%3BElasticsearch\&quot;,\&quot;permalink\&quot;:\&quot;http:\\\/\\\/blog.sematext.com\\\/2014\\\/10\\\/08\\\/centralized-logging-with-logstash-elasticsearch\\\/\&quot;,\&quot;item_id\&quot;:\&quot;_post_4114\&quot;}&quot;}"></div>
+        </div>
+       </div>
+       <div class="clear"></div> 
+      </div> 
+      <div class="post-meta"> 
+       <p> <span class="categories">Filed under <a href="http://blog.sematext.com/category/logging-2/" rel="category tag">Logging</a></span> <span class="tags">Tagged with <a href="http://blog.sematext.com/tag/conference/" rel="tag">conference</a>, <a href="http://blog.sematext.com/tag/elasticsearch/" rel="tag">elasticsearch</a>, <a href="http://blog.sematext.com/tag/logs/" rel="tag">logs</a>, <a href="http://blog.sematext.com/tag/logsene/" rel="tag">logsene</a>, <a href="http://blog.sematext.com/tag/logstash/" rel="tag">logstash</a>, <a href="http://blog.sematext.com/tag/presentation/" rel="tag">presentation</a>, <a href="http://blog.sematext.com/tag/talk/" rel="tag">talk</a></span> </p> 
+      </div> 
+     </div> 
+     <div class="post-4092 post type-post status-publish format-standard hentry category-monitoring-2 tag-announcement tag-apache-spark tag-monitoring tag-performance tag-performance-monitoring tag-spark tag-spm"> 
+      <div class="entry"> 
+       <h2><a href="http://blog.sematext.com/2014/10/07/apache-spark-monitoring/">Apache Spark Monitoring in&nbsp;SPM</a></h2> 
+       <div class="post-info"> 
+        <p> <span class="time">October 7, 2014</span> <span class="author">by <a href="http://blog.sematext.com/author/mickemmett/" title="Posts by MICK EMMETT" rel="author">MICK EMMETT</a></span> <span class="post-comments"><a href="http://blog.sematext.com/2014/10/07/apache-spark-monitoring/#respond" title="Comment on Apache Spark Monitoring in&nbsp;SPM">Leave a comment</a></span> </p> 
+       </div> 
+       <p>Apache Spark is an open-source, large-scale data processing engine built on top of the Hadoop Distributed File System (HDFS) and enables applications in Hadoop clusters to run up to 100x faster in memory, and 10x faster even when running on disk. &nbsp;So it’s not surprising the usage of Spark is booming as <a href="http://www.google.com/trends/explore#q=apache%20spark&amp;cmpt=q" target="_blank">this Google Trends graph</a> shows.</p> 
+       <p>And while Spark usage has been going through the roof, Engineers and DevOps handling Spark have not had a good monitoring tool at their disposal. &nbsp;Well, that is, until now. &nbsp;By releasing the first Spark monitoring product to market Sematext has, with the addition of Spark monitoring to <a href="http://sematext.com/spm/index.html">SPM Performance Monitoring, Alerting and Anomaly Detection</a>, just filled a big hole in the Spark ecosystem.</p> 
+       <p>Having just been added — <a href="http://blog.sematext.com/2014/09/16/metrics-nagios-webhooks-https-logging/">along with other goodies</a> — to the latest SPM release, SPM for Spark monitors all Spark metrics. &nbsp;It includes alerting, <a href="http://blog.sematext.com/2013/10/15/introducing-algolerts-anomaly-detection-alerts/">anomaly detection</a>, <a href="http://blog.sematext.com/2014/09/23/correlating-metrics-and-logs-use-case-elasticsearch-indexing/">log correlation</a>, custom dashboards, <a href="https://sematext.atlassian.net/wiki/display/PUBSPM/Events+Integration">events graphing</a>, <a href="https://sematext.atlassian.net/wiki/display/PUBSPM/Custom+Metrics">custom metrics</a>, and a ton more. &nbsp;SPM can be installed <b>On Premises</b> or one can use the <b>Cloud</b> version run by <a href="http://www.sematext.com/">Sematext</a>, in which case the setup takes less than 5 minutes before graphs with performance metrics start appearing in real-time.</p> 
+       <p><b>Enough with the words – Show me what Spark Monitoring looks like!</b></p> 
+       <p>Have a look at a few screenshots to see how we graph Spark metrics in SPM. &nbsp;While we don’t use Spark at Sematext at this time and thus don’t have a live demo to show you, you can check out&nbsp;<a href="https://apps.sematext.com/demo">SPM’s live demo</a> and see some other types of apps we monitor, such as Hadoop, HBase, <a href="http://blog.sematext.com/2014/06/02/announcement-cassandra-performance-monitoring-in-spm/">Cassandra</a>, <a href="http://blog.sematext.com/2014/06/11/monitoring-kafka-storm-and-cassandra-together-with-spm/">Kafka</a>, <a href="http://blog.sematext.com/2014/01/30/announcement-apache-storm-monitoring-in-spm/">Storm</a>, ZooKeeper, Elasticsearch, Solr, <a href="http://blog.sematext.com/2014/07/28/nginx-and-nginx-plus-monitoring/">NGINX and NGINX Plus</a>, <a href="http://blog.sematext.com/?s=apache">Apache</a>, <a href="http://blog.sematext.com/2014/05/21/announcement-mysql-performance-monitoring-in-spm/">MySQL</a>, <a href="http://blog.sematext.com/?s=redis">Redis</a>, Java webapps and generic Java applications, as well as <a href="https://sematext.atlassian.net/wiki/display/PUBSPM/Custom+Metrics" target="_blank">custom metrics</a>.</p> 
+       <p><b>Screenshot – Spark Executor metrics</b> <i>[click to enlarge]</i></p> 
+       <p><a href="https://sematext.files.wordpress.com/2014/10/spark_screenshot_executor_3.png"><img class="alignnone size-large wp-image-4125" src="https://sematext.files.wordpress.com/2014/10/spark_screenshot_executor_3.png?w=630&amp;h=254" alt="Spark_screenshot_Executor_3" width="630" height="254"></a></p> 
+       <p><b>Screenshot – Spark Worker metrics</b>&nbsp;&nbsp;<i>[click to enlarge]</i></p> 
+       <p><a href="https://sematext.files.wordpress.com/2014/10/spark_screenshot_worker_2.png"><img class="alignnone size-large wp-image-4105" src="https://sematext.files.wordpress.com/2014/10/spark_screenshot_worker_2.png?w=630&amp;h=240" alt="Spark_screenshot_Worker_2" width="630" height="240"></a></p> 
+       <p><b>And One More Thing…</b></p> 
+       <p>SPM now works hand-in-hand with <a href="http://sematext.com/logsene/index.html">Logsene Log Management and Analytics</a>. &nbsp;This makes the integration of performance metrics, logs, events and anomalies more robust for those of you looking to <b>combine performance monitoring and centralized log management in one place</b> — not only knowing that SOMETHING affected performance of your Spark cluster when you look at your performance metrics graphs or get an alert, but also exactly WHAT happened with the cluster by having immediate access to all relevant Spark event logs right there!</p> 
+       <p><b>Take a Test Drive — It’s Easy and Free to Get Started</b></p> 
+       <p>Like what you see here? &nbsp;Sound like something that could benefit your organization? &nbsp;Then try SPM and/or Logsene for Free for 30 days&nbsp;<a href="https://apps.sematext.com/users-web/register.do">by registering here</a>. &nbsp;There’s <b>no commitment</b> and <b>no credit card required</b>.</p> 
+       <div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled">
+        <div class="sd-block sd-rating">
+         <h3 class="sd-title">Rate this:</h3>
+         <div class="pd-rating" id="pd_rating_holder_96363_post_4092" data-settings="{&quot;id&quot;:96363,&quot;item_id&quot;:&quot;_post_4092&quot;,&quot;settings&quot;:&quot;{\&quot;id\&quot;:96363,\&quot;unique_id\&quot;:\&quot;wp-post-4092\&quot;,\&quot;title\&quot;:\&quot;Apache%20Spark%20Monitoring%20in%26nbsp%3BSPM\&quot;,\&quot;permalink\&quot;:\&quot;http:\\\/\\\/blog.sematext.com\\\/2014\\\/10\\\/07\\\/apache-spark-monitoring\\\/\&quot;,\&quot;item_id\&quot;:\&quot;_post_4092\&quot;}&quot;}"></div>
+        </div>
+       </div>
+       <div class="clear"></div> 
+      </div> 
+      <div class="post-meta"> 
+       <p> <span class="categories">Filed under <a href="http://blog.sematext.com/category/monitoring-2/" rel="category tag">Monitoring</a></span> <span class="tags">Tagged with <a href="http://blog.sematext.com/tag/announcement/" rel="tag">announcement</a>, <a href="http://blog.sematext.com/tag/apache-spark/" rel="tag">Apache Spark</a>, <a href="http://blog.sematext.com/tag/monitoring/" rel="tag">monitoring</a>, <a href="http://blog.sematext.com/tag/performance/" rel="tag">performance</a>, <a href="http://blog.sematext.com/tag/performance-monitoring/" rel="tag">performance monitoring</a>, <a href="http://blog.sematext.com/tag/spark/" rel="tag">Spark</a>, <a href="http://blog.sematext.com/tag/spm/" rel="tag">spm</a></span> </p> 
+      </div> 
+     </div> 
+     <div class="post-4083 post type-post status-publish format-standard hentry category-logging-2 tag-devops tag-fluentd tag-flume tag-logging tag-logstash tag-poll tag-rsyslog"> 
+      <div class="entry"> 
+       <h2><a href="http://blog.sematext.com/2014/10/06/top-5-most-popular-log-shippers/">Top 5 Most Popular Log&nbsp;Shippers</a></h2> 
+       <div class="post-info"> 
+        <p> <span class="time">October 6, 2014</span> <span class="author">by <a href="http://blog.sematext.com/author/sematext/" title="Posts by sematext" rel="author">sematext</a></span> <span class="post-comments"><a href="http://blog.sematext.com/2014/10/06/top-5-most-popular-log-shippers/#comments" title="Comment on Top 5 Most Popular Log&nbsp;Shippers">2 Comments</a></span> </p> 
+       </div> 
+       <p>The <a title="Poll: Which Log Shippers do you use?" href="http://blog.sematext.com/2014/09/22/poll-top-log-shippers/" target="_blank">Log Shipper Poll</a> results are in! &nbsp;We run <a href="http://sematext.com/logsene/">Logsene</a>&nbsp;here at <a href="http://sematext.com/">Sematext</a>, so we wanted to know what people like to use to ship their logs. &nbsp;Before we share the results, a few words about the poll:</p> 
+       <ul> 
+        <li>We published it here on our blog on September 22, 2014</li> 
+        <li>We automatically <a href="https://twitter.com/sematext/status/513981133814382592" target="_blank">tweeted it</a> and posted it to several Devops and similar LinkedIn groups</li> 
+        <li>We did not post it to groups or mailing lists for various log shippers we included in the poll to avoid bias</li> 
+        <li>We collected 115 votes until now</li> 
+       </ul> 
+       <p>That said, let’s see how log shipper popularity breaks down.</p> 
+       <p style="text-align:left;">You can tweet the results of this poll here:&nbsp;<a href="https://twitter.com/intent/tweet?source=webclient&amp;text=Top 5 Most Popular Log Shippers http://blog.sematext.com/2014/10/06/top-5-most-popular-log-shippers/ via @sematext" target="_blank"><strong>Top 5 Most Popular Log Shippers</strong></a></p> 
+       <div id="attachment_4085" style="width: 594px" class="wp-caption alignnone">
+        <a href="https://sematext.files.wordpress.com/2014/10/log-shipper-popularity-st.png"><img class="size-full wp-image-4085" src="http://sematext.files.wordpress.com/2014/10/log-shipper-popularity-st.png?w=630" alt="Log Shipper Popularity"></a>
+        <p class="wp-caption-text">Log Shipper Popularity</p>
+       </div> 
+       <p>Don’t forget to check out <strong><a href="http://sematext.com/logsene/" target="_blank">Logsene</a></strong> – our Log Management Cloud/On Premises service that will happily take logs from Logstash, Flume, rsyslog, Fluentd, Syslog-ng, syslogd, etc. &nbsp;Check <strong><a href="https://sematext.atlassian.net/wiki/display/PUBLOGSENE/Sending+Events+to+Logsene" target="_blank">How to Send Logs to Logsene</a></strong>&nbsp;to see how easy it is.</p> 
+       <div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled">
+        <div class="sd-block sd-rating">
+         <h3 class="sd-title">Rate this:</h3>
+         <div class="pd-rating" id="pd_rating_holder_96363_post_4083" data-settings="{&quot;id&quot;:96363,&quot;item_id&quot;:&quot;_post_4083&quot;,&quot;settings&quot;:&quot;{\&quot;id\&quot;:96363,\&quot;unique_id\&quot;:\&quot;wp-post-4083\&quot;,\&quot;title\&quot;:\&quot;Top%205%20Most%20Popular%20Log%26nbsp%3BShippers\&quot;,\&quot;permalink\&quot;:\&quot;http:\\\/\\\/blog.sematext.com\\\/2014\\\/10\\\/06\\\/top-5-most-popular-log-shippers\\\/\&quot;,\&quot;item_id\&quot;:\&quot;_post_4083\&quot;}&quot;}"></div>
+        </div>
+       </div>
+       <div class="clear"></div> 
+      </div> 
+      <div class="post-meta"> 
+       <p> <span class="categories">Filed under <a href="http://blog.sematext.com/category/logging-2/" rel="category tag">Logging</a></span> <span class="tags">Tagged with <a href="http://blog.sematext.com/tag/devops/" rel="tag">devops</a>, <a href="http://blog.sematext.com/tag/fluentd/" rel="tag">fluentd</a>, <a href="http://blog.sematext.com/tag/flume/" rel="tag">flume</a>, <a href="http://blog.sematext.com/tag/logging/" rel="tag">logging</a>, <a href="http://blog.sematext.com/tag/logstash/" rel="tag">logstash</a>, <a href="http://blog.sematext.com/tag/poll/" rel="tag">poll</a>, <a href="http://blog.sematext.com/tag/rsyslog/" rel="tag">rsyslog</a></span> </p> 
+      </div> 
+     </div> 
+     <div class="post-4080 post type-post status-publish format-standard hentry category-uncategorized tag-elasticsearch tag-job"> 
+      <div class="entry"> 
+       <h2><a href="http://blog.sematext.com/2014/09/29/elasticsearch-engineer-job/">Job: Sematext is hiring – Elasticsearch&nbsp;Engineer</a></h2> 
+       <div class="post-info"> 
+        <p> <span class="time">September 29, 2014</span> <span class="author">by <a href="http://blog.sematext.com/author/sematext/" title="Posts by sematext" rel="author">sematext</a></span> <span class="post-comments"><a href="http://blog.sematext.com/2014/09/29/elasticsearch-engineer-job/#respond" title="Comment on Job: Sematext is hiring – Elasticsearch&nbsp;Engineer">Leave a comment</a></span> </p> 
+       </div> 
+       <p>The <a href="http://sematext.com/about/index.html" target="_blank">Sematext team</a> is more distributed than your average Elasticsearch cluster and, trust me, we’ve seen a a good portion of the world’s&nbsp;Elasticsearch clusters. &nbsp;The thing with Elasticsearch clusters is they often get new nodes added and they keep expanding to handle more data and more queries. &nbsp;Similarly, we are looking to add a new node to the Sematext team so we can reshard our work a bit, distribute it more evenly, and scale further. &nbsp;In plain English, we are looking for an Engineer who loves working with Elasticsearch, who loves large volumes of data, and a wide&nbsp;variety of projects and challenges involving large scale data processing, high volume indexing, high query rates, who likes working with our clients, and wants to make&nbsp;<a href="http://sematext.com/logsene/" target="_blank">Logsene</a> and <a href="http://sematext.com/spm/" target="_blank">SPM</a>&nbsp;the killer log management and monitoring platforms. &nbsp;<strong>Advanced knowledge of Elasticsearch is less important than passion to learn and build, positive&nbsp;attitude, ability to make decisions, work both independently and with the rest of the team, communicate well, and simply be a good person. &nbsp;We can teach you everything about Elasticsearch and turn you into a bonsai tree loving Elasticsearch samurai, but we need you to be all these other things.</strong></p> 
+       <p>As a member of our team you will get to:</p> 
+       <ul> 
+        <li>Work with world-class search experts</li> 
+        <li>Design and implement systems&nbsp;(both our own and our clients’) that process 10s of thousands of queries per second and handle billions of documents, logs, data points, etc.</li> 
+        <li>Interact with <a href="http://sematext.com/clients/" target="_blank">clients and customers</a> world-wide</li> 
+        <li>Provide guidance, architecture design, implementation, and production support around Elasticsearch</li> 
+        <li>Participate in and contribute to&nbsp;open-source (we’ve contributed to Solr, Lucene, HBase, Flume, rsyslog, Logstash, etc.)</li> 
+        <li>Share your knowledge with clients, at conferences and under-conferences, online&nbsp;community, etc.</li> 
+       </ul> 
+       <p>This position:</p> 
+       <ul> 
+        <li>Offers a lot of independence, learning, and growth</li> 
+        <li>Is open to applicants&nbsp;“west of New York City” (this could be South, Central, or North America, of course), though we’ll happily make an exception if you persuade us we should make an exception for you!</li> 
+       </ul> 
+       <p>Our search team members have written several books about search, regularly give talks at conferences, blog, and participate in open-source projects. &nbsp;For more info, see&nbsp;<a href="http://sematext.com/about/jobs.html#why">19 things you may like about Sematext</a>.</p> 
+       <p>Interested? Please send your resume to&nbsp;<a href="mailto:jobs@sematext.com">jobs@sematext.com</a>.</p> 
+       <p>For other job openings please see&nbsp;<a href="http://sematext.com/about/jobs.html" target="_blank">Jobs @ Sematext</a>&nbsp;or even our&nbsp;<a href="http://blog.sematext.com/tag/job/">previous job listings</a>.</p> 
+       <div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled">
+        <div class="sd-block sd-rating">
+         <h3 class="sd-title">Rate this:</h3>
+         <div class="pd-rating" id="pd_rating_holder_96363_post_4080" data-settings="{&quot;id&quot;:96363,&quot;item_id&quot;:&quot;_post_4080&quot;,&quot;settings&quot;:&quot;{\&quot;id\&quot;:96363,\&quot;unique_id\&quot;:\&quot;wp-post-4080\&quot;,\&quot;title\&quot;:\&quot;Job%3A%20Sematext%20is%20hiring%20%26%238211%3B%20Elasticsearch%26nbsp%3BEngineer\&quot;,\&quot;permalink\&quot;:\&quot;http:\\\/\\\/blog.sematext.com\\\/2014\\\/09\\\/29\\\/elasticsearch-engineer-job\\\/\&quot;,\&quot;item_id\&quot;:\&quot;_post_4080\&quot;}&quot;}"></div>
+        </div>
+       </div>
+       <div class="clear"></div> 
+      </div> 
+      <div class="post-meta"> 
+       <p> <span class="categories">Filed under <a href="http://blog.sematext.com/category/uncategorized/" rel="category tag">Uncategorized</a></span> <span class="tags">Tagged with <a href="http://blog.sematext.com/tag/elasticsearch/" rel="tag">elasticsearch</a>, <a href="http://blog.sematext.com/tag/job/" rel="tag">job</a></span> </p> 
+      </div> 
+     </div> 
+     <div class="navlink"> 
+      <div class="nav-previous">
+       <p><a href="http://blog.sematext.com/page/2/"><span class="meta-nav">←</span> Older posts</a></p>
+      </div> 
+      <div class="nav-next">
+       <p></p>
+      </div> 
+     </div> 
+    </div> 
+    <div id="sidebar"> 
+     <div id="text-2" class="widget widget_text"> 
+      <div class="textwidget">
+       <a href="http://www.sematext.com"><img src="http://www.sematext.com/img/home.png" alt="Sematext Site"></a> 
+       <a href="http://feeds.feedburner.com/SematextBlog" rel="alternate"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="subscribe to Sematext Blog feed"></a> 
+       <a href="http://twitter.com/sematext"><img src="http://twitter-badges.s3.amazonaws.com/t_mini-a.png" alt="Sematext on Twitter"></a> 
+       <a href="http://www.linkedin.com/company/sematext-international-llc"><img src="http://www.sematext.com/img/linkedin.png" alt="Sematext on LinkedIn"></a> 
+       <a href="http://slideshare.net/sematext"><img src="http://www.sematext.com/img/slideshare.jpg" alt="Sematext on SlideShare"></a> 
+       <a href="http://github.com/sematext"><img src="http://www.sematext.com/img/github.png" alt="Sematext on GitHub"></a> 
+       <a href="http://twitter.com/sematext" class="twitter-follow-button" data-text-color="#555555" data-link-color="#008DCF">Follow @sematext</a> 
+      </div> 
+     </div>
+     <div id="text-3" class="widget widget_text"> 
+      <div class="textwidget">
+       <p><strong>· <a href="http://sematext.com/spm/?b,l,tr">Monitoring, Alerts, &amp; Anomaly Detection</a></strong></p> 
+       <p><a href="http://sematext.com/spm/?b,ic,tr"><img src="http://sematext.com/img/monitored-apps-small.png"></a></p> 
+       <p><strong>No credit card required -- <a href="http://sematext.com/spm/?b,gsn,tr">Get Started Now!</a></strong></p> 
+       <p><strong>· <a href="http://sematext.com/logsene/?b,l,tr">Log Management &amp; Analytics</a></strong></p> 
+       <p><strong>· <a href="http://sematext.com/search-analytics/?b,l,tr">Search Analytics</a></strong></p> 
+      </div> 
+     </div>
+     <div id="wp_tag_cloud-2" class="widget wp_widget_tag_cloud">
+      <h4></h4>
+      <div style="overflow:hidden">
+       <a href="http://blog.sematext.com/tag/alerts/" class="tag-link-10378" title="3 topics" style="font-size: 9.1428571428571pt;">alerts</a> 
+       <a href="http://blog.sematext.com/tag/analytics/" class="tag-link-11453" title="18 topics" style="font-size: 15.619047619048pt;">analytics</a> 
+       <a href="http://blog.sematext.com/tag/announcement/" class="tag-link-290" title="18 topics" style="font-size: 15.619047619048pt;">announcement</a> 
+       <a href="http://blog.sematext.com/tag/avro/" class="tag-link-828530" title="2 topics" style="font-size: 8pt;">avro</a> 
+       <a href="http://blog.sematext.com/tag/aws/" class="tag-link-144203" title="4 topics" style="font-size: 10.095238095238pt;">aws</a> 
+       <a href="http://blog.sematext.com/tag/berlin-buzzwords/" class="tag-link-36078301" title="10 topics" style="font-size: 13.333333333333pt;">berlin buzzwords</a> 
+       <a href="http://blog.sematext.com/tag/big-data/" class="tag-link-2075170" title="3 topics" style="font-size: 9.1428571428571pt;">big data</a> 
+       <a href="http://blog.sematext.com/tag/book/" class="tag-link-2364" title="3 topics" style="font-size: 9.1428571428571pt;">book</a> 
+       <a href="http://blog.sematext.com/tag/cassandra/" class="tag-link-566348" title="5 topics" style="font-size: 10.857142857143pt;">cassandra</a> 
+       <a href="http://blog.sematext.com/tag/cloud/" class="tag-link-69816" title="4 topics" style="font-size: 10.095238095238pt;">cloud</a> 
+       <a href="http://blog.sematext.com/tag/cluster/" class="tag-link-9868" title="4 topics" style="font-size: 10.095238095238pt;">cluster</a> 
+       <a href="http://blog.sematext.com/tag/conference/" class="tag-link-33525" title="27 topics" style="font-size: 17.238095238095pt;">conference</a> 
+       <a href="http://blog.sematext.com/tag/data-mining/" class="tag-link-867" title="2 topics" style="font-size: 8pt;">data mining</a> 
+       <a href="http://blog.sematext.com/tag/digest/" class="tag-link-16179" title="41 topics" style="font-size: 18.857142857143pt;">digest</a> 
+       <a href="http://blog.sematext.com/tag/discount/" class="tag-link-171208" title="2 topics" style="font-size: 8pt;">discount</a> 
+       <a href="http://blog.sematext.com/tag/distributed/" class="tag-link-131459" title="5 topics" style="font-size: 10.857142857143pt;">distributed</a> 
+       <a href="http://blog.sematext.com/tag/elasticsearch/" class="tag-link-50684163" title="55 topics" style="font-size: 20.095238095238pt;">elasticsearch</a> 
+       <a href="http://blog.sematext.com/tag/event/" class="tag-link-5784" title="6 topics" style="font-size: 11.52380952381pt;">event</a> 
+       <a href="http://blog.sematext.com/tag/fluentd/" class="tag-link-88382687" title="2 topics" style="font-size: 8pt;">fluentd</a> 
+       <a href="http://blog.sematext.com/tag/flume/" class="tag-link-1771509" title="8 topics" style="font-size: 12.47619047619pt;">flume</a> 
+       <a href="http://blog.sematext.com/tag/grok/" class="tag-link-562779" title="2 topics" style="font-size: 8pt;">grok</a> 
+       <a href="http://blog.sematext.com/tag/gsoc/" class="tag-link-151852" title="2 topics" style="font-size: 8pt;">GSOC</a> 
+       <a href="http://blog.sematext.com/tag/hadoop/" class="tag-link-3251196" title="28 topics" style="font-size: 17.333333333333pt;">hadoop</a> 
+       <a href="http://blog.sematext.com/tag/hbase/" class="tag-link-12595670" title="39 topics" style="font-size: 18.666666666667pt;">hbase</a> 
+       <a href="http://blog.sematext.com/tag/hdfs/" class="tag-link-12413600" title="4 topics" style="font-size: 10.095238095238pt;">hdfs</a> 
+       <a href="http://blog.sematext.com/tag/hire/" class="tag-link-233379" title="6 topics" style="font-size: 11.52380952381pt;">hire</a> 
+       <a href="http://blog.sematext.com/tag/hive/" class="tag-link-1205751" title="3 topics" style="font-size: 9.1428571428571pt;">hive</a> 
+       <a href="http://blog.sematext.com/tag/indexing-logs/" class="tag-link-204592303" title="2 topics" style="font-size: 8pt;">indexing logs</a> 
+       <a href="http://blog.sematext.com/tag/internship/" class="tag-link-12297" title="3 topics" style="font-size: 9.1428571428571pt;">internship</a> 
+       <a href="http://blog.sematext.com/tag/interview/" class="tag-link-11788" title="3 topics" style="font-size: 9.1428571428571pt;">interview</a> 
+       <a href="http://blog.sematext.com/tag/introduction/" class="tag-link-885" title="2 topics" style="font-size: 8pt;">introduction</a> 
+       <a href="http://blog.sematext.com/tag/java/" class="tag-link-1017" title="3 topics" style="font-size: 9.1428571428571pt;">java</a> 
+       <a href="http://blog.sematext.com/tag/job/" class="tag-link-1114" title="16 topics" style="font-size: 15.142857142857pt;">job</a> 
+       <a href="http://blog.sematext.com/tag/jvm/" class="tag-link-461295" title="5 topics" style="font-size: 10.857142857143pt;">jvm</a> 
+       <a href="http://blog.sematext.com/tag/kafka/" class="tag-link-207392" title="2 topics" style="font-size: 8pt;">kafka</a> 
+       <a href="http://blog.sematext.com/tag/kibana/" class="tag-link-99581934" title="6 topics" style="font-size: 11.52380952381pt;">kibana</a> 
+       <a href="http://blog.sematext.com/tag/logging/" class="tag-link-62087" title="20 topics" style="font-size: 16pt;">logging</a> 
+       <a href="http://blog.sematext.com/tag/logs/" class="tag-link-17958" title="4 topics" style="font-size: 10.095238095238pt;">logs</a> 
+       <a href="http://blog.sematext.com/tag/logsene/" class="tag-link-195167321" title="14 topics" style="font-size: 14.666666666667pt;">logsene</a> 
+       <a href="http://blog.sematext.com/tag/logstash/" class="tag-link-59657565" title="13 topics" style="font-size: 14.380952380952pt;">logstash</a> 
+       <a href="http://blog.sematext.com/tag/lucene/" class="tag-link-161367" title="37 topics" style="font-size: 18.47619047619pt;">lucene</a> 
+       <a href="http://blog.sematext.com/tag/lucene-revolution/" class="tag-link-45014492" title="4 topics" style="font-size: 10.095238095238pt;">lucene revolution</a> 
+       <a href="http://blog.sematext.com/tag/machine-learning/" class="tag-link-40978" title="4 topics" style="font-size: 10.095238095238pt;">machine learning</a> 
+       <a href="http://blog.sematext.com/tag/mahout/" class="tag-link-5271367" title="10 topics" style="font-size: 13.333333333333pt;">mahout</a> 
+       <a href="http://blog.sematext.com/tag/mapreduce/" class="tag-link-3859232" title="6 topics" style="font-size: 11.52380952381pt;">mapreduce</a> 
+       <a href="http://blog.sematext.com/tag/marketing/" class="tag-link-175" title="2 topics" style="font-size: 8pt;">marketing</a> 
+       <a href="http://blog.sematext.com/tag/meetup/" class="tag-link-27138" title="7 topics" style="font-size: 12pt;">meetup</a> 
+       <a href="http://blog.sematext.com/tag/monitor/" class="tag-link-32519" title="16 topics" style="font-size: 15.142857142857pt;">monitor</a> 
+       <a href="http://blog.sematext.com/tag/monitorama/" class="tag-link-194319187" title="2 topics" style="font-size: 8pt;">monitorama</a> 
+       <a href="http://blog.sematext.com/tag/monitoring/" class="tag-link-111949" title="26 topics" style="font-size: 17.047619047619pt;">monitoring</a> 
+       <a href="http://blog.sematext.com/tag/nutch/" class="tag-link-233771" title="5 topics" style="font-size: 10.857142857143pt;">nutch</a> 
+       <a href="http://blog.sematext.com/tag/omelasticsearch/" class="tag-link-219150494" title="3 topics" style="font-size: 9.1428571428571pt;">omelasticsearch</a> 
+       <a href="http://blog.sematext.com/tag/open-source/" class="tag-link-25" title="2 topics" style="font-size: 8pt;">open-source</a> 
+       <a href="http://blog.sematext.com/tag/performance/" class="tag-link-1930" title="29 topics" style="font-size: 17.52380952381pt;">performance</a> 
+       <a href="http://blog.sematext.com/tag/performance-monitoring/" class="tag-link-2039259" title="17 topics" style="font-size: 15.428571428571pt;">performance monitoring</a> 
+       <a href="http://blog.sematext.com/tag/pig/" class="tag-link-15610" title="2 topics" style="font-size: 8pt;">pig</a> 
+       <a href="http://blog.sematext.com/tag/poll/" class="tag-link-10386" title="13 topics" style="font-size: 14.380952380952pt;">poll</a> 
+       <a href="http://blog.sematext.com/tag/presentation/" class="tag-link-9402" title="32 topics" style="font-size: 17.904761904762pt;">presentation</a> 
+       <a href="http://blog.sematext.com/tag/real-time/" class="tag-link-75547" title="5 topics" style="font-size: 10.857142857143pt;">real-time</a> 
+       <a href="http://blog.sematext.com/tag/research/" class="tag-link-668" title="2 topics" style="font-size: 8pt;">research</a> 
+       <a href="http://blog.sematext.com/tag/rsyslog/" class="tag-link-14850093" title="12 topics" style="font-size: 14pt;">rsyslog</a> 
+       <a href="http://blog.sematext.com/tag/search/" class="tag-link-2373" title="34 topics" style="font-size: 18.095238095238pt;">search</a> 
+       <a href="http://blog.sematext.com/tag/sematext/" class="tag-link-22958983" title="4 topics" style="font-size: 10.095238095238pt;">sematext</a> 
+       <a href="http://blog.sematext.com/tag/sensei/" class="tag-link-380160" title="4 topics" style="font-size: 10.095238095238pt;">sensei</a> 
+       <a href="http://blog.sematext.com/tag/site-search-analytics/" class="tag-link-213969485" title="3 topics" style="font-size: 9.1428571428571pt;">Site Search Analytics</a> 
+       <a href="http://blog.sematext.com/tag/solr/" class="tag-link-631724" title="89 topics" style="font-size: 22pt;">solr</a> 
+       <a href="http://blog.sematext.com/tag/solrcloud/" class="tag-link-64441777" title="22 topics" style="font-size: 16.380952380952pt;">solrcloud</a> 
+       <a href="http://blog.sematext.com/tag/spm/" class="tag-link-288613" title="34 topics" style="font-size: 18.095238095238pt;">spm</a> 
+       <a href="http://blog.sematext.com/tag/storm/" class="tag-link-176746" title="2 topics" style="font-size: 8pt;">storm</a> 
+       <a href="http://blog.sematext.com/tag/syslog/" class="tag-link-306399" title="8 topics" style="font-size: 12.47619047619pt;">syslog</a> 
+       <a href="http://blog.sematext.com/tag/syslog-ng/" class="tag-link-1431743" title="4 topics" style="font-size: 10.095238095238pt;">syslog-ng</a> 
+       <a href="http://blog.sematext.com/tag/talk/" class="tag-link-739" title="8 topics" style="font-size: 12.47619047619pt;">talk</a> 
+       <a href="http://blog.sematext.com/tag/tika/" class="tag-link-1096255" title="4 topics" style="font-size: 10.095238095238pt;">tika</a> 
+       <a href="http://blog.sematext.com/tag/video/" class="tag-link-412" title="3 topics" style="font-size: 9.1428571428571pt;">video</a> 
+       <a href="http://blog.sematext.com/tag/zookeeper/" class="tag-link-425781" title="6 topics" style="font-size: 11.52380952381pt;">zookeeper</a>
+      </div>
+     </div>
+     <div id="twitter-4" class="widget widget_twitter">
+      <h4><a href="http://twitter.com/sematext">Sematext on Twitter</a></h4>
+      <ul class="tweets"> 
+       <li> Solr Presentations from Lucene/Solr Revolution&nbsp;2014 <a href="http://wp.me/pwdA7-16V"> wp.me/pwdA7-16V</a> <a href="http://twitter.com/sematext/statuses/534398548175904768" class="timesince">2&nbsp;weeks&nbsp;ago</a> </li> 
+       <li> At <a href="http://twitter.com/search?q=%23LuceneSolrRev">#LuceneSolrRev</a>? Check out our talks about Tuning <a href="http://twitter.com/search?q=%23solr">#solr</a> for <a href="http://twitter.com/search?q=%23logs">#logs</a> &amp; Solr Anti-Patterns on Friday: <a href="http://blog.sematext.com/2014/11/05/lucene-solr-revolution-2014/"> blog.sematext.com/2014/11/05/luc…</a> <a href="http://twitter.com/sematext/statuses/532562690125074432" class="timesince">3&nbsp;weeks&nbsp;ago</a> </li> 
+       <li> Sematext at Lucene/Solr Revolution&nbsp;2014 <a href="http://wp.me/pwdA7-16R"> wp.me/pwdA7-16R</a> <a href="http://twitter.com/sematext/statuses/530017245041139712" class="timesince">4&nbsp;weeks&nbsp;ago</a> </li> 
+       <li> @<a href="http://twitter.com/jeromatron">jeromatron</a> @<a href="http://twitter.com/tjake">tjake</a> have no plans, but <a href="http://search-hadoop.com/cassandra"> search-hadoop.com/cassandra</a> should do for now. Yeah, "hadoop" in there may have been too short sighted <a href="http://twitter.com/sematext/statuses/529724544337326080" class="timesince">1&nbsp;month&nbsp;ago</a> </li> 
+       <li> Wanna go to <a href="http://twitter.com/search?q=%23LuceneRevolution">#LuceneRevolution</a> in DC? We're sponsors &amp; have 20% discount codes for SPM, Logsene, or Search Analytics users &amp; our clients! <a href="http://twitter.com/sematext/statuses/529309761855315968" class="timesince">1&nbsp;month&nbsp;ago</a> </li> 
+      </ul>
+     </div>
+     <div id="archives-2" class="widget widget_archive">
+      <h4>Archives</h4> 
+      <ul> 
+       <li><a href="http://blog.sematext.com/2014/11/">November 2014</a>&nbsp;(2)</li> 
+       <li><a href="http://blog.sematext.com/2014/10/">October 2014</a>&nbsp;(4)</li> 
+       <li><a href="http://blog.sematext.com/2014/09/">September 2014</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2014/08/">August 2014</a>&nbsp;(1)</li> 
+       <li><a href="http://blog.sematext.com/2014/07/">July 2014</a>&nbsp;(7)</li> 
+       <li><a href="http://blog.sematext.com/2014/06/">June 2014</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2014/05/">May 2014</a>&nbsp;(8)</li> 
+       <li><a href="http://blog.sematext.com/2014/04/">April 2014</a>&nbsp;(2)</li> 
+       <li><a href="http://blog.sematext.com/2014/03/">March 2014</a>&nbsp;(3)</li> 
+       <li><a href="http://blog.sematext.com/2014/02/">February 2014</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2014/01/">January 2014</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2013/12/">December 2013</a>&nbsp;(6)</li> 
+       <li><a href="http://blog.sematext.com/2013/11/">November 2013</a>&nbsp;(11)</li> 
+       <li><a href="http://blog.sematext.com/2013/10/">October 2013</a>&nbsp;(4)</li> 
+       <li><a href="http://blog.sematext.com/2013/09/">September 2013</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2013/07/">July 2013</a>&nbsp;(4)</li> 
+       <li><a href="http://blog.sematext.com/2013/06/">June 2013</a>&nbsp;(4)</li> 
+       <li><a href="http://blog.sematext.com/2013/05/">May 2013</a>&nbsp;(6)</li> 
+       <li><a href="http://blog.sematext.com/2013/04/">April 2013</a>&nbsp;(4)</li> 
+       <li><a href="http://blog.sematext.com/2013/02/">February 2013</a>&nbsp;(2)</li> 
+       <li><a href="http://blog.sematext.com/2013/01/">January 2013</a>&nbsp;(2)</li> 
+       <li><a href="http://blog.sematext.com/2012/12/">December 2012</a>&nbsp;(2)</li> 
+       <li><a href="http://blog.sematext.com/2012/11/">November 2012</a>&nbsp;(1)</li> 
+       <li><a href="http://blog.sematext.com/2012/10/">October 2012</a>&nbsp;(2)</li> 
+       <li><a href="http://blog.sematext.com/2012/09/">September 2012</a>&nbsp;(4)</li> 
+       <li><a href="http://blog.sematext.com/2012/08/">August 2012</a>&nbsp;(4)</li> 
+       <li><a href="http://blog.sematext.com/2012/07/">July 2012</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2012/06/">June 2012</a>&nbsp;(4)</li> 
+       <li><a href="http://blog.sematext.com/2012/05/">May 2012</a>&nbsp;(6)</li> 
+       <li><a href="http://blog.sematext.com/2012/04/">April 2012</a>&nbsp;(8)</li> 
+       <li><a href="http://blog.sematext.com/2012/03/">March 2012</a>&nbsp;(1)</li> 
+       <li><a href="http://blog.sematext.com/2012/02/">February 2012</a>&nbsp;(3)</li> 
+       <li><a href="http://blog.sematext.com/2012/01/">January 2012</a>&nbsp;(4)</li> 
+       <li><a href="http://blog.sematext.com/2011/12/">December 2011</a>&nbsp;(1)</li> 
+       <li><a href="http://blog.sematext.com/2011/11/">November 2011</a>&nbsp;(1)</li> 
+       <li><a href="http://blog.sematext.com/2011/10/">October 2011</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2011/09/">September 2011</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2011/07/">July 2011</a>&nbsp;(2)</li> 
+       <li><a href="http://blog.sematext.com/2011/06/">June 2011</a>&nbsp;(2)</li> 
+       <li><a href="http://blog.sematext.com/2011/04/">April 2011</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2011/03/">March 2011</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2011/02/">February 2011</a>&nbsp;(1)</li> 
+       <li><a href="http://blog.sematext.com/2011/01/">January 2011</a>&nbsp;(2)</li> 
+       <li><a href="http://blog.sematext.com/2010/12/">December 2010</a>&nbsp;(2)</li> 
+       <li><a href="http://blog.sematext.com/2010/11/">November 2010</a>&nbsp;(3)</li> 
+       <li><a href="http://blog.sematext.com/2010/10/">October 2010</a>&nbsp;(6)</li> 
+       <li><a href="http://blog.sematext.com/2010/09/">September 2010</a>&nbsp;(4)</li> 
+       <li><a href="http://blog.sematext.com/2010/08/">August 2010</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2010/07/">July 2010</a>&nbsp;(3)</li> 
+       <li><a href="http://blog.sematext.com/2010/06/">June 2010</a>&nbsp;(5)</li> 
+       <li><a href="http://blog.sematext.com/2010/05/">May 2010</a>&nbsp;(8)</li> 
+       <li><a href="http://blog.sematext.com/2010/04/">April 2010</a>&nbsp;(3)</li> 
+       <li><a href="http://blog.sematext.com/2010/03/">March 2010</a>&nbsp;(7)</li> 
+       <li><a href="http://blog.sematext.com/2010/02/">February 2010</a>&nbsp;(7)</li> 
+       <li><a href="http://blog.sematext.com/2010/01/">January 2010</a>&nbsp;(7)</li> 
+       <li><a href="http://blog.sematext.com/2009/07/">July 2009</a>&nbsp;(2)</li> 
+      </ul> 
+     </div>
+     <div id="linkcat-1356" class="widget widget_links">
+      <h4>Blogroll</h4> 
+      <ul class="xoxo blogroll"> 
+       <li><a href="http://jroller.com/otis" title="Otis’ blog">Otis Chichimichi</a></li> 
+       <li><a href="http://twitter.com/otisg">Otis on Twitter</a></li> 
+       <li><a href="http://www.sematext.com/" title="Sematext">Sematext</a></li> 
+       <li><a href="http://twitter.com/sematext">Sematext on Twitter</a></li> 
+      </ul> 
+     </div> 
+     <div id="meta-2" class="widget widget_meta">
+      <h4>Meta</h4> 
+      <ul> 
+       <li><a href="https://en.wordpress.com/signup/?ref=wplogin">Register</a></li> 
+       <li><a href="https://sematext.wordpress.com/wp-login.php">Log in</a></li> 
+       <li><a href="http://blog.sematext.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+       <li><a href="http://blog.sematext.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+       <li><a href="http://wordpress.com/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.com</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="footer"> 
+    <div class="footerleft"> 
+     <p><a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com</a>.</p> 
+    </div> 
+    <div class="footerright"> 
+     <a href="https://wordpress.com/themes/enterprise/" title="Learn more about this theme">The Enterprise Theme</a>. 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+		//<![CDATA[
+		var infiniteScroll = {"settings":{"id":"content-left","ajaxurl":"http:\/\/blog.sematext.com\/?infinity=scrolling","type":"scroll","wrapper":true,"wrapper_class":"infinite-wrap","footer":true,"click_handle":"1","text":"Older posts","totop":"Scroll back to top","currentday":"29.09.14","order":"DESC","scripts":[],"styles":[],"google_analytics":false,"offset":0,"history":{"host":"blog.sematext.com","path":"\/page\/%d\/","use_trailing_slashes":true,"parameters":""},"query_args":{"error":"","m":"","p":0,"post_parent":"","subpost":"","subpost_id":"","attachment":"","attachment_id":0,"name":"","static":"","pagename":"","page_id":0,"second":"","minute":"","hour":"","day":0,"monthnum":0,"year":0,"w":0,"category_name":"","tag":"","cat":"","tag_id":"","author":"","author_name":"","feed":"","tb":"","paged":0,"comments_popup":"","meta_key":"","meta_value":"","preview":"","s":"","sentence":"","fields":"","menu_order":"","category__in":[],"category__not_in":[],"category__and":[],"post__in":[],"post__not_in":[],"tag__in":[],"tag__not_in":[],"tag__and":[],"tag_slug__in":[],"tag_slug__and":[],"post_parent__in":[],"post_parent__not_in":[],"author__in":[],"author__not_in":[],"posts_per_page":7,"ignore_sticky_posts":false,"suppress_filters":false,"cache_results":false,"update_post_term_cache":true,"update_post_meta_cache":true,"post_type":"","nopaging":false,"comments_per_page":"50","no_found_rows":false,"order":"DESC"},"last_post_date":"2014-09-29 20:51:17","stats":"blog=7678707&v=wpcom&tz=-5&user_id=0&subd=sematext&x_pagetype=infinite"}};
+		//]]>
+		</script> 
+  <script type="text/javascript" src="//0.gravatar.com/js/gprofiles.js?ver=201449x"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781g"></script> 
+  <script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script> 
+  <div style="display:none"> 
+  </div> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"http:\/\/sematext.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/sematext.wordpress.com\/wp-login.php?action=logout&_wpnonce=1cc9c44591","homeURL":"http:\/\/blog.sematext.com\/","postID":"4273","gravDefault":"monsterid","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://s0.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1414003384j"></script> 
+  <div id="infinite-footer"> 
+   <div class="container"> 
+    <div class="blog-info"> 
+     <a id="infinity-blog-title" href="http://blog.sematext.com/" rel="home"> Sematext Blog </a> 
+    </div> 
+    <div class="blog-credits"> 
+     <a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com</a>. 
+     <a href="https://wordpress.com/themes/enterprise/" title="Learn more about this theme">The Enterprise Theme</a>. 
+    </div> 
+   </div> 
+  </div>
+  <!-- #infinite-footer --> 
+  <div id="bit" class="loggedout-follow-normal"> 
+   <a class="bsub" href="javascript:void(0)"><span id="bsub-text">Follow</span></a> 
+   <div id="bitsubscribe"> 
+    <h3><label for="loggedout-follow-field">Follow “Sematext Blog”</label></h3> 
+    <form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow"> 
+     <p>Get every new post delivered to your Inbox.</p> 
+     <p id="loggedout-follow-error" style="display: none;"></p> 
+     <p class="bit-follow-count">Join 1,716 other followers</p> 
+     <p><input type="email" name="email" value="Enter your email address" onfocus="this.value=(this.value==&quot;Enter your email address&quot;) ? &quot;&quot; : this.value;" onblur="this.value=(this.value==&quot;&quot;) ? &quot;Enter your email address&quot; : this.value;" id="loggedout-follow-field"></p> 
+     <input type="hidden" name="action" value="subscribe"> 
+     <input type="hidden" name="blog_id" value="7678707"> 
+     <input type="hidden" name="source" value="http://blog.sematext.com/"> 
+     <input type="hidden" name="sub-type" value="loggedout-follow"> 
+     <input type="hidden" id="_wpnonce" name="_wpnonce" value="057aec5d0a">
+     <input type="hidden" name="_wp_http_referer" value="/"> 
+     <p id="bsub-subscribe-button"><input type="submit" value="Sign me up"></p> 
+    </form> 
+    <div id="bsub-credit">
+     <a href="https://wordpress.com/?ref=lof">Build a website with WordPress.com</a>
+    </div> 
+   </div>
+   <!-- #bitsubscribe --> 
+  </div>
+  <!-- #bit --> 
+  <script type="text/javascript" charset="UTF-8" id="polldaddyRatings"><!--//--><![CDATA[//><!--
+PDRTJS_settings_96363_post_4273={"id":96363,"unique_id":"wp-post-4273","title":"Solr%20Presentations%20from%20Lucene%2FSolr%20Revolution%26nbsp%3B2014","permalink":"http:\/\/blog.sematext.com\/2014\/11\/17\/solr-presentations-lucene-solr-revolution\/","item_id":"_post_4273"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_96363_post_4273 == 'undefined' ){PDRTJS_96363_post_4273 = new PDRTJS_RATING( PDRTJS_settings_96363_post_4273 );}}PDRTJS_settings_96363_post_4269={"id":96363,"unique_id":"wp-post-4269","title":"Sematext%20at%20Lucene%2FSolr%20Revolution%26nbsp%3B2014","permalink":"http:\/\/blog.sematext.com\/2014\/11\/05\/lucene-solr-revolution-2014\/","item_id":"_post_4269"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_96363_post_4269 == 'undefined' ){PDRTJS_96363_post_4269 = new PDRTJS_RATING( PDRTJS_settings_96363_post_4269 );}}PDRTJS_settings_96363_post_4213={"id":96363,"unique_id":"wp-post-4213","title":"Performance%20Monitoring%20Comparison%3A%20Build%20vs.%26nbsp%3BBuy","permalink":"http:\/\/blog.sematext.com\/2014\/10\/22\/performance-monitoring-comparison-build-vs-buy\/","item_id":"_post_4213"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_96363_post_4213 == 'undefined' ){PDRTJS_96363_post_4213 = new PDRTJS_RATING( PDRTJS_settings_96363_post_4213 );}}PDRTJS_settings_96363_post_4114={"id":96363,"unique_id":"wp-post-4114","title":"Video%20and%20Slides%3A%20Centralized%20Logging%20with%20Logstash%20and%26nbsp%3BElasticsearch","permalink":"http:\/\/blog.sematext.com\/2014\/10\/08\/centralized-logging-with-logstash-elasticsearch\/","item_id":"_post_4114"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_96363_post_4114 == 'undefined' ){PDRTJS_96363_post_4114 = new PDRTJS_RATING( PDRTJS_settings_96363_post_4114 );}}PDRTJS_settings_96363_post_4092={"id":96363,"unique_id":"wp-post-4092","title":"Apache%20Spark%20Monitoring%20in%26nbsp%3BSPM","permalink":"http:\/\/blog.sematext.com\/2014\/10\/07\/apache-spark-monitoring\/","item_id":"_post_4092"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_96363_post_4092 == 'undefined' ){PDRTJS_96363_post_4092 = new PDRTJS_RATING( PDRTJS_settings_96363_post_4092 );}}PDRTJS_settings_96363_post_4083={"id":96363,"unique_id":"wp-post-4083","title":"Top%205%20Most%20Popular%20Log%26nbsp%3BShippers","permalink":"http:\/\/blog.sematext.com\/2014\/10\/06\/top-5-most-popular-log-shippers\/","item_id":"_post_4083"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_96363_post_4083 == 'undefined' ){PDRTJS_96363_post_4083 = new PDRTJS_RATING( PDRTJS_settings_96363_post_4083 );}}PDRTJS_settings_96363_post_4080={"id":96363,"unique_id":"wp-post-4080","title":"Job%3A%20Sematext%20is%20hiring%20%26%238211%3B%20Elasticsearch%26nbsp%3BEngineer","permalink":"http:\/\/blog.sematext.com\/2014\/09\/29\/elasticsearch-engineer-job\/","item_id":"_post_4080"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_96363_post_4080 == 'undefined' ){PDRTJS_96363_post_4080 = new PDRTJS_RATING( PDRTJS_settings_96363_post_4080 );}}
+//--><!]]></script>
+  <script type="text/javascript" charset="UTF-8" src="http://i0.poll.fm/js/rating/rating.js"></script> 
+  <div id="carousel-reblog-box"> 
+   <form action="" name="carousel-reblog"> 
+    <textarea id="carousel-reblog-content" name="carousel-reblog-content" onclick="if ( this.value == 'Add your thoughts here... (optional)' ) { this.value = ''; }" onblur="if ( this.value == '' || this.value == '' ) { this.value = 'Add your thoughts here... (optional)'; }">Add your thoughts here... (optional)</textarea> 
+    <label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label> 
+    <select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id"> </select> 
+    <div class="submit"> 
+     <span class="canceltext"><a href="" class="cancel">Cancel</a></span> 
+     <input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post"> 
+     <input type="hidden" id="carousel-reblog-blog-id" value="7678707"> 
+     <input type="hidden" id="carousel-reblog-blog-url" value="http://blog.sematext.com"> 
+     <input type="hidden" id="carousel-reblog-blog-title" value="Sematext Blog"> 
+     <input type="hidden" id="carousel-reblog-post-url" value=""> 
+     <input type="hidden" id="carousel-reblog-post-title" value=""> 
+    </div> 
+    <input type="hidden" id="_wpnonce" name="_wpnonce" value="bdddc45757">
+    <input type="hidden" name="_wp_http_referer" value="/"> 
+   </form> 
+   <div class="arrow"></div> 
+  </div> 
+  <link rel="stylesheet" id="all-css-0" href="http://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1412618825g" type="text/css" media="all"> 
+  <!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='http://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825g&#038;ver=20121024' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="all-css-2" href="http://s2.wp.com/wp-content/mu-plugins/tiled-gallery/tiled-gallery.css?m=1401143454g" type="text/css" media="all"> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var jetpackSlideshowSettings = {"spinner":"http:\/\/s1.wp.com\/wp-content\/mu-plugins\/shortcodes\/img\/slideshow-loader.gif","blog_id":"7678707","blog_subdomain":"sematext","user_id":"0"};
+/* ]]> */
+</script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var JetpackEmojiSettings = {"base_url":"http:\/\/s0.wp.com\/wp-content\/mu-plugins\/emoji\/twemoji\/"};
+/* ]]> */
+</script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"http:\/\/blog.sematext.com\/wp-admin\/admin-ajax.php","nonce":"9d155ab508","display_exif":"1","display_geo":"1","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/sematext.wordpress.com\/wp-login.php?redirect_to=http%3A%2F%2Fblog.sematext.com%2F2014%2F09%2F29%2Felasticsearch-engineer-job%2F","local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=7678707&v=wpcom&tz=-5&user_id=0&subd=sematext","is_public":"1"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"http:\/\/blog.sematext.com\/wp-admin\/admin-ajax.php","nonce":"9d155ab508","display_exif":"1","display_geo":"1","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/sematext.wordpress.com\/wp-login.php?redirect_to=http%3A%2F%2Fblog.sematext.com%2F2014%2F09%2F29%2Felasticsearch-engineer-job%2F","local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=7678707&v=wpcom&tz=-5&user_id=0&subd=sematext","is_public":"1"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://s1.wp.com/_static/??-eJyNj90OgjAMhV9IXEgEr4zPgqVI59jm2jF5e5EEIl4gV/0732mrks/AWUErSrOqsSdA/zpqPqivURczb+KdLCuyDVmSYUk2tNy6IOBq5I+5fkYMwxEGMLgbYkNj1rqULf0NFjunSUlaxb96jeIreGT71CsVWTBxPjU17qYR5Ndi5vvxFacqZpQJmGofkHljKVTBRUazXDk3RubaXfJTXpRlXp4L/Qaisq06"></script> 
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js?ver=20111117"></script> 
+  <script type="text/javascript" src="http://s0.wp.com/_static/??-eJyVy7EOQEAMANAfUnViYBDfgmsupepyivh7VpMY3/DwjDCuaqSGyw5R9sC6oZ1sRgkG6cd54OQhMqHSQYnUs4Z82jL8c+P3YyEPoRehdL31rG5pXVXUTVO70k03DU5D1g=="></script> 
+  <script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>
+  <script type="text/javascript">
+			jQuery.extend( infiniteScroll.settings.scripts, ["jquery","mobile-useragent-info","jquery-core","jquery-migrate","postmessage","jquery_inview","jetpack_resize","loggedout-subscribe","spin","jquery.spin","grofiles-cards","wpgroho","jquery.autoresize","highlander-comments","devicepx","the-neverending-homepage","jquery-cycle","jetpack-slideshow","twemoji","jetpack-emoji","jetpack-emoji-init","swfobject","videopress","jetpack-carousel","twitter-widgets","twitter-widgets-infinity","twitter-widgets-pending","tiled-gallery"] );
+			jQuery.extend( infiniteScroll.settings.styles, ["smileyproject","jetpack_likes","loggedout-subscribe","the-neverending-homepage","jetpack-slideshow","wpcom-core-compat-playlist-styles","mp6hacks","enterprise","jetpack-emoji-css","noticons","geo-location-flair","reblogging","a8c-global-print","h4-global","highlander-comments","highlander-comments-ie7","jetpack-carousel","tiled-gallery","jetpack-carousel-ie8fix"] );
+		</script>
+  <script src="//stats.wp.com/w.js?31" type="text/javascript"></script> 
+  <script type="text/javascript">
+_tkq = window._tkq || [];
+_tkq.push(['storeContext', {'blog_id':'7678707','blog_tz':'-5','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+st_go({'blog':'7678707','v':'wpcom','tz':'-5','user_id':'0','subd':'sematext'});
+ex_go({'crypt':'UE40eW5QN0p8M2Y/RE1LVmwrVi5vQS5fVFtfdHBbPyw1VXIrU3hWLHhmcmw0bWUwNis5Vk1qSEpzeXBoR2E/dmFIcl9HLjd1TGgrJm9kalImVUZGNEZjYjVlR1gseHYlYnFdeHRaW3dIZyYldy09d1ZqbDcmLTUvUHxsTj1xWixWMko/cXl+eUp2ZF83VXpKXy96WDJMdSUwfmZ2TGltMzdZai4xYlJUR3QlPy92S2U3Uy94WCVEV3xremtCW2NzTTFKYjc3ZVVob1ZoUnlHUzN5SjJmdXkyZG5yTEI9al1lbHl+ZHd0V1VZaWhNPW5odXdYbk81fG9dR3MtNEV4LXg9UWNNNE9iWF9JTndPY3NNeVRtckF+Qk14aWlaVENQSmVSNFRCMHd4Y3Z4Z3JLcFJTeDBkbA=='});
+addLoadEvent(function(){linktracker_init('7678707',0);});
+	</script> 
+  <noscript>
+   <img src="http://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="">
+  </noscript> 
+  <script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>  
+ </body>
+</html>

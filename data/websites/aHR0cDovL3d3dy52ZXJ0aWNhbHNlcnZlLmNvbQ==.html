@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <link rel="icon" href="http://www.verticalserve.com/images/products-icn.png" type="image/x-icon"> 
+  <link rel="shortcut icon" href="http://www.verticalserve.com/images/products-icn.png" type="image/x-icon"> 
+  <title>VerticalServe</title> 
+  <link href="script_css/vertical.css" rel="stylesheet" type="text/css"> 
+  <link href="script_css/additional.css" rel="stylesheet" type="text/css"> 
+  <script src="script_css/jquery-2.1.1.min.js"></script> 
+  <script>
+	window.onscroll = function (event) {
+		setTimeout(function(){
+			if($(window).scrollTop() > 20){
+				$('.topheader').addClass('animate');
+				$('#service_wraper').addClass('animate');
+			}else{
+				$('.topheader').removeClass('animate');
+				$('#service_wraper').removeClass('animate');
+			}
+			
+			if($(window).scrollTop()>$(window).height()+50){
+				$('#support').addClass('animate');				
+			}else{
+				$('#support').removeClass('animate');		
+			}
+			
+		},10);
+	}
+</script> 
+ </head> 
+ <body> 
+  <div class="topheader"> 
+   <div id="wrap_header"> 
+    <div id="logo">
+     <a href="index.html" target="_self"><img src="images/logo.png" width="279" height="33" border="0"></a>
+    </div> 
+    <div id="navigation"> 
+     <ul> 
+      <li><a href="index.html" target="_self">HOME</a></li> 
+      <li><a href="support.html" target="_self">SUPPORT</a></li> 
+      <li><a href="training.html" target="_self">TRAINING</a></li> 
+      <li><a href="consultancy.html" target="_self">CONSULTANCY</a></li> 
+      <li><a href="product.html" target="_self">PRODUCTS</a></li> 
+      <li><a href="contact.html" target="_self">CONTACT</a></li> 
+      <li><a href="http://www.verticalserve.com/blog" target="_self">BLOG</a></li> 
+     </ul> 
+    </div> 
+    <div class="clear"></div> 
+   </div> 
+  </div> 
+  <div class="mainheader"> 
+   <div id="mainhd"> 
+    <div class="toptext">
+     We simplify your BigData transformation
+    </div> 
+   </div> 
+  </div> 
+  <div class="fixed-place"></div> 
+  <div class="main-container"> 
+   <div class="main-inner-container"> 
+    <div class="servbg"> 
+     <div id="service_wraper"> 
+      <div class="ser-topleft"> 
+       <div class="iconbg">
+        <a href="support.html"><img src="images/suppurt-icn.png" width="116" height="116"></a>
+       </div> 
+       <div class="ser_textpart"> 
+        <div class="title">
+         <a href="support.html">Support</a>
+        </div> 
+        <div>
+         Our support team boasts of all round support from architecture, planning, development and maintenance and our full slate support ensures that we exceed your expectations. 
+        </div> 
+       </div> 
+      </div> 
+      <div class="ser-topright"> 
+       <div class="iconbg1">
+        <a href="training.html"><img src="images/training-icn.png" width="116" height="116"></a>
+       </div> 
+       <div class="ser_textpart"> 
+        <div class="title">
+         <a href="training.html">Training</a>
+        </div> 
+        <div>
+         Our team offers high class training and we customize the training to match the current development cases based on real scenarios. Apart from the classroom training, we also provide webcasts and events
+        </div> 
+       </div> 
+      </div> 
+      <div class="ser-btmleft"> 
+       <div class="iconbg1">
+        <a href="consultancy.html"><img src="images/cunsultancy-icn.png" width="116" height="116"></a>
+       </div> 
+       <div class="ser_textpart1"> 
+        <div class="title">
+         <a href="consultancy.html">Consultancy</a>
+        </div> 
+        <div>
+         Our team of consultants ensure that your big data applications deliver to their full capability with world class methods and practices and deep technical and managerial skills.
+        </div> 
+       </div> 
+      </div> 
+      <div class="ser-btmright"> 
+       <div class="iconbg">
+        <a href="product.html"><img src="images/products-icn.png" width="116" height="116"></a>
+       </div> 
+       <div class="ser_textpart1"> 
+        <div class="title">
+         <a href="product.html">Products</a>
+        </div> 
+        <div>
+         Our products are nothing short of world class and we believe that our wide range of products help you to achieve what you expect and sometimes, more than what you expect.
+        </div> 
+       </div> 
+      </div> 
+      <div class="clear"></div> 
+     </div> 
+    </div> 
+    <div class="supportbg"> 
+     <div id="support"> 
+      <div id="down_arw">
+       &nbsp;
+      </div> 
+      <div class="sp_title">
+       Support
+      </div> 
+      <div id="support1"> 
+       <div class="support_circle">
+        <img src="images/planning.png" width="83" height="70">&nbsp;
+       </div> 
+       <div class="title">
+        Evaluation/Planning
+       </div> 
+       <div>
+        Our team provides quality support for production/QA and cluster planning which includes private cloud setup, capacity planning, virtual/dedicated resource management, hardware configuration etc.
+       </div> 
+      </div> 
+      <div id="support2"> 
+       <div class="support_circle">
+        <img src="images/architecture.png" width="83" height="70">
+       </div> 
+       <div class="title">
+        Architecture/PoC 
+       </div> 
+       <div>
+        Our solution architects help in providing the BigData solution which accurately meets the requirements of your organization. We also help in building and testing the Proof of concept (PoC) to test our assumptions. 
+       </div> 
+      </div> 
+      <div id="support3"> 
+       <div class="support_circle">
+        &nbsp;
+        <img src="images/development.png" width="83" height="70">
+       </div> 
+       <div class="title">
+        Development
+       </div> 
+       <div>
+        Our support team offers email, phone and web support to resolve the any issues and challenges in the development. Our timely support ensures that all the critical issues are resolved in timely manner. 
+       </div> 
+      </div> 
+      <div id="support4"> 
+       <div class="support_circle">
+        &nbsp;
+        <img src="images/maintenance.png" width="83" height="70">
+       </div> 
+       <div class="title">
+        Production
+       </div> 
+       <div>
+        Our team provides full support even after the production during rollouts, upgrades and monitoring the solution after the 
+        <br> development.
+       </div> 
+      </div> 
+      <div class="clear"></div> 
+     </div> 
+    </div> 
+    <div class="trainingpart"> 
+     <div class="trainingbar">
+      TRAINING
+     </div> 
+     <div id="training"> 
+      <div id="down_arw">
+       &nbsp;
+      </div> 
+      <div class="training_left"> 
+       <ul> 
+        <li>Hortonworks Hadoop&nbsp;-&nbsp;<a href="http://www.verticalserve.com/hortonworksadmin">admin</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/hortonworksdev">developer</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/hortonworksanalyst">analyst</a> </li> 
+        <li>Datastax Cassandra&nbsp;-&nbsp;<a href="http://www.verticalserve.com/datastaxadmin">admin</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/datastaxdev">developer</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/datastaxanalyst">analyst</a></li> 
+        <li>Cloudera Hadoop&nbsp;-&nbsp;<a href="http://www.verticalserve.com/clouderaadmin">admin</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/clouderadev">developer</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/clouderaanalyst">analyst</a></li> 
+        <li>Storm&nbsp;-&nbsp;<a href="http://www.verticalserve.com/stormadmin">admin</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/stormdev">developer</a></li> 
+        <li>AWS Redshift&nbsp;-&nbsp;<a href="http://www.verticalserve.com/redshiftadmin">admin</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/redshiftdev">developer</a></li> 
+        <li>Greenplum &nbsp;-&nbsp;<a href="http://www.verticalserve.com/greenplumadmin">admin</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/greenplumdev">developer</a></li> 
+        <li>Teradata &nbsp;-&nbsp;<a href="http://www.verticalserve.com/teradataadmin">admin</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/teradatadev">developer</a></li> 
+        <li>Talend &nbsp;-&nbsp;<a href="http://www.verticalserve.com/talenddev">developer</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/talendadmin">admin</a></li> 
+        <li>AWS &nbsp;-&nbsp;<a href="http://www.verticalserve.com/awsdev">developer</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/awsadmin">admin</a></li> 
+        <li>Apigee &nbsp;-&nbsp;<a href="http://www.verticalserve.com/apigee">developer</a></li> 
+       </ul> 
+      </div> 
+      <div class="training_right"> 
+       <ul> 
+        <li>Tableau &nbsp;-&nbsp;<a href="http://www.verticalserve.com/tableau">user</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/tableauadmin">admin</a></li> 
+        <li>Spark deep five&nbsp;-&nbsp;<a href="http://www.verticalserve.com/spark">developer</a></li> 
+        <li>Hive deep dive &nbsp;-&nbsp;<a href="http://www.verticalserve.com/hivedev">developer</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/hiveanalyst">analyst</a></li> 
+        <li>HBase deep dive &nbsp;-&nbsp;<a href="http://www.verticalserve.com/hbasedev">developer</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/hbaseadmin">admin</a></li> 
+        <li>R&nbsp;-&nbsp;<a href="http://www.verticalserve.com/rdev">developer</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/ranalyst">analyst</a></li> 
+        <li>Mahout deep dive&nbsp;-&nbsp;<a href="http://www.verticalserve.com/mahoutdev">developer</a>&nbsp;|&nbsp;<a href="mahoutanalyst">analyst</a></li> 
+        <li>Kafka &nbsp;-&nbsp;<a href="http://www.verticalserve.com/kafkadev">developer</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/kafkaadmin">admin</a></li> 
+        <li>Elastic Search&nbsp;-&nbsp;<a href="http://www.verticalserve.com/elasticsearchdev">dev</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/elasticsearchadmin">admin</a></li> 
+        <li>Machine Learning &nbsp;-&nbsp;<a href="http://www.verticalserve.com/mlearndev">developer</a>&nbsp;|&nbsp;<a href="http://www.verticalserve.com/mlearnanalyst">analyst</a></li> 
+        <li>Node.js &nbsp;-&nbsp;<a href="http://www.verticalserve.com/nodejs">developer</a></li> 
+        <li><a href="training.html">View all...</a> </li> 
+       </ul> 
+      </div> 
+      <div class="clear"></div> 
+     </div> 
+    </div> 
+    <div class="consultancy_part"> 
+     <div class="consultancybar">
+      Consultancy
+     </div> 
+     <div id="consultancy"> 
+      <div id="down_arw">
+       &nbsp;
+      </div> 
+      <div id="consultancy1"> 
+       <div class="title">
+        Remote Administration
+       </div> 
+       <div>
+        We provide remote BigData cluster administration service. Our team of experts would monitor your cluster 24/7 and take corrective measures in case of an issue. We provide remote BigData cluster administration service. Our team of experts would monitor your cluster 24/7 and take corrective measures in case of an issue. 
+       </div> 
+      </div> 
+      <div id="consultancy2"> 
+       <div class="title">
+        On Premise
+       </div> 
+       <div>
+        We provide experienced consultants to work at your location on both short and long term assignments and ensure that you reach your goals with the help of our unmatched expertise.
+       </div> 
+      </div> 
+      <div id="consultancy3"> 
+       <div class="title">
+        Offshore
+       </div> 
+       <div>
+        Our team at offshore also comprises of skilled consultants who assist the on premise consultants and work towards the common goal of achieving the customer satisfaction 
+       </div> 
+      </div> 
+      <div class="clear">
+       &nbsp;
+      </div> 
+     </div> 
+    </div> 
+    <div class="productbg"> 
+     <div id="product"> 
+      <div id="down_arw">
+       &nbsp;
+      </div> 
+      <div class="product_title">
+       Products
+      </div> 
+      <div id="consultancy1"> 
+       <div class="title">
+        Enterprise Data Platform
+       </div> 
+       <div>
+        Our enterprise ready data platform allows you to build and deploy data/analytics centric services very fast. Platform allows you to create services in simple scripting languages or more robust programming languages. Using simple web based dashboard you can manage your services. Many pre-developed services are packaged so you don't need to implement them. For a beta trial please contact us.
+       </div> 
+      </div> 
+      <div id="consultancy2"> 
+       <div class="title">
+        Data Profiler
+       </div> 
+       <div>
+        Data profiler allows you to profile your data quickly and gain insight. It allows you to plug your logical reference lookup data to identify logical data types. It provides duplicate analysis, unique keys combinations, basic chart analysis and may more useful features. For a demo and free trial please contact us. ...
+       </div> 
+      </div> 
+      <div id="consultancy3"> 
+       <div class="title">
+        Enterprise Event Manager
+       </div> 
+       <div>
+        Highly scalable platform allows business to ingest billions of operational and transactional events every day, store the data in Big data platform and process complex triggers in real time. It also provides event timelines, search features and analytics dashboards. Please contact us for a demo and free trial. ...
+       </div> 
+      </div> 
+      <div class="clear">
+       &nbsp;
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="footer" style="position: relative;width:100%;"> 
+   <div id="ftrnav"> 
+    <div align="">
+     <a href="https://www.facebook.com/verticalserveinc"><img src="images/facebook-footer.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="https://twitter.com/vserveinc"><img src="images/twitter-footer.gif"></a>
+    </div> 
+    <div>
+     &nbsp;
+    </div> 
+    <div>
+     <a href="index.html">Home</a>
+     <span class="linkspacer">|</span> 
+     <a href="support.html">Support</a>
+     <span class="linkspacer">|</span>
+     <a href="training.html"> Training</a>
+     <span class="linkspacer">|</span>
+     <a href="consultancy.html">Consultancy</a>
+     <span class="linkspacer">|</span>
+     <a href="product.html">Products</a>
+     <span class="linkspacer">|</span>
+     <a href="contact.html">Contact</a>
+     <span class="linkspacer">|</span>
+     <a href="http://www.verticalserve.com/blog">Blog</a>
+    </div> 
+    <div>
+     &nbsp;
+    </div> 
+    <div>
+     2014 VerticalServe, All rights reserved
+    </div> 
+   </div> 
+  </div> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55842910-1', 'auto');
+  ga('send', 'pageview');
+
+</script>   
+ </body>
+</html>

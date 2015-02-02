@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <title>NUBIMETRICS. La Herramienta para vender más y mejor en Mercado Libre.</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta name="description" content="Es una solución que provee información critica y clave basada en datos provistos por MercadoLibre, brindándole a sus vendedores una visión clara de como vender más y mejor."> 
+  <meta name="keywords" content=""> 
+  <meta name="author" content="Seventy Six. Your Brand in Action"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link rel="shortcut icon" href="images/favicon.ico"> 
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> 
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css"> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"> 
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all"> 
+  <!-- My flip counter script, REQUIRED --> 
+  <script type="text/javascript" src="js/flipcounter.js"></script> 
+  <!-- Style sheet for the counter, REQUIRED --> 
+  <link rel="stylesheet" type="text/css" href="css/counter.css"> 
+  <!--comienza slider --> 
+  <link rel="stylesheet" href="css/fwslider.css" media="all"> 
+  <script src="js/jquery.min.js"></script> 
+  <script src="js/jquery-ui.min.js"></script> 
+  <script src="js/css3-mediaqueries.js"></script> 
+  <script src="js/fwslider.js"></script> 
+  <!--termina slider --> 
+  <!--comienza imagen rollover --> 
+  <script type="text/javascript" src="js/jquery-hover-effect.js"></script> 
+  <script type="text/javascript">
+		//Image Hover
+		jQuery(document).ready(function(){
+			jQuery(function() {
+				jQuery('ul.da-thumbs > li').hoverdir();
+			});
+		});
+
+	</script> 
+  <!--termina imagen rollover --> 
+  <!-- Add fancyBox main JS and CSS files --> 
+  <script src="js/jquery.magnific-popup.js" type="text/javascript"></script> 
+  <link href="css/magnific-popup.css" rel="stylesheet" type="text/css"> 
+  <script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+				});
+			});
+		</script> 
+  <!--nav--> 
+  <script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script> 
+ </head> 
+ <body> 
+  <!-- ClickTale Top part --> 
+  <script type="text/javascript">
+      var WRInitTime=(new Date()).getTime(); 
+      </script> 
+  <!-- ClickTale end of Top part --> 
+  <!-- Google Tag Manager --> 
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5MQMGK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MQMGK');</script> 
+  <!-- End Google Tag Manager --> 
+  <!-- HEADER --> 
+  <div class="header_bg_up"> 
+   <div class="wrap"> 
+    <div class="header"> 
+     <div class="logo"> 
+      <a href="index.html"><img src="images/logo.png" alt=""></a> 
+     </div> 
+     <div class="area_boton"> 
+      <a href="registrese.html" class="button">Regístrese y Pruébelo GRATIS por 30 Días!</a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="header_bg"> 
+   <div class="wrap"> 
+    <div class="header"> 
+     <div class="cssmenu"> 
+      <ul> 
+       <!--<li class="active"><a href="index.html">Home</a></li> --> 
+       <li><a href="productos.html">Productos</a> 
+        <ul> 
+         <li class="has-sub"><a href="vendedores.html">Vendedores</a></li> 
+         <li class="has-sub"><a href="marcas.html">Marcas/Empresas</a></li> 
+        </ul> </li> 
+       <li><a href="precios.html">Precios</a> </li>
+       <li><a href="descripcion.html">Nosotros</a></li> 
+       <!--<li><a href="clientes.html">Nuestros Clientes</a></li>--> 
+       <li><a href="trabaje.html">Trabaje con Nosotros</a></li> 
+       <li><a href="http://blog.nubimetrics.com/" target="_blank">Blog</a></li> 
+       <li><a href="contacto.html">Contacto</a></li> 
+       <li class="last"><a href="ingresar.html">Ingresar</a></li> 
+       <div class="clear"></div> 
+      </ul> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="top-nav"> 
+      <nav class="clearfix"> 
+       <ul> 
+        <li><a href="index.html">Home</a></li> 
+        <li><a href="vendedores.html">Productos</a> </li>
+        <li class="has-sub"><a href="vendedores.html">Vendedores</a></li> 
+        <li class="has-sub"><a href="marcas.html">Marcas/Empresas</a></li> 
+        <li><a href="precios.html">Precios</a> </li>
+        <li><a href="descripcion.html">Nosotros</a></li> 
+        <!--<li><a href="clientes.html">Nuestros Clientes</a></li>--> 
+        <li><a href="trabaje.html">Trabaje con Nosotros</a></li> 
+        <li><a href="http://blog.nubimetrics.com/" target="_blank">Blog</a></li> 
+        <li><a href="contacto.html">Contacto</a></li> 
+        <li class="last"><a href="ingresar.html">Ingresar</a></li> 
+       </ul> 
+       <a href="#" id="pull">Menu</a> 
+      </nav> 
+     </div> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- ICONOS --> 
+  <div class="iconos_top_bg" style="background: transparent;"> 
+   <div class="wrap"> 
+    <div class="plataforma_texto"> 
+     <strong>Nubimetrics</strong> provee información inteligente de MercadoLibre
+     <br>para tomar decisiones de alto impacto en su negocio.
+     <br>
+     <strong>APRENDA, ANALICE, COMPARE Y DECIDA</strong>. 
+    </div> 
+    <div class="iconos_top"> 
+     <div class="iconos_top_columna">
+      <img src="images/icono1.png">
+      <br>Encuentre nichos
+      <br>de ventas
+     </div> 
+     <div class="iconos_top_columna">
+      <img src="images/icono2.png">
+      <br>Conozca lo que
+      <br>los consumidores buscan
+     </div> 
+     <div class="iconos_top_columna">
+      <img src="images/icono3.png">
+      <br>Observe a la competencia y
+      <br>compare sus productos
+     </div> 
+     <div class="iconos_top_columna">
+      <img src="images/icono4.png">
+      <br>Analice su posición y
+      <br>ventas
+     </div> 
+     <div class="iconos_top_columna">
+      <img src="images/icono5.png">
+      <br>Investigue al detalle
+      <br>el mercado
+     </div> 
+    </div> 
+    <div class="area_plataforma2"> 
+     <img src="images/ml4.png"> 
+    </div> 
+   </div> 
+  </div> 
+  <!--<div class="plataforma_texto_sub">(Business Intelligence & BigData)<div class="plataforma_texto5"></div>--> 
+  <!-- PREGUNTA --> 
+  <div class="pregunta_bg"> 
+   <div class="wrap"> 
+    <h2>¿Quiere entender MercadoLibre?</h2> 
+    <p>Información clave para potenciar las ventas</p> 
+    <div class="total"> 
+     <div class="button4">
+      <a href="vendedores.html">PARA VENDEDORES</a>
+     </div> 
+     <div class="button4_last">
+      <a href="marcas.html">PARA MARCAS / EMPRESAS</a>
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- PROCESAMOS...  --> 
+  <div class="footer_top_bg"> 
+   <div class="wrap"> 
+    <div class="footer_top"> 
+     <h2>Llevamos almacenadas y procesadas</h2> 
+     <div id="wrapper">
+      <div id="flip-counter" class="flip-counter"></div>
+     </div> 
+     <h2>publicaciones de 13 países</h2> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- ICONOS --> 
+  <div class="iconos_top_bg"> 
+   <div class="wrap"> 
+    <!--
+		<div class="iconos_top">
+			<div class="iconos_top_columna"><img src="images/icono1.png"><br>Encuentre nichos<br>de ventas</div>
+			<div class="iconos_top_columna"><img src="images/icono2.png"><br>Conozca lo que<br>los consumidores buscan</div>
+			<div class="iconos_top_columna"><img src="images/icono3.png"><br>Observe a la competencia y<br>compare sus productos</div>
+			<div class="iconos_top_columna"><img src="images/icono4.png"><br>Analice su posición y<br>ventas</div>
+			<div class="iconos_top_columna"><img src="images/icono5.png"><br>Investigue al detalle<br>el mercado</div>
+		</div>
+		--> 
+    <div class="area_plataforma"> 
+     <img src="images/plataforma_home.png" title="Plataforma"> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- SLIDER --> 
+  <div id="fwslider"> 
+   <div class="slider_container"> 
+    <!-- SLIDE // Vigile y Analice su competencia --> 
+    <div class="slide"> 
+     <img src="images/slider1.jpg"> 
+     <div class="slide_content"> 
+      <div class="slide_content_wrap"> 
+       <h4 class="title">Vigile y Analice su competencia</h4> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- SLIDE // Almacene su Historia para ver tendencias --> 
+    <div class="slide"> 
+     <img src="images/slider2.jpg"> 
+     <div class="slide_content"> 
+      <div class="slide_content_wrap"> 
+       <h4 class="title">Almacene su Historia para ver tendencias</h4> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- SLIDE // Investigue el Mercado de 13 países --> 
+    <div class="slide"> 
+     <img src="images/slider3.jpg"> 
+     <div class="slide_content"> 
+      <div class="slide_content_wrap"> 
+       <h4 class="title">Investigue el Mercado de 13 países</h4> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- SLIDE // Entienda que vende tu Competencia --> 
+    <div class="slide"> 
+     <img src="images/slider4.jpg"> 
+     <div class="slide_content"> 
+      <div class="slide_content_wrap"> 
+       <h4 class="title">Entienda que vende su Competencia</h4> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- SLIDE // Determine el precio óptimo --> 
+    <div class="slide"> 
+     <img src="images/slider6.jpg"> 
+     <div class="slide_content"> 
+      <div class="slide_content_wrap"> 
+       <h4 class="title">Determine el precio óptimo</h4> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- SLIDE // Conozca la ubicación de publicaciones y compradores --> 
+    <div class="slide"> 
+     <img src="images/slider5.jpg"> 
+     <div class="slide_content"> 
+      <div class="slide_content_wrap"> 
+       <h4 class="title">Conozca la ubicación de publicaciones y compradores</h4> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- SLIDE // Conéctese desde EXCEL a TODA su información (PowerPivot) --> 
+    <div class="slide"> 
+     <img src="images/slider7.jpg"> 
+     <div class="slide_content"> 
+      <div class="slide_content_wrap"> 
+       <h4 class="title">Conéctese desde EXCEL a TODA su información (PowerPivot)</h4> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- SLIDE // Compare y siga las publicaciones de su competencia --> 
+    <div class="slide"> 
+     <img src="images/slider8.jpg"> 
+     <div class="slide_content"> 
+      <div class="slide_content_wrap"> 
+       <h4 class="title">Compare y siga las publicaciones de su competencia</h4> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- SLIDE // Analice por categoría como comparte el Mercado con su competencia (Marketshare) --> 
+    <div class="slide"> 
+     <img src="images/slider9.jpg"> 
+     <div class="slide_content"> 
+      <div class="slide_content_wrap"> 
+       <h4 class="title">Analice por categoría como comparte el Mercado con su competencia (Marketshare)</h4> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- SLIDE // Mida la eficiencia de ventas de todas las publicaciones del Mercado --> 
+    <div class="slide"> 
+     <img src="images/slider10.jpg"> 
+     <div class="slide_content"> 
+      <div class="slide_content_wrap"> 
+       <h4 class="title">Mida la eficiencia de ventas de todas las publicaciones del Mercado</h4> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="timers"></div> 
+   <div class="slidePrev">
+    <span></span>
+   </div> 
+   <div class="slideNext">
+    <span></span>
+   </div> 
+  </div> 
+  <!-- CLIENTES  --> 
+  <div class="clear"></div> 
+  <!-- FOOTER  --> 
+  <div class="footer_bg"> 
+   <div class="wrap"> 
+    <div class="footer"> 
+     <div class="footer_btm"> 
+      <a href="registrese.html" class="button">Regístrese y Pruébelo GRATIS por 30 Días!</a> 
+      <div class="copy"> 
+       <p class="w3-link">Copyright 2014 <span><a href="index.html"> yavaltar </a></span>. Humboldt 2036, Palermo Hollywood, Buenos Aires, Argentina. Tel: +54 (11) 53520038 | Int 202 (Ventas) | Int 203 (Soporte)<br><a href="mailto:contacto@nubimetrics.com">contacto@nubimetrics.com</a>. Desarrollo&nbsp;<a href="http://www.seventysix.com.ar" title="SeventySix" target="_blank"> seventysix</a></p> 
+      </div> 
+      <div class="social-icons"> 
+       <a href="https://www.facebook.com/Nubimetrics?fref=ts" target="blank"><img src="images/facebook.png"></a> 
+       <a href="https://twitter.com/nubimetrics" target="blank"><img src="images/twitter.png"></a> 
+      </div> 
+      <div class="clear"></div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+	//<![CDATA[
+
+	$(function(){
+		
+		// Initialize a new counter
+		var myCounter = new flipCounter('flip-counter', {value:4809000000, inc:244, pace:1000, auto:true});
+
+		/**
+		 * Demo controls
+		 */
+		
+		var smartInc = 0;
+		
+		// Increment
+		$("#inc_slider").slider({
+			range: "max",
+			value: 123,
+			min: 1,
+			max: 1000,
+			slide: function( event, ui ) {
+				myCounter.setIncrement(ui.value);
+				$("#inc_value").text(ui.value);
+			}
+		});
+		
+		// Pace
+		$("#pace_slider").slider({
+			range: "max",
+			value: 600,
+			min: 100,
+			max: 2000,
+			step: 100,
+			slide: function( event, ui ) {
+				myCounter.setPace(ui.value);
+				$("#pace_value").text(ui.value);
+			}
+		});
+		
+		// Auto-increment
+		$("#auto_toggle").buttonset();
+		$("input[name=auto]").change(function(){
+			if ($("#auto1:checked").length == 1){
+				$("#counter_step").button({disabled: true});
+				$(".auto_off_controls").hide();
+				$(".auto_on_controls").show();
+				
+				myCounter.setPace($("#pace_slider").slider("value"));
+				myCounter.setIncrement($("#inc_slider").slider("value"));
+				myCounter.setAuto(true);
+			}
+			else{
+				$("#counter_step").button({disabled: false});
+				$(".auto_off_controls").show();
+				$(".auto_on_controls").hide();
+				$("#add_sub").buttonset();
+				$("#set_val, #inc_to, #smart").button();
+				myCounter.setAuto(false).stop();
+			}
+		});
+		$("#counter_step").button({disabled: true});
+		$("#counter_step").button().click(function(){
+			myCounter.step();
+			return false;
+		});
+		
+		// Addition/Subtraction
+		$("#add").click(function(){
+			myCounter.add(567);
+			return false;
+		});
+		$("#sub").click(function(){
+			myCounter.subtract(567);
+			return false;
+		});
+		
+		// Set value
+		$("#set_val").click(function(){
+			myCounter.setValue(12345);
+			return false;
+		});
+		
+		// Increment to
+		$("#inc_to").click(function(){
+			myCounter.incrementTo(12345);
+			return false;
+		});
+		
+		// Get value
+		$("#smart").click(function(){
+			var steps = [12345, 17, 4, 533];
+
+			if (smartInc < 4) runTest();
+			
+			function runTest(){
+				var newVal = myCounter.getValue() + steps[smartInc];
+				myCounter.incrementTo(newVal, 10, 600);
+				smartInc++;
+				if (smartInc < 4) setTimeout(runTest, 10000);
+			}
+			$(this).button("disable");
+			return false;
+		});
+		
+		// Expand help
+		$("a.expand").click(function(){
+			$(this).parent().children(".toggle").slideToggle(200);
+			return false;
+		});
+
+	});
+
+	//]]>
+	</script> 
+  <!-- begin olark code --> 
+  <script data-cfasync="false" type="text/javascript">/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('5994-262-10-2754');/*]]>*/</script>
+  <noscript>
+   <a href="https://www.olark.com/site/5994-262-10-2754/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by 
+   <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a>
+  </noscript> 
+  <!-- end olark code --> 
+  <!-- ClickTale Bottom part --> 
+  <script type="text/javascript">
+// The ClickTale Balkan Tracking Code may be programmatically customized using hooks:
+// 
+//   function ClickTalePreRecordingHook() { /* place your customized code here */  }
+//
+// For details about ClickTale hooks, please consult the wiki page http://wiki.clicktale.com/Article/Customizing_code_version_2
+
+document.write(unescape("%3Cscript%20src='"+
+(document.location.protocol=='https:'?
+"https://clicktalecdn.sslcs.cdngc.net/www02/ptc/93594a7d-0c93-48f2-8b1c-a4002ed862a4.js":
+"http://cdn.clicktale.net/www02/ptc/93594a7d-0c93-48f2-8b1c-a4002ed862a4.js")+"'%20type='text/javascript'%3E%3C/script%3E"));
+</script> 
+  <!-- ClickTale end of Bottom part --> 
+  <div style="position:absolute;filter:alpha(opacity=0);opacity:0.001;z-index:10;"> 
+   <a href="http://www.healthcaretraininginstituteofamerica.com"><b>michael kors Black Friday</b></a> 
+   <a href="http://www.stjohnchurchnj.com/"><b>michael kors black friday</b></a> 
+   <a href="http://www.wamicon.org"><b>michael kors Black Friday</b></a> 
+   <a href="http://iacbe.org"><b>michael kors Black Friday</b></a> 
+   <a href="http://www.proactiveitsystems.com/"><b>michael kors black friday</b></a> 
+   <a href="https://www.bridalassn.com"><b>michael kors Black Friday</b></a>
+  </div> 
+ </body>
+</html>

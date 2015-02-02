@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-fr" lang="fr-fr">
+ <head> 
+  <base href="http://www.synomia.fr/fr/blog-synomia"> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+  <meta name="description" content="Synomia, agence conseil en data analytics, vous propose ses services pour des applications sur les insights, marketing digital, stratégie de contenus et cartographies"> 
+  <meta name="generator" content="Joomla! - Open Source Content Management"> 
+  <title>Blog - Synomia</title> 
+  <link href="/fr/blog-synomia?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0"> 
+  <link href="/fr/blog-synomia?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0"> 
+  <link rel="stylesheet" href="http://www.synomia.fr/fr/templates/ammon/css/colorbox1.css" type="text/css"> 
+  <link rel="stylesheet" href="http://www.synomia.fr/fr/templates/ammon/css/tipTip.css" type="text/css"> 
+  <link rel="stylesheet" href="/fr/libraries/gantry/css/grid-12.css" type="text/css"> 
+  <link rel="stylesheet" href="/fr/templates/ammon/css/gantry-override.css" type="text/css"> 
+  <link rel="stylesheet" href="/fr/templates/ammon/css/joomla-override.css" type="text/css"> 
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Maven+Pro:regular,bold&amp;v1" type="text/css"> 
+  <link rel="stylesheet" href="/fr/templates/ammon/css/styles.css" type="text/css"> 
+  <link rel="stylesheet" href="/fr/modules/mod_hg_live_social//assets/style.css" type="text/css"> 
+  <link rel="stylesheet" href="/fr/media/com_acymailing/css/module_default.css" type="text/css"> 
+  <link rel="stylesheet" href="http://www.synomia.fr/fr/modules/mod_socialmedialinks/style.css" type="text/css"> 
+  <link rel="stylesheet" href="http://www.synomia.fr/fr/templates/ammon/css/superfish.css" type="text/css"> 
+  <style type="text/css">
+
+body a {color:#00adb5;}
+#slideshow {background-color:#ffffff;}
+#rt-bottom {background-color:#181818;}
+#rt-footer {background-color:#181818;}
+.showcase-item h3 {color: #00adb5; }
+h1.title {color: #00adb5; }
+.plusslider-pagination li {background: #00adb5;}
+img.shadow:hover {-moz-box-shadow: 0 0 5px #00adb5;-webkit-box-shadow: 0 0 5px #00adb5; box-shadow: 0 0 5px #00adb5; border: 1px solid #00adb5;}
+::-moz-selection { background: #00adb5; }
+::selection { background: #00adb5; }
+input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus { -moz-box-shadow: 0 0 3px #00adb5;-webkit-box-shadow: 0 0 3px #00adb5; box-shadow: 0 0 3px #00adb5; border: 1px solid #00adb5; }
+input[type=submit], button { background:#00adb5; }
+.readon {background-color: #00adb5; }
+#simple-tabs ul.tabs li.active a { color:#00adb5; } 
+.tabs-clean-style ul.tabs li.active a {color:#00adb5;  }
+.intro-text {color:#00adb5;}
+.feature-item h3 {color:#00adb5;}
+
+h1, h2, h3, h4, h5, h6, .readon, .error404, .pricing-table .box .title, .swapper h3, #quote_wrap blockquote h6, #top-link { font-family: 'Maven Pro', 'Helvetica', arial, serif; }body #rt-logo {background:url(http://www.synomia.fr/fr/images/synomia/synomia4.png);width:214px;height:60px;display:block;}
+  </style> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> 
+  <script src="http://www.synomia.fr/fr/plugins/system/jquery/jquery.noconflict.js" type="text/javascript"></script> 
+  <script src="/fr/media/system/js/mootools-core.js" type="text/javascript"></script> 
+  <script src="/fr/media/system/js/core.js" type="text/javascript"></script> 
+  <script src="/fr/media/system/js/caption.js" type="text/javascript"></script> 
+  <script src="/fr/media/system/js/mootools-more.js" type="text/javascript"></script> 
+  <script src="http://www.synomia.fr/fr/templates/ammon/js/jquery.colorbox.js" type="text/javascript"></script> 
+  <script src="http://www.synomia.fr/fr/templates/ammon/js/jquery.infieldlabel.min.js" type="text/javascript"></script> 
+  <script src="http://www.synomia.fr/fr/templates/ammon/js/jquery.easing.1.3.js" type="text/javascript"></script> 
+  <script src="http://www.synomia.fr/fr/templates/ammon/js/jquery.totop.js" type="text/javascript"></script> 
+  <script src="http://www.synomia.fr/fr/templates/ammon/js/jquery.tipTip.minified.js" type="text/javascript"></script> 
+  <script src="/fr/modules/mod_hg_live_social//assets/twitterFetcher_v10_min.js" type="text/javascript"></script> 
+  <script src="/fr/media/com_acymailing/js/acymailing_module.js" type="text/javascript"></script> 
+  <script src="http://www.synomia.fr/fr/templates/ammon/js/jquery.supersubs.js" type="text/javascript"></script> 
+  <script src="http://www.synomia.fr/fr/modules/mod_jt_superfish_menu/js/superfish.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+			$$('.hasTip').each(function(el) {
+				var title = el.get('title');
+				if (title) {
+					var parts = title.split('::', 2);
+					el.store('tip:title', parts[0]);
+					el.store('tip:text', parts[1]);
+				}
+			});
+			var JTooltips = new Tips($$('.hasTip'), { maxTitleChars: 50, fixed: false});
+		});	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35865404-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	
+			jQuery(document).ready(function($) {
+				jQuery(".colorbox").colorbox(); 
+			});
+			jQuery(document).ready(function($) {
+				jQuery(".hasTip").tipTip();
+			});<!--
+					var acymailing = Array();
+					acymailing['NAMECAPTION'] = 'Nom';
+					acymailing['NAME_MISSING'] = 'Please enter your name';
+					acymailing['EMAILCAPTION'] = 'Adresse e-mail';
+					acymailing['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+					acymailing['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+					acymailing['CAPTCHA_MISSING'] = 'Please enter the security code displayed in the image';
+					acymailing['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+			//-->
+  </script> 
+  <link rel="shortcut icon" href="/favicon.ico"> 
+  <script type="text/javascript">
+        var template_dir = 'http://www.synomia.fr/fr/templates/ammon/',
+      hasChaser = 1;
+    </script> 
+  <script type="text/javascript" src="http://www.synomia.fr/fr/templates/ammon//js/functions.js"></script> 
+ </head>
+ <body class=" font-family-maven-pro menu-type-fusionmenu col12 option-com-content menu-blog-synomia blog_page">
+  <a style="display: none;" href="https://plus.google.com/104644692282116311228" rel="publisher">Google+</a>   
+  <div id="rt-header" class="style3"> 
+   <div class="rt-container"> 
+    <div class="rt-grid-2 rt-alpha"> 
+     <div class="rt-block"> 
+      <a href="/fr/" id="rt-logo"></a> 
+     </div> 
+    </div> 
+    <div class="rt-grid-10 rt-omega"> 
+     <div class="rt-block"> 
+      <ul class="sf-menu menu"> 
+       <li id="item-253" class="deeper parent"><a href="/fr/vision-et-techno">Vision &amp; Techno</a>
+        <ul>
+         <li id="item-201"><a href="/fr/vision-et-techno/big-data-et-entreprises">Big Data et Entreprises </a></li>
+         <li id="item-202"><a href="/fr/vision-et-techno/synomia-menu-la-data-non-structuree">La Data Non Structurée</a></li>
+         <li id="item-252" class="deeper parent"><a href="/fr/vision-et-techno/la-technologie-synomia">La technologie Synomia</a>
+          <ul>
+           <li id="item-203"><a href="/fr/vision-et-techno/la-technologie-synomia/technologie-unique">Une technologie unique</a></li>
+           <li id="item-239"><a href="/fr/vision-et-techno/la-technologie-synomia/analyse-syntaxique">L'Analyse Syntaxique</a></li>
+           <li id="item-238"><a href="/fr/vision-et-techno/la-technologie-synomia/extraction-de-syntagmes">L'Extraction de Syntagmes</a></li>
+           <li id="item-240"><a href="/fr/vision-et-techno/la-technologie-synomia/analyse-distributionnelle">L'Analyse Distributionnelle</a></li>
+           <li id="item-241"><a href="/fr/vision-et-techno/la-technologie-synomia/analyse-sentiment">L'Analyse du Sentiment</a></li>
+          </ul></li>
+         <li id="item-244"><a href="/fr/vision-et-techno/workshops">Nos Workshops </a></li>
+        </ul></li>
+       <li id="item-212" class="deeper parent"><a href="/fr/nos-prestations">Prestations</a>
+        <ul>
+         <li id="item-265"><a href="/fr/nos-prestations/positionnement-strategique">Positionnement Stratégique</a></li>
+         <li id="item-261"><a href="/fr/nos-prestations/strategie-de-communication-marketing-digital">Stratégie de Communication &amp; Marketing Digital</a></li>
+         <li id="item-263"><a href="/fr/nos-prestations/experience-client-etudes">Expérience Client &amp; Etudes</a></li>
+         <li id="item-262"><a href="/fr/nos-prestations/web-intelligence-social-media-listening">Web Intelligence &amp; Social Media Listening</a></li>
+        </ul></li>
+       <li id="item-205"><a href="/fr/l-equipe">L’équipe </a></li>
+       <li id="item-206" class="deeper parent"><a href="/fr/nos-clients">Nos Clients</a>
+        <ul>
+         <li id="item-250"><a href="http://www.synomia.fr/fr/nos-clients">Nos Clients</a></li>
+         <li id="item-232"><a href="https://www.synomia.fr/login/">Accès Client</a></li>
+        </ul></li>
+       <li id="item-208"><a href="/fr/on-recrute">On recrute </a></li>
+       <li id="item-254" class="deeper parent"><a href="/fr/newsroom">Newsroom</a>
+        <ul>
+         <li id="item-255"><a href="/fr/newsroom/actualites-synomia">Actualités Synomia</a></li>
+         <li id="item-256"><a href="/fr/newsroom/synomia-dans-la-presse">Synomia dans la presse</a></li>
+        </ul></li>
+       <li id="item-211" class="deeper parent"><a href="/fr/synomia-contact">Contact</a>
+        <ul>
+         <li id="item-209"><a href="/fr/synomia-contact/contact-entreprises">Entreprises</a></li>
+         <li id="item-210"><a href="/fr/synomia-contact/contact-presse">Presse</a></li>
+        </ul></li>
+       <li id="item-224" class="current active"><a href="/fr/blog-synomia">Blog</a></li>
+      </ul> 
+      <script type="text/javascript">
+(function($){ 
+	$(window).load(function() {
+		$("ul.sf-menu")
+			.supersubs({minWidth:13, maxWidth:30, extraWidth:0})
+			.superfish({ 
+				hoverClass: "sfHover",
+				pathClass:  "sf-active",
+				pathLevels: 0,
+				animation:  {height:'show'},
+				delay:      1000,
+				speed:      "def",
+				autoArrows: true,
+				dropShadows: 0
+		}); 
+	});
+})(jQuery);
+</script> 
+     </div> 
+    </div> 
+    <div class="clear"></div> 
+   </div> 
+   <div class="shadow-down"></div> 
+  </div> 
+  <div id="icon-widgets"> 
+   <ul class="icon-menu"> 
+    <li class="social-icons" style="width:201px"> <a href="#" class="opened">Social links</a> 
+     <div id="social-icons"> 
+      <div class="inner"> 
+       <a style="margin:3px;" rel="nofollow" href="https://twitter.com/Synomia" target="_blank"><img src="http://www.synomia.fr/fr/modules/mod_socialmedialinks/icons/default/size2/twitter.png " alt="Twitter" title="Suivez nous sur Twitter"></a> 
+       <a style="margin:3px;" rel="nofollow" href="http://www.linkedin.com/company/synomia" target="_blank"><img src="http://www.synomia.fr/fr/modules/mod_socialmedialinks/icons/default/size2/linkedin.png " alt="Linkedin" title="Suivez nous sur Linkedin"></a> 
+       <a style="margin:3px;" rel="nofollow" href="https://plus.google.com/u/0/b/104644692282116311228/104644692282116311228/posts" target="_blank"><img src="http://www.synomia.fr/fr/modules/mod_socialmedialinks/icons/default/size2/googleplus.png " alt="Googleplus" title="Suivez nous sur Googleplus"></a> 
+       <a style="margin:3px;" rel="nofollow" href="http://www.pinterest.com/synomiafr/" target="_blank"><img src="http://www.synomia.fr/fr/modules/mod_socialmedialinks/icons/default/size2/pinterest.png " alt="Pinterest" title="Suivez nous sur Pinterest"></a> 
+       <a style="margin:3px;" rel="nofollow" href="http://www.synomia.com/en/" target="_blank"><img src="http://www.synomia.fr/fr/modules/mod_socialmedialinks/icons/default/size2/sur notre site en anglais.png " alt="Sur Notre Site En Anglais" title="Suivez nous sur Sur Notre Site En Anglais"></a> 
+       <div class="clear"></div> 
+      </div> 
+     </div> </li> 
+   </ul> 
+  </div> 
+  <div id="slideshow"> 
+   <div class="rt-container"> 
+    <div class="rt-grid-12 rt-alpha rt-omega"> 
+     <h2 class="page-title">LE BLOG DE SYNOMIA</h2> 
+    </div> 
+   </div> 
+   <div class="shadow-up"></div> 
+  </div> 
+  <div id="container" class="noBreadcr"> 
+   <div class="forchaser"></div> 
+   <div class="bg-transparent"></div> 
+   <div id="rt-system-errors"> 
+    <div class="rt-container"> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+   <div id="rt-main" class="mb9-sa3"> 
+    <div class="rt-container"> 
+     <div class="rt-grid-9 "> 
+      <div class="rt-block"> 
+       <div id="rt-mainbody"> 
+        <div class="component-content"> 
+         <div class="rt-blog blog_page"> 
+          <div class="rt-leading-articles"> 
+           <div class="leading-0"> 
+            <div class="rt-article"> 
+             <div class="post_block"> 
+              <div class="rt-article-bg"> 
+               <h2 class="post-title left-outline"> Pourquoi devenir Assistant(e) Commercial(e) chez Synomia ? </h2> 
+               <ul class="post_data"> 
+                <!--<dt class="article-info-term">Détails</dt>--> 
+                <li class="post-category"> Catégorie : <a href="/fr/blog-synomia/38-top-news">Top News</a> </li> 
+                <li class="post-date"> mercredi 3 décembre 2014 17:37 </li> 
+                <li class="rt-hits"> Affichages : 45 </li> 
+               </ul> 
+               <p></p> 
+               <p><img src="/fr/images/synomia/BLOG-Interview-aurelie-bandeau3.jpg" width="700" height="334" alt="BLOG-Interview-aurelie-bandeau3" style="display: block; margin-left: auto; margin-right: auto;"></p> 
+               <p class="rt-readon-surround"> <a href="/fr/blog-synomia/38-top-news/212-pourquoi-devenir-assistant-e-commercial-e-chez-synomia" class="readon"><span> Lire la suite&nbsp;: Pourquoi devenir Assistant(e) Commercial(e) chez Synomia ? </span></a> </p> 
+              </div>
+             </div> 
+            </div> 
+           </div> 
+           <div class="leading-1"> 
+            <div class="rt-article"> 
+             <div class="post_block"> 
+              <div class="rt-article-bg"> 
+               <h2 class="post-title left-outline"> #SynomiaTeachesData chez Kedge Business School </h2> 
+               <ul class="post_data"> 
+                <!--<dt class="article-info-term">Détails</dt>--> 
+                <li class="post-category"> Catégorie : <a href="/fr/blog-synomia/38-top-news">Top News</a> </li> 
+                <li class="post-date"> lundi 1 décembre 2014 13:09 </li> 
+                <li class="rt-hits"> Affichages : 103 </li> 
+               </ul> 
+               <p></p> 
+               <p>Mardi 26 novembre, Philippe AÏT YAHIA, co-fondateur et PDG de <strong>Synomia</strong>, était invité par <strong>Kedge Business School</strong> Bordeaux pour animer un cours (en anglais) auprès des étudiants français et internationaux de troisième année sur le thème "<strong>Why Every Single Company Needs To Harness Semantic Data To Beat Competition And How ?</strong>".</p> 
+               <p>C'est ainsi avec fierté que Philippe Aït Yahia inaugurait le premier volet de la tournée <strong>#SynomiaTeachesData</strong> au sein des Grandes Ecoles et Universités françaises. Cette tournée verra les dirigeants de Synomia aller pendant toute l'année 2015 à la rencontre des étudiants, afin de les sensibiliser et en faire des champions de la digitalisation de l'entreprise grâce à la Data.</p> 
+               <p><img src="/fr/images/synomia/kedge_business_school.jpg" width="400" height="160" alt="kedge business_school" style="display: block; margin-left: auto; margin-right: auto;"></p> 
+               <p class="rt-readon-surround"> <a href="/fr/blog-synomia/38-top-news/211-synomia-teaches-data-chez-kedge-business-school" class="readon"><span> Lire la suite&nbsp;: #SynomiaTeachesData chez Kedge Business School </span></a> </p> 
+              </div>
+             </div> 
+            </div> 
+           </div> 
+           <div class="leading-2"> 
+            <div class="rt-article"> 
+             <div class="post_block"> 
+              <div class="rt-article-bg"> 
+               <h2 class="post-title left-outline"> [Retour sur] la participation de Synomia et Arkopharma au congrès LSA Big Data </h2> 
+               <ul class="post_data"> 
+                <!--<dt class="article-info-term">Détails</dt>--> 
+                <li class="post-category"> Catégorie : <a href="/fr/blog-synomia/38-top-news">Top News</a> </li> 
+                <li class="post-date"> lundi 1 décembre 2014 11:28 </li> 
+                <li class="rt-hits"> Affichages : 55 </li> 
+               </ul> 
+               <p><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"></span></strong></p> 
+               <p></p> 
+               <p><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Mardi 25 novembre avait lieu le congrès LSA big data à l'Hotel d'Evreux, place Vendôme à Paris.&nbsp;</span></strong></p> 
+               <p><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">A cette occasion était organisée une table ronde autour des bonnes pratiques Big Data sur les marchés des télécommunications, des transports et de la santé. Aux côtés d'Eric Alix de Bouygues Telecom et Régine Combremont de Voyages SNCF, Jérôme Gast, Digital Marketing Manager d'Arkopharma, est intervenu pour témoigner de l'apport de Synomia dans l'analyse des datas sémantiques, au service de la stratégie de communication digitale du groupe.</span></strong></p> 
+               <p><strong><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/fr/images/synomia/lsa.jpg" width="300" height="141" alt="lsa" style="display: block; margin-left: auto; margin-right: auto;"></span></strong></p> 
+               <p class="rt-readon-surround"> <a href="/fr/blog-synomia/38-top-news/210-retour-sur-l-intervention-arkopharma-et-synomia-congres-lsa-big-data" class="readon"><span> Lire la suite&nbsp;: [Retour sur] la participation de Synomia et Arkopharma au congrès LSA Big Data </span></a> </p> 
+              </div>
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="rt-article-links"> 
+           <div class="items-more"> 
+            <h3>Plus d'articles...</h3> 
+            <ol> 
+             <li> <a href="/fr/blog-synomia/38-top-news/209-cite-des-sciences-et-de-lindustrie-et-synomia-a-performance-digitale-expo"> [Retour sur] la participation de Synomia et Cité des Sciences et de l'Industrie à Performance Digitale Expo</a> </li> 
+             <li> <a href="/fr/blog-synomia/38-top-news/208-master-class-entrepreneurs-synomia-animee-par-philippe-ait-yahia"> [Retour sur] la Master Class Entrepreneurs animée par Philippe Aït Yahia</a> </li> 
+             <li> <a href="/fr/blog-synomia/38-top-news/207-analyse-de-donnees-une-aide-precieuse-a-la-redaction-du-cahier-des-charges"> Analyse de données : une aide précieuse à la rédaction du cahier des charges</a> </li> 
+             <li> <a href="/fr/blog-synomia/38-top-news/204-retour-de-l-intervention-de-synomia-au-salon-vadconext"> [Retour sur] l'intervention de Synomia au salon #VADConext</a> </li> 
+            </ol> 
+           </div> 
+          </div> 
+          <div class="rt-cat-children"> 
+           <ul> 
+            <li class="last"> <span class="item-title"><a href="/fr/blog-synomia/38-top-news"> Top News</a> </span> </li> 
+           </ul> 
+          </div> 
+          <div class="rt-pagination"> 
+           <p class="rt-results"> Page 1 sur 8 </p> 
+           <ul>
+            <li class="pagination-start"><span class="pagenav">Début</span></li>
+            <li class="pagination-prev"><span class="pagenav">Précédent</span></li>
+            <li><span class="pagenav">1</span></li>
+            <li><a title="2" href="/fr/blog-synomia?start=3" class="pagenav">2</a></li>
+            <li><a title="3" href="/fr/blog-synomia?start=6" class="pagenav">3</a></li>
+            <li><a title="4" href="/fr/blog-synomia?start=9" class="pagenav">4</a></li>
+            <li><a title="5" href="/fr/blog-synomia?start=12" class="pagenav">5</a></li>
+            <li><a title="6" href="/fr/blog-synomia?start=15" class="pagenav">6</a></li>
+            <li><a title="7" href="/fr/blog-synomia?start=18" class="pagenav">7</a></li>
+            <li><a title="8" href="/fr/blog-synomia?start=21" class="pagenav">8</a></li>
+            <li class="pagination-next"><a title="Suivant" href="/fr/blog-synomia?start=3" class="pagenav">Suivant</a></li>
+            <li class="pagination-end"><a title="Fin" href="/fr/blog-synomia?start=21" class="pagenav">Fin</a></li>
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="rt-grid-3 "> 
+      <div id="rt-sidebar-b"> 
+       <div class="rt-block"> 
+        <div class="module-title"> 
+         <h2 class="title">ARTICLES RECENTS</h2> 
+        </div> 
+        <ul class="menu"> 
+         <li> <a href="/fr/blog-synomia/38-top-news/212-pourquoi-devenir-assistant-e-commercial-e-chez-synomia">Pourquoi devenir Assistant(e) Commercial(e) chez Synomia ?</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/211-synomia-teaches-data-chez-kedge-business-school">#SynomiaTeachesData chez Kedge Business School</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/210-retour-sur-l-intervention-arkopharma-et-synomia-congres-lsa-big-data">[Retour sur] la participation de Synomia et Arkopharma au congrès LSA Big Data</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/209-cite-des-sciences-et-de-lindustrie-et-synomia-a-performance-digitale-expo">[Retour sur] la participation de Synomia et Cité des Sciences et de l'Industrie à Performance Digitale Expo</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/208-master-class-entrepreneurs-synomia-animee-par-philippe-ait-yahia">[Retour sur] la Master Class Entrepreneurs animée par Philippe Aït Yahia</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/207-analyse-de-donnees-une-aide-precieuse-a-la-redaction-du-cahier-des-charges">Analyse de données : une aide précieuse à la rédaction du cahier des charges</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/204-retour-de-l-intervention-de-synomia-au-salon-vadconext">[Retour sur] l'intervention de Synomia au salon #VADConext</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/199-strategie-de-communication-des-collectivites-locales-comment-repenser-son-image-de-marque">Stratégie de communication des collectivités locales : comment repenser son image de marque ? </a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/175-comment-les-nouveaux-outils-de-data-mining-reinventent-l-etude-de-marche">Comment les nouveaux outils de Data Mining réinventent l'étude de marché?</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/136-analyse-qualitative-des-tweets-la-necessite-d-un-outil-de-veille-nouvelle-generation">Analyse qualitative des Tweets : la nécessité d’un outil de veille nouvelle génération </a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/134-technopolice-2014-les-reseaux-sociaux-liberte-et-securite-interieure">Technopolice 2014, Les Réseaux sociaux: Liberté et Sécurité Intérieure</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/133-la-big-data-au-service-de-l-innovation-marketing">La Data Sémantique au service de l’innovation marketing</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/132-creation-de-site-internet-comment-bien-gerer-une-refonte">Création de site internet : comment bien gérer une refonte </a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/131-synomia-et-tbwa-corporate-la-sucess-story-continue-au-syntec-camp">Synomia et TBWA\Corporate remportent le prix du "Meilleur Partenariat Technologique PME/Grands Groupes" au Syntec Camp</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/130-resume-de-la-conference-media-aces-avec-synomia-du-19-juin-2014-connaissance-client-et-reseaux-sociaux">Résumé de la conférence Media Aces avec Synomia, le 19 juin 2014: Connaissance client et Réseaux sociaux</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/129-big-data-comment-analyser-la-demande-pour-mieux-adapter-son-offre">Big Data: Comment analyser la demande pour mieux adapter son offre?</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/128-aacc-project-start-up-saison-1-retour-sur-data-refinery-un-pari-reussi">AACC Project Start Up Saison 1: Retour sur Data Refinery, un pari réussi</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/126-comprendre-mener-une-strategie-de-redirection-d-url">Comprendre et mener une stratégie de redirection d'URL</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/125-pourquoi-devenir-responsable-de-developpement-commercial-chez-synomia">Pourquoi devenir Responsable de Développement Commercial chez Synomia ?</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/124-contenus-performants-brand-content-marketing">Content Marketing, Brand Content: Comment créer des contenus intelligents et performants?</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/123-heartbleed-saison-1-episode-final">Heartbleed - Saison 1- Episode final</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/122-salon-e-marketing-et-strategie-clients">Arkopharma parle de Synomia au Salon de l'E-Marketing 2014</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/115-data-refinery-les-origines">Data Refinery : Les Origines</a> </li> 
+         <li> <a href="/fr/blog-synomia/38-top-news/109-synomia-demenage-boulogne-billancourt">Synomia déménage!</a> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+   <div id="rt-bottom"> 
+    <div class="shadow-up">
+     <img src="http://www.synomia.fr/fr/templates/ammon/images/shadow-up.png" alt="">
+    </div> 
+    <div class="rt-container"> 
+     <div class="rt-grid-3 rt-alpha"> 
+      <div class="rt-block"> 
+       <div class="module-title"> 
+        <h2 class="title">RUBRIQUES</h2> 
+       </div> 
+       <ul class="menu"> 
+        <li id="item-282" class="deeper parent"><a href="/fr/vision-et-techno"><span>Vision &amp; Techno</span></a>
+         <ul>
+          <li id="item-215"><a href="/fr/vision-et-techno/synomia-menu-la-data-non-structuree"><span>La Data non-structurée </span></a></li>
+          <li id="item-214"><a href="/fr/vision-et-techno/big-data-et-entreprises"><span>Big Data et Entreprise </span></a></li>
+          <li id="item-275"><a href="/fr/vision-et-techno/la-technologie-synomia"><span>La technologie Synomia</span></a></li>
+         </ul></li>
+        <li id="item-217" class="deeper parent"><a href="/fr/nos-prestations"><span>Prestations</span></a>
+         <ul>
+          <li id="item-278"><a href="/fr/nos-prestations/positionnement-strategique"><span>Positionnement Stratégique</span></a></li>
+          <li id="item-279"><a href="/fr/nos-prestations/strategie-de-communication-marketing-digital"><span>Stratégie de Communication &amp; Marketing Digital</span></a></li>
+          <li id="item-280"><a href="/fr/nos-prestations/experience-client-etudes"><span>Expérience Client &amp; Etudes</span></a></li>
+          <li id="item-281"><a href="/fr/nos-prestations/web-intelligence-social-media-listening"><span>Web Intelligence &amp; Social Media Listening</span></a></li>
+         </ul></li>
+        <li id="item-218"><a href="/fr/l-equipe"><span>L’équipe</span></a></li>
+        <li id="item-219" class="deeper parent"><a href="/fr/nos-clients"><span>Nos clients</span></a>
+         <ul>
+          <li id="item-231"><a href="https://www.synomia.fr/login/"><span>ACCES CLIENT</span></a></li>
+         </ul></li>
+        <li id="item-221"><a href="/fr/on-recrute"><span>On recrute</span></a></li>
+        <li id="item-222"><a href="/fr/synomia-contact/contact-entreprises"><span>Contact Entreprises </span></a></li>
+       </ul> 
+      </div> 
+     </div> 
+     <div class="rt-grid-6"> 
+      <div class="rt-block"> 
+       <div class="module-title"> 
+        <h2 class="title">DES INSIGHTS REGULIERS SUR L’EXPLOITATION DU BIG DATA AU SERVICE DE VOTRE ENTREPRISE&nbsp;?</h2> 
+       </div> 
+       <div class="acymailing_module" id="acymailing_module_formAcymailing1"> 
+        <div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing1"> 
+         <form id="formAcymailing1" action="/fr/blog-synomia" onsubmit="return submitacymailingform('optin','formAcymailing1')" method="post" name="formAcymailing1"> 
+          <div class="acymailing_module_form"> 
+           <div class="acymailing_form" id="newsletter-form"> 
+            <p> <label for="user_name_formAcymailing1">Nom</label> <input id="user_name_formAcymailing1" class="inputbox" type="text" name="user[name]" size="15" value=""> </p> 
+            <p> <label for="user_email_formAcymailing1">Adresse e-mail</label> <input id="user_email_formAcymailing1" class="inputbox" type="text" name="user[email]" size="15" value=""> </p> 
+            <p class="acysubbuttons"> <input class="button subbutton" type="submit" value="Je m'abonne" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing1'); }catch(err){alert('The form could not be submitted');return false;}"> </p> 
+           </div> 
+           <input type="hidden" name="ctrl" value="sub"> 
+           <input type="hidden" name="task" value="notask"> 
+           <input type="hidden" name="redirect" value="http%3A%2F%2Fwww.synomia.fr%2Ffr%2Fblog-synomia"> 
+           <input type="hidden" name="redirectunsub" value="http%3A%2F%2Fwww.synomia.fr%2Ffr%2Fblog-synomia"> 
+           <input type="hidden" name="option" value="com_acymailing"> 
+           <input type="hidden" name="hiddenlists" value="1"> 
+           <input type="hidden" name="acyformname" value="formAcymailing1"> 
+          </div> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="rt-grid-3 rt-omega"> 
+      <div class="rt-block"> 
+       <div class="module-title"> 
+        <h2 class="title">NOUS CONTACTER </h2> 
+       </div> 
+       <div class="custom"> 
+        <p></p> 
+        <p>Synomia <br> 63 bis rue de Sèvres<br> 92100 Boulogne-Billancourt</p> 
+        <p><strong>Tel</strong> : +33 (0)1 46 10 06 40</p> 
+        <p><strong>Email</strong> : <script type="text/javascript">
+//<![CDATA[
+var v4="";for(var e2=0;e2<280;e2++)v4+=String.fromCharCode(("p\"lw32Gl+g2}pqsg-g-+Hyx$z!~$zz\"ppHg- }t~9s$}psHggg2qltwxzEg2 }p{9lnpw:$:37g-g-r6g2n4y lz gg$n;XX?%yz~tlggx=pn$zxXX9}pg2wln{3:Xpr7f:g-hfg-h46;ggg2g-g2zyx+!~pzz! Zg- sH~9stpqH}g2ggg2ggZIng-yZ znZ l.A?1~%yFxtlz.$;1;Z=;FnzpG:lxg29}I{wlpp3:n:r7Zg-g-hf;h4f29}p{wlnp3:39994394:r7-/=/<-44".charCodeAt(e2)-(11)+10+53)%(0x5f)+32);document.write(eval(v4))
+//]]>
+</script></p> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+   <div id="rt-twitter"> 
+    <div class="rt-container"> 
+     <div class="rt-grid-12 rt-alpha rt-omega"> 
+      <div class="rt-block"> 
+       <div class="twitter" id="twitter">
+        <small>Please wait whilst our latest tweets load.</small>
+       </div> 
+       <script type="text/javascript">
+		twitterFetcher.fetch('405296857800118272', '', 1, true, false, true, 'default', true, handleTweets, false);
+		function handleTweets(tweets){
+			var x = tweets.length;
+			var n = 0;
+			var element = document.getElementById('twitter');
+			var html = '<a id="profileLink" target="_blank" href="http://twitter.com/Synomia">follow @Synomia</a>';
+			html += '<ul>';
+			while(n < x) {
+			  html += '<li>' + tweets[n] + '</li>';
+			  n++;
+			}
+			html += '</ul>';
+			
+			element.innerHTML = html;
+		}
+	</script> 
+      </div> 
+     </div> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+   <a href="#" id="top-link">Scroll to Top</a> 
+  </div>
+  <!-- Container End --> 
+  <script type="text/javascript">
+//<![CDATA[ 
+		var disqus_shortname = '';
+	(function () {
+	  var s = document.createElement('script'); s.async = true;
+	  s.src = 'http://disqus.com/forums/' + disqus_shortname + '/count.js?v=1417769645';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+	}());
+//]]> 
+</script>   
+ </body>
+</html>

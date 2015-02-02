@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Tagon8</title> 
+  <meta name="Resource-type" content="Document"> 
+  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+  <!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]--> 
+  <script type="text/javascript" src="js/jquery.js"></script> 
+  <script type="text/javascript" src="js/jquery-ui.js"></script> 
+  <script type="text/javascript" src="js/default.js"></script> 
+  <script type="text/javascript">
+		$(document).ready(function() {
+			$.fn.fullpage({
+				anchors: ['nos-construimos-coisas-incriveis', 'nos-somos-entusiastas-do-futuro', 'produtos', 'contato']
+			});
+		});
+	</script> 
+ </head> 
+ <body> 
+  <header> 
+   <h1>Tagon8</h1> 
+  </header> 
+  <div class="section active" id="pg1"> 
+   <section class="main-content"> 
+    <h2> NÓS CONSTRUÍMOS<br>COISAS INCRÍVEIS </h2> 
+    <p> e nos inspiramos na combinação de tecnologias radicalmente novas, para criar soluções que aprimoram a produtividade e a eficiência do trabalho. </p> 
+   </section>
+   <!--.main-content--> 
+  </div>
+  <!-- --> 
+  <div class="section" id="pg2"> 
+   <section class="main-content"> 
+    <h2> SOMOS ENTUSIASTAS <br> DO FUTURO </h2> 
+    <div> 
+     <p> Uma empresa jovem e intensa, de estrutura organizacional plana. Nos interessamos por desafios complexos. Enxergamos uma oportunidade para nos destacarmos dentro do ambiente tecnologico atual, e para isso pensamos antecipadamente. Oferecemos potencial de crescimento em carreira ilimitado, e a chance de estar rodeado por pessoas inteligentes e criativas. Pessoas que lutam, inspiram, motivam e inovam o tempo todo. Somos empreendedores, independentes e orientados ao resultado. </p> 
+    </div> 
+   </section>
+   <!-- .main-content --> 
+  </div> 
+  <div class="section" id="pg3"> 
+   <section class="main-content"> 
+    <div class="grid"> 
+     <div class="side-text"> 
+      <h2>Produtos</h2> 
+      <h3>TOUCHDOWN</h3> 
+      <p> Um CRM como você nunca viu. Tão simples como enviar um email, tão fácil como acessar o Facebook. Este é o objetivo do TOUCHDOWN, uma ferramenta para organizar seus contatos e suas negociações. </p> 
+      <a href="http://touchdowncrm.com/" target="_blank"> SAIBA MAIS </a> 
+     </div>
+     <!-- side-text --> 
+     <div id="mac"> 
+      <div class="mockup"></div> 
+     </div> 
+    </div>
+    <!-- grid --> 
+   </section>
+   <!-- .main-content --> 
+  </div>
+  <!-- #pg3 --> 
+  <div class="section" id="pg4"> 
+   <section class="main-content"> 
+    <div class="grid"> 
+     <div class="side-text"> 
+      <h2>CONTATO</h2> 
+      <p> Av. 9 de Julho, 5017, 12˚ andar<br> São Paulo, Brasil. <br> E: contato@tagon8inc.com<br> T: +55 11 3167-2888 </p> 
+     </div>
+     <!-- .side-text --> 
+     <div id="form"> 
+      <div class="forminputs"> 
+       <textarea id="msg" name="msg" cols="30" rows="10" placeholder="Mensagem"></textarea>
+       <br> 
+       <input id="name" name="name" type="text" placeholder="Nome"> 
+       <input id="email" name="email" type="text" placeholder="E-mail"> 
+       <input type="submit" value="Enviar" onclick="return valForm();"> 
+      </div>
+      <!-- forminputs --> 
+      <div class="dialog">
+        xxx 
+      </div>
+      <!-- dialog --> 
+     </div>
+     <!-- #form --> 
+    </div>
+    <!-- grid --> 
+    <footer>
+     Tagon8 © - Direitos Reservados
+    </footer> 
+   </section>
+  </div>
+  <!-- grid --> 
+  <!-- .main-content -->  
+  <div class="navArrows"> 
+   <span class="u" onclick="javascript:$.fn.fullpage.moveSlideUp();"></span> 
+   <span class="l"></span> 
+   <span class="d" onclick="javascript:$.fn.fullpage.moveSlideDown();"></span> 
+   <span class="r"></span> Use as teclas para navegar. 
+  </div>
+  <!-- .navArrows -->  
+ </body>
+</html>

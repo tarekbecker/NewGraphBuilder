@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Application Analytics for IT and Business - Teleran Technologies, Inc.</title> 
+  <link rel="shortcut icon" href="favicon.ico"> 
+  <link rel="icon" type="image/gif" href="animated_favicon1.gif"> 
+  <link href="/css/webstyles.css" rel="stylesheet" type="text/css"> 
+  <!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="/css/webstyles-ie.css" />
+<![endif]--> 
+  <!--[if lt IE 8]> 
+	<link rel="stylesheet" type="text/css" href="/css/webstyles-ie7.css" />
+<![endif]--> 
+  <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script> 
+  <script type="text/javascript" src="/js/jquery-ui-1.8.4.custom.min.js"></script> 
+  <script type="text/javascript" src="/js/jquery.tools.min.js"></script> 
+  <script type="text/javascript" src="/js/jquery-tinymce.js"></script> 
+  <script type="text/javascript" src="/js/jquery.autoGrowInput.js"></script> 
+  <!--[if IE]>
+<script type="text/javascript">
+$(function() {	
+	$('*:last-child').addClass('last-child');
+});
+</script>
+<![endif]--> 
+ </head> 
+ <body> 
+  <div id="wrapper"> 
+   <div id="header"> 
+    <div class="content"> 
+     <h1 class="logo"><a href="/"><span>teleran</span></a></h1> 
+     <strong id="slogan">Application Analytics for IT and Business</strong> 
+     <div id="quicklinks"> 
+      <ul> 
+       <li><a href="/">Home</a></li> 
+       <li><a href="/about-us">About Us</a></li> 
+       <li><a href="/search">Search</a></li> 
+       <li><a href="/contact-us">Contact Us</a></li> 
+      </ul> 
+     </div> 
+     <div id="nav"> 
+      <!--  --> 
+      <ul> 
+       <li><a href="/products" class="main">Products</a> 
+        <ul> 
+         <li><a href="/products/iSight">iSight</a></li> 
+         <li><a href="/products/isight-analytics">iSight Analytics</a></li> 
+         <li><a href="/products/iGuard">iGuard</a></li> 
+         <li><a href="/products/why-teleran">Why Teleran</a></li> 
+         <li><a href="/products/what-is-big-data">What is Big Data</a></li> 
+         <li><a href="/solutions/it-roles">Benefits by IT Role</a></li> 
+        </ul> </li> 
+       <li><a href="/solutions" class="main">Solutions</a> 
+        <ul> 
+         <li><a href="/solutions/business-intelligence-data-warehouse-environments">BI/Data Warehouse Visibility&nbsp;and&nbsp;Control</a></li> 
+         <li><a href="/solutions/benefits/increased-compliance">Data Compliance and Governance</a></li> 
+         <li><a href="/solutions/exadata">Oracle Exadata Solutions</a></li> 
+         <li><a href="/solutions/benefits/consolidation-and-migration">Database Migrations and Consolidations</a></li> 
+         <li><a href="/solutions/cloud-computing">Cloud Computing Assurance</a></li> 
+         <li><a href="/solutions/oltp">Transaction Systems Performance Management</a></li> 
+         <li><a href="/solutions/database-solutions">Database Platforms</a></li> 
+        </ul> </li> 
+       <li><a href="/customers/companies" class="main">Customers</a> 
+        <ul> 
+         <li><a href="/customers/companies">Company List</a></li> 
+         <li><a href="/customers/case-study">Case Studies</a></li> 
+         <li><a href="/solutions/it-roles">Benefits by Role</a></li> 
+        </ul> </li> 
+       <li><a href="/service-and-support" class="main">Services &amp; Support</a> 
+        <ul> 
+         <li><a href="/service-and-support/managed-services">Managed Services</a></li> 
+         <li><a href="/service-and-support/professional-services">Professional Services</a></li> 
+         <li><a href="/service-and-support/education-services">Teleran Education Services</a></li> 
+         <li><a href="/service-and-support/teleran-customer-support">Customer Support</a></li> 
+        </ul> </li> 
+       <li><a href="/partners" class="main">Partners</a> 
+        <ul> 
+         <li><a href="/partners">Our Partners</a></li> 
+         <li><a href="/partners/become-a-teleran-partner">Become a Partner</a></li> 
+        </ul> </li> 
+       <li><a href="/testimonials/by/Customers" class="main">Testimonials</a> 
+        <ul> 
+         <li><a href="/testimonials/by/Customers">by Customers</a></li> 
+         <li><a href="/testimonials/by/Industry Analyst">by Industry Analysts</a></li> 
+         <li><a href="/testimonials/by/Partners">by Partners</a></li> 
+        </ul> </li> 
+       <li><a href="/newsroom" class="main">Newsroom</a> 
+        <ul> 
+         <li><a href="/newsroom/in-the-news">In the News</a></li> 
+         <li><a href="/newsroom/featured-news">Featured News</a></li> 
+         <li><a href="/newsroom/press-releases">Press Releases</a></li> 
+         <li><a href="/newsroom/events">Events</a></li> 
+         <li><a href="/newsroom/media-center">Downloads</a></li> 
+        </ul> </li> 
+      </ul> 
+     </div> 
+     <script type="text/javascript">
+	
+var TOmenufadeout = null;
+var TOnavline = null;
+	
+function underlineCurrNavItem() {	
+	curr = $('#nav a.curr');			
+	if (curr.length > 0) {
+		o = curr.offset();
+		h = curr.height();
+		w = curr.width();
+		t = o.top+h+3;
+		$('.navhighlight').animate(  {'z-index' : 5, 'display' : 'block', 'top' : t, 'left' : o.left, 'width' : w } , 250 );
+	}
+	else {
+		TOnavline = setTimeout("$('.navhighlight').fadeOut();", 250);
+		
+	}
+}
+
+function undelineNavItem( t ) {
+
+
+
+	o = $(t).offset();
+	h = $(t).height();
+	w = $(t).width();
+	t = o.top+h+3;
+	clearTimeout(TOnavline);
+
+	//alert( o.left );
+	
+	if ( $('.navhighlight').css('display') == 'none' ) {
+		$('.navhighlight').show();
+	}
+	
+	if ( jQuery.browser.msie ) {
+		$('.navhighlight').css(  
+			{
+				'z-index' : 5, 			
+				'top' : t, 
+				'left' : o.left, 
+				'width' : w,
+				opacity: 1.0
+			}		
+		);
+	}
+	else {	
+		$('.navhighlight').animate (  
+			{
+				'z-index' : 5, 			
+				'top' : t, 
+				'left' : o.left, 
+				'width' : w,
+				opacity: 1.0
+			},
+			250	
+		);
+	}
+	
+	
+}
+
+$(function() {
+
+	//setTimeout("underlineCurrNavItem();", 1000);
+	$('#navhighlight').addClass('navhighlight');
+	$('#wrapper').css( { 'position' : 'relative' } );
+
+	$('#nav a.main').hover( 
+		function() {				
+
+			
+			
+			clearTimeout(TOmenufadeout);
+			clearTimeout(TOnavline);
+			
+			undelineNavItem( this ) 
+			
+			$('.menufadeout').hide(); 
+			$('.menufadeout').removeClass('menufadeout');				
+			$(this).parent().find('ul').stop();
+			$(this).parent().find('ul').css( {opacity : 1} );
+			$(this).parent().find('ul').fadeIn();	
+			//$(this).parent().find('ul').css( {'display' : 'inline'} );
+			//$(this).parent().find('.menufadeout').removeClass('menufadeout');
+			
+			
+			//alert('asd');
+	
+		},
+		function() {	
+			//undelineNavItem();
+			underlineCurrNavItem();				
+			$(this).parent().find('ul').addClass('menufadeout');
+			TOmenufadeout = setTimeout("$('.menufadeout').fadeOut('slow'); $('.menufadeout').removeClass('menufadeout'); $('.navhighlight').hide();", 300);
+		}
+	);
+	
+	
+	
+	$('#nav ul ul').hover( 
+		function() {
+			clearTimeout(TOmenufadeout);
+			clearTimeout(TOnavline);
+			
+			undelineNavItem( $(this).parent().find('a.main') );
+			
+		},
+		function() {							
+			underlineCurrNavItem();
+			TOmenufadeout = setTimeout("$('.menufadeout').fadeOut('slow'); $('.menufadeout').removeClass('menufadeout');", 300);
+		}
+	);
+	
+	
+	$('#nav ul').hover(
+		function() {
+			// nothing here -- do it on out
+		},
+		function () {								
+			//underlineCurrNavItem();
+		}
+	);
+
+});		
+</script> 
+    </div> 
+   </div> 
+   <div id="navhighlight" style="z-index:10">
+    &nbsp;
+   </div> 
+   <div id="body"> 
+    <div class="content"> 
+     <div id="fancy-home-page-area"> 
+      <script src="js/swfobject_modified.js" type="text/javascript"></script> 
+      <object id="FlashID" width="1000" height="400" data="swf/home/flash.swf" type="application/x-shockwave-flash"> <param name="data" value="swf/home/flash.swf"> <param name="quality" value="high"> <param name="wmode" value="opaque"> <param name="swfversion" value="6.0.65.0"> <param name="expressinstall" value="js/expressInstall.swf"> <param name="src" value="swf/home/flash.swf"> </object> 
+      <script type="text/javascript">// <![CDATA[
+swfobject.registerObject("FlashID");
+// ]]></script> 
+     </div> 
+     <div style="padding-left: 11px;">
+      <div class="front-block"> 
+       <div class="block-title">
+        &nbsp;·· News
+       </div> 
+       <div class="block-content">
+        <strong>September 9, 2014</strong>
+        <br>
+        <h3 style="margin-top:0px;"><a href="/prs/view/56">Teleran© to Present Application Analytics for Exadata at Oracle User Group Conference in New York City</a></h3>
+       </div> 
+       <div class="readmore">
+        <a href="/newsroom/press-releases">Read More</a>
+       </div> 
+      </div>
+      <div class="front-block"> 
+       <div class="block-title">
+        &nbsp;·· EVENTS
+       </div> 
+       <div class="block-content">
+        No upcoming events at this time. Check back soon
+       </div> 
+       <div class="readmore">
+        <a href="/newsroom/events">Read More</a>
+       </div> 
+      </div>
+      <div class="front-block"> 
+       <div class="block-title">
+        &nbsp;·· What Our Customers And Partners Say
+       </div> 
+       <div class="block-content">
+        <h3 style="margin-top:0px;">Oracle</h3>Teleran's solution continuously tracks users and their business context, BI applications and data usage, complementing management...
+       </div> 
+       <div class="readmore">
+        <a href="/testimonials/by/Partners#test31">Read More</a>
+       </div> 
+      </div>
+     </div> 
+     <div style="padding: 0px 11px;">
+      <div class="front-block fontpage-companies"> 
+       <div class="block-title">
+        &nbsp;·· Featured Clients
+       </div> 
+       <ul class="company-list"> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/0cb228.gif&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/d07fe5.jpg&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/0d462e.png&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/626ffc.png&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/988f61.jpg&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/2f0f63.jpg&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/533af9.png&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/1eb635.png&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/d4bcee.jpg&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/2d5b16.gif&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/0dcce8.gif&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/2035a2.gif&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/172a65.jpg&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/19222e.png&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/6f9d3e.gif&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/67f4c2.jpg&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/f55926.gif&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/37c921.gif&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/a8ce15.gif&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+        <li> <span style="display:block; padding:18px;"> <a href="javascript:;" style="cursor:default"> <img src="/image/sizer/?img=/logos/4fe1bb.gif&amp;width=300&amp;height=50px&amp;how=scaleY" border="0"> </a> </span> </li> 
+       </ul> 
+      </div>
+     </div>
+     <div style="clear:both"></div> 
+     <style>#body .content {
+padding:0px;
+}
+
+#fancy-home-page-area {  min-height: 400px;  border-bottom: 1px solid #c4c4c4;  background-color: #edecf0; }
+
+.fontpage-companies {}
+
+.fontpage-companies ul {}
+
+.fontpage-companies li {}
+</style> 
+    </div> 
+   </div> 
+   <div id="footer"> 
+    <div class="content"> 
+     <div class="contact-info">
+       Teleran Technologies, Inc.
+      <br> 333A Route 46 West
+      <br> Fairfield, NJ 07004
+      <br> 973.439.1820 Main
+      <br> 973.439.1821 Fax
+      <br> 
+      <a href="mailto:info@teleran.com">info@teleran.com</a> 
+     </div> 
+     <div class="navlinks"> 
+      <ul class="col1"> 
+       <li><a href="/news">News</a></li> 
+       <li><a href="/contact-us">Contact Us</a></li> 
+       <li><a href="/search">Search</a></li> 
+      </ul> 
+      <ul class="col2"> 
+       <li><a href="/products">Products</a></li> 
+       <li><a href="/solutions">Solutions</a></li> 
+       <li><a href="/service-and-support">Services &amp; Support</a></li> 
+      </ul> 
+      <ul class="col3"> 
+       <li><a href="/customers">Customers</a></li> 
+       <li><a href="/partners">Partners</a></li> 
+       <li><a href="/testimonials">Testimonials</a></li> 
+      </ul> 
+     </div> 
+     <p class="legal">© 2014 Teleran Technologies, Inc. All rights reserved. <a href="/legal-notices">Legal Notices</a> | <a href="/privacy-policy">Privacy Policy</a> | <a href="/site_map">Site Map</a></p> 
+     <div class="clear">
+       &nbsp; 
+     </div> 
+    </div> 
+   </div> 
+   <script type="text/javascript">
+
+$(document).ready(function(){
+	$("a[href^='http'], a[href*='.pdf']").attr('target','_blank');
+
+    $("#moreinfo").addClass('moreinfo');
+    $(".moreinfoScroller").addClass('moreinfo-scroller');
+	// initialize scrollable
+	$(".moreinfo-scroller").scrollable().navigator({navi:'ul.navi'});
+ 
+});
+</script> 
+   <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20666848-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+  </div> 
+  <div> 
+   <script>
+	$(function() {
+		
+		$('.cake-sql-log td').hover( 
+			function() {
+				$(this).parent().css( { 'background-color' : '#cecece' } );	
+			},
+			function() {
+				$(this).parent().css( { 'background-color' : '#ffffff' } );	
+			}
+		);
+		
+	});
+	</script> 
+  </div> 
+  <script type="text/javascript">
+
+function scrollcomps() {
+	
+	//alert( $('.fontpage-companies ul li:last-child').position().left );
+	
+	//toLeft = parseInt($('.fontpage-companies ul').css('left')) - 10;
+	/*$('.fontpage-companies ul').animate( 
+		{ 'left': $('.fontpage-companies ul li:last-child').position().left * -1 } , 
+		20000, 
+		function() { 
+			$('.fontpage-companies ul').animate( 
+				{ 'left': 0 } , 
+				20000, 
+				function () {
+					scrollcomps();
+				}
+			);
+		}		
+	);*/
+	
+	//element = $('.fontpage-companies ul li:first-child');
+	
+	//t = Math.floor( $('.fontpage-companies ul li:first-child').width() / 25) * 1000;
+	
+	$('.fontpage-companies ul li:first-child').clone().appendTo('.fontpage-companies ul');
+	
+	//$('.fontpage-companies ul li:first-child').animate({ width: 0, 'opacity' : 0 }, 1000, function() {
+			
+			$('.fontpage-companies ul li:first-child').animate( 
+				{ 
+					'padding-left': '0', 
+					'padding-right': '0', 
+					'margin-left': '0',
+					'margin-right': '0',					
+					'opacity' : 0,
+					'width': 0,					
+				}, 
+				2500, 				
+				function() {
+					$('.fontpage-companies ul li:first-child').remove();
+					//scrollcomps();
+					setTimeout('scrollcomps();', 2000);
+				}
+			);
+			
+	//});
+	
+}
+
+$(document).ready( function() {
+	
+	$('.fontpage-companies ul li').css( {'overflow' : 'hidden', 'display' : 'block', 'position':'relative', height: 86 } );
+	
+	//$('.fontpage-companies ul').width( $('.fontpage-companies ul li:last-child').position().left + $('.fontpage-companies ul li:last-child').width()+10 );
+	
+	setTimeout('scrollcomps();', 2000);
+	
+});
+
+</script>   
+ </body>
+</html>

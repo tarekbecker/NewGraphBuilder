@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>              <html lang="en" class="junior no-js ie ie6" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]>                 <html lang="en" class="junior no-js ie ie7" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>                 <html lang="en" class="junior no-js ie ie8" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>                 <html lang="en" class="junior no-js ie ie9" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-US" class="junior no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta content="Updated daily, Monday - Friday.  Chock full of big data insights, news and tips straight from the Data Mine." name="description"> 
+  <title>Infochimps Blog</title> 
+  <link rel="image_src" href="http://www.infochimps.com/images/marketing/pictograms/chimpmark.png"> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="shortcut icon" href="http://blog.infochimps.com/wp-content/themes/infochimps2/images/favicon.ico"> 
+  <link rel="stylesheet" type="text/css" media="all" href="http://blog.infochimps.com/wp-content/themes/infochimps2/infochimps.css?94843598345"> 
+  <link rel="stylesheet" type="text/css" media="all" href="http://blog.infochimps.com/wp-content/themes/infochimps2/style.css"> 
+  <link rel="stylesheet" type="text/css" media="all" href="http://blog.infochimps.com/wp-content/themes/infochimps2/header.css"> 
+  <link rel="pingback" href="http://blog.infochimps.com/xmlrpc.php"> 
+  <!-- jQuery + javascript --> 
+  <link rel="alternate" type="application/rss+xml" title="Infochimps Big Data Platform Blog » Feed" href="http://blog.infochimps.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Infochimps Big Data Platform Blog » Comments Feed" href="http://blog.infochimps.com/comments/feed/"> 
+  <link rel="stylesheet" id="hubspot-css" href="http://blog.infochimps.com/wp-content/plugins/hubspot/css/hubspot.css?ver=3.9.3" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://blog.infochimps.com/wp-includes/js/jquery/jquery.js?ver=1.11.0"></script> 
+  <script type="text/javascript" src="http://blog.infochimps.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://blog.infochimps.com/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.7.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.infochimps.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.infochimps.com/wp-includes/wlwmanifest.xml"> 
+  <!-- All in One SEO Pack 2.1.1 by Michael Torbert of Semper Fi Web Design[722,770] --> 
+  <meta name="description" content="Blog for Infochimps -- Find, Share or Sell any Dataset in the World"> 
+  <meta name="keywords" content="data,bigdata,dataset,datasets,visualization,spreadsheets,statistics,reference,free,open,buy,sell,bulk,download"> 
+  <link rel="next" href="http://blog.infochimps.com/page/2/"> 
+  <link rel="canonical" href="http://blog.infochimps.com"> 
+  <!-- /all in one seo pack --> 
+  <!-- Google Analytics Tracking by Google Analyticator 6.4.7.1: http://www.videousermanuals.com/google-analyticator/ --> 
+  <script type="text/javascript">
+                var analyticsFileTypes = [''];
+                            var analyticsEventTracking = 'enabled';
+            </script> 
+  <script type="text/javascript">
+	var _gaq = _gaq || [];
+  
+	_gaq.push(['_setAccount', 'UA-3828631-1']);
+    _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+	_gaq.push(['_setDomainName', '.infochimps.com']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script> 
+  <script src="http://blog.infochimps.com/wp-content/themes/infochimps2/javascript/modernizr-1.5.min.js"></script> 
+  <script type="text/javascript">var switchTo5x=true;</script> 
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
+  <script type="text/javascript">stLight.options({publisher: "12ddf3e5-43d4-49b7-a998-32f8587deea2", onhover: false}); </script> 
+ </head> 
+ <body class="home blog"> 
+  <div id="outer-container" class="hfeed"> 
+   <div class="header-container"> 
+    <div class="wrapper"> 
+     <header id="header"> 
+      <div class="section"> 
+       <ul class="social-links"> 
+        <li><a class="twitter" href="http://twitter.com/infochimps" target="_blank">Twitter</a></li> 
+        <li><a class="facebook" href="http://www.facebook.com/infochimps" target="_blank">Facebook</a></li> 
+        <li><a class="linkedin" href="http://www.linkedin.com/company/infochimps" target="_blank">LinkedIn</a></li> 
+        <li><a class="gplus" href="https://plus.google.com/108602128639816609652/" target="_blank">Google +</a></li> 
+        <li><a class="github" href="https://github.com/infochimps" target="_blank">github</a></li> 
+       </ul> 
+       <ul class="links"> 
+        <li><a href="http://www.infochimps.com/company/contact-us">CONTACT US</a></li> 
+        <li><a href="http://blog.infochimps.com">BLOG</a></li> 
+       </ul> 
+       <a href="http://bigdata.infochimps.com/request-a-big-data-platform-demo/" target="_blank" class="link1">REQUEST A DEMO »</a> 
+      </div> 
+      <strong class="logo"><a href="http://www.infochimps.com">Infochimps</a></strong> 
+      <nav id="nav"> 
+       <ul> 
+        <li><a href="http://www.infochimps.com/solutions/our-approach-to-big-data">Solutions</a></li> 
+        <li><a href="http://www.infochimps.com/infochimps-cloud/overview">Infochimps Cloud</a></li> 
+        <li><a href="http://www.infochimps.com/resources">Resources</a></li> 
+        <li><a href="http://www.infochimps.com/community">Community</a></li> 
+        <li><a href="http://www.infochimps.com/company/about">Company</a></li> 
+       </ul> 
+      </nav> 
+     </header> 
+    </div> 
+   </div> 
+   <div id="main"> 
+    <div class="container"> 
+     <article> 
+      <div class="left span-17"> 
+       <section id="post-2265" class="post"> 
+        <header class="span-16 last"> 
+         <h1><a href="http://blog.infochimps.com/2014/05/13/ie-chief-data-officer-summit-san-francisco/" title="Permalink to Upcoming Event: IE Chief Data Officer Summit" rel="bookmark">Upcoming Event: IE Chief Data Officer Summit</a></h1> 
+        </header> 
+        <div class="tabs span-16 last" id="posted_on"> 
+         <ul class="posted_on">
+          <li><span class="entry-date">May 13, 2014</span></li>
+          <li><span class="author vcard">Rhea Somaney</span></li> 
+          <div class="share-post-block"> 
+           <span class="st_twitter_hcount" displaytext="Tweet" st_title="Upcoming Event: IE Chief Data Officer Summit" st_url="http://blog.infochimps.com/2014/05/13/ie-chief-data-officer-summit-san-francisco/"></span> 
+           <span class="st_facebook_hcount" displaytext="Facebook" st_title="Upcoming Event: IE Chief Data Officer Summit" st_url="http://blog.infochimps.com/2014/05/13/ie-chief-data-officer-summit-san-francisco/"></span> 
+           <span class="st_linkedin_hcount" displaytext="LinkedIn" st_title="Upcoming Event: IE Chief Data Officer Summit" st_url="http://blog.infochimps.com/2014/05/13/ie-chief-data-officer-summit-san-francisco/"></span> 
+           <span class="st_plusone_hcount" displaytext="Google +1" st_title="Upcoming Event: IE Chief Data Officer Summit" st_url="http://blog.infochimps.com/2014/05/13/ie-chief-data-officer-summit-san-francisco/"></span> 
+           <span class="st_sharethis_hcount" displaytext="ShareThis" st_title="Upcoming Event: IE Chief Data Officer Summit" st_url="http://blog.infochimps.com/2014/05/13/ie-chief-data-officer-summit-san-francisco/"></span> 
+           <div class="blog-comment"> 
+            <a class="comment" href="http://blog.infochimps.com/2014/05/13/ie-chief-data-officer-summit-san-francisco/#comments"> <img src="http://blog.infochimps.com/wp-content/themes/infochimps2/images/chat-icon.png"> Comment</a> 
+            <a class="comment-count" href="http://blog.infochimps.com/2014/05/13/ie-chief-data-officer-summit-san-francisco/#comments">0</a> 
+           </div> 
+          </div> 
+         </ul>
+        </div>
+        <!-- #posted_on --> 
+        <div class="panes span-16 last"> 
+         <section class="pane" id="post_content"> 
+          <p>Are you attending the <strong><a href="http://theinnovationenterprise.com/summits/chief-data-officer-summit" target="_blank">Chief Data Officer Summit</a></strong>&nbsp;in San Francisco this year? Our partners at <a href="https://theinnovationenterprise.com/" target="_blank">IE</a> know how to put together a fantastic event—but if you haven’t attended one before, here’s the breakdown on what you can expect.</p> 
+          <p><a style="color: #ff4b33;" href="http://blog.infochimps.com/wp-content/uploads/2014/05/CDO-ES.jpg"><img class="size-large wp-image-2266 aligncenter" src="http://blog.infochimps.com/wp-content/uploads/2014/05/CDO-ES-567x1024.jpg" alt="CDO ES 567x1024 Upcoming Event: IE Chief Data Officer Summit" width="567" height="1024" title="Upcoming Event: IE Chief Data Officer Summit"></a></p> 
+          <p><strong><a href="https://theinnovationenterprise.com/summits/chief-data-officer-summit#overview" target="_blank">Chief Data Officer Summit</a></strong>:<b> May 22-23, San Francisco, 2014<br> </b><i>Data Strategy Innovation<br> </i>The Chief Data Officer summit brings together top data leaders for 2 days of networking and interactive learning, with this year’s topics including Fostering an Enterprise Data Mindset, Building a Data Driven Culture, Mining Brilliance From Your Data, and others.</p> 
+          <p><b>Why should you attend?<br> </b></p> 
+          <ul> 
+           <li>20+ industry expert keynote presentations</li> 
+           <li>150&nbsp;big data &amp; analytics professionals attending</li> 
+           <li>Interactive workshops with industry leaders</li> 
+           <li>Over 10 hours of networking opportunities included</li> 
+           <li>Access to online presentations on-demand post-summit</li> 
+           <li>25+ case studies presented from leading organizations</li> 
+          </ul> 
+          <p>Let us know in the comments if you plan on attending this year—and if&nbsp;you’re interested, there’s still time&nbsp;<a href="https://theinnovationenterprise.com/summits/chief-data-officer-summit/registration" target="_blank">to register</a>.</p> 
+          <p><a href="https://theinnovationenterprise.com/summits/chief-data-officer-summit/registration" target="_blank"><img class="wp-image-2120 size-medium alignleft" src="http://blog.infochimps.com/wp-content/uploads/2013/05/REGISTER-300x75.png" alt="REGISTER 300x75 Upcoming Event: IE Chief Data Officer Summit" width="300" height="75" title="Upcoming Event: IE Chief Data Officer Summit"></a>
+           <!--HubSpot Call-to-Action Code --><br> <span class="hs-cta-wrapper" id="hs-cta-wrapper-5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1"><br> <span class="hs-cta-node hs-cta-5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1" id="hs-cta-5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1"><br> 
+             <!--[if lte IE 8]>
+<div id="hs-cta-ie-element"></div>
+<p>< ![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/174427/5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1"><img class="hs-cta-img" id="hs-cta-img-5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/174427/5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1.png" title="Upcoming Event: IE Chief Data Officer Summit" alt="5fd3b37b f0ff 4b11 a9ba 54ff208f06f1 Upcoming Event: IE Chief Data Officer Summit"></a><br> </span><br> <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script><br> <script type="text/javascript">
+            hbspt.cta.load(174427, '5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1');
+        </script><br> </span><br> 
+           <!-- end HubSpot Call-to-Action Code --></p> 
+         </section>
+         <!-- #post_content --> 
+        </div>
+        <!-- .panes.span-17.last --> 
+        <div style="clear:left"></div> 
+       </section>
+       <!-- #post-## --> 
+       <section id="post-2262" class="post"> 
+        <header class="span-16 last"> 
+         <h1><a href="http://blog.infochimps.com/2014/05/05/join-us-big-data-conference/" title="Permalink to Join Us at the Big Data Conference Next Week" rel="bookmark">Join Us at the Big Data Conference Next Week</a></h1> 
+        </header> 
+        <div class="tabs span-16 last" id="posted_on"> 
+         <ul class="posted_on">
+          <li><span class="entry-date">May 5, 2014</span></li>
+          <li><span class="author vcard">Rhea Somaney</span></li> 
+          <div class="share-post-block"> 
+           <span class="st_twitter_hcount" displaytext="Tweet" st_title="Join Us at the Big Data Conference Next Week" st_url="http://blog.infochimps.com/2014/05/05/join-us-big-data-conference/"></span> 
+           <span class="st_facebook_hcount" displaytext="Facebook" st_title="Join Us at the Big Data Conference Next Week" st_url="http://blog.infochimps.com/2014/05/05/join-us-big-data-conference/"></span> 
+           <span class="st_linkedin_hcount" displaytext="LinkedIn" st_title="Join Us at the Big Data Conference Next Week" st_url="http://blog.infochimps.com/2014/05/05/join-us-big-data-conference/"></span> 
+           <span class="st_plusone_hcount" displaytext="Google +1" st_title="Join Us at the Big Data Conference Next Week" st_url="http://blog.infochimps.com/2014/05/05/join-us-big-data-conference/"></span> 
+           <span class="st_sharethis_hcount" displaytext="ShareThis" st_title="Join Us at the Big Data Conference Next Week" st_url="http://blog.infochimps.com/2014/05/05/join-us-big-data-conference/"></span> 
+           <div class="blog-comment"> 
+            <a class="comment" href="http://blog.infochimps.com/2014/05/05/join-us-big-data-conference/#comments"> <img src="http://blog.infochimps.com/wp-content/themes/infochimps2/images/chat-icon.png"> Comment</a> 
+            <a class="comment-count" href="http://blog.infochimps.com/2014/05/05/join-us-big-data-conference/#comments">0</a> 
+           </div> 
+          </div> 
+         </ul>
+        </div>
+        <!-- #posted_on --> 
+        <div class="panes span-16 last"> 
+         <section class="pane" id="post_content"> 
+          <p dir="ltr" style="text-align: left;">Are you planning on attending the<strong> <a href="http://globalbigdataconference.com/31/dallas/big-data-bootcamp/event.html" target="_blank">Global Big Data Conference</a></strong> in Dallas? We hope you are. Two of our executive chimps, <strong>Flip Kromer</strong> and <strong>Eddie Satterly</strong>, will take the stage at the Global Big Data Conference’s Big Data Bootcamp next week to present on Storm and other big data tools. This conference, targeted to both technical and non-technical people who want to understand the emerging world of big data, takes place from May 9-11 — and registration is still open.</p> 
+          <p dir="ltr" style="text-align: center;"><img class="size-full wp-image-2263 aligncenter" alt="Screen Shot 2014 05 05 at 12.50.58 PM Join Us at the Big Data Conference Next Week" src="http://blog.infochimps.com/wp-content/uploads/2014/05/Screen-Shot-2014-05-05-at-12.50.58-PM.png" width="475" height="199" title="Join Us at the Big Data Conference Next Week"></p> 
+          <h2 dir="ltr"><strong><a href="http://globalbigdataconference.com/31/dallas/big-data-bootcamp/schedule.html" target="_blank">Here’s a breakdown of the schedule:</a></strong></h2> 
+          <p dir="ltr"><strong>Selecting the Right Big Data Tool for the Right Job, and Making It Work for You</strong><br> <em>Eddie Satterly | Day 1 – Friday May 9, 2014 | 5-6PM&nbsp;</em><br> Join our CTO, Eddie Satterly, as he speaks on the various types of big data solutions—from open-source to commercial solutions—and the specific selection criteria and profiles of each. As in all technology areas, each solution has its own sweet spots and challenges either in CAP theorem, ACID compliance, performance or scalability. This class will provide an overview of the technical tradeoffs for the list of solutions in technical terminology. Once the technical tradeoffs are reviewed, Eddie will review the cost and value of open-source solutions versus commercial software, and the trade-offs that folks must take to choose one over the other. The next phase will go into great detail on use cases for specific solutions based on real-world experience.<br> <strong><em>See more details <a href="http://globalbigdataconference.com/31/dallas/big-data-bootcamp/speaker-details/263/eddie-satterly.html" target="_blank">HERE</a>.</em></strong></p> 
+          <p dir="ltr"><strong>Deathmarch Through the Internals of Storm + Trident</strong><br> <em>Flip Kromer | Day 2 – Saturday May 10, 2014 | 5-6PM</em><br> Join our co-founder, Flip Kromer, as he deep-dives into Storm+Trident, the incredibly exciting open-source framework for streaming analytics. Storm enables scalable high-throughput processing by programs in your language of choice, on distributed networks of commodity servers. Trident extends Storm to allow exactly-once processing, enabling large-scale aggregations and advanced analytics in real-time. You’ll leave knowing enough about the Storm+Trident internals to be able to reason about your programs’ performance and confidently bring it to production.<br> <strong><em>See more details <a href="http://globalbigdataconference.com/31/dallas/big-data-bootcamp/speaker-details/344/flip-kromer.html" target="_blank">HERE</a>.</em></strong></p> 
+          <p dir="ltr"><em><small><a href="http://globalbigdataconference.com/31/dallas/big-data-bootcamp/event.html" target="_blank">Global Big Data Conference</a> is offering a 3 day extensive bootcamp on Big Data. This is a fast paced, vendor agnostic, technical overview of the Big Data landscape. No prior knowledge of databases or programming is assumed. Big Data Bootcamp is targeted towards both technical and non-technical people who want to understand the emerging world of Big Data, with a specific focus on Hadoop, NoSQL &amp; Machine Learning. Attendees will experience real Hadoop clusters and the latest Hadoop distributions.</small></em></p> 
+          <p>
+           <!--HubSpot Call-to-Action Code --><br> <span class="hs-cta-wrapper" id="hs-cta-wrapper-b0bae296-90b0-4bfe-8177-b5ac72be71c6"><br> <span class="hs-cta-node hs-cta-b0bae296-90b0-4bfe-8177-b5ac72be71c6" id="hs-cta-b0bae296-90b0-4bfe-8177-b5ac72be71c6"><br> 
+             <!--[if lte IE 8]></p>
+<div id="hs-cta-ie-element"></div>
+<p>< ![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/174427/b0bae296-90b0-4bfe-8177-b5ac72be71c6"><img class="hs-cta-img" id="hs-cta-img-b0bae296-90b0-4bfe-8177-b5ac72be71c6" style="border-width: 0px;" alt="b0bae296 90b0 4bfe 8177 b5ac72be71c6 Join Us at the Big Data Conference Next Week" src="https://no-cache.hubspot.com/cta/default/174427/b0bae296-90b0-4bfe-8177-b5ac72be71c6.png" title="Join Us at the Big Data Conference Next Week"></a><br> </span><br> <script charset="utf-8" type="text/javascript" src="https://js.hscta.net/cta/current.js"></script><script type="text/javascript">// < ![CDATA[
+            hbspt.cta.load(174427, 'b0bae296-90b0-4bfe-8177-b5ac72be71c6');</p>
+<p>// ]]&gt;</script><br> </span><br> 
+           <!-- end HubSpot Call-to-Action Code --></p> 
+         </section>
+         <!-- #post_content --> 
+        </div>
+        <!-- .panes.span-17.last --> 
+        <div style="clear:left"></div> 
+       </section>
+       <!-- #post-## --> 
+       <section id="post-2259" class="post"> 
+        <header class="span-16 last"> 
+         <h1><a href="http://blog.infochimps.com/2014/04/28/guide-internet-of-things-infographic/" title="Permalink to A Guide to the Internet of Things [Infographic]" rel="bookmark">A Guide to the Internet of Things [Infographic]</a></h1> 
+        </header> 
+        <div class="tabs span-16 last" id="posted_on"> 
+         <ul class="posted_on">
+          <li><span class="entry-date">April 28, 2014</span></li>
+          <li><span class="author vcard">Rhea Somaney</span></li> 
+          <div class="share-post-block"> 
+           <span class="st_twitter_hcount" displaytext="Tweet" st_title="A Guide to the Internet of Things [Infographic]" st_url="http://blog.infochimps.com/2014/04/28/guide-internet-of-things-infographic/"></span> 
+           <span class="st_facebook_hcount" displaytext="Facebook" st_title="A Guide to the Internet of Things [Infographic]" st_url="http://blog.infochimps.com/2014/04/28/guide-internet-of-things-infographic/"></span> 
+           <span class="st_linkedin_hcount" displaytext="LinkedIn" st_title="A Guide to the Internet of Things [Infographic]" st_url="http://blog.infochimps.com/2014/04/28/guide-internet-of-things-infographic/"></span> 
+           <span class="st_plusone_hcount" displaytext="Google +1" st_title="A Guide to the Internet of Things [Infographic]" st_url="http://blog.infochimps.com/2014/04/28/guide-internet-of-things-infographic/"></span> 
+           <span class="st_sharethis_hcount" displaytext="ShareThis" st_title="A Guide to the Internet of Things [Infographic]" st_url="http://blog.infochimps.com/2014/04/28/guide-internet-of-things-infographic/"></span> 
+           <div class="blog-comment"> 
+            <a class="comment" href="http://blog.infochimps.com/2014/04/28/guide-internet-of-things-infographic/#comments"> <img src="http://blog.infochimps.com/wp-content/themes/infochimps2/images/chat-icon.png"> Comment</a> 
+            <a class="comment-count" href="http://blog.infochimps.com/2014/04/28/guide-internet-of-things-infographic/#comments">0</a> 
+           </div> 
+          </div> 
+         </ul>
+        </div>
+        <!-- #posted_on --> 
+        <div class="panes span-16 last"> 
+         <section class="pane" id="post_content"> 
+          <p dir="ltr">Every so often there comes along a fact or prediction about the future of technology that blows my mind. This infographic, published by <a href="http://businessintelligence.com/bi-insights/a-guide-to-the-internet-of-things-infographic/" target="_blank">BusinessIntelligence.com</a>, takes us on a tour of the Internet of Things landscape, exploring its current state and its future possibilities. This fact in particular is the one that got me this week: “<em>Our Internet of Things world is growing at a breathtaking pace — from 2 billion objects in 2006 to a projected 200 billion objects by 2020.</em>” Not only that but by 2025, the total global worth of IoT technology could reach up to $6.2 trillion, with healthcare and manufacturing making up the bulk.</p> 
+          <p>This infographic goes into a variety of different industry examples, but I’m especially happy to see that robotic machinery got a shout out. (If you missed it, check out one of my previous blog posts on the <strong><a href="http://blog.infochimps.com/2014/03/07/quantified-cow-internet-things-dairy-industry/">quantified cow</a></strong>, where I talk about robotic milking machines.)</p> 
+          <p>View the full infographic below and let us know what you think. Did anything in particular blow you away?</p> 
+          <p style="text-align: center;"><a href="http://blog.infochimps.com/wp-content/uploads/2014/04/IoT-Infographic.png"><img class="alignnone size-full wp-image-2260" alt="IoT Infographic A Guide to the Internet of Things [Infographic]" src="http://blog.infochimps.com/wp-content/uploads/2014/04/IoT-Infographic.png" width="1024" height="5665" title="A Guide to the Internet of Things [Infographic]"></a></p> 
+          <p>
+           <!--HubSpot Call-to-Action Code --><br> <span class="hs-cta-wrapper" id="hs-cta-wrapper-a9935ad0-3a68-44de-8b48-8fab1afa4b04"><br> <span class="hs-cta-node hs-cta-a9935ad0-3a68-44de-8b48-8fab1afa4b04" id="hs-cta-a9935ad0-3a68-44de-8b48-8fab1afa4b04"><br> 
+             <!--[if lte IE 8]>
+<div id="hs-cta-ie-element"></div>
+<p>< ![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/174427/a9935ad0-3a68-44de-8b48-8fab1afa4b04"><img class="hs-cta-img" id="hs-cta-img-a9935ad0-3a68-44de-8b48-8fab1afa4b04" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/174427/a9935ad0-3a68-44de-8b48-8fab1afa4b04.png" title="A Guide to the Internet of Things [Infographic]" alt="a9935ad0 3a68 44de 8b48 8fab1afa4b04 A Guide to the Internet of Things [Infographic]"></a><br> </span><br> <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script><br> <script type="text/javascript">
+            hbspt.cta.load(174427, 'a9935ad0-3a68-44de-8b48-8fab1afa4b04');
+        </script><br> </span><br> 
+           <!-- end HubSpot Call-to-Action Code --></p> 
+         </section>
+         <!-- #post_content --> 
+        </div>
+        <!-- .panes.span-17.last --> 
+        <div style="clear:left"></div> 
+       </section>
+       <!-- #post-## --> 
+       <section id="post-2258" class="post"> 
+        <header class="span-16 last"> 
+         <h1><a href="http://blog.infochimps.com/2014/04/25/10-social-media-facts-2014/" title="Permalink to 10 Social Media Facts You Should Know in 2014" rel="bookmark">10 Social Media Facts You Should Know in 2014</a></h1> 
+        </header> 
+        <div class="tabs span-16 last" id="posted_on"> 
+         <ul class="posted_on">
+          <li><span class="entry-date">April 25, 2014</span></li>
+          <li><span class="author vcard">Rhea Somaney</span></li> 
+          <div class="share-post-block"> 
+           <span class="st_twitter_hcount" displaytext="Tweet" st_title="10 Social Media Facts You Should Know in 2014" st_url="http://blog.infochimps.com/2014/04/25/10-social-media-facts-2014/"></span> 
+           <span class="st_facebook_hcount" displaytext="Facebook" st_title="10 Social Media Facts You Should Know in 2014" st_url="http://blog.infochimps.com/2014/04/25/10-social-media-facts-2014/"></span> 
+           <span class="st_linkedin_hcount" displaytext="LinkedIn" st_title="10 Social Media Facts You Should Know in 2014" st_url="http://blog.infochimps.com/2014/04/25/10-social-media-facts-2014/"></span> 
+           <span class="st_plusone_hcount" displaytext="Google +1" st_title="10 Social Media Facts You Should Know in 2014" st_url="http://blog.infochimps.com/2014/04/25/10-social-media-facts-2014/"></span> 
+           <span class="st_sharethis_hcount" displaytext="ShareThis" st_title="10 Social Media Facts You Should Know in 2014" st_url="http://blog.infochimps.com/2014/04/25/10-social-media-facts-2014/"></span> 
+           <div class="blog-comment"> 
+            <a class="comment" href="http://blog.infochimps.com/2014/04/25/10-social-media-facts-2014/#comments"> <img src="http://blog.infochimps.com/wp-content/themes/infochimps2/images/chat-icon.png"> Comment</a> 
+            <a class="comment-count" href="http://blog.infochimps.com/2014/04/25/10-social-media-facts-2014/#comments">0</a> 
+           </div> 
+          </div> 
+         </ul>
+        </div>
+        <!-- #posted_on --> 
+        <div class="panes span-16 last"> 
+         <section class="pane" id="post_content"> 
+          <p>Did you know 500 million tweets are sent every day? Or that more than 55 million photos are shared every day? The online social landscape is impressive — both Facebook and YouTube have more than 1 billion users, Twitter has 232 million active users (and 651 million accounts), and Pinterest has more than 70 million users, just to name a few. There’s no doubt about it — that’s a staggering amount of people connecting through the Internet. While the popularity of these sites may be something we’ve known for a long time, the amount of data shared and transmitted on each social network just may surprise you.</p> 
+          <p>Check out the video below (created by <a href="http://24motiondesign.com/" target="_blank">24motiondesign</a>) and let us know what you think in the comments. Did these stats surprise you?</p> 
+          <div class="visually_embed" data-category="Social Media" rel="videographic" style="position: relative;width: 540px;">
+           <iframe src="http://player.vimeo.com/video/89307127" width="540" height="303.75" frameborder="0"></iframe>
+           <p></p> 
+           <div class="visually_embed_bar">
+            <span class="visually_embed_cycle">Explore more <a href="http://visual.ly">visuals</a> like this one on the web’s largest information design community – <a href="http://visual.ly">Visually</a>.</span>
+           </div> 
+           <link rel="stylesheet" type="text/css" href="http://visual.ly/embeder/style.css">
+           <script type="text/javascript" src="http://visual.ly/embeder/embed.js"></script>
+          </div> 
+          <p>
+           <!--HubSpot Call-to-Action Code --><br> <span class="hs-cta-wrapper" id="hs-cta-wrapper-5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1"><span class="hs-cta-node hs-cta-5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1" id="hs-cta-5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1"><br> 
+             <!--[if lte IE 8]></p>
+<div id="hs-cta-ie-element"></div>
+<p>< ![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/174427/5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1"><img class="hs-cta-img" id="hs-cta-img-5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/174427/5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1.png" title="10 Social Media Facts You Should Know in 2014" alt="5fd3b37b f0ff 4b11 a9ba 54ff208f06f1 10 Social Media Facts You Should Know in 2014"></a></span><script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script><script type="text/javascript">hbspt.cta.load(174427, '5fd3b37b-f0ff-4b11-a9ba-54ff208f06f1');</script></span><br> 
+           <!-- end HubSpot Call-to-Action Code --></p> 
+         </section>
+         <!-- #post_content --> 
+        </div>
+        <!-- .panes.span-17.last --> 
+        <div style="clear:left"></div> 
+       </section>
+       <!-- #post-## --> 
+       <section id="post-2255" class="post"> 
+        <header class="span-16 last"> 
+         <h1><a href="http://blog.infochimps.com/2014/04/16/tell-the-white-house-what-you-think-about-their-use-of-big-data/" title="Permalink to Tell the White House What You Think About Their Use of Big Data" rel="bookmark">Tell the White House What You Think About Their Use of Big Data</a></h1> 
+        </header> 
+        <div class="tabs span-16 last" id="posted_on"> 
+         <ul class="posted_on">
+          <li><span class="entry-date">April 16, 2014</span></li>
+          <li><span class="author vcard">Rhea Somaney</span></li> 
+          <div class="share-post-block"> 
+           <span class="st_twitter_hcount" displaytext="Tweet" st_title="Tell the White House What You Think About Their Use of Big Data" st_url="http://blog.infochimps.com/2014/04/16/tell-the-white-house-what-you-think-about-their-use-of-big-data/"></span> 
+           <span class="st_facebook_hcount" displaytext="Facebook" st_title="Tell the White House What You Think About Their Use of Big Data" st_url="http://blog.infochimps.com/2014/04/16/tell-the-white-house-what-you-think-about-their-use-of-big-data/"></span> 
+           <span class="st_linkedin_hcount" displaytext="LinkedIn" st_title="Tell the White House What You Think About Their Use of Big Data" st_url="http://blog.infochimps.com/2014/04/16/tell-the-white-house-what-you-think-about-their-use-of-big-data/"></span> 
+           <span class="st_plusone_hcount" displaytext="Google +1" st_title="Tell the White House What You Think About Their Use of Big Data" st_url="http://blog.infochimps.com/2014/04/16/tell-the-white-house-what-you-think-about-their-use-of-big-data/"></span> 
+           <span class="st_sharethis_hcount" displaytext="ShareThis" st_title="Tell the White House What You Think About Their Use of Big Data" st_url="http://blog.infochimps.com/2014/04/16/tell-the-white-house-what-you-think-about-their-use-of-big-data/"></span> 
+           <div class="blog-comment"> 
+            <a class="comment" href="http://blog.infochimps.com/2014/04/16/tell-the-white-house-what-you-think-about-their-use-of-big-data/#comments"> <img src="http://blog.infochimps.com/wp-content/themes/infochimps2/images/chat-icon.png"> Comment</a> 
+            <a class="comment-count" href="http://blog.infochimps.com/2014/04/16/tell-the-white-house-what-you-think-about-their-use-of-big-data/#comments">0</a> 
+           </div> 
+          </div> 
+         </ul>
+        </div>
+        <!-- #posted_on --> 
+        <div class="panes span-16 last"> 
+         <section class="pane" id="post_content"> 
+          <p>When you think of the US government and big data, it’s almost impossible not to think about the issue of privacy and the growing concerns surrounding it. In light of multiple controversies surrounding this topic including Edward Snowden, the NSA and general US spying, the government has (perhaps belatedly) opened conversations&nbsp;on the future of privacy&nbsp;—&nbsp;<strong>and you can join in</strong>.</p> 
+          <p><img class="size-medium wp-image-2256 alignright" alt="obamaprivacy 300x148 Tell the White House What You Think About Their Use of Big Data" src="http://blog.infochimps.com/wp-content/uploads/2014/04/obamaprivacy-300x148.jpg" width="300" height="148" title="Tell the White House What You Think About Their Use of Big Data"></p> 
+          <p>Back in January the White House launched a 90-day comprehensive review on the use of big data and its impact on the future of privacy. Part of this review includes a short, public survey where you can voice your opinions on who you trust (or don’t) with your data. The survey asks a series of questions like how different types of data collection concern you (with options ranging from “not at all” to “very concerned”), and there’s a free-form section where you can share everything on your mind.&nbsp;Headed by President Obama’s counselor John Podesta, the review should offer insight and eventually lead to an action plan on how the government uses big data.</p> 
+          <p>We know you have lots to say about this so go on, tell the prez what you think <strong><a href="http://www.whitehouse.gov/issues/technology/big-data-review" target="_blank">HERE</a>.</strong> While you’re at it, let us know what you think about this initiative in the comments too&nbsp;—&nbsp;we’re curious!
+           <!--HubSpot Call-to-Action Code --><br> <span class="hs-cta-wrapper" id="hs-cta-wrapper-6fefa857-2e95-4742-9684-869168ac7099"><br> <span class="hs-cta-node hs-cta-6fefa857-2e95-4742-9684-869168ac7099" id="hs-cta-6fefa857-2e95-4742-9684-869168ac7099"><br> 
+             <!--[if lte IE 8]>
+<div id="hs-cta-ie-element"></div>
+<p>< ![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/174427/6fefa857-2e95-4742-9684-869168ac7099"><img class="hs-cta-img" id="hs-cta-img-6fefa857-2e95-4742-9684-869168ac7099" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/174427/6fefa857-2e95-4742-9684-869168ac7099.png" title="Tell the White House What You Think About Their Use of Big Data" alt="6fefa857 2e95 4742 9684 869168ac7099 Tell the White House What You Think About Their Use of Big Data"></a><br> </span><br> <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script><br> <script type="text/javascript">
+            hbspt.cta.load(174427, '6fefa857-2e95-4742-9684-869168ac7099');
+        </script><br> </span><br> 
+           <!-- end HubSpot Call-to-Action Code --></p> 
+         </section>
+         <!-- #post_content --> 
+        </div>
+        <!-- .panes.span-17.last --> 
+        <div style="clear:left"></div> 
+       </section>
+       <!-- #post-## --> 
+       <section id="post-2252" class="post"> 
+        <header class="span-16 last"> 
+         <h1><a href="http://blog.infochimps.com/2014/04/09/science-happy-relationship/" title="Permalink to Science Tells Us How to Have a Happy Relationship" rel="bookmark">Science Tells Us How to Have a Happy Relationship</a></h1> 
+        </header> 
+        <div class="tabs span-16 last" id="posted_on"> 
+         <ul class="posted_on">
+          <li><span class="entry-date">April 9, 2014</span></li>
+          <li><span class="author vcard">Ryan Miller</span></li> 
+          <div class="share-post-block"> 
+           <span class="st_twitter_hcount" displaytext="Tweet" st_title="Science Tells Us How to Have a Happy Relationship" st_url="http://blog.infochimps.com/2014/04/09/science-happy-relationship/"></span> 
+           <span class="st_facebook_hcount" displaytext="Facebook" st_title="Science Tells Us How to Have a Happy Relationship" st_url="http://blog.infochimps.com/2014/04/09/science-happy-relationship/"></span> 
+           <span class="st_linkedin_hcount" displaytext="LinkedIn" st_title="Science Tells Us How to Have a Happy Relationship" st_url="http://blog.infochimps.com/2014/04/09/science-happy-relationship/"></span> 
+           <span class="st_plusone_hcount" displaytext="Google +1" st_title="Science Tells Us How to Have a Happy Relationship" st_url="http://blog.infochimps.com/2014/04/09/science-happy-relationship/"></span> 
+           <span class="st_sharethis_hcount" displaytext="ShareThis" st_title="Science Tells Us How to Have a Happy Relationship" st_url="http://blog.infochimps.com/2014/04/09/science-happy-relationship/"></span> 
+           <div class="blog-comment"> 
+            <a class="comment" href="http://blog.infochimps.com/2014/04/09/science-happy-relationship/#comments"> <img src="http://blog.infochimps.com/wp-content/themes/infochimps2/images/chat-icon.png"> Comment</a> 
+            <a class="comment-count" href="http://blog.infochimps.com/2014/04/09/science-happy-relationship/#comments">0</a> 
+           </div> 
+          </div> 
+         </ul>
+        </div>
+        <!-- #posted_on --> 
+        <div class="panes span-16 last"> 
+         <section class="pane" id="post_content"> 
+          <p>The secret to a happy relationship has finally been cracked thanks to <a href="http://www.happify.com/" target="_blank">Happify</a>&nbsp;and countless hours of scientific research. Now I know some of you have probably seen this infographic before (probably a couple months ago around Valentine’s Day), but I thought it was so good I had to share in case you missed it. Also who doesn’t want a few tips every now and then about how to dominate your romantic life?</p> 
+          <p>The infographic includes some insightful pointers, but here’s a little tip of my own to help send you down the path to happiness with your partner — send it to your significant other for brownie points because it’s going to start a dialogue. Not only that but it’s going to start a positive dialogue (I’m 95% sure on that but don’t quote me), which just so happens to be the number one takeaway: Have a good positive to negative interaction ratio. This is probably the most important message, and the rest is all about how to reach that ratio.</p> 
+          <p>Getting a good positive to negative interaction ratio comes in many shapes and sizes, but we’ll let the data speak for itself.&nbsp;Here’s how you and your partner can make it happen:</p> 
+          <p><img class="aligncenter" alt="7TknIii Science Tells Us How to Have a Happy Relationship" src="http://i.imgur.com/7TknIii.jpg" width="640" height="5610" title="Science Tells Us How to Have a Happy Relationship"></p> 
+         </section>
+         <!-- #post_content --> 
+        </div>
+        <!-- .panes.span-17.last --> 
+        <div style="clear:left"></div> 
+       </section>
+       <!-- #post-## --> 
+       <section id="post-2249" class="post"> 
+        <header class="span-16 last"> 
+         <h1><a href="http://blog.infochimps.com/2014/03/13/25-years-world-wide-web/" title="Permalink to 25 Years of the World Wide Web" rel="bookmark">25 Years of the World Wide Web</a></h1> 
+        </header> 
+        <div class="tabs span-16 last" id="posted_on"> 
+         <ul class="posted_on">
+          <li><span class="entry-date">March 13, 2014</span></li>
+          <li><span class="author vcard">Rhea Somaney</span></li> 
+          <div class="share-post-block"> 
+           <span class="st_twitter_hcount" displaytext="Tweet" st_title="25 Years of the World Wide Web" st_url="http://blog.infochimps.com/2014/03/13/25-years-world-wide-web/"></span> 
+           <span class="st_facebook_hcount" displaytext="Facebook" st_title="25 Years of the World Wide Web" st_url="http://blog.infochimps.com/2014/03/13/25-years-world-wide-web/"></span> 
+           <span class="st_linkedin_hcount" displaytext="LinkedIn" st_title="25 Years of the World Wide Web" st_url="http://blog.infochimps.com/2014/03/13/25-years-world-wide-web/"></span> 
+           <span class="st_plusone_hcount" displaytext="Google +1" st_title="25 Years of the World Wide Web" st_url="http://blog.infochimps.com/2014/03/13/25-years-world-wide-web/"></span> 
+           <span class="st_sharethis_hcount" displaytext="ShareThis" st_title="25 Years of the World Wide Web" st_url="http://blog.infochimps.com/2014/03/13/25-years-world-wide-web/"></span> 
+           <div class="blog-comment"> 
+            <a class="comment" href="http://blog.infochimps.com/2014/03/13/25-years-world-wide-web/#comments"> <img src="http://blog.infochimps.com/wp-content/themes/infochimps2/images/chat-icon.png"> Comment</a> 
+            <a class="comment-count" href="http://blog.infochimps.com/2014/03/13/25-years-world-wide-web/#comments">0</a> 
+           </div> 
+          </div> 
+         </ul>
+        </div>
+        <!-- #posted_on --> 
+        <div class="panes span-16 last"> 
+         <section class="pane" id="post_content"> 
+          <p>Anyone reading this blog post right now knows the significance of the World Wide Web. It’s an invention that has revolutionized our world and given rise to seemingly boundless creativity, innovation, collaboration and knowledge&nbsp;— but it hasn’t yet reached its full potential.&nbsp;Father of the Web, Tim Berners-Lee, named some of the key challenges we still face:</p> 
+          <ul> 
+           <li>How do we connect the nearly two-thirds of the planet who can’t yet access the Web?</li> 
+           <li>Who has the right to collect and use our personal data, for what purpose and under what rules?</li> 
+           <li>How do we create a high-performance open architecture that will run on any device, rather than fall back into proprietary alternatives?</li> 
+          </ul> 
+          <p>Berners-Lee and the Web Foundation are launching the net-neutrality&nbsp;<a href="https://webwewant.org/" target="_blank">Web We Want campaign</a>&nbsp;to promote changes in public policy to make sure the web stays open, free and accessible. In his&nbsp;<a href="http://googleblog.blogspot.com/2014/03/on-25th-anniversary-of-web-lets-keep-it.html" target="_blank">guest blog post for Google</a>&nbsp;Berners-Lee writes, “On the 25th birthday of the web, I ask you to join in—to help us imagine and build the future standards for the web, and to press for every country to develop a digital bill of rights to advance a free and open web for everyone. Learn more at&nbsp;<a href="http://webat25.org" target="_blank">webat25.org</a>&nbsp;and speak up for the sort of web we really want with #web25.”
+           <!--HubSpot Call-to-Action Code --><br> <span class="hs-cta-wrapper" id="hs-cta-wrapper-119efc1b-cf09-4f4f-9085-057e76e0464c"><br> <span class="hs-cta-node hs-cta-119efc1b-cf09-4f4f-9085-057e76e0464c" id="hs-cta-119efc1b-cf09-4f4f-9085-057e76e0464c"><br> 
+             <!--[if lte IE 8]>
+<div id="hs-cta-ie-element"></div>
+<p>< ![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/174427/119efc1b-cf09-4f4f-9085-057e76e0464c"><img class="hs-cta-img" id="hs-cta-img-119efc1b-cf09-4f4f-9085-057e76e0464c" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/174427/119efc1b-cf09-4f4f-9085-057e76e0464c.png" title="25 Years of the World Wide Web" alt="119efc1b cf09 4f4f 9085 057e76e0464c 25 Years of the World Wide Web"></a><br> </span><br> <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script><br> <script type="text/javascript">
+            hbspt.cta.load(174427, '119efc1b-cf09-4f4f-9085-057e76e0464c');
+        </script><br> </span><br> 
+           <!-- end HubSpot Call-to-Action Code --></p> 
+         </section>
+         <!-- #post_content --> 
+        </div>
+        <!-- .panes.span-17.last --> 
+        <div style="clear:left"></div> 
+       </section>
+       <!-- #post-## --> 
+       <section id="post-2245" class="post"> 
+        <header class="span-16 last"> 
+         <h1><a href="http://blog.infochimps.com/2014/03/07/quantified-cow-internet-things-dairy-industry/" title="Permalink to The Quantified Cow: The Internet of Things for the Dairy Industry" rel="bookmark">The Quantified Cow: The Internet of Things for the Dairy Industry</a></h1> 
+        </header> 
+        <div class="tabs span-16 last" id="posted_on"> 
+         <ul class="posted_on">
+          <li><span class="entry-date">March 7, 2014</span></li>
+          <li><span class="author vcard">Rhea Somaney</span></li> 
+          <div class="share-post-block"> 
+           <span class="st_twitter_hcount" displaytext="Tweet" st_title="The Quantified Cow: The Internet of Things for the Dairy Industry" st_url="http://blog.infochimps.com/2014/03/07/quantified-cow-internet-things-dairy-industry/"></span> 
+           <span class="st_facebook_hcount" displaytext="Facebook" st_title="The Quantified Cow: The Internet of Things for the Dairy Industry" st_url="http://blog.infochimps.com/2014/03/07/quantified-cow-internet-things-dairy-industry/"></span> 
+           <span class="st_linkedin_hcount" displaytext="LinkedIn" st_title="The Quantified Cow: The Internet of Things for the Dairy Industry" st_url="http://blog.infochimps.com/2014/03/07/quantified-cow-internet-things-dairy-industry/"></span> 
+           <span class="st_plusone_hcount" displaytext="Google +1" st_title="The Quantified Cow: The Internet of Things for the Dairy Industry" st_url="http://blog.infochimps.com/2014/03/07/quantified-cow-internet-things-dairy-industry/"></span> 
+           <span class="st_sharethis_hcount" displaytext="ShareThis" st_title="The Quantified Cow: The Internet of Things for the Dairy Industry" st_url="http://blog.infochimps.com/2014/03/07/quantified-cow-internet-things-dairy-industry/"></span> 
+           <div class="blog-comment"> 
+            <a class="comment" href="http://blog.infochimps.com/2014/03/07/quantified-cow-internet-things-dairy-industry/#comments"> <img src="http://blog.infochimps.com/wp-content/themes/infochimps2/images/chat-icon.png"> Comment</a> 
+            <a class="comment-count" href="http://blog.infochimps.com/2014/03/07/quantified-cow-internet-things-dairy-industry/#comments">0</a> 
+           </div> 
+          </div> 
+         </ul>
+        </div>
+        <!-- #posted_on --> 
+        <div class="panes span-16 last"> 
+         <section class="pane" id="post_content"> 
+          <p>The future is here. We’ve all heard about the Internet of Things, another buzz word circulating the tech community recently. Although technically in existence for more than two decades, the Internet of Things movement has gained greater momentum in the last few years—most notably stepping into a bigger spotlight with Google’s $3.2 billion <a href="http://news.cnet.com/8301-1023_3-57618768-93/google-closes-$3.2-billion-purchase-of-nest/" target="_blank">purchase of Nest Labs</a>, a home device company responsible for the best-selling Nest thermostat. By keeping track of manually inputted temperature settings and surrounding environmental data like room humidity and lighting, Nest eventually collects enough data to learn the daily behavior and preferences of the residents in the home.</p> 
+          <p>These ideas tie into the concept of the <a href="http://en.wikipedia.org/wiki/Quantified_Self" target="_blank">Quantified Self</a>, the movement to incorporate technology into data acquisition on aspects of a person’s daily life. Things like daily food consumption, quality of surrounding air, blood oxygen levels, physical and mental performance, and even mood and arousal can be tracked, measured and analyzed—all in the name of improving daily functions and making better decisions (or maybe just nodding thoughtfully at the data instead).</p> 
+          <p><strong>Milking the Benefits in the Dairy Industry</strong></p> 
+          <p>So how does the Quantified Self and the Internet of Things fit with cows, pastures, farmers and milk? Three words: robotic milking machines. Dutch company <a href="http://www.lely.com/en/home" target="_blank">Lely</a>, self-proclaimed innovators in agriculture, created the Astronaut A4, a state-of-the-art “fully automated milk harvester.” Although the robotic milking machine will set you back about $200,000, the Lely Astronaut A4 collects a large range of cow data to help dairy farmers make better decisions regarding milk production and herd management.</p> 
+          <p><img class="size-medium wp-image-2246 alignright" alt="cow 300x168 The Quantified Cow: The Internet of Things for the Dairy Industry" src="http://blog.infochimps.com/wp-content/uploads/2014/03/cow-300x168.jpg" width="300" height="168" title="The Quantified Cow: The Internet of Things for the Dairy Industry"></p> 
+          <p>The A4 keeps track of each individual cow’s feeding and health history, preventing cows from sneaking back into the machine for more food if they return too close to their last visit. The system tracks different variables on each cow as it’s being milked: its weight, milk production, time required for milking, amount of feed eaten, and how long the cow chews on its cud. If there’s a health issue with one of the herd, farmers can isolate the problem right away. The machine collects data on the milk itself too, checking the color fat and protein content, temperature, somatic cell count and overall quality.</p> 
+          <p>Equipped with access to more data, dairy farmers are able to gain greater knowledge into their industry and thus maximize outputs. All of this data have translated to better decision-making for the farmers, better quality control of milk production and generally happier cows—and who doesn’t want happy cows?&nbsp;Having a machine do the work allows farmers to focus their energy elsewhere too, freeing up time for really anything else. The trend is clear: as the technology continues to get better, I have a feeling we’ll be seeing a lot more quantifiable and actionable data.&nbsp;Quantified Self, the movement to incorporate technology into data acquisition on aspects of not only a person’s daily life, but a cow’s daily life as well.
+           <!--HubSpot Call-to-Action Code --><br> <span class="hs-cta-wrapper" id="hs-cta-wrapper-162e2ef6-f2d3-4701-97b7-4fd140b7a864"><br> <span class="hs-cta-node hs-cta-162e2ef6-f2d3-4701-97b7-4fd140b7a864" id="hs-cta-162e2ef6-f2d3-4701-97b7-4fd140b7a864"><br> 
+             <!--[if lte IE 8]>
+<div id="hs-cta-ie-element"></div>
+<p>< ![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/174427/162e2ef6-f2d3-4701-97b7-4fd140b7a864"><img class="hs-cta-img" id="hs-cta-img-162e2ef6-f2d3-4701-97b7-4fd140b7a864" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/174427/162e2ef6-f2d3-4701-97b7-4fd140b7a864.png" title="The Quantified Cow: The Internet of Things for the Dairy Industry" alt="162e2ef6 f2d3 4701 97b7 4fd140b7a864 The Quantified Cow: The Internet of Things for the Dairy Industry"></a><br> </span><br> <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script><br> <script type="text/javascript">
+            hbspt.cta.load(174427, '162e2ef6-f2d3-4701-97b7-4fd140b7a864');
+        </script><br> </span><br> 
+           <!-- end HubSpot Call-to-Action Code --></p> 
+         </section>
+         <!-- #post_content --> 
+        </div>
+        <!-- .panes.span-17.last --> 
+        <div style="clear:left"></div> 
+       </section>
+       <!-- #post-## --> 
+       <section id="post-2240" class="post"> 
+        <header class="span-16 last"> 
+         <h1><a href="http://blog.infochimps.com/2014/03/02/take-cio-big-data-survey-win-amazon-gift-cards/" title="Permalink to Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)" rel="bookmark">Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)</a></h1> 
+        </header> 
+        <div class="tabs span-16 last" id="posted_on"> 
+         <ul class="posted_on">
+          <li><span class="entry-date">March 2, 2014</span></li>
+          <li><span class="author vcard">Rhea Somaney</span></li> 
+          <div class="share-post-block"> 
+           <span class="st_twitter_hcount" displaytext="Tweet" st_title="Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)" st_url="http://blog.infochimps.com/2014/03/02/take-cio-big-data-survey-win-amazon-gift-cards/"></span> 
+           <span class="st_facebook_hcount" displaytext="Facebook" st_title="Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)" st_url="http://blog.infochimps.com/2014/03/02/take-cio-big-data-survey-win-amazon-gift-cards/"></span> 
+           <span class="st_linkedin_hcount" displaytext="LinkedIn" st_title="Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)" st_url="http://blog.infochimps.com/2014/03/02/take-cio-big-data-survey-win-amazon-gift-cards/"></span> 
+           <span class="st_plusone_hcount" displaytext="Google +1" st_title="Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)" st_url="http://blog.infochimps.com/2014/03/02/take-cio-big-data-survey-win-amazon-gift-cards/"></span> 
+           <span class="st_sharethis_hcount" displaytext="ShareThis" st_title="Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)" st_url="http://blog.infochimps.com/2014/03/02/take-cio-big-data-survey-win-amazon-gift-cards/"></span> 
+           <div class="blog-comment"> 
+            <a class="comment" href="http://blog.infochimps.com/2014/03/02/take-cio-big-data-survey-win-amazon-gift-cards/#comments"> <img src="http://blog.infochimps.com/wp-content/themes/infochimps2/images/chat-icon.png"> Comment</a> 
+            <a class="comment-count" href="http://blog.infochimps.com/2014/03/02/take-cio-big-data-survey-win-amazon-gift-cards/#comments">0</a> 
+           </div> 
+          </div> 
+         </ul>
+        </div>
+        <!-- #posted_on --> 
+        <div class="panes span-16 last"> 
+         <section class="pane" id="post_content"> 
+          <p dir="ltr">We learned a lot from our <a href="http://blog.infochimps.com/2013/01/24/cios-big-data/" target="_blank">2013 CIOs &amp; Big Data report</a> — for instance, that 96% of enterprises have Big Data in their top 10 priorities list, but 55% of Big Data projects aren’t completed. This year we’re interested in seeing if the stats have changed, and <em>we want to hear from you</em>.</p> 
+          <p><a href="http://infochim.ps/1mIeCBQ " target="_blank"><img class="alignnone size-full wp-image-2241" alt="takethesurvey big Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)" src="http://blog.infochimps.com/wp-content/uploads/2014/02/takethesurvey-big.jpg" width="174" height="38" title="Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)"></a></p> 
+          <p dir="ltr">Take <a href="http://infochim.ps/1mIeCBQ" target="_blank">this quick survey</a> and tell us what you really want your execs to know when doing Big Data projects. <strong>It only takes 10 minutes</strong>, and you can win awesome prizes like $100 Amazon gift cards and a membership to <a href="http://www.sswug.org/" target="_blank">SSWUG.org</a>, one of the largest community-driven sites focused on enterprise technology, IT education and professional growth.</p> 
+          <p>Although the gift cards cap out at $100, we think letting your execs know how you truly feel is pretty priceless. <strong><a href="http://infochim.ps/1mIeCBQ" target="_blank">Take the survey here</a></strong>.
+           <!--HubSpot Call-to-Action Code --><br> <span class="hs-cta-wrapper" id="hs-cta-wrapper-162e2ef6-f2d3-4701-97b7-4fd140b7a864"><span class="hs-cta-node hs-cta-162e2ef6-f2d3-4701-97b7-4fd140b7a864" id="hs-cta-162e2ef6-f2d3-4701-97b7-4fd140b7a864"><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/174427/162e2ef6-f2d3-4701-97b7-4fd140b7a864" target="_blank"><img class="hs-cta-img" id="hs-cta-img-162e2ef6-f2d3-4701-97b7-4fd140b7a864" style="border-width: 0px;" alt="162e2ef6 f2d3 4701 97b7 4fd140b7a864 Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)" src="https://no-cache.hubspot.com/cta/default/174427/162e2ef6-f2d3-4701-97b7-4fd140b7a864.png" title="Take Our CIO &amp; Big Data Survey (and win $100 Amazon gift cards)"></a></span></span><br> 
+           <!-- end HubSpot Call-to-Action Code --></p> 
+         </section>
+         <!-- #post_content --> 
+        </div>
+        <!-- .panes.span-17.last --> 
+        <div style="clear:left"></div> 
+       </section>
+       <!-- #post-## --> 
+       <section id="post-2243" class="post"> 
+        <header class="span-16 last"> 
+         <h1><a href="http://blog.infochimps.com/2014/02/28/reinvention-enterprise-analytics/" title="Permalink to Reinvention of Enterprise Analytics" rel="bookmark">Reinvention of Enterprise Analytics</a></h1> 
+        </header> 
+        <div class="tabs span-16 last" id="posted_on"> 
+         <ul class="posted_on">
+          <li><span class="entry-date">February 28, 2014</span></li>
+          <li><span class="author vcard">Rhea Somaney</span></li> 
+          <div class="share-post-block"> 
+           <span class="st_twitter_hcount" displaytext="Tweet" st_title="Reinvention of Enterprise Analytics" st_url="http://blog.infochimps.com/2014/02/28/reinvention-enterprise-analytics/"></span> 
+           <span class="st_facebook_hcount" displaytext="Facebook" st_title="Reinvention of Enterprise Analytics" st_url="http://blog.infochimps.com/2014/02/28/reinvention-enterprise-analytics/"></span> 
+           <span class="st_linkedin_hcount" displaytext="LinkedIn" st_title="Reinvention of Enterprise Analytics" st_url="http://blog.infochimps.com/2014/02/28/reinvention-enterprise-analytics/"></span> 
+           <span class="st_plusone_hcount" displaytext="Google +1" st_title="Reinvention of Enterprise Analytics" st_url="http://blog.infochimps.com/2014/02/28/reinvention-enterprise-analytics/"></span> 
+           <span class="st_sharethis_hcount" displaytext="ShareThis" st_title="Reinvention of Enterprise Analytics" st_url="http://blog.infochimps.com/2014/02/28/reinvention-enterprise-analytics/"></span> 
+           <div class="blog-comment"> 
+            <a class="comment" href="http://blog.infochimps.com/2014/02/28/reinvention-enterprise-analytics/#comments"> <img src="http://blog.infochimps.com/wp-content/themes/infochimps2/images/chat-icon.png"> Comment</a> 
+            <a class="comment-count" href="http://blog.infochimps.com/2014/02/28/reinvention-enterprise-analytics/#comments">0</a> 
+           </div> 
+          </div> 
+         </ul>
+        </div>
+        <!-- #posted_on --> 
+        <div class="panes span-16 last"> 
+         <section class="pane" id="post_content"> 
+          <p><em></em><em>Authors:&nbsp;<a href="http://www.csc.com/big_data/blog/103269-csc_big_data_analytics_blog_authors#Lenke" target="_blank">Mark Lenke</a>&nbsp;and&nbsp;<a href="http://www.csc.com/big_data/blog/103269-csc_big_data_analytics_blog_authors#Nelson" target="_blank">Shawn Nelson</a></em></p> 
+          <div> 
+           <h2><strong>Breaking the Barriers of Time and Expense</strong></h2> 
+           <p>There’s no doubt that companies have benefited tremendously from business intelligence (BI) applications. Enterprise business intelligence (EBI) has enabled companies to spot emerging trends, identify new markets, serve customers more effectively and improve operational efficiencies.</p> 
+           <p>Recently though, EBI solutions have had a hard time adapting to the information explosion that companies have experienced. Attempting to stuff massive volumes of data into the structure required by traditional BI systems is inefficient, expensive and time consuming.</p> 
+           <p><img class="size-medium wp-image-2244 alignright" alt="Screen Shot 2014 02 28 at 2.00.59 PM 231x300 Reinvention of Enterprise Analytics" src="http://blog.infochimps.com/wp-content/uploads/2014/02/Screen-Shot-2014-02-28-at-2.00.59-PM-231x300.png" width="231" height="300" title="Reinvention of Enterprise Analytics"></p> 
+           <p>What’s more, systems have become more complex and difficult to use, limiting the types of insights that can be generated in a reasonable time frame. Big data solutions, which can efficiently handle large volumes of data, can also require people with a specific and hard-to-find skill set in order to get results. Typically, business process experts feel shut out from advances because new systems are too hard to use.</p> 
+           <p>As a result, many companies have avoided implementing more advanced BI or next-generation big data solutions because there is a perception — real or imagined — that&nbsp;<em>they take too much time and are too hard to use to justify the expense involved in implementation.</em></p> 
+           <p>But avoiding the change means that companies are missing out on opportunities to gain new insights that can radically transform their business. The next generation of BI systems, commonly referred to as big data, offers a huge leap forward in capabilities and features. Big data and analytics can help companies ask sophisticated, forward-looking questions that make new connections between seemingly unrelated trends. Big data and analytics can power new types of applications that provide real-time feedback, putting insights directly into the hands of people who can use that information.</p> 
+           <p>This paper examines advances in big data infrastructure and applications that can help companies overcome the challenges associated with bringing these new systems to life.</p> 
+           <p><a href="http://www.csc.com/big_data/publications/89362/106957-reinvention_of_enterprise_analytics" target="_blank"><img class="alignnone size-medium wp-image-2092" alt="READ 300x80 Reinvention of Enterprise Analytics" src="http://blog.infochimps.com/wp-content/uploads/2013/05/READ-300x80.png" width="300" height="80" title="Reinvention of Enterprise Analytics"></a></p> 
+           <p><em>Read the full article “Reinvention of Enterprise Analytics” and gain access to the “Breaking the Barriers of Time and Expense” white paper on the <a href="http://www.csc.com/big_data/publications/89362/106957-reinvention_of_enterprise_analytics" target="_blank">CSC Big Data &amp; Analytics blog</a>.</em></p>
+          </div> 
+          <p>
+           <!--HubSpot Call-to-Action Code --><br> <span class="hs-cta-wrapper" id="hs-cta-wrapper-162e2ef6-f2d3-4701-97b7-4fd140b7a864"><br> <span class="hs-cta-node hs-cta-162e2ef6-f2d3-4701-97b7-4fd140b7a864" id="hs-cta-162e2ef6-f2d3-4701-97b7-4fd140b7a864"><br> 
+             <!--[if lte IE 8]>
+<div id="hs-cta-ie-element"></div>
+<p>< ![endif]--><br> <a href="http://cta-redirect.hubspot.com/cta/redirect/174427/162e2ef6-f2d3-4701-97b7-4fd140b7a864"><img class="hs-cta-img" id="hs-cta-img-162e2ef6-f2d3-4701-97b7-4fd140b7a864" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/174427/162e2ef6-f2d3-4701-97b7-4fd140b7a864.png" title="Reinvention of Enterprise Analytics" alt="162e2ef6 f2d3 4701 97b7 4fd140b7a864 Reinvention of Enterprise Analytics"></a><br> </span><br> <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script><br> <script type="text/javascript">
+            hbspt.cta.load(174427, '162e2ef6-f2d3-4701-97b7-4fd140b7a864');
+        </script><br> </span><br> 
+           <!-- end HubSpot Call-to-Action Code --></p> 
+         </section>
+         <!-- #post_content --> 
+        </div>
+        <!-- .panes.span-17.last --> 
+        <div style="clear:left"></div> 
+       </section>
+       <!-- #post-## --> 
+      </div>
+      <!-- .left.span-18 --> 
+      <section class="span-6 prepend-1 last" id="sidebar" style="width:250px;padding-left:20px;"> 
+       <div id="social-box"> 
+        <a href="https://twitter.com/Infochimps" class="twitter-follow-button">Follow @Infochimps</a> 
+        <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script> 
+        <div style="height:16px"></div> 
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Finfochimps&amp;send=false&amp;layout=standard&amp;width=230&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=42" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:230px; height:42px;" allowtransparency="true"></iframe> 
+       </div> 
+       <script type="text/javascript">
+              function fullname() {
+                var names = $('#mce-FULLNAME').val().split(" ");
+                $('#mce-FNAME').val( names[0] );
+                $('#mce-LNAME').val( names[1] );
+              }
+            </script> 
+       <div class="rss-feed"> 
+        <a href="http://feeds.feedburner.com/infochimps" title="RSS Feed" target="_blank"> <img src="http://infochimps.com/images/icons/rss.png"> Subscribe to our feed </a> 
+       </div> 
+       <div class="widget_hubspot_emailsubscribe_widget widget-container">
+        <h2>Subscribe via Email</h2>
+        <form style="text-align:center;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=infochimps', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+         <p>Enter your email address:</p>
+         <p><input type="text" name="email"></p>
+         <input type="hidden" value="infochimps" name="uri">
+         <input type="hidden" name="loc" value="en_US">
+         <input type="submit" value="Subscribe">
+        </form>
+       </div>
+       <div class="widget_text widget-container"> 
+        <div class="textwidget">
+         <script src="//platform.linkedin.com/in.js" type="text/javascript"></script> 
+         <script type="IN/CompanyProfile" data-id="1084507" data-format="inline" data-width="200"></script> 
+        </div> 
+       </div>
+       <div class="widget_search widget-container">
+        <h2>Search the Blog</h2> 
+        <form action="http://blog.infochimps.com/" method="get" class="search"> 
+         <input type="search" name="s" id="s" placeholder="Search the Blog"> 
+         <input type="submit" value="Search"> 
+        </form>
+       </div>
+       <div class="widget_categories widget-container">
+        <h2>Categories</h2> 
+        <ul> 
+         <li class="cat-item cat-item-414"><a href="http://blog.infochimps.com/category/announcements/" title="Newsworthy news from us">Announcements</a> </li> 
+         <li class="cat-item cat-item-469"><a href="http://blog.infochimps.com/category/big-data-news/" title="Articles about innovations in Big Data">Big Data News</a> </li> 
+         <li class="cat-item cat-item-460"><a href="http://blog.infochimps.com/category/community/" title="Austin &amp; the startup community">Community</a> </li> 
+         <li class="cat-item cat-item-504"><a href="http://blog.infochimps.com/category/company-culture/" title="View all posts filed under Company Culture">Company Culture</a> </li> 
+         <li class="cat-item cat-item-146"><a href="http://blog.infochimps.com/category/conferences-and-events/" title="Find us in the wild">Conferences &amp; Events</a> </li> 
+         <li class="cat-item cat-item-464"><a href="http://blog.infochimps.com/category/customer-highlights/" title="Sharing the big data love">Customer Highlights</a> </li> 
+         <li class="cat-item cat-item-462"><a href="http://blog.infochimps.com/category/data-mine/" title="Tips, tricks, &amp; sample code">Data Mine</a> </li> 
+         <li class="cat-item cat-item-673"><a href="http://blog.infochimps.com/category/guest-blogger-series/" title="View all posts filed under Guest Blogger Series">Guest Blogger Series</a> </li> 
+         <li class="cat-item cat-item-9"><a href="http://blog.infochimps.com/category/monkey/" title="Simian-related posts">Monkey Business</a> </li> 
+         <li class="cat-item cat-item-10"><a href="http://blog.infochimps.com/category/news/" title="Chimps in the media">News &amp; Interviews</a> </li> 
+         <li class="cat-item cat-item-492"><a href="http://blog.infochimps.com/category/partners/" title="View all posts filed under Partners">Partners</a> </li> 
+         <li class="cat-item cat-item-12"><a href="http://blog.infochimps.com/category/pop-data/" title="Sweet infographics from around the web">Pop Data</a> </li> 
+         <li class="cat-item cat-item-463"><a href="http://blog.infochimps.com/category/product-features/" title="The best of our chimpwork">Products &amp; Features</a> </li> 
+         <li class="cat-item cat-item-557"><a href="http://blog.infochimps.com/category/resources/" title="View all posts filed under Resources">Resources</a> </li> 
+        </ul> 
+       </div>
+       <div class="widget_archive widget-container">
+        <h2>Archives</h2> 
+        <ul> 
+         <li><a href="http://blog.infochimps.com/2014/05/">May 2014</a></li> 
+         <li><a href="http://blog.infochimps.com/2014/04/">April 2014</a></li> 
+         <li><a href="http://blog.infochimps.com/2014/03/">March 2014</a></li> 
+         <li><a href="http://blog.infochimps.com/2014/02/">February 2014</a></li> 
+         <li><a href="http://blog.infochimps.com/2014/01/">January 2014</a></li> 
+         <li><a href="http://blog.infochimps.com/2013/12/">December 2013</a></li> 
+         <li><a href="http://blog.infochimps.com/2013/11/">November 2013</a></li> 
+         <li><a href="http://blog.infochimps.com/2013/10/">October 2013</a></li> 
+         <li><a href="http://blog.infochimps.com/2013/09/">September 2013</a></li> 
+         <li><a href="http://blog.infochimps.com/2013/08/">August 2013</a></li> 
+         <li><a href="http://blog.infochimps.com/2013/05/">May 2013</a></li> 
+         <li><a href="http://blog.infochimps.com/2013/04/">April 2013</a></li> 
+         <li><a href="http://blog.infochimps.com/2013/03/">March 2013</a></li> 
+         <li><a href="http://blog.infochimps.com/2013/02/">February 2013</a></li> 
+         <li><a href="http://blog.infochimps.com/2013/01/">January 2013</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/12/">December 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/11/">November 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/10/">October 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/09/">September 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/08/">August 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/07/">July 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/06/">June 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/05/">May 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/04/">April 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/03/">March 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/02/">February 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2012/01/">January 2012</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/12/">December 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/11/">November 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/10/">October 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/09/">September 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/08/">August 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/07/">July 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/06/">June 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/04/">April 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/03/">March 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/02/">February 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2011/01/">January 2011</a></li> 
+         <li><a href="http://blog.infochimps.com/2010/12/">December 2010</a></li> 
+         <li><a href="http://blog.infochimps.com/2010/11/">November 2010</a></li> 
+         <li><a href="http://blog.infochimps.com/2010/09/">September 2010</a></li> 
+         <li><a href="http://blog.infochimps.com/2010/08/">August 2010</a></li> 
+         <li><a href="http://blog.infochimps.com/2010/07/">July 2010</a></li> 
+         <li><a href="http://blog.infochimps.com/2010/06/">June 2010</a></li> 
+         <li><a href="http://blog.infochimps.com/2010/05/">May 2010</a></li> 
+         <li><a href="http://blog.infochimps.com/2010/04/">April 2010</a></li> 
+         <li><a href="http://blog.infochimps.com/2010/03/">March 2010</a></li> 
+         <li><a href="http://blog.infochimps.com/2010/01/">January 2010</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/12/">December 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/11/">November 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/10/">October 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/09/">September 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/08/">August 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/07/">July 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/06/">June 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/04/">April 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/03/">March 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/02/">February 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2009/01/">January 2009</a></li> 
+         <li><a href="http://blog.infochimps.com/2008/12/">December 2008</a></li> 
+         <li><a href="http://blog.infochimps.com/2008/10/">October 2008</a></li> 
+         <li><a href="http://blog.infochimps.com/2008/09/">September 2008</a></li> 
+         <li><a href="http://blog.infochimps.com/2008/08/">August 2008</a></li> 
+         <li><a href="http://blog.infochimps.com/2008/06/">June 2008</a></li> 
+         <li><a href="http://blog.infochimps.com/2008/04/">April 2008</a></li> 
+         <li><a href="http://blog.infochimps.com/2008/03/">March 2008</a></li> 
+        </ul> 
+       </div> 
+      </section>
+      <!-- .last.span-6 #sidebar --> 
+     </article>
+     <!-- .dataset-show --> 
+    </div>
+    <!-- .container --> 
+    <div class="container pagination"> 
+     <a href="http://blog.infochimps.com/page/2/"><em class="older">Older posts »</em></a> 
+    </div> 
+   </div>
+   <!-- #main --> 
+  </div>
+  <!-- #outer-container --> 
+  <footer id="footer"> 
+   <div class="footer-holder"> 
+    <div class="f1"> 
+     <div class="container"> 
+      <div class="col1 solutions widget"> 
+       <h3>SOLUTIONS</h3> 
+       <div class="menu-solutions-menu-container"> 
+        <ul> 
+         <li><a href="http://www.infochimps.com/solutions/our-approach-to-big-data/">Our Approach</a></li> 
+         <li><a href="http://www.infochimps.com/solutions/industry-solutions/">Industry Solutions</a></li> 
+         <li><a href="http://www.infochimps.com/solutions/business-solutions/">Business Solutions</a></li> 
+         <li><a href="http://www.infochimps.com/solutions/roles/">Roles</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="cloud widget"> 
+       <h3>Infochimps Cloud</h3> 
+       <div class="menu-infochimps-cloud-container"> 
+        <ul> 
+         <li><a href="http://www.infochimps.com/infochimps-cloud/overview/">Overview</a></li> 
+         <li><a href="http://www.infochimps.com/infochimps-cloud/how-it-works/">How It Works</a></li> 
+         <li><a href="http://www.infochimps.com/infochimps-cloud/cloud-services/cloud-streams/">Cloud::Streams</a></li> 
+         <li><a href="http://www.infochimps.com/infochimps-cloud/cloud-services/cloud-queries/">Cloud::Queries</a></li> 
+         <li><a href="http://www.infochimps.com/infochimps-cloud/cloud-services/cloud-hadoop/">Cloud::Hadoop</a></li> 
+         <li><a href="http://www.infochimps.com/infochimps-cloud/tools/command-center/">Tools</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="resources widget"> 
+       <h3>RESOURCES</h3> 
+       <div class="menu-resources-menu-container"> 
+        <ul> 
+         <li><a href="http://www.infochimps.com/resources/">Overview</a></li> 
+         <li><a href="http://www.infochimps.com/resourcescategories/whitepapers/">Whitepapers</a></li> 
+         <li><a href="http://www.infochimps.com/video-categories/product-demo/">Product Demos</a></li> 
+         <li><a href="http://www.infochimps.com/resourcescategories/data-sheets/">Data Sheets</a></li> 
+         <li><a href="http://www.infochimps.com/resourcescategories/case-studies/">Case Studies</a></li> 
+         <li><a href="http://www.infochimps.com/video-categories/video/">Videos</a></li> 
+         <li><a href="http://www.infochimps.com/resourcescategories/events/">Events</a></li> 
+         <li><a href="http://www.infochimps.com/marketplace">Data Marketplace</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="community widget"> 
+       <h3>COMMUNITY</h3> 
+       <div class="menu-community-menu-container"> 
+        <ul> 
+         <li><a href="http://www.infochimps.com/community/">Overview</a></li> 
+         <li class="big"><a href="http://www.infochimps.com/get-started/">GET STARTED</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="col2 company widget"> 
+       <h3>Company</h3> 
+       <div class="menu-company-menu-container"> 
+        <ul> 
+         <li><a href="http://www.infochimps.com/company/about/">About</a></li> 
+         <li><a href="http://www.infochimps.com/presscategories/coverage/">Press</a></li> 
+         <li><a href="http://www.infochimps.com/company/customers/">Customers</a></li> 
+         <li><a href="http://www.infochimps.com/company/partners/">Technologies</a></li> 
+         <li><a href="http://www.infochimps.com/company/about/careers/">Careers</a></li> 
+         <li><a href="http://www.infochimps.com/company/contact-us/">Contact Us</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="widget widget_reallysimpletwitterwidget"> 
+       <h3>Twitter</h3> 
+       <ul> 
+        <li><a href="http://twitter.com/infochimps" target="_blank">Follow us on Twitter</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="clear"></div> 
+     <p>© 2014 Infochimps | <a href="http://www.infochimps.com/privacy">Privacy</a> | <a href="http://www.infochimps.com/terms-of-service">Terms of Service</a> | <a href="http://www.infochimps.com/copyright">Copyright</a> | <a href="http://www.infochimps.com/acknowledgements">Acknowledgements</a> | All Rights Reserved.</p> 
+    </div> 
+   </div> 
+  </footer> 
+  <!-- Start of Async HubSpot Analytics Code for WordPress v1.8.7 --> 
+  <script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "standard-page"]);
+	(function(d,s,i,r) {
+	if (d.getElementById(i)){return;}
+	var n = d.createElement(s),e = document.getElementsByTagName(s)[0];
+	n.id=i;n.src = '//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/174427.js';
+	e.parentNode.insertBefore(n, e);
+	})(document, "script", "hs-analytics",300000);
+</script> 
+  <!-- End of Async HubSpot Analytics Code --> 
+  <script type="text/javascript">
+  adroll_adv_id = "OLBBPBWYIBDDBPJWWQVWXS";
+  adroll_pix_id = "XGQOJEOCIJBMTLCTCKCRFT";
+  (function () {
+    var oldonload = window.onload;
+    window.onload = function(){
+      __adroll_loaded=true;
+      var scr = document.createElement("script");
+      var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+      scr.setAttribute('async', 'true');
+      scr.type = "text/javascript";
+      scr.src = host + "/j/roundtrip.js";
+      ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      if(oldonload){oldonload()}
+    };
+  }());
+</script> 
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script> 
+  <script type="text/javascript">
+    //<![CDATA[
+      document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://ssl-" : "http://")
+      + "include.reinvigorate.net/re_.js' type='text/javascript'%3E%3C/script%3E"));
+    //]]>
+  </script> 
+  <script type="text/javascript">
+    //<![CDATA[
+      try {
+      reinvigorate.track("k7w9p-0q18t374k0");
+      } catch(err) {}
+    //]]>
+  </script>  
+ </body>
+</html>

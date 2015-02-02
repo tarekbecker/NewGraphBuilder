@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html style="background-color: #39393a;" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+ <head> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta http-equiv="cache-control" content="max-age=0"> 
+  <meta http-equiv="cache-control" content="no-cache"> 
+  <meta http-equiv="expires" content="0"> 
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"> 
+  <meta http-equiv="pragma" content="no-cache"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Big Data Exploration, Visualization, Analytics</title> 
+  <link rel="stylesheet" type="text/css" href="/css/style.css?mtime=1412197151"> 
+  <script type="text/javascript">
+			var tinyMceButtons = "bold,italic,sub,sup,|,justifyleft,justifycenter,justifyright,justifyfull,|,undo,redo,|,bullist,numlist,|,outdent,indent,|,cut,copy,paste,pasteword,|,link,unlink,|,image,charmap,|,cleanup,code";
+		</script> 
+  <script type="text/javascript">
+		var defaultRedirTo = "Ly8=";
+	</script> 
+  <script type="text/javascript" src="/js/lib24watch/cache/shared.js?mtime=1392059154"></script>
+  <script type="text/javascript" src="/js/core.js?mtime=1406647722"></script>
+  <script type="text/javascript" src="/js/tinymce_youtube/tinymce_youtube.js?mtime=1392050584"></script> 
+  <script type="text/javascript">
+//<![CDATA[
+window.youtubeEmbedMarkupUrl = "\/tinymce_youtube\/tinymce_youtube\/embed_markup";
+//]]>
+</script> 
+  <script type="text/javascript">
+//<![CDATA[
+var tinyMceSpellCheckerLocales = "+English=en";
+//]]>
+</script> 
+  <script type="text/javascript" src="/js/tinymce_spell_checker/tinymce_spell_checker.js?mtime=1392050584"></script> 
+  <link rel="stylesheet" type="text/css" href="/css/forms/prototip/prototip.css?mtime=1392050577"> 
+  <link rel="stylesheet" type="text/css" href="/css/forms/field_styles.css?mtime=1392050577"> 
+  <script type="text/javascript" src="/js/forms/prototip/prototip.js?mtime=1392050584"></script> 
+  <script type="text/javascript" src="/js/forms/prototip/customizations.js?mtime=1392050584"></script> 
+  <script type="text/javascript" src="/js/forms/prototip/styles.js?mtime=1392050584"></script> 
+  <script type="text/javascript" src="/js/forms/forms.js?mtime=1392050584"></script> 
+  <script type="text/javascript">
+//<![CDATA[
+var formsAjaxSubmitUrl = "\/forms\/forms\/ajax_submit";
+//]]>
+</script> 
+  <script type="text/javascript" src="/js/content_regions/overlay-notifier.js?mtime=1392050581"></script> 
+  <script type="text/javascript" src="http://analytics.orases.com/piwik.js"></script>
+  <script type="text/javascript" defer>
+	try 
+	{
+		var piwikTracker = Piwik.getTracker("http:\/\/analytics.orases.com\/piwik.php", 103);
+		piwikTracker.trackPageView();
+		piwikTracker.enableLinkTracking();
+	}
+	catch (err)
+	{
+		console.warn(err);
+	}
+</script> 
+  <script type="text/javascript" src="/js/media/jwplayer.js?mtime=1392050584"></script> 
+  <script type="text/javascript" src="/js/news/carousel.js?mtime=1392050584"></script> 
+  <script type="text/javascript">
+		// <![CDATA[
+		if (typeof DateTimePicker !== "undefined")
+		{
+			DateTimePicker.localizedStrings = {"shortDayNames":{"5":"Fri","6":"Sat","0":"Sun","1":"Mon","2":"Tue","3":"Wed","4":"Thu"},"longDayNames":{"5":"Friday","6":"Saturday","0":"Sunday","1":"Monday","2":"Tuesday","3":"Wednesday","4":"Thursday"},"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"clearDate":"Clear date","clearTime":"Clear time","clearDateTime":"Clear date and time","y2kOutOfBounds":"You may have entered a two-digit year. Zoomdata will assume you meant #{year}, but this input only permits selections from #{minYear} to #{maxYear}. #{newYear} will be used instead. You should enter four digit years.","yearTooHighWarning":"The year you entered (#{enteredYear}) is too far in the future; it cannot exceed #{maxYear}. The year has been changed to #{maxYear}."};
+		}
+		// ]]>
+	</script> 
+  <link rel="stylesheet" type="text/css" href="/css/home_page/home_page.css?mtime=1412197698">
+  <script type="text/javascript" src="/js/home_page/home_page.js?mtime=1392050584"></script>
+  <link href="/favicon.ico?1392050596" type="image/x-icon" rel="icon">
+  <link href="/favicon.ico?1392050596" type="image/x-icon" rel="shortcut icon"> 
+  <meta name="Description" content="Next Generation Big Data Analytics, Learn how to connect to Hadoop, Apache Solr, Stream Process billions of records, and visualize them using D3."> 
+  <meta name="Keywords" content="Hadoop, Cloudera, HDFS, No SQL, D3, JavaScript, Stream Processing."> 
+  <meta name="Author" content="Justin Langseth"> 
+  <meta name="Robots" content="all"> 
+  <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]--> 
+  <script type="text/javascript">
+		    var _elqQ = _elqQ || [];
+		    _elqQ.push(['elqSetSiteId', '116661760']);
+		    _elqQ.push(['elqTrackPageView']);
+		    
+		    (function () {
+				function async_load() {
+				    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+				    s.src = '//img03.en25.com/i/elqCfg.min.js';
+				    var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+				}
+				if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+				else if (window.attachEvent) window.attachEvent('onload', async_load); 
+		    })();
+		</script> 
+ </head> 
+ <body id="body"> 
+  <div id="fb-root"></div> 
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=466774773424791";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> 
+  <header> 
+   <section class="inner"> 
+    <a href="/en_us" class="logo" alt="Zoomdata">Zoomdata</a>
+    <ul class="contact-links"> 
+     <li> <a href="/about/jobs">Jobs</a> </li> 
+     <li id="link-help"> <script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script> <style type="text/css" media="screen, projection">
+    @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+</style> <script type="text/javascript">
+    if (typeof(Zenbox) !== "undefined") {
+        Zenbox.init( 
+            { 
+                dropboxID: "20255263", 
+                url: "https://zoomdata.zendesk.com",
+                tabID: "questions",
+                tabColor: "#9060C1",
+                tag: "dropbox_2",
+                hide_tab: true,
+                tabPosition: "Right"
+            }
+        );
+    }
+</script><a href="https://zoomdata.zendesk.com/hc/en-us" class="not-trigger-popup">Support</a> </li> 
+     <li id="link-contact"> <a href="/contact">Contact</a> </li> 
+    </ul> 
+   </section> 
+  </header> 
+  <nav> 
+   <section class="inner"> 
+    <ul class=" level-1" id="nav">
+     <li class="overview current exact-current"><a href="/">Overview</a></li>
+     <li class="product"><a href="/product">Product</a></li>
+     <li class="technology"><a href="/technology">Technology</a></li>
+     <li class="demo"><a href="/demos">Demo</a></li>
+     <li class="download"><a href="/download">Download</a></li>
+     <li class="about has-children"><a href="/about/team">About</a>
+      <ul class=" level-2">
+       <li class="team"><a href="/about/team">Team</a></li>
+       <li class="jobs"><a href="/about/jobs">Jobs</a></li>
+       <li class="partners"><a href="/partners">Partners</a></li>
+      </ul></li>
+    </ul> 
+   </section> 
+  </nav> 
+  <main id="content"> 
+   <h1>Zoomdata</h1> 
+   <div id="big-photo"> 
+    <div id="next-gen-data"> 
+     <section class="inner"> 
+      <ul class="bullets"> 
+       <li class="bullet-1"> <h3>Next Generation Data Connectors</h3> <h4>Hadoop, NoSQL, Elastic Search, Solr, Spark</h4> </li> 
+       <li class="bullet-2"> <h3>Fast Visualizations</h3> <h4>Sharpen billions of records in seconds</h4> </li> 
+       <li class="bullet-3"> <h3>Easy &amp; Beautiful</h3> <h4>Web/mobile, dashboard, customizable interface</h4> </li> 
+       <li class="bullet-4"> <h3>Historical &amp;<br>Real-Time</h3> <h4>Seamlessly access big data at the source</h4> </li> 
+      </ul> 
+      <div class="green-bar"> 
+       <h2> The Fastest <strong>Big Data Exploration,</strong><br> <strong>Visualization &amp; Analytics Platform</strong> </h2> 
+       <ul class="demos-link"> 
+        <li> <a href="/demos">Try out the demo</a> </li> 
+        <li> <a href="/media/media/video_popup/259/autostart:1" id="view-video">Watch the video</a> </li> 
+       </ul> 
+       <div id="video-container-large" class="large-iframe"> 
+        <div class="curtain"></div> 
+        <div class="theater"> 
+         <div class="screen"> 
+          <h3> <a href="javascript:void(0);" class="close-iframe" id="close-iframe-btn"><span>X</span></a> </h3> 
+          <div class="media-video-player media-video-player-259" style="width: 960px; height: 540px; background-image: url(/img/media/icons/cache/259-96e0a85d18dfa3be2bc14a378a52a6f3); background-repeat: no-repeat;"> 
+           <p id="media-88b0aa4db517759cb31f1d8cdfbfed3c">Loading...</p> 
+           <script type="text/javascript">
+            		var videoOptions = {"flashplayer":"\/swf\/media\/player.swf","file":"\/mp4\/media\/259.mp4","width":960,"height":540,"autostart":true,"duration":83,"controlbar":"over","image":"\/img\/media\/cache\/media_video_frame\/frame\/259-96e0a85d18dfa3be2bc14a378a52a6f3"};
+                    var videoId = "media-88b0aa4db517759cb31f1d8cdfbfed3c";
+            	</script> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+    </div> 
+   </div> 
+   <div class="interactive-dashboards"> 
+    <section class="inner"> 
+     <h2 id="interactive-dashboards">Interactive <strong>Dashboards</strong></h2> 
+     <ul class="data"> 
+      <li><strong>Data DVR</strong> – Pause/RW/FF Data</li> 
+      <li><strong>Data Quilt</strong> – Collaborative user community</li> 
+      <li><strong>Data Fusion</strong> – Fuse multiple sources together</li> 
+     </ul> 
+     <ol> 
+      <li class="item-1"> <h3><span>1</span>Data Segmentation</h3> 
+       <ul> 
+        <li>Search through billions of records in seconds</li> 
+        <li>Use filters and faceted search to narrow results</li> 
+        <li>Replace lengthy/time consuming queries</li> 
+       </ul> </li> 
+      <li class="item-4"> <h3><span>4</span>White Labeled Interface</h3> 
+       <ul> 
+        <li>Customized/branded user experience</li> 
+        <li>Visualizations designed around your data</li> 
+        <li>Create a competitive differentiator</li> 
+       </ul> </li> 
+      <li class="item-2"> <h3><span>2</span>Log Data Analytics</h3> 
+       <ul> 
+        <li>Monitor network activity</li> 
+        <li>Analyze semi/un/structured data</li> 
+        <li>Understand what happened 5 minutes ago</li> 
+       </ul> </li> 
+      <li class="item-5"> <h3><span>5</span>Click Stream Analytics</h3> 
+       <ul> 
+        <li>Stream user activity/clicks in real-time</li> 
+        <li>Use maps to visualize locations</li> 
+        <li>Create targeted marketing programs</li> 
+       </ul> </li> 
+      <li class="item-3"> <h3><span>3</span>Interactive Web Widgets</h3> 
+       <ul> 
+        <li>Embed Zoomdata onto your webpage</li> 
+        <li>Integrate multiple visuals onto a single page</li> 
+        <li>Real-time distribution of information</li> 
+        <li> </li>
+       </ul> </li> 
+      <li class="item-6"> <h3><span>6</span>Custom Experience</h3> 
+       <ul> 
+        <li>Create end to end solutions</li> 
+        <li>Quickly analyze big data sets</li> 
+        <li>Deliver an interactive experience</li> 
+       </ul> </li> 
+     </ol> 
+    </section> 
+   </div> 
+   <section id="big-data-analytics" class="inner analytics"> 
+    <h2>Big Data <strong>Exploration,</strong><br><strong>Visualization &amp; Analytics</strong></h2> 
+    <dl> 
+     <dt>
+      Relational Database
+     </dt> 
+     <dd>
+      Next Generation Databases
+     </dd> 
+     <dt>
+      Gigabytes &gt; Terabytes
+     </dt> 
+     <dd>
+      Terabytes &gt; Petabytes
+     </dd> 
+     <dt>
+      Copy/ETL Data
+     </dt> 
+     <dd>
+      Native Source Access
+     </dd> 
+     <dt>
+      Structured Data
+     </dt> 
+     <dd>
+      Semi/Un/Structured Data
+     </dd> 
+     <dt>
+      Proprietary Tech Stacks
+     </dt> 
+     <dd>
+      Pluggable Architecture
+     </dd> 
+     <dt>
+      Data Models/Schemas
+     </dt> 
+     <dd>
+      Wide/Long Table Documents
+     </dd> 
+     <dt>
+      Return Key Analytics
+     </dt> 
+     <dd>
+      Real Time/Historical Stream Processing
+     </dd> 
+    </dl> 
+   </section> 
+   <div id="data-sharpening"> 
+    <section class="inner"> 
+     <h2>Data Sharpening<strong>Using Micro-Queries</strong></h2> 
+     <img src="/img/home_page/data-sharpening.png" alt="Data Interaction, Zoomdata Server, Data Sharpens"> 
+    </section> 
+   </div> 
+   <div id="big-data"> 
+    <section class="inner"> 
+     <h2>We Are Designed For<strong>Big Data</strong></h2> 
+     <p> By implementing Big Data systems based on Hadoop, businesses are realizing significant operational savings and productivity benefits when it comes to managing large repositories of Structured, Semi-structured and Unstructured data. </p> 
+     <p class="green"> Zoomdata's visualization and analytics ecosystem is designed to take advantage of the many benefits that are inherent within Hadoop deployments. <strong>For instance:</strong> </p> 
+     <ul class="green-rounded"> 
+      <li> <h4>Native Access Support:</h4> <p> Zoomdata's Cloudera Impala, Amazon Redshift, MongoDB, and other connectors allow you to bypass the traditional ETL process and connect to data directly at the source. </p> </li> 
+      <li> <h4>Search:</h4> <p> Zoomdata's Cloudera Search, Apache Solr, and Elasticsearch connectors offer users the ability to search through unstructured text, and utilize faceted search. </p> </li> 
+      <li> <h4>Stream Processing Engine:</h4> <p> Zoomdata's patented Big Data Micro-Query technology stream billions of records from a Native Data Source directly to a Zoomdata Users Account. </p> </li> 
+     </ul> 
+    </section> 
+   </div> 
+   <section id="media"> 
+    <div class="white"> 
+     <section class="container"> 
+      <div id="media-carousel"> 
+       <a href="javascript:void(0);" class="prev">&lt;</a> 
+       <div class="viewport"> 
+        <ul id="slides"> 
+         <li> <a href="https://zoomdata.zendesk.com/hc/en-us/articles/203655576" class="logo"><img src="/img/media/icons/cache/270-380-80-6fabbdd50fec3939fcb44196e00d05bf" alt="PR News Wire"></a> <p class="quote"> <a href="https://zoomdata.zendesk.com/hc/en-us/articles/203655576">Zoomdata Raises $17 Million for World's Fastest Big Data Exploration, Visualization and Analytics Platform</a> </p> </li> 
+         <li> <a href="http://techcrunch.com/2014/10/06/zoomdata-scores-17m-to-disrupt-the-business-intelligence-market-again/" class="logo"><img src="/img/media/icons/cache/75-380-80-1bc34425bd63630135e8b78a8bbe5557" alt="Tech Crunch"></a> <p class="quote"> <a href="http://techcrunch.com/2014/10/06/zoomdata-scores-17m-to-disrupt-the-business-intelligence-market-again/">Zoomdata is the ability to stream it like a video and move back and forth in time as though you were scrubbing a video</a> </p> </li> 
+         <li> <a href="http://blogs.wsj.com/venturecapital/2014/10/06/zoomdata-raises-17-million-for-fast-exploration-of-big-data/" class="logo"><img src="/img/media/icons/cache/271-380-80-612fc0a17d6565e691d301a75f7f60bc" alt="Wall Street Journal"></a> <p class="quote"> <a href="http://blogs.wsj.com/venturecapital/2014/10/06/zoomdata-raises-17-million-for-fast-exploration-of-big-data/">Hadoop and NoSQL are for data geeks. We’re trying to build tools for the rest of us,</a> </p> </li> 
+         <li> <a href="http://www.washingtonpost.com/business/capitalbusiness/zoomdata-collects-17m-from-slate-of-investors-that-includes-accel-partners/2014/10/03/52cda050-4a41-11e4-891d-713f052086a0_story.html" class="logo"><img src="/img/media/icons/cache/30-380-80-bd51f992223a1d8e1b98bf88f66192f4" alt="The Washington Post"></a> <p class="quote"> <a href="http://www.washingtonpost.com/business/capitalbusiness/zoomdata-collects-17m-from-slate-of-investors-that-includes-accel-partners/2014/10/03/52cda050-4a41-11e4-891d-713f052086a0_story.html">Zoomdata’s technology builds on the big data phenomenon that has gripped just about every industry in recent years. </a> </p> </li> 
+         <li> <a href="https://gigaom.com/2014/10/06/zoomdata-raises-17m-to-become-the-visualization-layer-for-big-data/" class="logo"><img src="/img/media/icons/cache/28-380-80-069f1721d1cd22afa8ec93aa8fe9ebdf" alt="Gigaom"></a> <p class="quote"> <a href="https://gigaom.com/2014/10/06/zoomdata-raises-17m-to-become-the-visualization-layer-for-big-data/">Zoomdata is fairly unique in the world of big data startups headquartered more than 2,500 miles from Silicon Valley attracting attention from some big Silicon Valley names</a> </p> </li> 
+         <li> <a href="http://readwrite.com/2014/11/11/business-intelligence-big-data-zoomdata-justin-langseth?utm_source=TWITTER&amp;utm_medium=post&amp;utm_campaign=ReadWrite" class="logo"><img src="/img/media/icons/cache/280-380-80-3100582c280e1b6980a38f4a53c343f9" alt="Readwrite"></a> <p class="quote"> <a href="http://readwrite.com/2014/11/11/business-intelligence-big-data-zoomdata-justin-langseth?utm_source=TWITTER&amp;utm_medium=post&amp;utm_campaign=ReadWrite">Zoomdata figured out a way to stream process the results of a query back from the original data source and display the results in a sketch view that gets sharper as more data is processed.</a> </p> </li> 
+        </ul> 
+       </div> 
+       <a href="javascript:void(0);" class="next">&gt;</a> 
+      </div>
+     </section> 
+    </div>  
+   </section> 
+   <script type="text/javascript">
+			document.observe(
+				'dom:loaded',
+				function ()
+				{
+					new Carousel(
+						$('media-carousel'),
+						{
+							direction: 'horizontal',
+							viewportContainer: 'div.viewport',
+							slideContainer: 'ul#slides',
+							enableKeyboardShortcuts: false,
+							enableSwipeForTouchDevices: false,
+							positionIndicators: false,
+							previousButton: 'a.prev',
+							nextButton: 'a.next',
+							autoRotate: false,
+							moveBy: 'single'
+						}
+					);
+				}
+			);
+		</script> 
+  </main> 
+  <footer> 
+   <section class="main"> 
+    <ul class="inner"> 
+     <li> <h3>Facebook</h3> 
+      <div class="fb-like-box" data-href="http://www.facebook.com/Zoomdata" data-width="240" data-height="300" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div> </li> 
+     <li> <h3>Quick Links</h3> 
+      <div id="editable-content-region-footerQuickLinks-103" class="editable-content-region editable-content-region-html editable-content-region-footerQuickLinks">
+       <ul> 
+        <li><a href="/download">Download</a></li> 
+        <li><a href="/technology#architecture">Architecture</a></li> 
+        <li><a href="/demo">Demo</a></li> 
+        <li><a href="/contact">Contact Us</a></li> 
+        <li><a href="/#big-data-analytics">Big Data Analytics</a></li> 
+        <li><a href="http://www.zoomdata.com/partners">Partners</a></li> 
+        <li><a href="http://www.zoomdata.com/technology#connector-studio">Connector Studio</a></li> 
+        <li><a href="https://zoomdata.zendesk.com/hc/en-us">Support</a></li> 
+        <li><a href="/#interactive-dashboards">Interactive Dashboard</a></li> 
+        <li><a href="http://www.zoomdata.com/technology#visualization-studio">Visualization Studio</a></li> 
+        <li><a href="http://www.zoomdata.com/about/team">Team</a></li> 
+        <li><a href="http://www.zoomdata.com/about/jobs">Jobs</a></li> 
+       </ul> 
+       <script type="text/javascript">// <![CDATA[
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+//
+//
+//
+//
+//
+//
+// // ]]></script> 
+       <p>&nbsp;</p> 
+       <script type="text/javascript">// <![CDATA[
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+//
+//
+// // ]]></script>
+      </div> </li> 
+     <li> <h3>Contact Information</h3> <a href="/" alt="Zoomdata" title="Zoomdata" class="logo">Zoomdata</a> 
+      <ul id="contact-icons"> 
+       <li id="footer-phone"> <p>(888) 600-6996</p> </li> 
+       <li id="footer-address"> <address> 11921 Freedom Drive<br> Suite 800<br> Reston, VA 20190 </address> </li> 
+       <li id="footer-contact"> <a href="/contact">Contact us</a> </li> 
+      </ul> </li> 
+    </ul> 
+   </section> 
+   <section class="extra"> 
+    <ul class="inner"> 
+     <li> 
+      <ul class="social-links"> 
+       <li id="link-facebook"> <a href="https://www.facebook.com/Zoomdata" title="Facebook" rel="external">Facebook</a> </li> 
+       <li id="link-twitter"> <a href="https://twitter.com/zoomdata" title="Twitter" rel="external">Twitter</a> </li> 
+       <li id="link-youtube"> <a href="http://www.youtube.com/zoomdata" title="YouTube" rel="external">YouTube</a> </li> 
+       <li id="link-linkedin"> <a href="http://www.linkedin.com/company/zoomdata" title="LinkedIn" rel="external">LinkedIn</a> </li> 
+       <li id="link-googleplus"> <a href="https://plus.google.com/u/0/109200684493511618967/posts" title="Google+" rel="external">Google+</a> </li> 
+       <li id="link-contact"> <a href="/contact">Contact</a> </li> 
+      </ul> </li> 
+     <li> <p>© 2014 Zoomdata™. All Rights Reserved.</p> </li> 
+     <li> <a href="https://zoomdata.zendesk.com/hc/en-us" class="support-link">Visit our support page</a> </li> 
+    </ul> 
+   </section> 
+  </footer> 
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35945642-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>   
+ </body>
+</html>

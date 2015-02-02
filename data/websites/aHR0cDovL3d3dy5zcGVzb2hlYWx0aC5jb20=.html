@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width"> 
+  <!-- Allows iOS users to download an icon for their homescreen --> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-ipad.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-iphoneR.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-ipadR.png"> 
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-iphone.png"> 
+  <title>CurityMD</title> 
+  <link rel="stylesheet" type="text/css" href="css/desktop/animations.css"> 
+  <link rel="stylesheet" type="text/css" href="css/desktop/styles.css"> 
+  <link rel="stylesheet" type="text/css" href="css/desktop/blog.css"> 
+  <link rel="stylesheet" type="text/css" href="css/jQuery/jquery.autocomplete.css"> 
+  <link rel="stylesheet" type="text/css" href="css/jQuery/jquery-smoothness-ui.css"> 
+  <script type="text/javascript" src="js/decodeEmail.js"></script> 
+  <script>
+            // ANALYTICS SCRIPTS
+
+            // GOOGLE
+            // Google analytics script
+            // Should always go right before </head> tag
+
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),3
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            /* For Live Slice   
+            /* For Live Slice */
+			ga('create', 'UA-40184360-1', 'spesohealth.com'); 
+			
+	
+			/* For Dev Slice 
+			ga('create', 'UA-40184360-3', {'cookieDomain': 'none'});
+            */
+            
+            // KEEN
+            // This is our stuff from keen.io
+            // copy pasted from https://keen.io/docs/clients/javascript/usage-guide/
+            var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+            // Configure the Keen object with your Project ID and (optional) access keys.
+            Keen.configure({
+            projectId: "5207b388897a2c1f92000002",
+            // required for sending events
+            writeKey: "fc6c11a0ce7e3841cc2ed0b0a88cfc600197d98b005603c6aada33cef0a06b1737cf32c30de3c899797175bd77f75176fa019242a6eb8d5d10837850b952bb1355ad303d489a5f790062b83400f724a7c96c47e22e3f0f881e2720eb8045dd454e43fb175d8a2557fabdafff2c7d9d29",
+            });
+		</script> 
+ </head> 
+ <body> 
+  <header class="header"> 
+   <nav class="header-nav"> 
+    <a href="#mobile-menu" class="mobile-menu-tab"><img src="images/mobile-menu-tab.png" alt="menu"></a> 
+    <a href="index.html"><img src="images/speso-logo-old.png" alt="logo" class="logo"></a> 
+    <ul id="mobile-menu"> 
+     <h1><span>Navigation</span><a href="#mobile-menu" class="close"><img src="images/mobile-close-tab.png"></a></h1> 
+     <li><a href="howto/index.html">How it Works</a></li> 
+     <li><a href="contact/index.html">Contact</a></li> 
+     <li><a href="/search">Search <sup>beta</sup></a></li> 
+     <li><a href="about/index.html">About Us</a></li> 
+     <li><a href="disclaimer/index.html">Disclaimer</a></li> 
+    </ul> 
+    <!--a href="#mobile-search" class="mobile-search-tab"><img src="images/mobile-search-tab.png" alt="menu" /></a--> 
+   </nav> 
+  </header> 
+  <section class="splash-container"> 
+   <div class="splash-banner"> 
+    <div class="banner-message">
+     Speso Health is proud to introduce CurityMD, a new tool to connect with experts in complex conditions
+    </div> 
+   </div> 
+   <div class="splash-search-container"> 
+    <form action="/search" method="GET" class="condition-search"> 
+     <label for="conditionName">Quick Condition Search:</label>
+     <input type="text" name="conditionName" id="conditionName" class="conditionName" placeholder="Search for experts in your diagnosis"> 
+     <input type="text" name="city" id="city"> 
+     <input type="text" name="state" id="state"> 
+     <!--                 <input type="text" style="display:none" name="address" id="address" /> --> 
+     <!--                 <input type="text" style="display:none" name="country" id="country" /> --> 
+     <!--                 <input type="text" style="display:none" name="zipcode" id="zipcode" /> --> 
+     <!--                 <input type="text" style="display:none" name="radius" id="radius" /> --> 
+     <!--                 <input type="checkbox" style="display:none" name="organizations?" value="organizations" > --> 
+     <!--                 <input type="checkbox" style="display:none" name="organizations?" id="organizations?" value="organizations" checked /> --> 
+     <!--                 <input type="checkbox" style="display:none" name="publications?" id="publications?" value="publications" checked /> --> 
+     <!--                 <input type="checkbox" style="display:none" name="clinicalTrials?" id="clinicalTrials?" value="clinicalTrials" checked /> --> 
+     <!--                 <input type="checkbox" style="display:none" name="physicians?" id="physicians?" value="physicians" /> --> 
+     <!--                 <input type="radio" style="display:none" name="ranking" id="bestMatch" value="overallBestMatch" /> --> 
+     <!--                 <input type="radio" style="display:none" name="ranking" id="mostPublished" value="mostPublished" checked> --> 
+     <!--                 <input type="radio" style="display:none" name="ranking" id="mostClinicalTrials" value="mostClinicalTrials"> --> 
+     <!--                 <input type="radio" style="display:none" name="ranking" id="impactFactor" value="impactFactor"> --> 
+     <input type="submit" class="search-submit" value=""> 
+    </form> 
+   </div> 
+  </section> 
+  <h1 class="blog-header"><a href="http://blog.spesohealth.com">Recent News At CurityMD</a></h1> 
+  <h2 class="blog-sub-header">Follow us on <a href="http://blog.spesohealth.com" target="new">tumblr</a></h2> 
+  <section class="blog container"> 
+  </section> 
+  <section class="mission-statement"> 
+   <h1 class="mission-main-header">Rare and Complex Diseases Present Challenges</h1> 
+   <h2 class="mission-sub-header">We make sure that finding the right expert isn't one of them</h2> 
+   <article class="mission-info-container"> 
+    <img src="images/1in10_speso1b.png" alt="1 in 10" class="mission-info-icon"> 
+    <h1 class="mission-info-header">Rare Patients Are Everywhere</h1> 
+    <p class="mission-info-desc"> Despite the name, there are over 25 million patients with rare and complex conditions in the US alone. SpeSo Health has built a new tool called CurityMD, designed to help these patients, and their supporters, find and connect with the best experts for them. </p> 
+   </article> 
+   <article class="mission-info-container"> 
+    <img src="images/docs_speso2.png" alt="doctors" class="mission-info-icon"> 
+    <h1 class="mission-info-header">Search Like an Expert</h1> 
+    <p class="mission-info-desc">SpeSo built CurityMD based on the same tools and information that clinical experts, researchers, hospitals and companies use to understand expertise, and makes it simple enough for anyone to use.</p> 
+   </article> 
+   <article class="mission-info-container"> 
+    <img src="images/compass_speso2.png" alt="compass" class="mission-info-icon"> 
+    <h1 class="mission-info-header">Start Using CurityMD</h1> 
+    <p class="mission-info-desc">We are ready to help you connect to experts around the country. Ready to dive in? Perform your first Search using the CurityMD search service above or click <a href="/search">here!</a></p> 
+   </article> 
+  </section> 
+  <section class="video-container"> 
+   <div class="video-information"> 
+    <h1 class="video-info-header">Why a search engine for rare diseases?</h1> 
+    <p class="video-info-desc">Watch this video tell a story of how rare and complex conditions affect millions of people around the country, and how SpeSo's new CurityMD service can help make the task of finding experienced clinical experts and hospitals easier than it is today!</p> 
+   </div> 
+   <div class="video"> 
+    <img src="images/play-on.png" alt="play" class="play-button"> 
+   </div> 
+   <div class="video-lightbox"> 
+    <a href="#" class="close"><img src="images/close-button-thin.png"></a> 
+    <iframe src="//www.youtube.com/embed/Ez9AGbJkK8Q?showinfo=0&amp;modestbranding=1&amp;theme=light&amp;fs=1" frameborder="0" allowfullscreen></iframe> 
+   </div> 
+  </section> 
+  <section class="content-container about-curity"> 
+   <p class="content-desc"> CurityMD is an online platform that helps measure expertise in rare and complex conditions to help improve how patients and qualified specialists connect. </p> 
+   <ul class="content-checklist"> 
+    <li><img src="images/check.png" alt="check" class="checkmark">Find the most experienced care centers and experts - either nearby or anywhere in the country</li> 
+    <li><img src="images/check.png" alt="check" class="checkmark">Learn about important clinical trials, research and new treatments</li> 
+    <li><img src="images/check.png" alt="check" class="checkmark">Find hospitals looking for patients with rare and complex conditions</li> 
+    <li><img src="images/check.png" alt="check" class="checkmark">Find information that you can trust - we only use official, unbiased data</li> 
+   </ul> 
+   <img src="images/macbook.png" alt="macbook" class="macbook-demo"> 
+  </section> 
+  <section class="content-container choose-site"> 
+   <figure> 
+    <a href="/search" class="link for-patients"> <img src="images/circlemockup-patients.png" alt="patients" class="icon for-patients"> <h1 class="label for-patients">Information for Patients</h1> </a> 
+    <a href="physicians/index.html" class="link for-physicians"> <img src="images/circlemockup-physicians.png" alt="physicians" class="icon for physicians"> <h1 class="label for-physicians">Information for Physicians</h1> </a> 
+   </figure> 
+  </section> 
+  <section class="content-container contact-us"> 
+   <h1 class="main-header">Want to know more about SpeSo Health and their CurityMD tool?</h1> 
+   <div class="links-container"> 
+    <a href="contact/index.html" class="contact-link for-email"> <img src="images/blank-background.png" alt="contact us by email"> <h1>Contact Us</h1> </a> 
+    <a href="howto/index.html" class="contact-link for-howto"> <img src="images/blank-background.png" alt="contact us by email"> <h1>How Curity Works</h1> </a> 
+    <a href="" class="contact-link for-media"> <img src="images/blank-background.png" alt="contact us by email"> <h1>Media Inquiries</h1> </a> 
+   </div> 
+   <!--p class="content-desc for-users">Get in touch with us on the <a href="contact/index.html">contact page</a>, join our mailing list below, or learn how SpeSo works on the <a href="howto/index.html">how to page</a>!</p>
+            <p class="content-desc for-media"></p--> 
+  </section> 
+  <footer class="footer"> 
+   <div class="social-networks-container"> 
+    <figure> 
+     <a class="twitter-timeline" href="https://twitter.com/SpeSoHealth" data-widget-id="353262730972631040" data-chrome="transparent" data-border-color="#000000" width="">Tweets by @SpeSoHealth</a> 
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+    </figure> 
+   </div> 
+   <div class="faqs-container"> 
+    <h1 class="main-header">Frequently Asked Questions</h1> 
+    <div class="faqs-list"> 
+     <div class="faqs-list-item"> 
+      <h2 class="faqs-question">What is CurityMD?</h2> 
+      <p class="faqs-answer">CurityMD is a new product launched by SpeSo Health an early stage Healthcare IT company that is developing an online second opinion and educational platform that serves patients with rare and complex conditions. We are working to globalize medical expertise and empower these patients and their families to find answers faster, and achieve better medical outcomes more with less stress.</p> 
+      <p class="faqs-answer">We help patients with rare, complex and severe conditions find the specialists and hospitals that are best-suited to help them manage their specific case. We also help connect patients with leading specialists nationwide and share their health records to receive an online second opinion.</p> 
+     </div> 
+     <div class="faqs-list-item"> 
+      <h2 class="faqs-question">How does it work?</h2> 
+      <h3 class="faqs-answer-header">Identify the right expert based on a condition</h3> 
+      <p class="faqs-answer"> Enter a rare or complex condition into our search system that will cover over 6,000 rare conditions. The CurityMD Analysis tools then identify the specialists and hospitals that are most experienced at treating that condition. We do this using objective, unbiased data sources related to research, quality, capabilities, funding, influence and productivity.</p> 
+      <h3 class="faqs-answer-header">(Coming Soon): Secure online 2nd opinion</h3> 
+      <p class="faqs-answer">The SpeSo platform will soon allow you to connect with the expert hospital experts identified for your condition, by securely transferring medical information to a leading expert center. Specialists at that center then provide a second opinion to the patient, all delivered online.</p> 
+     </div> 
+     <div class="faqs-list-item"> 
+      <h2 class="faqs-question">Do I need to provide information to search?</h2> 
+      <p class="faqs-answer">We want to make our information available to as many patients as possible, as quickly as possible. That's why we have launched global access to CurityMD without requiring any user information. For the future, we invite all of our users to submit their email and stay up to date as we build new features into the site.</p> 
+      <p class="faqs-answer">In the future, we will let users save searches and communicate directly with experts through a simple, private account profile. With a SpeSo Profile, a user can customize their search: location information, treatments of interest, automatic alerts for clinical trials and new research nearby - all information that can help us find you top-class experts for treating patients just like you.</p> 
+     </div> 
+     <div class="faqs-list-item"> 
+      <h2 class="faqs-question">Does CurityMD cost anything to use?</h2> 
+      <p class="faqs-answer">The CurityMD patient access service is free for all patients!</p> 
+     </div> 
+     <div class="faqs-list-item"> 
+      <h2 class="faqs-question">Can I communicate with experts online?</h2> 
+      <p class="faqs-answer">Today, SpeSo is working with hospitals and physicians to set up pilot programs to help patients communicate with qualified experts online. We are also building a secure platform to allow CurityMD users to share personal health records with an expert health institution and receive a second opinion within a matter of days. Empowering patients with SpeSo's online access programs can eliminate long waits, costly travel, and inconvenient hotel stays.</p> 
+     </div> 
+     <div class="faqs-list-item"> 
+      <h2 class="faqs-question">Who are CurityMD's Supporters?</h2> 
+      <p class="faqs-answer">SpeSo Health, and their product CurityMD, are an independent company. We serve patients first. We believe that empowering rare and complex condition communities with better information can be both a valuable service and a successful business. We are fortunate to have supporters at the frontier of medicine and technology.</p> 
+      <p class="faqs-answer"><a href="sponsors/index.html">Click here to read more.</a></p> 
+     </div> 
+    </div>
+    <!-- END FAQS --> 
+   </div> 
+   <div class="curity-contact-container"> 
+    <h1 class="main-header">Join Our Mailing List</h1> 
+    <form action="http://spesohealth.us7.list-manage.com/subscribe/post?u=878eeee0712832fb6c2bf9bd7&amp;id=b439d5e488" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="mce-email-subscribe"> 
+     <div class="mc-field-group"> 
+      <input type="email" value="" name="EMAIL" class="required email" placeholder="john@gmail.com" id="mce-EMAIL"> 
+     </div> 
+     <button>Submit</button> 
+    </form> 
+    <h1 class="main-header">Media Inquiries</h1> 
+    <span class="media-container">Send Emails to: <a href="mailto:" name="e_mail">ddd.@mi mvryocuicat</a></span> 
+    <div class="container for-social-networks"> 
+     <h1 class="main-header">Connect with Us</h1> 
+     <a href="https://www.facebook.com/pages/Speso-Health/154607508033072" class="social" id="facebook" target="new"> <img src="images/social_fb.png" alt="facebook"> <img src="images/social_fb.png" alt="facebook"> </a> 
+     <a href="https://twitter.com/curitymd/" target="new" class="social" id="twitter"> <img src="images/social_tw.png" alt="twitter"> <img src="images/social_tw.png" alt="twitter"> </a>
+     <a href="http://www.linkedin.com/company/3354831?trk=tyah&amp;trkInfo=tas%3A%22speso%20health%22%2Cidx%3A1-1-1" class="social" id="linkedin" target="new"> <img src="images/social_in.png" alt="linkedin"> <img src="images/social_in.png" alt="linkedin"> </a> 
+     <a href="https://plus.google.com/107862424972340571499/posts" class="social" id="googleplus" target="new"> <img src="images/social_plus.png" alt="google plus"> <img src="images/social_plus.png" alt="google plus"> </a> 
+    </div> 
+   </div> 
+   <address class="site-information"> 
+    <nav class="footer-nav"> 
+     <ul> 
+      <li><a href="">Home</a></li> 
+      <li><a href="/howto">How It Works</a></li> 
+      <li><a href="/contact">Contact</a></li> 
+      <li><a href="/search">Search</a></li> 
+      <li><a href="/about">About Us</a></li> 
+      <li><a href="/disclaimer">Disclaimer</a></li> 
+      <li><a href="/sponsors">Our Sponsors</a></li> 
+      <li><a href="/sitemap">Site Map</a></li> 
+     </ul> 
+    </nav> 
+    <div class="copyright">
+      © CurityMD 2013
+    </div> </address> 
+  </footer> 
+  <div class="search-loading"> 
+   <h1>Please wait while we navigate your diagnosis in our database!</h1> 
+   <img src="images/logo-for-loading.png"> 
+   <h2>This may take some time, but we will have your results shortly!</h2> 
+  </div> 
+  <a class="to-top" href="#"><img src="images/up.png" alt="up arrow"></a> 
+  <!-- jQuery must remain in head for image slider to be functional --> 
+  <script type="text/javascript" src="js/jquery-1.10.2.js"></script> 
+  <script type="text/javascript" src="js/modernizr.js"></script> 
+  <script type="text/javascript" src="js/jquery.placeholder.js"></script> 
+  <script type="text/javascript" src="js/jquery-ui.js"></script> 
+  <script type="text/javascript" src="js/jquery-global-ui.js"></script> 
+  <!-- BEGIN KEEN --> 
+  <script type="text/javascript" src="js/analytics/jquery.cookie.js"></script> 
+  <script type="text/javascript" src="js/analytics/ua-parser.js"></script> 
+  <script type="text/javascript" src="js/analytics/purl.js"></script> 
+  <script type="text/javascript" src="js/analytics/Math.uuid.js"></script> 
+  <script type="text/javascript" src="js/analytics/ga-global.js"></script> 
+  <!-- END KEEN --> 
+  <script type="text/javascript">
+			$('body').click(function() {
+				$('.video-lightbox').css('display', 'none');
+				$('.video-lightbox iframe').attr('src', '');
+				});
+		</script> 
+  <script type="text/javascript"> 
+        // Validates the contact form when submitted
+       $.getJSON('http://curitymd.tumblr.com/api/read/json?callback=?', {}, function(data) {
+   			 	$.each(data.posts.slice(0, 6), function(i,posts){
+					 var type = this["type"]
+					 
+					 var title;
+					 var image;
+					 var postBody;
+					 var url;
+					 
+					 if(type == "regular") {
+					  title = this["regular-title"]; 
+					  postBody = this["regular-body"];
+					  url = this["url-with-slug"].replace(/\\/g, ' ');
+					  $('.blog.container').append('<div class="tumblr-post"><div class="preview-container"><h1 class="tumblr-title">' + title + '</h1><a class="for-tile-link" href="'+ url + '" target="new"></a>' + postBody + '</div><div class="outline"></div></div>'); 
+					 } else if (type == "photo") {
+					  postBody = this["photo-caption"];
+					  image = this["photo-url-500"];
+                      url = this["url-with-slug"].replace(/\\/g, ' ');
+					  $('.blog.container').append('<div class="tumblr-post"><div class="preview-container"><h1 class="tumblr-title">' + postBody + '</h1><a class="for-tile-link" href="'+ url + '" target="new"></a><p><img src="' + image + '"/></p></div><div class="outline"></div></div>'); 
+					 } else if (type == "link") {
+					  title = this["link-text"];
+					  postBody = this["link-description"];
+					  url = this["link-url"].replace(/\\/g, ' ');
+					  $('.blog.container').append('<div class="tumblr-post"><div class="preview-container"><h1 class="tumblr-title">' + title + '</h1>' + postBody + '<a class="for-tile-link" href="' + url + '" target="new"></a></div><div class="outline"></div></div>');
+					 } else if (type == "video") {
+					  video = this["video-player"].replace(/\\/g, ' ');
+					  $('.blog.container').append('<div class="tumblr-post video-post">' + video + '</div>');
+					 }
+					 
+					 
+	
+					 /*
+					 $('.tumblr-post').each(function() {
+					 	alert($(this).find('img:first-child').attr('src'));
+					 }); */
+				});
+			});
+			$(window).bind('load', function() {
+						
+						 $('.tumblr-post').each(function() {
+								 var getLink = $(this).find('.preview-container .for-tile-link').attr('href');
+								 $(this).find('.preview-container p > a').hide();
+								 if($(this).find('p img:first-child').length > 0) {
+									$(this).css('background', 'url(' + $(this).find('p img:first-child').attr('src') + ')');
+								 } else {
+									 var getNumber = $(this).index() + 1;
+									$(this).css('background', 'url(images/tumblr-placeholder' + getNumber +  '.jpg)');
+								 }
+								 if($(this).find('.preview-container').length && $(this).hasClass('video-post') == false) {
+									$(this).wrap('<a href="' + getLink + '" class="tile-link" target="new"></a>');
+									 $(this).append('<span class="text-cut-off"></span>');
+								 }
+						});
+						$('.tile-link').click(function() {
+							var getLink = $(this).attr('href');
+							$.getJSON('https://api.ipinfodb.com/v3/ip-city/?key=5020f81d8678a7a585475e1f6f661af7b51d3d357960711cff4a5833722391e9&format=json&callback=?', {}, function(data) {
+							var longitude = data.longitude;
+							var latitude = data.latitude;
+							var city = data.cityName;
+							var state = data.regionName;
+							var country = data.countryName;
+							return Keen.trackExternalLink(this, "User Interactions", {
+								'action': 'Tumblr Tile Click', 
+								'latitude': latitude,
+								'longitude': longitude,
+								'city of residence': city,
+								'state of residence': state,
+								'country of residence': country ,
+								'ip_address' : '${keen.ip}',
+								'blog source' : getLink
+								});
+							});
+						});
+						
+						
+					});
+		</script> 
+  <script type="text/javascript" src="js/analytics/keen-global.js"></script>  
+ </body>
+</html>

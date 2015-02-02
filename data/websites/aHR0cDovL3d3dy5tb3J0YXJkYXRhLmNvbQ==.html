@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html data-wf-site="5349618c8a05af9715000391">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="google-site-verification" content="-_jA-vBJHdspybllG1deb4qNz28SD7oJTuxOQnLRcAA"> 
+  <title>Mortar | Platform for Building High-Scale Data Applications</title> 
+  <meta name="keywords" content="recommender system recsys data science hadoop pig python cloud paas"> 
+  <meta name="description" content="Award-winning platform for building data apps with open technologies: Pig, Python, MongoDB and more. Easily run a custom recommender system, move data to Redshift, or do NLP."> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="/assets/application-aa583d739140101fec4548507281b056.css" media="screen" rel="stylesheet" type="text/css"> 
+  <link rel="icon" type="image/x-icon" href="/favicon.png"> 
+  <script src="/assets/application-4009c8f375a26180c115e64aa0c13084.js" type="text/javascript"></script> 
+  <meta content="authenticity_token" name="csrf-param"> 
+  <meta content="Xgs4cdhKsoq6trB7pLUoCPy0MfRa5vA7yhhHDa1FHhI=" name="csrf-token"> 
+  <script type="text/javascript" src="https://use.typekit.net/wjs7qbj.js"></script> 
+  <script type="text/javascript">
+    try{Typekit.load();}catch(e){}
+  </script> 
+  <script>
+    var _prum = [['id', '524f07bfabe53d4228000000'],
+               ['mark', 'firstbyte', (new Date()).getTime()]];
+    (function() {
+        var s = document.getElementsByTagName('script')[0]
+          , p = document.createElement('script');
+        p.async = 'async';
+        p.src = '//rum-static.pingdom.net/prum.min.js';
+        s.parentNode.insertBefore(p, s);
+    })();
+  </script> 
+ </head> 
+ <body> 
+  <div class="w-nav navbar" data-collapse="none" data-animation="default" data-duration="400" data-contain="1"> 
+   <div class="w-container"> 
+    <a class="w-nav-brand" href="/"> <img alt="Mortar" class="mortar-brand-navbar" src="/assets/mortar-logo-2x-346f72ab6016e749d296714dee773192.png" width="130"> </a> 
+    <nav class="w-nav-menu" role="navigation"> 
+     <a class="w-nav-link navbar-link " href="/platform">Platform</a> 
+     <a class="w-nav-link navbar-link" href="https://help.mortardata.com/">Docs</a> 
+     <a class="w-nav-link navbar-link" href="http://blog.mortardata.com/">Blog</a> 
+     <a class="w-nav-link navbar-link" href="https://app.mortardata.com/">Log In</a> 
+    </nav> 
+    <div class="w-nav-button"> 
+     <div class="w-icon-nav-menu"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="navbar-bottom"></div> 
+  <div class="modal-background"> 
+   <div class="w-container"> 
+    <div class="w-clearfix modal-window"> 
+     <a class="w-inline-block close-modal" href="#"> 
+      <div class="close-modal-text">
+       CLOSE
+      </div> </a> 
+     <div class="trial-title">
+      Request a free trial of Mortar.
+     </div> 
+     <div class="w-row"> 
+      <div class="w-col w-col-5 w-hidden-small w-hidden-tiny trial-col-1"> 
+       <div class="trial-text-1">
+        Mortar’s robust platform seamlessly joins the best data technologies so that you can develop quickly on a rock-solid foundation.&nbsp;
+       </div> 
+       <div class="trial-text-2">
+        Start off right.
+       </div> 
+       <div class="trial-text-3">
+        We’ll make sure that you have all the resources&nbsp;and support that you need to ensure success.&nbsp;
+       </div> 
+       <div class="trial-text-2">
+        No risk.
+       </div> 
+       <div class="trial-text-3">
+        Mortar’s platform runs on the best open technologies, so you are never locked in. If you decide Mortar isn’t for you, all your code is portable.
+       </div> 
+      </div> 
+      <div class="w-col w-col-7 trial-modal-col-2"> 
+       <div class="w-form"> 
+        <form class="w-clearfix trial-form" id="email-form" name="email-form" data-name="Email Form"> 
+         <div class="w-row trial-subrow"> 
+          <div class="w-col w-col-6 w-col-stack trial-col-1"> 
+           <div class="trial-key">
+            Name
+           </div> 
+           <input class="w-input trial-form-field" id="Name" type="text" placeholder="Name" name="Name" data-name="Name" required> 
+           <div class="trial-key">
+            Email address
+           </div> 
+           <input class="w-input trial-form-field" id="email" type="email" placeholder="Email" name="email" data-name="Email" required> 
+           <div class="trial-key">
+            Company or organization
+           </div> 
+           <input class="w-input trial-form-field" id="Company" type="text" placeholder="Company" name="Company" data-name="Company" required> 
+           <div class="trial-key">
+            Title or position
+           </div> 
+           <input class="w-input trial-form-field" id="Title" type="text" placeholder="Title" name="Title" data-name="Title" required> 
+          </div> 
+          <div class="w-col w-col-6 w-col-stack"> 
+           <div class="trial-key">
+            Phone number
+           </div> 
+           <input class="w-input trial-form-field" id="Phone" type="text" placeholder="Phone" name="Phone" data-name="Phone" required> 
+           <div class="trial-key">
+            Highest priority data project
+           </div> 
+           <select class="w-select trial-dropdown" id="Project" name="Project" data-name="Project" required> <option value="">Select one...</option> <option value="Recsys">Recommendation engine</option> <option value="Data warehouse/integration">Data integration or warehousing</option> <option value="Predictive analytics">Predictive analytics</option> <option value="NLP">Natural language processing</option> <option value="Other">Other</option> </select> 
+           <div class="trial-div-block"> 
+            <div class="trial-key">
+             Intended timeframe
+            </div> 
+            <select class="w-select trial-dropdown" id="Timeframe" name="Timeframe" data-name="Timeframe" required> <option value="">Select one...</option> <option value="30 days">30 days or less</option> <option value="90 days">Next 90 days</option> <option value="6 months">Next six months</option> <option value="12 months">Next 12 months or more</option> </select> 
+           </div> 
+          </div> 
+         </div> 
+         <input class="w-button trial-submit-button" type="submit" value="Submit" data-wait="Please wait..."> 
+        </form> 
+        <div class="w-form-done trial-success-message"> 
+         <p>Thank you! Your submission has been received. We will contact you shortly to set up a demo or an introductory call.</p> 
+        </div> 
+        <div class="w-form-fail"> 
+         <p>Oops! Something went wrong while submitting the form :(</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="w-slider slider" data-animation="slide" data-duration="500" data-infinite="1" data-hide-arrows="1"> 
+   <div class="w-slider-mask"> 
+    <div class="w-slide slide-1"> 
+     <div class="w-container video-container"> 
+      <div class="w-embed w-video corp-site-video" style="padding-top: 56.27659574468085%;"> 
+       <iframe id="player_1" class="embedly-embed" src="https://player.vimeo.com/video/100508201?api=1&amp;player_id=player_1" scrolling="no" frameborder="0" allowfullscreen></iframe> 
+      </div> 
+     </div> 
+     <div class="hero"> 
+      <div class="w-container hero-container"> 
+       <h1 class="w-hidden-tiny hero-head">Simple.&nbsp;Solid.&nbsp;Scalable.</h1> 
+       <h1 class="w-hidden-main w-hidden-medium w-hidden-small hero-head">Simple.&nbsp;Solid.&nbsp;<br>Scalable.</h1> 
+       <div class="hero-subhed">
+        Quickly build high-scale data applications and pipelines. Without the 
+        <em>headdesk.</em> 
+       </div> 
+       <div class="w-hidden-small w-hidden-tiny hero-button-block">
+        <a class="modal-link" href="#">Request a Free Trial</a>
+        <a class="hero-button video" href="#">Watch Video&nbsp;&nbsp;&nbsp;&nbsp;►</a> 
+       </div> 
+       <div class="w-hidden-main w-hidden-medium hero-button-block mobile">
+        <a class="mobile-trial-1" href="/signup">Request a Free Trial</a>
+        <a class="hero-button video" href="#">Watch Video&nbsp;&nbsp;&nbsp;&nbsp;►</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="w-slide slide-2"> 
+     <div class="w-container enterprise-container"> 
+      <h1 class="hero-head slide-2-hed">Your Toughest Data Challenge,&nbsp;Solved</h1> 
+      <p class="hero-subhed slide-2-subhed">Integrate and query all your data. Build pipelines that analyze, predict, or transform. And do it all faster, on a rock-solid foundation.</p>
+      <a class="tech-button white" href="/platform">LEARN MORE</a> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="w-slider-arrow-left w-clearfix left-arrow-link"> 
+    <img alt="slider arrow" class="slider-arrow left" src="/assets/left-arrow-dark-49336c35c95c8dad2179fcad34510a52.png"> 
+   </div> 
+   <div class="w-slider-arrow-right w-clearfix right-arrow-link"> 
+    <img alt="slider arrow" class="slider-arrow" src="/assets/right-arrow-dark-62ba696ab1fcdd91bc86b36b5a8628bf.png"> 
+   </div> 
+   <div class="w-slider-nav w-shadow w-round slide-nav"></div> 
+  </div>  
+  <div class="customers"> 
+   <div class="w-container customers-container"> 
+    <h4>Mortar Works for</h4> 
+    <div class="customers-row viacom"> 
+     <img alt="AP" class="customer ap" src="/assets/AP-@2x-6b45e4dadc25a3b9011eae10300024d1.png" width="150"> 
+     <img alt="Buffer" class="customer buffer" src="/assets/buffer-@2x-b9d2e98842c8086b3d46e807016c55cc.png" width="138"> 
+     <img alt="Progressive" class="customer progressive" height="16" src="/assets/progressive-@2x-df61a3375c819b552c5ea683e3964432.png"> 
+     <img alt="Viacom" class="customer customer-right" src="/assets/viacom-2x-6dbe742b0506dd4e230e13321c7169f3.png" width="118"> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="details icon"> 
+   <div class="w-container icon-container"> 
+    <h2 class="icon-header">Our award-winning platform lets you focus on what's important</h2> 
+    <div class="w-row icon-row"> 
+     <div class="w-col w-col-4 w-col-small-4 icon-col"> 
+      <div class="icon-block"> 
+       <div class="img-block"> 
+        <img alt="Scalable" class="icon-img" src="/assets/scalable-cloud-icon-08da8c733530fb669d70f20567420c46.png"> 
+       </div> 
+       <h3 class="icon-subhed">Scalable</h3> 
+       <div class="icon-descriptor">
+        Cloud computing power on demand. Use as much or as little as you need.
+       </div> 
+      </div> 
+      <div class="icon-block"> 
+       <div class="img-block"> 
+        <img alt="Repeatable" class="icon-img" src="/assets/repeatable-icon-6d2a12adb5baf9c50e5fc9872fa79946.png"> 
+       </div> 
+       <h3 class="icon-subhed">Repeatable</h3> 
+       <div class="icon-descriptor">
+        One-click deployment. Preserve your work with automatic code snapshots and git source control.
+       </div> 
+      </div> 
+     </div> 
+     <div class="w-col w-col-4 w-col-small-4 icon-col"> 
+      <div class="icon-block"> 
+       <div class="img-block"> 
+        <img alt="Open" class="icon-img" src="/assets/open-icon-734e7b1f747c533fb6ec48a3572b9015.png"> 
+       </div> 
+       <h3 class="icon-subhed">Open</h3> 
+       <div class="icon-descriptor">
+        Powered by open-source technologies. No lock-in, ever.
+       </div> 
+      </div> 
+      <div class="icon-block"> 
+       <div class="img-block"> 
+        <img alt="Orchestrated" class="icon-img" src="/assets/mortar_implementation_icon-green-be3ea1fb4cb9e565e39b20fe1ebb5f27.png"> 
+       </div> 
+       <h3 class="icon-subhed">Orchestrated</h3> 
+       <div class="icon-descriptor">
+        Automate complex pipelines with built-in scheduling, dependency management, and failure recovery.
+       </div> 
+      </div> 
+     </div> 
+     <div class="w-col w-col-4 w-col-small-4 icon-col"> 
+      <div class="icon-block"> 
+       <div class="img-block"> 
+        <img alt="Enterprise-grade" class="icon-img" src="/assets/no-surprises-icon-992b0a40de8ab1bfb19f822379c947c3.png"> 
+       </div> 
+       <h3 class="icon-subhed">Enterprise-grade</h3> 
+       <div class="icon-descriptor">
+        Mortar offers a 100% uptime SLA for guaranteed reliability, plus advanced security to protect sensitive data.
+       </div> 
+      </div> 
+      <div class="icon-block"> 
+       <div class="img-block"> 
+        <img alt="Amazing support" class="icon-img" src="/assets/support-icon-fa69497ecf01acb33c301220a341c408.png"> 
+       </div> 
+       <h3 class="icon-subhed">Amazing support</h3> 
+       <div class="icon-descriptor">
+        Our Hadoop engineers have your back, from development to production.
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="cta-text">
+     Ready to put your data to work?
+    </div>
+    <a class="w-hidden-small w-hidden-tiny modal-link modal-link-2" href="#">Request a Free Trial</a>
+    <a class="w-hidden-main w-hidden-medium mobile-trial-2" href="/signup">Request a Free Trial</a> 
+    <div class="cta-block"> 
+     <div class="cta-info">
+      or 
+      <a class="contact-link" href="/platform">learn more</a> about the expansive features and benefits of the Mortar platform
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="details"> 
+   <div class="w-container tech-container"> 
+    <div class="w-row tech-row"> 
+     <div class="w-col w-col-4 tech-type"> 
+      <h2 class="tech-head">We support the best open, free technologies</h2> 
+      <div class="tech-descriptor">
+       With open code and integrations with familiar technologies like GitHub, we make collaboration and reuse easy.
+      </div>
+      <a class="tech-button" href="http://help.mortardata.com#technologies">Learn More</a> 
+     </div> 
+     <div class="w-col w-col-8 w-clearfix tech-graphics"> 
+      <div class="w-row w-hidden-main w-hidden-medium tech-grid-mobile"> 
+       <div class="w-col w-col-4 w-col-small-4 w-clearfix"> 
+        <a class="w-inline-block mortar-tech-block" href="http://help.mortardata.com/technologies/hadoop"> 
+         <div class="tech-link">
+          Hadoop
+         </div> </a> 
+        <a class="w-inline-block mortar-tech-block luigi" href="http://help.mortardata.com/technologies/luigi"> 
+         <div class="tech-link">
+          Luigi
+         </div> </a> 
+       </div> 
+       <div class="w-col w-col-4 w-col-small-4 w-clearfix"> 
+        <a class="w-inline-block mortar-tech-block pig" href="http://help.mortardata.com/technologies/pig"> 
+         <div class="tech-link">
+          Pig
+         </div> </a> 
+        <a class="w-inline-block mortar-tech-block java" href="http://help.mortardata.com/technologies/pig/writing_java_udfs"> 
+         <div class="tech-link">
+          Java
+         </div> </a> 
+       </div> 
+       <div class="w-col w-col-4 w-col-small-4 w-clearfix"> 
+        <a class="w-inline-block mortar-tech-block python" href="http://help.mortardata.com/technologies/pig/writing_python_udfs"> 
+         <div class="tech-link">
+          Python
+         </div> </a> 
+        <a class="w-inline-block mortar-tech-block r" href="http://help.mortardata.com/technologies/r"> 
+         <div class="tech-link">
+          R
+         </div> </a> 
+       </div> 
+      </div> 
+      <a class="w-hidden-small w-hidden-tiny w-inline-block mortar-tech-block" href="http://help.mortardata.com/technologies/hadoop"> 
+       <div class="tech-link">
+        Hadoop
+       </div> </a> 
+      <a class="w-hidden-small w-hidden-tiny w-inline-block mortar-tech-block luigi" href="http://help.mortardata.com/technologies/luigi"> 
+       <div class="tech-link">
+        Luigi
+       </div> </a> 
+      <a class="w-hidden-small w-hidden-tiny w-inline-block mortar-tech-block python" href="http://help.mortardata.com/technologies/pig/writing_python_udfs"> 
+       <div class="tech-link">
+        Python
+       </div> </a> 
+      <a class="w-hidden-small w-hidden-tiny w-inline-block mortar-tech-block pig" href="http://help.mortardata.com/technologies/pig"> 
+       <div class="tech-link">
+        Pig
+       </div> </a> 
+      <a class="w-hidden-small w-hidden-tiny w-inline-block mortar-tech-block java" href="http://help.mortardata.com/technologies/pig/writing_java_udfs"> 
+       <div class="tech-link">
+        Java
+       </div> </a> 
+      <a class="w-hidden-small w-hidden-tiny w-inline-block mortar-tech-block r" href="http://help.mortardata.com/technologies/r"> 
+       <div class="tech-link">
+        R
+       </div> </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="details integrations-section"> 
+   <div class="w-container integrations-container"> 
+    <div class="w-row"> 
+     <div class="w-col w-col-7 w-col-small-6 integrations-col"> 
+      <img alt="Mortar data store integrations" class="mortar-integrations-logo" src="/assets/mortar_data-stores_illustration-834d0d059dae37662e8562488387412c.png"> 
+     </div> 
+     <div class="w-col w-col-5 w-col-small-6 tech-type tech-type-integrations"> 
+      <h2 class="tech-head tech-head-integrations">Yes, we support your data store</h2> 
+      <div class="tech-descriptor tech-descriptor-integrations">
+       If your data is in AWS, chances are you can connect it to Mortar.
+      </div> 
+      <div class="w-row integrations-row"> 
+       <div class="w-col w-col-6 w-col-small-6 w-col-tiny-6"> 
+        <div class="integrations-item">
+         <a class="integrations-item-link" target="_blank" href="http://help.mortardata.com/integrations/redshift">Redshift</a> 
+         <br>
+         <a class="integrations-item-link" target="_blank" href="http://help.mortardata.com/integrations/mongodb">MongoDB</a> 
+         <br>
+         <a class="integrations-item-link" target="_blank" href="http://help.mortardata.com/integrations/sql_databases">Postgres</a> 
+         <br>
+         <a class="integrations-item-link" target="_blank" href="http://help.mortardata.com/integrations/sql_databases">MySQL</a> 
+         <br>
+         <a class="integrations-item-link" target="_blank" href="http://help.mortardata.com/integrations/dynamodb">DynamoDB</a> 
+        </div> 
+       </div> 
+       <div class="w-col w-col-6 w-col-small-6 w-col-tiny-6"> 
+        <div class="integrations-item">
+         <a href="http://help.mortardata.com/integrations/amazon_s3" class="integrations-item-link" target="_blank">S3</a> 
+         <br>
+         <a href="http://help.mortardata.com/integrations/sql_databases" class="integrations-item-link" target="_blank">Oracle</a> 
+         <br>
+         <a href="http://help.mortardata.com/integrations/google_drive" class="integrations-item-link" target="_blank">Google Drive</a> 
+         <br>
+         <a href="http://help.mortardata.com/integrations/papertrail" class="integrations-item-link" target="_blank">Papertrail</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="tech-descriptor">
+       And we’re adding new integrations all the time.
+      </div>
+      <a class="tech-button" href="http://help.mortardata.com/#integrations">LEARN MORE</a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="details mortar"> 
+   <div class="w-container mortar-container"> 
+    <h2 class="details-hed details-hed-dark">How Mortar works</h2> 
+    <div class="w-clearfix works-block"> 
+     <div class="work-step step-1"> 
+      <img alt="Develop locally" class="work-step-img" src="/assets/how-it-works-local-4942a4c5ecf0da61c447478de22a4a79.png"> 
+      <h3 class="works-hed">Develop code locally</h3> 
+      <div class="works-descriptor">
+       Develop code on your own machine or in your browser. Use Mortar’s tools to test your code and preview the output.
+      </div> 
+     </div> 
+     <img alt="Arrow" class="w-hidden-main w-hidden-medium arrow-vert" src="/assets/how-it-works-arrow-right-vert-8ae5567d9f1446704057d60b3a187f19.png"> 
+     <div class="work-arrow"> 
+      <img alt="Arrow" class="w-hidden-small w-hidden-tiny arrow" src="/assets/how-it-works-arrow-right-f3a6499e75937b8ec5d6ed9fc77af4bb.png"> 
+     </div> 
+     <div class="work-step step-2"> 
+      <img alt="Mortar cloud" class="work-step-img" src="/assets/how-it-works-mortar-cloud-5ff9e352264f2658e7df40da06a70940.png"> 
+      <h3 class="works-hed">Deploy to Mortar</h3> 
+      <div class="works-descriptor">
+       With the click of a button, Mortar launches a Hadoop cluster to run your job, then monitors its progress for you.
+      </div> 
+     </div> 
+     <div class="work-arrow bidirectional"> 
+      <img alt="Arrow" class="w-hidden-small w-hidden-tiny arrow-2" src="/assets/how-it-works-arrow-bi-directional-abce04d55756c7d5186604d3c75a2229.png"> 
+     </div> 
+     <img alt="Arrow" class="w-hidden-main w-hidden-medium arrow-vert birectional" src="/assets/how-it-works-arrow-bi-directional-vert-d23333272dee4a2695429347efaa8180.png"> 
+     <div class="work-step step-3"> 
+      <img alt="Arrow" class="work-step-img" src="/assets/how-it-works-storage-5cd4be9e026efc0cc7dcdcb41035054b.png"> 
+      <h3 class="works-hed">Integrate with data stores</h3> 
+      <div class="works-descriptor">
+       Read from and write to your own data stores, whether in&nbsp;S3, Mongo,&nbsp;Dynamo, or a relational database system.
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="programs"> 
+   <div class="w-container programs-head-container"> 
+    <h2 class="details-hed">Powering custom, high-scale analytics pipelines</h2> 
+   </div> 
+   <div class="w-container program-item-row"> 
+    <div class="programs-block"> 
+     <h3 class="program-item-header">Make perfect recommendations for each user.</h3>
+     <a class="program-button" href="https://help.mortardata.com/data_apps/recommendation_engine">LEARN HOW</a> 
+    </div> 
+    <div class="programs-block"> 
+     <h3 class="program-item-header">Move data from Mongo to Hadoop, and back again.</h3>
+     <a class="program-button" href="https://help.mortardata.com/data_apps/mongo_hadoop">LEARN HOW</a> 
+    </div> 
+    <div class="programs-block programs-block-end"> 
+     <h3 class="program-item-header">Load an Amazon Redshift data warehouse.</h3>
+     <a class="program-button" href="https://help.mortardata.com/data_apps/redshift_data_warehouse">LEARN HOW</a> 
+    </div> 
+    <a class="w-inline-block diy-link" href="https://help.mortardata.com/data_apps/build_your_own"> 
+     <div class="diy-text-link">
+      Or Build a custom data app
+     </div> </a> 
+   </div> 
+  </div> 
+  <div class="details quotes"> 
+   <div class="w-container quote-container"> 
+    <h2 class="details-hed quote-head">What people are saying</h2> 
+    <div class="quote"> 
+     <div class="quote-box">
+      “Mortar’s approach is right on—their tools extend [Pig’s] quick start and ease of use focuses with pre-built Hadoop clusters, clear examples, code organization templates, and github for social sharing of the code.”
+     </div> 
+     <h4 class="quote-company">Hortonworks</h4> 
+     <div class="quote-name">
+      Alan Gates
+     </div> 
+     <div class="quote-bio">
+      Open-sourced Pig, co-founder of Hortonworks
+     </div> 
+    </div> 
+    <div class="quote quote-2"> 
+     <h4 class="quote-company">Twitter</h4> 
+     <div class="quote-name">
+      Jonathan Coveney
+     </div> 
+     <div class="quote-bio">
+      Apache Pig PMC member, Twitter
+     </div> 
+     <div class="quote-box quote-box-2">
+      “Mortar takes something complex and makes it simple and intuitive. it lets you focus on the fun part—writing the scripts that process your data and create business value—instead of managing AWS nodes or your own cluster.”
+     </div> 
+    </div> 
+    <div class="quote quote-3"> 
+     <div class="quote-box quote-box-3">
+      “We created MongoDB to help organizations quickly build scalable apps that run well in the cloud too. Mortar fits right in with that vision of the future... We’re excited that MongoDB users can now also seamlessly use Mortar.”
+     </div> 
+     <h4 class="quote-company">MongoDB</h4> 
+     <div class="quote-name">
+      Dwight Merriman
+     </div> 
+     <div class="quote-bio">
+      Founder of MongoDB and DoubleClick
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script src="https://secure-a.vimeocdn.com/js/froogaloop2.min.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+
+function on_load() {
+  var vidplaying = false;
+      if ($('#player_1').length) {
+        var player = $f($('#player_1')[0]);
+        player.addEvent('ready', function() {
+          player.addEvent('finish', onFinish);
+        });
+        function onFinish(id) {
+          $(".video-container").animate({ 'top': '-500px' });
+          vidplaying = false;
+        }
+        $(".hero-button.video").click(function(e) {
+          $(".video-container").animate({ 'top': '0px' }, 800, function() {
+            player.api('play');
+            vidplaying = true;
+          });
+          return false;
+        });
+        $("html").on("click", function(e) {
+          if (vidplaying && !$(e.target).hasClass('watch-video')) {
+            player.api('pause');
+            $(".video-container").animate({ 'top': '-500px' });
+          }
+        });
+      }
+};
+
+    window.onload = on_load();
+</script> 
+  <script type="text/javascript">
+
+$(document).ready(function() {
+  $('.modal-link').click(function() {
+    $('.modal-background').fadeIn();
+  });
+  $('.close-modal').click(function() {
+    $('.modal-background').fadeOut();
+  });
+});
+
+</script> 
+  <div class="footer"> 
+   <div class="w-container"> 
+    <div class="w-row"> 
+     <div class="w-col w-col-3"> 
+      <div class="w-clearfix footer-block">
+       <a class="footer-link" href="/">Home</a>
+      </div> 
+      <div class="w-clearfix footer-block">
+       <a class="footer-link" href="/platform">Platform</a>
+      </div> 
+      <div class="w-clearfix footer-block">
+       <a class="footer-link" href="http://blog.mortardata.com">Blog</a>
+      </div> 
+      <div class="w-clearfix footer-block">
+       <a class="footer-link" href="/press">Press</a>
+      </div> 
+      <div class="w-clearfix footer-block">
+       <a class="footer-link" href="/security">Security</a>
+      </div> 
+     </div> 
+     <div class="w-col w-col-3"> 
+      <div class="w-clearfix footer-block">
+       <a class="footer-link" href="https://help.mortardata.com/">Documentation</a>
+      </div> 
+      <div class="w-clearfix footer-block">
+       <a class="footer-link" href="https://answers.mortardata.com/">Q&amp;A</a>
+      </div> 
+      <div class="w-clearfix footer-block">
+       <a class="footer-link" href="http://mortar-framework.org/">Open-source framework</a>
+      </div> 
+      <div class="w-clearfix footer-block">
+       <a class="footer-link" href="mailto:jobs@mortardata.com?subject=Tell%20us%20about%20yourself">Jobs</a>
+      </div> 
+      <div class="w-clearfix footer-block">
+       <a class="footer-link" href="/faq">FAQ</a>
+      </div> 
+     </div> 
+     <div class="w-col w-col-4 w-clearfix"> 
+      <a class="w-inline-block social-link-area" href="http://twitter.com/mortardata"> <img alt="Twitter" src="/assets/twitter-@2x-921f791bb5537cd4d9e626486e89500c.png" width="22"> </a> 
+      <a class="w-inline-block social-link-area" href="http://www.linkedin.com/company/mortar-data-inc."> <img alt="LinkedIn" src="/assets/linkedin-@2x-b406aafdd0c47a0a896abc47125e93f8.png" width="22"> </a> 
+      <a class="w-inline-block social-link-area" href="https://github.com/mortardata"> <img alt="Github" src="/assets/octocat-@2x-94acaa9309502a930e2d4a389c35ac1e.png" width="22"> </a> 
+      <a class="w-inline-block social-link-area" href="mailto:teammortar@mortardata.com"> <img alt="Email" src="/assets/e@2x-92e0f9df36a846f0df21ca2eccb2c774.png" width="22"> </a> 
+     </div> 
+     <div class="w-col w-col-2"> 
+      <img alt="Mortar" class="mortar-logo" src="/assets/M-white@2x-3f175f085ba86a98d935bb98616a714c.png"> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- SEGMENT.IO --> 
+  <script type="text/javascript">
+    var analytics=analytics||[];analytics.load=function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+e+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);var r=function(e){return function(){analytics.push([e].concat(Array.prototype.slice.call(arguments,0)))}},i=["identify","track","trackLink","trackForm","trackClick","trackSubmit","pageview","ab","alias","ready"];for(var s=0;s<i.length;s++)analytics[i[s]]=r(i[s])};
+    
+    if (!document.cookie.toString().match(/_mortar_ignore_metrics/)) {
+      analytics.load("dla1g4m3ns");
+      analytics.ready(function() {
+        $(document).ready(function() {
+        });
+      });
+    }
+
+    function setupKMTrackableVideo(id, name)
+    {
+      var player = $f(id);
+      player.addEvent('ready', function(){
+        player.addEvent('play', function(){
+          analytics && analytics.track('Played video - ' + name); });
+        player.addEvent('pause', function(){
+          analytics && analytics.track('Paused video - ' + name); });
+        player.addEvent('finish', function(){
+          analytics && analytics.track('Finished video - ' + name); });
+      });
+    }
+
+  </script>   
+ </body>
+</html>

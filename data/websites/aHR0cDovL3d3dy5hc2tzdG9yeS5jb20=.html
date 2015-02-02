@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"> 
+  <meta http-equiv="PRAGMA" content="NO-CACHE"> 
+  <title>Welcome to AskStory</title> 
+  <link rel="stylesheet" type="text/css" href="/css/semantic.min.css"> 
+  <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+  <link rel="stylesheet" type="text/css" href="/css/job/most_popular.css"> 
+  <link rel="stylesheet" type="text/css" href="/css/main/search.css"> 
+  <link rel="stylesheet" type="text/css" href="/css/jobs.css"> 
+ </head> 
+ <body page="welcome"> 
+  <div class="rs-body"> 
+   <div id="as_submenu" class="rs-left"> 
+    <div class="rs-header rs-title"> 
+    </div> 
+    <div class="rs-content"> 
+     <div class="navbar"> 
+      <ul class="nav"> 
+       <li> <a href="/"><img src="/images/navi/icon_search.png">Search</a> </li> 
+       <li> <a href="/profile"><img src="/images/navi/icon_my.png">My Story</a> </li> 
+       <li> <a href="/job/recomm"><img src="/images/navi/icon_recomm.png">Recommendation</a> </li> 
+       <li> <a href="/job/saved"><img src="/images/navi/icon_save.png">Saved Jobs</a> </li> 
+       <li> <a href="/search/recent"><img src="/images/navi/icon_reSearch.png">Recent Search</a> </li> 
+       <li> <a href="/account/login"><img src="/images/navi/icon_out.png">Sign In</a> </li> 
+      </ul> 
+      <div id="as_career_goal" style="display:none;background-color: black;padding-bottom: 30px;"> 
+       <h4 class="ui blue header"> Our recommended industries </h4> 
+       <div class="ui basic segment" style="margin:0;padding: 0px 0px 0px 5px;"> 
+        <h5 id="ccc" class="ui inverted center aligned tiny header" style="font-weight:normal;padding-bottom:5px;"> touch below to find jobs </h5> 
+       </div> 
+       <div style="padding:0 20px"> 
+        <div id="as_piechart_3d"></div> 
+       </div> 
+       <div class="ui basic segment" style="margin:0;padding:0;"> 
+        <div id="as_rank_job_list"> 
+        </div> 
+       </div> 
+       <div class="ui basic segment" style="margin:0px 5px 15px 5px;"> 
+        <p style="/* padding:0 20px; */ font-size: 1.1rem; font-weight:bold; color:steelblue; ">Is it wrong?</p> 
+        <div id="as_act_career_correct" class="ui black attached button">
+          Correct Us! 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="rs-main"> 
+    <div class="jmc-page"> 
+     <table id="as_header" class="jmc-header jmc-title"> 
+      <tbody>
+       <tr> 
+        <td class="h_l"> <a href="javascript:void(0);"><i class="big reorder white icon"></i></a> </td> 
+        <td class="h_logo"> <a href="/"><img src="/images/header/logo.png"></a> </td> 
+        <td class="h_r"> <a href="/account/login"> 
+          <div class="ui mini gray button">
+            Sign in 
+          </div> </a> </td> 
+       </tr>
+       <tr> 
+       </tr>
+      </tbody>
+     </table> 
+     <div id="as_content" class="jmc-content"> 
+      <div id="as_message" class="reveal-msg-header"> 
+       <div class="reveal-msg-nav ui message"> 
+        <i class="icon help"></i> 
+        <i class="close icon"></i> 
+        <span class="header"> </span> 
+       </div> 
+      </div> 
+      <div class="reveal-msg-contents"> 
+      </div> 
+      <div class="main_container"> 
+       <div id="fff"> 
+        <div id="as_job_most_popular"> 
+         <h4 class="ui center aligned header"> THIS WEEK'S MOST POPULAR JOB </h4> 
+         <div class="as_flick-container"> 
+          <div class="job_item as_flick-ct"> 
+           <div class="ui one items"> 
+            <div class="item"> 
+             <div class="image"> 
+              <img> 
+              <a class="star ui corner blue label"> <i class="star icon"></i> </a> 
+             </div> 
+             <div class="content"> 
+              <span class="as_started_at"></span> 
+              <h4 class="as_title ellipsis"></h4> 
+              <div> 
+               <span class="as_comp"></span> 
+               <span class="as_location"></span> 
+              </div> 
+              <div style="clear:both;"> 
+               <p class="as_desc ellipsis multiline"> </p> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div style="text-align:center;"> 
+         <div class="ui small borderless pagination menu"> 
+          <a id="aprev" class="item"> <i class="left arrow icon"></i> </a> 
+          <span id="pg_area" class="item"></span> 
+          <a id="anext" class="item"> <i class="icon right arrow"></i> </a> 
+         </div> 
+        </div> 
+       </div> 
+       <!-- search layer ----------> 
+       <form name="searchForm"> 
+        <div class="search_form_box"> 
+         <div class="ui one column grid"> 
+          <div class="row"> 
+           <div class="column"> 
+            <div class="ui raised segment"> 
+             <div id="dd" class="ui ribbon label">
+               Search your job and news 
+             </div> 
+             <div class="ui form segment" style="margin-bottom: 0px"> 
+              <div class="field"> 
+               <div class="ui small input"> 
+                <input id="s_opt_key" name="s_opt_key" type="text" placeholder="Job position, keywords"> 
+               </div> 
+               <div class="ui basic accordion field"> 
+                <div class="title" style="padding-bottom: 0px"> 
+                 <i class="icon dropdown"></i> Optional Details 
+                </div> 
+                <div class="content field"> 
+                 <div class="ui small input"> 
+                  <input id="s_opt_comp" name="s_opt_comp" placeholder="Company" type="text" style="margin-bottom: 10px"> 
+                  <input id="s_opt_loc" name="s_opt_loc" placeholder="Location" type="text"> 
+                  <input id="s_opt_ids" name="s_opt_ids" type="hidden"> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div id="bb" class="btnIndustry ui attached large button">
+              Select Industry
+             </div> 
+             <div class="ui two column grid" style="margin-top: 15px;"> 
+              <div class="row"> 
+               <div class="column"> 
+                <div id="btnJob" class="ui green attached large button">
+                  Jobs 
+                </div> 
+               </div> 
+               <div class="column"> 
+                <div id="btnNews" class="ui blue attached large button">
+                  News 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </form> 
+      </div>
+      <!-- main_container end --> 
+      <div style="text-align: center;"> 
+       <span id="as_more_contents" class="scroll_pullUp" style="display:none;"> </span> 
+      </div> 
+     </div> 
+     <!-- jmc-content --> 
+     <div class="jmc-footer jmc-title"> 
+     </div> 
+    </div> 
+    <!-- jmc-page --> 
+   </div> 
+   <!-- rs-main --> 
+   <div class="rs-right" style="display:none;"> 
+    <div class="rs-header rs-title ui basic segment"> 
+     <h3 class="ui right aligned tiny header"> 
+      <div class="as_close_right ui icon tiny black button"> 
+       <i class="close icon"></i> 
+      </div> </h3> 
+    </div> 
+    <div id="as_right_pane" class="rs-content"> 
+     <div id="as_job_detail" style="display:none;"> 
+      <div class="as_header ui inverted segment"> 
+       <h3 class="as_title"></h3> 
+       <h4 class="as_comp"></h4> 
+      </div> 
+      <h5 class="as_location"></h5> 
+      <div class="as_body ui basic segment"> 
+       <div class="as_desc"> 
+       </div> 
+      </div> 
+      <div class="as_buttons ui basic segment"> 
+       <div class="ui three column grid" style="margin-bottom: 15px;"> 
+        <div class="row"> 
+         <div class="column"> 
+          <div id="btnJob" class="as_act_apply ui attached blue large button">
+            Apply 
+          </div> 
+         </div> 
+         <div class="column"> 
+          <div class="as_act_save ui attached large button">
+            Save 
+          </div> 
+         </div> 
+         <div class="column"> 
+          <div class="as_act_close ui attached large button">
+            Close 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="as_modal_industry" style="display:none;"> 
+      <div class="ui top attached header">
+        Industry 
+      </div> 
+      <div class="ui raised segment attached"> 
+       <div class="ui form"> 
+        <!--  s_opt_ind_1st--> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids1" name="s_opt_ind_1st_[]" value="1"> 
+          <label for="ids1"> Accountancy </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids2" name="s_opt_ind_1st_[]" value="2"> 
+          <label for="ids2"> Accountancy (Qualified) </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids4" name="s_opt_ind_1st_[]" value="4"> 
+          <label for="ids4"> Admin, Secretarial &amp; PA </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids6" name="s_opt_ind_1st_[]" value="6"> 
+          <label for="ids6"> Banking </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids7" name="s_opt_ind_1st_[]" value="7"> 
+          <label for="ids7"> Charity &amp; Voluntary </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids8" name="s_opt_ind_1st_[]" value="8"> 
+          <label for="ids8"> Construction &amp; Property </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids9" name="s_opt_ind_1st_[]" value="9"> 
+          <label for="ids9"> Customer Service </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids10" name="s_opt_ind_1st_[]" value="10"> 
+          <label for="ids10"> Education </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids11" name="s_opt_ind_1st_[]" value="11"> 
+          <label for="ids11"> Energy </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids12" name="s_opt_ind_1st_[]" value="12"> 
+          <label for="ids12"> Engineering </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids13" name="s_opt_ind_1st_[]" value="13"> 
+          <label for="ids13"> Estate Agency </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids14" name="s_opt_ind_1st_[]" value="14"> 
+          <label for="ids14"> Financial Services </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids15" name="s_opt_ind_1st_[]" value="15"> 
+          <label for="ids15"> FMCG </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids16" name="s_opt_ind_1st_[]" value="16"> 
+          <label for="ids16"> General Insurance </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids18" name="s_opt_ind_1st_[]" value="18"> 
+          <label for="ids18"> Health &amp; Medicine </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids19" name="s_opt_ind_1st_[]" value="19"> 
+          <label for="ids19"> Hospitality &amp; Catering </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids20" name="s_opt_ind_1st_[]" value="20"> 
+          <label for="ids20"> Human Resources </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids21" name="s_opt_ind_1st_[]" value="21"> 
+          <label for="ids21"> IT &amp; Telecoms </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids23" name="s_opt_ind_1st_[]" value="23"> 
+          <label for="ids23"> Legal </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids24" name="s_opt_ind_1st_[]" value="24"> 
+          <label for="ids24"> Leisure &amp; Tourism </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids25" name="s_opt_ind_1st_[]" value="25"> 
+          <label for="ids25"> Manufacturing </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids26" name="s_opt_ind_1st_[]" value="26"> 
+          <label for="ids26"> Marketing &amp; PR </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids27" name="s_opt_ind_1st_[]" value="27"> 
+          <label for="ids27"> Media, Digital &amp; Creative </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids28" name="s_opt_ind_1st_[]" value="28"> 
+          <label for="ids28"> Motoring &amp; Automotive </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids31" name="s_opt_ind_1st_[]" value="31"> 
+          <label for="ids31"> Purchasing </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids32" name="s_opt_ind_1st_[]" value="32"> 
+          <label for="ids32"> Recruitment Consultancy </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids33" name="s_opt_ind_1st_[]" value="33"> 
+          <label for="ids33"> Retail </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids34" name="s_opt_ind_1st_[]" value="34"> 
+          <label for="ids34"> Sales </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids35" name="s_opt_ind_1st_[]" value="35"> 
+          <label for="ids35"> Scientific </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids36" name="s_opt_ind_1st_[]" value="36"> 
+          <label for="ids36"> Security &amp; Safety </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids37" name="s_opt_ind_1st_[]" value="37"> 
+          <label for="ids37"> Social Care </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids38" name="s_opt_ind_1st_[]" value="38"> 
+          <label for="ids38"> Strategy &amp; Consultancy </label> 
+         </div> 
+        </div> 
+        <div class="inline field"> 
+         <div class="ui slider checkbox"> 
+          <input type="checkbox" id="ids41" name="s_opt_ind_1st_[]" value="41"> 
+          <label for="ids41"> Transport &amp; Logistics </label> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="as_buttons ui basic segment"> 
+        <div class="ui one column grid" style="margin-bottom: 15px;"> 
+         <div class="row"> 
+          <div class="column"> 
+           <div class="as_act_ok ui attached blue large button">
+             Ok 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- select industry form ------------------> 
+     <div id="as_modal_career_correct_us" class="ui form segment" style="display:none;"> 
+      <div class="ui black header">
+        My Career Goal 
+      </div> 
+      <div class="ui inverted purple segment">
+        Please select industry you think best fits your profile 
+      </div> 
+      <div class="inline fields" style="position:relative;"> 
+       <div class="field" style="position:absolute;top:10px;"> 
+        <div class="ui radio checkbox"> 
+         <input type="radio" id="as_cc_1st" name="as_cc_radio" checked> 
+         <label for="as_cc_1st"></label> 
+        </div> 
+       </div> 
+       <div class="field" style="margin-left:20px; margin-right:0;"> 
+        <div class="ui left icon input"> 
+         <input type="text" placeholder="Select 1st Industry" readonly> 
+         <i class="circular ind_1st inverted red icon"></i> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="inline fields" style="position:relative;"> 
+       <div class="field" style="position:absolute;top:10px;"> 
+        <div class="ui radio checkbox"> 
+         <input type="radio" id="as_cc_2nd" name="as_cc_radio"> 
+         <label for="as_cc_2nd"></label> 
+        </div> 
+       </div> 
+       <div class="field" style="margin-left:20px; margin-right:0;"> 
+        <div class="ui left icon input"> 
+         <input type="text" placeholder="Select 2nd Industry" readonly> 
+         <i class="circular ind_2nd inverted green icon"></i> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="inline fields" style="position:relative;"> 
+       <div class="field" style="position:absolute;top:10px;"> 
+        <div class="ui radio checkbox"> 
+         <input type="radio" id="as_cc_3rd" name="as_cc_radio"> 
+         <label for="as_cc_3rd"></label> 
+        </div> 
+       </div> 
+       <div class="field" style="margin-left:20px; margin-right:0;"> 
+        <div class="ui left icon input"> 
+         <input type="text" placeholder="Select 3rd Industry" readonly> 
+         <i class="circular ind_3rd inverted blue icon"></i> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="as_buttons ui basic segment" style="margin:0;padding:0;"> 
+       <div class="ui three column grid" style="margin-bottom: 15px;"> 
+        <div class="row"> 
+         <div class="column"> 
+          <div class="as_act_ccu_save ui attached blue large button">
+            Save 
+          </div> 
+         </div> 
+         <div class="column"> 
+          <div class="as_act_ccu_reset ui attached large button">
+            Reset 
+          </div> 
+         </div> 
+         <div class="column"> 
+          <div class="as_act_ccu_close ui attached large button">
+            Close 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="as_industry grouped inline fields"> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- rs-body --> 
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
+  <script src="/js/mobile_jindo.min.js"></script> 
+  <script src="/js/mobile_component.min.js"></script> 
+  <script src="/js/semantic.min.js"></script> 
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+  <script src="/js/mobile.js?20140806_0935"></script> 
+  <script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-48056583-1', 'askstory.com');
+	ga('require', 'linkid', 'linkid.js');
+	ga('send', 'pageview');
+	</script>   
+ </body>
+</html>

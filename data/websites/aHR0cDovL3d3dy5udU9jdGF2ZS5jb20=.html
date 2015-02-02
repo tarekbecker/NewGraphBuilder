@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> 
+  <link href="style.css" media="screen" rel="stylesheet" type="text/css"> 
+  <title>nuOctave - Apps for Insight™</title> 
+  <style>
+	@font-face {
+		 font-family: 'BreuerText-Light';
+		 src: url('font/BreuerText-Light.eot'); /* IE 5-8 */ 
+		 src: local('☺'),       /* sneakily trick IE */
+		    url('font/BreuerText-Light.woff') format('woff'),  /* FF 3.6, Chrome 5, IE9 */
+		    url('font/BreuerText-Light.ttf') format('truetype'), /* Opera, Safari */
+		    url('font/BreuerText-Light.svg#font') format('svg'); /* iOS */
+		}
+</style> 
+ </head> 
+ <body> 
+  <div id="head"> 
+   <div id="top"> 
+    <div id="logo">
+     <a href="/"><img src="img/logo.png" alt=""></a>
+    </div> 
+    <div id="team"> 
+     <ul> 
+      <li> <a href="http://twitter.com/drbigdata" target="_blank"><img id="Benoit_Brookens" src="img/team/blue/Benoit_Brookens.png" alt=""></a> 
+       <div class="name">
+        Benoit Brookens III
+       </div> </li> 
+      <li> <a href="https://twitter.com/luyben" target="_blank"><img id="Tycho_Luyben" src="img/team/blue/Tycho_Luyben.png" alt=""></a> 
+       <div class="name">
+        Tycho Luyben
+       </div> </li> 
+      <li> <a href="https://twitter.com/jfkii" target="_blank"><img id="James_Felton_Keith" src="img/team/blue/James_Felton_Keith.png" alt=""></a> 
+       <div class="name">
+        James Felton Keith
+       </div> </li> 
+      <li> <a href="https://twitter.com/lzimm" target="_blank"><img id="Lewis_Zimmerman" src="img/team/blue/Lewis_Zimmerman.png" alt=""></a> 
+       <div class="name">
+        Lewis Zimmerman
+       </div> </li> 
+      <li> <a href="https://www.facebook.com/paceme" target="_blank"><img id="Pace_Ellsworth" src="img/team/blue/Pace_Ellsworth.png" alt=""></a> 
+       <div class="name">
+        Pace Ellsworth
+       </div> </li> 
+      <li> <a href="https://www.facebook.com/benjaminweinberg" target="_blank"><img id="Ben_Weinberg" src="img/team/blue/Ben_Weinberg.png" alt=""></a> 
+       <div class="name">
+        Ben Weinberg
+       </div> </li> 
+      <!--  		<li>
+			    		<a href="https://www.facebook.com/joao" target="_blank"><img id="Joao_Filgueiras" src="img/team/blue/Joao_Filgueiras.png" alt="" /></a>
+			    		<div class="name">Jo&atilde;o Filgueiras</div>
+		    		</li> --> 
+      <li> <a href="mailto:hellous@nuoctave.com"><img id="btn-add" src="img/team/add_team.png" alt=""></a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="line"></div> 
+  </div> 
+  <!-- CONTENT --> 
+  <div id="content"> 
+   <div id="block"> 
+    <div class="block_left"> 
+     <div id="accrue">
+       Accrue 
+      <font>Because you can.™</font>
+     </div>
+     <font> 
+      <div id="about_accrue">
+        Accrue™ is the first mobile financial trading research app for exploring your hunches to find and capture market opportunities.
+      </div> </font>
+    </div>
+    <font> 
+     <div class="block_right"> 
+      <div class="blog"> 
+       <a class="title_blog" href="/blog">Our blog</a> 
+       <hr> 
+       <div> 
+        <a href="/blog/20130415">Gods Gift to Wall Street: The Age of Insight</a> April 15, 2013 
+       </div> 
+      </div> 
+     </div> </font>
+   </div>
+   <font> </font>
+  </div>
+  <font> 
+   <!-- FOOTER --> 
+   <div id="footer"> 
+    <ul> 
+     <li><a href="mailto:hellous@nuoctave.com">Contact us</a></li> 
+     <li><a href="mailto:hellous@nuoctave.com?subject=I%20would%20love%20to%20join%20you!">Join us</a></li> 
+     <li><a href="/blog">Our blog</a></li> 
+    </ul> 
+    <div>
+     © 2014 nuOctave
+    </div> 
+   </div> <script type="text/javascript">
+    $(document).ready(function() {
+    	$("#team img:not(#btn-add)")
+    		.mouseover(function() {
+	    		$(this).attr('src','img/team/'+$(this).attr('id')+'.png');
+	    	})
+	    	.mouseout(function() {
+	    		$(this).attr('src','img/team/blue/'+$(this).attr('id')+'.png');
+	    	})
+    })
+    </script>   </font>
+ </body>
+</html>

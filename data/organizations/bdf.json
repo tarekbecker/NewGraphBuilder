@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "2e59640938c6089217d96558242c2014",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "email_address": "arboun.ahmed@gmail.com",
+      "short_description": "Big Data Foundation",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 7,
+      "founded_on_month": 1,
+      "founded_on_year": 2012,
+      "founded_on": "2012-01-01",
+      "permalink": "bdf",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://www.bigdatafoundation.com",
+      "name": "BDF",
+      "num_employees_max": 10,
+      "num_employees_min": 1,
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "created_at": 1372175994,
+      "updated_at": 1409883112,
+      "total_funding_usd": 0,
+      "number_of_investments": 0,
+      "number_of_employees": 6
+    },
+    "relationships": {
+      "categories": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/bdf/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1417159419
+          },
+          {
+            "type": "Category",
+            "name": "Software",
+            "uuid": "c08b5441a05b9777b7a6012728caddd9",
+            "path": "category/software/c08b5441a05b9777b7a6012728caddd9",
+            "created_at": 1397980727,
+            "updated_at": 1417194917
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/bdf/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1397186953/aa57fc9a0267aa61058c72ef83dcaf9a.png",
+            "created_at": 1398018592,
+            "updated_at": 1398018592
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/bdf/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://twitter.com/bigdatafoundati",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1372150794,
+            "updated_at": 1409444623
+          },
+          {
+            "url": "http://www.bigdatafoundation.com/blog",
+            "type": "WebPresence",
+            "title": "blog",
+            "created_at": 1372150794,
+            "updated_at": 1397987956
+          },
+          {
+            "url": "http://www.bigdatafoundation.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1372150794,
+            "updated_at": 1397987956
+          }
+        ]
+      }
+    }
+  }
+}

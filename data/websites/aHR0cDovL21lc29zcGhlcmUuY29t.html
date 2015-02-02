@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <title>Mesosphere · Scale Your Datacenter with Apache Mesos</title> 
+  <meta name="title" content="Scale Your Datacenter with Apache Mesos"> 
+  <meta name="description" content="Mesos allows you to create a highly-available and scalable cluster on your existing hardware."> 
+  <meta name="keywords" content="mesos, mesosphere, apache mesos, cluster, mesos cluster, apache mesos, mesos tutorial, ETL, long-running services, service automation, distributed kernel, apache marathon, marathon tutorial, chronos tutorial, spark tutorial"> 
+  <meta name="googlebot" content="all"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="//dw8zztroqvu2r.cloudfront.net/assets/mesosphere-19a094b5ec74a480408c0d3568cd04fa.css"> 
+  <link rel="alternate" type="application/atom+xml" title="The Mesosphere Blog" href="/blog/atom.xml"> 
+  <link rel="shortcut icon" href="/favicon.ico"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//dw8zztroqvu2r.cloudfront.net/assets/apple-touch-icon-114x114-precomposed-b3372d3ef9a81bda4ed7a7f0a0188a86.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//dw8zztroqvu2r.cloudfront.net/assets/apple-touch-icon-72x72-precomposed-28de169dfcabd0c2dcb4d52d4990e502.png"> 
+  <link rel="apple-touch-icon-precomposed" href="//dw8zztroqvu2r.cloudfront.net/assets/apple-touch-icon-57x57-precomposed-0bd7367bd0d4bb9f85ca1f0095c2a3f3.png"> 
+  <script src="//cdn.optimizely.com/js/2009520669.js"></script> 
+  <script>
+      window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+      window.analytics.load("7sgtwqvuai");
+      window.analytics.page();
+    </script> 
+ </head> 
+ <body>
+  <div class="navbar navbar-default  navbar-front navbar-transparent" role="navigation"> 
+   <div class="container"> 
+    <div class="navbar-header"> 
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="navbar-brand" href="/"> <img src="//dw8zztroqvu2r.cloudfront.net/assets/logo-white-296x50-9b6748653207fdd06304ba0a7da507aa.png" width="148" height="25" alt="Mesosphere"> </a> 
+    </div> 
+    <div class="collapse navbar-collapse"> 
+     <ul class="nav navbar-nav"> 
+      <li><a href="/docs/">Documentation</a></li> 
+      <li><a href="/downloads/">Downloads</a></li> 
+      <li><a href="/services/">Services</a></li> 
+      <li><a href="/contact/">Contact</a> </li>
+      <li><a href="/blog/">Blog</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <section class="section section-primary home-masthead-gce"> 
+   <div class="container text-center"> 
+    <div class="row"> 
+     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3"> 
+      <div class="home-masthead-gce-logo"></div> 
+      <h1>Introducing Mesosphere on DigitalOcean</h1> 
+      <p class="lead"> Deploy and scale your apps fast on a Mesosphere cluster built for DigitalOcean's simple, SSD-only cloud. </p> 
+      <a class="btn btn-lg btn-primary btn-white-outline" href="https://digitalocean.mesosphere.com/"> Learn More </a> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="section section-inverted home-introduction"> 
+   <div class="container text-center"> 
+    <div class="row"> 
+     <div class="col-sm-10 col-sm-offset-1"> 
+      <h1 class="home-gce short"> Scale is broken in the datacenter and cloud.<br>We fix it. </h1> 
+      <a class="btn btn-lg btn-primary" data-toggle="modal" data-remote="false" data-target="#schedule-demo-modal" href="/request-a-demo/"> Request a Demo </a> 
+      <div class="btn-group" style="display: inline-block;"> 
+       <a class="btn btn-lg btn-default btn-white-outline dropdown-toggle" href="/docs/tutorials/" data-toggle="dropdown"> Try Mesosphere <span class="caret"></span> </a> 
+       <ul class="dropdown-menu text-left" role="menu"> 
+        <li class="dropdown-header">Integrations</li> 
+        <li><a href="/docs/tutorials/launch-docker-container-on-mesosphere/">Docker</a></li> 
+        <li><a href="https://digitalocean.mesosphere.com">Mesosphere on DigitalOcean</a></li> 
+        <li><a href="https://google.mesosphere.com">Mesosphere on Google Cloud Platform</a></li> 
+        <li role="presentation" class="divider"></li> 
+        <li class="dropdown-header">Platforms</li> 
+        <li><a href="/docs/tutorials/install_centos_rhel/">CentOS</a></li> 
+        <li><a href="/docs/tutorials/install_ubuntu_debian/">Debian</a></li> 
+        <li><a href="/docs/tutorials/install_centos_rhel/">Red Hat</a></li> 
+        <li><a href="/docs/tutorials/install_ubuntu_debian/">Ubuntu (12.x, 13.x)</a></li> 
+        <li role="presentation" class="divider"></li> 
+        <li><a href="/downloads/">Download Packages</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="section section-feature"> 
+   <div class="container text-center"> 
+    <h2 class="section-header">Combine Your Servers Into One Big Computer</h2> 
+    <div class="row"> 
+     <div class="col-sm-8 col-sm-offset-2"> 
+      <p class="lead text-muted"> Mesosphere combines your datacenter servers and cloud instances into one shared pool from which any app or framework can draw. </p> 
+     </div> 
+    </div> 
+    <div class="row" style="position: relative;"> 
+     <div class="col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2"> 
+      <p> <i class="graphic-datacenter graphic-datacenter-default"></i> </p> 
+      <h4>Datacenter or Cloud</h4> 
+      <p class="text-muted"> Gone are the days where writing and deploying new applications means managing individual machines and static partitions. </p> 
+     </div> 
+     <div class="col-sm-6 col-md-5 col-lg-4"> 
+      <p> <i class="graphic-datacenter graphic-datacenter-mesos"></i> </p> 
+      <h4>With Mesosphere</h4> 
+      <p class="text-muted"> Pool your datacenter and cloud resources, so all your apps run together on the same machines—reducing complexity and waste. </p> 
+     </div> 
+     <i class="graphic-datacenter graphic-datacenter-arrow hidden-xs"></i> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="section-feature"> 
+   <div class="container"> 
+    <hr class="hr-feature"> 
+   </div> 
+  </section> 
+  <section class="section section-feature"> 
+   <div class="container text-center"> 
+    <h2 class="section-header">Software to Transform your Datacenter</h2> 
+    <div class="row"> 
+     <div class="col-sm-8 col-sm-offset-2"> 
+      <p class="lead text-muted"> Mesosphere is software that runs on each server in your physical or cloud-based datacenter, on top of any Linux distribution. </p> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-sm-4"> 
+      <div class="panel"> 
+       <div class="panel-body"> 
+        <p> <i class="transform-bullet"> <i class="transform-bullet-body"> <i class="fa fa-unlock-alt" aria-hidden="true"></i> </i> </i> </p> 
+        <h4>Eliminate Lock-in</h4> 
+        <p class="text-muted"> Built on top of open source technology, Mesosphere lets you run in any cloud or datacenter, maintaining your flexibility. </p> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-4"> 
+      <div class="panel"> 
+       <div class="panel-body"> 
+        <p> <i class="transform-bullet"> <i class="transform-bullet-body"> <i class="fa fa-signal" aria-hidden="true"></i> </i> </i> </p> 
+        <h4>Scale infinitely</h4> 
+        <p class="text-muted"> Grow to tens of thousands of nodes effortlessly while dynamically allocating resources with ease. </p> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-4"> 
+      <div class="panel"> 
+       <div class="panel-body"> 
+        <p> <i class="transform-bullet"> <i class="transform-bullet-body"> <i class="fa fa-heart" aria-hidden="true"></i> </i> </i> </p> 
+        <h4>Never Fail</h4> 
+        <p class="text-muted"> Mesosphere keeps your apps running by rebalancing resources and restarting failed tasks automatically. </p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-sm-4"> 
+      <div class="panel"> 
+       <div class="panel-body"> 
+        <p> <i class="transform-bullet"> <i class="transform-bullet-body"> <i class="fa fa-tachometer" aria-hidden="true"></i> </i> </i> </p> 
+        <h4>Optimize Resources</h4> 
+        <p class="text-muted"> Mesosphere packs each server with multiple apps, increasing resource utilization. </p> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-4"> 
+      <div class="panel"> 
+       <div class="panel-body"> 
+        <p> <i class="transform-bullet"> <i class="transform-bullet-body"> <i class="fa fa-rocket" aria-hidden="true"></i> </i> </i> </p> 
+        <h4>Develop Quickly</h4> 
+        <p class="text-muted"> Developers can build and deploy faster with Mesosphere because they can think about code, not servers. </p> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-4"> 
+      <div class="panel"> 
+       <div class="panel-body"> 
+        <p> <i class="transform-bullet"> <i class="transform-bullet-body"> <i class="fa fa-gear" aria-hidden="true"></i> </i> </i> </p> 
+        <h4>Operate Automatically</h4> 
+        <p class="text-muted"> Mesosphere brings high-degrees of automation to managing your cluster. Save time and money with more efficient operations. </p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <div class="bg-primary"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-sm-4 section"> 
+      <h3 class="section-header">How does Mesosphere work?</h3> 
+      <p> Mesosphere offers a layer of software that organizes your machines, VMs, and cloud instances and lets applications draw from a single pool of intelligently- and dynamically-allocated resources, increasing efficiency and reducing operational complexity. </p> 
+      <p> It is highly-available and fault-tolerant and runs in production at some of the most agile companies in the world in both private data centers and on public clouds. </p>
+      <p> </p>
+      <p> The core of Mesosphere is based on Apache Mesos, an open source technology invented at UC Berkeley's AMPLab and run at large scale at Twitter. </p> 
+     </div> 
+     <div class="col-sm-8 section section-inverted"> 
+      <div class="row"> 
+       <div class="col-sm-7 text-center"> 
+        <div class="graphic-works-container"> 
+         <i class="graphic-works graphic-works-apps"></i> 
+         <i class="graphic-works graphic-works-shell-fill"></i> 
+         <i class="graphic-works graphic-works-shell"></i> 
+         <i class="graphic-works graphic-works-tools"></i> 
+         <i class="graphic-works graphic-works-servers-shell"></i> 
+         <i class="graphic-works graphic-works-servers"></i> 
+        </div> 
+       </div> 
+       <div class="col-sm-5"> 
+        <h4 class="section-header">Applications</h4> 
+        <p class="text-muted"> Easily deploy and manage Linux applications and frameworks, including Ruby on Rails, Tomcat, Lucene, Spark, MPI, and Hadoop. </p> 
+        <h4>Mesosphere Layer</h4> 
+        <p class="text-muted"> Mesosphere provides products and tools for managing your cluster and deploying apps, and an API for building and orchestrating distributed systems. </p> 
+        <h4>Hardware</h4> 
+        <p class="text-muted"> Apache Mesos, open source software that provides abstractions similar to an OS kernel, makes the datacenter behave like one pool of resources. </p> 
+        <div> 
+         <a href="/docs/getting-started" class="btn btn-lg btn-white-outline"> Learn more </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <section class="section section-secondary"> 
+   <div class="container text-center"> 
+    <h2 class="section-header">What Can Mesosphere Do For You?</h2> 
+    <div class="row"> 
+     <div class="col-sm-8 col-sm-offset-2"> 
+      <p class="lead text-muted"> Gain competitive advantage by moving faster, leveraging fault tolerance, and running more efficiently. </p> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-sm-4"> 
+      <div class="panel panel-no-walls"> 
+       <div class="panel-body"> 
+        <p> <i class="icon-solutions icon-solutions-dev-velocity"></i> </p> 
+        <h4>Developer Velocity</h4> 
+        <p class="text-muted"> From commit to production, engineering teams focus on applications rather than servers. With access to a pool of resources, run anything from experiments to high-scale production apps without slowing down. </p> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-4"> 
+      <div class="panel panel-no-walls"> 
+       <div class="panel-body"> 
+        <p> <i class="icon-solutions icon-solutions-op-excel"></i> </p> 
+        <h4>Operational Excellence</h4> 
+        <p class="text-muted"> Leave behind the days of manual configurations and sleep-depriving pager duty. Give ops teams the tools they need to automate and simplify their clusters. Mesosphere clusters have no single point of failure and run with little downtime. </p> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-4"> 
+      <div class="panel panel-no-walls"> 
+       <div class="panel-body"> 
+        <p> <i class="icon-solutions icon-solutions-bus-leader"></i> </p> 
+        <h4>Business Leadership</h4> 
+        <p class="text-muted"> Lower costs. Move faster. Use your datacenter and cloud to deliver business value. Mesosphere lets you run existing apps more efficiently and build new apps faster, creating competitive advantage while also saving money. </p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="section section-feature"> 
+   <div class="container text-center"> 
+    <div class="row"> 
+     <div class="col-sm-10 col-sm-offset-1"> 
+      <h2 class="section-header">From Bare Metal to Amazon, We Have You Covered</h2> 
+      <p class="lead text-muted"> Whether you are hand-tuning your own hardware, virtualizing with VMware, building a private cloud with OpenStack, or leveraging a public cloud like Amazon Web Services, Mesosphere will deliver better resource utilization, elastic scaling, and fault tolerance out of the box. </p> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-sm-10 col-sm-offset-1"> 
+      <h4 class="header-strike-back text-muted"> <span class="header-strike-back-body">Mesosphere works well with</span> </h4> 
+      <ul class="list-inline list-inline-padded list-unstyled"> 
+       <li> <i class="icon-logo icon-logo-aws">Amazon Web Services</i> </li> 
+       <li> <i class="icon-logo icon-logo-openstack">OpenStack</i> </li> 
+       <li> <i class="icon-logo icon-logo-docker">Docker</i> </li> 
+       <li> <i class="icon-logo icon-logo-openshift">OpenShift</i> </li> 
+       <li> <a href="/docs/tutorials/install_centos_rhel/"> <i class="icon-logo icon-logo-redhat">Redhat</i> </a> </li> 
+       <li> <a href="/docs/tutorials/install_centos_rhel/"> <i class="icon-logo icon-logo-centos">CentOS</i> </a> </li> 
+       <li> <a href="/docs/tutorials/install_ubuntu_debian/"> <i class="icon-logo icon-logo-ubuntu">Ubuntu</i> </a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="section-compact section-inverted"> 
+   <div class="container text-center"> 
+    <span class="h1"> <i class="fa fa-quote-left text-muted"></i> </span> 
+    <blockquote class="h2 blockquote-feature"> 
+     <p>Mesosphere brings Google-scale compute to everybody.</p> 
+     <footer>
+       Abdur Chowdhury
+      <br> Former Chief Scientist, Twitter Inc.
+      <br> 
+      <i class="icon-logo icon-logo-inverse-twitter">Twitter</i> 
+     </footer> 
+    </blockquote> 
+   </div> 
+  </section> 
+  <section class="section section-secondary"> 
+   <div class="container text-center"> 
+    <h2 class="section-header">Let Mesosphere Work For You</h2> 
+    <a class="btn btn-lg btn-primary" data-toggle="modal" data-remote="false" data-target="#schedule-demo-modal" href="/request-a-demo/">Request a Demo</a> 
+    <div class="btn-group" style="display: inline-block;"> 
+     <a class="btn btn-lg btn-default dropdown-toggle" href="/docs/tutorials/" data-toggle="dropdown"> Try Mesosphere <span class="caret"></span> </a> 
+     <ul class="dropdown-menu text-left" role="menu"> 
+      <li class="dropdown-header">Integrations</li> 
+      <li><a href="/docs/tutorials/launch-docker-container-on-mesosphere/">Docker</a></li> 
+      <li><a href="https://digitalocean.mesosphere.com">Mesosphere on DigitalOcean</a></li> 
+      <li><a href="https://google.mesosphere.com">Mesosphere on Google Cloud Platform</a></li> 
+      <li role="presentation" class="divider"></li> 
+      <li class="dropdown-header">Platforms</li> 
+      <li><a href="/docs/tutorials/install_centos_rhel/">CentOS</a></li> 
+      <li><a href="/docs/tutorials/install_ubuntu_debian/">Debian</a></li> 
+      <li><a href="/docs/tutorials/install_centos_rhel/">Red Hat</a></li> 
+      <li><a href="/docs/tutorials/install_ubuntu_debian/">Ubuntu (12.x, 13.x)</a></li> 
+      <li role="presentation" class="divider"></li> 
+      <li><a href="/downloads/">Download Packages</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="section section-inverted bg-mesosphere"> 
+   <div class="container text-center"> 
+    <div class="row"> 
+     <div class="col-sm-10 col-sm-offset-1"> 
+      <h2 class="section-header">Who We Are</h2> 
+      <p> We believe that scale is broken in datacenters, and even in the cloud. We are fixing that. </p> 
+      <p> Nestled in the SoMa district of San Francisco, a young enterprise software tribe stares down orthodox datacenter models. Born from the brightest minds, Mesosphere challenges the datacenter experience to be efficient and delightful. </p> 
+      <p> Set your sights high and join us. </p> 
+      <p> <a href="/team" class="btn btn-lg btn-white-outline"> About Mesosphere </a> </p> 
+     </div> 
+    </div> 
+    <h4 class="header-strike-back header-strike-back-inverted"> <span class="header-strike-back-body"> Some of the great companies already using Mesos </span> </h4> 
+    <ul class="list-inline list-inline-padded list-unstyled"> 
+     <li><i class="icon-logo icon-logo-inverse-airbnb">Airbnb</i></li> 
+     <li><i class="icon-logo icon-logo-inverse-twitter">Twitter</i></li> 
+     <li><i class="icon-logo icon-logo-inverse-hubspot">Hubspot</i></li> 
+     <li><i class="icon-logo icon-logo-inverse-urx">URX</i></li> 
+    </ul> 
+   </div> 
+  </section> 
+  <div class="modal fade" id="schedule-demo-modal" tabindex="-1" role="dialog" aria-hidden="true"> 
+   <div class="modal-dialog"> 
+    <form action="https://mesosphere.wufoo.com/forms/z13a97yv0m79239/#public" method="post" id="schedule-demo-form" accept-charset="UTF-8" enctype="multipart/form-data"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+       <h3 class="modal-title">Request a Demo of Mesosphere</h3> 
+      </div> 
+      <div class="modal-body"> 
+       <div id="schedule-demo-form-pane1"> 
+        <p>Get a first-hand demo of Mesosphere, and see for yourself how it can transform your datacenter or cloud.</p> 
+        <small class="pull-right text-muted">* indicates required</small> 
+        <div class="form-group"> 
+         <label for="Field9">First Name</label> 
+         <input id="Field9" name="Field9" type="text" class="form-control" value="" maxlength="255" tabindex="1"> 
+        </div> 
+        <div class="form-group"> 
+         <label for="Field10">Last Name</label> 
+         <input id="Field10" name="Field10" type="text" class="form-control" value="" maxlength="255" tabindex="2"> 
+        </div> 
+        <div class="form-group"> 
+         <label for="mce-EMAIL">Email Address <span class="text-muted">*</span></label> 
+         <input id="Field7" name="Field7" type="email" class="form-control" value="" maxlength="255" tabindex="3" required> 
+        </div> 
+        <div class="form-group"> 
+         <label for="Field11">Company Name</label> 
+         <input id="Field11" name="Field11" type="text" class="form-control" value="" maxlength="255" tabindex="4"> 
+        </div> 
+        <div class="form-group"> 
+         <label for="Field12">Job Title</label> 
+         <input id="Field12" name="Field12" type="text" class="form-control" value="" maxlength="255" tabindex="5"> 
+        </div> 
+        <div class="form-group"> 
+         <label for="Field14">How big is your cluster? <span class="text-muted">*</span></label> 
+         <select id="Field14" name="Field14" class="form-control" tabindex="6" required> <option value="" selected> </option> <option value="1 - 10 machines"> 1 - 10 machines </option> <option value="11 - 50 machines"> 11 - 50 machines </option> <option value="51 - 100 machines"> 51 - 100 machines </option> <option value="101 - 500 machines"> 101 - 500 machines </option> <option value="500+ machines"> 500+ machines </option> </select> 
+        </div> 
+        <div class="form-group"> 
+         <label for="Field16">What is the #1 problem you hope to solve with Mesosphere?</label> 
+         <textarea id="Field16" name="Field16" class="form-control" spellcheck="true" style="resize: vertical;" tabindex="7"></textarea> 
+        </div> 
+        <div class="form-group"> 
+         <input type="submit" value="Request a Free Demo" name="saveForm" class="btn btn-primary btn-lg" tabindex="8"> 
+        </div> 
+        <div class="hide"> 
+         <textarea name="comment" id="comment" rows="1" cols="1"></textarea> 
+         <input type="hidden" id="idstamp" name="idstamp" value="2LKXDu+qDTJ+O4aq26OozlS270vhaecISCKILoIW9r0="> 
+        </div> 
+       </div> 
+       <div id="schedule-demo-form-pane2" class="hide"> 
+        <p>Great! We will be in touch shortly to schedule a time for a demo of Mesosphere.</p> 
+        <button data-dismiss="modal" aria-hidden="true" class="btn btn-primary btn-lg" type="button">Continue</button> 
+       </div> 
+      </div>  
+     </div>
+    </form> 
+   </div> 
+  </div> 
+  <footer class=" "> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-sm-3"> 
+      <ul class="list-unstyled"> 
+       <li><a href="/team/">Team</a> </li>
+       <li><a href="/news-events/">News &amp; Events</a></li> 
+       <li><a href="/jobs/">Careers</a> </li>
+      </ul> 
+     </div> 
+     <div class="col-sm-3"> 
+      <ul class="list-unstyled"> 
+       <li><a href="/resources/case-studies/">Case Studies</a> </li>
+       <li><a href="/resources/research/">Research</a> </li>
+      </ul> 
+     </div> 
+     <div class="col-sm-3"> 
+      <ul class="list-unstyled"> 
+       <li><a href="https://twitter.com/mesosphere">@mesosphere</a> </li>
+       <li><span class="text-muted">© 2014 Mesosphere, Inc.</span> </li>
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.3.2/ZeroClipboard.min.js"></script> 
+  <script>
+  (function() {
+    function Glossary() {}
+    Glossary.TERMS = {"aws_access_key_id":{"term":"AWS Access Key ID","def":"Part of the AWS Credentials, the identifier for your AWS account. You include it in AWS service requests to identify yourself as the sender of the request.\n\n*See also: [http://blogs.aws.amazon.com/security/post/Tx1R9KDN9ISZ0HF/Where-s-my-secret-access-key]()*\n"},"aws_secret_access_key":{"term":"AWS Secret Access Key","def":"The secret, password-like component of the AWS Credentials. You should securely store your secret access keys as a security best practice, but you can always generate new access keys at any time.\n\n*<a href=\"http://blogs.aws.amazon.com/security/post/Tx1R9KDN9ISZ0HF/Where-s-my-secret-access-key\">More info</a>*\n"},"cluster":{"term":"cluster","def":"A group of instances."},"cluster_properties":{"term":"Cluster Properties","def":"Cluster size and details: OS, #instances, RAM, etc.\n"},"cookie":{"term":"cookie","def":"A cookie, also known as an HTTP cookie, web cookie, or browser cookie, is a small piece of data sent from a website and stored in a user's web browser while the user is browsing that website. For elastic mesos, we store the encrypted AWS credentials inside a cookie in your browser to start and stop your mesos cluster. We never record your credentials on our server\n\n*<a href=\"http://en.wikipedia.org/wiki/HTTP_cookie\">More info</a>*\n"},"credentials":{"term":"Credentials","def":"Set of data saved to reuse for New Computers\n\n*<a href=\"http://blogs.aws.amazon.com/security/post/Tx1R9KDN9ISZ0HF/Where-s-my-secret-access-key\">More info</a>*\n"},"destroy":{"term":"Destroy","def":"Verb used to kill either a process or a Mesos cluster."},"executor":{"term":"Executor","def":"The part of a Framework that runs as a process launched on Mesos-slaves to run the Framework's tasks.\n\n*<a href=\"http://mesos.apache.org/documentation/latest/mesos-architecture/\">More info</a>*\n"},"framework":{"term":"Framework","def":"Runs directly via Mesos and includes both a Scheduler and one or more Executors. Receives resource offers describing CPU, RAM, etc., and allocates them for tasks that can be launched on Mesos-slaves.\n\n*<a href=\"http://mesos.apache.org/documentation/latest/mesos-architecture/\">More info</a>*\n"},"instance":{"term":"instance","def":"Term for a machine, used by AWS and other cloud providers."},"launch":{"term":"Launch","def":"Verb used to initiate a new cluster \"Launch Computer!\""},"machine":{"term":"machine","def":"Refers to the physical hardware for an instance."},"mesos_master":{"term":"Mesos-master","def":"A Mesos master aggregates resource offers from all the slaves and provides them to registered frameworks.\n\n*<a href=\"http://mesos.apache.org/documentation/latest/mesos-architecture/\">More info</a>*\n"},"mesos_slave":{"term":"Mesos-slave","def":"A Mesos slave runs a discrete Mesos task on behalf of a framework. It is a worker instance registered with the Mesos master.\n\n*<a href=\"http://mesos.apache.org/documentation/latest/mesos-architecture/\">More info</a>*\n"},"offer":{"term":"offer","def":"An offer represents available resources (e.g. cpu, disk, ram) which a slave offers to the master and the master hands to the registered frameworks in some order.\n\n*<a href=\"http://mesos.apache.org/documentation/latest/mesos-architecture/\">More info</a>*\n"},"provisioned":{"term":"provisioned","def":"Status when a new cluster is ready to use. Proceed to the Mesos UI next."},"provisioning":{"term":"provisioning","def":"Status while a new cluster is starting EC2 instances, prior to being ready to use.\n"},"public_ssh_key":{"term":"Public SSH Key","def":"The public portion of an SSH key, e.g. \"id_rsa.pub\"\n\n*<a href=\"http://en.wikipedia.org/wiki/Public-key_cryptography\">More info</a>*\n"},"scheduler":{"term":"Scheduler","def":"The part of a Framework that registers with the Mesos-master to be offered resources, selecting which resource offers to allocated to the Executors.\n\n*<a href=\"http://mesos.apache.org/documentation/latest/mesos-architecture/\">More info</a>*\n"},"service":{"term":"Service","def":"A service is a long-lived process which provides request/response interaction. Examples include web service, e.g., Ruby on Rails or a database.\n\n*<a href=\"http://en.wikipedia.org/wiki/Request-response\">More info</a>*\n"},"task":{"term":"task","def":"A unit of work, scheduled by a framework and executed on a Mesos-slave. In Hadoop terminology, this is a \"job\". In MySQL terminology, this is a \"query\" or \"statement\". A task may simply be a Bash command or a Python script.\n"}};
+    window.Glossary = Glossary;
+  })();
+</script> 
+  <script src="//dw8zztroqvu2r.cloudfront.net/assets/application-f4a378fcfb0f4dcb8770ff20ad6aee71.js"></script>  
+ </body>
+</html>

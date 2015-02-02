@@ -1,0 +1,879 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+ <head> 
+  <meta name="google-site-verification" content="z1YnNkM9puU3bwplG60gpcFAv6EgccOqifjUiODaZ-0"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"> 
+  <title>Big Data Craft</title> 
+  <meta name="description" content="Blog about Data clouds, data analytics, BigData, Flash Memory, SSD, cloud computing, BI, Netezza, DBMS, OLAP, Columnar, Main-memory databases, NoSQL."> 
+  <meta name="keywords" content="Data clouds, data analytics, BigData, Flash Memory, SSD, cloud computing, BI, Netezza, DBMS, OLAP, Columnar, Main-memory databases, NoSQL"> 
+  <link rel="shortcut icon" href="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/favicon/fff-lightbulb.ico">
+  <link rel="alternate" type="application/rss+xml" title="Big Data Craft RSS Feed" href="http://bigdatacraft.com/feed"> 
+  <link rel="alternate" type="application/atom+xml" title="Big Data Craft Atom Feed" href="http://bigdatacraft.com/feed/atom"> 
+  <link rel="pingback" href="http://bigdatacraft.com/xmlrpc.php"> 
+  <script type="text/javascript" src="http://bigdatacraft.com/wp-includes/js/jquery/jquery.js?ver=1.8.3"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bigdatacraft.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bigdatacraft.com/wp-includes/wlwmanifest.xml"> 
+  <style type="text/css">body{text-align:center;margin:0;padding:0;font-family:Georgia;font-size:16px;line-height:1.5;padding:0;color:#000000;background:#fff url('http://bigdatacraft.com/wp-content/themes/atahualpa353/images/background7.png') repeat-x top left}a:link,a:visited,a:active{color:#365DA0;font-weight:normal;text-decoration:none;}a:hover{color:#365DA0;font-weight:normal;text-decoration:underline}ul,ol,dl,p,h1,h2,h3,h4,h5,h6{margin-top:10px;margin-bottom:10px;padding-top:0;padding-bottom:0;}ul ul,ul ol,ol ul,ol ol{margin-top:0;margin-bottom:0}code,pre{font-family:"Courier New",Courier,monospace;font-size:1em}pre{overflow:auto;word-wrap:normal;padding-bottom:1.5em;overflow-y:hidden;width:99%}abbr[title],acronym[title]{border-bottom:1px dotted}hr{display:block;height:2px;border:none;margin:0.5em auto;color:#cccccc;background-color:#cccccc}table{font-size:1em;}div.post,ul.commentlist li,ol.commentlist li{word-wrap:break-word;}pre,.wp_syntax{word-wrap:normal;}div#wrapper{text-align:center;margin-left:auto;margin-right:auto;display:block;width:950px}div#container{position:relative;padding-left:10px;padding-right:10px;width:auto;margin-left:auto;margin-right:auto;text-align:left;display:block}table#layout{font-size:100%;width:100%;table-layout:fixed}.colone{width:200px}.colone-inner{width:200px}.coltwo{width:100% }.colthree-inner{width:200px}.colthree{width:200px}td#header{width:auto;padding:0}table#logoarea,table#logoarea tr,table#logoarea td{margin:0;padding:0;background:none;border:0}table#logoarea{width:100%;border-spacing:0px;height:150px;background:#000000}img.logo{display:block;margin:0 0 0 0;color:#000000}td.logoarea-logo{width:1%}h1.blogtitle,h2.blogtitle{ display:block;margin-left:20px;padding:0;font-size:56px;font-family:Garamond;font-smooth:always}h1.blogtitle a:link,h1.blogtitle a:visited,h1.blogtitle a:active,h2.blogtitle a:link,h2.blogtitle a:visited,h2.blogtitle a:active{ text-decoration:none;color:#FFFFFF;font-weight:normal;font-smooth:always}h1.blogtitle a:hover,h2.blogtitle a:hover{ text-decoration:none;color:#FFFFFF;font-weight:normal}p.tagline{margin-left:20px;padding:0;font-size:20px;font-weight:normal;color:#ffffff;margin-top:0px}td.feed-icons{white-space:nowrap;}div.rss-box{height:1%;display:block;padding:10px 0 10px 10px;margin:0;width:280px}a.comments-icon{height:22px;line-height:22px;margin:0 5px 0 5px;padding-left:22px;display:block;text-decoration:none;float:right;white-space:nowrap}a.comments-icon:link,a.commentss-icon:active,a.comments-icon:visited{background:transparent url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/comment-gray.png) no-repeat scroll center left}a.comments-icon:hover{background:transparent url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/comment.png) no-repeat scroll center left}a.posts-icon{height:22px;line-height:22px;margin:0 5px 0 0;padding-left:20px;display:block;text-decoration:none;float:right;white-space:nowrap}a.posts-icon:link,a.posts-icon:active,a.posts-icon:visited{background:transparent url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/rss-gray.png) no-repeat scroll center left}a.posts-icon:hover{background:transparent url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/rss.png) no-repeat scroll center left}a.email-icon{height:22px;line-height:22px;margin:0 5px 0 5px;padding-left:24px;display:block;text-decoration:none;float:right;white-space:nowrap}a.email-icon:link,a.email-icon:active,a.email-icon:visited{background:transparent url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/email-gray.png) no-repeat scroll center left}a.email-icon:hover{background:transparent url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/email.png) no-repeat scroll center left}td.search-box{height:1%}div.searchbox{height:35px;width:260px;margin:0;padding:0}div.searchbox-form{margin:5px 10px 5px 10px}div.horbar1,div.horbar2{font-size:1px;clear:both;display:block;position:relative;padding:0;margin:0;width:100%;}div.horbar1{height:5px;background:#ffffff;border-top:dashed 1px #cccccc}div.horbar2{height:5px;background:#ffffff;border-bottom:dashed 1px #cccccc}div.header-image-container{position:relative;margin:0;padding:0;height:90px;}div.titleoverlay{z-index:4;position:relative;float:left;width:auto}div.opacityleft{position:absolute;z-index:2;top:0;left:0;background-color:#000000;height:90px;width:200px;filter:alpha(opacity=95);-moz-opacity:.95;opacity:.95}div.opacityright{position:absolute;z-index:2;top:0;right:0;background-color:#000000;height:90px;width:200px;filter:alpha(opacity=95);-moz-opacity:.95;opacity:.95}a.divclick:link,a.divclick:visited,a.divclick:active,a.divclick:hover{width:100%;height:100%;display:block;text-decoration:none}td#left{vertical-align:top}td#left-inner{vertical-align:top}td#right{vertical-align:top;padding:20px 20px 30px 20px;}td#right-inner{vertical-align:top;padding:20px 20px 30px 20px;border-bottom:solid 1px #777;border-left:solid 1px #777;border-right:solid 1px #777;background:#eee}td#middle{vertical-align:top;width:100%;padding:20px 20px 30px 20px;background:#fff;font-size:16px}td#footer{width:auto;padding:10px;text-align:center;color:#999;font-size:11px}td#footer a:link,td#footer a:visited,td#footer a:active{text-decoration:none;color:#999;font-weight:normal}td#footer a:hover{text-decoration:underline;color:#999;font-weight:normal}div.widget{display:block;width:auto;font-size:12px;line-height:1.2;padding:10px 0 20px 0;border-bottom:solid 1px #777;margin-bottom:10px}div.widget-title{display:block;width:auto}div.widget-title h3,td#left h3.tw-widgettitle,td#right h3.tw-widgettitle,td#left ul.tw-nav-list,td#right ul.tw-nav-list{padding:0;margin:0;font-size:14px;font-weight:normal;color:#333;margin-bottom:15px;text-transform:uppercase;letter-spacing:1px}div.widget ul,div.textwidget{display:block;width:auto}div.widget select{width:98%;margin-top:5px;}div.widget ul{list-style-type:none;margin:0;padding:0;width:auto}div.widget ul li{display:block;margin:2px 0 2px 0px;padding:0 0 0 0px;border-left:solid 0px #CCCCCC}div.widget ul li:hover,div.widget ul li.sfhover{display:block;width:auto;border-left:solid 0px #000000;}div.widget ul li ul li{margin:2px 0 2px 5px;padding:0 0 0 0px;border-left:solid 0px #CCCCCC;}div.widget ul li ul li:hover,div.widget ul li ul li.sfhover{border-left:solid 0px #000000;}div.widget ul li ul li ul li{margin:2px 0 2px 5px;padding:0 0 0 0px;border-left:solid 0px #CCCCCC;}div.widget ul li ul li ul li:hover,div.widget ul li ul li ul li.sfhover{border-left:solid 0px #000000;}div.widget td a:link,div.widget td a:visited,div.widget td a:active,div.widget ul li a:link,div.widget ul li a:visited,div.widget ul li a:active{text-decoration:none;font-weight:normal;color:#365DA0;font-weight:normal;}div.widget ul li ul li a:link,div.widget ul li ul li a:visited,div.widget ul li ul li a:active{color:#365DA0;font-weight:normal;}div.widget ul li ul li ul li a:link,div.widget ul li ul li ul li a:visited,div.widget ul li ul li ul li a:active{color:#365DA0;font-weight:normal;}div.widget ul li a:hover{color:#365DA0;}div.widget ul li ul li a:hover{color:#365DA0;}div.widget ul li ul li ul li a:hover{color:#365DA0;}div.widget ul li a:link,div.widget ul li a:visited,div.widget ul li a:active,div.widget ul li a:hover{display:inline}* html div.widget ul li a:link,* html div.widget ul li a:visited,* html div.widget ul li a:active,* html div.widget ul li a:hover{height:1%; } div.widget_pages ul li,div.widget_categories ul li{border-left:0 !important;padding:0 !important}div.widget_pages ul li a:link,div.widget_pages ul li a:visited,div.widget_pages ul li a:active,div.widget_categories ul li a:link,div.widget_categories ul li a:visited,div.widget_categories ul li a:active{padding:0 0 0 0px;border-left:solid 0px #CCCCCC}div.widget_pages ul li a:hover,div.widget_categories ul li a:hover{border-left:solid 0px #000000;}div.widget_pages ul li ul li a:link,div.widget_pages ul li ul li a:visited,div.widget_pages ul li ul li a:active,div.widget_categories ul li ul li a:link,div.widget_categories ul li ul li a:visited,div.widget_categories ul li ul li a:active{padding:0 0 0 0px;border-left:solid 0px #CCCCCC}div.widget_pages ul li ul li a:hover,div.widget_categories ul li ul li a:hover{border-left:solid 0px #000000;}div.widget_pages ul li ul li ul li a:link,div.widget_pages ul li ul li ul li a:visited,div.widget_pages ul li ul li ul li a:active,div.widget_categories ul li ul li ul li a:link,div.widget_categories ul li ul li ul li a:visited,div.widget_categories ul li ul li ul li a:active{padding:0 0 0 0px;border-left:solid 0px #CCCCCC}div.widget_pages ul li ul li ul li a:hover,div.widget_categories ul li ul li ul li a:hover{border-left:solid 0px #000000;}div.widget_pages ul li a:link,div.widget_pages ul li a:active,div.widget_pages ul li a:visited,div.widget_pages ul li a:hover{display:block !important}div.widget_categories ul li a:link,div.widget_categories ul li a:active,div.widget_categories ul li a:visited,div.widget_categories ul li a:hover{display:inline !important}table.subscribe{width:100%}table.subscribe td.email-text{padding:0 0 5px 0;vertical-align:top}table.subscribe td.email-field{padding:0;width:100%}table.subscribe td.email-button{padding:0 0 0 5px}table.subscribe td.post-text{padding:7px 0 0 0;vertical-align:top}table.subscribe td.comment-text{padding:7px 0 0 0;vertical-align:top}div.post,div.page{display:block;margin:0 0 5px 0;padding:20px 0 30px 0;background:#fff}div.sticky{background:#eee url('http://bigdatacraft.com/wp-content/themes/atahualpa353/images/sticky.gif') 99% 5% no-repeat;padding:10px}div.post-kicker{margin:0 0 5px 0;padding:0 20px 0 30px;background:#000;color:#fff;margin:0 0 5px 0;padding:0 20px 0 30px;background:#000;color:#fff;font-weight:bold}div.post-kicker a:link,div.post-kicker a:visited,div.post-kicker a:active{color:#999;text-decoration:none;text-transform:uppercase;letter-spacing:1px}div.post-kicker a:hover{color:#cc0000}div.post-headline{}div.post-headline h1,div.post-headline h2{ margin:0; padding:0;padding:0;margin:0;font-size:1.9em;line-height:1.2;font-weight:normal}div.post-headline h2 a:link,div.post-headline h2 a:visited,div.post-headline h2 a:active,div.post-headline h1 a:link,div.post-headline h1 a:visited,div.post-headline h1 a:active{font-weight:normal}div.post-headline h2 a:hover,div.post-headline h1 a:hover{}div.post-byline{margin:5px 0 10px 0;color:#999;text-transform:uppercase;letter-spacing:1px;font-size:11px}div.post-byline a:link,div.post-byline a:visited,div.post-byline a:active{}div.post-byline a:hover{}div.post-bodycopy{font-size:16px;color:#000;font-weight:normal}div.post-bodycopy p{margin:1em 0;padding:0;display:block}div.post-pagination{}div.post-footer{clear:both;display:block;color:#000;text-transform:uppercase;letter-spacing:1px;font-size:11px;background:#f8f8f8;padding:10px 10px 30px 10px;border:solid 1px #777;}div.post-footer a:link,div.post-footer a:visited,div.post-footer a:active{color:#000;font-weight:normal;text-decoration:none}div.post-footer a:hover{color:#333;font-weight:normal;text-decoration:underline}div.post-kicker img,div.post-byline img,div.post-footer img{border:0;padding:0;margin:0 0 -1px 0;background:none}span.post-ratings{display:inline-block;width:auto;white-space:nowrap}div.navigation-top{padding:10px 0;background:#fff;margin-bottom:5px;font-size:16px}div.navigation-middle{padding:5px;background:#fff;margin:5px 0;font-size:16px}div.navigation-bottom{padding:5px;background:#fff;margin:5px 0;font-size:16px}div.navigation-comments-above{padding:10px;margin:5px 0;font-size:16px;border-bottom:solid 1px #777}div.navigation-comments-below{padding:10px;margin:5px 0;font-size:16px;border-bottom:solid 1px #777}div.older{float:left;width:48%;text-align:left;margin:0;padding:0}div.newer{float:right;width:48%;text-align:right;margin:0;padding:0;}div.older-home{float:left;width:44%;text-align:left;margin:0;padding:0}div.newer-home{float:right;width:44%;text-align:right;margin:0;padding:0;}div.home{float:left;width:8%;text-align:center;margin:0;padding:0}form,.feedburner-email-form{margin:0;padding:0;}fieldset{border:1px solid #cccccc;width:auto;padding:0.35em 0.625em 0.75em;display:block;}legend{color:#000000;background:#f4f4f4;border:1px solid #cccccc;padding:2px 6px;margin-bottom:15px;}form p{margin:5px 0 0 0;padding:0;}div.xhtml-tags p{margin:0}label{margin-right:0.5em;font-family:arial;cursor:pointer;}input.text,input.textbox,input.password,input.file,input.TextField,textarea{padding:3px;color:#000000;border:solid 3px #eee}textarea{width:96%;}input.inputblur{color:#777777;width:95%}input.inputfocus{color:#000000;width:95%}input.highlight,textarea.highlight{background:#e8eff7;border-color:#37699f}.button,.Button{padding:0 2px;height:24px;line-height:16px;background-color:#777777;color:#ffffff;border:solid 2px #555555}.buttonhover{padding:0 2px;cursor:pointer;background-color:#6b9c6b;color:#ffffff;border:solid 2px #496d49}form#commentform input#submit{ padding:0 .25em; width:0; overflow:visible}form#commentform input#submit[class]{width:auto}form#commentform input#submit{padding:4px 10px 4px 10px;line-height:1.5em;height:36px}table.searchform{width:100%}table.searchform td.searchfield{padding:0;width:100%}table.searchform td.searchbutton{padding:0 0 0 5px}table.searchform td.searchbutton input{padding:0 0 0 5px}blockquote{height:1%;display:block;clear:both;color:#555555;padding:1em 1em;background:#f4f4f4;border:solid 1px #e1e1e1}blockquote blockquote{height:1%;display:block;clear:both;color:#444444;padding:1em 1em;background:#e1e1e1;border:solid 1px #d3d3d3}div.post table{border-collapse:collapse;margin:10px 0}div.post table caption{width:auto;margin:0 auto;background:#eeeeee;border:#999999;padding:4px 8px;color:#666666}div.post table th{background:#888888;color:#ffffff;font-weight:bold;font-size:90%;padding:4px 8px;border:solid 1px #ffffff;text-align:left}div.post table td{padding:4px 8px;background-color:#ffffff;border-bottom:1px solid #dddddd;text-align:left}div.post table tfoot td{}div.post table tr.alt td{background:#f4f4f4}div.post table tr.over td{background:#e2e2e2}#calendar_wrap{padding:0;border:none}table#wp-calendar{width:100%;font-size:90%;border-collapse:collapse;background-color:#ffffff;margin:0 auto}table#wp-calendar caption{width:auto;background:#eeeeee;border:none;;padding:3px;margin:0 auto;font-size:1em}table#wp-calendar th{border:solid 1px #eeeeee;background-color:#999999;color:#ffffff;font-weight:bold;padding:2px;text-align:center}table#wp-calendar td{padding:0;line-height:18px;background-color:#ffffff;border:1px solid #dddddd;text-align:center}table#wp-calendar tfoot td{border:solid 1px #eeeeee;background-color:#eeeeee}table#wp-calendar td a{display:block;background-color:#eeeeee;width:100%;height:100%;padding:0}div#respond{margin:7px 0;padding:10px 10px;}p.thesetags{margin:10px 0}h3.reply{margin:0;padding:0 0 10px 0}ol.commentlist{margin:15px 0 25px 0;list-style-type:none;padding:0;display:block;border-top:solid 1px #777}ol.commentlist li{padding:15px 10px;display:block;height:1%;margin:0;background-color:#F3FCFC;border-bottom:solid 1px #777}ol.commentlist li.alt{display:block;height:1%;background-color:#F7FDF5;border-bottom:solid 1px #777}ol.commentlist li.authorcomment{display:block;height:1%;background-color:#FBFFEE}ol.commentlist span.authorname{font-weight:bold;font-size:150%}ol.commentlist span.commentdate{color:#666666;font-size:90%;margin-bottom:5px;display:block}ol.commentlist span.editcomment{display:block}ol.commentlist li p{margin:2px 0 5px 0}div.comment-number{float:right;font-size:2em;line-height:2em;font-family:georgia,serif;font-weight:bold;color:#ddd;margin:-10px 0 0 0;position:relative;height:1%}div.comment-number a:link,div.comment-number a:visited,div.comment-number a:active{color:#ccc}textarea#comment{width:98%;margin:10px 0;display:block}ul.commentlist{margin:15px 0 15px 0;list-style-type:none;padding:0;display:block;border-top:solid 1px #777}ul.commentlist ul{margin:0;border:none;list-style-type:none;padding:0}ul.commentlist li{padding:0; margin:0;display:block;clear:both;height:1%;}ul.commentlist ul.children li{ margin-left:30px}ul.commentlist div.comment-container{padding:10px;margin:0}ul.children div.comment-container{background-color:transparent;border:dotted 1px #ccc;padding:10px;margin:0 10px 8px 0; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px}ul.children div.bypostauthor{}ul.commentlist li.thread-even{background-color:#F3FCFC;border-bottom:solid 1px #777}ul.commentlist li.thread-odd{background-color:#F7FDF5;border-bottom:solid 1px #777}ul.commentlist div.bypostauthor{background-color:#FBFFEE}ul.children div.bypostauthor{border:dotted 1px #FBFEE2}ul.commentlist span.authorname{font-size:150%}div.comment-meta a:link,div.comment-meta a:visited,div.comment-meta a:active,div.comment-meta a:hover{font-weight:normal}div#cancel-comment-reply{margin:-5px 0 10px 0}div.comment-number{float:right;font-size:2em;line-height:2em;font-family:georgia,serif;font-weight:bold;color:#ddd;margin:-10px 0 0 0;position:relative;height:1%}div.comment-number a:link,div.comment-number a:visited,div.comment-number a:active{color:#ccc}.page-numbers{padding:2px 6px;border:solid 1px #000000;-moz-border-radius:6px;-khtml-border-radius:6px;-webkit-border-radius:6px;border-radius:6px}span.current{background:#ddd}a.prev,a.next{border:none}a.page-numbers:link,a.page-numbers:visited,a.page-numbers:active{text-decoration:none;color:#365DA0;border-color:#365DA0}a.page-numbers:hover{text-decoration:none;color:#365DA0;border-color:#365DA0}div.xhtml-tags{display:none}abbr em{border:none !important;border-top:dashed 1px #aaa !important;display:-moz-inline-box !important;display:inline-block !important;background:url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/commentluv.gif) 0% 90% no-repeat;margin-top:8px;padding:5px 5px 2px 20px !important;font-style:normal}p.subscribe-to-comments{margin-bottom:10px}div#gsHeader{display:none;}div.g2_column{margin:0 !important;width:100% !important;font-size:1.2em}div#gsNavBar{border-top-width:0 !important}p.giDescription{font-size:1.2em;line-height:1 !important}p.giTitle{margin:0.3em 0 !important;font-size:1em;font-weight:normal;color:#666}div#wp-email img{border:0;padding:0}div#wp-email input,div#wp-email textarea{margin-top:5px;margin-bottom:2px}div#wp-email p{margin-bottom:10px}input#wp-email-submit{ padding:0; font-size:30px; height:50px; line-height:50px; overflow:visible;}img.WP-EmailIcon{ vertical-align:text-bottom !important}.tw-accordion .tw-widgettitle,.tw-accordion .tw-widgettitle:hover,.tw-accordion .tw-hovered,.tw-accordion .selected,.tw-accordion .selected:hover{ background:transparent !important; background-image:none !important}.tw-accordion .tw-widgettitle span{ padding-left:0 !important}.tw-accordion h3.tw-widgettitle{border-bottom:solid 1px #ccc}.tw-accordion h3.selected{border-bottom:none}td#left .without_title,td#right .without_title{ margin-top:0;margin-bottom:0}ul.tw-nav-list{border-bottom:solid 1px #999;display:block;margin-bottom:5px !important}td#left ul.tw-nav-list li,td#right ul.tw-nav-list li{padding:0 0 1px 0;margin:0 0 -1px 5px; border:solid 1px #ccc;border-bottom:none;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:0;-webkit-border-bottom-right-radius:0;-webkit-border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0;background:#eee}td#left ul.tw-nav-list li.ui-tabs-selected,td#right ul.tw-nav-list li.ui-tabs-selected{ background:none;border:solid 1px #999;border-bottom:solid 1px #fff !important}ul.tw-nav-list li a:link,ul.tw-nav-list li a:visited,ul.tw-nav-list li a:active,ul.tw-nav-list li a:hover{padding:0 8px !important;background:none;border-left:none !important;outline:none}td#left ul.tw-nav-list li.ui-tabs-selected a,td#left li.ui-tabs-selected a:hover,td#right ul.tw-nav-list li.ui-tabs-selected a,td#right li.ui-tabs-selected a:hover{ color:#000000; text-decoration:none;font-weight:bold;background:none !important;outline:none}td#left .ui-tabs-panel,td#right .ui-tabs-panel{ margin:0; padding:0}img{border:0}#dbem-location-map img{ background:none !important}.post img{padding:5px;border:solid 1px #dddddd;background-color:#f3f3f3;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}.post img.size-full{margin:5px 0 5px 0}.post img.alignleft{float:left;margin:10px 10px 5px 0;}.post img.alignright{float:right;margin:10px 0 5px 10px;}.post img.aligncenter{display:block;margin:10px auto}.aligncenter,div.aligncenter{ display:block; margin-left:auto; margin-right:auto}.alignleft,div.alignleft{float:left;margin:10px 10px 5px 0}.alignright,div.alignright{ float:right; margin:10px 0 5px 10px}div.archives-page img{border:0;padding:0;background:none;margin-bottom:0;vertical-align:-10%}.wp-caption{max-width:96%;width:auto 100%;height:auto;display:block;border:1px solid #dddddd;text-align:center;background-color:#f3f3f3;padding-top:4px;margin:10px 0 0 0;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}* html .wp-caption{height:100%;}.wp-caption img{ margin:0 !important; padding:0 !important; border:0 none !important}.wp-caption p.wp-caption-text{font-size:0.8em;line-height:13px;padding:2px 4px 5px;margin:0;color:#666666}img.wp-post-image{float:left;border:0;padding:0;background:none;margin:0 10px 5px 0}img.wp-smiley{ float:none;border:none !important;margin:0 1px -1px 1px;padding:0 !important;background:none !important}img.avatar{float:left;display:block;margin:0 15px 15px 0;}#comment_quicktags{text-align:left;padding:10px 0 2px 0;display:block}#comment_quicktags input.ed_button{background:#f4f4f4;border:2px solid #cccccc;color:#444444;margin:2px 4px 2px 0;width:auto;padding:0 4px;height:24px;line-height:16px}#comment_quicktags input.ed_button_hover{background:#dddddd;border:2px solid #666666;color:#000000;margin:2px 4px 2px 0;width:auto;padding:0 4px;height:24px;line-height:16px;cursor:pointer}#comment_quicktags #ed_strong{font-weight:bold}#comment_quicktags #ed_em{font-style:italic}@media print{body{background:white;color:black;margin:0;font-size:10pt !important;font-family:arial,sans-serif;}div.post-footer{line-height:normal !important;color:#555 !important;font-size:9pt !important}a:link,a:visited,a:active,a:hover{text-decoration:underline !important;color:#000}h2{color:#000;font-size:14pt !important;font-weight:normal !important}h3{color:#000;font-size:12pt !important;}#header,#footer,.colone,.colthree,.navigation,.navigation-top,.navigation-middle,.navigation-bottom,.wp-pagenavi-navigation,#comment,#respond,.remove-for-print{display:none}td#left,td#right,td#left-inner,td#right-inner{width:0}td#middle{width:100%}*:lang(en) td#left{ display:none}*:lang(en) td#right{ display:none}*:lang(en) td#left-inner{ display:none}*:lang(en) td#right-inner{ display:none}td#left:empty{ display:none}td#right:empty{ display:none}td#left-inner:empty{ display:none}td#right-inner:empty{ display:none}}ul.rMenu,ul.rMenu ul,ul.rMenu li,ul.rMenu a{display:block;margin:0;padding:0}ul.rMenu,ul.rMenu li,ul.rMenu ul{list-style:none}ul.rMenu ul{display:none}ul.rMenu li{position:relative;z-index:1}ul.rMenu li:hover{z-index:999}ul.rMenu li:hover > ul{display:block;position:absolute}ul.rMenu li:hover{background-position:0 0} ul.rMenu-hor li{float:left;width:auto}ul.rMenu-hRight li{float:right}ul.rMenu-ver li{float:none}div#menu1 ul.rMenu-ver,div#menu1 ul.rMenu-ver ul{width:11em}div#menu2 ul.rMenu-ver,div#menu2 ul.rMenu-ver ul{width:11em}ul.rMenu-wide{width:100%}ul.rMenu-vRight{float:right}ul.rMenu-lFloat{float:left}ul.rMenu-noFloat{float:none}div.rMenu-center ul.rMenu{float:left;position:relative;left:50%}div.rMenu-center ul.rMenu li{position:relative;left:-50%}div.rMenu-center ul.rMenu li li{left:auto}ul.rMenu-hor ul{top:auto;right:auto;left:auto;margin-top:-1px}ul.rMenu-hor ul ul{margin-top:0;margin-left:0px}ul.rMenu-ver ul{left:100%;right:auto;top:auto;top:0}ul.rMenu-vRight ul,ul.rMenu-hRight ul.rMenu-ver ul{left:-100%;right:auto;top:auto}ul.rMenu-hRight ul{left:auto;right:0;top:auto;margin-top:-1px}div#menu1 ul.rMenu{background:#000000;border:0}div#menu2 ul.rMenu{background:#666666;border:0}div#menu1 ul.rMenu li a{border:0}div#menu2 ul.rMenu li a{border:0}ul.rMenu-hor li{margin-bottom:-1px;margin-top:-1px;margin-left:-1px}ul#rmenu li{}ul#rmenu li ul li{}ul.rMenu-hor{padding-left:1px }ul.rMenu-ver li{margin-left:0;margin-top:-1px; }div#menu1 ul.rMenu-ver{border-top:0}div#menu2 ul.rMenu-ver{border-top:0}div#menu1 ul.rMenu li a{padding:4px 5px}div#menu2 ul.rMenu li a{padding:4px 5px}div#menu1 ul.rMenu li a:link,div#menu1 ul.rMenu li a:hover,div#menu1 ul.rMenu li a:visited,div#menu1 ul.rMenu li a:active{text-decoration:none;margin:0;color:#FFFFFF;text-transform:none;font:19px Garamond;}div#menu2 ul.rMenu li a:link,div#menu2 ul.rMenu li a:hover,div#menu2 ul.rMenu li a:visited,div#menu2 ul.rMenu li a:active{text-decoration:none;margin:0;color:#FEFEFE;text-transform:uppercase;font:12px Verdana,sans-serif;}div#menu1 ul.rMenu li{background-color:#000000}div#menu2 ul.rMenu li{background-color:#666666}div#menu1 ul.rMenu li:hover,div#menu1 ul.rMenu li.sfhover{background:#777777}div#menu2 ul.rMenu li:hover,div#menu2 ul.rMenu li.sfhover{background:#444444}div#menu1 ul.rMenu li.current_page_item > a:link,div#menu1 ul.rMenu li.current_page_item > a:active,div#menu1 ul.rMenu li.current_page_item > a:hover,div#menu1 ul.rMenu li.current_page_item > a:visited{background-color:#777777;color:#FFFFFF}div#menu1 ul.rMenu li.current_page_item a:link,div#menu1 ul.rMenu li.current_page_item a:active,div#menu1 ul.rMenu li.current_page_item a:hover,div#menu1 ul.rMenu li.current_page_item a:visited,div#menu1 ul.rMenu li a:hover{background-color:#777777;color:#FFFFFF}div#menu2 ul.rMenu li.current-cat > a:link,div#menu2 ul.rMenu li.current-cat > a:active,div#menu2 ul.rMenu li.current-cat > a:hover,div#menu2 ul.rMenu li.current-cat > a:visited{background-color:#222222;color:#FEFEFE}div#menu2 ul.rMenu li.current-cat a:link,div#menu2 ul.rMenu li.current-cat a:active,div#menu2 ul.rMenu li.current-cat a:hover,div#menu2 ul.rMenu li.current-cat a:visited,div#menu2 ul.rMenu li a:hover{background-color:#222222;color:#FEFEFE}div#menu1 ul.rMenu li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a{padding-right:15px;padding-left:5px;background-repeat:no-repeat;background-position:100% 50%;background-image:url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/expand-right.gif)}div#menu2 ul.rMenu li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a{padding-right:15px;padding-left:5px;background-repeat:no-repeat;background-position:100% 50%;background-image:url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/expand-right-white.gif)}ul.rMenu-vRight li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a{padding-right:5px;padding-left:20px;background-image:url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/expand-left.gif);background-repeat:no-repeat;background-position:-5px 50%}div#menu1 ul.rMenu-hor li.rMenu-expand a{padding-left:5px;padding-right:15px !important;background-position:100% 50%;background-image:url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/expand-down.gif)}div#menu2 ul.rMenu-hor li.rMenu-expand a{padding-left:5px;padding-right:15px !important;background-position:100% 50%;background-image:url(http://bigdatacraft.com/wp-content/themes/atahualpa353/images/expand-down-white.gif)}div#menu1 ul.rMenu li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a{background-image:none;padding-right:5px;padding-left:5px}div#menu2 ul.rMenu li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a{background-image:none;padding-right:5px;padding-left:5px}* html ul.rMenu{display:inline-block;display:block;position:relative;position:static}* html ul.rMenu ul{float:left;float:none}ul.rMenu ul{}* html ul.rMenu-ver li,* html ul.rMenu-hor li ul.rMenu-ver li{width:100%;float:left;clear:left}*:first-child+html ul.rMenu-ver > li{width:100%;float:left;clear:left}ul.rMenu li a{position:relative;min-width:0}* html ul.rMenu-hor li{width:11em;width:auto}* html div.rMenu-center{position:relative;z-index:1}* html ul.rMenu ul{display:block;position:absolute}* html ul.rMenu ul,* html ul.rMenu-hor ul,* html ul.rMenu-ver ul,* html ul.rMenu-vRight ul,* html ul.rMenu-hRight ul.rMenu-ver ul,* html ul.rMenu-hRight ul{left:-10000px}* html ul.rMenu li.sfhover{z-index:999}* html ul.rMenu li.sfhover ul{left:auto}* html ul.rMenu li.sfhover ul ul,* html ul.rMenu li.sfhover ul ul ul,* html ul.rMenu li.sfhover ul ul ul ul,* html ul.rMenu li.sfhover ul ul ul ul ul,* html ul.rMenu li.sfhover ul ul ul ul ul ul{display:none}* html ul.rMenu li.sfhover ul,* html ul.rMenu li li.sfhover ul,* html ul.rMenu li li li.sfhover ul,* html ul.rMenu li li li li.sfhover ul,* html ul.rMenu li li li li li.sfhover ul{display:block}* html ul.rMenu-ver li.sfhover ul{left:100%}* html ul.rMenu-vRight li.sfhover ul,* html ul.rMenu-hRight ul.rMenu-ver li.sfhover ul{left:-100%}* html ul.rMenu iframe{position:absolute;left:0;top:0;z-index:-1}* html ul.rMenu{margin-left:1px}* html ul.rMenu ul,* html ul.rMenu ul ul,* html ul.rMenu ul ul ul,* html ul.rMenu ul ul ul ul{margin-left:0}* html ul.rMenu{display:inline-block;display:block;position:relative;position:static}* html ul.rMenu ul{float:left;float:none}ul.rMenu ul{background-color:#fff}* html ul.rMenu-ver li,* html ul.rMenu-hor li ul.rMenu-ver li{width:100%;float:left;clear:left}*:first-child+html ul.rMenu-ver > li:hover ul{min-width:0}ul.rMenu li a{position:relative;min-width:0}* html ul.rMenu-hor li{width:6em;width:auto}* html div.rMenu-center{position:relative;z-index:1}html:not([lang*=""]) div.rMenu-center ul.rMenu li a:hover{height:100%}html:not([lang*=""]) div.rMenu-center ul.rMenu li a:hover{height:auto}* html ul.rMenu ul{display:block;position:absolute}* html ul.rMenu ul,* html ul.rMenu-hor ul,* html ul.rMenu-ver ul,* html ul.rMenu-vRight ul,* html ul.rMenu-hRight ul.rMenu-ver ul,* html ul.rMenu-hRight ul{left:-10000px}* html ul.rMenu li.sfhover{z-index:999}* html ul.rMenu li.sfhover ul{left:auto}* html ul.rMenu li.sfhover ul ul,* html ul.rMenu li.sfhover ul ul ul{display:none}* html ul.rMenu li.sfhover ul,* html ul.rMenu li li.sfhover ul,* html ul.rMenu li li li.sfhover ul{display:block}* html ul.rMenu-ver li.sfhover ul{left:60%}* html ul.rMenu-vRight li.sfhover ul,* html ul.rMenu-hRight ul.rMenu-ver li.sfhover ul{left:-60%}* html ul.rMenu iframe{position:absolute;left:0;top:0;z-index:-1}.clearfix:after{ content:".";display:block;height:0;clear:both;visibility:hidden}.clearfix{min-width:0;display:inline-block;display:block}* html .clearfix{height:1%;}.clearfix:after{ content:".";display:block;height:0;clear:both;visibility:hidden}.clearfix{min-width:0;display:inline-block;display:block}* html .clearfix{height:1%;}.clearboth{clear:both;height:1%;font-size:1%;line-height:1%;display:block;padding:0;margin:0}td#header{padding-bottom:0}div.searchbox{margin:0;padding:0;position:absolute;top:35px;left:534px}div.searchbox input.text{padding:0;background:#fff no-repeat right center;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;height:30px;width:250px;bolder:solid 1px #e7e7e7;font-size:16px}a.posts-icon{position:absolute;top:10px;left:544px;font-weight:normal;color:#fff;font-size:14px}a.email-icon{position:absolute;top:10px;left:610px;font-weight:normal;color:#fff;font-size:14px}a.comments-icon{position:absolute;top:10px;left:700px;font-weight:normal;color:#fff;font-size:14px}div#menu1 ul.rMenu{background:transparent;position:absolute;top:90px;left:544px}div.widget ul li{padding:1px 5px 1px 14px !important;background:url('http://bigdatacraft.com/wp-content/themes/atahualpa353/images/bullets/gray-arrow.gif') no-repeat 0 4px}div.widget ul li a:hover{text-decoration:underline}ul.rMenu-hor ul,ul.rMenu-hRight ul{margin-top:0px;}ul.rMenu-hor li{margin-bottom:0px;margin-top:0px;margin-left:0px;}ul.rMenu-hor{padding-left:0px;}ul.rMenu-ver li{margin-top:0xp;}div#menu1 ul.rMenu li a,div#menu2 ul.rMenu li a{padding:8px 10px} div#menu1 ul.rMenu li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand a{padding:8px 22px 8px 10px !important;background-position:97% 50% !important} div#menu1 ul.rMenu li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li a{padding:5px 22px 5px 10px !important;background-position:97% 50% !important}div#menu2{background:#666666}div#menu1{background:#eee}h3#comments{}ul.commentlist{}ul.commentlist li.thread-odd,ul.commentlist li.thread-even{}span.authorname,span.authorname a{}div.commentmetadata a{font-size:10px;text-transform:uppercase;letter-spacing:1px}</style> 
+  <script type="text/javascript">
+//<![CDATA[
+
+
+
+
+/* JQUERY */
+jQuery(document).ready(function(){  
+
+
+	/* jQuery('ul#rmenu').superfish(); */
+	/* jQuery('ul#rmenu').superfish().find('ul').bgIframe({opacity:false}); */
+ 
+	/* For IE6 */
+	if (jQuery.browser.msie && /MSIE 6\.0/i.test(window.navigator.userAgent) && !/MSIE 7\.0/i.test(window.navigator.userAgent) && !/MSIE 8\.0/i.test(window.navigator.userAgent)) {
+
+		/* Max-width for images in IE6 */		
+		var centerwidth = jQuery("td#middle").width(); 
+		
+		/* Images without caption */
+		jQuery(".post img").each(function() { 
+			var maxwidth = centerwidth - 10 + 'px';
+			var imgwidth = jQuery(this).width(); 
+			var imgheight = jQuery(this).height(); 
+			var newimgheight = (centerwidth / imgwidth * imgheight) + 'px';	
+			if (imgwidth > centerwidth) { 
+				jQuery(this).css({width: maxwidth}); 
+				jQuery(this).css({height: newimgheight}); 
+			}
+		});
+		
+		/* Images with caption */
+		jQuery("div.wp-caption").each(function() { 
+			var captionwidth = jQuery(this).width(); 
+			var maxcaptionwidth = centerwidth + 'px';
+			var captionheight = jQuery(this).height();
+			var captionimgwidth =  jQuery("div.wp-caption img").width();
+			var captionimgheight =  jQuery("div.wp-caption img").height();
+			if (captionwidth > centerwidth) { 
+				jQuery(this).css({width: maxcaptionwidth}); 
+				var newcaptionheight = (centerwidth / captionwidth * captionheight) + 'px';
+				var newcaptionimgheight = (centerwidth / captionimgwidth * captionimgheight) + 'px';
+				jQuery(this).css({height: newcaptionheight}); 
+				jQuery("div.wp-caption img").css({height: newcaptionimgheight}); 
+				}
+		});
+		
+		/* sfhover for LI:HOVER support in IE6: */
+		jQuery("ul li").
+			hover( function() {
+					jQuery(this).addClass("sfhover")
+				}, 
+				function() {
+					jQuery(this).removeClass("sfhover")
+				} 
+			); 
+
+	/* End IE6 */
+	}
+	
+	jQuery(".post table tr").
+		mouseover(function() {
+			jQuery(this).addClass("over");
+		}).
+		mouseout(function() {
+			jQuery(this).removeClass("over");
+		});
+
+	
+	jQuery(".post table tr:even").
+		addClass("alt");
+
+	
+	jQuery("input.text, input.TextField, input.file, input.password, textarea").
+		focus(function () {  
+			jQuery(this).addClass("highlight"); 
+		}).
+		blur(function () { 
+			jQuery(this).removeClass("highlight"); 
+		})
+	
+	jQuery("input.inputblur").
+		focus(function () {  
+			jQuery(this).addClass("inputfocus"); 
+		}).
+		blur(function () { 
+			jQuery(this).removeClass("inputfocus"); 
+		})
+
+		
+
+	
+	jQuery("input.button, input.Button").
+		mouseover(function() {
+			jQuery(this).addClass("buttonhover");
+		}).
+		mouseout(function() {
+			jQuery(this).removeClass("buttonhover");
+		});
+
+	/* toggle "you can use these xhtml tags" */
+	jQuery("a.xhtmltags").
+		click(function(){ 
+			jQuery("div.xhtml-tags").slideToggle(300); 
+		});
+
+	/* For the Tabbed Widgets plugin: */
+	jQuery("ul.tw-nav-list").
+		addClass("clearfix");
+
+		
+	
+});
+
+//]]>
+</script> 
+  <!--[if IE 6]>
+<script type="text/javascript" src="http://bigdatacraft.com/wp-content/themes/atahualpa353/js/DD_roundies.js"></script>
+<script type="text/javascript">DD_roundies.addRule('a.posts-icon, a.comments-icon, a.email-icon, img.logo');</script>
+<![endif]--> 
+  <script type="text/javascript" src="http://bigdatacraft.com/wp-content/themes/atahualpa353/js/mootools-for-dropdown.js"></script> 
+  <script type="text/javascript" src="http://bigdatacraft.com/wp-content/themes/atahualpa353/js/UvumiDropdown-compressed.js"></script> 
+  <script type="text/javascript">
+var myMenu2 = new UvumiDropdown("rmenu2",{ closeDelay:200});
+</script> 
+ </head> 
+ <body class="home blog"> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52091737-1', 'bigdatacraft.com');
+  ga('send', 'pageview');
+
+</script> 
+  <div id="container"> 
+   <table id="layout" border="0" cellspacing="0" cellpadding="0"> 
+    <colgroup> 
+     <col class="coltwo"> 
+     <col class="colthree-inner">
+     <col class="colthree">
+    </colgroup> 
+    <tbody>
+     <tr> 
+      <!-- Header --> 
+      <td id="header" colspan="3"> 
+       <table id="logoarea" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tbody>
+         <tr>
+          <td rowspan="2" valign="middle" class="logoarea-title"><h1 class="blogtitle"><a href="http://bigdatacraft.com/">Big Data Craft</a></h1><p class="tagline">Passionate about data…</p></td>
+          <td class="feed-icons" valign="middle" align="right">
+           <div class="clearfix rss-box">
+            <a class="comments-icon" href="http://bigdatacraft.com/comments/feed" title="Subscribe to the COMMENTS feed">Comments</a>
+            <a class="email-icon" href="http://feedburner.google.com/fb/a/mailverify?uri=InsightCrew&amp;loc=en_US" title="Subscribe by EMAIL" onclick="pageTracker._trackPageview('/outgoing/feedburner.google.com/fb/a/mailverify?uri=InsightCrew_amp_loc=en_US&amp;referer=');">By Email</a>
+            <a class="posts-icon" href="http://bigdatacraft.com/feed" title="Subscribe to the POSTS feed">Posts</a>
+           </div></td>
+         </tr>
+         <tr>
+          <td valign="bottom" class="search-box" align="right">
+           <div class="searchbox"> 
+            <form method="get" class="searchform" action="http://bigdatacraft.com/"> 
+             <div class="searchbox-form"> 
+              <input type="text" class="text inputblur" onfocus="this.value=''" value="            type &amp; enter to search" onblur="this.value='            type &amp; enter to search'" name="s">
+             </div> 
+            </form> 
+           </div> </td>
+         </tr>
+        </tbody>
+       </table> 
+       <div id="menu1">
+        <ul id="rmenu2" class="clearfix rMenu-hor rMenu"> 
+         <li class="page_item current_page_item"><a href="http://bigdatacraft.com/" title="Big Data Craft">Home</a></li> 
+         <li class="page_item page-item-2"><a href="http://bigdatacraft.com/about">About</a></li> 
+         <li class="page_item page-item-308"><a href="http://bigdatacraft.com/consulting-services">Consulting</a></li> 
+         <li class="page_item page-item-310"><a href="http://bigdatacraft.com/dazo">OpenSource</a></li> 
+        </ul>
+       </div> 
+       <!--<div id="menu2"><ul id="rmenu" class="clearfix rMenu-hor rMenu">
+	<li class="cat-item cat-item-1"><a href="http://bigdatacraft.com/archives/category/uncategorized" >Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://bigdatacraft.com/archives/category/terminology" >Terminology</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://bigdatacraft.com/archives/category/qlikview" >QlikView</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://bigdatacraft.com/archives/category/bi" >BI</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://bigdatacraft.com/archives/category/analytics" >Analytics</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://bigdatacraft.com/archives/category/advanced-analytics" >Advanced Analytics</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://bigdatacraft.com/archives/category/monte-carlo" >Monte Carlo</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://bigdatacraft.com/archives/category/analytics-patterns" >Analytics Patterns</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://bigdatacraft.com/archives/category/cap" >CAP</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://bigdatacraft.com/archives/category/svlc" >SVLC</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://bigdatacraft.com/archives/category/ssd" >SSD</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="http://bigdatacraft.com/archives/category/flash-memory" >Flash Memory</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="http://bigdatacraft.com/archives/category/percolator" >Percolator</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="http://bigdatacraft.com/archives/category/nosql" >NoSQL</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://bigdatacraft.com/archives/category/tenzing" >Tenzing</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://bigdatacraft.com/archives/category/dremel" >Dremel</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="http://bigdatacraft.com/archives/category/hadoop" >Hadoop</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="http://bigdatacraft.com/archives/category/sawzall" >Sawzall</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://bigdatacraft.com/archives/category/openstack" >OpenStack</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://bigdatacraft.com/archives/category/apache-drill" >Apache Drill</a>
+</li>
+</ul></div>
+--> 
+       <!-- To remove the ad altogether, start removing here... --> 
+       <!--div style="position:absolute;top:20px;right:20px;width:728px;height:90px;" --> 
+       <!-- Put the ad code BELOW this (and remove the sample text if there is any) --> 
+       <!--<div id="imagecontainer" class="header-image-container" style="background: url('http://bigdatacraft.com/wp-content/themes/atahualpa353/images/header/IMG_1496.jpg') top center no-repeat;"><div class="opacityleft">&nbsp;</div><div class="opacityright">&nbsp;</div><div class="titleoverlay"><h1 class="blogtitle"><a href="http://bigdatacraft.com/">Big Data Craft</a></h1><p class="tagline">Passionate about data&#8230;</p></div></div> --> 
+       <!-- Put the ad code ABOVE this --> 
+       <!--/div --> 
+       <!-- End removing the ad here --> </td> 
+      <!-- / Header --> 
+     </tr> 
+     <!-- Main Body --> 
+     <tr id="bodyrow"> 
+      <!-- Main Column --> 
+      <td id="middle"> 
+       <div class="post-470 post type-post status-publish format-standard hentry category-analytics category-ssd tag-cache tag-cloud tag-cloud-storage tag-databases tag-s3" id="post-470"> 
+        <div class="post-kicker">
+         By David Gruzman, on November 9th, 2014
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/470" rel="bookmark" title="Permanent Link to Efficient usage of local drives in the cloud for big data  processing">Efficient usage of local drives in the cloud for big data processing</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>Cloud sounds like a perfect platform for the big data processing – you get as much processing power when you need it and release when you don’t. But why does a lot of big data processing happen outside of cloud? Lets try to find out: </p> 
+         <p>The question came from following dilemma in big <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/470">Efficient usage of local drives in the cloud for big data processing</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/470#comments" class="comments-link" title="Comment on Efficient usage of local drives in the cloud for big data  processing">2 comments</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, 
+         <a href="http://bigdatacraft.com/archives/category/ssd" title="View all posts in SSD" rel="category tag">SSD</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/tag-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/tag/cache" rel="tag">cache</a>, 
+         <a href="http://bigdatacraft.com/archives/tag/cloud" rel="tag">cloud</a>, 
+         <a href="http://bigdatacraft.com/archives/tag/cloud-storage" rel="tag">cloud storage</a>, 
+         <a href="http://bigdatacraft.com/archives/tag/databases" rel="tag">databases</a>, 
+         <a href="http://bigdatacraft.com/archives/tag/s3" rel="tag">S3</a> &nbsp; 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-462 post type-post status-publish format-standard hentry category-analytics category-hadoop" id="post-462"> 
+        <div class="post-kicker">
+         By David Gruzman, on June 18th, 2014
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/462" rel="bookmark" title="Permanent Link to Multi-engine data processing">Multi-engine data processing</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>There is a lot of criticism of HDFS – it is slow, it has SPOF, it is read only, etc. All of the above is true. Systems built on top of a local file system are more efficient than those built on top of HDFS (like Cassandra vs. HBase). That is also true. However, <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/462">Multi-engine data processing</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/462#respond" class="comments-link" title="Comment on Multi-engine data processing">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, 
+         <a href="http://bigdatacraft.com/archives/category/hadoop" title="View all posts in Hadoop" rel="category tag">Hadoop</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-441 post type-post status-publish format-standard hentry category-uncategorized" id="post-441"> 
+        <div class="post-kicker">
+         By Constantine Peresypkin, on October 2nd, 2012
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/441" rel="bookmark" title="Permanent Link to Network virtualization for the Cloud: Open vSwitch study">Network virtualization for the Cloud: Open vSwitch study</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>In face of the current reality of ten thousand node data-centers and all the BigData jazz it seems like the network guys were slightly forgotten. We have enough hardware virtualization solutions but until now the network was left on the outskirts of the cloud hype. Let’s see what we can use right now and <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/441">Network virtualization for the Cloud: Open vSwitch study</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/441#respond" class="comments-link" title="Comment on Network virtualization for the Cloud: Open vSwitch study">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-426 post type-post status-publish format-standard hentry category-uncategorized" id="post-426"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on September 24th, 2012
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/426" rel="bookmark" title="Permanent Link to What does BigData mean?">What does BigData mean?</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p><iframe style="border: 1px solid #CCC; border-width: 1px 1px 0; margin-bottom: 5px;" src="http://www.slideshare.net/slideshow/embed_code/11690496?rel=0" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="427" height="356"></iframe></p> 
+         <p>The full deck available at <a href="http://bigdatacraft.com/archives/426#more-426" class="more-link">Continue reading What does BigData mean?</a></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/426#respond" class="comments-link" title="Comment on What does BigData mean?">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-415 post type-post status-publish format-standard hentry category-analytics category-apache-drill category-dremel" id="post-415"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on September 14th, 2012
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/415" rel="bookmark" title="Permanent Link to Apache Drill Design Meeting">Apache Drill Design Meeting</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>MapR folks invited me to participate in Apache Drill design meeting. Meetup site indicates that 60 people have been participated which sounds about right.</p> 
+         <p>Tomer Shiran started the meeting with the overview of Apache Drill project. Then I (Camuel here) presented our team view for Apache Drill architecture. Jason Frantz of MapR continued touching <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/415">Apache Drill Design Meeting</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/415#comments" class="comments-link" title="Comment on Apache Drill Design Meeting">4 comments</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, 
+         <a href="http://bigdatacraft.com/archives/category/apache-drill" title="View all posts in Apache Drill" rel="category tag">Apache Drill</a>, 
+         <a href="http://bigdatacraft.com/archives/category/dremel" title="View all posts in Dremel" rel="category tag">Dremel</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-406 post type-post status-publish format-standard hentry category-hadoop category-openstack" id="post-406"> 
+        <div class="post-kicker">
+         By Constantine Peresypkin, on September 8th, 2012
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/406" rel="bookmark" title="Permanent Link to Hadoop on OpenStack Swift: experiments">Hadoop on OpenStack Swift: experiments</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>Some time has passed since our initial post on Hadoop over OpenStack Swift implementation. A couple of things have changed (Rackspace finally implemented range requests in their Cloudfiles library) others remained the same (still no built-in support for Hadoop in OpenStack / CloudFiles).</p> 
+         <p>We got a lot of feedback and questions regarding the integration <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/406">Hadoop on OpenStack Swift: experiments</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/406#comments" class="comments-link" title="Comment on Hadoop on OpenStack Swift: experiments">12 comments</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/hadoop" title="View all posts in Hadoop" rel="category tag">Hadoop</a>, 
+         <a href="http://bigdatacraft.com/archives/category/openstack" title="View all posts in OpenStack" rel="category tag">OpenStack</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-398 post type-post status-publish format-standard hentry category-dremel category-hadoop" id="post-398"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on September 4th, 2012
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/398" rel="bookmark" title="Permanent Link to Apache Drill Progress">Progress on Apache Drill</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>We are continuing our efforts in contributing our OpenDremel code to Apache Drill project and look forward to be active with it right after that.</p> 
+         <p>Right now the efforts are being put into our ANTLR-based parser, we want to make it work with the new grammar of BigQuery language. That should be done within <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/398">Apache Drill Progress</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/398#respond" class="comments-link" title="Comment on Apache Drill Progress">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/dremel" title="View all posts in Dremel" rel="category tag">Dremel</a>, 
+         <a href="http://bigdatacraft.com/archives/category/hadoop" title="View all posts in Hadoop" rel="category tag">Hadoop</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-374 post type-post status-publish format-standard hentry category-dremel" id="post-374"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on August 25th, 2012
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/374" rel="bookmark" title="Permanent Link to Apache Drill">Apache Drill Proposed Design</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>We are not longer alone implementing Google Dremel and BigQuery technology. A proposal was made recently to Apache Foundation suggesting similar project. Moreover Ted Dunning kindly invited us to take part in the project.</p> 
+         <p>The project is just starting now and there is no source code yet and not even a consensus design. So <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/374">Apache Drill</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/374#respond" class="comments-link" title="Comment on Apache Drill">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/dremel" title="View all posts in Dremel" rel="category tag">Dremel</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-354 post type-post status-publish format-standard hentry category-uncategorized" id="post-354"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on July 7th, 2012
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/354" rel="bookmark" title="Permanent Link to Start-Up Chile">Start-Up Chile</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>I’ve been frequently asked about my&nbsp;experiences in Start-Up Chile program.&nbsp;For the past half year that I’ve been participating in the program I could say that it was interesting and&nbsp;fulfilling&nbsp;experience.</p> 
+         <p>On top of provided seed capital you get a supporting framework of mentors and fellow startupists. You can literally “feel” the surrounding &nbsp;entrepreneurial spirit. And <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/354">Start-Up Chile</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/354#respond" class="comments-link" title="Comment on Start-Up Chile">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-349 post type-post status-publish format-standard hentry category-uncategorized" id="post-349"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on March 1st, 2012
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/349" rel="bookmark" title="Permanent Link to Apache Hadoop over OpenStack Swift">Apache Hadoop over OpenStack Swift</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>This is a post by&nbsp;Constantine Peresypkin and David Gruzman. Lately we were working on integrating Hadoop with OpenStack Swift. Hadoop doesn’t need an introduction neither does OpenStack. Swift is an object-storage system and the technology behind RackSpace cloud-files (and quite a few others like Korea Telecom object storage, Internap and etc…) Before we go <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/349">Apache Hadoop over OpenStack Swift</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/349#comments" class="comments-link" title="Comment on Apache Hadoop over OpenStack Swift">39 comments</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-340 post type-post status-publish format-standard hentry category-uncategorized" id="post-340"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on February 11th, 2012
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/340" rel="bookmark" title="Permanent Link to Futility of “tooling” a proprietary cloud.">Futility of "tooling" a proprietary cloud.</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>I’v been pitched by a lot of&nbsp;entrepreneurs&nbsp;trying to make a better-than-original “tooling” for a proprietary&nbsp;cloud, particularly for AWS. Ain’t the attempt futile from the beginning? Amazon is smart, innovative and working hard to make its cloud offering comprehensive and has much larger arsenal to overdo anyone who dare to compete on their own turf. <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/340">Futility of “tooling” a proprietary cloud.</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/340#respond" class="comments-link" title="Comment on Futility of “tooling” a proprietary cloud.">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-327 post type-post status-publish format-standard hentry category-dremel category-hadoop category-nosql category-sawzall category-tenzing" id="post-327"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on February 7th, 2012
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/327" rel="bookmark" title="Permanent Link to OpenDremel update and Dremel vs. Tenzing">OpenDremel update and Dremel vs. Tenzing</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>I wasn’t blogged for whole 2011 year… I’m not dead, quite on contrary, we were pretty active with OpenDremel project in 2011. First, we are renaming it to&nbsp;Dazo to avoid using a trademarked name and second, we did a good job implementing a secure generic execution engine&nbsp;and integrating it into OpenStack Swift. It also <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/327">OpenDremel update and Dremel vs. Tenzing</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/327#comments" class="comments-link" title="Comment on OpenDremel update and Dremel vs. Tenzing">4 comments</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/dremel" title="View all posts in Dremel" rel="category tag">Dremel</a>, 
+         <a href="http://bigdatacraft.com/archives/category/hadoop" title="View all posts in Hadoop" rel="category tag">Hadoop</a>, 
+         <a href="http://bigdatacraft.com/archives/category/nosql" title="View all posts in NoSQL" rel="category tag">NoSQL</a>, 
+         <a href="http://bigdatacraft.com/archives/category/sawzall" title="View all posts in Sawzall" rel="category tag">Sawzall</a>, 
+         <a href="http://bigdatacraft.com/archives/category/tenzing" title="View all posts in Tenzing" rel="category tag">Tenzing</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-300 post type-post status-publish format-standard hentry category-uncategorized" id="post-300"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on January 17th, 2011
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/300" rel="bookmark" title="Permanent Link to Upcoming hardware renaissance era:  part #2.">Upcoming hardware renaissance era: part #2.</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>Some examples of upcoming hardware renaissance era:</p> 
+         <p>1. Virtually all server vendors are pitching modularized data centers by now. MDC are boxes resembling shipping containers accommodating complete vritualized data-center inside. With MDC one just connects power, network and chilled water and gets access to the cloud in the box. Most MDC are good to <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/300">Upcoming hardware renaissance era: part #2.</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/300#respond" class="comments-link" title="Comment on Upcoming hardware renaissance era:  part #2.">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-295 post type-post status-publish format-standard hentry category-uncategorized" id="post-295"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on November 17th, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/295" rel="bookmark" title="Permanent Link to Emerging Proprietary Hardware Renaissance">Emerging Proprietary Hardware Renaissance</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>INTRO I cannot count number of times I heard that cloud computing means innovation stagnation in the proprietary hardware business and that with cloud computing, hardware doesn’t matter anymore and will succumb sooner or later into boring razor-thin-margins oligopolistic commodity industry.</p> 
+         <p>GAME OVER FOR FAT MARGINS IN PROPRIETARY HARDWARE? Why folks think like that? <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/295">Emerging Proprietary Hardware Renaissance</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/295#respond" class="comments-link" title="Comment on Emerging Proprietary Hardware Renaissance">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-274 post type-post status-publish format-standard hentry category-uncategorized" id="post-274"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on October 17th, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/274" rel="bookmark" title="Permanent Link to Two Envelopes Problem: Am I just dumb?">Two Envelopes Problem: Am I just dumb? </a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>It seems the recent craze about statistician being a profession of choice in the future gains steam. In future where we will be surrounded by quality BigData, capable computers and bug-free open source software including OpenDremel. Well the last one I made up… but the rest seems to be the current situation. Acknowledging this <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/274">Two Envelopes Problem: Am I just dumb?</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/274#comments" class="comments-link" title="Comment on Two Envelopes Problem: Am I just dumb?">One comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-252 post type-post status-publish format-standard hentry category-analytics category-bi category-flash-memory category-ssd" id="post-252"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on October 13th, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/252" rel="bookmark" title="Permanent Link to Debunking common misconceptions in SSD, particularly for analytics">Debunking common misconceptions in SSD, particularly for analytics</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>1. SSD is NOT synonymous for flash memory. </p>
+         <p>First of all let’s settle on terms. SSD is best described as a concept of using semiconductor memory as disk. There is two common cases: DRAM-as-disk and flash-as-disk. And flash-memory is a semiconductor technology pretty similar to DRAM, just with slightly different set of trade-offs made.</p> 
+         <p> <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/252">Debunking common misconceptions in SSD, particularly for analytics</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/252#respond" class="comments-link" title="Comment on Debunking common misconceptions in SSD, particularly for analytics">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, 
+         <a href="http://bigdatacraft.com/archives/category/bi" title="View all posts in BI" rel="category tag">BI</a>, 
+         <a href="http://bigdatacraft.com/archives/category/flash-memory" title="View all posts in Flash Memory" rel="category tag">Flash Memory</a>, 
+         <a href="http://bigdatacraft.com/archives/category/ssd" title="View all posts in SSD" rel="category tag">SSD</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-240 post type-post status-publish format-standard hentry category-advanced-analytics category-analytics category-analytics-patterns category-nosql category-percolator category-svlc" id="post-240"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on October 12th, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/240" rel="bookmark" title="Permanent Link to Google Percolator: MapReduce Demise?">Google Percolator: MapReduce Demise?</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>Here is my early thoughts after quickly looking into &nbsp;Google Percolator and skimming&nbsp;the&nbsp;paper .</p> 
+         <p>Major take-away: massive transactional mutating of tens-petabyte-scale dataset on thousands-node cluster is possible!</p> 
+         <p>MapReduce is still useful for distributed sorts of big-data and&nbsp;few other things, nevertheless it’s “karma” has suffered a blow. Beforehand you could end any MapReduce dispute by <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/240">Google Percolator: MapReduce Demise?</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/240#comments" class="comments-link" title="Comment on Google Percolator: MapReduce Demise?">3 comments</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/advanced-analytics" title="View all posts in Advanced Analytics" rel="category tag">Advanced Analytics</a>, 
+         <a href="http://bigdatacraft.com/archives/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, 
+         <a href="http://bigdatacraft.com/archives/category/analytics-patterns" title="View all posts in Analytics Patterns" rel="category tag">Analytics Patterns</a>, 
+         <a href="http://bigdatacraft.com/archives/category/nosql" title="View all posts in NoSQL" rel="category tag">NoSQL</a>, 
+         <a href="http://bigdatacraft.com/archives/category/percolator" title="View all posts in Percolator" rel="category tag">Percolator</a>, 
+         <a href="http://bigdatacraft.com/archives/category/svlc" title="View all posts in SVLC" rel="category tag">SVLC</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-225 post type-post status-publish format-standard hentry category-uncategorized" id="post-225"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on October 11th, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/225" rel="bookmark" title="Permanent Link to How scalable is linux kernel on 48-core machine?">How scalable is linux kernel on 48-core machine?</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>According to this&nbsp;excellent&nbsp;and comprehensive research with some kernel hacking ~x33 speedup (compared to single core) is possible. For example PostgreSQL running on 48 cores gives ~x4&nbsp;&nbsp;out of the box and after kernel/postgreSQL patches are applied it grows to ~x33. Assuming IO can keep up of course.</p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/225#respond" class="comments-link" title="Comment on How scalable is linux kernel on 48-core machine?">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-215 post type-post status-publish format-standard hentry category-nosql category-terminology" id="post-215"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on October 11th, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/215" rel="bookmark" title="Permanent Link to Is NoSQL a DBMS?">Is NoSQL a DBMS?</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>Yes, it is.</p> 
+         <p>Proof? – By definition.</p> 
+         <p>But Wikipedia…… – fixed.</p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/215#respond" class="comments-link" title="Comment on Is NoSQL a DBMS?">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/nosql" title="View all posts in NoSQL" rel="category tag">NoSQL</a>, 
+         <a href="http://bigdatacraft.com/archives/category/terminology" title="View all posts in Terminology" rel="category tag">Terminology</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-135 post type-post status-publish format-standard hentry category-analytics category-cap category-svlc" id="post-135"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on October 8th, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/135" rel="bookmark" title="Permanent Link to CAP equivalent for analytics?">CAP equivalent for analytics?</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>CAP theorem deals with trade-off in transactional system. It doesn’t need an introduction, unless of course you have been busy on the moon for last couple of years. In this case you can easily Google for good intros. Here is a wikipedia entry on the subject.</p> 
+         <p>I was thinking how would I build an <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/135">CAP equivalent for analytics?</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/135#comments" class="comments-link" title="Comment on CAP equivalent for analytics?">5 comments</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, 
+         <a href="http://bigdatacraft.com/archives/category/cap" title="View all posts in CAP" rel="category tag">CAP</a>, 
+         <a href="http://bigdatacraft.com/archives/category/svlc" title="View all posts in SVLC" rel="category tag">SVLC</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-96 post type-post status-publish format-standard hentry category-advanced-analytics category-analytics category-analytics-patterns category-monte-carlo category-terminology" id="post-96"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on October 8th, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/96" rel="bookmark" title="Permanent Link to Analytics Patterns">Analytics Patterns</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>Unsatisfied by my previous post‘s Advanced Analytics definition and giving it a thought of what is advanced methods in analytics I realized that analytics industry miss a good analytics pattern catalog. A list of common problems followed by a list of common industry-consensus solutions to them. An equivalent of GoF design patterns to analytics.&nbsp;The <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/96">Analytics Patterns</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/96#comments" class="comments-link" title="Comment on Analytics Patterns">One comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/advanced-analytics" title="View all posts in Advanced Analytics" rel="category tag">Advanced Analytics</a>, 
+         <a href="http://bigdatacraft.com/archives/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a>, 
+         <a href="http://bigdatacraft.com/archives/category/analytics-patterns" title="View all posts in Analytics Patterns" rel="category tag">Analytics Patterns</a>, 
+         <a href="http://bigdatacraft.com/archives/category/monte-carlo" title="View all posts in Monte Carlo" rel="category tag">Monte Carlo</a>, 
+         <a href="http://bigdatacraft.com/archives/category/terminology" title="View all posts in Terminology" rel="category tag">Terminology</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-94 post type-post status-publish format-standard hentry category-advanced-analytics category-analytics" id="post-94"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on October 8th, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/94" rel="bookmark" title="Permanent Link to Feature list of ultimate BigData analytics">Feature list of ultimate BigData analytics</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p> Volume Scalability =&gt; the solution must handle high volumes of data, meaning the cost must scale linearly in the range of 10GB – 10PB. Latency Scalability =&gt; the solution must be interactive or batch, and cost must scale linearly in the range of 1 msec – 1 week. Sophistication Scalability =&gt; the solution <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/94">Feature list of ultimate BigData analytics</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/94#comments" class="comments-link" title="Comment on Feature list of ultimate BigData analytics">One comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/advanced-analytics" title="View all posts in Advanced Analytics" rel="category tag">Advanced Analytics</a>, 
+         <a href="http://bigdatacraft.com/archives/category/analytics" title="View all posts in Analytics" rel="category tag">Analytics</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-62 post type-post status-publish format-standard hentry category-bi category-qlikview category-terminology" id="post-62"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on October 7th, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/62" rel="bookmark" title="Permanent Link to Terminology: Analysis vs. analytics and more…">Terminology: Analysis vs. analytics advanced analytics</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p>I see a lot of confusion in the usage of newer terms in analytics. I do confuse them myself&nbsp;occasionally. I find it funny that the industry as serious as analytics tolerates constant renewal of its basic terminology. Yet, I confess, I’m very guilty of it myself. I do enjoy the freshness and the novelty <span style="color:#777"> . . . → Read More: <a href="http://bigdatacraft.com/archives/62">Terminology: Analysis vs. analytics and more…</a></span></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/62#comments" class="comments-link" title="Comment on Terminology: Analysis vs. analytics and more…">2 comments</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/bi" title="View all posts in BI" rel="category tag">BI</a>, 
+         <a href="http://bigdatacraft.com/archives/category/qlikview" title="View all posts in QlikView" rel="category tag">QlikView</a>, 
+         <a href="http://bigdatacraft.com/archives/category/terminology" title="View all posts in Terminology" rel="category tag">Terminology</a> 
+        </div> 
+       </div>
+       <!-- / Post --> 
+       <div class="post-113 post type-post status-publish format-standard hentry category-uncategorized" id="post-113"> 
+        <div class="post-kicker">
+         By Camuel Gilyadov, on October 1st, 2010
+        </div> 
+        <div class="post-headline"> 
+         <h2> <a href="http://bigdatacraft.com/archives/113" rel="bookmark" title="Permanent Link to The story behind this blog">The story behind this blog</a></h2> 
+        </div> 
+        <div class="post-bodycopy clearfix">
+         <p> <a href="http://bigdatacraft.com/archives/113#more-113" class="more-link">Continue reading The story behind this blog</a></p> 
+        </div> 
+        <div class="post-footer">
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/comment-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/113#respond" class="comments-link" title="Comment on The story behind this blog">Leave a comment</a> &nbsp; 
+         <img src="http://bigdatacraft.com/wp-content/themes/atahualpa353/images/icons/folder-gray.gif" alt=""> 
+         <a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> 
+        </div> 
+       </div>
+       <!-- / Post --> <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34244780-1']);
+  _gaq.push(['_setDomainName', 'bigdatacraft.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></td> 
+      <!-- / Main Column --> 
+      <!-- Right Inner Sidebar --> 
+      <td id="right-inner"> 
+       <div id="recent-posts-3" class="widget widget_recent_entries"> 
+        <div class="widget-title">
+         <h3>Last Posts</h3>
+        </div> 
+        <ul> 
+         <li> <a href="http://bigdatacraft.com/archives/470" title="Efficient usage of local drives in the cloud for big data  processing">Efficient usage of local drives in the cloud for big data processing</a> </li> 
+         <li> <a href="http://bigdatacraft.com/archives/462" title="Multi-engine data processing">Multi-engine data processing</a> </li> 
+         <li> <a href="http://bigdatacraft.com/archives/441" title="Network virtualization for the Cloud: Open vSwitch study">Network virtualization for the Cloud: Open vSwitch study</a> </li> 
+         <li> <a href="http://bigdatacraft.com/archives/426" title="What does BigData mean?">What does BigData mean?</a> </li> 
+         <li> <a href="http://bigdatacraft.com/archives/415" title="Apache Drill Design Meeting">Apache Drill Design Meeting</a> </li> 
+        </ul> 
+       </div>
+       <div id="bfa-recent-comments" class="widget widget_simple_recent_comments">
+        <div class="widget-title">
+         <h3>Last Comments</h3>
+        </div> 
+        <ul id="bfarecentcomments"> 
+         <li class="bfarecentcomments"><strong>David Gruzman</strong>: <a href="http://bigdatacraft.com/archives/470#comment-1118" title="On: Efficient usage of local drives in the cloud for big data  processing ">Hi Benjamin, Thank you a lot for the interesting link. Inde</a></li> 
+         <li class="bfarecentcomments"><strong>Benjamin Darfler</strong>: <a href="http://bigdatacraft.com/archives/470#comment-1117" title="On: Efficient usage of local drives in the cloud for big data  processing ">Have you seen what Swrve is up to? Sounds like you are on th</a></li> 
+         <li class="bfarecentcomments"><strong>rk</strong>: <a href="http://bigdatacraft.com/archives/349#comment-1038" title="On: Apache Hadoop over OpenStack Swift">hey guys I have installed Openstack swift SAIO. I am unable </a></li> 
+         <li class="bfarecentcomments"><strong>Issac Kelly</strong>: <a href="http://bigdatacraft.com/archives/349#comment-1031" title="On: Apache Hadoop over OpenStack Swift">Just as a heads up. your github links need re-pointed at zer</a></li> 
+         <li class="bfarecentcomments"><strong>Issac Kelly</strong>: <a href="http://bigdatacraft.com/archives/349#comment-1009" title="On: Apache Hadoop over OpenStack Swift">In general we instrumented Hadoop to run over Swift *naively</a></li> 
+        </ul>
+       </div>
+       <div id="categories-3" class="widget widget_categories">
+        <div class="widget-title">
+         <h3>Categories</h3>
+        </div> 
+        <ul> 
+         <li class="cat-item cat-item-8"><a href="http://bigdatacraft.com/archives/category/advanced-analytics" title="View all posts filed under Advanced Analytics">Advanced Analytics</a> (3) </li> 
+         <li class="cat-item cat-item-7"><a href="http://bigdatacraft.com/archives/category/analytics" title="View all posts filed under Analytics">Analytics</a> (8) </li> 
+         <li class="cat-item cat-item-10"><a href="http://bigdatacraft.com/archives/category/analytics-patterns" title="View all posts filed under Analytics Patterns">Analytics Patterns</a> (2) </li> 
+         <li class="cat-item cat-item-22"><a href="http://bigdatacraft.com/archives/category/apache-drill" title="View all posts filed under Apache Drill">Apache Drill</a> (1) </li> 
+         <li class="cat-item cat-item-5"><a href="http://bigdatacraft.com/archives/category/bi" title="View all posts filed under BI">BI</a> (2) </li> 
+         <li class="cat-item cat-item-11"><a href="http://bigdatacraft.com/archives/category/cap" title="View all posts filed under CAP">CAP</a> (1) </li> 
+         <li class="cat-item cat-item-18"><a href="http://bigdatacraft.com/archives/category/dremel" title="View all posts filed under Dremel">Dremel</a> (4) </li> 
+         <li class="cat-item cat-item-14"><a href="http://bigdatacraft.com/archives/category/flash-memory" title="View all posts filed under Flash Memory">Flash Memory</a> (1) </li> 
+         <li class="cat-item cat-item-19"><a href="http://bigdatacraft.com/archives/category/hadoop" title="View all posts filed under Hadoop">Hadoop</a> (4) </li> 
+         <li class="cat-item cat-item-9"><a href="http://bigdatacraft.com/archives/category/monte-carlo" title="View all posts filed under Monte Carlo">Monte Carlo</a> (1) </li> 
+         <li class="cat-item cat-item-16"><a href="http://bigdatacraft.com/archives/category/nosql" title="View all posts filed under NoSQL">NoSQL</a> (3) </li> 
+         <li class="cat-item cat-item-21"><a href="http://bigdatacraft.com/archives/category/openstack" title="View all posts filed under OpenStack">OpenStack</a> (1) </li> 
+         <li class="cat-item cat-item-15"><a href="http://bigdatacraft.com/archives/category/percolator" title="View all posts filed under Percolator">Percolator</a> (1) </li> 
+         <li class="cat-item cat-item-4"><a href="http://bigdatacraft.com/archives/category/qlikview" title="View all posts filed under QlikView">QlikView</a> (1) </li> 
+         <li class="cat-item cat-item-20"><a href="http://bigdatacraft.com/archives/category/sawzall" title="View all posts filed under Sawzall">Sawzall</a> (1) </li> 
+         <li class="cat-item cat-item-13"><a href="http://bigdatacraft.com/archives/category/ssd" title="View all posts filed under SSD">SSD</a> (2) </li> 
+         <li class="cat-item cat-item-12"><a href="http://bigdatacraft.com/archives/category/svlc" title="View all posts filed under SVLC">SVLC</a> (2) </li> 
+         <li class="cat-item cat-item-17"><a href="http://bigdatacraft.com/archives/category/tenzing" title="View all posts filed under Tenzing">Tenzing</a> (1) </li> 
+         <li class="cat-item cat-item-3"><a href="http://bigdatacraft.com/archives/category/terminology" title="View all posts filed under Terminology">Terminology</a> (3) </li> 
+         <li class="cat-item cat-item-1"><a href="http://bigdatacraft.com/archives/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> (10) </li> 
+        </ul> 
+       </div> </td> 
+      <!-- / Right Inner Sidebar --> 
+      <!-- Right Sidebar --> 
+      <td id="right"> 
+       <div id="bfa-popular-posts" class="widget widget_mdv_most_commented">
+        <div class="widget-title">
+         <h3>Popular</h3>
+        </div>
+        <ul>
+         <li><a href="http://bigdatacraft.com/archives/349" title="Apache Hadoop over OpenStack Swift">Apache Hadoop over OpenStack Swift (39)</a></li>
+         <li><a href="http://bigdatacraft.com/archives/406" title="Hadoop on OpenStack Swift: experiments">Hadoop on OpenStack Swift: experiments (12)</a></li>
+         <li><a href="http://bigdatacraft.com/archives/135" title="CAP equivalent for analytics?">CAP equivalent for analytics? (5)</a></li>
+         <li><a href="http://bigdatacraft.com/archives/327" title="OpenDremel update and Dremel vs. Tenzing">OpenDremel update and Dremel vs. Tenzing (4)</a></li>
+         <li><a href="http://bigdatacraft.com/archives/415" title="Apache Drill Design Meeting">Apache Drill Design Meeting (4)</a></li>
+        </ul>
+       </div>
+       <div id="archives-3" class="widget widget_archive">
+        <div class="widget-title">
+         <h3>Archive</h3>
+        </div> 
+        <ul> 
+         <li><a href="http://bigdatacraft.com/archives/date/2014/11" title="November 2014">November 2014</a>&nbsp;(1)</li> 
+         <li><a href="http://bigdatacraft.com/archives/date/2014/06" title="June 2014">June 2014</a>&nbsp;(1)</li> 
+         <li><a href="http://bigdatacraft.com/archives/date/2012/10" title="October 2012">October 2012</a>&nbsp;(1)</li> 
+         <li><a href="http://bigdatacraft.com/archives/date/2012/09" title="September 2012">September 2012</a>&nbsp;(4)</li> 
+         <li><a href="http://bigdatacraft.com/archives/date/2012/08" title="August 2012">August 2012</a>&nbsp;(1)</li> 
+         <li><a href="http://bigdatacraft.com/archives/date/2012/07" title="July 2012">July 2012</a>&nbsp;(1)</li> 
+         <li><a href="http://bigdatacraft.com/archives/date/2012/03" title="March 2012">March 2012</a>&nbsp;(1)</li> 
+         <li><a href="http://bigdatacraft.com/archives/date/2012/02" title="February 2012">February 2012</a>&nbsp;(2)</li> 
+         <li><a href="http://bigdatacraft.com/archives/date/2011/01" title="January 2011">January 2011</a>&nbsp;(1)</li> 
+         <li><a href="http://bigdatacraft.com/archives/date/2010/11" title="November 2010">November 2010</a>&nbsp;(1)</li> 
+         <li><a href="http://bigdatacraft.com/archives/date/2010/10" title="October 2010">October 2010</a>&nbsp;(10)</li> 
+        </ul> 
+       </div>
+       <div id="linkcat-2" class="widget widget_links">
+        <div class="widget-title">
+         <h3>Blogroll</h3>
+        </div> 
+        <ul class="xoxo blogroll"> 
+         <li><a href="http://cloudscaling.com/blog" onclick="pageTracker._trackPageview('/outgoing/cloudscaling.com/blog?referer=');">Cloud Scaling</a></li> 
+         <li><a href="http://cloudave.com/" onclick="pageTracker._trackPageview('/outgoing/cloudave.com/?referer=');">Cloudave</a></li> 
+         <li><a href="http://dataspora.com/blog" onclick="pageTracker._trackPageview('/outgoing/dataspora.com/blog?referer=');">dataspora</a></li> 
+         <li><a href="http://dbmsmusings.blogspot.com" rel="contact met colleague" title="Insightful analysis on DBMS industry  &amp; columnar stuff." target="_blank" onclick="pageTracker._trackPageview('/outgoing/dbmsmusings.blogspot.com?referer=');">DBMS Musings</a></li> 
+         <li><a href="http://dbms2.com" rel="friend met colleague" title="Closely tracking DBMS industry with accent on analytics." target="_blank" onclick="pageTracker._trackPageview('/outgoing/dbms2.com?referer=');">DBMS2</a></li> 
+         <li><a href="http://gevaperry.typepad.com/main/" onclick="pageTracker._trackPageview('/outgoing/gevaperry.typepad.com/main/?referer=');">Geva Perry</a></li> 
+         <li><a href="http://highscalability.com/" onclick="pageTracker._trackPageview('/outgoing/highscalability.com/?referer=');">HighScalability</a></li> 
+         <li><a href="http://nosql.mypopescu.com/" onclick="pageTracker._trackPageview('/outgoing/nosql.mypopescu.com/?referer=');">myNoSQL blog</a></li> 
+         <li><a href="http://www.storagesearch.com/" onclick="pageTracker._trackPageview('/outgoing/www.storagesearch.com/?referer=');">SSD Blog</a></li> 
+         <li><a href="http://storagemojo.com" rel="contact met colleague" title="Tracks storage industry." target="_blank" onclick="pageTracker._trackPageview('/outgoing/storagemojo.com?referer=');">StorageMojo</a></li> 
+         <li><a href="http://blog.tonybain.com" onclick="pageTracker._trackPageview('/outgoing/blog.tonybain.com?referer=');">Tony Bain</a></li> 
+        </ul> 
+       </div> 
+       <div id="meta-3" class="widget widget_meta">
+        <div class="widget-title">
+         <h3>Meta</h3>
+        </div> 
+        <ul> 
+         <li><a href="http://bigdatacraft.com/wp-login.php">Log in</a></li> 
+         <li><a href="http://bigdatacraft.com/feed" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+         <li><a href="http://bigdatacraft.com/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+         <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform." onclick="pageTracker._trackPageview('/outgoing/wordpress.org/?referer=');">WordPress.org</a></li> 
+        </ul> 
+       </div> </td> 
+      <!-- / Right Sidebar --> 
+     </tr> 
+     <!-- / Main Body --> 
+     <tr> 
+      <!-- Footer --> 
+      <td id="footer" colspan="3"> <p> Copyright © 2014 <a href="http://bigdatacraft.com/">Big Data Craft</a> - All Rights Reserved<br>Powered by <a href="http://wordpress.org/" onclick="pageTracker._trackPageview('/outgoing/wordpress.org/?referer=');">WordPress</a> &amp; the <a href="http://wordpress.bytesforall.com/" title="Customizable WordPress themes" onclick="pageTracker._trackPageview('/outgoing/wordpress.bytesforall.com/?referer=');">Atahualpa Theme</a> by <a href="http://www.bytesforall.com/" title="BFA Webdesign" onclick="pageTracker._trackPageview('/outgoing/www.bytesforall.com/?referer=');">BytesForAll</a>. Discuss on our <a href="http://forum.bytesforall.com/" title="Atahualpa &amp; WordPress" onclick="pageTracker._trackPageview('/outgoing/forum.bytesforall.com/?referer=');">WP Forum</a> </p> </td> 
+      <!-- / Footer --> 
+     </tr> 
+    </tbody>
+   </table>
+   <!-- / layout --> 
+  </div>
+  <!-- / container --> 
+  <!-- / wrapper -->  
+ </body>
+</html>

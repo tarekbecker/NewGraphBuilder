@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]>             <html lang="en" dir="ltr" class="no-js old_ie ie6"> <![endif]-->
+<!--[if IE 7 ]>                <html lang="en" dir="ltr" class="no-js old_ie ie7"> <![endif]-->
+<!--[if IE 8 ]>                <html lang="en" dir="ltr" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>                <html lang="en" dir="ltr" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" dir="ltr" class="no-js">
+ <!-- InstanceBegin template="/Templates/Main.dwt" codeOutsideHTMLIsLocked="false" -->
+ <!--<![endif]-->
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="author" content="Sumo Logic"> 
+  <meta name="copyright" content="Copyright Sumo Logic 2011. All Rights Reserved."> 
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="robots" content="all"> 
+  <meta name="googlebot" content="all"> 
+  <meta name="revisit-after" content="7 days"> 
+  <meta name="viewport" content="width=1090"> 
+  <link href="/_css/master.1417718345.css" media="screen" rel="stylesheet" type="text/css"> 
+  <script src="/_js/master.1409784228.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+		document.write(unescape('%3Cstyle type="text/css" media="screen"%3E .js-hide {display: none;} .js-show {display: block;} .fouc-fix {display:none;} %3C/style%3E'));
+	</script> 
+  <script type="text/javascript" src="//use.typekit.com/elg1lzp.js"></script> 
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  <!-- InstanceBeginEditable name="meta" --> 
+  <meta name="Description" content=""> 
+  <meta name="keywords" content=""> 
+  <!-- InstanceEndEditable --> 
+  <!-- InstanceBeginEditable name="doctitle" --> 
+  <title>Sumo Logic | Next Generation Log Management &amp; Analytics</title> 
+  <!-- InstanceEndEditable --> 
+  <!-- InstanceBeginEditable name="head" --> 
+  <!-- InstanceEndEditable --> 
+  <!-- InstanceParam name="class" type="text" value="home" --> 
+ </head>
+ <body class="home">
+  <a href="https://plus.google.com/101915881618766942873" rel="publisher"></a>   
+  <div class="container"> 
+   <div class="span-6"> 
+    <p class="tagline"></p> 
+   </div> 
+   <div id="supernav" class="span-9 last"> 
+    <ul> 
+     <li><a href="/about-sumo/contact/">Contact</a></li> 
+     <li><a href="/blog/">Blog</a></li> 
+     <li><a href="/support/">Support</a></li> 
+     <li class="search-wrap"> 
+      <form action="/search/" method="get" id="google_search_form"> 
+       <input type="submit" id="search-button" value=""> 
+       <input type="text" name="q" value="" class="text"> 
+      </form> </li> 
+     <li><a href="https://service.sumologic.com/" class="highlight"><strong>Login</strong></a></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div id="header"> 
+   <div class="container"> 
+    <div class="container"> 
+     <div class="span-3"> 
+      <a class="logo " href="/"> <img src="/_media/logo.svg" alt="" width="209" height="39"> </a> 
+     </div> 
+     <div class="span-12 last" id="main-nav-wrap"> 
+      <ul id="main-nav" class="float-right valign-bottom"> 
+       <li class=""> <a href="/product/">Product</a> 
+        <ul class="product subnav"> 
+         <li class="big-data-challenge"> <a href="/big-data-challenge/">Big Data Challenge</a> 
+          <ul> 
+           <li> <a href="/big-data-challenge/real-time-data/">Real-Time Data</a> </li> 
+           <li> <a href="/big-data-challenge/the-cloud-advantage/">The Cloud Advantage</a> </li> 
+          </ul> </li> 
+         <li class="overview"> <a href="/product/">Product Overview</a> 
+          <ul> 
+           <li> <a href="/product/overview/advanced-analytics/">Machine Data Analytics</a> </li> 
+           <li> <a href="/product/overview/security/">Secure by Design</a> </li> 
+          </ul> </li> 
+         <li class="capabilities"> <a href="/product/capabilities/">Capabilities</a> 
+          <ul> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-collect">Collect</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-centralize">Centralize</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-search">Search + Troubleshoot</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-alert">Alert + Notify</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-monitor">Visualize + Monitor</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-analyze">Analyze with LogReduce</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-predict">Predict with Anomaly Detection</a> </li> 
+           <li> <a href="/product/capabilities/transactionanalytics/">Transaction Analytics</a> </li> 
+          </ul> </li> 
+         <li class="solutions"> <a href="/product/use-cases/">Use Cases</a> 
+          <ul> 
+           <li> <a href="/product/use-cases/security-compliance/">Security &amp; Compliance</a> </li> 
+           <li> <a href="/product/use-cases/availability-performance/">Availability &amp; Performance</a> </li> 
+           <li> <a href="/product/use-cases/customer-insights/">Customer Insights</a> </li> 
+           <li> <a href="/product/use-cases/cloud-deployments/">Cloud Deployments</a> </li> 
+           <li> <a href="/product/use-cases/application-releases/">Application Releases</a> </li> 
+          </ul> </li> 
+         <li> 
+          <ul class="last"> 
+           <li> <a href="/product/sumo-logic-free/">Sumo Logic Free</a> </li> 
+           <li> <a href="/product/pricing-and-packaging/">Pricing and Packaging</a> </li> 
+           <li> <a href="/product/momentum/">Momentum</a> </li> 
+           <li> <a href="/product/faq/">FAQ</a> </li> 
+          </ul> </li> 
+        </ul> </li> 
+       <li class=""> <a href="/whats-new/">What's New</a> </li> 
+       <li class=""> <a href="/applications/">Applications</a> 
+        <ul class="subnav applications"> 
+         <li> <a href="/applications/">Overview</a> 
+          <ul> 
+           <li> <a href="/applications/active-directory/">Active Directory</a> </li> 
+           <li> <a href="/applications/adobe-connect/">Adobe Connect</a> </li> 
+           <li> <a href="/applications/akamai/">Akamai</a> </li> 
+           <li> <a href="/applications/amazon-cloudfront/">Amazon Cloudfront</a> </li> 
+           <li> <a href="/applications/aws-elastic-load-balancing/">Amazon ELB</a> </li> 
+           <li> <a href="/applications/amazon-s3/">Amazon S3</a> </li> 
+           <li> <a href="/applications/apache/">Apache</a> </li> 
+           <li> <a href="/applications/aws-cloudtrail/">AWS CloudTrail</a> </li> 
+           <li> <a href="/applications/cisco/">Cisco</a> </li> 
+          </ul> </li> 
+         <li> <a href="#">&nbsp;</a> 
+          <ul> 
+           <li> <a href="/applications/collectd/">Collectd</a> </li> 
+           <li> <a href="/applications/hyperguard/">Hyperguard</a> </li> 
+           <li> <a href="/applications/IIS/">IIS</a> </li> 
+           <li> <a href="/applications/linux/">Linux</a> </li> 
+           <li> <a href="/applications/nginx/">Nginx</a> </li> 
+           <li> <a href="/applications/mac-osx/">Mac OSX</a> </li> 
+           <li> <a href="/applications/ossec/">OSSEC</a> </li> 
+           <li> <a href="/applications/pci/">PCI Compliance</a> </li> 
+           <li> <a href="/applications/palo-alto-networks/">Palo Alto Networks</a> </li> 
+          </ul> </li> 
+         <li> <a href="#">&nbsp;</a> 
+          <ul> 
+           <li> <a href="/applications/postfix/">Postfix</a> </li> 
+           <li> <a href="/applications/quickstart/">QuickStart</a> </li> 
+           <li> <a href="/applications/sentiment/">Sentiment</a> </li> 
+           <li> <a href="/applications/snort/">Snort</a> </li> 
+           <li> <a href="/applications/statsd/">StatsD</a> </li> 
+           <li> <a href="/applications/varnish/">Varnish</a> </li> 
+           <li> <a href="/applications/vmware/">VMware</a> </li> 
+           <li> <a href="/applications/windows/">Windows</a> </li> 
+          </ul> </li> 
+        </ul> </li> 
+       <li class=""> <a href="/resources/">Resources</a> </li> 
+       <li class=" about"> <a href="/about-sumo/">About Sumo</a> 
+        <ul class="about-sumo subnav"> 
+         <li> 
+          <ul> 
+           <li> <a href="/about-sumo/">Overview</a> </li> 
+           <li> <a href="/about-sumo/management/">Management</a> </li> 
+           <li> <a href="/about-sumo/our-team/">Our Team</a> </li> 
+           <li> <a href="/about-sumo/board-of-directors/">Board of Directors</a> </li> 
+           <li> <a href="/about-sumo/advisory-board/">Advisory Board</a> </li> 
+           <li> <a href="/about-sumo/partners/">Partners</a> </li> 
+          </ul> </li> 
+         <li> 
+          <ul> 
+           <li> <a href="/about-sumo/customers/">Customers</a> </li> 
+           <li> <a href="/follow-us/news/">News</a> </li> 
+           <li> <a href="/follow-us/press/">Press</a> </li> 
+           <li> <a href="/about-sumo/careers/">Careers</a> </li> 
+           <li> <a href="/about-sumo/contact/">Contact Us</a> </li> 
+          </ul> </li> 
+        </ul> </li> 
+       <li class="last"> <a class="button button-pink button-inline pie" href="/signup/">Sumo Logic FREE</a> </li> 
+      </ul> 
+     </div>
+     <!-- .span-12 --> 
+    </div>
+    <!-- .container --> 
+   </div> 
+  </div> 
+  <div id="valprop"> 
+   <div id="valprop-inner"> 
+    <div class="container"> 
+     <!-- InstanceBeginEditable name="value-prop" --> 
+     <div class="slideshow-wrap"> 
+      <div class="slideshow"> 
+       <div id="slide-2" class="slide"> 
+        <div class="target"> 
+         <div class="valprop-left"> 
+          <h1> Sumo Logic Grows Exponentially </h1> 
+          <p>Powers the future of Machine Data Intelligence with Incredible Momentum</p> 
+          <p class="cta">Learn More</p> 
+         </div> 
+         <div class="valprop-right"> 
+          <p class="kicker"> In just <span class="highlight blue">ONE DAY</span>, Sumo Logic: </p> 
+          <a class="target-link" href="/product/momentum/"> 
+           <div class="slide2-banner"> 
+            <div class="span-2"> 
+             <img src="/_media/momentum-data.png" alt="Analyzes 4+ Petabytes of Data"> 
+             <p>Analyzes <span class="highlight blue">4+ Petabytes</span> of Data</p> 
+            </div> 
+            <div class="span-2"> 
+             <img src="/_media/momentum-record.png" alt="Queries 14 Trillion+ Records"> 
+             <p>Queries <span class="highlight blue">14 Trillion+</span> Records</p> 
+            </div> 
+            <div class="span-2 last"> 
+             <img src="/_media/momentum-years.png" alt="Examines 200+ Years of Data"> 
+             <p>Examines <span class="highlight blue">200+ Years</span> of Data</p> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="container"> 
+         <div class="valprop-bottom"> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="slide-1" class="slide"> 
+        <div class="target"> 
+         <div class="valprop-left" style="width: 590px"> 
+          <h1> Sumo Logic and ServiceNow Deliver Automated Event Management </h1> 
+          <p>Cloud-to-Cloud Integration <span class="highlight">Optimizes</span> IT Productivity </p> 
+          <p class="cta">Learn More</p> 
+         </div> 
+         <div class="valprop-right" style="right: -30px;"> 
+          <a class="target-link" href="/about-sumo/partners/servicenow.html"> <img src="/_media/valprop_servicenow.png" alt="Valprop ServiceNow"> </a> 
+         </div> 
+        </div> 
+        <div class="container"> 
+         <div class="valprop-bottom"> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="slide-5" class="slide"> 
+        <div class="target"> 
+         <div class="valprop-left"> 
+          <h1> We Broke the Rules </h1> 
+          <p>Speed <span class="highlight">+</span> Scale <span class="highlight">+</span> Anomaly Detection<br> <span style="font-size: 18px;">Redefining Security Analytics</span></p> 
+          <br>
+          <br> 
+          <p class="cta">Learn More</p> 
+         </div> 
+         <div class="valprop-right"> 
+          <a class="target-link" href="/product/use-cases/security-compliance/"> <img src="/_media/valprop_security.png" alt="Valprop Security"> </a> 
+         </div> 
+        </div> 
+        <div class="container"> 
+         <div class="valprop-bottom"> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="slide-4" class="slide fouc-fix"> 
+        <div class="target"> 
+         <div class="valprop-left"> 
+          <h1> Sumo Logic Applications For Popular Data Sources </h1> 
+          <p>Dashboards, saved searches, and reports</p> 
+          <p class="cta">Learn More</p> 
+         </div> 
+         <div class="valprop-right"> 
+          <a class="target-link" href="/applications/"> <img src="/_media/valprop_applications.png" width="520" height="310" alt="Valprop Dashboard"> </a> 
+         </div> 
+        </div> 
+        <div class="container"> 
+         <div class="valprop-bottom"> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="slide-3" class="slide fouc-fix"> 
+        <a href="http://www.youtube.com/embed/aTQi0k5kl8s?rel=0&amp;autoplay=1" class="lightbox-video" onclick="_gaq.push(['_trackEvent', 'Overview Video', 'Play', 'Homepage']);" title="Product Overview of the Sumo Logic Service"> 
+         <div class="valprop-left"> 
+          <h1> The Enterprise Cloud For Machine Data </h1> 
+          <p>Search For What You Know <br><span class="highlight">Analyze</span> What You Don't </p> 
+          <p class="cta">Learn More</p> 
+         </div> 
+         <div class="valprop-right"> 
+          <img src="/_media/valprop_tour.png" width="498" height="369" alt="Valprop Tour"> 
+         </div> </a>
+        <div class="container">
+         <a href="http://www.youtube.com/embed/aTQi0k5kl8s?rel=0&amp;autoplay=1" class="lightbox-video" onclick="_gaq.push(['_trackEvent', 'Overview Video', 'Play', 'Homepage']);" title="Product Overview of the Sumo Logic Service"> 
+          <div class="valprop-bottom"> 
+           <p><a href="/signup/" title="Try Sumo Logic Free">Register for Sumo Logic Free</a></p> 
+          </div></a> 
+        </div>  
+       </div> 
+      </div> 
+      <div class="slides-nav"> 
+       <ul> 
+        <li><a href="#slide-1"></a></li> 
+        <li><a href="#slide-2"></a></li> 
+        <li><a href="#slide-3"></a></li> 
+        <li><a href="#slide-4"></a></li> 
+        <li><a href="#slide-5"></a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <!-- InstanceEndEditable --> 
+    </div>
+    <!-- .wrapper --> 
+   </div>
+   <!-- #valprop-inner --> 
+  </div>
+  <!-- #valprop --> 
+  <div id="content-wrap" class="clearfix"> 
+   <div class="content"> 
+    <div class="wrapper"> 
+     <ul class="breadcrumbs"> 
+     </ul> 
+    </div> 
+    <!-- InstanceBeginEditable name="main-content" --> 
+    <div class="wrapper"> 
+     <div class="container"> 
+      <div class="span-15 append-bottom"> 
+       <div class="homepage-customer-logo-wrapper"> 
+        <img class="homepage-customer-logo" src="/_media/logo_netflix_homepage.png" width="135" height="57" alt="Logo Netflix"> 
+        <img class="homepage-customer-logo" src="/_media/logo_solarcity.png" width="150" alt="Logo SolarCity"> 
+        <img class="homepage-customer-logo" src="/_media/logo_mcgraw_hill_homepage.png" width="73" height="70" alt="Logo McGraw Hill"> 
+        <img class="homepage-customer-logo" src="/_media/logo_scripps_networks_homepage.png" width="160" height="27" alt="Logo Scripps Networks Interactive"> 
+        <img class="homepage-customer-logo" src="/_media/logo_hbs_white.png" width="144" height="69" alt="Logo Deutsche Telekom Hosted Business Services"> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- .container --> 
+     <div class="container"> 
+      <div class="span-8 customer-tabs"> 
+       <div id="tabs-2"> 
+        <blockquote class="basic"> 
+         <cite> <a href="http://www.youtube.com/embed/8toYXqPEkOg?rel=0&amp;autoplay=1" class="video-thumb-wrap lightbox-video" title="Okta Customer Testimonial Video"> <img src="/_media/resource_thumb_video_okta_sm.jpg" width="234" height="132"> </a> 
+          <div class="text">
+            Adam D'Amico 
+           <br>
+           <span>Director of Technical Operations</span> 
+           <img src="/_media/logos/okta.png" width="133" alt="Logo Okta"> 
+          </div> </cite> 
+         <p>Sumo Logic has been indispensable in maintaining the quality of service our enterprise customers demand.</p> 
+        </blockquote> 
+       </div> 
+       <div id="tabs-3"> 
+        <blockquote class="basic"> 
+         <cite> 
+          <div class="text"> 
+           <img src="_media/servicenow_logo.png" alt="Logo Servicenow"> 
+          </div> </cite> 
+         <p>The ability to access Sumo Logic directly from the ServiceNow user interface, and vice versa, makes critical event and change management more efficient.</p> 
+        </blockquote> 
+       </div> 
+       <div style="clear: both;"></div> 
+       <div id="customer-tabs-nav"> 
+        <ul> 
+         <li><a href="#tabs-2">Okta</a></li> 
+         <li><a href="#tabs-3">Servicenow</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="span-6 last"> 
+       <div class="homepage-gartner-promo"> 
+        <p class="center"><img src="/_media/logo_gartner_coolvendor_2014.png" alt="Gartner Cool Vendor 2014" style="margin: 20px 0 25px;"></p> 
+        <p class="small">'Cool Vendors in Application Performance Monitoring and IT Operations Analytics', 2014, Jonah Kowall, Will Cappelli, Colin Fletcher, April, 28, 2014.</p> 
+        <p class="small">Gartner does not endorse any vendor, product or service depicted in its research publications, and does not advise technology users to select only those vendors with the highest ratings. Gartner research publications consist of the opinions of Gartner’s research organization and should not be construed as statements of fact. Gartner disclaims all warranties, expressed or implied, with respect to this research, including any warranties of merchantability of fitness for a particular purpose.</p> 
+       </div> 
+      </div> 
+      <!-- <div class="span-1">&nbsp;</div> --> 
+     </div> 
+    </div> 
+    <div class="wrapper"> 
+     <div class="container prepend-top"> 
+      <div class="span-15"> 
+       <h2>Why Sumo Logic?</h2> 
+       <p>Our cloud log management solution processes ALL your production application logs and server log data, analyzes them in real-time and delivers actionable results at a fraction of the cost of on-premise solution. <a href="/product/sumo-vs-on-premise/">Find out more</a></p> 
+      </div> 
+     </div> 
+     <div class="container"> 
+      <div class="span-13 homepage-why"> 
+       <div class="video-wrap"> 
+        <a href="http://www.youtube.com/embed/stACOyIU1R8?rel=0&amp;autoplay=1" class="lightbox-video"> 
+         <div class="play-alt"> 
+          <span class="button-play"></span> 
+         </div> <img src="/_media/resource_thumb_video_analytics.jpg" width="168" height="94"> </a> 
+        <h3><a href="http://www.youtube.com/embed/stACOyIU1R8?rel=0&amp;autoplay=1" class="lightbox-video">Insights in real time</a></h3> 
+        <p>Kumar Saurabh, Co-founder and VP of Engineering</p> 
+       </div> 
+       <div class="video-wrap"> 
+        <a href="http://www.youtube.com/embed/0YFfwfg-b8E?rel=0&amp;autoplay=1" class="lightbox-video"> 
+         <div class="play-alt"> 
+          <span class="button-play"></span> 
+         </div> <img src="/_media/resource_thumb_video_cloud_based.jpg" width="168" height="94"> </a> 
+        <h3><a href="http://www.youtube.com/embed/0YFfwfg-b8E?rel=0&amp;autoplay=1" class="lightbox-video">Take logs to the cloud</a></h3> 
+        <p>Christian Beedgen, Co-Founder &amp; Chief Technical Officer</p> 
+       </div> 
+       <div class="video-wrap"> 
+        <a href="http://www.youtube.com/embed/oy29kh5S-yk?rel=0&amp;autoplay=1" class="lightbox-video"> 
+         <div class="play-alt"> 
+          <span class="button-play"></span> 
+         </div> <img src="/_media/resource_thumb_video_processing.jpg" width="168" height="94"> </a> 
+        <h3><a href="http://www.youtube.com/embed/oy29kh5S-yk?rel=0&amp;autoplay=1" class="lightbox-video">Superior scalability</a></h3> 
+        <p>Bruno Kurtic, Founding VP of Product &amp; Strategy</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="page-wrap bgg-box"> 
+     <div class="container"> 
+      <div class="span-4" style="border-right: 1px solid #d1d1d1;"> 
+       <p><a href="http://www.networkworld.com/news/2014/041414-big-data-startups-280585.html" title="Sumo Logic Ranked #1 Among Top 10 Big Data Startups To Watch" target="_blank"><img src="/_media/network_world_homepage.png" width="180" style="margin-top: 20px; border: 1px solid #d1d1d1;" alt="Sumo Logic Listed In CRN's Big Data 100 List"></a></p> 
+       <p><a href="http://www.networkworld.com/news/2014/041414-big-data-startups-280585.html" title="Sumo Logic Ranked #1 Among Top 10 Big Data Startups To Watch" target="_blank">Sumo Logic Ranked #1 Among <br>Top 10 Big Data Startups To Watch</a></p> 
+      </div> 
+      <div class="span-5"> 
+       <h3><a href="/product/">What is Cloud Log Management?</a></h3> 
+       <p>A cloud-based log management service eliminates the operational overhead and complexity of today's on-premise log management solutions. On-premise solutions quickly run into scalability issues with increasing log volumes, and logs are voluminous. A cloud native solution with its elastic scalability enables you to process ALL your log data with zero extra overhead. This scalability also powers interactive analytics that will deliver answers from your logs in seconds.</p> 
+       <p><a href="/product/">Learn More</a></p> 
+      </div> 
+      <div class="span-5 last"> 
+       <h3><a href="/solutions/application-management/">Log Data for Application Management</a></h3> 
+       <p>Logs are the richest source of operational intelligence, revealing answers to production issues, usage patterns and performance metrics. Sumo Logic lets you uncover root causes buried under mountains of production application data in seconds. Analyze and improve your users’ experience in real time. Perform production application troubleshooting, detecting performance issues before they turn into critical events.</p> 
+       <p><a href="/solutions/application-management/">Learn More</a></p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="gray-box feeds prepend-top clearfix"> 
+     <div class="wrapper"> 
+      <div class="container"> 
+       <div class="span-8 blog-feed" style=" background-color: #fff;"> 
+        <div class="footer-blog-box"> 
+         <h3>Blog</h3> 
+         <p class="item"><a href="http://www.sumologic.com/blog/company/shifting-into-overdrive?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=shifting-into-overdrive" title="Read full post">Shifting Into Overdrive</a><br><span class="date">Dec 02, 2014</span></p>
+         <p class="item"><a href="http://www.sumologic.com/blog/company/improving-misfit-wearables-devices-with-sumo-logic?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=improving-misfit-wearables-devices-with-sumo-logic" title="Read full post">Improving Misfit Wearable’s Devices With Sumo Logic</a><br><span class="date">Nov 20, 2014</span></p>
+         <p class="item"><a href="http://www.sumologic.com/blog/technology/have-you-found-the-right-apm?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=have-you-found-the-right-apm" title="Read full post">Have you found the right APM?</a><br><span class="date">Nov 17, 2014</span></p> 
+        </div> 
+        <div class="footer-news-box"> 
+         <h3>News</h3> 
+         <p class="no-margin"><a href="http://www.computerworld.com.au/article/558216/big-data-digest-rise-think-bots/" target="_blank">Big Data digest: Rise of the think-bots</a></p> 
+         <p class="small">Oct 25, 2014 - Computerworld</p> 
+         <p class="no-margin"><a href="http://appdevelopermagazine.com/2038/2014/10/23/Sumo-Logic-Offers-Updates-to-Machine-Data-Analytics-Platform/" target="_blank">Sumo Logic Offers Updates to Machine Data Analytics Platform</a></p> 
+         <p class="small">Oct 23, 2014 - App Developer Magazine</p> 
+         <p class="no-margin"><a href="http://siliconangle.com/blog/2014/10/23/sumo-logic-unveils-transaction-analysis-component-for-its-analytics-platform/?angle=silicon" target="_blank">Sumo Logic unveils Transaction Analysis component for its analytics platform</a></p> 
+         <p class="small">Oct 23, 2014 - siliconANGLE</p> 
+        </div> 
+       </div> 
+       <div class="span-4"> 
+        <div class="footer-box"> 
+         <div class="twitter-feed"> 
+          <p class="no-margin tweet-content">How <a href="https://twitter.com/Netskope" target="_blank">@Netskope</a> Mastered DevOps with Sumo Logic by <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> <a href="https://twitter.com/search?q=%23anomalydetection" target="_blank">#anomalydetection</a> <a href="https://twitter.com/search?q=%23apache" target="_blank">#apache</a> <a href="http://buff.ly/1ykSwut" target="_blank">buff.ly/1ykSwut</a> via <a href="https://twitter.com/SlideShare" target="_blank">@SlideShare</a> <br> <span class="date">04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank">SumoLogic</a></span> </p> 
+          <div class="pointer"></div> 
+         </div> 
+         <div class="append-bottom"> 
+          <img class="icon-twitter" src="/_media/twitter_big.png" height="29" width="35"> 
+          <a href="https://twitter.com/sumologic" class="twitter-follow-button" data-show-count="false">Follow @sumologic</a> 
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+         </div> 
+         <h4>Featured News</h4> 
+         <p><a href="http://www.sramanamitra.com/2014/03/10/thought-leaders-in-big-data-vance-loiselle-ceo-of-sumologic-part-1/" target="_blank">Thought Leaders in Big Data</a></p> 
+         <p><a href="http://www.forbes.com/sites/benkepes/2014/02/21/sumo-logic-delivers-enterprise-security-analytic-product/">Sumo Logic Delivers Enterprise Security Analytic Product</a></p> 
+        </div> 
+       </div> 
+       <div class="span-3 last"> 
+        <div class="footer-box"> 
+         <h3>Upcoming Webinars</h3> 
+         <a href="https://info.sumologic.com/UpcomingWebinars.html" alt="Webinar: Getting Started with Sumo Logic Free"> <img src="/_media/webinar_icon_large.png" width="168" height="128" alt="Webinar: Getting Started with Sumo Logic Free"> </a> 
+         <p style="margin: 5px 0;"><a href="https://info.sumologic.com/UpcomingWebinars.html" alt="Webinar: Getting Started with Sumo Logic Free">Check Out Upcoming Sumo Logic Webinars</a></p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- .wrapper --> 
+    <!-- InstanceEndEditable --> 
+    <div class="wrapper"> 
+     <div class="social"> 
+      <div class="column" style="width:100px;">
+       <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="sumologic">Tweet</a>
+      </div> 
+      <div class="column" style="width:65px;">
+       <g:plusone size="medium" href="http://www.sumologic.com/"></g:plusone>
+      </div> 
+      <div class="column" style="width:65px;">
+       <fb:like href="" send="false" layout="button_count" show_faces="false" font=""></fb:like>
+      </div> 
+      <!-- Use Google +1 Asynchronous loading --> 
+      <script type="text/javascript">
+		  (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script> 
+     </div> 
+    </div> 
+   </div>
+   <!-- .content --> 
+  </div> 
+  <div id="footer" class="clearfix"> 
+   <div class="wrapper"> 
+    <div id="superfooter" class="container"> 
+     <div class="span-3"> 
+      <ul> 
+       <li><a href="/big-data-challenge/"><strong>Big Data Challenge</strong></a></li> 
+       <li class="first"><a href="/big-data-challenge/">Overview</a></li>
+       <li><a href="/big-data-challenge/real-time-data/">Real-Time Data</a></li>
+       <li><a href="/big-data-challenge/the-cloud-advantage/">The Cloud Advantage</a></li> 
+      </ul> 
+     </div> 
+     <div class="span-2"> 
+      <ul> 
+       <li><a href="/product/"><strong>Product</strong></a></li> 
+       <li class="first"><a href="/product/">Overview</a></li>
+       <li><a href="/product/capabilities/">Capabilities</a></li>
+       <li><a href="/product/use-cases/">Use Cases</a></li>
+       <li><a href="/product/pricing-and-packaging/">Pricing</a></li>
+       <li><a href="/product/sumo-logic-free/">Sumo Logic Free</a></li>
+       <li><a href="/product/sumo-vs-on-premise/">Sumo vs On-premise</a></li>
+       <li><a href="/product/faq/">FAQ</a></li> 
+      </ul> 
+     </div> 
+     <div class="span-2"> 
+      <ul> 
+       <li><a href="/follow-us/"><strong>Follow Us</strong></a></li> 
+       <li class="first"><a href="/follow-us/news/">News</a></li>
+       <li><a href="/follow-us/press/">Press</a></li> 
+      </ul> 
+     </div> 
+     <div class="span-2"> 
+      <ul> 
+       <li><a href="/about-sumo/"><strong>About Sumo</strong></a></li> 
+       <li class="first"><a href="/about-sumo/">Overview</a></li>
+       <li><a href="/about-sumo/management/">Management</a></li>
+       <li><a href="/about-sumo/board-of-directors/">Board of Directors</a></li>
+       <li><a href="/about-sumo/advisory-board/">Advisory Board</a></li>
+       <li><a href="/about-sumo/customers/">Customers</a></li>
+       <li><a href="/about-sumo/partners/">Partners</a></li>
+       <li><a href="/about-sumo/careers/">Careers</a></li>
+       <li><a href="/about-sumo/contact/">Contact Us</a></li> 
+      </ul> 
+      <div id="6196377c-dbbd-4b88-8fd8-5409f4230f70" class="truste"> 
+       <script type="text/javascript" src="//privacy-policy.truste.com/privacy-seal/Sumo-Logic,-Inc-/asc?rid=6196377c-dbbd-4b88-8fd8-5409f4230f70"></script>
+       <a href="//privacy.truste.com/privacy-seal/Sumo-Logic,-Inc-/validation?rid=a822ea69-03d8-40d9-b354-c387a0373131" title="TRUSTe online privacy certification" target="_blank"><img style="border: none" src="//privacy-policy.truste.com/privacy-seal/Sumo-Logic,-Inc-/seal?rid=a822ea69-03d8-40d9-b354-c387a0373131" alt="TRUSTe online privacy certification"></a>
+      </div> 
+     </div> 
+     <div class="span-2"> 
+      <ul> 
+       <li><a href="/resources/"><strong>Resources</strong></a></li> 
+       <li><a href="/blog/"><strong>Blog</strong></a></li> 
+       <li><a href="https://sumologic.zendesk.com/home" target="_blank"><strong>Support</strong></a></li> 
+       <li><a href="http://operations.sumologic.com/" target="_blank"><strong>Status</strong></a></li> 
+      </ul> 
+     </div> 
+     <div class="span-4 last"> 
+      <div class="footer-box"> 
+       <p>Want a fully functioning version of our enterprise cloud-based log management and analytics service?</p> 
+       <a class="button button-pink pie" href="/signup/">Sumo Logic FREE</a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="container"> 
+     <div class="span-8"> 
+      <p>© 2014 Sumo Logic, All rights reserved. <a href="/privacy/">Privacy Policy</a> | <a href="/terms-and-conditions/">Terms &amp; Conditions</a></p> 
+     </div> 
+     <ul class="social-media"> 
+      <li class="youtube"><span></span><a href="https://www.youtube.com/user/sumologic" target="_blank">YouTube</a></li> 
+      <li class="google"><span></span><a href="https://plus.google.com/s/sumo%20logic" target="_blank">Google +</a></li> 
+      <li class="linkedin"><span></span><a href="http://www.linkedin.com/company/sumo-logic" target="_blank">LinkedIn</a></li> 
+      <li class="twitter"><span></span><a href="https://twitter.com/#!/SumoLogic" target="_blank">Twitter</a></li> 
+      <li class="facebook"><span></span><a href="https://www.facebook.com/Sumo.Logic" target="_blank">Facebook</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div>
+  <!-- #footer --> 
+  <!-- Twitter // START --> 
+  <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script> 
+  <!-- Twitter // END --> 
+  <!-- Google Plus // START --> 
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script> 
+  <!-- Google Plus // END --> 
+  <!-- Facebook // START --> 
+  <div id="fb-root"></div> 
+  <script src="//connect.facebook.net/en_US/all.js#appId=4972420734&amp;xfbml=1"></script> 
+  <!-- Facebook // END --> 
+  <!-- Chartbeat // START --> 
+  <script type="text/javascript">
+var _sf_async_config = {
+	uid: 8007,
+	domain: "sumologic.com"
+};
+(function() {
+	function loadChartbeat() {
+		window._sf_endpt = (new Date()).getTime();
+		var e = document.createElement('script');
+		e.setAttribute('language', 'javascript');
+		e.setAttribute('type', 'text/javascript');
+		e.setAttribute('src', (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") + "static.chartbeat.com/js/chartbeat.js");
+		document.body.appendChild(e);
+	}
+	var oldonload = window.onload;
+	window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() {
+		oldonload();
+		loadChartbeat();
+	};
+})();
+</script> 
+  <!-- Chartbeat // END --> 
+  <!-- Reinvigorate // START --> 
+  <script type="text/javascript" src="//include.reinvigorate.net/re_.js"></script> 
+  <script type="text/javascript">try { reinvigorate.track("p0305-52u88l87h8"); } catch(err) {}</script> 
+  <!-- Reinvigorate // END --> 
+  <!-- Marketo Munchkin // START --> 
+  <script src="//munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+  <script>mktoMunchkin("793-NKB-950");</script> 
+  <!-- Marketo Munchkin // END --> 
+  <!-- Google Analytics // START --> 
+  <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16579649-1']);
+_gaq.push(['_setDomainName', '.sumologic.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script');
+	ga.type = 'text/javascript';
+	ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ga, s);
+})();
+</script> 
+  <!-- Google Analytics // END --> 
+  <!-- Google Code for Free Trial Remarketing List START --> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1004672846;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "tLsCCLKr4wIQzq6I3wM";
+var google_conversion_value = 0;
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script> 
+  <noscript> 
+   <div style="display:inline;"> 
+    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1004672846/?label=tLsCCLKr4wIQzq6I3wM&amp;guid=ON&amp;script=0"> 
+   </div> 
+  </noscript> 
+  <!-- Google Code for Free Trial Remarketing List END --> 
+  <!-- DemandbaseClient // START --> 
+  <script>
+	var key='ee7c80d5290e9ede9bd82a3a6392310afe280cbc', db_cta=function(){}, s=document.createElement('script');
+	s.src='//api.demandbase.com/api/v2/ip.json?key='+key+'&callback=db_cta&page='+document.location.href+'&page_title='+document.title+'&referrer='+document.referrer;
+	document.getElementsByTagName('head')[0].appendChild(s);
+</script> 
+  <img src="https://a.company-target.com/pixel?id=1389980030&amp;type=js" alt="" style="display:none"> 
+  <img src="https://a.company-target.com/pixel?id=1389980153&amp;type=js" alt="" style="display:none"> 
+  <!-- DemandbaseClient // END --> 
+  <!-- Bizo Insight Tags // START --> 
+  <script type="text/javascript">
+  _bizo_data_partner_id = "6821";
+</script> 
+  <script type="text/javascript">
+(function() {
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";
+  b.async = true;
+  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js" ) + ".bizographics.com/insight.min.js";
+  s.parentNode.insertBefore(b, s);
+})();
+</script> 
+  <noscript> 
+   <img height="1" width="1" alt="" style="display:none;" src="//www.bizographics.com/collect/?pid=6821&amp;fmt=gif"> 
+  </noscript> 
+  <!-- Bizo Insight Tags // END --> 
+  <!-- Crazy Egg // START --> 
+  <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0025/6846.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script> 
+  <!-- Crazy Egg // END --> 
+  <script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=2';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script> 
+  <!-- InstanceEnd --> 
+ </body>
+</html>

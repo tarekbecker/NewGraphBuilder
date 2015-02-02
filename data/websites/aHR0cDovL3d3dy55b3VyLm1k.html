@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <title>Your.MD</title> 
+  <meta name="description" content=""> 
+  <meta property="og:image" content="http://pipeline.your.md/assets/frontpage-bg/footer-bg-outdoor.jpg"> 
+  <meta property="og:title" content="Your.MD - Your mobile doctor"> 
+  <meta property="og:description" content="Your.MD - Personalised healthcare advice on your mobile"> 
+  <meta property="og:site_name" content="Your.MD"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="http://www.your.md/"> 
+  <meta name="viewport" content="width=device-width" initial-scale="1.0"> 
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> 
+  <link rel="stylesheet" href="styles/5756280b.main.css"> 
+  <base href="/"> 
+ </head> 
+ <body ng-app="yourmdApp"> 
+  <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> 
+  <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]--> 
+  <!-- Add your site or application content here --> 
+  <ng-include ng-hide="hideHeader" src="'partials/menubar.html'"></ng-include> 
+  <div ng-view="" class="view"></div> 
+  <div ng-show="loading" class="loading">
+   <p><img class="loading-animation" src="http://pipeline.your.md/assets/ic_loading_spinner.png" alt=""></p>
+  </div> 
+  <ng-include ng-hide="hideFooter" src="'partials/footer.html'"></ng-include> 
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> 
+  <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//pipeline.your.md/assets/analytics.js','ga');
+
+       ga('create', 'UA-44847109-1', 'your.md');
+       ga('send', 'pageview');
+
+    </script> 
+  <script src="//pipeline.your.md/assets/jquery.min.js"></script> 
+  <script src="bower_components/angular/angular.js"></script> 
+  <script src="//static.opentok.com/webrtc/v2.2/js/opentok.min.js"></script> 
+  <script src="scripts/3f5d7dac.plugins.js"></script> 
+  <script src="scripts/d484e3bf.modules.js"></script> 
+  <script src="scripts/69c660f5.scripts.js"></script>  
+ </body>
+</html>

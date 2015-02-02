@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+
+
+
+<html class="ie ie7" lang="en-US">
+
+
+
+<![endif]-->
+<!--[if IE 8]>
+
+
+
+<html class="ie ie8" lang="en-US">
+
+
+
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width"> 
+  <title>Concurrent, Inc. | Driving Innovation Through Data</title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://www.concurrentinc.com/xmlrpc.php"> 
+  <!-- Favicon --> 
+  <link rel="shortcut icon" href="http://www.concurrentinc.com/wp-content/uploads/favicon.ico"> 
+  <script type="text/javascript" src="//use.typekit.net/dob3ybp.js"></script> 
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  <!--[if lt IE 9]>
+
+
+
+	<script src="http://www.concurrentinc.com/wp-content/themes/concurrent/js/html5.js"></script>
+
+
+
+	<![endif]--> 
+  <!--[if IE]><script type="text/javascript" src="http://www.concurrentinc.com/wp-content/themes/concurrent/js/ie.js"></script><![endif]--> 
+  <link rel="alternate" type="application/rss+xml" title="CONCURRENT INC. » Feed" href="http://www.concurrentinc.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="CONCURRENT INC. » Comments Feed" href="http://www.concurrentinc.com/comments/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="CONCURRENT INC. » Home Comments Feed" href="http://www.concurrentinc.com/home/feed/"> 
+  <link rel="stylesheet" id="myPluginStylesheet-css" href="http://www.concurrentinc.com/wp-content/plugins/myqtip-easy-qtip2/js/jquery.qtip.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="jetpack-widgets-css" href="http://www.concurrentinc.com/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003" type="text/css" media="all"> 
+  <link rel="stylesheet" id="cascading-fonts-css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CBitter%3A400%2C700&amp;subset=latin%2Clatin-ext" type="text/css" media="all"> 
+  <link rel="stylesheet" id="genericons-css" href="http://www.concurrentinc.com/wp-content/plugins/jetpack/_inc/genericons/genericons.css?ver=3.0.2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="cascading-style-css" href="http://www.concurrentinc.com/wp-content/themes/concurrent/style.css?ver=2013-07-18" type="text/css" media="all"> 
+  <link rel="stylesheet" id="styles-aux-css" href="http://www.concurrentinc.com/wp-content/themes/concurrent/styles-aux.css?ver=2013-07-18" type="text/css" media="all"> 
+  <link rel="stylesheet" id="cascading-carousel-css" href="http://www.concurrentinc.com/wp-content/themes/concurrent/css/owl.carousel.css?ver=2013-07-18" type="text/css" media="all"> 
+  <!--[if lt IE 9]>
+<link rel='stylesheet' id='cascading-ie-css'  href='http://www.concurrentinc.com/wp-content/themes/concurrent/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]--> 
+  <script type="text/javascript" src="http://www.concurrentinc.com/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script> 
+  <script type="text/javascript" src="http://www.concurrentinc.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://www.concurrentinc.com/wp-content/plugins/myqtip-easy-qtip2/js/jquery.qtip.js?ver=4.0.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.concurrentinc.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.concurrentinc.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="shortlink" href="http://wp.me/P4il29-4"> 
+  <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> 
+  <!-- All in One SEO Pack 2.2.3.1 by Michael Torbert of Semper Fi Web Design[390,438] --> 
+  <link rel="canonical" href="http://www.concurrentinc.com/"> 
+  <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-188528-6');
+			
+			ga('send', 'pageview');
+			</script> 
+  <script type="text/javascript">
+		function recordOutboundLink(link, category, action) {
+					ga('send', 'event', category, action);
+					if ( link.target == '_blank' ) return true;
+			setTimeout('document.location = "' + link.href + '"', 100);
+			return false;
+		}
+			/* use regular Javascript for this */
+			function getAttr(ele, attr) {
+				var result = (ele.getAttribute && ele.getAttribute(attr)) || null;
+				if( !result ) {
+					var attrs = ele.attributes;
+					var length = attrs.length;
+					for(var i = 0; i < length; i++)
+					if(attr[i].nodeName === attr) result = attr[i].nodeValue;
+				}
+				return result;
+			}
+			function aiosp_addLoadEvent(func) {
+			  var oldonload = window.onload;
+			  if (typeof window.onload != 'function') {
+			    window.onload = func;
+			  } else {
+			    window.onload = function() {
+			      if (oldonload) {
+			        oldonload();
+			      }
+			      func();
+			    }
+			  }
+			}
+			
+			function aiosp_addEvent(element, evnt, funct){
+			  if (element.attachEvent)
+			   return element.attachEvent('on'+evnt, funct);
+			  else
+			   return element.addEventListener(evnt, funct, false);
+			}
+
+			aiosp_addLoadEvent(function () {
+				var links = document.getElementsByTagName('a');
+				for (var x=0; x < links.length; x++) {
+					if (typeof links[x] == 'undefined') continue;
+					aiosp_addEvent( links[x], 'onclick', function () {
+						var mydomain = new RegExp(document.domain, 'i');
+						href = getAttr(this, 'href');
+						if (href && href.toLowerCase().indexOf('http') === 0 && !mydomain.test(href)) {
+							recordOutboundLink(this, 'Outbound Links', href);
+						}
+					});
+				}
+			});
+		</script> 
+  <!-- /all in one seo pack --> 
+  <style type="text/css" id="cascading-header-css">
+			.site-header {
+			background: url(http://www.concurrentinc.com/wp-content/themes/concurrent/images/headers/circle.png) no-repeat scroll top;
+			background-size: 1600px auto;
+		}
+		</style> 
+  <style type="text/css">
+.myqtip {
+	cursor: pointer;
+}
+ 
+
+ 
+</style> 
+  <script type="text/javascript">
+var 
+	my = [
+		'top left', 'top right', 'top center',
+		'bottom left', 'bottom right', 'bottom center',
+		'right center', 'right top', 'right bottom',
+		'left center', 'left top', 'left bottom', 'center'
+	],
+	at = [
+		'bottom left', 'bottom right', 'bottom center',
+		'top left', 'top right', 'top center',
+		'left center', 'left top', 'left bottom',
+		'right center', 'right top', 'right bottom', 'center'
+	],
+	styles = [
+		'red', 'blue', 'dark', 'light', 'green', 'jtools', 'plain', 'youtube', 'cluetip', 'tipsy', 'tipped', 'bootstrap'
+	];
+// Create the tooltips only on document load
+jQuery(document).ready(function()
+{
+	// Loop through the my array
+	 
+	 
+	{
+		jQuery('.myqtip')
+		
+			/*
+			 * Lets delete the qTip data from our target element so we can apply multiple tooltips.
+			 * Since the data is also stored on the tooltip element itself this isn't a problem!
+			 * 
+			 * Check here for more details on this: http://craigsworks.com/projects/qtip2/tutorials/advanced/#multi
+			 */
+			 
+			.qtip({
+				
+				 
+				
+				position: {
+					my: 'top left' , // Use the corner...
+					at: 'bottom left', // ...and opposite corner
+					 
+					viewport: jQuery(window), // Keep it on-screen at all times if possible
+         				adjust: {
+           						 x: 10,  y: 25
+        						 }
+				},
+					
+				show: {
+					  
+				},
+				
+				hide: {
+					
+				},
+				
+				
+				style: {
+					classes: 'qtip-shadow qtip-' + 'dark'
+					/*classes: 'ui-tooltip-green ui-tooltip-shadow ui-tooltip-rounded '*/
+				}
+				
+			});
+			 
+	}
+	
+});
+</script> 
+  <script src="http://www.concurrentinc.com/wp-content/themes/concurrent/js/jquery.cycle2.min.js"></script> 
+ </head> 
+ <body class="home page page-id-4 page-template page-template-page-home-php"> 
+  <div id="page" class="hfeed site"> 
+   <header id="header"> 
+    <div class="holder"> 
+     <strong class="logo"><a href="http://www.concurrentinc.com">CASCADING TOOLS &amp; SERVICES</a></strong> 
+     <div class="header-content"> 
+      <div class="header-top"> 
+       <a class="link" href="http://www.cascading.org">CASCADING.ORG</a> 
+       <a class="link" href="http://www.cascading.io">CASCADING.IO</a> 
+       <!--
+                    <a href="http://cascading.405dev.com/wp-login.php" class="btn-login">Driven Login</a>
+--> 
+       <div class="header-google"> 
+        <script>
+          jQuery("gsc-i-id1").keyup(function(e){
+            if(event.keyCode == 13){
+              $("#gsc-b-id1").click();
+            }
+          });
+
+          function OpenInNewTab(url) {
+            var win = window.open(url, '_self');
+            win.focus();
+          }
+        </script> 
+        <div class="gsc-bar"> 
+         <input onkeydown="if (event.keyCode == 13) OpenInNewTab('/search_gcse/?search=' + this.value)" autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" spellcheck="false" style="outline: none;"> 
+         <input type="button" class="gsc-search-button" title="search" onclick="OpenInNewTab('/search_gcse/?search=' + document.getElementById('gsc-i-id1').value)"> 
+        </div> 
+       </div> 
+       <script>
+  		(function() {
+    			var cx = '015733436406368034956:5--eocgdbzm';
+    			var gcse = document.createElement('script');
+    			gcse.type = 'text/javascript';
+    			gcse.async = true;
+    			gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        			'//www.google.com/cse/cse.js?cx=' + cx;
+    			var s = document.getElementsByTagName('script')[0];
+    			s.parentNode.insertBefore(gcse, s);
+  		})();
+	</script> 
+      </div> 
+      <nav id="nav"> 
+       <div class="menu-header-menu-container">
+        <ul id="menu-header-menu" class="nav-menu">
+         <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="http://www.concurrentinc.com/products/">PRODUCTS</a></li> 
+         <li id="menu-item-856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-856"><a href="http://www.concurrentinc.com/services/">SERVICES</a></li> 
+         <li id="menu-item-383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-383"><a href="http://www.concurrentinc.com/partners/">PARTNERS</a></li> 
+         <li id="menu-item-389" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-389"><a href="http://www.concurrentinc.com/company/">COMPANY</a></li> 
+         <li id="menu-item-844" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-844"><a href="http://www.concurrentinc.com/customers/">CUSTOMERS</a></li> 
+         <li id="menu-item-401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"><a href="http://www.concurrentinc.com/news/">NEWS</a></li> 
+        </ul>
+       </div> 
+      </nav> 
+     </div> 
+    </div> 
+   </header> 
+   <div id="main" class="site-main"> 
+    <section class="visule"> 
+     <div class="cycle-slideshow" id="slideshow">
+      <img src="/wp-content/uploads/2014/02/concurrent_BB_current.jpg" alt="billboard01" width="1280" height="400" class="alignnone size-full wp-image-789">
+     </div> 
+    </section> 
+    <div id="primary" class="content-area"> 
+     <div id="content" class="site-content" role="main"> 
+      <div id="main-content"> 
+       <div class="container"> 
+        <div class="c1"> 
+         <article id="post-4" class="post-4 page type-page status-publish hentry"> 
+          <header class="entry-header"> 
+           <h1 class="entry-title">Home</h1> 
+          </header>
+          <!-- .entry-header --> 
+          <div class="entry-content"> 
+           <aside class="promotion-area"> 
+            <div class="block"> 
+             <p><span class="logo-block"><span class="logo-block"><img class="alignnone size-full wp-image-881" alt="logo_home_cascading" src="http://www.concurrentinc.com/wp-content/uploads/2014/02/logo_home_cascading.png" width="286" height="164"></span></span></p> 
+             <h2 class="sub-title">Easy App Development</h2> 
+             <p>Simplify Development of<br> your Data Apps</p> 
+             <div class="btn-area">
+              <a class="btn" href="http://www.cascading.org">Learn More&nbsp;&gt;</a>
+             </div> 
+            </div> 
+            <div class="block"> 
+             <p><span class="logo-block"><span class="logo-block"><img class="alignnone size-full wp-image-880" alt="logo-home-driven" src="http://www.concurrentinc.com/wp-content/uploads/2014/01/logo-home-driven.png" width="173" height="164"></span></span></p> 
+             <h2 class="sub-title">Unmatched App Insight</h2> 
+             <p>Application Performance Management<br> for Cascading Apps</p> 
+             <div class="btn-area">
+              <a class="btn" href="http://www.cascading.io">Get Driven&nbsp;&gt;</a>
+             </div> 
+            </div> 
+           </aside> 
+          </div>
+          <!-- .entry-content --> 
+          <footer class="entry-meta"> 
+          </footer>
+          <!-- .entry-meta --> 
+         </article>
+         <!-- #post --> 
+        </div> 
+       </div>  
+       <section class="case-studies"> 
+        <div class="holder"> 
+         <h3>CASE STUDIES</h3> 
+         <div class="carousel"> 
+          <div class="mask"> 
+           <div class="slideset"> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_twitter.png" alt="img_twitter" width="162" height="52" class="alignnone size-full wp-image-709"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_trulia.png" alt="img_trulia" width="162" height="52" class="alignnone size-full wp-image-719"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_telenav.png" alt="img_telenav" width="162" height="52" class="alignnone size-full wp-image-717"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_solusi247.png" alt="img_solusi247" width="162" height="52" class="alignnone size-full wp-image-716"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_scaleunlimited.png" alt="img_scaleunlimited" width="162" height="52" class="alignnone size-full wp-image-715"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_razorfish.png" alt="img_razorfish" width="162" height="52" class="alignnone size-full wp-image-714"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_ionflux.png" alt="img_ionflux" width="162" height="52" class="alignnone size-full wp-image-713"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_datasong.png" alt="img_datasong" width="162" height="52" class="alignnone size-full wp-image-711"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_etsy.png" alt="img_etsy" width="162" height="52" class="alignnone size-full wp-image-712"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_theclimatecorp.png" alt="img_theclimatecorp" width="162" height="52" class="alignnone size-full wp-image-718"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/01/img_airbnb.png" alt="img_airbnb" width="162" height="52" class="alignnone size-full wp-image-710"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/04/AdMobius.jpg" alt="AdMobius" width="162" height="52" class="alignnone size-full wp-image-710"></a>
+             </div> 
+            </div> 
+            <div class="slide"> 
+             <div class="img-holder">
+              <a href="/customers/"><img src="/wp-content/uploads/2014/11/soundcloud-logo.jpg" alt="soundcloud-logo" width="120" height="52" class="alignnone size-full wp-image-710"></a>
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <!--<a class="btn-prev" href="#">Previous</a>
+<a class="btn-next" href="#">Next</a>--> 
+         </div> 
+        </div>
+       </section> 
+      </div>
+      <!-- #content --> 
+     </div>
+     <!-- #primary --> 
+    </div>
+    <!-- #main --> 
+    <section class="pre-footer"> 
+     <div class="holder"> 
+      <aside class="details"> 
+       <ul style="padding-left: 0; width: 75%; list-style-type: none;"> 
+        <li><img class="alignnone size-full wp-image-593" style="margin-right: 20px;" src="http://www.concurrentinc.com/wp-content/uploads/2014/01/ico01.png" alt="forums_icon" width="83" height="69">IN THE CENTER OF ALL THINGS BIG DATA</li> 
+        <li><img class="alignnone size-full wp-image-594" style="margin-right: 20px;" src="http://www.concurrentinc.com/wp-content/uploads/2014/01/ico02.png" alt="forums_icon" width="83" height="69">BE PART OF A TALENTED, WORLD-CLASS TEAM</li> 
+        <li><img class="alignnone size-full wp-image-595" style="margin-right: 20px;" src="http://www.concurrentinc.com/wp-content/uploads/2014/01/ico03.png" alt="forums_icon" width="83" height="69">THE FOREFRONT OF BIG DATA APP DEVELOPMENT</li> 
+        <li><img class="alignnone size-full wp-image-596" style="margin-right: 20px;" src="http://www.concurrentinc.com/wp-content/uploads/2014/01/ico04.png" alt="forums_icon" width="83" height="69">LOCATED IN THE HEART OF SAN FRANCISCO</li> 
+       </ul> 
+      </aside> 
+      <div class="hiring"> 
+       <h2>WE'RE HIRING!</h2> 
+       <!--
+<img class="alignnone size-full wp-image-728" style="margin-right: 20px; float: left;" alt="img_wearehiring" src="http://www.concurrentinc.com/wp-content/uploads/2014/01/img_wearehiring.png" width="142" height="142" />
+--> Big Data is moving to the next level of maturity and it's all about the applications. We are the minds behind Cascading, the most widely used and deployed technology for Big Data applications with more than 200,000 user downloads a month and thousands of active deployments around the world. Our group is always on the lookout for more talent, so check out our opportunities! 
+       <a href="http://www.concurrentinc.com/company/careers/">Join the team</a> 
+      </div>
+     </div> 
+    </section> 
+   </div> 
+   <!-- #main --> 
+   <!-- -------------------> 
+   <footer id="footer"> 
+    <div class="footer-top"> 
+     <div class="footer-holder"> 
+      <nav class="nav"> 
+       <div class="menu-header-menu-container">
+        <ul id="menu-header-menu-1" class="nav-menu">
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="http://www.concurrentinc.com/products/">PRODUCTS</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-856"><a href="http://www.concurrentinc.com/services/">SERVICES</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-383"><a href="http://www.concurrentinc.com/partners/">PARTNERS</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-389"><a href="http://www.concurrentinc.com/company/">COMPANY</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-844"><a href="http://www.concurrentinc.com/customers/">CUSTOMERS</a></li> 
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"><a href="http://www.concurrentinc.com/news/">NEWS</a></li> 
+        </ul>
+       </div> 
+      </nav> 
+      <div class="newsletter_container"> 
+       <script>
+			jQuery(function(){
+						
+						jQuery('#input_1_1').attr('placeholder','Enter your email');		
+									});
+		</script> 
+       <div class="gf_browser_ie gf_browser_ie8 gform_wrapper" id="gform_wrapper_1">
+        <form method="post" enctype="multipart/form-data" id="gform_1" action="/"> 
+         <div class="gform_body"> 
+          <ul id="gform_fields_1" class="gform_fields right_label description_below">
+           <li id="field_1_1" class="gfield    newsletter"><label class="gfield_label" for="input_1_1">Sign-up for Updates</label>
+            <div class="ginput_container">
+             <input name="input_1" id="input_1_1" type="text" value="" class="medium">
+            </div></li>
+           <li id="field_1_2" class="gfield     gform_hidden"><input name="input_2" id="input_1_2" type="hidden" class="gform_hidden" value="Inbound - Info Request"></li>
+           <li id="field_1_3" class="gfield     gform_hidden"><input name="input_3" id="input_1_3" type="hidden" class="gform_hidden" value="Cascading Newsletter Sign-up"></li>
+           <li id="field_1_4" class="gfield     gform_hidden"><input name="input_4" id="input_1_4" type="hidden" class="gform_hidden" value=""></li>
+           <li id="field_1_5" class="gfield     gform_hidden"><input name="input_5" id="input_1_5" type="hidden" class="gform_hidden" value=""></li>
+           <li id="field_1_6" class="gfield     gform_hidden"><input name="input_6" id="input_1_6" type="hidden" class="gform_hidden" value="50.22.219.2"></li> 
+          </ul>
+         </div> 
+         <div class="gform_footer right_label"> 
+          <input type="submit" id="gform_submit_button_1" class="button gform_button" value="Submit" onclick="if(window[&quot;gf_submitting_1&quot;]){return false;}  window[&quot;gf_submitting_1&quot;]=true; "> 
+          <input type="hidden" class="gform_hidden" name="is_submit_1" value="1"> 
+          <input type="hidden" class="gform_hidden" name="gform_submit" value="1"> 
+          <input type="hidden" class="gform_hidden" name="gform_unique_id" value=""> 
+          <input type="hidden" class="gform_hidden" name="state_1" value="WyJhOjA6e30iLCI1NzIxOWI4YjFiZjlmNjhkZGYxOTUzMWFjZWRjNzRhMyJd"> 
+          <input type="hidden" class="gform_hidden" name="gform_target_page_number_1" id="gform_target_page_number_1" value="0"> 
+          <input type="hidden" class="gform_hidden" name="gform_source_page_number_1" id="gform_source_page_number_1" value="1"> 
+          <input type="hidden" name="gform_field_values" value=""> 
+         </div> 
+        </form> 
+       </div>
+       <script type="text/javascript"> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script> 
+       <script type="text/javascript">
+var ipaddress = jQuery("#input_1_6").val();
+
+jQuery("#input_1_1").focus(function() {
+	jQuery.get("http://ipinfo.io/" + ipaddress + "/json", function(data) {
+		jQuery("#input_1_5").val(data.country);
+		jQuery("#input_1_4").val(data.region);
+	});
+});
+</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="footer-content"> 
+     <div class="footer-holder"> 
+      <div class="block"> 
+       <div class="frame"> 
+        <div class="footer-info"> 
+         <address>Concurrent, Inc. <br> 720 Market St.<br> Suite 300 <br> San Francisco, CA 94102 </address> 
+         <ul class="other-info"> 
+          <li><strong>Phone</strong>(415) 813-1010</li> 
+          <li><strong>Sales and Support</strong><a href="mailto:sales@concurrentinc.com">sales@concurrentinc.com</a></li> 
+         </ul> 
+        </div> 
+        <div class="social-networks"> 
+         <strong class="title">Get Social</strong> 
+         <ul> 
+          <li class="facebook"><a href="http://www.facebook.com/concurrentinc">facebook</a></li> 
+          <li class="twitter"><a href="http://twitter.com/concurrent">twitter</a></li> 
+          <li class="google-plus"><a href="http://plus.google.com/u/0/b/110186819281157694076/110186819281157694076/about">google plus</a></li> 
+          <li class="linkedin"><a href="http://www.linkedin.com/company/concurrent-inc.">linkedin</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="frame"> 
+        <div class="footer-logo"> 
+         <div class="logo-icon"> 
+          <img src="http://www.concurrentinc.com/wp-content/themes/concurrent/images/driven-footer-logo.png" alt="DRIVEN LOGO"> 
+          <span class="text">is Cascading <br> Made Powerful</span> 
+         </div> 
+        </div> 
+        <a class="btn-find" href="http://docs.cascading.io/driven/1.0/getting-started/index.html">get it now ►</a> 
+       </div> 
+      </div> 
+      <div class="footer-bottom"> 
+       <p>© 2014 <a href="#">Concurrent</a>, Inc. All rights reserved. <a href="http://www.concurrentinc.com/terms-of-service/">Terms of Service</a> <a href="http://www.concurrentinc.com/copyright/">Copyright</a> <a href="http://www.concurrentinc.com/privacy-policy/">Privacy Policy</a> </p> 
+      </div> 
+     </div> 
+    </div> 
+   </footer> 
+   <!-- -------------------> 
+  </div>
+  <!-- #page --> 
+  <div style="display:none"> 
+  </div> 
+  <link rel="stylesheet" id="gforms_reset_css-css" href="http://www.concurrentinc.com/wp-content/plugins/gravityforms/css/formreset.css?ver=1.8.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="gforms_datepicker_css-css" href="http://www.concurrentinc.com/wp-content/plugins/gravityforms/css/datepicker.css?ver=1.8.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="gforms_formsmain_css-css" href="http://www.concurrentinc.com/wp-content/plugins/gravityforms/css/formsmain.css?ver=1.8.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="gforms_ready_class_css-css" href="http://www.concurrentinc.com/wp-content/plugins/gravityforms/css/readyclass.css?ver=1.8.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="gforms_browsers_css-css" href="http://www.concurrentinc.com/wp-content/plugins/gravityforms/css/browsers.css?ver=1.8.3" type="text/css" media="all"> 
+  <script type="text/javascript" src="//platform.twitter.com/widgets.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201449"></script> 
+  <script type="text/javascript" src="http://s.gravatar.com/js/gprofiles.js?ver=2014Decaa"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.concurrentinc.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.concurrentinc.com/wp-includes/js/masonry.min.js?ver=3.1.2"></script> 
+  <script type="text/javascript" src="http://www.concurrentinc.com/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2"></script> 
+  <script type="text/javascript" src="http://www.concurrentinc.com/wp-content/themes/concurrent/js/functions.js?ver=2013-07-18"></script> 
+  <script type="text/javascript" src="http://www.concurrentinc.com/wp-content/themes/concurrent/js/isotope.pkgd.min.js?ver=2013-07-18"></script> 
+  <script type="text/javascript" src="http://www.concurrentinc.com/wp-content/themes/concurrent/js/jquery.main.js?ver=2013-07-18"></script> 
+  <script type="text/javascript" src="http://www.concurrentinc.com/wp-content/themes/concurrent/js/owl.carousel.min.js?ver=2013-07-18"></script> 
+  <script src="http://stats.wordpress.com/e-201449.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+	st_go({v:'ext',j:'1:2.7',blog:'63476105',post:'4',tz:'-8'});
+	var load_cmc = function(){linktracker_init(63476105,4,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-188528-6', 'concurrentinc.com');
+ga('send', 'pageview');
+</body>
+
+</html></script>
+ </body>
+</html>

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <script src="//cdn.optimizely.com/js/786465526.js"></script> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <title>Big Data Processing. Simplified. Powered by Hadoop · Xplenty</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <meta name="description" content="Xplenty makes ETL quick and painless with Data Integration on the cloud powered by Hadoop. Integrate with MongoDB, RDS,MySQL, PostgreSQL, MS SQL, Redshift and more."> 
+  <meta name="author" content="Xplenty"> 
+  <meta name="copyright" content="2014 © Xplenty Ltd. All rights reserverd."> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css"> 
+  <!--Le HTML5 shim, for IE6-8 support of HTML5 elements--> 
+  <!--[if lt IE 9]>
+  <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]--> 
+  <!-- Le styles --> 
+  <link rel="stylesheet" href="/assets/application-d6a7f598932851536c7dab58ea58e986.css"> 
+  <!-- xdomain --> 
+  <script src="/assets/xdomain.min-213c77e4379a53d2b92077db2c5b6bca.js" slave="https://app.xplenty.com/proxy.html"></script> 
+  <!-- Fav and touch icons --> 
+  <link href="/assets/apple-touch-icon-114-360ca05a5b3ea9f1d92843eecb4e22a2.png" rel="apple-touch-icon" sizes="57x57" type="image/png"> 
+  <link href="/assets/apple-touch-icon-114-360ca05a5b3ea9f1d92843eecb4e22a2.png" rel="apple-touch-icon" sizes="114x114" type="image/png"> 
+  <link href="/assets/apple-touch-icon-144-aa4599cb7e94a1f89c5ce1c0ad51179b.png" rel="apple-touch-icon" sizes="72x72" type="image/png"> 
+  <link href="/assets/apple-touch-icon-144-aa4599cb7e94a1f89c5ce1c0ad51179b.png" rel="apple-touch-icon" sizes="144x144" type="image/png"> 
+  <link href="/assets/apple-touch-icon-120-fae18438772988a8ad19829f3a714a6a.png" rel="apple-touch-icon" sizes="60x60" type="image/png"> 
+  <link href="/assets/apple-touch-icon-120-fae18438772988a8ad19829f3a714a6a.png" rel="apple-touch-icon" sizes="120x120" type="image/png"> 
+  <link href="/assets/apple-touch-icon-152-09fb4d235083bdacc6954856d3771013.png" rel="apple-touch-icon" sizes="72x72" type="image/png"> 
+  <link href="/assets/apple-touch-icon-152-09fb4d235083bdacc6954856d3771013.png" rel="apple-touch-icon" sizes="152x152" type="image/png"> 
+  <link href="/assets/favicon-99e02a877988a896e7ede79c178e785c.ico" rel="icon" type="image/x-icon"> 
+  <link href="/assets/favicon-25eb6fc1c365d2a948dd1aab5b8b6aa9.png" rel="shortcut icon"> 
+  <!-- Facebook Graph --> 
+  <meta property="og:title" content="Big Data Processing. Simplified. Powered by Hadoop"> 
+  <meta property="og:description" content="Xplenty makes ETL quick and painless with Data Integration on the cloud powered by Hadoop. Integrate with MongoDB, RDS,MySQL, PostgreSQL, MS SQL, Redshift and more."> 
+  <meta property="og:image" content="https://www.xplenty.com/assets/logo-7d3d7adf61d3a78c8b9a5ef79556ca1f.png"> 
+  <meta property="og:url" content="https://www.xplenty.com/index.html"> 
+  <meta property="og:site_name" content="Xplenty"> 
+  <!-- Begin Twitter Card --> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@xplenty"> 
+  <meta name="twitter:image" content="https://www.xplenty.com/assets/logo-7d3d7adf61d3a78c8b9a5ef79556ca1f.png"> 
+  <meta name="twitter:creator" content="@xplenty"> 
+  <meta name="twitter:title" content="Big Data Processing. Simplified. Powered by Hadoop"> 
+  <meta name="twitter:description" content="Xplenty makes ETL quick and painless with Data Integration on the cloud powered by Hadoop. Integrate with MongoDB, RDS,MySQL, PostgreSQL, MS SQL, Redshift and more."> 
+  <meta name="twitter:url" content="https://www.xplenty.com/index.html"> 
+  <!-- End Twitter Card --> 
+  <!-- Google Tag Manager --> 
+  <noscript></noscript>
+ </head>
+ <body class="home  fixed-header ">
+  <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NL6NC8" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NL6NC8');
+</script> 
+  <script>
+  if( typeof ga != "undefined" ) {
+    ga('create', 'UA-33233740-1');
+    ga('send', 'pageview');
+  }
+</script> 
+  <!-- End Google Tag Manager -->   
+  <div class="navbar-wrapper"> 
+   <div class="navbar navbar-fixed-top" id="navigation"> 
+    <div class="navbar-inner"> 
+     <div class="container"> 
+      <button type="button" class="btn btn-navbar btn-outline-inverse" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      <a class="brand" data-track-event="click" data-category="Navigation" data-action="Home" data-label="Logo - Top Nav" href="#top"> <img src="/assets/logo-7d3d7adf61d3a78c8b9a5ef79556ca1f.png" width="172"></a> 
+      <div class="nav-collapse collapse"> 
+       <ul class="nav scrollspy pull-left"> 
+        <li class=""> <a data-track-page="/features" href="#features" data-track-event="click" data-category="Navigation" data-action="Features" data-label="Features - Top Nav">Features</a> </li> 
+        <li class=""> <a data-track-page="/pricing" href="#pricing" data-track-event="click" data-category="Navigation" data-action="Pricing" data-label="Pricing - Top Nav">Pricing</a> </li> 
+        <li class=""> <a href="/integrations/">Integrations</a> </li> 
+        <li class=""> <a href="http://grow.xplenty.com/xplenty-enterprise/" data-track-event="click" data-category="Navigation" data-action="Enterprise" data-label="Enterprise - Top Nav">Enterprise</a> </li> 
+        <li class=""> <a href="http://community.xplenty.com/knowledgebase" data-track-event="click" data-category="Navigation" data-action="Resources" data-label="Resources - Top Nav">Resources</a> </li> 
+        <li class=""> <a href="/blog/" data-track-event="click" data-category="Navigation" data-action="Blog" data-label="Blog - Top Nav">Blog</a> </li> 
+       </ul> 
+       <ul class="nav pull-right"> 
+        <li class=""> <a href="https://app.xplenty.com/login">Sign In</a> </li> 
+        <li class="hidden-desktop"> <a data-toggle="modal" data-track-page="/signup" href="#signupModal"><strong>Get Free Account</strong></a> </li> 
+        <li class="visible-desktop"> 
+         <form class="navbar-form pull-right"> 
+          <a data-toggle="modal" href="#signupModal" data-track-page="/signup" data-track-event="click" data-category="Signup" data-action="Create Free Account" data-label="Home - Top Nav" class="btn btn-outline-inverse btn-primary"><strong>Get Free Account</strong></a> 
+         </form> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="main" role="main"> 
+   <div id="wrap"> 
+    <!--################ HEADER START ################--> 
+    <header id="top" data-stellar-background-ratio="0.5"> 
+     <div class="container home"> 
+      <div class="flexslider home"> 
+       <div class="logo hidden-home"> 
+        <img src="/assets/logo-vertical-f565d61a2c399389025e8e6438e3472e.png"> 
+       </div> 
+       <ul class="slides margintop20"> 
+        <li class="slide margintop40"> <h1>Data Integration on the Cloud</h1> <h3>Harness the power of Hadoop with zero coding and no deployment</h3> <a data-toggle="modal" data-track-page="/signup" data-track-event="click" data-category="Signup" data-action="Get Free Account" data-label="Home - Slider 1" href="#signupModal" tabindex="3" type="submit" class="btn btn-xlarge btn-header margintop40">Get Free Account</a> </li> 
+       </ul> 
+       <!-- <a href="https://xplenty.youcanbook.me/">
+        <div id="ribbon">
+          <span id="content">Meet up with Xplenty at <img src="https://reinvent.awsevents.com/images/reinvent-white.png"><small> · <b>Booth 535</b> · November 11 - 14, 2014 · Las Vegas, NV</small></span>
+        </div>
+      </a>
+ --> 
+      </div> 
+      <div class="social-header hidden-phone"> 
+       <a href="https://www.linkedin.com/company/xplenty" data-track-page="/outgoing/social/linkedin" target="_blank" class="social-network"><i class="icon-linkedin icon-halfx"></i></a> 
+       <a href="https://twitter.com/xplenty" data-track-page="/outgoing/social/twitter" target="_blank" class="social-network"><i class="icon-twitter icon-halfx"></i></a> 
+       <a href="https://plus.google.com/+Xplenty" data-track-page="/outgoing/social/google" target="_blank" class="social-network" rel="publisher"><i class="icon-google-plus icon-halfx"></i></a> 
+       <a href="https://www.facebook.com/xplenty" data-track-page="/outgoing/social/facebook" target="_blank" class="social-network"><i class="icon-facebook icon-halfx"></i></a> 
+       <a href="https://www.youtube.com/user/Xplenty" data-track-page="/outgoing/social/youtube" target="_blank" class="social-network"><i class="icon-youtube icon-halfx"></i></a> 
+       <a href="https://github.com/xplenty" data-track-page="/outgoing/social/github" target="_blank" class="social-network"><i class="icon-github icon-halfx"></i></a> 
+      </div> 
+     </div> 
+     <div id="home-arrow" class="hidden-phone"> 
+      <a href="#features" data-track-page="/features" data-track-event="click" data-category="Navigation" data-action="Features" data-label="Home - Sliders"><i class="icon-angle-down icon-3x" id="iconHome"></i></a> 
+     </div> 
+    </header> 
+    <!--################ HEADER END ################--> 
+    <!--################ FEATURES SECTION START ################--> 
+    <section id="features"> 
+     <div id="features-banner" data-stellar-background-ratio="1"> 
+      <h1>Features</h1> 
+      <p class="sub-heading-support">Everything you want in a data processing platform.</p> 
+     </div> 
+    </section> 
+    <section class="feature-page "> 
+     <div class="container"> 
+      <div class="row"> 
+       <div class="span6"> 
+        <h4>ETL done right</h4> 
+        <p></p>
+        <p>Doing your ETL with Hadoop does not need to be complicated. Xplenty provides you with an intuitive interface to design your ETL dataflows the way you're used to.</p> 
+        <p></p> 
+        <blockquote class="margintop20">
+         <p>"With Xplenty, we are saving time dealing with data, as it's not necessary to change the schema constantly. We are also independent in terms of IT, where we've saved on headcount resources and can put more attention on analytics and business insights than on technical maintenance of Hadoop."<br> <br> <strong>- Slava Borodovsky</strong>, BI Director, <a href="http://www.fiverr.com/" target="_blank">Fiverr</a></p> 
+        </blockquote> 
+        <a data-toggle="modal" data-track-page="/signup" data-track-event="click" data-category="Signup" data-action="Start Crunching Data" data-label="Features Section - ETL done right" href="#signupModal" tabindex="3" type="submit" class="btn btn-primary margintop10 marginbot20">Start Crunching Data</a> 
+       </div> 
+       <div class="span6 pull-left"> 
+        <div class="browser dark animate-from-right"> 
+         <div class="bar"> 
+          <div class="actions"> 
+           <div class="dot red"></div> 
+           <div class="dot yellow"></div> 
+           <div class="dot green"></div> 
+          </div> 
+         </div> 
+         <div class="content"> 
+          <img class="feature-image" src="/images/features/feature4.gif" alt=""> 
+         </div> 
+        </div> 
+        <!-- // end browser --> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <section class="feature-page rev"> 
+     <div class="container"> 
+      <div class="row"> 
+       <div class="span6 pull-left"> 
+        <div class="browser dark animate-from-left"> 
+         <div class="bar"> 
+          <div class="actions"> 
+           <div class="dot red"></div> 
+           <div class="dot yellow"></div> 
+           <div class="dot green"></div> 
+          </div> 
+         </div> 
+         <div class="content"> 
+          <img class="feature-image" src="/images/features/feature1.gif" alt=""> 
+         </div> 
+        </div> 
+        <!-- // end browser --> 
+       </div> 
+       <div class="span6"> 
+        <h4>Connect with a variety of data stores</h4> 
+        <p></p>
+        <p>Xplenty lets you integrate data from a variety of data stores, such as <strong>Amazon RDS</strong>, <strong>MySQL</strong>, <strong>PostgreSQL</strong>, <strong>Microsoft SQL Server</strong> and <strong>MongoDB</strong>.</p> 
+        <p>Read and process data from cloud storage sources such as <strong>Amazon S3</strong>, <strong>Rackspace Cloud Files</strong> and <strong>IBM SoftLayer Object Storage</strong>. </p> 
+        <p>Once done processing, Xplenty allows you to connect with <strong>HDFS</strong>, <strong>Amazon Redshift</strong>, <strong>SAP HANA</strong> and <strong>Google BigQuery</strong>. You can also store processed data back in your favorite <em>relational database</em>, <em>cloud storage</em> or <em>key-value store</em>.</p> 
+        <p></p> 
+        <blockquote class="margintop20">
+         <p>"Because of Xplenty, we are datawise able to accomplish all of the things we’ve set out to do in a reasonable time-frame. As a result, we’re exactly where we want to be, moving in the direction that we planned."<br> <br> <strong>- Ido Shichor</strong>, BI Manager, <a href="http://www.dealply.com/" target="_blank">DealPly</a></p> 
+        </blockquote> 
+        <a data-toggle="modal" data-track-page="/signup" data-track-event="click" data-category="Signup" data-action="Get Connected Now" data-label="Features Section - Connect with a variety of data stores" href="#signupModal" tabindex="3" type="submit" class="btn btn-primary margintop10 marginbot20">Get Connected Now</a> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <section class="feature-page "> 
+     <div class="container"> 
+      <div class="row"> 
+       <div class="span6"> 
+        <h4>Parse, process and integrate structured and semi-structured data</h4> 
+        <p></p>
+        <p>Integrate semi-structured data with structured data. Our package designer makes it a snap for every data and BI user to write complex dataflows for your flat files and JSON files on top of Hadoop without writing a single line of code.</p> 
+        <p></p> 
+        <blockquote class="margintop20">
+         <p>"By using Xplenty to break down our log files, we’re able to gain valuable insights into our customer needs and preferences. With the easy-to-use GUI, we just designate the file location for processing, and it automatically sets up the template and runs."<br> <br> <strong>- Nir Nahum</strong>, VP R&amp;D, <a href="http://www.walkme.com/" target="_blank">WalkMe</a></p> 
+        </blockquote> 
+        <a data-toggle="modal" data-track-page="/signup" data-track-event="click" data-category="Signup" data-action="Create a Data Flow" data-label="Features Section - Parse, process and integrate structured and semi-structured data" href="#signupModal" tabindex="3" type="submit" class="btn btn-primary margintop10 marginbot20">Create a Data Flow</a> 
+       </div> 
+       <div class="span6 pull-left"> 
+        <div class="browser dark animate-from-right"> 
+         <div class="bar"> 
+          <div class="actions"> 
+           <div class="dot red"></div> 
+           <div class="dot yellow"></div> 
+           <div class="dot green"></div> 
+          </div> 
+         </div> 
+         <div class="content"> 
+          <img class="feature-image" src="/images/features/feature2.gif" alt=""> 
+         </div> 
+        </div> 
+        <!-- // end browser --> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <section class="feature-page rev"> 
+     <div class="container"> 
+      <div class="row"> 
+       <div class="span6 pull-left"> 
+        <div class="browser dark animate-from-left"> 
+         <div class="bar"> 
+          <div class="actions"> 
+           <div class="dot red"></div> 
+           <div class="dot yellow"></div> 
+           <div class="dot green"></div> 
+          </div> 
+         </div> 
+         <div class="content"> 
+          <img class="feature-image" src="/images/features/feature3.gif" alt=""> 
+         </div> 
+        </div> 
+        <!-- // end browser --> 
+       </div> 
+       <div class="span6"> 
+        <h4>Hadoop made simple</h4> 
+        <p></p>
+        <p>Provision Hadoop clusters to power your data processing with just a few clicks and without any knowledge of Hadoop. Fire up and tear down clusters when and how you please.</p> 
+        <p></p> 
+        <blockquote class="margintop20">
+         <p>"Their coding-free Hadoop Big Data service is simple, easy to use and affordable for even the mid-market."<br> <br> <strong>Jeff Vance</strong>, <a href="http://www.cio.com/article/734787/10_Hot_Big_Data_Startups_to_Watch?page=7&amp;taxonomyId=600010" target="_blank">CIO.com</a></p> 
+        </blockquote> 
+        <a data-toggle="modal" data-track-page="/signup" data-track-event="click" data-category="Signup" data-action="Fire Up Clusters" data-label="Features Section - Hadoop made simple" href="#signupModal" tabindex="3" type="submit" class="btn btn-primary margintop10 marginbot20">Fire Up Clusters</a> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <!--################ FEATURES SECTION END ################--> 
+    <!--################ PRICING SECTION START ################--> 
+    <section id="pricing"> 
+     <div id="pricing-background" data-stellar-background-ratio="0"> 
+      <h1>Simple pricing, no messing around</h1> 
+      <p class="sub-heading-support">Start with a free 14-day trial. No long-term contracts. No per-user fees.</p> 
+     </div> 
+     <div class="container"> 
+      <div class="row center margintop20"> 
+       <div class="span12"> 
+        <h1 class="big-heading">Pricing</h1> 
+        <p>Our pricing is simple and fair. Pay only for what you use and scale as you grow.</p> 
+       </div> 
+      </div> 
+      <ul class="nav nav-tabs pricing-providers margintop20" id="pricing_providers"> 
+       <li><a href="#aws" data-track-event="click" data-category="Pricing" data-action="Amazon Web Services" data-label="Provider Segment" data-toggle="tab">Amazon Web Services</a></li> 
+       <li><a href="#google" data-track-event="click" data-category="Pricing" data-action="Google Cloud Platform" data-label="Provider Segment" data-toggle="tab">Google Cloud Platform</a></li> 
+       <li><a href="#softlayer" data-track-event="click" data-category="Pricing" data-action="IBM SoftLayer" data-label="Provider Segment" data-toggle="tab">IBM SoftLayer</a></li> 
+       <li><a href="#rackspace" data-track-event="click" data-category="Pricing" data-action="Rackspace" data-label="Provider Segment" data-toggle="tab">Rackspace</a></li> 
+      </ul> 
+      <div class="row paddingtop20 tab-content"> 
+       <div id="aws" class="tab-pane"> 
+        <div class="span4 "> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>BASIC <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for the enrichment, cleansing and aggregation of 10's of millions of raw web logs in preparation for analysis" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">99</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">0.95</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for the enrichment, cleansing and aggregation of 10's of millions of raw web logs in preparation for analysis</p> 
+           </div> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>20</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>4</strong> nodes per cluster</li> 
+            <li><strong>1</strong> Sandbox cluster <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="Amazon Web Services - BASIC" data-value="99" data-track-page="/signup" data-plan="BASIC" data-provider="aws" data-signup-url="https://app.xplenty.com/signup/aws" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="span4 popular"> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>PRO <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for the enrichment, cleansing and aggregation of 100's of millions of raw web logs in preparation for analysis" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">199</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">0.85</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for the enrichment, cleansing and aggregation of 100's of millions of raw web logs in preparation for analysis</p> 
+           </div> 
+          </div> 
+          <div class="most-popular"> 
+           <span> <p>Popular</p> </span> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>50</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>16</strong> nodes per cluster</li> 
+            <li><strong>1</strong> Sandbox cluster <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="Amazon Web Services - PRO" data-value="199" data-track-page="/signup" data-plan="PRO" data-provider="aws" data-signup-url="https://app.xplenty.com/signup/aws" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="span4 "> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>EXPERT <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for complex job processing of several terabytes of semi structured data (e.g., twitter stream analysis)" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">499</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">0.8</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for complex job processing of several terabytes of semi structured data (e.g., twitter stream analysis)</p> 
+           </div> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>140</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>32</strong> nodes per cluster</li> 
+            <li><strong>2</strong> Sandbox clusters <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="Amazon Web Services - EXPERT" data-value="499" data-track-page="/signup" data-plan="EXPERT" data-provider="aws" data-signup-url="https://app.xplenty.com/signup/aws" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="google" class="tab-pane"> 
+        <div class="span4 "> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>BASIC <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for the enrichment, cleansing and aggregation of 10's of millions of raw web logs in preparation for analysis" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">99</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">0.95</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for the enrichment, cleansing and aggregation of 10's of millions of raw web logs in preparation for analysis</p> 
+           </div> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>20</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>4</strong> nodes per cluster</li> 
+            <li><strong>1</strong> Sandbox cluster <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="Google Cloud Platform - BASIC" data-value="99" data-track-page="/signup" data-plan="BASIC" data-provider="google" data-signup-url="https://app.xplenty.com/signup/google" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="span4 popular"> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>PRO <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for the enrichment, cleansing and aggregation of 100's of millions of raw web logs in preparation for analysis" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">199</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">0.85</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for the enrichment, cleansing and aggregation of 100's of millions of raw web logs in preparation for analysis</p> 
+           </div> 
+          </div> 
+          <div class="most-popular"> 
+           <span> <p>Popular</p> </span> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>50</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>16</strong> nodes per cluster</li> 
+            <li><strong>1</strong> Sandbox cluster <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="Google Cloud Platform - PRO" data-value="199" data-track-page="/signup" data-plan="PRO" data-provider="google" data-signup-url="https://app.xplenty.com/signup/google" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="span4 "> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>EXPERT <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for complex job processing of several terabytes of semi structured data (e.g., twitter stream analysis)" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">499</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">0.8</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for complex job processing of several terabytes of semi structured data (e.g., twitter stream analysis)</p> 
+           </div> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>140</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>32</strong> nodes per cluster</li> 
+            <li><strong>2</strong> Sandbox clusters <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="Google Cloud Platform - EXPERT" data-value="499" data-track-page="/signup" data-plan="EXPERT" data-provider="google" data-signup-url="https://app.xplenty.com/signup/google" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="softlayer" class="tab-pane"> 
+        <div class="span4 "> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>BASIC <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for the enrichment, cleansing and aggregation of 10's of millions of raw web logs in preparation for analysis" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">199</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">1.2</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for the enrichment, cleansing and aggregation of 10's of millions of raw web logs in preparation for analysis</p> 
+           </div> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>20</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>4</strong> nodes per cluster</li> 
+            <li><strong>1</strong> Sandbox cluster <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="IBM SoftLayer - BASIC" data-value="199" data-track-page="/signup" data-plan="BASIC" data-provider="softlayer" data-signup-url="https://app.xplenty.com/signup/softlayer" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="span4 popular"> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>PRO <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for the enrichment, cleansing and aggregation of 100's of millions of raw web logs in preparation for analysis" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">399</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">1.05</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for the enrichment, cleansing and aggregation of 100's of millions of raw web logs in preparation for analysis</p> 
+           </div> 
+          </div> 
+          <div class="most-popular"> 
+           <span> <p>Popular</p> </span> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>50</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>16</strong> nodes per cluster</li> 
+            <li><strong>1</strong> Sandbox cluster <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="IBM SoftLayer - PRO" data-value="399" data-track-page="/signup" data-plan="PRO" data-provider="softlayer" data-signup-url="https://app.xplenty.com/signup/softlayer" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="span4 "> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>EXPERT <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for complex job processing of several terabytes of semi structured data (e.g., twitter stream analysis)" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">799</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">0.95</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for complex job processing of several terabytes of semi structured data (e.g., twitter stream analysis)</p> 
+           </div> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>140</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>32</strong> nodes per cluster</li> 
+            <li><strong>2</strong> Sandbox clusters <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="IBM SoftLayer - EXPERT" data-value="799" data-track-page="/signup" data-plan="EXPERT" data-provider="softlayer" data-signup-url="https://app.xplenty.com/signup/softlayer" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="rackspace" class="tab-pane"> 
+        <div class="span4 "> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>BASIC <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for the enrichment, cleansing and aggregation of 10's of millions of raw web logs in preparation for analysis" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">399</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">1.6</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for the enrichment, cleansing and aggregation of 10's of millions of raw web logs in preparation for analysis</p> 
+           </div> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>20</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>4</strong> nodes per cluster</li> 
+            <li><strong>1</strong> Sandbox cluster <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="Rackspace - BASIC" data-value="399" data-track-page="/signup" data-plan="BASIC" data-provider="rackspace" data-signup-url="https://app.xplenty.com/signup/rackspace" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="span4 popular"> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>PRO <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for the enrichment, cleansing and aggregation of 100's of millions of raw web logs in preparation for analysis" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">799</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">1.55</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for the enrichment, cleansing and aggregation of 100's of millions of raw web logs in preparation for analysis</p> 
+           </div> 
+          </div> 
+          <div class="most-popular"> 
+           <span> <p>Popular</p> </span> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>50</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>16</strong> nodes per cluster</li> 
+            <li><strong>1</strong> Sandbox cluster <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="Rackspace - PRO" data-value="799" data-track-page="/signup" data-plan="PRO" data-provider="rackspace" data-signup-url="https://app.xplenty.com/signup/rackspace" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="span4 "> 
+         <div class="price-plan"> 
+          <div class="plan-info price"> 
+           <h2>EXPERT <span><i class="icon-question-circle hidden-desktop" data-toggle="tooltip" rel="tooltip" data-title="Good for complex job processing of several terabytes of semi structured data (e.g., twitter stream analysis)" data-placement="top" data-container="body"></i><span></span></span></h2> 
+           <div class="inside"> 
+            <span class="super">$</span>
+            <span class="amt">1299</span> 
+            <span class="sub">/mo</span> 
+           </div> 
+           <div class="hour"> 
+            <span class="super">$</span>
+            <span class="amt">1.3</span> 
+            <span class="sub">for each additional node hour</span> 
+           </div> 
+           <span class="overlay visible-desktop"></span> 
+           <div class="description visible-desktop"> 
+            <p>Good for complex job processing of several terabytes of semi structured data (e.g., twitter stream analysis)</p> 
+           </div> 
+          </div> 
+          <div class="info"> 
+           <ul> 
+            <li><strong>140</strong> node hours <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The amount of compute power included in the plan. It's equal to the quantity of nodes used when provisioning Hadoop clusters multiplied by the number of hours the nodes are available." data-placement="top"></i></li> 
+            <li>Up to <strong>32</strong> nodes per cluster</li> 
+            <li><strong>2</strong> Sandbox clusters <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="The development and QA playground. Used for testing data flows, the sandbox cluster is free of charge. Usage does not count towards the plan's allotted node hours." data-placement="top"></i><span class="free">Free</span></li> 
+            <li><strong>2</strong> hours expert training <i class="muted icon-question-circle" data-toggle="tooltip" rel="tooltip" data-title="Included with each plan is a two hour session with one of our Hadoop specialists. We will help you implement your first project with Xplenty." data-placement="top"></i></li> 
+            <li><strong>Unlimited</strong> account users</li> 
+            <li class="signup"> <a data-toggle="modal" data-track-event="click" data-category="Pricing" data-action="GET FREE ACCOUNT" data-label="Rackspace - EXPERT" data-value="1299" data-track-page="/signup" data-plan="EXPERT" data-provider="rackspace" data-signup-url="https://app.xplenty.com/signup/rackspace" href="#signupModal" class="btn btn-primary btn-xlarge btn-block">GET FREE ACCOUNT</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row center margintop20 marginbot40"> 
+       <div class="span12"> 
+        <p class="muted">All plans come equipped with unlimited number of packages and jobs, integration with variety of data stores and job scheduling. 
+         <!--<a href="/pricing">Check out the full details and FAQ.</a> --></p> 
+        <hr class="line"> 
+        <h4>Want the power of Xplenty on your own servers? <a href="http://grow.xplenty.com/xplenty-enterprise/" data-track-event="click" data-category="Signup" data-action="Get Started With Xplenty Enterprise" data-label="Get Started Section" class="btn btn-primary btn-large marginleft10">REQUEST ACCESS</a> </h4> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <!--################ PRICING SECTION END ################--> 
+    <!--################ NEWS SECTION START ################--> 
+    <section id="press" class="page paddingbot20 paddingtop20"> 
+     <div class="container"> 
+      <div class="row center page-title"> 
+       <div class="span12"> 
+        <h2>Press Coverage</h2> 
+       </div> 
+      </div> 
+      <div class="row center paddingbot20 paddingtop20 as-seen"> 
+       <div class="span2"> 
+        <a href="http://www.datacenterknowledge.com/archives/2014/10/27/xplenty-raises-3m-cloud-based-enterprise-hadoop/" title="Data Center Knowledge" target="_blank"> <img src="https://assets.xplenty.com/site/news/data_center_knowledge.png" alt=""> </a> 
+       </div> 
+       <div class="span3"> 
+        <a href="http://www.wired.com/2013/10/big-data-not-just-for-nerds-anymore/" title="Wired" target="_blank"> <img src="https://assets.xplenty.com/site/news/wired.png" alt=""> </a> 
+       </div> 
+       <div class="span3"> 
+        <a href="http://techcrunch.com/2014/10/20/pitching-a-means-to-automate-data-processing-xplenty-raises-3-million/" title="TechCrunch" target="_blank"> <img src="https://assets.xplenty.com/site/news/techcrunch.png" alt=""> </a> 
+       </div> 
+       <div class="span2"> 
+        <a href="http://venturebeat.com/2014/11/08/xplenty-google/" title="VentureBeat" target="_blank"> <img src="https://assets.xplenty.com/site/news/venturebeat.png" alt=""> </a> 
+       </div> 
+       <div class="span1"> 
+        <a href="http://www.cio.com/article/2384982/big-data/10-hot-big-data-startups-to-watch.html" title="CIO" target="_blank"> <img src="https://assets.xplenty.com/site/news/cio.png" alt=""> </a> 
+       </div> 
+      </div> 
+      <div class="row center margintop20 marginbot20"> 
+       <div class="span12"> 
+        <p>Have press inquires? <a href="/#contact">Get in touch!</a></p> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <!--################ NEWS SECTION END ################--> 
+    <!--################ CONTACT SECTION START ################--> 
+    <section id="contact"> 
+     <div id="contact-background" data-stellar-background-ratio="0.5"> 
+      <h1>Contact Us</h1> 
+      <p class="sub-heading-support">We'd love to hear from you.</p> 
+     </div> 
+     <div class="container"> 
+      <div class="row margintop20"> 
+       <div class="span6"> 
+        <h2 class="big-h2-heading"><i class="icon-envelope"></i> Contact Us</h2> 
+        <p>Contact us to learn more about Xplenty. We'll be in touch soon! Fill out the form or drop us an email to <a href="mailto:info@xplenty.com">info@xplenty.com</a>.</p> 
+        <form id="contactUsForm" class="form-main" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"> 
+         <input type="hidden" name="oid" value="00Db0000000JHhX"> 
+         <input type="hidden" name="Campaign_ID" value="701b00000009pk3"> 
+         <input type="hidden" name="retURL" value="https://www.xplenty.com/contact/thanks/"> 
+         <input type="hidden" name="lead_source" id="lead_source" value="Web Contact"> 
+         <fieldset> 
+          <!-- Form Name --> 
+          <!-- Text input--> 
+          <div class="control-group"> 
+           <label class="control-label" for="contact_first_name">Name <abbr title="required">*</abbr></label> 
+           <div class="controls"> 
+            <input id="contact_first_name" name="first_name" type="text" placeholder="" class="input-xlarge required"> 
+           </div> 
+          </div> 
+          <!-- Text input--> 
+          <div class="control-group"> 
+           <label class="control-label" for="contact_email">Email <abbr title="required">*</abbr></label> 
+           <div class="controls"> 
+            <input id="contact_email" name="email" type="text" placeholder="" class="input-xlarge required email"> 
+           </div> 
+          </div> 
+          <!-- Text input--> 
+          <div class="control-group"> 
+           <label class="control-label" for="contact_message">Message <abbr title="required">*</abbr></label> 
+           <div class="controls"> 
+            <textarea id="contact_message" name="00Nb0000009NMvh" rows="3" type="text" wrap="soft" class="input-xlarge required"></textarea> 
+           </div> 
+          </div> 
+          <div class="control-group hide"> 
+           <div class="controls"> 
+            <input maxlength="10" name="00Nb0000007as9g" size="20" type="text" value="yes" class="spam-input"> 
+           </div> 
+          </div> 
+          <div class="actions"> 
+           <button tabindex="4" type="submit" class="btn btn-large btn-primary ">Submit</button> 
+          </div> 
+         </fieldset> 
+        </form> 
+       </div> 
+       <div class="span5 offset1 vcard"> 
+        <h2 class="big-h2-heading"><i class="icon-map-marker"></i> Locate Us</h2> 
+        <p><span class="fn org">Xplenty HQ</span></p> 
+        <div class="adr"> 
+         <p><i class="icon-road"></i> <span class="street-address">Gershon Shatz 15</span></p> 
+         <p><i class="icon-home"></i> <span class="locality">Tel Aviv </span>, <span class="postal-code">6701751</span> <span class="country-name">Israel</span></p> 
+        </div> 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d211.31667455211723!2d34.788619386408975!3d32.067442142342244!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b9d8cc946b1%3A0xabc9bc240b903ede!2sXplenty!5e0!3m2!1sen!2s!4v1406658264845" width="400" height="150" frameborder="0" style="border:0"></iframe> 
+        <p class="margintop10"><span class="fn org">Xplenty US</span></p> 
+        <div class="adr"> 
+         <p><i class="icon-road"></i> <span class="street-address">580 California Street</span></p> 
+         <p><i class="icon-home"></i> <span class="locality">San Francisco</span>, <span class="region">CA</span> <span class="postal-code">94109</span></p> 
+        </div> 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3152.8830437467714!2d-122.40431719999998!3d37.7927806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808bb2bb622f%3A0x7c7ba763cf6767eb!2s580+California+St!5e0!3m2!1sen!2s!4v1396354177710" width="400" height="150" frameborder="0" style="border:0"></iframe> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <!--################ CONTACT SECTION END ################--> 
+    <section id="bottom" class="paddingbot20 paddingtop20"> 
+     <div class="row center"> 
+      <h4>Create your account today. No credit card required. <a data-toggle="modal" href="#signupModal" data-track-page="/signup" data-track-event="click" data-category="Signup" data-action="Get Started With Xplenty" data-label="Get Started Section" class="btn btn-primary btn-large marginleft10">Get Started With Xplenty</a> </h4>
+     </div> 
+    </section> 
+   </div> 
+  </div> 
+  <div id="push"></div> 
+  <footer id="footer"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span4"> 
+      <h2>about us...</h2> 
+      <!--<p><br /Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.</p>--> 
+      <p>Making the most of your data has become a necessity. Xplenty’s data integration on the cloud makes it easy. We’ve taken the power of Hadoop and put it under the hood of our ETL platform, giving you a potent tool that makes the whole process quick and painless.</p> 
+      <p class="copyright"> 2014 © <a href="https://www.xplenty.com" class="site-link">Xplenty</a> Ltd. All rights reserverd. <a href="/tos/" class="flink">Terms of Use</a> </p> 
+     </div> 
+     <div class="span2"> 
+      <h2>xplenty </h2> 
+      <ul class="unstyled footer-links"> 
+       <li><a href="/about/" class="flink">About</a></li> 
+       <li><a href="/#features" data-track-page="/features" class="flink">Features</a></li> 
+       <li><a href="/integrations/" class="flink">Integrations</a></li> 
+       <li><a href="/#pricing" data-track-page="/pricing" class="flink">Pricing</a></li> 
+       <li><a href="http://grow.xplenty.com/xplenty-enterprise/" data-track-event="click" data-category="Footer" data-action="Enterprise" data-label="Enterprise - Footer" class="flink">Enterprise</a></li> 
+       <li><a href="http://community.xplenty.com/knowledgebase" data-track-event="click" data-category="Footer" data-action="Resources" data-label="Resources - Footer" class="flink">Resources</a></li> 
+       <li><a href="/#contact" data-track-page="/contact" class="flink">Contact</a></li> 
+       <li><a href="/blog/" class="flink">Blog</a></li> 
+      </ul> 
+     </div> 
+     <div class="span3"> 
+      <h2>support </h2> 
+      <ul class="unstyled footer-links"> 
+       <li class="livechat"><a href="javascript:void(0);" onclick="olark('api.box.expand')" class="flink">Live Chat</a></li> 
+       <li><a href="http://community.xplenty.com/" data-track-page="/outgoing/community" target="_blank" class="flink">Documentation</a></li> 
+       <li><a href="https://github.com/xplenty/xplenty-api-doc" data-track-page="/outgoing/api-docs" target="_blank" class="flink">API Technical Reference</a></li> 
+       <li><a href="http://status.xplenty.com/" target="_blank" data-track-page="/outgoing/status" class="flink">Service Status</a></li> 
+      </ul> 
+     </div> 
+     <div class="span3"> 
+      <h2>follow us </h2> 
+      <a href="https://www.linkedin.com/company/xplenty" data-track-page="/outgoing/social/linkedin" target="_blank" class="social-network"><i class="icon-linkedin icon-halfx"></i></a> 
+      <a href="https://twitter.com/xplenty" data-track-page="/outgoing/social/twitter" target="_blank" class="social-network"><i class="icon-twitter icon-halfx"></i></a> 
+      <a href="https://plus.google.com/+Xplenty" data-track-page="/outgoing/social/google" target="_blank" class="social-network" rel="publisher"><i class="icon-google-plus icon-halfx"></i></a> 
+      <a href="https://www.facebook.com/xplenty" data-track-page="/outgoing/social/facebook" target="_blank" class="social-network"><i class="icon-facebook icon-halfx"></i></a> 
+      <a href="https://www.youtube.com/user/Xplenty" data-track-page="/outgoing/social/youtube" target="_blank" class="social-network"><i class="icon-youtube icon-halfx"></i></a> 
+      <a href="https://github.com/xplenty" data-track-page="/outgoing/social/github" target="_blank" class="social-network"><i class="icon-github icon-halfx"></i></a> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <!--SIGNUP MODAL --> 
+  <div id="signupModal" class="modal fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+   <form class="form-vertical form-modal modal-form" id="signupForm" data-signup-url="https://app.xplenty.com/signup" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"> 
+    <div class="modal-header"> 
+     <input type="hidden" name="oid" value="00Db0000000JHhX"> 
+     <input type="hidden" name="Campaign_ID" value="701b00000009pjy"> 
+     <input type="hidden" name="retURL" value="https://www.xplenty.com/signup/thanks/"> 
+     <input type="hidden" name="lead_source" value="Web"> 
+     <input type="hidden" name="00Nb0000009NPeA" class="plan" maxlength="100" size="20"> 
+     <input type="hidden" name="00Nb00000063bX3" class="provider" maxlength="100" size="20"> 
+     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+     <h3>Create Free Account</h3> 
+    </div> 
+    <div class="modal-body"> 
+     <fieldset> 
+      <!-- Form Name --> 
+      <!-- Text input--> 
+      <div class="control-group"> 
+       <label class="control-label" for="signup_first_name">Name <abbr title="required">*</abbr></label> 
+       <div class="controls"> 
+        <input id="signup_first_name" name="first_name" type="text" placeholder="" class="input-xlarge required"> 
+       </div> 
+      </div> 
+      <!-- Text input--> 
+      <div class="control-group"> 
+       <label class="control-label" for="signup_email">Email <abbr title="required">*</abbr></label> 
+       <div class="controls"> 
+        <input id="signup_email" name="email" type="text" placeholder="" class="input-xlarge required email"> 
+       </div> 
+      </div> 
+      <!-- Text input--> 
+      <div class="control-group"> 
+       <label class="control-label" for="signup_company">Company</label> 
+       <div class="controls"> 
+        <input id="signup_company" name="company" type="text" placeholder="" class="input-xlarge"> 
+       </div> 
+      </div> 
+      <div class="control-group hide"> 
+       <div class="controls"> 
+        <input maxlength="10" name="00Nb0000007as9g" size="20" type="text" value="yes" class="spam-input"> 
+       </div> 
+      </div> 
+     </fieldset> 
+    </div> 
+    <div class="modal-footer"> 
+     <button type="submit" class="btn btn-primary btn-xlarge btn-block">Start Your Free Trial</button> 
+     <div class="text-center margintop10"> 
+      <small class="muted">Already have an Xplenty account? <a href="https://app.xplenty.com/login">Click here to log in</a>.</small> 
+     </div> 
+    </div> 
+   </form> 
+  </div> 
+  <!--SIGNUP MODAL END--> 
+  <script src="/assets/application-8a4d4243ecba2abd493f0597cb033010.js"></script> 
+  <script src="/assets/custom-c18bab5d33e345ff7cb58198296727ab.js"></script> 
+  <script src="/assets/custom-home-e01d214765214bd730345d26441c716d.js"></script> 
+  <!-- Start of Woopra Code --> 
+  <script>
+(function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'xplenty.com',
+    idle_timeout: 1800000
+});
+
+woopra.track();
+</script> 
+  <!-- End of Woopra Code --> 
+  <!-- AddThis Button BEGIN --> 
+  <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script> 
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-503ccd1658e49343"></script> 
+  <!-- AddThis Button END --> 
+  <!-- AddThis Trending Content BEGIN --> 
+  <script type="text/javascript">
+$(document).ready(function () {
+  var _addthis_trendingcontent = {};
+
+  addthis.box("#addthis_trendingcontent", {
+    feed_title : "",
+    feed_type : "trending",
+    feed_period : "month",
+    num_links : 5,
+    height : "auto",
+    width : "auto",
+    domain : "www.xplenty.com",
+    remove: " · Xplenty",
+    transform : function(urlTitle) {
+      // Don't allow titles that we already met.
+      var re = /\/blog\/.+\/.*/
+      if (re.test(urlTitle.url) && !_addthis_trendingcontent.hasOwnProperty(urlTitle.title)) {
+        _addthis_trendingcontent[urlTitle.title] = urlTitle.url
+        return urlTitle;
+      }
+      return false;
+    }
+  });
+});
+</script> 
+  <!-- AddThis Trending Content END --> 
+  <!-- Begin Olark code --> 
+  <script data-cfasync="false" type="text/javascript">/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('3716-346-10-6734');/*]]>*/</script>
+  <noscript>
+   <a href="https://www.olark.com/site/3716-346-10-6734/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by 
+   <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a>
+  </noscript> 
+  <!-- End Olark code --> 
+  <script type="text/javascript">
+adroll_adv_id = "3R4QWTNUENGD5KOIGH4NUU";
+adroll_pix_id = "EBKL6GQGGBBXJDRIJEFYHA";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script> 
+  <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0022/6093.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script> 
+  <script src="//platform.twitter.com/oct.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+twttr.conversion.trackPid('l4lty');
+</script> 
+  <noscript> 
+   <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4lty&amp;p_id=Twitter"> 
+   <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l4lty&amp;p_id=Twitter"> 
+  </noscript>   
+ </body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "7f2b98d8eca6afa3122f79f3b3c36dbe",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "short_description": "Big Data for Finance",
+      "permalink": "zettacap",
+      "primary_role": "company",
+      "closed_on_trust_code": 0,
+      "name": "Zettacap",
+      "is_closed": false,
+      "homepage_url": "http://www.zettacap.com",
+      "closed_on_year": null,
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on": null,
+      "created_at": 1406232771,
+      "updated_at": 1406232773,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "categories": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zettacap/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Financial Services",
+            "uuid": "90b4194f1d4fff5cd7a66b6f32ae4892",
+            "path": "category/financial services/90b4194f1d4fff5cd7a66b6f32ae4892",
+            "created_at": 1397980726,
+            "updated_at": 1416982320
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zettacap/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1406232742/ot8i5jebbweank3uelxn.png",
+            "created_at": 1406232772,
+            "updated_at": 1406232772
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/zettacap/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.zettacap.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1406232772,
+            "updated_at": 1406232772
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta property="twitter:account_id" content="288500051"> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Comprehensive and Coordinated Security for Enterprise Hadoop</title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://hortonworks.com/xmlrpc.php"> 
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/hortonworks/feed"> 
+  <!-- Favicon --> 
+  <link rel="shortcut icon" href="http://hortonworks.com/wp-content/themes/hortonworks/images/icons/favicon.ico"> 
+  <link rel="stylesheet" href="http://hortonworks.com/wp-content/themes/hortonworks/css/v3/legacy.css" media="all" type="text/css"> 
+  <!-- v3 Stylesheet --> 
+  <link rel="stylesheet" href="http://hortonworks.com/wp-content/themes/hortonworks/css/v3/base.css?1417714407" media="all" type="text/css"> 
+  <!--[if lte IE 8]><link rel="stylesheet" href="http://hortonworks.com/wp-content/themes/hortonworks/css/ie.css?v=2"><![endif]--> 
+  <!-- Template is : page.php --> 
+  <!-- Start wp_head(); --> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.6.1 - https://yoast.com/wordpress/plugins/seo/ --> 
+  <meta name="description" content="Enterprises require security in Hadoop. These requirements represent a holistic and integrated approach to securing a Hadoop implementation."> 
+  <link rel="canonical" href="http://hortonworks.com/labs/security/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:title" content="Comprehensive and Coordinated Security for Enterprise Hadoop"> 
+  <meta property="og:description" content="Enterprises require security in Hadoop. These requirements represent a holistic and integrated approach to securing a Hadoop implementation."> 
+  <meta property="og:url" content="http://hortonworks.com/labs/security/"> 
+  <meta property="og:site_name" content="Hortonworks"> 
+  <meta property="article:section" content="Security"> 
+  <meta property="og:image" content="http://hortonworks.com/wp-content/themes/hortonworks/images/layout/content/hworks_FB.png"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@hortonworks"> 
+  <meta name="twitter:domain" content="Hortonworks"> 
+  <meta name="twitter:creator" content="@marcholmes"> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="alternate" type="application/rss+xml" title="Hortonworks » Comprehensive and Coordinated Security for Enterprise Hadoop Comments Feed" href="http://hortonworks.com/labs/security/feed/"> 
+  <link rel="stylesheet" id="jetpack-subscriptions-css" href="http://hortonworks.com/wp-content/plugins/jetpack/modules/subscriptions/subscriptions.css?ver=4.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="bbp-default-css" href="http://hortonworks.com/wp-content/plugins/bbpress/templates/default/css/bbpress.css?ver=2.5.4-5380" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="wp-pagenavi-css" href="http://hortonworks.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-syntax-css-css" href="http://hortonworks.com/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="validation-engine-css" href="http://hortonworks.com/wp-content/themes/hortonworks/js/libs/jquery.validation-engine/css/validationEngine.jquery.css?ver=4.0" type="text/css" media="all"> 
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=4.0"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var obj_localize = {"submitSuccess":"Thank You for providing your information","themePath":"http:\/\/hortonworks.com\/wp-content\/plugins\/intercept-gate\/formProcessing.php"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://hortonworks.com/wp-content/plugins/intercept-gate/js/link_update.js?ver=4.0"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://hortonworks.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://hortonworks.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="shortlink" href="http://hortonworks.com/?p=44745"> 
+  <style type="text/css" id="syntaxhighlighteranchor"></style> 
+  <script language="javascript" type="text/javascript">var sfjq$ = jQuery.noConflict(), $ = jQuery.noConflict();</script> 
+  <script type="text/javascript" src="//d12ulf131zb0yj.cloudfront.net/SmartForms3-0/SmartForms.js"></script> 
+  <script type="text/javascript" src="/wp-content/themes/hortonworks/js/reachforce/reachforce.js"></script> 
+  <!-- //wp_head(); --> 
+  <!-- Local fallback if we weren't able to load jQuery --> 
+  <script>window.jQuery || document.write('<script src="/wp-includes//js/jquery/jquery.js"><\/script>')</script> 
+  <!-- Marketo Analytics --> 
+  <script type="text/javascript">
+	$.ajax({
+		url: '//munchkin.marketo.net/munchkin-beta.js',
+		dataType: 'script',
+		cache: true,
+		success: function() {
+			Munchkin.init('549-QAL-086');
+		}
+	});
+</script> 
+ </head> 
+ <body class="page page-id-44745 page-child parent-pageid-40412 page-template-default slug_security "> 
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PC8GGM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','lsfDataLayer','GTM-PC8GGM');</script> 
+  <div id="canvas"> 
+   <nav class="navigation relative"> 
+    <!-- This is the mobile nav --> 
+    <div class="search"> 
+     <form action="http://hortonworks.com/search-results" method="GET"> 
+      <input type="text" name="search" placeholder="Search"> 
+      <button type="submit"><span class="icon-search"></span></button> 
+     </form> 
+    </div> 
+    <div class="menu-header-new-container">
+     <ul id="menu-header-new" class="menu">
+      <li id="menu-item-55289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-55289"><a href="http://hortonworks.com/hadoop/">What is Hadoop?</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-54194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54194"><a href="http://hortonworks.com/use-cases/">Business Applications of Hadoop</a></li> 
+        <li id="menu-item-54226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54226"><a href="http://hortonworks.com/customers/">Industry Solutions</a></li> 
+        <li id="menu-item-54193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54193"><a href="http://hortonworks.com/hadoop-modern-data-architecture/">Hadoop in a Modern Data Architecture</a></li> 
+       </ul> </li> 
+      <li id="menu-item-54188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-54188"><a href="http://hortonworks.com/why-hortonworks/">Why Hortonworks?</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-55220" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-55220"><a href="http://hortonworks.com/labs/">Innovation in the Open</a></li> 
+        <li id="menu-item-54195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54195"><a href="http://hortonworks.com/customers/">Customers</a></li> 
+        <li id="menu-item-54225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-54225"><a href="http://hortonworks.com/partners/">Partners</a> 
+         <ul class="sub-menu"> 
+          <li id="menu-item-55388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55388"><a href="http://hortonworks.com/partners/yarn-ready/">YARN Ready Program</a></li> 
+         </ul> </li> 
+        <li id="menu-item-54224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54224"><a href="http://hortonworks.com/about-us/management-team/">Leadership Team</a></li> 
+        <li id="menu-item-55192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55192"><a href="http://hortonworks.com/support/">Enterprise Support</a></li> 
+       </ul> </li> 
+      <li id="menu-item-54187" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-54187"><a href="http://hortonworks.com/hdp/">HDP</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-54218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54218"><a href="http://hortonworks.com/hdp/whats-new/">What’s New</a></li> 
+        <li id="menu-item-54197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54197"><a href="http://hortonworks.com/hdp/docs/">Docs</a></li> 
+        <li id="menu-item-55191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55191"><a href="http://hortonworks.com/products/hortonworks-sandbox/">HDP Sandbox</a></li> 
+       </ul> </li> 
+      <li id="menu-item-54191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-54191"><a href="http://hortonworks.com/get-started/">Get Started</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-54221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54221"><a href="http://hortonworks.com/training/">Training &amp; Classes</a></li> 
+        <li id="menu-item-54200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54200"><a href="http://hortonworks.com/products/hortonworks-sandbox/">HDP Sandbox</a></li> 
+        <li id="menu-item-54216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54216"><a href="http://hortonworks.com/tutorials/">Tutorials</a></li> 
+        <li id="menu-item-55189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55189"><a href="http://hortonworks.com/get-started/yarn/">Developing for YARN</a></li> 
+       </ul> </li> 
+      <li id="menu-item-54190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54190"><a href="http://hortonworks.com/blog/">Blog</a></li> 
+      <li id="menu-item-61497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61497"><a href="http://hortonworks.com/careers/">Careers</a></li> 
+      <li id="menu-item-55190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55190"><a href="http://hortonworks.com/webinars/">Upcoming Webinars</a></li> 
+      <li id="menu-item-54291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54291"><a href="http://hortonworks.com/contact/">Office &amp; Contacts</a></li> 
+     </ul>
+    </div> 
+   </nav> 
+   <div id="navbar"> 
+    <section class="ps" id="blacknav"> 
+     <div> 
+     </div> 
+    </section> 
+    <section class="ps" id="header"> 
+     <div> 
+      <!-- <div class="blacklinks"><a href="/about/">About</a> &nbsp;|&nbsp; <a href="/blog/">Blog</a></div> --> 
+      <!-- #logo --> 
+      <div id="logo">
+       <a title="Hortonworks Logo" href="http://hortonworks.com/"><img src="/wp-content/themes/hortonworks/images/layout/header/hortonworks-logo-wht.png"></a>
+      </div> 
+      <!-- Nav --> 
+      <nav id="main" class="navigation"> 
+       <a href="#menu" class="menu-link"><span class="icon-menu"></span></a> 
+       <div class="menu-header-navigation-container"> 
+        <aside id="header-tools" class="pop-over"> 
+         <form action="http://hortonworks.com/search-results" method="GET" class="tool-form search-form"> 
+          <fieldset> 
+           <input type="text" name="search" placeholder="Search"> 
+           <button type="submit"><span class="icon-search"></span></button> 
+          </fieldset> 
+         </form> 
+         <div class="language-form tool-form"> 
+          <div class="statement"> 
+           <span class="icon-language"></span> 
+           <div id="smt-lang-selector"></div> 
+          </div> 
+         </div> 
+         <form class="login-form tool-form" name="loginform" action="http://hortonworks.com/wp-login.php?wpe-login=hortonworks" method="post"> 
+          <span class="icon-profile"></span> 
+          <fieldset> 
+           <input name="log" type="text" placeholder="Username"> 
+           <input name="pwd" type="password" placeholder="Password"> 
+           <input type="hidden" name="redirect_to" value="wp-admin/"> 
+           <button>Sign In</button> 
+           <a href="http://hortonworks.com/wp-login.php?action=lostpassword" class="forgot">Forgot?</a> 
+          </fieldset> 
+         </form> 
+         <div class="login-fail tool-form"> 
+          <span class="icon-profile"></span> Login failed, please try again. 
+         </div> 
+         <a href="#" class="close"><span class="icon-close"></span></a> 
+        </aside> 
+        <ul id="fat-nav" class="menu"> 
+         <li id="menu-item-1" class="menu-item menu-item-has-children"><a href="/hadoop-modern-data-architecture/" class="menu-item-link">Solutions 
+           <!-- <span class="subhead">Build a Modern Data Architecture</span> --></a> 
+          <ul class="sub-menu tall col-5"> 
+           <li><a href="/hadoop-modern-data-architecture/" class="menu-item-link">Build a Modern Data Architecture <span class="subhead">Integrate Hadoop, Reduce Costs </span></a></li> 
+           <li><a href="/solutions/" class="menu-item-link">Industry Solutions <span class="subhead">Unlock new efficiencies, new opportunities</span></a></li> 
+           <li><a href="/customers/" class="menu-item-link">Case Studies <span class="subhead">Enabling the Data-First Enterprise</span></a></li> 
+           <li><a href="/hadoop/" class="menu-item-link">What is Hadoop? <span class="subhead">Discover the technology of Enterprise Hadoop</span></a></li> 
+           <li class="download"> <a href="http://info.hortonworks.com/data-lake-hadoop-whitepaper.html" class="menu-item-link"><span class="uptext">Download the </span>Modern Data Architecture Whitepaper</a> </li> 
+          </ul> </li> 
+         <li id="menu-item-2" class="menu-item menu-item-has-children"><a href="/hdp/" class="menu-item-link">Products 
+           <!-- <span class="subhead">Hortonworks Data Platform</span> --></a> 
+          <ul class="sub-menu col-5"> 
+           <li><a href="/hdp/" class="menu-item-link">Hortonworks Data Platform <span class="subhead">One open platform for all data and any workload</span></a></li> 
+           <li><a href="/hdp/whats-new/" class="menu-item-link">What's New <span class="subhead">The latest in HDP 2.2</span></a></li> 
+           <li class="highlight"><a href="/hdp/downloads/" class="menu-item-link">Download &amp; Install <span class="subhead">Available on Windows &amp; Unix</span></a></li> 
+           <li><a href="/hdp/addons/" class="menu-item-link">Add-ons <span class="subhead">Third-party connectors, technical previews and more</span></a></li> 
+           <li><a href="/labs/" class="menu-item-link">Labs <span class="subhead">Innovation and investment from Hortonworks</span></a></li> 
+           <!-- <li><a href="/hdp/archive/" class="menu-item-link">Archive
+											<span class="subhead">Previous versions of HDP and components</span></a></li> --> 
+          </ul> </li> 
+         <li id="menu-item-3" class="menu-item menu-item-has-children"><a href="/why-hortonworks/" class="menu-item-link">Services 
+           <!-- <span class="subhead">Open Leadership,<br>Enterprise Rigor</span> --></a> 
+          <ul class="sub-menu col-4"> 
+           <li><a href="/why-hortonworks/" class="menu-item-link">Why Hortonworks? <span class="subhead">Building 100% open-source enterprise Hadoop</span></a></li> 
+           <li><a href="/support/" class="menu-item-link">Enterprise Support <span class="subhead">Direct connection to the architects and experts of Apache Hadoop</span></a></li> 
+           <li><a href="/training/" class="menu-item-link">Training <span class="subhead">Live training developed by the core architects of Apache Hadoop</span></a></li> 
+           <li class="highlight"><a href="/contact/" class="menu-item-link">Contact Us <span class="subhead">Talk with us! </span></a></li> 
+          </ul> </li> 
+         <li id="menu-item-5" class="menu-item menu-item-has-children"><a href="/partners/" class="menu-item-link">Partners 
+           <!-- <span class="subhead">Support & Training<br>&nbsp;</span>--></a> 
+          <ul class="sub-menu col-5"> 
+           <li><a href="/partners/" class="menu-item-link">Overview <span class="subhead">Learn about our partner program</span></a></li> 
+           <li><a href="/partners/ecosystem/" class="menu-item-link">Technology Partners <span class="subhead">Find the integrations for your data center</span></a></li> 
+           <li><a href="/partners/hadoop-consultants/" class="menu-item-link">Systems Integrators <span class="subhead">Partners to help you make the most of Hadoop</span></a></li> 
+           <li><a href="/partners/certified-technology-program/" class="menu-item-link">Certification <span class="subhead">HDP Certification ensures interoperability</span></a></li> 
+           <li><a href="/partners/resources/" class="menu-item-link">Resources <span class="subhead">Portal &amp; learning resources for current partners</span></a></li> 
+          </ul> </li> 
+         <li id="menu-item-4" class="menu-item menu-item-has-children"><a href="/get-started/" class="menu-item-link">Get Started 
+           <!-- <span class="subhead">Tutorials, Sandbox, Docs, and more</span> --></a> 
+          <ul class="sub-menu col-5"> 
+           <li><a href="/get-started/" class="menu-item-link">Get Started <span class="subhead">for Developers, Administrators, and Data Analysts</span></a></li> 
+           <li class="highlight"><a href="/sandbox/" class="menu-item-link highlight">HDP Sandbox <span class="subhead">Try HDP on a virtual machine</span></a></li> 
+           <li><a href="/tutorials/" class="menu-item-link">Tutorials <span class="subhead">Step by step guides to get you started</span></a></li> 
+           <li><a href="/hdp/docs/" class="menu-item-link">Documentation <span class="subhead">Installation, Operations Guides</span></a></li> 
+           <li><a href="/community/forums/" class="menu-item-link">Forums <span class="subhead">Join the community of HDP users</span></a></li> 
+          </ul> </li> 
+         <li id="menu-item-6" class="menu-item menu-item-has-children"><a href="/blog/" class="menu-item-link">Resources 
+           <!-- <span class="subhead">Support & Training<br>&nbsp;</span>--></a> 
+          <ul class="sub-menu col-3"> 
+           <li><a href="/blog/" class="menu-item-link">Blog <span class="subhead">Announcements, ecosystem news &amp; more</span></a> </li> 
+           <li><a href="/webinars/" class="menu-item-link">Webinars <span class="subhead">Upcoming presentations &amp; Archives</span></a></li> 
+           <li><a href="/events/" class="menu-item-link">Events <span class="subhead">Connect with us at these upcoming events</span></a> </li> 
+          </ul> </li> 
+        </ul> 
+        <div class="tools"> 
+         <ul class="tools-list"> 
+          <li class="hide-small"><a class="open" data-tool="search" href="#" title="search"><span class="icon-search"></span></a></li> 
+          <li><a class="open" data-tool="language" href="#" title="change language"><span class="icon-language"></span></a></li> 
+          <li class="hide-small"><a class="open" data-tool="profile" href="#" title="login"><span class="icon-profile"></span></a></li> 
+         </ul> 
+        </div> 
+       </div> 
+      </nav>
+      <!-- End of #main --> 
+     </div> 
+    </section> 
+    <div class="mainbody"> 
+     <section class="ps titlebar"> 
+      <div> 
+       <div class="breadcrumb"> 
+        <ul id="menu-header-navigation" class="menu">
+         <a href="http://hortonworks.com/labs/">Labs</a>
+         <span class="delim"> » </span>
+         <a href="http://hortonworks.com/labs/security/">Security</a>
+        </ul> 
+       </div> 
+       <h1 class="wordy">Comprehensive and Coordinated Security for Enterprise Hadoop</h1> 
+       <div class="subtitle">
+        Central administration and coordinated enforcement of security policy
+       </div> 
+      </div> 
+     </section> 
+     <div class="lowerbody"> 
+      <section class="ps"> 
+       <div> 
+        <div class="grid"> 
+         <div class="col-3-4 maincontent"> 
+          <p class="subheader">With the emergence of Hadoop as a business-critical data platform, more stringent requirements for data security are now being required by the enterprise.&nbsp;Hadoop already includes many of these security requirements, but the work is not done.</p> 
+          <p>Hortonworks has already contributed a wide range of security functions, including Kerberos within Apache Hadoop, GRANT/REVOKE commands in Apache Hive and the Apache Knox project for perimeter security among many other features. &nbsp;Recently, we purchased XA Secure to extend this already rich set of features with central administration and coordinated enforcement of security policy across the entire Hadoop ecosystem of projects. And as part of our promise to keep HDP completely open, we will&nbsp;incubate the XA Secure functionality as a project governed by the Apache Software Foundation.</p> 
+          <p>With the open source community, we will continue to pursue three security goals.</p> 
+          <div class="three mainpoints"> 
+           <div> 
+            <div class="title">
+             Comprehensive Security
+            </div> 
+            <div class="desc">
+             Meet all security requirements across authentication, authorization, audit &amp; data protection for all HDP components.
+            </div> 
+           </div> 
+           <div> 
+            <div class="title">
+             Central Administration
+            </div> 
+            <div class="desc">
+             Provide one location for administering security policies and for viewing and managing audit across the platform.
+            </div> 
+           </div> 
+           <div> 
+            <div class="title">
+             Consistent Integration
+            </div> 
+            <div class="desc">
+             Integrate with other security and identity management systems, for compliance with IT policies.
+            </div> 
+           </div> 
+          </div> 
+          <h2>Already Delivered</h2> 
+          <p>Through individual Apache projects and the acquisition of XA Secure, Hortonworks has already delivered key pieces of the security roadmap in five areas.</p> 
+          <p dir="ltr"><strong>Centralized Security Administration</strong><br> Security best practices should be consistently applied across the platform, and they should be managed centrally with a single user interface. With XA Secure, HDP Advanced Security now provides a security administration console that is unique to HDP but will be delivered completely in the open for all. Now Hadoop administrators can easily manage all security policies related to access control, in one place.</p> 
+          <p dir="ltr"><strong>Authentication</strong><br> HDP Advanced Security provides support for Kerberos-based authentication. Kerberos can be connected to corporate LDAP environments to centrally provision user information. HDP also provides perimeter authentication through <a title="Apache Knox" href="http://hortonworks.com/hadoop/knox-gateway/">Apache Knox</a> for REST APIs and Web services.</p> 
+          <p dir="ltr"><strong>Authorization</strong><br> Authorization or entitlement is the process of ensuring that users have access only to data as per corporate policies. Hadoop already provides fine-grained authorization via file permissions in HDFS, resource-level access control for YARN and MapReduce, and coarser-grained access control at a service level. HBase provides authorization with ACL on tables and column families, while Accumulo extends this further to cell-level control. Apache Hive provides Grant/Revoke access control on tables.</p> 
+          <p>With the addition of XA Secure, Hadoop now includes authorization features that help enterprises securely use varied data with multiple user groups while ensuring proper entitlements. It provides an intuitive way for users to specify entitlements policies for HDFS, HBase, and Hive with a centralized administration interface and extended authorization enforcement. Our goal is to provide a common authorization framework for the HDP platform, providing security administrators with a single administrative console to manage all the authorization policies for HDP components.</p> 
+          <p dir="ltr"><strong>Audit</strong><br> One of the cornerstones for any security system is accountability, or having audit data for auditors to control the system and check for regulatory compliance, for example in Healthcare around HIPAA compliance. Healthcare providers would look within audit data for access history for sensitive data such as patient records, and provide the data if requested by patient or any regulatory authority. Having a robust audit data would help enterprises manage their regulatory compliance needs better as well as control the environment proactively. XA Secure provides a centralized framework for collecting access audit history and easy reporting on the data. The data can be filtered based on various parameters. Our goal is to enhance the audit information that is captured within various components within Hadoop and provide insights through the centralized reporting.</p> 
+          <p dir="ltr"><strong>Data protection</strong><br> Data protection involves protecting data at rest and in motion, including encryption and masking. Encryption provides an added layer of security by protecting data when it is transferred and when it is stored (at rest), while masking capabilities enable security administrators to desensitize PII for display or temporary storage. We will continue to leverage the existing capabilities in HDP for encrypting data in flight, while bringing forward partner solutions for encrypting data at rest, data discovery, and data masking.</p> 
+          <h2>Coming Next</h2> 
+          <p>The next phase on the Hadoop security roadmap will deliver:</p> 
+          <ul> 
+           <li>Encryption in HDFS, Hive &amp; HBase</li> 
+           <li>Centralized security administration for all Hadoop components</li> 
+           <li>Expand audit to cover more operations and provide audit correlation</li> 
+           <li>Offer additional SSO integration choices</li> 
+           <li>Provide alternative to Kerberos-based authentication</li> 
+          </ul> 
+         </div> 
+         <div class="col-1-4 aside right"> 
+          <h3>Now Available!</h3> 
+          <div class="related_files"> 
+           <div class="file"> 
+            <div class="icon">
+             <a title="HDP Advanced Security" href="/wp-content/uploads/2014/06/bk_HDPSecure_Admin-20140624.pdf" target="_blank"><img alt="" src="http://hortonworks.com/wp-content/uploads/2013/12/FalconHortonworksTechnicalPreview-54x70.png"></a>
+            </div> 
+            <div class="name">
+             <a title="HDP Advanced Security" href="/hdp/addons/" target="_blank">HDP Advanced Security</a>
+            </div> 
+            <div class="desc">
+             Download, installation and setup instructions for HDP Advanced Security with HDP 2.1
+            </div> 
+            <p><a class="full clear btn" title="HDP Advanced Security" href="/hdp/addons/" target="_blank">Download the Bits</a></p> 
+           </div> 
+          </div> 
+          <h3>Essential Timeline</h3> 
+          <div class="phase_diagram"> 
+           <div class="phase completed"> 
+            <div class="title">
+             Previous Phases
+            </div> 
+            <div class="desc"> 
+             <ul> 
+              <li>Kerberos Authentication</li> 
+              <li>HBase, Hive &amp; HDFS authorization</li> 
+              <li>Wire Encryption for HDFS, Shuffle &amp; JDBC</li> 
+              <li>Basic audit in HDFS &amp; MR</li> 
+              <li>ACLs for HDFS</li> 
+              <li>Knox: Hadoop REST API Security</li> 
+              <li>SQL-style Hive Authorization</li> 
+              <li>Expanded Wire Encryption for HiveServer2 &amp; WebHDFS</li> 
+             </ul> 
+            </div> 
+            <div class="progress">
+             <b>Delivered</b>
+             <span class="hwx-release"><br> </span>
+            </div> 
+           </div> 
+           <div class="phase completed"> 
+            <div class="title">
+             XA Secure Phase
+            </div> 
+            <div class="desc"> 
+             <ul> 
+              <li>Centralized Security Administration for HDFS, HBase &amp; Hive</li> 
+              <li>Centralized Audit Reporting</li> 
+              <li>Delegated Policy Administration</li> 
+             </ul> 
+            </div> 
+            <div class="progress">
+             <b>Delivered</b>
+             <br> 
+             <span class="apache-release">XA Secure</span>
+            </div> 
+           </div> 
+           <div class="phase"> 
+            <div class="title">
+             Future Phases
+            </div> 
+            <div class="desc"> 
+             <ul> 
+              <li>Encryption in HDFS, Hive &amp; HBase</li> 
+              <li>Centralized security administration for all Hadoop components</li> 
+              <li>Expand audit to cover more operations and provide audit correlation</li> 
+              <li>Offer additional SSO integration choices</li> 
+              <li>Tag-based global policies</li> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="related_posts widget"> 
+           <h3>Tutorials</h3> 
+           <ul> 
+            <li class="post"> 
+             <div class="title">
+              <a href="/hadoop-tutorial/securing-data-lake-auditing-user-access-using-hdp-security/">Securing Hadoop with HDP Advanced Security</a>
+             </div> </li> 
+           </ul> 
+          </div> 
+          <!-- Insert Related Resources --> 
+          <h3>Resources</h3> 
+          <div class="related_files widget"> 
+           <div class="file"> 
+            <div class="icon video">
+             <a title="HDP Advanced Security: Comprehensive Security for Enterprise Hadoop" href="#resource_57672" class="fancybox-media"><img src="http://hortonworks.com/wp-content/uploads/2014/07/HDP-Advanced-Security-Comprehensive-Security-for-Enterprise-Hadoop1-70x52.jpg"><img class="video_overlay" src="http://hortonworks.com/wp-content/themes/hortonworks/images/icons/transparent_play.png"></a>
+            </div> 
+            <div class="name">
+             <a title="HDP Advanced Security: Comprehensive Security for Enterprise Hadoop" href="#resource_57672" class="fancybox-media">HDP Advanced Security: Comprehensive Security for Enterprise Hadoop</a>
+            </div> 
+            <div class="desc">
+             Balaji Ganesan and Bosco Durai introduce HDP Advanced Security
+            </div> 
+            <div id="resource_57672" style="display:none"> 
+             <iframe width="640" height="480" src="https://www.youtube.com/embed/_ryGyFcWgS8?feature=oembed" frameborder="0" allowfullscreen></iframe> 
+            </div> 
+           </div> 
+           <div class="file"> 
+            <div class="icon video">
+             <a title="New Features for Security &amp; Apache Knox" href="#resource_57515" class="fancybox-media"><img src="http://hortonworks.com/wp-content/uploads/2014/07/Discover-HDP-2.1-New-Features-for-Security-Apache-Knox-70x52.jpg"><img class="video_overlay" src="http://hortonworks.com/wp-content/themes/hortonworks/images/icons/transparent_play.png"></a>
+            </div> 
+            <div class="name">
+             <a title="New Features for Security &amp; Apache Knox" href="#resource_57515" class="fancybox-media">New Features for Security &amp; Apache Knox</a>
+            </div> 
+            <div class="desc">
+             Vinay Shukla and Kevin Minder discuss Hadoop REST API Security with Apache Knox Gateway, ACL's and the HDP security roadmap.
+            </div> 
+            <div id="resource_57515" style="display:none"> 
+             <iframe width="640" height="480" src="https://www.youtube.com/embed/6SoOS0j0rp8?feature=oembed" frameborder="0" allowfullscreen></iframe> 
+            </div> 
+           </div> 
+          </div> 
+          <!-- Insert Related Promo --> 
+          <div class="insightera_promo" id="insightera_promo"></div> 
+          <!-- Insert Related Links --> 
+          <div class="related_posts widget">
+           <h3>Recently in the Blog</h3>
+           <ul class="related_posts">
+            <li class="post">
+             <div class="title">
+              <a href="http://hortonworks.com/blog/chart-journey-scale-hadoop-summit-brussels/">Chart Your Journey to Scale the Hadoop Summit Brussels</a>
+             </div>
+             <div class="date">
+              November 19, 2014
+             </div></li>
+            <li class="post">
+             <div class="title">
+              <a href="http://hortonworks.com/blog/red-hat-jboss-data-virtualization-hdp-part2/">Improve Insight into Your Enterprise Data with Red Hat JBoss Data Virtualization and HDP – Part 2</a>
+             </div>
+             <div class="date">
+              November 6, 2014
+             </div></li>
+            <li class="post">
+             <div class="title">
+              <a href="http://hortonworks.com/blog/discover-hdp-2-2-comprehensive-hadoop-security/">Discover HDP 2.2: Comprehensive Hadoop Security with Apache Ranger and Apache Knox</a>
+             </div>
+             <div class="date">
+              October 28, 2014
+             </div></li>
+            <li class="post">
+             <div class="title">
+              <a href="http://hortonworks.com/blog/rebalancing-security-equation/">Rebalancing the Security Equation</a>
+             </div>
+             <div class="date">
+              October 21, 2014
+             </div></li>
+            <li class="post">
+             <div class="title">
+              <a href="http://hortonworks.com/blog/discover-hdp-2-2-join-us-eight-30-minute-enterprise-hadoop-webinars/">Discover HDP 2.2: Join Us for Eight 30-Minute Enterprise Hadoop Webinars</a>
+             </div>
+             <div class="date">
+              October 21, 2014
+             </div></li>
+            <li class="post">
+             <div class="title">
+              <a href="http://hortonworks.com/blog/end-end-wire-encryption-apache-knox/">End to End Wire Encryption with Apache Knox</a>
+             </div>
+             <div class="date">
+              October 20, 2014
+             </div></li>
+            <li class="post">
+             <div class="title">
+              <a href="http://hortonworks.com/blog/hdp-operations-migrating-hortonworks-data-platform/">HDP Operations: Migrating to the Hortonworks Data Platform</a>
+             </div>
+             <div class="date">
+              October 16, 2014
+             </div></li>
+            <li class="post">
+             <div class="title">
+              <a href="http://hortonworks.com/blog/announcing-hdp-2-2/">HDP 2.2 – A Major Step Forward for Enterprise Hadoop</a>
+             </div>
+             <div class="date">
+              October 15, 2014
+             </div></li> 
+           </ul>
+          </div>
+          <h3>Try these Tutorials</h3>
+          <ul class="related_tutorials">
+           <li>
+            <div class="title">
+             <a href="http://hortonworks.com/hadoop-tutorial/manage-security-policy-hive-hbase-knox-ranger/">NEW: Manage Security Policy for Hive &amp; HBase with Knox &amp; Ranger</a>
+            </div>
+            <div class="excerpt">
+             <h3>Summary</h3> Apache Ranger (formerly called Apache Argus or HDP Advanced Security) delivers a comprehensive approach to security for a Hadoop cluster....
+            </div>
+            <div class="tuts_type">
+             Get Started Tutorials
+            </div></li>
+           <li>
+            <div class="title">
+             <a href="http://hortonworks.com/hadoop-tutorial/securing-data-lake-auditing-user-access-using-hdp-security/">Securing your Data Lake Resource &amp; Auditing User Access with HDP Advanced Security</a>
+            </div>
+            <div class="excerpt">
+             In this tutorial we will explore how you can use policies in HDP Advanced Security to protect your enterprise data lake and audit access by users to resources on HDFS, Hive and HBase from a centralized HDP Security Administration Console.
+            </div>
+            <div class="tuts_type">
+             New Features in HDP 2.1
+            </div></li>
+           <li>
+            <div class="title">
+             <a href="http://hortonworks.com/hadoop-tutorial/securing-hadoop-infrastructure-apache-knox/">Securing your Hadoop Infrastructure with Apache Knox</a>
+            </div>
+            <div class="excerpt">
+             In this tutorial we will walk through the process of Configuring Apache Knox and LDAP services on HDP Sandbox Run a MapReduce Program using Apache...
+            </div>
+            <div class="tuts_type">
+             New Features in HDP 2.1
+            </div></li>
+           <li>
+            <div class="title">
+             <a href="http://hortonworks.com/hadoop-tutorial/secure-jdbc-odbc-clients-access-hiveserver2-using-apache-knox/">Secure JDBC and ODBC Clients’ Access to HiveServer2 using Apache Knox</a>
+            </div>
+            <div class="excerpt">
+             <h3>Introduction</h3> HDP 2.1 ships with Apache Knox 0.4.0. This release of Apache Knox supports WebHDFS, WebHCAT, Oozie, Hive, and HBase REST APIs. Hive...
+            </div>
+            <div class="tuts_type">
+             Get Started Tutorials
+            </div></li>
+           <li>
+            <div class="title">
+             <a href="http://hortonworks.com/hadoop-tutorial/fine-grained-permissions-hdfs-files-hadoop-using-hdfs-acls/">Fine-Grained Permissions for HDFS Files in Hadoop using HDFS ACLs</a>
+            </div>
+            <div class="excerpt">
+             Securing any system requires you to implement layers of protection. &nbsp;Access Control Lists (ACLs) are typically applied to data to restrict...
+            </div>
+            <div class="tuts_type">
+             Get Started Tutorials
+            </div></li>
+           <li>
+            <div class="title">
+             <a href="http://hortonworks.com/hadoop-tutorial/integrating-hadoop-cluster-microsoft-active-directory-authentication/">Integrating Hadoop Cluster to Microsoft Active Directory for Authentication</a>
+            </div>
+            <div class="excerpt">
+             Hadoop is a business-critical data platform at many of the world’s largest enterprises. These corporations require a layered security model...
+            </div>
+            <div class="tuts_type">
+             Get Started Tutorials
+            </div></li>
+           <li>
+            <div class="title">
+             <a href="http://hortonworks.com/hadoop-tutorial/dgsecure/">Securing Data with DGSecure</a>
+            </div>
+            <div class="excerpt">
+             Using DgSecure to discover and secure sensitive data is fairly straightforward. Using the combined Hortonworks – Dataguise Sandbox and...
+            </div>
+            <div class="tuts_type">
+             Partner Tutorials
+            </div></li>
+          </ul> 
+         </div> 
+        </div> 
+        <!-- /grid --> 
+       </div> 
+      </section> 
+     </div> 
+    </div>
+    <!-- End mainbody early --> 
+    <section class="ps light-grey bottom_drawer"> 
+     <div> 
+      <div class="three hitters"> 
+       <div id="drawer_1">
+        <div class="promo"> 
+         <div class="icon"></div> 
+         <div class="title">
+          HDP 2.2 Webinar Series
+         </div> 
+         <div class="desc">
+          Join us for a series of talks on some of the new enterprise functionality available in HDP 2.2 including data governance, security, operations and data access :
+         </div> 
+         <div class="cta">
+          <a href="/webinars/">HDP 2.2 Webinar Series »</a>
+         </div> 
+        </div>
+       </div>
+       <div id="drawer_2">
+        <div class="promo"> 
+         <div class="icon"></div> 
+         <div class="title">
+          Contact Us
+         </div> 
+         <div class="desc">
+          Hortonworks provides enterprise-grade support, services and training. Discuss how to leverage Hadoop in your business with our sales team.
+         </div> 
+         <div class="cta">
+          <a href="/wp-content/themes/hortonworks/raw/mkto-contact-sales.php" class="contact-us-launch fancybox.ajax">Talk to Sales</a>
+         </div> 
+        </div>
+       </div>
+       <div id="drawer_3">
+        <div class="promo"> 
+         <div class="icon"></div> 
+         <div class="title">
+          Explore Technology Partners 
+         </div> 
+         <div class="desc">
+          Hortonworks nurtures an extensive ecosystem of technology partners, from enterprise platform vendors to specialized solutions and systems integrators.
+         </div> 
+         <div class="cta">
+          <a href="/partners/ecosystem">Explore Partners</a>
+         </div> 
+        </div>
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <div> 
+     <!-- This is just a stand-in for the mainbody div tag that was closed above, but will also get closed in the footer. --> 
+    </div>
+    <!-- end mainbody --> 
+    <section class="ps" id="newsletter_signup"> 
+     <div class="newsletter_signup_wrapper"> 
+      <div class="container"> 
+       <form method="GET" action="/marketo-ajax/" name="newsletter" id="footer_newsletter"> 
+        <span>Stay up to date!</span> 
+        <input type="text" name="email" id="email" placeholder="Leave your email for updates" value=""> 
+        <input type="button" id="submit" value="Subscribe" onclick="_gaq.push(['_trackEvent', 'Subscribe to Newsletter','Form Submission','Subscribe to newsletter']);"> 
+       </form> 
+       <div class="form_loading" style="text-align:center; padding:20px; display:none;">
+        <img src="/wp-content/themes/hortonworks/images/icons/ajax-loader-orange2.gif">
+       </div> 
+       <p class="form_success">Thank you for subscribing!</p> 
+      </div> 
+     </div> 
+    </section> 
+    <section class="ps" id="fat_footer"> 
+     <div> 
+      <ul class="menu"> 
+       <li><b>About Us</b> 
+        <ul class="sub-menu"> 
+         <li><a href="/about-us/management-team/">Management Team</a></li> 
+         <li><a href="/about-us/board-of-directors/">Board of Directors</a></li> 
+         <li><a href="/about-us/founders/">Founders</a></li> 
+         <li><a href="/careers/">Careers</a></li> 
+        </ul> </li> 
+       <li><b>Press</b> 
+        <ul class="sub-menu"> 
+         <li><a href="/press-releases/">Press Releases</a></li> 
+         <li><a href="/in-the-press/">In the Press</a></li> 
+        </ul> </li> 
+       <li><b>Partners</b> 
+        <ul class="sub-menu"> 
+         <li><a href="/partners/hadoop-consultants/">Systems Integrators</a></li> 
+         <li><a href="/partners/ecosystem/">Technology Partners</a></li> 
+         <li><a href="/partners/strategic-resell-partners/">Resellers</a></li> 
+         <li><a href="/partners/certified-technology-program/">Certification</a></li> 
+         <li><a href="/partners/become-a-partner/">Become a Partner</a></li> 
+        </ul> </li> 
+       <li><b>Connect</b> 
+        <ul class="sub-menu"> 
+         <li><a href="/blog/">Blog</a></li> 
+         <li><a href="/webinars/">Webinars</a></li> 
+         <li><a href="/events/">Events</a></li> 
+         <li><a href="http://info.hortonworks.com/MDA-Roadshow-2014.html">MDA Roadshow</a></li> 
+        </ul> </li> 
+       <li><b>Contact</b> 
+        <ul class="sub-menu"> 
+         <li><a href="/contact/">Contact</a></li> 
+        </ul> 
+        <div class="tel">
+         +1 408 916-4121 
+         <br>
+         <span style="font-size:70%; font-weight:normal; color:rgba(255, 255, 255, 0.4)">1 855 8-HORTON</span>
+        </div> 
+        <ul class="social-icons-list"> 
+         <li><a href="http://facebook.com/hortonworks/" target="_blank"><img src="/wp-content/themes/hortonworks/images/icons/social/facebook-footer.gif" alt="Hortonworks Facebook" scale="0"></a></li> 
+         <li><a href="http://twitter.com/#!/hortonworks" target="_blank"><img src="/wp-content/themes/hortonworks/images/icons/social/twitter-footer.gif" alt="Hortonworks Twitter" scale="0"></a></li> 
+         <li><a href="http://www.linkedin.com/company/hortonworks" target="_blank"><img src="/wp-content/themes/hortonworks/images/icons/social/linkedin-footer.gif" alt="Hortonworks LinkedIn" scale="0"></a></li> 
+        </ul> </li> 
+      </ul> 
+      <div class="sock"> 
+       <div class="logo">
+        <a title="Hortonworks - Develops, Distributes and Supports Enterprise Apache Hadoop." href="/">Hortonworks - Develops, Distributes and Supports Enterprise Apache Hadoop.</a>
+       </div> 
+       <p class="copy">© 2011-2014 Hortonworks Inc. All Rights Reserved.<br> Hadoop and the Hadoop elephant logo are trademarks of the Apache Software Foundation.<br> <a href="/agreements/privacy-policy/" title="Privacy Policy">Privacy Policy</a> | <a href="/agreements/terms-of-service/" title="Terms of Service">Terms of Service</a> </p> 
+      </div> 
+     </div> 
+    </section> 
+   </div> 
+   <div id="options_panel" style="top:320px; right:-169px; width:375px;"> 
+    <ul> 
+     <li class="chat-to-sales"></li> 
+     <li class="contact-box"><a href="/wp-content/themes/hortonworks/raw/mkto-contact-sales.php" class="contact-us-launch fancybox.ajax">Contact Us <i class="fa fa-pencil-square-o"></i></a></li> 
+    </ul> 
+   </div> 
+   <!-- MODALS --> 
+   <div class="modals"> 
+    <!-- Customer Portal Shadowbox... we should really move this into an AJAX request.  --> 
+    <div id="portal" class="modal"> 
+     <div class="portal-wrapper"> 
+      <h3 style="text-align:center; margin-top:0px;">Customer Portal Login:</h3> 
+      <form name="login" class="labels-on-top" action="https://na9.salesforce.com/secur/login_portal.jsp" method="post" base_target="_top" id="login" onsubmit="return changeForm()"> 
+       <input type="hidden" name="startURL" value=""> 
+       <input type="hidden" name="loginURL" value=""> 
+       <input type="hidden" name="useSecure" value="true"> 
+       <input type="hidden" name="jse" id="jse" value="0"> 
+       <input type="hidden" name="orgId" value="00DE0000000J52j"> 
+       <input type="hidden" name="portalId" value="060E0000000PbFt"> 
+       <input type="hidden" name="loginType" value="2"> 
+       <input type="hidden" name="action" value="loginAction"> 
+       <label for="un">Username:</label> 
+       <input autocomplete="on" type="text" name="un" id="un" size="25" maxlength="80" value="" class="username"> 
+       <label for="password">Password:</label> 
+       <input autocomplete="on" type="password" id="password" name="pw" size="25" maxlength="80" class="pw"> 
+       <input type="submit" value="Login"> 
+      </form> 
+      <div class="smaller">
+       <a id="forgotPassword" href="https://na9.salesforce.com/secur/forgotpasswordp.jsp?orgId=00DE0000000J52j&amp;portalId=060E0000000PbFt&amp;pLu=%2Fsecur%2Flogin_portal.jsp" target="_blank">Forgot your password?</a>
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <!-- end of modal wrapper --> 
+   <div style="display:none"> 
+   </div> 
+   <script type="text/javascript" src="http://hortonworks.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9"></script> 
+   <script type="text/javascript" src="http://hortonworks.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.9"></script> 
+   <script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://hortonworks.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://hortonworks.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeEclipse.css?ver=3.0.9";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = true;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var AIA = {"ajaxurl":"http:\/\/hortonworks.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="http://hortonworks.com/wp-content/plugins/advanced-invisible-anti-spam/includes/aia.js?ver=1.1"></script> 
+   <script type="text/javascript" src="http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201449"></script> 
+   <script type="text/javascript" src="http://s.gravatar.com/js/gprofiles.js?ver=2014Decaa"></script> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="http://hortonworks.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.0"></script> 
+   <script type="text/javascript" src="http://hortonworks.com/wp-content/themes/hortonworks/js/plugins.js?ver=4.0"></script> 
+   <script type="text/javascript" src="http://hortonworks.com/wp-content/themes/hortonworks/js/libs/jquery.validation-engine/js/languages/jquery.validationEngine-en.js?ver=4.0"></script> 
+   <script type="text/javascript" src="http://hortonworks.com/wp-content/themes/hortonworks/js/libs/jquery.validation-engine/js/jquery.validationEngine.js?ver=4.0"></script> 
+   <script type="text/javascript" src="http://hortonworks.com/wp-content/themes/hortonworks/js/scripts.js?ver=1.0"></script> 
+   <script type="text/javascript" src="https://ssl-munchkin.marketo.net/js/munchkin.js?ver=44633"></script> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var marketo_vars = {"munchkin_id":"549-QAL-086"};
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="http://hortonworks.com/wp-content/plugins/marketo/includes/marketo.js?ver=4.0"></script> 
+   <div style="display:none;"> 
+   </div> 
+   <!-- Marketo Analytics : Must Load Before Marketo --> 
+   <script src="//munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+   <script>mktoMunchkin("549-QAL-086");</script> 
+   <!-- Google Analytics --> 
+   <script type="text/javascript">
+		var _gaq = _gaq || [];
+		var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+		_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+		_gaq.push(['_setAccount', 'UA-22950817-1']);
+		_gaq.push(['_setDomainName', '.hortonworks.com']);
+		_gaq.push(['_trackPageview']);
+		/*
+				// SetCustomeVar's allow us to group pages in GA.
+				_gaq.push(['_setCustomVar',
+				1,                  // This custom var is set to slot #1.  Required parameter.
+				'Section',          // The top-level name for your online content categories.  Required parameter.
+				'High level sell',  // Sets the value of "Section" to "Life & Style" for this particular aricle.  Required parameter.
+				3                   // Sets the scope to page-level.  Optional parameter.
+				]);
+
+				// This would allow us to assign categories to each page.
+				 _gaq.push(['_setCustomVar', 2, 'Category',  'Hive',  3   ]);
+		*/
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+</script> 
+   <!-- Non essential, tracking, cookieing stuff below here --> 
+   <!-- Insightera Scripts :  RTP tag --> 
+   <script type="text/javascript">
+	(function(c,h,a,f,i){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+		c[a].a=i;var g=h.createElement("script");g.async=true;g.type="text/javascript";
+		g.src=f+'?rh='+c.location.hostname+'&aid='+i;var b=h.getElementsByTagName("script")[0];b.parentNode.insertBefore(g,b);
+	})(window,document,"rtp","//rtp-cloud2.marketo.com/rtp-api/v1/rtp.js","hortonworks");
+
+	rtp('send','view');
+	rtp('get', 'campaign',true);
+</script> 
+   <!-- End of RTP tag --> 
+   <!-- Bizo Retargetting : Lauren --> 
+   <script type="text/javascript">
+		_bizo_data_partner_id = "6008";
+		(function() {
+				var s = document.getElementsByTagName("script")[0];
+				var b = document.createElement("script");
+				b.type = "text/javascript";
+				b.async = true;
+				b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+				s.parentNode.insertBefore(b, s);
+		})();
+</script> 
+   <noscript> 
+    <img height="1" width="1" alt="" style="display:none;" src="//www.bizographics.com/collect/?pid=6008&amp;fmt=gif"> 
+   </noscript> 
+   <!-- Smartling Language Detector --> 
+   <script type="text/javascript">
+	var smtId = "1b5fd90c4";
+	var smtDefaultStyles = false; /* set to false to use your own css */
+	var smtRedirect = true;
+	var smtProt = (("https:" == document.location.protocol) ? "https://" : "http://");
+	document.write(unescape("%3Cscript src='" + smtProt + "cdn01.smartling.com/ls/" + smtId + ".js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+   <!-- Pingdom RUM --> 
+   <script>
+	var _prum = [['id', '544ef94fabe53db12aa05f65'],
+		['mark', 'firstbyte', (new Date()).getTime()]];
+	(function() {
+		var s = document.getElementsByTagName('script')[0]
+			, p = document.createElement('script');
+		p.async = 'async';
+		p.src = '//rum-static.pingdom.net/prum.min.js';
+		s.parentNode.insertBefore(p, s);
+	})();
+</script> 
+   <!-- Facebook Retargetting - Added for Masha Nov 12, 2014 --> 
+   <script>(function() {
+		var _fbq = window._fbq || (window._fbq = []);
+		if (!_fbq.loaded) {
+			var fbds = document.createElement('script');
+			fbds.async = true;
+			fbds.src = '//connect.facebook.net/en_US/fbds.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(fbds, s);
+			_fbq.loaded = true;
+		}
+		_fbq.push(['addPixelId', '828241047198292']);
+	})();
+	window._fbq = window._fbq || [];
+	window._fbq.push(['track', 'PixelInitialized', {}]);
+</script> 
+   <noscript>
+    <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=828241047198292&amp;ev=PixelInitialized">
+   </noscript> 
+  </div>
+ </body>
+</html>

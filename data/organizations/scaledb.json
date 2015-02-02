@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "acaf666f882412b5c6247c63f1015206",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "email_address": "info@scaledb.com",
+      "description": "ScaleDB provides a MySQL storage engine that makes MySQL work like Oracle RAC, but in the cloud. \n\nScaleDB adds dynamic elasticity, high-availability, and freedom from the pain of partitioning. ScaleDB turns MySQL into a shared-cache database. Your MySQL application simply scales-out elastically without modification.\n\nSQL Competitors: Akiban, VoltDB, Xeround, Clustrix\n\nSQL Shared-Disk Competitor: Oracle RAC\n\nNoSQL / NoACID Competitors: Cassandra, SimpleDB, Mongo, Couch, etc.\n",
+      "short_description": "ScaleDB, a software platform, transforms MySQL into a cluster of database servers and storage nodes that manage big data.",
+      "permalink": "scaledb",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://www.scaledb.com",
+      "name": "ScaleDB",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 7,
+      "founded_on_month": 1,
+      "founded_on_year": 2005,
+      "founded_on": "2005-01-01",
+      "created_at": 1287727451,
+      "updated_at": 1397987378,
+      "total_funding_usd": 2100000,
+      "number_of_investments": 0,
+      "number_of_employees": 6
+    },
+    "relationships": {
+      "past_team": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/scaledb/past_team",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "first_name": "Ron",
+            "last_name": "Hu",
+            "title": "VP Engineering",
+            "started_on": null,
+            "ended_on": null,
+            "path": "person/ron-hu",
+            "created_at": 1287727447,
+            "updated_at": 1397989583
+          },
+          {
+            "first_name": "Mark",
+            "last_name": "Moore",
+            "title": "VP Products",
+            "started_on": null,
+            "ended_on": null,
+            "path": "person/mark-moore-6",
+            "created_at": 1373603030,
+            "updated_at": 1397989663
+          },
+          {
+            "first_name": "Mark",
+            "last_name": "Moore",
+            "title": "VP, Products",
+            "started_on": "2009-01-01",
+            "ended_on": "2010-01-01",
+            "path": "person/mark-moore-6",
+            "created_at": 1373603030,
+            "updated_at": 1397989663
+          }
+        ]
+      },
+      "board_members_and_advisors": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/scaledb/board_members_and_advisors",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "first_name": "Tuvia",
+            "last_name": "Barlev",
+            "title": "Advisory Board Member",
+            "started_on": "2011-01-01",
+            "path": "person/tuvia-barlev",
+            "created_at": 1377798752,
+            "updated_at": 1397989481
+          }
+        ]
+      },
+      "current_team": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/scaledb/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "Mike",
+            "last_name": "Hogan",
+            "title": "CEO",
+            "started_on": "2008-08-01",
+            "path": "person/mike-hogan",
+            "created_at": 1235394485,
+            "updated_at": 1397989334
+          },
+          {
+            "first_name": "Moshe",
+            "last_name": "Shadmon",
+            "title": "CTO",
+            "started_on": null,
+            "path": "person/moshe-shadmon",
+            "created_at": 1287727447,
+            "updated_at": 1397989582
+          }
+        ]
+      },
+      "competitors": {
+        "paging": {
+          "total_items": 7,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/scaledb/competitors",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Organization",
+            "name": "BigTable",
+            "path": "organization/bigtable",
+            "created_at": 1287727449,
+            "updated_at": 1397987378
+          },
+          {
+            "type": "Organization",
+            "name": "Cassandra",
+            "path": "organization/cassandra",
+            "created_at": 1287727448,
+            "updated_at": 1397987378
+          },
+          {
+            "type": "Organization",
+            "name": "Akiban Technologies",
+            "path": "organization/akiban",
+            "created_at": 1287727448,
+            "updated_at": 1397987378
+          },
+          {
+            "type": "Organization",
+            "name": "VoltDB",
+            "path": "organization/voltdb",
+            "created_at": 1277037136,
+            "updated_at": 1405587969
+          },
+          {
+            "type": "Organization",
+            "name": "CouchOne",
+            "path": "organization/couchone",
+            "created_at": 1260331685,
+            "updated_at": 1412049074
+          },
+          {
+            "type": "Organization",
+            "name": "Clustrix",
+            "path": "organization/clustrix",
+            "created_at": 1237249528,
+            "updated_at": 1399633782
+          },
+          {
+            "type": "Organization",
+            "name": "Xeround",
+            "path": "organization/xeround",
+            "created_at": 1226123781,
+            "updated_at": 1411767265
+          }
+        ]
+      },
+      "offices": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/scaledb/offices",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Headquarters",
+            "street_1": "3723 Haven Ave.",
+            "street_2": null,
+            "postal_code": "94025",
+            "city": "Menlo Park",
+            "city_path": "location/menlo-park/1f8abfef5379b26b702005a09908492f",
+            "region": "California",
+            "region_path": "location/california/eb879a83c91a121e0bb8829782dbcf04",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1287702253,
+            "updated_at": 1397990934
+          }
+        ]
+      },
+      "headquarters": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/scaledb/headquarters",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Headquarters",
+            "street_1": "3723 Haven Ave.",
+            "street_2": null,
+            "postal_code": "94025",
+            "city": "Menlo Park",
+            "city_path": "location/menlo-park/1f8abfef5379b26b702005a09908492f",
+            "region": "California",
+            "region_path": "location/california/eb879a83c91a121e0bb8829782dbcf04",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1287702253,
+            "updated_at": 1397990934
+          },
+          {
+            "type": "Address",
+            "name": "Headquarters",
+            "street_1": "3723 Haven Ave.",
+            "street_2": null,
+            "postal_code": "94025",
+            "city": "Menlo Park",
+            "city_path": "location/menlo-park/1f8abfef5379b26b702005a09908492f",
+            "region": "California",
+            "region_path": "location/california/eb879a83c91a121e0bb8829782dbcf04",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1287702253,
+            "updated_at": 1397990934
+          }
+        ]
+      },
+      "funding_rounds": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/scaledb/funding_rounds",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "FundingRound",
+            "name": "ScaleDB raises 2100000 in angel round",
+            "path": "funding-round/43f6e12320c6ab63582a950d9a497349",
+            "created_at": 1287702253,
+            "updated_at": 1398009928
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/scaledb/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Cloud Computing",
+            "uuid": "7866a1c021ec241cc2a6d263a6ef49dd",
+            "path": "category/cloud computing/7866a1c021ec241cc2a6d263a6ef49dd",
+            "created_at": 1397980727,
+            "updated_at": 1417195454
+          },
+          {
+            "type": "Category",
+            "name": "Software",
+            "uuid": "c08b5441a05b9777b7a6012728caddd9",
+            "path": "category/software/c08b5441a05b9777b7a6012728caddd9",
+            "created_at": 1397980727,
+            "updated_at": 1417194917
+          },
+          {
+            "type": "Category",
+            "name": "Databases",
+            "uuid": "7c5bc9757eb6dbc1f4e77a7867592760",
+            "path": "category/databases/7c5bc9757eb6dbc1f4e77a7867592760",
+            "created_at": 1397980726,
+            "updated_at": 1417169636
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 4,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/scaledb/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.linkedin.com/company/615437",
+            "type": "WebPresence",
+            "title": "linkedin",
+            "created_at": 1397877760,
+            "updated_at": 2014
+          },
+          {
+            "url": "http://twitter.com/scaledb",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1287702251,
+            "updated_at": 1409446200
+          },
+          {
+            "url": "http://scaledb.blogspot.com/",
+            "type": "WebPresence",
+            "title": "blog",
+            "created_at": 1287702251,
+            "updated_at": 1397987378
+          },
+          {
+            "url": "http://www.scaledb.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1287702251,
+            "updated_at": 1397987378
+          }
+        ]
+      }
+    }
+  }
+}

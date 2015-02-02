@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://callingfreshers.com/ufaber/index-new.html -->
+<html class="no-js1">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta http-equiv="content-language" content="en-US"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <!-- only for plancess  --> 
+  <meta name="copyright" content="uFaber"> 
+  <link rel="icon" type="image/png" href="/site_media/img/enterprise_template_images/ufaber.com/favicon.png"> 
+  <meta type="text/xml" charset="UTF-8"> 
+  <style>
+.msg-viewer {
+  position: fixed;
+  transition: top 0.7s ease;
+  -moz-transition: top 0.7s ease;
+  -webkit-transition: top 0.7s ease;
+  -o-transition: top 0.7s ease;
+  height: 3.75em;
+  top: -6.19em;
+  width: 100%;
+  z-index: 10000;
+}
+.msg-viewer .msg-viewer-inner {
+  position: relative;
+  width: 270px;
+  margin: 0 auto;
+  text-align: center;
+}
+.msg-viewer .msg-viewer-inner .msg-viewer-icon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.88em;
+  margin: 0.47em 0.33em 0em 0em;
+  float: left;
+  color: #fff;
+}
+.msg-viewer .msg-viewer-inner .msg-viewer-icon:before {
+  content: "\f058";
+}
+.msg-viewer .msg-viewer-inner .msg-viewer-text {
+  float: left;
+  font-size: 1.14em;
+  color: #fff;
+}
+.msg-viewer.active {
+  top: 0.00em;
+}
+.msg-viewer.done {
+  background-color: #2aaa62;
+}
+.msg-viewer.error {
+  background-color: #c24040;
+}
+.slide-down {
+  top: 3.5em;
+  transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  z-index: 9;
+}
+.lq-new-input {
+  padding: 10px;
+  border: 1px solid #bdbdbd;
+  -webkit-transition: border linear 0.5s, box-shadow linear 0.5s;
+  -moz-transition: border linear 0.5s, box-shadow linear 0.5s;
+  transition: border linear 0.5s, box-shadow linear 0.5s;
+  box-shadow: inset 0px 1px 3px #cccccc;
+  -moz-box-shadow: inset 0px 1px 3px #cccccc;
+  -webkit-box-shadow: inset 0px 1px 3px #cccccc;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.lq-new-input:focus {
+  border: 1px solid #cccccc;
+  outline: none;
+  box-shadow: 0px 1px 6px #666666;
+  -moz-box-shadow: 0px 1px 6px #666666;
+  -webkit-box-shadow: 0px 1px 6px #666666;
+}
+.help-text {
+  font-family: 'icomoon';
+  font-size: 15px;
+  color: #666666;
+  cursor: pointer;
+  float: left;
+  margin-left: 5px;
+}
+.help-text:hover {
+  color: #333333;
+}
+.overLay-container {
+  float: left;
+  overflow: auto;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  position: fixed;
+  top: 100px;
+  left: 300px;
+}
+.overLay-container .overLay-container-wrapper {
+  float: left;
+  min-width: 500px;
+  max-width: 700px;
+  background-color: #FFFFFF;
+}
+.overLay-container .overLay-container-wrapper .overLay-container-title {
+  background-color: #eeeeee;
+  border-bottom: 1px solid #bdbdbd;
+  color: #333333;
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: -0.04em;
+  padding: 15px;
+  width: 100%;
+}
+.overLay-container .overLay-container-wrapper .overLay-container-title .overLay-container-close {
+  float: right;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 20px;
+  color: #CCCCCC;
+  cursor: pointer;
+}
+.overLay-container .overLay-container-wrapper .overLay-container-title .overLay-container-close:before {
+  content: "\e055";
+}
+.overLay-container .overLay-container-wrapper .overLay-container-title .overLay-container-close:hover {
+  color: #333333;
+}
+.overLay-container .overLay-container-wrapper .overLay-container-content {
+  float: left;
+  width: 100%;
+  padding: 15px;
+  background-color: #FFFFFF;
+}
+.overLay-container .overLay-container-wrapper .overLay-container-interaction {
+  background-color: #eeeeee;
+  width: 100%;
+  padding: 15px;
+}
+</style> 
+  <link rel="stylesheet" href="/site_media/main/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="/site_media/main/css/bootstrap-theme.min.css"> 
+  <link rel="stylesheet" href="/site_media/main/css/style.css"> 
+  <!--link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"--> 
+  <link href="/site_media/main/css/font-awesome.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="/site_media/main/css/animate.css"> 
+  <link href="/site_media/main/css/jquery.bxslider.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="/site_media/main/css/rateit.css"> 
+  <title>uFaber.com | Online courses for exam preparation, skill development, training &amp; certifications</title> 
+  <meta name="description" content="Best quality online courses to prepare for exams, enahnce skills and achieve your goals. Now get results by learning anything, anywhere."> 
+  <meta name="keywords" content="Online courses, free courses, exam preparation, certifications, training, skills"> 
+  <style>
+        body {}
+    </style> 
+ </head> 
+ <body> 
+  <div class="hdr-sctn"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="top-hdr"> 
+      <nav class="navbar" role=""> 
+       <div class="container"> 
+        <div class="navbar-header"> 
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#hdr-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+         <a class="navbar-brand hdr-logo" href="."> <img src="/site_media/home/logo2.png" alt="UFABER" class="img-responsive" title=""> </a> 
+        </div> 
+        <div class="collapse navbar-collapse" id="hdr-collapse"> 
+         <ul class="nav navbar-nav navbar-right hdr-nav"> 
+          <li> <a href="/explore-courses/all/">Courses</a> </li> 
+          <li> <a href="/teach/">Teach</a> </li> 
+          <li> <a href="" class="" data-toggle="modal" data-target="#sign_in" id="sign_in_link">Sign In</a> </li> 
+          <li> <a href="" class="" data-toggle="modal" data-target="#sign_up" id="sign_up_link">Sign Up</a> </li> 
+         </ul> 
+        </div> 
+       </div> 
+      </nav> 
+     </div> 
+     <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+      <div class="modal-dialog"> 
+       <div class="modal-content"> 
+        <div class="modal-header"> 
+         <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">×</span><span class="sr-only">Close</span> </button> 
+         <h4 class="modal-title" id="myModalLabel">LOG IN</h4> 
+        </div> 
+        <div class="modal-body"> 
+         <div class="bg-accent"> 
+          <div class="modal-white-segment"> 
+           <div class="btn btn-facebook-login"> 
+            <span class="fb-button-icon"><i class="fa fa-facebook"></i></span>
+            <span class="login-text">LOGIN WITH FACEBOOK</span> 
+           </div> 
+           <div class="mini-text1"> 
+            <i class="fa fa-lock"></i>We will never post on your wall. 
+           </div> 
+          </div> 
+          <div class="mini-text">
+            OR 
+          </div> 
+          <div class="login-container login_form"> 
+           <form class="login-form" action="/login/" method="POST"> 
+            <div class="form-group"> 
+             <input type="text" name="username" placeholder="Email Address" class="form-control" id="loginMail"> 
+            </div> 
+            <div class="form-group"> 
+             <input type="password" name="password" placeholder="Password" class="form-control margin-top" id="loginPass"> 
+            </div> 
+            <div class="margin-top text-right"> 
+             <a href="/password_reset/" id="resetPass">Forgot your password?</a> 
+             <span class="if icon-help"></span> 
+             <input name="csrfmiddlewaretoken" type="hidden" value="ILrRWHnB8hNEpLRQnVLSFnPepfvIoMzv"> 
+            </div> 
+            <div class="pad-bottom margin-top"> 
+             <input type="submit" class="login-btn btn btn-primary btn-block login-submit" value="LOG IN"> 
+            </div> 
+            <div class="login-loader"></div> 
+           </form> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="modal-footer"> 
+         <span class="inform">Don't have an account? <a href="http://callingfreshers.com/ufaber/index-new.html#sign_up" id="clRegister" data-dismiss="modal" data-toggle="modal">Sign up here.</a></span> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="modal fade" id="sign_up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;"> 
+      <div class="modal-dialog"> 
+       <div class="modal-content"> 
+        <div class="modal-header"> 
+         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+         <h4 class="modal-title" id="myModalLabel">SIGN UP</h4> 
+        </div> 
+        <div class="modal-body"> 
+         <div class="bg-accent"> 
+          <div class="modal-white-segment"> 
+           <!--div class="signup-offer">
+                          <h3>Signup Now &amp; get <span>Rs 1000</span> to start learning!</h3>
+                        </div--> 
+           <div class="btn btn-facebook-login"> 
+            <span class="fb-button-icon"> <i class="fa fa-facebook"></i> </span> 
+            <span class="login-text">SIGN UP WITH FACEBOOK</span> 
+           </div> 
+           <div class="mini-text1"> 
+            <i class="fa fa-lock"></i> We will never post on your wall. 
+           </div> 
+          </div> 
+          <div class="row"> 
+           <div class="mini-text">
+            OR
+           </div> 
+           <div class="col-sm-10 col-sm-offset-1"> 
+            <div class="login_form registration-container"> 
+             <form class="user-registration-form" action="/register/" method="POST"> 
+              <div class="form-group"> 
+               <input name="email" type="email" class="form-control" id="sign_upMail" placeholder="Email Address"> 
+              </div> 
+              <div class="form-group"> 
+               <input name="pass" type="password" class="form-control margin-top" id="loginPass" placeholder="Choose a Password"> 
+              </div> 
+              <div class="form-group"> 
+               <input name="re-pass" type="password" class="form-control margin-top" id="re-loginPass" placeholder="Confirm your Password"> 
+              </div> 
+              <div class="pad-bottom margin-top"> 
+               <input name="csrfmiddlewaretoken" type="hidden" value="ILrRWHnB8hNEpLRQnVLSFnPepfvIoMzv"> 
+               <input type="submit" class="btn btn-primary btn-block login-submit" value="SIGN UP"> 
+              </div> 
+              <div class="margin-top">
+                By registering you agree to our 
+               <a href="/terms_of_use/" id="resetPass" data-dismiss="modal" data-toggle="modal">Terms</a> 
+              </div> 
+             </form> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="modal-footer"> 
+         <span class="inform">Already have an account? <a href="/#sign_in" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Log in here.</a></span> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- 			<div class="modal fade" id="sign_up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">
+								<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+							</button>
+							<h4 class="modal-title" id="myModalLabel">SIGN UP</h4>
+						</div>
+						<div class="modal-body">
+							<div class="bg-accent">
+
+								<div class="fbLoginRegister login-with-fb other-login modal-white-segment">
+									<div class="btn btn-facebook-login">
+										<span class="fb-button-icon"><i class="fa fa-facebook"></i></span><span class="login-text">SIGN UP WITH FACEBOOK</span>
+									</div>
+									<div class="mini-text1">
+										<i class="fa fa-lock"></i>We will never post on your wall.
+									</div>
+								</div>
+								<div class="mini-text">
+									OR
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="signup-offer">
+											<h3>Signup Now &amp; get
+											<br>
+											<span>Rs 1000</span>
+											<br>
+											to start learning!</h3>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="registration-container login_form">
+											<form class="user-registration-form" action="/register/" method="POST">
+												<div class="form-group">
+													<input name="email" type="email" class="form-control" id="sign_upMail" placeholder="Email Address">
+												</div>
+												<div class="form-group">
+													<input name="pass" type="password" class="form-control margin-top" id="loginPass" placeholder="Choose a Password">
+												</div>
+												<div class="form-group">
+													<input name="re-pass" type="password" class="form-control margin-top" id="re-loginPass" placeholder="Confirm your Password">
+												</div>
+												<div class="pad-bottom margin-top">
+													<input name="csrfmiddlewaretoken" type="hidden" value="ILrRWHnB8hNEpLRQnVLSFnPepfvIoMzv"/>
+													<input type="submit" class="btn btn-primary btn-block login-submit" value="SIGN UP"></input>
+												</div>
+												<div class="margin-top">
+													By registering you agree to our <a href="/terms_of_use/" id="resetPass" data-dismiss="modal" data-toggle="modal">Terms</a>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<span class="inform">Already have an account? <a href="http://callingfreshers.com/ufaber/index-new.html#sign_in" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Log in here.</a></span>
+						</div>
+					</div>
+				</div>
+			</div> --> 
+     <div class="hdr-btm"> 
+      <div class="container"> 
+       <div class="row"> 
+        <div class="col-sm-12 col-md-10 col-md-offset-1"> 
+         <div class="hdr-cnt text-center wow fadeIn animated" data-wow-delay="0.1s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeIn 0.1s;"> 
+          <h2>Learn Anything, Anywhere!</h2> 
+          <p> Hundreds of courses from best experts to help you succeed in school, get into college and advance your career! </p> 
+          <div class="hdr-btm-btn"> 
+           <form action="/explore-courses/all/"> 
+            <button href="/explore-courses/all/" class="btn btn-lg btn-default" type="submit"> Start Learning </button> 
+           </form> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="message_container" style="display:none;"> 
+   <div class="loading_for_all"> 
+    <img src="/site_media/img/common_loader.gif"> 
+   </div> 
+   <div class="success_msg_for_all"> 
+    <span class="check_box icon-font">%</span> 
+    <span class="success_message">Request completed successfully.</span> 
+   </div> 
+  </div> 
+  <div class="lov-sctn"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-sm-12"> 
+      <div class="sctn-title"> 
+       <h2>What Students are Saying</h2> 
+      </div> 
+      <div class="std-tstml"> 
+       <div class="row"> 
+        <div class="col-sm-12 col-md-10 col-md-offset-1"> 
+         <div class="bx-wrapper" style="max-width: 100%;"> 
+          <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 255px;"> 
+           <ul class="bxslider tstml-sldr" style="width: auto; position: relative;"> 
+            <li style="float: none; list-style: none; position: absolute; display: none; z-index: 0; width: 945px;"> 
+             <div class="row"> 
+              <div class="col-sm-4 col-xs-3"> 
+               <div class="tstml-img"> 
+                <img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/s960x960/1496272_680498988648850_2002526201_o.jpg" style="width:250px;height:250px"> 
+               </div> 
+              </div> 
+              <div class="col-sm-8"> 
+               <div class="tstml-cnt"> 
+                <a href="/course/GATE-2015-course-for-Mechanical-Engineering/" class="tstml-cnthead"> 
+                 <div class="row"> 
+                  <div class="col-sm-3 col-xs-4"> 
+                   <img src="http://www.ufaber.com/site_media/course/2014/06/GATE_2015_course_for_Mechanical_Engineering_250x175.jpg" class="img-responsive" alt=""> 
+                  </div> 
+                  <div class="col-sm-9 col-xs-8"> 
+                   <div class="tstml-cnthead-info"> 
+                    <h2>GATE 2015 course for mechanical engineering</h2> 
+                    <h4>with Himanshu</h4> 
+                   </div> 
+                  </div> 
+                 </div> </a> 
+                <div class="tstml-info"> 
+                 <p>This is my second attempt for GATE and now I am confident that I will crack the exam. The course at uFaber is designed perfectly and I have never seen such an amazing quality in online courses. In this course, you get everything that you need to prepare for GATE and the faculty is awesome. The way he explains the concepts and solves doubts is really great. It has worked even better than offline coaching class for me.</p> 
+                 <h3>Gaurav</h3> 
+                </div> 
+               </div> 
+              </div> 
+             </div> </li> 
+            <li style="float: none; list-style: none; position: absolute; z-index: 0; display: none; width: 945px;"> 
+             <div class="row"> 
+              <div class="col-sm-4 col-xs-3"> 
+               <div class="tstml-img"> 
+                <img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/536434_364581666968244_262859236_n.jpg?oh=f7b088da2f3ef69f59f0878dba4ea28d&amp;oe=54C1832A&amp;__gda__=1422715028_e1fd1bafdc3c03125a6d794531fe4db9" style="width:250px;height:250px"> 
+               </div> 
+              </div> 
+              <div class="col-sm-8"> 
+               <div class="tstml-cnt"> 
+                <a href="/course/Hands-on-Certification-Course-on-Big-Data-Hadoop/" class="tstml-cnthead"> 
+                 <div class="row"> 
+                  <div class="col-sm-3 col-xs-4"> 
+                   <img src="http://www.ufaber.com/site_media/course/2014/06/Live_Course_Hadoop_Kick-starter_with_Industry_projects_250x175.jpg" class="img-responsive" alt=""> 
+                  </div> 
+                  <div class="col-sm-9 col-xs-8"> 
+                   <div class="tstml-cnthead-info"> 
+                    <h2>Hands on certification course on big data</h2> 
+                    <h4>with Anish</h4> 
+                   </div> 
+                  </div> 
+                 </div> </a> 
+                <div class="tstml-info"> 
+                 <p>Big data &amp; hadoop is the new buzz in technology and being a fresher I was not sure if I would be able to learn anything from this online course. By the end of the course, I knew much more than my seniors who are working in this field. I got an amazing job because of this training. The trainer is the master in this subject and teaches using practical projects and assignment. The support and personal attention is amazing.</p> 
+                 <h3>Chirag khadelwal</h3> 
+                </div> 
+               </div> 
+              </div> 
+             </div> </li> 
+            <li style="float: none; list-style: none; position: absolute; z-index: 0; display: none; width: 945px;"> 
+             <div class="row"> 
+              <div class="col-sm-4 col-xs-3"> 
+               <div class="tstml-img"> 
+                <img src="https://scontent-b-lhr.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10365921_745370118862091_3787565802404890630_n.jpg?oh=fdde8616b9fc437b02b0ce5f0ac695b9&amp;oe=54C816B5" style="width:250px;height:250px"> 
+               </div> 
+              </div> 
+              <div class="col-sm-8"> 
+               <div class="tstml-cnt"> 
+                <a href="/course/Perfect-English-Speaking-Course/" class="tstml-cnthead"> 
+                 <div class="row"> 
+                  <div class="col-sm-3 col-xs-4"> 
+                   <img src="http://www.ufaber.com/site_media/course/2014/07/Learn_English_from_Scratch_250x175.jpg" class="img-responsive" alt=""> 
+                  </div> 
+                  <div class="col-sm-9 col-xs-8"> 
+                   <div class="tstml-cnthead-info"> 
+                    <h2>Perfect english speaking course</h2> 
+                    <h4>with Ufaber</h4> 
+                   </div> 
+                  </div> 
+                 </div> </a> 
+                <div class="tstml-info"> 
+                 <p>I always wanted to speak fluent English but never got the confidence for the same until I enrolled for this course. The unique teaching method gives the confidence and the knowledge to speak better English. Online practice sessions are so convenient and fun. There are many offline classes who claim to teach English but I think the course from uFaber is the best.</p> 
+                 <h3>Jigyasa</h3> 
+                </div> 
+               </div> 
+              </div> 
+             </div> </li> 
+            <li style="float: none; list-style: none; position: absolute; width: 945px; z-index: 0; display: none;"> 
+             <div class="row"> 
+              <div class="col-sm-4 col-xs-3"> 
+               <div class="tstml-img"> 
+                <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/10400693_23712237843_2020_n.jpg?oh=65dffe9710cb289baaf28c8c03086f6b&amp;oe=54CCFC9B&amp;__gda__=1422496349_d31047cba2d05b5d83fb1f88d4b678e8" style="width:250px;height:250px"> 
+               </div> 
+              </div> 
+              <div class="col-sm-8"> 
+               <div class="tstml-cnt"> 
+                <a href="/course/Digital-Marketing-workshop/" class="tstml-cnthead"> 
+                 <div class="row"> 
+                  <div class="col-sm-3 col-xs-4"> 
+                   <img src="http://www.ufaber.com/site_media/course/2014/07/Digital_Marketing_workshop_250x175.jpg" class="img-responsive" alt=""> 
+                  </div> 
+                  <div class="col-sm-9 col-xs-8"> 
+                   <div class="tstml-cnthead-info"> 
+                    <h2>Digital marketing workshop</h2> 
+                    <h4>with Siddhesh</h4> 
+                   </div> 
+                  </div> 
+                 </div> </a> 
+                <div class="tstml-info"> 
+                 <p>I had read a lot about online marketing at several blogs but the practical insight that I got in this training was really useful. The trainer has some real experience and explains the big jargons in a way that makes it useful in your Job. Instead of wasting a lot of time reading loads on free content online, I would recommend to take this practical dose to become a pro in this subject.</p> 
+                 <h3>Ankit Mehta</h3> 
+                </div> 
+               </div> 
+              </div> 
+             </div> </li> 
+            <li style="float: none; list-style: none; position: absolute; width: 945px; z-index: 50;"> 
+             <div class="row"> 
+              <div class="col-sm-4 col-xs-3"> 
+               <div class="tstml-img"> 
+                <img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10660150_742044422529648_2574873438672016414_n.jpg?oh=461347b2477d9a4c9efb2074d606ad8e&amp;oe=54C648DB&amp;__gda__=1421297507_75a3fadd7c5b85505ec100cce540164c" style="width:250px;height:250px"> 
+               </div> 
+              </div> 
+              <div class="col-sm-8"> 
+               <div class="tstml-cnt"> 
+                <a href="/course/IIT-JEE-Inception-Program/" class="tstml-cnthead"> 
+                 <div class="row"> 
+                  <div class="col-sm-3 col-xs-4"> 
+                   <img src="http://www.ufaber.com/site_media/course/2014/06/iit-jee_250x175.jpg" class="img-responsive" alt=""> 
+                  </div> 
+                  <div class="col-sm-9 col-xs-8"> 
+                   <div class="tstml-cnthead-info"> 
+                    <h2>IIT JEE inception program</h2> 
+                    <h4>with Rajiv</h4> 
+                   </div> 
+                  </div> 
+                 </div> </a> 
+                <div class="tstml-info"> 
+                 <p>JEE preparation is not just about content and studies. It’s about proper planning, great guidance and learning from the best content. I was lucky to get all this from this course. The faculty, the content and the support is amazing and it gives you all that personal attention that you miss in the coaching class. If you are seriously preparing for IIT JEE, you must evaluate this course.</p> 
+                 <h3>Anshul Jain</h3> 
+                </div> 
+               </div> 
+              </div> 
+             </div> </li> 
+            <!-- <li><img src="img/user1.jpg" /></li>
+                      <li><img src="img/user2.jpg" /></li>
+                      <li><img src="img/user3.jpg" /></li> --> 
+           </ul> 
+          </div> 
+          <div class="bx-controls"></div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-sm-12 col-md-6 col-md-offset-3"> 
+         <div id="bx-pager" class="tstml-thumb"> 
+          <a data-slide-index="0" href="" class=""> <img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/s960x960/1496272_680498988648850_2002526201_o.jpg" class="img-responsive img-thumbnail"> </a> 
+          <a data-slide-index="1" href="" class=""> <img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/536434_364581666968244_262859236_n.jpg?oh=f7b088da2f3ef69f59f0878dba4ea28d&amp;oe=54C1832A&amp;__gda__=1422715028_e1fd1bafdc3c03125a6d794531fe4db9" class="img-responsive img-thumbnail"> </a> 
+          <a data-slide-index="2" href="" class=""> <img src="https://scontent-b-lhr.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10365921_745370118862091_3787565802404890630_n.jpg?oh=fdde8616b9fc437b02b0ce5f0ac695b9&amp;oe=54C816B5" class="img-responsive img-thumbnail"> </a> 
+          <a data-slide-index="3" href="" class=""> <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/10400693_23712237843_2020_n.jpg?oh=65dffe9710cb289baaf28c8c03086f6b&amp;oe=54CCFC9B&amp;__gda__=1422496349_d31047cba2d05b5d83fb1f88d4b678e8" class="img-responsive img-thumbnail"> </a> 
+          <a data-slide-index="4" href="" class="active"> <img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10660150_742044422529648_2574873438672016414_n.jpg?oh=461347b2477d9a4c9efb2074d606ad8e&amp;oe=54C648DB&amp;__gda__=1421297507_75a3fadd7c5b85505ec100cce540164c" class="img-responsive img-thumbnail"> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="crsc-sctn"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-lg-12 text-center"> 
+      <div class="sctn-title"> 
+       <h2>Featured Courses</h2> 
+      </div> 
+      <p class="crsc-sub-title"></p> 
+     </div> 
+     <div class="col-sm-12 col-xs-12 col-md-10 col-md-offset-1"> 
+      <div class="row"> 
+       <div class="col-sm-4 col-xs-6 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <div class="crsc-main"> 
+         <div class="crsc-img" style="height:194px"> 
+          <a href="/course/GATE-2015-course-for-Mechanical-Engineering/"> <img src="/site_media/course/2014/06/GATE_2015_course_for_Mechanical_Engineering_275x191.jpg" alt="" class="img-responsive" width="275" height="191"> </a> 
+         </div> 
+         <div class="crsc-desc"> 
+          <div class="crsc-desc-title">
+           <a href="/course/GATE-2015-course-for-Mechanical-Engineering/">GATE 2015 course for Mechanical Engineering</a> 
+          </div> 
+          <div class="crsc-desc-athr"> 
+           <img src="/site_media/user/992/36e6c6da4a8e16f72b583a6b94c863f0906d5e29c1577a2335235875_cropped_50x50.jpg" class="img-responsive" alt="Himanshu Vasistha"> 
+           <h3>Himanshu Vasistha</h3> 
+          </div> 
+          <div class="crsc-desc-btm"> 
+           <div class="row"> 
+            <div class="col-sm-7"> 
+             <div class="crsc-std"> 
+              <h3><i class="fa fa-group"></i>342 Students</h3> 
+             </div> 
+            </div> 
+            <div class="col-sm-5"> 
+             <div class="crsc-desc-price"> 
+              <h3><i class="fa fa-rupee"></i>7000</h3> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-sm-4 col-xs-6 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <div class="crsc-main"> 
+         <div class="crsc-img" style="height:194px"> 
+          <a href="/course/Perfect-English-Speaking-Course/"> <img src="/site_media/course/2014/07/Learn_English_from_Scratch_275x191.jpg" alt="" class="img-responsive" width="275" height="191"> </a> 
+         </div> 
+         <div class="crsc-desc"> 
+          <div class="crsc-desc-title">
+           <a href="/course/Perfect-English-Speaking-Course/">Perfect English Speaking Course</a> 
+          </div> 
+          <div class="crsc-desc-athr"> 
+           <img src="/site_media/img/userdefaultimg/1square.png" class="img-responsive" alt="Ufaber"> 
+           <h3>Ufaber</h3> 
+          </div> 
+          <div class="crsc-desc-btm"> 
+           <div class="row"> 
+            <div class="col-sm-7"> 
+             <div class="crsc-std"> 
+              <h3><i class="fa fa-group"></i>125 Students</h3> 
+             </div> 
+            </div> 
+            <div class="col-sm-5"> 
+             <div class="crsc-desc-price"> 
+              <h3><i class="fa fa-rupee"></i>7500</h3> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-sm-4 col-xs-6 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <div class="crsc-main"> 
+         <div class="crsc-img" style="height:194px"> 
+          <a href="/course/IIT-JEE-Inception-Program/"> <img src="/site_media/course/2014/06/iit-jee_275x191.jpg" alt="" class="img-responsive" width="275" height="191"> </a> 
+         </div> 
+         <div class="crsc-desc"> 
+          <div class="crsc-desc-title">
+           <a href="/course/IIT-JEE-Inception-Program/">IIT JEE Inception Program</a> 
+          </div> 
+          <div class="crsc-desc-athr"> 
+           <img src="/site_media/user/2015/79bbee3e43514f32657d67a292683b1d787b73ff3cd2c0d91c4367cb_cropped_50x50.jpg" class="img-responsive" alt="Rajiv Jain"> 
+           <h3>Rajiv Jain</h3> 
+          </div> 
+          <div class="crsc-desc-btm"> 
+           <div class="row"> 
+            <div class="col-sm-7"> 
+             <div class="crsc-std"> 
+              <h3><i class="fa fa-group"></i>207 Students</h3> 
+             </div> 
+            </div> 
+            <div class="col-sm-5"> 
+             <div class="crsc-desc-price"> 
+              <h3>Comming Soon</h3> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-sm-4 col-xs-6 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <div class="crsc-main"> 
+         <div class="crsc-img" style="height:194px"> 
+          <a href="/course/Hands-on-Certification-Course-on-Big-Data-Hadoop/"> <img src="/site_media/course/2014/06/Live_Course_Hadoop_Kick-starter_with_Industry_projects_275x191.jpg" alt="" class="img-responsive" width="275" height="191"> </a> 
+         </div> 
+         <div class="crsc-desc"> 
+          <div class="crsc-desc-title">
+           <a href="/course/Hands-on-Certification-Course-on-Big-Data-Hadoop/">Hands-on Certification Course on Big Data Hadoop</a> 
+          </div> 
+          <div class="crsc-desc-athr"> 
+           <img src="/site_media/img/userdefaultimg/1square.png" class="img-responsive" alt="Anish"> 
+           <h3>Anish</h3> 
+          </div> 
+          <div class="crsc-desc-btm"> 
+           <div class="row"> 
+            <div class="col-sm-7"> 
+             <div class="crsc-std"> 
+              <h3><i class="fa fa-group"></i>529 Students</h3> 
+             </div> 
+            </div> 
+            <div class="col-sm-5"> 
+             <div class="crsc-desc-price"> 
+              <h3><i class="fa fa-rupee"></i>16000</h3> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-sm-4 col-xs-6 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <div class="crsc-main"> 
+         <div class="crsc-img" style="height:194px"> 
+          <a href="/course/Learn-to-build-a-Cross-Platform-Mobile-App-using-PhoneGap/"> <img src="/site_media/course/2014/07/Phonegapcourse2_275x191.jpg" alt="" class="img-responsive" width="275" height="191"> </a> 
+         </div> 
+         <div class="crsc-desc"> 
+          <div class="crsc-desc-title">
+           <a href="/course/Learn-to-build-a-Cross-Platform-Mobile-App-using-PhoneGap/">Learn to build a Cross Platform Mobile App usin...</a> 
+          </div> 
+          <div class="crsc-desc-athr"> 
+           <img src="/site_media/img/userdefaultimg/4square.png" class="img-responsive" alt="Yoda"> 
+           <h3>Yoda</h3> 
+          </div> 
+          <div class="crsc-desc-btm"> 
+           <div class="row"> 
+            <div class="col-sm-7"> 
+             <div class="crsc-std"> 
+              <h3><i class="fa fa-group"></i>79 Students</h3> 
+             </div> 
+            </div> 
+            <div class="col-sm-5"> 
+             <div class="crsc-desc-price"> 
+              <h3>Free</h3> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-sm-4 col-xs-6 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <div class="crsc-main"> 
+         <div class="crsc-img" style="height:194px"> 
+          <a href="/course/Engineering-Mechanics-for-Engineering-Students/"> <img src="/site_media/course/2014/06/Engineering_Mechanics_for_Engineering_Students_275x191.jpg" alt="" class="img-responsive" width="275" height="191"> </a> 
+         </div> 
+         <div class="crsc-desc"> 
+          <div class="crsc-desc-title">
+           <a href="/course/Engineering-Mechanics-for-Engineering-Students/">Engineering Mechanics for Engineering Students</a> 
+          </div> 
+          <div class="crsc-desc-athr"> 
+           <img src="/site_media/img/userdefaultimg/3square.png" class="img-responsive" alt="Shivraj"> 
+           <h3>Shivraj</h3> 
+          </div> 
+          <div class="crsc-desc-btm"> 
+           <div class="row"> 
+            <div class="col-sm-7"> 
+             <div class="crsc-std"> 
+              <h3><i class="fa fa-group"></i>93 Students</h3> 
+             </div> 
+            </div> 
+            <div class="col-sm-5"> 
+             <div class="crsc-desc-price"> 
+              <h3><i class="fa fa-rupee"></i>646</h3> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-sm-4 col-xs-6 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <div class="crsc-main"> 
+         <div class="crsc-img" style="height:194px"> 
+          <a href="/course/Course-on-Adobe-Illustrator-Learn-from-scratch/"> <img src="/site_media/course/2014/06/Course_on_Adobe-Illustrator_Learn_from_scratch-1_275x191.jpg" alt="" class="img-responsive" width="275" height="191"> </a> 
+         </div> 
+         <div class="crsc-desc"> 
+          <div class="crsc-desc-title">
+           <a href="/course/Course-on-Adobe-Illustrator-Learn-from-scratch/">Course on Adobe Illustrator - Learn from scratch</a> 
+          </div> 
+          <div class="crsc-desc-athr"> 
+           <img src="/site_media/img/userdefaultimg/4square.png" class="img-responsive" alt="Eduonix"> 
+           <h3>Eduonix</h3> 
+          </div> 
+          <div class="crsc-desc-btm"> 
+           <div class="row"> 
+            <div class="col-sm-7"> 
+             <div class="crsc-std"> 
+              <h3><i class="fa fa-group"></i>105 Students</h3> 
+             </div> 
+            </div> 
+            <div class="col-sm-5"> 
+             <div class="crsc-desc-price"> 
+              <h3><i class="fa fa-rupee"></i>2500</h3> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-sm-4 col-xs-6 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <div class="crsc-main"> 
+         <div class="crsc-img" style="height:194px"> 
+          <a href="/course/Advanced-Web-Metrics-with-Google-Analytics/"> <img src="/site_media/course/2014/07/Advanced_Web_Metrics_with_Google_Analytics_275x191.jpg" alt="" class="img-responsive" width="275" height="191"> </a> 
+         </div> 
+         <div class="crsc-desc"> 
+          <div class="crsc-desc-title">
+           <a href="/course/Advanced-Web-Metrics-with-Google-Analytics/">Advanced Web Metrics with Google Analytics</a> 
+          </div> 
+          <div class="crsc-desc-athr"> 
+           <img src="/site_media/img/userdefaultimg/3square.png" class="img-responsive" alt="Sarvesh"> 
+           <h3>Sarvesh</h3> 
+          </div> 
+          <div class="crsc-desc-btm"> 
+           <div class="row"> 
+            <div class="col-sm-7"> 
+             <div class="crsc-std"> 
+              <h3><i class="fa fa-group"></i>189 Students</h3> 
+             </div> 
+            </div> 
+            <div class="col-sm-5"> 
+             <div class="crsc-desc-price"> 
+              <h3>Free</h3> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-sm-4 col-xs-6 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <div class="crsc-main"> 
+         <div class="crsc-img" style="height:194px"> 
+          <a href="/course/Cracking-The-Coding-Interview/"> <img src="/site_media/course/2014/08/Cracking_The_Coding_Interview-1_275x191.jpg" alt="" class="img-responsive" width="275" height="191"> </a> 
+         </div> 
+         <div class="crsc-desc"> 
+          <div class="crsc-desc-title">
+           <a href="/course/Cracking-The-Coding-Interview/">Cracking The Coding Interview</a> 
+          </div> 
+          <div class="crsc-desc-athr"> 
+           <img src="https://graph.facebook.com/834041439940120/picture?type=square" class="img-responsive" alt="Anjali"> 
+           <h3>Anjali</h3> 
+          </div> 
+          <div class="crsc-desc-btm"> 
+           <div class="row"> 
+            <div class="col-sm-7"> 
+             <div class="crsc-std"> 
+              <h3><i class="fa fa-group"></i>166 Students</h3> 
+             </div> 
+            </div> 
+            <div class="col-sm-5"> 
+             <div class="crsc-desc-price"> 
+              <h3>Free</h3> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-sm-12 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <div class="crsc-all" align="center"> 
+         <form action="/explore-courses/all/"> 
+          <button href="/explore-courses/all/" class="btn btn-lg btn-defaulf">Show all Courses</button> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="ctgy-sctn"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-sm-12"> 
+      <div class="sctn-title"> 
+       <h2>What would you like to Learn?</h2> 
+      </div> 
+     </div> 
+     <div class="col-sm-3 wow fadeInUp" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: hidden; -webkit-animation: none 0.3s;width:20%;"> 
+      <div class="crsc-ctgy"> 
+       <h3>Technology</h3> 
+       <ul class="list-unstyled"> 
+        <li><a href="/course/Course-on-Java-for-Complete-Beginners/">Java</a></li> 
+        <li><a href="/course/Learn-Python-Programming-from-Scratch/">Python</a></li> 
+        <li><a href="/course/Learn-MongoDB-for-Beginners/">MongoDB</a></li> 
+        <li><a href="/course/Learn-iOS-Programming-from-scratch-The-Basic-Course/">iOS development</a></li> 
+        <li><a href="/course/Hands-on-Certification-Course-on-Big-Data-Hadoop/">Big data &amp; hadoop</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="col-sm-3 wow fadeInUp" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: hidden; -webkit-animation: none 0.3s;width:20%;"> 
+      <div class="crsc-ctgy"> 
+       <h3>Marketing</h3> 
+       <ul class="list-unstyled"> 
+        <li><a href="/course/Digital-Marketing-workshop/">Digital marketing</a></li> 
+        <li><a href="/course/The-Great-Facebook-Advertising-Course/">Facebook marketing</a></li> 
+        <li><a href="/course/Linkedin-Social-Media-Marketing/">Linkedin Social media marketing</a></li> 
+        <li><a href="/course/Email-marketing/">Email marketing</a></li> 
+        <li><a href="/course/The-Art-of-Mobile-Marketing/">The art of mobile marketing</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="col-sm-3 wow fadeInUp" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: hidden; -webkit-animation: none 0.3s;width:20%"> 
+      <div class="crsc-ctgy"> 
+       <h3>Exam preparation</h3> 
+       <ul class="list-unstyled"> 
+        <li><a href="/course/GATE-2015-course-for-Mechanical-Engineering/">GATE mechanical</a></li> 
+        <li><a href="/course/GATE-2015-course-for-Electronics-Communication-Engineering/">GATE ECE</a></li> 
+        <li><a href="/course/IIT-JEE-Inception-Program"></a>IIT JEE</li> 
+        <li><a href="/course/Bank-PO-A-Signature-Course/">Bank PO</a></li> 
+        <li><a href="/course/GRE-2014-A-complete-course-on-quant-verbal-and-analytical-writing/">GRE</a></li> 
+        <li><a href="/course/Perfect-Scores-Premium-TV-GRE-GMAT-CAT/">GMAT</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="col-sm-3 wow fadeInUp" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: hidden; -webkit-animation: none 0.3s;width:20%;"> 
+      <div class="crsc-ctgy"> 
+       <h3>Certification</h3> 
+       <ul class="list-unstyled"> 
+        <li><a href="/course/Become-a-Certified-Financial-Planner-CFP/">financial Planning</a></li> 
+        <li><a href="/course/360-degree-course-for-Human-Resource-Professionals/">HR professional</a></li> 
+        <li><a href="/course/ITIL-Foundation-Training/">ITIL</a></li> 
+        <li><a href="/course/Lean-Six-Sigma-A-crash-course-on-quality-principles/">Six Sigma</a></li> 
+        <li><a href="/course/PMP-certification-video-Lecture/">PMP</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="col-sm-3 wow fadeInUp" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: hidden; -webkit-animation: none 0.3s;width:20%;"> 
+      <div class="crsc-ctgy"> 
+       <h3>Language</h3> 
+       <ul class="list-unstyled"> 
+        <li><a href="/course/Perfect-English-Speaking-Course/">English</a></li> 
+        <li><a href="/course/Basic-Spanish-For-Beginners~191/">Spanish</a></li> 
+        <li><a href="/course/Course-on-Body-Language-How-to-interpret-the-unspoken-language/">Body language</a></li> 
+        <li><a href="/course/Basic-Chinese-For-Beginners/">chinese</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+  <div class="exprt-sctn"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="exprt-strt"> 
+      <div class="col-sm-12"> 
+       <div class="exprt-main text-center wow fadeInUp animated" data-wow-delay="0.3s" data-wow-offset="10" style="visibility: visible; -webkit-animation: fadeInUp 0.3s;"> 
+        <h3>Are You An Expert?</h3> 
+        <form action="/teach/"> 
+         <button class="btn btn-primary btn-lg btn-exprt">Start Teaching</button> 
+        </form> 
+       </div> 
+      </div> 
+      <!-- <div class="col-sm-4">
+              <div class="exprt-right wow fadeInUp"  data-wow-delay="0.3s"   data-wow-offset="10">
+                <img src="img/teach-expert.png" class="img-responsive" alt="">
+              </div>
+            </div> -->
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <input type="hidden" id="inputFields"> 
+  <input type="hidden" id="submitLogin"> 
+  <input type="hidden" id="facebookLoginEvent"> 
+  <input type="hidden" id="showOverlayContainer"> 
+  <input type="hidden" id="addLibraryEvent"> 
+  <input type="hidden" id="postFBLesson"> 
+  <input type="hidden" id="applyToolTip"> 
+  <input type="hidden" id="csrf" value="ILrRWHnB8hNEpLRQnVLSFnPepfvIoMzv"> 
+  <input type="hidden" id="isEnterprise" value="True"> 
+  <input type="hidden" id="userloggedin" value="false"> 
+  <div class="ftr"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-sm-4"> 
+      <div class="ftr-abt"> 
+       <h3 class="ftr-title">UFABER</h3> 
+       <p>Welcome to a whole new world of learning without any constraint of time and location. Learn from the best experts of the industry and Immerse into a rich experience of live classes, online courses, round table discussions, webinars, virtual workshops and web events all year round at ufaber.com. Learn for career advancement, school/college studies, entrance exams or just for the knowledge.</p> 
+      </div> 
+     </div> 
+     <div class="col-sm-2"> 
+      <div class="ftr-qwk"> 
+       <h3 class="ftr-title">Quick Links</h3> 
+       <ul class="list-unstyled"> 
+        <li><a href="/aboutus/">About</a> </li> 
+        <li><a href="/explore-courses/all/">Start learning</a> </li> 
+        <li><a href="/teach/">Start teaching</a> </li> 
+        <li><a href="http://blog.ufaber.com/">Blog</a> </li> 
+        <li><a href="/contact/">Contact Us</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="col-sm-3"> 
+      <div class="ftr-contact"> 
+       <h3 class="ftr-title">Contact Us</h3> 
+       <p>The Playce, Marathon Maxima, <br>Lal Bahadur Shastri Rd, Mulund West, <br>Mumbai - 400080 <br>India</p> 
+       <h4>Ph: +918080555766</h4> 
+       <h4>Email: <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="1774787963767463576271767572653974787a">[email&nbsp;protected]</a><script cf-hash="f9e31" type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></h4> 
+       <div class="ftr-scl"> 
+        <ul class="list-inline"> 
+         <li><a href="http://www.facebook.com/edufaber" id="sclk1"><i class="fa fa-facebook"></i></a> </li> 
+         <li><a href="http://www.twitter.com/ufabers" id="sclk2"><i class="fa fa-twitter"></i></a> </li> 
+         <li><a href="https://www.linkedin.com/company/ufaber-com" id="sclk3"><i class="fa fa-linkedin"></i></a> </li> 
+         <li><a href="https://www.youtube.com/channel/UCcVak4mOze-tkKg0hMYGbxA" id="sclk4"><i class="fa fa-youtube"></i></a> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-3"> 
+      <div class="ftr-rqst request-course-container"> 
+       <h3 class="ftr-title">Request a Course</h3> 
+       <form action="" class="form-rqst"> 
+        <div class="form-group"> 
+         <input type="text" name="name" class="form-control" placeholder="Name"> 
+        </div> 
+        <div class="form-group"> 
+         <input type="text" name="email" class="form-control" placeholder="Email"> 
+        </div> 
+        <div class="form-group"> 
+         <input type="text" name="phone_number" class="form-control" placeholder="Phone Number"> 
+        </div> 
+        <div class="form-group"> 
+         <input type="text" name="course" class="form-control" placeholder="Course"> 
+        </div> 
+        <div class="form-group"> 
+         <div class="ftr-sub"> 
+          <input name="csrfmiddlewaretoken" type="hidden" value="ILrRWHnB8hNEpLRQnVLSFnPepfvIoMzv"> 
+          <input type="submit" value="Submit" name="" class="btn btn-danger btn-block" placeholder="Course"> 
+         </div> 
+        </div> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="copyright"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-sm-12"> 
+      <div class="pull-right"> 
+       <ul class="list-inline"> 
+        <li><a href="/privacy/">Privacy Policy</a> </li> 
+        <li><a href="/terms_of_use/">Terms &amp; Conditions</a> </li> 
+        <li><span>All Rights Reserved. © 2014 Company Pvt Ltd.</span> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+  <script src="/site_media/js/external/require.js?v=1409562266"></script> 
+  <script src="/site_media/main/js/bmi.js" language="javascript"></script> 
+  <script src="/site_media/main/js/jquery.min.js"></script> 
+  <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')
+    </script> 
+  <script src="/site_media/main/js/bootstrap.min.js"></script> 
+  <script src="/site_media/main/js/jquery.bxslider.min.js"></script> 
+  <script src="/site_media/main/js/wow.js"></script> 
+  <script src="/site_media/home/custom.js"></script> 
+  <script>
+        new WOW().init();
+    </script> 
+  <script>
+        $(document).ready(function() {
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                pagerCustom: '#bx-pager',
+                auto: 'true',
+                pause: '6000',
+                controls: false
+            });
+
+	    setTimeout(function(){ if($('#sign_up_link').length != 0){ $('#sign_up_link')[0].click();} }, 5000);
+        });
+
+    </script> 
+  <script type="text/javascript" src="/site_media/main/js/core.js?v=1411625857"></script> 
+  <script>
+	define('course_full_header_params', {
+		csrfToken : 'ILrRWHnB8hNEpLRQnVLSFnPepfvIoMzv',
+		headerNotificationUrl : '/header-notifications/'
+	});
+	//
+	require(['site_media/js/config'], function() {
+		require(['domReady', 'course_full_header_new', 'course_full_header_params'], function(domReady, courseFullHeaderNew, params) {
+			domReady(function() {
+				var h = new courseFullHeaderNew(params);
+				h._init();
+			});
+		});
+	});
+
+</script>  
+ </body>
+</html>

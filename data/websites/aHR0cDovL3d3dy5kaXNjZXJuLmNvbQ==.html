@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html ng-app="DISCERNApp" ng-controller="RootController" class="{{getCustomDocumentClasses( )}}">
+ <head> 
+  <base href="/"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!-- FIXME: Make unique per view. --> 
+  <title>DISCERN </title> 
+  <meta name="description" content="The DISCERN data aggregation platform improves business decision-making through personalized signaling and analytics."> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> 
+  <link rel="stylesheet" href="styles/e8d9326a.main.css"> 
+  <!-- Moving to <head> so ngCloak works effectively. --> 
+  <script>
+      function getCookie(name) {
+        var dc = document.cookie;
+        var prefix = name + "=";
+        var begin = dc.indexOf("; " + prefix);
+        if (begin == -1) {
+          begin = dc.indexOf(prefix);
+          if (begin != 0) return null;
+        } else {
+          begin += 2;
+          var end = document.cookie.indexOf(";", begin);
+          if (end == -1) {
+          end = dc.length;
+          }
+        }
+        return unescape(dc.substring(begin + prefix.length, end));
+      }
+      // To check authentication and redirect to home page
+      function redirectToHome() {
+        var myCookie = getCookie("auth-tok");
+        var currentPath = window.location.href;
+        var loginCheck = currentPath.indexOf("login");
+        var landingCheck = currentPath.indexOf("type=signalLandingPage");
+        if(loginCheck == -1 && landingCheck == -1 && myCookie == null) {
+          window.location.href = "/home/redirect-to-home.html";
+        }
+      }
+
+      function loginToHomeRedirect(){
+        window.location.href = "/home/redirect-to-home.html";
+      }
+      redirectToHome();
+    </script> 
+  <script src="bower_components/ng-file-upload/angular-file-upload-shim.min.js"></script> 
+  <script src="bower_components/angular/angular.min.js"></script> 
+ </head> 
+ <body> 
+  <!-- onLoad="canvg()" --> 
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> 
+  <!--  To get Historical data --> 
+  <form id="historicData" method="POST" action=""> 
+   <input type="hidden" value="pqs_wrapper/signal/gethistoricsignalevents" name="path"> 
+   <input type="hidden" id="start_date" name="start_date" value=""> 
+   <input type="hidden" id="end_date" name="end_date" value=""> 
+   <input type="hidden" id="token" name="token" value=""> 
+   <input type="hidden" id="ticker" name="ticker" value=""> 
+   <input type="hidden" name="version" value="v2"> 
+   <input type="hidden" name="historic_data" value="historic_data"> 
+  </form> 
+  <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]--> 
+  <div id="renderSignalTemplateImg" class="beautification"></div> 
+  <div class="feedback-button" ng-if="hasAuth( )"> 
+   <div class="feedback-trigger-button">
+    <a href="javascript:;" ng-click="feedbackForm()">Feedback</a>
+   </div> 
+  </div> 
+  <div class="push-footer"> 
+   <header class="site-header" ng-if="!isCurrentRoute('/login')" ng-cloak=""> 
+    <a href="/#/signals/list/" class="title" title="Home"> <h1 class="title">DISCERN</h1> </a> 
+    <ul class="utility-menu"> 
+     <li class="menu-item"> <a href="http://www.aboutdiscern.com/discerndifference/">About</a> </li>
+     <li class="menu-item"> <a href="http://www.aboutdiscern.com/contact/">Help</a> </li>
+     <li class="menu-item" ng-if="hasAuth( )"> <a role="button" ng-click="$emit( 'should-show-profile', 'account-settings:view' )">Settings</a> </li>
+     <li class="menu-item" ng-if="hasAuth( )"> <a role="button" ng-click="logOut()">Logout</a> </li> 
+    </ul> 
+    <div class="commerce-menu" ng-if="hasAuth( )"> 
+     <button class="trades reset icon-trading fa-2x">
+      <!--
+            FIXME: More informative label.
+           --><span class="count">0</span> </button> 
+     <button class="shopping-cart reset fa fa-shopping-cart fa-2x">
+      <!--
+            FIXME: More informative label.
+           --><span class="count">0</span> </button> 
+    </div> 
+   </header> 
+   <span ng-bind="setTimeout()"></span> 
+   <nav class="site-nav reset-anchors" ng-if="hasAuth( )" ng-cloak=""> 
+    <section class="primary-nav"> 
+     <h2 class="nav-header text-hide reset-header">Site Navigation</h2> 
+     <ul class="site-menu"> 
+      <li class="menu-item ng-class:{ selected: isCurrentRoute( '/signals/*' ) };"> <a href="/#/signals/list/">Signals</a> </li>
+      <li class="menu-item ng-class:{ selected: isCurrentRoute( '/charts/*' ) };"> <a href="/#/charts/">Charts</a> </li>
+      <li class="menu-item ng-class:{ selected: isCurrentRoute( '/data-reports/*' ) };"> <a href="/#/data-reports/">Data &amp; Reports</a> 
+       <!-- removed has-tertiary-menu class temporarily for watchlist menu item--> </li>
+      <li class="menu-item ng-class:{ selected: isCurrentRoute( '/watchlist/*' ) };"> <a href="/#/watchlist/stocks/">My Watchlist</a> </li>
+     </ul> 
+     <fieldset class="site-search"> 
+      <legend class="text-hide reset">Site Search</legend> 
+      <input class="keywords" type="search" placeholder="Search">
+      <!--
+           -->
+      <button class="submit reset fa fa-search"> <span class="text-hide">Submit</span> </button> 
+     </fieldset> 
+    </section> 
+    <!-- <section class="tertiary-nav">
+          <ul class="menu" ng-if="isCurrentRoute( '/watchlist/*/' )">
+            <li class="menu-item" ng-class="{'selected':isCurrentRoute( '/watchlist/stocks/' )}"><a href="/#/watchlist/stocks" title="">Stocks &amp; Sectors</a>
+            <li class="menu-item" ng-class="{'selected':isCurrentRoute( '/watchlist/products/' )}"><a href="/#/watchlist/products" title="">Products</a>
+            <li class="menu-item" ng-class="{'selected':isCurrentRoute( '/watchlist/markets/' )}"><a href="/#/watchlist/markets" title="">Markets</a>
+            <li class="menu-item" ng-class="{'selected':isCurrentRoute( '/watchlist/sources/' )}"><a href="/#/watchlist/sources" title="">Sources</a>
+          </ul>
+        </section> --> 
+   </nav> 
+   <main ng-view=""></main> 
+  </div> 
+  <footer class="site-footer" ng-if="hasAuth( )  &amp;&amp; !isCurrentRoute('/signals/aperture_view/')" ng-cloak=""> 
+   <span class="copyright">DISCERN © 2014 All rights reserved.</span> 
+   <ul class="utility-menu"> 
+    <li class="menu-item"> <a href="http://www.aboutdiscern.com/discerndifference/">About</a> </li>
+    <li class="menu-item"> <a href="http://www.aboutdiscern.com/contact/">Help</a> 
+     <!--<li class="menu-item">
+          <a href="http://www.aboutdiscern.com/terms-of-use/">Terms of Use</a>
+        <li class="menu-item">
+          <a href="http://www.aboutdiscern.com/contact/">Contact</a> --> </li>
+   </ul> 
+  </footer> 
+  <script type="text/template" id="infowindow-template-1">
+      <div class='my-info-window' style="width:260px;">
+        <div><span class='info-label'>Operator:</span> <%= rowData.ticker %></div>
+        <div>
+          <span class='info-label'>API No:</span> 
+          <% if(rowData.downloadUrl && rowData.downloadUrl.toUpperCase() !== 'NA' && rowData.downloadUrl !== '' ) { %> 
+            <a href="<%= rowData.downloadUrl %>" target="_blank"><%= rowData.apiNo %></a>
+          <% } else { %>
+            <%= rowData.apiNo %>
+          <% } %>
+        </div>
+        <div><span class='info-label'>Well Name:</span> <%= rowData.wellName %></div>
+        <div><span class='info-label'>Test Date:</span>  <%= rowData.testDate %></div>
+        <div><span class='info-label'><%= rowData.ipLabel %>:</span>  <%= parseFloat(rowData.ip).toFixed(1) %></div>
+        <div><span class='info-label'>County:</span>  <%= rowData.county %></div>
+      </div>
+    </script> 
+  <script type="text/template" id="map-legend-template">
+      <div class="legend_title"><span><%= legend_title %></span></div>
+      <% _.each(legends, function(legend, i) { %>
+        <div class="legend_<%= i %>">
+          <div class="legend_image_container"><span class="center legend_image_circle_<%= i %>"><div class="legend_image_circle"></div></span></div>
+          <span class="legend_label"><%= legend %></span><span class="legend_clear"></span>
+        </div>
+      <% }); %>
+    </script> 
+  <script type="text/template" id="infowindow-template-create-map">
+      <div class='my-info-window' style="width:260px;">
+        <div><span class='info-label'>Ticker:</span> <%= rowData.ticker %></div>
+        <div>
+          <span class='info-label'>API No:</span> 
+          <% if(rowData.downloadUrl && rowData.downloadUrl.toUpperCase() !== 'NA' && rowData.downloadUrl !== '' ) { %> 
+            <a href="<%= rowData.downloadUrl %>" target="_blank"><%= rowData.apiNo %></a>
+          <% } else { %>
+            <%= rowData.apiNo %>
+          <% } %>
+        </div>
+        <div><span class='info-label'>Well Name:</span> <%= rowData.wellName %></div>
+        <div><span class='info-label'>Test Date:</span>  <%= rowData.testDate %></div>
+        <div><span class='info-label'><%= rowData.ipLabel %>:</span>  <%= parseFloat(rowData.labelValue).toFixed(1) %></div>
+      </div>
+    </script> 
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> 
+  <script>
+      // Apply Google analytics only for www environment.
+      if(document.URL.indexOf('www.discern.com')!= -1){
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+        ga('create', 'UA-15220345-1');
+        ga('send', 'pageview');
+
+        // Upgraded the Google Analytics with username.
+        var authCookie = getCookie("auth-tok");
+        if( typeof authCookie != 'undefined' && authCookie != null){
+          ga('set', '&uid', getCookie('auth-usemail'));
+        }
+      }
+    </script> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+  <script src="bower_components/angular-i18n/angular-locale_en-us.js"></script> 
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+  <script src="scripts/bc534c7d.plugins.js"></script> 
+  <script src="scripts/c224e9a0.modules.js"></script> 
+  <script src="scripts/3764bcab.scripts.js"></script> 
+  <script>
+
+    /*
+     * Prevent Enter key on create Chart/Map form to avoid deleting the default row.
+     */
+
+    $(window).keypress(function(event) {  
+      if ((event.keyCode == 13) && ($(event.target).hasClass('disableEnterKey'))) { 
+        event.preventDefault();
+      } 
+    });
+
+    </script> 
+  <script type="text/javascript">
+
+      /*
+       *Pardot tracking code for track user information.
+       */
+
+      if(document.URL.indexOf('www.discern.com')!= -1){
+        piAId = '46612';
+        piCId = '1054';
+        (function() {
+          function async_load() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+            var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+          }
+          if(window.attachEvent) {
+            window.attachEvent('onload', async_load); 
+          } else {
+            window.addEventListener('load', async_load, false); 
+          }
+        })();
+      }
+    </script>  
+ </body>
+</html>

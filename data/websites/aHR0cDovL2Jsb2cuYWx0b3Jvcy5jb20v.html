@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+ <head> 
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+  <title>Blog on All Things Cloud Foundry |</title> 
+  <style type="text/css">
+		.stpulldown-gradient
+		{
+			background: #E1E1E1;
+			background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%); /* firefox */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A7A7A7)); /* webkit */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7',GradientType=0 ); /* ie */
+			background: -o-linear-gradient(top, #E1E1E1 0%,#A7A7A7 100%); /* opera */
+			color: #636363;
+		}
+		#stpulldown .stpulldown-logo
+		{
+			height: 40px;
+			width: 300px;
+			margin-left: 20px;
+			margin-top: 5px;
+			background:url('') no-repeat;
+		}
+</style> 
+  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <meta name="iFACVERSION" content="1.0.3"> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.13 - http://yoast.com/wordpress/seo/ --> 
+  <link rel="canonical" href="http://blog.altoros.com/"> 
+  <link rel="publisher" href="https://plus.google.com/b/106511337358259588944/106511337358259588944/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Blog on All Things Cloud Foundry -"> 
+  <meta property="og:url" content="http://blog.altoros.com/"> 
+  <meta property="og:site_name" content="Blog on All Things Cloud Foundry"> 
+  <meta property="fb:admins" content="1183071148"> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="stylesheet" id="validate-engine-css-css" href="http://blog.altoros.com/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css?ver=2.6.6" type="text/css" media="all"> 
+  <link rel="stylesheet" id="cptchStylesheet-css" href="http://blog.altoros.com/wp-content/plugins/captcha/css/style.css?ver=3.7.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="mailchimp-for-wp-checkbox-css" href="http://blog.altoros.com/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.css?ver=2.0.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="mailchimp-for-wp-form-css" href="http://blog.altoros.com/wp-content/plugins/mailchimp-for-wp/assets/css/form.css?ver=2.0.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="jetpack-widgets-css" href="http://blog.altoros.com/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003" type="text/css" media="all"> 
+  <link rel="stylesheet" id="goodweb_googlefont_style-css" href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C800%2C700&amp;ver=3.7.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="goodweb_bootstrap_css-css" href="http://blog.altoros.com/wp-content/themes/goodweb/css/bootstrap.css?ver=3.7.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="goodweb_theme_css-css" href="http://blog.altoros.com/wp-content/themes/goodweb/style.css?ver=3.7.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="goodweb_skin_css-css" href="http://blog.altoros.com/wp-content/themes/goodweb/css/style-light.css?ver=3.7.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="goodweb_punchbox_css-css" href="http://blog.altoros.com/wp-content/themes/goodweb/js/punchbox/css/settings.css?ver=3.7.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="goodweb_fontello_css-css" href="http://blog.altoros.com/wp-content/themes/goodweb/css/type/fontello.css?ver=3.7.1" type="text/css" media="all"> 
+  <!--[if IE 8]>
+<link rel='stylesheet' id='ie8-style-css'  href='http://blog.altoros.com/wp-content/themes/goodweb/css/style_ie8.css?ver=3.7.1' type='text/css' media='all' />
+<![endif]--> 
+  <!--[if IE 9]>
+<link rel='stylesheet' id='ie9-style-css'  href='http://blog.altoros.com/wp-content/themes/goodweb/css/style_ie9.css?ver=3.7.1' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="sharedaddy-css" href="http://blog.altoros.com/wp-content/plugins/jetpack/modules/sharedaddy/sharing.css?ver=2.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="simple-pagination-css-css" href="http://blog.altoros.com/wp-content/plugins/simple-pagination/css/default.css?ver=2.1.7" type="text/css" media="screen"> 
+  <script type="text/javascript" src="http://blog.altoros.com/wp-includes/js/jquery/jquery.js?ver=1.10.2"></script> 
+  <script type="text/javascript" src="http://blog.altoros.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript">
+	window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9";
+		window.analytics.load("PJ1HXQwGH6");
+	window.analytics.page();
+	</script>
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.altoros.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.altoros.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 3.7.1"> 
+  <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.0r4/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+  <!-- ClickTale Top part --> 
+  <script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script> 
+  <!-- ClickTale end of Top part -->
+  <!--[if lt IE 9]><script src="http://blog.altoros.com/wp-content/plugins/livecom1.1.3rc/assets/js/libs/html5shiv/html5shiv.js"></script><![endif]-->
+  <script charset="utf-8" type="text/javascript">var switchTo5x=true;</script>
+  <script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script charset="utf-8" type="text/javascript">stLight.options({publisher:"wp.776f4136-a31e-41aa-8864-e0eb0f70f4a6" , doNotCopy: true, hashAddressBar: false, doNotHash: true});var st_type='wordpress3.6';</script>
+  <style type="text/css" id="syntaxhighlighteranchor"></style> 
+  <link rel="stylesheet" id="custom-css-css" type="text/css" href="http://blog.altoros.com/?custom-css=1&amp;csblog=1&amp;cscache=6&amp;csrev=112"> 
+  <link rel="stylesheet" href="http://blog.altoros.com/wp-content/cache/css/static/a02b0596b52cf850097413c4467ce763.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400|Pacifico:400|Average:400|Open+Sans:400|Raleway:400|Bebas:400&amp;subset=latin" type="text/css">
+  <script type="text/javascript">
+(function (w, d, u) {
+    if(w.njQuery === u){
+        w.bindNextendQ = [];
+    
+        function pushToReady(x) {
+            w.bindNextendQ.push([alias.handler,"ready", x]);
+        }
+        
+        function pushToLoad(x) {
+            w.bindNextendQ.push([alias.handler,"load", x]);
+        }
+
+        var alias = {
+            handler: w,
+            ready: pushToReady,
+            load: pushToLoad
+        }
+
+        w.njQuery = function (handler) {
+            alias.handler = handler;
+            return alias;
+        }
+    }
+})(window, document);
+              </script>
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-343776-24']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  </script>
+  <style>
+  		.cinematic.overheader	{	mask:url('#m1'); }
+  </style>
+ </head>  
+ <!-- THE FF HACK FOR MASKING HEADER -->   
+ <body class="home blog  withoutmoduleanimations menuontop nobluredcontainers gw_light" data-menutitle="12/9 Meetup: Microservices, Docker Containers, Cloud Foundry, and Diego" data-autoslider="0"> 
+  <style>
+			/* Highlight Color */
+		.sticky a h3.bo-title, .sticky a:visited h3.bo-title	{	color:#8e3233}
+		a					{	color:#8e3233 !important }
+		a:hover icon			{	color:#8e3233 !important }
+		#subfooter a:hover		{	color:#8e3233 }
+		.subfooter-socials:hover		{   color:#8e3233 !important }
+		.widget_pages ul li a:hover { color:#8e3233 !important }
+		.widget_pages ul li.current_page_item a { color:#8e3233 !important }
+		.widget_nav_menu ul li a:hover { color:#8e3233 !important }
+		.widget_nav_menu ul li.current_page_item a { color:#8e3233 !important }
+		.widget_archive ul li a:hover, .widget_categories ul li a:hover, .widget_meta ul li a:hover, .widget_recent_entries ul li a:hover { color:#8e3233 !important }
+		.tagcloud a:hover {  color: #8e3233 ; border: 1px solid #8e3233  }
+		menu #navigation ul li:hover >a .menubutton,
+		menu #navigation ul li.active >a .menubutton		{	color:#8e3233  }
+		menu #navigation ul li.hassubmenu:hover >a:after 	{ 	color:#8e3233  }
+		.single_bluroverlay								{	background-color:#8e3233  }
+		.minibtn, .logged-in-as a, #cancel-comment-reply-link { color: #8e3233 !important; border: 1px solid #8e3233 !important}
+		.glassbtn input[type="submit"] { color: #8e3233 !important; border: 1px solid #8e3233 !important }
+		.mediawall-filter:hover,
+		.mediawall-filter.selected			{	color:#8e3233 !important }
+		.teamgroup .centeredlist li a:hover		{	color:#8e3233 !important }
+		#bo-loadmorebutton:hover				{	background:#8e3233 }
+		.blog-author a:hover,
+		.blog-category a:hover,
+		.blog-comments:hover,
+		.bo-comments:hover,
+		.bo-category a:hover,
+		.blog-tag a:hover,
+		.tagcloud a:hover				{	color:#8e3233 !important }
+		.sb-nav-goodweb .sb-navigation-left:hover i,
+		.sb-nav-goodweb .sb-navigation-right:hover i	{	color:#8e3233  }
+		.accordion-colored .accordion-heading .accordion-toggle,
+		.accordion-colored .accordion-heading .accordion-toggle:hover				{ 	color:#8e3233 !important}
+		.accordion-glas .accordion-heading .accordion-toggle,
+		.accordion-glas .accordion-heading .accordion-toggle:hover 					{ 	color:#8e3233 !important }
+		.nav-tabs>li.active>a,
+		.nav-tabs>li.active>a:hover,
+		.nav-tabs>li.active>a:visited,
+		.nav-tabs>li>a:hover		{	color:#8e3233 !important }
+		.skill-overlay			{	background: #8e3233  }
+		.ptglas.highlight .decoredbutton		{ 	background-color:#8e3233 !important }
+		.thecomments .comment-details a:hover		{	color: #8e3233 !important}
+		.thecomments .comment-details .comment-reply-link span	{ color: #8e3233 !important }
+		.comment-reply-link:hover .icon-forward	{ color: #8e3233 !important }
+		code							{	background-color:#8e3233}
+		#bo-loadmorebutton:hover		{	background:#8e3233 }
+		.page-navi ul li a:hover { color: #8e3233 !important; border: 1px solid #8e3233 !important; }
+		.page-navi ul li a.current { color: #8e3233 !important; border: 1px solid #8e3233 !important; }
+		.page-navi ul li a.current span { color: #8e3233 !important; }
+		.postlist-title a:hover			{ color: #8e3233 !important; font-weight: 300 !important}
+		ul#recentcomments li a:hover { color: #8e3233 !important; font-weight: 300 !important}
+		ul#recentcomments li a.url:hover { color: #8e3233 !important; font-weight: 400 !important}
+		.sb-goodweb-skin .showbiz-title a:hover { color: #8e3233 !important; }
+		.mediawall-lightbox a:hover,
+		.mediawall-link a:hover				{	 color: #8e3233 !important;  }
+		.mediawall-categories a:hover		{	color: #8e3233 !important; }
+		.search-results h2.section-title a:hover { color: #8e3233 !important; }
+		.skill-overlay					{	background: #8e3233  }
+		.menuontop menu #navigation > ul >li >a:hover > .menubutton,.menuontop menu #navigation > ul > li.active >a > .menubutton{color:#8e3233!important; } 
+	
+				
+			/* Font Family */
+				body, .uneditable-input, .btn, .decoredbutton 	{	font-family: 'Open Sans', sans-serif;	}
+							
+	
+				
+	</style> 
+  <script>
+		jQuery("document").ready(function(){
+			jQuery(".form-submit input[type=submit]").each(function(){
+				jQuery(this).wrap("<div class=\"glassbtn\">");
+			});
+			jQuery(".wpcf7 input[type=submit]").each(function(){
+				jQuery(this).wrap("<div class=\"glassbtn\">");
+			});
+		});
+	</script> 
+  <style id="customizercss"></style> 
+  <!-- THE FIREFOX FALL BACK GRADIENT HEADER --> 
+  <svg height="0"> 
+   <mask id="m1" maskunits="objectBoundingBox" maskcontentunits="objectBoundingBox"> 
+    <lineargradient id="g" gradientunits="objectBoundingBox" x2="0" y2="1"> 
+     <stop stop-color="white" stop-opacity="1" offset="0" /> 
+     <stop stop-color="white" stop-opacity="1" offset="0.80" /> 
+     <stop stop-color="white" stop-opacity="0" offset="1" /> 
+    </lineargradient> 
+    <rect x="0" y="0" width="1" height="1" fill="url(#g)" /> 
+   </mask> 
+  </svg>
+  <!-- END OF GRADIENT HEAdER FALL BACK --> 
+  <!-- THE MENU --> 
+  <menu id="mainmenuholder"> 
+   <!-- THE NAVIGATION HOLDER --> 
+   <a>
+    <div class="header-menu-closer hidden-phone hidden-tablet menucloser nobg">
+     <div class="single_blurredbg_holder noborder"> 
+      <div class="single_blurredbg"></div> 
+      <div class="single_bluroverlay"></div> 
+     </div>
+     <i class="icon-cancel"></i>
+    </div></a> 
+   <div id="navigation" class="menu-main-menu-container">
+    <ul id="menu-main-menu" class="">
+     <li class="header-menu-closer visible-phone visible-tablet"><a>
+       <div class="menubutton txt-center">
+        <i class="icon-cancel"></i>
+       </div></a></li> 
+     <li id="menu-item-5366" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://altoros.com/">Altoros Home</a>
+      <div class="clear"></div></li> 
+     <li id="menu-item-5334" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a>Solutions</a>
+      <div class="clear"></div> 
+      <ul class="sub-menu"> 
+       <li id="menu-item-5341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children hassubmenu"><a href="http://www.altoros.com/cloud_foundry_enablement_for_iaas.html">For IaaS</a>
+        <div class="clear"></div> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-5342" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/cloud_foundry_as_a_service.html">CFaaS, Cloud Foundry-as-a-Service</a>
+          <div class="clear"></div></li> 
+         <li id="menu-item-5343" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/paas_revenue_acceleration.html">PaaS Revenue Acceleration</a>
+          <div class="clear"></div></li> 
+        </ul> </li> 
+       <li id="menu-item-5344" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/cloud_foundry_enablement_for_enterprises.html">For Enterprises</a>
+        <div class="clear"></div></li> 
+       <li id="menu-item-5345" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/cloud_foundry_enablement_for_vendors.html">For Software Vendors</a>
+        <div class="clear"></div></li> 
+      </ul> </li> 
+     <li id="menu-item-5176" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a>Services</a>
+      <div class="clear"></div> 
+      <ul class="sub-menu"> 
+       <li id="menu-item-5346" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/paas_enablement.html">Cloud Foundry Deployment</a>
+        <div class="clear"></div></li> 
+       <li id="menu-item-5347" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/scalability_tuning.html">Multi-cloud Automation</a>
+        <div class="clear"></div></li> 
+       <li id="menu-item-5348" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/hadoop_enablement_for_enterprises.html">Integration of SQL / NoSQL / Hadoop with Cloud Foundry</a>
+        <div class="clear"></div></li> 
+      </ul> </li> 
+     <li id="menu-item-5178" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a>Why Altoros</a>
+      <div class="clear"></div> 
+      <ul class="sub-menu"> 
+       <li id="menu-item-5349" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/partial_customer_list.html">Featured Customers</a>
+        <div class="clear"></div></li> 
+       <li id="menu-item-5350" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/portfolio.html">Featured Projects Portfolio</a>
+        <div class="clear"></div></li> 
+       <li id="menu-item-5351" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/customers_speak.html">Customers Speak</a>
+        <div class="clear"></div></li> 
+       <li id="menu-item-5353" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/partners_summary.html">Partners</a>
+        <div class="clear"></div></li> 
+       <li id="menu-item-5354" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/download_white_papers.html">Benchmarks and Research</a>
+        <div class="clear"></div></li> 
+      </ul> </li> 
+     <li id="menu-item-5179" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a>About</a>
+      <div class="clear"></div> 
+      <ul class="sub-menu"> 
+       <li id="menu-item-5355" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/about_summary.html">Company Summary</a>
+        <div class="clear"></div></li> 
+       <li id="menu-item-5371" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/management_team.html">Management Team</a>
+        <div class="clear"></div></li> 
+       <li id="menu-item-5372" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/careers.html">Careers</a>
+        <div class="clear"></div></li> 
+      </ul> </li> 
+     <li id="menu-item-5369" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="http://blog.altoros.com/">News / R&amp;D Blog</a>
+      <div class="clear"></div></li> 
+     <li id="menu-item-5370" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://altoros.com/contact_us.html">Contact us</a>
+      <div class="clear"></div></li> 
+    </ul>
+   </div> 
+  </menu>
+  <!-- END OF MENU --> 
+  <!-- TO BE ABLE TO SCROLL ALL THE CONTENT IN CASE MENU HAS BEEN PRESSED --> 
+  <section id="allcontent"> 
+   <!-- HEADER --> 
+   <header id="headerwrapper"> 
+    <div class="header_innerwrapper container"> 
+     <div class="header-menu-wrapper txtshadow pull-left bgholderparent" id="headermenuholder"> 
+      <div class="single_blurredbg_holder"> 
+       <div class="single_blurredbg"></div> 
+       <div class="single_bluroverlay"></div> 
+      </div> 
+      <i class="icon-menu menu-toggler"></i> 
+      <div id="current-menu-txt">
+       12/9 Meetup: Microservices, Docker Containers, Cloud Foundry, and Diego
+      </div> 
+      <div class="clear"></div> 
+     </div> 
+     <!-- !LOGO --> 
+     <a href="http://blog.altoros.com">
+      <div id="logo-wrapper"> 
+       <img id="logo" src="http://blog.altoros.com/wp-content/uploads/2014/05/AltorosLogo_v6_300_Blog.png"> 
+      </div></a>
+     <!-- END OF LOGO --> 
+     <!-- !SEARCH FORM --> 
+     <article id="header_search" class="pull-right"> 
+      <form role="search" method="get" id="searchform" action="http://blog.altoros.com"> 
+       <div style="position:relative;z-index:10"> 
+        <input type="text" id="Form_Search" class="searchinput" name="s"> 
+        <input type="submit" class="searchsubmitter"> 
+        <i class="icon-search searchsubmittericon"></i> 
+       </div> 
+       <div class="single_blurredbg_holder"> 
+        <div class="single_blurredbg"></div> 
+        <div class="single_bluroverlay"></div> 
+       </div> 
+       <div class="clear"></div> 
+      </form> 
+     </article> 
+     <!-- END OF SEARCH FORM --> 
+     <div class="clear"></div> 
+    </div> 
+   </header>
+   <!-- END OF HEADER --> 
+   <section id="background-wrapper"> 
+    <!-- THE BACKGROUND SLIDER --> 
+    <article class="cinematic" data-contentholder="#slidercontent-wrapper"> 
+     <!-- SLIDER LIST --> 
+     <ul> 
+      <!-- A SLIDE ITEM --> 
+      <li>
+       <!-- USE  data-repeatbg="true" for Tiled BG 's --> 
+       <div class="slide-background-image" data-repeatbg="false" data-repeatbg2="false" data-src="http://blog.altoros.com/wp-content/uploads/2014/05/Altoros_Grey_Background_1280x800_optimized.jpg" data-srcblur="http://blog.altoros.com/wp-content/uploads/2014/05/Altoros_Grey_Background_1280x800_optimized.jpg" data-width="1280" data-height="800"></div> 
+       <section class="slidercontent"></section> </li>
+      <!-- END OF A SLIDE ITEM --> 
+     </ul>
+     <!-- END OF SLIDER LIST --> 
+    </article> 
+   </section> 
+   <section id="maincontent"> 
+    <!-- START OF THE MAIN CONTENT CONTAINER --> 
+    <section class="container"> 
+     <section class="row"> 
+      <section class="main-col" style="float: left;"> 
+       <section class="withsidebar"> 
+        <section class="row"> 
+         <section class="span9"> 
+          <!-- THE SINGLE POST CONTENT --> 
+          <article class="blog-single-post"> 
+           <section class="container onfullwidth"> 
+           </section> 
+           <section class="container boxedbg"> 
+            <div class="post-header"> 
+             <h2 itemprop="name" class="blog-title"> <a href="http://blog.altoros.com/microservices-docker-vs-cloud-foundry-vs-diego.html" title="12/9 Meetup: Microservices, Docker Containers, Cloud Foundry, and Diego">12/9 Meetup: Microservices, Docker Containers, Cloud Foundry, and Diego</a> </h2> 
+             <img src="http://blog.altoros.com/wp-content/uploads/userphoto/31.thumbnail.jpg" alt="Renat Khasanshyn" width="60" height="60" class="photo"> 
+             <div class="post-info"> 
+              <div>
+               Posted by 
+               <span itemprop="author"><a href="http://blog.altoros.com/author/renat" title="Posts by Renat Khasanshyn" rel="author">Renat Khasanshyn</a></span>, CEO @ Altoros, in 
+               <span itemprop="articleSection"><a href="http://blog.altoros.com/category/events" title="View all posts in Events" rel="category tag">Events</a></span>
+              </div> 
+              <div>
+               Tags: 
+               <a href="http://blog.altoros.com/tag/cloud-foundry" rel="tag">Cloud Foundry</a>, 
+               <a href="http://blog.altoros.com/tag/docker" rel="tag">Docker</a>, 
+               <a href="http://blog.altoros.com/tag/paas" rel="tag">PaaS</a>
+              </div> 
+              <span itemprop="datePublished" content="3 days ago" class="post-date">3 days ago</span> | 
+              <span itemprop="url" class="post-commented"><a href="http://blog.altoros.com/microservices-docker-vs-cloud-foundry-vs-diego.html#all-comments" title="Comment on 12/9 Meetup: Microservices, Docker Containers, Cloud Foundry, and Diego"><span class="dsq-postid" rel="6846 http://blog.altoros.com/?p=6846">No Comments</span></a></span> 
+             </div> 
+            </div> 
+            <div class="clr"></div> 
+            <div class="text-content">
+             <p>Join an upcoming East Bay&nbsp;<a href="http://www.meetup.com/Docker-Containers-Cloud-Foundry-PaaS-East-Bay-Meetup/events/216885522/" target="_blank">meetup</a>&nbsp;to learn when to use Docker, Diego, or Cloud Foundry and how to deploy Spring Boot-based Microservices with Docker—together with Chris Richardson, the founder of the original Cloud Foundry. In addition to Mr. Richardson’s presentation, I will speak about the opportunities that Diego brings to both Docker and Cloud Foundry users and likely scenarios of Docker evolution in clustered systems.</p> 
+             <p>Not in Pleasanton, CA? Watch the live streaming of the meetup here starting from 7 PM, Dec 9.</p> 
+             <p><img alt="" src="http://blog.altoros.com/wp-content/uploads/2014/12/Docker-CloudFoundry-Diego-v5.jpg"></p> 
+             <p>Agenda:</p> 
+             <p>7:00–7:30 PM <b>The Blurring Line Between Docker, Diego, and the Cloud Foundry PaaS </b>(by Renat Khasanshyn of Altoros)</p> 
+             <p>7:45–8:15 PM <b>Deploying Spring Boot-based Microservices with Docker </b>(by Chris Richardson, the founder of the original Cloud Foundry)</p> 
+             <p>Click <a href="http://www.meetup.com/Docker-Containers-Cloud-Foundry-PaaS-East-Bay-Meetup/events/216885522/" target="_blank">here</a> to RSVP.</p> 
+             <hr> 
+             <p><em>Related study:</em><br> <a href="http://www.altoros.com/microservices-vs-monolithic-architecture-pros-cons-cloud-foundry-paas.html" target="_blank">Microservices vs. Monolithic Architectures (Pros/Cons + Cloud Foundry Examples)</a></p> 
+             <div class="sharedaddy sd-sharing-enabled">
+              <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+               <div class="sd-content">
+                <ul>
+                 <li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.altoros.com/microservices-docker-vs-cloud-foundry-vs-diego.html?share=twitter" title="Click to share on Twitter" id="sharing-twitter-6846"><span>Twitter</span></a></li>
+                 <li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://blog.altoros.com/microservices-docker-vs-cloud-foundry-vs-diego.html?share=linkedin" title="Click to share on LinkedIn" id="sharing-linkedin-6846"><span>LinkedIn</span></a></li>
+                 <li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.altoros.com/microservices-docker-vs-cloud-foundry-vs-diego.html?share=facebook" title="Share on Facebook" id="sharing-facebook-6846"><span>Facebook</span></a></li>
+                 <li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://blog.altoros.com/microservices-docker-vs-cloud-foundry-vs-diego.html?share=google-plus-1" title="Click to share on Google+" id="sharing-google-6846"><span>Google</span></a></li>
+                 <li class="share-scoopit"><a href="http://www.scoop.it" class="scoopit-button sd-button" scit-position="horizontal" onclick=" url = encodeURIComponent(document.location); window.open('https://www.scoop.it/bookmarklet?url=' + url , 'Scoopit', 'status=no,toolbar=no,location=no,width=538,height=670');return false;" scit-url="http://blog.altoros.com/microservices-docker-vs-cloud-foundry-vs-diego.html"><span>Scoop</span></a></li>
+                 <li class="share-end"></li>
+                </ul>
+               </div>
+              </div> 
+              <div class="clear"></div> 
+              <div id="all-comments" class="contentdivider-mini"></div>
+              <a href="http://blog.altoros.com/microservices-docker-vs-cloud-foundry-vs-diego.html#all-comments" title="Comment on 12/9 Meetup: Microservices, Docker Containers, Cloud Foundry, and Diego"><span class="dsq-postid" rel="6846 http://blog.altoros.com/?p=6846">No Comments</span></a> 
+             </div>
+            </div>
+           </section> 
+          </article> 
+          <!-- END OF THE SINGLE POST CONTENT --> 
+          <!-- RELATED POSTS --> 
+         </section>
+         <!--END OF LEFT CONTENT PART --> 
+        </section>
+        <!-- END OF CONTAINER --> 
+       </section>
+       <!-- END OF CONTAINER --> 
+       <div class="sbclear"></div> 
+       <br> 
+       <section class="withsidebar"> 
+        <section class="row"> 
+         <section class="span9"> 
+          <!-- THE SINGLE POST CONTENT --> 
+          <article class="blog-single-post"> 
+           <section class="container onfullwidth"> 
+           </section> 
+           <section class="container boxedbg"> 
+            <div class="post-header"> 
+             <h2 itemprop="name" class="blog-title"> <a href="http://blog.altoros.com/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html" title="Meetup: How to Build Scalable IoT Apps with Cloud Foundry, Bluemix, Docker Containers, and Cloudant">Meetup: How to Build Scalable IoT Apps with Cloud Foundry, Bluemix, Docker Containers, and Cloudant</a> </h2> 
+             <img src="http://blog.altoros.com/wp-content/uploads/userphoto/31.thumbnail.jpg" alt="Renat Khasanshyn" width="60" height="60" class="photo"> 
+             <div class="post-info"> 
+              <div>
+               Posted by 
+               <span itemprop="author"><a href="http://blog.altoros.com/author/renat" title="Posts by Renat Khasanshyn" rel="author">Renat Khasanshyn</a></span>, CEO @ Altoros, in 
+               <span itemprop="articleSection"><a href="http://blog.altoros.com/category/cloud-foundry" title="View all posts in Cloud Foundry" rel="category tag">Cloud Foundry</a>, <a href="http://blog.altoros.com/category/events" title="View all posts in Events" rel="category tag">Events</a></span>
+              </div> 
+              <div>
+               Tags: 
+               <a href="http://blog.altoros.com/tag/bluemix" rel="tag">Bluemix</a>, 
+               <a href="http://blog.altoros.com/tag/cloud-foundry" rel="tag">Cloud Foundry</a>, 
+               <a href="http://blog.altoros.com/tag/cloudant" rel="tag">Cloudant</a>, 
+               <a href="http://blog.altoros.com/tag/docker" rel="tag">Docker</a>, 
+               <a href="http://blog.altoros.com/tag/paas" rel="tag">PaaS</a>
+              </div> 
+              <span itemprop="datePublished" content="3 weeks ago" class="post-date">3 weeks ago</span> | 
+              <span itemprop="url" class="post-commented"><a href="http://blog.altoros.com/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html#all-comments" title="Comment on Meetup: How to Build Scalable IoT Apps with Cloud Foundry, Bluemix, Docker Containers, and Cloudant"><span class="dsq-postid" rel="6802 http://blog.altoros.com/?p=6802">2 Comments</span></a></span> 
+             </div> 
+            </div> 
+            <div class="clr"></div> 
+            <div class="text-content">
+             <p>A video recording of the event:<br> &nbsp;<br> <iframe src="//fast.wistia.net/embed/iframe/46o8cgue7l" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" width="601" height="338"></iframe></p> 
+             <hr> 
+             <p>Join tomorrow’s meetup in San Francisco to discuss how to store and analyze sensor-generated data—together with Animesh Singh, Syed Zaidi, Dwight Ford, and Nicholas Vargas of the IBM Bluemix team. In addition, I will identify four levels of IoT maturity and share how an S&amp;P 500 company created an IoT business model using Docker containers and Cloud Foundry-based microservices.</p> 
+             <p>Not in San Francisco? You can watch the <strong>live streaming</strong> of the meetup on this page starting from 6 PM, Nov 18.</p> 
+             <p></p>
+             <center>
+              <p></p> 
+              <p><img src="http://blog.altoros.com/wp-content/uploads/2014/11/IoT-Applications-Using-Cloud-Foundry-IBM-BlueMix-Cloudant-Containers-Docker-2-1024x576.png" alt="IoT-Applications-Using-Cloud-Foundry-IBM-BlueMix-Cloudant-Containers-Docker-2" width="960" height="540" class="aligncenter size-large wp-image-6828"></p> 
+              <p><img src="http://blog.altoros.com/wp-content/uploads/2014/11/IoT-Applications-Using-Cloud-Foundry-IBM-BlueMix-Cloudant-Containers-Docker-1-1024x576.png" alt="IoT-Applications-Using-Cloud-Foundry-IBM-BlueMix-Cloudant-Containers-Docker-1" width="960" height="540" class="aligncenter size-large wp-image-6829"><br> </p>
+             </center>
+             <p></p> 
+             <p> <a href="http://blog.altoros.com/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html#more-6802" class="more-link">(more…)</a></p> 
+             <div class="sharedaddy sd-sharing-enabled">
+              <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+               <div class="sd-content">
+                <ul>
+                 <li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.altoros.com/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html?share=twitter" title="Click to share on Twitter" id="sharing-twitter-6802"><span>Twitter</span></a></li>
+                 <li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://blog.altoros.com/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html?share=linkedin" title="Click to share on LinkedIn" id="sharing-linkedin-6802"><span>LinkedIn</span></a></li>
+                 <li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.altoros.com/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html?share=facebook" title="Share on Facebook" id="sharing-facebook-6802"><span>Facebook</span></a></li>
+                 <li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://blog.altoros.com/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html?share=google-plus-1" title="Click to share on Google+" id="sharing-google-6802"><span>Google</span></a></li>
+                 <li class="share-scoopit"><a href="http://www.scoop.it" class="scoopit-button sd-button" scit-position="horizontal" onclick=" url = encodeURIComponent(document.location); window.open('https://www.scoop.it/bookmarklet?url=' + url , 'Scoopit', 'status=no,toolbar=no,location=no,width=538,height=670');return false;" scit-url="http://blog.altoros.com/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html"><span>Scoop</span></a></li>
+                 <li class="share-end"></li>
+                </ul>
+               </div>
+              </div> 
+              <div class="clear"></div> 
+              <div id="all-comments" class="contentdivider-mini"></div>
+              <a href="http://blog.altoros.com/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html#all-comments" title="Comment on Meetup: How to Build Scalable IoT Apps with Cloud Foundry, Bluemix, Docker Containers, and Cloudant"><span class="dsq-postid" rel="6802 http://blog.altoros.com/?p=6802">2 Comments</span></a> 
+             </div>
+            </div>
+           </section> 
+          </article> 
+          <!-- END OF THE SINGLE POST CONTENT --> 
+          <!-- RELATED POSTS --> 
+         </section>
+         <!--END OF LEFT CONTENT PART --> 
+        </section>
+        <!-- END OF CONTAINER --> 
+       </section>
+       <!-- END OF CONTAINER --> 
+       <div class="sbclear"></div> 
+       <br> 
+       <section class="withsidebar"> 
+        <section class="row"> 
+         <section class="span9"> 
+          <!-- THE SINGLE POST CONTENT --> 
+          <article class="blog-single-post"> 
+           <section class="container onfullwidth"> 
+           </section> 
+           <section class="container boxedbg"> 
+            <div class="post-header"> 
+             <h2 itemprop="name" class="blog-title"> <a href="http://blog.altoros.com/cloud-foundry-deployment-tools-bosh-vs-juju-live-from-santa-clara-devops-summit.html" title="Cloud Foundry Deployment Tools: BOSH vs Juju – Live from Santa Clara DevOps Summit">Cloud Foundry Deployment Tools: BOSH vs Juju – Live from Santa Clara DevOps Summit</a> </h2> 
+             <img src="http://blog.altoros.com/wp-content/uploads/userphoto/31.thumbnail.jpg" alt="Renat Khasanshyn" width="60" height="60" class="photo"> 
+             <div class="post-info"> 
+              <div>
+               Posted by 
+               <span itemprop="author"><a href="http://blog.altoros.com/author/renat" title="Posts by Renat Khasanshyn" rel="author">Renat Khasanshyn</a></span>, CEO @ Altoros, in 
+               <span itemprop="articleSection"><a href="http://blog.altoros.com/category/cloud-foundry" title="View all posts in Cloud Foundry" rel="category tag">Cloud Foundry</a></span>
+              </div> 
+              <div>
+               Tags: 
+               <a href="http://blog.altoros.com/tag/bosh" rel="tag">BOSH</a>, 
+               <a href="http://blog.altoros.com/tag/cloud-foundry" rel="tag">Cloud Foundry</a>, 
+               <a href="http://blog.altoros.com/tag/juju" rel="tag">Juju</a>
+              </div> 
+              <span itemprop="datePublished" content="4 weeks ago" class="post-date">4 weeks ago</span> | 
+              <span itemprop="url" class="post-commented"><a href="http://blog.altoros.com/cloud-foundry-deployment-tools-bosh-vs-juju-live-from-santa-clara-devops-summit.html#all-comments" title="Comment on Cloud Foundry Deployment Tools: BOSH vs Juju – Live from Santa Clara DevOps Summit"><span class="dsq-postid" rel="6781 http://blog.altoros.com/?p=6781">No Comments</span></a></span> 
+             </div> 
+            </div> 
+            <div class="clr"></div> 
+            <div class="text-content">
+             <p>Recording of the live stream is now available:<br> &nbsp;<br> <iframe src="//fast.wistia.net/embed/iframe/8opm0mipba" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" width="800" height="450"></iframe><br> &nbsp;<br> <a href="http://blog.altoros.com/cloud-foundry-deployment-tools-bosh-vs-juju-live-from-santa-clara-devops-summit.html#more-6781" class="more-link">(more…)</a></p> 
+             <div class="sharedaddy sd-sharing-enabled">
+              <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+               <div class="sd-content">
+                <ul>
+                 <li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.altoros.com/cloud-foundry-deployment-tools-bosh-vs-juju-live-from-santa-clara-devops-summit.html?share=twitter" title="Click to share on Twitter" id="sharing-twitter-6781"><span>Twitter</span></a></li>
+                 <li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://blog.altoros.com/cloud-foundry-deployment-tools-bosh-vs-juju-live-from-santa-clara-devops-summit.html?share=linkedin" title="Click to share on LinkedIn" id="sharing-linkedin-6781"><span>LinkedIn</span></a></li>
+                 <li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.altoros.com/cloud-foundry-deployment-tools-bosh-vs-juju-live-from-santa-clara-devops-summit.html?share=facebook" title="Share on Facebook" id="sharing-facebook-6781"><span>Facebook</span></a></li>
+                 <li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://blog.altoros.com/cloud-foundry-deployment-tools-bosh-vs-juju-live-from-santa-clara-devops-summit.html?share=google-plus-1" title="Click to share on Google+" id="sharing-google-6781"><span>Google</span></a></li>
+                 <li class="share-scoopit"><a href="http://www.scoop.it" class="scoopit-button sd-button" scit-position="horizontal" onclick=" url = encodeURIComponent(document.location); window.open('https://www.scoop.it/bookmarklet?url=' + url , 'Scoopit', 'status=no,toolbar=no,location=no,width=538,height=670');return false;" scit-url="http://blog.altoros.com/cloud-foundry-deployment-tools-bosh-vs-juju-live-from-santa-clara-devops-summit.html"><span>Scoop</span></a></li>
+                 <li class="share-end"></li>
+                </ul>
+               </div>
+              </div> 
+              <div class="clear"></div> 
+              <div id="all-comments" class="contentdivider-mini"></div>
+              <a href="http://blog.altoros.com/cloud-foundry-deployment-tools-bosh-vs-juju-live-from-santa-clara-devops-summit.html#all-comments" title="Comment on Cloud Foundry Deployment Tools: BOSH vs Juju – Live from Santa Clara DevOps Summit"><span class="dsq-postid" rel="6781 http://blog.altoros.com/?p=6781">No Comments</span></a> 
+             </div>
+            </div>
+           </section> 
+          </article> 
+          <!-- END OF THE SINGLE POST CONTENT --> 
+          <!-- RELATED POSTS --> 
+         </section>
+         <!--END OF LEFT CONTENT PART --> 
+        </section>
+        <!-- END OF CONTAINER --> 
+       </section>
+       <!-- END OF CONTAINER --> 
+       <div class="sbclear"></div> 
+       <br> 
+       <section class="withsidebar"> 
+        <section class="row"> 
+         <section class="span9"> 
+          <!-- THE SINGLE POST CONTENT --> 
+          <article class="blog-single-post"> 
+           <section class="container onfullwidth"> 
+           </section> 
+           <section class="container boxedbg"> 
+            <div class="post-header"> 
+             <h2 itemprop="name" class="blog-title"> <a href="http://blog.altoros.com/creating-a-bosh-release-for-admin-ui-a-monitoring-tool-for-cloud-foundry.html" title="Creating a BOSH Release for Admin UI, a Monitoring Tool for Cloud Foundry">Creating a BOSH Release for Admin UI, a Monitoring Tool for Cloud Foundry</a> </h2> 
+             <img src="http://blog.altoros.com/wp-content/uploads/userphoto/64.thumbnail.jpg" alt="Alexander Lomov" width="60" height="57" class="photo"> 
+             <div class="post-info"> 
+              <div>
+               Posted by 
+               <span itemprop="author"><a href="http://blog.altoros.com/author/alexander-lomov" title="Posts by Alexander Lomov" rel="author">Alexander Lomov</a></span>, Cloud Foundry Engineer, in 
+               <span itemprop="articleSection"><a href="http://blog.altoros.com/category/articles" title="View all posts in Articles" rel="category tag">Articles</a>, <a href="http://blog.altoros.com/category/cloud-foundry" title="View all posts in Cloud Foundry" rel="category tag">Cloud Foundry</a>, <a href="http://blog.altoros.com/category/research-and-development" title="View all posts in Research &amp; Development" rel="category tag">Research &amp; Development</a></span>
+              </div> 
+              <div>
+               Tags: 
+               <a href="http://blog.altoros.com/tag/admin-ui" rel="tag">Admin UI</a>, 
+               <a href="http://blog.altoros.com/tag/bosh" rel="tag">BOSH</a>, 
+               <a href="http://blog.altoros.com/tag/cloud-foundry" rel="tag">Cloud Foundry</a>, 
+               <a href="http://blog.altoros.com/tag/paas" rel="tag">PaaS</a>
+              </div> 
+              <span itemprop="datePublished" content="5 weeks ago" class="post-date">5 weeks ago</span> | 
+              <span itemprop="url" class="post-commented"><a href="http://blog.altoros.com/creating-a-bosh-release-for-admin-ui-a-monitoring-tool-for-cloud-foundry.html#all-comments" title="Comment on Creating a BOSH Release for Admin UI, a Monitoring Tool for Cloud Foundry"><span class="dsq-postid" rel="6765 http://blog.altoros.com/?p=6765">10 Comments</span></a></span> 
+             </div> 
+            </div> 
+            <div class="clr"></div> 
+            <div class="text-content">
+             <p dir="ptr">Some Cloud Foundry components must be available, even if Router fails. Admin UI, a monitoring tool from the Cloud Foundry incubator, is a good example of a utility that you want to have access to no matter what. Getting updates directly from the NATS messaging bus, it gives admins access to CF components, their logs, statistics on DEAs and applications deployed to them, user rights, and other things not available in the Cloud Foundry CLI.</p> 
+             <p>BOSH releases help to achieve high availability by installing important components outside the main CF deployment. By doing so, you can <a href="https://github.com/cloudfoundry-incubator/admin-ui/issues/123" target="_blank">avoid</a> exposing them with Router or deploying them as apps. In addition, they provide the easiest way to bind Cloud Foundry components and custom services.</p> 
+             <p>In this post, I share my experience with creating a BOSH release (not yet available at the time this was published) for a new version of Admin UI. I also provide a temporary workaround for those who need to deploy Admin UI now and cannot wait for the next BOSH release.</p> 
+             <p dir="ltr"> </p>
+             <p dir="ptr"></p>
+             <center>
+              <img class="aligncenter size-full wp-image-6766" alt="" src="http://blog.altoros.com/wp-content/uploads/2014/11/stats-tab-2-e1415283171465.png" width="628" height="414">
+             </center>
+             <p></p> 
+             <p> <a href="http://blog.altoros.com/creating-a-bosh-release-for-admin-ui-a-monitoring-tool-for-cloud-foundry.html#more-6765" class="more-link">(more…)</a></p> 
+             <div class="sharedaddy sd-sharing-enabled">
+              <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+               <div class="sd-content">
+                <ul>
+                 <li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.altoros.com/creating-a-bosh-release-for-admin-ui-a-monitoring-tool-for-cloud-foundry.html?share=twitter" title="Click to share on Twitter" id="sharing-twitter-6765"><span>Twitter</span></a></li>
+                 <li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://blog.altoros.com/creating-a-bosh-release-for-admin-ui-a-monitoring-tool-for-cloud-foundry.html?share=linkedin" title="Click to share on LinkedIn" id="sharing-linkedin-6765"><span>LinkedIn</span></a></li>
+                 <li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.altoros.com/creating-a-bosh-release-for-admin-ui-a-monitoring-tool-for-cloud-foundry.html?share=facebook" title="Share on Facebook" id="sharing-facebook-6765"><span>Facebook</span></a></li>
+                 <li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://blog.altoros.com/creating-a-bosh-release-for-admin-ui-a-monitoring-tool-for-cloud-foundry.html?share=google-plus-1" title="Click to share on Google+" id="sharing-google-6765"><span>Google</span></a></li>
+                 <li class="share-scoopit"><a href="http://www.scoop.it" class="scoopit-button sd-button" scit-position="horizontal" onclick=" url = encodeURIComponent(document.location); window.open('https://www.scoop.it/bookmarklet?url=' + url , 'Scoopit', 'status=no,toolbar=no,location=no,width=538,height=670');return false;" scit-url="http://blog.altoros.com/creating-a-bosh-release-for-admin-ui-a-monitoring-tool-for-cloud-foundry.html"><span>Scoop</span></a></li>
+                 <li class="share-end"></li>
+                </ul>
+               </div>
+              </div> 
+              <div class="clear"></div> 
+              <div id="all-comments" class="contentdivider-mini"></div>
+              <a href="http://blog.altoros.com/creating-a-bosh-release-for-admin-ui-a-monitoring-tool-for-cloud-foundry.html#all-comments" title="Comment on Creating a BOSH Release for Admin UI, a Monitoring Tool for Cloud Foundry"><span class="dsq-postid" rel="6765 http://blog.altoros.com/?p=6765">10 Comments</span></a> 
+             </div>
+            </div>
+           </section> 
+          </article> 
+          <!-- END OF THE SINGLE POST CONTENT --> 
+          <!-- RELATED POSTS --> 
+         </section>
+         <!--END OF LEFT CONTENT PART --> 
+        </section>
+        <!-- END OF CONTAINER --> 
+       </section>
+       <!-- END OF CONTAINER --> 
+       <div class="sbclear"></div> 
+       <br> 
+       <section class="withsidebar"> 
+        <section class="row"> 
+         <section class="span9"> 
+          <!-- THE SINGLE POST CONTENT --> 
+          <article class="blog-single-post"> 
+           <section class="container onfullwidth"> 
+           </section> 
+           <section class="container boxedbg"> 
+            <div class="post-header"> 
+             <h2 itemprop="name" class="blog-title"> <a href="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html" title="HP Helion Dev Platform: Launch and Crowd Chat 10/23">HP Helion Dev Platform: Launch and Crowd Chat 10/23</a> </h2> 
+             <img src="http://blog.altoros.com/wp-content/uploads/userphoto/31.thumbnail.jpg" alt="Renat Khasanshyn" width="60" height="60" class="photo"> 
+             <div class="post-info"> 
+              <div>
+               Posted by 
+               <span itemprop="author"><a href="http://blog.altoros.com/author/renat" title="Posts by Renat Khasanshyn" rel="author">Renat Khasanshyn</a></span>, CEO @ Altoros, in 
+               <span itemprop="articleSection"><a href="http://blog.altoros.com/category/cloud-foundry" title="View all posts in Cloud Foundry" rel="category tag">Cloud Foundry</a>, <a href="http://blog.altoros.com/category/events" title="View all posts in Events" rel="category tag">Events</a></span>
+              </div> 
+              <div>
+               Tags: 
+               <a href="http://blog.altoros.com/tag/cloud-foundry" rel="tag">Cloud Foundry</a>, 
+               <a href="http://blog.altoros.com/tag/crowd-chat" rel="tag">Crowd Chat</a>, 
+               <a href="http://blog.altoros.com/tag/hp-helion" rel="tag">HP Helion</a>, 
+               <a href="http://blog.altoros.com/tag/hp-moonshot" rel="tag">HP Moonshot</a>, 
+               <a href="http://blog.altoros.com/tag/openstack" rel="tag">OpenStack</a>, 
+               <a href="http://blog.altoros.com/tag/paas" rel="tag">PaaS</a>
+              </div> 
+              <span itemprop="datePublished" content="2014-10-15" class="post-date">15 Oct 2014</span> | 
+              <span itemprop="url" class="post-commented"><a href="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html#all-comments" title="Comment on HP Helion Dev Platform: Launch and Crowd Chat 10/23"><span class="dsq-postid" rel="6575 http://blog.altoros.com/?p=6575">No Comments</span></a></span> 
+             </div> 
+            </div> 
+            <div class="clr"></div> 
+            <div class="text-content">
+             <p><a href="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html#more-6575"><img class="alignnone size-full wp-image-6648" src="http://blog.altoros.com/wp-content/uploads/2014/10/HPPaaS-2014-v41.jpg" width="960" height="540"></a> On Oct 23, HP launched Helion Development Platform—HP’s PaaS&nbsp;based on Cloud Foundry and integrated with HP Helion OpenStack. Below is a brief recap of the event.<br> <a href="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html#more-6575" class="more-link">(more…)</a></p> 
+             <div class="sharedaddy sd-sharing-enabled">
+              <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+               <div class="sd-content">
+                <ul>
+                 <li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html?share=twitter" title="Click to share on Twitter" id="sharing-twitter-6575"><span>Twitter</span></a></li>
+                 <li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html?share=linkedin" title="Click to share on LinkedIn" id="sharing-linkedin-6575"><span>LinkedIn</span></a></li>
+                 <li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html?share=facebook" title="Share on Facebook" id="sharing-facebook-6575"><span>Facebook</span></a></li>
+                 <li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html?share=google-plus-1" title="Click to share on Google+" id="sharing-google-6575"><span>Google</span></a></li>
+                 <li class="share-scoopit"><a href="http://www.scoop.it" class="scoopit-button sd-button" scit-position="horizontal" onclick=" url = encodeURIComponent(document.location); window.open('https://www.scoop.it/bookmarklet?url=' + url , 'Scoopit', 'status=no,toolbar=no,location=no,width=538,height=670');return false;" scit-url="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html"><span>Scoop</span></a></li>
+                 <li class="share-end"></li>
+                </ul>
+               </div>
+              </div> 
+              <div class="clear"></div> 
+              <div id="all-comments" class="contentdivider-mini"></div>
+              <a href="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html#all-comments" title="Comment on HP Helion Dev Platform: Launch and Crowd Chat 10/23"><span class="dsq-postid" rel="6575 http://blog.altoros.com/?p=6575">No Comments</span></a> 
+             </div>
+            </div>
+           </section> 
+          </article> 
+          <!-- END OF THE SINGLE POST CONTENT --> 
+          <!-- RELATED POSTS --> 
+         </section>
+         <!--END OF LEFT CONTENT PART --> 
+        </section>
+        <!-- END OF CONTAINER --> 
+       </section>
+       <!-- END OF CONTAINER --> 
+       <div class="sbclear"></div> 
+       <br> 
+       <section class="withsidebar"> 
+        <section class="row"> 
+         <section class="span9"> 
+          <!-- THE SINGLE POST CONTENT --> 
+          <article class="blog-single-post"> 
+           <section class="container onfullwidth"> 
+           </section> 
+           <section class="container boxedbg"> 
+            <div class="post-header"> 
+             <h2 itemprop="name" class="blog-title"> <a href="http://blog.altoros.com/nosql-tech-comparison-cassandra-datastax-mongodb-and-couchbase.html" title="NoSQL Tech Comparison: Cassandra (DataStax), MongoDB, and Couchbase">NoSQL Tech Comparison: Cassandra (DataStax), MongoDB, and Couchbase</a> </h2> 
+             <img src="http://blog.altoros.com/wp-content/uploads/userphoto/59.thumbnail.jpg" alt="Vladimir Starostenkov" width="59" height="60" class="photo"> 
+             <div class="post-info"> 
+              <div>
+               Posted by 
+               <span itemprop="author"><a href="http://blog.altoros.com/author/vladimir-starostenkov" title="Posts by Vladimir Starostenkov" rel="author">Vladimir Starostenkov</a></span>, R&amp;D Engineer, in 
+               <span itemprop="articleSection"><a href="http://blog.altoros.com/category/research-and-development" title="View all posts in Research &amp; Development" rel="category tag">Research &amp; Development</a></span>
+              </div> 
+              <div>
+               Tags: 
+               <a href="http://blog.altoros.com/tag/cassandra" rel="tag">Cassandra</a>, 
+               <a href="http://blog.altoros.com/tag/couchbase" rel="tag">Couchbase</a>, 
+               <a href="http://blog.altoros.com/tag/datastax" rel="tag">DataStax</a>, 
+               <a href="http://blog.altoros.com/tag/mongodb" rel="tag">MongoDB</a>, 
+               <a href="http://blog.altoros.com/tag/nosql" rel="tag">NoSQL</a>
+              </div> 
+              <span itemprop="datePublished" content="2014-10-02" class="post-date">02 Oct 2014</span> | 
+              <span itemprop="url" class="post-commented"><a href="http://blog.altoros.com/nosql-tech-comparison-cassandra-datastax-mongodb-and-couchbase.html#all-comments" title="Comment on NoSQL Tech Comparison: Cassandra (DataStax), MongoDB, and Couchbase"><span class="dsq-postid" rel="6503 http://blog.altoros.com/?p=6503">No Comments</span></a></span> 
+             </div> 
+            </div> 
+            <div class="clr"></div> 
+            <div class="text-content">
+             <p><img src="http://www.altoros.com/wp-content/uploads/2014/06/nosql_tech_133x165_v9.png" align="right" style="margin: 15px;">Even if you have years of experience with data-intensive apps, selecting a NoSQL data store for a particular case out of dozens of options may be a daunting task. The variety of databases goes way beyond sheer numbers, so you have to carefully compare and benchmark several options before you can choose the most appropriate solution.</p> 
+             <p>To help companies select the best database based on particular use cases, workloads, or requirements, we decided to come up with a handy template for evaluating NoSQL solutions. While many other comparisons focus only on one or two dimensions, we compiled a scoring framework that approaches the databases from 20+ angles (including performance, scalability, availability, ease of installation, maintenance, data consistency, fault tolerance, replication, recovery, etc.).</p> 
+             <p>As a real-life example of such an evaluation benchmark, today we present “The NoSQL Technical Comparison Report” that provides an in-depth analysis of the leading NoSQL systems: Cassandra (DataStax), MongoDB, and Couchbase Server. Each of the databases was scored on a scale from 1 to 10 across 21 criteria.</p> 
+             <p>With 29 charts and 30 tables, this paper features a scoring template for evaluating and comparing NoSQL data stores for your particular use case—depending on the weight of each criterion. We also give recommendations on the best ways to configure, install, and use NoSQL databases depending on their specific features.</p> 
+             <p></p>
+             <center>
+              <a href="http://www.altoros.com/nosql-tech-comparison"><img src="http://blog.altoros.com/wp-content/uploads/2014/01/download_icon_.gif"></a>
+             </center>
+             <p></p> 
+             <h3>The framework will be presented at a webinar on 11/6</h3> 
+             <p> <a href="http://blog.altoros.com/nosql-tech-comparison-cassandra-datastax-mongodb-and-couchbase.html#more-6503" class="more-link">(more…)</a></p> 
+             <div class="sharedaddy sd-sharing-enabled">
+              <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+               <div class="sd-content">
+                <ul>
+                 <li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.altoros.com/nosql-tech-comparison-cassandra-datastax-mongodb-and-couchbase.html?share=twitter" title="Click to share on Twitter" id="sharing-twitter-6503"><span>Twitter</span></a></li>
+                 <li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://blog.altoros.com/nosql-tech-comparison-cassandra-datastax-mongodb-and-couchbase.html?share=linkedin" title="Click to share on LinkedIn" id="sharing-linkedin-6503"><span>LinkedIn</span></a></li>
+                 <li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.altoros.com/nosql-tech-comparison-cassandra-datastax-mongodb-and-couchbase.html?share=facebook" title="Share on Facebook" id="sharing-facebook-6503"><span>Facebook</span></a></li>
+                 <li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://blog.altoros.com/nosql-tech-comparison-cassandra-datastax-mongodb-and-couchbase.html?share=google-plus-1" title="Click to share on Google+" id="sharing-google-6503"><span>Google</span></a></li>
+                 <li class="share-scoopit"><a href="http://www.scoop.it" class="scoopit-button sd-button" scit-position="horizontal" onclick=" url = encodeURIComponent(document.location); window.open('https://www.scoop.it/bookmarklet?url=' + url , 'Scoopit', 'status=no,toolbar=no,location=no,width=538,height=670');return false;" scit-url="http://blog.altoros.com/nosql-tech-comparison-cassandra-datastax-mongodb-and-couchbase.html"><span>Scoop</span></a></li>
+                 <li class="share-end"></li>
+                </ul>
+               </div>
+              </div> 
+              <div class="clear"></div> 
+              <div id="all-comments" class="contentdivider-mini"></div>
+              <a href="http://blog.altoros.com/nosql-tech-comparison-cassandra-datastax-mongodb-and-couchbase.html#all-comments" title="Comment on NoSQL Tech Comparison: Cassandra (DataStax), MongoDB, and Couchbase"><span class="dsq-postid" rel="6503 http://blog.altoros.com/?p=6503">No Comments</span></a> 
+             </div>
+            </div>
+           </section> 
+          </article> 
+          <!-- END OF THE SINGLE POST CONTENT --> 
+          <!-- RELATED POSTS --> 
+         </section>
+         <!--END OF LEFT CONTENT PART --> 
+        </section>
+        <!-- END OF CONTAINER --> 
+       </section>
+       <!-- END OF CONTAINER --> 
+       <div class="sbclear"></div> 
+       <br> 
+       <section class="withsidebar"> 
+        <section class="row"> 
+         <section class="span9"> 
+          <!-- THE SINGLE POST CONTENT --> 
+          <article class="blog-single-post"> 
+           <section class="container onfullwidth"> 
+           </section> 
+           <section class="container boxedbg"> 
+            <div class="post-header"> 
+             <h2 itemprop="name" class="blog-title"> <a href="http://blog.altoros.com/cloud-foundry-bosh-cpi-for-gce.html" title="Building a Custom BOSH CPI for the Cloud Foundry PaaS: A GCE Example">Building a Custom BOSH CPI for the Cloud Foundry PaaS: A GCE Example</a> </h2> 
+             <img src="http://blog.altoros.com/wp-content/uploads/userphoto/64.thumbnail.jpg" alt="Alexander Lomov" width="60" height="57" class="photo"> 
+             <div class="post-info"> 
+              <div>
+               Posted by 
+               <span itemprop="author"><a href="http://blog.altoros.com/author/alexander-lomov" title="Posts by Alexander Lomov" rel="author">Alexander Lomov</a></span>, Cloud Foundry Engineer, in 
+               <span itemprop="articleSection"><a href="http://blog.altoros.com/category/articles" title="View all posts in Articles" rel="category tag">Articles</a>, <a href="http://blog.altoros.com/category/cloud-foundry" title="View all posts in Cloud Foundry" rel="category tag">Cloud Foundry</a>, <a href="http://blog.altoros.com/category/research-and-development" title="View all posts in Research &amp; Development" rel="category tag">Research &amp; Development</a></span>
+              </div> 
+              <div>
+               Tags: 
+               <a href="http://blog.altoros.com/tag/bosh" rel="tag">BOSH</a>, 
+               <a href="http://blog.altoros.com/tag/cloud-foundry" rel="tag">Cloud Foundry</a>, 
+               <a href="http://blog.altoros.com/tag/google-compute-engine" rel="tag">Google Compute Engine</a>
+              </div> 
+              <span itemprop="datePublished" content="2014-09-01" class="post-date">01 Sep 2014</span> | 
+              <span itemprop="url" class="post-commented"><a href="http://blog.altoros.com/cloud-foundry-bosh-cpi-for-gce.html#all-comments" title="Comment on Building a Custom BOSH CPI for the Cloud Foundry PaaS: A GCE Example"><span class="dsq-postid" rel="6407 http://blog.altoros.com/?p=6407">1 Comment</span></a></span> 
+             </div> 
+            </div> 
+            <div class="clr"></div> 
+            <div class="text-content">
+             <p dir="ltr"><img class="alignright size-full wp-image-6408" alt="" src="http://blog.altoros.com/wp-content/uploads/2014/09/1.png" width="303" height="226">Portability and cross-platform compatibility are the fundamental principles and also key advantages of the Cloud Foundry PaaS.&nbsp;Despite that, until now, its architecture supported a limited number of cloud platforms: OpenStack, AWS, vSphere, vCloud, and Warden. However, thanks to the efforts of the community some new names have been added to the list of available IaaS vendors. At the end of May, Pivotal <a href="http://blog.gopivotal.com/cloud-foundry-pivotal/products/deploy-and-update-your-google-compute-engine-vms-using-cloud-foundry-bosh" target="_blank">released</a> its <a href="https://github.com/cf-platform-eng/bosh-google-cpi/tree/google-cpi" target="_blank">Google Compute Engine CF-BOSH CPI</a>. Developers&nbsp;are currently discussing ways to create a <a href="https://groups.google.com/a/cloudfoundry.org/forum/#!topic/bosh-dev/Kh1XMshWCYY" target="_blank">CPI for Microsoft Azure</a> in the BOSH Developers Google <a href="https://groups.google.com/a/cloudfoundry.org/forum/#!msg/bosh-dev/Kh1XMshWCYY/JZORpjoedVIJ" target="_blank">group</a>. Finally, the BOSH team have released an experimental version of the <a href="https://groups.google.com/a/cloudfoundry.org/forum/#!searchin/bosh-dev/bosh-dev$20Working$20external$20CPI$20experiment/bosh-dev/8CkDk20aDU4/u4vsALaELHIJ" target="_blank">external CPI</a> that can serve as a new way for creating CPIs.</p> 
+             <p>In this post, I will share my experience with developing a custom CPI for Cloud Foundry using the standard CPI mechanism. Read on to learn about the issues I have encountered and get some tips on how to address them. <a href="http://blog.altoros.com/cloud-foundry-bosh-cpi-for-gce.html#more-6407" class="more-link">(more…)</a></p> 
+             <div class="sharedaddy sd-sharing-enabled">
+              <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+               <div class="sd-content">
+                <ul>
+                 <li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.altoros.com/cloud-foundry-bosh-cpi-for-gce.html?share=twitter" title="Click to share on Twitter" id="sharing-twitter-6407"><span>Twitter</span></a></li>
+                 <li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://blog.altoros.com/cloud-foundry-bosh-cpi-for-gce.html?share=linkedin" title="Click to share on LinkedIn" id="sharing-linkedin-6407"><span>LinkedIn</span></a></li>
+                 <li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.altoros.com/cloud-foundry-bosh-cpi-for-gce.html?share=facebook" title="Share on Facebook" id="sharing-facebook-6407"><span>Facebook</span></a></li>
+                 <li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://blog.altoros.com/cloud-foundry-bosh-cpi-for-gce.html?share=google-plus-1" title="Click to share on Google+" id="sharing-google-6407"><span>Google</span></a></li>
+                 <li class="share-scoopit"><a href="http://www.scoop.it" class="scoopit-button sd-button" scit-position="horizontal" onclick=" url = encodeURIComponent(document.location); window.open('https://www.scoop.it/bookmarklet?url=' + url , 'Scoopit', 'status=no,toolbar=no,location=no,width=538,height=670');return false;" scit-url="http://blog.altoros.com/cloud-foundry-bosh-cpi-for-gce.html"><span>Scoop</span></a></li>
+                 <li class="share-end"></li>
+                </ul>
+               </div>
+              </div> 
+              <div class="clear"></div> 
+              <div id="all-comments" class="contentdivider-mini"></div>
+              <a href="http://blog.altoros.com/cloud-foundry-bosh-cpi-for-gce.html#all-comments" title="Comment on Building a Custom BOSH CPI for the Cloud Foundry PaaS: A GCE Example"><span class="dsq-postid" rel="6407 http://blog.altoros.com/?p=6407">1 Comment</span></a> 
+             </div>
+            </div>
+           </section> 
+          </article> 
+          <!-- END OF THE SINGLE POST CONTENT --> 
+          <!-- RELATED POSTS --> 
+         </section>
+         <!--END OF LEFT CONTENT PART --> 
+        </section>
+        <!-- END OF CONTAINER --> 
+       </section>
+       <!-- END OF CONTAINER --> 
+       <div class="sbclear"></div> 
+       <br> 
+       <section class="withsidebar"> 
+        <section class="row"> 
+         <section class="span9"> 
+          <!-- THE SINGLE POST CONTENT --> 
+          <article class="blog-single-post"> 
+           <section class="container onfullwidth"> 
+           </section> 
+           <section class="container boxedbg"> 
+            <div class="post-header"> 
+             <h2 itemprop="name" class="blog-title"> <a href="http://blog.altoros.com/deploying-cloud-foundry-in-a-single-click-with-juju-charms.html" title="Deploying Cloud Foundry in a Single Click with Juju Charms">Deploying Cloud Foundry in a Single Click with Juju Charms</a> </h2> 
+             <img src="http://blog.altoros.com/wp-content/uploads/userphoto/72.thumbnail.jpg" alt="Alex Prismakov" width="45" height="60" class="photo"> 
+             <div class="post-info"> 
+              <div>
+               Posted by 
+               <span itemprop="author"><a href="http://blog.altoros.com/author/alex-prismakov" title="Posts by Alex Prismakov" rel="author">Alex Prismakov</a></span>, Cloud Foundry Engineer, in 
+               <span itemprop="articleSection"><a href="http://blog.altoros.com/category/research-and-development" title="View all posts in Research &amp; Development" rel="category tag">Research &amp; Development</a></span>
+              </div> 
+              <div>
+               Tags: 
+               <a href="http://blog.altoros.com/tag/cloud-foundry" rel="tag">Cloud Foundry</a>
+              </div> 
+              <span itemprop="datePublished" content="2014-08-06" class="post-date">06 Aug 2014</span> | 
+              <span itemprop="url" class="post-commented"><a href="http://blog.altoros.com/deploying-cloud-foundry-in-a-single-click-with-juju-charms.html#all-comments" title="Comment on Deploying Cloud Foundry in a Single Click with Juju Charms"><span class="dsq-postid" rel="6275 http://blog.altoros.com/?p=6275">2 Comments</span></a></span> 
+             </div> 
+            </div> 
+            <div class="clr"></div> 
+            <div class="text-content">
+             <p><img class="alignright size-medium wp-image-6280" alt="" src="http://blog.altoros.com/wp-content/uploads/2014/08/pngbase6474405b82fb7b779d-300x146.png" width="300" height="146">Up until recently, BOSH has been pretty much the only tool chain for deployment of Cloud Foundry. We love BOSH for its visionary approach towards managing life cycle of clustered systems, flexibility and a distro-agnostic approach to Linux. Yet, it could be quite difficult to deploy BOSH/with BOSH. Yes, despite all its beauty, BOSH has a learning curve, and you certainly need to know its key concepts and internals to be productive. Bottom line, it takes quite a few manual steps to bring all Cloud Foundry components into a single working deployment using BOSH.</p> 
+             <p>To grow the Cloud Foundry community, Altoros, Canonical, and Pivotal joined their efforts to deliver an alternative deployment tool, which would reduce complexity of Cloud Foundry deployment and decrease the number of steps. This solution is based on Juju, a service orchestration tool by Canonical.</p> 
+             <p>In this article, I am going to show you how to deploy the <a href="http://cloudfoundry.org/index.html" target="_blank">Cloud Foundry PaaS</a> using <a href="https://code.launchpad.net/~cf-charmers" target="_blank">Juju Charms for Cloud Foundry</a>, a joint project of Altoros, Canonical, and Pivotal.<br> &nbsp;<br> <a href="http://blog.altoros.com/deploying-cloud-foundry-in-a-single-click-with-juju-charms.html#more-6275" class="more-link">(more…)</a></p> 
+             <div class="sharedaddy sd-sharing-enabled">
+              <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+               <div class="sd-content">
+                <ul>
+                 <li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.altoros.com/deploying-cloud-foundry-in-a-single-click-with-juju-charms.html?share=twitter" title="Click to share on Twitter" id="sharing-twitter-6275"><span>Twitter</span></a></li>
+                 <li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://blog.altoros.com/deploying-cloud-foundry-in-a-single-click-with-juju-charms.html?share=linkedin" title="Click to share on LinkedIn" id="sharing-linkedin-6275"><span>LinkedIn</span></a></li>
+                 <li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.altoros.com/deploying-cloud-foundry-in-a-single-click-with-juju-charms.html?share=facebook" title="Share on Facebook" id="sharing-facebook-6275"><span>Facebook</span></a></li>
+                 <li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://blog.altoros.com/deploying-cloud-foundry-in-a-single-click-with-juju-charms.html?share=google-plus-1" title="Click to share on Google+" id="sharing-google-6275"><span>Google</span></a></li>
+                 <li class="share-scoopit"><a href="http://www.scoop.it" class="scoopit-button sd-button" scit-position="horizontal" onclick=" url = encodeURIComponent(document.location); window.open('https://www.scoop.it/bookmarklet?url=' + url , 'Scoopit', 'status=no,toolbar=no,location=no,width=538,height=670');return false;" scit-url="http://blog.altoros.com/deploying-cloud-foundry-in-a-single-click-with-juju-charms.html"><span>Scoop</span></a></li>
+                 <li class="share-end"></li>
+                </ul>
+               </div>
+              </div> 
+              <div class="clear"></div> 
+              <div id="all-comments" class="contentdivider-mini"></div>
+              <a href="http://blog.altoros.com/deploying-cloud-foundry-in-a-single-click-with-juju-charms.html#all-comments" title="Comment on Deploying Cloud Foundry in a Single Click with Juju Charms"><span class="dsq-postid" rel="6275 http://blog.altoros.com/?p=6275">2 Comments</span></a> 
+             </div>
+            </div>
+           </section> 
+          </article> 
+          <!-- END OF THE SINGLE POST CONTENT --> 
+          <!-- RELATED POSTS --> 
+         </section>
+         <!--END OF LEFT CONTENT PART --> 
+        </section>
+        <!-- END OF CONTAINER --> 
+       </section>
+       <!-- END OF CONTAINER --> 
+       <div class="sbclear"></div> 
+       <br> 
+       <section class="withsidebar"> 
+        <section class="row"> 
+         <section class="span9"> 
+          <!-- THE SINGLE POST CONTENT --> 
+          <article class="blog-single-post"> 
+           <section class="container onfullwidth"> 
+           </section> 
+           <section class="container boxedbg"> 
+            <div class="post-header"> 
+             <h2 itemprop="name" class="blog-title"> <a href="http://blog.altoros.com/creating-net-apps-using-iron-foundry.html" title="Creating .NET Apps with Iron Foundry, a Cloud Foundry-based Platform">Creating .NET Apps with Iron Foundry, a Cloud Foundry-based Platform</a> </h2> 
+             <img src="http://blog.altoros.com/wp-content/uploads/userphoto/70.thumbnail.jpg" alt="Alex Makarenko" width="59" height="60" class="photo"> 
+             <div class="post-info"> 
+              <div>
+               Posted by 
+               <span itemprop="author"><a href="http://blog.altoros.com/author/alex-makarenko" title="Posts by Alex Makarenko" rel="author">Alex Makarenko</a></span>, .NET Team Lead, in 
+               <span itemprop="articleSection"><a href="http://blog.altoros.com/category/cloud-foundry" title="View all posts in Cloud Foundry" rel="category tag">Cloud Foundry</a>, <a href="http://blog.altoros.com/category/research-and-development" title="View all posts in Research &amp; Development" rel="category tag">Research &amp; Development</a></span>
+              </div> 
+              <div>
+               Tags: 
+               <a href="http://blog.altoros.com/tag/net" rel="tag">.NET</a>, 
+               <a href="http://blog.altoros.com/tag/cloud-foundry" rel="tag">Cloud Foundry</a>, 
+               <a href="http://blog.altoros.com/tag/iron-foundry" rel="tag">Iron Foundry</a>, 
+               <a href="http://blog.altoros.com/tag/paas" rel="tag">PaaS</a>
+              </div> 
+              <span itemprop="datePublished" content="2014-07-17" class="post-date">17 Jul 2014</span> | 
+              <span itemprop="url" class="post-commented"><a href="http://blog.altoros.com/creating-net-apps-using-iron-foundry.html#all-comments" title="Comment on Creating .NET Apps with Iron Foundry, a Cloud Foundry-based Platform"><span class="dsq-postid" rel="5939 http://blog.altoros.com/?p=5939">No Comments</span></a></span> 
+             </div> 
+            </div> 
+            <div class="clr"></div> 
+            <div class="text-content">
+             <p><img class="alignright size-full wp-image-6158" alt="" src="http://blog.altoros.com/wp-content/uploads/2014/07/iron-foundry2_logo.png" width="250" height="122">PaaS has revolutionized the way applications are developed and deployed. With reduced delivery cycles and full automation, PaaS users can reach the market faster, significantly improving ROI and time-to-revenue. Cloud Foundry is one of the most popular open-source solutions for enterprises. </p> 
+             <p>Until recently, .NET developers—who constitute a large part of software delivery folks—had rather limited access to Cloud Foundry’s services. The Iron Foundry project has corrected this imbalance by providing support for .NET on Cloud Foundry. It is not merely an extension, but an entire collection of tools and services .NET developers are used to working with, e.g. MS SQL and Message Bus-as-a-service. Services can be bound to applications, so you do not have to worry about infrastructure and maintenance.</p> 
+             <p>This post starts a series that will explore the capabilities of Iron Foundry. To show you how this platform works and try its services in action, I am going to create a validation prototype using a mixture of .NET and Node.js. I will rely on the Cloud-First approach in my investigation on how application interaction, management, and deployment are implemented in this platform. By the end of the series, you will have learned everything you need to know about creating .NET apps on Iron Foundry.</p> 
+             <p> <a href="http://blog.altoros.com/creating-net-apps-using-iron-foundry.html#more-5939" class="more-link">(more…)</a></p> 
+             <div class="sharedaddy sd-sharing-enabled">
+              <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+               <div class="sd-content">
+                <ul>
+                 <li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.altoros.com/creating-net-apps-using-iron-foundry.html?share=twitter" title="Click to share on Twitter" id="sharing-twitter-5939"><span>Twitter</span></a></li>
+                 <li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://blog.altoros.com/creating-net-apps-using-iron-foundry.html?share=linkedin" title="Click to share on LinkedIn" id="sharing-linkedin-5939"><span>LinkedIn</span></a></li>
+                 <li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.altoros.com/creating-net-apps-using-iron-foundry.html?share=facebook" title="Share on Facebook" id="sharing-facebook-5939"><span>Facebook</span></a></li>
+                 <li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://blog.altoros.com/creating-net-apps-using-iron-foundry.html?share=google-plus-1" title="Click to share on Google+" id="sharing-google-5939"><span>Google</span></a></li>
+                 <li class="share-scoopit"><a href="http://www.scoop.it" class="scoopit-button sd-button" scit-position="horizontal" onclick=" url = encodeURIComponent(document.location); window.open('https://www.scoop.it/bookmarklet?url=' + url , 'Scoopit', 'status=no,toolbar=no,location=no,width=538,height=670');return false;" scit-url="http://blog.altoros.com/creating-net-apps-using-iron-foundry.html"><span>Scoop</span></a></li>
+                 <li class="share-end"></li>
+                </ul>
+               </div>
+              </div> 
+              <div class="clear"></div> 
+              <div id="all-comments" class="contentdivider-mini"></div>
+              <a href="http://blog.altoros.com/creating-net-apps-using-iron-foundry.html#all-comments" title="Comment on Creating .NET Apps with Iron Foundry, a Cloud Foundry-based Platform"><span class="dsq-postid" rel="5939 http://blog.altoros.com/?p=5939">No Comments</span></a> 
+             </div>
+            </div>
+           </section> 
+          </article> 
+          <!-- END OF THE SINGLE POST CONTENT --> 
+          <!-- RELATED POSTS --> 
+         </section>
+         <!--END OF LEFT CONTENT PART --> 
+        </section>
+        <!-- END OF CONTAINER --> 
+       </section>
+       <!-- END OF CONTAINER --> 
+       <div class="sbclear"></div> 
+       <br> 
+       <section class="withsidebar"> 
+        <section class="row"> 
+         <section class="span9"> 
+          <!-- THE SINGLE POST CONTENT --> 
+          <article class="blog-single-post"> 
+           <section class="container onfullwidth"> 
+           </section> 
+           <section class="container boxedbg"> 
+            <div class="post-header"> 
+             <h2 itemprop="name" class="blog-title"> <a href="http://blog.altoros.com/openstack-and-cloud-foundry-on-hp-moonshot.html" title="How to Install OpenStack and Cloud Foundry on HP Moonshot">How to Install OpenStack and Cloud Foundry on HP Moonshot</a> </h2> 
+             <img src="http://blog.altoros.com/wp-content/uploads/userphoto/71.thumbnail.png" alt="Aleksey Makarevich" width="56" height="60" class="photo"> 
+             <div class="post-info"> 
+              <div>
+               Posted by 
+               <span itemprop="author"><a href="http://blog.altoros.com/author/alexey-makarevich" title="Posts by Aleksey Makarevich" rel="author">Aleksey Makarevich</a></span>, Infrastructure Engineer, in 
+               <span itemprop="articleSection"><a href="http://blog.altoros.com/category/research-and-development" title="View all posts in Research &amp; Development" rel="category tag">Research &amp; Development</a></span>
+              </div> 
+              <div>
+               Tags: 
+               <a href="http://blog.altoros.com/tag/cloud-foundry" rel="tag">Cloud Foundry</a>, 
+               <a href="http://blog.altoros.com/tag/hp-moonshot" rel="tag">HP Moonshot</a>, 
+               <a href="http://blog.altoros.com/tag/juju" rel="tag">Juju</a>, 
+               <a href="http://blog.altoros.com/tag/maas" rel="tag">MaaS</a>, 
+               <a href="http://blog.altoros.com/tag/openstack" rel="tag">OpenStack</a>
+              </div> 
+              <span itemprop="datePublished" content="2014-07-11" class="post-date">11 Jul 2014</span> | 
+              <span itemprop="url" class="post-commented"><a href="http://blog.altoros.com/openstack-and-cloud-foundry-on-hp-moonshot.html#all-comments" title="Comment on How to Install OpenStack and Cloud Foundry on HP Moonshot"><span class="dsq-postid" rel="6107 http://blog.altoros.com/?p=6107">No Comments</span></a></span> 
+             </div> 
+            </div> 
+            <div class="clr"></div> 
+            <div class="text-content">
+             <p><img class="size-full wp-image-6117 alignright" style="margin-left: 30px;" alt="" src="http://blog.altoros.com/wp-content/uploads/2014/07/IMG_3784-e1405013088892.jpg" width="206" height="275"></p> 
+             <p>HP Moonshot is a new-generaition low-power server built specifically for distributed computing and big data processing. It is perfect for deploying Cloud Foundry, an open source platform for delivering cloud apps. To help you reap all the benefits of Cloud Foundry deployed on top of Moonshot, we have created a 12-page guide with a reference architecture and a tested configuration. It includes detailed instructions on how to install MaaS, assign roles to servers, deploy OpenStack, configure a new environment, set up routing, &nbsp;provide high availability of apps on Cloud Foundry, and much more.</p> 
+             <p><a href="http://www.altoros.com/installing_openstack_cloud_foundry_hp_moonshot.html">Download</a> your copy to get:</p> 
+             <ul> 
+              <li>a tested Moonshot configuration and reference architecture</li> 
+              <li>a step-by-step guide on installing OpenStack</li> 
+              <li>instructions on how to configure MaaS and Juju</li> 
+              <li>a tutorial on creating a highly available Cloud Foundry deployment</li> 
+             </ul> 
+             <p><a href="http://www.altoros.com/installing_openstack_cloud_foundry_hp_moonshot.html"><img class="aligncenter size-full wp-image-4397" alt="download_icon_" src="http://blog.altoros.com/wp-content/uploads/2014/01/download_icon_.gif" width="86" height="31"></a></p> 
+             <div class="sharedaddy sd-sharing-enabled">
+              <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+               <div class="sd-content">
+                <ul>
+                 <li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.altoros.com/openstack-and-cloud-foundry-on-hp-moonshot.html?share=twitter" title="Click to share on Twitter" id="sharing-twitter-6107"><span>Twitter</span></a></li>
+                 <li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://blog.altoros.com/openstack-and-cloud-foundry-on-hp-moonshot.html?share=linkedin" title="Click to share on LinkedIn" id="sharing-linkedin-6107"><span>LinkedIn</span></a></li>
+                 <li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.altoros.com/openstack-and-cloud-foundry-on-hp-moonshot.html?share=facebook" title="Share on Facebook" id="sharing-facebook-6107"><span>Facebook</span></a></li>
+                 <li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://blog.altoros.com/openstack-and-cloud-foundry-on-hp-moonshot.html?share=google-plus-1" title="Click to share on Google+" id="sharing-google-6107"><span>Google</span></a></li>
+                 <li class="share-scoopit"><a href="http://www.scoop.it" class="scoopit-button sd-button" scit-position="horizontal" onclick=" url = encodeURIComponent(document.location); window.open('https://www.scoop.it/bookmarklet?url=' + url , 'Scoopit', 'status=no,toolbar=no,location=no,width=538,height=670');return false;" scit-url="http://blog.altoros.com/openstack-and-cloud-foundry-on-hp-moonshot.html"><span>Scoop</span></a></li>
+                 <li class="share-end"></li>
+                </ul>
+               </div>
+              </div> 
+              <div class="clear"></div> 
+              <div id="all-comments" class="contentdivider-mini"></div>
+              <a href="http://blog.altoros.com/openstack-and-cloud-foundry-on-hp-moonshot.html#all-comments" title="Comment on How to Install OpenStack and Cloud Foundry on HP Moonshot"><span class="dsq-postid" rel="6107 http://blog.altoros.com/?p=6107">No Comments</span></a> 
+             </div>
+            </div>
+           </section> 
+          </article> 
+          <!-- END OF THE SINGLE POST CONTENT --> 
+          <!-- RELATED POSTS --> 
+         </section>
+         <!--END OF LEFT CONTENT PART --> 
+        </section>
+        <!-- END OF CONTAINER --> 
+       </section>
+       <!-- END OF CONTAINER --> 
+       <div class="sbclear"></div> 
+       <br> 
+       <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'blogaltoroscom';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#all-comments';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + 'disqus.com/forums/' + disqus_shortname + '/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script> 
+       <!-- pagination --> 
+       <section class="pagination">
+         &nbsp;&nbsp;|&nbsp;&nbsp; 
+        <a href="http://blog.altoros.com/page/2">Next Page »</a> 
+       </section> 
+      </section> 
+      <section class="span3 thesidebar"> 
+       <div class="widget-1  first clear"></div>
+       <article id="execphp-13" class="widget-1  first widget widget_execphp">
+        <h4 class="widget-title">Download Benchmarks and Research</h4> 
+        <div class="execphpwidget">
+         <div class="ss2-align" style="margin: 0 auto; max-width: 150px;">
+          <script type="text/javascript">
+    window['nextend-smart-slider-1-onresize'] = [];
+</script> 
+          <div id="nextend-smart-slider-1" class="nextend-slider-fadeload nextend-desktop " style="font-size: 12px;" data-allfontsize="12" data-desktopfontsize="12" data-tabletfontsize="16" data-phonefontsize="20"> 
+           <div class="smart-slider-border1" style=""> 
+            <div class="smart-slider-border2"> 
+             <div class="smart-slider-canvas smart-slider-slide-active smart-slider-bg-colored" style="cursor:pointer;" onclick="window.open('http://www.altoros.com/download_white_papers.html','_blank');"> 
+              <img src="http://blog.altoros.com/wp-content/uploads/2014/05/wp_hadoop_benchmark.png" data-desktop="http://blog.altoros.com/wp-content/uploads/2014/05/wp_hadoop_benchmark.png" class="nextend-slide-bg"> 
+              <div class="smart-slider-canvas-inner"> 
+              </div> 
+             </div> 
+             <div class="smart-slider-canvas smart-slider-bg-colored" style="cursor:pointer;" onclick="window.open('http://www.altoros.com/download_white_papers.html','_blank');"> 
+              <img src="http://blog.altoros.com/wp-content/uploads/2014/05/wp_nosql.png" data-desktop="http://blog.altoros.com/wp-content/uploads/2014/05/wp_nosql.png" class="nextend-slide-bg"> 
+              <div class="smart-slider-canvas-inner"> 
+              </div> 
+             </div> 
+             <div class="smart-slider-canvas smart-slider-bg-colored" style="cursor:pointer;" onclick="window.location='http://www.altoros.com/download_white_papers.html'"> 
+              <img src="http://blog.altoros.com/wp-content/uploads/2014/05/wp_paas_comparison.png" data-desktop="http://blog.altoros.com/wp-content/uploads/2014/05/wp_paas_comparison.png" class="nextend-slide-bg"> 
+              <div class="smart-slider-canvas-inner"> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <script type="text/javascript">
+    njQuery(document).ready(function () {
+        njQuery('#nextend-smart-slider-1').smartslider({"translate3d":1,"playfirstlayer":0,"mainafterout":1,"inaftermain":1,"fadeonscroll":0,"autoplay":1,"autoplayConfig":{"duration":4000,"counter":0,"autoplayToSlide":0,"stopautoplay":{"click":1,"mouseenter":1,"slideplaying":1},"resumeautoplay":{"mouseleave":0,"slideplayed":1,"slidechanged":0}},"responsive":{"downscale":1,"upscale":0,"maxwidth":3000,"basedon":"combined","screenwidth":{"tablet":1024,"phone":640},"ratios":[1,1,0.7,0.5]},"controls":{"scroll":0,"touch":"0","keyboard":0},"blockrightclick":0,"lazyload":0,"lazyloadneighbor":0,"randomize":0,"type":"ssSimpleSlider","animation":["horizontal"],"animationSettings":{"duration":1500,"delay":0,"easing":"easeInOutQuint","parallax":1},"flux":[0,["bars"]],"touchanimation":"0"});
+    });
+</script> 
+          <div style="clear: both;"></div> 
+         </div>
+         <div style="clear:both;"></div>
+         <div id="nextend-smart-slider-1-placeholder">
+          <img alt="" style="width:100%; max-width: 3000px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACrCAYAAACE5WWRAAAByUlEQVR4nO3SQQkAIADAQLV/Zy3hEOQuwR6be8B963UAfzIWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWiQPBBQJVIPyLIQAAAABJRU5ErkJggg==">
+         </div>
+        </div> 
+        <div class="clear"></div>
+       </article>
+       <div class="widget-2 clear"></div>
+       <article id="text-5" class="widget-2 widget widget_text"> 
+        <div class="textwidget">
+         <p align="center"><a href="http://blog.altoros.com/altoros-cloud-foundry-foundation.html"><img src="/wp-content/uploads/2014/06/cf_f_320px_3.png" align="center"></a></p> 
+         <p align="center"><a href="http://blog.altoros.com/altoros-cloud-foundry-foundation.html">Learn why Altoros joined Cloud Foundry Foundation</a></p>
+        </div> 
+        <div class="clear"></div>
+       </article>
+       <div class="widget-3 clear"></div>
+       <article id="similar-posts" class="widget-3 widget widget_rrm_similar_posts">
+        <h4 class="widget-title">Relevant posts</h4>
+        <ul>
+         <li><a href="http://blog.altoros.com/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html" rel="bookmark" title="November 17, 2014">Meetup: How to Build Scalable IoT Apps with Cloud Foundry, Bluemix, Docker Containers, and Cloudant</a></li> 
+         <li><a href="http://blog.altoros.com/hphelion-dev-platform-launch-and-crowdchat-hppaas.html" rel="bookmark" title="October 15, 2014">HP Helion Dev Platform: Launch and Crowd Chat 10/23</a></li> 
+         <li><a href="http://blog.altoros.com/by-2025-containers-will-run-half-of-the-cloud-workloads.html" rel="bookmark" title="June 5, 2014">By 2025, Containers, not VMs, Will Run 1/2 of the Cloud Workloads</a></li> 
+        </ul>
+        <!-- Similar Posts took 36.996 ms -->
+        <div class="clear"></div>
+       </article>
+       <div class="widget-4 clear"></div>
+       <article id="wysija-3" class="widget-4 widget widget_wysija">
+        <h4 class="widget-title">Subscribe to new posts</h4>
+        <div class="widget_wysija_cont">
+         <div id="msg-form-wysija-3" class="wysija-msg ajax"></div>
+         <form id="form-wysija-3" method="post" action="#wysija" class="widget_wysija">
+           Get the best of our content right in your inbox! 
+          <p class="wysija-paragraph"> <input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="E-mail*" placeholder="E-mail*" value=""> <span class="abs-req"> <input type="text" name="wysija[user][abs][email]" class="wysija-input validated[abs][email]" value=""> </span> </p> 
+          <input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!"> 
+          <input type="hidden" name="form_id" value="1"> 
+          <input type="hidden" name="action" value="save"> 
+          <input type="hidden" name="controller" value="subscribers"> 
+          <input type="hidden" value="1" name="wysija-page"> 
+          <input type="hidden" name="wysija[user_list][list_ids]" value="1"> 
+         </form>
+        </div>
+        <div class="clear"></div>
+       </article>
+       <div class="widget-5 clear"></div>
+       <article id="execphp-11" class="widget-5 widget widget_execphp"> 
+        <div class="execphpwidget">
+         <div class="widgetready" id="widgetwidget_twitter_timeline"> 
+          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/Altoros" data-widget-id="415160285737926657">Твиты пользователя @Altoros</a> 
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+         </div>
+        </div> 
+        <div class="clear"></div>
+       </article>
+       <div class="widget-6  last clear"></div>
+       <article id="execphp-12" class="widget-6  last widget widget_execphp"> 
+        <div class="execphpwidget">
+         <div class="item subscribe"> 
+          <h3></h3> 
+          <ul> 
+           <li><a href="/feed">Entries RSS</a></li> 
+           <li><a href="/comments/feed">Comments RSS</a></li> 
+          </ul> 
+         </div>
+        </div> 
+        <div class="clear"></div>
+       </article> 
+      </section> 
+      <!-- END OF THE SIDEBAR --> 
+     </section> 
+    </section> 
+   </section> 
+   <footer id="footer"> 
+    <section class="container"> 
+     <div class="row"> 
+      <article class="span4"> 
+       <div class="widget-1  first divide30 footer_widget_spacer clear"></div>
+       <div id="nav_menu-2" class="widget-1  first footer_widget widget_nav_menu">
+        <div class="menu-footer-menu-container">
+         <ul id="menu-footer-menu" class="menu">
+          <li id="menu-item-5224" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/paas_enablement.html">Cloud Foundry Services</a>
+           <div class="clear"></div></li> 
+          <li id="menu-item-5229" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/cloud_foundry_enablement_for_iaas.html">PaaS Solutions</a>
+           <div class="clear"></div></li> 
+          <li id="menu-item-5226" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/openshift_and_cloud_foundry_paas.html">Download An Overview of Openshift and CloudFoundry PaaS</a>
+           <div class="clear"></div></li> 
+          <li id="menu-item-5225" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/hadoop_benchmark.html">Download Hadoop Benchmark</a>
+           <div class="clear"></div></li> 
+          <li id="menu-item-5230" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/download_white_papers.html">Benchmarks and Researches</a>
+           <div class="clear"></div></li> 
+          <li id="menu-item-5227" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.altoros.com/about_summary.html">More About us</a>
+           <div class="clear"></div></li> 
+         </ul>
+        </div>
+        <div class="clear"></div>
+       </div>
+       <div class="widget-2  last divide30 footer_widget_spacer clear"></div>
+       <div id="image-5" class="widget-2  last footer_widget widget_image">
+        <div class="jetpack-image-container">
+         <a href="http://altoros.com/contact_us.html"><img src="http://blog.altoros.com/wp-content/uploads/2014/05/contact-us.png" class="alignnone" width="236" height="45"></a>
+        </div> 
+        <div class="clear"></div>
+       </div> 
+      </article> 
+      <article class="span4"> 
+       <div class="widget-1  last divide30 footer_widget_spacer clear"></div>
+       <div id="wysija-4" class="widget-1  last footer_widget widget_wysija">
+        <h4 class="widget-title">Subscribe to new posts</h4>
+        <div class="widget_wysija_cont">
+         <div id="msg-form-wysija-4" class="wysija-msg ajax"></div>
+         <form id="form-wysija-4" method="post" action="#wysija" class="widget_wysija">
+           Get the best of our content right in your inbox! 
+          <p class="wysija-paragraph"> <input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="E-mail*" placeholder="E-mail*" value=""> <span class="abs-req"> <input type="text" name="wysija[user][abs][email]" class="wysija-input validated[abs][email]" value=""> </span> </p> 
+          <input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!"> 
+          <input type="hidden" name="form_id" value="1"> 
+          <input type="hidden" name="action" value="save"> 
+          <input type="hidden" name="controller" value="subscribers"> 
+          <input type="hidden" value="1" name="wysija-page"> 
+          <input type="hidden" name="wysija[user_list][list_ids]" value="1"> 
+         </form>
+        </div>
+        <div class="clear"></div>
+       </div> 
+      </article> 
+      <article class="span4 last"> 
+       <div class="widget-1  last divide30 footer_widget_spacer clear"></div>
+       <div id="text-2" class="widget-1  last footer_widget widget_text">
+        <h4 class="widget-title">About Altoros</h4> 
+        <div class="textwidget">
+         <p>Altoros brings “software assembly lines” into organizations through training, deployment, and integration of solutions offered by the Cloud Foundry ecosystem. As a result, customers of Altoros discover and monetize application-driven competitive advantages sooner than competition by using Cloud Foundry-based ”software factories” and “data lakes.” With 250+ employees across 8 countries, Altoros is behind some of the world’s largest Cloud Foundry deployments.</p> 
+         <p>© Altoros Systems, Inc.</p> 
+        </div> 
+        <div class="clear"></div>
+       </div> 
+      </article> 
+      <div class="clear"></div> 
+     </div>
+     <!-- END OF THE ROW --> 
+    </section>
+    <!-- END OF THE FOOTER CONTAINER --> 
+   </footer> 
+   <script src="http://pmd.altoros.com/js/XDM/src/easyXDM.debug.js" type="text/javascript"></script> 
+   <script src="http://pmd.altoros.com/js/md5.js" type="text/javascript"></script> 
+   <script type="text/javascript" language="JavaScript" src="http://pmd.altoros.com/js/services/track_visiters.js"></script> 
+   <script type="text/javascript">
+  analytics.track("Viewed Home Page", {"noninteraction":true}, {"library":"analytics-wordpress"});
+    
+</script> 
+   <!-- ClickTale Bottom part --> 
+   <script type="text/javascript">
+// The ClickTale Balkan Tracking Code may be programmatically customized using hooks:
+// 
+//   function ClickTalePreRecordingHook() { /* place your customized code here */  }
+//
+// For details about ClickTale hooks, please consult the wiki page http://wiki.clicktale.com/Article/Customizing_code_version_2
+
+document.write(unescape("%3Cscript%20src='"+
+(document.location.protocol=='https:'?
+"https://cdnssl.clicktale.net/www03/ptc/26dfb3e6-957c-436e-95a9-6aab894f4dc6.js":
+"http://cdn.clicktale.net/www03/ptc/26dfb3e6-957c-436e-95a9-6aab894f4dc6.js")+"'%20type='text/javascript'%3E%3C/script%3E"));
+</script> 
+   <!-- ClickTale end of Bottom part --> 
+   <script type="text/javascript">
+			/*<![CDATA[*//*---->*/
+			inputs = document.getElementsByTagName("input");
+			for (var i in inputs) {
+				if (typeof(inputs[i].value) != 'unknown' && inputs[i].value != null && (inputs[i].type == "button" || inputs[i].type == "submit") && inputs[i].value.search(/^Search$/) != -1) {
+					var oElement = inputs[i];
+					function fn(e) { ClickTaleTag("Search"); }
+					YAHOO.util.Event.addListener(oElement, "click", fn);  
+				}
+			} 
+			/*--*//*]]>*/
+			</script> 
+   <script type="text/javascript">
+			/*<![CDATA[*//*---->*/
+			for (var i in document.forms) {
+				if (typeof(document.forms[i].action) != 'unknown' && document.forms[i].action != null && document.forms[i].action.search(/\/wp-comments-post\.php$/) != -1) { 
+					var oElement = document.forms[i];
+					function fn(e) { ClickTaleTag("Comment");}
+					YAHOO.util.Event.addListener(oElement, "submit", fn);  
+				}
+			}
+			/*--*//*]]>*/
+			</script> 
+   <script type="text/javascript">
+			/*<![CDATA[*//*---->*/
+			for (var i in document.links) {
+				if (typeof(document.links[i].href) != 'unknown' && document.links[i].href != null && document.links[i].href.search(/(feed=rss2$)|(feed$)|(feed\/$)/) != -1) {
+					var oElement = document.links[i];
+					function fn(e) { ClickTaleTag("RSS"); }
+					YAHOO.util.Event.addListener(oElement, "click", fn);  
+				}
+			} 
+			/*--*//*]]>*/
+			</script> 
+   <script type="text/javascript">
+			/*<![CDATA[*//*---->*/
+			for (var i in document.links) {
+				if (typeof(document.links[i].href) != 'unknown' && document.links[i].href != null && document.links[i].href.search(/(feed=comments-rss2$)|(comments\/feed$)|(comments\/feed\/$)/) != -1) {
+					var oElement = document.links[i];
+					function fn(e) { ClickTaleTag("Comments-RSS"); }
+					YAHOO.util.Event.addListener(oElement, "click", fn);  
+				}
+			} 
+			/*--*//*]]>*/
+			</script> 
+   <script type="text/javascript">
+			/*<![CDATA[*//*---->*/
+			for (var i in document.links) {
+				if (typeof(document.links[i].href) != 'unknown' && document.links[i].href != null && document.links[i].href.search(/(feed=rss2$)|(feed$)|(feed\/$)/) != -1) {
+					var oElement = document.links[i];
+					function fn(e) { ClickTaleTag("RSS-Rightclick"); }
+					YAHOO.util.Event.addListener(oElement, "contextmenu", fn);  
+				}
+			} 
+			/*--*//*]]>*/
+			</script> 
+   <script type="text/javascript">
+			/*<![CDATA[*//*---->*/
+			for (var i in document.links) {
+				if (typeof(document.links[i].href) != 'unknown' && document.links[i].href != null && document.links[i].href.search(/(feed=comments-rss2$)|(comments\/feed$)|(comments\/feed\/$)/) != -1) {
+					var oElement = document.links[i];
+					function fn(e) { ClickTaleTag("Comments-RSS-Rightclick"); }
+					YAHOO.util.Event.addListener(oElement, "contextmenu", fn);  
+				}
+			} 
+			/*--*//*]]>*/
+			</script> 
+   <script type="text/javascript">	
+			  var orbtr_account = "ORBTR-282";
+			
+			  (function() {
+				var trk = document.createElement("script"); trk.type = "text/javascript"; trk.async = true;
+				trk.src = ("https:" == document.location.protocol ? "https://" : "http://") + "api.orbtr.net/v2/trk.v2.js?r=1417767997";
+				var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(trk, s);
+			  })();
+			</script> 
+   <script type="text/javascript">
+		WPCOM_sharing_counts = {"http:\/\/blog.altoros.com\/microservices-docker-vs-cloud-foundry-vs-diego.html":6846,"http:\/\/blog.altoros.com\/how-to-build-scalable-iot-apps-with-cloud-foundry-bluemix-docker-containers-and-cloudant.html":6802,"http:\/\/blog.altoros.com\/cloud-foundry-deployment-tools-bosh-vs-juju-live-from-santa-clara-devops-summit.html":6781,"http:\/\/blog.altoros.com\/creating-a-bosh-release-for-admin-ui-a-monitoring-tool-for-cloud-foundry.html":6765,"http:\/\/blog.altoros.com\/hphelion-dev-platform-launch-and-crowdchat-hppaas.html":6575,"http:\/\/blog.altoros.com\/nosql-tech-comparison-cassandra-datastax-mongodb-and-couchbase.html":6503,"http:\/\/blog.altoros.com\/cloud-foundry-bosh-cpi-for-gce.html":6407,"http:\/\/blog.altoros.com\/deploying-cloud-foundry-in-a-single-click-with-juju-charms.html":6275,"http:\/\/blog.altoros.com\/creating-net-apps-using-iron-foundry.html":5939,"http:\/\/blog.altoros.com\/openstack-and-cloud-foundry-on-hp-moonshot.html":6107}	</script> 
+   <script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script> 
+   <script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script> 
+   <script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script> 
+   <script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script> 
+   <script type="text/javascript" src="http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201449"></script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/themes/goodweb/js/bootstrap.min.js?ver=3.7.1"></script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/themes/goodweb/js/jquery.themepunch.plugins.min.js?ver=3.7.1"></script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/themes/goodweb/js/punchbox/js/jquery.themepunch.punchbox.js?ver=3.7.1"></script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/themes/goodweb/js/jquery.isotope.min.js?ver=3.7.1"></script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/themes/goodweb/js/hammer.js?ver=3.7.1"></script> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var goodweb_theme_vars = {"load":"LOAD","more":"MORE"};
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/themes/goodweb/js/screen.js?ver=3.7.1"></script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/plugins/wysija-newsletters/js/validate/languages/jquery.validationEngine-en.js?ver=2.6.6"></script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/plugins/wysija-newsletters/js/validate/jquery.validationEngine.js?ver=2.6.6"></script> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var wysijaAJAX = {"action":"wysija_ajax","controller":"subscribers","ajaxurl":"http:\/\/blog.altoros.com\/wp-admin\/admin-ajax.php","loadingTrans":"Loading...","is_rtl":""};
+var wysijaAJAX = {"action":"wysija_ajax","controller":"subscribers","ajaxurl":"http:\/\/blog.altoros.com\/wp-admin\/admin-ajax.php","loadingTrans":"Loading...","is_rtl":""};
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/plugins/wysija-newsletters/js/front-subscribers.js?ver=2.6.6"></script> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=20121205"></script> 
+   <!--stats_footer_test-->
+   <script src="http://stats.wordpress.com/e-201449.js" type="text/javascript"></script> 
+   <script type="text/javascript">
+st_go({blog:'18106049',v:'ext',post:'0'});
+var load_cmc = function(){linktracker_init(18106049,0,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script> 
+   <script type="text/javascript" src="http://blog.altoros.com/wp-content/cache/js/static/4594840784e4c555a08be15ed971d92e.js"></script>
+   <script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-1.newrelic.com","ba0ffdee0c","2093194","ZAAGYRYCXRJVURVcC11KJVYQClwPG1sPUQFL",0,1674,new Date().getTime(),"","","","",""]);</script> 
+  </section>
+ </body>
+</html>

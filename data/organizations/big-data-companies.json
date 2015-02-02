@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "65473efcb248aca37b14304ace3c9f11",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "short_description": "Big Data News Blog",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 4,
+      "founded_on_month": 1,
+      "founded_on_year": 2012,
+      "founded_on": "2012-01-01",
+      "permalink": "big-data-companies",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://www.bigdatacompanies.com",
+      "name": "Big Data Companies",
+      "description": "Offers both a comprehensive list of Big Data Companies listed in one of 6 categories for easy searching as well as daily updates covering Big Data and the companies embracing a new way of doing business.\n",
+      "email_address": "shane@bigdatacompanies.com",
+      "created_at": 1371716342,
+      "updated_at": 1397987597,
+      "total_funding_usd": 0,
+      "number_of_investments": 0,
+      "number_of_employees": 5
+    },
+    "relationships": {
+      "categories": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/big-data-companies/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1417089997
+          },
+          {
+            "type": "Category",
+            "name": "Events",
+            "uuid": "d4a7bfe659edae17e0431a7415745a0e",
+            "path": "category/events/d4a7bfe659edae17e0431a7415745a0e",
+            "created_at": 1397980726,
+            "updated_at": 1417084374
+          },
+          {
+            "type": "Category",
+            "name": "Enterprise Software",
+            "uuid": "d38b3f26abc46f7bb29db952021a1b14",
+            "path": "category/enterprise software/d38b3f26abc46f7bb29db952021a1b14",
+            "created_at": 1397980726,
+            "updated_at": 1417107610
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/big-data-companies/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://twitter.com/bigdatacompany",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1371691142,
+            "updated_at": 1409454213
+          },
+          {
+            "url": "http://www.bigdatacompanies.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1371691142,
+            "updated_at": 1397987598
+          }
+        ]
+      }
+    }
+  }
+}

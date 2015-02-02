@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html ng-app="ngApp" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html ng-app="ngApp" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html ng-app="ngApp" class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html ng-app="ngApp" class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html ng-app="ngApp" class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="description" content="Hadoop, Subversion &amp; Git With 100% Uptime and 0% Data Loss| WANdisco"> 
+  <meta name="keywords" content="big data,hadoop,subversion,svn,alm,active active,replication,enterprise, continuous availability, Power of 100%"> 
+  <meta name="generator" content="WANdiscoD7"> 
+  <link rel="shortlink" href="http://www.wandisco.com/"> 
+  <link rel="canonical" href="http://www.wandisco.com/"> 
+  <!-- Shareaholic Content Tags --> 
+  <meta name="shareaholic:site_name" content="WANdisco"> 
+  <meta name="shareaholic:language" content="en"> 
+  <meta name="shareaholic:site_id" content="5b6cc3e384bb77138e54482b8720098c"> 
+  <meta name="shareaholic:drupal_version" content="7.x-3.15"> 
+  <meta name="shareaholic:url" content="http://www.wandisco.com/"> 
+  <meta name="shareaholic:article_published_time" content="2014-01-24T17:34:49+00:00"> 
+  <meta name="shareaholic:article_modified_time" content="2014-11-07T19:22:25+00:00"> 
+  <meta name="shareaholic:article_author_name" content="duffy"> 
+  <!-- Shareaholic Content Tags End --> 
+  <script type="text/javascript" data-cfasync="false">
+    //<![CDATA[
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = '5b6cc3e384bb77138e54482b8720098c';
+          var page_config = {"apps":{"share_buttons":{"get_share_counts":  function(url, services, cb) {
+    Shareaholic.Utils.ajax({
+      cache: true,
+      cache_ttl: '1 minute',
+      url: 'http://www.wandisco.com/shareaholic/api/share_counts/v1',
+      data: { url: url, services: services },
+      success: function(res) {
+        if(res && res.data) {
+          cb(res.data, true);
+        }
+      }
+    })
+  }}}};
+          try { Shareaholic.init(site_id, page_config); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    //]]>
+  </script> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="googlebot" content="NOODP"> 
+  <meta name="viewport" content="width=device-width"> 
+  <!-- END Salesforce Live Agent Deployment Code --> 
+  <!-- Marketo --> 
+  <script type="text/javascript">
+  document.write(unescape("%3Cscript src='//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+  </script> 
+  <script>Munchkin.init('292-MSV-198');</script> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+  { (i[r].q=i[r].q||[]).push(arguments)}
+  ,i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-244993-1', 'wandisco.com');
+  ga('send', 'pageview');
+  </script> 
+  <!-- metatags --> 
+  <meta name="title" content="Hadoop, Subversion &amp; Git With 100% Uptime and 0% Data Loss| WANdisco "> 
+  <meta name="description" content="Discover the only continuous availability software to deliver non-stop Big Data access for Hadoop and LAN-speed collaboration for teams using SVN and Git. "> 
+  <meta name="abstract" content="Discover the only continuous availability software to deliver non-stop Big Data access for Hadoop and LAN-speed collaboration for teams using SVN and Git. "> 
+  <!-- end metatags --> 
+  <title>WANdisco</title> 
+  <link type="text/css" rel="stylesheet" href="http://www.wandisco.com/sites/default/files/css/css_791YXBaKKm1ORM_7huSKEsIV9tSWq6wmRkERhuXpN6w.css" media="all"> 
+  <link type="text/css" rel="stylesheet" href="http://www.wandisco.com/sites/default/files/css/css_PQCMS2vpFYC-1k73Z0ydoOFZjOv56KZ21myKp0tid28.css" media="all"> 
+  <link type="text/css" rel="stylesheet" href="http://www.wandisco.com/sites/default/files/css/css_-dIirapsVzQkKK0F0EtpzICq9tK0eYpoFKEeE-njXSw.css" media="all"> 
+  <style>div.a093e_field{display:none;visibility:hidden;}
+div.ae89c_field{display:none;visibility:hidden;}
+</style> 
+  <link type="text/css" rel="stylesheet" href="http://www.wandisco.com/sites/default/files/css/css_B6FrEhSzQ-LYsV2O2mZz_ffSgb9IB6S14sl6kaS-SZ0.css" media="all"> 
+  <link type="text/css" rel="stylesheet" href="http://www.wandisco.com/sites/default/files/css/css_gQvQi1hBxSijBVym-9ECsResAC3cQ6VC98kSTAAtxxk.css" media="screen"> 
+  <link type="text/css" rel="stylesheet" href="http://www.wandisco.com/sites/default/files/css/css_47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU.css" media="all"> 
+  <script src="http://www.wandisco.com/sites/default/files/js/js_-z-2lAhufzBeVjYseT6cTzSICUy9vnoLBpu1sF_zZrs.js"></script> 
+  <script src="http://www.wandisco.com/sites/default/files/js/js_F1dzW4ZdRMwy6jqXu_iBQ9xx2hOqQRQ86Yt5c00Pywk.js"></script> 
+  <script src="http://www.wandisco.com/sites/default/files/js/js_kdqUVGXTvV4YgYZRjexRDbAd7U9aeP8kumG8Jk2xiig.js"></script> 
+  <script>(function ($) {
+  Drupal.behaviors.afec2c905cce458b455 = {
+    attach: function (context, settings) {
+      $("input.a093e_field").each(function() {
+        f=$(this)[0];
+        if (f.value.indexOf("b45e458b")==0){f.value="ed"+f.value.substring(3)+"c04ffd685943eb5c_form";}
+      });
+    }
+  };
+})(jQuery);</script> 
+  <script>(function ($) {
+  Drupal.behaviors.afec2c905cc52b8d9da = {
+    attach: function (context, settings) {
+      $("input.ae89c_field").each(function() {
+        f=$(this)[0];
+        tok2 = f.style.fontFamily;
+        if(tok2.charAt(0) == "'" || tok2.charAt(0) == '"') tok2=tok2.substring(1, tok2.length-1);
+        tok2=tok2.substring(1, tok2.length);
+        if (f.value.indexOf("d9da352")==0){f.value="c8"+f.value.substring(5)+tok2;}
+      });
+    }
+  };
+}(jQuery));</script> 
+  <script src="http://www.wandisco.com/sites/default/files/js/js_6MCBCJkZv2Q5bXWQ3sWnRYvl7gEX2uN9uXeXe5GPtk8.js"></script> 
+  <script src="http://www.wandisco.com/sites/default/files/js/js_gW2UdxPTaHtVOu9668cKvtg8vKNCZfysKJlJOAv558Y.js"></script> 
+  <script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"wandisco","theme_token":"SPVw5O61HxQglGBznBFMwWwmCVyPxu6Oe8Xb11WJ83k","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/wandisco_form_extras\/js\/jquery.validate.min.js":1,"sites\/all\/modules\/fancybox\/fancybox.js":1,"sites\/all\/libraries\/fancybox\/source\/jquery.fancybox.pack.js":1,"sites\/all\/libraries\/fancybox\/lib\/jquery.mousewheel-3.0.6.pack.js":1,"0":1,"1":1,"misc\/textarea.js":1,"sites\/all\/modules\/webform\/js\/webform.js":1,"sites\/all\/themes\/wandisco\/assets\/js\/libs\/jquery-ui.1.8.24.min.js":1,"sites\/all\/themes\/wandisco\/assets\/js\/libs\/modernizr-2.6.2.js":1,"sites\/all\/themes\/wandisco\/assets\/js\/libs\/jquery.jcarousel.min.js":1,"sites\/all\/themes\/wandisco\/assets\/js\/libs\/jquery.carouFredSel-6.2.1-packed.js":1,"sites\/all\/themes\/wandisco\/assets\/js\/jquery.getGradientColorStop.js":1,"sites\/all\/themes\/wandisco\/assets\/js\/jquery.scrollTo.min.js":1,"sites\/all\/themes\/wandisco\/assets\/js\/jquery.localScroll.min.js":1,"sites\/all\/themes\/wandisco\/assets\/js\/global.js":1,"sites\/all\/themes\/wandisco\/assets\/js\/floatingnav.js":1,"sites\/all\/themes\/wandisco\/assets\/js\/carousel.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/fancybox\/source\/jquery.fancybox.css":1,"0":1,"1":1,"sites\/all\/modules\/webform\/css\/webform.css":1,"sites\/all\/themes\/wandisco\/assets\/css\/global.css":1,"sites\/all\/themes\/wandisco\/assets\/css\/modify.css":1,"sites\/all\/themes\/wandisco\/assets\/css\/newss.css":1,"sites\/all\/themes\/wandisco\/assets\/css\/quicktabs\/newsvtabs.css":1,"sites\/all\/themes\/wandisco\/assets\/css\/quicktabs\/newstabs.css":1,"sites\/all\/themes\/wandisco\/modules\/filter\/filter.css":1,"sites\/all\/themes\/wandisco\/modules\/system\/system.menus.css":1}},"fancybox":{"selectors":[".inline"]}});</script> 
+  <!--[if lt IE 9]>
+              <script src="'https://raw.github.com/scottjehl/Respond/master/respond.min.js'"></script>
+              <script src="'http://html5shim.googlecode.com/svn/trunk/html5.js'"></script>
+          <![endif]--> 
+  <!-- Fancybox override --> 
+  <script src="/sites/all/libraries/fancybox/source/helpers/jquery.fancybox-media.js"></script> 
+  <script>
+    var fancyboxSettings = {
+      video: {
+	helpers: {
+	  media: true
+	},
+	'width'       : '90%',
+	'height'      : '90%',
+	    'autoScale'       : false,
+	    'transitionIn'    : 'elastic',
+	'transitionOut'   : 'elastic',
+	'type'        : 'iframe'
+      },
+      googlemaps: {
+	'type' : 'iframe',
+	'width' : '800px',
+	'height' : '600px'
+      }
+    };
+  </script> 
+  <style type="text/css">
+    @import url("/sites/all/themes/wandisco/assets/css/fancybox.css");
+  </style> 
+  <link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/wandisco/images/icons/apple-touch-icon-57x57.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="/sites/all/themes/wandisco/images/icons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/wandisco/images/icons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="/sites/all/themes/wandisco/images/icons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon" sizes="60x60" href="/sites/all/themes/wandisco/images/icons/apple-touch-icon-60x60.png"> 
+  <link rel="apple-touch-icon" sizes="120x120" href="/sites/all/themes/wandisco/images/icons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon" sizes="76x76" href="/sites/all/themes/wandisco/images/icons/apple-touch-icon-76x76.png"> 
+  <link rel="apple-touch-icon" sizes="152x152" href="/sites/all/themes/wandisco/images/icons/apple-touch-icon-152x152.png"> 
+  <link rel="icon" type="image/png" href="/sites/all/themes/wandisco/images/icons/favicon-196x196.png" sizes="196x196"> 
+  <link rel="icon" type="image/png" href="/sites/all/themes/wandisco/images/icons/favicon-160x160.png" sizes="160x160"> 
+  <link rel="icon" type="image/png" href="/sites/all/themes/wandisco/images/icons/favicon-96x96.png" sizes="96x96"> 
+  <link rel="icon" type="image/png" href="/sites/all/themes/wandisco/images/icons/favicon-16x16.png" sizes="16x16"> 
+  <link rel="icon" type="image/png" href="/sites/all/themes/wandisco/images/icons/favicon-32x32.png" sizes="32x32"> 
+  <meta name="msapplication-TileColor" content="#2b5797"> 
+  <meta name="msapplication-TileImage" content="/sites/all/themes/wandisco/images/icons/mstile-144x144.png"> 
+ </head> 
+ <body class="html front not-logged-in no-sidebars page-node page-node- page-node-1 node-type-thome i18n-en"> 
+  <div id="skip-link"> 
+   <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a> 
+  </div> 
+  <header class="site-header home"> 
+   <div style="width: 940px; margin: auto;"> 
+    <a href="/" class="logo">WANDisco</a> 
+    <ul class="utility"> 
+     <li><a href="/user">Account</a></li> 
+     <li><a href="http://blogs.wandisco.com/">Blog</a></li> 
+     <li><a href="/store">Store</a></li> 
+     <li><a href="/support">Support</a></li> 
+     <li><a href="/investors">Investors</a></li> 
+     <li><a href="/contact-us">Contact Us</a></li> 
+     <li><a href="/careers">Careers</a></li> 
+    </ul> 
+    <nav id="site-header-nav"> 
+     <form action="/" method="post" id="search-block-form" accept-charset="UTF-8">
+      <div>
+       <div class="container-inline"> 
+        <h2 class="element-invisible">Search form</h2> 
+        <div class="form-item form-type-textfield form-item-search-block-form"> 
+         <label class="element-invisible" for="edit-search-block-form--2">Search </label> 
+         <input title="Enter the terms you wish to search for." class="search form-text" type="search" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128"> 
+        </div> 
+        <div class="form-actions form-wrapper" id="edit-actions--2">
+         <input class="hidden form-submit" type="submit" id="edit-submit--2" name="op" value="Search">
+        </div>
+        <input type="hidden" name="form_build_id" value="form-xiwiAhkS-sdg0RxvrefzME9YgweVXAeUYhsWWFVzwds"> 
+        <input type="hidden" name="form_id" value="search_block_form"> 
+       </div> 
+      </div>
+     </form> 
+     <ul> 
+      <li class="site-menu hadoop "><a href="/hadoop" aria-haspopup="true">Hadoop</a> 
+       <div class="subnav hadoop-subnav"> 
+        <div class="wrapper"> 
+         <h4 class="product"><a href="/hadoop">Non-Stop Hadoop for</a></h4> 
+         <div class="grid bg three"> 
+          <div class="col subnav-items"> 
+           <a href="/hadoop/non-stop-hadoop-cloudera"><p class="subnavCloudera title product">CLOUDERA</p></a> 
+           <p class="desc multiple product">Cloudera Distribution including Apache Hadoop</p> 
+           <a href="/hadoop/non-stop-hadoop-hortonworks"><p class="subnavHortonworks title product">HORTONWORKS</p></a> 
+           <p class="desc product">Hortonworks Data Platform</p> 
+          </div> 
+          <div class="col subnav-items"> 
+           <a href="/hadoop/non-stop-hadoop-oracle"><p class="subnavOracle title product">ORACLE</p></a> 
+           <p class="desc product">Oracle Big Data Appliance</p> 
+           <a href="/hadoop/non-stop-hadoop-ibm"><p class="subnavIBM title product">IBM</p></a> 
+           <p class="desc product">IBM InfoSphere BigInsights</p> 
+          </div> 
+          <div class="col subnav-items"> 
+           <a href="/hadoop/non-stop-hadoop"><p class="subnavApache title product">APACHE</p></a> 
+           <p class="desc product">Open-source Apache Hadoop</p> 
+          </div> 
+         </div> 
+        </div> 
+       </div> </li> 
+      <li class="site-menu svngit "><a href="/subversion-git" aria-haspopup="true">SVN &amp; Git</a> 
+       <div class="subnav svngit-subnav"> 
+        <div class="wrapper"> 
+         <div class="grid bg three"> 
+          <div class="col subnav-items"> 
+           <h4 class="product"><a href="/subversion-products">Subversion</a></h4> 
+           <a href="/subversion/multisiteplus"><p class="subnavSVN title product">SVN MULTISITE PLUS</p></a> 
+           <p class="desc product">For large globally distributed teams</p> 
+           <a href="/subversion/multisite"><p class="subnavSVN title product">SVN MULTISITE</p></a> 
+           <p class="desc product">Unify small and medium sized teams</p> 
+           <a href="/subversion/clustering"><p class="subnavSVN title product">SVN CLUSTERING</p></a> 
+           <p class="desc product">SVN performance and scalability</p> 
+           <a href="/subversion/accesscontrol"><p class="subnavSVN title product">SVN ACCESS CONTROL</p></a> 
+           <p class="desc product">Global Access Control and Audit for SVN</p> 
+           <a href="/accesscontrolplus"><p class="subnavSVN title product">ACCESS CONTROL PLUS</p></a> 
+           <p class="desc product multiple">Global Access Control and Audit Across SVN &amp; Git</p> 
+           <a href="/smartsvn/home"><p class="subnavSVN title product">SMARTSVN</p></a> 
+           <p class="desc product">Cross-platform SVN client</p> 
+           <a href="/subversion/download"><p class="subnavSVN title product">SVN CLIENT &amp; SERVER</p></a> 
+           <p class="desc product">Download certified Subversion binaries</p> 
+          </div> 
+          <div class="col subnav-items"> 
+           <h4 class="product"><a href="/git">Git</a></h4> 
+           <a href="/git/multisite"><p class="subnavGit title product">GIT MULTISITE</p></a> 
+           <p class="desc product">For large global development teams</p> 
+           <a href="/git/clustering"><p class="subnavGit title product">GIT CLUSTERING</p></a> 
+           <p class="desc product">Git performance and scalability</p> 
+           <a href="/git/accesscontrol"><p class="subnavGit title product">GIT ACCESS CONTROL</p></a> 
+           <p class="desc product">Global Access Control and Audit for Git</p> 
+           <a href="/accesscontrolplus"><p class="subnavGit title product">ACCESS CONTROL PLUS</p></a> 
+           <p class="desc product multiple">Global Access Control and Audit Across SVN &amp; Git</p> 
+           <a href="/git/download"><p class="subnavGit title product">GIT</p></a> 
+           <p class="desc product">Download certified Git binaries</p> 
+          </div> 
+          <div class="col subnav-items"> 
+           <h4 class="product"><a href="/subversion-products">CVS</a></h4> 
+           <a href="/cvs/multisite"><p class="subnavCVS title product">CVS MULTISITE</p></a> 
+           <p class="desc product">Unify development teams</p> 
+           <a href="/cvs/clustering"><p class="subnavCVS title product">CVS CLUSTERING</p></a> 
+           <p class="desc product">CVS performance and scalability</p> 
+           <a href="/cvs/accesscontrol"><p class="subnavCVS title product">CVS ACCESS CONTROL</p></a> 
+           <p class="desc product">Standardize global authorization</p> 
+          </div> 
+         </div> 
+        </div> 
+       </div> </li> 
+      <li class="site-menu customers "><a href="/customers">Customers</a></li> 
+      <li class="site-menu partners "><a href="/partners/find">Partners</a> 
+       <div class="subnav partners-subnav"> 
+        <div class="wrapper"> 
+         <h4><a href="/partners/find">Partners</a></h4> 
+         <div class="grid bg three"> 
+          <div class="col subnav-items"> 
+           <a href="/partners/find"><p class="title">FIND A PARTNER</p></a> 
+           <p class="desc">Search WANdisco partners</p> 
+          </div> 
+          <div class="col subnav-items"> 
+           <a href="/partner-portal"><p class="title">PARTNER PORTAL</p></a> 
+           <p class="desc">Access partner resources</p> 
+          </div> 
+          <div class="col subnav-items"> 
+          </div> 
+         </div> 
+        </div> 
+       </div> </li> 
+      <li class="site-menu resources "><a href="/training">Resources</a> 
+       <div class="subnav resources-subnav"> 
+        <div class="wrapper"> 
+         <h4><a href="/training">Resources</a></h4> 
+         <div class="grid bg three"> 
+          <div class="col subnav-items"> 
+           <a href="/enterprise-training"><p class="title">ENTERPRISE TRAINING</p></a> 
+           <p class="desc">On-site and online instruction</p> 
+           <a href="/training-content"><p class="title">FREE TRAINING CONTENT</p></a> 
+           <p class="desc">Ref cards, how-tos and more</p> 
+          </div> 
+          <div class="col subnav-items"> 
+           <a href="/webinars"><p class="title">FREE WEBINARS</p></a> 
+           <p class="desc">Expert-led Hadoop, SVN and Git sessions</p> 
+          </div> 
+          <div class="col subnav-items"> 
+           <a href="/training/webinar-replays"><p class="title">WEBINAR REPLAYS</p></a> 
+           <p class="desc">On-demand access to our library</p> 
+          </div> 
+         </div> 
+        </div> 
+       </div> </li> 
+      <li class="site-menu aboutus "><a href="/about">About Us</a> 
+       <div class="subnav aboutus-subnav"> 
+        <div class="wrapper"> 
+         <h4><a href="/about">About Us</a></h4> 
+         <div class="grid bg three"> 
+          <div class="col subnav-items"> 
+           <a href="/about"><p class="title">WHO WE ARE</p></a> 
+           <p class="desc">Our story</p> 
+           <a href="/about/team"><p class="title">MANAGEMENT</p></a> 
+           <p class="desc">Our team</p> 
+           <a href="/investors"><p class="title">INVESTORS</p></a> 
+           <p class="desc">Company and shareholder information</p> 
+           <a href="/careers"><p class="title">CAREERS</p></a> 
+           <p class="desc">Work at the 'disco</p> 
+          </div> 
+          <div class="col subnav-items"> 
+           <a href="/news"><p class="title">NEWS</p></a> 
+           <p class="desc">Press releases and media coverage</p> 
+           <a href="/events"><p class="title">EVENTS</p></a> 
+           <p class="desc">Upcoming conferences and meetups</p> 
+          </div> 
+          <div class="col subnav-items"> 
+           <a href="/media-kit"><p class="title">MEDIA KIT</p></a> 
+           <p class="desc">Download WANdisco assets</p> 
+           <a href="/contact-us"><p class="title">CONTACT US</p></a> 
+           <p class="desc">Get in touch</p> 
+          </div> 
+         </div> 
+        </div> 
+       </div> </li> 
+     </ul> 
+    </nav> 
+   </div> 
+   <script src="/sites/all/themes/wandisco/assets/js/doubletaptogo.js"></script> 
+   <script type="text/javascript">
+  //Touch friendly drop down menu with top level links
+  jQuery(function($) {
+    $( '#site-header-nav li' ).doubleTapToGo();
+  });
+</script> 
+  </header> 
+  <article style="height: 590px; background: black; text-align: center; padding: 0; margin: -24px auto 0;" id="linkSource"> 
+   <div style="margin: auto; height: 100%; width: 100%; background: url('/sites/all/themes/wandisco/images/newhome/basejump.jpg'); background-size: cover; background-position: 0% 50%;"> 
+    <p style="font-weight: 900; font-size: 48px; padding-top: 207px; padding-bottom: 0; letter-spacing: 5px; color: white;margin-bottom: 0;">HADOOP WITHOUT LIMITS</p> 
+    <p style="font-weight: 300; font-size: 25px; color: white;padding-top: 3px; padding-bottom: 20px; margin-top: 0;">WHY YOUR HADOOP NEEDS WANDISCO</p> 
+    <p><a class="button bigger" style="height: 46px; padding-top: 17px; width: 190px; margin-left: -40px; font-weight: 500; font-size:  13px;" href="#cont_avail">LEARN MORE &nbsp; <img src="/sites/all/themes/wandisco/images/newhome/base-arrow.png"> </a></p> 
+   </div> 
+  </article> 
+  <hr class="sep"> 
+  <script type="text/javascript">
+  jQuery(function($) {
+    $( ".moreContent" ).accordion({
+      collapsible: true, active: false, header: "h5"
+    });
+  });
+</script> 
+  <style>
+  section.norm {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  section.norm.panel {
+    text-align: center;
+  }
+  section.norm.panel p {
+    margin: 0;
+    padding-bottom: 0;
+    line-height: 2.5em;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  section.norm.panel p a {
+    color: #0066FF;
+  }
+  section.alternate {
+    width: 100%;
+    margin: auto;
+    background-color: #ededed;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+  }
+  section.norm .homeContainer, section.alternate .homeContainer {
+    text-align: left;
+    width: 940px;
+    margin: auto;
+  }
+  section.norm > div > div, section.alternate > div > div {
+    float: left;
+    width: 50%;
+    font-size: 14px;
+    padding: 20px;
+  }
+  section.norm img, section.alternate img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  section.norm a img, section.alternate a img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #selective {
+    margin-bottom: 0;
+  }
+</style> 
+  <section id="cont_avail" class="alternate"> 
+   <div class="homeContainer"> 
+    <div> 
+     <h3 style="color: #0066FF; font-weight: 100;">Continuous availability with Maximum Performance and Scalability</h3> 
+     <p>WANdisco’s patented technology removes the bottleneck of a single active NameNode in a single data center, balances workload across data centers, and enables LAN-speed read/write at any location without downtime or data loss – even during Hadoop upgrades and maintenance. </p> 
+     <div class="moreContent">
+      <h5 style="display:inline;">More...</h5> 
+      <div> 
+       <p>WANdisco’s patented replication technology enables workload to be balanced across multiple active peer NameNodes that simultaneously support client requests and continually synchronize across any number of data centers any distance apart. Clients have LAN-speed read/write access to the same data at every location without downtime or data loss. Support for rolling upgrades eliminates downtime when new versions of Hadoop are deployed. These capabilities meet the most stringent regulatory and business requirements for data availability and disaster recovery.</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div> 
+     <img src="/sites/all/themes/wandisco/images/newhome/reason-1.png"> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="compute_resource" class="norm"> 
+   <div class="homeContainer"> 
+    <div> 
+     <img src="/sites/all/themes/wandisco/images/newhome/reason-2.png"> 
+    </div> 
+    <div> 
+     <h3 style="color: #0066FF; font-weight: 100;">100% Use of Compute Resources</h3> 
+     <p>Active-active architecture eliminates read-only backup servers by making all servers fully readable and writable, so you can take full advantage of the hardware at each location.</p> 
+     <div class="moreContent">
+      <h5 style="display:inline;">More...</h5> 
+      <div> 
+       <p>With Non-Stop Hadoop, there are no passive standby servers. In WANdisco’s active/active architecture, all servers across all locations are fully readable and writeable. Money isn’t wasted on read-only backup servers and clusters that can’t be fully utilized. For even greater efficiency, features such as selective replication and asymmetric block replication allow different hardware footprints in each location.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="cluster" class="alternate"> 
+   <div class="homeContainer"> 
+    <div> 
+     <h3 style="color: #0066FF; font-weight: 100;">Cluster Zoning</h3> 
+     <p>Delegate your most resource-intensive data load and in-memory applications to high-spec servers while running less critical batch applications on commodity servers. Maintain quality of service for all users and eliminate the need for costly hardware throughout the cluster.</p> 
+     <div class="moreContent">
+      <h5 style="display:inline;">More...</h5> 
+      <div> 
+       <p>Cluster zoning enables a ‘virtual cluster’ or zone within a cluster to be deployed that isolates the most resource intensive data load and in-memory applications to the highest spec servers, while less critical batch applications run on low-end commodity servers. This offers significant cost savings by eliminating the need to deploy high-end servers throughout a cluster, while maintaining quality of service for all users.</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div> 
+     <img src="/sites/all/themes/wandisco/images/newhome/reason-3.png"> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="ingest" class="norm"> 
+   <div class="homeContainer"> 
+    <div> 
+     <img src="/sites/all/themes/wandisco/images/newhome/reason-4.png"> 
+    </div> 
+    <div> 
+     <h3 style="color: #0066FF; font-weight: 100;">Multi-Data Center Ingest</h3> 
+     <p>Ingest data at any number of locations simultaneously, automatically replicate where you choose, and analyze from anywhere with no single point of failure. No admin overhead, no loss of data.</p> 
+     <div class="moreContent">
+      <h5 style="display:inline;">More...</h5> 
+      <div> 
+       <p>WANdisco’s active/active architecture enables data ingest at any number of locations simultaneously, automatically replicates it to any number of locations, and allows it to be analyzed anywhere without any single point of failure. This eliminates the administrator overhead and risk of error involved in using DistCp and other tools to copy data from its source to a central location for analysis. This capability is essential in large global organizations where data is generated from widely distributed sources and timeliness and accuracy are critical.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section id="selective" class="alternate"> 
+   <div class="homeContainer"> 
+    <div> 
+     <h3 style="color: #0066FF; font-weight: 100;">Selective replication with global access</h3> 
+     <p>WANdisco makes Hadoop data center-aware so you can perform global, company-wide roll-up analysis from anywhere regardless of how your data is distributed. </p> 
+     <div class="moreContent">
+      <h5 style="display:inline;">More...</h5> 
+      <div> 
+       <p>In large deployments where selective replication is used, data may not exist at the location where analysis is run. WANdisco overcomes this by enabling Hadoop to be data center aware, making global company-wide roll-up analysis possible regardless of how data is distributed across an organization.</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div> 
+     <img src="/sites/all/themes/wandisco/images/newhome/reason-5.png"> 
+    </div> 
+   </div> 
+  </section> 
+  <hr class="sep"> 
+  <div class="cycle-wrapper"> 
+   <article id="cycle-companies" class="banner companies cycle" data-cycle-log="false" data-cycle-slides="> .slide" data-cycle-paused="false" data-cycle-pager="#companies-cycle-pager" data-cycle-pager-template="" data-cycle-fx="scrollHorz"> 
+    <div class="cycle-prevnext cycle-prev" data-cycle-cmd="pause" data-cycle-context="#cycle-companies">
+     &lt;
+    </div> 
+    <div class="cycle-prevnext cycle-next" data-cycle-cmd="pause" data-cycle-context="#cycle-companies">
+     &gt;
+    </div> 
+    <div class="slide slide-uci"> 
+     <div class="slide-content"> 
+      <div class="wrapper"> 
+       <p class="lead">It doesn’t take a brain surgeon</p> 
+       <p class="lead2">to see Big Data is saving lives</p> 
+       <p class="text">By harnessing the power of 100% Big Data, WANdisco is enabling UC Irvine Health<br>to change the future of medical care for doctors and patients.</p> 
+       <p class="cta"><a href="http://www.youtube.com/watch?v=tRKci1rhZBY" class="button arrow-circle">Watch video<span></span></a></p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="slide slide-juniper"> 
+     <div class="slide-content"> 
+      <div class="wrapper"> 
+       <p class="lead">Only WANdisco can unify</p> 
+       <p class="lead2">a 3,000-person global workforce</p> 
+       <p class="text">Imagine a 3,000-person global workforce, across three locations collaborating in real time. Now see how WANdisco helped Juniper Networks achieve it.</p> 
+       <p class="cta"><a href="http://youtu.be/-PeOGygkFWU" class="button arrow-circle">Watch video<span></span></a></p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="slide slide-mcafee"> 
+     <div class="slide-content"> 
+      <div class="wrapper"> 
+       <p class="lead">McAfee keeps Internet usage secure,</p> 
+       <p class="lead2">we keep them running 24/7</p> 
+       <p class="text">There’s a lot at stake when it comes to Internet security. Read how WANdisco delivered absolute business continuity to the company protecting our Internet experience.</p> 
+       <p class="cta"><a href="/customers/case-studies/mcafee" class="button arrow-circle">Read case study<span></span></a></p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="slide slide-pitneybowes"> 
+     <div class="slide-content"> 
+      <div class="wrapper"> 
+       <p class="lead">With global collaboration, Pitney Bowes is now</p> 
+       <p class="lead2">greater than the sum of its parts</p> 
+       <p class="text">After a number of company acquisitions, Pitney Bowes needed a solution that would enable real-time collaboration across all locations. WANdisco answered the call.</p> 
+       <p class="cta"><a href="/customers/case-studies/pitney-bowes" class="button arrow-circle">Read case study<span></span></a></p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="slide slide-eso"> 
+     <div class="slide-content"> 
+      <div class="wrapper"> 
+       <p class="lead">Planets 127 light years away,</p> 
+       <p class="lead2">discovered using WANdisco software</p> 
+       <p class="text">With 0% downtime, the sky is no longer the limit. Read how WANdisco enabled the European Southern Observatory (ESO) to take their research to new heights.</p> 
+       <p class="cta"><a href="/customers/case-studies/eso" class="button arrow-circle">Read case study<span></span></a></p> 
+      </div> 
+     </div> 
+    </div> 
+   </article> 
+   <div class="cycle-pager"> 
+    <div class="wrapper"> 
+     <ul id="companies-cycle-pager" data-cycle-cmd="pause" data-cycle-context="#cycle-companies"> 
+      <li class="pager-uci">UC Irvine Health</li> 
+      <li class="pager-juniper">Juniper Networks</li> 
+      <li class="pager-mcafee">McAfee</li> 
+      <li class="pager-pitneybowes">Pitney Bowes</li> 
+      <li class="pager-eso">ESO</li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <article class="banner harness" id="harness"> 
+   <div class="wrapper"> 
+    <p><img src="/sites/all/themes/wandisco/images/front/harness-power.png"> </p>
+    <p class="text">Learn more about the key features of Non-Stop Hadoop for<br> Hortonworks, Cloudera, Oracle, IBM, and Apache.</p> 
+    <p><a href="/hadoop" class="button large arrow-circle">Learn More<span></span></a></p> 
+    <ul> 
+     <li><a href="/subversion-products">View Subversion Products</a></li> 
+     <li class="last"><a href="/git">View Git Products</a></li> 
+    </ul> 
+   </div> 
+  </article> 
+  <!--<article class="harness" id="harness">
+  <div class="wrapper">
+    <h2><p class="lead">McAfee keeps Internet usage secure,</p>
+<p class="lead2">we keep them running 24/7</p>
+<p class="text">There’s a lot at stake when it comes to Internet security. Read how WANdisco delivered absolute business continuity to the company protecting our Internet experience.</p>
+<p class="cta"><a href="/customers/case-studies/mcafee" class="button arrow-circle">Read case study<span></span></a></p></h2>
+    <h3><p class="lead">With global collaboration, Pitney Bowes is now</p>
+<p class="lead2">greater than the sum of its parts</p>
+<p class="text">After a number of company acquisitions, Pitney Bowes needed a solution that would enable real-time collaboration across all locations. WANdisco answered the call.</p>
+<p class="cta"><a href="/customers/case-studies/pitney-bowes" class="button arrow-circle">Read case study<span></span></a></p></h3>
+    <div class="grid three">
+      <div class="col">
+	<p class="lead">Planets 127 light years away,</p>
+<p class="lead2">discovered using WANdisco software</p>
+<p class="text">With 0% downtime, the sky is no longer the limit. Read how WANdisco enabled the European Southern Observatory (ESO) to take their research to new heights.</p>
+<p class="cta"><a href="/customers/case-studies/eso" class="button arrow-circle">Read case study<span></span></a></p>      </div>
+      <div class="col">
+	Learn more about the key features of Non-Stop Hadoop for</br>
+Hortonworks, Cloudera, Oracle, IBM, and Apache.      </div>
+      <div class="col">
+	<a href="/hadoop" class="button large arrow-circle">Learn More<span></span></a>      </div>
+    </div>
+  </div>
+</article>--> 
+  <article class="contact"> 
+   <div class="wrapper"> 
+    <h2>Contact a Specialist</h2> 
+   </div> 
+   <form class="webform-client-form" enctype="multipart/form-data" action="/content/contact-specialist" method="post" id="webform-client-form-1425" accept-charset="UTF-8">
+    <div> 
+     <article class="contact"> 
+      <div class="wrapper">
+       <div class="inner"> 
+        <div class="grid two"> 
+         <div class="col"> 
+          <div class="form-item webform-component webform-component-email" id="webform-component-email"> 
+           <label class="element-invisible" for="edit-submitted-email--2">Email <span class="form-required" title="This field is required.">*</span></label> 
+           <input class="email form-text form-email required" placeholder="Email *" style="width: inherit" type="email" id="edit-submitted-email--2" name="submitted[email]" size="60"> 
+          </div> 
+          <div class="form-item webform-component webform-component-textfield" id="webform-component-first-name"> 
+           <label class="element-invisible" for="edit-submitted-first-name--2">First Name <span class="form-required" title="This field is required.">*</span></label> 
+           <input placeholder="First Name *" style="width: inherit" type="text" id="edit-submitted-first-name--2" name="submitted[first_name]" value="" size="60" maxlength="128" class="form-text required"> 
+          </div> 
+          <div class="form-item webform-component webform-component-textfield" id="webform-component-last-name"> 
+           <label class="element-invisible" for="edit-submitted-last-name--2">Last Name <span class="form-required" title="This field is required.">*</span></label> 
+           <input placeholder="Last Name *" style="width: inherit" type="text" id="edit-submitted-last-name--2" name="submitted[last_name]" value="" size="60" maxlength="128" class="form-text required"> 
+          </div> 
+          <div class="form-item webform-component webform-component-textfield" id="webform-component-telephone"> 
+           <label class="element-invisible" for="edit-submitted-telephone">Telephone <span class="form-required" title="This field is required.">*</span></label> 
+           <input placeholder="Phone *" style="width: inherit" type="text" id="edit-submitted-telephone" name="submitted[telephone]" value="" size="60" maxlength="128" class="form-text required"> 
+          </div> 
+         </div> 
+         <div class="col"> 
+          <div class="form-item webform-component webform-component-textarea" id="webform-component-comments-or-questions"> 
+           <label class="element-invisible" for="edit-submitted-comments-or-questions">Comments or Questions </label> 
+           <div class="form-textarea-wrapper resizable">
+            <textarea placeholder="Comments &amp; Questions" style="height: 253px" id="edit-submitted-comments-or-questions" name="submitted[comments_or_questions]" cols="60" rows="5" class="form-textarea"></textarea>
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <p style="padding-bottom: 0;">* Required field</p> 
+        <input type="hidden" name="details[sid]"> 
+        <input type="hidden" name="details[page_num]" value="1"> 
+        <input type="hidden" name="details[page_count]" value="1"> 
+        <input type="hidden" name="details[finished]" value="0"> 
+        <input type="hidden" name="form_build_id" value="form--V0J17hnWgV-oT-sISZ4MumPoGiU-ujjf8oLnGR7ePI"> 
+        <input type="hidden" name="form_id" value="webform_client_form_1425"> 
+        <div class="form-actions form-wrapper" id="edit-actions--3">
+         <input type="submit" id="edit-submit--3" name="op" value="Submit" class="form-submit">
+        </div>
+       </div>
+      </div> 
+     </article> 
+    </div>
+   </form>
+  </article> 
+  <script src="/sites/all/themes/wandisco/assets/js/libs/jquery.cycle2.min.js"></script> 
+  <script src="/sites/all/themes/wandisco/assets/js/jquery.backgroundSize.js"></script> 
+  <script src="/sites/all/themes/wandisco/assets/js/cycle.js"></script> 
+  <script src="/sites/all/themes/wandisco/assets/js/homepage.js"></script> 
+  <footer class="site-footer"> 
+   <a href="/" class="logo">WANDisco</a> 
+   <ul> 
+    <li>US: +1 925 380 1728</li> 
+    <li>UK: +44 (0)114 3039985</li> 
+   </ul> 
+   <hr class="sep"> 
+   <div class="footer-col"> 
+    <ul class="links"> 
+     <li><a href="http://blogs.wandisco.com/">Blog</a></li> 
+     <li><a href="/investors">Investors</a></li> 
+     <li><a href="/contact-us">Contact Us</a></li> 
+     <li><a href="/careers">Careers</a></li> 
+     <li><a href="/sitemap">Site Map</a></li> 
+     <li><a href="/privacy-policy">Privacy</a></li> 
+     <li><a href="/terms">Terms</a></li> 
+     <li><a href="/privacy-policy#trademarks">Trademarks</a></li> 
+    </ul> 
+    <p>Subversion and the Subversion logo are trademarks of the <a href="http://www.apache.org/" target="_blank">Apache Software Foundation</a>. Hadoop and the Hadoop elephant logo are trademarks of the <a href="http://www.apache.org/" target="_blank">Apache Software Foundation</a>. All other trademarks and copyrights are the property of their rightful owners.</p> 
+   </div> 
+   <div class="footer-col right"> 
+    <ul class="social"> 
+     <li><a href="http://www.linkedin.com/company/wandisco" target="_blank"><i class="icon-linkedin"></i></a></li> 
+     <li><a href="http://www.facebook.com/wandisco" target="_blank"><i class="icon-facebook"></i></a></li> 
+     <li><a href="http://twitter.com/WANdisco" target="_blank"><i class="icon-twitter"></i></a></li> 
+    </ul> 
+    <p class="copyright">Copyright © 2005 - 2014 WANdisco, Inc. All rights reserved.</p> 
+   </div> 
+   <!-- Start of Leadlander Code --> 
+   <script type="text/javascript">llactid=12596</script> 
+   <script type="text/javascript" src="http://t5.trackalyzer.com/trackalyze.js"></script> 
+   <!-- End of Leadlander Code --> 
+  </footer> 
+  <!-- REMARKETING --> 
+  <!-- AdRoll RM Tag --> 
+  <script type="text/javascript">
+      adroll_adv_id = "GWX2PWQORFFPXPFP6ONAT4";
+      adroll_pix_id = "CSMV3P2CVBBJDCEQZZCV2U";
+      (function () {
+      var oldonload = window.onload;
+      window.onload = function(){
+        __adroll_loaded=true;
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        if(oldonload){oldonload()}};
+        }());
+        </script> 
+  <!-- Google RM Tag --> 
+  <!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup ---------------------------------------------------> 
+  <script type="text/javascript"> /* <![CDATA[ */ var google_conversion_id = 966146879; var google_custom_params = window.google_tag_params; var google_remarketing_only = true; /* ]]> */ </script> 
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"> </script> 
+  <noscript> 
+   <div style="display:inline;"> 
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/966146879/?value=0&amp;guid=ON&amp;script=0"> 
+   </div> 
+  </noscript> 
+  <!-- REMARKETING -->   
+ </body>
+</html>

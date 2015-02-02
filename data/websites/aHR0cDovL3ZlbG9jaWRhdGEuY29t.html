@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8" id="ie7" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js lt-ie10 lt-ie9" id="ie8" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 9 ]>
+<html class="no-js lt-ie10" id="ie9" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !IE ]><!-->
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="initial-scale=1.0, width=device-width"> 
+  <title>VelociData - Big Data Solutions Provider</title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://velocidata.com/xmlrpc.php"> 
+  <!--[if lt IE 9]>
+<script src="http://velocidata.com/wp-content/themes/3clicks/js/excanvas/excanvas.compiled.js"></script>
+<![endif]--> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.6.3 - https://yoast.com/wordpress/plugins/seo/ --> 
+  <meta name="description" content="If you have ingest bottlenecks, VelociData is the Big Data solutions provider that eliminates them, while optimizing data quality. Read More."> 
+  <link rel="canonical" href="http://velocidata.com/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="VelociData - Big Data Solutions Provider"> 
+  <meta property="og:description" content="If you have ingest bottlenecks, VelociData is the Big Data solutions provider that eliminates them, while optimizing data quality. Read More."> 
+  <meta property="og:url" content="http://velocidata.com/"> 
+  <meta property="og:site_name" content="Velocidata"> 
+  <meta property="og:image" content="http://velocidata.com/wp-content/uploads/2013/03/improve-data-operations.gif"> 
+  <meta name="msvalidate.01" content="06CF52D9431EDFFFCD4B61E6544DC4C2"> 
+  <script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "http://velocidata.com/", "potentialAction": { "@type": "SearchAction", "target": "http://velocidata.com/?s={search_term}", "query-input": "required name=search_term" } }</script> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="alternate" type="application/rss+xml" title="Velocidata » Feed" href="http://velocidata.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Velocidata » Comments Feed" href="http://velocidata.com/comments/feed/"> 
+  <!-- This site is powered by Shareaholic - https://shareaholic.com --> 
+  <script type="text/javascript" data-cfasync="false">
+  //<![CDATA[
+    (function() {
+      var shr = document.createElement('script');
+      shr.setAttribute('data-cfasync', 'false');
+      shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+      shr.type = 'text/javascript'; shr.async = 'true';
+      shr.onload = shr.onreadystatechange = function() {
+        var rs = this.readyState;
+        if (rs && rs != 'complete' && rs != 'loaded') return;
+        var site_id = '92b046d28e797260ee4fe958a70635a4';
+        var page_config = {"apps":{"share_buttons":{"get_share_counts":  function(url, services, cb) {
+    Shareaholic.Utils.ajax({
+      cache: true,
+      cache_ttl: '1 minute',
+      url: 'http://velocidata.com/wp-admin/admin-ajax.php',
+      data: { action: 'shareaholic_share_counts_api', url: url, services: services },
+      success: function(res) {
+        if(res && res.data) {
+          cb(res.data, true);
+        }
+      }
+    })
+  }}}};
+        try { Shareaholic.init(site_id, page_config); } catch (e) {}
+      };
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(shr, s);
+    })();
+  //]]>
+</script> 
+  <!-- Shareaholic Content Tags --> 
+  <meta name="shareaholic:site_name" content="Velocidata"> 
+  <meta name="shareaholic:language" content="en-US"> 
+  <meta name="shareaholic:site_id" content="92b046d28e797260ee4fe958a70635a4"> 
+  <meta name="shareaholic:wp_version" content="7.6.0.4"> 
+  <!-- Shareaholic Content Tags End --> 
+  <link rel="stylesheet" id="eMember.style-css" href="http://velocidata.com/wp-content/plugins/wp-eMember/css/eMember_style.css?ver=8.8.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="eMember.style.custom-css" href="http://velocidata.com/wp-content/plugins/wp-eMember/css/eMember_custom_style.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="validationEngine.jquery-css" href="http://velocidata.com/wp-content/plugins/wp-eMember/css/validationEngine.jquery.css?ver=8.8.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="jquery.fileuploader-css" href="http://velocidata.com/wp-content/plugins/wp-eMember/css/jquery.fileuploader.css?ver=8.8.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://velocidata.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="g1-gmaps-css" href="http://velocidata.com/wp-content/plugins/g1-gmaps/css/g1-gmaps.css?ver=0.6.1" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="g1-social-icons-css" href="http://velocidata.com/wp-content/plugins/g1-social-icons/css/main.css?ver=1.0.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="collapseomatic-css-css" href="http://velocidata.com/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6" type="text/css" media="all"> 
+  <link rel="stylesheet" id="rs-plugin-settings-css" href="http://velocidata.com/wp-content/plugins/revslider/rs-plugin/css/settings.css?rev=4.6.0&amp;ver=4.0.1" type="text/css" media="all"> 
+  <style type="text/css">
+.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+</style> 
+  <link rel="stylesheet" id="g1_screen-css" href="http://velocidata.com/wp-content/themes/3clicks/css/g1-screen.css?ver=1.2.1" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="g1_dynamic_style-css" href="http://velocidata.com/wp-content/themes/3clicks/css/g1-dynamic-style.php?respondjs=no&amp;ver=1.2.1" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="galleria_theme-css" href="http://velocidata.com/wp-content/themes/3clicks/js/galleria/themes/classic/galleria.classic.css?respondjs=no&amp;ver=1.2.1" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="jquery.magnific-popup-css" href="http://velocidata.com/wp-content/themes/3clicks/js/jquery.magnific-popup/magnific-popup.css?ver=1.2.1" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="g1_style-css" href="http://velocidata.com/wp-content/themes/3clicks-child-theme/style.css?ver=4.0.1" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="google_font_bb9cf7cb-css" href="http://fonts.googleapis.com/css?family=Droid+Sans:700&amp;subset=latin,latin-ext" type="text/css" media="all"> 
+  <link rel="stylesheet" id="google_font_4fe4578f-css" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular&amp;subset=latin,latin-ext" type="text/css" media="all"> 
+  <link rel="stylesheet" id="google_font_4a2a13c1-css" href="http://fonts.googleapis.com/css?family=Days+One&amp;subset=latin,latin-ext" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://velocidata.com/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/wp-eMember/js/jquery.fileuploader.js?ver=8.8.0"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/wp-eMember/js/jquery.validationEngine.js?ver=8.8.0"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/wp-eMember/js/jquery.hint.js?ver=8.8.0"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/wp-eMember/js/jquery.tools18.min.js?ver=8.8.0"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/wp-eMember/js/jquery.libs.js?ver=8.8.0"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/wp-eMember/js/jquery.pagination-2.0rc.js?ver=8.8.0"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/wp-eMember/js/jquery.confirm-1.3.js?ver=8.8.0"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min.js?rev=4.6.0&amp;ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?rev=4.6.0&amp;ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/modernizr/modernizr.custom.js?ver=1.2.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://velocidata.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://velocidata.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="shortlink" href="http://velocidata.com/"> 
+  <link rel="stylesheet" type="text/css" href="http://velocidata.com/wp-content/plugins/cforms146/styling/cforms2012.css"> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/cforms146/js/cforms.js"></script> 
+  <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-27883835-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script> 
+  <!-- WP eMember plugin v8.8.0 - http://www.tipsandtricks-hq.com/wordpress-emember-easy-to-use-wordpress-membership-plugin-1706 --> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+jQuery(document).ready(function($){
+  
+    emember_forget_pass_trigger = '';    
+    $forgot_pass_overlay = $(".forgot_pass_link").click(function(e){
+        $("#wp_emember_email_mailMsg").html("").hide();
+        $("#wp_emember_email_mailForm").show();   
+        $('.eMember_text_input').val("");     
+        }).overlay({
+        mask: {
+            color: '#ebecff'/*'darkred'*//*'#E7E7E7'*/,
+            loadSpeed: 200,
+            top: '30%',
+            opacity: 0.9
+        },
+        api:true,
+        onBeforeLoad:function(){
+            emember_forget_pass_trigger = this.getTrigger();
+        },    
+        closeOnClick: false
+    });
+            
+    $("#wp_emember_mailSendForm").live('submit',function(e){
+       var $this = this;
+       var divs = jQuery($this).parent().parent().find("div");
+       var emailId = jQuery($this).find("input").eq(0).val();
+       if(emailId=="")
+          return;
+       divs.eq(1).hide();
+       divs.eq(0).html("").append(jQuery('<h3>Please Wait...</h3>')).show();
+       var params = {"event":"send_mail","action":"send_mail","email":emailId,"_ajax_nonce":"725a691dfe"}
+       jQuery.get( 'http://velocidata.com/wp-admin/admin-ajax.php',params,               
+             function(data){
+                 divs.eq(0).html("").append(jQuery('<h3>'+data.msg+'</h3>'));  
+                 setTimeout("emember_forget_pass_trigger.overlay().close()", 1000);                                  
+             },
+       "json");
+       e.preventDefault();
+    });
+    
+    
+    function get_redirect_url($redirects){
+            
+        var $after_login_page = 'http://velocidata.com/partner-account/';
+        if ($redirects.own) return $redirects.own;
+        if ($redirects.level) return $redirects.level;
+        if ($after_login_page) return $after_login_page;
+        return '';  
+    }
+});
+/* ]]> */
+</script> 
+  <link rel="shortcut icon" href="http://velocidata.com/wp-content/uploads/2014/06/favicon.ico">
+  <script type="text/javascript">
+// Rendered by the Simple Scripts Plugin
+// http://wordpress.org/plugins/simple-scripts/
+ 
+
+</script> 
+  <style type="text/css"></style> 
+  <style type="text/css">
+.synved-social-resolution-single {
+display: inline-block;
+}
+.synved-social-resolution-normal {
+display: inline-block;
+}
+.synved-social-resolution-hidef {
+display: none;
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx),
+only screen and (min-resolution: 192dpi) {
+	.synved-social-resolution-normal {
+	display: none;
+	}
+	.synved-social-resolution-hidef {
+	display: inline-block;
+	}
+}
+</style> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/respond/respond.src.js"></script> 
+ </head> 
+ <body class="home page page-id-124 page-template-default g1-font-regular-s g1-font-important-m g1-tl-squircle g1-tr-squircle g1-br-squircle g1-bl-squircle g1-preheader-open-expand g1-preheader-layout-wide-standard g1-preheader-tl-square g1-preheader-tr-square g1-preheader-br-square g1-preheader-bl-square g1-header-position-static g1-header-layout-wide-standard g1-header-comp-left-right g1-primary-nav--unstyled g1-header-tl-square g1-header-tr-square g1-header-br-square g1-header-bl-square g1-header-searchform-none g1-precontent-layout-wide-narrow g1-precontent-tl-square g1-precontent-tr-square g1-precontent-br-square g1-precontent-bl-square g1-content-layout-standard-narrow g1-content-tl-square g1-content-tr-square g1-content-br-square g1-content-bl-square g1-prefooter-layout-wide-narrow g1-prefooter-tl-square g1-prefooter-tr-square g1-prefooter-br-square g1-prefooter-bl-square g1-footer-layout-wide-narrow g1-footer-comp-01 g1-footer-tl-square g1-footer-tr-square g1-footer-br-square g1-footer-bl-square g1-secondary-none" itemscope itemtype="http://schema.org/WebPage"> 
+  <div id="page"> 
+   <div id="g1-top"> 
+    <!-- BEGIN #g1-header --> 
+    <div id="g1-header-waypoint"> 
+     <div id="g1-header" role="banner"> 
+      <div class="g1-layout-inner"> 
+       <div id="g1-primary-bar"> 
+        <div id="g1-id">
+         <h1 class="site-title"><a href="http://velocidata.com"><img width="147" height="109" id="g1-logo" src="http://velocidata.com/wp-content/uploads/2014/06/velocidata-logo-white1.png" alt="Velocidata" data-g1-src-desktop="http://velocidata.com/wp-content/uploads/2014/06/velocidata-logo-white1.png" data-g1-src-desktop-hdpi="http://velocidata.com/wp-content/uploads/2014/06/velocidata-logo-white1.png"> 
+           <noscript>
+            <img src="http://velocidata.com/wp-content/uploads/2014/06/velocidata-logo-white1.png" alt="Velocidata">
+           </noscript><img width="147" height="109" id="g1-mobile-logo" src="http://velocidata.com/wp-content/uploads/2014/06/velocidata-logo-white1.png" alt="Velocidata" data-g1-src-mobile="http://velocidata.com/wp-content/uploads/2014/06/velocidata-logo-white1.png" data-g1-src-mobile-hdpi="http://velocidata.com/wp-content/uploads/2014/06/velocidata-logo-white1.png"></a></h1>
+        </div>
+        <!-- #id --> 
+        <!-- BEGIN #g1-primary-nav --> 
+        <nav id="g1-primary-nav" class="g1-nav--unstyled g1-nav--collapsed"> 
+         <a id="g1-primary-nav-switch" href="#">Menu</a> 
+         <ul id="g1-primary-nav-menu" class="">
+          <li id="menu-item-3969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-3969 g1-type-drops"><a href="#">
+            <div class="g1-nav-item__arrow"></div>
+            <div class="g1-nav-item__title">
+             Corporate
+            </div></a> 
+           <div class="g1-submenus">
+            <ul> 
+             <li id="menu-item-3968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3968"><a href="http://velocidata.com/corporate-profile/">
+               <div class="g1-nav-item__title">
+                Corporate Team
+               </div></a></li> 
+             <li id="menu-item-3970" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3970"><a href="http://velocidata.com/category/news/">
+               <div class="g1-nav-item__title">
+                VelociData News
+               </div></a></li> 
+            </ul>
+           </div> </li> 
+          <li id="menu-item-3972" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-3972 g1-type-drops"><a href="#">
+            <div class="g1-nav-item__arrow"></div>
+            <div class="g1-nav-item__title">
+             Our Solutions
+            </div></a> 
+           <div class="g1-submenus">
+            <ul> 
+             <li id="menu-item-3973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3973"><a href="http://velocidata.com/your-challenge/">
+               <div class="g1-nav-item__title">
+                Your Challenge
+               </div></a></li> 
+             <li id="menu-item-3974" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3974"><a href="http://velocidata.com/our-solution/">
+               <div class="g1-nav-item__title">
+                Our Approach
+               </div></a></li> 
+             <li id="menu-item-3975" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-3975"><a href="#">
+               <div class="g1-nav-item__arrow"></div>
+               <div class="g1-nav-item__title">
+                Products
+               </div></a> 
+              <ul> 
+               <li id="menu-item-3976" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3976"><a href="http://velocidata.com/zfusion/">
+                 <div class="g1-nav-item__title">
+                  zFusion
+                 </div></a></li> 
+               <li id="menu-item-3977" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3977"><a href="http://velocidata.com/vfusion/">
+                 <div class="g1-nav-item__title">
+                  vFusion
+                 </div></a></li> 
+              </ul> </li> 
+             <li id="menu-item-3978" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3978"><a href="http://velocidata.com/pricing/">
+               <div class="g1-nav-item__title">
+                Cost Model
+               </div></a></li> 
+            </ul>
+           </div> </li> 
+          <li id="menu-item-3979" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-3979 g1-type-drops"><a href="#">
+            <div class="g1-nav-item__arrow"></div>
+            <div class="g1-nav-item__title">
+             Resources
+            </div></a> 
+           <div class="g1-submenus">
+            <ul> 
+             <li id="menu-item-3980" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3980"><a href="http://velocidata.com/resources/">
+               <div class="g1-nav-item__title">
+                Whitepapers
+               </div></a></li> 
+             <li id="menu-item-3981" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3981"><a href="http://velocidata.com/frequently-asked-questions/">
+               <div class="g1-nav-item__title">
+                Frequently Asked Questions
+               </div></a></li> 
+             <li id="menu-item-3982" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3982"><a href="http://support.velocidata.com">
+               <div class="g1-nav-item__title">
+                Support
+               </div></a></li> 
+            </ul>
+           </div> </li> 
+          <li id="menu-item-3983" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-3983 g1-type-drops"><a href="#">
+            <div class="g1-nav-item__arrow"></div>
+            <div class="g1-nav-item__title">
+             Partners
+            </div></a> 
+           <div class="g1-submenus">
+            <ul> 
+             <li id="menu-item-3984" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3984"><a href="http://velocidata.com/partners/">
+               <div class="g1-nav-item__title">
+                Our Partners
+               </div></a></li> 
+             <li id="menu-item-3985" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3985"><a href="http://velocidata.com/join-us/">
+               <div class="g1-nav-item__title">
+                Become a Business Partner
+               </div></a></li> 
+             <li id="menu-item-3986" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3986"><a href="http://velocidata.com/member-login/">
+               <div class="g1-nav-item__title">
+                Partner Login
+               </div></a></li> 
+            </ul>
+           </div> </li> 
+          <li id="menu-item-4067" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4067 g1-type-drops"><a href="http://velocidata.com/category/mainblog/">
+            <div class="g1-nav-item__title">
+             Blog
+            </div></a></li> 
+          <li id="menu-item-3991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3991 g1-type-drops"><a href="http://velocidata.com/contact-velocidata/">
+            <div class="g1-nav-item__title">
+             Contact
+            </div></a></li> 
+         </ul> 
+        </nav> 
+        <!-- END #g1-primary-nav --> 
+       </div>
+       <!-- END #g1-primary-bar --> 
+      </div> 
+      <div class="g1-background"> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- END #g1-header --> 
+    <!-- BEGIN #g1-precontent --> 
+    <div id="g1-precontent"> 
+     <figure id="g1-primary-slider">
+      <!-- START REVOLUTION SLIDER 4.6.0 fullwidth mode --> 
+      <link href="http://fonts.googleapis.com/css?family=Days+One" rel="stylesheet" type="text/css" media="all"> 
+      <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;max-height:350px;"> 
+       <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;max-height:350px;height:350px;"> 
+        <ul> 
+         <!-- SLIDE  --> 
+         <li data-transition="fade" data-slotamount="0" data-masterspeed="100" data-delay="17100" data-saveperformance="off"> 
+          <!-- MAIN IMAGE --> <img src="http://velocidata.com/wp-content/plugins/revslider/images/transparent.png" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+          <!-- LAYERS --> 
+          <!-- LAYER NR. 1 --> 
+          <div class="tp-caption tp-fade" data-x="423" data-y="12" data-speed="300" data-start="1000" data-easing="easeOutExpo" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 2;">
+           <img src="http://velocidata.com/wp-content/uploads/2014/06/group42.png" alt=""> 
+          </div> 
+          <!-- LAYER NR. 2 --> 
+          <div class="tp-caption large_bold_darkblue tp-fade" data-x="10" data-y="31" data-speed="300" data-start="0" data-easing="easeOutExpo" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+           Big Data Ingest Bottlenecks? 
+          </div> 
+          <!-- LAYER NR. 3 --> 
+          <div class="tp-caption large_text tp-fade" data-x="10" data-y="85" data-speed="300" data-start="0" data-easing="easeOutExpo" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+           VelociData eliminates them 
+           <br> while optimizing data quality 
+          </div> 
+          <!-- LAYER NR. 4 --> 
+          <div class="tp-caption medium_text tp-fade" data-x="10" data-y="180" data-speed="300" data-start="0" data-easing="easeOutExpo" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+           · Accelerates data transformations by 1000x
+           <br> · Cuts infrastructure TCO up to 90%
+           <br> · Quickly snaps into your current environment
+           <br> 
+          </div> 
+          <!-- LAYER NR. 5 --> 
+          <div class="tp-caption tp-fade" data-x="10" data-y="264" data-speed="300" data-start="500" data-easing="easeOutExpo" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+           <a href="http://velocidata.com/velocidata-proof-of-value-challenge/" class="tp-button blue small">Try our No-Risk Proof of Value</a> 
+          </div> 
+          <!-- LAYER NR. 6 --> 
+          <div class="tp-caption tp-fade" data-x="734" data-y="227" data-speed="300" data-start="1000" data-easing="easeOutExpo" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 7;">
+           <a href="http://velocidata.com/top-10-companies-and-technologies-watch-2014-2/"><img src="http://velocidata.com/wp-content/uploads/2014/06/badge.png" alt=""></a> 
+          </div> </li> 
+         <!-- SLIDE  --> 
+         <li data-transition="fade" data-slotamount="0" data-masterspeed="100" data-delay="17100" data-saveperformance="off"> 
+          <!-- MAIN IMAGE --> <img src="http://velocidata.com/wp-content/plugins/revslider/images/transparent.png" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+          <!-- LAYERS --> 
+          <!-- LAYER NR. 1 --> 
+          <div class="tp-caption tp-fade" data-x="423" data-y="12" data-speed="300" data-start="1000" data-easing="easeOutExpo" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 2;">
+           <img src="http://velocidata.com/wp-content/uploads/2014/06/group42.png" alt=""> 
+          </div> 
+          <!-- LAYER NR. 2 --> 
+          <div class="tp-caption large_bold_darkblue tp-fade" data-x="10" data-y="31" data-speed="300" data-start="0" data-easing="easeOutExpo" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+           Big Data Ingest Bottlenecks? 
+          </div> 
+          <!-- LAYER NR. 3 --> 
+          <div class="tp-caption large_text tp-fade" data-x="10" data-y="85" data-speed="300" data-start="0" data-easing="easeOutExpo" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+           VelociData eliminates them 
+           <br> while optimizing data quality 
+          </div> 
+          <!-- LAYER NR. 4 --> 
+          <div class="tp-caption medium_text tp-fade" data-x="10" data-y="180" data-speed="300" data-start="0" data-easing="easeOutExpo" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+           · Accelerates data transformations by 1000x
+           <br> · Cuts infrastructure TCO up to 90%
+           <br> · Quickly snaps into your current environment
+           <br> 
+          </div> 
+          <!-- LAYER NR. 5 --> 
+          <div class="tp-caption tp-fade" data-x="10" data-y="264" data-speed="300" data-start="500" data-easing="easeOutExpo" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+           <a href="http://velocidata.com/velocidata-proof-of-value-challenge/" class="tp-button blue small">Try our No-Risk Proof of Value</a> 
+          </div> 
+          <!-- LAYER NR. 6 --> 
+          <div class="tp-caption tp-fade" data-x="734" data-y="227" data-speed="300" data-start="1000" data-easing="easeOutExpo" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 7;">
+           <a href="http://velocidata.com/top-10-companies-and-technologies-watch-2014-2/"><img src="http://velocidata.com/wp-content/uploads/2014/06/badge.png" alt=""></a> 
+          </div> </li> 
+        </ul> 
+        <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div> 
+       </div> 
+       <script type="text/javascript">
+
+				/******************************************
+					-	PREPARE PLACEHOLDER FOR SLIDER	-
+				******************************************/
+				
+
+				var setREVStartSize = function() {
+					var	tpopt = new Object();
+						tpopt.startwidth = 1024;
+						tpopt.startheight = 350;
+						tpopt.container = jQuery('#rev_slider_4_1');
+						tpopt.fullScreen = "off";
+						tpopt.forceFullWidth="off";
+
+					tpopt.container.closest(".rev_slider_wrapper").css({height:tpopt.container.height()});tpopt.width=parseInt(tpopt.container.width(),0);tpopt.height=parseInt(tpopt.container.height(),0);tpopt.bw=tpopt.width/tpopt.startwidth;tpopt.bh=tpopt.height/tpopt.startheight;if(tpopt.bh>tpopt.bw)tpopt.bh=tpopt.bw;if(tpopt.bh<tpopt.bw)tpopt.bw=tpopt.bh;if(tpopt.bw<tpopt.bh)tpopt.bh=tpopt.bw;if(tpopt.bh>1){tpopt.bw=1;tpopt.bh=1}if(tpopt.bw>1){tpopt.bw=1;tpopt.bh=1}tpopt.height=Math.round(tpopt.startheight*(tpopt.width/tpopt.startwidth));if(tpopt.height>tpopt.startheight&&tpopt.autoHeight!="on")tpopt.height=tpopt.startheight;if(tpopt.fullScreen=="on"){tpopt.height=tpopt.bw*tpopt.startheight;var cow=tpopt.container.parent().width();var coh=jQuery(window).height();if(tpopt.fullScreenOffsetContainer!=undefined){try{var offcontainers=tpopt.fullScreenOffsetContainer.split(",");jQuery.each(offcontainers,function(e,t){coh=coh-jQuery(t).outerHeight(true);if(coh<tpopt.minFullScreenHeight)coh=tpopt.minFullScreenHeight})}catch(e){}}tpopt.container.parent().height(coh);tpopt.container.height(coh);tpopt.container.closest(".rev_slider_wrapper").height(coh);tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(coh);tpopt.container.css({height:"100%"});tpopt.height=coh;}else{tpopt.container.height(tpopt.height);tpopt.container.closest(".rev_slider_wrapper").height(tpopt.height);tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(tpopt.height);}
+				};
+
+				/* CALL PLACEHOLDER */
+				setREVStartSize();
+
+
+				var tpj=jQuery;
+				tpj.noConflict();
+				var revapi4;
+
+				tpj(document).ready(function() {
+
+				if(tpj('#rev_slider_4_1').revolution == undefined)
+					revslider_showDoubleJqueryError('#rev_slider_4_1');
+				else
+				   revapi4 = tpj('#rev_slider_4_1').show().revolution(
+					{
+						dottedOverlay:"none",
+						delay:10000,
+						startwidth:1024,
+						startheight:350,
+						hideThumbs:10,
+
+						thumbWidth:100,
+						thumbHeight:50,
+						thumbAmount:1,
+						
+												
+						simplifyAll:"off",
+
+						navigationType:"none",
+						navigationArrows:"none",
+						navigationStyle:"round",
+
+						touchenabled:"off",
+						onHoverStop:"off",
+						nextSlideOnWindowFocus:"off",
+
+						
+												
+												
+						keyboardNavigation:"off",
+
+						navigationHAlign:"center",
+						navigationVAlign:"bottom",
+						navigationHOffset:0,
+						navigationVOffset:20,
+
+						soloArrowLeftHalign:"left",
+						soloArrowLeftValign:"center",
+						soloArrowLeftHOffset:20,
+						soloArrowLeftVOffset:0,
+
+						soloArrowRightHalign:"right",
+						soloArrowRightValign:"center",
+						soloArrowRightHOffset:20,
+						soloArrowRightVOffset:0,
+
+						shadow:0,
+						fullWidth:"on",
+						fullScreen:"off",
+
+						spinner:"spinner0",
+						
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+
+						shuffle:"off",
+
+						autoHeight:"off",
+						forceFullWidth:"off",
+						
+						
+						hideTimerBar:"on",
+						hideThumbsOnMobile:"off",
+						hideNavDelayOnMobile:1500,
+						hideBulletsOnMobile:"off",
+						hideArrowsOnMobile:"off",
+						hideThumbsUnderResolution:0,
+
+												hideSliderAtLimit:481,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						startWithSlide:0					});
+
+
+
+					
+				});	/*ready*/
+
+			</script> 
+      </div>
+      <!-- END REVOLUTION SLIDER -->
+     </figure> 
+     <div class="g1-background"> 
+     </div>
+    </div> 
+    <!-- END #g1-precontent --> 
+    <div class="g1-background"> 
+    </div> 
+   </div> 
+   <!-- BEGIN #g1-content --> 
+   <div id="g1-content"> 
+    <div class="g1-layout-inner"> 
+     <div id="g1-content-area"> 
+      <div id="primary"> 
+       <div id="content" role="main"> 
+        <article id="post-124" class="post-124 page type-page status-publish g1-complete"> 
+         <!-- BEGIN .entry-content --> 
+         <div class="entry-content"> 
+          <p></p>
+          <ul class="g1-grid">
+           <li class="g1-column g1-one-half g1-valign-top">
+            <div id="g1-box-counter-1" class="g1-box g1-box--solid  g1-box--icon">
+             <i class="icon-money g1-box__icon"></i>
+             <div class="g1-box__inner"> 
+              <div style="font-size: 22px; font-weight: bold; color: #000; line-height: 1.2em; text-align: center;">
+               Mainframe Offload
+              </div> 
+              <p></p>
+              <div id="g1-divider-1" class="g1-divider g1-divider--none g1-divider--noicon "></div> 
+              <ul> 
+               <li>Easily tap the value of your mainframe data with unprecedented speed and economy</li> 
+               <li>Eliminate mainframe ETL bottlenecks and costs</li> 
+               <li>Retain data quality, governance, and security without sacrificing speed with our zFusion product</li> 
+              </ul> 
+              <div style="Text-align: center;">
+               <style type="text/css" scoped="scoped">#g1-button-1.g1-button {color: #ffffff; background-color: #093447; border-color: #093447;}</style>
+               <a id="g1-button-1" class="g1-button g1-button--medium g1-button--solid g1-button--standard " href="http://velocidata.com/zfusion/">Learn More</a>
+              </div> 
+             </div>
+            </div></li>
+           <!-- -->
+           <li class="g1-column g1-one-half g1-valign-top">
+            <div id="g1-box-counter-2" class="g1-box g1-box--solid  g1-box--icon">
+             <i class="icon-dashboard g1-box__icon"></i>
+             <div class="g1-box__inner"> 
+              <div style="font-size: 22px; font-weight: bold; color: #000; line-height: 1.2em; text-align: center;">
+               ETL Offload
+              </div> 
+              <p></p>
+              <div id="g1-divider-2" class="g1-divider g1-divider--none g1-divider--noicon "></div> 
+              <ul> 
+               <li>Eliminate ETL and big data ingest bottlenecks</li> 
+               <li>Accelerate ETL performance so that jobs that run hours can be done in minutes</li> 
+               <li>Integrate all types of data seamlessly with our vFusion product</li> 
+              </ul> 
+              <div style="Text-align: center;margin-top: 40px;">
+               <style type="text/css" scoped="scoped">#g1-button-2.g1-button {color: #ffffff; background-color: #093447; border-color: #093447;}</style>
+               <a id="g1-button-2" class="g1-button g1-button--medium g1-button--solid g1-button--standard " href="http://velocidata.com/vfusion/">Learn More</a>
+              </div> 
+             </div>
+            </div></li>
+           <!-- -->
+          </ul>
+          <br> 
+          <div id="g1-box-counter-3" class="g1-box g1-box--solid  g1-box--noicon">
+           <div class="g1-box__inner"> 
+            <div style="font-size: 22px; font-weight: bold; color: #000; line-height: 1.2em; text-align: center;">
+             Improve essential data operations by orders of magnitude
+            </div> 
+            <p></p>
+            <div id="g1-divider-3" class="g1-divider g1-divider--none g1-divider--noicon "></div>
+            <img src="http://velocidata.com/wp-content/uploads/2013/03/improve-data-operations.gif" alt="improve-data-operations" width="919" height="213" class="aligncenter size-full wp-image-3825">
+            <br> 
+           </div>
+          </div>
+          <br> 
+          <ul class="g1-grid">
+           <li class="g1-column g1-one-half g1-valign-top"> <h3>Recent News</h3> <p></p>
+            <div id="g1-custom-posts-shortcode-1" class="g1-custom-posts-shortcode g1-shortcode"> 
+             <!-- BEGIN: .g1-collection --> 
+             <div class="g1-collection g1-collection--grid g1-collection--one-half g1-collection--simple g1-effect-none"> 
+              <ul>
+               <!-- -->
+               <li class="g1-collection__item"> 
+                <article itemscope itemtype="http://schema.org/BlogPosting" id="post-4177" class="post-4177 post type-post status-publish format-standard category-news g1-brief"> 
+                 <div class="g1-nonmedia"> 
+                  <div class="g1-inner"> 
+                   <header class="entry-header"> 
+                    <h3><a href="http://velocidata.com/barry-rudolph-discusses-real-time-data-analytics/" title="VelociData CEO Barry Rudolph talks about Real Time Data Analytics">VelociData CEO Barry Rudolph talks about Real Time Data Analytics</a></h3> 
+                   </header>
+                   <!-- .entry-header --> 
+                   <footer class="entry-footer"> 
+                   </footer>
+                   <!-- .entry-footer --> 
+                  </div> 
+                  <div class="g1-01"></div> 
+                 </div> 
+                </article>
+                <!-- .post-XX --> </li>
+               <!-- -->
+               <li class="g1-collection__item"> 
+                <article itemscope itemtype="http://schema.org/BlogPosting" id="post-4167" class="post-4167 post type-post status-publish format-standard category-news g1-brief"> 
+                 <div class="g1-nonmedia"> 
+                  <div class="g1-inner"> 
+                   <header class="entry-header"> 
+                    <h3><a href="http://velocidata.com/velocidata-top-20-big-data-solutions-provider/" title="VelociData Recognized by CIO Story as One of the Top 20 Most Powerful Big Data Solutions Providers of 2014">VelociData Recognized by CIO Story as One of the Top 20 Most Powerful Big Data Solutions Providers of 2014</a></h3> 
+                   </header>
+                   <!-- .entry-header --> 
+                   <footer class="entry-footer"> 
+                   </footer>
+                   <!-- .entry-footer --> 
+                  </div> 
+                  <div class="g1-01"></div> 
+                 </div> 
+                </article>
+                <!-- .post-XX --> </li>
+               <!-- -->
+               <li class="g1-collection__item"> 
+                <article itemscope itemtype="http://schema.org/BlogPosting" id="post-4000" class="post-4000 post type-post status-publish format-standard category-news g1-brief"> 
+                 <div class="g1-nonmedia"> 
+                  <div class="g1-inner"> 
+                   <header class="entry-header"> 
+                    <h3><a href="http://velocidata.com/velocidata-names-barry-rudolph-new-ceo/" title="VelociData Names Barry Rudolph New CEO">VelociData Names Barry Rudolph New CEO</a></h3> 
+                   </header>
+                   <!-- .entry-header --> 
+                   <footer class="entry-footer"> 
+                   </footer>
+                   <!-- .entry-footer --> 
+                  </div> 
+                  <div class="g1-01"></div> 
+                 </div> 
+                </article>
+                <!-- .post-XX --> </li>
+               <!-- -->
+              </ul> 
+             </div> 
+             <!-- END: .g1-collection --> 
+            </div></li>
+           <!-- -->
+           <li class="g1-column g1-one-half g1-valign-top">
+            <div id="g1-custom-posts-shortcode-2" class="g1-custom-posts-shortcode g1-shortcode"> 
+             <!-- BEGIN: .g1-collection --> 
+             <div class="g1-collection g1-collection--grid g1-collection--one-fourth g1-collection--simple g1-effect-none"> 
+              <ul>
+               <!-- -->
+               <li class="g1-collection__item"> 
+                <article itemscope itemtype="http://schema.org/BlogPosting" id="post-4186" class="post-4186 post type-post status-publish format-standard has-post-thumbnail category-mainblog category-fpga-mainblog g1-brief"> 
+                 <figure class="entry-featured-media"> 
+                  <a href="http://velocidata.com/intel-moores-law-fpgas-datacenter/" id="g1-frame-1" class="g1-frame g1-frame--none g1-frame--inherit g1-frame--center"><span class="g1-decorator"> <img width="239" height="134" src="http://velocidata.com/wp-content/uploads/2014/11/origin_14364884304-sm-239x134.jpg" class="attachment-g1_one_fourth wp-post-image" alt="VelociData -FPGAs in the Datacenter"> <span class="g1-indicator g1-indicator-document"></span> </span></a> 
+                 </figure> 
+                 <div class="g1-nonmedia"> 
+                  <div class="g1-inner"> 
+                   <header class="entry-header"> 
+                    <h3><a href="http://velocidata.com/intel-moores-law-fpgas-datacenter/" title="Intel, Moore’s Law and FPGAs in the Datacenter">Intel, Moore’s Law and FPGAs in the Datacenter</a></h3> 
+                   </header>
+                   <!-- .entry-header --> 
+                   <footer class="entry-footer"> 
+                    <div> 
+                     <a id="g1-button-3" class="g1-button g1-button--small g1-button--solid g1-button--standard " href="http://velocidata.com/intel-moores-law-fpgas-datacenter/">More</a> 
+                    </div> 
+                   </footer>
+                   <!-- .entry-footer --> 
+                  </div> 
+                  <div class="g1-01"></div> 
+                 </div> 
+                </article>
+                <!-- .post-XX --> </li>
+               <!-- -->
+               <li class="g1-collection__item"> 
+                <article itemscope itemtype="http://schema.org/BlogPosting" id="post-4144" class="post-4144 post type-post status-publish format-standard has-post-thumbnail category-big-data category-mainblog category-mobile-mainblog tag-real-time-infrastructure g1-brief"> 
+                 <figure class="entry-featured-media"> 
+                  <a href="http://velocidata.com/mobility-and-the-real-time-infrastructure/" id="g1-frame-2" class="g1-frame g1-frame--none g1-frame--inherit g1-frame--center"><span class="g1-decorator"> <img width="239" height="134" src="http://velocidata.com/wp-content/uploads/2014/09/realtimemobility-239x134.jpg" class="attachment-g1_one_fourth wp-post-image" alt="Real Time Infrastructure"> <span class="g1-indicator g1-indicator-document"></span> </span></a> 
+                 </figure> 
+                 <div class="g1-nonmedia"> 
+                  <div class="g1-inner"> 
+                   <header class="entry-header"> 
+                    <h3><a href="http://velocidata.com/mobility-and-the-real-time-infrastructure/" title="Mobility and the Real-Time Enterprise">Mobility and the Real-Time Enterprise</a></h3> 
+                   </header>
+                   <!-- .entry-header --> 
+                   <footer class="entry-footer"> 
+                    <div> 
+                     <a id="g1-button-4" class="g1-button g1-button--small g1-button--solid g1-button--standard " href="http://velocidata.com/mobility-and-the-real-time-infrastructure/">More</a> 
+                    </div> 
+                   </footer>
+                   <!-- .entry-footer --> 
+                  </div> 
+                  <div class="g1-01"></div> 
+                 </div> 
+                </article>
+                <!-- .post-XX --> </li>
+               <!-- -->
+              </ul> 
+             </div> 
+             <!-- END: .g1-collection --> 
+            </div></li>
+           <!-- -->
+          </ul>
+          <p></p> 
+         </div> 
+         <!-- END .entry-content --> 
+         <footer class="entry-meta"> 
+         </footer> 
+        </article>
+        <!-- #post-124 --> 
+       </div>
+       <!-- #content --> 
+      </div>
+      <!-- #primary --> 
+     </div> 
+     <!-- END #g1-content-area --> 
+    </div> 
+    <div class="g1-background"> 
+    </div> 
+   </div> 
+   <!-- END #g1-content --> 
+   <!-- BEGIN #g1-preheader --> 
+   <aside id="g1-preheader"> 
+    <div class="g1-layout-inner"> 
+     <!-- BEGIN #g1-preheader-bar --> 
+     <div id="g1-preheader-bar" class="g1-meta"> 
+      <!--<a class="log-menu"href="http://velocidata.com/member-login/" style="line-height: 24px; float: right; padding-left:15px; margin-top: 4px; color: #799FAF;">Partner Login</a><a href="http://velocidata.com/join-us/" style="line-height: 24px; float: right; padding-left:15px; margin-top: 4px; color: #799FAF;" class="log-menu">Become a Partner</a><div style="clear: both;"></div--> 
+      <!--<a class="log-menu"href="http://www.velocidata.com?event=logout" style="line-height: 24px; float: right; padding-left:15px; margin-top: 4px; color: #799FAF;">Logout</a><a href="http://velocidata.com/partner-account/" style="line-height: 24px; float: right; padding-left:15px; margin-top: 4px; color: #799FAF;" class="log-menu">Account</a><div style="clear: both;"></div>--> 
+     </div> 
+     <!-- END #g1-preheader-bar --> 
+    </div>
+    <!-- .g1-inner --> 
+    <div class="g1-background"> 
+    </div> 
+   </aside> 
+   <!-- END #g1-preheader --> 
+   <!-- BEGIN #g1-prefooter --> 
+   <aside id="g1-prefooter"> 
+    <!-- BEGIN #g1-prefooter-widget-area --> 
+    <div id="g1-prefooter-widget-area" class="g1-layout-inner"> 
+     <div class="g1-grid"> 
+      <div class="g1-column g1-one-fourth"> 
+       <section id="nav_menu-2" class="widget widget_nav_menu g1-widget-list">
+        <div class="menu-footernavigationmenu-container">
+         <ul id="menu-footernavigationmenu" class="menu">
+          <li id="menu-item-1822" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1822"><a href="http://velocidata.com">Home</a></li> 
+          <li id="menu-item-2208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2208"><a href="http://velocidata.com/corporate-profile/">Corporate</a></li> 
+          <li id="menu-item-4143" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4143"><a href="http://velocidata.com/category/news/">VelociData News</a></li> 
+          <li id="menu-item-2209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2209"><a href="http://velocidata.com/your-challenge/">Your Challenge</a></li> 
+          <li id="menu-item-2210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2210"><a href="http://velocidata.com/our-solution/">Our Approach</a></li> 
+          <li id="menu-item-3850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-parent-item menu-item-3850"><a href="http://velocidata.com/products/">Products</a> 
+           <ul class="sub-menu"> 
+            <li id="menu-item-3813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3813"><a href="http://velocidata.com/zfusion/">Real Time Data Integration – zFusion</a></li> 
+            <li id="menu-item-3812" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3812"><a href="http://velocidata.com/vfusion/">Accelerate Data Integration Performance – vFusion</a></li> 
+           </ul> </li> 
+          <li id="menu-item-2211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2211"><a href="http://velocidata.com/pricing/">VelociData Cost Model</a></li> 
+          <li id="menu-item-2213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2213"><a href="http://velocidata.com/resources/">Resources for Big Data Challenges</a></li> 
+          <li id="menu-item-3475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3475"><a href="http://velocidata.com/frequently-asked-questions/">VelociData Frequently Asked Questions</a></li> 
+          <li id="menu-item-2214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2214"><a href="http://velocidata.com/velocidata-blog/">Blog</a></li> 
+          <li id="menu-item-2207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2207"><a href="http://velocidata.com/contact-velocidata/">Contact</a></li> 
+          <li id="menu-item-3489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3489"><a href="http://velocidata.com/member-login/">Partner Login</a></li> 
+          <li id="menu-item-3488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3488"><a href="http://velocidata.com/join-us/">Become a Partner</a></li> 
+          <li id="menu-item-4142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4142"><a href="http://velocidata.com/velocidata-privacy-policy/">VelociData Privacy Policy</a></li> 
+         </ul>
+        </div>
+       </section> 
+      </div> 
+      <div class="g1-column g1-one-fourth"> 
+       <section id="synved_social_follow-2" class="widget widget_synved_social_follow g1-widget--cssclass">
+        <header>
+         <h3 class="widgettitle">Follow Us</h3>
+        </header>
+        <div>
+         <a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-normal synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Follow us on Twitter" href="http://twitter.com/VelociData" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Follow us on Twitter" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://velocidata.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/32x32/twitter.png"></a>
+         <a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-normal synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Follow us on Google+" href="https://plus.google.com/+Velocidata/" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Follow us on Google+" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://velocidata.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/32x32/google_plus.png"></a>
+         <a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-normal synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Find us on Linkedin" href="http://www.linkedin.com/company/velocidata" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Find us on Linkedin" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://velocidata.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/32x32/linkedin.png"></a>
+         <a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-normal synved-social-provider-rss" data-provider="rss" target="_blank" rel="nofollow" title="Subscribe to our RSS Feed" href="http://velocidata.com/category/mainblog/feed" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;"><img alt="rss" title="Subscribe to our RSS Feed" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://velocidata.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/32x32/rss.png"></a>
+         <a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-hidef synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Follow us on Twitter" href="http://twitter.com/VelociData" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Follow us on Twitter" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://velocidata.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/twitter.png"></a>
+         <a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-hidef synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Follow us on Google+" href="https://plus.google.com/+Velocidata/" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="google_plus" title="Follow us on Google+" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://velocidata.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/google_plus.png"></a>
+         <a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-hidef synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Find us on Linkedin" href="http://www.linkedin.com/company/velocidata" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Find us on Linkedin" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://velocidata.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/linkedin.png"></a>
+         <a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-hidef synved-social-provider-rss" data-provider="rss" target="_blank" rel="nofollow" title="Subscribe to our RSS Feed" href="http://velocidata.com/category/mainblog/feed" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:5px;"><img alt="rss" title="Subscribe to our RSS Feed" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://velocidata.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/64x64/rss.png"></a>
+        </div>
+       </section>
+       <section id="text-6" class="widget widget_text g1-widget--cssclass"> 
+        <div class="textwidget">
+         <strong>VelociData Inc. World Headquarters</strong>
+         <br> 321 North Clark Street, #740
+         <br> Chicago, IL 60654
+         <br> 312-600-4422
+         <br>
+         <br> 
+         <strong>VelociData Inc. Research &amp; Development Center</strong>
+         <br> 349 Marshall Ave. #302
+         <br> St. Louis, MO 63119
+         <br> 314-499-8984 
+        </div> 
+       </section> 
+      </div> 
+      <div class="g1-column g1-one-half"> 
+       <section id="text-12" class="widget widget_text g1-widget--cssclass"> 
+        <div class="textwidget">
+         <a href="http://velocidata.com/top-10-companies-and-technologies-watch-2014-2/"><img src="http://velocidata.com/wp-content/uploads/2014/01/Bloor-Award-Banner-email-template-3.png" alt="Bloor-Award-Banner-email-template-3" width="400" height="144" class="aligncenter size-full wp-image-3334"></a>
+        </div> 
+       </section> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- END #g1-prefooter-widget-area --> 
+    <div class="g1-background"> 
+    </div>
+   </aside> 
+   <!-- END #g1-prefooter --> 
+   <!-- BEGIN #g1-footer --> 
+   <footer id="g1-footer" role="contentinfo"> 
+    <!-- BEGIN #g1-footer-area --> 
+    <div id="g1-footer-area" class="g1-layout-inner"> 
+     <nav id="g1-footer-nav"> 
+     </nav> 
+     <p id="g1-footer-text">© 2014 VelociData Inc.</p> 
+    </div> 
+    <!-- END #g1-footer-area --> 
+    <div class="g1-background"> 
+    </div> 
+   </footer> 
+   <!-- END #g1-footer --> 
+   <a href="#page" id="g1-back-to-top">Back to Top</a> 
+  </div> 
+  <!-- END #page --> 
+  <script type="text/javascript">
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+</script>
+  <!-- dynamic js block --> 
+  <div class="emember_modal" id="emember_forgot_pass_prompt"> 
+   <div class="emember_modal_title eMember_red">
+    Password Reset
+   </div> 
+   <div id="wp_emember_email_mailMsg"></div> 
+   <div id="wp_emember_email_mailForm">
+     Please enter your e-mail address. You will receive a new password via e-mail. 
+    <form action="javascript:void(0);" method="post" name="wp_emember_mailSendForm" id="wp_emember_mailSendForm"> 
+     <p class="textbox"> <label for="wp_emember_email" class="eMember_label">Email: </label> <input class="eMember_text_input" type="text" id="wp_emember_email" name="wp_emember_email" size="20" value=""> <input class="eMember_text_input" type="hidden" id="event" name="event" size="20" value="send_mail"> </p> 
+     <p> <input name="wp_emember_email_doSend" type="submit" id="wp_emember_email_doSend" class="emember_button" value="Reset"> <input type="button" id="emember_forgot_pass_prompt_close_btn" class="close emember_button" value="Close"> </p> 
+    </form> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+// Rendered by the Simple Scripts Plugin
+// http://wordpress.org/plugins/simple-scripts/
+
+imgsrc = location.protocol + '//www.visitortracklog.com/loghit.asp?id=106878&vr=4.0&rp=' + escape(document.referrer) + '&pa=' + escape(document.URL);
+document.write('<img border="0" alt="" src="' + imgsrc + '">');
+
+
+  /* <![CDATA[ */
+  document.write (
+    '<img src="http://connect.velocidata.com/acton/bn/11189/visitor.gif?ts='+
+    new Date().getTime()+
+    '&ref='+escape(document.referrer) + '">'
+  );
+  var aoAccountId = '11189';
+  var aoCookieMode = 'STANDARD';
+  var aoCookieDomain = 'velocidata.com';
+  var aoServerContext = 'http://connect.velocidata.com/acton';
+  /* ]]> */
+
+</script>
+  <div class="revsliderstyles">
+   <style type="text/css">.tp-caption.medium_text{font-size:20px;line-height:20px;font-weight:700;font-family:Arial;color:#093447;text-decoration:none;background-color:transparent;margin:0px;white-space:nowrap;border-width:0px;border-color:rgb(255,255,255);border-style:none}.tp-caption.large_text{font-size:30px;line-height:30px;font-weight:700;font-family:Arial;color:#093447;text-decoration:none;background-color:transparent;margin:0px;white-space:nowrap;border-width:0px;border-color:rgb(255,255,255);border-style:none}.tp-caption.large_bold_darkblue{font-size:41px;line-height:50px;font-weight:800;font-family:Arial;color:rgb(9,52,71);text-decoration:none;background-color:transparent;border-width:0px;border-color:rgb(255,214,88);border-style:none}.medium_text{font-size:20px;line-height:20px;font-weight:700;font-family:Arial;color:#093447;text-decoration:none;background-color:transparent;margin:0px;white-space:nowrap;border-width:0px;border-color:rgb(255,255,255);border-style:none}.large_text{font-size:30px;line-height:30px;font-weight:700;font-family:Arial;color:#093447;text-decoration:none;background-color:transparent;margin:0px;white-space:nowrap;border-width:0px;border-color:rgb(255,255,255);border-style:none}.large_bold_darkblue{font-size:41px;line-height:50px;font-weight:800;font-family:Arial;color:rgb(9,52,71);text-decoration:none;background-color:transparent;border-width:0px;border-color:rgb(255,214,88);border-style:none}</style> 
+  </div>
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/velocidata.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.5.12"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var g1Theme = {"uri":"http:\/\/velocidata.com\/wp-content\/themes\/3clicks"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/main.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/jquery.touchSwipe/jquery.touchSwipe.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/galleria/galleria-1.2.9.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/galleria/themes/classic/galleria.classic.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/lib/g1-simple-sliders/js/g1-simple-sliders.js?ver=1.0.0"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-includes/js/comment-reply.min.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/jquery-metadata/jquery.metadata.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/easing/jquery.easing.1.3.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/breakpoints/breakpoints.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/carouFredSel/jquery.carouFredSel-6.2.0-packed.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/jquery-waypoints/waypoints.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/skrollr/skrollr.min.js?ver=1.0"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks/js/jquery.magnific-popup/jquery.magnific-popup.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://velocidata.com/wp-content/themes/3clicks-child-theme/modifications.js?ver=4.0.1"></script> 
+  <!-- Start Of Script Generated By cforms v14.6 [Oliver Seidel | www.deliciousdays.com] --> 
+  <!-- End Of Script Generated By cforms -->  
+ </body>
+</html>

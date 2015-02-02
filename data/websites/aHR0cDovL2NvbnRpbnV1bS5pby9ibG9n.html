@@ -1,0 +1,2737 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <!-- Head --> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>Continuum Blog</title> 
+  <meta name="description" content="Continuum Analytics provides software, training, and consulting for high performance computing and data visualization using Python.  "> 
+  <meta name="keywords" content="python, big data, data exploration, data analysis, data visualization, high performance computing, consulting, training, anaconda, developer resources, open source"> 
+  <!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+  <link href="/media/css/bootstrap.css" rel="stylesheet" type="text/css"> 
+  <link href="/media/css/custom.css" rel="stylesheet" type="text/css"> 
+  <link href="/media/css/blog_custom.css" rel="stylesheet" type="text/css"> 
+  <link href="/media/css/pygments.css" rel="stylesheet" type="text/css"> 
+  <link href="/media/js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" -=""> 
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic|Open+Sans:400,700,600;" rel="stylesheet" type="text/css"> 
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> 
+  <script type="text/javascript" src="/media/js/google-code-prettify/prettify.js"></script> 
+  <!--[if IE]>
+		<link href="/media/css/ie.css" rel="stylesheet" type="text/css" />
+	<![endif]--> 
+  <link rel="shortcut icon" href="/media/img/favicon.ico"> 
+  <link rel="icon" type="image/ico" href="/media/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="/media/img/apple-touch-icon.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="/media/img/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="/media/img/apple-touch-icon-114x114.png"> 
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> 
+  <script type="text/javascript">
+		$(document).ready(function(){
+			prettyPrint();
+		})
+	</script> 
+  <!-- end Head --> 
+  <style>
+    .content, .content_center { background-image: none; background-color: #FFFFFF; }
+    .form_standard { background: url(/media/img/inner_form_background.png); }
+    .blog_title { margin-bottom: 20px; }
+    .blog_content { margin-bottom: 20px; }
+    p { margin-right: 20px; }
+  </style> 
+  <!-- Google Analytics --> 
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27761864-1'],['_setDomainName', 'continuum.io']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+  <!-- close Google Analytics --> 
+  <script src="/media/js/rss_script.js"></script>
+ </head>  
+ <body> 
+  <!-- Header --> 
+  <header class="header"> 
+   <section class="container"> 
+    <img class="header_logo" src="/media/img/continuum_analytics_logo.png" alt="Continuum Analytics" border="0" usemap="#spacerMap" id="spacer"> 
+    <map name="spacerMap" id="spacerMap"> <area shape="rect" coords="0,0,187,83" href="http://www.continuum.io" target="" alt="Continuum Analytics"> </map> 
+    <div class="pull-right header-social"> 
+     <a class="social" href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/media/img/gplus_header.png" alt="Circle Continuum Analytics on Google+"></a> 
+     <a class="social" href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/media/img/twitter_header.png" alt="Follow @continuumio on Twitter"></a> 
+     <a class="social" href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/media/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn"></a> 
+     <a class="social" href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/media/img/facebook_header.png" alt="Like Continuum Analytics on Facebook"></a> 
+     <a href="/press/feed" title="Subscribe to Conintuum Analytics RSS Press Feed" target="_blank"> <img id="prss" src="/media/img/rssds.png" alt="Subscribe to Continuum Analytics RSS Press Feed" width="20" height="20"></a> 
+     <a href="/blog/feed" title="Subscribe to Continuum Analytics RSS Blog Feed" target="_blank"> <img id="brss" src="/media/img/rssds.png" alt="Subscribe to Continuum Analytics RSS Blog Feed" width="20" height="20">  </a>
+     <a href="https://store.continuum.io/cshop/viewcart" class="btn btn-disabled"><img src="/media/img/shopping-cart.png" alt="shopping cart"> View Your Cart</a> 
+    </div> 
+    <nav class="navbar"> 
+     <section class="navbar-inner"> 
+      <section class="container"> 
+       <ul class="nav"> 
+        <li class="dropdown"><a href="/" title="Continuum Analytics">Home</a></li> 
+        <li class="dropdown">
+         <!-- Products --> <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Products&nbsp; <b class="caret"></b></a> 
+         <ul class="dropdown-menu" role="menu"> 
+          <li><a href="https://store.continuum.io/cshop/products" title="Overview">Overview</a></li> 
+          <li><a href="https://store.continuum.io/cshop/anaconda" title="Anaconda">Anaconda</a></li> 
+          <li><a href="/anaconda-server" title="Anaconda Server">Anaconda Server</a></li> 
+          <li><a href="/anaconda-addons" title="Anaconda Add-Ons">Anaconda Add-Ons</a></li> 
+          <li><a href="/anaconda-cluster" title="Anaconda Cluster">Anaconda Cluster</a></li> 
+          <li><a href="http://binstar.org" target="_blank">Binstar.org</a></li> 
+          <li><a href="/wakari" title="Wakari">Wakari</a></li> 
+          <li><a href="/developer-resources" title="For Developers">Open Source</a></li> 
+          <li class="dropdown"><a href="http://docs.continuum.io" title="">Documentation</a></li> 
+          <li class="dropdown"><a href="/support" title="">Support</a></li> 
+         </ul> </li> 
+        <li class="dropdown">
+         <!-- Consulting --> <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Consulting&nbsp; <b class="caret"></b></a> 
+         <ul class="dropdown-menu"> 
+          <li class="dropdown"><a href="/consulting" title="Consulting">Overview</a></li> 
+          <li class="dropdown"><a href="/consulting/app-development" title="Web, Native, &amp; Desktop App Development">App Development</a></li> 
+          <li class="dropdown"><a href="/consulting/optimization" title="System Optimization &amp; Performance">System Optimization</a></li> 
+          <li class="dropdown"><a href="/consulting/data-insights" title="Big Data Insights">Big Data Insights</a></li> 
+         </ul> </li> 
+        <li class="dropdown">
+         <!-- Training --> <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Training&nbsp; <b class="caret"></b></a> 
+         <ul class="dropdown-menu"> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/training" title="Overview">Overview</a></li> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/practical python programming" title="Practical Python Programming">Practical Python Programming</a></li> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/python for finance" title="Python for Finance">Python for Finance</a></li> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/python for science" title="Python for Science">Python for Science</a></li> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/course-philosophy" title="Course Philosophy">Course Philosophy</a></li> 
+          <li class="dropdown"><a href="https://store.continuum.io/cshop/course-trainer-bios" title="Trainer Bios">Trainer Bios</a></li> 
+         </ul> </li> 
+        <li class="dropdown"><a data-target="#" title="Company" class="dropdown-toggle" data-toggle="dropdown">Company&nbsp; <b class="caret"></b></a> 
+         <ul class="dropdown-menu">
+          <!-- Company --> 
+          <li><a href="/about-continuum" title="About Continuum">About Us</a></li> 
+          <li><a href="/our-team" title="Team">Our Team</a></li> 
+          <li><a href="http://boards.greenhouse.io/continuum" title="Careers">Careers</a></li> 
+          <li><a href="/blog">Blog</a></li> 
+          <li><a href="/press" title="News &amp; Events">News &amp; Events</a></li> 
+          <li><a href="/webinars" title="Webinars">Webinars</a></li> 
+          <li><a href="/video" title="Video">Video</a></li> 
+          <li><a href="/news" title="In the Press">In the Press</a></li> 
+          <li><a href="http://www.numfocus.org" title="NumFocus" target="_blank">NumFocus</a></li> 
+          <li><a href="/python-for-big-data" title="Python for Big Data">Python for Big Data</a></li> 
+          <li><a href="/selling-open-source" title="Open Source">Open Source</a></li> 
+         </ul> </li> 
+        <li class="dropdown"><a href="/contact-us">Contact Us</a></li> 
+       </ul> 
+      </section> 
+     </section> 
+    </nav> 
+   </section> 
+  </header> 
+  <section class="downstream_banner"> 
+   <section class="container"> 
+    <h1 class="title">Continuum Blog</h1> 
+   </section> 
+  </section> 
+  <!-- /Header --> 
+  <!-- Content --> 
+  <div class="container"></div> 
+  <section class="content"> 
+   <section class="container content_center"> 
+    <article class="container"> 
+     <section class="blog_content narrow"> 
+      <section class="span8"> 
+       <div id="content" role="main"> 
+        <ul class="listing clear"> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Matt Rocklin" src="https://secure.gravatar.com/avatar/8749ec52cee260c4c1f67f2dec29d957"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/blaze-datasets">Blaze Datasets</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-11-18"> <a href="/blog/blaze-datasets"> <span class="entry-date">Tue, 18 Nov 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/mattrocklin" title="View all posts by Matt Rocklin">Matt Rocklin </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/blaze-datasets"></a> </p>
+           <p><strong>tl;dr</strong> Blaze aids exploration by supporting full databases and collections of&nbsp;datasets.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/blaze-datasets">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/blaze-datasets" title="Blaze Datasets">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Stanley Seibert" src="http://www.gravatar.com/avatar/1889c07b78bc827b0a8d1faa9e14b22e.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/numba-tips">Tips for More Effective Numba Usage</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-10-09"> <a href="/blog/numba-tips"> <span class="entry-date">Thu, 09 Oct 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/stan" title="View all posts by Stanley Seibert">Stanley Seibert </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/numba-tips"></a> </p>
+           <p><a href="http://continuum.io/blog/numba-014-update">Last week</a>, I wrote about the features <a href="http://numba.pydata.org/">Numba</a> has, and what our long term development goals are. Today, I want to dig into the details of how to more effectively use Numba on your&nbsp;programs.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/numba-tips">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/numba-tips" title="Tips for More Effective Numba Usage">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Aaron Meurer" src="http://www.gravatar.com/avatar/7341713fcfc525d0ef7849bb7a2ebd5a.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/advanced-conda-part-2">Advanced Features of Conda Part 2</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-10-02"> <a href="/blog/advanced-conda-part-2"> <span class="entry-date">Thu, 02 Oct 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/aaron" title="View all posts by Aaron Meurer">Aaron Meurer </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/advanced-conda-part-2"></a> </p>
+           <p><a href="http://conda.pydata.org/">Conda</a> is the package manager that comes with Continuum’s <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> distribution. Conda makes it easy to install and manage all your packages and environments on Windows, Mac <span class="caps">OS</span> X, and&nbsp;Linux.</p> 
+           <p>If you are new to conda, I recommend starting at the <a href="http://conda.pydata.org/docs/">documentation</a>, and watching my presentation from SciPy&nbsp;2014.</p> 
+           <iframe width="560" height="315" src="//www.youtube.com/embed/UaIvrDWrIWM" frameborder="0" allowfullscreen></iframe> 
+           <p>In this post, I will assume that you are already familiar with conda and its basic usage, both for installing and building packages. I will look at a few advanced features or tips that may not be well known, even among advanced users of conda. These features will help you with feature discovery, customization, and allow you to manage your packages and environments in more advanced&nbsp;ways.</p> 
+           <!-- XXX: Is there a better way to do a cross-site link? --> 
+           <p>In <a href="http://continuum.io/blog/advanced-conda-part-1">part 1</a>, we looked at <code>--help</code>, configuration, <code>conda update --all</code>, <code>conda list --export</code> and <code>conda create --file</code>, <code>conda clean</code>, and pinning packages. In this post, we will look at some tools that make building packages easier and some more features that help manage your environments and use <code>conda</code> more effectively from the command&nbsp;line.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/advanced-conda-part-2">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/advanced-conda-part-2" title="Advanced Features of Conda Part 2">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Matt Rocklin" src="https://secure.gravatar.com/avatar/8749ec52cee260c4c1f67f2dec29d957"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/blaze-hmda">Introducing Blaze - HMDA Practice</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-09-23"> <a href="/blog/blaze-hmda"> <span class="entry-date">Tue, 23 Sep 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/mattrocklin" title="View all posts by Matt Rocklin">Matt Rocklin </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/blaze-hmda"></a> </p>
+           <p>We look at data from the <a href="http://www.ffiec.gov/hmda/">Home Mortgage Disclosure Act</a>, a collection of actions taken on housing loans by various governmental agencies (gzip-ed csv file <a href="http://files.consumerfinance.gov/hmda/hmda_lar-2012.csv.gz">here</a>) (thanks to <a href="http://aron.ahmadia.net/">Aron Ahmadia</a> for the pointer). Uncompressed this dataset is around <span class="caps">10GB</span> on disk, so we don’t want to load it up into memory with a modern commercial&nbsp;notebook.</p> 
+           <p>Instead, we use Blaze to investigate the data, select down to the data we care about, and then migrate that data into a suitable computational&nbsp;backend.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/blaze-hmda">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/blaze-hmda" title="Introducing Blaze - HMDA Practice">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Stanley Seibert" src="http://www.gravatar.com/avatar/1889c07b78bc827b0a8d1faa9e14b22e.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/numba-014-update">Numba 0.14 Release and Project Status</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-09-18"> <a href="/blog/numba-014-update"> <span class="entry-date">Thu, 18 Sep 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/stan" title="View all posts by Stanley Seibert">Stanley Seibert </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/numba-014-update"></a> </p>
+           <p>Continuing our goal to have a new release of Numba every month, we are celebrating the month of September with Numba version 0.14! Along with a number of bug fixes, it brings support for many new features,&nbsp;including:</p> 
+           <ul> 
+            <li>Support for nearly all of the NumPy math functions (including comparison, logical, bitwise and some previously missing float functions) in nopython&nbsp;mode.</li> 
+            <li>The NumPy datetime64 and timedelta64 dtypes are supported in nopython mode with NumPy 1.7 and&nbsp;later.</li> 
+            <li>Support for NumPy math functions on complex numbers in nopython&nbsp;mode.</li> 
+            <li>ndarray.sum() is supported in nopython&nbsp;mode.</li> 
+            <li>Improved warnings and error&nbsp;messages.</li> 
+            <li>Support for NumPy record arrays on the&nbsp;<span class="caps">GPU</span>.</li> 
+           </ul> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/numba-014-update">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/numba-014-update" title="Numba 0.14 Release and Project Status">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Matt Rocklin" src="https://secure.gravatar.com/avatar/8749ec52cee260c4c1f67f2dec29d957"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/blaze-migrations">Introducing Blaze - Migrations</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-09-16"> <a href="/blog/blaze-migrations"> <span class="entry-date">Tue, 16 Sep 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/mattrocklin" title="View all posts by Matt Rocklin">Matt Rocklin </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/blaze-migrations"></a> </p>
+           <p><strong>tl;dr Blaze migrates data efficiently between a variety of data&nbsp;stores.</strong></p> 
+           <p>In our <a href="http://continuum.io/blog/blaze-expressions">last post on Blaze expressions</a> we showed how Blaze can execute the same tabular query on a variety of computational backends. However, this ability is only useful if you can migrate your data to the new computational system in the first&nbsp;place.</p> 
+           <p>To help with this, Blaze provides the <code>into</code> function which moves data from one container type to&nbsp;another.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/blaze-migrations">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/blaze-migrations" title="Introducing Blaze - Migrations">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Bryan Van de Ven" src="https://secure.gravatar.com/avatar/e47adafb8e2c93d0eb0196d19e46ed19?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/bokeh-0.6">Bokeh 0.6 Released!</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-09-11"> <a href="/blog/bokeh-0.6"> <span class="entry-date">Thu, 11 Sep 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/bryanv" title="View all posts by Bryan Van de Ven">Bryan Van de Ven </a> <a class="url fn n" href="/author/" title="View all posts by Damian Avila">Damian Avila </a> <a class="url fn n" href="/author/" title="View all posts by Joseph Cottam">Joseph Cottam </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/bokeh-0.6"></a> </p>
+           <p>We are excited to announce the release of <a href="https://github.com/ContinuumIO/bokeh/tree/0.6.0">version 0.6 of Bokeh</a>, an interactive web plotting library for&nbsp;Python!</p> 
+           <p>This release includes some major new&nbsp;features:</p> 
+           <ul> 
+            <li>Abstract Rendering recipes for large data sets: isocontour,&nbsp;heatmap</li> 
+            <li>New charts in bokeh.charts: Time Series and Categorical&nbsp;Heatmap</li> 
+            <li>Sophisticated Hands-on Table&nbsp;widget</li> 
+            <li>Complete Python 3 support for&nbsp;bokeh-server</li> 
+            <li>Much expanded <a href="http://bokeh.pydata.org/docs/user_guide.html">User Guide</a> and <a href="http://bokeh.pydata.org/docs/dev_guide.html">Dev&nbsp;Guide</a></li> 
+            <li><a href="https://github.com/ContinuumIO/bokeh/blob/master/examples/plotting/file/twin_axis.py">Multiple axes and ranges</a> now&nbsp;supported</li> 
+            <li>Object query interface to help with plot&nbsp;styling</li> 
+            <li>Hit-testing (hover tool support) for patch&nbsp;glyphs</li> 
+           </ul> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/bokeh-0.6">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/bokeh-0.6" title="Bokeh 0.6 Released!">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="David Li" src="https://s.gravatar.com/avatar/503f2737e5df22b2bf7727e4b401a1dc?s=80"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/new-launcher">New Anaconda Launcher - 1.0</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-09-09"> <a href="/blog/new-launcher"> <span class="entry-date">Tue, 09 Sep 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/" title="View all posts by David Li">David Li </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/new-launcher"></a> </p>
+           <p>We are pleased to announce a new version of the Anaconda Launcher, a graphical user interface that allows <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> users to easily discover, install, update, and launch applications with <a href="http://conda.pydata.org/">conda</a>.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/new-launcher">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/new-launcher" title="New Anaconda Launcher - 1.0">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Matt Rocklin" src="https://secure.gravatar.com/avatar/8749ec52cee260c4c1f67f2dec29d957"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/blaze-expressions">Introducing Blaze - Expressions</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-09-03"> <a href="/blog/blaze-expressions"> <span class="entry-date">Wed, 03 Sep 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/mattrocklin" title="View all posts by Matt Rocklin">Matt Rocklin </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/blaze-expressions"></a> </p>
+           <p><strong>tl;dr Blaze abstracts tabular computation, providing uniform access to a variety of database&nbsp;technologies</strong></p> 
+           <h2>Introduction</h2> 
+           <p>NumPy and Pandas couple a high level interface with fast low-level computation. They allow us to manipulate data intuitively and&nbsp;efficiently.</p> 
+           <p>Occasionally we run across a dataset that is too big to fit in our computer’s memory. In this case NumPy and Pandas don’t fit our needs and we look to other tools to manage and analyze our data. Popular choices include databases like Postgres and MongoDB, out-of-disk storage systems like PyTables and BColz and the menagerie of tools on top of the Hadoop File System (Hadoop, Spark, Impala and&nbsp;derivatives.)</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/blaze-expressions">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/blaze-expressions" title="Introducing Blaze - Expressions">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Aaron Meurer" src="http://www.gravatar.com/avatar/7341713fcfc525d0ef7849bb7a2ebd5a.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/advanced-conda-part-1">Advanced Features of Conda Part 1</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-07-30"> <a href="/blog/advanced-conda-part-1"> <span class="entry-date">Wed, 30 Jul 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/aaron" title="View all posts by Aaron Meurer">Aaron Meurer </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/advanced-conda-part-1"></a> </p>
+           <p><a href="http://conda.pydata.org/">Conda</a> is the package manager that comes with Continuum’s <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> distribution. Conda makes it easy to install and manage all your packages and environments on Windows, Mac <span class="caps">OS</span> X, and&nbsp;Linux.</p> 
+           <p>If you are new to conda, I recommend starting at the <a href="http://conda.pydata.org/docs/">documentation</a>, and watching my presentation from SciPy&nbsp;2014.</p> 
+           <iframe width="560" height="315" src="//www.youtube.com/embed/UaIvrDWrIWM" frameborder="0" allowfullscreen></iframe> 
+           <p>In this post, I will assume that you are already familiar with conda and its basic usage, both for installing and building packages. I will look at a few advanced features or tips that may not be well known, even among advanced users of conda. These features will help you with feature discovery, customization, and allow you to manage your packages and environments in more advanced&nbsp;ways.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/advanced-conda-part-1">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/advanced-conda-part-1" title="Advanced Features of Conda Part 1">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Damián Avila" src="https://s.gravatar.com/avatar/4e38c658571b67282fda714dfea98843?s=80"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/bokeh-0.5.1">Bokeh 0.5.1 Released!</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-07-23"> <a href="/blog/bokeh-0.5.1"> <span class="entry-date">Wed, 23 Jul 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/damian" title="View all posts by Damián Avila">Damián Avila </a> <a class="url fn n" href="/author/bryanv" title="View all posts by Bryan Van de Ven">Bryan Van de Ven </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/bokeh-0.5.1"></a> </p>
+           <p>We are excited to announce the release of <a href="https://github.com/ContinuumIO/bokeh/tree/0.5.1">version 0.5.1 of Bokeh</a>, an interactive web plotting library for&nbsp;Python!</p> 
+           <p>This release includes many bug fixes and improvements over our last recent 0.5&nbsp;release:</p> 
+           <ul> 
+            <li>Hover activated by&nbsp;default</li> 
+            <li>Boxplot in&nbsp;bokeh.charts</li> 
+            <li>Better messages when you forget to start the&nbsp;bokeh-server</li> 
+            <li>Fixed some packaging&nbsp;bugs</li> 
+            <li>Fixed NBviewer&nbsp;rendering</li> 
+            <li>Fixed some&nbsp;Unicodeencodeerror</li> 
+           </ul> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/bokeh-0.5.1">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/bokeh-0.5.1" title="Bokeh 0.5.1 Released!">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Bryan Van de Ven" src="https://secure.gravatar.com/avatar/e47adafb8e2c93d0eb0196d19e46ed19?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/bokeh-0.5">Bokeh 0.5 Released!</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-07-09"> <a href="/blog/bokeh-0.5"> <span class="entry-date">Wed, 09 Jul 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/bryanv" title="View all posts by Bryan Van de Ven">Bryan Van de Ven </a> <a class="url fn n" href="/author/damian" title="View all posts by Damián Avila">Damián Avila </a> <a class="url fn n" href="/author/" title="View all posts by Joseph Cottam">Joseph Cottam </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/bokeh-0.5"></a> </p>
+           <p>We are excited to announce the release of <a href="https://github.com/ContinuumIO/bokeh/tree/0.5.0">version 0.5 of Bokeh</a>, an interactive web plotting library for&nbsp;Python!</p> 
+           <p>This release includes some major new features: support for Widgets and Dashboards, preliminary integration of Abstract Rendering for big data visualization, and a new schematic bokeh.charts interface for very high level statistical charting. Additionally, tighter Pandas integration makes using Bokeh with the tools we all love even easier, and a new, much simpler bokeh.embed module makes including Bokeh content in your documents a snap. Over forty bugfixes and several new smaller features are also included: log axes, minor ticks, a new plot frame, gears and gauges glyphs, an npm package for BokehJS, and many usability&nbsp;improvements.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/bokeh-0.5">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/bokeh-0.5" title="Bokeh 0.5 Released!">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Travis Oliphant" src="http://www.gravatar.com/avatar/6c8561779fff34c62074c614d19980fc?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/binstar">Binstar is Out of Beta, Now Available for Everyone</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-06-18"> <a href="/blog/binstar"> <span class="entry-date">Wed, 18 Jun 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/travis" title="View all posts by Travis Oliphant">Travis Oliphant </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/binstar"></a> </p>
+           <p>I am very excited to announce the public availability of <a href="https://binstar.org">Binstar</a>. Binstar is a free service for hosting public packages for pip and conda with support for R, npm, and other formats in the near future. Private packages can also be hosted for a nominal monthly subscription. An on-premise version of Binstar is also available as part of <a href="http://www.continuum.io/anaconda-server">Anaconda Server</a>.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/binstar">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/binstar" title="Binstar is Out of Beta, Now Available for Everyone">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Corinna Bahr" src="http://gravatar.com/avatar/b92d459ea48bb064be61642c534da92c"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/anaconda-2-released">Continuum Analytics Releases Anaconda 2.0</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-05-29"> <a href="/blog/anaconda-2-released"> <span class="entry-date">Thu, 29 May 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/cbahr" title="View all posts by Corinna Bahr">Corinna Bahr </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/anaconda-2-released"></a> </p>
+           <p>We are pleased to announce <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> 2.0, the newest version of our enterprise-ready Python distribution. Available for free on Windows, Mac <span class="caps">OS</span> X and Linux, Anaconda includes <a href="http://docs.continuum.io/anaconda/pkg-docs.html">almost 200 of the most popular numerical and scientific Python libraries</a> used by scientists, engineers and data analysts, with an integrated and flexible&nbsp;installer. </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/anaconda-2-released">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/anaconda-2-released" title="Continuum Analytics Releases Anaconda 2.0">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Bryan Van de Ven" src="https://secure.gravatar.com/avatar/e47adafb8e2c93d0eb0196d19e46ed19?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/bokeh-0.4.4">Bokeh 0.4.4 Released!</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-04-16"> <a href="/blog/bokeh-0.4.4"> <span class="entry-date">Wed, 16 Apr 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/bryanv" title="View all posts by Bryan Van de Ven">Bryan Van de Ven </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/bokeh-0.4.4"></a> </p>
+           <p>We are pleased to announce the release of <a href="https://github.com/ContinuumIO/bokeh/tree/0.4.4">version 0.4.4 of Bokeh</a>, an interactive web plotting library for&nbsp;Python!</p> 
+           <p>This release includes improved <a href="https://github.com/ContinuumIO/bokeh/tree/0.4.4/examples/mpl">Matplotlib</a>, <a href="https://github.com/ContinuumIO/bokeh/tree/0.4.4/examples/ggplot">ggplot</a>, and <a href="https://github.com/ContinuumIO/bokeh/tree/0.4.4/examples/seaborn">Seaborn</a> support, PyPy compatibility, <a href="https://travis-ci.org/ContinuumIO/bokeh">continuous integration testing</a>, downsampling of remote data, and initial work on Bokeh “apps”. If you are a Matplotlib user, you can just use %bokeh magic to start interacting with your plots in the notebook&nbsp;immediately!</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/bokeh-0.4.4">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/bokeh-0.4.4" title="Bokeh 0.4.4 Released!">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Matthew Willis" src="http://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/t1.0-1/p160x160/35318_408054444194_7402832_n.jpg"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/openssl-1.0.1g">OpenSSL 1.0.1g fixes critical vulnerability</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-04-08"> <a href="/blog/openssl-1.0.1g"> <span class="entry-date">Tue, 08 Apr 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/" title="View all posts by Matthew Willis">Matthew Willis </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/openssl-1.0.1g"></a> </p>
+           <p>OpenSSL 1.0.1g packages are now available via Anaconda. These packages patch the <a href="http://heartbleed.com">“heartbleed” vulnerability</a> described in <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0160&amp;cid=2"><span class="caps">CVE</span>-2014-0160</a>. This is a <strong>critical update</strong> and we strongly recommend that all Anaconda users - especially those in corporate or sensitive environments - follow the steps outlined&nbsp;here.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/openssl-1.0.1g">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/openssl-1.0.1g" title="OpenSSL 1.0.1g fixes critical vulnerability">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Jay Bourque" src="/media/img/avatar/Jay-Bourque_avatar.jpg"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/numba-0.13">Numba 0.13</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-04-03"> <a href="/blog/numba-0.13"> <span class="entry-date">Thu, 03 Apr 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/jbourque" title="View all posts by Jay Bourque">Jay Bourque </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/numba-0.13"></a> </p>
+           <p>We are pleased to announce the release of <a href="https://github.com/numba/numba/tree/0.13.0">Numba 0.13</a>. This release continues to improve on the 0.12 refactor and contains numerous bug and regression fixes. We’re also excited about the introduction of <span class="caps">CUDA</span> support, which has long been available in <a href="https://store.continuum.io/cshop/accelerate/">NumbaPro</a>. Numba 0.13 now has preliminary capabilities for writing <span class="caps">CUDA</span> kernels in Python using the cuda.jit and cuda.autojit decorators. NumbaPro will continue to have more advanced <span class="caps">CUDA</span> support like vectorize, guvectorize, and <a href="http://docs.continuum.io/numbapro/cudalib.html"><span class="caps">CUDA</span> Library bindings</a>.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/numba-0.13">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/numba-0.13" title="Numba 0.13">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Ilan Schnell" src="https://secure.gravatar.com/avatar/9e540027a1240c03f3e9938214a4b0e0"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/python-1.0">Python 1.0 installable using conda</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-04-01"> <a href="/blog/python-1.0"> <span class="entry-date">Tue, 01 Apr 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/ilan" title="View all posts by Ilan Schnell">Ilan Schnell </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/python-1.0"></a> </p>
+           <p>Python 1.0.1 is now available using conda (on Unix, because this version of Python does not support Windows). This blog post explains how easy it is to create a Python 1.0 environment and some of the features of this Python&nbsp;version.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/python-1.0">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/python-1.0" title="Python 1.0 installable using conda">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Bryan Van de Ven" src="https://secure.gravatar.com/avatar/e47adafb8e2c93d0eb0196d19e46ed19?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/bokeh-0.4.2">Bokeh 0.4.2: Improved Matplotlib, Seaborn, Windows, and IPython Notebook Support</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-03-10"> <a href="/blog/bokeh-0.4.2"> <span class="entry-date">Mon, 10 Mar 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/bryanv" title="View all posts by Bryan Van de Ven">Bryan Van de Ven </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/bokeh-0.4.2"></a> </p>
+           <p>We are pleased to announce the release of <a href="https://github.com/ContinuumIO/bokeh/tree/0.4.2">version 0.4.2 of Bokeh</a>, an interactive web plotting library for&nbsp;Python!</p> 
+           <p>This release includes improved <a href="https://github.com/ContinuumIO/bokeh/tree/0.4.2/examples/mpl">Matplotlib and Seaborn support</a>, an extensive <a href="http://bokeh.pydata.org/tutorial">tutorial</a> with exercises and solutions, a new <a href="https://github.com/ContinuumIO/bokeh/blob/0.4.2/extensions/bokeh_magic.py">%bokeh magic command</a> for IPython notebook, and Windows support for the Bokeh server with two new storage backend&nbsp;options.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/bokeh-0.4.2">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/bokeh-0.4.2" title="Bokeh 0.4.2: Improved Matplotlib, Seaborn, Windows, and IPython Notebook Support">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Francesc Alted" src="http://www.gravatar.com/avatar/38153b4768acea6b89aed9f19a0a5243.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/pydata-london-2014-recap">PyData London 2014 is over (but still lives in our minds)</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-03-06"> <a href="/blog/pydata-london-2014-recap"> <span class="entry-date">Thu, 06 Mar 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/francesc" title="View all posts by Francesc Alted">Francesc Alted </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/pydata-london-2014-recap"></a> </p>
+           <p>Thank you to all who attended <a href="http://pydata.org/">PyData</a> London 2014. We had a great time meeting up with everyone, attending talks, and learning more about the cool things being done with Python and Data these days. We were pleased to see many of our own team participate - from tutorials and talks to&nbsp;networking.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/pydata-london-2014-recap">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/pydata-london-2014-recap" title="PyData London 2014 is over (but still lives in our minds)">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Peter Wang" src="http://www.gravatar.com/avatar/3c2430d201fb71e935765851ec35e1db?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/bokeh-0.4.1">Bokeh 0.4.1</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-02-19"> <a href="/blog/bokeh-0.4.1"> <span class="entry-date">Wed, 19 Feb 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/pwang" title="View all posts by Peter Wang">Peter Wang </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/bokeh-0.4.1"></a> </p>
+           <p>We are excited to announce the release of <a href="https://github.com/ContinuumIO/bokeh/tree/0.4.1">version 0.4.1 of Bokeh</a>, an interactive web plotting library for&nbsp;Python!</p> 
+           <p>This release includes preliminary <a href="https://github.com/ContinuumIO/bokeh/tree/0.4.1/examples/mpl">Matplotlib support</a>, improved plots of <a href="/media/post_imgs/bokeh_unemp.png" target="_blank">categorical</a> <a href="/media/post_imgs/bokeh_les_mis.png" target="_blank">data</a>, a flexible <a href="/media/post_imgs/bokeh_periodic_table_tooltip.png" target="_blank">hover tool</a>, and a <a href="https://github.com/mattpap/bokeh-scala">Scala interface for Bokeh</a> (with&nbsp;examples).</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/bokeh-0.4.1">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/bokeh-0.4.1" title="Bokeh 0.4.1">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Travis Oliphant" src="http://www.gravatar.com/avatar/6c8561779fff34c62074c614d19980fc?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/conda_packaging">Conda Packaging for the PyData Ecosystem</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2014-01-15"> <a href="/blog/conda_packaging"> <span class="entry-date">Wed, 15 Jan 2014</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/travis" title="View all posts by Travis Oliphant">Travis Oliphant </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/conda_packaging"></a> </p>
+           <p>Developers at Continuum Analytics have been using Python actively for a long time. We have all seen and made poor software engineering decisions in the Python ecosystem because of the lack of a solid, cross-platform, binary packaging mechanism – particularly for Python extensions in the NumPy&nbsp;stack. </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/conda_packaging">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/conda_packaging" title="Conda Packaging for the PyData Ecosystem">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Bryan Van de Ven" src="https://secure.gravatar.com/avatar/e47adafb8e2c93d0eb0196d19e46ed19?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/bokeh03">Bokeh 0.3 Released</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-11-20"> <a href="/blog/bokeh03"> <span class="entry-date">Wed, 20 Nov 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/bryanv" title="View all posts by Bryan Van de Ven">Bryan Van de Ven </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/bokeh03"></a> </p>
+           <p>We are pleased to announce the release of <a href="https://github.com/ContinuumIO/Bokeh/tree/0.3">version 0.3 of the Bokeh plotting library</a>. This release sees the BokehJS browser runtime merged into the Bokeh project for much simplified building and deployment. We also took the opportunity to fix several bugs, add more examples, and improve the&nbsp;documentation.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/bokeh03">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/bokeh03" title="Bokeh 0.3 Released">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/painless_streaming_plots_w_bokeh">Painless Streaming Plots with Bokeh</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-11-14"> <a href="/blog/painless_streaming_plots_w_bokeh"> <span class="entry-date">Thu, 14 Nov 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/painless_streaming_plots_w_bokeh"></a> </p>
+           <p>Bokeh is quickly proving to be the easiest plotting toolkit for web-enabled graphs. Continuum recently released version 0.2 , with 0.3 coming shortly. One of the distinguishing features of Bokeh compared to other web-based plotting toolkits is that streaming, as a feature, is not an afterthought. Animated as well as streaming realtime plots on the web should be nearly as easy as static plots — and with Bokeh, it really is that easy. It’s good to remind yourself that Bokeh is built with Python as a first-class citizen — in other words, all of the plotting commands are in Python and <span class="caps">NOT</span> Javascript. Bokeh is open-source and <a href="http://bokeh.pydata.org/">our documentation</a> has loads of <a href="http://continuumio.github.io/bokehjs/index.html">beautiful interactive plots</a>. </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/painless_streaming_plots_w_bokeh">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/painless_streaming_plots_w_bokeh" title="Painless Streaming Plots with Bokeh">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Ilan Schnell" src="https://secure.gravatar.com/avatar/9e540027a1240c03f3e9938214a4b0e0"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/anaconda-python-3">Python 3 support in Anaconda</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-10-29"> <a href="/blog/anaconda-python-3"> <span class="entry-date">Tue, 29 Oct 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/ilan" title="View all posts by Ilan Schnell">Ilan Schnell </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/anaconda-python-3"></a> </p>
+           <p>Did you know that Anaconda has been supporting Python 3 for more than half a year? While the Anaconda installers use Python 2.7, it is quite easy to create new additional environments that provide Python 3.3 (and soon Python 3.4), as well as many scientific packages. This blog explains how this is done in&nbsp;detail.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/anaconda-python-3">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/anaconda-python-3" title="Python 3 support in Anaconda">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Peter Wang" src="http://www.gravatar.com/avatar/3c2430d201fb71e935765851ec35e1db?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/bokeh02">Announcing Bokeh 0.2!</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-10-23"> <a href="/blog/bokeh02"> <span class="entry-date">Wed, 23 Oct 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/pwang" title="View all posts by Peter Wang">Peter Wang </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/bokeh02"></a> </p>
+           <p>We’re pleased to announced the release of <a href="https://github.com/ContinuumIO/Bokeh/tree/0.2">version 0.2 of the Bokeh plotting library</a>. We’ve made lots of progress since our v0.1 release: over 1,500 commits across two repositories. There is a ton of new functionality, improved and refactored architecture, and hopefully a much easier installation process for&nbsp;users.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/bokeh02">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/bokeh02" title="Announcing Bokeh 0.2!">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Siu Kwan Lam" src="http://www.gravatar.com/avatar/c95e286acbc218c8919df5167182b83a?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/cudapy_ilp_opt">CUDA Performance: Maximizing Instruction-Level Parallelism</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-09-06"> <a href="/blog/cudapy_ilp_opt"> <span class="entry-date">Fri, 06 Sep 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/siu" title="View all posts by Siu Kwan Lam">Siu Kwan Lam </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/cudapy_ilp_opt"></a> </p>
+           <p><span class="caps">CUDA</span> programming can be difficult because of the unfamiliar hardware architecture. <span class="caps">CUDA</span> is so new that not many people have enough experience to say what is the best approach to write performant code. In this post, we will revisit Vasily Volkov’s talk on <a href="http://www.cs.berkeley.edu/~volkov/volkov10-GTC.pdf">Better Performance at Lower Occupancy</a> to show the importance of instruction-level parallelism&nbsp;(<span class="caps">ILP</span>).</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/cudapy_ilp_opt">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/cudapy_ilp_opt" title="CUDA Performance: Maximizing Instruction-Level Parallelism">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Matt Thornell" src="http://0.gravatar.com/avatar/bd5d5c2e0047f2958fee82a9edcc1e48?size=420"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/teaching-with-wakari">Easily Teach Scientific Python with Wakari</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-08-27"> <a href="/blog/teaching-with-wakari"> <span class="entry-date">Tue, 27 Aug 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/" title="View all posts by Matt Thornell">Matt Thornell </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/teaching-with-wakari"></a> </p>
+           <p>Some of the more frequent questions we receive about <a href="https://www.wakari.io">Wakari</a> center on its use for the teaching and the&nbsp;classroom.</p> 
+           <p><em>“Can I use Wakari to teach a mathematical or computational science course?<br> What about an Intro to Programming course?<br> Do you have any suggestions or best-practices for doing&nbsp;so?”</em></p> 
+           <p>The answer, of course, is a resounding&nbsp;<span class="caps">YES</span>!</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/teaching-with-wakari">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/teaching-with-wakari" title="Easily Teach Scientific Python with Wakari">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Siu Kwan Lam" src="http://www.gravatar.com/avatar/c95e286acbc218c8919df5167182b83a?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/numbapro_012">NumbaPro 0.12 and CUDA 5.5</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-08-08"> <a href="/blog/numbapro_012"> <span class="entry-date">Thu, 08 Aug 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/siu" title="View all posts by Siu Kwan Lam">Siu Kwan Lam </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/numbapro_012"></a> </p>
+           <p>Since the last <a href="http://continuum.io/blog/monte-carlo-pricer">NumbaPro blog post</a>, there has been significant enhancement to the <span class="caps">CUDA</span>-Python compiler. For better <span class="caps">GPU</span> support, NumbaPro 0.12 uses <a href="https://developer.nvidia.com/cuda-downloads"><span class="caps">CUDA</span> 5.5</a>, which contains the first official release of <a href="https://developer.nvidia.com/cuda-llvm-compiler"><span class="caps">NVVM</span></a>. The new <span class="caps">NVVM</span> includes the libdevice math function library, allowing NumbaPro to provide the same math function support as <span class="caps">CUDA</span>-C. We will highlight a few important changes into this&nbsp;post.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/numbapro_012">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/numbapro_012" title="NumbaPro 0.12 and CUDA 5.5">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Oscar Villellas" src="http://www.gravatar.com/avatar/27b4a2d94960ca60ea51cce07cc23a42.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/iopro-pyodbc-performance">Faster, More Memory Efficient SQL queries via IOPro</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-07-30"> <a href="/blog/iopro-pyodbc-performance"> <span class="entry-date">Tue, 30 Jul 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/oscar" title="View all posts by Oscar Villellas">Oscar Villellas </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/iopro-pyodbc-performance"></a> </p>
+           <p><a href="https://store.continuum.io/cshop/iopro/">IOPro</a> provides a version of pyodbc containing <a href="http://docs.continuum.io/iopro/pyodbc.html">extra methods</a> that load data directly into NumPy ndarrays. With IOPro, queries execute several times faster, and memory usage can be 10x-16x lower than with default pyodbc and pandas methods. In this blog post I will present graphs and figures showing improved execution time and memory usage from the use of these new&nbsp;methods.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/iopro-pyodbc-performance">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/iopro-pyodbc-performance" title="Faster, More Memory Efficient SQL queries via IOPro">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Ilan Schnell" src="https://secure.gravatar.com/avatar/9e540027a1240c03f3e9938214a4b0e0"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/new-advances-in-conda">New Advances in conda</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-07-19"> <a href="/blog/new-advances-in-conda"> <span class="entry-date">Fri, 19 Jul 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/ilan" title="View all posts by Ilan Schnell">Ilan Schnell </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/new-advances-in-conda"></a> </p>
+           <p>A lot of developments have happened since our last conda <a href="http://continuum.io/blog/conda">blog post</a> half a year ago. In this post, we want to focus on two new major development efforts: the resolution of install dependencies using a <span class="caps">SAT</span> solver and the ability to build conda packages from “conda&nbsp;recipes”.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/new-advances-in-conda">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/new-advances-in-conda" title="New Advances in conda">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Paddy Mullen" src="http://www.gravatar.com/avatar/29e8ddc03a8df898045c7922976c57f6?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/introducing-bundles">Introducing Wakari Bundles: Simple Code &amp; Data Sharing</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-07-17"> <a href="/blog/introducing-bundles"> <span class="entry-date">Wed, 17 Jul 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/pmullen" title="View all posts by Paddy Mullen">Paddy Mullen </a> <a class="url fn n" href="/author/" title="View all posts by Sahat Yalkabov">Sahat Yalkabov </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/introducing-bundles"></a> </p>
+           <p>Have you ever sent a Python script to someone, only to have them complain about missing libraries, or incompatible versions? Have you found yourself writing long-winded <span class="caps">HOWTO</span> docs around how to use your scripts? We’ve seen many scientists and analysts have this problem, and they are real impediments to robust, repeatable&nbsp;collaboration.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/introducing-bundles">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/introducing-bundles" title="Introducing Wakari Bundles: Simple Code &amp; Data Sharing">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Clayton Davis" src="http://www.gravatar.com/avatar/c3b01ce87df3e86edeed67f0701b5e77.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/bayesian-estimation-hoops">Bayesian Estimation with PyMC and IPCluster</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-07-03"> <a href="/blog/bayesian-estimation-hoops"> <span class="entry-date">Wed, 03 Jul 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/" title="View all posts by Clayton Davis">Clayton Davis </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/bayesian-estimation-hoops"></a> </p>
+           <p>Does the probability of a basketball player making a second free throw depend on the outcome of the first? In this notebook, I demonstrate the use of IPCluster and PyMC to investigate the “hot hand” phenomenon using Bayesian&nbsp;estimation.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/bayesian-estimation-hoops">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/bayesian-estimation-hoops" title="Bayesian Estimation with PyMC and IPCluster">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Ian Stokes-Rees" src="http://www.gravatar.com/avatar/201d7d78aee3641165a11d708892805d.png?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/ipcluster-wakari-intro">Parallel Python with IPCluster and Wakari</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-06-17"> <a href="/blog/ipcluster-wakari-intro"> <span class="entry-date">Mon, 17 Jun 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/" title="View all posts by Ian Stokes-Rees">Ian Stokes-Rees </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/ipcluster-wakari-intro"></a> </p>
+           <p><a href="http://ipython.org/ipython-doc/dev/parallel/parallel_intro.html">IPCluster</a> provides an easy way to do parallel computing in Python, allowing you to connect to and control Python processes running on multiple compute cores, either locally or across a cluster. This introduction should take about 20 minutes and will show you how to start a cluster, access engines, and execute commands. We will use our web-based <a href="http://wakari.io">Wakari</a> analytics environment that will allow you to get started right away, without needing to install or configure&nbsp;anything.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/ipcluster-wakari-intro">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/ipcluster-wakari-intro" title="Parallel Python with IPCluster and Wakari">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Clayton Davis" src="http://www.gravatar.com/avatar/c3b01ce87df3e86edeed67f0701b5e77.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/realtime-analytics-twitter">Realtime Analytics on Streaming Twitter Data</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-06-06"> <a href="/blog/realtime-analytics-twitter"> <span class="entry-date">Thu, 06 Jun 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/" title="View all posts by Clayton Davis">Clayton Davis </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/realtime-analytics-twitter"></a> </p>
+           <p>From weather readings to financial tickers, many interesting data come in the form of streams. An issue with streaming data analysis in IPython is that one often has to either be collecting the data from the stream, or analyzing it, but not both. In this tutorial, I demonstrate a single-notebook IPython workflow for simultaneous collection and analysis of realtime streaming&nbsp;data:</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/realtime-analytics-twitter">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/realtime-analytics-twitter" title="Realtime Analytics on Streaming Twitter Data">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Jay Bourque" src="/media/img/avatar/Jay-Bourque_avatar.jpg"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/follow-the-money-iopro">Follow the Money with IOPro</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-05-30"> <a href="/blog/follow-the-money-iopro"> <span class="entry-date">Thu, 30 May 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/jbourque" title="View all posts by Jay Bourque">Jay Bourque </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/follow-the-money-iopro"></a> </p>
+           <p>One of <a href="https://store.continuum.io/cshop/iopro/">IOPro’s</a> more advanced features is the ability to work with csv data directly from Amazon’s <a href="http://aws.amazon.com/s3/">S3 service</a>. Combining this with <a href="http://continuum.io/wakari.html">Wakari’s</a> notebook sharing feature gives us a powerful way to collaborate on data analysis using data stored in the&nbsp;cloud.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/follow-the-money-iopro">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/follow-the-money-iopro" title="Follow the Money with IOPro">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Aron Ahmadia" src="http://gravatar.com/avatar/821b8bf222958f83097ac40befc9edd7?s=128"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/numba_performance">Accelerating Python Libraries with Numba (Part 2)</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-05-23"> <a href="/blog/numba_performance"> <span class="entry-date">Thu, 23 May 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/aron" title="View all posts by Aron Ahmadia">Aron Ahmadia </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/numba_performance"></a> </p>
+           <p>Welcome. This post is part of a series of <a href="http://continuum.io">Continuum Analytics</a> Open Notebooks showcasing our projects, products, and&nbsp;services.</p> 
+           <p><strong>In this <a href="https://www.wakari.io/sharing/bundle/aron/Accelerating_Python_Libraries_with_Numba_-_Part_2">Continuum Open Notebook</a>, you’ll learn more about how <a href="http://numba.pydata.org">Numba</a> works and how it reduces your programming effort, and see that it achieves comparable performance to C and Cython over a range of&nbsp;benchmarks.</strong></p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/numba_performance">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/numba_performance" title="Accelerating Python Libraries with Numba (Part 2)">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/wakari_financial_health_checks">Wakari and Financial Health Checks</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-05-16"> <a href="/blog/wakari_financial_health_checks"> <span class="entry-date">Thu, 16 May 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/wakari_financial_health_checks"></a> </p>
+           <p><a href="http://smallbusiness.chron.com/definition-balance-sheet-based-accrual-ratio-32741.html">Accrual Ratios</a> are an important index for assessing the performance and continued viability of every publicly traded company. Using <a href="http://wakari.io">Wakari</a>, <a href="https://github.com/ContinuumIO/TR_CONNECT/"><span class="caps">TR</span> <span class="caps">CONNECT</span></a>, and <a href="http://thomsonreuters.com/products_services/financial/financial_products/a-z/worldscope_fundamentals/">Thomson Reuters Financial Data</a> I calculated accrual ratios for a variety of companies and explored news events, which may correlate with strong signals in the data. You can easily <strong><a href="https://www.wakari.io/sharing/bundle/quasiben_tr/Accrual_Ratios">download and edit the notebook</a></strong> used in this post into your Wakari&nbsp;account.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/wakari_financial_health_checks">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/wakari_financial_health_checks" title="Wakari and Financial Health Checks">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Aron Ahmadia" src="http://gravatar.com/avatar/821b8bf222958f83097ac40befc9edd7?s=128"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/numba_growcut">Accelerating Python Libraries with Numba (Part 1)</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-05-07"> <a href="/blog/numba_growcut"> <span class="entry-date">Tue, 07 May 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/aron" title="View all posts by Aron Ahmadia">Aron Ahmadia </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/numba_growcut"></a> </p>
+           <p>Welcome. This post is part of a series of <a href="http://continuum.io/">Continuum Analytics</a> Open Notebooks showcasing our projects, products, and&nbsp;services.</p> 
+           <p><strong>In <a href="https://www.wakari.io/sharing/bundle/aron/numbapost">this Continuum Open Notebook</a>, you’ll see how Numba accelerates the performance of the GrowCut image segmentation window function by three orders of magnitude in two lines of&nbsp;Python.</strong></p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/numba_growcut">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/numba_growcut" title="Accelerating Python Libraries with Numba (Part 1)">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Ilan Schnell" src="https://secure.gravatar.com/avatar/9e540027a1240c03f3e9938214a4b0e0"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/mkl-optimizations">MKL Optimizations for Anaconda</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-04-30"> <a href="/blog/mkl-optimizations"> <span class="entry-date">Tue, 30 Apr 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/ilan" title="View all posts by Ilan Schnell">Ilan Schnell </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/mkl-optimizations"></a> </p>
+           <p>We are happy to announce a new <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> add-on product called <a href="https://store.continuum.io/cshop/mkl-optimizations/"> “<span class="caps">MKL</span> Optimizations”</a>, which allows packages in Anaconda to take advantage of the <a href="http://software.intel.com/en-us/intel-mkl">Math Kernel Library</a> (<span class="caps">MKL</span>) by <a href="http://www.intel.com/">Intel</a>.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/mkl-optimizations">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/mkl-optimizations" title="MKL Optimizations for Anaconda">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Corinna Bahr" src="http://gravatar.com/avatar/b92d459ea48bb064be61642c534da92c"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/virtual-training-now-available">Virtual Python Training Courses now available</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-04-26"> <a href="/blog/virtual-training-now-available"> <span class="entry-date">Fri, 26 Apr 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/cbahr" title="View all posts by Corinna Bahr">Corinna Bahr </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/virtual-training-now-available"></a> </p>
+           <p>Last week, our Python training courses went virtual! In addition to open courses and customizable on-site courses, Continuum’s new <a href="https://store.continuum.io/cshop/training">virtual training courses</a> are more cost effective and flexible for individuals, as well as&nbsp;organizations. </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/virtual-training-now-available">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/virtual-training-now-available" title="Virtual Python Training Courses now available">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Siu Kwan Lam" src="http://www.gravatar.com/avatar/c95e286acbc218c8919df5167182b83a?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/monte-carlo-pricer">NumbaPro Monte Carlo Option Pricer</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-04-09"> <a href="/blog/monte-carlo-pricer"> <span class="entry-date">Tue, 09 Apr 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/siu" title="View all posts by Siu Kwan Lam">Siu Kwan Lam </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/monte-carlo-pricer"></a> </p>
+           <p>The <span class="caps">GPU</span> revolution of the past few years provides inexpensive access to hundreds of specialized computational units in a single silicon die. The challenge is efficiently accessing these and developing or adapting algorithms that can harness their power. Here, I’ll show how the NumbaPro module from <a href="https://store.continuum.io/cshop/accelerate">Anaconda Accelerate</a> can be used to parallelize a standard option pricing algorithm onto a <span class="caps">GPU</span>, giving a 14x speedup, using only a few extra lines of&nbsp;code.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/monte-carlo-pricer">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/monte-carlo-pricer" title="NumbaPro Monte Carlo Option Pricer">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Ilan Schnell" src="https://secure.gravatar.com/avatar/9e540027a1240c03f3e9938214a4b0e0"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/sudoku">SAT based Sudoku solver in Python</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-04-02"> <a href="/blog/sudoku"> <span class="entry-date">Tue, 02 Apr 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/ilan" title="View all posts by Ilan Schnell">Ilan Schnell </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/sudoku"></a> </p>
+           <p>The <a href="http://en.wikipedia.org/wiki/Boolean_satisfiability_problem"> Boolean satisfiability problem</a> can be solved extremely efficiently using <span class="caps">SAT</span> solvers. Over the past 20 years, <span class="caps">SAT</span> solvers have drastically improved. In the early 90’s <span class="caps">SAT</span> solvers could only handle a few hundred variables and clauses, whereas today problems with millions of variables and clauses can be solved quickly. Most of these advances are due to better algorithms, not due to better&nbsp;hardware.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/sudoku">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/sudoku" title="SAT based Sudoku solver in Python">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/wakari-and-big-finance">Wakari and Big Finance</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-03-26"> <a href="/blog/wakari-and-big-finance"> <span class="entry-date">Tue, 26 Mar 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/wakari-and-big-finance"></a> </p>
+           <p>Continuum is proud to announce a new partnership with <a href="http://thomsonreuters.com/products_services/financial/financial_products/a-z/datastream/">Thomson Reuters</a>. </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/wakari-and-big-finance">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/wakari-and-big-finance" title="Wakari and Big Finance">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Ilan Schnell" src="https://secure.gravatar.com/avatar/9e540027a1240c03f3e9938214a4b0e0"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/raspberry">Anaconda on the Raspberry Pi</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-03-22"> <a href="/blog/raspberry"> <span class="entry-date">Fri, 22 Mar 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/ilan" title="View all posts by Ilan Schnell">Ilan Schnell </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/raspberry"></a> </p>
+           <p>As most of you probably already know, the <span class="caps">PSF</span> gave a Raspberry Pi to everyone attending PyCon 2013 in Santa Clara last weekend. I would like to take the opportunity to thank everyone involved for putting together the most fantastic PyCon ever. I’m always amazed to see this conference exceeding its own&nbsp;standards.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/raspberry">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/raspberry" title="Anaconda on the Raspberry Pi">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Corinna Bahr" src="http://gravatar.com/avatar/b92d459ea48bb064be61642c534da92c"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/anaconda-1-4-released">Big Changes to Anaconda in Version 1.4</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-03-13"> <a href="/blog/anaconda-1-4-released"> <span class="entry-date">Wed, 13 Mar 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/cbahr" title="View all posts by Corinna Bahr">Corinna Bahr </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/anaconda-1-4-released"></a> </p>
+           <p>Yesterday we released the newest version of Anaconda, our premier Python distribution, and with it, we’ve also made a number of changes to our product&nbsp;offering.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/anaconda-1-4-released">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/anaconda-1-4-released" title="Big Changes to Anaconda in Version 1.4">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Francesc Alted" src="http://www.gravatar.com/avatar/38153b4768acea6b89aed9f19a0a5243.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/blz-format">BLZ: A data format leveraging the hierarchical memory model</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-02-28"> <a href="/blog/blz-format"> <span class="entry-date">Thu, 28 Feb 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/francesc" title="View all posts by Francesc Alted">Francesc Alted </a> <a class="url fn n" href="/author/oscar" title="View all posts by Oscar Villellas">Oscar Villellas </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/blz-format"></a> </p>
+           <p>Current computer architectures are quite different from what it used to be 25 years ago. Many things have changed, but probably the most dramatic difference has been the growing gap between <span class="caps">CPU</span> and memory speeds, also known as the memory&nbsp;wall.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/blz-format">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/blz-format" title="BLZ: A data format leveraging the hierarchical memory model">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Joel Hull" src="http://www.gravatar.com/avatar/87564b59bd493063ca19f724d6f3cae6?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/wakari_custom_envs">Custom Python Environments in Wakari</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-02-19"> <a href="/blog/wakari_custom_envs"> <span class="entry-date">Tue, 19 Feb 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/jhull" title="View all posts by Joel Hull">Joel Hull </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/wakari_custom_envs"></a> </p>
+           <p><a href="http://continuum.io/wakari">Wakari</a> provides a powerful set of pre-configured Python environments, but what if you need a Python module that Wakari doesn’t include by&nbsp;default?</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/wakari_custom_envs">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/wakari_custom_envs" title="Custom Python Environments in Wakari">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Peter Wang" src="http://www.gravatar.com/avatar/3c2430d201fb71e935765851ec35e1db?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/anagram">Anagram Picture - Real or Fake?</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-02-11"> <a href="/blog/anagram"> <span class="entry-date">Mon, 11 Feb 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/pwang" title="View all posts by Peter Wang">Peter Wang </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/anagram"></a> </p>
+           <p>I came across this image on Facebook: <a href="/media/img/anagram.jpg"><img alt="Anagram" src="/media/img/anagram.jpg"></a></p> 
+           <p>I was struck by the unusual surnames (“Bok” and “Lexier”), and doubly suspicious about the “x” in the surname. The premise of this image is that the left text was created independently, and then the text on the right was created from it, using awesome anagram skills. This image would be a lot less impressive if the two paragraphs were crafted at the same time, so that they were anagrams of one another. So I wondered: is there a way to figure out if this is real or&nbsp;fake?</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/anagram">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/anagram" title="Anagram Picture - Real or Fake?">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Corinna Bahr" src="http://gravatar.com/avatar/b92d459ea48bb064be61642c534da92c"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/continuum-wins-darpa-xdata-funding">Continuum wins DARPA XDATA Funding</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-02-04"> <a href="/blog/continuum-wins-darpa-xdata-funding"> <span class="entry-date">Mon, 04 Feb 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/cbahr" title="View all posts by Corinna Bahr">Corinna Bahr </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/continuum-wins-darpa-xdata-funding"></a> </p>
+           <p>With data volumes growing, the ability to manage and analyze data sets is increasingly important to many governmental agencies. Recently, we were awarded $3 million to develop Blaze and&nbsp;Bokeh </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/continuum-wins-darpa-xdata-funding">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/continuum-wins-darpa-xdata-funding" title="Continuum wins DARPA XDATA Funding">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Jay Bourque" src="/media/img/avatar/Jay-Bourque_avatar.jpg"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/superbowl-squares-XLVII">SuperBowl Squares XLVII</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-02-01"> <a href="/blog/superbowl-squares-XLVII"> <span class="entry-date">Fri, 01 Feb 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/jbourque" title="View all posts by Jay Bourque">Jay Bourque </a> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> <a class="url fn n" href="/author/" title="View all posts by Hugo Shi">Hugo Shi </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/superbowl-squares-XLVII"></a> </p>
+           <p><a href="http://en.wikipedia.org/wiki/Super_Bowl_XLVII">Super Bowl 47</a> is just a few days away, and cubicle dwellers across America are gearing up for another round of their office Super Bowl Squares pool. If you’ve never participated in&nbsp;one,</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/superbowl-squares-XLVII">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/superbowl-squares-XLVII" title="SuperBowl Squares XLVII">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Bryan Van de Ven" src="https://secure.gravatar.com/avatar/e47adafb8e2c93d0eb0196d19e46ed19?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/conda">Python Packages and Environments with conda</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-01-29"> <a href="/blog/conda"> <span class="entry-date">Tue, 29 Jan 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/bryanv" title="View all posts by Bryan Van de Ven">Bryan Van de Ven </a> <a class="url fn n" href="/author/maggie" title="View all posts by Maggie Mari">Maggie Mari </a> <a class="url fn n" href="/author/ilan" title="View all posts by Ilan Schnell">Ilan Schnell </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/conda"></a> </p>
+           <p>For all the many strengths of Python, people often express frustration in finding, building, and installing third party packages. This pain can be especially&nbsp;acute</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/conda">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/conda" title="Python Packages and Environments with conda">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/hello-noaa">Hello NOAA</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2013-01-22"> <a href="/blog/hello-noaa"> <span class="entry-date">Tue, 22 Jan 2013</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/hello-noaa"></a> </p>
+           <p>Several Continuum developers and I were invited to speak at the <a href="https://ams.confex.com/ams/93Annual/webprogram/3PYTHON.html">93rd American Meteorological Society conference</a>. I took the opportunity to learn a bit about climate science and set out to reproduce the <a href="https://www.ncdc.noaa.gov/cmb-faq/anomalies.php">Global Temperature&nbsp;Anomaly</a> </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/hello-noaa">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/hello-noaa" title="Hello NOAA">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Stephen Diehl" src="https://secure.gravatar.com/avatar/24ff9d2750dca67e4ce9a87c3c270ef5.pngh"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/blaze">A Python Compiler for Big Data</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-12-17"> <a href="/blog/blaze"> <span class="entry-date">Mon, 17 Dec 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/sdiehl" title="View all posts by Stephen Diehl">Stephen Diehl </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/blaze"></a> </p>
+           <p>Blaze is the next generation of NumPy, Python’s extremely popular array library. At Continuum Analytics we aim to tackle some of the hardest problems in large data analytics&nbsp;with</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/blaze">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/blaze" title="A Python Compiler for Big Data">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Jay Bourque" src="/media/img/avatar/Jay-Bourque_avatar.jpg"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/iopro-even-faster-and-smaller">IOPro: Even Faster and Smaller</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-12-13"> <a href="/blog/iopro-even-faster-and-smaller"> <span class="entry-date">Thu, 13 Dec 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/jbourque" title="View all posts by Jay Bourque">Jay Bourque </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/iopro-even-faster-and-smaller"></a> </p>
+           <p>In my last <a href="http://continuum.io/blog/advanced_iopro">blog post</a> on <a href="https://store.continuum.io/cshop/iopro">IOPro</a> I promised new benchmarks that show off IOPro’s improved csv text parsing performance. The latest version of IOPro (version 1.2.3)&nbsp;has </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/iopro-even-faster-and-smaller">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/iopro-even-faster-and-smaller" title="IOPro: Even Faster and Smaller">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/ipython-notebook-sharing-in-wakari">IPython Notebook Sharing in Wakari</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-12-06"> <a href="/blog/ipython-notebook-sharing-in-wakari"> <span class="entry-date">Thu, 06 Dec 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/ipython-notebook-sharing-in-wakari"></a> </p>
+           <p>We are proud to announce that <a href="http://wakari.io">Wakari</a> now supports IPython Notebook publishing and sharing! Wakari users can publish a notebook for public viewing, and obtain a permalink that can be shared and tweeted. Furthermore, when another Wakari user&nbsp;visits </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/ipython-notebook-sharing-in-wakari">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/ipython-notebook-sharing-in-wakari" title="IPython Notebook Sharing in Wakari">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Joseph W. Richards, Ph.D." src="/media/img/avatar/jrichards_avatar.jpeg"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/wiserf-use-cases-and-benchmarks">wiseRF Use Cases and Benchmarks</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-11-27"> <a href="/blog/wiserf-use-cases-and-benchmarks"> <span class="entry-date">Tue, 27 Nov 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/jrichards" title="View all posts by Joseph W. Richards, Ph.D.">Joseph W. Richards, Ph.D. </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/wiserf-use-cases-and-benchmarks"></a> </p>
+           <p>In a previous <a href="http://continuum.io/blog/machine-learning">post</a>, we announced the partnership between Continuum Analytics and <a href="http://wise.io/">wise.io</a> to bring fast and memory-efficient machine learning to data scientists and programmers. <a href="http://wise.io/wiserf.html">wiseRF</a>, the implementation of the <a href="http://en.wikipedia.org/wiki/Random_forest">Random Forest</a> algorithm from wise.io, is currently available on&nbsp;Anaconda.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/wiserf-use-cases-and-benchmarks">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/wiserf-use-cases-and-benchmarks" title="wiseRF Use Cases and Benchmarks">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/testing-claims-in-outliers-with-wikipedia-data">Testing claims in Outliers with Wikipedia Data</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-11-21"> <a href="/blog/testing-claims-in-outliers-with-wikipedia-data"> <span class="entry-date">Wed, 21 Nov 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/testing-claims-in-outliers-with-wikipedia-data"></a> </p>
+           <p>In <a href="http://www.gladwell.com/">Malcom Gladwell</a>‘s book <a href="http://gladwell.com/outliers/">Outliers</a> — in which he explores “why some people succeed and others don’t” — he famously analyzes the surprising statistic that more professional hockey players, especially Canadian hockey players, are born earlier in the year.&nbsp;Gladwell</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/testing-claims-in-outliers-with-wikipedia-data">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/testing-claims-in-outliers-with-wikipedia-data" title="Testing claims in Outliers with Wikipedia Data">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Leah Silen" src="http://www.gravatar.com/avatar/07dcb022f5f5b871784e6f4cc5c151aa?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/videos-from-pydata-nyc">Videos From PyData NYC 2012</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-11-14"> <a href="/blog/videos-from-pydata-nyc"> <span class="entry-date">Wed, 14 Nov 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/leah" title="View all posts by Leah Silen">Leah Silen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/videos-from-pydata-nyc"></a> </p>
+           <p>If you weren’t able to attend PyData <span class="caps">NYC</span>, or would like another opportunity to watch a talk or tutorial, you now have the chance.&nbsp; Conference videos are posted on Vimeo at: <a href="https://vimeo.com/channels/pydata">https://vimeo.com/channels/pydata</a>.</p> 
+           <p>Talks, tutorials, and lightning talks were among&nbsp;the</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/videos-from-pydata-nyc">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/videos-from-pydata-nyc" title="Videos From PyData NYC 2012">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Paddy Mullen" src="http://www.gravatar.com/avatar/29e8ddc03a8df898045c7922976c57f6?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/introducing-wakari">Introducing Wakari</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-11-09"> <a href="/blog/introducing-wakari"> <span class="entry-date">Fri, 09 Nov 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/pmullen" title="View all posts by Paddy Mullen">Paddy Mullen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/introducing-wakari"></a> </p>
+           <p>We are proud to introduce <a href="http://www.wakari.io">Wakari</a>, our hosted Python data analysis&nbsp;environment.</p> 
+           <p>We believe that&nbsp;programmers, scientists, and analysts should spend their time writing code, not working to setup a system. Data should be shareable, and analysis should be&nbsp;repeatable. </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/introducing-wakari">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/introducing-wakari" title="Introducing Wakari">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/obama-romney-facial-recognition">Obama-Romney Facial Recognition</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-11-06"> <a href="/blog/obama-romney-facial-recognition"> <span class="entry-date">Tue, 06 Nov 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/obama-romney-facial-recognition"></a> </p>
+           <p>In addition to building great open-source and enterprise software, Continuum also consults with data science companies and organizations. One company we recently contracted with is <a href="https://stipple.com/">Stipple</a>. Many of those that attended PyData last&nbsp;month </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/obama-romney-facial-recognition">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/obama-romney-facial-recognition" title="Obama-Romney Facial Recognition">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Travis Oliphant" src="http://www.gravatar.com/avatar/6c8561779fff34c62074c614d19980fc?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/pydata-nyc-epilogue">PyData NYC epilogue</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-11-06"> <a href="/blog/pydata-nyc-epilogue"> <span class="entry-date">Tue, 06 Nov 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/travis" title="View all posts by Travis Oliphant">Travis Oliphant </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/pydata-nyc-epilogue"></a> </p>
+           <p>This past March, over 50 people came to the <a href="http://pydataworkshop.eventbrite.com">PyData Workshop</a> in Mountain View, <span class="caps">CA</span> at Google’s offices and over 120 people came to the evening sprint event. &nbsp;Last weekend, amidst the lights and bustle of midtown Manhattan, the <a href="http://nyc2012.pydata.org">PyData&nbsp;<span class="caps">NYC</span></a></p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/pydata-nyc-epilogue">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/pydata-nyc-epilogue" title="PyData NYC epilogue">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Siu Kwan Lam" src="http://www.gravatar.com/avatar/c95e286acbc218c8919df5167182b83a?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/simple-wave-simulation-with-numba-and-pygame">Simple Wave Simulation with Numba and PyGame</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-10-23"> <a href="/blog/simple-wave-simulation-with-numba-and-pygame"> <span class="entry-date">Tue, 23 Oct 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/siu" title="View all posts by Siu Kwan Lam">Siu Kwan Lam </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/simple-wave-simulation-with-numba-and-pygame"></a> </p>
+           <p>Python is a great language for writing experimental code quickly. &nbsp;With <a href="http://pygame.org/news.html">PyGame</a>, one can add graphics to visualize the experiments effortlessly. &nbsp;I always enjoy using PyGame for rendering simple physics simulation in realtime. &nbsp;However, as the simulation scales, Python&nbsp;can</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/simple-wave-simulation-with-numba-and-pygame">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/simple-wave-simulation-with-numba-and-pygame" title="Simple Wave Simulation with Numba and PyGame">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/the-python-and-the-complied-python">The Python and The Compiled Python</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-10-12"> <a href="/blog/the-python-and-the-complied-python"> <span class="entry-date">Fri, 12 Oct 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/the-python-and-the-complied-python"></a> </p>
+           <p>In Peter Wang’s <a href="http://www.youtube.com/watch?v=fK6E9tq-KjM">SciPy Evangelism 101 talk</a> he discussed “The Truth About Good Programmers.” He says good programmers&nbsp;are</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/the-python-and-the-complied-python">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/the-python-and-the-complied-python" title="The Python and The Compiled Python">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Jay Bourque" src="/media/img/avatar/Jay-Bourque_avatar.jpg"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/advanced_iopro">Advanced IOPro</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-10-09"> <a href="/blog/advanced_iopro"> <span class="entry-date">Tue, 09 Oct 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/jbourque" title="View all posts by Jay Bourque">Jay Bourque </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/advanced_iopro"></a> </p>
+           <p>In previous posts <a href="http://continuum.io/blog/faster-and-smaller">here</a> and <a href="http://continuum.io/blog/numerical-data-sets-and-iopro">here</a>, my colleague Ben has done a great job of exploring the performance characteristics of IOPro. A fast, memory efficient csv parser is a great and much needed tool in the Python world, but&nbsp;what </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/advanced_iopro">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/advanced_iopro" title="Advanced IOPro">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Peter Wang" src="http://www.gravatar.com/avatar/3c2430d201fb71e935765851ec35e1db?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/pydata-nyc-speakers-and-talks-announced">PyData NYC Speakers and Talks announced!</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-09-28"> <a href="/blog/pydata-nyc-speakers-and-talks-announced"> <span class="entry-date">Fri, 28 Sep 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/pwang" title="View all posts by Peter Wang">Peter Wang </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/pydata-nyc-speakers-and-talks-announced"></a> </p>
+           <p>We’ve updated the <a href="http://nyc2012.pydata.org">PyData <span class="caps">NYC</span></a> schedule with keynotes, tutorials, and accepted talks. We’re thrilled with the exciting lineup of workshops, hands-on tutorials, and talks about real-world uses of Python for data&nbsp;analysis.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/pydata-nyc-speakers-and-talks-announced">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/pydata-nyc-speakers-and-talks-announced" title="PyData NYC Speakers and Talks announced!">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Joel Hull" src="http://www.gravatar.com/avatar/87564b59bd493063ca19f724d6f3cae6?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/the-anaconda-launcher-a-tool-of-tools">The Anaconda Launcher – A Tool of Tools</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-09-25"> <a href="/blog/the-anaconda-launcher-a-tool-of-tools"> <span class="entry-date">Tue, 25 Sep 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/jhull" title="View all posts by Joel Hull">Joel Hull </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/the-anaconda-launcher-a-tool-of-tools"></a> </p>
+           <p><strong><em>*Whether your preferred </em></strong>*tool of choice is the legendary Swiss Army knife or the versatile Leatherman tool, everyone can agree that there is no substitute for a great tool that helps you get the job&nbsp;done.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/the-anaconda-launcher-a-tool-of-tools">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/the-anaconda-launcher-a-tool-of-tools" title="The Anaconda Launcher – A Tool of Tools">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Joseph W. Richards, Ph.D." src="/media/img/avatar/jrichards_avatar.jpeg"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/machine-learning">wiseRF: Best-in-class Machine Learning from wise.io</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-09-18"> <a href="/blog/machine-learning"> <span class="entry-date">Tue, 18 Sep 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/jrichards" title="View all posts by Joseph W. Richards, Ph.D.">Joseph W. Richards, Ph.D. </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/machine-learning"></a> </p>
+           <p>Technological advancements in the collection, storage, and retrieval of data have ushered in a new era of <a href="http://www.economist.com/node/15557443?story_id=15557443">Big Data</a>. In this day and age, peta-scale data sets are ubiquitous in such diverse fields as medicine, finance, science, and web&nbsp;traffic. </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/machine-learning">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/machine-learning" title="wiseRF: Best-in-class Machine Learning from wise.io">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/anaconda-pro-big-data-toolkit">Anaconda Pro - Big Data Toolkit</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-09-11"> <a href="/blog/anaconda-pro-big-data-toolkit"> <span class="entry-date">Tue, 11 Sep 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/anaconda-pro-big-data-toolkit"></a> </p>
+           <p>In 1987 Martin H. Krieger wrote an article for the American Journal of Physics titled <a href="http://pluslucis.univie.ac.at/Archiv/ICPE/B2.html">“The Physicist’s Toolkit”</a>. Krieger develops the concept of a toolkit for physicists and discusses how thinking about&nbsp;doing </p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/anaconda-pro-big-data-toolkit">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/anaconda-pro-big-data-toolkit" title="Anaconda Pro - Big Data Toolkit">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/numerical-data-sets-and-iopro">Numerical Data Sets and IOPro</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-09-05"> <a href="/blog/numerical-data-sets-and-iopro"> <span class="entry-date">Wed, 05 Sep 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/numerical-data-sets-and-iopro"></a> </p>
+           <p>At the end of the 16th century, <a href="http://en.wikipedia.org/wiki/Tycho_Brahe">Tycho Brahe</a> achieved a scientist’s dream — he received funding! As the lead principal investigator&nbsp;(<span class="caps">PI</span>)</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/numerical-data-sets-and-iopro">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/numerical-data-sets-and-iopro" title="Numerical Data Sets and IOPro">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/faster-and-smaller">IOPro - Faster and Smaller</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-08-29"> <a href="/blog/faster-and-smaller"> <span class="entry-date">Wed, 29 Aug 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/faster-and-smaller"></a> </p>
+           <p>Today, Continuum Analytics is releasing a new product, <a href="https://store.continuum.io/cshop/iopro">IOPro</a>. This module provides fast reading of data into NumPy arrays. The engine is written in C, which ensures that data can be parsed as fast as it can be read&nbsp;from</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/faster-and-smaller">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/faster-and-smaller" title="IOPro - Faster and Smaller">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/literary-chains">Literary Chains</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-08-08"> <a href="/blog/literary-chains"> <span class="entry-date">Wed, 08 Aug 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/literary-chains"></a> </p>
+           <p><a href="http://continuum.io/blog/starcluster-anaconda">Last week</a>, we discussed how to spawn instances of Continuum’s <a href="http://continuum.io/downloads.html">Anaconda <span class="caps">AMI</span></a> for <a href="http://aws.amazon.com/ec2/">Amazon’s <span class="caps">EC2</span></a> with <a href="http://web.mit.edu/star/cluster/">StarCluster</a>. This enables interested parties — businesses, individuals, and academics alike — to harness distributed computing with very little&nbsp;overhead.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/literary-chains">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/literary-chains" title="Literary Chains">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/starcluster-anaconda">StarCluster Anaconda</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-08-02"> <a href="/blog/starcluster-anaconda"> <span class="entry-date">Thu, 02 Aug 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/starcluster-anaconda"></a> </p>
+           <p>In last week’s <a href="/blog/hello-genomics">post</a> on the <a href="http://www.1000genomes.org/">1000 Genomes Project</a>, we used Amazon’s Web Service (<span class="caps">AWS</span>) Elastic Compute 2 (<span class="caps">EC2</span>) — an hourly <em>pay as you go</em> computing service — for our MapReduce computation. <span class="caps">EC2</span> instances come in a variety&nbsp;of</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/starcluster-anaconda">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/starcluster-anaconda" title="StarCluster Anaconda">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/hello-genomics">Hello Genomics</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-07-26"> <a href="/blog/hello-genomics"> <span class="entry-date">Thu, 26 Jul 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/hello-genomics"></a> </p>
+           <p>At several hundred Terabytes and growing, the 1000 Genomes Project is clearly in the realm of Big Data. Earlier this year <a href="http://www.lab7.io/">Chris Mueller</a> gave two great presentations at <a href="http://pydataworkshop.eventbrite.com/">PyData</a> and&nbsp;[PyGotham]</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/hello-genomics">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/hello-genomics" title="Hello Genomics">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/counting-words-part-2">Counting Words, Part Two</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-07-14"> <a href="/blog/counting-words-part-2"> <span class="entry-date">Sat, 14 Jul 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/counting-words-part-2"></a> </p>
+           <p>How do literary detectives think? Let’s look at two of the most famous sleuths in literature, Sherlock Holmes and Hercule Poirot. Here’s Holmes’s key&nbsp;edict:</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/counting-words-part-2">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/counting-words-part-2" title="Counting Words, Part Two">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/counting-words-part-1">Counting Words, Part One</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-07-13"> <a href="/blog/counting-words-part-1"> <span class="entry-date">Fri, 13 Jul 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/counting-words-part-1"></a> </p>
+           <p>In the original Willy Wonka film, if you recall, Charlie attends a chemistry class taught by Mr. Turkentine. Mr. Turkentine asks Charlie what the result would be from a complicated mix of&nbsp;chemicals.</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/counting-words-part-1">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/counting-words-part-1" title="Counting Words, Part One">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Benjamin Zaitlen" src="http://www.gravatar.com/avatar/2851d5d532ab575906b2a1228bc62717?d=mm&amp;s=100&amp;r=g"> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/mapreduce">MapReduce and All That Disco/Hadoopla!</a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-07-13"> <a href="/blog/mapreduce"> <span class="entry-date">Fri, 13 Jul 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/quasiben" title="View all posts by Benjamin Zaitlen">Benjamin Zaitlen </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/mapreduce"></a> </p>
+           <p>In the winter of 2011 <a href="http://atlas-model.mehlhase.info/">Sascha Mehlhase</a> completed construction on a 1:50 scale model of the <span class="caps">ATLAS</span>&nbsp;detector.</p> 
+           <p>Over 48 hours, Sascha painstakingly designed&nbsp;a</p> 
+           <div style="margin-top: -10px;">
+            <a href="/blog/mapreduce">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/mapreduce" title="MapReduce and All That Disco/Hadoopla!">Leave a comment</a></span> 
+          </div> 
+         </article> 
+         <article> 
+          <!-- gravatar --> 
+          <div class="gravatar"> 
+           <img alt="Continuum Analytics" src=""> 
+          </div> 
+          <!-- end gravatar --> 
+          <!-- title --> 
+          <h2><a href="/blog/embedded_bokeh"></a></h2> 
+          <!-- end title --> 
+          <!-- meta data --> 
+          <div class="entry-meta"> 
+           <span class="meta-prep meta-prep-author">Posted on</span> 
+           <time datetime="2012-01-01"> <a href="/blog/embedded_bokeh"> <span class="entry-date">Sun, 01 Jan 2012</span> </a> </time> 
+           <span class="meta-sep">by</span> 
+           <span class="author vcard"> <a class="url fn n" href="/author/" title="View all posts by Continuum Analytics">Continuum Analytics </a> </span> 
+          </div>
+          <!-- end meta --> 
+          <div class="entry-content"> 
+           <p> <a href="/blog/embedded_bokeh"></a> </p>
+           <div style="margin-top: -10px;">
+            <a href="/blog/embedded_bokeh">Continue reading <span class="meta-nav">→</span></a>
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="entry-utility"> 
+           <span class="comments-link"><a href="/blog/embedded_bokeh" title="">Leave a comment</a></span> 
+          </div> 
+         </article> 
+        </ul> 
+       </div>
+       <!-- #content --> 
+      </section> 
+      <section class="span4">
+       <!-- sidebar --> 
+       <!-- Search --> 
+       <!-- Recent Posts --> 
+       <!-- Categories --> 
+       <!-- Archives --> 
+       <div id="recent-posts-3" class="widget widget_recent_entries"> 
+        <h2 class="widget-title">Recent Posts</h2> 
+        <ul> 
+         <li> <a href="/blog/blaze-datasets" title="Blaze Datasets">Blaze Datasets</a></li> 
+         <li> <a href="/blog/numba-tips" title="Tips for More Effective Numba Usage">Tips for More Effective Numba Usage</a></li> 
+         <li> <a href="/blog/advanced-conda-part-2" title="Advanced Features of Conda Part 2">Advanced Features of Conda Part 2</a></li> 
+         <li> <a href="/blog/blaze-hmda" title="Introducing Blaze - HMDA Practice">Introducing Blaze - HMDA Practice</a></li> 
+         <li> <a href="/blog/numba-014-update" title="Numba 0.14 Release and Project Status">Numba 0.14 Release and Project Status</a></li> 
+        </ul> 
+       </div> 
+       <div id="categories-3" class="widget widget_categories"> 
+        <h2 class="widget-title">Tags</h2> 
+        <ul> 
+         <li><a href="/blog/tags/Accelerate">Accelerate</a></li> 
+         <li><a href="/blog/tags/Anaconda">Anaconda</a></li> 
+         <li><a href="/blog/tags/Anaconda%20Server">Anaconda Server</a></li> 
+         <li><a href="/blog/tags/ARM11">ARM11</a></li> 
+         <li><a href="/blog/tags/Astronomy">Astronomy</a></li> 
+         <li><a href="/blog/tags/Bayesian%20Data%20Analysis">Bayesian Data Analysis</a></li> 
+         <li><a href="/blog/tags/Big%20Data">Big Data</a></li> 
+         <li><a href="/blog/tags/Binstar">Binstar</a></li> 
+         <li><a href="/blog/tags/blaze">blaze</a></li> 
+         <li><a href="/blog/tags/Blaze">Blaze</a></li> 
+         <li><a href="/blog/tags/Bokeh">Bokeh</a></li> 
+         <li><a href="/blog/tags/Boolean%20satisfiability%20problem">Boolean satisfiability problem</a></li> 
+         <li><a href="/blog/tags/conda">conda</a></li> 
+         <li><a href="/blog/tags/Conference">Conference</a></li> 
+         <li><a href="/blog/tags/CUDA">CUDA</a></li> 
+         <li><a href="/blog/tags/dataframe">dataframe</a></li> 
+         <li><a href="/blog/tags/Disco">Disco</a></li> 
+         <li><a href="/blog/tags/easy_install">easy_install</a></li> 
+         <li><a href="/blog/tags/Finance">Finance</a></li> 
+         <li><a href="/blog/tags/Genomics">Genomics</a></li> 
+         <li><a href="/blog/tags/Geography">Geography</a></li> 
+         <li><a href="/blog/tags/ImageProcessing">ImageProcessing</a></li> 
+         <li><a href="/blog/tags/Intel">Intel</a></li> 
+         <li><a href="/blog/tags/IOPro">IOPro</a></li> 
+         <li><a href="/blog/tags/IPCluster">IPCluster</a></li> 
+         <li><a href="/blog/tags/IPython">IPython</a></li> 
+         <li><a href="/blog/tags/IPython%20Notebook">IPython Notebook</a></li> 
+         <li><a href="/blog/tags/MapReduce">MapReduce</a></li> 
+         <li><a href="/blog/tags/MKL">MKL</a></li> 
+         <li><a href="/blog/tags/ML">ML</a></li> 
+         <li><a href="/blog/tags/NLP">NLP</a></li> 
+         <li><a href="/blog/tags/Numba">Numba</a></li> 
+         <li><a href="/blog/tags/NumbaPro">NumbaPro</a></li> 
+         <li><a href="/blog/tags/NumPy">NumPy</a></li> 
+         <li><a href="/blog/tags/odbc">odbc</a></li> 
+         <li><a href="/blog/tags/OpenSSL">OpenSSL</a></li> 
+         <li><a href="/blog/tags/Packaging">Packaging</a></li> 
+         <li><a href="/blog/tags/pandas">pandas</a></li> 
+         <li><a href="/blog/tags/performance">performance</a></li> 
+         <li><a href="/blog/tags/pip">pip</a></li> 
+         <li><a href="/blog/tags/Practical%20Python">Practical Python</a></li> 
+         <li><a href="/blog/tags/Product%20Release">Product Release</a></li> 
+         <li><a href="/blog/tags/Product%20Update">Product Update</a></li> 
+         <li><a href="/blog/tags/Programming">Programming</a></li> 
+         <li><a href="/blog/tags/programming">programming</a></li> 
+         <li><a href="/blog/tags/PyData">PyData</a></li> 
+         <li><a href="/blog/tags/Python">Python</a></li> 
+         <li><a href="/blog/tags/Python%203">Python 3</a></li> 
+         <li><a href="/blog/tags/Raspberry%20Pi">Raspberry Pi</a></li> 
+         <li><a href="/blog/tags/SAT%20solver">SAT solver</a></li> 
+         <li><a href="/blog/tags/Science">Science</a></li> 
+         <li><a href="/blog/tags/scipy">scipy</a></li> 
+         <li><a href="/blog/tags/SciPy">SciPy</a></li> 
+         <li><a href="/blog/tags/Social%20Media">Social Media</a></li> 
+         <li><a href="/blog/tags/Sports">Sports</a></li> 
+         <li><a href="/blog/tags/Sudoku">Sudoku</a></li> 
+         <li><a href="/blog/tags/Teaching">Teaching</a></li> 
+         <li><a href="/blog/tags/Thomson%20Reuters">Thomson Reuters</a></li> 
+         <li><a href="/blog/tags/Tools">Tools</a></li> 
+         <li><a href="/blog/tags/Training">Training</a></li> 
+         <li><a href="/blog/tags/Virtual">Virtual</a></li> 
+         <li><a href="/blog/tags/Visualization">Visualization</a></li> 
+         <li><a href="/blog/tags/Wakari">Wakari</a></li> 
+         <li><a href="/blog/tags/Weather">Weather</a></li> 
+         <li><a href="/blog/tags/Widgets">Widgets</a></li> 
+         <li><a href="/blog/tags/wiseRF">wiseRF</a></li> 
+        </ul> 
+       </div> 
+      </section>
+      <!-- end span4 --> 
+     </section> 
+    </article>
+   </section>  
+  </section>  
+  <!-- close contnet --> 
+  <!-- Footer --> 
+  <footer class="footer"> 
+   <section class="container"> 
+    <section class="row"> 
+     <!-- Address --> 
+     <article class="span4 footer_left"> 
+      <figure>
+       <a href="" title="Continuum Analytics"><img src="/media/img/continuum_analytics_logo.png" class="footer_logo" alt="Continuum Analytics"></a>
+      </figure> 4301 Westbank Dr
+      <br> Suite A-100
+      <br> Austin, TX 78746
+      <br> USA
+      <br> +1 512.222.5440
+      <br> 
+      <br> 
+      <a class="footer_links" href="mailto:info@continuum.io">info@continuum.io</a>
+      <br> 
+      <br> 28865 Lilienthal
+      <br> Germany
+      <br> 
+      <section class="footer_social_media"> 
+       <a class="social" href="http://plus.google.com/108011804375544975017" title="Circle Continuum Analytics on Google+" target="_blank"><img src="/media/img/gplus_header.png" alt="Circle Continuum Analytics on Google+"></a> 
+       <a class="social" href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"><img src="/media/img/twitter_header.png" alt="Follow @continuumio on Twitter"></a> 
+       <a class="social" href="http://www.linkedin.com/company/continuum-analytics-inc-" title="Follow Continuum Analytics on LinkedIn" target="_blank"><img src="/media/img/linkedin_header.png" alt="Follow Continuum Analytics on LinkedIn"></a> 
+       <a class="social" href="http://www.facebook.com/ContinuumAnalytics" title="Like Continuum Analytics on Facebook" target="_blank"><img src="/media/img/facebook_header.png" alt="Like Continuum Analytics on Facebook"></a> 
+       <!--<a href="http://www.youtube.com/user/ContinuumIO" title="Check out Continuum's support videos on YouTube" target="_blank"><img src="/img/youtube_header.png') }}" alt="Check out Continuum's support videos on YouTube" width="33" height="33"></a>--> 
+      </section> 
+      <section class="footer_copyright">
+       2014 Continuum Analytics®
+      </section> 
+     </article> 
+     <!-- Site Map --> 
+     <article class="span4 footer_center" background-image:="" url=""> 
+      <article class="span2 footer_align_left"> 
+       <b><a href="https://store.continuum.io/cshop/products" title="Products" class="footer_links">Products</a></b>
+       <br> 
+       <a href="http://store.continuum.io/cshop/anaconda" title="Anaconda">Anaconda</a>
+       <br> 
+       <a href="/anaconda-server" title="Anaconda Server">Anaconda Server</a>
+       <br> 
+       <a href="/anaconda-addons" title="Anaconda Add-Ons">Anaconda Add-Ons</a>
+       <br> 
+       <a href="/anaconda-cluster" title="Anaconda Cluster">Anaconda Cluster</a>
+       <br> 
+       <a href="/wakari" title="Wakari">Wakari</a>
+       <br> 
+       <!--<a href="/downloads" title="Downloads" class="footer_links">Downloads</a><br/>--> 
+       <a href="/developer-resources" title="Open Source">Open Source</a>
+       <br> 
+       <a href="http://docs.continuum.io" title="Documentation">Documentation</a>
+       <br> 
+       <a href="/support" title="Support">Support</a>
+       <br>
+       <br> 
+       <b><a href="/consulting" title="Consulting" class="footer_links">Consulting</a></b>
+       <br> 
+      </article> 
+      <article class="span2 footer_align_right"> 
+       <b><a href="/training" title="Training" class="footer_links">Training</a></b>
+       <br>
+       <br> 
+       <b><a href="/developer-resources" title="Developer Resources" class="footer_links">Developers</a></b>
+       <br>
+       <br> 
+       <b><a href="/about-continuum" title="Company" class="footer_links">Company</a></b>
+       <br> 
+       <a href="/our-team" title="Our Team">Our Team</a>
+       <br> 
+       <a href="http://boards.greenhouse.io/continuum" title="Careers">Careers</a>
+       <br> 
+       <a href="/blog" title="Blog">Blog</a>
+       <br> 
+       <a href="/press" title="News &amp; Events">News &amp; Events</a>
+       <br> 
+       <a href="/video" title="Video">Video</a>
+       <br> 
+       <a href="/news" title="In the Press">In the Press</a>
+       <br> 
+       <a href="http://www.numfocus.org" title="NumFocus">NumFocus</a>
+       <br>
+       <br> 
+       <b><a href="/contact-us" title="Contact Us" class="footer_links">Contact Us</a></b> 
+      </article> 
+     </article>  
+     <!-- Social Media --> 
+     <article class="span4"> 
+      <section class="footer_right"> 
+       <section class="footer_twitter"> 
+        <a href="http://www.twitter.com/continuumio" class="footer_links" target="_blank">Follow us on Twitter!</a> 
+        <a class="social" href="http://www.twitter.com/continuumio" title="Follow @continuumio on Twitter" target="_blank"> <img style="float: right; padding-right: 10px;" src="/media/img/twitter_header.png" alt="Follow @continuumio on Twitter"> </a> 
+       </section> 
+       <section id="jstwitter">
+        <a class="twitter-timeline" theme="light" data-chrome="nofooter noscrollbar noheader noborders transparent" data-tweet-limit="2" data-cards="hidden" href="https://twitter.com/ContinuumIO" data-widget-id="369911646115749888"> Tweets by @ContinuumIO</a> 
+       </section> 
+       <script>
+                        !function(d,s,id){
+                            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                            if(!d.getElementById(id)){js=d.createElement(s);
+                                js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js,fjs);
+                                }
+                        }
+                        (document,"script","twitter-wjs");
+                    </script> 
+       <script type="text/javascript">
+                        $('.dropdown-toggle').click(function(e) {
+                          e.preventDefault();
+                          setTimeout($.proxy(function() {
+                            if ('ontouchstart' in document.documentElement) {
+                              $(this).siblings('.dropdown-backdrop').off().remove();
+                            }
+                          }, this), 0);
+                        });
+                    </script> 
+      </section> 
+     </article> 
+    </section> 
+   </section> 
+  </footer>
+  <!-- close footer --> 
+  <!-- Start of StatCounter Code for Default Guide --> 
+  <script type="text/javascript">
+var sc_project=8151065; 
+var sc_invisible=0; 
+var sc_security="4fab10ae"; 
+</script> 
+  <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script> 
+  <noscript>
+   <div class="statcounter">
+    <a title="tumblr
+analytics" href="http://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="http://c.statcounter.com/8151065/0/4fab10ae/0/" alt="tumblr analytics"></a>
+   </div>
+  </noscript> 
+  <!-- End of StatCounter Code for Default Guide --> 
+  <!-- Javascript --> 
+  <script type="text/javascript" src="/media/js/jquery.ebcaptcha.js"></script> 
+  <script src="/media/js/rss_script.js"></script> 
+  <script type="text/javascript" src="http://datejs.googlecode.com/files/date.js"></script> 
+  <script src="/media/js/bootstrap.js"></script> 
+  <script src="/media/js/libs/bootstrap-collapse.js"></script> 
+  <script src="/media/js/libs/bootstrap-dropdown.js"></script> 
+  <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"> </script> 
+  <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$','$$'], ['\\(','\\)']]},
+          "SVG": { scale: 125}
+        });
+    </script> 
+  <script type="text/javascript">
+        $(function(){
+            $('#contact_form').ebcaptcha();
+        });
+    </script> 
+  <script src="/media/js/prettify.js"></script> 
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27761864-1']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script> 
+  <!--[if lt IE 7 ]>
+      <script src="/media/js/libs/dd_belatedpng.js"></script>
+      <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+    <![endif]--> 
+  <!-- HelpOnClick --> 
+  <script async type="text/javascript" src="//traffic4.helponclick.com/assist?lang=en&amp;a=510be6b48fc04ca1812005d2b86abfd4&amp;mode=widget&amp;widget=l"></script>
+  <div style="display:none">
+   <a href="http://www.helponclick.com">Live Chat</a>
+  </div> 
+  <!-- /HelpOnClick -->  
+ </body>
+</html>

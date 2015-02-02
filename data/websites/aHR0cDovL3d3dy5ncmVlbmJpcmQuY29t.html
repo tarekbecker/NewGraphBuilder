@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" class="ancient-ie old-ie no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" class="ancient-ie old-ie no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" class="old-ie no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 9]>
+<html id="ie9" class="old-ie9 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html class="no-js" lang="en-US">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <script type="text/javascript">
+function createCookie(a,d,b){if(b){var c=new Date;c.setTime(c.getTime()+864E5*b);b="; expires="+c.toGMTString()}else b="";document.cookie=a+"="+d+b+"; path=/"}function readCookie(a){a+="=";for(var d=document.cookie.split(";"),b=0;b<d.length;b++){for(var c=d[b];" "==c.charAt(0);)c=c.substring(1,c.length);if(0==c.indexOf(a))return c.substring(a.length,c.length)}return null}function eraseCookie(a){createCookie(a,"",-1)}
+function areCookiesEnabled(){var a=!1;createCookie("testing","Hello",1);null!=readCookie("testing")&&(a=!0,eraseCookie("testing"));return a}(function(a){var d=readCookie("devicePixelRatio"),b=void 0===a.devicePixelRatio?1:a.devicePixelRatio;areCookiesEnabled()&&null==d&&(a.navigator.standalone?(d=new XMLHttpRequest,d.open("GET","http://www.greenbird.com/wp-content/themes/dt-the7/set-cookie.php?devicePixelRatio="+b,!1),d.send()):createCookie("devicePixelRatio",b,7),1!=b&&a.location.reload(!0))})(window);
+</script> 
+  <title>greenbird.com | making data fly.</title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://www.greenbird.com/xmlrpc.php"> 
+  <!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+  <style type="text/css" id="static-stylesheet"></style> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12922558-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  <link rel="alternate" type="application/rss+xml" title="greenbird.com » Feed" href="http://www.greenbird.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="greenbird.com » Comments Feed" href="http://www.greenbird.com/comments/feed/"> 
+  <link rel="stylesheet" id="dt-validator-style-css" href="http://www.greenbird.com/wp-content/themes/dt-the7/js/plugins/validator/validationEngine.jquery.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://www.greenbird.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="rs-plugin-settings-css" href="http://www.greenbird.com/wp-content/plugins/revslider/rs-plugin/css/settings.css?rev=4.6.0&amp;ver=4.0.1" type="text/css" media="all"> 
+  <style type="text/css">
+.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-button.gbgreen,.tp-button:hover.gbgreen{background-color:#99c21c; -webkit-box-shadow:0px 3px 0px 0px #82993D; -moz-box-shadow:0px 3px 0px 0px #82993D; box-shadow:0px 3px 0px 0px #82993D}
+</style> 
+  <link rel="stylesheet" id="js_composer_front-css" href="http://www.greenbird.com/wp-content/themes/dt-the7/wpbakery/js_composer/assets/css/js_composer.css?ver=4.3.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="js_composer_custom_css-css" href="http://www.greenbird.com/wp-content/uploads/js_composer/custom.css?ver=4.3.4" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="dt-font-h1-skin1-css" href="http://fonts.googleapis.com/css?family=Open+Sans%3A300&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="dt-font-h3-skin1-css" href="http://fonts.googleapis.com/css?family=Open+Sans&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="dt-font-h6-skin1-css" href="http://fonts.googleapis.com/css?family=Open+Sans%3A600&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="dt-main-css" href="http://www.greenbird.com/wp-content/themes/dt-the7/css/main.min.css?ver=4.4.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="dt-awsome-fonts-css" href="http://www.greenbird.com/wp-content/themes/dt-the7/css/font-awesome.min.css?ver=4.4.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="dt-custom.less-css" href="http://www.greenbird.com/wp-content/uploads/wp-less/dt-the7/css/custom-65007a7805.css?ver=4.4.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="dt-media-css" href="http://www.greenbird.com/wp-content/themes/dt-the7/css/media.min.css?ver=4.4.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="dt-royalslider-css" href="http://www.greenbird.com/wp-content/themes/dt-the7/royalslider/royalslider.css?ver=4.4.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="style-css" href="http://www.greenbird.com/wp-content/themes/dt-the7/style.css?ver=4.4.4" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min.js?rev=4.6.0&amp;ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?rev=4.6.0&amp;ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/themes/dt-the7/js/modernizr.js?ver=4.4.4"></script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/themes/dt-the7/js/svg-icons.min.js?ver=4.4.4"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.greenbird.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.greenbird.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 4.0.1"> 
+  <link rel="canonical" href="http://www.greenbird.com/"> 
+  <link rel="shortlink" href="http://www.greenbird.com/"> 
+  <script type="text/javascript">
+			dtGlobals.logoEnabled = 1;
+			dtGlobals.logoURL = 'http://www.greenbird.com/wp-content/uploads/2014/06/greenbird14_rgb_72dpi_trans_53px.png';
+			dtGlobals.logoW = '100';
+			dtGlobals.logoH = '53';
+			smartMenu = 1;
+		</script> 
+  <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."> 
+  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://www.greenbird.com/wp-content/themes/dt-the7/wpbakery/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]-->
+ </head> 
+ <body class="home page page-id-13 page-template-default overlap slideshow-on btn-flat wpb-js-composer js-comp-ver-4.3.4 vc_responsive"> 
+  <div id="page"> 
+   <!-- left, center, classical, classic-centered --> 
+   <!-- !Header --> 
+   <header id="header" class="logo-left" role="banner">
+    <!-- class="overlap"; class="logo-left", class="logo-center", class="logo-classic" --> 
+    <div class="wf-wrap"> 
+     <div class="wf-table"> 
+      <!-- !- Branding --> 
+      <div id="branding" class="wf-td"> 
+       <a href="http://www.greenbird.com/"><img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/greenbird14_rgb_72dpi_trans_78px.png" width="147" height="78" alt="greenbird.com"></a> 
+       <div id="site-title" class="assistive-text">
+        greenbird.com
+       </div> 
+       <div id="site-description" class="assistive-text">
+        making data fly.
+       </div> 
+      </div>
+      <!-- #branding --> 
+      <!-- !- Navigation --> 
+      <nav id="navigation" class="wf-td"> 
+       <ul id="main-nav" class="fancy-rollovers wf-mobile-hidden menu-frame-on"> 
+        <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-13134 dt-mega-menu mega-auto-width mega-column-3 first level-arrows-on"><a href="http://www.greenbird.com/services/"><span>Services</span></a></li> 
+        <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-13140 level-arrows-on"><a href="http://www.greenbird.com/industries/"><span>Industries</span></a></li> 
+        <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-13061 level-arrows-on"><a href="http://www.greenbird.com/metercloud/"><span>Metercloud</span></a></li> 
+        <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-22502 level-arrows-on"><a href="http://www.greenbird.com/blog/"><span>News</span></a></li> 
+        <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-23995 level-arrows-on"><a href="http://www.greenbird.com/careers/"><span>Careers</span></a></li> 
+        <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-13150 level-arrows-on"><a href="http://www.greenbird.com/company/"><span>Company</span></a></li> 
+        <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-24385 level-arrows-on"><a href="http://www.greenbird.com/technoblog/"><span>Blog</span></a></li> 
+       </ul> 
+       <a href="#show-menu" rel="nofollow" id="mobile-menu"> <span class="menu-open">MENU</span> <span class="menu-close">CLOSE</span> <span class="menu-back">back</span> <span class="wf-phone-visible">&nbsp;</span> </a> 
+      </nav> 
+      <div class="wf-td mini-search wf-mobile-hidden"> 
+       <form class="searchform" role="search" method="get" action="http://www.greenbird.com/"> 
+        <input type="text" class="field searchform-s" name="s" value="" placeholder="Type and hit enter …"> 
+        <input type="submit" class="assistive-text searchsubmit" value="Go!"> 
+        <a href="#go" class="submit"></a> 
+       </form> 
+      </div> 
+     </div>
+     <!-- #branding --> 
+    </div>
+    <!-- .wf-wrap --> 
+   </header>
+   <!-- #masthead --> 
+   <div id="main-slideshow">
+    <!-- START REVOLUTION SLIDER 4.6.0 fullwidth mode --> 
+    <div id="rev_slider_3_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:#E9E9E9;padding:0px;margin-top:0px;margin-bottom:0px;max-height:500px;"> 
+     <div id="rev_slider_3_1" class="rev_slider fullwidthabanner" style="display:none;max-height:500px;height:500px;"> 
+      <ul> 
+       <!-- SLIDE  --> 
+       <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off"> 
+        <!-- MAIN IMAGE --> <img src="http://www.greenbird.com/wp-content/uploads/2014/06/iStock_000016352958Large_compressed2.jpg" alt="iStock_000016352958Large_compressed2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+        <!-- LAYERS --> 
+        <!-- LAYER NR. 1 --> 
+        <div class="tp-caption medium_light_white tp-fade tp-resizeme" data-x="center" data-hoffset="0" data-y="center" data-voffset="-1" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="3700" data-endspeed="300" style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">
+         Consulting services for the digital enterprise 
+        </div> 
+        <!-- LAYER NR. 2 --> 
+        <div class="tp-caption small_light_white tp-fade tp-resizeme" data-x="center" data-hoffset="0" data-y="center" data-voffset="53" data-speed="300" data-start="800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="3700" data-endspeed="300" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+         UNLEASHING BUSINESS POTENTIAL THROUGH SMART USAGE OF IT 
+        </div> 
+        <!-- LAYER NR. 3 --> 
+        <div class="tp-caption sfb tp-resizeme" data-x="center" data-hoffset="0" data-y="center" data-voffset="118" data-speed="300" data-start="1100" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="3700" data-endspeed="300" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+         <a href="/services/" class="tp-button gbgreen small">Learn more</a> 
+        </div> </li> 
+       <!-- SLIDE  --> 
+       <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off"> 
+        <!-- MAIN IMAGE --> <img src="http://www.greenbird.com/wp-content/uploads/2014/06/iStock_000035808130Large_compressed.jpg" alt="iStock_000035808130Large_compressed" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+        <!-- LAYERS --> 
+        <!-- LAYER NR. 1 --> 
+        <div class="tp-caption medium_light_white tp-fade tp-resizeme" data-x="center" data-hoffset="0" data-y="center" data-voffset="0" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="5700" data-endspeed="300" style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">
+         Integration solutions for the digital enterprise 
+        </div> 
+        <!-- LAYER NR. 2 --> 
+        <div class="tp-caption small_light_white tp-fade tp-resizeme" data-x="center" data-hoffset="3" data-y="center" data-voffset="50" data-speed="300" data-start="800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="5700" data-endspeed="300" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+         DRIVING BUSINESS INNOVATION WITH DIGITAL TECHNOLOGIES 
+        </div> 
+        <!-- LAYER NR. 3 --> 
+        <div class="tp-caption sfb tp-resizeme" data-x="center" data-hoffset="-1" data-y="center" data-voffset="117" data-speed="300" data-start="1100" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="3700" data-endspeed="300" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+         <a href="/industries/" class="tp-button gbgreen small">Learn more</a> 
+        </div> </li> 
+       <!-- SLIDE  --> 
+       <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off"> 
+        <!-- MAIN IMAGE --> <img src="http://www.greenbird.com/wp-content/uploads/2014/06/shutterstock_110405549_compressed.jpg" alt="shutterstock_110405549_compressed" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+        <!-- LAYERS --> 
+        <!-- LAYER NR. 1 --> 
+        <div class="tp-caption medium_light_white tp-fade tp-resizeme" data-x="center" data-hoffset="0" data-y="center" data-voffset="0" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="3700" data-endspeed="300" style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">
+         Open integration services for the digital utility 
+        </div> 
+        <!-- LAYER NR. 2 --> 
+        <div class="tp-caption small_light_white tp-fade tp-resizeme" data-x="center" data-hoffset="3" data-y="center" data-voffset="50" data-speed="300" data-start="800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="5700" data-endspeed="300" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+         ENABLING SMART APPLICATIONS WITH INTEGRATIONS DELIVERED AS SERVICE 
+        </div> 
+        <!-- LAYER NR. 3 --> 
+        <div class="tp-caption sfb tp-resizeme" data-x="center" data-hoffset="1" data-y="center" data-voffset="116" data-speed="300" data-start="1100" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="3700" data-endspeed="300" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+         <a href="/metercloud/" class="tp-button gbgreen small">Learn more</a> 
+        </div> </li> 
+       <!-- SLIDE  --> 
+       <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off"> 
+        <!-- MAIN IMAGE --> <img src="http://www.greenbird.com/wp-content/uploads/2014/06/iStock_000031217938Large_compressed.jpg" alt="iStock_000031217938Large_compressed" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+        <!-- LAYERS --> 
+        <!-- LAYER NR. 1 --> 
+        <div class="tp-caption medium_light_white tp-fade tp-resizeme" data-x="center" data-hoffset="0" data-y="center" data-voffset="0" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="3700" data-endspeed="300" style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">
+         Work somewhere awesome 
+        </div> 
+        <!-- LAYER NR. 2 --> 
+        <div class="tp-caption small_light_white tp-fade tp-resizeme" data-x="center" data-hoffset="3" data-y="center" data-voffset="50" data-speed="300" data-start="800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="3700" data-endspeed="300" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
+         JOIN GREENBIRD AND CHALLENGE CURRENT MINDSETS 
+        </div> 
+        <!-- LAYER NR. 3 --> 
+        <div class="tp-caption sfb tp-resizeme" data-x="center" data-hoffset="0" data-y="center" data-voffset="116" data-speed="300" data-start="1100" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-end="3700" data-endspeed="300" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+         <a href="/careers/" class="tp-button gbgreen small">Go to open positions</a> 
+        </div> </li> 
+      </ul> 
+      <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div> 
+     </div> 
+     <script type="text/javascript">
+
+				/******************************************
+					-	PREPARE PLACEHOLDER FOR SLIDER	-
+				******************************************/
+				
+
+				var setREVStartSize = function() {
+					var	tpopt = new Object();
+						tpopt.startwidth = 960;
+						tpopt.startheight = 500;
+						tpopt.container = jQuery('#rev_slider_3_1');
+						tpopt.fullScreen = "off";
+						tpopt.forceFullWidth="off";
+
+					tpopt.container.closest(".rev_slider_wrapper").css({height:tpopt.container.height()});tpopt.width=parseInt(tpopt.container.width(),0);tpopt.height=parseInt(tpopt.container.height(),0);tpopt.bw=tpopt.width/tpopt.startwidth;tpopt.bh=tpopt.height/tpopt.startheight;if(tpopt.bh>tpopt.bw)tpopt.bh=tpopt.bw;if(tpopt.bh<tpopt.bw)tpopt.bw=tpopt.bh;if(tpopt.bw<tpopt.bh)tpopt.bh=tpopt.bw;if(tpopt.bh>1){tpopt.bw=1;tpopt.bh=1}if(tpopt.bw>1){tpopt.bw=1;tpopt.bh=1}tpopt.height=Math.round(tpopt.startheight*(tpopt.width/tpopt.startwidth));if(tpopt.height>tpopt.startheight&&tpopt.autoHeight!="on")tpopt.height=tpopt.startheight;if(tpopt.fullScreen=="on"){tpopt.height=tpopt.bw*tpopt.startheight;var cow=tpopt.container.parent().width();var coh=jQuery(window).height();if(tpopt.fullScreenOffsetContainer!=undefined){try{var offcontainers=tpopt.fullScreenOffsetContainer.split(",");jQuery.each(offcontainers,function(e,t){coh=coh-jQuery(t).outerHeight(true);if(coh<tpopt.minFullScreenHeight)coh=tpopt.minFullScreenHeight})}catch(e){}}tpopt.container.parent().height(coh);tpopt.container.height(coh);tpopt.container.closest(".rev_slider_wrapper").height(coh);tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(coh);tpopt.container.css({height:"100%"});tpopt.height=coh;}else{tpopt.container.height(tpopt.height);tpopt.container.closest(".rev_slider_wrapper").height(tpopt.height);tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(tpopt.height);}
+				};
+
+				/* CALL PLACEHOLDER */
+				setREVStartSize();
+
+
+				var tpj=jQuery;
+				tpj.noConflict();
+				var revapi3;
+
+				tpj(document).ready(function() {
+
+				if(tpj('#rev_slider_3_1').revolution == undefined)
+					revslider_showDoubleJqueryError('#rev_slider_3_1');
+				else
+				   revapi3 = tpj('#rev_slider_3_1').show().revolution(
+					{
+						dottedOverlay:"none",
+						delay:4000,
+						startwidth:960,
+						startheight:500,
+						hideThumbs:200,
+
+						thumbWidth:100,
+						thumbHeight:50,
+						thumbAmount:4,
+						
+												
+						simplifyAll:"off",
+
+						navigationType:"none",
+						navigationArrows:"solo",
+						navigationStyle:"round",
+
+						touchenabled:"on",
+						onHoverStop:"on",
+						nextSlideOnWindowFocus:"off",
+
+						swipe_threshold: 0.7,
+						swipe_min_touches: 1,
+						drag_block_vertical: false,
+						
+												
+												
+						keyboardNavigation:"off",
+
+						navigationHAlign:"center",
+						navigationVAlign:"bottom",
+						navigationHOffset:0,
+						navigationVOffset:20,
+
+						soloArrowLeftHalign:"left",
+						soloArrowLeftValign:"center",
+						soloArrowLeftHOffset:20,
+						soloArrowLeftVOffset:0,
+
+						soloArrowRightHalign:"right",
+						soloArrowRightValign:"center",
+						soloArrowRightHOffset:20,
+						soloArrowRightVOffset:0,
+
+						shadow:2,
+						fullWidth:"on",
+						fullScreen:"off",
+
+						spinner:"spinner0",
+						
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+
+						shuffle:"off",
+
+						autoHeight:"off",
+						forceFullWidth:"off",
+						
+						
+						hideTimerBar:"on",
+						hideThumbsOnMobile:"off",
+						hideNavDelayOnMobile:1500,
+						hideBulletsOnMobile:"off",
+						hideArrowsOnMobile:"off",
+						hideThumbsUnderResolution:0,
+
+												hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						startWithSlide:0					});
+
+
+
+					
+				});	/*ready*/
+
+			</script> 
+    </div>
+    <!-- END REVOLUTION SLIDER -->
+   </div> 
+   <div id="main" class="sidebar-none">
+    <!-- class="sidebar-none", class="sidebar-left", class="sidebar-right" --> 
+    <div class="main-gradient"></div> 
+    <div class="wf-wrap"> 
+     <div class="wf-container-main"> 
+      <div id="content" class="content" role="main"> 
+       <div class="wpb_row wf-container" style="margin-top: 0px;margin-bottom: 0px"> 
+        <div class="vc_col-sm-8 wpb_column column_container "> 
+         <div class="wpb_wrapper"> 
+          <div class="gap" style="line-height: 50px; height: 50px;"></div> 
+          <div class="wpb_text_column wpb_content_element "> 
+           <div class="wpb_wrapper"> 
+            <h3 style="text-align: left;">FEATURED CUSTOMERS</h3> 
+           </div> 
+          </div> 
+          <div class="gap" style="line-height: 50px; height: 50px;"></div> 
+          <section class="logos-grid wf-container">
+           <div class="wf-cell wf-1-5">
+            <div>
+             <img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/eika-logo_gray1.png" width="1175" height="661" alt="Eika">
+            </div>
+           </div>
+           <div class="wf-cell wf-1-5">
+            <div>
+             <img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/Statnett2_gray1.png" width="1600" height="900" alt="Statnett">
+            </div>
+           </div>
+           <div class="wf-cell wf-1-5">
+            <div>
+             <img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/Intrum_logo_colour_3d_140mm150dpi_gray1.png" width="450" height="225" alt="Intrum Justitia">
+            </div>
+           </div>
+           <div class="wf-cell wf-1-5">
+            <div>
+             <img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/aenett_logo_trans_340px_gray2.png" width="400" height="225" alt="Agder Energi Nett">
+            </div>
+           </div>
+           <div class="wf-cell wf-1-5">
+            <div>
+             <img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/Apotek1_logo_web_grey-1024x209.png" width="900" height="450" alt="Apotek 1">
+            </div>
+           </div>
+           <div class="wf-cell wf-1-5">
+            <div>
+             <img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/nte_logo_gray1.png" width="800" height="450" alt="NTE">
+            </div>
+           </div>
+           <div class="wf-cell wf-1-5">
+            <div>
+             <img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/Avinor2_gray1.png" width="1600" height="900" alt="Avinor">
+            </div>
+           </div>
+           <div class="wf-cell wf-1-5">
+            <div>
+             <img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/HAFS_Blue_RGB_grey1.jpg" width="1600" height="900" alt="Hafslund">
+            </div>
+           </div>
+           <div class="wf-cell wf-1-5">
+            <div>
+             <img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/Pasientreiser_no_gray1.png" width="200" height="112" alt="Pasientreiser">
+            </div>
+           </div>
+           <div class="wf-cell wf-1-5">
+            <div>
+             <img class="preload-me" src="http://www.greenbird.com/wp-content/uploads/2014/06/skagerak2_gray1.png" width="200" height="112" alt="Skagerak energi">
+            </div>
+           </div>
+          </section> 
+         </div> 
+        </div> 
+        <div class="vc_col-sm-4 wpb_column column_container "> 
+         <div class="wpb_wrapper"> 
+          <div class="gap" style="line-height: 50px; height: 50px;"></div> 
+          <div class="wpb_text_column wpb_content_element "> 
+           <div class="wpb_wrapper"> 
+            <h3 style="text-align: left;">LATEST NEWS</h3> 
+           </div> 
+          </div> 
+          <div class="gap" style="line-height: 50px; height: 50px;"></div> 
+          <section class="items-grid wf-container">
+           <div class="wf-cell wf-1">
+            <div class="borders">
+             <article class="post-format-standard">
+              <div class="wf-td"></div>
+              <div class="post-content">
+               <a href="http://www.greenbird.com/2014/10/31/visit-greenbird-at-booth-1b-18/">Visit Greenbird at Booth 1B.18</a>
+               <br>
+               <time class="text-secondary" datetime="2014-10-31T10:11:31+00:00">31/10/2014</time>
+              </div>
+             </article>
+            </div>
+           </div>
+           <div class="wf-cell wf-1">
+            <div class="borders">
+             <article class="post-format-standard">
+              <div class="wf-td"></div>
+              <div class="post-content">
+               <a href="http://www.greenbird.com/2014/10/20/metercloud-io-and-ghostwriter-at-european-utility-week-2014/">Metercloud.io and Ghostwriter at European Utility Week 2014</a>
+               <br>
+               <time class="text-secondary" datetime="2014-10-20T08:00:15+00:00">20/10/2014</time>
+              </div>
+             </article>
+            </div>
+           </div>
+           <div class="wf-cell wf-1">
+            <div class="borders">
+             <article class="post-format-standard">
+              <div class="wf-td"></div>
+              <div class="post-content">
+               <a href="http://www.greenbird.com/2014/09/18/greenbird-opens-stavanger-office/">Greenbird opens Stavanger office</a>
+               <br>
+               <time class="text-secondary" datetime="2014-09-18T11:12:50+00:00">18/09/2014</time>
+              </div>
+             </article>
+            </div>
+           </div>
+          </section> 
+         </div> 
+        </div> 
+       </div> 
+      </div>
+      <!-- #content --> 
+     </div>
+     <!-- .wf-container --> 
+    </div>
+    <!-- .wf-wrap --> 
+   </div>
+   <!-- #main --> 
+   <!-- !Footer --> 
+   <footer id="footer" class="footer"> 
+    <div class="wf-wrap"> 
+     <div class="wf-container"> 
+      <section id="text-2" class="widget widget_text">
+       <div class="widget-title">
+        COMPANY
+       </div> 
+       <div class="textwidget">
+        <p>Greenbird is an independent consultancy and integration technology provider. Greenbird delivers IT advisory services and integration solutions enabling public and private organizations to unleash business potential.</p> 
+       </div> 
+      </section> 
+      <section id="recent-posts-4" class="widget widget_recent_entries"> 
+       <div class="widget-title">
+        RECENT BLOG POSTS
+       </div> 
+       <ul> 
+        <li> <a href="http://www.greenbird.com/2014/10/31/visit-greenbird-at-booth-1b-18/">Visit Greenbird at Booth 1B.18</a> </li> 
+        <li> <a href="http://www.greenbird.com/2014/10/26/raml-webapp-experiments/">RAML webapp experiments</a> </li> 
+        <li> <a href="http://www.greenbird.com/2014/10/20/metercloud-io-and-ghostwriter-at-european-utility-week-2014/">Metercloud.io and Ghostwriter at European Utility Week 2014</a> </li> 
+        <li> <a href="http://www.greenbird.com/2014/09/18/greenbird-opens-stavanger-office/">Greenbird opens Stavanger office</a> </li> 
+       </ul> 
+      </section>
+      <section id="presscore-custom-menu-1-3" class="widget widget_presscore-custom-menu-1">
+       <div class="widget-title">
+        Links
+       </div>
+       <ul class="custom-menu">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13170 first"><a href="http://www.greenbird.com/services/">Services</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13169"><a href="http://www.greenbird.com/industries/">Industries</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13171"><a href="http://www.greenbird.com/metercloud/">Metercloud</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24121"><a href="http://www.greenbird.com/careers/">Careers</a></li>
+       </ul>
+      </section>
+      <section id="presscore-contact-info-widget-3" class="widget widget_presscore-contact-info-widget">
+       <div class="widget-title">
+        GET IN TOUCH
+       </div>
+       <ul class="contact-info">
+        <li><span class="color-primary">Address</span><br>Storgata 8, 0155 Oslo, Norway</li>
+        <li><span class="color-primary">Email</span><br>info@greenbird.com</li>
+       </ul>
+       <div class="soc-ico">
+        <p class="assistive-text">Find us on:</p>
+        <a class="facebook" href="https://www.facebook.com/greenbirdIT" target="_blank" title="Facebook"><span class="assistive-text">Facebook</span></a>
+        <a class="twitter" href="https://twitter.com/greenbirdIT" target="_blank" title="Twitter"><span class="assistive-text">Twitter</span></a>
+        <a class="linkedin" href="https://www.linkedin.com/company/751723" target="_blank" title="Linkedin"><span class="assistive-text">Linkedin</span></a>
+       </div>
+      </section> 
+     </div>
+     <!-- .wf-container --> 
+    </div>
+    <!-- .wf-wrap --> 
+   </footer>
+   <!-- #footer --> 
+   <!-- !Bottom-bar --> 
+   <div id="bottom-bar" role="contentinfo"> 
+    <div class="wf-wrap"> 
+     <div class="wf-table wf-mobile-collapsed"> 
+      <div class="wf-td"> 
+       <div class="wf-float-left">
+         Copyright Greenbird Integration Technology © 2014. All Rights Reserved. 
+       </div> 
+      </div> 
+      <div class="wf-td"> 
+      </div> 
+     </div> 
+    </div>
+    <!-- .wf-wrap --> 
+   </div>
+   <!-- #bottom-bar --> 
+   <a href="#" class="scroll-top"></a> 
+  </div>
+  <!-- #page --> 
+  <div class="revsliderstyles">
+   <style type="text/css">.tp-caption.medium_light_white{font-size:40px;line-height:36px;font-weight:200;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.small_light_white{font-size:20px;line-height:28px;font-weight:300;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.medium_light_white{font-size:40px;line-height:36px;font-weight:200;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.small_light_white{font-size:20px;line-height:28px;font-weight:300;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}</style> 
+  </div>
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.greenbird.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/themes/dt-the7/royalslider/jquery.royalslider.js?ver=4.4.4"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var dtLocal = {"passText":"To view this protected post, enter the password below:","moreButtonAllLoadedText":"Everything is loaded","moreButtonText":{"loading":"Loading..."},"postID":"13","ajaxurl":"http:\/\/www.greenbird.com\/wp-admin\/admin-ajax.php","contactNonce":"c290a307b0","ajaxNonce":"40e2926edc","pageData":{"type":"page","template":"page","layout":null},"themeSettings":{"smoothScroll":"on","lazyLoading":false}};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/themes/dt-the7/js/plugins.min.js?ver=4.4.4"></script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/themes/dt-the7/js/desktop-tablet.min.js?ver=4.4.4"></script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/themes/dt-the7/js/desktop.min.js?ver=4.4.4"></script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/themes/dt-the7/js/main.min.js?ver=4.4.4"></script> 
+  <script type="text/javascript" src="http://www.greenbird.com/wp-content/themes/dt-the7/wpbakery/js_composer/assets/js/js_composer_front.js?ver=4.3.4"></script>  
+ </body>
+</html>

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <!-- DebugInfo Template fileName: ~/Views/Shared/Layout/_Full.cshtml --> 
+  <title>karmadata | Healthcare (Big) Data Simplified</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Always force latest IE rendering engine or request Chrome Frame --> 
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"> 
+  <meta name="description" content="karmadata is the trusted platform to integrate and analyze your Private and Public Data. karmadata is a collection of the world's healthcare and clinical data, linked to key healthcare entities such as Corporations, Physicians, Investigators, Diseases, and Drugs."> 
+  <meta name="google-site-verification" content="8CbnGrSJ43wVcK4slkUAoGUuxYzl2HqChMKL8p_dRIY"> 
+  <link rel="SHORTCUT ICON" href="/favicon.ico?kdBuild=20141205.03.23"> 
+  <!-- DebugInfo Template fileName: ~/Views/Shared/Layout/_css-main.cshtml --> 
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+  <link href="/Content/kd-fonts.css?kdBuild=20141205.03.23" rel="stylesheet" type="text/css"> 
+  <link href="/Content/kd-baseline.css?kdBuild=20141205.03.23" rel="stylesheet" type="text/css"> 
+  <link href="//code.jquery.com/ui/1.10.3/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css"> 
+  <!-- Custom Jquery-Multiselect, uses jquery-ui css, we've opted to point to code.jquery.com for latest jquery-ui.css --> 
+  <link href="/Content/jquery-multiselect/jquery.multiselect.css?kdBuild=20141205.03.23" rel="stylesheet" type="text/css"> 
+  <link href="/Content/css?v=2kL5Kb9w-iy2T0w4buagqlrel_zhDpG7swMEiwx5kV01" rel="stylesheet"> 
+  <link href="/Content/kd-ui.css?kdBuild=20141205.03.23" rel="stylesheet" type="text/css"> 
+  <!-- DebugInfo Template fileName: ~/Views/Shared/Layout/_js-main.cshtml --> 
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script> 
+  <script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script> 
+  <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script> 
+  <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.min.js"></script> 
+  <!--ALWAYS load kd validator extensions AFTER jquery and jquery.validate--> 
+  <script type="text/javascript" src="/Scripts/jquery.validate.kd.js?kdBuild=20141205.03.23"></script> 
+  <script type="text/javascript" src="/Scripts/jquery.shorten.js?kdBuild=20141205.03.23"></script> 
+  <script type="text/javascript" src="/Scripts/jQuery.tmpl.min.js?kdBuild=20141205.03.23"></script> 
+  <script type="text/javascript" src="/Scripts/jquery.unobtrusive-ajax.js?kdBuild=20141205.03.23"></script> 
+  <!--google jsapi load is pre-requisite for using their apis like maps, charts, etc... best to load in header--> 
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+  <script type="text/javascript">
+    google.load('visualization', '1.1', { 'packages': ['corechart', 'controls', 'table', 'geochart', 'annotationchart'] });
+</script> 
+  <!--Google tracking js for karmadata--> 
+  <script type="text/javascript" src="/Scripts/kd-GoogleAnalytics.js?kdBuild=20141205.03.23"></script> 
+  <script type="text/javascript" src="/Scripts/kd-GooglePlus.js?kdBuild=20141205.03.23"></script> 
+  <!-- Custom Jquery-Multiselect --> 
+  <script type="text/javascript" src="/Scripts/jquery-multiselect/jquery.multiselect.js?kdBuild=20141205.03.23"></script> 
+  <script src="/Content/js?v=avEmujBj_jgF6gs6oZSGAad9_clEctmlQsaLTElygSQ1"></script> 
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="/Scripts/kd.UI.js"></script> 
+  <script type="text/javascript">
+    //Define Site global page variables
+    //ToDo: Namespace these
+//    var contactDownloadBaseUrl = "/App/DataDotComDownloadContacts";
+    //    var contactSearchBaseUrl = "/App/DataDotComContactSearch";
+
+    var contactDownloadBaseUrl = "/App/ZoomInfoDownloadContacts";
+    var contactSearchBaseUrl = "/App/ZoomInfoContactSearch";
+    var contactCountBaseUrl = "/App/DataDotComContactSearchCount";
+</script> 
+  <script type="text/javascript">
+
+            var kdCallerId = "karmadata | Healthcare (Big) Data Simplified";
+            
+        </script> 
+ </head> 
+ <body id="" class="kdMarketing kdSubPage" data-spy="scroll" data-target="#kd-nav-floating" data-offset="57"> 
+  <!-- DebugInfo Template fileName: /Views/Shared/v2/_TopNav.cshtml --> 
+  <!-- START navbar --> 
+  <div id="kdTopNav" class="navbar-default kdTopNav navbar-static-top navbar-blank" role="navigation"> 
+   <div class="container"> 
+    <div class="navbar-header"> 
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-navbar-kdTopNav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="navbar-brand" href="/Home"> <img src="/Content/Images/base/logo.png" alt="karmadata.com"> </a> 
+    </div> 
+    <div class="collapse navbar-collapse" id="navbar-navbar-kdTopNav"> 
+     <ul class="nav navbar-nav"> 
+      <li class=""> <a href="/Feed/Summary" title="Follow any Disease, Drug, Clinical Investigator or Organization to receive live updates on your home feed or email.">Feed</a> </li> 
+      <li class="dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="karmadata App Gallery">App Gallery <b class="caret"></b></a> 
+       <ul class="dropdown-menu"> 
+        <li> <a href="/App/Investigators" title="Find Clinical Investigators and Sites for Your Study.">Indicate Investigators</a> </li> 
+        <li> <a target="_blank" href="/App/MyHealthIO" title="MyHealth.io enables patient driven healthcare through data and intuitive visualizations.">myHealth.io</a> </li> 
+        <li> <a href="/App/SponsorFinder" title="Find the Most Active Companies Conducting Clinical Trials">Sponsor Finder</a> </li> 
+       </ul> </li> 
+      <li class="dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Visualize data and share with the karmadata community.">Datacards <b class="caret"></b></a> 
+       <ul class="dropdown-menu"> 
+        <li><a href="/Search" title="Browse datacards created by the karmadata community.">Browse</a></li> 
+        <li><a href="/Card/Create" title="Create, Visualize and Share with the karmadata community.">Create</a></li> 
+       </ul> </li> 
+      <li class="dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="About karmadata">About <b class="caret"></b></a> 
+       <ul class="dropdown-menu"> 
+        <li class="dropdown-header"><a href="/Home/WhatIsKarmadata" title="What is karmadata?">What is karmadata?</a></li> 
+        <li><a href="/Feed/Summary" title="Follow any Disease, Drug, Clinical Investigator or Organization to receive live updates on your home feed or email.">Feed</a></li> 
+        <li><a href="/Data/Summary" title="Integrate karmadata into your internal systems such as CRM, data warehouses and operational systems.">Data</a></li> 
+        <li><a href="/API" title="The karmadata Application Programming Interface (API) enables your app to access all of our multiple industry datasources in XML or JSON.">API</a></li> 
+        <li><a href="/Home/AboutUs" title="We are a passionate team dedicated to creating awesome data driven applications.">Team</a></li> 
+        <li><a href="/Press" title="karmadata in the News and Press releases.">Press</a></li> 
+        <li><a href="/Join" title="Join karmadata">Review Plan Options</a></li> 
+        <li class="divider"></li> 
+        <li class="dropdown-header"> <a href="/App/Investigators" title="We have created an API to access various levels of the world's healthcare data, enabling developers to create innovative Apps and tools without having to worry about creating the data."> Apps </a> </li> 
+        <li> <a href="/App/Investigators" title="Find Clinical Investigators and Sites for Your Study."> Indicate Investigators </a> </li> 
+        <li> <a href="/App/SponsorFinder" title="Find the Most Active Companies Conducting Clinical Trials"> Sponsor Finder </a> </li> 
+        <li class="divider"></li> 
+        <li class="dropdown-header"><a href="/Contact" title="Contact us to set up a demo or to get you and your business set up with a plus account.">Contact Us</a></li> 
+        <li><a href="/Training" target="_blank" title="Register for a free live demo and select a date and time that works best for you.">Watch a Live Demo</a></li> 
+        <li><a href="/Home/ReferYourFriends" title="Tell Your Friends">Tell Your Friends</a></li> 
+        <li><a target="_blank" href="/Jobs" title="Career opportunities at karmadata">Careers</a></li> 
+        <li><a href="http://blog.karmadata.com" title="karmadata Blog">Blog</a></li> 
+        <li><a href="/Newsletter" title="karmadata Newsletter">Newsletter</a></li> 
+       </ul> </li> 
+     </ul> 
+     <!-- DebugInfo Template fileName: ~/Views/Shared/Widget/_SelectEntitiesWidget.cshtml --> 
+     <div id="kdTopNavkdSelectEntitiesTopNavSearch"></div> 
+     <script type="text/javascript">
+    $(function () {
+
+        var _widget = new kd.app.Widget.SelectEntities("kdTopNavkdSelectEntitiesTopNavSearch");
+
+        _widget.Protocol();
+        _widget.HostUrl();
+        _widget.AppId("");
+
+        _widget.SelectedEntityWidget("Organization");
+        
+        _widget.OnSelectionClearSelectedValueFromTextbox(false);
+        _widget.ChickletsClearAllLinkVisible(true);
+        _widget.RenderChickletsCountTextbox(false);
+        _widget.RenderChickletsContainer(false);
+
+        _widget.OnSelectionAction("RedirectToEntityPoster"); // See OnSelectionActionTypes in SelectEntitiesWidget.cs for all options
+
+
+        _widget.RenderFollowUnfollowButtons(false);
+        _widget.FollowRoute("/entity/startfollowing");
+        _widget.UnFollowRoute("/entity/stopfollowing");
+        _widget.FollowClass("");
+        _widget.UnFollowClass("");
+        _widget.FollowUnFollowButtonContainerId("");
+        
+        _widget.RenderCheckboxGroupAs("dropdownmenu");
+        
+        _widget.DiseaseVisible(true);
+        _widget.OrganizationVisible(true);
+        _widget.DrugVisible(true);
+        _widget.DrugClassVisible(true);
+        _widget.InvestigatorVisible(true);
+        _widget.GeographyVisible(false);
+        _widget.CityVisible(false);
+        _widget.StateVisible(false);
+        _widget.HealthcareProviderTaxonomyVisible(false);
+        _widget.HospitalVisible(false);
+        _widget.DrugRxNormVisible(false);
+        _widget.PhysicianVisible(false);
+        _widget.PhysicianGroupVisible(false);
+        _widget.SnomedCtVisible(false);
+        
+
+        _widget.DiseaseLabel("Disease");
+        _widget.OrganizationLabel("Organization");
+        _widget.DrugLabel("Drug");
+        _widget.DrugClassLabel("Drug Class");
+        _widget.InvestigatorLabel("Investigator");
+        _widget.GeographyLabel("Geography");
+        _widget.CityLabel("");
+        _widget.StateLabel("");
+        _widget.HealthcareProviderTaxonomyLabel("Medical Specialty");
+        _widget.HospitalLabel("Hospital");
+        _widget.DrugRxNormLabel("DrugRxNorm");
+        _widget.PhysicianLabel("Physician");
+        _widget.PhysicianGroupLabel("Physician Groups");
+        _widget.SnomedCtLabel("Medical Conditions");
+        
+
+        _widget.SearchTermLengthDisease(3);
+        _widget.SearchTermLengthOrganization(3);
+        _widget.SearchTermLengthDrug(3);
+        _widget.SearchTermLengthDrugClass(3);
+        _widget.SearchTermLengthInvestigator(3);
+        _widget.SearchTermLengthGeography(3);
+        _widget.SearchTermLengthCity(3);
+        _widget.SearchTermLengthState(3);
+        _widget.SearchTermLengthHealthcareProviderTaxonomy(3);
+        _widget.SearchTermLengthHospital(3);
+        _widget.SearchTermLengthDrugRxNorm(3);
+        _widget.SearchTermLengthPhysician(3);
+        _widget.SearchTermLengthPhysicianGroup(3);
+        _widget.SearchTermLengthSnomedCt(3);
+        
+
+        _widget.DiseaseCheckboxesVisible(false);
+        _widget.OrganizationCheckboxesVisible(false);
+        _widget.DrugCheckboxesVisible(false);
+        _widget.DrugClassCheckboxesVisible(false);
+        _widget.InvestigatorCheckboxesVisible(false);
+        _widget.GeographyCheckboxesVisible(false);
+        _widget.CityCheckboxesVisible(false);
+        _widget.StateCheckboxesVisible(false);
+        _widget.HealthcareProviderTaxonomyCheckboxesVisible(false);
+        _widget.HospitalCheckboxesVisible(false);
+        _widget.DrugRxNormCheckboxesVisible(false);
+        _widget.PhysicianCheckboxesVisible(false);
+        _widget.PhysicianGroupCheckboxesVisible(false);
+        _widget.SnomedCtCheckboxesVisible(false);
+        
+        
+        _widget.GroupSelectionDropDownMenuClass("");
+        _widget.CommaDelimitedSelectedValues("");
+
+        _widget.SetOnSelectionChangeHandler(); // specific to Select Entity Widget
+        _widget.SetOnSelectionHandler();
+        _widget.SetOnChangeHandler();
+        _widget.SetOnChickletClickHandler();
+        _widget.SetOnChickletCloseHandler();
+        _widget.SetOnCompleteHandler();
+
+        _widget.ChickletsContainerId("");
+        _widget.ChickletsCountTextboxId("");
+        
+        _widget.init();
+    });
+</script> 
+     <ul class="nav navbar-nav navbar-right"> 
+      <li><a href="/Join" title="Join karmadata">Join</a></li> 
+      <li class="dropdown "> <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Sign In">Sign In <b class="caret"></b></a> 
+       <ul class="dropdown-menu"> 
+        <li> 
+         <!-- DebugInfo Template fileName: ~/Views/Shared/v2/_LoginFlyOut.cshtml --> 
+         <div class="kdFlyOut"> 
+          <form id="kdLoginDialog" name="kdLoginDialog" method="post" action="/Login"> 
+           <fieldset class="kdTextBoxSet"> 
+            <label class="kdUserName"> <span>Username or email</span> </label> 
+            <input id="kdUserNameOfDialog" name="UserName" type="text" autocomplete="on"> 
+            <label class="kdPassword"> <span>Password</span> </label> 
+            <input id="kdPasswordOfDialog" name="Password" type="password" value=""> 
+           </fieldset> 
+           <fieldset class="kdCheckBox"> 
+            <button type="submit" class="kdButton kdButtonAction kdWide" id="kdDoLogin">Sign in</button> 
+           </fieldset> 
+          </form> 
+          <div class="kdFlyOutFooter"> 
+           <ul class="kdLinks"> 
+            <li><a href="/Account/Register">Create an account</a></li> 
+            <li>Forgot your <a href="/Account/ForgotUserName">username</a> or <a href="/Account/ForgotPassword">password</a>?</li> 
+           </ul> 
+          </div> 
+         </div> 
+         <!-- I don't see any reason for having the JS below, as the form is simply submitted w/ a submit button |bwilly Jan2013
+     NOT TRUE: Must submit JSON, as form field names cannot bound to model as the login appears for every page, yet different pages use different models --> </li> 
+       </ul> </li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- END navbar --> 
+  <div class="kdLayoutPage"> 
+   <div class="container kdLayoutSubNav"> 
+   </div> 
+   <div class="kdLayoutUberRow"> 
+    <!-- START kdCarouselOverview ================================================== --> 
+    <div id="kdCarouselOverview" class="carousel slide" data-ride="carousel" data-interval="15000"> 
+     <!-- Indicators --> 
+     <ol class="carousel-indicators"> 
+      <li data-target="#kdCarouselOverview" data-slide-to="0" class="active"></li> 
+      <li data-target="#kdCarouselOverview" data-slide-to="1"></li> 
+      <li data-target="#kdCarouselOverview" data-slide-to="2"></li> 
+      <li data-target="#kdCarouselOverview" data-slide-to="3"></li> 
+      <li data-target="#kdCarouselOverview" data-slide-to="4"></li> 
+     </ol> 
+     <!-- Slides --> 
+     <div class="carousel-inner"> 
+      <div class="item active"> 
+       <div class="container"> 
+        <div class="carousel-caption"> 
+         <h1>2014 Health Datapalooza Award Winner</h1> 
+         <p class="lead"> <a target="_blank" title="MyHealth.io enables patient driven healthcare through data and intuitive visualizations." href="http://myHealth.io">myHealth.io</a>, the patient facing free service created by karmadata wins an award for providing meaningful information to patients at the <a target="_blank" href="http://www.prnewswire.com/news-releases/karmadata-launches-myhealthio-a-groundbreaking-tool-for-patients-seeking-to-comparison-shop-for-a-surgeon-261981411.html">2014 Health Datapalooza</a>, a gathering of over 2,000 of the nation’s healthcare experts in Washington, D.C </p> 
+         <p style="margin-top: 10px"> <a target="_blank" href="http://myHealth.io" title="MyHealth.io enables patient driven healthcare through data and intuitive visualizations." class="kdButton kdButtonStart kdButtonNormalAnchor">Try myHealth.io</a> </p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="item"> 
+       <div class="container"> 
+        <div class="carousel-caption"> 
+         <h1>Healthcare (Big) Data Simplified</h1> 
+         <p class="lead"> Healthcare data represents one of the biggest challenges and opportunities for our planet. We have a technology platform to link it all together, enabling awesome visualizations, facilitating better decisions for consumers, analysts, and industry leaders alike. </p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="item"> 
+       <div class="container"> 
+        <div class="carousel-caption"> 
+         <h1>Private Sandbox</h1> 
+         <p class="lead"> Our technology stack was built with privacy in mind. Open data is meant to be open; your data...is meant to be protected. Feel confident that data you contribute to your private sandbox via kdPlus is for your eyes only. </p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="item"> 
+       <div class="container"> 
+        <div class="carousel-caption"> 
+         <h1>Apps, Feed and API</h1> 
+         <p class="lead"> We have created an API to access various levels of the world's healthcare data, enabling developers to create innovative Apps, Live Feed Updates and tools without having to worry about creating the data. Our App gallery will showcase the best of these, including many from karmadata developers. </p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="item"> 
+       <div class="container"> 
+        <div class="carousel-caption"> 
+         <h1>Watch a Live Demo!</h1> 
+         <p class="lead"> Register for a free live demo and select a date and time that works best for you. We will walk you through our apps and the benefits of karmadata Plus. </p> 
+         <p style="margin-top: 10px"> <a target="_blank" href="/Training" title="Register for a free live demo and select a date and time that works best for you." class="kdButton kdButtonStart kdButtonNormalAnchor">Watch a Live Demo</a> </p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- Controls --> 
+     <a class="left carousel-control" href="#kdCarouselOverview" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a> 
+     <a class="right carousel-control" href="#kdCarouselOverview" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a> 
+    </div> 
+    <!-- END kdCarouselOverview --> 
+    <script type="text/javascript">
+		
+    jQuery(function($) {
+
+        $("#kdCarouselOverview").carousel();
+			
+	});
+		
+</script> 
+    <!-- DebugInfo Template fileName: /Views/Shared/v2/_HomeFloatingNav.cshtml --> 
+    <!-- Navbar ================================================== --> 
+    <div id="kdHomeFloatingNavWrapper"> 
+     <div id="kdHomeFloatingNav" class="navbar-default navbar-static-top navbar-blank kdHomeFloatingNav" role="navigation"> 
+      <div class="container"> 
+       <div class="navbar-header"> 
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#kd-nav-floating"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+        <a id="kdHomeFloatingNavLogo" class="navbar-brand" href="#kdTopNav"><img class="kd-nav-logo" src="/Content/images/base/logo_onWhite.png"></a> 
+       </div> 
+       <div class="collapse navbar-collapse" id="kd-nav-floating"> 
+        <ul class="nav navbar-nav nav-pills"> 
+         <li> <a href="#Overview" title="Overview">Overview</a> </li> 
+         <li> <a href="#HealthCareData" title="karmadata's technology platform links Healthcare data together, enabling awesome visualizations, facilitating better decisions for consumers, analysts, and industry leaders.">Healthcare (Big) Data</a> </li> 
+         <li> <a href="#PrivateDataSandbox" title="karmadata Plus enables you to keep all of your activities private, and the possibility to combine your organization's private data with the world's open data sources. ">Private Sandbox</a> </li> 
+         <li> <a href="#APIFeedandApps" title="We have created an API to access various levels of the world's healthcare data, enabling developers to create innovative Apps and tools without having to worry about creating the data.">Apps, Feed and API</a> </li> 
+         <li> <a href="#ClinicalTrialData" title="karmadata saves you time and money by obtaining the most recent information about physicians, investigators and sites complete with up to date emails, phone numbers and addresses.">Clinical Trial Data</a> </li> 
+         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="More on karmadata">More <b class="caret"></b></a> 
+          <ul class="dropdown-menu"> 
+           <li><a href="/Join" title="Join karmadata">Join</a></li> 
+           <li><a href="/Login" title="Sign into karmadata">Sign In</a></li> 
+           <li class="divider"></li> 
+           <li class="dropdown-header"><a href="/Home/WhatIsKarmadata" title="What is karmadata?">What is karmadata?</a></li> 
+           <li><a href="/Feed/Summary" title="Follow any Disease, Drug, Clinical Investigator or Organization to receive live updates on your home feed or email.">Feed</a></li> 
+           <li><a href="/Data/Summary" title="Integrate karmadata into your internal systems such as CRM, data warehouses and operational systems.">Data</a></li> 
+           <li><a href="/API" title="The karmadata Application Programming Interface (API) enables your app to access all of our multiple industry datasources in XML or JSON.">API</a></li> 
+           <li><a href="/Home/AboutUs" title="We are a passionate team dedicated to creating awesome data driven applications.">Team</a></li> 
+           <li><a href="/Press" title="karmadata in the News and Press releases.">Press</a></li> 
+           <li><a href="/Join" title="Join karmadata">Review Plan Options</a></li> 
+           <li class="divider"></li> 
+           <li class="dropdown-header"> <a href="/App/Investigators" title="We have created an API to access various levels of the world's healthcare data, enabling developers to create innovative Apps and tools without having to worry about creating the data."> Apps </a> </li> 
+           <li> <a href="/App/Investigators" title="Find Clinical Investigators and Sites for Your Study."> Indicate Investigators </a> </li> 
+           <li> <a href="/App/SponsorFinder" title="Find the Most Active Companies Conducting Clinical Trials"> Sponsor Finder </a> </li> 
+           <li class="divider"></li> 
+           <li class="dropdown-header"><a href="/Contact" title="Contact us to set up a demo or to get you and your business set up with a plus account.">Contact Us</a></li> 
+           <li><a href="/Training" target="_blank" title="Register for a free live demo and select a date and time that works best for you.">Watch a Live Demo</a></li> 
+           <li><a href="/Home/ReferYourFriends" title="Tell Your Friends">Tell Your Friends</a></li> 
+           <li><a target="_blank" href="/Jobs" title="Career opportunities at karmadata">Careers</a></li> 
+           <li><a href="http://blog.karmadata.com" title="karmadata Blog">Blog</a></li> 
+           <li><a href="/Newsletter" title="karmadata Newsletter">Newsletter</a></li> 
+           <!-- DebugInfo Template fileName: ~/Views/Shared/v2/_TopNavUpgradeMenu.cshtml --> 
+          </ul> </li> 
+         <li id="btn_kdHomeFloatingNavLogo_backToTop" class="kdBackToTop" style="display: none;"> <a href="#kdTopNav">Top</a> </li> 
+        </ul> 
+        <ul class="nav navbar-nav nav-pills pull-right"> 
+         <li> <a href="/Training" target="_blank" class="kdButtonStart" title="Register for a free live demo and select a date and time that works best for you.">Watch Demo</a> </li> 
+         <li class="dropdown"> <a href="#" class="dropdown-toggle kdButtonAction" data-toggle="dropdown" title="Sign In">Contact Us <b class="caret" style="border-top-color: #ffffff; border-bottom-color: #ffffff;"></b></a> 
+          <ul class="dropdown-menu"> 
+           <li> 
+            <!-- DebugInfo Template fileName: ~/Views/Home/_ContactFlyOut.cshtml --> 
+            <div id="kdContactUsFlyOut" class="kdFlyOut"> 
+             <div class="kdFlyOutHeader"> 
+              <h5>Contact Us Now</h5> 
+              <p style="padding-top: 5px;"> Let us help you find the right karmadata solution for you. You can also <a href="/Training" title="Register for a free live demo and select a date and time that works best for you.">watch a live demo</a> of karmadata to learn more. </p> 
+             </div> 
+             <!-- DebugInfo Template fileName: ~/Views/Home/_ContactForm.cshtml --> 
+             <form id="kdContactFlyOutForm" name="kdContactFlyOutForm" method="post" action="/Contact"> 
+              <fieldset id="contact_fields" class="kdTextBoxSet"> 
+               <label> <span>Name</span> </label> 
+               <div class="validation-summary-errors"> 
+               </div> 
+               <input value="" class="text-box" id="FullName" name="FullName" placeholder="Name" type="text"> 
+               <label> <span>Company</span> </label> 
+               <div class="validation-summary-errors"> 
+               </div> 
+               <input value="" class="text-box" id="Company" name="Company" placeholder="Comapny Name" type="text"> 
+               <label> <span>Email</span> </label> 
+               <div class="validation-summary-errors"> 
+               </div> 
+               <input value="" class="text-box" id="EmailAddress" name="EmailAddress" placeholder="Email Address" type="text"> 
+               <label> <span>Comments</span> </label> 
+               <div class="validation-summary-errors"> 
+               </div> 
+               <textarea cols="20" id="Comments" name="Comments" rows="2" style="resize:none;border-style:solid;border-width:fine;display:block;">
+</textarea> 
+               <input value="" class="kdTextboxH" id="CommentsMore" name="CommentsMore" type="text"> 
+               <label> <span>Please show us that you are human:</span> </label> 
+               <div id="kdCaptcha" class="kdCaptcha kdInputWidget"> 
+                <table style="width:100%;"> 
+                 <tbody>
+                  <tr> 
+                   <td class="kdCaptchaLabelWrapper"> <label class="kdCaptchaQ1"></label> </td> 
+                   <td class="kdCaptchaLabelWrapper"> <label>+</label> </td> 
+                   <td class="kdCaptchaLabelWrapper"> <label class="kdCaptchaQ2"></label> </td> 
+                   <td class="kdCaptchaLabelWrapper"> <label>=</label> </td> 
+                   <td> <input style="margin:0;" value="" class="kdCaptchaSolution" id="kdCaptchaHumanSolution" name="kdCaptchaHumanSolution" type="hidden"> 
+                    <div id="kdCaptchaHumanValueWrapper" class="" data-trigger="manual" data-toggle="popover" data-placement="top" data-content="You've entered an incorrect value, please correct before continuing."> 
+                     <input placeholder="What is the sum?" value="" class="kdCaptchaHuman" id="kdCaptchaHumanValue" name="kdCaptchaHumanValue" type="text"> 
+                    </div> </td> 
+                  </tr> 
+                 </tbody>
+                </table> 
+               </div> 
+               <button id="sendForm" class="kdButton kdButtonAction kdButtonNormal">Send</button> 
+              </fieldset> 
+             </form> 
+             <script type="text/javascript">
+
+    var iskdCaptchaValid = function (captchaId) {
+
+        var valid = false;
+        
+        var kdCaptchaQ1Value = parseInt($("#" + captchaId).find(".kdCaptchaQ1").attr("data-value"));
+        var kdCaptchaQ2Value = parseInt($("#" + captchaId).find(".kdCaptchaQ2").attr("data-value"));
+        var kdCaptchaHumanValue = parseInt($("#" + captchaId).find(".kdCaptchaHuman").val()); 
+        
+        if ((kdCaptchaQ1Value + kdCaptchaQ2Value) == kdCaptchaHumanValue) {
+            valid = true;
+        }
+
+        return valid;
+    };
+
+    var kdCaptchaInitQ = function (captchaId, captchaLableClassId) {
+        
+        var array_qValues = [1, 2, 3, 4, 5];
+        
+        var kdCaptchaQValue = array_qValues[Math.floor(Math.random() * 4) + 1];
+        var kdCaptchaQ = $("#" + captchaId).find("." + captchaLableClassId);
+
+        kdCaptchaQ.attr("data-value", kdCaptchaQValue);
+        kdCaptchaQ.html(kdCaptchaQValue);
+
+        return kdCaptchaQValue;
+    };
+
+    var kdCaptchaInit = function (captchaId) {
+        var kdCaptchaQValue1 = kdCaptchaInitQ(captchaId, "kdCaptchaQ1");
+        var kdCaptchaQValue2 = kdCaptchaInitQ(captchaId, "kdCaptchaQ2");
+
+        // Save value for server-side validation
+        $("#" + captchaId).find(".kdCaptchaSolution").val(kdCaptchaQValue1 + kdCaptchaQValue2);
+    };
+
+    kdCaptchaInit("kdCaptcha");
+
+    $("#kdCaptchaHumanValueWrapper").popover();
+
+    $("#kdCaptchaHumanValue").keyup(function() {
+        $("#kdCaptchaHumanValueWrapper").popover('hide');
+    });
+    $("#sendForm").click(function () {
+
+        var formIsValid = true;
+        if ($("#CommentsMore").val().length > 0) {
+            formIsValid = false;
+        }
+
+        if (!iskdCaptchaValid("kdCaptcha")) {
+            formIsValid = false;
+
+            $("#kdCaptchaHumanValueWrapper").popover('show');
+        }
+        
+        return formIsValid;
+    });
+
+</script> 
+             <div class="kdFlyOutFooter"> 
+              <ul class="kdLinks"> 
+               <li>You can also email us at <a href="mailto:contact@karmadata.com">contact@karmadata.com</a></li> 
+              </ul> 
+             </div> 
+            </div> </li> 
+          </ul> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <script type="text/javascript">
+
+
+    $(function () {
+
+
+        // Stick the #nav to the top of the window
+        var nav = $('#kdHomeFloatingNav');
+        var btnBackToTop = $('#btn_kdHomeFloatingNavLogo_backToTop');
+        var navHomeY = nav.offset().top; // + nav.height();
+        var isFixed = false;
+        var $w = $(window);
+        $w.scroll(function () {
+            var scrollTop = $w.scrollTop();
+            var shouldBeFixed = scrollTop > navHomeY;
+            if (shouldBeFixed && !isFixed) {
+                nav.css({
+                });
+                // navbar-blank is to provide a different look to Nav while not floating
+                nav.removeClass("navbar-blank");
+                nav.addClass("navbar-fixed-top");
+                
+                // Show Back To Top Button
+                btnBackToTop.show();
+                isFixed = true;
+            }
+            else if (!shouldBeFixed && isFixed) {
+                nav.css({
+                });
+                nav.removeClass("navbar-fixed-top");
+                nav.addClass("navbar-blank");
+                
+                // Hide Back To Top Button
+                btnBackToTop.hide();
+                isFixed = false;
+            }
+        });
+
+
+    });
+
+
+</script> 
+   </div> 
+   <div class="kdLayoutRow"> 
+    <div class="kdMarketingContent"> 
+     <a name="About"></a> 
+     <!-- START Row --> 
+     <div class="kdMarketingContentWideMainRow"> 
+      <div class="container" id="Overview"> 
+       <div class="row"> 
+        <div class="col-md-3 text-center"> 
+         <a title="Healthcare (Big) Data" href="#HealthCareData"> <img alt="Healthcare (Big) Data" title="karmadata's technology platform links Healthcare data together, enabling awesome visualizations, facilitating better decisions for consumers, analysts, and industry leaders." style="border:0;" src="/Content/images/icons/token_gold_healthcare.png"> </a> 
+         <h4> <a title="Healthcare (Big) Data" href="#HealthCareData">Healthcare (Big) Data</a> </h4> 
+         <p> Healthcare data represents one of the biggest challenges and opportunities for our planet. We have a technology platform to link it all, enabling awesome visualizations, facilitating better decisions for consumers, analysts, and industry leaders alike. </p> 
+        </div> 
+        <div class="col-md-3 text-center"> 
+         <a title="Private Sandbox" href="#PrivateDataSandbox"> <img alt="Private Sandbox" title="karmadata Plus enables you to keep all of your activities private, and the possibility to combine your organization's private data with the world's open data sources. " style="border:0;" src="/Content/images/icons/token_gold_privateDataSandbox.png"> </a> 
+         <h4> <a title="Private Sandbox" href="#PrivateDataSandbox">Private Sandbox</a> </h4> 
+         <p> Our technology stack was built with privacy in mind. Open data is meant to be open, your data...is meant to be protected. Feel confident that data you contribute to your private sandbox via kdPlus is for your eyes only. </p> 
+        </div> 
+        <div class="col-md-3 text-center"> 
+         <a title="Apps, Feed and API" href="#APIFeedandApps"> <img alt="Apps, Feed and API" title="We have created an API to access various levels of the world's healthcare data, enabling developers to create innovative Apps and tools without having to worry about creating the data." style="border:0;" src="/Content/images/icons/token_gold_api.png"> </a> 
+         <h4> <a title="Apps, Feed and API" href="#APIFeedandApps">Apps, Feed and API</a> </h4> 
+         <p> We have created an <a href="/API" title="The karmadata Application Programming Interface (API) enables your app to access all of our multiple industry datasources in XML or JSON.">API</a> to access various levels of the world's healthcare data, enabling developers to create innovative <a href="/App/Investigators" title="Find Clinical Investigators and Sites for Your Study.">Apps</a>, <a href="/Feed/Summary" title="Follow any Disease, Drug, Clinical Investigator or Organization to receive live updates on your home feed or email.">Live Feed Updates</a> and tools without having to worry about creating the data. </p> 
+        </div> 
+        <div class="col-md-3 text-center"> 
+         <a title="karmadata's technology platform links Healthcare data together, enabling awesome visualizations, facilitating better decisions for consumers, analysts, and industry leaders." href="/Training" target="_blank"> <img alt="Watch a Live Demo" title="karmadata's technology platform links Healthcare data together, enabling awesome visualizations, facilitating better decisions for consumers, analysts, and industry leaders." style="border:0;" src="/Content/images/icons/token_gold_demo.png"> </a> 
+         <h4> <a title="karmadata's technology platform links Healthcare data together, enabling awesome visualizations, facilitating better decisions for consumers, analysts, and industry leaders." href="/Training" target="_blank">Watch a Live Demo</a> </h4> 
+         <p> <a href="/Training" title="Register for a free live demo and select a date and time that works best for you.">Register for a free live demo</a> and select a date and time that works best for you. We will walk you through karmadata.com, our apps and the benefits of karmadata Plus. </p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- END Row --> 
+     <!-- DebugInfo Template fileName: /Views/Home/_HomeSectionOverview.cshtml --> 
+     <div class="container"> 
+      <hr> 
+      <!-- START Row --> 
+      <div class="row"> 
+       <div class="col-md-12 text-center"> 
+        <h1>karmadata in a nutshell</h1> 
+        <h3> karmadata is a collection of the world's healthcare data, all standardized, linked, and accessible in one place. We want you to ask and answer healthcare questions that matter, to you, to the world. The data is standardized into common healthcare entities (Physicians, Clinical Trial Data, Clinical Investigators, Hospitals, Pharmacies, Drugs, Diseases, Geography, etc.), enabling users to visualize and (simply) query the world's healthcare data. </h3> 
+       </div> 
+      </div> 
+      <!-- END Row --> 
+      <!-- START Row --> 
+      <!-- DebugInfo Template fileName: ~/Views/Home/_HomeOurSite.cshtml --> 
+      <div id="kdHomeSiteOverview" class="row"> 
+       <div class="col-md-4 text-center"> 
+        <div> 
+         <img alt="Search and Browse" title="Search and Browse" src="/Content/images/base/home_browse.png"> 
+         <h4>Search and Browse</h4> 
+         <p> We offer everything from the basic keyword search (one text box only please!) to the complex filtering by dates, geography, disease, drug, company, person, etc.. </p> 
+        </div> 
+       </div> 
+       <div class="col-md-4 text-center"> 
+        <div class="kdHomeEditorsPickScreenshotWrapper text-center"> 
+         <img alt="Visualize and Analyze" title="Visualize and Analyze" class="kdHomeEditorsPickScreenshot" src="/Content/images/base/home_editorspick.png"> 
+         <h4>Visualize and Analyze</h4> 
+         <p> This is where your talent to identify healtcare problems and solutions can shine. Join multiple sources together into an amazing mashup. The best data cards are recognized every week. </p> 
+         <div> 
+          <img alt="Visualize and Analyze" title="Visualize and Analyze" src="/Content/images/email/badge_editorsPick_datacard.gif"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-md-4 text-center"> 
+        <div> 
+         <img alt="Share and Follow" title="Share and Follow" src="/Content/images/base/home_follow.png"> 
+         <h4>Share and Follow</h4> 
+         <p> You can follow other users, or any one of our entities (companies, drugs, people, etc.) and receive a <a href="/Feed/Summary" title="Follow any Disease, Drug, Clinical Investigator or Organization to receive live updates on your home feed or email.">real time feed</a> of their activities on the site or in the data we mine. </p> 
+        </div> 
+       </div> 
+      </div> 
+      <!-- END Row --> 
+      <hr> 
+      <!-- START Row --> 
+      <div class="row"> 
+       <div class="col-md-12"> 
+        <h5>Standardized, Linked, Share or Keep Private</h5> 
+        <h2>How is karmadata different?</h2> 
+        <h3> You don't need a corporate subscription to access top notch healthcare data. We offer private sandboxes for corporations that need privacy. We treat each open data source as a global treasure trove waiting to be mined. We treat HIPAA facing data such as insurance claims and provider records with the tightest of security. We find the best possible source for a particular information need, and using our API bring that source directly to you. </h3> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-4 text-center"> 
+        <img alt="World's Open Healthcare Data" title="World's Open Healthcare Data" src="/Content/images/base/graphic_datasourcetypes.png"> 
+        <h4 style="line-height: normal;">World's Open<br>Healthcare Data</h4> 
+        <p> Healthcare data (Open and Private) comes to us in raw (non-standard) format, billions of records and growing. </p> 
+       </div> 
+       <div class="col-md-4 text-center"> 
+        <img alt="Standardized Data" title="Standardized Data" src="/Content/images/base/graphic_standardizeAsFlow.png"> 
+        <h4 style="line-height: normal;">Standardized<br>Data</h4> 
+        <p> We standardize it, enabling joins (mashup, analysis, pick your favorite term) to all other healthcare data. </p> 
+       </div> 
+       <div class="col-md-4 text-center"> 
+        <img alt="Share or Keep to Yourself (or a Private Group)" title="Share or Keep to Yourself (or a Private Group)" src="/Content/images/base/graphic_cardsandposters.png"> 
+        <h4 style="line-height: normal;">Share or Keep to Yourself<br>(or a Private Group)</h4> 
+        <p> Freemium users can share their findings with the world. kdPlus users can keep to themselves or their private sandbox. </p> 
+       </div> 
+      </div> 
+      <!-- END Row --> 
+     </div> 
+     <!-- DebugInfo Template fileName: /Views/Home/_HomeSectionHealthcareBigData.cshtml --> 
+     <div class="container"> 
+      <a name="Health"></a>
+      <a name="HealthCare"></a> 
+      <hr id="HealthCareData"> 
+      <!-- START Row --> 
+      <div class="row"> 
+       <div class="col-md-12 text-center"> 
+        <h1>Healthcare (Big) Data</h1> 
+        <h3> karmadata obtains data from two different universes: public data (aka Open data) and private (aka Insurance/Payor, Provider, Exchanges/EMR/EHR/etc) data. </h3> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-xs-3 col-md-2 col-md-offset-2 text-center"> 
+        <h5>&nbsp;</h5> 
+        <div style="border-top:4px solid #fff; padding-top: 15px;"> 
+         <img alt="Insurance Plans" title="Insurance Plans" src="/Content/images/icons/home_govtRegulatory_orange_large.png"> 
+         <h3>Insurance Plans</h3> 
+        </div> 
+       </div> 
+       <div class="col-xs-9 col-md-6 text-center"> 
+        <h5>Private <span>Data</span></h5> 
+        <div class="row" style="border-top:4px solid #F88C04; padding-top: 15px;"> 
+         <div class="col-xs-4 col-md-4 text-center"> 
+          <img alt="Insurance Plans" title="Insurance Plans" src="/Content/images/icons/home_insuranceProviders_orange_large.png"> 
+          <h3>Insurance Plans</h3> 
+         </div> 
+         <div class="col-xs-4 col-md-4 text-center"> 
+          <img alt="Healthcare Providers" title="Healthcare Providers" style="height: 58px;" src="/Content/images/icons/home_healthcareprovider_orange_large.png"> 
+          <h3>Healthcare Providers</h3> 
+         </div> 
+         <div class="col-xs-4 col-md-4 text-center"> 
+          <img alt="Insurance Plans" title="Insurance Plans" src="/Content/images/icons/home_systemProviders_orange_large.png"> 
+          <h3>Insurance Plans</h3> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <!-- END Row --> 
+      <hr> 
+      <!-- START Row --> 
+      <div class="kdMarketingFeaturette"> 
+       <div class="kdMarketingFeaturette-hero pull-right text-center"> 
+        <img alt="Government and Regulatory Agencies" title="Government and Regulatory Agencies" src="/Content/images/base/graphic_openData.png"> 
+       </div> 
+       <h5>Government and Regulatory Agencies</h5> 
+       <h2>Open <span>Data</span></h2> 
+       <h3> The World Health Organization, Medicare, Medicaid, HealthData.gov, FDA, NIH, CDC, and countless other agencies provide awesome starting points for understanding the global healthcare market. Sadly these source records need a LOT of work before they can be analyzed. First the data is HUGE. Multiple terrabytes. Second each data source is messy and unstandardized. Finally none of these great healthcare data sources are linked to each other. We provide a scalable platform where they are all in a standard format and LINKED together. A Data Scientist's dream. </h3> 
+      </div> 
+      <!-- END Row --> 
+      <hr> 
+      <!-- START Row --> 
+      <div class="kdMarketingFeaturette"> 
+       <div class="kdMarketingFeaturette-hero pull-left text-center"> 
+        <img alt="Healthcare Providers, Insurance Plans and IT Systems" title="Healthcare Providers, Insurance Plans and IT Systems" src="/Content/images/base/graphic_healthcareTrifecta.png"> 
+       </div> 
+       <h5>Healthcare Providers, Insurance Plans and IT Systems</h5> 
+       <h2>Private <span>Data</span></h2> 
+       <h3> Everyone reading this has been to a doctors office, or picked up a prescription at their local pharmacy. Some of you may even have an electronic medical record. Hopefully most of your physicians do. This is the really BIG healthcare data: interactions between consumers of healthcare (you) and the providers of healthcare (doctors, pharmacists, etc.). There is tremendous value in mining this data, and creating Apps to empower consumers, and drive down the costs of healthcare. We are an active participant in this market. We envision a brave new world where consumers have enough information to make informed decisions and engage in active conversations with their provider. </h3> 
+      </div> 
+      <!-- END Row --> 
+     </div> 
+     <!-- DebugInfo Template fileName: /Views/Home/_HomeSectionPrivateDataSandbox.cshtml --> 
+     <div class="container"> 
+      <a name="PrivateData"></a>
+      <a name="Sandbox"></a>
+      <a name="Plans"></a>
+      <a name="PlusLink"></a> 
+      <hr id="PrivateDataSandbox"> 
+      <!-- START Row --> 
+      <div class="row"> 
+       <div class="col-md-12 text-center"> 
+        <h1>Private Sandbox</h1> 
+        <h3> Our technology stack was built with privacy in mind. Open data is meant to be open; your data...is meant to be protected. Feel confident that data you contribute to your private sandbox via kdPlus is for your eyes only. </h3> 
+       </div> 
+      </div> 
+      <!-- END Row --> 
+      <!-- START Row --> 
+      <div class="kdMarketingFeaturette"> 
+       <div class="kdMarketingFeaturette-hero pull-right text-center"> 
+        <img alt="kdPlus" title="kdPlus" src="/Content/images/base/graphic_privateDataSandbox.png"> 
+       </div> 
+       <h5>kdPlus</h5> 
+       <h2><span>Sandbox</span> For You and Your Team</h2> 
+       <h3> kdPlus enables you to keep all of your activities private, and the possibility to combine your organization's private data with the world’s open data sources. kdPlus has other advantages as well, including unlimited data downloads and access to our best Apps and sophisticated algorithms like our Investigator Ratings. </h3> 
+      </div> 
+      <!-- END Row --> 
+      <hr> 
+      <!-- START Row --> 
+      <div class="row"> 
+       <div class="col-md-12"> 
+        <h5>Get More Out of karmadata</h5> 
+        <h2>Plans to match your needs</h2> 
+        <h3> We have plans that meet the needs ranging from casual interest in healthcare (Basic / free for individuals), to individual advocates (Premium for data scientists, bloggers, journals, students, non-profits), to corporations (Plus for private sandbox). </h3> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-6 text-center"> 
+        <div class="kdHomePlansHeader"> 
+         <h5>Researchers and Professionals</h5> 
+         <h2><a title="karmadata Premium" href="/Join">karmadata Premium</a></h2> 
+         <p> $9.99/month. Premium offers a wealth of features for your data needs, including the creation of unlimited visualizations. This option is ideal for individual users who want to openly advocate and share their datacards. Maximize your ability to project a point of view through data mining, and leverage the power of crowdsourcing. Power your newsletters or reports with datacard and visualizations you create. </p> 
+        </div> 
+        <div style="margin-bottom: 30px;"> 
+         <a href="/Join" class="kdButton kdButtonAction kdButtonNormalAnchor" title="Upgrade to Premium">Upgrade to Premium</a> 
+        </div> 
+        <div class="PlansQuickSummary"> 
+         <table> 
+          <tbody> 
+           <tr> 
+            <td> <img alt="Create Unlimited Datacards" title="Create Unlimited Datacards" src="/Content/images/icons/token_gold_datacards.png"> </td> 
+            <td> <h5>Create</h5> <h4>Unlimited Datacards</h4> <p> If you are a true data lover, you need more than 5 visualizations! Create unlimited datacards to share with the world. </p> </td> 
+           </tr> 
+           <tr> 
+            <td> <img alt="Top Results, Follow Companies" title="Top Results, Follow Companies" src="/Content/images/icons/token_gold_search.png"> </td> 
+            <td> <h5>Do More</h5> <h4>Top Results, Follow Companies</h4> <p> Upgrade to premium and access the Top 100 results from your datacards with the option to export to Excel. Follow up to 10 entities (companies, drugs, physicians, etc.) and receive a <a href="/Feed/Summary" title="Follow any Disease, Drug, Clinical Investigator or Organization to receive live updates on your home feed or email.">daily feed</a> of their updated activity. </p> </td> 
+           </tr> 
+           <tr> 
+            <td> <img alt="Ad Free Experience" title="Ad Free Experience" src="/Content/images/icons/token_gold_noAds.png"> </td> 
+            <td> <h5>Ad Free Experience</h5> <h4>Say No to Ads</h4> <p> Upgrade to premium and enjoy an ad free experience. </p> </td> 
+           </tr> 
+          </tbody> 
+         </table> 
+        </div> 
+       </div> 
+       <div class="col-md-6 text-center"> 
+        <div class="kdHomePlansHeader"> 
+         <h5>Developers and Businesses</h5> 
+         <h2><a title="karmadata Plus" href="/Join">karmadata Plus</a></h2> 
+         <p> Starting at $250/month. Plus is the option for organizations. Whereas Premium is ideal for users that want to share their activities and interests, many (most) corporations need to keep their activities out of the public domain. Plus grants you that privacy so you can share within your organization in a private sandbox. You also obtain access to our best data and Apps, like our Investigator Ratings. </p> 
+        </div> 
+        <div style="margin-bottom: 30px;"> 
+         <a href="/Join" class="kdButton kdButtonStart kdButtonNormalAnchor" title="Upgrade to Plus">Upgrade to Plus</a> 
+        </div> 
+        <div class="PlansQuickSummary"> 
+         <table> 
+          <tbody> 
+           <tr> 
+            <td> <img alt="Private Sandbox" title="Private Sandbox" src="/Content/images/icons/token_purple_privateDataSandbox.png"> </td> 
+            <td> <h5>Privacy</h5> <h4>Private Sandbox</h4> <p> Keep your activities private. Share within your sandbox (your company), or keep to yourself. Load your data into the sandbox, and link with public data to create amazing data mining opportunities. </p> </td> 
+           </tr> 
+           <tr> 
+            <td> <img alt="Apps, Downloads, and Follow" title="Apps, Downloads, and Follow" src="/Content/images/icons/token_purple_download.png"> </td> 
+            <td> <h5>Do More</h5> <h4>Apps, Downloads, and Follow</h4> <p> Plus users have access to our best Apps (like our Investigator Ratings). Also Plus users have unlimited download rights...no metered access. Finally follow an unlimited number or entities (companies, drugs, physicians, etc.) </p> </td> 
+           </tr> 
+           <tr> 
+            <td> <img alt="Plus Link" title="Plus Link" src="/Content/images/icons/token_purple_contacts.png"> </td> 
+            <td> <h5>Join a Plus Group for Free</h5> <h4>Plus Link</h4> <p> Once your company has paid, the first 10 users to join the sandbox forgo the $9.99 fee! And once you have joined you can share datacards with your colleagues...privately. </p> </td> 
+           </tr> 
+          </tbody> 
+         </table> 
+        </div> 
+       </div> 
+      </div> 
+      <!-- END Row --> 
+     </div> 
+     <!-- DebugInfo Template fileName: /Views/Home/_HomeSectionAPIandApps.cshtml --> 
+     <div class="container"> 
+      <a name="API"></a>
+      <a name="Apps"></a> 
+      <hr id="APIFeedandApps"> 
+      <!-- START Row --> 
+      <div class="row"> 
+       <div class="col-md-12 text-center"> 
+        <h1>karmadata Apps, Feed and API</h1> 
+        <h3> We have created an <a href="/API" title="The karmadata Application Programming Interface (API) enables your app to access all of our multiple industry datasources in XML or JSON.">API</a> to access various levels of the world's healthcare data, enabling developers to create innovative <a href="/App/Investigators" title="Find Clinical Investigators and Sites for Your Study.">Apps</a>, <a href="/Feed/Summary" title="Follow any Disease, Drug, Clinical Investigator or Organization to receive live updates on your home feed or email.">Live Feed Updates</a> and tools without having to worry about creating the data. Our App gallery will showcase the best of these, including many from karmadata developers. </h3> 
+       </div> 
+      </div> 
+      <!-- END Row --> 
+      <!-- START Row --> 
+      <div class="kdMarketingFeaturette"> 
+       <div class="kdMarketingFeaturette-hero pull-right text-center"> 
+        <a href="/API" title="Learn more about the karmadata API"> <img alt="Access the World's Healthcare Data...Standardized and Linked" title="Access the World's Healthcare Data...Standardized and Linked" src="/Content/images/base/karmadata_puzzleHorizontalPublicAndPrivateDate_large.png"> </a> 
+       </div> 
+       <h5>Access the World's Healthcare Data...Standardized and Linked</h5> 
+       <h2>karmadata <span>API</span></h2> 
+       <h3 style="margin-bottom: 15px;"> karmadata provides a standard RESTful API to query the world's healthcare data, and to receive results in JSON, XML, Excel, Google DataTable formats (more formats being added). Developers with an API key can build their own apps mashing our Open data sources against their own Private Data. </h3> 
+       <a href="/API" class="kdButton kdButtonStart kdButtonNormalAnchor" title="Learn more about the karmadata API">Learn more about the karmadata API</a> 
+      </div> 
+      <!-- END Row --> 
+      <hr> 
+      <!-- START Row --> 
+      <div class="kdMarketingFeaturette"> 
+       <div class="kdMarketingFeaturette-hero pull-left text-center"> 
+        <table align="center" class="kdMarketingAppGallery"> 
+         <tbody>
+          <tr> 
+           <td align="center" valign="top"> <a href="/App/Investigators" title="Power Your App with karmadata"><img alt="Indicate Investigator App" title="Indicate Investigator App" src="/Content/images/icons/app_clinicalinvestigator.png"></a> </td> 
+           <td align="center" valign="top"> <a target="_blank" href="/App/MyHealthIO" title="Power Your App with karmadata"><img alt="myHealth.io" title="myHealth.io" src="/Content/images/icons/app_myhealthio.png"></a> </td> 
+           <td align="center" valign="top"> <a href="/App/SponsorFinder" title="Power Your App with karmadata"><img alt="Sponsor Finder App" title="Sponsor Finder App" src="/Content/images/icons/app_contacts.png"></a> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <h5>App Gallery</h5> 
+       <h2>Power Your <span>App</span> with karmadata</h2> 
+       <h3 style="margin-bottom: 15px;"> The karmadata App gallery showcases the best in class data apps built by third parties or our own developer team. Find the best Clinical Investigators for any given Disease/Indication using our <a href="/App/Investigators">Indicate Investigator™</a> App. Or, search for and follow pharmaceutical, biotech, and device companies by geography, disease, clinical trials or company size by using our <a href="/App/SponsorFinder">Sponsor Finder™</a> App. Or try our award winning <a target="_blank" href="/App/MyHealthIO" title="MyHealth.io enables patient driven healthcare through data and intuitive visualizations.">myHealth.io</a> app to find a physician for a surgical proceure. </h3> 
+      </div> 
+      <!-- END Row --> 
+      <hr> 
+      <!-- START Row --> 
+      <div class="kdMarketingFeaturette"> 
+       <div class="kdMarketingFeaturette-hero pull-right text-center"> 
+        <a href="/Feed/Summary" title="Learn more about the karmadata Feed"> <img alt="Access the World's Healthcare Data...Standardized and Linked" title="Access the World's Healthcare Data...Standardized and Linked" src="/Content/images/base/karmadata_feed_clipped_short.png"> </a> 
+       </div> 
+       <h5>Follow for Alerts and Live Updates</h5> 
+       <h2>karmadata <span>Feed</span></h2> 
+       <h3 style="margin-bottom: 15px;"> Follow any Disease, Drug, Clinical Investigator or Organization to receive live updates on your home feed or email. Follow as many entities as you'd like. Use our <a href="/App/Investigators">apps</a> to search and find entities that are important to you. </h3> 
+       <a href="/Feed/Summary" class="kdButton kdButtonStart kdButtonNormalAnchor" title="Learn more about the karmadata Feed">Learn more about the karmadata Feed</a> 
+      </div> 
+      <!-- END Row --> 
+     </div> 
+     <!-- DebugInfo Template fileName: /Views/Home/_HomeSectionClinicalTrailData.cshtml --> 
+     <div class="container"> 
+      <a name="ClinicalTrials"></a>
+      <a name="ClinicalData"></a>
+      <a name="Clinical"></a> 
+      <hr id="ClinicalTrialData"> 
+      <!-- START Row --> 
+      <div class="row"> 
+       <div class="col-md-12" text-center"=""> 
+        <h1>Clinical Trial Data</h1> 
+        <h3> The clinical trial enrollment process starts and ends with data, and a simple question: Who are the best investigators to successfully enroll patients in my trial? karmadata saves you time and money by obtaining the most recent clinical trial data and information about physicians, investigators and sites complete with up to date emails, phone numbers and addresses. </h3> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-xs-2 col-md-2 text-center"> 
+        <img alt="Clinical Investigators" title="Clinical Investigators" src="/Content/images/icons/home_clinicalinvestigator_orange_large.png"> 
+        <h3> 294k<br> Clinical Investigators </h3> 
+       </div> 
+       <div class="col-xs-2 col-md-2 text-center"> 
+        <img alt="Drugs" title="Drugs" src="/Content/images/icons/home_drug_orange_large.png"> 
+        <h3> 6.4k<br> Drugs </h3> 
+       </div> 
+       <div class="col-xs-2 col-md-2 text-center"> 
+        <img alt="Diseases" title="Diseases" src="/Content/images/icons/home_disease_orange_large.png"> 
+        <h3> 4.5k<br> Diseases </h3> 
+       </div> 
+       <div class="col-xs-2 col-md-2 text-center"> 
+        <img alt="Healthcare Providers" title="Healthcare Providers" src="/Content/images/icons/home_healthcareprovider_orange_large.png"> 
+        <h3> 3M<br> Healthcare Providers </h3> 
+       </div> 
+       <div class="col-xs-2 col-md-2 text-center"> 
+        <img alt="Healthcare Facilities" title="Healthcare Facilities" src="/Content/images/icons/home_healthcarefacility_orange_large.png"> 
+        <h3> 939k<br> Healthcare Facilities </h3> 
+       </div> 
+       <div class="col-xs-2 col-md-2 text-center"> 
+        <img alt="Hospitals" title="Hospitals" src="/Content/images/icons/home_hospital_orange.png"> 
+        <h3> 33.9k<br> Hospitals </h3> 
+       </div> 
+      </div> 
+      <!-- END Row --> 
+      <hr> 
+      <!-- START Row --> 
+      <div class="kdMarketingFeaturette"> 
+       <div class="kdMarketingFeaturette-hero pull-left text-center"> 
+        <img alt="Powerful Filter Capability" title="Powerful Filter Capability" src="/Content/images/base/graphic_filterList.png"> 
+       </div> 
+       <h5>Powerful Filter Capability</h5> 
+       <h2>Clinical Trial Activities and <span>Clinical Sites</span></h2> 
+       <h3> We curate all publicly available databases, mining the data from its native text or XML into actionable, linked data critical to clinical operations. </h3> 
+      </div> 
+      <!-- END Row --> 
+     </div> 
+     <!-- Break out of .container to span entire page --> 
+     <!-- START Row --> 
+     <div class="kdMarketingContentWideAccentRow"> 
+      <hr style="margin-bottom: 0;"> 
+      <div class="container kdRowClinicalInvestigators"> 
+       <div class="kdMarketingFeaturette"> 
+        <h5>Clinical Trial Enrollment Process Simplified</h5> 
+        <h2>Find <span>Clinical Investigators</span></h2> 
+        <h3> Need a list of investigators in Europe with Multiple Sclerosis trial experience? No problem. Spending hours (days!) developing a list of authors from PubMed in pediatric clinical research? Minutes with karmadata. Want to limit by date last published, plus date of last 1572 filing? Easy! </h3> 
+        <a href="/App/Investigators" class="kdButton kdButtonStart kdButtonNormalAnchor" title="Search for Clinical Investigators">Search for Clinical Investigators</a> 
+       </div> 
+      </div> 
+      <hr style="margin-top:0; margin-bottom:0;"> 
+     </div> 
+     <!-- START Row --> 
+     <div class="container" style="margin-top: 3em;"> 
+      <!-- START Row --> 
+      <div class="kdMarketingFeaturette text-center"> 
+       <div class="kdSignUp"> 
+        <h1>It's free to sign up!</h1> 
+        <a href="/Join" title="Create An Account"><img src="/Content/images/base/btn_createAccount.png"></a> 
+        <p style="font-size: smaller; padding-top: 0">Already a member? <a href="/Login">Log in</a></p> 
+       </div> 
+      </div> 
+      <!-- END Row --> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- DebugInfo Template fileName: ~/Views/Shared/v2/_Footer.cshtml --> 
+  <div id="kdStickyFooter"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-9"> 
+      <ul class="kdPrimary"> 
+       <li><a href="http://blog.karmadata.com" title="karmadata Blog">Blog</a></li> 
+       <li>&nbsp; &nbsp; <a href="/Data/Summary" title="Integrate karmadata into your internal systems such as CRM, data warehouses and operational systems.">Data</a></li> 
+       <li>&nbsp; &nbsp;<a href="/API" title="The karmadata Application Programming Interface (API) enables your app to access all of our multiple industry datasources in XML or JSON.">API</a></li> 
+       <li>&nbsp; &nbsp;<a href="/Home/AboutUs" title="We are a passionate team dedicated to creating awesome data driven applications.">Team</a></li> 
+       <li>&nbsp; &nbsp;<a href="/Press" title="karmadata in the News and Press releases.">Press</a></li> 
+      </ul> 
+      <ul class="kdSecondary"> 
+       <li><a href="/Policy/Terms">Terms of Service</a></li> 
+       <li>&nbsp; &nbsp;<a href="/Policy/Privacy">Privacy Policy</a></li> 
+       <li>&nbsp; &nbsp; <a target="_blank" href="/Jobs" title="Career opportunities at karmadata">Careers</a></li> 
+       <li> &nbsp; &nbsp; <a href="/Contact" title="Contact us to set up a demo or to get you and your business set up with a plus account.">Contact</a> </li> 
+       <li>&nbsp; &nbsp;<a href="/Login">Sign In</a></li> 
+       <li>&nbsp; &nbsp;<a href="/Account/Register" title="Join karmadata">Join</a></li> 
+      </ul> 
+      <p>© 2012-2014 karmadata, Inc. All rights reserved.</p> 
+     </div> 
+     <div class="col-md-3"> 
+      <div> 
+       <h4>Connect with karmadata</h4> 
+       <!-- DebugInfo Template fileName: /Views/Press/_SocialMediaIcons.cshtml --> 
+       <a target="_blank" href="https://flipboard.com/profile/karmadata"><img src="/Content/images/icons/sm_flipboard_large.png" alt="Flipboard"></a> 
+       <a target="_blank" href="http://pinterest.com/karmadata/"><img src="/Content/images/icons/sm_pinterest_large.png" alt="Pinterest"></a> 
+       <a target="_blank" href="http://www.facebook.com/karmadata"><img src="/Content/images/icons/sm_facebook_large.png" alt="Facebook"></a> 
+       <a target="_blank" href="http://twitter.com/karmadata"><img src="/Content/images/icons/sm_twitter_large.png" alt="Twitter"></a> 
+       <a target="_blank" href="http://www.linkedin.com/company/2320392"><img src="/Content/images/icons/sm_linkedin_large.png" alt="LinkedIn"></a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+    var _usersnapEmail = null;
+
+
+    var _usersnapconfig = {
+        apiKey: 'b2f3a85f-030c-4cdd-a630-9b99eacaa768',
+        valign: 'bottom',
+        halign: 'right',
+        tools: ["pen", "highlight", "note"],
+        lang: 'en',
+        commentBox: true,
+        emailBox: true,
+
+        beforeOpen: function (obj) {
+            if (_usersnapEmail != null) {
+                UserSnap.setEmailBox(_usersnapEmail);
+            }
+        }
+
+    };
+    (function () {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//api.usersnap.com/usersnap.js';
+        var x = document.getElementsByTagName('head')[0];
+        x.appendChild(s);
+    })();
+</script>   
+ </body>
+</html>

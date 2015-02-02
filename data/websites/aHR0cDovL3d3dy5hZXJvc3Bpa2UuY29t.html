@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:fb="http://ogp.me/ns/fb#" xmlns:addthis="http://www.addthis.com/help/api-spec">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <!-- Site Crafted Using PageLines v2.4.4 - WordPress - HTML5 ( dev ) - www.PageLines.com --> 
+  <!-- Title --> 
+  <title>NoSQL Database, In-Memory or Flash Optimized and Web Scale</title> 
+  <!-- Start >> Meta Tags and Inline Scripts --> 
+  <link rel="alternate" type="application/rss+xml" title="Aerospike » Feed" href="http://www.aerospike.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Aerospike » Comments Feed" href="http://www.aerospike.com/comments/feed/"> 
+  <link rel="alternate" type="text/calendar" title="Aerospike » iCal Feed" href="http://www.aerospike.com/events/?ical=1"> 
+  <link rel="alternate" type="application/rss+xml" title="Aerospike » Home Comments Feed" href="http://www.aerospike.com/home/feed/"> 
+  <!-- Styles --> 
+  <link rel="stylesheet" id="prettify-gc-syntax-highlighter-css" href="https://aerospike.com/wp-content/plugins/prettify-gc-syntax-highlighter/prettify.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="output-css" href="http://www.aerospike.com/wp-content/plugins/addthis/css/output.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="pagelines-less-css" href="http://www.aerospike.com/wp-content/uploads/pagelines/compiled-css-1417714916.css" type="text/css" media="all"> 
+  <link rel="stylesheet" id="vc_plugin_table_style_css-css" href="http://www.aerospike.com/wp-content/plugins/easy-tables-vc/assets/css/style.css?ver=1.0.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="vc_plugin_themes_css-css" href="http://www.aerospike.com/wp-content/plugins/easy-tables-vc/assets/css/themes.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="sunprettify_style-css" href="http://www.aerospike.com/wp-content/plugins/sunburst-code-prettify/assets/css/sunburst.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-advanced-rp-css-css" href="http://www.aerospike.com/wp-content/plugins/advanced-recent-posts-widget/css/advanced-recent-posts-widget.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="superfish-css" href="http://www.aerospike.com/wp-content/themes/pagelines/sections/nav/style.superfish.css?ver=2.4.4" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="pagelines-child-stylesheet-css" href="http://www.aerospike.com/wp-content/themes/aerospike/style.css?ver=244-1204172007" type="text/css" media="all"> 
+  <!-- Scripts --> 
+  <script type="text/javascript" src="/wp-includes/js/jquery/jquery.js?ver=1.11.0"></script> 
+  <script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="/wp-content/plugins/flexo-archives-widget/flexo-anim.js?ver=2.0"></script> 
+  <script type="text/javascript" src="/wp-content/plugins/sunburst-code-prettify/assets/js/highlight.pack.js?ver=3.9.3"></script> 
+  <link rel="shortcut icon" href="/wp-content/uploads/2012/08/favicon.png" type="image/x-icon"> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.aerospike.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.aerospike.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="prev" title="Whitepapers" href="/whitepapers/"> 
+  <link rel="next" title="Glossary" href="/glossary/"> 
+  <meta name="generator" content="WordPress 3.9.3"> 
+  <link rel="shortlink" href="http://www.aerospike.com"> 
+  <link rel="author" href="shweta"> 
+  <!-- All in One SEO Pack 2.2.3.1 by Michael Torbert of Semper Fi Web Design[312,378] --> 
+  <meta name="description" itemprop="description" content="Aerospike the Only Visionary Database in the 2014 Gartner MQ. Built for speed, scale, and 100% uptime on fewer servers. Flash-optimized, In-memory NoSQL. Try it"> 
+  <link rel="canonical" href="/"> 
+  <!-- /all in one seo pack --> 
+  <!-- Dynamic Widgets by QURL - http://www.qurl.nl //--> 
+  <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."> 
+  <style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style> 
+  <!-- On Ready --> 
+  <script> /* <![CDATA[ */
+!function ($) {
+jQuery(document).ready(function() {
+})
+}(window.jQuery);
+/* ]]> */
+</script> 
+  <!-- BrandNav | Section Head --> 
+  <script type="text/javascript"> /* <![CDATA[ */ jQuery(document).ready(function() {  jQuery('div.brandnav-nav ul.sf-menu').superfish({ delay: 100, speed: 'fast', autoArrows:  0, dropShadows: 0 });  }); /* ]]> */ </script> 
+  <!-- Nav Classic | Section Head --> 
+  <script type="text/javascript"> /* <![CDATA[ */ jQuery(document).ready(function() {  jQuery('div.main_nav_container ul.sf-menu').superfish({ delay: 100, speed: 'fast', autoArrows:  0, dropShadows: 0 });  }); /* ]]> */ </script> 
+  <!-- Features | Section Head --> 
+  <style type="text/css" id="feature-css">
+ .fset_height,#feature_slider .text-bottom .fmedia .fmedia-pad,#feature_slider .text-bottom .feature-pad,#feature_slider .text-none .fmedia .fmedia-pad{height:375px;} 
+</style> 
+  <script type="text/javascript">
+/* <![CDATA[ */ jQuery(document).ready(function () {
+
+	jQuery('#feature-area').css('overflow', 'hidden');
+
+
+
+	jQuery(window).load(function() {
+	jQuery('#cycle.fclone1').cycle({ slideResize: 0, fit: 1,  fx: 'fade', sync: 1, timeout: 4000, speed: 300, cleartype: true, cleartypeNoBg: true, pager: '#featurenav.fclone1'  });jQuery("div#featurenav.fclone1").children("a").each(function() { if(jQuery(this).html() == "1") { jQuery(this).attr("title", "SPEED@SCALE with 6X SMALLER CLUSTERS");  }if(jQuery(this).html() == "2") { jQuery(this).attr("title", "Enterprise Edition FREE&lt;br/&gt;with &quot;Start Up Special&quot;");  }if(jQuery(this).html() == "3") { jQuery(this).attr("title", "The World\'s First Flash-optimized,&lt;br&gt;In-memory, NoSQL Database.&lt;br&gt; Now Open Source.");  } });
+	});
+});
+
+/* ]]> */ </script> 
+  <meta name="google-site-verification" content="BQ3y--sDEu3FLoj-I-XvzSmzF7RsJlmvxO1f7uxwdbw"> 
+  <script type="text/javascript">
+// Popup window code
+function newPopup(url) {
+	popupWindow = window.open(
+		url,'popUpWindow','height=500,width=800,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
+</script> 
+  <script type="text/javascript">
+jQuery(function(){
+    //var stickyHeaderTop = jQuery('#header').offset().top;
+  	var stickyBrandTop = jQuery('#brandnav').offset().top;
+    var stickyNavTop = jQuery('#nav').offset().top;
+   
+  
+    jQuery(window).scroll(function(){
+            if( jQuery(window).scrollTop() > stickyBrandTop ) {
+              jQuery("#brandnav").css({'position':'fixed','top':'0','z-index':'9999','width':'100%'});
+               jQuery("#nav").css({'position':'fixed','top':'50px','z-index':'9999','width':'100%'});
+              jQuery("#contentbox").css({'position':'fixed','top':'100px','z-index':'9999','width':'100%'});
+    
+    
+            }
+            
+            else {
+                     jQuery("#brandnav").css({'position':'static'});	
+                     jQuery("#nav").css({'position':'static'});
+                     jQuery("#contentbox").css({'position':'static'});
+            }
+	})
+})
+</script> 
+  <!--
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function() {
+		/* For zebra striping */
+        $("table tr:nth-child(odd)").addClass("odd-row");
+		/* For cell text alignment */
+		$("table td:first-child, table th:first-child").addClass("first");
+		/* For removing the last border */
+		$("table td:last-child, table th:last-child").addClass("last");
+});
+</script>--> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" language="javaScript"></script> 
+  <style type="text/css" id="pagelines-custom">
+ #menu-super-nav {
+  margin-right: 26px;
+}
+.fpost .media .img img {
+  width: auto;
+}
+#sidebar ul {
+  font-weight: none;
+  margin: 0;
+  padding-left: 12px;
+}
+#sidebar ul li {
+  list-style: square;
+} 
+</style> 
+ </head> 
+ <body class="home page page-id-1601 page-template page-template-page-alpha-php custom static aerospike alpha full_width  tribe-bar-is-disabled wpb-js-composer js-comp-ver-4.1.2 vc_responsive tribe-theme-parent-pagelines tribe-theme-child-aerospike page-template-page-alpha-php">
+  <div itemscope itemtype="http://schema.org/ItemPage"> 
+   <div itemprop="specialty" itemscope itemtype="http://schema.org/Specialty"> 
+    <div itemprop="about" itemscope itemtype="http://schema.org/SoftwareApplication"> 
+     <meta itemprop="applicationCategory" content="Database Software"> 
+     <meta itemprop="applicationSubCategory" content="NoSQL Database"> 
+     <meta itemprop="description" content="In-memory NoSQL Key Value Stores Database. Open-source, database software for real-time big data or context driven applications that must sense and respond in real time "> 
+    </div> 
+   </div> 
+   <!-- Start >> HTML Body -->  
+   <div id="site" class="fullwidth"> 
+    <div id="page" class="thepage"> 
+     <div class="page-canvas"> 
+      <header id="header" class="container-group"> 
+       <div itemprop="breadcrumb" itemscope itemtype="http://schema.org/WPheader" class="outline"> 
+        <meta itemprop="about" content="Page Header Navigational Menu to Aerospike.com Content"> 
+        <meta itemprop="description" content="Links to the technology, NoSQL Downloads, Documentation and Help, The Aerospike Community Etc."> 
+        <!-- BrandNav | Section Template --> 
+        <section id="brandnav" class="container clone_1 section-brandnav fix">
+         <div class="texture">
+          <div class="content">
+           <div class="content-pad">
+            <a class="plbrand mainlogo-link" href="http://www.aerospike.com" title="Aerospike"><img class="mainlogo-img" src="/wp-content/uploads/2014/05/aerospike_logo_set_horizontal2.png" alt="Aerospike"></a> 
+            <div class="brandnav-nav main_nav fix"> 
+            </div> 
+            <div class="clear"></div> 
+           </div>
+          </div>
+         </div>
+        </section> 
+        <!-- Nav Classic | Section Template --> 
+        <section id="nav" class="container clone_1 section-nav fix">
+         <div class="texture">
+          <div class="content">
+           <div class="content-pad">
+            <div class="navigation_wrap fix">
+             <div class="main_nav_container nosearch">
+              <nav id="nav_row" class="main_nav fix">
+               <ul id="menu-main-nav" class="main-nav sf-menu">
+                <li id="menu-item-11485" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11485"><a href="#">Discover</a> 
+                 <ul class="sub-menu"> 
+                  <li id="menu-item-11303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11303"><a href="/imagine/">Imagine</a></li> 
+                  <li id="menu-item-11488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11488"><a href="/transactions-hot-analytics/">Transactions &amp; Hot Analytics</a></li> 
+                  <li id="menu-item-11487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11487"><a href="/technology/">Technology</a></li> 
+                  <li id="menu-item-15293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15293"><a href="/use-cases/">Use Cases</a></li> 
+                  <li id="menu-item-15049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15049"><a href="/customers/">Customers</a></li> 
+                  <li id="menu-item-11486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11486"><a href="/products-services/">Products &amp; Pricing</a></li> 
+                 </ul> </li> 
+                <li id="menu-item-8541" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8541"><a href="/download">Download</a></li> 
+                <li id="menu-item-11472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11472"><a href="/develop">Develop</a></li> 
+                <li id="menu-item-11473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11473"><a href="/deploy">Deploy</a></li> 
+                <li id="menu-item-10953" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10953"><a title="Documentation" href="/docs">Documentation</a></li> 
+                <li id="menu-item-11300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11300"><a href="/community/">Community</a></li> 
+               </ul>
+              </nav>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section> 
+        <!-- ContentBox | Section Template --> 
+        <section id="contentbox" class="container clone_1 section-contentbox fix">
+         <div class="texture">
+          <div class="content">
+           <div class="content-pad">
+            <div class="hentry cb-standard">
+             <div class="hentry-pad cb-standard-pad entry_content">
+              <ul class="top_lang_menu main-nav sf-menu"> 
+               <li class="menu-item menu-item-has-children"> <a><img src="/wp-content/uploads/2014/05/flag_ico.png"></a> 
+                <ul class="sub-menu"> 
+                 <li class="menu-item"> <a href="/">English</a> </li> 
+                 <li class="menu-item"> <a href="/German">Deutsch</a> </li> 
+                 <li class="menu-item"> <a href="/Chinese">中国</a> </li> 
+                 <li class="menu-item"> <a href="/Japanese">日本語</a> </li> 
+                </ul> </li> 
+               <li class="menu-item"> <a href="/enterprise" style="padding-top: 10px !important; padding-bottom: 17px !important;"><img src="/wp-content/uploads/2014/05/icon-login.png" alt=""></a> </li> 
+               <li class="menu-item search_li"> 
+                <form method="get" class="searchform" onsubmit="this.submit();return false;" action="/search">
+                 <fieldset>
+                  <input type="text" value="" name="q" class="searchfield" placeholder="Search">
+                 </fieldset>
+                </form> </li> 
+               <ul> 
+                <div>
+                 <p style="font-size: 14px;color: #fff;position: absolute;right: 335px;font-family: 'Open Sans', helvetica, arial;font-weight: 100;width: 350px;top: 20px;">Open Source. NoSQL. Key-Value Store &amp; more. </p>
+                </div>
+               </ul>
+              </ul>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section> 
+       </div> 
+      </header> 
+      <div id="page-main" class="container-group"> 
+       <div itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement" id="dynamic-content" class="outline"> 
+        <!-- Features | Section Template --> 
+        <section id="features" class="container clone_1 section-features fix">
+         <div class="texture">
+          <div class="content">
+           <div class="content-pad"> 
+            <div id="feature_slider" class="fclone1_wrap default-features fix"> 
+             <div id="feature-area" class="fset_height"> 
+              <div id="cycle" class="fclone1"> 
+               <div id="feature_15192" class="fcontainer text-left  fix">
+                <div class="feature-wrap fset_height bg_cover" style="background-image: url('http://www.aerospike.com/wp-content/uploads/2014/05/Slider-Image11.jpg');"> 
+                 <div class="feature-pad fset_height fix"> 
+                  <div class="fcontent scale_text fset_height "> 
+                   <div class="fcontent-pad fix"> 
+                    <div class="fheading"> 
+                     <h2 class="ftitle">SPEED@SCALE with 6X SMALLER CLUSTERS</h2> 
+                    </div>
+                    <div class="ftext">
+                     <div class="fexcerpt">
+                      <img class="aligncenter" src="/wp-content/uploads/2014/12/GOOG-50_CloudPlatform_Blogger_Logo_285x121.png" alt="Aerospike on Google Compute" width="285" height="121"> 
+                      <a class="plmore" href="http://www.aerospike.com/blog/1m-wps-6x-fewer-servers-than-cassandra/">Learn more...</a>
+                     </div>
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="fmedia fset_height" style=""> 
+                   <div class="fmedia-pad"> 
+                   </div> 
+                  </div> 
+                  <div class="clear"></div> 
+                 </div> 
+                </div>
+               </div>
+               <div id="feature_11558" class="fcontainer text-left fstyle-darkbg-overlay fix">
+                <div class="feature-wrap fset_height bg_cover" style="background-image: url('http://www.aerospike.com/wp-content/uploads/2014/05/Slider-Image11.jpg');"> 
+                 <div class="feature-pad fset_height fix"> 
+                  <div class="fcontent scale_text fset_height "> 
+                   <div class="fcontent-pad fix"> 
+                    <div class="fheading"> 
+                     <h2 class="ftitle">Enterprise Edition FREE<br>with "Start Up Special"</h2> 
+                    </div>
+                    <div class="ftext">
+                     <div class="fexcerpt"> 
+                      <a class="plmore" href="http://www.aerospike.com/blog/special-startups/">Learn more...</a>
+                     </div>
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="fmedia fset_height" style=""> 
+                   <div class="fmedia-pad"> 
+                   </div> 
+                  </div> 
+                  <div class="clear"></div> 
+                 </div> 
+                </div>
+               </div>
+               <div id="feature_11315" class="fcontainer text-left fstyle-darkbg-overlay fix">
+                <div class="feature-wrap fset_height bg_cover" style="background-image: url('http://www.aerospike.com/wp-content/uploads/2014/05/Slider-Image11.jpg');"> 
+                 <div class="feature-pad fset_height fix"> 
+                  <div class="fcontent scale_text fset_height "> 
+                   <div class="fcontent-pad fix"> 
+                    <div class="fheading"> 
+                     <h2 class="ftitle">The World's First Flash-optimized,<br>In-memory, NoSQL Database.<br> Now Open Source.</h2> 
+                    </div>
+                    <div class="ftext">
+                     <div class="fexcerpt"></div>
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="fmedia fset_height" style=""> 
+                   <div class="fmedia-pad"> 
+                   </div> 
+                  </div> 
+                  <div class="clear"></div> 
+                 </div> 
+                </div>
+               </div> 
+              </div> 
+             </div> 
+             <div id="feature-footer" class="default-features dots fix">
+              <div class="feature-footer-pad">
+               <div id="featurenav" class="fclone1 subtext fix"></div>
+               <div class="clear"></div>
+              </div>
+             </div> 
+            </div> 
+            <div class="clear"></div> 
+           </div>
+          </div>
+         </div>
+        </section> 
+        <!-- Content | Section Template --> 
+        <section id="content" class="container clone_1 section-content-area fix">
+         <div class="texture">
+          <div class="content">
+           <div class="content-pad"> 
+            <div id="pagelines_content" class="fullwidth fix"> 
+             <div id="column-wrap" class="fix"> 
+              <div id="column-main" class="mcolumn fix"> 
+               <div class="mcolumn-pad"> 
+                <!-- PostLoop | Section Template --> 
+                <section id="postloop" class="copy clone_1 section-postloop">
+                 <div class="copy-pad">
+                  <article class="post-1601 page type-page status-publish hentry fpost post-number-1" id="post-1601">
+                   <div class="hentry-pad">
+                    <div class="entry_wrap fix">
+                     <div class="entry_content">
+                      <p>
+                       <meta itemprop="about" content="Aerospike the flash-optimized in-memory NoSQL Database - Website Home Page"><br> 
+                       <meta itemprop="keywords" content="NoSQL, Database, Key Value Stores, in-memory, flash optimized"><br> </p>
+                      <div class="wpb_row vc_row-fluid cover_row vc_custom_1400753938248"> 
+                       <div class="vc_span12 wpb_column column_container"> 
+                        <div class="wpb_wrapper"> 
+                         <div class="wpb_row vc_row-fluid row_932"> 
+                          <div class="vc_span12 wpb_column column_container"> 
+                           <div class="wpb_wrapper"> 
+                            <div class="wpb_single_image wpb_content_element top_center_img vc_align_left"> 
+                             <div class="wpb_wrapper"> 
+                              <img width="107" height="106" src="/wp-content/uploads/2012/07/circle_rocket.png" class=" vc_box_border_grey attachment-thumbnail" alt="circle_rocket"> 
+                             </div> 
+                            </div> 
+                            <div class="wpb_text_column wpb_content_element  home-panel2-copy vc_custom_1403678073729"> 
+                             <div class="wpb_wrapper"> 
+                              <p itemprop="text" style="text-align: center;">Our open source technology delivers&nbsp;<span style="color: #c31618;"><em>blazing speed</em></span>, unlimited scale and&nbsp;unprecedented reliability.</p> 
+                              <p itemprop="text" style="text-align: center;">It’s designed to power the app that&nbsp;matters most: the one you’re&nbsp;building right now.</p> 
+                             </div> 
+                            </div> 
+                           </div> 
+                          </div> 
+                         </div> 
+                        </div> 
+                       </div> 
+                      </div>
+                      <div class="wpb_row vc_row-fluid home-panel3-background vc_custom_1400803381107"> 
+                       <div class="vc_span12 wpb_column column_container"> 
+                        <div class="wpb_wrapper"> 
+                         <div class="wpb_row vc_row-fluid vc_custom_1400802792490"> 
+                          <div class="vc_span12 wpb_column column_container"> 
+                           <div class="wpb_wrapper"> 
+                            <div class="wpb_text_column wpb_content_element  home-panel3-copy vc_custom_1400802927014"> 
+                             <div class="wpb_wrapper"> 
+                              <p itemprop="text" style="text-align: center;">We handle real-time big data faster,<br> we scale more reliably,<br> and what’s really surprising, we cost less too.</p> 
+                             </div> 
+                            </div> 
+                           </div> 
+                          </div> 
+                         </div> 
+                        </div> 
+                       </div> 
+                      </div>
+                      <div class="wpb_row vc_row-fluid cover_row vc_custom_1400087552916"> 
+                       <div class="vc_span12 wpb_column column_container"> 
+                        <div class="wpb_wrapper"> 
+                         <div class="wpb_row vc_row-fluid row_932 vc_custom_1400816877179"> 
+                          <div class="vc_span4 wpb_column column_container"> 
+                           <div class="wpb_wrapper"> 
+                            <div class="wpb_single_image wpb_content_element vc_custom_1403595851286 vc_align_center"> 
+                             <div class="wpb_wrapper"> 
+                              <a href="http://www.aerospike.com/transactions-hot-analytics"><img class=" vc_box_border_grey " src="/wp-content/uploads/2012/07/c1-130x130.png" width="130" height="130" alt="c1"></a> 
+                             </div> 
+                            </div> 
+                            <div class="wpb_text_column wpb_content_element  vc_custom_1403283370211"> 
+                             <div class="wpb_wrapper"> 
+                              <h4 itemprop="headline" style="text-align: center;"><span style="color: #333333;">SPEED</span></h4> 
+                              <p itemprop="text" style="text-align: center;">99% &lt; 1 millisecond<br> Predictable low latency</p> 
+                             </div> 
+                            </div> 
+                           </div> 
+                          </div> 
+                          <div class="vc_span4 wpb_column column_container"> 
+                           <div class="wpb_wrapper"> 
+                            <div class="wpb_single_image wpb_content_element vc_custom_1403595860883 vc_align_center"> 
+                             <div class="wpb_wrapper"> 
+                              <a href="http://www.aerospike.com/transactions-hot-analytics"><img class=" vc_box_border_grey " src="/wp-content/uploads/2012/07/icon-scale-130x130.png" width="130" height="130" alt="icon-scale"></a> 
+                             </div> 
+                            </div> 
+                            <div class="wpb_text_column wpb_content_element  vc_custom_1403283320344"> 
+                             <div class="wpb_wrapper"> 
+                              <h4 itemprop="headline" style="text-align: center;">SCALE</h4> 
+                              <p itemprop="text" style="text-align: center;">1 M TPS / 100TB<br> on just a handful of servers</p> 
+                             </div> 
+                            </div> 
+                           </div> 
+                          </div> 
+                          <div class="vc_span4 wpb_column column_container"> 
+                           <div class="wpb_wrapper"> 
+                            <div class="wpb_single_image wpb_content_element vc_custom_1403595868543 vc_align_center"> 
+                             <div class="wpb_wrapper"> 
+                              <a href="http://www.aerospike.com/transactions-hot-analytics"><img class=" vc_box_border_grey " src="/wp-content/uploads/2012/07/icon-reliability-130x130.png" width="130" height="130" alt="icon-reliability"></a> 
+                             </div> 
+                            </div> 
+                            <div class="wpb_text_column wpb_content_element  vc_custom_1403283287900"> 
+                             <div class="wpb_wrapper"> 
+                              <h4 itemprop="headline" style="text-align: center;">RELIABILITY</h4> 
+                              <p itemprop="text" style="text-align: center;">100% Uptime<br> with&nbsp;strong&nbsp;consistency (ACID)</p> 
+                             </div> 
+                            </div> 
+                           </div> 
+                          </div> 
+                         </div> 
+                        </div> 
+                       </div> 
+                      </div>
+                      <div class="wpb_row vc_row-fluid cover_row vc_custom_1400792736507"> 
+                       <div class="vc_span12 wpb_column column_container"> 
+                        <div class="wpb_wrapper"> 
+                         <div class="wpb_single_image wpb_content_element vc_custom_1400795611596 vc_align_center"> 
+                          <div class="wpb_wrapper"> 
+                           <img width="400" height="42" src="/wp-content/uploads/2012/07/10x-header.png" class=" vc_box_border_grey attachment-full" alt="10x-header"> 
+                          </div> 
+                         </div> 
+                         <div class="wpb_text_column wpb_content_element  home-10x-copy vc_custom_1403674690900"> 
+                          <div class="wpb_wrapper"> 
+                           <p itemprop="text" style="text-align: center;">If you want value, you need our native flash database. Our customers reap the benefits of the best price-to-performance ratio available today.</p> 
+                          </div> 
+                         </div> 
+                         <div class="wpb_single_image wpb_content_element vc_custom_1400796034332 vc_align_center"> 
+                          <div class="wpb_wrapper"> 
+                           <img width="920" height="370" src="/wp-content/uploads/2012/07/combo-server-cluster.png" class=" vc_box_border_grey attachment-full" alt="combo-server-cluster"> 
+                          </div> 
+                         </div> 
+                        </div> 
+                       </div> 
+                      </div>
+                      <div class="wpb_row vc_row-fluid row_932 vc_custom_1403594195794"> 
+                       <div class="vc_span12 wpb_column column_container"> 
+                        <div class="wpb_wrapper"> 
+                         <div class="wpb_images_carousel wpb_content_element vc_clearfix"> 
+                          <div class="wpb_wrapper"> 
+                           <div id="vc-images-carousel-1-1417758731" data-ride="vc-carousel" data-wrap="true" style="width: 100%;" data-interval="3500" data-auto-height="yes" data-mode="horizontal" data-partial="false" data-per-view="1" data-hide-on-end="false" class="vc-slide vc-carousel"> 
+                            <!-- Wrapper for slides --> 
+                            <div class="vc-carousel-inner"> 
+                             <div class="vc-carousel-slideline">
+                              <div class="vc-carousel-slideline-inner"> 
+                               <div class="vc-item">
+                                <div class="vc-inner"> 
+                                 <a href="/customers/" target="_self"> <img width="1000" height="60" src="/wp-content/uploads/2012/07/logo-group1.jpg" class="attachment-full" alt="logo-group1"> </a> 
+                                </div>
+                               </div> 
+                               <div class="vc-item">
+                                <div class="vc-inner"> 
+                                 <a href="/customers/" target="_self"> <img width="1000" height="60" src="/wp-content/uploads/2012/07/logo-group2.jpg" class="attachment-full" alt="logo-group2"> </a> 
+                                </div>
+                               </div> 
+                               <div class="vc-item">
+                                <div class="vc-inner"> 
+                                 <a href="/customers/" target="_self"> <img width="1000" height="60" src="/wp-content/uploads/2012/07/logo-group3.jpg" class="attachment-full" alt="logo-group3"> </a> 
+                                </div>
+                               </div> 
+                               <div class="vc-item">
+                                <div class="vc-inner"> 
+                                 <a href="/customers/" target="_self"> <img width="1000" height="60" src="/wp-content/uploads/2012/07/logo-group4.jpg" class="attachment-full" alt="logo-group4"> </a> 
+                                </div>
+                               </div> 
+                               <div class="vc-item">
+                                <div class="vc-inner"> 
+                                 <a href="/customers/" target="_self"> <img width="1000" height="60" src="/wp-content/uploads/2012/07/logo-group5.jpg" class="attachment-full" alt="logo-group5"> </a> 
+                                </div>
+                               </div> 
+                              </div>
+                             </div> 
+                            </div> 
+                           </div> 
+                          </div>
+                         </div> 
+                        </div> 
+                       </div> 
+                      </div> 
+                     </div>
+                    </div>
+                   </div>
+                  </article>
+                  <div class="clear"></div>
+                 </div>
+                </section> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div>
+          </div>
+         </div>
+        </section> 
+        <!-- Callout | Section Template --> 
+        <section id="callout" class="container clone_1 section-callout fix">
+         <div class="texture">
+          <div class="content">
+           <div class="content-pad"> 
+            <div class="callout-area fix callout-center "> 
+             <div class="callout_text"> 
+              <div class="callout_text-pad"> 
+               <h2 class="callout_head noimage">Aerospike is Open Source.</h2> 
+              </div> 
+             </div> 
+             <div class="callout_action rtimg"> 
+              <a target="_blank" class="btn btn-important btn-large" href="/develop/">Get It Now!</a> 
+             </div> 
+            </div> 
+           </div>
+          </div>
+         </div>
+        </section>
+       </div> 
+      </div> 
+      <div itemprop="breadcrumb" itemscope itemtype="http://schema.org/WPFooter"> 
+       <meta itemprop="about" content="Links to Aerospike.com Company information, News &amp; Events, Resources, Contact Information"> 
+       <div id="morefoot_area" class="container-group"> 
+        <!-- Footer Columns Sidebar | Section Template --> 
+        <section id="sb_footcols" class="container clone_1 section-sb_footcols fix">
+         <div class="texture">
+          <div class="content">
+           <div class="content-pad">
+            <div class="fcolumns ppfull pprow">
+             <div class="fcolumns-pad fix">
+              <div class="pp4 footcol">
+               <div class="footcol-pad">
+                <h3 class="widget-title">COMPANY</h3> 
+                <div class="textwidget">
+                 <ul> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/about-aerospike/">About Aerospike</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/team/">Team</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/board/">Advisors &amp; Investors</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/partners/">Partners</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/careers/">Careers</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/customers/">Customers</a></li>
+                 </ul>
+                </div> 
+               </div>
+              </div>
+              <div class="pp4 footcol">
+               <div class="footcol-pad">
+                <h3 class="widget-title">NEWS &amp; EVENTS</h3> 
+                <div class="textwidget">
+                 <ul>
+                  <li><a itemprop="url" href="http://www.aerospike.com/category/press-releases/">Press Releases</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/category/news/">News</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/events">Events</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/aerospike-training/">Training</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/webinars/">Webinars</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/category/blog/">Blog</a></li>
+                 </ul>
+                </div> 
+               </div>
+              </div>
+              <div class="pp4 footcol">
+               <div class="footcol-pad">
+                <h3 class="widget-title">RESOURCES</h3> 
+                <div class="textwidget">
+                 <ul>
+                  <li><a itemprop="url" href="http://www.aerospike.com/performance/">Performance</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/wp-content/uploads/2014/07/Aerospike_Datasheet_2014.pdf">Datasheet</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/benchmarks/">Benchmarks</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/analyst-reports/">Analyst Reports</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/act-for-ssds/">ACT for SSDs</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/whitepapers/">Whitepapers</a></li>
+                 </ul>
+                </div> 
+               </div>
+              </div>
+              <div class="pp4 footcol">
+               <div class="footcol-pad">
+                <h3 class="widget-title">CONTACT</h3> 
+                <div class="textwidget">
+                 <ul>
+                  <li><a itemprop="url" href="http://www.aerospike.com/contact/">Offices</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/rss-feeds">RSS Feeds</a></li> 
+                  <li><a itemprop="url" href="http://www.aerospike.com/aerospike-newsletter-signup/">Newsletter Sign-up</a></li>
+                 </ul> 
+                 <a itemprop="url" href="http://www.facebook.com/pages/Aerospike/441629982537405" target="_new" style="margin-right:5px;"><img itemprop="image" src="/wp-content/uploads/2014/06/icon-facebook1.png" width="34" height="34" alt="Facebook" title="Connect with us on Facebook"></a>
+                 <a itemprop="url" href="https://twitter.com/aerospikedb" target="_new" style="margin-right:5px;"><img src="/wp-content/uploads/2014/06/icon-twitter1.png" width="34" height="34" alt="Twitter" title="Follow us on Twitter"></a>
+                 <a itemprop="url" href="http://www.linkedin.com/company/2696852" target="_new" style="margin-right:5px;"><img src="/wp-content/uploads/2014/06/icon-linkedin1.png" width="34" height="34" alt="LinkedIn" title="Connect with us on LinkedIn"></a>
+                 <a itemprop="url" href="http://www.youtube.com/user/AerospikeTV" target="_new"><img src="/wp-content/uploads/2014/06/icon-youtube.png" width="34" height="34" alt="YouTube" title="See our videos on YouTube"></a> 
+                 <br>
+                </div> 
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="clear"></div>
+           </div>
+          </div>
+         </div>
+        </section> 
+       </div> 
+       <div class="clear"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <footer id="footer" class="container-group"> 
+     <div itemprop="breadcrumb" itemscope itemtype="http://schema.org/WPFooter"> 
+      <meta itemprop="about" content="Links to Aerospike privacy policy and terms and Conditions of use."> 
+      <div class="outline fix"> 
+       <!-- Morefoot Sidebars | Section Template --> 
+       <section id="morefoot" class="container clone_1 section-morefoot fix">
+        <div class="texture">
+         <div class="content">
+          <div class="content-pad">
+           <div class="morefoot fix">
+            <div class="morefoot-pad">
+             <div class="plgrid pagelines-grid">
+              <div class="plgrid-pad">
+               <div class="pprow grid-row fix ">
+                <div class="grid-element pp3 img_grid ">
+                 <div class="grid-element-pad">
+                  <div class="morefoot-col">
+                   <div class="morefoot-col-pad blocks">
+                    <div id="text-18" class="widget_text widget fix">
+                     <div class="widget-pad"> 
+                      <div class="textwidget">
+                       © 2014 Copyright Aerospike, Inc. | All rights reserved. | 
+                       <a itemprop="url" href="/privacy-policy" style="color: #C31618;">Privacy Policy</a> | 
+                       <a itemprop="url" href="/terms-conditions" style="color: #C31618;">Terms and Conditions</a>
+                      </div> 
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="grid-element pp3 img_grid ">
+                 <div class="grid-element-pad">
+                  <div class="morefoot-col">
+                   <div class="morefoot-col-pad blocks">
+                    <div id="text-5" class="widget_text widget fix">
+                     <div class="widget-pad"> 
+                      <div class="textwidget">
+                       <span itemprop="text">© 2014 Copyright Aerospike, Inc. | All rights reserved. |</span> 
+                       <a href="/privacy-policy" style="color: #C31618;">Privacy Policy</a> | 
+                       <a href="/terms-conditions" style="color: #C31618;">Terms and Conditions</a>
+                      </div> 
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="grid-element pp3 img_grid pplast">
+                 <div class="grid-element-pad">
+                  <div class="morefoot-col">
+                   <div class="morefoot-col-pad blocks">
+                    <div id="text-17" class="widget_text widget fix">
+                     <div class="widget-pad"> 
+                      <div class="textwidget"></div> 
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+   <link href="/rwpopup_t/fancybox/rwlightwindow.css" rel="stylesheet" type="text/css"> 
+   <script src="/rwpopup_t/rwquery.js" type="text/javascript"></script> 
+   <script src="/rwpopup_t/rwlightwindow.js" type="text/javascript"></script> 
+   <script src="/assets/scripts/analytics.js" type="text/javascript"></script> 
+   <!-- Start YouTube video frames code --> 
+   <script type="text/javascript">
+$('.video-3').click(function(e){
+  e.preventDefault();
+  $('.video').html('<iframe width="560" height="315" src="//www.youtube.com/embed/7HiVGPnjLLI" frameborder="0" allowfullscreen></iframe>');
+});
+$('.video-2').click(function(e){
+  e.preventDefault();
+  $('.video').html('<iframe width="560" height="315" src="//www.youtube.com/embed/K1c2Hj0nWiw" frameborder="0" allowfullscreen></iframe>');
+});
+$('.video-1').click(function(e){
+  e.preventDefault();
+  $('.video').html('<iframe width="560" height="315" src="//www.youtube.com/embed/CkB1KUpt_vQ" frameborder="0" allowfullscreen></iframe>');
+});
+</script> 
+   <!-- End YouTube video frames code --> 
+   <!-- Start RWTrack Tag --> 
+   <script type="text/javascript">
+ var pkBaseURL = (("https:" == document.location.protocol)?"https://go.aerospike.com/as/" : "http://go.aerospike.com/as/");
+ var tsURL =  pkBaseURL + "std/resource/script/rwts.js";
+ $.ajax({
+  url: tsURL,
+    dataType: 'script',
+    cache: true,
+    success: function() {
+ 
+     rw_log(pkBaseURL, 4230);
+    }
+   });
+</script> 
+   <!-- End RWTrack Tag --> 
+   <script>
+// Tribe Events Shim
+// the tribe_spin() function was not found, and caused past events to not work.
+$(document).ready(function(){
+$.fn.tribe_spin = function() {
+};
+$.tribe_spin = function() {
+};
+});
+</script>
+   <script type="text/javascript">
+jQuery(document).ready(function(){
+   jQuery('pre code').each(function(i, e) {
+    hljs.highlightBlock(e, '    ')
+   });
+});
+</script> 
+   <script type="text/javascript">
+
+var addthis_config = {"data_track_clickback":false,"data_track_addressbar":false,"data_track_textcopy":false,"ui_atversion":"300"};
+var addthis_product = 'wpp-3.5.9';
+</script>
+   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=fbbb35f731a81e36529b91e127dbecba"></script> 
+   <!-- Footer Scripts --> 
+   <link rel="stylesheet" id="js_composer_front-css" href="http://www.aerospike.com/wp-content/plugins/js_composer/assets/css/js_composer_front.css?ver=4.1.2" type="text/css" media="all"> 
+   <link rel="stylesheet" id="vc_carousel_css-css" href="http://www.aerospike.com/wp-content/plugins/js_composer/assets/lib/vc_carousel/css/vc_carousel.css?ver=3.9.3" type="text/css" media="all"> 
+   <script type="text/javascript" src="/wp-content/plugins/prettify-gc-syntax-highlighter/prettify.js?ver=3.9.3"></script> 
+   <script type="text/javascript" src="/wp-content/plugins/prettify-gc-syntax-highlighter/launch.js?ver=3.9.3"></script> 
+   <script type="text/javascript" src="/wp-content/themes/pagelines/sections/nav/script.superfish.js?ver=1.4.8"></script> 
+   <script type="text/javascript" src="/wp-content/themes/pagelines/sections/nav/script.bgiframe.js?ver=2.1"></script> 
+   <script type="text/javascript" src="/wp-content/themes/pagelines/sections/features/script.cycle.js?ver=2.9994"></script> 
+   <script type="text/javascript" src="/wp-content/themes/pagelines/js/script.bootstrap.min.js?ver=2.3.1"></script> 
+   <script type="text/javascript" src="/wp-content/themes/pagelines/js/script.blocks.js?ver=1.0.1"></script> 
+   <script type="text/javascript" src="/wp-content/plugins/js_composer/assets/js/js_composer_front.js?ver=4.1.2"></script> 
+   <script type="text/javascript" src="/wp-content/plugins/js_composer/assets/lib/vc_carousel/js/transition.js?ver=1417758730"></script> 
+   <script type="text/javascript" src="/wp-content/plugins/js_composer/assets/lib/vc_carousel/js/vc_carousel.js?ver=1417758730"></script> 
+   <style type="text/css" data-type="vc-shortcodes-custom-css">.vc_custom_1400753938248{background-image: url(http://www.aerospike.com/wp-content/uploads/2012/07/section-2-background.jpg?id=11323) !important;}.vc_custom_1400803381107{background-color: #c31618 !important;}.vc_custom_1400087552916{background-color: #ffffff !important;}.vc_custom_1400792736507{margin-right: -15px !important;margin-left: -15px !important;background-image: url(http://www.aerospike.com/wp-content/uploads/2012/07/section-4-background.jpg?id=11343) !important;}.vc_custom_1403594195794{border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 40px !important;padding-bottom: 40px !important;background-color: #ffffff !important;}.vc_custom_1403678073729{padding: 100px 20% !important;}.vc_custom_1400802792490{background-position: 0 0 !important;background-repeat: no-repeat !important;}.vc_custom_1400802927014{padding: 30px 20% 60px !important;background-position: 0 0 !important;background-repeat: no-repeat !important;}.vc_custom_1400816877179{padding-top: 30px !important;padding-bottom: 30px !important;}.vc_custom_1403595851286{margin: 0px !important;border-width: 0px !important;padding: 50px 0px 0px !important;}.vc_custom_1403283370211{padding-top: 10px !important;padding-bottom: 30px !important;}.vc_custom_1403595860883{margin: 0px !important;border-width: 0px !important;padding: 50px 0px 0px !important;}.vc_custom_1403283320344{padding-top: 10px !important;padding-bottom: 30px !important;}.vc_custom_1403595868543{margin: 0px !important;border-width: 0px !important;padding: 50px 0px 0px !important;}.vc_custom_1403283287900{padding-top: 10px !important;padding-bottom: 30px !important;}.vc_custom_1400795611596{padding-top: 50px !important;}.vc_custom_1403674690900{padding-right: 20% !important;padding-left: 20% !important;}.vc_custom_1400796034332{padding-bottom: 50px !important;}</style>
+   <!--wp_footer-->
+  </div> 
+  <!-- Google Code for Remarketing Tag --> 
+  <!--
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+---------------------------------------------------> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1001120198;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script> 
+  <noscript> 
+   <div style="display:inline;"> 
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1001120198/?value=0&amp;guid=ON&amp;script=0"> 
+   </div> 
+  </noscript>    
+  <!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Database Caching 57/118 queries in 0.092 seconds using disk
+
+ Served from: www.aerospike.com @ 2014-12-04 21:52:11 by W3 Total Cache -->
+ </body>
+</html>

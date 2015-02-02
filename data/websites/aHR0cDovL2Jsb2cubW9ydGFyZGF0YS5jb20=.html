@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <script>var __pbpa = true;</script>
+  <script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script>
+  <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=0fe6931f685c5a29060675a836044a62"></script>  
+  <!--
+
+MORTAR Blog.
+
+-->   
+  <!-- DEFAULT VARIABLES --> 
+  <meta name="color:Background" content="#ffffff"> 
+  <meta name="color:PostBackground" content="#F0F0F0"> 
+  <meta name="color:PrimaryColor" content="#17BC00"> 
+  <meta name="color:BaseColor" content="#222222"> 
+  <meta name="font:Title" content="Helvetica"> 
+  <meta name="font:Body" content="Helvetica"> 
+  <meta name="font:Accent" content="Helvetica"> 
+  <meta name="if:Show People I Follow" content="1"> 
+  <meta name="if:Show Tags" content="1"> 
+  <meta name="if:Show Album Art on Audio Posts" content="1"> 
+  <meta name="if:Enable Jump Pagination" content="0"> 
+  <meta name="text:Disqus Shortname" content=""> 
+  <meta name="image:Header" content=""> 
+  <meta name="image:Background" content=""> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta name="keywords" content="recommender system recsys data science hadoop pig python cloud paas"> 
+  <title>Mortar Blog | Data Science at Scale</title> 
+  <meta name="description" content="News, updates, and technical posts on Mortar, data science, data engineering, and the Hadoop ecosystem."> 
+  <link rel="shortcut icon" href="http://33.media.tumblr.com/avatar_86cdaccfcb69_128.png"> 
+  <link rel="apple-touch-icon" href="http://33.media.tumblr.com/avatar_86cdaccfcb69_128.png"> 
+  <link rel="alternate" type="application/rss+xml" href="http://blog.mortardata.com/rss"> 
+  <style type="text/css">
+body {
+    background: #fcfcfd url('http://assets.tumblr.com/images/x.gif?v=1') top left fixed repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}
+.center {
+    text-align:center;
+}
+
+a img {
+    border: none;
+}
+
+#wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 940px;
+}
+
+#wrapper #title {
+    margin: 30px 0;
+    color: #61e738;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    letter-spacing: -1px;
+}
+
+#wrapper #title a {
+    color: #61e738;
+    text-decoration: none;
+}
+
+#wrapper #title a .blog-title-text {
+  font-weight: normal;
+  color: #DDD;
+  font-size: 56px;
+  margin-left: 7px;
+}
+
+#wrapper #title #follow-twitter {
+  float:right;
+  font-weight: normal;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+
+#wrapper #content .post {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    border-bottom: 4px solid #030303;
+    position: relative;
+    overflow:hidden;
+    padding-top:30px;
+    padding-bottom:50px;
+}
+
+#wrapper #content .post:last-of-type {
+    border-bottom: none;
+}
+
+
+#wrapper #content .post .media {
+    position: relative;
+    text-align: center;
+}
+
+#wrapper #content .post .media:hover .audio {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+
+#wrapper #content .post .quotebg {
+    display:none;
+    font-family: georgia, serif;
+    font-size: 150px;
+    color: #030303;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    position: absolute;
+    top: 70px;
+    left: 10px;
+}
+
+#wrapper #content .post .quote {
+    color: #030303;
+    background: #61e738;
+    font-weight: bold;
+    padding: 25px 30px 25px 30px;
+    position: relative;
+    width: 760px;
+}
+
+#wrapper #content .post .quote.short {
+    font-size: 33px;
+    line-height: 35px;
+}
+
+#wrapper #content .post .quote.medium {
+    font-size: 25px;
+    line-height: 28px;
+}
+
+#wrapper #content .post .quote.long {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+#wrapper #content .post .quote_source *:first-child {
+    margin-top: 0px;
+}
+
+#wrapper #content .post .quote_source *:last-child {
+    margin-bottom: 0px;
+}
+
+#wrapper #content .post .quote *:first-child {
+    margin-top: 0px;
+}
+
+#wrapper #content .post .quote *:last-child {
+    margin-bottom: 0px;
+}
+#wrapper #content .post .read_more_container {
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color:rgb(84,84,84);
+}
+#wrapper #content .post .copy {
+    margin: 0px 100px 0px 0px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+    width:540px;
+    float:left;
+    color:rgb(86,86,86);
+}
+#wrapper #content .post .header .date {
+    font-size: 15px;
+    font-weight:bold;
+}
+#wrapper #content .post .author {
+    margin-bottom: 15px;
+    margin-right: 100px;
+    border-bottom: solid 2px black;
+    width: 170px;
+    float: right;
+}
+#wrapper #content .post .author img {
+    width: 50px;
+    height: 60px;
+    margin-bottom:30px;
+}
+
+#wrapper #content .post .meta {
+    float:right;
+    width: 170px;
+    margin-bottom:30px;
+    margin-right: 100px;
+}
+#wrapper #content .post .author h3,
+#wrapper #content .post .meta h3 {
+    font-size:14px;
+    line-height:14px;
+    margin-bottom:15px;
+}
+#wrapper #content .post .tags {
+    color:rgb(23, 188, 0);
+    width:140px;
+}
+#wrapper #content .post .tags a {
+    font-size:12px;
+    line-height:16px;
+    color:rgb(23, 188, 0);
+}
+#wrapper #content .post .sharing-is-caring {
+    margin-top:30px;
+    width:170px;
+}
+#wrapper #content .post .sharing-is-caring a {
+    background-image: url('http://static.tumblr.com/8g3qwvr/qYNmhwsit/sharesprite.png');
+    display:inline-block;
+    margin-right: 20px;
+    width: 15px;
+    height:15px;
+}
+
+#wrapper #content .post .sharing-is-caring #share-twitter {
+    width: 18px;
+    background-position: 0 15px;
+}
+#wrapper #content .post .sharing-is-caring #share-twitter:hover {
+    background-position: 0 0;
+}
+#wrapper #content .post .sharing-is-caring #share-linkedin {
+    background-position: -18px 15px;
+}
+#wrapper #content .post .sharing-is-caring #share-linkedin:hover {
+    background-position: -18px 0;
+}
+#wrapper #content .post .sharing-is-caring #share-gplus {
+    background-position: -33px 15px;
+}
+#wrapper #content .post .sharing-is-caring #share-gplus:hover {
+    background-position: -33px 0;
+}
+
+#wrapper #content .post .quote-copy {
+    margin: 0;
+    background: #61e738;
+    padding: 0 0 30px 30px;
+}
+
+#wrapper #content .post .copy a {
+    color: rgb(23, 188, 0);
+    font-weight:bold;
+}
+#wrapper #content .post .copy a:hover {
+    text-decoration: underline;
+}
+
+#wrapper #content .post .copy p {
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+
+#wrapper #content .post .copy pre {
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    background-color: #e6e6e6;
+    font: normal 13px Courier, monospace;
+    overflow: auto;
+}
+
+#wrapper #content .post .copy > p:first-child {
+    margin-top: 0;
+}
+
+#wrapper #content .post .copy img {
+    max-width: 100%;
+}
+
+#wrapper #content .post .audio {
+    position: absolute;
+    bottom: 0;
+    width: 760px;
+    background: #eaeaea;
+    padding: 30px;
+
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+
+#wrapper #content .post .audio .player {
+    float: left;
+}
+
+#wrapper #content .post .audio .player .audio_player embed {
+    border: 1px solid #c8c8c8;
+}
+
+#wrapper #content .post .audio .meta {
+    padding: 8px 13px;
+    height: 13px;
+    float: left;
+    color: #666;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-transform: lowercase;
+}
+
+#wrapper #content .post .audio .meta a {
+    color: #666;
+    text-decoration: none;
+}
+
+#wrapper #content .post .album_art {
+    text-align: center;
+}
+
+#wrapper #content .post .question {
+    color: #494949;
+    font-size: 16px;
+    font-weight: bold;
+    background: #f1f1f1;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin: 0 0 15px 0;
+    padding: 15px 20px;
+    position: relative;
+}
+
+#wrapper #content .post .question .nipple {
+    width: 13px;
+    height: 7px;
+    background: #f1f1f1 url('http://assets.tumblr.com/themes/redux/ask-mask.png');
+    position: absolute;
+    bottom: -7px;
+    left: 30px;
+}
+
+#wrapper #content .post .asker_container {
+    margin: 0 0 20px 24px;
+}
+
+#wrapper #content .post .asker_container img {
+    margin: 0 12px -7px 0;
+}
+
+#wrapper #content .post .asker_container a.asker {
+    color: ;
+}
+
+#wrapper #content .post .header {
+    color: #030303;
+    background: transparent;
+    font-size: 33px;
+    line-height: 35px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 30px 5px 0;
+    float:left;
+    width: 540px;
+}
+#wrapper #content .post .title a {
+    color: black;
+}
+#wrapper #content .post .title a:hover {
+    text-decoration:none;    
+}
+
+#wrapper #content .post img {
+  width: auto;
+}
+
+#wrapper #content .post .chat {
+    background-color: #fff;
+    border-left: 5px solid #61e738;
+    margin: 0;
+    font-size: 14px;
+}
+
+#wrapper #content .post .chat .lines {
+}
+
+#wrapper #content .post .chat .lines .line {
+    background-color: #eaeaea;
+    color: #494949;
+    margin-bottom: 1px;
+    padding: 5px 5px 5px 27px;
+}
+
+#wrapper #content .post .chat .lines .line.even {
+    background-color: #dedddd;
+}
+
+#wrapper #content .post .link {
+    margin: 25px 30px 25px 30px;
+    font-size: 33px;
+    line-height: 35px;
+}
+
+#wrapper #content .post .link a {
+    color: #61e738;
+}
+
+#wrapper #content .post .link a:hover {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+
+#wrapper #content .footer {
+    background:rgb(23, 188, 0);
+    padding: 30px 0;
+    width:810px;
+    margin-top: 30px;
+    overflow:hidden;
+}
+
+#wrapper #content .footer > div,
+#wrapper #content .footer > a {
+    display:inline-block;
+    vertical-align:middle;
+    text-align:center;
+}
+#wrapper #content .footer .footer-text {
+    font-weight:bold;
+    width:230px;
+    margin-left:80px;
+}
+#wrapper #content .footer a.footer-try-it-free {
+    text-decoration: none;
+    color:black;
+}
+#wrapper #content .footer a.footer-try-it-free:hover {
+    text-decoration:none;
+}
+#wrapper #content .footer .footer-try-it-free {
+    width: 119px;
+    margin-left: 100px;
+    background-color:white;
+    padding:10px 0;
+    border: solid 3px black;
+}
+#wrapper #content .footer .footer-try-it-free:hover {
+    background-color: rgb( 230,230,230);
+}
+#wrapper #content .footer .footer-logo {
+    width:170px;
+    margin-left:95px;
+}
+
+
+#wrapper #content .post .tags .tag-commas:last-child {
+    display: none;
+}
+
+#wrapper #content .post .footer.with_source_url .tags {
+    max-width: 330px;
+    float: left;
+}
+
+#wrapper #content .post .footer.with_source_url .source_url {
+    float: right;
+    max-width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#wrapper #content .post .footer.with_source_url .source_url img {
+    vertical-align: top;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+#wrapper #content .post .footer.with_source_url .source_url:hover img {
+    -moz-opacity: 0.7;
+    opacity: 0.7;
+}
+
+#wrapper #content .post a {
+    color: #030303;
+    text-decoration: none;
+}
+
+#wrapper #content .post .copy blockquote {
+    margin: 10px 0px 10px 10px;
+    padding-left: 15px;
+    border-left: solid 4px #dcdcdc;
+}
+
+#wrapper #content .post .copy blockquote blockquote {
+    border-left: solid 4px #cccccc;
+}
+
+#wrapper #content .post .copy blockquote blockquote blockquote {
+    border-left: solid 4px #bcbcbc;
+}
+
+#wrapper #content .post .copy blockquote blockquote blockquote blockquote {
+    border-left: solid 4px #acacac;
+}
+
+#wrapper #content .post .copy blockquote blockquote blockquote blockquote blockquote {
+    border-left: solid 4px #9c9c9c;
+}
+
+#wrapper #content .post .copy blockquote blockquote blockquote blockquote blockquote blockquote {
+    border-left: solid 4px #8c8c8c;
+}
+
+#wrapper #content .bottom {
+    width: 803px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+#wrapper #content #navigation {
+    text-align: right;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    text-transform: lowercase;
+}
+
+#wrapper #content #navigation a {
+    color: #030303;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#wrapper #content #navigation a:hover {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+
+#wrapper #content #navigation.jump_pagination {}
+
+#wrapper #content #navigation.jump_pagination a {
+    margin: 0 0 0 4px;
+}
+
+#wrapper #content #navigation.jump_pagination .current_page {
+    color: #fff;
+    background-color: rgba(255,255,255, 0.1);
+    border: 2px solid #fff;
+    padding: 3px 8px;
+    margin: 0 0 0 4px;
+    cursor: default;
+}
+
+#wrapper #content #navigation.jump_pagination .jump_page {}
+
+#wrapper #content .post .notecontainer {
+    background: #eaeaea;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+#wrapper #content .post .notecontainer a {
+    color: #666;
+    text-decoration: underline;
+}
+
+#wrapper #content .post .notecontainer ol.notes {
+    padding: 0px 0 10px 0;
+    list-style-type: none;
+    font-size: 11px;
+}
+
+#wrapper #content .post .notecontainer ol.notes li.note {
+    padding: 10px 10px 0 10px;
+}
+
+#wrapper #content .post .notecontainer ol.notes li.note img.avatar {
+    vertical-align: -4px;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+#wrapper #content .post .notecontainer ol.notes li.note span.action {
+    font-weight: normal;
+}
+
+#wrapper #content .post .notecontainer ol.notes li.note .answer_content {
+    font-weight: normal;
+}
+
+#wrapper #content .post .notecontainer ol.notes li.note blockquote {
+    border-left: 2px solid #666;
+    padding: 4px 10px;
+    margin: 10px 0px 0px 25px;
+}
+
+#wrapper #content .post .notecontainer ol.notes li.note blockquote a {
+    text-decoration: none;
+}
+
+#wrapper #content #searchresults {
+    color: #fff;
+    margin: 0 0 15px 0;
+    text-shadow: 1px 3px 5px rgba(0,0,0, 0.5);
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#wrapper #content #searchresults .search_query {
+    font-weight: bold;
+}
+
+#wrapper #content #searchresults .search_query:before {
+    content:'“';
+}
+
+#wrapper #content #searchresults .search_query:after {
+    content:'”';
+}        
+            /** NAV BAR **/
+@font-face {
+  font-family: 'NimbusSansNovusBold';
+  src: url('http://mortardata.com/assets/nimbussannov-bol-webfont.eot');
+  src: url('http://mortardata.com/assets/nimbussannov-bol-webfont.eot?#iefix') format('embedded-opentype'),
+       url('data:font/woff;base64,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') format('woff'),
+       url('http://mortardata.com/assets/nimbussannov-bol-webfont.ttf') format('truetype'),
+       url('http://mortardata.com/assets/nimbussannov-bol-webfont.svg#NimbusSansNovusBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+#logo {
+position: fixed;
+top: 135px;
+left: 30px;
+}
+.mortar_navbar {
+  position: fixed;
+  z-index: 1;
+  top: 235px;
+}
+.mortar_navbar ul {
+  width: 258px;
+  margin: 0;
+  border-top: 1px solid #000000;
+  padding:0;
+}
+.mortar_navbar li {
+  display: block;
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid #000000;
+  padding: 0;
+  width: 258px;
+  height: 30px;
+  background: #f0f0f0;
+}
+.mortar_navbar li .social_media {
+  padding: 0 0 0 30px;
+}
+.mortar_navbar li .social_media a {
+  display:inline-block;
+  vertical-align:middle;
+  margin-right:10px;
+  text-align:center;
+  width:24px;
+}
+.mortar_navbar li .social_media_greeting {
+  color:rgb(74,74,74);
+  padding: 6px 0 3px 30px;
+  height:21px;
+  font-family: "NimbusSansNovusBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 19px;
+}
+.mortar_navbar li .nav_text {
+  position: absolute;
+  z-index: 2;
+  padding: 6px 0 3px 30px;
+  width: 228px;
+  height: 21px;
+  font-family: "NimbusSansNovusBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 19px;
+  color:black;
+}
+.mortar_navbar li:before {
+  content: "";
+}
+.mortar_navbar li:hover {
+  background: #c8c8c8;
+  cursor: pointer;
+}
+.mortar_navbar li.active a {
+  color: #fafafa;
+}
+.mortar_navbar li.active  {
+  background: #464646;
+  color: #fafafa;
+}
+.mortar_navbar li#nav_contact:after {
+  border: 0;
+}
+.mortar_navbar li#nav_try_it {
+  background: #61e738;
+  border-top: 1px solid #BBB;
+  border-bottom: 1px solid #CCC;
+  width: 268px;
+  height: 29px;
+  position: relative;
+  top: -1px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.mortar_navbar li#nav_try_it .nav_text {
+  width: 238px;
+}
+.mortar_navbar li#nav_try_it:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -11px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #464646;
+  border-left: 5px solid #464646;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.mortar_navbar li#nav_try_it a:hover {
+  background: #464646;
+  color: #fafafa;
+}
+.mortar_navbar li.trailing {
+  background: #fafafa;
+  border: none;
+  color: #464646;
+}
+.mortar_navbar li.trailing a {
+  color: #464646;
+  text-decoration: none;
+}
+.mortar_navbar li.trailing a:hover {
+  color: #61e738;
+  text-decoration: none;
+}
+.mortar_navbar li.trailing .about-mortar {
+  padding:6px 0 3px 30px;
+}
+.mortar_navbar li.trailing .about-mortar h5 {
+    letter-spacing: 1px;
+    margin:0;
+}
+.mortar_navbar li.trailing .about-mortar p {
+  font-size: 14px;
+  line-height: 19px;
+  margin: 7px 0;
+}
+.mortar_navbar #request_button {
+  position: absolute;
+  z-index: 3;
+  bottom: -30px;
+  right: -30px;
+  width: 105px;
+  height: 100px;
+  background: transparent url(request_sprite.png) no-repeat 0 0;
+}
+.mortar_navbar #request_button:hover {
+  cursor: pointer;
+  background: transparent url(request_sprite.png) no-repeat 0 -100px;
+}
+
+.mortar-blog {
+    padding:6px 10px 2px 10px;
+    background:black;
+    color:white;
+    font-size: 16px;
+    
+}
+.mortar-blog a {
+    color:white;
+    text-decoration: none;
+}
+
+.header {
+    padding-top: 15px;
+    background:#191919;
+}
+
+.header .container,
+.footer .container {
+    width: 940px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+a.header-link {
+    text-decoration: none;
+}
+.header .logo, 
+.footer .logo img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+.header-link .logo {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-right: 33px;
+    vertical-align:top;
+
+}
+.header-link .tagline {
+    display:inline-block;
+    color: #999;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: NimbusSansNovusBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.header-nav-links {
+    float:right;
+}
+.header-nav-links .nav-link {
+    padding-top: 22px;
+    padding-right: 30px;
+    float: left;
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.header-nav-links .nav-link:hover,
+.header-nav-links .nav-link-active {
+    color:white;
+}
+a.footer-link:hover {
+    color: #9ae300;
+}
+.footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #191919;
+}
+.footer-col {
+    width: 25%;
+    float:left;
+}
+.footer-col.social {
+    width: 33.333%;
+}
+.footer-col.logo {
+    width: 16.666%;
+}
+.footer-col.social a {
+    text-decoration:none;
+    padding-right:20px;
+}
+.footer-link {
+    display: block;
+    color: #d1d1d1;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+
+.mortar-link {
+  text-decoration: none;
+  text-align: center;
+}
+.mortar-button {
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 3px solid #61E738;
+  background-color: #61E738;
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight:normal;
+  font-family: "NimbusSansNovusBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.mortar-button:hover {
+  border-color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+.mortar-button-logo {
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  display: inline;
+  padding-right: 20px;
+  float: right;
+  width:20px
+}
+.mortar-button-text {
+  padding-left: 0px;
+  text-align: center;
+}
+
+            
+    </style> 
+  <!--[if lt IE 7.]>
+        <style type="text/css">
+            #wrapper #sidebar #bottom {
+                background: transparent;
+            }
+
+            #wrapper #sidebar #top #avatar {
+                background: none;
+            }
+
+            #wrapper #sidebar #top #avatar img {
+                border: 5px solid #f1f1f1;
+            }
+
+            #wrapper #sidebar #top .heading#followontumblr {
+                background-image: none;
+                text-indent: 0;
+            }
+
+            #wrapper #sidebar #top .heading#twitter {
+                background-image: none;
+            }
+
+            #wrapper #sidebar #top .heading#following {
+                background-image: none;
+            }
+
+            #wrapper #content .post .audio .player {
+                float: none;
+            }
+
+            #wrapper #content .post .audio .meta {
+                display: none;
+                float: none;
+            }
+        </style>
+    <![endif]--> 
+  <!--[if lt IE 8.]>
+        <style type="text/css">
+            #wrapper #content .bottom {
+                background: transparent;
+            }
+
+            #wrapper #content .post .footer {
+                background: transparent;
+                color: #000;
+            }
+
+            #wrapper #content .post .audio {
+                float: none;
+                background: transparent;
+            }
+
+            #wrapper #content .post .notecontainer .notes {
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    <![endif]--> 
+  <style type="text/css"></style> 
+  <!-- Segment.io --> 
+  <script type="text/javascript">
+window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+window.analytics.load("byw355c3te");
+window.analytics.page();
+</script> 
+  <!-- Code to display github gists --> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script> 
+  <script src="http://static.tumblr.com/fpifyru/VCxlv9xwi/writecapture.js"></script> 
+  <script src="http://static.tumblr.com/fpifyru/AKFlv9zdu/embedgist.js"></script> 
+  <link rel="alternate" href="android-app://com.tumblr/tumblr/x-callback-url/blog?blogName=mortardata"> 
+  <script src="http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=c78ef57bd25c48e7f24a984e7ef6ceba"></script> 
+  <link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3"> 
+  <meta http-equiv="x-dns-prefetch-control" content="off"> 
+  <meta name="keywords" content="Hadoop Weekly,Luigi,data pipelines,open source,product updates"> 
+  <!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+  <!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+  <!-- Read more: http://ogp.me/ -->
+  <meta property="fb:app_id" content="48119224995">
+  <meta property="og:title" content="Mortar Blog">
+  <meta property="og:url" content="http://blog.mortardata.com/?og=1">
+  <meta property="og:description" content="News, updates, and technical posts on Mortar, data science, data engineering, and the Hadoop...">
+  <meta property="og:type" content="tumblr-feed:tumblelog">
+  <meta property="og:image" content="http://33.media.tumblr.com/avatar_86cdaccfcb69_128.png">
+  <meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=mortardata">
+  <meta property="al:ios:app_name" content="Tumblr">
+  <meta property="al:ios:app_store_id" content="305343404">
+  <meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=mortardata">
+  <meta property="al:android:app_name" content="Tumblr">
+  <meta property="al:android:package" content="com.tumblr">
+  <!-- END TUMBLR FACEBOOK OPENGRAPH TAGS --> 
+  <!-- TWITTER TAGS -->
+  <meta charset="utf-8">
+  <meta name="twitter:site" content="tumblr">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="mortardata">
+  <meta name="twitter:description" content="                                                                                                                                                                                                        News, updates, and technical posts on Mortar, data science, data engineering, and the Hadoop ecosystem.">
+  <meta name="twitter:app:name:iphone" content="Tumblr">
+  <meta name="twitter:app:name:ipad" content="Tumblr">
+  <meta name="twitter:app:name:googleplay" content="Tumblr">
+  <meta name="twitter:app:id:iphone" content="305343404">
+  <meta name="twitter:app:id:ipad" content="305343404">
+  <meta name="twitter:app:id:googleplay" content="com.tumblr">
+  <meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=mortardata&amp;referrer=twitter-cards">
+  <meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=mortardata&amp;referrer=twitter-cards">
+  <meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=mortardata&amp;referrer=twitter-cards"> 
+ </head> 
+ <body> 
+  <div class="header"> 
+   <div class="container"> 
+    <a class="header-link" href="http://www.mortardata.com" target="_blank"> <img alt="Mortar-logo%402x" class="logo" src="http://static.tumblr.com/8g3qwvr/1qKmsasz4/mortar-logo_2x.png" width="130"> </a> 
+    <div class="header-nav-links"> 
+     <a href="https://www.mortardata.com/platform" target="_self" class="nav-link">Platform</a> 
+     <a href="https://help.mortardata.com" target="_self" class="nav-link">Docs</a> 
+     <a href="/" class="nav-link nav-link-active">Blog</a> 
+     <a href="https://app.mortardata.com/login" target="_self" class="nav-link">Log In</a> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="wrapper"> 
+   <div id="content"> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/103458657976/hadoop-weekly-november-24-2014">Hadoop Weekly - November 24, 2014</a> 
+      </div> 
+      <div class="date">
+       November 24, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span>Lots of news out of Europe this week as both StrataConf Barcelona and ApacheCon EU took place. In addition to several interesting presentations from those conferences, this week’s issue contains several articles on Spark and YARN. Also, Stripe has open-sourced four Hadoop tools, and there were releases from open-source projects Apache Pig and Apache Chukwa as well as vendor releases by Splice Machine and HP’s Vertica. One quick editorial note—with the short week in the US for Thanksgiving, I’m going to skip next week’s issue and resume with issue #98 on December 7th.</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/103458657976/hadoop-weekly-november-24-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/103458657976/hadoop-weekly-november-24-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/103458657976/hadoop-weekly-november-24-2014&amp;title=Hadoop Weekly - November 24, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/103458657976/hadoop-weekly-november-24-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/102865723576/hadoop-weekly-november-17-2014">Hadoop Weekly - November 17, 2014</a> 
+      </div> 
+      <div class="date">
+       November 17, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span>Big news this week out of Palo Alto as Hortonworks has filed paperwork for an initial public offering. There were also a number of notable releases this week, including Apache Hive 0.14.0. Technical posts cover a large number of ecosystem topics, including Apache Sqoop, Apache Drill, and Apache Pig. There’s a lot of breadth in this issue, so there should be something for everyone!</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/102865723576/hadoop-weekly-november-17-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/102865723576/hadoop-weekly-november-17-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/102865723576/hadoop-weekly-november-17-2014&amp;title=Hadoop Weekly - November 17, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/102865723576/hadoop-weekly-november-17-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/102281398306/hadoop-weekly-november-10-2014">Hadoop Weekly - November 10, 2014</a> 
+      </div> 
+      <div class="date">
+       November 10, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span>This week’s issue has great technical content including articles about data infrastructure from small companies, Buffer and Asana, to a large company, Facebook (and their big data challenges). There’s also coverage of a diverse set of topics related to YARN - Kafka on YARN, a comparison of YARN and Mesos, and the YARN timeline server. In industry news, Databricks recent sort benchmarking results have earned a tie for first place in this year’s Daytona GraySort contest.</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/102281398306/hadoop-weekly-november-10-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/102281398306/hadoop-weekly-november-10-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/102281398306/hadoop-weekly-november-10-2014&amp;title=Hadoop Weekly - November 10, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/102281398306/hadoop-weekly-november-10-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/101947952581/pig-on-spark">Pig on Spark: Video + slides from Mayur Rustagi’s talk</a> 
+      </div> 
+      <div class="date">
+       November 6, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <h3><a href="http://mortardata.com/about" target="_self">John Matson</a></h3> 
+      <a href="http://mortardata.com/about" target="_self"> <img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></a> 
+     </div> 
+     <div class="copy"> 
+      <p> During the recent Strata + Hadoop World conference in New York, we hosted a meetup of <a href="http://www.meetup.com/NYC-Pig-User-Group/" target="_blank">the NYC Pig User Group</a>. Among the data-minded folks in town for the week was <a href="http://www.sigmoidanalytics.com/" target="_blank">Sigmoid Analytics</a> co-founder Mayur Rustagi, who gave a talk updating the group on the Pig-on-Spark initiative. </p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/101947952581/pig-on-spark" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/apache-pig">apache pig</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/apache-spark">apache spark</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/NYC-Pig-User-Group-Meetup">NYC Pig User Group Meetup</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/Mayur-Rustagi">Mayur Rustagi</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/Sigmoid-Analytics">Sigmoid Analytics</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/open-source">open source</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/101947952581/pig-on-spark" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/101947952581/pig-on-spark&amp;title=Pig on Spark: Video + slides from Mayur Rustagi’s talk" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/101947952581/pig-on-spark" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/101676100476/hadoop-weekly-november-3-2014">Hadoop Weekly - November 3, 2014</a> 
+      </div> 
+      <div class="date">
+       November 3, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span>Hadoop in the cloud (both open and public) is a big topic again this week. There are articles on Hortonworks’ HDP in the Microsoft Azure cloud, Cloudera’s new cloud provisioning tool Cloudera Director, OpenShift, and SequenceIQ’s Cloudbreak. Also, there are several articles this week on Hadoop adoption, which seems to be limited by maturity of enterprise features. Finally, Kafka released version 0.8.2-beta this week, and a new project aims to provide higher throughput from Kafka for MapReduce jobs.</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/101676100476/hadoop-weekly-november-3-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/101676100476/hadoop-weekly-november-3-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/101676100476/hadoop-weekly-november-3-2014&amp;title=Hadoop Weekly - November 3, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/101676100476/hadoop-weekly-november-3-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/101098588221/hadoop-weekly-october-27-2014">Hadoop Weekly - October 27, 2014</a> 
+      </div> 
+      <div class="date">
+       October 27, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span>Given the torrent of Strata + Hadoop World news last week, it’s no surprise that this week’s edition is a bit shorter than normal. With that said, the amount and quality of technical content in this edition is above average—posts on Storm, HBase, HDFS metadata, Docker-in-YARN, and much more. Security is also a hot topic this week—in addition to technical posts, Cloudera announced that Cloudera Enterprise has achieved PCI compliance.</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/101098588221/hadoop-weekly-october-27-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/101098588221/hadoop-weekly-october-27-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/101098588221/hadoop-weekly-october-27-2014&amp;title=Hadoop Weekly - October 27, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/101098588221/hadoop-weekly-october-27-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/100517410856/r-hadoop-python-data-pipelines">R You Experienced?</a> 
+      </div> 
+      <div class="date">
+       October 20, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <h3>John Matson</h3> 
+      <img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"> 
+     </div> 
+     <div class="copy"> 
+      <center>
+       <img src="https://31.media.tumblr.com/2245bd27b855fbed292eab4c9088c221/tumblr_inline_ndrayw749z1rtny8t.png">
+      </center> 
+      <p>Are you a Pythonista, or are you an R devotee? Are you all about ggplot2, or do you entrust your visuals to matplotlib?</p> 
+      <p>With Mortar, it doesn’t matter which camp you belong to. That’s because we have just added R support, so that you can readily access all your favorite technologies on the Mortar platform. </p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/100517410856/r-hadoop-python-data-pipelines" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/R">R</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/product-updates">product updates</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/Luigi">Luigi</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/data-pipelines">data pipelines</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/automation">automation</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/100517410856/r-hadoop-python-data-pipelines" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/100517410856/r-hadoop-python-data-pipelines&amp;title=R You Experienced?" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/100517410856/r-hadoop-python-data-pipelines" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/100496699801/hadoop-weekly-october-20-2014">Hadoop Weekly - October 20, 2014</a> 
+      </div> 
+      <div class="date">
+       October 20, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span>With Strata + Hadoop World this week, there were a number of partnership announcements and software releases. Among them, Cloudera and Hortonworks released new versions of their distributions, MapR is bundling MapR-DB with their community edition, and Pivotal announced plans for the Tachyon project. There are also several good technical posts this week covering Sqoop, Kafka, Presto, Hive, and Scala as a language for data processing. I tried to cover the key news from the week but likely missed some stories given the Strata + Hadoop World tsunami. Please let me know if there’s something you think should be in next week’s newsletter.</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/100496699801/hadoop-weekly-october-20-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/100496699801/hadoop-weekly-october-20-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/100496699801/hadoop-weekly-october-20-2014&amp;title=Hadoop Weekly - October 20, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/100496699801/hadoop-weekly-october-20-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/99997015326/using-data-for-good-jake-porway-talk-video">Using Data for Good: Jake Porway Talk [Video, Slides, and Transcript]</a> 
+      </div> 
+      <div class="date">
+       October 14, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <h3>John Matson</h3> 
+      <img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"> 
+     </div> 
+     <div class="copy"> 
+      <p>Recently <a href="https://twitter.com/jakeporway" target="_blank">Jake Porway</a>, the founder and executive director of <a href="http://www.datakind.org/" target="_blank">DataKind</a>, visited the NYC Data Science meetup to talk about his organization’s work using data for good. DataKind is a nonprofit that pairs data scientists with mission-driven organizations, and Jake gave a few examples of fruitful efforts that mapped indicators of childhood wellbeing in Washington, D.C., or figured out whether widespread tree-pruning makes New Yorkers any safer.</p> 
+      <p>Jake also spoke about some of the lessons learned in working with myriad organizations where data science has not historically been a priority, and closed with some thoughts about the promise and potential pitfalls of data science.</p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/99997015326/using-data-for-good-jake-porway-talk-video" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/NYC-Data-Science-Meetup">NYC Data Science Meetup</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/Jake-Porway">Jake Porway</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/Datakind">Datakind</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/99997015326/using-data-for-good-jake-porway-talk-video" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/99997015326/using-data-for-good-jake-porway-talk-video&amp;title=Using Data for Good: Jake Porway Talk [Video, Slides, and Transcript]" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/99997015326/using-data-for-good-jake-porway-talk-video" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/99922239466/mortar-luigi-the-best-way-to-build-data">Mortar + Luigi: The Best Way to Build Data Pipelines Has Arrived</a> 
+      </div> 
+      <div class="date">
+       October 13, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <h3>John Matson</h3> 
+      <img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"> 
+     </div> 
+     <div class="copy"> 
+      <img src="https://31.media.tumblr.com/01b62e54324b202c2754ac47fcc1e027/tumblr_inline_ndczhpd1f61rtny8t.png">
+      <p>At Mortar, we’re all about providing our users with versatile, powerful, easy-to-use tools that enable them to solve thorny data challenges. And few tools meet that description as well as Luigi, the open-source framework for building scalable, resilient data pipelines.</p> 
+      <p>So today we’re proud to announce that <a href="https://help.mortardata.com/technologies/luigi" target="_blank">Luigi has been fully integrated into Mortar</a>. Our users can now seamlessly use Luigi within the Mortar platform to develop complex data pipelines using Hadoop or non-Hadoop technologies, deploy those pipelines to run in the cloud with a single command, and then monitor their progress with the Mortar web app.</p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/99922239466/mortar-luigi-the-best-way-to-build-data" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/product-updates">product updates</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/Luigi">Luigi</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/open-source">open source</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/Spotify">Spotify</a>
+       <span class="tag-commas">,</span> 
+       <a href="http://blog.mortardata.com/tagged/data-pipelines">data pipelines</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/99922239466/mortar-luigi-the-best-way-to-build-data" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/99922239466/mortar-luigi-the-best-way-to-build-data&amp;title=Mortar + Luigi: The Best Way to Build Data Pipelines Has Arrived" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/99922239466/mortar-luigi-the-best-way-to-build-data" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/99905761111/hadoop-weekly-october-13-2014">Hadoop Weekly - October 13, 2014</a> 
+      </div> 
+      <div class="date">
+       October 13, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span>With Strata+Hadoop World taking place this week in New York, we can expect to see a lot of announcements. But a number of folks have jumped out ahead of the conference, and there are several partnership and technical announcements in this week’s issue. On the technical side, Databricks posted a benchmark for terasort on Spark, and eBay has open-sourced Kylin, their Hadoop OLAP system. If you’re in NYC for Strata+Hadoop World, be sure to check out some of the 14 meetups happening this week!</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/99905761111/hadoop-weekly-october-13-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/99905761111/hadoop-weekly-october-13-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/99905761111/hadoop-weekly-october-13-2014&amp;title=Hadoop Weekly - October 13, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/99905761111/hadoop-weekly-october-13-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/99315247216/hadoop-weekly-october-6-2014">Hadoop Weekly - October 6, 2014</a> 
+      </div> 
+      <div class="date">
+       October 6, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span> It’s a relatively quiet week with only two releases (the calm before the Strata + Hadoop World storm?). In the technical and news areas, two themes are playing out this week. First, there is a lot of great content on stream processing frameworks—namely Storm and Spark streaming. Second, there are several articles about integration YARN with other systems and frameworks (OpenStack, Mesos, AWS). There are also pieces on Spark MLlib, RStudio on Amazon EMR, and the cost-based optimizer for Hive—something for everyone.</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/99315247216/hadoop-weekly-october-6-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/99315247216/hadoop-weekly-october-6-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/99315247216/hadoop-weekly-october-6-2014&amp;title=Hadoop Weekly - October 6, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/99315247216/hadoop-weekly-october-6-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/98734692561/hadoop-weekly-september-29-2014">Hadoop Weekly - September 29, 2014</a> 
+      </div> 
+      <div class="date">
+       September 29, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span> This week’s issue has a lot of great content. It includes new open-source projects from Netflix and LinkedIn, several articles about Apache Spark (including details from Hortonworks on their plans for it), and news on Cascading on Tez. There’s also coverage of news in the ecosystem and several additional releases.</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/98734692561/hadoop-weekly-september-29-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/98734692561/hadoop-weekly-september-29-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/98734692561/hadoop-weekly-september-29-2014&amp;title=Hadoop Weekly - September 29, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/98734692561/hadoop-weekly-september-29-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/98145516891/hadoop-weekly-september-22-2014">Hadoop Weekly - September 22, 2014</a> 
+      </div> 
+      <div class="date">
+       September 22, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span>This weeks issues includes a number of posts covering the recently released Apache Spark 1.1, Apache Drill 0.5.0-incubating, and Apache Tez 0.5.0. In addition, there’s a look at Hadoop in the healthcare industry, a look at ORCFile for non-Hive workloads, instructions for building a Hadoop setup on Mac, and more. The amount of content this week shows that we’re past the summer lull, and I expect to see lots more great content this fall.</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/98145516891/hadoop-weekly-september-22-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/98145516891/hadoop-weekly-september-22-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/98145516891/hadoop-weekly-september-22-2014&amp;title=Hadoop Weekly - September 22, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/98145516891/hadoop-weekly-september-22-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post"> 
+     <div class="header"> 
+      <div class="title"> 
+       <a href="http://blog.mortardata.com/post/97563414991/hadoop-weekly-september-15-2014">Hadoop Weekly - September 15, 2014</a> 
+      </div> 
+      <div class="date">
+       September 15, 2014
+      </div> 
+     </div> 
+     <div class="author"> 
+      <p><img alt="image" src="http://mortardata.com/assets/team-blog/John_Matson.png"></p> 
+     </div> 
+     <div class="copy"> 
+      <p><em>Hadoop Weekly is a recurring guest post by&nbsp;<a href="http://www.crobak.org/" target="_blank">Joe Crobak</a>. Joe is a software engineer focused on Hadoop and analytics. You can follow Joe on Twitter at&nbsp;<a href="https://twitter.com/joecrobak" target="_blank">@joecrobak</a>.</em></p> 
+      <p><span><span>There were several releases in the Hadoop ecosystem this week, including Apache Hadoop 2.5.1 and Apache Spark 1.1.0. There’s a lot of interesting technical content, including testing HBase’s consistency with Jepsen and an in-depth look at an end-to-end big data infrastructure with Hadoop. On that node, there’s an interesting look into the growing demand for Data Engineers to build out Hadoop infrastructure.</span></span></p> 
+     </div> 
+     <p class="read_more_container"><a href="http://blog.mortardata.com/post/97563414991/hadoop-weekly-september-15-2014" class="read_more">Read More</a></p> 
+     <div class="meta"> 
+      <h3>Tags</h3> 
+      <div class="tags"> 
+       <a href="http://blog.mortardata.com/tagged/Hadoop-Weekly">Hadoop Weekly</a>
+       <span class="tag-commas">,</span> 
+      </div> 
+      <div class="sharing-is-caring"> 
+       <a id="share-twitter" href="http://www.twitter.com/share?url=http://blog.mortardata.com/post/97563414991/hadoop-weekly-september-15-2014" target="_blank"></a> 
+       <a id="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.mortardata.com/post/97563414991/hadoop-weekly-september-15-2014&amp;title=Hadoop Weekly - September 15, 2014" target="_blank"></a> 
+       <a id="share-gplus" href="https://plus.google.com/share?url=http://blog.mortardata.com/post/97563414991/hadoop-weekly-september-15-2014" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="navigation"> 
+     <a href="/page/2">Next page →</a> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="footer"> 
+   <div class="container"> 
+    <div class="footer-col"> 
+     <a class="footer-link" href="https://www.mortardata.com/" target="_self">Home</a> 
+     <a class="footer-link" href="https://www.mortardata.com/platform">Platform</a> 
+     <a class="footer-link" href="/" target="_self">Blog</a> 
+     <a class="footer-link" href="https://www.mortardata.com/press">Press</a> 
+     <a class="footer-link" href="https://www.mortardata.com/security">Security</a> 
+    </div> 
+    <div class="footer-col"> 
+     <a class="footer-link" href="https://help.mortardata.com" target="_blank">Documentation</a> 
+     <a class="footer-link" href="https://answers.mortardata.com">Q&amp;A</a> 
+     <a class="footer-link" href="http://mortar-framework.org" target="_blank">Open-source framework</a> 
+     <a class="footer-link" href="mailto:jobs@mortardata.com?subject=Jobs: Tell us about yourself." target="_blank">Jobs</a> 
+     <a class="footer-link" href="https://www.mortardata.com/faq" target="_blank">FAQ</a> 
+    </div> 
+    <div class="footer-col social"> 
+     <a href="http://twitter.com/mortardata" target="_blank"> <img src="http://static.tumblr.com/8g3qwvr/C1lmsazzl/twitter-_2x.png" width="22"> </a> 
+     <a href="http://www.linkedin.com/company/mortar-data-inc." target="_blank"> <img src="http://static.tumblr.com/8g3qwvr/katmsb02j/linkedin-_2x.png" width="22"> </a> 
+     <a href="https://github.com/mortardata" target="_blank"> <img src="http://static.tumblr.com/8g3qwvr/jWnmsb03b/octocat-_2x.png" width="22"> </a> 
+     <a href="mailto:teammortar@mortardata.com" target="_blank"> <img src="http://static.tumblr.com/8g3qwvr/AAGmsb04i/e_2x.png" width="22"> </a> 
+    </div> 
+    <div class="footer-col logo"> 
+     <img alt="Mortar-m-green-small" class="footer-logo" src="https://31.media.tumblr.com/3d351d5e56c829fbc7f5b7201bde7f43/tumblr_inline_n4340q9che1rtny8t.png"> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- BEGIN TUMBLR CODE -->
+  <iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe>
+  <script type="text/javascript">
+    (function(){
+        var analytics_frame = document.getElementById('ga_target');
+        var analytics_iframe_loaded;
+        var user_logged_in;
+        var blog_is_nsfw = 'No';
+        var addthis_enabled = false;
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent,function(e) {
+            var message = (e.data && e.data.split) ? e.data.split(';') : '';
+            switch (message[0]) {
+                case 'analytics_iframe_loaded':
+                    analytics_iframe_loaded = true;
+                    postCSMessage();
+                    postGAMessage();
+                    postATMessage();
+                    break;
+                case 'user_logged_in':
+                    user_logged_in = message[1];
+                    postGAMessage();
+                    postATMessage();
+                    break;
+            }
+        }, false);
+
+        analytics_frame.src = "https://secure.assets.tumblr.com/analytics.html?a57a7a4b4579d695d8e64bdfee554a5e#http://blog.mortardata.com";
+        function postGAMessage() {
+            if (analytics_iframe_loaded && user_logged_in) {
+                var is_ajax = false;
+                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/?route=%2F'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postCSMessage() {
+            COMSCORE = true;
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }
+        function postATMessage() {
+            if (addthis_enabled && analytics_iframe_loaded) {
+                analytics_frame.contentWindow.postMessage('enable_addthis', analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+    })();
+</script>
+  <script type="text/javascript">!function(s){s.src='https://www.tumblr.com/impixu?T=1417768889&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5tb3J0YXJkYXRhLmNvbVwvIiwicmVxdHlwZSI6MCwicm91dGUiOiJcLyJ9&U=GILJFCLHJF&K=8fa5767c8f77791fcf59354c04295b7cf7b98df6441478e1e61213d3f0e9c3b2&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script>
+  <noscript>
+   <img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://www.tumblr.com/impixu?T=1417768889&amp;J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5tb3J0YXJkYXRhLmNvbVwvIiwicmVxdHlwZSI6MCwicm91dGUiOiJcLyIsIm5vc2NyaXB0IjoxfQ==&amp;U=GILJFCLHJF&amp;K=8631d498f5ed2998978322bef55f9f923a3571535c6384a77608915848115397&amp;R=">
+  </noscript>
+  <script type="text/javascript">!function(s){s.src='https://www.tumblr.com/impixu?T=1417768889&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cubW9ydGFyZGF0YS5jb21cLyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC8iLCJwb3N0cyI6W3sicG9zdGlkIjoiMTAzNDU4NjU3OTc2IiwiYmxvZ2lkIjoiNjM5ODUyMTgiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEwMjg2NTcyMzU3NiIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMDIyODEzOTgzMDYiLCJibG9naWQiOiI2Mzk4NTIxOCIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTAxOTQ3OTUyNTgxIiwiYmxvZ2lkIjoiNjM5ODUyMTgiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEwMTY3NjEwMDQ3NiIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMDEwOTg1ODgyMjEiLCJibG9naWQiOiI2Mzk4NTIxOCIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTAwNTE3NDEwODU2IiwiYmxvZ2lkIjoiNjM5ODUyMTgiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEwMDQ5NjY5OTgwMSIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5OTk5NzAxNTMyNiIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5OTkyMjIzOTQ2NiIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5OTkwNTc2MTExMSIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5OTMxNTI0NzIxNiIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5ODczNDY5MjU2MSIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5ODE0NTUxNjg5MSIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5NzU2MzQxNDk5MSIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM31dfQ==&U=FPGEAELFKN&K=293a9d98f61c14d40eeff749e1aeddb8722dcc6a4f4398f2a548ec5cd55160eb&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script>
+  <noscript>
+   <img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://www.tumblr.com/impixu?T=1417768889&amp;J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cubW9ydGFyZGF0YS5jb21cLyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC8iLCJwb3N0cyI6W3sicG9zdGlkIjoiMTAzNDU4NjU3OTc2IiwiYmxvZ2lkIjoiNjM5ODUyMTgiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEwMjg2NTcyMzU3NiIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMDIyODEzOTgzMDYiLCJibG9naWQiOiI2Mzk4NTIxOCIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTAxOTQ3OTUyNTgxIiwiYmxvZ2lkIjoiNjM5ODUyMTgiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEwMTY3NjEwMDQ3NiIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiIxMDEwOTg1ODgyMjEiLCJibG9naWQiOiI2Mzk4NTIxOCIsInNvdXJjZSI6MzN9LHsicG9zdGlkIjoiMTAwNTE3NDEwODU2IiwiYmxvZ2lkIjoiNjM5ODUyMTgiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjEwMDQ5NjY5OTgwMSIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5OTk5NzAxNTMyNiIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5OTkyMjIzOTQ2NiIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5OTkwNTc2MTExMSIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5OTMxNTI0NzIxNiIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5ODczNDY5MjU2MSIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5ODE0NTUxNjg5MSIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM30seyJwb3N0aWQiOiI5NzU2MzQxNDk5MSIsImJsb2dpZCI6IjYzOTg1MjE4Iiwic291cmNlIjozM31dLCJub3NjcmlwdCI6MX0=&amp;U=FPGEAELFKN&amp;K=2a48a4ee92f6ec39610b2532cb9799cfffbc4a1b1330665edbe97d37d7bc787b&amp;R=">
+  </noscript>
+  <script>
+                (function() {
+                    var s = document.createElement('script');
+                    var el = document.getElementsByTagName('script')[0];
+                                            s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://l') + '.yimg.com/ss/rapid-3.18.1.js';
+                                        s.onload = function(){
+                        var YAHOO = window.YAHOO;
+                        if (YAHOO) {
+                            var keys = {
+                                pd:'/',
+                                _li:0,
+                                b_id:63985218,
+                                i_rad:0,
+                                i_strm:0
+                            };
+                            var conf = {
+                                                                spaceid:1197716038,
+                                client_only:1,
+                                yql_enabled:false,
+                                keys:keys,
+                                nol:1
+                            };
+                            YAHOO.rapid = new YAHOO.i13n.Rapid(conf);
+                        }
+                    };
+                    el.parentNode.insertBefore(s, el);
+                })();
+            </script>
+  <iframe id="tumblr_controls" class="tumblr_controls" width="1" height="1" frameborder="0" scrolling="no" src="https://secure.assets.tumblr.com/assets/html/iframe/o.html?_v=e62bb39e803951fade52d018c6a0056f#src=http%3A%2F%2Fblog.mortardata.com%2F&amp;lang=en_US&amp;name=mortardata&amp;brag=false&amp;avatar=http%3A%2F%2F38.media.tumblr.com%2Favatar_86cdaccfcb69_64.png&amp;title=Mortar+Blog&amp;url=http%3A%2F%2Fblog.mortardata.com%2F&amp;page_slide=slide"></iframe>
+  <div id="teaser_iframe_container" style="display:none;">
+   <iframe scrolling="no" frameborder="0" src="https://www.tumblr.com/assets/html/iframe/teaser.html?_v=391d2e8bd72c4cb84fec0fda964697d3#src=http%3A%2F%2Fblog.mortardata.com%2F&amp;lang=en_US&amp;name=mortardata&amp;brag=false&amp;avatar=http%3A%2F%2F38.media.tumblr.com%2Favatar_86cdaccfcb69_64.png&amp;title=Mortar+Blog&amp;url=http%3A%2F%2Fblog.mortardata.com%2F&amp;page_slide=slide" id="teaser_iframe" width="1" height="1"></iframe>
+  </div>
+  <script type="text/javascript">
+    (function(Tumblr){
+        var follow_iframe_initialized = false;
+        if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {
+            // Don't do anything until the first initialize event
+            Tumblr.PostMessageListener.initialize(function(message, origin) {
+                if (follow_iframe_initialized || message.length < 2) return;
+
+                if (message[0] === 'follow_iframe' && message[1] === 'enable') {
+                    Tumblr.FollowTeaser.current_page = 1;
+                    Tumblr.FollowTeaser.infer_infinite_scroll = true;
+                    Tumblr.FollowTeaser.create_from_tumblr_controls("http:\/\/assets.tumblr.com\/assets\/html\/iframe\/follow.html?_v=3f7aaadc4834fb52a1754e9878721fe6");
+                    Tumblr.FollowTeaser.scroll_listener(true);
+                    follow_iframe_initialized = true;
+                }
+            });
+        }
+    })(this.Tumblr || (this.Tumblr = {}));
+</script>
+  <!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]-->
+  <!-- END TUMBLR CODE -->   
+ </body>
+</html>

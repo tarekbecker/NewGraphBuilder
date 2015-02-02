@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>High performance graph analytics</title> 
+  <link rel="icon" href="http://sparqlcity.com/content/themes/spearca-dist_prod/favico.ico" type="image/x-icon"> 
+  <!-- For third-generation iPad with high-resolution Retina display: --> 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://sparqlcity.com/content/themes/spearca-dist_prod/img/icons/apple-touch-icon-144x144-precomposed.png"> 
+  <!-- For iPhone with high-resolution Retina display: --> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://sparqlcity.com/content/themes/spearca-dist_prod/img/icons/apple-touch-icon-114x114-precomposed.png"> 
+  <!-- For first- and second-generation iPad: --> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://sparqlcity.com/content/themes/spearca-dist_prod/img/icons/apple-touch-icon-72x72-precomposed.png"> 
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --> 
+  <link rel="apple-touch-icon-precomposed" href="http://sparqlcity.com/content/themes/spearca-dist_prod/img/icons/apple-touch-icon-precomposed.png"> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://sparqlcity.com/xmlrpc.php"> 
+  <link rel="publisher" href="https://plus.google.com/+Sparqlcity"> 
+  <meta name="copyright" content="SPARQLcity, inc. Copyright (c) 2014"> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.7.1 - https://yoast.com/wordpress/plugins/seo/ --> 
+  <meta name="description" content="Analyze diverse datasets in the SPARQLverse to find connections that span data types and time. Implement SPARQLverse in minutes. No waiting. No limits"> 
+  <link rel="canonical" href="http://sparqlcity.com/"> 
+  <link rel="publisher" href="https://plus.google.com/+Sparqlcity"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="High performance graph analytics"> 
+  <meta property="og:description" content="Analyze diverse datasets in the SPARQLverse to find connections that span data types and time. Implement SPARQLverse in minutes. No waiting. No limits"> 
+  <meta property="og:url" content="http://sparqlcity.com/"> 
+  <meta property="og:site_name" content="SPARQLcity"> 
+  <script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "http://sparqlcity.com/", "potentialAction": { "@type": "SearchAction", "target": "http://sparqlcity.com/?s={search_term}", "query-input": "required name=search_term" } }</script> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="alternate" type="application/rss+xml" title="SPARQLcity » Feed" href="http://sparqlcity.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="SPARQLcity » Comments Feed" href="http://sparqlcity.com/comments/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="SPARQLcity » Front Comments Feed" href="http://sparqlcity.com/front/feed/"> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://sparqlcity.com/content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="cptch_stylesheet-css" href="http://sparqlcity.com/content/plugins/captcha/css/style.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="woocommerce-layout-css" href="//sparqlcity.com/content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=2.1.12" type="text/css" media="all"> 
+  <link rel="stylesheet" id="woocommerce-smallscreen-css" href="//sparqlcity.com/content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=2.1.12" type="text/css" media="only screen and (max-width: 768px)"> 
+  <link rel="stylesheet" id="woocommerce-general-css" href="//sparqlcity.com/content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.1.12" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wc-paypal-pro-css" href="http://sparqlcity.com/content/plugins/woocommerce-gateway-paypal-pro/assets/css/checkout.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="spearca-style-css" href="http://sparqlcity.com/content/themes/spearca-dist_prod/style.css?ver=1.2.7" type="text/css" media="all"> 
+  <!-- This site uses the Yoast Google Analytics plugin v5.1.4 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ --> 
+  <script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-46717193-2']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script> 
+  <!-- / Yoast Google Analytics --> 
+  <script type="text/javascript" src="/content/themes/spearca-dist_prod/scripts/vendor/modernizr/modernizr.js?ver=2014-07-01"></script> 
+  <link rel="shortlink" href="http://sparqlcity.com"> 
+  <!-- Stream WordPress user activity plugin v1.4.9 --> 
+  <style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style> 
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> 
+ </head> 
+ <body vocab="http://schema.org/" typeof="Organization" class="home page page-id-676 page-template-default" itemscope itemtype="http://schema.org/Corporation"> 
+  <div class="row fullwidthrow banner-front"> 
+   <div class="small-12 columns"> 
+    <div class="row"> 
+     <div class="hero-front"> 
+      <i class="banner-front-text" alt="Enterprise meet Graph Analytics"></i> 
+     </div> 
+     <div class="product-introduction"> 
+      <ul class="fa-ul product-introduction-item-wrap"> 
+       <li class="product-introduction-item-first">A Graph Analytical Engine With...</li> 
+       <li class="product-introduction-item"> <i class="fa fa-li fa-check-square-o"></i> The Scalability of Hadoop </li> 
+       <li class="product-introduction-item"> <i class="fa fa-li fa-check-square-o"></i> The Speed of Leading Analytic Databases </li> 
+       <li class="product-introduction-item-last"> <i class="fa fa-li fa-check-square-o"></i> The Ease of Use of a SQL-like Standard </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="contain-to-grid sticky nav-main"> 
+   <nav class="top-bar" data-topbar="" data-options="is_hover: true; back_text: « back"> 
+    <ul class="title-area"> 
+     <li class="name"> <h1> <a href="/" class="hide-for-small"> <img src="/shared/SPARQLcity/logo_reversed_small1.png" alt="SPARQLCity"> </a> <a href="#" class="show-for-small-only toggle-topbar" style="position:relative"> <img src="http://sparqlcity.com/content/themes/spearca-dist_prod/img/brandmark-nav.png" alt="Brandmark for SPARQLCity"> </a> </h1> </li> 
+     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> 
+    </ul> 
+    <section class="top-bar-section"> 
+     <!-- <ul class="right show-for-medium-up"><li><a href="http://twitter.com/sparqlcity" target="_blank"><i class="fa fa-twitter"></i></a></li></ul> --> 
+     <ul id="menu-primary-menu" class=""> 
+      <li class="show-for-small-only"><a href="/">Front</a></li> 
+      <li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-513"><a href="/product" class="nav-main-link-default">Product</a></li> 
+      <li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-513"><a href="/use-cases" class="nav-main-link-default">Use Cases</a></li> 
+      <li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-513"><a href="/why-sparql" class="nav-main-link-default">Why SPARQL?</a></li> 
+      <li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-513"><a href="/support" class="nav-main-link-default">Support</a></li> 
+      <li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-dropdown not-click menu-item-513"><a href="/about-us" class="nav-main-link-default">About Us</a> 
+       <ul class="dropdown"> 
+        <li id="menu-item-514" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-514"><a href="/about-us#news">News</a></li> 
+        <li id="menu-item-514" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-514"><a href="/about-us#history">History</a></li> 
+        <li id="menu-item-514" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-514"><a href="/about-us#leadership">Leadership</a></li> 
+        <li id="menu-item-514" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-514"><a href="/about-us#contact">Contact Us</a></li> 
+        <li id="menu-item-514" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-514"><a href="/about-us#careers">Careers</a></li> 
+       </ul> </li> 
+      <!-- <li class="show-for-small-only"> --> 
+      <!-- <a href="http://twitter.com/sparqlcity" target="_blank">Twitter</a> --> 
+      <!-- </li> --> 
+     </ul> 
+    </section> 
+   </nav> 
+  </div> 
+  <div class="row callout-usp-front-statement-wrapper content-section"> 
+   <!-- <div class="large-7 large-uncentered small-10 small-centered columns callout-usp-front-statement"> --> 
+   <div class="large-uncentered small-centered columns callout-usp-front-statement"> 
+    <p class="headline">Graph Analytics at Hadoop Scale. Yes, Scale.</p> 
+    <p style="color: #414042">The ability to quickly combine and analyze data from multiple sources and find interesting connected patterns within this data, is increasingly underpinning your ability to quickly and easily answer the most interesting questions in your business. However, most of the solutions available today to tackle this problem lack the scale, ease-of-use, and openness characteristics that are required in concert to function at enterprise scale. That is, until now…</p> 
+   </div> 
+   <!-- <div class="large-5 large-uncentered medium-8 small-10 small-centered columns text-center callout-usp-front-questions-wrapper"> --> 
+   <div class="large-uncentered small-centered columns callout-usp-front-questions-wrapper"> 
+    <div class="callout-usp-front-questions"> 
+     <p>Which customers are likely <br>to influence other buyers?</p> &nbsp; 
+     <p>Does this series of transactions <br>constitute fraud?</p> &nbsp; 
+     <p>Which drugs are most likely <br>to work against this disease?</p> 
+    </div> 
+   </div> 
+   <div class="news-front"> 
+    <div class="row"> 
+     <div class="small-12 columns"> 
+      <h2>Recent news, upcoming events, and more:</h2> 
+     </div> 
+     <div class="front-page-news-item"> 
+      <div class="front-news-no-thumb">
+       &nbsp;
+      </div> 
+      <p> <a href="http://insideanalysis.com/2014/12/the-seductive-lure-of-meaning/" class="subheadline">The Seductive Lure of Meaning</a> </p> 
+     </div> 
+     <div class="front-page-news-item"> 
+      <div class="front-news-no-thumb">
+       &nbsp;
+      </div> 
+      <p> <a href="http://www.actian.com/company/news-and-events/press-releases/actian-introduces-scalable-highest-performing-graph-analytics-capabilities-discover-cause-effect-influence-events-business-outcomes/" class="subheadline">Actian expands Actian Analytics Platform with SPARQLverse</a> </p> 
+     </div> 
+     <div class="front-page-news-item"> 
+      <div class="front-news-no-thumb">
+       &nbsp;
+      </div> 
+      <p> <a href="http://insideanalysis.com/2014/11/the-sparkle-of-sparql/" class="subheadline">The Sparqkle of SPARQL</a> </p> 
+     </div> 
+     <div class="front-page-news-item"> 
+      <div class="front-news-no-thumb">
+       &nbsp;
+      </div> 
+      <p> <a href="http://www.datanami.com/2014/11/03/graph-analytics-poised-solve-tough-big-data-problems/" class="subheadline">Graph Analytics Poised to Solve Tough Big Data Problems</a> </p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="row chain-broken-row"> 
+   <p><span class="line" style="float:left">&nbsp;</span> A Graph Analytical Engine for the Enterprise <span class="line" style="float:right">&nbsp;</span></p> 
+  </div> 
+  <div class="row benefit-row-front"> 
+   <div class="benefit-wrap-front large-uncentered small-centered columns"> 
+    <div class="benefit-item-front benefit-scale"> 
+     <p class="headline">Scales on Commodity Hardware</p> 
+    </div> 
+   </div> 
+   <div class="benefit-wrap-front large-uncentered small-centered columns"> 
+    <div class="benefit-item-front benefit-performance"> 
+     <p class="headline">10x-100x Performance </p> 
+    </div> 
+   </div> 
+   <div class="benefit-wrap-front large-uncentered small-centered columns"> 
+    <div class="benefit-item-front benefit-standards"> 
+     <p class="headline">Standards Based</p> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="row footer-cta-front"> 
+   <div class="large-4 columns text-center "> 
+    <p> &nbsp; </p> 
+   </div> 
+   <div class="large-4 columns text-center "> 
+    <p style="margin-bottom: 0.6rem"> <a href="/download" class="button small footer-cta-front-download-btn" onclick="_gaq.push(['_trackEvent', 'Call to Action', 'Download', 'Front Page Try It Now']);">TRY IT NOW</a> </p> 
+    <p class="font-size-small">Free Download. Use in Minutes.</p> 
+    <p></p> 
+   </div> 
+   <div class="large-4 columns text-center "> 
+    <p style="margin-top: .8rem"> <a href="/why-sparql" class="font-size-small">Learn More »</a> </p> 
+   </div> 
+  </div> 
+  <div class="row footer"> 
+   <div class="large-12 columns"> 
+    <p class="footer-sitemap"> 
+     <!-- <a href="/privacy-policy">Privacy Policy</a> --> <a href="http://SPARQLvillage.org">SPARQLvillage</a> <a href="http://sparqlcity.com/documentation">Documentation</a> <a href="/independent-software-vendors">ISV Login</a> </p> 
+    <p class="footer-legal"> © 2014 SPARQL City </p> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="/content/themes/spearca-dist_prod/scripts/vendor/jquery/dist/jquery.min.js?ver=2014-07-01"></script> 
+  <script type="text/javascript" src="/content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"\/content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="/content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.2"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"http:\/\/sparqlcity.com\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/sparqlcity.com\/content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif","i18n_view_cart":"View Cart","cart_url":"\/?page_id=8","is_cart":"","cart_redirect_after_add":"yes"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="/content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=2.1.12"></script> 
+  <script type="text/javascript" src="/content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.60"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"http:\/\/sparqlcity.com\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/sparqlcity.com\/content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="/content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=2.1.12"></script> 
+  <script type="text/javascript" src="/content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js?ver=1.3.1"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"http:\/\/sparqlcity.com\/wp-admin\/admin-ajax.php","fragment_name":"wc_fragments"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="/content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=2.1.12"></script> 
+  <script type="text/javascript" src="/content/themes/spearca-dist_prod/scripts/vendor/fastclick/lib/fastclick.js?ver=2014-07-07"></script> 
+  <script type="text/javascript" src="/content/themes/spearca-dist_prod/scripts/vendor/foundation/js/foundation.min.js?ver=2014-07-01"></script> 
+  <script type="text/javascript" src="/content/themes/spearca-dist_prod/scripts/functions.js?ver=2014-08-13"></script>   
+  <!-- Dynamic page generated in 0.502 seconds. --> 
+  <!-- Cached page generated by WP-Super-Cache on 2014-12-04 20:02:18 --> 
+  <!-- Compression = gzip -->
+ </body>
+</html>

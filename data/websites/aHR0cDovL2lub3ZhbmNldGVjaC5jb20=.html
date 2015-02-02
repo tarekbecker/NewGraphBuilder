@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <title>Inovance - Discover Profitable Trading Rules</title> 
+  <meta name="description" content="Machine Learning and Data Visualization for Traders | Discover Profitable Trading Rules"> 
+  <meta name="keywords" content="machine learning artificial intelligence financial markets big data visualization interactive"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
+  <link rel="icon" type="image/png" href="img/inovanceFav.png"> 
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" href="css/navigationnew.css"> 
+  <link rel="stylesheet" href="css/normalize.css"> 
+  <link rel="stylesheet" href="css/mainnew2.css"> 
+  <script type="text/javascript" src="//www.google-analytics.com/analytics.js"></script> 
+  <script type="text/javascript" src="js/jquerymin2.js"></script> 
+  <script type="text/javascript" src="js/typed.js"></script> 
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+  <script type="text/javascript" src="js/contenthover.js"></script> 
+  <script>
+			$(window).scroll(function () {
+			console.log($(window).scrollTop());
+			var topDivHeight = $(".topdiv").height();
+			var viewPortSize = $(window).height();
+			
+			var triggerAt = 450;
+			var triggerHeight = (topDivHeight - viewPortSize) + triggerAt;
+
+			if ($(window).scrollTop() >= triggerHeight) {
+				$('.fadethisdiv').css('visibility', 'visible').hide().fadeIn(900);
+				$(this).off('scroll');
+			}
+		});
+		</script> 
+  <script>
+			$(function(){
+					$("#typed").typed({
+					strings: ["Discover more information faster.", "Use machine-learning algorithms to build your trading strategies.", "In an easy-to-use, point-and-click interface.","Find your signal in the noise."],
+					typeSpeed: 50
+					});
+				});
+		</script> 
+  <script>
+			$(document).ready(function() {
+				var downarrow = $('#downArrow');
+					function runIt() {
+					downarrow.animate({opacity:'+=1'}, 1000);
+					downarrow.animate({opacity:'-=0.5'}, 1000, runIt);
+					}
+				runIt();
+			});
+		</script> 
+  <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-51767942-1', 'inovancetech.com');
+			ga('require', 'displayfeatures');
+			ga('send', 'pageview');
+		</script> 
+ </head> 
+ <body> 
+  <header class="entry-header"> 
+   <div> 
+    <nav> 
+     <div class="centerLogo">
+      <a id="homeLink" href="/"><img class="imgLogo" style="width:180px;" src="/img/inovanceLogo6.png" alt="Algorithmic Automated Trading Home"></a>
+     </div> 
+     <ul> 
+      <li><a href="#home">Home</a></li> 
+      <li><a>Product</a> 
+       <ul> 
+        <li><a href="#overview">Overview</a></li> 
+        <li><a href="#analysis">Analysis</a></li> 
+        <li><a href="#technology">Technology</a></li> 
+       </ul> </li> 
+      <li style="display:none;"><a href="/technology.html">Technology</a></li> 
+      <li><a href="/blogtitles.html">Blog</a></li> 
+      <li id="navHide"><a href="/contact.html">Contact</a></li> 
+     </ul> 
+    </nav> 
+   </div> 
+  </header> 
+  <a id="home"></a> 
+  <div id="slide-1" class="topdiv"> 
+   <div class="content"> 
+    <div id="titleSignUp"> 
+     <div style="max-width:960px;margin:0 auto;text-align:center;"> 
+      <div> 
+       <h2 style="color:#fff;"><span id="typed"></span></h2> 
+      </div> 
+     </div> 
+     <div class="signup"> 
+      <div class="promo"> 
+       <p>We'll let you know as soon as we launch</p> 
+      </div> 
+      <script language="Javascript" type="text/javascript">
+							function checkform()
+							{
+							  for (i=0;i<fieldstocheck.length;i++) {
+								if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].type") == "checkbox") {
+								  if (document.subscribeform.elements[fieldstocheck[i]].checked) {
+								  } else {
+									alert("Please enter your "+fieldnames[i]);
+									eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
+									return false;
+								  }
+								} else {
+								  if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].value") == "") {
+									alert("Please enter your "+fieldnames[i]);
+									eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
+									return false;
+								  }
+								}
+							  }
+							  for (i=0;i<groupstocheck.length;i++) {
+								if (!checkGroup(groupstocheck[i],groupnames[i])) {
+								  return false;
+								}
+							  }
+							  return true;
+							}
+							var fieldstocheck = new Array();
+							var fieldnames = new Array();
+							function addFieldToCheck(value,name)
+							{
+							  fieldstocheck[fieldstocheck.length] = value;
+							  fieldnames[fieldnames.length] = name;
+							}
+							var groupstocheck = new Array();
+							var groupnames = new Array();
+							function addGroupToCheck(value,name)
+							{
+							  groupstocheck[groupstocheck.length] = value;
+							  groupnames[groupnames.length] = name;
+							}
+							function compareEmail()
+							{
+							  return (document.subscribeform.elements["email"].value == document.subscribeform.elements["emailconfirm"].value);
+							}
+							function checkGroup(name,value)
+							{
+							  option = -1;
+							  for (i=0;i<document.subscribeform.elements[name].length;i++) {
+								if (document.subscribeform.elements[name][i].checked) {
+								  option = i;
+								}
+							  }
+							  if (option == -1) {
+								alert ("Please enter your "+value);
+								return false;
+							  }
+							  return true;
+							}
+						</script> 
+      <form method="post" action="https://www.inovancetech.com/lists/?p=subscribe" name="subscribeform"> 
+       <input type="hidden" name="formtoken" value="1b69cd01ce15429d91f4332f7cc07f2e"> 
+       <p> <input id="inputName" type="text" name="attribute1" size="40" value="" placeholder="NAME" autocomplete="off"> <script language="Javascript" type="text/javascript">addFieldToCheck("attribute1","Name");</script> </p> 
+       <p> <input id="inputEmail" type="text" name="email" value="" size="40" placeholder="EMAIL ADDRESS" autocomplete="off"> <script language="Javascript" type="text/javascript">addFieldToCheck("email","Email address");</script> </p> 
+       <input type="hidden" name="htmlemail" value="1"> 
+       <input type="hidden" name="list[4]" value="signup"> 
+       <input type="hidden" name="listname[4]" value="Sign Ups"> 
+       <div style="display:none"> 
+        <input type="text" name="VerificationCodeX" value="" size="20"> 
+       </div> 
+       <p> <input class="button" type="submit" name="subscribe" value="Sign Up" onclick="return checkform();"> </p> 
+      </form> 
+      <div style="position:relative;width:100%;color:#fff;text-align:Center;font-size:12px;"> 
+       <span>We'll never send you unnecessary emails.</span> 
+      </div> 
+     </div> 
+    </div> 
+    <a href="#overview"> 
+     <div id="downArrow" style="margin-top:5px;"> 
+      <i class="icon-arrow-down"></i> 
+     </div> </a> 
+   </div> 
+  </div> 
+  <a id="overview" class="offsetAnchor"></a> 
+  <div id="slide-2"> 
+   <div class="content"> 
+    <div class="contentOverview clearfix"> 
+     <img src="img/traidelogo.png" alt="TRAIDE Logo"> 
+     <div class="fadethisdiv inline"> 
+      <div class="inlinelist"> 
+       <h4>Your Ideas</h4> 
+       <i class="icon-user"></i> 
+       <p>Select from <b>high-quality data</b> in the Equities, Forex, and Bitcoin markets.</p> 
+       <p>Choose from technical, fundamental and sentimental indicators.</p> 
+      </div> 
+      <div class="inlinelist"> 
+       <h4>Machine Learning Analysis</h4> 
+       <i class="icon-bars2"></i> 
+       <p>Utilize <b>machine-learning algorithms</b> to discover patterns in your data.</p> 
+       <p>Find complex relationships with a single click.</p> 
+      </div> 
+      <div class="inlinelist"> 
+       <h4>Trading Rules</h4> 
+       <i class="icon-numbered-list"></i> 
+       <p>Interactive charts for discovering <b>definitive trading rules</b>.</p> 
+       <p>Clear entry and exit rules based on your asset and indicator.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <a id="analysis" class="offsetAnchor"></a> 
+  <div id="slide-3"> 
+   <div class="content"> 
+    <div class="contentOverview"> 
+     <h2>Find the Signal in the Noise</h2> 
+     <h3>We use probabilistic classifiers to find information in your data. You use an intuitive interface to find trading rules.</h3> 
+     <div class="inline"> 
+      <div class="inlinelistTwo"> 
+       <h4>We'll Do the Math</h4> 
+       <div id="specifyMath"> 
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> 
+         <msup> 
+          <mi>
+           P
+          </mi> 
+         </msup> 
+         <mo stretchy="false">
+          (
+         </mo> 
+         <mi>
+          C| 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            1
+           </mi> 
+          </msub> ,..., 
+         </mi> 
+         <msub> 
+          <mi>
+           x
+          </mi> 
+          <mi>
+           d
+          </mi> 
+         </msub> 
+         <mo stretchy="false">
+          )
+         </mo> 
+         <mo>
+          =
+         </mo> 
+         <mfrac> 
+          <mi>
+           p(C)p 
+           <mo stretchy="false">
+            (
+           </mo> 
+           <msub> 
+            <mi>
+             x
+            </mi> 
+            <mi>
+             1
+            </mi> 
+           </msub> ,..., 
+           <msub> 
+            <mi>
+             x
+            </mi> 
+            <mi>
+             d
+            </mi> 
+           </msub> |C 
+           <mo stretchy="false">
+            )
+           </mo> 
+          </mi> 
+          <mrow> 
+           <mi>
+            p 
+            <mo stretchy="false">
+             (
+            </mo> 
+            <msub> 
+             <mi>
+              x
+             </mi> 
+             <mi>
+              1
+             </mi> 
+            </msub> ,..., 
+            <msub> 
+             <mi>
+              x
+             </mi> 
+             <mi>
+              d
+             </mi> 
+            </msub> 
+            <mo stretchy="false">
+             )
+            </mo> 
+           </mi> 
+          </mrow> 
+         </mfrac> 
+        </math> 
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> 
+         <mi> 
+          <msup> 
+           <mi>
+            p
+           </mi> 
+          </msup> 
+          <mo stretchy="false">
+           (
+          </mo> 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            n
+           </mi> 
+          </msub> |C, 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            1
+           </mi> 
+          </msub> , 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            2
+           </mi> 
+          </msub> , 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            3
+           </mi> 
+          </msub> ,..., 
+          <msub> 
+           <mi>
+            F
+           </mi> 
+           <mi>
+            d-1
+           </mi> 
+          </msub> 
+          <mo stretchy="false">
+           )
+          </mo> 
+         </mi> 
+        </math> 
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> 
+         <mi> 
+          <msup> 
+           <mi>
+            p
+           </mi> 
+          </msup> 
+          <mo stretchy="false">
+           (
+          </mo> 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            1
+           </mi> 
+          </msub> |C, 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            j
+           </mi> 
+          </msub> 
+          <mo stretchy="false">
+           )
+          </mo> 
+          <mo>
+           =
+          </mo> 
+          <msup> 
+           <mi>
+            p
+           </mi> 
+          </msup> 
+          <mo stretchy="false">
+           (
+          </mo> 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            i
+           </mi> 
+          </msub> |C
+          <mo stretchy="false">
+           )
+          </mo> 
+         </mi> 
+        </math> 
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> 
+         <msup> 
+          <mi>
+           p
+          </mi> 
+         </msup> 
+         <mo stretchy="false">
+          (
+         </mo> 
+         <mi>
+          C, 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            1
+           </mi> 
+          </msub> ,..., 
+         </mi> 
+         <msub> 
+          <mi>
+           x
+          </mi> 
+          <mi>
+           d
+          </mi> 
+         </msub> 
+         <mo stretchy="false">
+          )
+         </mo> 
+         <mo>
+          =
+         </mo> 
+         <mi> 
+          <msup> 
+           <mi>
+            p
+           </mi> 
+          </msup> 
+          <mo stretchy="false">
+           (
+          </mo> 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            i
+           </mi> 
+          </msub> |C 
+          <mo stretchy="false">
+           )
+          </mo> 
+         </mi> 
+        </math> 
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> 
+         <mo>
+          =
+         </mo> 
+         <mi>
+          p
+         </mi> 
+         <mo stretchy="false">
+          (
+         </mo> 
+         <mo>
+          C
+         </mo> 
+         <mo stretchy="false">
+          )
+         </mo> 
+         <munderover> 
+          <mo>
+           ∏
+           <!-- ? -->
+          </mo> 
+          <mrow class="MJX-TeXAtom-ORD"> 
+           <mi>
+            i
+           </mi> 
+           <mo>
+            =
+           </mo> 
+           <mn>
+            1
+           </mn> 
+          </mrow> 
+          <mrow class="MJX-TeXAtom-ORD"> 
+           <mi>
+            d
+           </mi> 
+          </mrow> 
+         </munderover> 
+         <mi>
+          p
+         </mi> 
+         <mo stretchy="false">
+          (
+         </mo> 
+         <msub> 
+          <mi>
+           x
+          </mi> 
+          <mi>
+           i
+          </mi> 
+         </msub> 
+         <mo>
+          |C
+         </mo> 
+         <mo stretchy="false">
+          )
+         </mo> 
+        </math> 
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> 
+         <msup> 
+          <mi>
+           p
+          </mi> 
+         </msup> 
+         <mo stretchy="false">
+          (
+         </mo> 
+         <mi>
+          C, 
+          <msub> 
+           <mi>
+            x
+           </mi> 
+           <mi>
+            1
+           </mi> 
+          </msub> ,..., 
+         </mi> 
+         <msub> 
+          <mi>
+           x
+          </mi> 
+          <mi>
+           d
+          </mi> 
+         </msub> 
+         <mo stretchy="false">
+          )
+         </mo> 
+         <mo>
+          =
+         </mo> 
+         <mfrac> 
+          <mi>
+            1 
+          </mi> 
+          <mrow> 
+           <mi>
+             z 
+           </mi> 
+          </mrow> 
+         </mfrac> 
+         <mi>
+          p
+         </mi> 
+         <mo stretchy="false">
+          (
+         </mo> 
+         <mo>
+          C
+         </mo> 
+         <mo stretchy="false">
+          )
+         </mo> 
+         <munderover> 
+          <mo>
+           ∏
+           <!-- ? -->
+          </mo> 
+          <mrow class="MJX-TeXAtom-ORD"> 
+           <mi>
+            i
+           </mi> 
+           <mo>
+            =
+           </mo> 
+           <mn>
+            1
+           </mn> 
+          </mrow> 
+          <mrow class="MJX-TeXAtom-ORD"> 
+           <mi>
+            d
+           </mi> 
+          </mrow> 
+         </munderover> 
+         <mi>
+          p
+         </mi> 
+         <mo stretchy="false">
+          (
+         </mo> 
+         <msub> 
+          <mi>
+           x
+          </mi> 
+          <mi>
+           i
+          </mi> 
+         </msub> 
+         <mo>
+          |C
+         </mo> 
+         <mo stretchy="false">
+          )
+         </mo> 
+        </math> 
+       </div> 
+      </div> 
+      <div class="inlinelistTwo"> 
+       <h4>You Analyze the Results</h4> 
+       <div id="preChart">
+        <img src="img/interface2.jpg">
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <a id="technology" class="offsetAnchor"></a> 
+  <div id="slide-4"> 
+   <div class="content"> 
+    <div class="contentOverview inline clearfix"> 
+     <h2>Technology</h2> 
+     <h3>We focus on powerful algorithms, robust information extraction techniques, and simple interpretations.</h3> 
+     <br> 
+     <div class="inlinelist"> 
+      <div id="d4" style="width: 320px; height: 240px; background: rgb(236, 240, 241);"> 
+       <div> 
+        <p style="margin:0px;"><img src="/img/automated1.png"></p> 
+        <h4>Machine Learning</h4> 
+       </div> 
+      </div> 
+      <div class="contenthover"> 
+       <h3>Machine Learning</h3> 
+       <p>Powerful algorithms designed to discover valuable information from complex, noisy data.</p> 
+      </div> 
+     </div> 
+     <div class="inlinelist"> 
+      <div id="d5" style="width: 320px; height: 240px; background: rgb(236, 240, 241);"> 
+       <div> 
+        <p style="margin:0px;"><img src="/img/datamining1.png"></p> 
+        <h4>Data Mining</h4> 
+       </div> 
+      </div> 
+      <div class="contenthover" style="display: none;"> 
+       <h3>Data Mining</h3> 
+       <p>The rigorous techniques and standards of extracting knowledge from data.</p> 
+      </div> 
+     </div> 
+     <div class="inlinelist"> 
+      <div id="d6" style="width: 320px; height: 240px; background: rgb(236, 240, 241);"> 
+       <div> 
+        <p style="margin:0px;"><img src="/img/arl1.png"></p> 
+        <h4 style="bottom:38px;"><span>Association Rule Learning</span></h4> 
+       </div> 
+      </div> 
+      <div class="contenthover" style="display: none;"> 
+       <h3>Association Rule Learning</h3> 
+       <p>A subcategory of data mining focused on translating information found by data mining into clear, concise trading rules.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="slide-5"> 
+   <div class="content"> 
+    <div id="titleSignUp"> 
+     <div style="max-width:960px;margin:0 auto;text-align:center;"> 
+      <div> 
+       <h2 style="color:#fff;">Discover More Information Faster</h2> 
+      </div> 
+     </div> 
+     <div class="signup"> 
+      <div class="promo"> 
+       <p>We'll let you know as soon as we launch</p> 
+      </div> 
+      <script language="Javascript" type="text/javascript">
+							function checkform()
+							{
+							  for (i=0;i<fieldstocheck.length;i++) {
+								if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].type") == "checkbox") {
+								  if (document.subscribeform.elements[fieldstocheck[i]].checked) {
+								  } else {
+									alert("Please enter your "+fieldnames[i]);
+									eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
+									return false;
+								  }
+								} else {
+								  if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].value") == "") {
+									alert("Please enter your "+fieldnames[i]);
+									eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
+									return false;
+								  }
+								}
+							  }
+							  for (i=0;i<groupstocheck.length;i++) {
+								if (!checkGroup(groupstocheck[i],groupnames[i])) {
+								  return false;
+								}
+							  }
+							  return true;
+							}
+							var fieldstocheck = new Array();
+							var fieldnames = new Array();
+							function addFieldToCheck(value,name)
+							{
+							  fieldstocheck[fieldstocheck.length] = value;
+							  fieldnames[fieldnames.length] = name;
+							}
+							var groupstocheck = new Array();
+							var groupnames = new Array();
+							function addGroupToCheck(value,name)
+							{
+							  groupstocheck[groupstocheck.length] = value;
+							  groupnames[groupnames.length] = name;
+							}
+							function compareEmail()
+							{
+							  return (document.subscribeform.elements["email"].value == document.subscribeform.elements["emailconfirm"].value);
+							}
+							function checkGroup(name,value)
+							{
+							  option = -1;
+							  for (i=0;i<document.subscribeform.elements[name].length;i++) {
+								if (document.subscribeform.elements[name][i].checked) {
+								  option = i;
+								}
+							  }
+							  if (option == -1) {
+								alert ("Please enter your "+value);
+								return false;
+							  }
+							  return true;
+							}
+						</script> 
+      <form method="post" action="https://www.inovancetech.com/lists/?p=subscribe" name="subscribeform"> 
+       <input type="hidden" name="formtoken" value="1b69cd01ce15429d91f4332f7cc07f2e"> 
+       <p> <input id="inputName" type="text" name="attribute1" size="40" value="" placeholder="NAME"> <script language="Javascript" type="text/javascript">addFieldToCheck("attribute1","Name");</script> </p> 
+       <p> <input id="inputEmail" type="text" name="email" value="" size="40" placeholder="EMAIL ADDRESS"> <script language="Javascript" type="text/javascript">addFieldToCheck("email","Email address");</script> </p> 
+       <input type="hidden" name="htmlemail" value="1"> 
+       <input type="hidden" name="list[4]" value="signup"> 
+       <input type="hidden" name="listname[4]" value="Sign Ups"> 
+       <div style="display:none"> 
+        <input type="text" name="VerificationCodeX" value="" size="20"> 
+       </div> 
+       <p> <input class="button" type="submit" name="subscribe" value="Sign Up" onclick="return checkform();"> </p> 
+       <div style="position:relative;width:100%;color:#fff;text-align:Center;font-size:12px;"> 
+        <a href="#home" style="text-decoration:none;color:white;font-size:14px;"> <span>Back to Top</span> </a> 
+       </div> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="featured"> 
+   <h3 style="color:#ccc;">Featured in</h3> 
+   <ul> 
+    <li><a target="_blank" href="http://forexmagnates.com/new-product-spotlight-inovance-machine-learning-trading-with-traid/"><img src="./img/forexMagnates.png" alt="Forex Magnates"></a></li> 
+    <li><a target="_blank" href="http://www.killerstartups.com/people/inovance-founder-justin-cahoon/"><img src="./img/killerStartups.png" alt="killerStartups"></a></li> 
+    <li><a target="_blank" href="//onlinelibrary.wiley.com/doi/10.1002/wilm.10305/abstract"><img src="./img/wilmott.png" alt="Wilmott Magazine"></a></li> 
+    <li><a target="_blank" href="http://www.alleywatch.com/2014/10/hey-investors-this-nyc-fintech-startup-launched-a-new-tool-of-the-traide/"><img src="./img/awatch.png" alt="Alley Watch"></a></li> 
+   </ul> 
+  </div> 
+  <footer class="exit-footer"> 
+   <div class="row-fluid"> 
+    <div class="column2"> 
+     <div class="row1"> 
+      <span>Company</span> 
+     </div> 
+     <div class="row2"> 
+      <a href="/aboutUs.html"><span>About Us</span></a> 
+     </div> 
+     <div class="row3"> 
+      <a href="/aboutUs.html"><span>Team</span></a> 
+     </div> 
+    </div> 
+    <div class="footerTable column3"> 
+     <div class="row1"> 
+      <span>Notices</span> 
+     </div> 
+     <div class="row2"> 
+      <a href="/termsofservice.html"><span>Terms of Use</span></a> 
+     </div> 
+     <div class="row3"> 
+      <a href="/privacy.html"><span>Privacy Policy</span></a> 
+     </div> 
+    </div> 
+    <div class="footerTable column4"> 
+     <div class="row1"> 
+      <span>Support</span> 
+     </div> 
+     <div class="row2"> 
+      <a href="/contact.html"><span>Contact Us</span></a> 
+     </div> 
+    </div> 
+    <div class="footerTable column5"> 
+     <div class="row1"> 
+      <span>Community</span> 
+     </div> 
+     <div class="row2"> 
+      <a href="/blogtitles.html"><span>Blog</span></a> 
+     </div> 
+     <div class="row3"> 
+      <a href="https://twitter.com/InovanceTech"><span>Twitter</span></a> 
+     </div> 
+     <div class="row4"> 
+      <a href="https://www.facebook.com/inovancetech"><span>Facebook</span></a> 
+     </div> 
+     <div class="row4"> 
+      <a href="https://www.linkedin.com/company/3301624?trk=tyah&amp;trkInfo=tarId%3A1403458328355%2Ctas%3Ainovance%2Cidx%3A1-1-1"><span>LinkedIn</span></a> 
+     </div> 
+     <div class="row5"> 
+      <a href="https://plus.google.com/b/118365509685684903912/118365509685684903912/about/p/pub?hl=en&amp;service=PLUS"><span>Google+</span></a> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="copyright"> 
+    <p>© 2014 Inovance, Inc. All rights reserved.</p> 
+   </div> 
+  </footer> 
+  <script>
+			$('#d4').contenthover({
+				overlay_background:'#34495e'
+			});
+			$('#d5').contenthover({
+				overlay_background:'#3498db'
+			});
+			$('#d6').contenthover({
+				overlay_background:'#16a085'
+			});
+		</script> 
+  <script>
+			$('a').click(function(){
+				$('html, body').animate({
+					scrollTop: $('[id="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+				}, 500);
+				return false;
+			});
+		</script>  
+ </body>
+</html>

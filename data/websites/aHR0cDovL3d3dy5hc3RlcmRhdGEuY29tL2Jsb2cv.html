@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en-US"
+ xmlns:og='http://opengraphprotocol.org/schema/'
+ xmlns:fb='http://www.facebook.com/2008/fbml'> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en-US"
+ xmlns:og='http://opengraphprotocol.org/schema/'
+ xmlns:fb='http://www.facebook.com/2008/fbml' > <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en-US"
+ xmlns:og='http://opengraphprotocol.org/schema/'
+ xmlns:fb='http://www.facebook.com/2008/fbml' > <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+ <!--<![endif]-->
+ <head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"> 
+  <title>Data Points - Discussions from Teradata</title> 
+  <link rel="pingback" href=""> 
+  <link rel="alternate" type="application/rss+xml" title="Data Points » Feed" href="http://blogs.teradata.com/data-points/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Data Points » Comments Feed" href="http://blogs.teradata.com/data-points/comments/feed/"> 
+  <link rel="stylesheet" id="jquery-ui-style-css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-darkness/jquery-ui.css?ver=3.9.2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="mr_social_sharing-css" href="http://blogs.teradata.com/data-points/wp-content/plugins/social-sharing-toolkit/style.css?ver=3.9.2" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js?ver=3.9.2"></script> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js?ver=3.9.2"></script> 
+  <script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function() {
+	var dialog = jQuery('<div></div>')
+	.html('<form method="post" action="http://blogs.teradata.com/data-points/thank/"><input type="hidden" name="ip" value="155.56.40.73" /><p><label for="s2email">Your email:</label><br /><input type="text" name="email" id="s2email" value="" size="20" /></p><p><input type="submit" name="subscribe" value="Subscribe" />&nbsp;<input type="submit" name="unsubscribe" value="Unsubscribe" /></p></form>')
+	.dialog({autoOpen: false, modal: true, zIndex: 10000, title: 'Subscribe to this blog'});
+	jQuery('a.s2popup').click(function(){
+		dialog.dialog('open');
+		return false;
+	});
+});
+//]]>
+</script> 
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif+Caption:400,400italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet" type="text/css">
+  <link id="styles" rel="stylesheet" href="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/style.css?v=">
+  <link id="styles-751-970" rel="stylesheet" type="text/css" href="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/css/751-970.css?v=" media="only screen and (min-width:751px) and (max-width:970px)">
+  <link id="styles-0-750" rel="stylesheet" type="text/css" href="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/css/0-750.css?v=" media="only screen and (max-width:750px)">
+  <link rel="stylesheet" id="themefit-mobilemenu-css" href="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/css/themefit.mobilemenu.css?v=" type="text/css" media="screen">
+  <link rel="stylesheet" id="themefit-gallery-css" href="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/css/themefit.gallery.css?v=" type="text/css" media="screen">
+  <link rel="stylesheet" id="themefit-slideshow-css" href="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/css/themefit.slideshow.css?v=" type="text/css" media="screen">
+  <link rel="apple-touch-icon" href="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/images/touch-icon.png"> 
+  <!-- Custom Styling --> 
+  <style type="text/css">
+body { background:#ffffff; }
+body {
+ 	font-family:Georgia, serif; 
+	font-style:normal; 
+	color: #242424; 
+}
+h1, h2, h3, h4, h5, h6, 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, 
+a h1, a h2, a h3, a h4, a h5, a h6 { 
+	font-family:Georgia, serif; 
+	font-style:normal; 
+	color: #000; 
+	text-decoration:none; 
+}
+blockquote { 
+	font-family:Georgia, serif; 
+	color: #000; 
+}
+.primary-color-background { background-color:#0e345f; }
+.primary-color-text { color:#0e345f; }
+.primary-color-text a { color:#0e345f; }
+.pagination span.current { background-color:#0e345f; }
+#header-shell { border-color:#0e345f; }
+a { color:#2e5893;}
+.accent-color-background { background-color:#2e5893; }
+.accent-color-text { color:#2e5893;}
+a.accent-color-background.no-hover:hover { background-color:#2e5893; }
+a.accent-color-text.no-hover:hover { color:#2e5893;}
+submit, input[type="submit"] { background-color:#2e5893; }
+.border-styles {
+	border-color:#000; 
+	border-style:none; 
+} 
+#main-nav #main-nav-container ul.menu li.menu-item a, 
+#main-nav.tf-mobile-menu #main-nav-container ul.menu li.menu-item ul.sub-menu li a, 
+#tf-sub-page-nav li a { 
+	color:#000; 
+} 
+#main-nav #main-nav-container ul.menu li.menu-item a:hover, 
+#main-nav.tf-mobile-menu #main-nav-container ul.menu li.menu-item ul.sub-menu li a:hover, 
+#tf-sub-page-nav li a:hover { 
+	color:#CC3333; 
+} 
+#main-nav #main-nav-container ul.menu li.current-menu-item a, 
+#main-nav #main-nav-container ul.menu li.current-page-ancestor a, 
+#main-nav #main-nav-container ul.menu li.current-menu-ancestor a, 
+#main-nav.tf-mobile-menu #main-nav-container ul.menu li.menu-item ul.sub-menu li.current-menu-item a, 
+#tf-sub-page-nav li.tf-current-menu-item a { 
+	color:#CC3333; 
+}
+a:hover { color:#002448; }
+a:hover span.accent-color-background, 
+a:hover a.accent-color-background, 
+a.accent-color-background:hover{ 
+	background-color:#002448; 
+}
+a.primary-color-text:hover, a span.primary-color-text:hover { color:#002448; }
+submit:hover, input[type="submit"]:hover { background-color:#002448; }
+div.tf-gallery-wrapper ul.tf-gallery-list li.tf-gallery-list-item a.tf-gallery-link:hover div.tf-gallery-controls a.tf-gallery-icon, 
+div.tf-gallery-wrapper ul.tf-gallery-list li.tf-gallery-list-item:hover div.tf-gallery-controls a.tf-gallery-icon{ 
+	background-color:#002448; 
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, 
+a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6 { 
+	color:#002448; 
+	text-decoration:none; 
+} 
+</style> 
+  <link rel="shortcut icon" href="http://blogs.teradata.com/data-points/wp-content/uploads/2013/01/t-favicon1.gif"> 
+  <!-- Wordpress Popular Posts v2.2.1 --> 
+  <link rel="stylesheet" href="http://blogs.teradata.com/data-points/wp-content/plugins/wordpress-popular-posts/style/wpp.css" type="text/css" media="screen"> 
+  <!-- End Wordpress Popular Posts v2.2.1 --> 
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8608432-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+ </head> 
+ <body class="home blog"> 
+  <div id="site-wrapper"> 
+   <div id="header-shell"> 
+    <div id="header"> 
+     <div id="header-logo"> 
+      <a href="http://blogs.teradata.com/data-points"> </a>
+      <a id="logo" href="http://blogs.teradata.com/data-points" title="Discussions from Teradata"> <img src="http://blogs.teradata.com/data-points/wp-content/uploads/2013/01/teradata1.png" alt="Data Points"> </a>  
+      <p>Data Points</p> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content-shell"> 
+    <div id="content"> 
+     <div id="tf-left-column"> 
+      <div class="post-2746 post type-post status-publish format-standard hentry category-uncategorized border-styles"> 
+       <div class="showhide"> 
+        <div class="persistent-content"> 
+         <h1 id="post-2746"><a href="http://blogs.teradata.com/data-points/advice-for-bringing-hadoop-into-the-enterprise-analytical-ecosystem/">Advice for Bringing Hadoop Into the Enterprise Analytical Ecosystem</a></h1> 
+         <div class="meta"> 
+          <em>Posted on:</em> 
+          <span class="primary-color-text">December 1st, 2014</span> 
+          <em>by</em> 
+          <span class="primary-color-text">Guest Blogger</span> 
+          <a href="http://blogs.teradata.com/data-points/advice-for-bringing-hadoop-into-the-enterprise-analytical-ecosystem/#respond" class="comments-link" title="Comment on Advice for Bringing Hadoop Into the Enterprise Analytical Ecosystem">No Comments</a>
+         </div> 
+        </div> 
+        <a class="toggle-button accent-color-background"></a> 
+        <!-- force ie8 to toogle smoothly --> 
+        <p class="ie8-toggle-fix">&nbsp;</p> 
+        <div class="toggle-content"> 
+         <div class="entry"> 
+          <p>Where is the business world today in relation to the long-term effort to incorporate insights from big data? Winston Churchill put it best: “We are at the end of the beginning.” In the Silicon Valley ecosystem, Hadoop has been the rage for several years, but the larger business world is just starting to come to&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://blogs.teradata.com/data-points/advice-for-bringing-hadoop-into-the-enterprise-analytical-ecosystem/">Read More…</a></strong></p> 
+          <div class="mr_social_sharing_wrapper"> 
+           <!-- Social Sharing Toolkit v2.0.8 | http://www.active-bits.nl/support/social-sharing-toolkit/ -->
+           <span class="mr_social_sharing"><iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fblogs.teradata.com%2Fdata-points%2Fadvice-for-bringing-hadoop-into-the-enterprise-analytical-ecosystem%2F&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:62px;" allowtransparency="true"></iframe></span>
+           <span class="mr_social_sharing"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://blogs.teradata.com/data-points/advice-for-bringing-hadoop-into-the-enterprise-analytical-ecosystem/" data-text="Advice for Bringing Hadoop Into the Enterprise Analytical Ecosystem">Tweet</a></span>
+           <span class="mr_social_sharing">
+            <g:plusone size="tall" href="http://blogs.teradata.com/data-points/advice-for-bringing-hadoop-into-the-enterprise-analytical-ecosystem/"></g:plusone></span>
+           <span class="mr_social_sharing"><script type="IN/Share" data-url="http://blogs.teradata.com/data-points/advice-for-bringing-hadoop-into-the-enterprise-analytical-ecosystem/" data-counter="top"></script></span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="post-2744 post type-post status-publish format-standard hentry category-uncategorized border-styles"> 
+       <div class="showhide"> 
+        <div class="persistent-content"> 
+         <h1 id="post-2744"><a href="http://blogs.teradata.com/data-points/why-use-an-industry-data-model-speed-time-to-your-objectives/">Why Use an Industry Data Model? Speed Time to Your Objectives</a></h1> 
+         <div class="meta"> 
+          <em>Posted on:</em> 
+          <span class="primary-color-text">December 1st, 2014</span> 
+          <em>by</em> 
+          <span class="primary-color-text">Guest Blogger</span> 
+          <a href="http://blogs.teradata.com/data-points/why-use-an-industry-data-model-speed-time-to-your-objectives/#respond" class="comments-link" title="Comment on Why Use an Industry Data Model? Speed Time to Your Objectives">No Comments</a>
+         </div> 
+        </div> 
+        <a class="toggle-button accent-color-background"></a> 
+        <!-- force ie8 to toogle smoothly --> 
+        <p class="ie8-toggle-fix">&nbsp;</p> 
+        <div class="toggle-content"> 
+         <div class="entry"> 
+          <p>I have been involved in the development of Industry data models since the late ’90s and still to this day I get asked “what’s the value of using an Industry Data Model?” For anyone unfamiliar with data models, here is the definition from Wikipedia: “Data models are often used as an aid to communication between&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://blogs.teradata.com/data-points/why-use-an-industry-data-model-speed-time-to-your-objectives/">Read More…</a></strong></p> 
+          <div class="mr_social_sharing_wrapper"> 
+           <!-- Social Sharing Toolkit v2.0.8 | http://www.active-bits.nl/support/social-sharing-toolkit/ -->
+           <span class="mr_social_sharing"><iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fblogs.teradata.com%2Fdata-points%2Fwhy-use-an-industry-data-model-speed-time-to-your-objectives%2F&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:62px;" allowtransparency="true"></iframe></span>
+           <span class="mr_social_sharing"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://blogs.teradata.com/data-points/why-use-an-industry-data-model-speed-time-to-your-objectives/" data-text="Why Use an Industry Data Model? Speed Time to Your Objectives">Tweet</a></span>
+           <span class="mr_social_sharing">
+            <g:plusone size="tall" href="http://blogs.teradata.com/data-points/why-use-an-industry-data-model-speed-time-to-your-objectives/"></g:plusone></span>
+           <span class="mr_social_sharing"><script type="IN/Share" data-url="http://blogs.teradata.com/data-points/why-use-an-industry-data-model-speed-time-to-your-objectives/" data-counter="top"></script></span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="post-2735 post type-post status-publish format-standard hentry category-uncategorized tag-big-data tag-data tag-database tag-marketing tag-marketing-analytics border-styles"> 
+       <div class="showhide"> 
+        <div class="persistent-content"> 
+         <h1 id="post-2735"><a href="http://blogs.teradata.com/data-points/integrate-data-processes-people-end-data-ownership-turf-wars/">Integrate Data, Processes &amp; People: End Data Ownership Turf Wars</a></h1> 
+         <div class="meta"> 
+          <em>Posted on:</em> 
+          <span class="primary-color-text">November 18th, 2014</span> 
+          <em>by</em> 
+          <span class="primary-color-text">Guest Blogger</span> 
+          <a href="http://blogs.teradata.com/data-points/integrate-data-processes-people-end-data-ownership-turf-wars/#respond" class="comments-link" title="Comment on Integrate Data, Processes &amp; People: End Data Ownership Turf Wars">No Comments</a>
+         </div> 
+        </div> 
+        <a class="toggle-button accent-color-background"></a> 
+        <!-- force ie8 to toogle smoothly --> 
+        <p class="ie8-toggle-fix">&nbsp;</p> 
+        <div class="toggle-content"> 
+         <div class="entry"> 
+          <p>The biggest thing I’ve realized over the past couple of months, other than Tony Romo is one of the best NFL players I’ve ever seen — is the fact that data ownership is still a huge problem for companies of all types. Tony’s numbers keep getting more impressive game by game – and likewise the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://blogs.teradata.com/data-points/integrate-data-processes-people-end-data-ownership-turf-wars/">Read More…</a></strong></p> 
+          <div class="mr_social_sharing_wrapper"> 
+           <!-- Social Sharing Toolkit v2.0.8 | http://www.active-bits.nl/support/social-sharing-toolkit/ -->
+           <span class="mr_social_sharing"><iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fblogs.teradata.com%2Fdata-points%2Fintegrate-data-processes-people-end-data-ownership-turf-wars%2F&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:62px;" allowtransparency="true"></iframe></span>
+           <span class="mr_social_sharing"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://blogs.teradata.com/data-points/integrate-data-processes-people-end-data-ownership-turf-wars/" data-text="Integrate Data, Processes &amp; People: End Data Ownership Turf Wars">Tweet</a></span>
+           <span class="mr_social_sharing">
+            <g:plusone size="tall" href="http://blogs.teradata.com/data-points/integrate-data-processes-people-end-data-ownership-turf-wars/"></g:plusone></span>
+           <span class="mr_social_sharing"><script type="IN/Share" data-url="http://blogs.teradata.com/data-points/integrate-data-processes-people-end-data-ownership-turf-wars/" data-counter="top"></script></span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="post-2722 post type-post status-publish format-standard hentry category-uncategorized border-styles"> 
+       <div class="showhide"> 
+        <div class="persistent-content"> 
+         <h1 id="post-2722"><a href="http://blogs.teradata.com/data-points/data-lake-best-and-worst-practices/">Data Lake Best and Worst Practices</a></h1> 
+         <div class="meta"> 
+          <em>Posted on:</em> 
+          <span class="primary-color-text">November 10th, 2014</span> 
+          <em>by</em> 
+          <span class="primary-color-text">Dan Graham</span> 
+          <a href="http://blogs.teradata.com/data-points/data-lake-best-and-worst-practices/#respond" class="comments-link" title="Comment on Data Lake Best and Worst Practices">No Comments</a>
+         </div> 
+        </div> 
+        <a class="toggle-button accent-color-background"></a> 
+        <!-- force ie8 to toogle smoothly --> 
+        <p class="ie8-toggle-fix">&nbsp;</p> 
+        <div class="toggle-content"> 
+         <div class="entry"> 
+          <p>Data Lake Best Practices Where’s the Money? Rule #1: start with a data lake justification owned and signed off on by the business leaders. Regardless of how inexpensive a data lake may seem, it still costs money. OK, so what is the value of the data lake? Focus as much energy as possible on getting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://blogs.teradata.com/data-points/data-lake-best-and-worst-practices/">Read More…</a></strong></p> 
+          <div class="mr_social_sharing_wrapper"> 
+           <!-- Social Sharing Toolkit v2.0.8 | http://www.active-bits.nl/support/social-sharing-toolkit/ -->
+           <span class="mr_social_sharing"><iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fblogs.teradata.com%2Fdata-points%2Fdata-lake-best-and-worst-practices%2F&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:62px;" allowtransparency="true"></iframe></span>
+           <span class="mr_social_sharing"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://blogs.teradata.com/data-points/data-lake-best-and-worst-practices/" data-text="Data Lake Best and Worst Practices">Tweet</a></span>
+           <span class="mr_social_sharing">
+            <g:plusone size="tall" href="http://blogs.teradata.com/data-points/data-lake-best-and-worst-practices/"></g:plusone></span>
+           <span class="mr_social_sharing"><script type="IN/Share" data-url="http://blogs.teradata.com/data-points/data-lake-best-and-worst-practices/" data-counter="top"></script></span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="post-2712 post type-post status-publish format-standard hentry category-uncategorized border-styles"> 
+       <div class="showhide"> 
+        <div class="persistent-content"> 
+         <h1 id="post-2712"><a href="http://blogs.teradata.com/data-points/optimizing-disk-io-and-memory-for-big-data-vector-analysis/">Optimizing Disk IO and Memory for Big Data Vector Analysis</a></h1> 
+         <div class="meta"> 
+          <em>Posted on:</em> 
+          <span class="primary-color-text">November 10th, 2014</span> 
+          <em>by</em> 
+          <span class="primary-color-text">Daniel Abadi</span> 
+          <a href="http://blogs.teradata.com/data-points/optimizing-disk-io-and-memory-for-big-data-vector-analysis/#respond" class="comments-link" title="Comment on Optimizing Disk IO and Memory for Big Data Vector Analysis">No Comments</a>
+         </div> 
+        </div> 
+        <a class="toggle-button accent-color-background"></a> 
+        <!-- force ie8 to toogle smoothly --> 
+        <p class="ie8-toggle-fix">&nbsp;</p> 
+        <div class="toggle-content"> 
+         <div class="entry"> 
+          <p>At Yale, every spring I usually teach an advanced database systems implementation class that covers both traditional and more modern database system architectures. I often like to test my students with questions like the following: Let’s say the following SQL query is issued to a data warehouse for a retail store (the query requests the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://blogs.teradata.com/data-points/optimizing-disk-io-and-memory-for-big-data-vector-analysis/">Read More…</a></strong></p> 
+          <div class="mr_social_sharing_wrapper"> 
+           <!-- Social Sharing Toolkit v2.0.8 | http://www.active-bits.nl/support/social-sharing-toolkit/ -->
+           <span class="mr_social_sharing"><iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fblogs.teradata.com%2Fdata-points%2Foptimizing-disk-io-and-memory-for-big-data-vector-analysis%2F&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:62px;" allowtransparency="true"></iframe></span>
+           <span class="mr_social_sharing"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://blogs.teradata.com/data-points/optimizing-disk-io-and-memory-for-big-data-vector-analysis/" data-text="Optimizing Disk IO and Memory for Big Data Vector Analysis">Tweet</a></span>
+           <span class="mr_social_sharing">
+            <g:plusone size="tall" href="http://blogs.teradata.com/data-points/optimizing-disk-io-and-memory-for-big-data-vector-analysis/"></g:plusone></span>
+           <span class="mr_social_sharing"><script type="IN/Share" data-url="http://blogs.teradata.com/data-points/optimizing-disk-io-and-memory-for-big-data-vector-analysis/" data-counter="top"></script></span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="post-2698 post type-post status-publish format-standard hentry category-daniel-abadi category-uncategorized border-styles"> 
+       <div class="showhide"> 
+        <div class="persistent-content"> 
+         <h1 id="post-2698"><a href="http://blogs.teradata.com/data-points/teradata-querygrid-and-adaptive-optimization/">Teradata QueryGrid and Adaptive Optimization</a></h1> 
+         <div class="meta"> 
+          <em>Posted on:</em> 
+          <span class="primary-color-text">October 17th, 2014</span> 
+          <em>by</em> 
+          <span class="primary-color-text">Daniel Abadi</span> 
+          <a href="http://blogs.teradata.com/data-points/teradata-querygrid-and-adaptive-optimization/#respond" class="comments-link" title="Comment on Teradata QueryGrid and Adaptive Optimization">No Comments</a>
+         </div> 
+        </div> 
+        <a class="toggle-button accent-color-background"></a> 
+        <!-- force ie8 to toogle smoothly --> 
+        <p class="ie8-toggle-fix">&nbsp;</p> 
+        <div class="toggle-content"> 
+         <div class="entry"> 
+          <p>Not Your Typical DBMS-Hadoop Connector For those readers who followed my writings for the Hadapt blog before it was acquired by Teradata http://hadapt.com/blog/, one of my common refrains was the architectural flaws inherent in database connectors to Hadoop. My problems with connectors centered on the following issues: (1) Big data may mean different things to&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://blogs.teradata.com/data-points/teradata-querygrid-and-adaptive-optimization/">Read More…</a></strong></p> 
+          <div class="mr_social_sharing_wrapper"> 
+           <!-- Social Sharing Toolkit v2.0.8 | http://www.active-bits.nl/support/social-sharing-toolkit/ -->
+           <span class="mr_social_sharing"><iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fblogs.teradata.com%2Fdata-points%2Fteradata-querygrid-and-adaptive-optimization%2F&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:62px;" allowtransparency="true"></iframe></span>
+           <span class="mr_social_sharing"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://blogs.teradata.com/data-points/teradata-querygrid-and-adaptive-optimization/" data-text="Teradata QueryGrid and Adaptive Optimization">Tweet</a></span>
+           <span class="mr_social_sharing">
+            <g:plusone size="tall" href="http://blogs.teradata.com/data-points/teradata-querygrid-and-adaptive-optimization/"></g:plusone></span>
+           <span class="mr_social_sharing"><script type="IN/Share" data-url="http://blogs.teradata.com/data-points/teradata-querygrid-and-adaptive-optimization/" data-counter="top"></script></span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="post-2693 post type-post status-publish format-standard hentry category-uncategorized border-styles"> 
+       <div class="showhide"> 
+        <div class="persistent-content"> 
+         <h1 id="post-2693"><a href="http://blogs.teradata.com/data-points/why-a-portable-history-is-key-to-a-productive-data-lake/">Why a Portable History Is Key To a Productive Data Lake</a></h1> 
+         <div class="meta"> 
+          <em>Posted on:</em> 
+          <span class="primary-color-text">October 14th, 2014</span> 
+          <em>by</em> 
+          <span class="primary-color-text">Ariff Kassam</span> 
+          <a href="http://blogs.teradata.com/data-points/why-a-portable-history-is-key-to-a-productive-data-lake/#respond" class="comments-link" title="Comment on Why a Portable History Is Key To a Productive Data Lake">No Comments</a>
+         </div> 
+        </div> 
+        <a class="toggle-button accent-color-background"></a> 
+        <!-- force ie8 to toogle smoothly --> 
+        <p class="ie8-toggle-fix">&nbsp;</p> 
+        <div class="toggle-content"> 
+         <div class="entry"> 
+          <p>The Latin phrase “sine qua non” means, “something that without it you have nothing.” In the emerging world of the data lake: a complete, portable, and shareable understanding is the sine qua non for productivity. Why? With it, you can rapidly create, preserve, and share a way of understanding data that is valuable to your&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://blogs.teradata.com/data-points/why-a-portable-history-is-key-to-a-productive-data-lake/">Read More…</a></strong></p> 
+          <div class="mr_social_sharing_wrapper"> 
+           <!-- Social Sharing Toolkit v2.0.8 | http://www.active-bits.nl/support/social-sharing-toolkit/ -->
+           <span class="mr_social_sharing"><iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fblogs.teradata.com%2Fdata-points%2Fwhy-a-portable-history-is-key-to-a-productive-data-lake%2F&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:62px;" allowtransparency="true"></iframe></span>
+           <span class="mr_social_sharing"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://blogs.teradata.com/data-points/why-a-portable-history-is-key-to-a-productive-data-lake/" data-text="Why a Portable History Is Key To a Productive Data Lake">Tweet</a></span>
+           <span class="mr_social_sharing">
+            <g:plusone size="tall" href="http://blogs.teradata.com/data-points/why-a-portable-history-is-key-to-a-productive-data-lake/"></g:plusone></span>
+           <span class="mr_social_sharing"><script type="IN/Share" data-url="http://blogs.teradata.com/data-points/why-a-portable-history-is-key-to-a-productive-data-lake/" data-counter="top"></script></span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="post-2688 post type-post status-publish format-standard hentry category-uncategorized border-styles"> 
+       <div class="showhide"> 
+        <div class="persistent-content"> 
+         <h1 id="post-2688"><a href="http://blogs.teradata.com/data-points/real-time-data-acquisition-causes-disruption-to-analytics-for-sap-r3/">Real-time data acquisition causes disruption to analytics for SAP R/3</a></h1> 
+         <div class="meta"> 
+          <em>Posted on:</em> 
+          <span class="primary-color-text">October 13th, 2014</span> 
+          <em>by</em> 
+          <span class="primary-color-text">Patrick Teunissen</span> 
+          <a href="http://blogs.teradata.com/data-points/real-time-data-acquisition-causes-disruption-to-analytics-for-sap-r3/#comments" class="comments-link" title="Comment on Real-time data acquisition causes disruption to analytics for SAP R/3">1 Comment</a>
+         </div> 
+        </div> 
+        <a class="toggle-button accent-color-background"></a> 
+        <!-- force ie8 to toogle smoothly --> 
+        <p class="ie8-toggle-fix">&nbsp;</p> 
+        <div class="toggle-content"> 
+         <div class="entry"> 
+          <p>– A series on what is next in analytics on SAP R/3 – part 3 Most engineers do not like big words. However our newest “near-real-time” software has caused disruptive change! That is, for my team –and all that we have been working on for so many years. Why is it disruptive? Identifying and capturing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://blogs.teradata.com/data-points/real-time-data-acquisition-causes-disruption-to-analytics-for-sap-r3/">Read More…</a></strong></p> 
+          <div class="mr_social_sharing_wrapper"> 
+           <!-- Social Sharing Toolkit v2.0.8 | http://www.active-bits.nl/support/social-sharing-toolkit/ -->
+           <span class="mr_social_sharing"><iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fblogs.teradata.com%2Fdata-points%2Freal-time-data-acquisition-causes-disruption-to-analytics-for-sap-r3%2F&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:62px;" allowtransparency="true"></iframe></span>
+           <span class="mr_social_sharing"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://blogs.teradata.com/data-points/real-time-data-acquisition-causes-disruption-to-analytics-for-sap-r3/" data-text="Real-time data acquisition causes disruption to analytics for SAP R/3">Tweet</a></span>
+           <span class="mr_social_sharing">
+            <g:plusone size="tall" href="http://blogs.teradata.com/data-points/real-time-data-acquisition-causes-disruption-to-analytics-for-sap-r3/"></g:plusone></span>
+           <span class="mr_social_sharing"><script type="IN/Share" data-url="http://blogs.teradata.com/data-points/real-time-data-acquisition-causes-disruption-to-analytics-for-sap-r3/" data-counter="top"></script></span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="post-2680 post type-post status-publish format-standard hentry category-uncategorized border-styles"> 
+       <div class="showhide"> 
+        <div class="persistent-content"> 
+         <h1 id="post-2680"><a href="http://blogs.teradata.com/data-points/open-source-and-the-last-mile-of-data-analytics/">Open Source and the Last Mile of Data Analytics</a></h1> 
+         <div class="meta"> 
+          <em>Posted on:</em> 
+          <span class="primary-color-text">October 7th, 2014</span> 
+          <em>by</em> 
+          <span class="primary-color-text">Ron Bodkin</span> 
+          <a href="http://blogs.teradata.com/data-points/open-source-and-the-last-mile-of-data-analytics/#respond" class="comments-link" title="Comment on Open Source and the Last Mile of Data Analytics">No Comments</a>
+         </div> 
+        </div> 
+        <a class="toggle-button accent-color-background"></a> 
+        <!-- force ie8 to toogle smoothly --> 
+        <p class="ie8-toggle-fix">&nbsp;</p> 
+        <div class="toggle-content"> 
+         <div class="entry"> 
+          <p>To understand the role of open source in data analytics, it is helpful to remember a concept from telecommunications. “The last mile,” the distance from the distribution points of telecom and cable operators to the house, was always seen as a bottleneck. But there was good reason for that bottleneck. About 95% or more of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://blogs.teradata.com/data-points/open-source-and-the-last-mile-of-data-analytics/">Read More…</a></strong></p> 
+          <div class="mr_social_sharing_wrapper"> 
+           <!-- Social Sharing Toolkit v2.0.8 | http://www.active-bits.nl/support/social-sharing-toolkit/ -->
+           <span class="mr_social_sharing"><iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fblogs.teradata.com%2Fdata-points%2Fopen-source-and-the-last-mile-of-data-analytics%2F&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:62px;" allowtransparency="true"></iframe></span>
+           <span class="mr_social_sharing"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://blogs.teradata.com/data-points/open-source-and-the-last-mile-of-data-analytics/" data-text="Open Source and the Last Mile of Data Analytics">Tweet</a></span>
+           <span class="mr_social_sharing">
+            <g:plusone size="tall" href="http://blogs.teradata.com/data-points/open-source-and-the-last-mile-of-data-analytics/"></g:plusone></span>
+           <span class="mr_social_sharing"><script type="IN/Share" data-url="http://blogs.teradata.com/data-points/open-source-and-the-last-mile-of-data-analytics/" data-counter="top"></script></span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="post-2665 post type-post status-publish format-standard hentry category-uncategorized border-styles"> 
+       <div class="showhide"> 
+        <div class="persistent-content"> 
+         <h1 id="post-2665"><a href="http://blogs.teradata.com/data-points/overview-of-teradata-loom-technology/">Overview of Teradata Loom Technology</a></h1> 
+         <div class="meta"> 
+          <em>Posted on:</em> 
+          <span class="primary-color-text">October 7th, 2014</span> 
+          <em>by</em> 
+          <span class="primary-color-text">Daniel Abadi</span> 
+          <a href="http://blogs.teradata.com/data-points/overview-of-teradata-loom-technology/#respond" class="comments-link" title="Comment on Overview of Teradata Loom Technology">No Comments</a>
+         </div> 
+        </div> 
+        <a class="toggle-button accent-color-background"></a> 
+        <!-- force ie8 to toogle smoothly --> 
+        <p class="ie8-toggle-fix">&nbsp;</p> 
+        <div class="toggle-content"> 
+         <div class="entry"> 
+          <p>A little less than two months ago, I joined Teradata as part of their acquisition of my start-up, Hadapt. One thing that has struck me at Teradata thus far is the large amount of cool pockets of technology that they have (both in their core and peripheral products) that I had been previously unaware of.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://blogs.teradata.com/data-points/overview-of-teradata-loom-technology/">Read More…</a></strong></p> 
+          <div class="mr_social_sharing_wrapper"> 
+           <!-- Social Sharing Toolkit v2.0.8 | http://www.active-bits.nl/support/social-sharing-toolkit/ -->
+           <span class="mr_social_sharing"><iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fblogs.teradata.com%2Fdata-points%2Foverview-of-teradata-loom-technology%2F&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:62px;" allowtransparency="true"></iframe></span>
+           <span class="mr_social_sharing"><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://blogs.teradata.com/data-points/overview-of-teradata-loom-technology/" data-text="Overview of Teradata Loom Technology">Tweet</a></span>
+           <span class="mr_social_sharing">
+            <g:plusone size="tall" href="http://blogs.teradata.com/data-points/overview-of-teradata-loom-technology/"></g:plusone></span>
+           <span class="mr_social_sharing"><script type="IN/Share" data-url="http://blogs.teradata.com/data-points/overview-of-teradata-loom-technology/" data-counter="top"></script></span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="pagination primary-color-text">
+       <span class="page-numbers current">1</span> 
+       <a class="page-numbers" href="http://blogs.teradata.com/data-points/page/2/">2</a> 
+       <a class="page-numbers" href="http://blogs.teradata.com/data-points/page/3/">3</a> 
+       <span class="page-numbers dots">…</span> 
+       <a class="page-numbers" href="http://blogs.teradata.com/data-points/page/7/">7</a> 
+       <a class="next page-numbers" href="http://blogs.teradata.com/data-points/page/2/">Next</a>
+      </div> 
+     </div> 
+     <div id="tf-right-column" class="border-styles"> 
+      <ul class="sidebar"> 
+       <li id="search-2" class="widget sidebar-widget-item widget_search border-styles">
+        <form action="http://blogs.teradata.com/data-points" id="searchform" method="get"> 
+         <div id="search-text-input"> 
+          <input type="text" id="s" name="s" value=""> 
+         </div> 
+         <input type="submit" value="Search" id="searchsubmit"> 
+        </form></li>
+       <li id="text-4" class="widget sidebar-widget-item widget_text border-styles"> 
+        <div class="textwidget">
+         <p><a href="mailto:teradata.information@teradata.com"><img class="right-rail-icon" src="http://blogs.teradata.com/anz/wp-content/images/icon-email.gif">Contact Us</a></p> 
+         <p><a href="http://www.teradata.com">Teradata.com</a><br> <a href="http://www.teradata.com/blogs/">Teradata Blogs</a><br> <a href="http://www.teradata.com/blogs/bios/">Teradata Blogger Bios</a></p> 
+        </div> </li>
+       <li id="text-2" class="widget sidebar-widget-item widget_text border-styles"><h5>Follow Us</h5> 
+        <div class="textwidget">
+         <p><a href="/data-points/feed/"><img class="right-rail-icon" src="http://blogs.teradata.com/anz/wp-content/images/icon-feed.gif">RSS Feed</a><br> <a href="http://www.linkedin.com/company/teradata"><img class="right-rail-icon" src="http://blogs.teradata.com/anz/wp-content/images/icon_linkedin.jpg">LinkedIn</a><br> <a href="https://twitter.com/teradata"><img class="right-rail-icon" src="http://blogs.teradata.com/anz/wp-content/images/icon_twitter.jpg">Twitter</a><br> <a href="http://www.youtube.com/user/teradata"><img class="right-rail-icon" src="http://blogs.teradata.com/anz/wp-content/images/icon_youtube.jpg">You Tube</a></p> 
+        </div> </li>
+       <li id="text-3" class="widget sidebar-widget-item widget_text border-styles"><h5>About Us</h5> 
+        <div class="textwidget">
+         <p>Here, Teradata innovators and industry visionaries make some great data points on the use of data analytics and information discovery.</p> 
+        </div> </li>
+       <li id="s2_form_widget-2" class="widget sidebar-widget-item s2_form_widget border-styles"><h5>Email Subscription</h5>
+        <div class="search">
+         <a href="http://blogs.teradata.com/data-points/thank/" class="s2popup">Subscription</a> 
+        </div></li>
+       <li id="easy-ategories-anagement" class="widget sidebar-widget-item easy_categories_manage_widget border-styles"><h5>Topics</h5>
+        <ul id="easy_categories_managementidget"> 
+         <li class="cat-item cat-item-750"><a href="http://blogs.teradata.com/data-points/category/chris-twogood/" title="View all posts filed under Chris Twogood">Chris Twogood</a> (0) </li> 
+         <li class="cat-item cat-item-751"><a href="http://blogs.teradata.com/data-points/category/contributors/" title="View all posts filed under Contributors">Contributors</a> (13) 
+          <ul class="children"> 
+           <li class="cat-item cat-item-882"><a href="http://blogs.teradata.com/data-points/category/contributors/ariff-kassam/" title="View all posts filed under Ariff Kassam">Ariff Kassam</a> (0) </li> 
+           <li class="cat-item cat-item-757"><a href="http://blogs.teradata.com/data-points/category/contributors/dan-graham/" title="View all posts filed under Dan Graham">Dan Graham</a> (6) </li> 
+           <li class="cat-item cat-item-880"><a href="http://blogs.teradata.com/data-points/category/contributors/daniel-abadi/" title="View all posts filed under Daniel Abadi">Daniel Abadi</a> (1) </li> 
+           <li class="cat-item cat-item-766"><a href="http://blogs.teradata.com/data-points/category/contributors/jim-dietz/" title="View all posts filed under Jim Dietz">Jim Dietz</a> (0) </li> 
+           <li class="cat-item cat-item-866"><a href="http://blogs.teradata.com/data-points/category/contributors/kevin-lewis/" title="View all posts filed under Kevin Lewis">Kevin Lewis</a> (1) </li> 
+           <li class="cat-item cat-item-776"><a href="http://blogs.teradata.com/data-points/category/contributors/ray-wilson/" title="View all posts filed under Ray Wilson">Ray Wilson</a> (1) </li> 
+           <li class="cat-item cat-item-881"><a href="http://blogs.teradata.com/data-points/category/contributors/ron-bodkin/" title="View all posts filed under Ron Bodkin">Ron Bodkin</a> (0) </li> 
+           <li class="cat-item cat-item-756"><a href="http://blogs.teradata.com/data-points/category/contributors/sam-tawfik/" title="View all posts filed under Sam Tawfik">Sam Tawfik</a> (1) </li> 
+           <li class="cat-item cat-item-862"><a href="http://blogs.teradata.com/data-points/category/contributors/tho-nguyen/" title="View all posts filed under Tho Nguyen">Tho Nguyen</a> (1) </li> 
+          </ul> </li> 
+         <li class="cat-item cat-item-796"><a href="http://blogs.teradata.com/data-points/category/discovery-2/" title="View all posts filed under Discovery">Discovery</a> (16) </li> 
+         <li class="cat-item cat-item-521"><a href="http://blogs.teradata.com/data-points/category/scott-gnau/" title="View all posts filed under Scott Gnau">Scott Gnau</a> (1) </li> 
+         <li class="cat-item cat-item-869"><a href="http://blogs.teradata.com/data-points/category/topics/" title="View all posts filed under Topics">Topics</a> (1) 
+          <ul class="children"> 
+           <li class="cat-item cat-item-870"><a href="http://blogs.teradata.com/data-points/category/topics/big-data-big-value/" title="View all posts filed under Big Data, Big Value">Big Data, Big Value</a> (1) </li> 
+           <li class="cat-item cat-item-875"><a href="http://blogs.teradata.com/data-points/category/topics/clouds-both-sides-now/" title="View all posts filed under Clouds: Both Sides Now">Clouds: Both Sides Now</a> (0) </li> 
+           <li class="cat-item cat-item-873"><a href="http://blogs.teradata.com/data-points/category/topics/consultants-and-services/" title="View all posts filed under Consultants &amp; Services">Consultants &amp; Services</a> (0) </li> 
+           <li class="cat-item cat-item-884"><a href="http://blogs.teradata.com/data-points/category/topics/data-modeling-and-agile-technologies/" title="View all posts filed under Data Modeling &amp; Agile Technologies">Data Modeling &amp; Agile Technologies</a> (0) </li> 
+           <li class="cat-item cat-item-876"><a href="http://blogs.teradata.com/data-points/category/topics/data-science-and-modeling/" title="View all posts filed under Data Science &amp; Modeling">Data Science &amp; Modeling</a> (0) </li> 
+           <li class="cat-item cat-item-871"><a href="http://blogs.teradata.com/data-points/category/topics/data-warehousing-forever/" title="View all posts filed under Data Warehousing Forever">Data Warehousing Forever</a> (0) </li> 
+           <li class="cat-item cat-item-879"><a href="http://blogs.teradata.com/data-points/category/topics/data-driven-business-strategy/" title="View all posts filed under Data-Driven Business Strategy">Data-Driven Business Strategy</a> (0) </li> 
+           <li class="cat-item cat-item-878"><a href="http://blogs.teradata.com/data-points/category/topics/driving-roi-getting-real/" title="View all posts filed under Driving ROI: Getting Real">Driving ROI: Getting Real</a> (0) </li> 
+           <li class="cat-item cat-item-874"><a href="http://blogs.teradata.com/data-points/category/topics/hadoop-reality-checks/" title="View all posts filed under Hadoop: Reality Checks">Hadoop: Reality Checks</a> (0) </li> 
+           <li class="cat-item cat-item-877"><a href="http://blogs.teradata.com/data-points/category/topics/integration-junction/" title="View all posts filed under Integration Junction">Integration Junction</a> (0) </li> 
+           <li class="cat-item cat-item-872"><a href="http://blogs.teradata.com/data-points/category/topics/lets-get-analytical/" title="View all posts filed under Let’s Get Analytical">Let’s Get Analytical</a> (0) </li> 
+          </ul> </li> 
+        </ul></li>
+       <!-- Wordpress Popular Posts Plugin v2.2.1 [W] [weekly] [regular] --> 
+       <li id="wpp-2" class="widget sidebar-widget-item popular-posts border-styles"> <h5>Popular Posts</h5>
+        <ul> 
+         <li><a href="http://blogs.teradata.com/data-points/how-illy-is-cost-per-terabyte/" title="How $illy is Cost per Terabyte?"><span class="wpp-post-title">How $illy is Cost per Terabyte?</span></a> </li> 
+         <li><a href="http://blogs.teradata.com/data-points/optimizing-disk-io-and-memory-for-big-data-vector-analysis/" title="Optimizing Disk IO and Memory for Big Data Vector Analysis"><span class="wpp-post-title">Optimizing Disk IO and Memory for Big Data Vector Analysis</span></a> </li> 
+         <li><a href="http://blogs.teradata.com/data-points/teradata-querygrid-and-adaptive-optimization/" title="Teradata QueryGrid and Adaptive Optimization"><span class="wpp-post-title">Teradata QueryGrid and Adaptive Optimization</span></a> </li> 
+        </ul> </li> 
+       <!-- End Wordpress Popular Posts Plugin v2.2.1 --> 
+       <li id="calendar-2" class="widget sidebar-widget-item widget_calendar border-styles"><h5>Archive</h5>
+        <div id="calendar_wrap">
+         <table id="wp-calendar"> 
+          <caption>
+           December 2014
+          </caption> 
+          <thead> 
+           <tr> 
+            <th scope="col" title="Monday">M</th> 
+            <th scope="col" title="Tuesday">T</th> 
+            <th scope="col" title="Wednesday">W</th> 
+            <th scope="col" title="Thursday">T</th> 
+            <th scope="col" title="Friday">F</th> 
+            <th scope="col" title="Saturday">S</th> 
+            <th scope="col" title="Sunday">S</th> 
+           </tr> 
+          </thead> 
+          <tfoot> 
+           <tr> 
+            <td colspan="3" id="prev"><a href="http://blogs.teradata.com/data-points/2014/11/" title="View posts for November 2014">« Nov</a></td> 
+            <td class="pad">&nbsp;</td> 
+            <td colspan="3" id="next" class="pad">&nbsp;</td> 
+           </tr> 
+          </tfoot> 
+          <tbody> 
+           <tr>
+            <td><a href="http://blogs.teradata.com/data-points/2014/12/01/" title="Why Use an Industry Data Model? Speed Time to Your Objectives, Advice for Bringing Hadoop Into the Enterprise Analytical Ecosystem">1</a></td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td id="today">5</td>
+            <td>6</td>
+            <td>7</td> 
+           </tr> 
+           <tr> 
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td> 
+           </tr> 
+           <tr> 
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td> 
+           </tr> 
+           <tr> 
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td> 
+           </tr> 
+           <tr> 
+            <td>29</td>
+            <td>30</td>
+            <td>31</td> 
+            <td class="pad" colspan="4">&nbsp;</td> 
+           </tr> 
+          </tbody> 
+         </table>
+        </div></li>
+       <li id="tag_cloud-2" class="widget sidebar-widget-item widget_tag_cloud border-styles"><h5>Tags</h5>
+        <div class="tagcloud">
+         <a href="http://blogs.teradata.com/data-points/tag/bars12/" class="tag-link-841" title="2 topics" style="font-size: 8pt;">#bars12</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/analytic-platform/" class="tag-link-808" title="2 topics" style="font-size: 8pt;">Analytic platform</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/analytics/" class="tag-link-528" title="21 topics" style="font-size: 20.94623655914pt;">Analytics</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/apache-hadoop/" class="tag-link-809" title="4 topics" style="font-size: 11.311827956989pt;">Apache Hadoop</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/aster/" class="tag-link-701" title="5 topics" style="font-size: 12.516129032258pt;">Aster</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/aster-discovery/" class="tag-link-797" title="3 topics" style="font-size: 9.8064516129032pt;">Aster Discovery</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/barnes-noble/" class="tag-link-842" title="2 topics" style="font-size: 8pt;">barnes &amp; noble</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/bi/" class="tag-link-825" title="2 topics" style="font-size: 8pt;">BI</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/big-analytics/" class="tag-link-709" title="8 topics" style="font-size: 15.075268817204pt;">Big Analytics</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/big-data/" class="tag-link-630" title="25 topics" style="font-size: 22pt;">big data</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/big-data-analytics/" class="tag-link-715" title="10 topics" style="font-size: 16.430107526882pt;">big data analytics</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/big-data-events/" class="tag-link-811" title="2 topics" style="font-size: 8pt;">big data events</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/business-analytics/" class="tag-link-812" title="4 topics" style="font-size: 11.311827956989pt;">Business analytics</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/business-intelligence/" class="tag-link-352" title="3 topics" style="font-size: 9.8064516129032pt;">business intelligence</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/dan-graham/" class="tag-link-757" title="2 topics" style="font-size: 8pt;">Dan Graham</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/data/" class="tag-link-413" title="2 topics" style="font-size: 8pt;">data</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/data-analyst/" class="tag-link-813" title="2 topics" style="font-size: 8pt;">data analyst</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/data-analytics-roadshow/" class="tag-link-814" title="2 topics" style="font-size: 8pt;">data analytics roadshow</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/data-architecture/" class="tag-link-798" title="6 topics" style="font-size: 13.569892473118pt;">data architecture</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/database/" class="tag-link-405" title="7 topics" style="font-size: 14.322580645161pt;">database</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/data-management/" class="tag-link-529" title="3 topics" style="font-size: 9.8064516129032pt;">data management</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/data-science/" class="tag-link-763" title="8 topics" style="font-size: 15.075268817204pt;">data science</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/data-scientist/" class="tag-link-710" title="6 topics" style="font-size: 13.569892473118pt;">Data scientist</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/data-warehouse/" class="tag-link-402" title="7 topics" style="font-size: 14.322580645161pt;">data warehouse</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/data-warehousing/" class="tag-link-351" title="2 topics" style="font-size: 8pt;">data warehousing</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/digital-marketing/" class="tag-link-714" title="3 topics" style="font-size: 9.8064516129032pt;">digital marketing</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/digital-marketing-optimization/" class="tag-link-816" title="2 topics" style="font-size: 8pt;">digital marketing optimization</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/discovery-platform/" class="tag-link-802" title="3 topics" style="font-size: 9.8064516129032pt;">discovery platform</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/ebay/" class="tag-link-373" title="2 topics" style="font-size: 8pt;">ebay</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/event/" class="tag-link-773" title="2 topics" style="font-size: 8pt;">event</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/hadoop/" class="tag-link-632" title="19 topics" style="font-size: 20.344086021505pt;">Hadoop</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/hortonworks/" class="tag-link-767" title="6 topics" style="font-size: 13.569892473118pt;">Hortonworks</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/integration/" class="tag-link-774" title="2 topics" style="font-size: 8pt;">integration</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/mapreduce/" class="tag-link-817" title="5 topics" style="font-size: 12.516129032258pt;">mapreduce</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/marketing/" class="tag-link-387" title="2 topics" style="font-size: 8pt;">marketing</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/new-markets/" class="tag-link-759" title="2 topics" style="font-size: 8pt;">new markets</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/sap/" class="tag-link-426" title="4 topics" style="font-size: 11.311827956989pt;">sap</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/sql/" class="tag-link-829" title="3 topics" style="font-size: 9.8064516129032pt;">SQL</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/sql-h/" class="tag-link-852" title="2 topics" style="font-size: 8pt;">SQL-H</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/sql-mapreduce/" class="tag-link-820" title="4 topics" style="font-size: 11.311827956989pt;">SQL-MapReduce</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/teradata/" class="tag-link-350" title="18 topics" style="font-size: 20.043010752688pt;">teradata</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/teradata-aster/" class="tag-link-732" title="9 topics" style="font-size: 15.827956989247pt;">Teradata Aster</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/total-cost-of-data/" class="tag-link-768" title="4 topics" style="font-size: 11.311827956989pt;">total cost of data</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/uda/" class="tag-link-754" title="6 topics" style="font-size: 13.569892473118pt;">UDA</a> 
+         <a href="http://blogs.teradata.com/data-points/tag/unified-data-architecture/" class="tag-link-755" title="8 topics" style="font-size: 15.075268817204pt;">Unified Data Architecture</a>
+        </div> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="upper-footer-shell"> 
+    <div id="upper-footer"> 
+     <ul id="footer-widgets"> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="push-lower-footer-shell"></div> 
+  </div>
+  <!-- end site-wrapper --> 
+  <div id="lower-footer-shell" class="primary-color-background"> 
+   <div id="lower-footer"> 
+    <p id="lower-left-text"></p> 
+    <p id="lower-right-text"></p> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/js/themefit.mobilemenu.jQuery.js?v="></script>
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/js/themefit.gallery.jQuery.js?v="></script>
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/js/themefit.slideshow.jQuery.js?v="></script>
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/js/themefit.showhide.jQuery.js?v="></script>
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-content/themes/themefit_fluid/themefit-fluid/js/themefit.init.jQuery.js?v="></script>
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-includes/js/jquery/ui/jquery.ui.mouse.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-includes/js/jquery/ui/jquery.ui.resizable.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-includes/js/jquery/ui/jquery.ui.draggable.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-includes/js/jquery/ui/jquery.ui.button.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-includes/js/jquery/ui/jquery.ui.position.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-includes/js/jquery/ui/jquery.ui.dialog.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-content/plugins/social-sharing-toolkit/script.js?ver=3.9.2"></script> 
+  <script type="text/javascript" src="http://platform.linkedin.com/in.js?ver=3.9.2"></script> 
+  <script type="text/javascript" src="http://blogs.teradata.com/data-points/wp-content/plugins/social-sharing-toolkit/googleplus.js.php?lang=en_US&amp;ver=3.9.2"></script> 
+  <script type="text/javascript" src="http://apis.google.com/js/plusone.js?ver=3.9.2"></script> 
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js?ver=3.9.2"></script>   
+ </body>
+</html>

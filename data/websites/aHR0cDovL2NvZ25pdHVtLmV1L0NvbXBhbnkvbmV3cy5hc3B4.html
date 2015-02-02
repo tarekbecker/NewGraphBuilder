@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="keywords" content="software, software outsourcing, software development, offshoring, nearshoring, software development, programming, development, business applications, azure, cloud, bigdata, big data">
+  <meta name="keywords" content="semantic web, ontologies, RDF, OWL, SPARQL, SWRL, semantic modelling, model driven applications, ontology edititor, ontology editing software">
+ </head>
+ <body>
+  <div> 
+   <link rel="Stylesheet" type="text/css" href="/styles/style.css?v=20930"> 
+  </div>
+  <meta property="og:title" content="" runat="server">
+  <meta property="og:image" content="http://media.example.com/ 1234567.jpg">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Roboto:300" rel="stylesheet" type="text/css"> 
+  <!-- order of styles loading is important! --> 
+  <link rel="Stylesheet" type="text/css" href="/styles/branding-main.css"> 
+  <script type="text/javascript" src="/scripts/jquery-1.11.1.min.js"></script> 
+  <script type="text/javascript" src="/scripts/jquery.easytabs.min.js"></script> 
+  <link rel="stylesheet" href="/styles/jquery-ui.min.css"> 
+  <script type="text/javascript" src="/scripts/jquery.number.min.js"></script> 
+  <script type="text/javascript" src="/scripts/facebox.js"></script> 
+  <link rel="stylesheet" href="/styles/facebox.css">
+  <link rel="stylesheet" type="text/css" href="/styles/jquery.cookiebar.css"> 
+  <script type="text/javascript" src="/scripts/jquery.cookiebar.js"></script> 
+  <script type="text/javascript">
+        $(document).ready(function () {
+            $.cookieBar({
+                message: 'This website uses cookies to track user preferences',
+                //policyButton: true,
+                policyText: 'Privacy Policy',
+                policyURL: '/legal/Privacy.aspx',
+                bottom: true,
+                fixed: true,
+                zindex: '1100'
+            });
+        });
+    </script> 
+  <link rel="Shortcut Icon" href="/favicon.ico"> 
+  <script type="text/javascript" src="/scripts/jQuery.BlockUI.js"></script> 
+  <script type="text/javascript" src="/scripts/autoresize.jquery.min.js"></script> 
+  <script type="text/javascript" src="/scripts/jquery.colorbox-min.js"></script> 
+  <link rel="stylesheet" type="text/css" href="/styles/colorbox.css">
+  <link rel="stylesheet" href="/styles/contactable.css" type="text/css"> 
+  <script type="text/javascript" src="/scripts/jquery.validate.min.js"></script> 
+  <script type="text/javascript" src="/scripts/jquery.contactable.js"></script> 
+  <link rel="stylesheet" href="/styles/megamenu.css"> 
+  <!-- Mega Menu Stylesheet --> 
+  <script type="text/javascript" src="/scripts/megamenu_plugins.js"></script> 
+  <!-- Mega Menu Plugins --> 
+  <script type="text/javascript" src="/scripts/megamenu.js"></script> 
+  <!-- Polyglot --> 
+  <link href="/styles/polyglot-language-switcher.css" type="text/css" rel="stylesheet"> 
+  <script src="/scripts/jquery.polyglot.language.switcher.js" type="text/javascript"></script> 
+  <div> 
+   <script src="/scripts/website-scripts.js?v=20930" type="text/javascript"></script> 
+  </div> 
+  <style type="text/css">
+        #newsletterlink {
+            float: right;
+            background-color: #37A;
+            padding: 0px;
+            margin: 0px;
+            font-size: 10pt;
+            font-family: Segoe UI;
+            width: 96px;
+            height: 20px;
+        }
+
+            #newsletterlink img {
+                margin: 2px 3px 1px 1px;
+                padding: 0px;
+                border: none;
+                vertical-align: text-top;
+            }
+
+            #newsletterlink a, #newsletterlink a:visited {
+                text-decoration: none;
+                color: #eee;
+            }
+
+                #newsletterlink a:hover {
+                    color: #ffd800;
+                }
+
+        #techbloglink {
+            float: right;
+            font: 11pt Impact;
+            padding-right: 12px;
+        }
+
+            #techbloglink a, #techbloglink a:visited {
+                color: #356;
+                text-decoration: none;
+            }
+
+                #techbloglink a:hover {
+                    color: #467;
+                    text-decoration: none;
+                }
+    </style> 
+  <title>
+	
+            Cognitum
+        
+</title> 
+  <script type="text/javascript" src="/scripts/jquery.jcarousel.min.js"></script> 
+  <link rel="stylesheet" type="text/css" href="/styles/jcarousel.basic.css"> 
+  <script type="text/javascript">
+        (function ($) {
+            $(function () {
+                $('.jcarousel').jcarousel({
+                    wrap: 'both',
+                });
+
+                setInterval(function () {
+                    $('.jcarousel').jcarousel('scroll', '+=1');
+                }, 6000);
+
+
+                $('.jcarousel-pagination')
+                    .on('jcarouselpagination:active', 'a', function () {
+                        $(this).addClass('active');
+                    })
+                    .on('jcarouselpagination:inactive', 'a', function () {
+                        $(this).removeClass('active');
+                    })
+                    .jcarouselPagination();
+            });
+        })(jQuery);
+    </script> 
+  <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-20532698-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script> 
+  <script>(function () {
+        var _fbq = window._fbq || (window._fbq = []);
+        if (!_fbq.loaded) {
+            var fbds = document.createElement('script');
+            fbds.async = true;
+            fbds.src = '//connect.facebook.net/en_US/fbds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(fbds, s);
+            _fbq.loaded = true;
+        }
+        _fbq.push(['addPixelId', '793722090687657']);
+    })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script> 
+  <noscript>
+   <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=793722090687657&amp;ev=PixelInitialized">
+  </noscript>   
+  <!-- AddThis Smart Layers BEGIN --> 
+  <!-- Go to http://www.addthis.com/get/smart-layers to customize --> 
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=cognitum"></script> 
+  <script type="text/javascript">
+        addthis.layers({
+            'theme': 'transparent'
+            //'follow': {
+            //    'services': [
+            //    { 'service': 'facebook', 'id': 'cognitum.eu' },
+            //    { 'service': 'twitter', 'id': 'cognitum_eu' },
+            //    { 'service': 'linkedin', 'id': '2300455', 'usertype': 'company' },
+            //    { 'service': 'youtube', 'id': 'cognitumeu' }
+            //    ]
+            //},
+            //'whatsnext': {},
+            //'share' : {},
+        });
+    </script> 
+  <!-- AddThis Smart Layers END --> 
+  <!-- main contactable --> 
+  <div id="contactable"></div> 
+  <div class="cog_page_wrapper"> 
+   <!-- begin language switcher --> 
+   <div id="polyglotLanguageSwitcher"> 
+    <form action="#"> 
+     <select id="polyglot-language-options"> <option id="en" value="en" selected>English</option> </select> 
+    </form> 
+   </div> 
+   <!-- end language switcher --> 
+   <form name="aspnetForm" method="post" action="" id="aspnetForm"> 
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTg0NjczNDc5MQ9kFgJmD2QWAmYPZBYCAgMPFgIeBFRleHQFTDxtZXRhIHByb3BlcnR5PSdvZzppbWFnZScgY29udGVudD0naHR0cDovL21lZGlhLmV4YW1wbGUuY29tLyAxMjM0NTY3LmpwZycgLz5kZI6JA3rYHJOaEfuDJVkyA3laC241gSOtFkisE6f9yr2+"> 
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334"> 
+    <div> 
+     <a href="/"> 
+      <div id="main-logo-big" style="float: left"> 
+      </div> </a> 
+     <div style="margin: 36px 8px 8px 8px; float: right;"> 
+      <span> <a href="http://facebook.com/cognitum.eu" class="fr" target="_blank"> <img src="/img/ico/facebook_blue.png" style="margin: 2px 6px;"></a> <a href="http://www.linkedin.com/company/2300455" class="fr" target="_blank"> <img src="/img/ico/linkedin_blue.png" style="margin: 2px 6px;"></a> </span> 
+      <div id="newsletterlink"> 
+       <a href="/company/newsletter.aspx">&nbsp;Newsletter&nbsp;<img src="/img/ico/mail_16.png" alt=""></a> 
+      </div> 
+      <div id="techbloglink"> 
+       <a href="http://techblog.cognitum.eu/" target="_blank">TECHBLOG</a> 
+      </div> 
+     </div> 
+     <div class="clear"> 
+     </div> 
+    </div> 
+    <div class="megamenu_container megamenu_light_bar megamenu_light .megamenu_bluetheme"> 
+     <!-- Begin Menu Container --> 
+     <ul class="megamenu"> 
+      <!-- Begin Mega Menu --> 
+      <li><a href="#_" class="megamenu_drop">Company</a>
+       <!-- Begin Item --> 
+       <div class="dropdown_fullwidth"> 
+        <!-- Begin Item Container --> 
+        <div class="col_4"> 
+         <h3>Company</h3> 
+         <hr> 
+         <ul class="list_unstyled"> 
+          <li><a href="/company/Default.aspx">About Cognitum</a></li> 
+          <li><a href="/company/Jobs.aspx">Careers</a></li> 
+          <li><a href="/company/News.aspx">News</a></li> 
+          <li><a href="/company/Investors.aspx">Investor Relations</a></li> 
+          <li><a href="/company/Newsletter.aspx">Neswletter</a></li> 
+          <li><a href="/company/Contact.aspx">Contact</a></li> 
+         </ul> 
+        </div> 
+        <div class="col_4"> 
+         <h3>Partnerships</h3> 
+         <hr> 
+         <ul class="list_unstyled"> 
+          <li><a href="/Partners/Default.aspx">Partnerships</a></li> 
+          <li><a href="/Partners/TechnologyPartners.aspx">Technology Partners</a></li> 
+          <li><a href="/Partners/ResearchPartners.aspx">Research Partners</a></li> 
+          <li><a href="/Partners/BusinessPartners.aspx">Business Partners</a></li> 
+          <li><a href="/Partners/Default.aspx" style="color: blueviolet">Become a Partner!</a></li> 
+         </ul> 
+        </div> 
+        <div class="col_4"> 
+         <h3>Research</h3> 
+         <hr> 
+         <ul class="list_unstyled"> 
+          <li><a href="/research/">Research Team</a></li> 
+          <li><a href="/research/Publications.aspx">Publications</a></li> 
+          <li><a href="/research/LaboratoryUW.aspx">Joint Laboratory</a></li> 
+          <li><a href="/partners/ResearchPartners.aspx">Let's Cooperate!</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <!-- End Item Container --> </li> 
+      <!-- End Item --> 
+      <li><a href="#_" class="megamenu_drop">Semantic Platform</a>
+       <!-- Begin Item --> 
+       <div class="dropdown_fullwidth"> 
+        <!-- Begin Item Container --> 
+        <div class="col_5"> 
+         <h3>Semantic Platform</h3> 
+         <hr> 
+         <div class=""> 
+          <div class="col_9" style="margin-left:0px;"> 
+           <ul class="list_links1"> 
+            <li style="background: url('/img/menu/Fluen Editor 2014 icon -32px.png') no-repeat left top; padding-left: 40px;"> <a href="/semantics/FluentEditor/">Fluent Editor 2014</a> <span>Comprehensive Ontology Editor</span> </li> 
+           </ul> 
+           <a href="/semantics/FluentEditor/GetLicense.aspx" style="color:green;">Free for Academics and Researchers!</a> 
+          </div> 
+          <div class="col_3"> 
+           <ul class="list_unstyled"> 
+            <li><a href="/semantics/Examples">Examples</a></li> 
+            <li><a href="/semantics/FluentEditor/Overview.aspx">Overview</a></li> 
+            <li><a href="/semantics/FluentEditor/GetLicense.aspx">Order&nbsp;License</a></li> 
+           </ul> 
+          </div> 
+          <div class="col_12">
+           &nbsp;
+          </div> 
+          <hr> 
+         </div> 
+         <div class=""> 
+          <ul class="list_links1"> 
+           <li style="background: url('/img/menu/Ontorion Server icon - 32px.png') no-repeat left top; padding-left: 40px;"> <a href="/semantics/Ontorion/">Ontorion Server with SDK</a> <span>Complete solution for OWL/SWRL/RDF </span> </li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="col_4"> 
+         <h3>Free Tools</h3> 
+         <hr> 
+         <ul class="list_links1"> 
+          <li style="background: url('/img/menu/SPARQL Tools Excel - 32.png') no-repeat left top; padding-left: 40px;"> <a href="/semantics/Tools/SparqlExcelTools.aspx">SPARQL Tools for Excel</a> <span>Ontorion SPARQL Tools for Excel </span> </li> 
+         </ul> 
+         <ul class="list_unstyled"> 
+          <li><a href="/semantics/Tools/OWLAPI.NET.aspx">OWL API .NET</a></li> 
+          <li><a href="/semantics/oase/">Ontology Aided Software Engineering</a></li> 
+         </ul> 
+         <h3>Tools</h3> 
+         <hr> 
+         <ul class="list_links1"> 
+          <li style="background: url('/img/menu/TextMining Tools for Excel - 32.png') no-repeat left top; padding-left: 40px;"> <a href="/semantics/TextMiningExcel/">TextMining Tools for Excel</a> <span>Ontorion TextMining Tools for Excel</span> </li> 
+         </ul> 
+        </div> 
+        <div class="col_3"> 
+         <h3>Trainings</h3> 
+         <hr> 
+         <ul class="list_unstyled"> 
+          <li><a href="/semantics/Trainings/Trainings.aspx#c1">"Introduction to Semantic Techn..."</a></li> 
+          <li><a href="/semantics/Trainings/Trainings.aspx#c2">"R – The Data Science Language"</a></li> 
+          <li><a href="/semantics/Trainings/Trainings.aspx#c3">"Cognitum Semantic Toolset"</a></li> 
+         </ul> 
+         <h3>Services</h3> 
+         <hr> 
+         <ul class="list_unstyled"> 
+          <li><a href="/software/">Tailored Software Solutions</a></li> 
+         </ul> 
+        </div> 
+        <div class="col_12"> 
+        </div> 
+        <img src="/img/w3c-member2.png" class="fr" style="margin: 6px;"> 
+       </div> 
+       <!-- End Item Container --> </li> 
+      <!-- End Item --> 
+      <li><a href="#_" class="megamenu_drop">Big Data</a>
+       <!-- Begin Item --> 
+       <div class="dropdown_fullwidth"> 
+        <div class="col_2"> 
+         <h3>Big Data</h3> 
+         <hr> 
+         <ul class="list_unstyled"> 
+          <li><a href="/BigData/Default.aspx">About Big Data</a></li> 
+          <li><a href="/BigData/Technology.aspx">Technology News</a></li> 
+         </ul> 
+        </div> 
+        <div class="col_2"> 
+         <h3>Services</h3> 
+         <hr> 
+         <ul class="list_unstyled"> 
+          <li><a href="/Bigdata/ProductServices.aspx">What we offer</a></li> 
+          <li><a href="/BigData/SME.aspx">Consultancy</a></li> 
+         </ul> 
+        </div> 
+        <div class="col_2"> 
+         <h3>Products</h3> 
+         <hr> 
+         <ul class="list_unstyled"> 
+          <li><a href="/Bigdata/Cassandra.aspx">Cassandra</a></li> 
+          <li><a href="/BigData/Datastax_enterprise.aspx">Datastax Enterprise</a></li> 
+          <li><a href="/BigData/Subscriptions.aspx">Subscriptions</a></li> 
+         </ul> 
+        </div> 
+        <div class="col_2"> 
+         <h3>Training</h3> 
+         <hr> 
+         <ul class="list_unstyled"> 
+          <li><a href="/Bigdata/BasicTraining.aspx">Basic Training</a></li> 
+          <li><a href="/BigData/Training.aspx">Certified Training</a></li> 
+         </ul> 
+        </div> 
+        <div class="col_2"> 
+         <h3>Solutions</h3> 
+         <hr> 
+         <ul class="list_unstyled"> 
+          <li><a href="/BigData/Solutions/EnergySector.aspx">Energy Sector</a></li> 
+          <li><a href="/BigData/Solutions/ecommerce.aspx">E-commerce</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <!-- End Item Container --> </li> 
+      <!-- End Item --> 
+      <li><a href="/Software/">Services</a></li> 
+      <li><a href="/research/">Research</a></li> 
+      <!-- End Item --> 
+     </ul> 
+     <!-- End Mega Menu --> 
+    </div> 
+    <!-- End Menu Container --> 
+    <div class="clear"> 
+    </div> 
+    <div style="margin-top: 0;"> 
+     <div style="width: 100%; height: 10px;">
+      &nbsp;
+     </div> 
+     <div class="jcarousel-wrapper"> 
+      <div class="jcarousel"> 
+       <ul> 
+        <li> <a href="/semantics/FluentEditor/"> 
+          <div style="height: 350px; width: 900px; background-image: url('/img/2014_big_banner_04.jpg'); background-repeat: no-repeat;"> 
+          </div> </a> </li> 
+        <li> <a href="/semantics/Ontorion/"> 
+          <div style="height: 350px; width: 900px; background-image: url('/img/2014_big_banner_03.jpg'); background-repeat: no-repeat;"> 
+          </div> </a> </li> 
+        <li> <a href="/BigData/Solutions/EnergySector.aspx"> 
+          <div style="height: 350px; width: 900px; background-image: url('/img/2014_big_banner_02.jpg'); background-repeat: no-repeat;"> 
+          </div> </a> </li> 
+       </ul> 
+      </div> 
+      <p class="jcarousel-pagination"> </p> 
+     </div> 
+     <a href="/software/"> 
+      <div class="metro-box1 hoverable" id="metro-box-div-1" style="margin: 10px 5px 10px 0px;"> 
+       <img src="/img/ico/cog-software.png"> 
+       <h3>Software</h3> 
+       <p> We deliver comprehensive IT project outsourcing. High quality Development <br> and Software Quality Assesement. </p> 
+      </div> </a> 
+     <a href="/semantics/"> 
+      <div class="metro-box1 hoverable" id="metro-box-div-2" style="margin: 10px 5px 10px 5px;"> 
+       <img src="/img/ico/cog-semantics.png"> 
+       <h3>Semantics</h3> 
+       <p>Knowledge Management Systems in various fields of applications. Health, Law, Administration, Industry, Financial and Corporate.</p> 
+      </div> </a> 
+     <a href="/analytics/"> 
+      <div class="metro-box1 hoverable" id="metro-box-div-3" style="margin: 10px 0px 10px 5px;"> 
+       <img src="/img/ico/cog-analytics.png"> 
+       <h3>Analytics</h3> 
+       <p>Comprehensive analytical services of Internet Big Data data volume. Monitor and Analyse Media &amp; eCommerce.</p> 
+      </div> </a> 
+     <div class="clear"></div> 
+    </div> 
+    <div class="clear"></div> 
+    <div> 
+     <div style="float: left"> 
+      <span id="ctl00_SiteMapPath1"><a href="#ctl00_SiteMapPath1_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=dX7zsTJjdWz0ej1Cyc3986JJwrPd_oJ59V7xIRtfFj7pEicRsZlWJ3k8o0Mp1AGaCh5o1J3ck6425sQVSo230LzK7I2i5UFN72O5_YEV8UU1&amp;t=635332439280000000" width="0" height="0" border="0"></a><span>Home</span><a id="ctl00_SiteMapPath1_SkipLink"></a></span> 
+     </div> 
+     <div style="float: right"> 
+      <!-- AddThis Button BEGIN --> 
+      <div class="addthis_toolbox addthis_default_style "> 
+       <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=cognitum" class="addthis_button_compact">Share</a> 
+       <span class="addthis_separator">|</span> 
+       <a class="addthis_button_preferred_1"></a> 
+       <a class="addthis_button_preferred_2"></a> 
+       <a class="addthis_button_preferred_3"></a> 
+       <a class="addthis_button_preferred_4"></a> 
+      </div> 
+      <script type="text/javascript">    var addthis_config = { 'data_ga_property': 'UA-20532698-1', 'data_track_clickback': true };</script> 
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=cognitum"></script> 
+      <!-- AddThis Button END --> 
+     </div> 
+    </div> 
+    <div class="clear"></div> 
+    <div class="dContent"> 
+     <div class="dContent2"> 
+      <div class="clear"> 
+      </div> 
+      <div> 
+       <div class="col_4_3"> 
+        <h2>Welcome to Cognitum</h2> 
+        <p> <strong>Cognitum</strong> delivers high-end IT services in the area of <strong>Cloud Computing</strong> &amp; <strong>Big Data</strong> solutions as well as <strong>Knowledge Management</strong> tools and <strong>Semantic Technologies</strong>. We seek our competitive advantage with constant innovation through own investment in R&amp;D activities and cooperation with major academics within multiparty research projects. </p> 
+        <p> We build our strong competences within several technological areas: </p> 
+        <ul> 
+         <li>Big Data processing and analysis</li> 
+         <li>Cloud Solutions and core Business Applications</li> 
+         <li>Knowledge Management and Semantic Web</li> 
+         <li>Ontology Engineering</li> 
+         <li>Heterogeneous Data Acquisition &amp; Analysis</li> 
+         <li>Formal Systems </li> 
+         <li>Cloud Computing and Cloud Testing</li> 
+        </ul> 
+        <p> We are present on several vertical markets (industry, telco, health, government, legal services, media) and deliver services to customers from many countries. </p> 
+        <p> Our mission is to deliver high-end, scallable and future-ready solutions for data aquision, storage, searching and processing. No matter how big or complex they are. </p> 
+        <p></p> 
+        <h2>Latests Products</h2> 
+        <div class="videolink" style="padding-left:24px;"> 
+         <a class="video1" rel="video1" href="http://www.youtube.com/embed/Bc6mWHbN-P4?hd=1&amp;autoplay=1" title="Fluent Editor 2014 - Overview"> <img src="http://img.youtube.com/vi/Bc6mWHbN-P4/default.jpg"><br> 
+          <center>
+           Fluent Editor 2014 - Overview
+          </center> </a> 
+        </div> 
+        <div> 
+         <h2>Some of our customers:</h2> 
+         <style type="text/css">
+    .style1
+    {
+        color: #996633;
+    }
+</style> 
+         <script type="text/javascript">
+
+</script> 
+         <div id="div-customers"> 
+          <img class="hoverable-bw" src="/img/logo_antal_bw.png" title="Antal International"> 
+          <img class="hoverable-bw" src="/img/logo_uw_bw.png" title="University of Warsaw"> 
+          <img class="hoverable-bw" src="/img/logo_undp_bw.png" title="United Nations Development Programme"> 
+          <img class="hoverable-bw" src="/img/logo_datastax_bw.png" title="DataStax"> 
+          <img class="hoverable-bw" src="/img/logo_pfrs_bw.png" title="The Robert Schuman Foundation of Poland"> 
+          <img class="hoverable-bw" src="/img/logo_kas_bw.png" title="Konrad-Adenauer-Stiftung"> 
+          <img class="hoverable-bw" src="/img/logo_parp_bw.png" title="Polish Agency for Enterprise Development"> 
+          <img class="hoverable-bw" src="/img/logo_coi_bw.png" title="Centre of Oncology - Intitute"> 
+         </div> 
+         <div> 
+          <br> 
+          <span class="style1">Our Customers are located including: US, CH, FL, DE</span>.
+         </div> 
+         <div>
+           Member of:
+          <br> 
+          <img class="image hoverable-bw" src="/img/SWISSchamber_120px_bw.png" alt="Member of Polish-Swiss Chamber of Commerce">
+         </div> 
+        </div> 
+       </div> 
+       <div class="col_4_1"> 
+        <h2>News</h2> 
+        <div id="ctl00_contentMain_NewsControl1_Panel1"> 
+         <div class="newsItem">
+          <a href="/News/49,0,Cognitum_took_part_in_the_18th_International_Conference_on_Knowledge-Based_and_Intelligent_Information_and_Engineering_Systems.aspx">
+           <div class="newsItemTitle">
+            Cognitum took part in the 18th International Conference on Knowledge-Based and Intelligent Information and Engineering Systems
+           </div></a>
+          <div class="newsItemHeader">
+           14 October 2014
+          </div>
+          <div class="newsItemPreview">
+           Between 15-17 of September 2014 in Gdansk held the 18th International Conference on....
+          </div>
+         </div>
+         <div class="newsItem">
+          <a href="/News/45,0,Cognitum_announced_the_release_of_Fluent_Editor_2014.aspx">
+           <div class="newsItemTitle">
+            Cognitum announced the release of Fluent Editor 2014
+           </div></a>
+          <div class="newsItemHeader">
+           10 September 2014
+          </div>
+          <div class="newsItemPreview">
+           Cognitum improves its ontology editor Fluent Editor, a comprehensive tool for......
+          </div>
+         </div>
+         <div class="newsItem">
+          <a href="/News/44,0,Cognitum_was_a_gold_sponsor_of_SEMANTiCS_2014_Conference_.aspx">
+           <div class="newsItemTitle">
+            Cognitum was a gold sponsor of SEMANTiCS 2014 Conference.
+           </div></a>
+          <div class="newsItemHeader">
+           09 September 2014
+          </div>
+          <div class="newsItemPreview">
+           Cognitum had the pleasure to be this year a Gold Sponsor of SEMANTiCS 2014 Conference.... 
+          </div>
+         </div>
+         <div class="newsItem">
+          <a href="/News/43,0,Cognitum_becomes_a_Member_of_World_Wide_Web_Consortium_W3C.aspx">
+           <div class="newsItemTitle">
+            Cognitum becomes a Member of World Wide Web Consortium W3C
+           </div></a>
+          <div class="newsItemHeader">
+           11 August 2014
+          </div>
+          <div class="newsItemPreview">
+           Cognitum is very proud to inform that on the 4th of August we became a member...
+          </div>
+         </div>
+         <div class="newsItem">
+          <a href="/News/42,0,Cognitum_at_IBIZA_2014_Conference_on_Computer_Science.aspx">
+           <div class="newsItemTitle">
+            Cognitum at IBIZA 2014 Conference on Computer Science
+           </div></a>
+          <div class="newsItemHeader">
+           29 May 2014
+          </div>
+          <div class="newsItemPreview">
+           This year, Cognitum took part in International Conference on Computer Science - Research and...
+          </div>
+         </div>
+         <div class="newsItem">
+          <a href="/News/40,0,Patrick_McFadin_from_DataStax_at_Warsaw_Cassandra_Group_Meeting.aspx">
+           <div class="newsItemTitle">
+            Patrick McFadin from DataStax at Warsaw Cassandra Group Meeting
+           </div></a>
+          <div class="newsItemHeader">
+           02 April 2014
+          </div>
+          <div class="newsItemPreview">
+           Cognitum had pleasure to host Patrick McFadin from DataStax at Warsaw Cassandra Users Group Meeting...
+          </div>
+         </div>
+         <div class="newsItem">
+          <a href="/News/39,0,Cognitum_Provides_Internships_for_Researchers_and_Academics.aspx">
+           <div class="newsItemTitle">
+            Cognitum Provides Internships for Researchers and Academics
+           </div></a>
+          <div class="newsItemHeader">
+           10 March 2014
+          </div>
+          <div class="newsItemPreview">
+           During past few years, Cognitum has organized several internships for researchers and academics...
+          </div>
+         </div>
+         <div class="newsItem">
+          <a href="/News/37,0,Cognitum_at_IV_National_Congress_of_Information_Analysts.aspx">
+           <div class="newsItemTitle">
+            Cognitum at IV National Congress of Information Analysts
+           </div></a>
+          <div class="newsItemHeader">
+           27 February 2014
+          </div>
+          <div class="newsItemPreview">
+           On the 26th of February 2014 Cognitum took part in the IV National Congress of Information Analysts.
+          </div>
+         </div>
+         <div class="newsItem">
+          <a href="/News/36,0,Giza_Polish_Ventures_has_invested_in_Cognitum_company_.aspx">
+           <div class="newsItemTitle">
+            Giza Polish Ventures has invested in Cognitum company.
+           </div></a>
+          <div class="newsItemHeader">
+           23 January 2014
+          </div>
+          <div class="newsItemPreview">
+           Cognitum - the most recent investment of Giza Polish Ventures I Fund...
+          </div>
+         </div>
+         <div class="newsItem">
+          <a href="/News/34,0,Cognitum_on_Warsaw_Cassandra_User_Group.aspx">
+           <div class="newsItemTitle">
+            Cognitum on Warsaw Cassandra User Group
+           </div></a>
+          <div class="newsItemHeader">
+           08 December 2013
+          </div>
+          <div class="newsItemPreview">
+           Cognitum took part in the second Seminary of Big Data at Warsaw University of Technology
+          </div>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="clear"></div> 
+     </div> 
+    </div> 
+    <div id="dFooter"> 
+     <p> <a href="/legal/Terms.aspx">Terms of Use</a> | <a href="/legal/Trademarks.aspx">Trademarks</a> | <a href="/legal/Privacy.aspx">Privacy Statement</a> | <a href="/company/contact.aspx">Contact</a> </p> 
+     <a href="http://www.cognitum.eu/"> <img class="fr" src="/images/cog_logo_sm.png" alt="Cognitum"> </a> 
+     <img class="fr" style="margin: 0px 18px;" src="/images/BizSpark_Startup.png" alt="Microsoft BizSpark"> 
+     <a href="http://www.w3.org/" target="_blank"> <img class="fr" src="/img/w3c-member.png" alt="W3C Member"> </a> 
+     <a href="http://www.madeinwarsaw.net/" target="_blank"> <img class="fr" src="/img/miw_white_72.png" alt="Made in Warsaw!"> </a> 
+     <p> <br> © 2014 Cognitum. All rights reserved.<br> <span style="font-size:7pt;color:#ddd;">1.1.5449.20930</span> </p> 
+     <p>&nbsp;</p> 
+    </div> 
+   </form> 
+  </div> 
+  <!-- cog_page_wrapper -->   
+ </body>
+</html>

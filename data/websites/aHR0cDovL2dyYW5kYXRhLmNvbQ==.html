@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta name="robots" content="index,follow"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content=""> 
+  <link href="imgs/icon.png" rel="shortcut icon" type="image/png"> 
+  <link href="css/style.css" rel="stylesheet"> 
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> 
+  <script src="js/functions.js"></script> 
+  <title>GranData</title>
+ </head> 
+ <body> 
+  <!--HEADER--> 
+  <div id="header-red-izq"></div> 
+  <div id="header-red-der"></div> 
+  <div id="header"> 
+   <div class="cont"> 
+    <div class="block"> 
+     <div class="logo">
+      <a href="index.php"><img src="imgs/header-logo.png"></a>
+     </div> 
+     <div class="menu"> 
+      <ul> 
+       <li style="display:none !important;"><a class="btnMenu" id="index-btn" href="index.php">HOME</a></li> 
+       <li><a class="btnMenu" id="product-btn" href="product.php">PRODUCTS</a></li> 
+       <li><a class="btnMenu" id="company-btn" href="company.php">COMPANY</a></li> 
+       <li><a class="btnMenu" id="blog-btn" href="http://grandatablog.tumblr.com/" target="_blank">BLOG</a></li> 
+       <li><a class="btnMenu" id="contact-btn" href="contact.php">CONTACT</a></li> 
+      </ul> 
+      <!--<div class="login"><a href="http://demo.grandata.com" target="_blank">Login</a></div>--> 
+     </div> 
+    </div> 
+    <div id="header-index" class="block"></div> 
+   </div> 
+  </div> 
+  <div id="header-submenu"> 
+   <div class="cont"> 
+    <div class="block"> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+	var index = window.location.href.lastIndexOf("/") + 1;
+	var filename = window.location.href.substr(index);
+	filename = filename.split('.');
+	filename = filename[0];
+	//console.log(filename);\
+	$("#"+filename+"-btn").addClass('selected');	
+</script> 
+  <!--//end//-HEADER--> 
+  <!--NEWS--> 
+  <div id="news"> 
+   <div class="cont"> 
+    <div class="block"> 
+     <p class="t15 t-blue2 t-center"> WE ARE HIRING!!: <a href="https://grandata.workable.com/" target="_blank" class="t-blue2"> Grandata is Hiring Several Positions. Check them out!</a> </p> 
+    </div> 
+   </div> 
+  </div> 
+  <!--//end//-NEWS--> 
+  <!--BRANDS--> 
+  <div id="brands"> 
+   <div class="cont"> 
+    <div class="block"> 
+     <ul> 
+      <li><a href="product-success.php"><img src="imgs/brands/telefonica.png"></a></li> 
+      <li><a href="product-success.php"><img src="imgs/brands/iusacel.png"></a></li> 
+      <li><a href="product-success.php#success2"><img src="imgs/brands/santander.png"></a></li> 
+      <li><a href="company-partners.php"><img src="imgs/brands/equifax.png"></a></li> 
+      <!-- <li><a href="company-partners.php"><img src="imgs/brands/nielsen.png" /></a></li> --> 
+      <li><a href="company-partners.php"><img src="imgs/brands/brightstar.png"></a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div>
+  <!--//end//-BRANDS--> 
+  <!--SOCIAL UNIVERSE--> 
+  <div id="social-universe"> 
+   <div class="cont"> 
+    <div class="block"> 
+     <p class="t30 t-blue t-center">Find out how Grandata can help you:</p> 
+    </div> 
+    <div class="block mt30"> 
+     <ul> 
+      <li> <img src="imgs/social-universe/social-universe-img1.png"> <p class="t24 t-light t-blue">Telecom</p> <p class="t18 t-blue2" style="font-size: 18px;margin-bottom: 10px;margin-top: 10px;font-family: Lato;font-weight: 100;height: 90px;">Leverage comprehensive consumer data to deliver products and services that precisely match user demand. </p> 
+       <ul style=""> 
+        <li>Deliver event-driven, value-added services <br><br></li> 
+        <li>Leverage social relationships to acquire new customers</li> 
+        <li>Identify competitive threats</li> 
+       </ul> <a href="product-success.php#success1">Learn more »</a> </li> 
+      <li> <img src="imgs/social-universe/social-universe-img2.png"> <p class="t24 t-light t-green2">Financial Services</p> <p class="t18 t-blue2" style="font-size: 18px;margin-bottom: 10px;margin-top: 10px;font-family: Lato;font-weight: 100;height: 90px;">Combine telco customer data and consumer purchase information to optimize business processes and focus marketing efforts</p> 
+       <ul style=""> 
+        <li>Expand relationship with highest-value customers</li> 
+        <li>Identify prospects and acquire new customers</li> 
+        <li>Leverage mobile channel for campaign delivery</li> 
+       </ul> <a href="product-success.php#success2">Learn more »</a> </li> 
+      <li> <img src="imgs/social-universe/social-universe-img3.png"> <p class="t24 t-light t-red">Global Brands</p> <p class="t18 t-blue2" style="font-size: 18px;margin-bottom: 10px;margin-top: 10px;font-family: Lato;font-weight: 100;height: 90px;">Deliver highly personalized and customized campaigns through intelligence gathered from consumer spending, location and demo data</p> 
+       <ul style=""> 
+        <li>Determine social influence paths and information flow</li> 
+        <li>Expand relationship with highest-value customers</li> 
+        <li>Identify highest potential micro-segments</li> 
+       </ul> <a href="product-success.php#success3">Learn more »</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div>
+  <!--//end//-SOCIAL UNIVERSE--> 
+  <!--FOOTER--> 
+  <div id="footer"> 
+   <div class="cont"> 
+    <div class="block"> 
+     <div class="logo"> 
+      <ul>
+       <img src="imgs/footer-logo2.png">
+      </ul> 
+      <ul> 
+       <li>Grandata integrates first-party and telco partner data <br> to understand key market trends, predict customer behavior,<br> and deliver impressive business results.</li>
+       <br> 
+       <li> © 2014 Grandata, Inc. All rights reserved. | <a href="privacy.php">Privacy Policy</a> | <a href="terms-of-use.php">Terms of Use</a></li> 
+      </ul> 
+     </div> 
+     <div class="sitemap"> 
+      <ul> 
+       <li class="title">PRODUCT</li> 
+       <li><a href="product.php">Overview</a></li> 
+       <li><a href="product-technology.php">Technology</a></li> 
+       <li><a href="product-success.php">Case Studies</a></li> 
+      </ul> 
+      <ul> 
+       <li class="title">COMPANY</li> 
+       <li><a href="company.php">About Us</a></li> 
+       <!--<li><a href="company-customers.php" >Customers</a></li>--> 
+       <li><a href="company-team.php">Team</a></li> 
+       <li><a href="company-partners.php">Partners</a></li> 
+       <li><a href="company-news.php">News</a></li> 
+      </ul> 
+      <ul> 
+       <li class="title">STAY IN TOUCH</li> 
+       <li><a href="blog.php">Blog</a></li> 
+       <li><a href="contact.php">Contact Us</a></li> 
+       <li><a href="https://grandata.workable.com" target="_blank">Jobs</a></li> 
+       <li> <a href="https://www.facebook.com/Grandata" target="_blank" style="margin-top: 5px;float: left;"> <img src="imgs/footer-fb.png"> </a> <a href="http://www.twitter.com/grandatacorp" target="_blank" style="margin-top: 5px;float: left;margin-left: 5px;"> <img src="imgs/footer-tw.png"> </a> <a href="http://www.linkedin.com/company/grandata" target="_blank" style="margin-top: 5px;float: left;margin-left: 5px;"> <img src="imgs/footer-linkedin.png"> </a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--//end//-FOOTER--> 
+  <script>
+	$(document).ready(function(){
+		$( "#header-index" ).load( "includes/index-header.php", function() {
+			$( "#header-index" ).css({"display":"block"})
+		});
+	});
+</script>   
+ </body>
+</html>

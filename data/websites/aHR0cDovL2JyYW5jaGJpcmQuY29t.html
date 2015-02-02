@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta name="description" content="Branchbird solves big data problems for companies by providing world class Agile Business Intelligence and E-Commerce services and solutions."> 
+  <meta name="keywords" content="Cloudera, CDH4, Tableau, agile business intelligence, QlikView, Hadoop, information access, search, Endeca, Oracle, Discovery Framework, Studio, Endeca Guided Search, Oracle Endeca Commerce, Oracle Endeca Information Discovery"> 
+  <title>Branchbird</title> 
+  <link rel="icon" type="image/png" href="images/favicon.png"> 
+  <!--style sheet--> 
+  <link rel="stylesheet" media="screen" href="css/style.css"> 
+  <link rel="stylesheet" media="screen" href="css/custom.css"> 
+  <link rel="stylesheet" media="screen" href="css/navigation.css"> 
+  <link rel="stylesheet" media="screen" href="css/jquery-ui-1.8.17.custom.css"> 
+  <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="css/ie7.css">
+<![endif]--> 
+  <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="css/ie8.css">
+<![endif]--> 
+  <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script> 
+  <!--anything slider scripts starts--> 
+  <link rel="stylesheet" media="screen" href="css/anythingslider.css"> 
+  <script src="js/jquery.anythingslider.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+$(document).ready(function() {
+//Anything slider
+function formatText(index, panel) {
+	return index + "";
+	}
+	$(function () {
+	$('.anythingSlider').anythingSlider({
+                easing: "easeInOutExpo",        // Anything other than "linear" or "swing" requires the easing plugin
+                autoPlay: true,                 // This turns off the entire FUNCTIONALY, not just if it starts running or not.
+                delay: 5000,                    // How long between slide transitions in AutoPlay mode
+                animationTime: 1000,             // How long the slide transition takes
+                hashTags: true,                 // Should links change the hashtag in the URL?
+                buildNavigation: true,          // If true, builds and list of anchor links to link to each slide
+        		pauseOnHover: true,             // If true, and autoPlay is enabled, the show will pause on hover
+		        navigationFormatter: formatText       // Details at the top of the file on this use (advanced use)
+	});
+    });
+});
+</script> 
+  <!--anything slider scripts end--> 
+  <!--jcarousel scripts starts--> 
+  <link rel="stylesheet" media="screen" href="css/jcarousel.css"> 
+  <script src="js/jquery.jcarousel.min.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+//Image slider for gallery	
+$(document).ready(function() {	
+$('#mycarousel').jcarousel({
+         easing: 'easeInOutQuint',
+         animation: 600
+});
+});
+</script> 
+  <!--jcarousel scripts ends--> 
+  <!--prettyphoto scripts starts--> 
+  <link rel="stylesheet" media="screen" href="css/prettyPhoto.css"> 
+  <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+$(document).ready(function() {	
+$('a[data-rel]').each(function() {
+		$(this).attr('rel', $(this).data('rel'));
+});
+$("a[rel^='prettyPhoto[mixed]']").prettyPhoto({
+		animation_speed: 'fast',
+		slideshow: 5000,
+		autoplay_slideshow: false,
+		opacity: 0.80,
+		show_title: false,
+		theme: 'pp_default', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+		overlay_gallery: false,
+		social_tools: false
+});
+});
+</script> 
+  <!--prettyphoto scripts ends--> 
+  <!--subscribe scripts starts--> 
+  <script src="js/jquery.validate.js" type="text/javascript"></script> 
+  <script src="js/jquery.form.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+$(document).ready(function() {	
+$(function() {
+		var v = $("#subform").validate({
+		submitHandler: function(form) {
+		$(form).ajaxSubmit({
+		target: "#result_sub",
+		clearForm: true
+		});
+		}
+		});
+});	
+//To clear form field on page refresh
+$('#subform #email').val('');
+});
+</script> 
+  <!--subscribe scripts ends--> 
+ </head> 
+ <body> 
+  <script type="text/javascript"> 
+
+	jQuery(document).ready(function($) {
+
+		var pageName = window.location.pathname.replace('/','');
+		//remove all other currents
+		$(".sf-menu a").each(function() {
+			$(this).removeClass("current");
+		});
+
+		$(".sf-menu a").each(function() {
+			if($(this).attr("href") == pageName) {
+				$(this).addClass("current");
+				$(this).parents("li").each(function() {
+					$(this).children("a[href='#']").addClass("current");
+					//$(this).addClass("current");
+				});
+			}
+		});
+
+	});
+	
+	
+</script> 
+  <!--top starts--> 
+  <div id="top"> 
+   <div class="container clearfix"> 
+    <div class="grid_12"> 
+     <p>Transform Big Data into Big Discovery.</p> 
+     <p class="call">To learn more: <span style="color:#FFB400"><a style="text-decoration: underline;" href="mailto:info@branchbird.com">info@branchbird.com</a></span>&nbsp;&nbsp; &nbsp;&nbsp;<a href="http://www.linkedin.com/company/branchbird"><img src="images/icons/social/linkedin.png" width="16" height="16" alt="icon"></a> &nbsp;&nbsp;<a href="http://www.twitter.com/branchbird"><img src="images/icons/social/twitter.png" width="16" height="16" alt="icon"></a> &nbsp;&nbsp;<a href="http://www.facebook.com/branchbird"><img src="images/icons/social/facebook.png" width="16" height="16" alt="icon"></a></p> 
+     <!--social links--> 
+    </div> 
+   </div> 
+  </div> 
+  <!--top ends--> 
+  <!--header starts--> 
+  <div id="header"> 
+   <div class="container  header_inner clearfix"> 
+    <div class="grid_12"> 
+     <!--logo here--> 
+     <a href="/index.php"> <img src="images/branchbird_weblogo.png" width="250" height="82" alt="logo" class="logo"> </a> 
+     <!--menu / navigation starts--> 
+     <ul class="sf-menu"> 
+      <li><a href="index.php">Home</a></li> 
+      <li><a href="#">What We Do</a> 
+       <ul> 
+        <li><a href="discovery-for-agile-bi.php">Data Discovery &amp; Agile BI</a></li> 
+        <li><a href="endeca-managed-analytics.php">Endeca Managed Analytics</a></li> 
+        <li><a href="endeca-extensions-catalog.php">Extensions Catalog</a></li> 
+        <li><a href="eee-cloud-offering.php">EEE Cloud Offering</a></li> 
+       </ul> </li> 
+      <li><a href="leadership.php">Who We Are</a> 
+       <ul> 
+        <li><a href="leadership.php">Our Leadership</a></li> 
+        <li><a href="team.php">Our Team</a></li> 
+        <li><a href="our-approach.php">Our Approach</a></li> 
+        <li><a href="/our-customers.php">Our Customers</a></li> 
+        <li><a href="our-partners.php">Our Partners</a></li> 
+       </ul> </li> 
+      <li><a href="#" class="current">Contact</a> 
+       <ul> 
+        <li><a href="contact-us.php">Contact Us</a></li> 
+        <li><a href="careers.php">Join Us</a></li> 
+        <li><a href="news_events.php">News &amp; Events</a></li> 
+       </ul> </li> 
+      <li><a href="/blog">Blog</a> </li> 
+      <li><a href="/blog/downloads">Downloads</a> </li> 
+     </ul> 
+     <!--menu ends--> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--header ends--> 
+  <!--header_bottom starts--> 
+  <div id="header_bottom"> 
+   <div class="container clearfix"> 
+    <div class="grid_12"> 
+     <!--anything slider starts--> 
+     <div class="anythingSlider"> 
+      <div class="any_wrapper"> 
+       <ul> 
+        <!--third slide starts--> 
+        <li> 
+         <div class="image_frame_left"> 
+          <iframe src="http://www.youtube.com/embed/QQkhAj5i13s?controls=0&amp;fs=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;theme=light&amp;rel=0&amp;showinfo=0" width="480" height="260" frameborder="0"></iframe> 
+         </div> 
+         <div class="slide-2"> 
+          <p>Providers need to understand the "why" behind the "what"...</p> 
+          <h1>Discovery in Healthcare</h1> 
+          <h4>Today's providers are realizing the need to analyze both structured AND unstructured data to gain a complete picture of their clinical outcomes. See a demo of a real-world Branchbird data discovery solution. Let us guide you to cost effective information discovery applications with huge ROI.</h4> 
+         </div> </li> 
+        <!--third slide starts--> 
+        <!--third slide starts--> 
+        <li> 
+         <div class="image_frame_left"> 
+          <iframe src="http://www.youtube.com/embed/1HzUkKDSu0E?controls=0&amp;fs=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;theme=light&amp;rel=0&amp;showinfo=0" width="480" height="260" frameborder="0"></iframe> 
+         </div> 
+         <div class="slide-2"> 
+          <p>Learn what separates Branchbird from the pack in Oracle's...</p> 
+          <h1>Latest PartnerCast featuring Branchbird</h1> 
+          <h4>Branchbird President Andrew Oh joins Oracle in studio to discuss Branchbird's expertise as well as a some recent success stories.</h4> 
+         </div> </li> 
+        <!--third slide starts--> 
+        <!--first slide starts--> 
+        <li> 
+         <div class="slide-4a"> 
+          <img src="images/branch-bird-browser_443_315.png" width="443" height="315" alt="image"> 
+         </div> 
+         <div class="slide-4b"> 
+          <h3>Discovery For Agile Business Intelligence</h3> 
+          <ul class="list3 clearfix"> 
+           <li>Eliminate your BI backlog by empowering end users to explore their data based on any criteria.</li> 
+           <li>Produce new insights by incorporating and enriching unstructured feeds.</li> 
+           <li>Extend your BI tools to meet the unique demands of your users.</li> 
+           <li>Employ discovery best practices and performance-minded design.</li> 
+          </ul> 
+          <a href="discovery-for-agile-bi.php">Learn more »</a> 
+         </div> </li> 
+        <!--first slide ends--> 
+        <!--third slide starts--> 
+        <li> 
+         <div class="image_frame_left"> 
+          <iframe src="http://www.youtube.com/embed/r2Fu6udHvPs?controls=0&amp;fs=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;theme=light&amp;rel=0&amp;showinfo=0" width="480" height="260" frameborder="0"></iframe> 
+         </div> 
+         <div class="slide-2"> 
+          <p>Don't settle for out-of-the-box charts. Let your data tell the best story possible leveraging Branchbird's...</p> 
+          <h1>Advanced Visualization Framework</h1> 
+          <h4>Our framework extends Endeca Studio to easily incorporate <a href="http://d3js.org/">the visualization</a> best suited for your data and users.</h4> 
+          <br>
+          <a href="http://branchbird.com/blog/oracle-endeca-donut-chart/">Learn to configure a new visualization in minutes »</a>
+          <br>
+          <a href="http://d3js.org/">Find your perfect visualization »</a> 
+         </div> </li> 
+        <!--third slide starts--> 
+        <!--second slide starts--
+            <li>
+              <div class="slide-4a">
+				<img src="images/advanced-visualizations.png" alt="image">
+			  </div>
+              <div class="slide-4b">
+                <h3>Transform Big Data into Big Discovery</h3>
+                <ul class="list3 clearfix">
+                  <li>Don't just store your Big Data.  Unlock it with best of breed discovery products.</li>
+				  <li>Put all your organization's data to use.  Marry disparate systems.  Accept all variety.</li>
+				  <li>Provide your organization's knowledge workers with the ability to ask the unanticipated question while eliminating the BI backlog.</li>
+                </ul>
+				<a href="/blog">Learn more &raquo;</a>
+              </div>
+            </li>
+            <!--second slide ends--> 
+        <!--forth slide starts--> 
+        <li> 
+         <div class="anythingSlider" align="center"> 
+          <a href="http://branchbird.com/news_events.php"><img align="center" src="images/one_and_only.png"></a> 
+         </div> </li> 
+        <!--forth slide ends--> 
+       </ul> 
+      </div> 
+     </div> 
+     <!--anything slider ends--> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--header_bottom ends--> 
+  <!--section for intro text and button starts--> 
+  <div class="section colored"> 
+   <div class="container clearfix"> 
+    <div class="grid_12"> 
+     <!--action2 starts--> 
+     <div class="action2"> 
+      <h1>Looking to extend, upgrade or maintain your existing Endeca solution?</h1> 
+      <p><a href="endeca-solutions.php">Learn how Branchbird can optimize your application with our Endeca extension pack and industry specific solution accelerators.</a>...</p> 
+     </div> 
+     <!--action2 ends--> 
+     <!--button here--> 
+     <a href="endeca-solutions.php" class="button button-eggplant right"> <span>Solutions</span> </a> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--section for intro text and button ends--> 
+  <!--section for features starts--> 
+  <!--
+<div class="section">
+  <div class="container clearfix"> 
+    
+    <div class="grid_12 features_style2">
+      <h2>The three pillars of our unique approach</h2>
+      <div class="grid_4 first">
+        <h4>Enable the end user, not IT</h4>
+        <img src="images/icons/features/feature-icon-9.png" width="64" height="64" alt="icon">
+        <p>Lorem ipsum dolor sit amet elit, sed diam nonummy nibh zzril laoreet dolore magna aliquam erat volutpat praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+      </div>
+      <div class="grid_4">
+        <h4>Work with technologies that embrace disparate data</h4>
+        <img src="images/icons/features/feature-icon-8.png" width="64" height="64" alt="icon">
+        <p>Duis autem vel eum iriure dolor in vulputate velit molestie consequat, consuetudium lectorum. Mirum est notare quam littera gothica vel illum feugiat nulla facilisis</p>
+      </div>
+      <div class="grid_4 last">
+        <h4>Find improvement iteratively</h4>
+        <img src="images/icons/features/feature-icon-10.png" width="64" height="64" alt="icon">
+        <p>Nam liber tempor cum soluta nobis eleifend option ullamcorper suscipit lobortis nisl commodo consequat doming quod mazim placerat facer possim assum.</p>
+      </div>
+      
+      <div class="spacer_30px"></div>
+    
+  </div>
+-->  
+  <!--section for features ends--> 
+  <!--footer starts--> 
+  <div id="footer"> 
+   <div class="container footer_inner clearfix"> 
+    <!--about starts--> 
+    <div class="grid_4 first"> 
+     <h4>About Branchbird</h4> 
+     <p>Branchbird solves big data problems for companies by providing world class agile business intelligence services and solutions. Our work empowers companies to make better decisions, derive new insights from a variety of data sources and surface the competitive advantages that are critical for success.</p> 
+    </div> 
+    <!--about ends--> 
+    <!--testimonial starts--> 
+    <!--<div class="grid_3">
+      <h4>What they're saying...</h4>
+      <div class="testimonial_style1"> 
+        --> 
+    <!--first testimonial starts--> 
+    <!-- <div>
+          <p>" Praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim "</p>
+          <span>John Doe <br/>
+          http://companyname.com</span> </div> --> 
+    <!--first testimonial ends--> 
+    <!--second testimonial starts--> 
+    <!-- <div>
+          <p>" Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram decima. "</p>
+          <span>Jenny<br/>
+          http://companyname.com</span> </div>--> 
+    <!--second testimonial ends--> 
+    <!-- </div>
+    </div>--> 
+    <!--testimonial ends--> 
+    <!--social starts--> 
+    <div class="grid_5"> 
+     <h4>Socialize with us</h4> 
+     <div id="twitter"> 
+      <a class="twitter-timeline" data-dnt="true" data-tweet-limit="3" data-chrome="nofooter transparent noheader noborders noscrollbar" href="https://twitter.com/branchbird" data-widget-id="349604688464859137">Tweets by @branchbird</a> 
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+      <script src="js/customize-twitter-1.1.min.js" type="text/javascript"></script> 
+      <script>
+    var options = {
+        "url": "/css/twitter.css"
+    };
+    CustomizeTwitterWidget(options);
+    </script> 
+     </div> 
+    </div> 
+    <!--social ends--> 
+    <!--list starts--> 
+    <div class="grid_3 last"> 
+     <h4>Our Technologies</h4> 
+     <ul class="list1"> 
+      <li><a target="_blank" href="http://www.oracle.com/us/solutions/ent-performance-bi/endeca-info-discovery-1494658.html">Oracle Endeca, OBIEE</a></li> 
+      <li><a target="_blank" href="http://www.oracle.com/us/technologies/big-data/products/index.html">Oracle Big Data Appliance</a></li> 
+      <li><a target="_blank" href="http://www.oracle.com/us/technologies/big-data/products/index.html">Oracle Exalytics</a></li> 
+      <li><a target="_blank" href="http://www.cloudera.com">Cloudera's Distribution of Hadoop</a></li> 
+      <li><a target="_blank" href="http://www.qlikview.com">QlikView</a></li> 
+      <li><a target="_blank" href="http://www.tableausoftware.com/">Tableau</a></li> 
+     </ul> 
+     <a href="index.php"><img src="images/branchbird_weblogo.png" width="105" height="35" alt="logo" class="logo"></a> 
+    </div> 
+    <!--list ends--> 
+    <div class="clear"></div> 
+   </div> 
+  </div> 
+  <!--footer ends--> 
+  <!--copyright starts--> 
+  <div id="copyright"> 
+   <div class="container clearfix"> 
+    <!--copyright text and general links--> 
+    <div class="grid_6"> 
+     <p>Copyright © 2012. All rights reserved.</p> 
+     <!-- <ul class="copyright">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy policy</a></li>
+      </ul>--> 
+    </div> 
+    <!--social links--> 
+    <div class="grid_6"> 
+     <ul class="social"> 
+      <li><a href="http://www.linkedin.com/company/branchbird"><img src="images/icons/social/linkedin.png" width="16" height="16" alt="icon"></a></li> 
+      <li><a href="http://www.twitter.com/branchbird"><img src="images/icons/social/twitter.png" width="16" height="16" alt="icon"></a></li> 
+      <li><a href="http://www.facebook.com/branchbird"><img src="images/icons/social/facebook.png" width="16" height="16" alt="icon"></a></li> 
+     </ul> 
+    </div> 
+    <div class="clear"></div> 
+   </div> 
+  </div> 
+  <!--copyright ends--> 
+  <!--jqueries required--> 
+  <script type="text/javascript"> Cufon.now(); </script> 
+  <script src="js/jquery.cycle.all.js" type="text/javascript"></script> 
+  <script src="js/jquery-ui-1.8.17.custom.min.js" type="text/javascript"></script> 
+  <script src="js/jquery.easing.1.3.js" type="text/javascript"></script> 
+  <script src="js/jquery.supersubs.js" type="text/javascript"></script> 
+  <script src="js/jquery.superfish.js" type="text/javascript"></script> 
+  <script src="js/twitter.js" type="text/javascript"></script> 
+  <script src="js/cufon-yui.js" type="text/javascript"></script> 
+  <script src="js/Arimo_400.font.js" type="text/javascript"></script> 
+  <script src="js/custom.js" type="text/javascript"></script>  
+ </body>
+</html>

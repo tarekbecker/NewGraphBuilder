@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <title>eBureau Lead Verification and Lead Scoring with Predictive Analytics</title> 
+  <meta name="description" content="eBureau helps businesses acquire customers, manage risks and maintain customer relationships - through big data and predictive analytics"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> 
+  <!--[if lt IE 9]><script src="js/vendor/respond.js"></script><![endif]--> 
+  <style type="text/css" media="all">@import url("http://www.ebureau.com/modules/system/system.base.css?nebd6i");
+@import url("http://www.ebureau.com/modules/system/system.menus.css?nebd6i");
+@import url("http://www.ebureau.com/modules/system/system.messages.css?nebd6i");
+@import url("http://www.ebureau.com/modules/system/system.theme.css?nebd6i");</style> 
+  <style type="text/css" media="all">@import url("http://www.ebureau.com/modules/aggregator/aggregator.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/modules/date/date_api/date.css?nebd6i");
+@import url("http://www.ebureau.com/modules/field/theme/field.css?nebd6i");
+@import url("http://www.ebureau.com/modules/node/node.css?nebd6i");
+@import url("http://www.ebureau.com/modules/search/search.css?nebd6i");
+@import url("http://www.ebureau.com/modules/user/user.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/modules/views/css/views.css?nebd6i");</style> 
+  <style type="text/css" media="all">@import url("http://www.ebureau.com/sites/all/modules/ctools/css/ctools.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/modules/nice_menus/css/nice_menus.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/modules/nice_menus/css/nice_menus_default.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/front-page.css?nebd6i");</style> 
+  <style type="text/css" media="all">@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/html-reset.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/layout-fixed.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/page-backgrounds.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/tabs.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/pages.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/blocks.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/navigation.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/views-styles.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/nodes.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/comments.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/forms.css?nebd6i");
+@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/fields.css?nebd6i");</style> 
+  <style type="text/css" media="print">@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/print.css?nebd6i");</style> 
+  <!--[if lte IE 7]>
+<style type="text/css" media="all">@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/ie7.css?nebd6i");</style>
+<![endif]--> 
+  <!--[if lte IE 6]>
+<style type="text/css" media="all">@import url("http://www.ebureau.com/sites/all/themes/zen/default/css/ie6.css?nebd6i");</style>
+<![endif]--> 
+  <script type="text/javascript" src="http://www.ebureau.com/misc/jquery.js?v=1.4.4"></script> 
+  <script type="text/javascript" src="http://www.ebureau.com/misc/jquery.once.js?v=1.2"></script> 
+  <script type="text/javascript" src="http://www.ebureau.com/misc/drupal.js?nebd6i"></script> 
+  <script type="text/javascript" src="http://www.ebureau.com/sites/all/modules/nice_menus/js/jquery.bgiframe.js?v=2.1"></script> 
+  <script type="text/javascript" src="http://www.ebureau.com/sites/all/modules/nice_menus/js/jquery.hoverIntent.js?v=0.5"></script> 
+  <script type="text/javascript" src="http://www.ebureau.com/sites/all/modules/nice_menus/js/superfish.js?v=1.4.8"></script> 
+  <script type="text/javascript" src="http://www.ebureau.com/sites/all/modules/nice_menus/js/nice_menus.js?v=1.0"></script> 
+  <script type="text/javascript" src="http://www.ebureau.com/sites/all/modules/google_analytics/googleanalytics.js?nebd6i"></script> 
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-1997399-2"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script> 
+  <script type="text/javascript" src="http://www.ebureau.com/sites/all/themes/zen/default/js/vendor/modernizr-2.6.2.min.js?nebd6i"></script> 
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"default","theme_token":"e-GN_pon_hWHz7bS4_zPVVVlznPTr15LuNYxqG_7Gms","js":{"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.10.2\/jquery.min.js":1,"0":1,"sites\/all\/themes\/zen\/default\/js\/plugins.js":1,"http:\/\/munchkin.marketo.net\/munchkin.js":1,"1":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/nice_menus\/js\/jquery.bgiframe.js":1,"sites\/all\/modules\/nice_menus\/js\/jquery.hoverIntent.js":1,"sites\/all\/modules\/nice_menus\/js\/superfish.js":1,"sites\/all\/modules\/nice_menus\/js\/nice_menus.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/themes\/zen\/default\/js\/vendor\/modernizr-2.6.2.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/nice_menus\/css\/nice_menus.css":1,"sites\/all\/modules\/nice_menus\/css\/nice_menus_default.css":1,"sites\/all\/themes\/zen\/default\/css\/front-page.css":1,"sites\/all\/themes\/zen\/default\/css\/html-reset.css":1,"sites\/all\/themes\/zen\/default\/css\/wireframes.css":1,"sites\/all\/themes\/zen\/default\/css\/layout-fixed.css":1,"sites\/all\/themes\/zen\/default\/css\/page-backgrounds.css":1,"sites\/all\/themes\/zen\/default\/css\/tabs.css":1,"sites\/all\/themes\/zen\/default\/css\/pages.css":1,"sites\/all\/themes\/zen\/default\/css\/blocks.css":1,"sites\/all\/themes\/zen\/default\/css\/navigation.css":1,"sites\/all\/themes\/zen\/default\/css\/views-styles.css":1,"sites\/all\/themes\/zen\/default\/css\/nodes.css":1,"sites\/all\/themes\/zen\/default\/css\/comments.css":1,"sites\/all\/themes\/zen\/default\/css\/forms.css":1,"sites\/all\/themes\/zen\/default\/css\/fields.css":1,"sites\/all\/themes\/zen\/default\/css\/print.css":1,"sites\/all\/themes\/zen\/default\/css\/ie7.css":1,"sites\/all\/themes\/zen\/default\/css\/ie6.css":1}},"nice_menus_options":{"delay":800,"speed":"slow"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});
+//--><!]]>
+</script> 
+ </head> 
+ <body class="html front not-logged-in no-sidebars page-node"> 
+  <div id="skip-link"> 
+   <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a> 
+  </div> 
+  <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]--> 
+  <div id="site"> 
+   <header id="masthead"> 
+    <div class="content cleafix"> 
+     <a href="/" id="logo" class="ir">eBureau</a> 
+     <h3 id="tagline">Powerful Insights. Smarter Decisions. Better Results.</h3> 
+    </div> 
+   </header>
+   <!--end #masthead--> 
+   <div id="entry" role="main" class="clearfix"> 
+    <a href="/b2c" class="entrypanel" id="b2c"> <h2>Business-to-Consumer</h2> <h4>B2C Solutions</h4> </a> 
+    <a href="/b2b" class="entrypanel" id="b2b"> <h2>Business-to-Business</h2> <h4>B2B Solutions</h4> </a> 
+   </div>
+   <!--end #entry--> 
+   <section id="generalInfo"> 
+    <div class="content clearfix"> 
+     <div class="leftcol"> 
+      <div class="region region-landing-left"> 
+       <div id="block-block-8" class="block block-block first last odd"> 
+        <h2 class="block-title">About eBureau</h2> 
+        <div class="content"> 
+         <p class="p1"><span class="s1">eBureau was founded in 2004 and has become an industry leading provider of predictive analytics and information solutions. eBureau utilizes its patented technologies and big data assets to help businesses acquire customers, manage risks and maintain customer relationships. Our services access vast amounts of predictive data to deliver instant insights that help make critical decisions throughout the customer lifecycle and are helping Business-to-Consumer (B2C) and Business-to-Business (B2B) companies improve profitability, boost efficiencies, reduce losses and increase revenue.&nbsp;</span></p> 
+        </div> 
+       </div>
+       <!-- /.block --> 
+      </div>
+      <!-- /.region --> 
+     </div> 
+     <div class="rightcol"> 
+      <div class="region region-landing-right"> 
+       <div id="block-block-7" class="block block-block first last odd"> 
+        <div class="content"> 
+         <ul>
+          <li>In enim justo, rhoncus ut</li> 
+          <li>Imperdiet a, venenatis vitae, justo</li> 
+          <li>Nullam dictum felis eu pede mollis pretium</li> 
+          <li>nteger tincidunt</li> 
+          <li>Cras dapibus.</li> 
+          <li>Vivamus elementum semper nisi.</li> 
+          <li>Aenean vulputate eleifend tellus.</li> 
+         </ul> 
+        </div> 
+       </div>
+       <!-- /.block --> 
+      </div>
+      <!-- /.region --> 
+     </div> 
+    </div> 
+   </section>
+   <!--end #generalInfo--> 
+   <div> 
+    <div class="region region-landing-bottom"> 
+     <div id="block-block-9" class="block block-block first last odd"> 
+      <div class="content"> 
+       <div class="footer">
+        © 2014 eBureau. All rights reserved.&nbsp;&nbsp; 
+        <a href="/sitemap">Site Map</a>&nbsp;
+        <a href="/privacy-center">Privacy Center</a>&nbsp;
+        <a href="/terms-use">Terms of Use</a>&nbsp;
+        <a href="/privacy-center/opt-out">Consumer Opt-Out</a>
+       </div> 
+      </div> 
+     </div>
+     <!-- /.block --> 
+    </div>
+    <!-- /.region --> 
+   </div> 
+  </div> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script> 
+  <script src="/sites/all/themes/zen/default/js/plugins.js"></script> 
+  <script src="/sites/all/themes/zen/default/js/main.js"></script> 
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --> 
+  <script>
+            /*(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');*/
+        </script> 
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+//--><!]]>
+</script> 
+  <script type="text/javascript" src="http://www.ebureau.com/sites/all/themes/zen/default/js/plugins.js?nebd6i"></script> 
+  <script type="text/javascript" src="http://munchkin.marketo.net/munchkin.js"></script> 
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+mktoMunchkin("164-EPD-721");
+//--><!]]>
+</script>   
+ </body>
+</html>

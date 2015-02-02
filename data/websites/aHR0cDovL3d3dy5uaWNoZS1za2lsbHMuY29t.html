@@ -1,0 +1,1423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <link rel="shortcut icon" type="image/x-icon" href="http://static.niche-skills.com/images/favicon.ico"> 
+  <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"> 
+  <link type="text/css" rel="stylesheet" href="/resources/bootstrap311/css/bootstrap.min.css"> 
+  <link type="text/css" rel="stylesheet" href="/resources/bootstrap311/css/bootstrap-theme.min.css"> 
+  <link type="text/css" rel="stylesheet" href="/resources/bootstrap311/css/docs.min.css"> 
+  <link type="text/css" rel="stylesheet" href="/resources/bootstrap311/css/customize.css"> 
+  <link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> 
+  <link type="text/css" rel="stylesheet" href="/resources/style/jquery.sidr.dark.css"> 
+  <link type="text/css" rel="stylesheet" href="/resources/style/dragtable.css"> 
+  <link type="text/css" rel="stylesheet" href="/resources/style/datepicker.css"> 
+  <link type="text/css" rel="stylesheet" href="/resources/codemirror41/lib/codemirror.css"> 
+  <link type="text/css" rel="stylesheet" href="/resources/style/summernote.css"> 
+  <!-- Windows Phone 8 and Internet Explorer 10 --> 
+  <style>
+	.myflash{
+		position: fixed;
+		top: 50px;
+		left:10%;
+		padding:7px;
+		background-color: #ffffe0;
+		color:#222;
+		font-size:12px;
+		Z-INDEX:10000;
+		display:none;
+		width:80%;
+	}
+	
+	/* Fix Google Maps canvas
+		 *
+		 * Wrap your Google Maps embed in a `.google-map-canvas` to reset Bootstrap's
+		 * global `box-sizing` changes. You may optionally need to reset the `max-width`
+		 * on images in case you've applied that anywhere else. (That shouldn't be as
+		 * necessary with Bootstrap 3 though as that behavior is relegated to the
+		 * `.img-responsive` class.)
+		 */
+	.google-map-canvas,.google-map-canvas * { .box-sizing (content-box);
+		
+	}
+	
+	/* Optional responsive image override */
+	img {
+		max-width: none;
+	}
+	</style> 
+  <style>
+	.mybadge {
+		padding: 5px;
+		font-size: 12px;
+		float: left;
+		margin: 10px;
+	}
+	.opacity100 {
+		opacity: 1;
+		filter: alpha(opacity = 100); /* For IE8 and earlier */
+	}
+	
+	.smallText {
+		font-size: 11px;
+	}
+	.smallHeading{
+		font-size:12px;font-weight:bold;font-variant: small-caps;margin-top:10px;
+	}
+	.nolink {
+		text-decoration: none;
+		color: #d1d1d1;
+	}
+	.sidelabel{
+		width:48%;overflow:hidden;font-weight:bold;float:left;clear:both;font-size:11px;
+	}
+	.sidevalue{
+		width:50%;margin-left:2%;overflow:hidden;float:left;font-size:11px;
+	}
+	.tree {
+	    min-height:20px;
+	    padding:19px;
+	    margin-bottom:20px;
+	    background-color:#fbfbfb;
+	    border:1px solid #999;
+	    -webkit-border-radius:4px;
+	    -moz-border-radius:4px;
+	    border-radius:4px;
+	    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05)
+	}
+	.tree li {
+	    list-style-type:none;
+	    margin:0;
+	    padding:10px 5px 0 5px;
+	    position:relative
+	}
+	.tree li::before, .tree li::after {
+	    content:'';
+	    left:-20px;
+	    position:absolute;
+	    right:auto
+	}
+	.tree li::before {
+	    border-left:1px solid #999;
+	    bottom:50px;
+	    height:100%;
+	    top:0;
+	    width:1px
+	}
+	.tree li::after {
+	    border-top:1px solid #999;
+	    height:20px;
+	    top:25px;
+	    width:25px
+	}
+	.tree li span {
+	    -moz-border-radius:5px;
+	    -webkit-border-radius:5px;
+	    border:1px solid #999;
+	    border-radius:5px;
+	    display:inline-block;
+	    padding:3px 8px;
+	    text-decoration:none
+	}
+	.tree li.parent_li>span {
+	    cursor:pointer
+	}
+	.tree>ul>li::before, .tree>ul>li::after {
+	    border:0
+	}
+	.tree li:last-child::before {
+	    height:30px
+	}
+	.tree li.parent_li>span:hover, .tree li.parent_li>span:hover+ul li span {
+	    background:#eee;
+	    border:1px solid #94a0b4;
+	    color:#000
+	}
+	
+	
+	body {
+	    overflow-x: hidden;
+	}
+	#slideout {
+	    background: #fff;
+	    position: absolute;
+	    width: 800px;
+	    height: 100%;
+	    top: 7%;
+	    left:-770px;
+	    padding-left: 20px
+	}
+	    
+	#clickme {
+	    position: absolute;
+	    top: 45%; right: 0;
+	    height: 100px;
+	    width: 30px;
+	    background: #f1f1f1;
+	    padding:10px; 
+	}
+	
+	#slidecontent {
+	    float:left;
+	}
+	table.bottomborder tr{
+		border-bottom:1px dotted #f1f1f1;
+		font-size:11px;
+		font-weight:normal;
+		
+	}
+	.hoverDiv {background: #fff;}
+	.hoverDiv:hover {background: #f5f5f5;}
+	
+	.announceop {
+		font-size: 23px;
+		color: #a1a1a1;	
+		letter-spacing: 3px;
+		font-weight: 80;
+		font-family: ProximaNovaRgRegular, helvetica, verdana;
+	}
+	.announcenorm {
+		font-size: 12px;
+		color: #818181;	
+		letter-spacing: 1px;
+		font-weight: 40;
+		font-family: ProximaNovaRgRegular, helvetica, verdana;
+	}
+	
+	.star-rating s:hover {
+	    color: orange;
+	}
+	.star-rating s,
+	.star-rating-rtl s {
+	    color: black;
+	    font-size: 50px;
+	    cursor: default;
+	    text-decoration: none;
+	    line-height: 50px;
+	}
+	.star-rating {
+	    padding: 2px;
+	}
+	.star-rating-rtl {
+	    background: #555;
+	    display: inline-block;
+	    border: 2px solid #444;
+	}
+	.star-rating-rtl s {
+	    color: yellow;
+	}
+	.star-rating s:hover:before{
+	    content: "\2605";
+	}
+	.star-rating s:before {
+	    content: "\2606";
+	}
+	.star-rating-rtl s:hover:after{
+	    content: "\2605";
+	}
+	.star-rating-rtl s:after {
+	    content: "\2606";
+	}
+	.smallHeading{
+		font-size:12px;font-weight:bold;font-variant: small-caps;margin-top:10px;
+	}
+	.announceop {
+		font-size: 23px;
+		color: #a1a1a1;	
+		letter-spacing: 3px;
+		font-weight: 80;
+		font-family: ProximaNovaRgRegular, helvetica, verdana;
+	}
+	.blackpanel{
+		width:100%;
+		background-color:#777;
+		height:400px;
+	}
+	.carpanel{
+		height:75px;
+		margin
+	}
+	.datepicker{z-index:110051;} //for bootstrap behind popover problem
+	.drag-handle{   
+		cursor: move;
+		
+	}
+	.gloss{
+	#container {
+	    /*gradient*/
+	    background: #666666; /* old browsers */
+	    background: -moz-linear-gradient(top, #666666 4%, #545454 50%, #3A3A3A 51%, #131313 100%); /* firefox */
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(4%,#666666), color-stop(50%,#545454), color-stop(51%,#3A3A3A), color-stop(100%,#131313)); /* webkit */
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#131313',GradientType=0 ); /* ie */
+	    /*box styles*/
+	    height: 200px;
+	    width: 400px;
+	    margin: 100px auto;
+	    /*shadow*/
+	    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+	    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+	    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+	    /*corners*/
+	    -webkit-border-radius: 50px;
+	    -moz-border-radius: 50px;
+	    border-radius: 50px;    
+	}
+	
+	.stitched{
+		font-size: 70px;
+	    line-height: 190px;
+	    font-family: Helvetica, sans-serif;
+	    font-weight: bold;
+	    text-align: center;
+	    /*stitching*/
+	    outline: 1px dashed #98abb9;
+	    outline-offset: -5px;
+	    background-color: #556068;
+	    height: 200px;
+	    width: 400px;
+	    margin: 100px auto;
+	    /*shadow*/
+	    -webkit-box-shadow: 2px 2px 2px #000;
+	    -moz-box-shadow: 2px 2px 2px #000;
+	    box-shadow: 2px 2px 2px #000;
+	}
+	
+	.coupan{
+		font-size: 80px;
+	    line-height: 70px;
+	    font-family: Helvetica, sans-serif;
+	    font-weight: bold;
+	    text-align: center;
+	    text-transform: uppercase;
+	    background-color: white;
+	    height: 200px;
+	    width: 400px;
+	    margin: 100px auto;
+	    border: 3px dashed #21303b;
+	    /*shadow*/
+	    -webkit-box-shadow: 10px 10px 10px #000;
+	    -moz-box-shadow: 10px 10px 10px #000;
+	    box-shadow: 10px 10px 10px #000;
+	    /*rounded corners*/
+	    -webkit-border-radius: 20px;
+	    -moz-border-radius: 20px;
+	    border-radius: 20px;
+	}
+	
+}
+	
+.ruler {
+	border: 1px dotted #616161;
+}
+
+.menu {
+	display: none;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #515151;
+	color: white;
+	opacity: 1.0;
+	width: 400px;
+	z-index: 10000;
+}
+
+.context {}
+
+.myhighlight {}
+
+.overlay {
+	background-color: red;
+	color: blue;
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width:200px;
+	height: 100%;
+	display: none;
+}
+
+.initial-layout {
+	border: 1px dotted #888;
+	min-height: 50px;
+	background-color: #f1f1f1;
+	opacity: 0.8;
+}
+
+.zbar{
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	z-index: 2000;
+	opacity: 1.0;
+	font-size:12px;
+	color:white;	
+	background-color:#000;
+	float:right;
+	width:auto;
+}
+#editbar{
+	display:none;
+	background-color:#000;
+	padding:1%;
+	height:98%;
+}
+
+.zbar a {
+	color:white;	
+	display:inline;
+	margin-right:10px;
+}
+
+.zbar .dropdown {
+ display:inline;
+  margin-right:20px;
+}
+
+</style> 
+  <link rel="stylesheet" type="text/css" href="http://static.niche-skills.com/style/ns.css"> 
+  <link rel="stylesheet" type="text/css" href="http://static.niche-skills.com/style/op.css"> 
+  <link rel="stylesheet" type="text/css" href="http://static.niche-skills.com/style/ns.css"> 
+  <link type="text/css" rel="stylesheet" href="http://static.niche-skills.com/style/nivo-slider.css"> 
+  <title>Niche Skills</title> 
+  <meta name="keywords" content="Niche-skills,Niche,skills,Web,application,development,Software,Outsourcing,
+			Service,Mobile,Solutions,social,cq5,magnolia,alfresco,j2ee,bpm,cordys,websphere,aqualogic,recruitment,outsource,components,
+			cloud,aws,amazon,appengine,ipad,iphone,apps,nosql,cassandra,neo4j,mongo,eai,crossworlds,streaming,hds,hls,flash media,tomcat,
+			jboss,media,solutions"> 
+  <meta name="description" content="We deal in coveted technologies such as Big Data, cloud, CQ5, Cordys, WebSphere, NoSQL, Mongo across a range of industries"> 
+ </head> 
+ <body> 
+  <div id="infopopup" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+  </div> 
+  <div class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation"> 
+   <div class="container"> 
+    <div class="navbar-header" style="margin-left:15px;"> 
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="navbar-brand" href="/ns/index.h"> <img class="img-responsive" src="http://static.niche-skills.com/images/logo/jpeg/LogoColorTextBelow.jpeg" style="position:absolute; left:45px; top:0px;width: 75px; height: 75px; z-index:10000;"> </a> 
+    </div> 
+    <div class="collapse navbar-collapse navbar-ex1-collapse"> 
+     <ul class="nav navbar-nav navbar-left" style="margin-left:15px;"> 
+      <li><a href="/ns/index.h">Home</a></li> 
+      <li><a href="/ns/index.h#services">Services</a></li> 
+      <li><a href="/ns/index.h#clients">Clients</a></li> 
+      <li><a href="/ns/index.h#careers">Careers</a></li> 
+      <li><a href="/ns/index.h#contactus">Contact us</a></li> 
+     </ul> 
+     <ul class="nav navbar-nav navbar-right"> 
+      <li> 
+       <!-- AddThis Button BEGIN --> <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300&amp;pubid=xa-5187ec0d06c30124"> <img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" alt="Bookmark and Share"></a> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5187ec0d06c30124"></script> 
+       <!-- AddThis Button END --> </li> 
+      <li> <select class="navbar-btn form-control input-sm" style="height:30px;" onchange="window.location.href= this.options[this.selectedIndex].value"> <option value="">Choose Practice</option> <option value="/ns/cq5.h">Adobe CQ5</option> <option value="/ns/bpm.h">Business Integration</option> <option value="/ns/smart.h">Smart Devices</option> <option value="/ns/cloud.h">Cloud Solutions</option> <option value="/ns/ecommerce.h">ECommerce</option> <option value="/ns/labs.h">Niche Labs</option> </select> </li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <div style="clear: both; margin-top:60px;"></div> 
+  <div class="container"> 
+   <div class="row" style="margin-top:40px;"> 
+    <div class="col-md-4"> 
+     <div class="announce">
+       "We Love Going Through the Treacherous In-Roads Of Niche Technology So We Can Take You Through The 
+      <font color="#a91">Shortest Path To Results</font> When You Call Upon Us" 
+      <br>
+      <br> 
+      <div class="announce-sub">
+        ..and this takes some exceptionally talented people to weave their way through the thicks of Technology. No Wonder then, that We have 
+       <b>More Experienced Hands-On Architects</b> in our teams Than Commodity Developers.
+       <br>
+       <br> With 
+       <b>Service-Oriented-Offshoring (SOOS)</b> and Patent Pending 
+       <b>ObjectMapping<sup>TM</sup></b> Techniques, We make sure We Deliver What You Need 
+       <font color="#a91"><b>Exactly!</b></font> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-md-8 text-center"> 
+     <div class="row"> 
+      <div class="col-md-4" onclick="window.location.href='/ns/cq5.h'"> 
+       <div class="panel panel-default"> 
+        <div class="panel-body"> 
+         <img class="img-responsive" src="http://static.niche-skills.com/images/cq5.jpg"> 
+         <div class="announce" style="clear:both;width:100%;font-size:16px;">
+           Adobe CQ5 
+          <br> 
+          <div class="announce-sub" style="font-size:11px;color:#a91;">
+            JCR, CRX, Felix, Jackrabbit, WCM, DAM etc 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-4" onclick="window.location.href='/ns/bpm.h'"> 
+       <div class="panel panel-default"> 
+        <div class="panel-body"> 
+         <img class="img-responsive" src="http://static.niche-skills.com/images/erp.jpg"> 
+         <div class="announce" style="width:100%;font-size:16px;">
+           Bus. Integration 
+          <br> 
+          <div class="announce-sub" style="font-size:11px;color:#a91;">
+            BPM, EAI, Websphere, Oracle, Tibco, Cordys.... 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-4" onclick="window.location.href='/ns/smart.h'"> 
+       <div class="panel panel-default"> 
+        <div class="panel-body"> 
+         <img class="img-responsive" src="http://static.niche-skills.com/images/iph.jpg"> 
+         <div class="announce" style="width:100%;font-size:16px;">
+           Smart Devices 
+          <br> 
+          <div class="announce-sub" style="font-size:11px;color:#a91;">
+            iPhone, Android, Smart TVs, XBox, PS4, STBs... 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-4" onclick="window.location.href='/ns/cloud.h'"> 
+       <div class="panel panel-default"> 
+        <div class="panel-body"> 
+         <img class="img-responsive" src="http://static.niche-skills.com/images/th_cloudconcept.jpg"> 
+         <div class="announce" style="width:100%;font-size:16px;margin-left:10px;">
+           Cloud 
+          <br> 
+          <div class="announce-sub" style="font-size:11px;color:#a91;">
+            AWS, AppEngine, Azure, noSQL, BigData, Mongo... 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-4" onclick="window.location.href='/ns/ecommerce.h'"> 
+       <div class="panel panel-default"> 
+        <div class="panel-body"> 
+         <img class="img-responsive" src="http://static.niche-skills.com/images/hybris.jpg"> 
+         <div class="announce" style="width:100%;font-size:16px;">
+           eCommerce 
+          <br> 
+          <div class="announce-sub" style="font-size:11px;color:#a91;">
+            ATG, IBM Commerce, Hybris, Magneto... 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-4" onclick="window.location.href='/ns/labs.h'"> 
+       <div class="panel panel-default"> 
+        <div class="panel-body"> 
+         <img class="img-responsive" src="http://static.niche-skills.com/images/labs.jpg"> 
+         <div class="announce" style="width:100%;font-size:16px;margin-top:5px;">
+           Niche-Labs... 
+          <br> 
+          <div class="announce-sub" style="font-size:11px;color:#a91;">
+            Google Glass, RaspPi, Touch Screens, 4KTV... 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="text-center" style="margin-top:10px;letter-spacing:7px;font-size:14px;color:#a11;">
+        CHOOSE A PRACTICE ABOVE 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row" id="services"> 
+    <div class="whitepanel box1"> 
+     <div class="col-md-4"> 
+      <div style="float: left; font-size: 16px; letter-spacing: 1px; font-weight: 200; font-family: ProximaNovaRgRegular, helvetica, verdana; 
+						width: 58%;padding:1%;"> 
+       <div style="color: #aa1111; font-size: 24px;">
+        Services
+       </div> 
+       <div style="clear: both; margin-bottom: 15px;"></div> 
+      </div> 
+      <div style="clear:both;"></div> 
+      <div class="announce">
+        "So, Which One Is Most Important Delivery Aspect - Cost, Quality or Time? 
+       <font color="#a91">- For Us, Its All Of Them!</font>" 
+       <br>
+       <br> From Helping You Win The Bid 
+       <i>to</i> providing you with Specialist Consultants 
+       <i>to</i> Partnering With Yourself to Realize The Software Product - 
+       <font color="#a91">We Do Everything We Can To Help You Remain Focussed On Your Main Business!</font> 
+       <br>
+       <br> 
+       <div class="announce-sub"> 
+        <a href="#contactus">Click Here</a> for a free, no-obligation consultation 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-md-8"> 
+      <div class="row"> 
+       <div class="col-md-5 col-xs-6"> 
+        <img class="img-responsive" src="http://static.niche-skills.com/images/th_arch.gif"> 
+       </div> 
+       <div class="col-md-7 col-xs-12"> 
+        <a style="font-size: 20px;color:#a11;" href="panel_contactForm.h?subject=Architecture &amp; Design Services">Architecture &amp; Design Services</a> 
+        <p> <b>D</b>on't know where to start from? Our Architects can help you translate business requirements into design modules, define <b>technical architecture, best practices</b> and even set up Environment stacks <b>for your team to get started</b> </p> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-5 col-xs-6"> 
+        <img class="img-responsive" src="http://static.niche-skills.com/images/th_Specialists.jpg"> 
+       </div> 
+       <div class="col-md-7 col-xs-12"> 
+        <a style="font-size: 20px;color:#a11;" href="panel_contactForm.h?subject=Specialist Consultants">Specialist Consultants</a> 
+        <p> When demand is more and supply is less- time slicing is the best option. Thats why, our expert Consultants are available to you <b>on Weekly &amp; Monthly Basis, Remote or On-Site</b>. For You It means you have the flexibility to choose according to your budget. </p> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-5 col-xs-6"> 
+        <img class="img-responsive" src="http://static.niche-skills.com/images/th_fixedcosts.jpg"> 
+       </div> 
+       <div class="col-md-7 col-xs-12"> 
+        <a style="font-size: 20px;color:#a11;" href="panel_contactForm.h?subject=Fixed Cost Development">Fixed Cost Development</a> 
+        <p> Before the start of a project, our team works closely with the client to understand and scope out the <b>exact features and functionalities </b> that are to be included in the project. Based on the requirements, a time and cost estimate is made. The work on the project begins after the cost and timelines have been approved by the client. The project is delivered to the client <b>on the basis of the delivery milestones</b> agreed upon. </p> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-5 col-xs-6"> 
+        <img class="img-responsive" src="http://static.niche-skills.com/images/th_revshare.jpg"> 
+       </div> 
+       <div class="col-md-7 col-xs-12"> 
+        <a style="font-size: 20px;color:#a11;" href="panel_contactForm.h?subject=Revenue Share">Revenue Share</a> 
+        <p> You have got a unique standing in your Business and We enjoy the same in the field of Software - <b>Why not join hands</b> and bring out a product which could be beneficial for both of us. You <b>off-load all your risks</b> and We mitigate risks with our vast experience to create a long-lasting symbiotic relationship. </p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row" id="clients"> 
+    <div class="whitepanel box1"> 
+     <div class="row"> 
+      <div style="float: left; font-size: 16px; letter-spacing: 1px; font-weight: 200; font-family: ProximaNovaRgRegular, helvetica, verdana; 
+					padding:1%;"> 
+       <div style="color: #aa1111; font-size: 24px;">
+        Clients - Our Most Coveted Resources
+       </div> 
+       <div style="clear: both; margin-bottom: 15px;"></div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-4"> 
+       <div class="announce">
+         "We Deliver Where Others Fail...But, That's Only One Of The Many Reasons Our Clients Love To Work With Us - Projects After Projects..." 
+        <br>
+        <br> 
+        <div class="announce-sub">
+          ...and it boils down to the commitment and unparalleled expertise of our dedicated staff to build your project in the best possible way. We know, how uphill a task it is to take a new technology in stride. And we would like You to make use of our experience and expertise in achieving what we all strive for - 
+         <u>Results!</u> 
+         <br> 
+         <br> We have built this company ground up and our team has challenged the established norms and processes in SDLC to come up with a lean approach. We have built software which help us to reduce the analysis and architecture time mani-folds using our patent-pending ObjectMapping
+         <sup>TM</sup> techniques. 
+         <a href="#">Click here</a> to learn how. 
+         <br>
+         <br> Using our vast experience in the industry, We have very carefully crafted the offerings that are targeted at your specific needs because We understand that 
+         <i><u>Cost</u></i>, 
+         <i><u>Quality</u></i> and 
+         <i><u>Time</u></i> are the most crucial aspects of any delivery. 
+         <br>
+         <br> 
+         <i><b>We Believe In Building Relationships And Software Development Has Been Our Best Tool In Doing So!</b></i> 
+         <br>
+         <br> 
+         <a href="#services">Click Here</a> To Learn About The Services We Offer 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-8 hidden-md hidden-lg"> 
+       <div class="row"> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_adobe.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_accenture.jpeg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_aviva.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_cablewireless.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_creditSuisse.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_deloitte.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_eads.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_ibm.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_jacobsRimell.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_johnlewis.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_marsh.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_quadriga.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_ons.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_sapient.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_sky.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_steria.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_tmlewin.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_tnt.jpeg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_universal.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_waitrose.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_xansa.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_rbs.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_logica.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_johnbrown.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_redbee.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_rscomponents.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_tag.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_barclays.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_wipro.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_defra.jpg"> 
+        </div> 
+        <div class="col-xs-3 col-sm-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_sj.jpg"> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div style="float:right;font-size:10px;margin-top:5px;clear:both;">
+         *all logos &amp; trademarks belong to the respective companies
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-8 hidden-xs hidden-sm"> 
+       <div class="row"> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_adobe.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_accenture.jpeg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_aviva.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_cablewireless.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_creditSuisse.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_deloitte.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_eads.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_ibm.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_jacobsRimell.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_johnlewis.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_marsh.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_quadriga.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_ons.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_sapient.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_sky.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_steria.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_tmlewin.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_tnt.jpeg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_universal.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_waitrose.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_xansa.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_rbs.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_logica.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_johnbrown.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/th_redbee.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_rscomponents.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_tag.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_barclays.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_wipro.jpg"> 
+        </div> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_defra.jpg"> 
+        </div> 
+       </div> 
+       <div class="row" style="margin-top:30px;"> 
+        <div class="col-md-2"> 
+         <img class="img-responsive img-thumbnail" src="http://static.niche-skills.com/images/th_sj.jpg"> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div style="float:right;font-size:10px;margin-top:5px;clear:both;">
+         *all logos &amp; trademarks belong to the respective companies
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row" id="blog"> 
+    <div class="whitepanel box1"> 
+     <div class="row"> 
+      <div style="float: left; font-size: 16px; letter-spacing: 1px; font-weight: 200; font-family: ProximaNovaRgRegular, helvetica, verdana; 
+					width: 98%;padding:1%;"> 
+       <div style="color: #aa1111; font-size: 24px;">
+        Blogs
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-4"> 
+       <div class="announce">
+         "Collaboration is the biggest key to success 
+        <font color="#a91;"> and especially when its with right people</font>" 
+        <br>
+        <br> 
+        <div class="announce-sub">
+          Pursuit of Knowledge is the goal of our journey and We Are Thoroughly Enjoying Our Journey, Come and Join The Fun! 
+         <div style="clear:both;margin-bottom:10px;"></div> 
+         <img class="img-responsive img-rounded" src="http://static.niche-skills.com/images/blog.jpg" style="width:100%;"> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-8"> 
+       <div id="divRss"></div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row" id="careers"> 
+    <div class="whitepanel box1"> 
+     <div class="row"> 
+      <div style="float: left; font-size: 16px; letter-spacing: 1px; font-weight: 200; font-family: ProximaNovaRgRegular, helvetica, verdana; 
+					width: 98%;padding:1%;"> 
+       <div style="color: #aa1111; font-size: 24px;">
+        Careers
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-4"> 
+       <div class="announce">
+         "We Challenge You, We Intrigue You, We Set New Goals For You, We Guide You, We Seek Your Help, We Let You Take The Ownership..." 
+        <br>
+        <br> 
+        <div class="announce-sub">
+          Because 
+         <b>We believe in Self-Managing Teams of Professionals</b> Who Find Their Own Clever Ways To Meet Client's Goals and We Know You Are Worth It If We Let You In It.. 
+         <br>
+         <br> Have A Look At The Available Openings And Ping Us Your CV If You Feel You Can Make The Difference.. 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-8"> 
+       <div style="color: #a91; font-size: 12px;">
+        Job Openings
+       </div>
+       <br> 
+       <div style="clear:both;font-size:12px;color:#a11; font-family: ProximaNovaRgRegular, helvetica, verdana;"> 
+        <a href="job1.h" data-toggle="modal" data-target="#infopopup">Big Data Architect</a> 
+       </div> 
+       <div style="font-size:11px; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+         Big Data, Architect, Architecture, Technical Project Manager, PM, Hadoop, Mapreduce, Hive, Data Migration, Analytics, SQL, NoSQL, ETL, Banking, Financial, Solution Architect, Cloud Computing, High Performance Computing We are currently recruiting for a Big Data Architect for a 6 months + contract. This is likely to be a long-term engagement working on a project for a market leading global client. For this position we need a hands on technical architect who also has the ability to communicate effectively with multiple vendors in a particularly fluid environment. You will take on the role of technical architect/technical project manager and work in a team of highly experienced Big Data Architects. 
+       </div> 
+       <div style="font-size:12px;color:#a11; font-family: ProximaNovaRgRegular, helvetica, verdana;margin-top:10px;"> 
+        <a href="job2.h" data-toggle="modal" data-target="#infopopup">Hybris B2C v 4.8, Developer, Architect, Technical Lead</a> 
+       </div> 
+       <div style="font-size:11px; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+         The selected candidate will contribute to analyze, design, develop and support application modules for our B2C E-commerce platform. The Java Hybris Developer is responsible for the delivery of very high quality applications while using cutting edge Java technologies and practicing Agile Development (SCRUM, XP, LEAN, KANBAN) and Continuous Integration. 
+       </div> 
+       <div style="font-size:12px;color:#a11; font-family: ProximaNovaRgRegular, helvetica, verdana;margin-top:10px;"> 
+        <a href="job3.h" data-toggle="modal" data-target="#infopopup">iOS Architect/Developer - Leader, Objective C, iPhone</a> 
+       </div> 
+       <div style="font-size:11px; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+         iOS Architect, Development Leader with strong Objective C is needed to work on an exciting new greenfield project. You will have ownership of the iOS codebase for our iPhone and iPad apps and will be responsible for helping build industry-leading scalable, high performing &amp; low latency apps that offer a great user experience. 
+       </div> 
+       <div style="font-size:12px;color:#a11; font-family: ProximaNovaRgRegular, helvetica, verdana;margin-top:10px;"> 
+        <a href="job4.h" data-toggle="modal" data-target="#infopopup">Business Analyst - Software Implementation - London</a> 
+       </div> 
+       <div style="font-size:11px; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+         Business Analyst from a software delivery background required to deliver enterprise HR software solutions to global corporations. You should have a Background of successfully delivering software solutions to external clients and customers - Highly analytical, preferably with a technical background. 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row" id="services"> 
+    <div class="whitepanel box1"> 
+     <div class="row"> 
+      <div style="float: left; font-size: 16px; letter-spacing: 1px; font-weight: 200; font-family: ProximaNovaRgRegular, helvetica, verdana; 
+					padding:1%;"> 
+       <div style="color: #aa1111; font-size: 24px;">
+        Development Centres
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-5"> 
+       <div class="announce">
+         "They Say that Healthy Mind Lives In A Healthy Body and we believe that Healthy Body can only live in a Healthy Atmosphere!" 
+        <br>
+        <br> 
+        <div class="announce-sub">
+          That's why all our centres have been built and furnished with Human factor in mind. Have a look at our current offices at 
+         <b>London Heathrow</b> and 
+         <b>Noida, India</b>. 
+         <br>
+         <br>Coming up soon with another 20,000 sq ft offices in 
+         <b>Gurgaon</b>, India. 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-7"> 
+       <div id="carousel-example-generic" class="carousel slide"> 
+        <!-- Indicators --> 
+        <ol class="carousel-indicators"> 
+         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li> 
+         <li data-target="#carousel-example-generic" data-slide-to="1"></li> 
+         <li data-target="#carousel-example-generic" data-slide-to="2"></li> 
+         <li data-target="#carousel-example-generic" data-slide-to="3"></li> 
+         <li data-target="#carousel-example-generic" data-slide-to="4"></li> 
+         <li data-target="#carousel-example-generic" data-slide-to="5"></li> 
+         <li data-target="#carousel-example-generic" data-slide-to="6"></li> 
+         <li data-target="#carousel-example-generic" data-slide-to="7"></li> 
+         <li data-target="#carousel-example-generic" data-slide-to="8"></li> 
+        </ol> 
+        <!-- Wrapper for slides --> 
+        <div class="carousel-inner"> 
+         <div class="item active"> 
+          <img class="img-responsive" src="http://static.niche-skills.com/images/wembleypoint.jpg"> 
+         </div> 
+         <div class="item"> 
+          <img class="img-responsive" src="http://static.niche-skills.com/images/wembleypoint2.jpg"> 
+         </div> 
+         <div class="item"> 
+          <img class="img-responsive" src="http://static.niche-skills.com/images/wembleypoint3.jpg"> 
+         </div> 
+         <div class="item"> 
+          <img class="img-responsive" src="http://static.niche-skills.com/images/th_london3.jpg"> 
+         </div> 
+         <div class="item"> 
+          <img class="img-responsive" src="http://static.niche-skills.com/images/th_01.jpg"> 
+         </div> 
+         <div class="item"> 
+          <img class="img-responsive" src="http://static.niche-skills.com/images/th_02.jpg"> 
+         </div> 
+         <div class="item"> 
+          <img class="img-responsive" src="http://static.niche-skills.com/images/th_03.jpg"> 
+         </div> 
+         <div class="item"> 
+          <img class="img-responsive" src="http://static.niche-skills.com/images/th_23.jpg"> 
+         </div> 
+        </div> 
+        <!-- Controls --> 
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="icon-prev"></span> </a> 
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="icon-next"></span> </a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row" id="contactus"> 
+    <div class="whitepanel box1"> 
+     <div class="row"> 
+      <div style="float: left; font-size: 16px; letter-spacing: 1px; font-weight: 200; font-family: ProximaNovaRgRegular, helvetica, verdana; 
+						padding:1%;"> 
+       <div style="color: #aa1111; font-size: 24px;">
+        Contact
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-4"> 
+       <div style="font-size:14px;border-bottom:1px solid #d1d1d1;padding:10px;"> 
+        <b>UK Development Centre:</b>
+        <br>
+        <br> Niche Skills Limited
+        <br> 18, Floor 20, Wembley Point, 
+        <br> Harrow Road, Wembley, 
+        <br> Middlesex, 
+        <br> HA9 6DE, Greater London 
+        <br> United Kingdom
+        <br>
+        <br> 
+       </div> 
+       <div style="clear:both;margin-top:10px;font-size:14px;border-bottom:1px solid #d1d1d1;padding:10px;"> 
+        <b>UK Head Office:</b>
+        <br>
+        <br> Niche Skills Limited
+        <br> 37, Gurney Road,
+        <br> Northolt, Ealing 
+        <br> Greater London, UB5 6LJ
+        <br> United Kingdom 
+        <br>
+        <br> 
+       </div> 
+       <div style="clear:both;font-size:14px;border-bottom:1px solid #d1d1d1;padding:10px;"> 
+        <b>India Development Centre:</b>
+        <br>
+        <br> Niche Skills (India) Limited
+        <br> 87, Pocket 2B, 
+        <br> Sector 18, Greater Noida 
+        <br> Delhi NCR, 
+        <br> India 
+        <br>
+        <br> 
+       </div> 
+       <div style="clear:both;margin-top:10px;font-size:14px;padding:10px;"> 
+        <b>India Office:</b>
+        <br>
+        <br> Niche Skills (India) Limited
+        <br> 34, R S Park,
+        <br> New Delhi, 110051 
+        <br> India 
+        <br>
+        <br> 
+       </div> 
+      </div> 
+      <div class="col-md-8"> 
+       <div class="row"> 
+        <div class="col-md-6 well well-lg"> 
+         <div style="font-size:12px;margin-top:10px;"> 
+          <i class="glyphicon glyphicon-phone-alt"></i> 
+          <b>Sales @ Niche-Skills.Com</b> 
+          <br> Phone: +44 (0)800 689 0262, Fax: +44 (0)203 608 8731 
+         </div> 
+        </div> 
+        <div class="col-md-6 well well-lg" style="font-size:12px;">
+          Alternatively, Leave Your Details With Us &amp; We Will Be In Touch
+         <br> 
+         <a href="panel_contactForm.h?subject=General Inquiry"> Click Here To Contact Us </a> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-md-12"> 
+         <iframe width="100%" height="640px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Wembley+Point,+1,+Harrow+Road,+Wembley,+United+Kingdom&amp;aq=&amp;sll=51.544803,-0.273322&amp;sspn=0.00794,0.021007&amp;ie=UTF8&amp;hq=&amp;hnear=Wembley+Point,+1+Harrow+Rd,+Wembley,+Middlesex+HA9+6DE,+United+Kingdom&amp;ll=51.5448,-0.273328&amp;spn=0.01588,0.042014&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+         <br>
+         <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Wembley+Point,+1,+Harrow+Road,+Wembley,+United+Kingdom&amp;aq=&amp;sll=51.544803,-0.273322&amp;sspn=0.00794,0.021007&amp;ie=UTF8&amp;hq=&amp;hnear=Wembley+Point,+1+Harrow+Rd,+Wembley,+Middlesex+HA9+6DE,+United+Kingdom&amp;ll=51.5448,-0.273328&amp;spn=0.01588,0.042014&amp;t=m&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="johnlewis" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      This project aims to enhance John Lewis' existing platform to provision e-commerce services it currently offers through its online portal. The Business Control Centre is the area in which business users can configure the behaviour of ATG through the Merchandising, Personalisation and Campaign Optimiser tools under the workflow provided by the Content Administration module. Content Administration is then used to deploy changes to ATG assets to the Storefront environment where ATG Commerce and ATG Search deliver the user experience for the customer.Content prepared in Day CQ5 is deployed to the site by loading in to ATG first, and then treating it as if it were any other ATG asset. The Day CQ5 has got multiple author and publisher instances and makes heavy use of custom templates and components. The social collaboration elements are used extensively. CQ DAM is 
+    </div> 
+   </div> 
+   <div id="tnt" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      TNT has a global presence in 150 countries across five continents. It targets to synchronize all its regional sites with a centralizedsystem however allowing a loose decoupling between sites to cater to specific needs of a particular country. This particular applicationprovides a consolidated view for customers and staff. The aim is to integrate various services offered by TNT under one umbrella and toprovide a seamless customer Experience within TNT.com. This includes integration with third party tracking systems, SAP interfaces,regional offices, external sites like TNT Fashion, etc. The site provides functionality for the customers to rearrange theirdeliveries, track the shipping consignments, registration for personal &amp; commercial prospects etc. 
+    </div> 
+   </div> 
+   <div id="deloitte" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Deloitte provided us with an opportunity to work with one of their clients - John Lewis. This project aims to enhance John Lewis' existing platform to provision e-commerce services it currently offers through its online portal. The Business Control Centre is the area in which business users can configure the behaviour of ATG through the Merchandising, Personalisation and Campaign Optimiser tools under the workflow provided by the Content Administration module. Content Administration is then used to deploy changes to ATG assets to the Storefront environment where ATG Commerce and ATG Search deliver the user experience for the customer.Content prepared in Day CQ5 is deployed to the site by loading in to ATG first, and then treating it as if it were any other ATG asset. The Day CQ5 has got multiple author and publisher instances and makes heavy use of custom templates and components. The social collaboration elements are used extensively. CQ DAM is 
+    </div> 
+   </div> 
+   <div id="sj" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Every day, 100,000 people travel with SJ, the largest train operator in Sweden. 5,400 employees work to ensure that journeys by train are safe, reliable, comfortable and convenient. It commands a Market share of approx. 90 percent of long-distance passenger train travel (over 100 km) and approx. 55 percent of the total Swedish passenger rail market with an approx SEK 8 billion turnover last year. Essentially, they needed to create a mobile portal to allow customers to book tickets using web or smart devices. The site is being built using Adobe CQ5. Our company helped them with the Architecture and design services and also helped create their environments. 
+    </div> 
+   </div> 
+   <div id="rbs" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      The Royal Bank of Scotland is one of the retail banking subsidiaries of the The Royal Bank of Scotland Group plc, and together with NatWest and Ulster Bank, provides branch banking facilities throughout the British Isles. The Royal Bank of Scotland has around 700 branches, mainly in Scotland though there are branches in many larger towns and cities throughout England and Wales. The Royal Bank of Scotland and its parent, The Royal Bank of Scotland Group, are completely separate from the fellow Edinburgh based bank, the Bank of Scotland, which pre-dates The Royal Bank of Scotland by 32 years. We helped create the mobile portal for Adobe using CQ5 which mimics the main site's content and makes those available on specialised devices. 
+    </div> 
+   </div> 
+   <div id="waitrose" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Waitrose is one of the prominent clients on our John Brown account. John Brown has multiple clients who regularly require content changes for publication. JBM has embarked on a major exercise to create a CMS system based on Day-communique CQ5. This allows a loose decoupling between the partner sites and their published content. The idea is that partners will outsource their content management functions to JBM. JBM will develop all the CQ5 widgets, pages, libraries etc for their content. This content will be used both for Print-publication as well as Online-publication by respective companies to provide consistent information on all channels of advertisement/revenue streams. This includes integration with third party tracking systems, SAP interfaces, regional offices and external sites. The site provides functionality for administrators to change prices, columns, content etc on regular basis. Day CMS systems are being used to allow authors to dynamically control the site layout and content for various clients for multiple languages &amp; countries. This has been tied in using Spring, hibernate based application which makes use of this content through web services. The back-end is handled through MQ MOM and process server to keep track of shipments. 
+    </div> 
+   </div> 
+   <div id="jbp" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      John Brown has multiple clients who regularly require content changes for publication. JBM has embarked on a major exercise to create a CMS system based on Day-communique CQ5. This allows a loose decoupling between the partner sites and their published content. The idea is that partners will outsource their content management functions to JBM. JBM will develop all the CQ5 widgets, pages, libraries etc for their content. This content will be used both for Print-publication as well as Online-publication by respective companies to provide consistent information on all channels of advertisement/revenue streams. This includes integration with third party tracking systems, SAP interfaces, regional offices and external sites. The site provides functionality for administrators to change prices, columns, content etc on regular basis. Day CMS systems are being used to allow authors to dynamically control the site layout and content for various clients for multiple languages &amp; countries. This has been tied in using Spring, hibernate based application which makes use of this content through web services. The back-end is handled through MQ MOM and process server to keep track of shipments. 
+    </div> 
+   </div> 
+   <div id="objectmap" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Object Map Analysis 
+    </div> 
+   </div> 
+   <div id="ibm" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      This project aims to integrate Criminal Justice System of UK providing a centralized solution for courts spread across UK. The project is responsible for processing all charge and summons cases, ensuring the laying of all information at court and the delivery of case papers to the Crown Prosecution Service; administration of all upgraded files for court, including delivery of the requirements of the Code of Practice for Victims of Crime and the Witness Charter; processing of all but the most complex CCTV and interview recordings for investigative and evidential purposes and the disposal of all court cases on to the Police National Computer. It caters to both types of court case delivery standards XHIBIT and LIBRA. 
+    </div> 
+   </div> 
+   <div id="defra" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      We worked with IBM to help Defra achieve its goals - Defra is a government organization which looks after the Environment, Food &amp; Rural Affairs. Defra has numerous numbers of projects which need to be operated from a single platform for better integration, consistency, failover, manageability etc. The CARA Architecture employed by DEFRA is one of the central and Key Components for all the projects. This provides a Service-Oriented Architecture. All the projects in DEFRA are either being migrated to this architecture or are being developed for this architecture. CARA uses a central component which choreographs all the business processes for Defra. It communicates with Message Queues and various projects plug-in to CARA using SOAP and other flavors of Web Services. Projects and Technologies used in the project traverse a wide range of IT spectrum. 
+    </div> 
+   </div> 
+   <div id="tmlewin" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      The project is to automate and modernize T.M.Lewin Stores using Websphere Commerce. T.M.Lewin are one of the established and respected garment manufacturers having a chain of retail stores in and around UK. T.M.Lewin offers quality and craftsmanship at a price that is consistently competitive. Together with an award-winning customer service record, this has firmly established us a leading retailer of premium quality business wear. It's a large project which aims to integrate some of the new and some already existing product &amp; service modules. The project manages and automate order management, inventory management, taxing and shipping etc. Since they have stores in Europe as well, the project employs a state of the art Tax Calculation system along with the default shipping modules. 
+    </div> 
+   </div> 
+   <div id="marsh" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Marsh is one of the leading Insurance Companies across the world and understandably, needed to streamline its offering to the customers and manage its back-office. Through its G-10 platform, it has initiated a number of projects and Web eCommerce is one of their main projects which focus on an insurance Policy end-to-end life cycle. This involves getting orders from customers, automatically traversing through a business flow, raising work for the staff, managing transformations and changes in the policy through its life cycle, communicating with rest of the projects feeding into it through Message Queues. The average length of our business flows here was 1 year 3 months which meant that all this information should be held in plasma state in backend systems. 
+    </div> 
+   </div> 
+   <div id="logica" class="login-popup"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="width:500px;color:#fff;font-size:16px;font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Logica provided us with an opportunity to work with one of their clients - Swedish Rail. Every day, 100,000 people travel with SJ, the largest train operator in Sweden. 5,400 employees work to ensure that journeys by train are safe, reliable, comfortable and convenient. It commands a Market share of approx. 90 percent of long-distance passenger train travel (over 100 km) and approx. 55 percent of the total Swedish passenger rail market with an approx SEK 8 billion turnover last year. Essentially, they needed to create a mobile portal to allow customers to book tickets using web or smart devices. The site is being built using Adobe CQ5. Our company helped them with the Architecture and design services and also helped create their environments. 
+    </div> 
+   </div> 
+   <!-- Panel For Job1 Popup --> 
+   <div id="job1Popup" class="login-popup" style="width:600px;background-color:#efefef;"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="font-size:14px;color:#a11; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Big Data Architect 
+    </div>
+    <br> 
+    <div id="job1" style="font-size:12px; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Job Ref: NS310/12A 
+     <br>
+     <br> Big Data, Architect, Architecture, Technical Project Manager, PM, Hadoop, Mapreduce, Hive, Data Migration, Analytics, SQL, NoSQL, ETL, Banking, Financial, Solution Architect, Cloud Computing, High Performance Computing We are currently recruiting for a Big Data Architect for a 6 months + contract. This is likely to be a long-term engagement working on a project for a market leading global client. 
+     <br>
+     <br> For this position we need a hands on technical architect who also has the ability to communicate effectively with multiple vendors in a particularly fluid environment. You will take on the role of technical architect/technical project manager and work in a team of highly experienced Big Data Architects. 
+     <br>
+     <br> You should have a good knowledge of the following: 
+     <br> HADOOP
+     <br> HIVE
+     <br> MAPREDUCE
+     <br> NOSQL
+     <br> DATA MIGRATION
+     <br> ANALYTICS
+     <br> SQL
+     <br> ETL
+     <br> 
+     <br>
+     <br> If you believe you are a good fit, please send us a copy of your updated CV, availability/notice period and your daily rate. 
+     <br>
+     <br> 
+     <div class="techbox roundedCorners" style="background-color:#7e5281;color:white;float:right;" onclick="window.location.href='panel_careerForm.h?subject=Big Data Architect'"> 
+      <div style="font-size:14px;font-weight:bold;color:white;">
+       Apply Job
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- Panel For Job 2 Popup --> 
+   <div id="job2Popup" class="login-popup" style="width:600px;background-color:#efefef;"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="font-size:14px;color:#a11; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Hybris B2C v 4.8, Developer, Architect, Technical Lead 
+    </div>
+    <br> 
+    <div id="job2" style="font-size:12px; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Job Ref: NS317/12E 
+     <br>
+     <br> The selected candidate will contribute to analyze, design, develop and support application modules for our B2C E-commerce platform. The Java Hybris Developer is responsible for the delivery of very high quality applications while using cutting edge Java technologies and practicing Agile Development (SCRUM, XP, LEAN, KANBAN) and Continuous Integration. 
+     <br>
+     <br> 3-5 years Java, J2EE and srong appreciation of Spring MVC 
+     <br> Several years of building testable web applications 
+     <br> Min. 3 years of relevant professional experience in Java Development using Agile development methodology. 
+     <br> Good knowledge of peripheral tools - Ant, Maven, SVN/SWX, JUnit, etc. 
+     <br> Experienced with HTML, JSP, TagLibs, XML and AJAX 
+     <br> Strong with SQL, JDBC and ORM tools. JPA is an asset. 
+     <br> Experienced with Source Versioning (Mercurial) and unit testing (jUnit). 
+     <br> Familiar with application frameworks (Spring), build automation (Ant) and Web Services (REST).
+     <br> University degree in computer science or equivalent 
+     <br> Excellent knowledge in OO software design 
+     <br> Sound programming experience in Java/JEE 
+     <br> Experience in Front End technologies, UML and framework technologies 
+     <br> Previous customer facing experience, preferably working with business users 
+     <br> Ideally experience in eCommerce and/or product information management 
+     <br> Interest in latest development tools and approaches
+     <br> Good understanding of Design patterns
+     <br> 
+     <br>
+     <br> If you believe you are a good fit, please send us a copy of your updated CV, availability/notice period and your daily rate. 
+     <br>
+     <br> 
+     <div class="techbox roundedCorners" style="background-color:#7e5281;color:white;float:right;" onclick="window.location.href='panel_careerForm.h?subject=Hybris B2C Architect'"> 
+      <div style="font-size:14px;font-weight:bold;color:white;">
+       Apply Job
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- Panel For Job 3 Popup --> 
+   <div id="job3Popup" class="login-popup" style="width:600px;background-color:#efefef;"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="font-size:14px;color:#a11; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      iOS Architect/Developer - Leader, Objective C, iPhone 
+    </div>
+    <br> 
+    <div id="job3" style="font-size:12px; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Job Ref: NS314/18S 
+     <br>
+     <br> iOS Architect/Developer - Leader, Objective C, iPhone, iPad. 
+     <br>
+     <br> iOS Architect, Development Leader with strong Objective C is needed to work on an exciting new greenfield project. You will have ownership of the iOS codebase for our iPhone and iPad apps and will be responsible for helping build industry-leading scalable, high performing &amp; low latency apps that offer a great user experience. 
+     <br>
+     <br> You will need to drive framework improvements and be comfortable with rapidly evolving designs and requirements. Specific tasks will include defining architecture, debugging and coding features of our apps within estimated timescales for our planned releases. 
+     <br>
+     <br> To be considered you will be experienced in and be able to carry out the following: 
+     <br> * Architect, develop and debug a highly sophisticated mobile consumer application;
+     <br> * Work on a talented team to create iPhone &amp; iPad applications;
+     <br> * Write Objective C code to implement your designated features in the app;
+     <br> * Embrace ownership of the product and your code;
+     <br> * Provide realistic estimates to implement features and fix bugs;
+     <br> * Generate builds, document changes, and update issue tracking.
+     <br> 
+     <br>
+     <br> If you believe you are a good fit, please send us a copy of your updated CV, availability/notice period and your daily rate. 
+     <br>
+     <br> 
+     <div class="techbox roundedCorners" style="background-color:#7e5281;color:white;float:right;" onclick="window.location.href='panel_careerForm.h?subject=iOS Architect'"> 
+      <div style="font-size:14px;font-weight:bold;color:white;">
+       Apply Job
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- Panel For Job 4 Popup --> 
+   <div id="job4Popup" class="login-popup" style="width:600px;background-color:#efefef;"> 
+    <a href="#" class="close"><img class="btn_close" src="http://static.niche-skills.com/images/close_pop.png" title="Close Window" alt="Close"></a> 
+    <div style="font-size:14px;color:#a11; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Business Analyst - Software Implementation - London 
+    </div>
+    <br> 
+    <div id="job4" style="font-size:12px; font-family: ProximaNovaRgRegular, helvetica, verdana;">
+      Job Ref: NS321/21S 
+     <br>
+     <br> Business Analyst from a software delivery background required to deliver enterprise HR software solutions to global corporations for this London based provider. You should have a Background of successfully delivering software solutions to external clients and customers - Highly analytical, preferably with a technical background. 
+     <br>
+     <br> You will be an excellent communicator, Ideally Degree educated. Experience within HR Software solutions ideal but not essential. If not then the ability to rapidly become a subject matter expert in their systems and HR functions they work with. 
+     <br>
+     <br> Working on international system rollouts you will work with customers in a client focused Business Analyst &amp; Consultancy capacity. This will include client project, client workshop facilitation, requirements capture, analysis and functional specifications. 
+     <br>
+     <br> You will work with multi -disciplinary teams to deliver projects from 50 - 100 days, change requests and major global implementations. Prince 2 experience would be a benefit. 
+     <br>
+     <br> Excellent opportunity working for a leading player and to take on interesting projects for blue chip customers. 
+     <br>
+     <br> If you believe you are a good fit, please send us a copy of your updated CV, availability/notice period and your daily rate. 
+     <br>
+     <br> 
+     <div class="techbox roundedCorners" style="background-color:#7e5281;color:white;float:right;" onclick="window.location.href='panel_careerForm.h?subject=Business Analyst'"> 
+      <div style="font-size:14px;font-weight:bold;color:white;">
+       Apply Job
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div style="clear: both;"></div> 
+  <div id="myfooter" style="height:50px;"> 
+   <!-- AddThis Follow BEGIN  --> 
+   <div style="float: right; margin-right: 10px;"> 
+    <div class="addthis_toolbox addthis_default_style"> 
+     <a class="addthis_button_facebook_follow" addthis:userid="nicheskills"></a> 
+     <a class="addthis_button_twitter_follow" addthis:userid="NicheSkills"></a> 
+     <a class="addthis_button_linkedin_follow" href="http://www.linkedin.com/company/Niche-skills-ltd"></a> 
+     <a class="addthis_button_google_follow" addthis:userid="u/0/117204960031438222915/posts"></a> 
+     <a class="addthis_button_youtube_follow" addthis:userid="nicheskillsltd"></a> 
+    </div> 
+   </div> 
+   <!-- AddThis Follow END --> 
+   <div style="float: left; width: 100%; padding-top: 10px; clear: both;font-size:14px; 
+			background-image: url('http://static.niche-skills.com/images/blackbg1.jpg');  margin-top: 7px;; height:75px;font-family: ProximaNovaRgRegular, helvetica, verdana;"> 
+    <div class="container"> 
+     <div style="float: left; margin-left: 30px;"> 
+      <a href="/ns/index.h#contactus">
+       <div class="bottomlink">
+        Contact Us
+       </div></a> 
+      <a href="/ns/privacy.h">
+       <div class="bottomlink">
+        Privacy Policy
+       </div></a> 
+      <a href="/ns/TandC.h">
+       <div class="bottomlink">
+        Terms of Use
+       </div></a> 
+      <a href="/ns/accessibility.h">
+       <div class="bottomlink">
+        Accessibility
+       </div></a> 
+      <a href="/ns/sitemap.h">
+       <div class="bottomlink">
+        Site Map
+       </div></a> 
+     </div> 
+     <div style="clear: both; margin-bottom: 8px;"></div> 
+     <div style="float: left; margin-left: 30px; font-size: 8px; color:#e1e1e1;">
+       © 2004 - 2015. Niche Skills Ltd. All Rights Reserved. Logos and Trademarks belong entirely to respective companies
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="loader">
+   <!-- Place at bottom of page -->
+  </div> 
+  <div id="mydata"></div> 
+  <div id="largeImg"></div> 
+  <script>
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+	  var msViewportStyle = document.createElement("style")
+	  msViewportStyle.appendChild(
+	    document.createTextNode(
+	      "@-ms-viewport{width:auto!important}"
+	    )
+	  )
+	  document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+	}
+</script> 
+  <!-- End Windows Phone 8 and IE10 --> 
+  <!-- Just for debugging purposes. Don't actually copy this line! --> 
+  <!--[if lt IE 9]><script type='text/javascript' src="/resources/bootstrap311/js/ie8-responsive-file-warning.js"></script><![endif]--> 
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+  <!--[if lt IE 9]>
+  <script type='text/javascript' src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script type='text/javascript' src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]--> 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script> 
+  <script type="text/javascript" src="/resources/bootstrap311/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="/resources/bootstrap311/js/docs.min.js"></script> 
+  <script type="text/javascript" src="/resources/js/uuid.js"></script> 
+  <script type="text/javascript" src="/resources/js/jquery.dragtable.js"></script> 
+  <script type="text/javascript" src="/resources/js/bootstrap-datepicker.js"></script> 
+  <script type="text/javascript" src="/resources/js/bootstrap-confirmation.js"></script> 
+  <script type="text/javascript" src="/resources/js/jquery.sidr.min.js"></script> 
+  <script type="text/javascript" src="/resources/js/summernote.min.js"></script> 
+  <script type="text/javascript" src="/resources/js/jqBootstrapValidation.js"></script> 
+  <script type="text/javascript" src="http://static.niche-skills.com/js/jquery.json-2.3.min.js"></script> 
+  <script type="text/javascript" src="/resources/js/op.js"></script> 
+  <script type="text/javascript" src="/resources/js/html2canvas.js"></script> 
+  <script type="text/javascript" src="/resources/codemirror41/lib/codemirror.js"></script> 
+  <script type="text/javascript" src="/resources/codemirror41/mode/javascript/javascript.js"></script> 
+  <script type="text/javascript" src="/resources/codemirror41/mode/css/css.js"></script> 
+  <script language="JavaScript" src="http://static.niche-skills.com/js/jquery.zrssfeed.min.js"></script> 
+  <script language="JavaScript" src="/resources/js/ns-all-min.js"></script>  
+ </body>
+</html>

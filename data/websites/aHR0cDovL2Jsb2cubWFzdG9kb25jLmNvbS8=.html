@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <!--
+	generated in 0.362 seconds
+	61511 bytes batcached for 300 seconds
+-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width"> 
+  <title>Mastodon C | Big data done better.</title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://blog.mastodonc.com/xmlrpc.php"> 
+  <!--[if lt IE 9]>
+<script src="http://s0.wp.com/wp-content/themes/pub/twentytwelve/js/html5.js?m=1394055319g" type="text/javascript"></script>
+<![endif]--> 
+  <script src="//r-login.wordpress.com/remote-login.php?action=js&amp;host=blog.mastodonc.com&amp;id=32231674&amp;t=1417770600&amp;back=http%3A%2F%2Fblog.mastodonc.com%2F" type="text/javascript"></script> 
+  <script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script> 
+  <link rel="alternate" type="application/rss+xml" title="Mastodon C » Feed" href="http://blog.mastodonc.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Mastodon C » Comments Feed" href="http://blog.mastodonc.com/comments/feed/"> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script> 
+  <link rel="stylesheet" id="all-css-0" href="http://s1.wp.com/_static/??-eJx9kNEKgzAMRX9oXRE2ZQ9j3+LaWKNpU2yk+Perwhxjw7eb5BwSonNUhoNAEO1nFWl2GJJOHgmWOPEARr6rs0nppP9rhCMkPYDE1oxqq37wJ7H7COwcWJ5FdUzEWWe0Dg53YOgwoCx7OIJTz5MYtuWqQulEWGLPWe2DI9vwBKXvYysr4cFiCwS+YEeaj/XbWmNffrG94eHv1aVqLvW1uVXDC5Cjjos=" type="text/css" media="all"> 
+  <link rel="stylesheet" id="twentytwelve-fonts-css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext" type="text/css" media="all"> 
+  <link rel="stylesheet" id="all-css-2" href="http://s1.wp.com/wp-content/themes/pub/twentytwelve/style.css?m=1413316158g" type="text/css" media="all"> 
+  <!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://s0.wp.com/wp-content/themes/pub/twentytwelve/css/ie.css?m=1395207824g&#038;ver=20121010' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="all-css-4" href="http://s2.wp.com/_static/??-eJx9j9EKwjAMRX/IGiZT3IP4LVvJuoy0KWtm2d9bmchE3Mvl3nDOQyBHYyUoBgUd0GOCOHeguRyWkvxASLowmhyt+KNN6QAbx88m8uwoJEAvI625YgRBlAqZPmXPdyiGxbZKEr6G6bmlaU+dsGNxpToo1GbuSRR6CqTLv79/3Dc31OBYupZfwN3fqro6X5rqdG3GJ1GIfUo=" type="text/css" media="all"> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://s0.wp.com/_static/??-eJyFkNsOwiAMQH9IxrZo4ovxW3bpSBEoUhjRrxeTGTXO7KlNe9LTVmYvBnIRXJSapaUeDYjEEDpVagLdRJXmnSwcusGkEfgJ6muCcFvCJiAsqtBFqCy6F/xh9cTRAnNRrnS/VehmhLyJaYi+Gy4iAOP9Z2pvSAlvkkLHsuQKRkpRTGQMZZlxVBDXjmL/3v//NxbqbE/Nvq4Px6atW/0AiPqGzQ=="></script> 
+  <link rel="stylesheet" id="all-css-0" href="http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1377793621g" type="text/css" media="all"> 
+  <!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mastodonc.wordpress.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress.com"> 
+  <link rel="shortlink" href="http://wp.me/2beVI"> 
+  <!-- Jetpack Open Graph Tags --> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Mastodon C"> 
+  <meta property="og:description" content="Big data done better."> 
+  <meta property="og:url" content="http://blog.mastodonc.com/"> 
+  <meta property="og:site_name" content="Mastodon C"> 
+  <meta property="og:image" content="https://s0.wp.com/i/blank.jpg"> 
+  <meta name="twitter:site" content="@wordpressdotcom"> 
+  <link rel="shortcut icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1405977958g" sizes="16x16 24x24 32x32 48x48"> 
+  <link rel="icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1405977958g" sizes="16x16 24x24 32x32 48x48"> 
+  <link rel="apple-touch-icon-precomposed" href="http://s0.wp.com/i/webclip.png?m=1391188133g"> 
+  <link rel="openid.server" href="http://mastodonc.wordpress.com/?openidserver=1"> 
+  <link rel="openid.delegate" href="http://mastodonc.wordpress.com/"> 
+  <link rel="search" type="application/opensearchdescription+xml" href="http://blog.mastodonc.com/osd.xml" title="Mastodon C"> 
+  <link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com"> 
+  <style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style> 
+  <style type="text/css">
+.widget_twitter li {
+	word-wrap: break-word;
+}
+</style> 
+  <meta name="application-name" content="Mastodon C">
+  <meta name="msapplication-window" content="width=device-width;height=device-height">
+  <meta name="msapplication-tooltip" content="Big data done better.">
+  <meta name="msapplication-task" content="name=Subscribe;action-uri=http://blog.mastodonc.com/feed/;icon-uri=http://s2.wp.com/i/favicon.ico">
+  <meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico">
+  <meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico">
+  <meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico">
+  <meta name="title" content="Mastodon C on WordPress.com"> 
+  <meta name="description" content="Big data done better."> 
+  <style type="text/css" id="syntaxhighlighteranchor"></style> 
+ </head> 
+ <body class="home blog custom-background mp6 typekit-enabled custom-font-enabled highlander-enabled highlander-light infinite-scroll neverending"> 
+  <div id="page" class="hfeed site"> 
+   <header id="masthead" class="site-header" role="banner"> 
+    <hgroup> 
+     <h1 class="site-title"><a href="http://blog.mastodonc.com/" title="Mastodon C" rel="home">Mastodon C</a></h1> 
+     <h2 class="site-description">Big data done better.</h2> 
+    </hgroup> 
+    <nav id="site-navigation" class="main-navigation" role="navigation"> 
+     <button class="menu-toggle">Menu</button> 
+     <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a> 
+     <div class="nav-menu">
+      <ul>
+       <li class="current_page_item"><a href="http://blog.mastodonc.com/">Home</a></li>
+       <li class="page_item page-item-2"><a href="http://blog.mastodonc.com/about/">About</a></li>
+      </ul>
+     </div> 
+    </nav>
+    <!-- #site-navigation --> 
+   </header>
+   <!-- #masthead --> 
+   <div id="main" class="wrapper"> 
+    <div id="primary" class="site-content"> 
+     <div id="content" role="main"> 
+      <article id="post-314" class="post-314 post type-post status-publish format-standard hentry category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"> <a href="http://blog.mastodonc.com/2014/09/06/reflections-on-an-internship/" rel="bookmark">Reflections on an&nbsp;internship</a> </h1> 
+        <div class="comments-link"> 
+         <a href="http://blog.mastodonc.com/2014/09/06/reflections-on-an-internship/#comments" title="Comment on Reflections on an&nbsp;internship">2 Replies</a> 
+        </div>
+        <!-- .comments-link --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>Our latest superstar intern, Max, has just left us to go back to his last year of university at Queen Mary University of London.</p> 
+        <p><a href="https://twitter.com/AnnaPawlicka/status/505408829627326464" rel="nofollow">https://twitter.com/AnnaPawlicka/status/505408829627326464</a></p> 
+        <p>He’s been working with us on server automation and on separating out our code base into better modules – heavy work, and with a steep learning curve, but important work for the company. Happily, he’s done a brilliant job. We asked him to write up some thoughts on how he found it, and what he did and didn’t like – and we thought you’d like to read them too.</p> 
+        <blockquote>
+         <p>From the start, I felt very included. Even as an intern I was never left out of anything and that was my first big impression of the team at MastodonC. I remember in my first week when everyone was moving to the meeting room for democake, I was saying that I have nothing to show. But Anna explained that didn’t matter, and I could just talk about what I had learned.</p> 
+         <p>During my internship, I was given the opportunity to work on many different and interesting tasks. From initially learning the basics of Clojure and getting the chance to do some ClojureScript too, all the way to creating virtual machines to allow certain tasks to be run locally for testing. I learned a new way of thinking with Clojure which was different to all of my previous OO experience, and using virtual machines locally to run servers was completely new to me too. In the end I eventually managed to conquer setting up a virtual FTP server, which took me far too long!</p> 
+         <p>A lot of my work over the summer involved writing tests for existing code. I had to check whether given inputs would match a schema. However, the team wanted to tests these in massive numbers, not just a couple of hard-coded tests. So I got to learn about generative testing using Clojure’s test.check library. Through this I got the chance to write<a href="https://github.com/MastodonC/schema_gen"> my own small Clojure library</a>. The team wanted to generate test data from existing schemas built from the Prismatic Schema library. After a lot of researching I couldn’t find anything that would do this well enough, so I had a go at creating my own. It is completely open source and can be found (and added to!) on GitHub. Doing this showed me how friendly and helpful the Clojure community is, when I had problems I could ask questions on specific Google Groups or the more general London Clojurians, as well as various IRC channels.</p> 
+         <p>Now that it has finished, I definitely miss everyone at MastodonC and I would happily work there again if I get the chance to. Thank you so much for a fun, interesting and rewarding time!</p> 
+         <p>Thank you Fran for being a great boss, who I could talk to about any questions I had. Thank you Bruce, for making me into a person who paredit is for. Thank you Neale for helping me with all of my Git mishaps and showing off ridiculous Emacs commands. Thank you Anna for coercing me into going to Clojure Dojos.</p> 
+        </blockquote> 
+        <p>Thanks very much Max for spending time with us – it’s been a great experience, and we hope to get you back someday.</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta">
+         This entry was posted in 
+        <a href="http://blog.mastodonc.com/category/uncategorized/" rel="category tag">Uncategorized</a> on 
+        <a href="http://blog.mastodonc.com/2014/09/06/reflections-on-an-internship/" title="6:45 pm" rel="bookmark"><time class="entry-date" datetime="2014-09-06T18:45:59+00:00">September 6, 2014</time></a>
+        <span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://blog.mastodonc.com/author/magicdashes/" title="View all posts by Fran" rel="author">Fran</a></span></span>. 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <article id="post-297" class="post-297 post type-post status-publish format-standard hentry category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"> <a href="http://blog.mastodonc.com/2014/05/02/open-health-data-platform-is-launched/" rel="bookmark">Open Health Data platform is&nbsp;launched</a> </h1> 
+        <div class="comments-link"> 
+         <a href="http://blog.mastodonc.com/2014/05/02/open-health-data-platform-is-launched/#respond" title="Comment on Open Health Data platform is&nbsp;launched"><span class="leave-reply">Leave a reply</span></a> 
+        </div>
+        <!-- .comments-link --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>We had the big launch this week for the <a href="http://www.cde.org.uk/">Open Health Data Platform</a>, at <a href="http://shoreditchworks.com/shoreditch-village-hall/">Shoreditch Village Hall</a>. It seemed like the audience agreed with&nbsp;us that there was plenty of good stuff to be done with open health data:</p> 
+        <div class="embed-twitter"> 
+         <blockquote class="twitter-tweet" width="550"> 
+          <p>Pretty conclusive result from the audience vote <a href="https://twitter.com/hashtag/OHDP?src=hash">#OHDP</a> says <a href="https://twitter.com/krishgm">@krishgm</a> <a href="http://t.co/F8jFydyj17">pic.twitter.com/F8jFydyj17</a></p> 
+          <p>— Mary McKenna (@MMaryMcKenna) <a href="https://twitter.com/MMaryMcKenna/status/461424624895803392">April 30, 2014</a></p>
+         </blockquote> 
+         <p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+        </div> 
+        <p>We’ve built the platform on behalf of <a href="https://cde.catapult.org.uk/">Connected Digital Economy Catapult</a>, along with <a href="http://www.errorstudio.co.uk/">Error Creative Studio</a> who did the work to make it beautiful. The Platform is really a collection of examples, how-tos, and case studies for using open health data to build useful analytics and applications: everything there, including both code and design, is open source and open access, and intended for people to reuse and remix for their own purposes.</p> 
+        <p>The Catapult are now really keen to take this forward with more examples, and to support health tech entrepreneurs as well as bigger organisations and the public and voluntary sectors to do good things with this data, so if you’re interested in the area you should definitely <a href="http://www.cde.org.uk/getinvolved/">stay&nbsp;in touch</a>.</p> 
+        <div class="embed-twitter"> 
+         <blockquote class="twitter-tweet" width="550"> 
+          <p>My favourite pic from the pre <a href="https://twitter.com/hashtag/OHDP?src=hash">#OHDP</a> networking with <a href="https://twitter.com/ncrockettcdec">@ncrockettcdec</a> (<a href="https://twitter.com/CDECatapult">@CDECatapult</a>) <a href="http://t.co/2v6iZxLgrr">pic.twitter.com/2v6iZxLgrr</a></p> 
+          <p>— Mary McKenna (@MMaryMcKenna) <a href="https://twitter.com/MMaryMcKenna/status/461416281837928449">April 30, 2014</a></p>
+         </blockquote> 
+         <p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+        </div> 
+        <p>&nbsp;</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta">
+         This entry was posted in 
+        <a href="http://blog.mastodonc.com/category/uncategorized/" rel="category tag">Uncategorized</a> on 
+        <a href="http://blog.mastodonc.com/2014/05/02/open-health-data-platform-is-launched/" title="3:15 pm" rel="bookmark"><time class="entry-date" datetime="2014-05-02T15:15:16+00:00">May 2, 2014</time></a>
+        <span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://blog.mastodonc.com/author/magicdashes/" title="View all posts by Fran" rel="author">Fran</a></span></span>. 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <article id="post-287" class="post-287 post type-post status-publish format-standard hentry category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"> <a href="http://blog.mastodonc.com/2014/01/15/network-analysis-to-find-innovators/" rel="bookmark">Network analysis to find ‘innovators’</a> </h1> 
+        <div class="comments-link"> 
+         <a href="http://blog.mastodonc.com/2014/01/15/network-analysis-to-find-innovators/#comments" title="Comment on Network analysis to find ‘innovators’">2 Replies</a> 
+        </div>
+        <!-- .comments-link --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>We’re midway through some work with Nesta to systematically find ‘innovators’ in the UK&nbsp;technology scene. It’s been a&nbsp;really interesting project so far, and we’re looking forward to launching the work more widely in 2014.</p> 
+        <p>The system we’re building is collecting and joining together data from multiple sources about software developers and what they work on, the idea being to spot innovative people, innovative companies, and to understand the tech innovation landscape better than we can just using official information. “Innovative” is a pretty subjective term, but we’ve been exploring ways of identifying innovative individuals and companies by analysing their apparent importance and influence in their professional networks.</p> 
+        <p><a href="http://mastodonc.files.wordpress.com/2014/01/software_innovators.jpg"><img class="aligncenter size-full wp-image-290" alt="software_innovators" src="http://mastodonc.files.wordpress.com/2014/01/software_innovators.jpg?w=625"></a></p> 
+        <p>Our sources are pretty varied, and aren’t usually used in official tracking. Namely, we’re finding data from:</p> 
+        <ul> 
+         <li>Github, a popular code sharing service which many programmers use to store, track, and share their projects, both public and private</li> 
+         <li>StackOverflow, a question and answer site for technical issues</li> 
+         <li>Twitter, where a lot of social chat goes on, and</li> 
+         <li>Open Corporates, the open database of the corporate world, which pulls together the official public data available on companies</li> 
+        </ul> 
+        <p>We’re still working out what the final interface will look like – and would be really interested to hear any thoughts on what would be most useful – but we expect it to be a web-based way to identify explore innovators and their relationships by region, specialty, and maybe other factors as well. We hope that this will give a way to escape the ‘filter bubble’ of known innovators and start to spot those people and companies who are slightly under the official radar at present.</p> 
+        <p>Here are five of the interesting things we’ve found so far:</p> 
+        <p>1.&nbsp;&nbsp;&nbsp; As in lots of other social networks, the number of followers of UK Github users follows the Pareto (80/20) principle, where 80% of followers are watching just 20% of the total users. This is handy for us, since there are a few central users and innovators who are genuinely influential</p> 
+        <p>2.&nbsp;&nbsp;&nbsp; Big network analysis is&nbsp;<em>way</em>&nbsp;more computationally intensive than you might guess. Because everybody can be linked to everybody else, there are lots of potential relationships to analyse: if there are only 1,000 users, there are 1,000,000 relationships, so the sums get very big very fast. In fact, there are about 15,000 UK ‘innovators’, plus their friends, who we want to look at. We’ve been working with modern open source tools including&nbsp;<a href="http://www.neo4j.org/" target="_blank">Neo4j</a>&nbsp;and&nbsp;<a href="https://gephi.org/" target="_blank">Gephi</a>, which are pretty good, but we’re still stretching the limits of what’s practical.</p> 
+        <p>3.&nbsp;&nbsp;&nbsp; Living in our own filter bubble at a technology company in Shoreditch, it’s easy to imagine that all the innovators work at small technology companies in Shoreditch. In fact, that’s off the mark: we find lots of people working for big corporations, for organisations like the BBC, and for universities.</p> 
+        <p>4.&nbsp;&nbsp;&nbsp; On the other hand, our filter bubble isn’t&nbsp;<em>too&nbsp;</em>bad: in our random sample of innovators, we also found a few people who we knew and who Nesta knew personally, so we’re pretty sure that we are hitting the right networks of people.</p> 
+        <p>5.&nbsp;&nbsp;&nbsp; Innovative people seem to have side projects; we’d initially assumed that we could link people with companies just by looking at their websites. The fact is, a lot of the innovators we identified have got their own personal websites, as well as corporate identities – they’re connected to multiple projects and not just their main employer</p> 
+        <p>(cross posted from&nbsp;<a href="http://www.nesta.org.uk/blogs/">http://www.nesta.org.uk/blogs/</a>)</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta">
+         This entry was posted in 
+        <a href="http://blog.mastodonc.com/category/uncategorized/" rel="category tag">Uncategorized</a> on 
+        <a href="http://blog.mastodonc.com/2014/01/15/network-analysis-to-find-innovators/" title="2:22 pm" rel="bookmark"><time class="entry-date" datetime="2014-01-15T14:22:46+00:00">January 15, 2014</time></a>
+        <span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://blog.mastodonc.com/author/magicdashes/" title="View all posts by Fran" rel="author">Fran</a></span></span>. 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <article id="post-276" class="post-276 post type-post status-publish format-standard hentry category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"> <a href="http://blog.mastodonc.com/2013/09/03/what-and-why-is-democake/" rel="bookmark">What and why is&nbsp;#democake?</a> </h1> 
+        <div class="comments-link"> 
+         <a href="http://blog.mastodonc.com/2013/09/03/what-and-why-is-democake/#respond" title="Comment on What and why is&nbsp;#democake?"><span class="leave-reply">Leave a reply</span></a> 
+        </div>
+        <!-- .comments-link --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>We use an agile approach in all the work we do here at Mastodon C.</p> 
+        <p>Part of our agile technology development is breaking work up into short, set-length iterations, with clear deadlines at the end of each, which helps us to clarify what we’re doing right now, to plan effectively, and also to have a rhythm of regular checkpoints where we can look up from our keyboards, review progress, and respond to anything that’s changed.</p> 
+        <p>Internally, we run 1-week iterations, which end on a Tuesday afternoon. Then, every Wednesday, we take 20 minutes to prioritise what we want to do over the next week. This gives us a chance to make sure we’re still working on the right things and not forgetting to do important stuff that might be buried by the urgent, but less important things that appear daily.</p> 
+        <p>At the end of the iteration we all show off what we’ve achieved, relax, and bask in a little glory before heading, refreshed and ready to tear into the next iteration. To help us with that celebration, every Tuesday afternoon we also have demo cake.</p> 
+        <div class="embed-twitter"> 
+         <blockquote class="twitter-tweet" width="550"> 
+          <p>Suddenly getting the <a href="https://twitter.com/MastodonC">@MastodonC</a> team <a href="https://twitter.com/hashtag/democake?src=hash">#democake</a> seems like an overwhelming task. What is cake? What's a cookie? Are cupcakes allowed?</p> 
+          <p>— merici (@merici) <a href="https://twitter.com/merici/status/374864992484728832">September 3, 2013</a></p>
+         </blockquote> 
+         <p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+        </div> 
+        <p>The heavy responsibility of demo cake acquisition this week fell to Merici. She did well.</p> 
+        <p><a href="http://mastodonc.files.wordpress.com/2013/09/img_20130903_170743.jpg"><img class="aligncenter size-full wp-image-283" alt="IMG_20130903_170743" src="http://mastodonc.files.wordpress.com/2013/09/img_20130903_170743.jpg?w=625&amp;h=598" width="625" height="598"></a></p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta">
+         This entry was posted in 
+        <a href="http://blog.mastodonc.com/category/uncategorized/" rel="category tag">Uncategorized</a> on 
+        <a href="http://blog.mastodonc.com/2013/09/03/what-and-why-is-democake/" title="5:17 pm" rel="bookmark"><time class="entry-date" datetime="2013-09-03T17:17:34+00:00">September 3, 2013</time></a>
+        <span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://blog.mastodonc.com/author/magicdashes/" title="View all posts by Fran" rel="author">Fran</a></span></span>. 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <article id="post-272" class="post-272 post type-post status-publish format-standard hentry category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"> <a href="http://blog.mastodonc.com/2013/08/27/the-end-of-summer-the-end-of-internship-the-end-of-awesome-2/" rel="bookmark">The end of summer. The end of internship. The end of&nbsp;awesome.</a> </h1> 
+        <div class="comments-link"> 
+         <a href="http://blog.mastodonc.com/2013/08/27/the-end-of-summer-the-end-of-internship-the-end-of-awesome-2/#respond" title="Comment on The end of summer. The end of internship. The end of&nbsp;awesome."><span class="leave-reply">Leave a reply</span></a> 
+        </div>
+        <!-- .comments-link --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p><em>Our superstar intern @AnnaPawlicka finished her time with us last Friday *sniffles*</em>.&nbsp;<em>Here’s her look back on the experience, cross-posted from <a href="http://annapawlicka.com/the-end-of-summer-the-end-of-internship-the-end-of-awesome/">her blog</a>&nbsp;. If we can keep hiring people like her and making them happy, we’ll know we’re doing something right.&nbsp;</em></p> 
+        <p>This has been a whirlwind of a summer, and I can’t believe it’s come to an end. &nbsp;Working at&nbsp;<a href="https://www.mastodonc.com/">Mastodon C</a>&nbsp;has been exactly what I wanted it to be: an awesome experience. I can honestly say I enjoyed every single day. Whether I was working my way out of JavaScript’s scoping labyrinths or learning the power of Cascalog,&nbsp;there was a sense of pride for me knowing that I had directly participated as a part of the team. With a very very rare coffee requests&nbsp;<img alt=";-)" src="http://annapawlicka.com/wp-includes/images/smilies/icon_wink.gif"></p> 
+        <div class="embed-twitter"> 
+         <blockquote class="twitter-tweet" width="550"> 
+          <p>My internship just got real – <a href="https://twitter.com/otfrom">@otfrom</a> asked me to get coffees <span class="wp-smiley wp-emoji wp-emoji-smile" title=":)">:)</span></p> 
+          <p>— Anna Pawlicka (@AnnaPawlicka) <a href="https://twitter.com/AnnaPawlicka/status/362912344017354752">August 1, 2013</a></p>
+         </blockquote> 
+         <p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+        </div> 
+        <p>With the recent rise of big data and open data I feel very lucky to have been in the middle of it. During my first week of the internship I was introduced to the CDEC Open Health Data Platform idea, given a bunch of files, some examples of maps and Cascalog queries, and off I went.</p> 
+        <p>It took me a couple of hours to work through Paul Lam’s&nbsp;<a href="https://github.com/Cascading/Impatient-Cascalog/wiki">“Cascalog for the Impatient”</a>&nbsp;– enough to start writing my own queries. Cascalog, and Clojure for that matter, are amazing. You get to do stuff fast, clean and in a functional way. I used it to scrub the data and calculate diabetes prevalence stats. &nbsp;If a recent graduate whose only experience is in Java, is able to do that in a few days, then everyone who is dismissing the power of Clojure should go and ponder over their technology choices&nbsp;<img alt=";-)" src="http://annapawlicka.com/wp-includes/images/smilies/icon_wink.gif">&nbsp;&nbsp;Feel free to have a look at the&nbsp;<a href="https://github.com/CDECatapult/cdec.openhealthdata">GitHub repo</a>, all code is open source.</p> 
+        <p>I have been a frequent user of online maps, but I have not created any maps myself. This was about to change. I was going to take the data processed with Cascalog &nbsp;and visualise it on interactive maps and charts. Brilliant JavaScript libraries made this process much easier:&nbsp;<a href="http://leafletjs.com/">leaflet</a>&nbsp;and&nbsp;<a href="http://dimplejs.org/">dimple</a>. And although my JavaScript was rusty, it all soon started to come together. The (still ongoing) results can be seen on the&nbsp;<a href="http://openhealthdata.cdehub.org/">alpha site</a>.&nbsp;The&nbsp;<a href="http://storify.com/CDECatapult/launch-of-cdec-open-health-data-platform">feedback</a>&nbsp;it received on the day of the launch was the best reward I could imagine.</p> 
+        <p>Since then I have created more maps, more charts and more queries. And during that time I have always been myself:&nbsp;I came to code, Mastodon C allowed me to do just that. It has been like working in this unreal world where I wake up in the morning wanting to go to work, and where every day helps me to live my life in a more rewarding way. Being able to use my skills to help someone and see their positive reaction – priceless.</p> 
+        <p>Thank you to all Mastodonians for guiding the way for me throughout the entire summer.</p> 
+        <p><strong>Fran</strong>&nbsp;<strong>(@fhr)</strong>,&nbsp;for being a friendly, approachable boss, for introducing me to Women in Data, for inspiring me to overcome my fears of public speaking and balancing out the sci-fi references.</p> 
+        <p><strong>Bruce (@otfrom)</strong>, for always having a positive attitude and constantly helping to point me in the right direction, for introducing me to the world of Clojure and for the long list of all sci-fi films/books I’m yet to watch/read.</p> 
+        <p><strong>Neale (@sw1nn)</strong>, for the Iron Maiden talks, for&nbsp;always willing to help out, for inspiring me through your passion for technology and keeping lunch breaks interesting thanks to your amazing skill of remembering facts.</p> 
+        <p><strong>Steve (@sf105)</strong>&nbsp;and&nbsp;<strong>Merici (@merici)</strong>, it’s been a pleasure to work with you both, even if only briefly. Thank you for advice on professional career and for the froyo!</p> 
+        <p>It has been a wonderful experience to be part of a company that does meaningful things. If I were asked again what I wanted to be when I grow up, my answer would be: a&nbsp;<del>Giant Robot</del>&nbsp;Mastodonian: professional, expert and geeky. You guys rock!</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta">
+         This entry was posted in 
+        <a href="http://blog.mastodonc.com/category/uncategorized/" rel="category tag">Uncategorized</a> on 
+        <a href="http://blog.mastodonc.com/2013/08/27/the-end-of-summer-the-end-of-internship-the-end-of-awesome-2/" title="11:04 am" rel="bookmark"><time class="entry-date" datetime="2013-08-27T11:04:35+00:00">August 27, 2013</time></a>
+        <span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://blog.mastodonc.com/author/magicdashes/" title="View all posts by Fran" rel="author">Fran</a></span></span>. 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <article id="post-266" class="post-266 post type-post status-publish format-standard hentry category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"> <a href="http://blog.mastodonc.com/2013/08/09/open-health-data-alpha-launch-happy-dance/" rel="bookmark">Open Health Data – alpha launch happy&nbsp;dance</a> </h1> 
+        <div class="comments-link"> 
+         <a href="http://blog.mastodonc.com/2013/08/09/open-health-data-alpha-launch-happy-dance/#respond" title="Comment on Open Health Data – alpha launch happy&nbsp;dance"><span class="leave-reply">Leave a reply</span></a> 
+        </div>
+        <!-- .comments-link --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>[cross posted from <a href="https://cde.catapult.org.uk/%5D" rel="nofollow">https://cde.catapult.org.uk/%5D</a></p> 
+        <div>
+         We just launched the alpha of the&nbsp;
+         <a href="http://openhealthdata.cdehub.org/">CDEC Open Health Data Platform</a>.&nbsp;It’s been an exciting process developing the platform so far, and we’re really pleased with the way the alpha site looks and&nbsp;
+         <a href="http://telecareaware.com/alpha-version-of-open-health-data-platform-produces-impressive-data-analysis-graphics-uk/">the reactions it’s had</a>. The platform in general is a really fun project: it’s motivated by the fact that there’s an enormous amount of interesting and valuable raw health data available, from the NHS and elsewhere, but that it’s relatively difficult for business and government to make use of that data without a good reusable technical base to help them build different views and services around it.&nbsp;
+        </div> 
+        <div>
+         &nbsp;
+        </div> 
+        <div>
+         It’s easy to see how that data holds a lot of economic and social value for so many parties. For example, public, private and third sector services providers want to understand existing need and provision in different areas, to know where to send resources; journalists and politicians want to understand what health issues are topical in their area; and of course medical suppliers want to understand prevalence of conditions, supply of resources, trends and patterns. The aim behind the platform is to help all these parties to get hold of that possible value, by making the raw data easier to use and reuse.&nbsp;
+        </div> 
+        <div>
+         &nbsp;
+        </div> 
+        <div>
+         The idea behind having a very early alpha, and of developing the site very visibly in public, is to get a minimal version out for discussion which will make sure it is developing towards what people need. The project itself is quite an unusual one, since CDEC aren’t the ‘true’ end users: the users are really the people who we hope will take and repurpose the platform code, and the people who’ll use the interactive front end either of our version or of the repurposed versions of the platform. This gives us a bit of a dilemma: it would be impossible, and pretty stupid, to try and build something which serves every potential need we can think of (there are a lot of different potential ways of looking at this data) so we have to choose some example cases to build functionality around.&nbsp;
+        </div> 
+        <div>
+         &nbsp;
+        </div> 
+        <div>
+         For the alpha launch, we looked at data relating to diabetes – prescriptions, prevalence, and other information. Diabetes is a good ‘example’ condition to hang development around, as it’s common, chronic, affected by multiple environmental, medical, and social factors, and expensive to manage – so there are strong economic incentives for lots of different players to make sense of diabetes data for lots of different purposes: both charities like&nbsp;
+         <a href="http://www.diabetes.org.uk/">Diabetes UK</a>, health providers, and private sector providers who serve diabetes patients.&nbsp;
+        </div> 
+        <div>
+         &nbsp;
+        </div> 
+        <div>
+         We and CDEC are very happy with the way this first alpha version has come out, and have come up with a lot more questions based on the initial site. We’re also now looking to get feedback on what direction this should build in, and what functionality is important to users (both those who want to repurpose the code for themselves, and those who want to use the existing front end). If that’s you, drop us a line, or even better, raise an issue or fork the code on&nbsp;
+         <a href="https://github.com/CDECatapult/cdec.openhealthdata">Github</a>&nbsp;we positively want you to take it, use it, and make money or do other good stuff with this material.&nbsp;
+        </div> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta">
+         This entry was posted in 
+        <a href="http://blog.mastodonc.com/category/uncategorized/" rel="category tag">Uncategorized</a> on 
+        <a href="http://blog.mastodonc.com/2013/08/09/open-health-data-alpha-launch-happy-dance/" title="1:57 pm" rel="bookmark"><time class="entry-date" datetime="2013-08-09T13:57:44+00:00">August 9, 2013</time></a>
+        <span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://blog.mastodonc.com/author/magicdashes/" title="View all posts by Fran" rel="author">Fran</a></span></span>. 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <article id="post-263" class="post-263 post type-post status-publish format-standard hentry category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"> <a href="http://blog.mastodonc.com/2013/07/30/getting-technical-how-to-process-data-with-cascalog/" rel="bookmark">Getting technical – how to process data with&nbsp;Cascalog</a> </h1> 
+        <div class="comments-link"> 
+         <a href="http://blog.mastodonc.com/2013/07/30/getting-technical-how-to-process-data-with-cascalog/#comments" title="Comment on Getting technical – how to process data with&nbsp;Cascalog">2 Replies</a> 
+        </div>
+        <!-- .comments-link --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>Our superstar intern Anna (@AnnaPawlicka) has been working with Cascalog to process data for our clients. She met Clojure for the first time on her internship with us, and has been learning fast.&nbsp;</p> 
+        <p>She’s written up a great tutorial on how to use Cascalog on your desktop to process datasets locally, starting from the very beginning. You can read more <a href="http://annapawlicka.com/how-to-process-small-dataset-with-cascalog/">on her blog</a>.</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta">
+         This entry was posted in 
+        <a href="http://blog.mastodonc.com/category/uncategorized/" rel="category tag">Uncategorized</a> on 
+        <a href="http://blog.mastodonc.com/2013/07/30/getting-technical-how-to-process-data-with-cascalog/" title="2:51 pm" rel="bookmark"><time class="entry-date" datetime="2013-07-30T14:51:40+00:00">July 30, 2013</time></a>
+        <span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://blog.mastodonc.com/author/magicdashes/" title="View all posts by Fran" rel="author">Fran</a></span></span>. 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <nav id="nav-below" class="navigation" role="navigation"> 
+       <h3 class="assistive-text">Post navigation</h3> 
+       <div class="nav-previous">
+        <a href="http://blog.mastodonc.com/page/2/"><span class="meta-nav">←</span> Older posts</a>
+       </div> 
+       <div class="nav-next"></div> 
+      </nav>
+      <!-- #nav-below .navigation --> 
+     </div>
+     <!-- #content --> 
+    </div>
+    <!-- #primary --> 
+    <div id="secondary" class="widget-area" role="complementary"> 
+     <aside id="twitter-2" class="widget widget_twitter">
+      <h3 class="widget-title"><a href="http://twitter.com/mastodonc">Twitter Updates</a></h3>
+      <ul class="tweets"> 
+       <li> This is good news: Amazon have committed to all of AWS getting on renewable power, although without deadline yet: <a href="http://cloudofdata.tumblr.com/post/103200830988/amazon-slowly-starts-to-paint-data-centres-green"> cloudofdata.tumblr.com/post/103200830…</a> <a href="http://twitter.com/mastodonc/statuses/536179639862194177" class="timesince">1&nbsp;week&nbsp;ago</a> </li> 
+       <li> @<a href="http://twitter.com/DialogueByLucy">DialogueByLucy</a> @<a href="http://twitter.com/innovate_uk">innovate_uk</a> seconded! Great to get some time to do innovative stuff with an interesting company <a href="http://twitter.com/mastodonc/statuses/534024121244729346" class="timesince">2&nbsp;weeks&nbsp;ago</a> </li> 
+       <li> RT @<a href="http://twitter.com/se2limited">se2limited</a>: Next up at @<a href="http://twitter.com/ArupGroup">ArupGroup</a> is Fran Bennett from @<a href="http://twitter.com/MastodonC">MastodonC</a> - absolutely the best big data people in <a href="http://twitter.com/search?q=%23energyefficiency">#energyefficiency</a> and <a href="http://twitter.com/search?q=%23retro">#retro</a>… <a href="http://twitter.com/mastodonc/statuses/532527362156822528" class="timesince">3&nbsp;weeks&nbsp;ago</a> </li> 
+       <li> @<a href="http://twitter.com/se2limited">se2limited</a> @<a href="http://twitter.com/ArupGroup">ArupGroup</a> ahh, thank you! <a href="http://twitter.com/mastodonc/statuses/532527343253086208" class="timesince">3&nbsp;weeks&nbsp;ago</a> </li> 
+       <li> @<a href="http://twitter.com/envirobuzz">envirobuzz</a> sorry, just picked this up. <a href="mailto:theteam@mastodonc.com">theteam@mastodonc.com</a> <a href="http://twitter.com/mastodonc/statuses/531517836502769665" class="timesince">3&nbsp;weeks&nbsp;ago</a> </li> 
+      </ul>
+      <a href="http://twitter.com/mastodonc" class="twitter-follow-button" data-show-count="false" data-link-color="#21759b" data-text-color="#444444">Follow @mastodonc</a>
+     </aside> 
+     <aside id="recent-posts-2" class="widget widget_recent_entries"> 
+      <h3 class="widget-title">Recent Posts</h3> 
+      <ul> 
+       <li> <a href="http://blog.mastodonc.com/2014/09/06/reflections-on-an-internship/">Reflections on an&nbsp;internship</a> </li> 
+       <li> <a href="http://blog.mastodonc.com/2014/05/02/open-health-data-platform-is-launched/">Open Health Data platform is&nbsp;launched</a> </li> 
+       <li> <a href="http://blog.mastodonc.com/2014/01/15/network-analysis-to-find-innovators/">Network analysis to find ‘innovators’</a> </li> 
+       <li> <a href="http://blog.mastodonc.com/2013/09/03/what-and-why-is-democake/">What and why is&nbsp;#democake?</a> </li> 
+       <li> <a href="http://blog.mastodonc.com/2013/08/27/the-end-of-summer-the-end-of-internship-the-end-of-awesome-2/">The end of summer. The end of internship. The end of&nbsp;awesome.</a> </li> 
+      </ul> 
+     </aside>
+     <aside id="archives-2" class="widget widget_archive">
+      <h3 class="widget-title">Archives</h3> 
+      <ul> 
+       <li><a href="http://blog.mastodonc.com/2014/09/">September 2014</a></li> 
+       <li><a href="http://blog.mastodonc.com/2014/05/">May 2014</a></li> 
+       <li><a href="http://blog.mastodonc.com/2014/01/">January 2014</a></li> 
+       <li><a href="http://blog.mastodonc.com/2013/09/">September 2013</a></li> 
+       <li><a href="http://blog.mastodonc.com/2013/08/">August 2013</a></li> 
+       <li><a href="http://blog.mastodonc.com/2013/07/">July 2013</a></li> 
+       <li><a href="http://blog.mastodonc.com/2013/05/">May 2013</a></li> 
+       <li><a href="http://blog.mastodonc.com/2013/03/">March 2013</a></li> 
+       <li><a href="http://blog.mastodonc.com/2013/02/">February 2013</a></li> 
+       <li><a href="http://blog.mastodonc.com/2013/01/">January 2013</a></li> 
+       <li><a href="http://blog.mastodonc.com/2012/12/">December 2012</a></li> 
+       <li><a href="http://blog.mastodonc.com/2012/10/">October 2012</a></li> 
+       <li><a href="http://blog.mastodonc.com/2012/09/">September 2012</a></li> 
+       <li><a href="http://blog.mastodonc.com/2012/08/">August 2012</a></li> 
+       <li><a href="http://blog.mastodonc.com/2012/07/">July 2012</a></li> 
+       <li><a href="http://blog.mastodonc.com/2012/06/">June 2012</a></li> 
+       <li><a href="http://blog.mastodonc.com/2012/05/">May 2012</a></li> 
+       <li><a href="http://blog.mastodonc.com/2012/04/">April 2012</a></li> 
+       <li><a href="http://blog.mastodonc.com/2012/03/">March 2012</a></li> 
+       <li><a href="http://blog.mastodonc.com/2012/02/">February 2012</a></li> 
+      </ul> 
+     </aside> 
+    </div>
+    <!-- #secondary --> 
+   </div>
+   <!-- #main .wrapper --> 
+   <footer id="colophon" role="contentinfo"> 
+    <div class="site-info"> 
+     <a href="https://wordpress.com/themes/twentytwelve/" title="Learn more about this theme">The Twenty Twelve Theme</a>. 
+     <a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com</a>. 
+    </div>
+    <!-- .site-info --> 
+   </footer>
+   <!-- #colophon --> 
+  </div>
+  <!-- #page --> 
+  <script type="text/javascript">
+		//<![CDATA[
+		var infiniteScroll = {"settings":{"id":"content","ajaxurl":"http:\/\/blog.mastodonc.com\/?infinity=scrolling","type":"scroll","wrapper":true,"wrapper_class":"infinite-wrap","footer":"page","click_handle":"1","text":"Older posts","totop":"Scroll back to top","currentday":"30.07.13","order":"DESC","scripts":[],"styles":[],"google_analytics":false,"offset":0,"history":{"host":"blog.mastodonc.com","path":"\/page\/%d\/","use_trailing_slashes":true,"parameters":""},"query_args":{"error":"","m":"","p":0,"post_parent":"","subpost":"","subpost_id":"","attachment":"","attachment_id":0,"name":"","static":"","pagename":"","page_id":0,"second":"","minute":"","hour":"","day":0,"monthnum":0,"year":0,"w":0,"category_name":"","tag":"","cat":"","tag_id":"","author":"","author_name":"","feed":"","tb":"","paged":0,"comments_popup":"","meta_key":"","meta_value":"","preview":"","s":"","sentence":"","fields":"","menu_order":"","category__in":[],"category__not_in":[],"category__and":[],"post__in":[],"post__not_in":[],"tag__in":[],"tag__not_in":[],"tag__and":[],"tag_slug__in":[],"tag_slug__and":[],"post_parent__in":[],"post_parent__not_in":[],"author__in":[],"author__not_in":[],"posts_per_page":7,"ignore_sticky_posts":false,"suppress_filters":false,"cache_results":false,"update_post_term_cache":true,"update_post_meta_cache":true,"post_type":"","nopaging":false,"comments_per_page":"50","no_found_rows":false,"order":"DESC"},"last_post_date":"2013-07-30 14:51:40","stats":"blog=32231674&v=wpcom&tz=0&user_id=0&subd=mastodonc&x_pagetype=infinite"}};
+		//]]>
+		</script> 
+  <script type="text/javascript" src="//0.gravatar.com/js/gprofiles.js?ver=201449x"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781g"></script> 
+  <script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script> 
+  <div style="display:none"> 
+  </div> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"http:\/\/mastodonc.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/mastodonc.wordpress.com\/wp-login.php?action=logout&_wpnonce=1cc9c44591","homeURL":"http:\/\/blog.mastodonc.com\/","postID":"314","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"0"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://s0.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1414003384j"></script> 
+  <div id="infinite-footer"> 
+   <div class="container"> 
+    <div class="blog-info"> 
+     <a id="infinity-blog-title" href="http://blog.mastodonc.com/" rel="home"> Mastodon C </a> 
+    </div> 
+    <div class="blog-credits"> 
+     <a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com</a>. 
+     <a href="https://wordpress.com/themes/twentytwelve/" title="Learn more about this theme">The Twenty Twelve Theme</a>. 
+    </div> 
+   </div> 
+  </div>
+  <!-- #infinite-footer --> 
+  <div id="bit" class="loggedout-follow-normal"> 
+   <a class="bsub" href="javascript:void(0)"><span id="bsub-text">Follow</span></a> 
+   <div id="bitsubscribe"> 
+    <h3><label for="loggedout-follow-field">Follow “Mastodon C”</label></h3> 
+    <form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow"> 
+     <p>Get every new post delivered to your Inbox.</p> 
+     <p id="loggedout-follow-error" style="display: none;"></p> 
+     <p class="bit-follow-count">Join 969 other followers</p> 
+     <p><input type="email" name="email" value="Enter your email address" onfocus="this.value=(this.value==&quot;Enter your email address&quot;) ? &quot;&quot; : this.value;" onblur="this.value=(this.value==&quot;&quot;) ? &quot;Enter your email address&quot; : this.value;" id="loggedout-follow-field"></p> 
+     <input type="hidden" name="action" value="subscribe"> 
+     <input type="hidden" name="blog_id" value="32231674"> 
+     <input type="hidden" name="source" value="http://blog.mastodonc.com/"> 
+     <input type="hidden" name="sub-type" value="loggedout-follow"> 
+     <input type="hidden" id="_wpnonce" name="_wpnonce" value="3958e3bedc">
+     <input type="hidden" name="_wp_http_referer" value="/"> 
+     <p id="bsub-subscribe-button"><input type="submit" value="Sign me up"></p> 
+    </form> 
+    <div id="bsub-credit">
+     <a href="https://wordpress.com/?ref=lof">Build a website with WordPress.com</a>
+    </div> 
+   </div>
+   <!-- #bitsubscribe --> 
+  </div>
+  <!-- #bit --> 
+  <div id="carousel-reblog-box"> 
+   <form action="" name="carousel-reblog"> 
+    <textarea id="carousel-reblog-content" name="carousel-reblog-content" onclick="if ( this.value == 'Add your thoughts here... (optional)' ) { this.value = ''; }" onblur="if ( this.value == '' || this.value == '' ) { this.value = 'Add your thoughts here... (optional)'; }">Add your thoughts here... (optional)</textarea> 
+    <label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label> 
+    <select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id"> </select> 
+    <div class="submit"> 
+     <span class="canceltext"><a href="" class="cancel">Cancel</a></span> 
+     <input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post"> 
+     <input type="hidden" id="carousel-reblog-blog-id" value="32231674"> 
+     <input type="hidden" id="carousel-reblog-blog-url" value="http://blog.mastodonc.com"> 
+     <input type="hidden" id="carousel-reblog-blog-title" value="Mastodon C"> 
+     <input type="hidden" id="carousel-reblog-post-url" value=""> 
+     <input type="hidden" id="carousel-reblog-post-title" value=""> 
+    </div> 
+    <input type="hidden" id="_wpnonce" name="_wpnonce" value="bdddc45757">
+    <input type="hidden" name="_wp_http_referer" value="/"> 
+   </form> 
+   <div class="arrow"></div> 
+  </div> 
+  <link rel="stylesheet" id="all-css-0" href="http://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1412618825g" type="text/css" media="all"> 
+  <!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='http://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825g&#038;ver=20121024' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="all-css-2" href="http://s2.wp.com/wp-content/mu-plugins/tiled-gallery/tiled-gallery.css?m=1401143454g" type="text/css" media="all"> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var jetpackSlideshowSettings = {"spinner":"http:\/\/s1.wp.com\/wp-content\/mu-plugins\/shortcodes\/img\/slideshow-loader.gif","blog_id":"32231674","blog_subdomain":"mastodonc","user_id":"0"};
+/* ]]> */
+</script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var JetpackEmojiSettings = {"base_url":"http:\/\/s0.wp.com\/wp-content\/mu-plugins\/emoji\/twemoji\/"};
+/* ]]> */
+</script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"http:\/\/blog.mastodonc.com\/wp-admin\/admin-ajax.php","nonce":"9d155ab508","display_exif":"1","display_geo":"1","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/mastodonc.wordpress.com\/wp-login.php?redirect_to=http%3A%2F%2Fblog.mastodonc.com%2F2013%2F07%2F30%2Fgetting-technical-how-to-process-data-with-cascalog%2F","local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=32231674&v=wpcom&tz=0&user_id=0&subd=mastodonc","is_public":"1"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"http:\/\/blog.mastodonc.com\/wp-admin\/admin-ajax.php","nonce":"9d155ab508","display_exif":"1","display_geo":"1","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/mastodonc.wordpress.com\/wp-login.php?redirect_to=http%3A%2F%2Fblog.mastodonc.com%2F2013%2F07%2F30%2Fgetting-technical-how-to-process-data-with-cascalog%2F","local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=32231674&v=wpcom&tz=0&user_id=0&subd=mastodonc","is_public":"1"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://s0.wp.com/_static/??-eJyNj90OgjAMhV9IXEgUr4zPMmuRzrFO2oG8vcMEol6gN2t7dr7+mCEWwEExqHFiLtgTYHxsnWzM21ebiujTlYIYCjUF0nFJVrzScKfAF5Spubsn7MYtjODxb0g85azhoVj0b1YbbLM5prPRIQtjfn2PEx1sT1erxGFlILbsaELf40+/Q40WbsV/7g8XBfBpvm+o+ewQ9LvFzPf5fjZWBPUFvOrYocjKULAdJ0G/bDkLmTm1x3JX7quqrA579wRy6sG2"></script> 
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js?ver=20111117"></script> 
+  <script type="text/javascript" src="http://s0.wp.com/_static/??-eJyVy7EOQEAMANAfUnViYBDfgmsupepyivh7VpMY3/DwjDCuaqSGyw5R9sC6oZ1sRgkG6cd54OQhMqHSQYnUs4Z82jL8c+P3YyEPoRehdL31rG5pXVXUTVO70k03DU5D1g=="></script> 
+  <script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>
+  <script type="text/javascript">
+			jQuery.extend( infiniteScroll.settings.scripts, ["jquery","mobile-useragent-info","jquery-core","jquery-migrate","postmessage","jquery_inview","jetpack_resize","loggedout-subscribe","spin","jquery.spin","grofiles-cards","wpgroho","jquery.autoresize","highlander-comments","devicepx","the-neverending-homepage","jquery-cycle","jetpack-slideshow","twentytwelve-navigation","twemoji","jetpack-emoji","jetpack-emoji-init","swfobject","videopress","jetpack-carousel","twitter-widgets","twitter-widgets-infinity","twitter-widgets-pending","tiled-gallery"] );
+			jQuery.extend( infiniteScroll.settings.styles, ["smileyproject","jetpack_likes","loggedout-subscribe","the-neverending-homepage","jetpack-slideshow","wpcom-core-compat-playlist-styles","mp6hacks","twentytwelve-style","twentytwelve-wpcom-style","jetpack-emoji-css","noticons","geo-location-flair","reblogging","infinity-twentytwelve","h4-global","twentytwelve-fonts","twentytwelve-ie","highlander-comments","highlander-comments-ie7","jetpack-carousel","tiled-gallery","jetpack-carousel-ie8fix"] );
+		</script>
+  <script src="//stats.wp.com/w.js?31" type="text/javascript"></script> 
+  <script type="text/javascript">
+_tkq = window._tkq || [];
+_tkq.push(['storeContext', {'blog_id':'32231674','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+st_go({'blog':'32231674','v':'wpcom','tz':'0','user_id':'0','subd':'mastodonc'});
+ex_go({'crypt':'UE40eW5QN0p8M2Y/RE1LVmwrVi5vQS5fVFtfdHBbPyw1VXIrU3hWLHhmcmw0bWUwNis5Vk1qSEpzeXBoR2E/dmFIcl9HLjd1TGgrJm9kalImVUZGNEZjYjVlR1gseHYlYnFfay5pQ2RWMXpsRXxuNF8zdDZud1o1cS4zQloyNkt1TTl5N0ZDK3gldDlxT3hORnBHcjhWWG1GX01+MC03XVJ+P3F0V084MGxJUEljUSVKajY/JUpkU2Q2JjdBdWhnNFgxeHZlK1NSeiUuZHJDK0VqW0R2RXBxXXxYV1VoeDJaS00uS1g0LkNSNEVdRmYufExuL25nNFVdb3UreWJtRVZkQkVIMT9wa3h3Q0ZicFQlbTU/flZqRTZIWmJUVmVXNkZaby0='});
+addLoadEvent(function(){linktracker_init('32231674',0);});
+	</script> 
+  <noscript>
+   <img src="http://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="">
+  </noscript> 
+  <script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script> 
+ </body>
+</html>

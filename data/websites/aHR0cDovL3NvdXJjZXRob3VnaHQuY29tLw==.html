@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <!--[if lt IE 9]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]--> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css"> 
+  <!-- WP_Head --> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.3.4.4 - http://yoast.com/wordpress/seo/ --> 
+  <title>Automate Data Shaping - SourceThought</title> 
+  <meta name="description" content="SourceThought automates data shaping so an analyst can ingest, cleanse, combine and shape data on Hadoop without ETL or programming"> 
+  <link rel="canonical" href="http://sourcethought.com/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:title" content="Automate Data Shaping - SourceThought"> 
+  <meta property="og:description" content="SourceThought automates data shaping so an analyst can ingest, cleanse, combine and shape data on Hadoop without ETL or programming"> 
+  <meta property="og:url" content="http://sourcethought.com/"> 
+  <meta property="og:site_name" content="Source Thought"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:image" content="http://sourcethought.com/wp-content/uploads/2013/01/main-graphic-left.png"> 
+  <meta property="og:image" content="http://sourcethought.com/wp-content/uploads/2013/10/data-lake-btn1.png"> 
+  <meta property="og:image" content="http://sourcethought.com/wp-content/uploads/2014/01/what-is-data-shaping.png"> 
+  <meta property="og:image" content="http://sourcethought.com/wp-content/uploads/2013/02/h-3.png"> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="alternate" type="application/rss+xml" title="Source Thought » Feed" href="http://sourcethought.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Source Thought » Comments Feed" href="http://sourcethought.com/comments/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Source Thought » Home Comments Feed" href="http://sourcethought.com/homepage/feed/"> 
+  <link rel="stylesheet" id="fp_webfont_Open_Sans-css" href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic&amp;ver=3.5.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="fp_frontend_css-css" href="http://sourcethought.com/wp-content/plugins/fontpress/css/frontend.css?ver=3.5.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://sourcethought.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.2.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="bootstrap-css" href="http://sourcethought.com/wp-content/themes/flipit/css/bootstrap.css?ver=2.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="font-awesome-css" href="http://sourcethought.com/wp-content/themes/flipit/css/font-awesome.css?ver=2.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="font-awesome-ie7-css" href="http://sourcethought.com/wp-content/themes/flipit/css/font-awesome-ie7.css?ver=2.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="shortcodes-css" href="http://sourcethought.com/wp-content/themes/flipit/css/shortcodes.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="audioPlayerV1-skin-css" href="http://sourcethought.com/wp-content/themes/flipit/css/audio_skin/style.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="prettyPhoto-css" href="http://sourcethought.com/wp-content/themes/flipit/css/prettyPhoto.css?ver=3.1.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="flexSlider-css" href="http://sourcethought.com/wp-content/themes/flipit/css/flexslider.css?ver=1.8" type="text/css" media="all"> 
+  <link rel="stylesheet" id="retweets-css" href="http://sourcethought.com/wp-content/themes/flipit/css/retweets.css?ver=1.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="flip-css" href="http://sourcethought.com/wp-content/themes/flipit/css/flip.css?ver=1.8" type="text/css" media="all"> 
+  <link rel="stylesheet" id="main-stylesheet-css" href="http://sourcethought.com/wp-content/themes/flipit/style.css?ver=1.0" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://sourcethought.com/wp-includes/js/jquery/jquery.js?ver=1.8.3"></script> 
+  <script type="text/javascript" src="http://sourcethought.com/wp-includes/js/comment-reply.min.js?ver=3.5.1"></script> 
+  <!-- Custom Styles --> 
+  <style type="text/css">
+		
+		body{
+			 
+			
+			background-color: #ffffff;
+			color: #737373;
+		}
+		
+		a{
+			 
+			color: #00a7d6;
+		}
+		
+		.footer_wrap {
+			background-color: #e8e8e8;
+		}
+		
+		.post_icon i {
+			color: #ffffff;
+		}
+		
+		a:hover {
+			color: #cd6d33;
+		}
+			
+		
+		#content a, #contact_info a  {		
+			/**border-bottom: 1px solid #00a7d6;**/
+		}
+		#content .post_title a {
+			border-bottom: 0;
+		}
+		
+		.stat {
+		  background-color:#00a7d6; 
+		}		
+		
+		h1, h3, h1 a, h3 a, .blogpost h2 a, .widget h4 {
+
+			color: #00a7d6;
+
+		}
+
+		h5, h5 a, , .widget h3, .widget h2, .widget h4  {
+				}
+
+		h3, .ag_projects_widget h3, h4, h3 a, h4 a, .aj_projects_widget h3 a, .footer .note h4, .footer h4.subheadline {
+				}
+
+		p, ul, ol, .button, .ui-tabs-vertical .ui-tabs-nav li a span.text,
+		.footer p, .footer ul, .footer ol, .footer.button, .credits p,
+		.credits ul, .credits ol, .credits.button, .footer textarea, .footer input, .testimonial p, 
+		.contactsubmit label, .contactsubmit input[type=text], .contactsubmit textarea {
+				}
+
+		.except_link a:hover{
+			color: #fff;
+		}
+		
+		.except_link a{
+				color: #cd6d33;	
+		}
+		
+		a.portfolio_link:hover {
+			color: #cd6d33;
+		}
+		
+		.portfolio_link a{
+			color: #ffffff;
+		}		
+		
+
+		.stats {
+			border-top: 1px dotted rgba(115, 115, 115, 0.2);
+		}		
+		
+		.blog article {
+			border-bottom: 1px dotted rgba(115, 115, 115, 0.2);
+		}		
+		
+		#sidebar .widget ul li {
+			list-style: none;
+			border-bottom: 1px dotted rgba(115, 115, 115, 0.2);
+		}
+		
+		.panel .back {
+			background: #00a7d6;
+		}
+		
+		.panel_2col .back {
+				background: #00a7d6;	
+		}
+		
+		.post_title h3{
+			margin-bottom: 0.2em;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #cd6d33;
+		}
+		
+		.post_icon {
+			background-color: #cd6d33;
+		}
+
+		.author_link {
+			color: #00a7d6;
+		}
+		
+		.stats li em {
+			color: #00a7d6;
+		}
+		
+		.nav_social li a{
+			background-color: #00a7d6;
+		}
+
+		.folio_desc {
+			background-color: #00a7d6;
+		}
+
+		ul.fancy_tags li a {
+			  background-color: #cd6d33;
+		}
+		
+		ul.fancy_tags li a:hover {
+			background-color:  #00a7d6;
+		}
+		
+		.btn-flat {
+			background-color: #00a7d6;
+		}
+		.btn-flat a:hover{
+			background-color: #cd6d33;
+		}
+
+		.pagination a {
+			background-color: #00a7d6;
+			border: solid 1px #00a7d6;					
+		}
+
+		.pagination a:hover {
+			 background-color: #cd6d33;
+			border: solid 1px #cd6d33;				 
+			 color: #fff;
+		}
+		
+		.pagination span.current {
+			color: 	#cd6d33;
+			border: solid 1px #cd6d33;
+		}		
+
+		.quote_cite {
+			border-bottom: 1px solid #cd6d33;
+			color: #00a7d6;	
+		}
+		
+		.widget_tn_holder {
+			background-color:#cd6d33;
+		}
+		
+		.icon_holder_feat {
+			background-color:#00a7d6;
+		}
+		
+		.icon_holder_acc {
+			background-color:#cd6d33;
+		}
+		
+		.flexslider {
+			background-color: #00a7d6;	
+		}
+		
+		.flex-caption-title span{
+			background-color:  rgba(0, 167, 214, 0.8);
+			box-shadow: 10px 0 0 rgba(0, 167, 214, 0.8), -10px 0 0 rgba(0, 167, 214, 0.8);
+		}	
+		
+		.flex-caption-text span{
+			background-color:  rgba(0, 167, 214, 0.5);
+			box-shadow: 5px 0 0 rgba(0, 167, 214, 0.5), -7px 0 0 rgba(0, 167, 214, 0.5);
+		}	
+
+
+		.flex-control-nav li a {background: #cd6d33;}
+		.flex-control-nav li.flex-active a {background: #aaa; } 
+		.img_post a span {
+			background-color: rgba(0, 167, 214, 0.8);
+		} 
+		
+		.img_post {
+			background-color: #e8e8e8;
+		}
+		
+					.flex-direction-nav
+			{
+				display: none;
+			}
+					
+		.flex-direction-nav li a {			
+			/**border: 3px solid #00a7d6;**/
+			background-color: #cd6d33;
+			color: #ffffff;
+		}
+		
+		.flex-direction-nav li a:hover {
+			/**border: 3px solid #cd6d33;**/
+		}
+		
+		
+		.nav > li > a:hover {
+			text-decoration: none;
+			background-color: #00a7d6		}		
+		
+		.jqueryslidemenu ul li a {
+				border-bottom: 1px dotted rgba(115, 115, 115, 0);
+		}
+		
+		.jqueryslidemenu > ul > li:hover > a {
+				border-bottom: #ebebeb 5px solid;
+				background-color: transparent;
+		}
+		
+		.in .jqueryslidemenu > ul li:hover > a {
+				border-bottom: #ebebeb 5px solid;  
+		}
+		
+		.dropcap2 {
+		 background: #00a7d6;
+		}
+		
+		#content blockquote p.qp {
+				color:#00a7d6;
+		}
+		
+		.btn-flipit {
+  			background-color:#00a7d6;
+			background-image: none;
+			text-shadow: none;
+		}
+		.btn-flipit:hover {
+  			background-color:#cd6d33;
+			background-image: none;
+		}
+
+		.more-link:hover {
+			background-color: #cd6d33;
+		}
+
+		.nav_social li a {
+				color: #ffffff;
+		}
+		
+	.jqueryslidemenu > ul > .current_page_item > a, .jqueryslidemenu > ul > .current-menu-parent > a, .jqueryslidemenu > ul > .current_page_parent > a, .jqueryslidemenu > ul > li:hover > a, .latest_work .work_post a.work_link, footer h4, #sidebar .widget h4, .masonry_item .masonry_desc, .title_underline{
+	border-bottom-color: #00a7d6!important;
+	}
+	.jqueryslidemenu ul li ul{
+	border-top-color: #00a7d6!important;
+	}
+	.circle_service:hover .circle_icon, .latest_work .work_post a.work_link:hover, .more-link, a.post-edit-link, .pagination a:hover, #respond #submit, #respond .add-on, ul.source li.active a, .simple_btn {
+	background-color: #00a7d6!important;
+	}
+	
+	.circle_service:hover h3, .post_title h3 a:hover, .metadata ul li:hover i, .metadata ul li a:hover, a.post-edit-link:hover, ul.source li a:hover, ul.source li.active a:hover, .simple_btn:hover, .heroColor{
+	color: #00a7d6!important;
+	}
+	
+	#sidebar .widget ul li.active > a:hover {
+		color: #00a7d6!important;
+	}
+	
+	#sidebar .widget ul li > a:hover {
+	
+	}
+	
+	#respond #submit:hover{
+		background-color: #cd6d33!important;	
+		color: #fff;
+	}
+	.more-link:hover, .post-edit-link:hover, ul.source li.active a:hover{
+		background-color: #fff!important;
+
+	}
+	
+	#respond .add-on{
+		border-color: #00a7d6!important;
+	}
+	
+	.wpcf7 input.wpcf7-submit{
+		background-color: #00a7d6;
+	}
+	.wpcf7 input.wpcf7-submit:hover{
+		background-color: #cd6d33;
+	}
+	
+	.nav-tabs > li > a:hover {
+		color: #fff;
+	}
+		
+	.nav-tabs > li > a {
+		color: ;
+	}
+	
+	#sidebar .widget ul li > a:hover {
+		color: #fff;
+	}
+	.accordion-heading a{ color: #737373; }	
+	.accordion-heading a:hover { color: #00a7d6; }
+	
+	.flipIcon {
+		background-color: #00a7d6;	
+	}
+	
+	.hoverBG {
+		background-color: #00a7d6;			
+	}
+	
+	div.pp_default .pp_nav .pp_play,div.pp_default .pp_nav .pp_pause{
+		background-color: #00a7d6;		
+	}
+	div.pp_default a.pp_arrow_previous,div.pp_default a.pp_arrow_next{background-color: #00a7d6;	}
+	div.pp_default a.pp_arrow_next{background-color: #00a7d6;	}
+	
+	#sidebar .widget h4 i {
+		color: #00a7d6;		
+	}
+	
+	
+	#sidebar .widget .flip_stats ul li > a {
+		color: #ffffff;
+	}
+	
+	.flip_stats li a {
+		color: #ffffff;
+	}
+	
+    </style> 
+  <!-- Custom Styling --> 
+  <style type="text/css">
+ul.nav li.dropdown:hover ul.dropdown-menu{
+display: block;
+}
+</style> 
+  <link rel="shortcut icon" href="http://sourcethought.com/wp-content/uploads/2013/01/sourcethought_favicon_option1.ico"> 
+  <!-- /WP_Head --> 
+  <script type="text/javascript">
+			var defaultAnimation = 'fadepanel';var slideText = 'hover';	
+
+			
+			jQuery(document).ready(function($){
+				$("#content").preloader({loader: 'http://sourcethought.com/wp-content/themes/flipit/images/loading.gif'});
+			});
+				
+		</script> 
+  <!-- Facebook and Google +1 Tags --> 
+  <script type="text/javascript">
+						jQuery(window).load(function(){
+							if(jQuery(".logo_holder").height() > 30)
+							{
+								jQuery(".nav").css("margin-top", (jQuery(".logo_holder").height() - 45) + "px");
+							}
+						});
+					</script> 
+  <!--[if lt IE 9]>
+		   <script>
+			  document.createElement('header');
+			  document.createElement('nav');
+			  document.createElement('section');
+			  document.createElement('article');
+			  document.createElement('aside');
+			  document.createElement('footer');
+		   </script>
+		<![endif]--> 
+ </head> 
+ <body class="home page page-id-771 page-template page-template-page-fullwidth-php layout-2cr"> 
+  <div id="wrap" class="navPositionright"> 
+   <div id="container" class="container"> 
+    <header id="header"> 
+     <div class="navbar"> 
+      <div class="navbar-inner"> 
+       <div class="container"> 
+        <div class="logo_holder"> 
+         <a href="http://sourcethought.com/"><img src="http://sourcethought.com/wp-content/uploads/2013/01/sourcethought-logo1.png" alt="Source Thought"></a> 
+        </div> 
+        <a class="btn-flat" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+        <div class="nav-collapse collapse" style="height: 0;"> 
+         <nav id="jqueryslidemenu" class="jqueryslidemenu"> 
+          <ul class="nav">
+           <li id="menu-item-815" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-771 current_page_item menu-item-815"><a href="http://sourcethought.com/">Home</a></li> 
+           <li id="menu-item-1372" class="disabled menu-item menu-item-type-custom menu-item-object-custom menu-item-1372"><a href="#">Solution</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-820"><a href="http://sourcethought.com/data-shaping/">Automate Data Shaping</a></li> 
+             <li id="menu-item-1373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1373"><a href="http://sourcethought.com/the-data-lake/">The Data Lake</a></li> 
+            </ul> </li> 
+           <li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="http://sourcethought.com/technology/">Technology</a></li> 
+           <li id="menu-item-818" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-818"><a href="http://sourcethought.com/delivery/">Delivery</a></li> 
+           <li id="menu-item-816" class="disabled menu-item menu-item-type-post_type menu-item-object-page menu-item-816"><a href="http://sourcethought.com/company/">Company</a> 
+            <ul class="sub-menu"> 
+             <li id="menu-item-1332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1332"><a href="http://sourcethought.com/company/">About</a></li> 
+             <li id="menu-item-839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-839"><a href="http://sourcethought.com/team/">Team</a></li> 
+             <li id="menu-item-838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-838"><a href="http://sourcethought.com/investors/">Investors</a></li> 
+             <li id="menu-item-837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="http://sourcethought.com/careers/">Careers</a></li> 
+            </ul> </li> 
+           <li id="menu-item-817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-817"><a href="http://sourcethought.com/contact/">Contact Us</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </nav> 
+        </div>
+        <!-- /nav-collapse --> 
+        <div class="pull-right"> 
+        </div> 
+       </div>
+       <!-- /container --> 
+      </div>
+      <!-- /navbar-inner --> 
+     </div>
+     <!-- /navbar --> 
+    </header> 
+    <hr class="cool_divider"> 
+    <div class="page_title"> 
+     <div class="clearfix"></div> 
+    </div>
+    <!-- /page_title --> 
+    <div id="main" role="main" class="row layout_"> 
+     <section id="content" class="span12"> 
+      <article id="post-771" class="post-771 page type-page status-publish hentry"> 
+       <div style="background: #928d87 url('http://sourcethought.com/wp-content/uploads/2013/01/main-graphic-right.jpg');"> 
+        <div class="row-fluid">
+         <div class="span6">
+          <img class="alignleft size-full wp-image-1020" alt="main-graphic-left" src="http://sourcethought.com/wp-content/uploads/2013/01/main-graphic-left.png" width="508" height="395">
+         </div> 
+         <div class="span6">
+          <p></p> 
+          <div style="padding: 25px 25px 0 15px;"> 
+           <h1 style="color: #fff; font-size: 2.0em; font-weight: bold;">Get Your Information into Shape</h1> 
+           <p style="color: #fff; line-height: 1.5em; font-size: .9em;">The primary bottleneck to innovation and insight is getting the right information into the right shape. Today teams of analysts, engineers and ETL specialists take weeks or months building processes to prepare data for analysis. The size and inconsistency of big data creates an even bigger bottleneck. SourceThought eliminates this bottleneck.</p> 
+           <p style="color: #fff; line-height: 1.5em; font-size: .9em;">SourceThought provides automated data shaping that lets an analyst ingest, cleanse, join and restructure data on Hadoop without ETL or programming. Disparate data is automatically combined and shaped into the requested format.&nbsp; It is made available within your current tools to enable discovery, analysis, modeling or warehousing. Imagine the impact when the information you want in the format you need is available with little effort or cost.</p> 
+           <h3 style="color: #fff; font-size: 1.0em; font-weight: bold;">Shape Data to Drive Innovation and&nbsp;Insight&nbsp;&nbsp;&nbsp;<a href="data-shaping" class="btn btn-large btn-warning" style="background-color:undefined !important;" "=""><span style="color:#fff">Learn More</span></a></h3> 
+          </div> 
+          <p></p>
+         </div> 
+        </div> 
+       </div> 
+       <div class="row-fluid">
+        <div class="span4">
+         <a href="the-data-lake"><img class="alignnone size-full" alt="Discover the Data Lake" src="http://sourcethought.com/wp-content/uploads/2013/10/data-lake-btn1.png" width="371" height="109"></a>
+         <p></p> 
+         <p></p>
+        </div> 
+        <div class="span4">
+         <a href="data-shaping"><img class="alignnone size-full" alt="What is Automated Data Shaping" src="http://sourcethought.com/wp-content/uploads/2014/01/what-is-data-shaping.png" width="371" height="109"></a>
+         <br> 
+        </div> 
+        <div class="span4">
+         <a href="technology"><img class="alignnone size-full" alt="Explore Tools Architected for Hadoop" src="http://sourcethought.com/wp-content/uploads/2013/02/h-3.png" width="371" height="109"></a>
+         <br> 
+        </div> 
+       </div> 
+       <hr class="cool_divider"> 
+       <div class="row-fluid">
+        <div class="span4">
+         <p></p> 
+         <h3>Shape Information in the&nbsp;Data Lake</h3> 
+         <p>A Data Lake is a comprehensive Hadoop repository storing information from any system, source or structure. SourceThought efficiently fills and shapes data in the Data Lake.&nbsp; Break down disparate silos of information and provide a complete picture of your operation, your customer, your challenges and your next opportunity.</p> 
+         <p><a title="The Data Lake" href="the-data-lake">Learn how to access and combine information from anywhere &gt;</a><br> </p>
+        </div> 
+        <div class="span4">
+         <p></p> 
+         <h3>The Right Data in the Right Format</h3> 
+         <p>Ingest raw data into Hadoop from databases, files or cloud services. Analyze its content, structure and semantics. Clean, integrate and restructure it automatically to match the format needed. Combining semantic analysis and machine learning, SourceThought delivers useful data quickly and easily for a fraction of the cost.</p> 
+         <p><a href="data-shaping">Learn how to shape data for discovery, analysis, modeling and warehousing &gt;</a></p> 
+         <p></p>
+        </div> 
+        <div class="span4">
+         <p></p> 
+         <h3>Hadoop Makes Data Shaping Possible</h3> 
+         <p>Before Hadoop, data had to be prepared before it could be stored and queried. Now data can be ingested, profiled, cleansed and shaped directly on Hadoop. SourceThought delivers a browser based data shaping platform that takes full advantage of Hadoop technologies like HDFS, Hive, Pig, Map Reduce, Oozie, Sqoop and Flume.</p> 
+         <p><a href="technology">Learn&nbsp;how our&nbsp;technology delivers any data in any shape natively on Hadoop &gt;</a><br> </p>
+        </div> 
+       </div> 
+       <p>&nbsp;</p> 
+       <div class="clear"></div> 
+      </article> 
+     </section>
+     <!-- /content --> 
+     <div class="clearfix"></div> 
+     <div class="clearfix"></div> 
+    </div>
+    <!-- /main --> 
+    <div class="clearfix"></div> 
+   </div>
+   <!-- /container --> 
+   <div class=""> 
+    <footer id="footer" class="container"> 
+     <div class="clear"></div> 
+     <div class="sub_footer_wrap"> 
+      <hr style="margin: 0 0 30px 0;"> 
+     </div>
+     <!-- /sub_footer_wrap --> 
+    </footer> 
+   </div>
+   <!-- /wrap --> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span9"> 
+      <div class="footer_left"> 
+       <div class="logo"> 
+        <img src="http://sourcethought.com/wp-content/uploads/2013/01/sourcethought-logo1.png" alt="Source Thought"> 
+       </div> 
+       <p>© 2013 SourceThought. All Rights Reserved.</p> 
+      </div> 
+     </div> 
+     <div class="span3"> 
+      <div class="pull-right"> 
+       <ul class="nav_social"> 
+        <li class="n_facebook"><a href="http://www.facebook.com/SourceThought" target="_blank"><i class="icon-facebook"></i></a></li> 
+        <li class="n_twitter"><a href="http://twitter.com/SourceThought" target="_blank"><i class="icon-twitter"></i></a></li> 
+        <li class="n_linkedin"><a href="http://www.linkedin.com/company/SourceThought" target="_blank"><i class="icon-linkedin"></i></a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div>
+    <!-- /row --> 
+   </div> 
+   <!-- WP_Footer --> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.js?ver=3.14"></script> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/sourcethought.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.2.1"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/jquery.flexslider-min.js?ver=1.0"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/bootstrap.js?ver=1.0"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/script.js?ver=1.0"></script> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var WP_Flexslider = {"effect":"slide","animSpeed":"600","interval":"5000","pauseOnHover":"0","navigation":"","smoothHeight":"true"};
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/jquery.flexslider.custom.js?ver=1.0"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-includes/js/hoverIntent.min.js?ver=r6"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.9.2"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/jquery.prettyPhoto.js?ver=3.1.3"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/jquery.tools.min.js?ver=1.2.6"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/jquery.touchSwipe-1.3.1.js?ver=1.3.1"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/jquery.jplayer.min.js?ver=1.0"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/customRetweet.min.js?ver=10"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/ios-orientationchange-fix.js?ver=1.0"></script> 
+   <script type="text/javascript">
+/* <![CDATA[ */
+var WP_Preloader = {"theme_path":"http:\/\/sourcethought.com\/wp-content\/themes\/flipit"};
+/* ]]> */
+</script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/jquery.preloader.js?ver=1.0"></script> 
+   <script type="text/javascript" src="http://sourcethought.com/wp-content/themes/flipit/js/jquery.infinitescroll.js?ver=1.0"></script> 
+   <!-- /WP_Footer --> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <title>Nara Logics - Discover what matters</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="shortcut icon" href="img/nara_favicon.ico" type="image/x-icon"> 
+  <!-- typekit fonts --> 
+  <script type="text/javascript" src="//use.typekit.net/vwe6gnu.js"></script> 
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  <link rel="stylesheet" href="sass/css/normalize.css"> 
+  <link rel="stylesheet" href="sass/css/screen.css"> 
+  <script src="js/_vendor/modernizr.js"></script> 
+  <script type="text/javascript" src="//wurfl.io/wurfl.js"></script> 
+ </head> 
+ <body class="home" data-ng-app="nara" data-ng-controller="naraCtrl" data-ng-init="page='home'"> 
+  <section class="block-intro"> 
+   <header> 
+    <div> 
+     <a href="/">
+      <figure class="nara-logo"></figure></a> 
+     <nav> 
+      <a class="navtarget capabilities" href="capabilities.html">Capabilities</a> 
+      <a class="navtarget about-us" href="about.html">About Us</a> 
+      <a class="navtarget request-demo" href="#" data-ng-click="openOverlay($event,'form')">Request Demo</a> 
+      <a class="indicator"></a> 
+     </nav> 
+     <a class="hamburger" href="#" data-ng-click="openOverlay($event,'menu')"> 
+      <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewbox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+       <path d="M4, 10h24c1.104, 0, 2-0.896, 2-2s-0.896-2-2-2H4C2.896, 6, 2, 6.896, 2, 8S2.896, 10, 4, 10z M28, 14H4c-1.104, 0-2, 0.896-2, 2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" fill="white"></path> 
+      </svg> </a> 
+    </div> 
+   </header> 
+   <svg id="gradient-background"> 
+    <lineargradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%" gradientunits="userSpaceOnUse"> 
+     <stop stop-color="#F57936" offset="0"></stop> 
+     <stop stop-color="#D93C56" offset="0.25"></stop> 
+     <stop stop-color="#C93D7A" offset="0.5"></stop> 
+     <stop stop-color="#BC3CAA" offset="0.6"></stop> 
+     <stop stop-color="#7539B7" offset="1"></stop> 
+    </lineargradient> 
+    <radialgradient id="grad3" gradientunits="userSpaceOnUse" cx="50%" cy="50%" r="0"> 
+     <stop stop-color="#353688" stop-opacity="0" offset="0"></stop> 
+     <stop stop-color="#353688" offset="1"></stop> 
+    </radialgradient> 
+    <lineargradient id="grad4" gradientunits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%"> 
+     <stop stop-color="#3077A4" offset="0"></stop> 
+     <stop stop-color="#3B5FBA" offset="0.3"></stop> 
+     <stop stop-color="#473CAD" offset="0.6"></stop> 
+     <stop stop-color="#472498" offset="0.8"></stop> 
+     <stop stop-color="#6323AA" offset="1"></stop> 
+    </lineargradient> 
+    <rect width="100%" height="100%" fill="url(#grad2)"></rect> 
+    <rect id="circ-grad" width="100%" height="100%" fill="url(#grad3)"></rect> 
+    <rect id="cold" width="100%" height="100%" fill="url(#grad4)"></rect> 
+   </svg> 
+   <div class="inner-header"> 
+    <div class="header-stage"> 
+     <div style="max-width:400px">
+      <svg viewbox="0 0 400 400" id="circle-svg">
+       <ellipse id="circle" cx="50" cy="1900" rx="10" ry="10" fill="#FFF"></ellipse>
+      </svg> 
+      <svg id="waves" class="waves"></svg>
+     </div> 
+     <div class="text-wrapper"> 
+      <h1 class="discover">Discover</h1> 
+      <h1 class="matters"><span>&nbsp;</span>what matters.</h1> 
+      <p class="header-copy"> Meet Nara, the personalization engine created by MIT neuroscientists to save the world from an overwhelming ocean of data. <a class="request-demo" href="#" data-ng-click="openOverlay($event,'form')">Request Demo</a> </p> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <div class="show-tablet white-wave-up"></div> 
+  <section class="block-lead"> 
+   <h1>What can Nara do for you?</h1> 
+   <p><strong>We help businesses continuously deliver more personalized and relevant recommendations for products, places and experiences</strong> by leveraging the power of deep learning artificial intelligence and the latest advancements in computational neuroscience. Our cloud-based platform is easy to implement and works with almost all enterprise data sources.</p> 
+   <p>Plug into our platform and immediately:</p> 
+   <div class="three-up"> 
+    <div> 
+     <figure class="threeup_engagement"></figure> 
+     <h2>Increase Engagement</h2> 
+    </div> 
+    <div> 
+     <figure class="threeup_conversions"></figure> 
+     <h2>Drive Conversions</h2> 
+    </div> 
+    <div> 
+     <figure class="threeup_loyalty"></figure> 
+     <h2>Improve Loyalty</h2> 
+    </div> 
+   </div> 
+   <div class="lead-buttons"> 
+    <a href="capabilities.html">See our capabilities</a> 
+    <a href="#" data-ng-click="openOverlay($event,'form')">Request a demo</a> 
+   </div> 
+  </section> 
+  <!-- LATER --> 
+  <section class="block-stage clearfix" id="dotsSection"> 
+   <object class="svg-wrapper" id="svgWrapper"> 
+    <svg id="svgContainer" style="width:100%;max-height:900px" x="0px" y="0px" viewbox="-50 0 1100 900" preserveaspectratio="xMinYMin meet"> 
+     <defs> 
+      <pattern id="dotpattern" patternunits="userSpaceOnUse" y="-500" width="27" height="1000"> 
+       <image xlink:href="img/texture_27x1000.jpg" x="0" y="0" width="27" height="1000"></image> 
+      </pattern> 
+      <pattern id="linepattern" patternunits="userSpaceOnUse" y="0" width="27" height="1000"> 
+       <image xlink:href="img/texture_27x1000.jpg" x="0" y="0" width="27" height="1000"></image> 
+      </pattern> 
+      <lineargradient id="textBlockFade"> 
+       <stop id="blockFadeStop1" offset="45%" stop-color="#fbf9ef " stop-opacity="0" /> 
+       <stop id="blockFadeStop2" offset="45%" stop-color="#fbf9ef " stop-opacity="1" /> 
+       <stop id="blockFadeStop2" offset="75%" stop-color="#fbf9ef " stop-opacity="1" /> 
+       <stop id="blockFadeStop2" offset="95%" stop-color="#fbf9ef " stop-opacity="1" /> 
+      </lineargradient> 
+     </defs> 
+    </svg> </object> 
+   <div class="scroll-section one"> 
+    <div class="wrapper"> 
+     <div class="text-block"> 
+      <h1>Here's how it works</h1> 
+      <!--  TODO# swap out inline style for SASS implementation --> 
+      <p>Until now, personalization technology has been more artificial than intelligent, with companies throwing resources at a problem that really calls for brainpower, not just processing power. Fortunately, brainpower’s at the core of everything we do.</p> 
+     </div> 
+    </div> 
+    <!-- <img class="show-tablet" src="img/tablet-dot-2.png" height="113" width="113"/> --> 
+   </div> 
+   <div class="scroll-section two"> 
+    <div class="wrapper"> 
+     <div class="text-block"> 
+      <figure class="show-mobile" style="background-image: url('img/mobile-dots-spread.png')"></figure> 
+      <h1 class="purple-grad">We See What Your Data Is Made Of</h1> 
+      <p>Nara starts by analyzing the whole web, and identifying the millions of features and attributes (and attributes of attributes) that make up every person, place and thing that’s relevant to your database, then augmenting it with additional information, reviews and opinions.</p> 
+     </div> 
+     <!-- <img class="show-tablet" src="img/tablet-universe-2.png" width="300" height="360"/> --> 
+    </div> 
+   </div> 
+   <div class="scroll-section three"> 
+    <div class="wrapper"> 
+     <div class="text-block"> 
+      <figure class="show-mobile" style="background-image: url('img/mobile-dots-lines.png')"></figure> 
+      <h1 class="purple-grad">We Figure Out What It All Means</h1> 
+      <p>Our technology emulates human brain cognition in the way it links and organizes all this data into a single neural network, uncovering pre-existing relationships and building both expected and unexpected connections between entities.</p> 
+     </div> 
+     <!-- <img class="show-tablet" src="img/tablet-dot-lines-2.png" width="320" height="297"/> --> 
+    </div> 
+   </div> 
+   <div class="scroll-section four"> 
+    <div class="wrapper"> 
+     <div class="text-block"> 
+      <figure class="show-mobile" style="background-image: url('img/mobile-dna.png')"></figure> 
+      <h1 class="purple-grad">We Learn What Makes Users Unique</h1> 
+      <p>Using even just a small baseline of user data, Nara immediately builds rich online profiles for each individual prospect and customer, learning the unique tastes and preferences that define their Digital DNA™</p> 
+     </div> 
+     <!-- <img class="show-tablet" src="img/tablet-man-2.png" width="155" height="350"/> --> 
+    </div> 
+   </div> 
+   <div class="scroll-section five"> 
+    <div class="wrapper"> 
+     <div class="text-block"> 
+      <figure class="show-mobile" style="background-image: url('img/mobile-man.png')"></figure> 
+      <h1 class="purple-grad">We Turn Preferences Into Personalization</h1> 
+      <p>Our brain-like algorithm dynamically matches these unique preferences with your products and services in real time, delivering personalized content recommendations and messaging, and enabling true one-to-one segmentation.</p> 
+     </div> 
+     <!-- <img class="show-tablet" src="img/tablet-dna-2.png" width="300" height="322"/> --> 
+    </div> 
+   </div> 
+   <div class="scroll-section six last"> 
+    <div class="wrapper"> 
+     <div class="text-block"> 
+      <figure class="show-mobile" style="background-image: url('img/mobile-universe-alt2.png')"></figure> 
+      <h1 class="purple-grad">We Make Everything Easy</h1> 
+      <p>Nara’s cloud-based neural network is scalable and flexible, so it simply and seamlessly plugs into your existing product and marketing infrastructure to immediately start re-indexing data and improving relevance.</p> 
+     </div> 
+     <!-- <img class="show-tablet" src="img/tablet-dot-2.png" height="113" width="113"/> --> 
+    </div> 
+   </div> 
+   <div class="strip"></div> 
+  </section> 
+  <!-- END : LATER --> 
+  <section class="block-callout"> 
+   <div> 
+    <p>This groundbreaking ability to collect and connect data within a neural nodal network makes Nara the first and only platform to put personalization and the true power of cognitive computing in the hands of every business, everywhere.</p> 
+   </div> 
+  </section> 
+  <section class="block-action"> 
+   <div class="wide"> 
+    <h1>See Nara in action</h1> 
+    <div class="three-up"> 
+     <div> 
+      <h2><a href="http://www.nara.me" target="_blank">Nara.me</a></h2> 
+      <p>Learn why 95% of consumers preferred the personalized restaurant and hotel recommendations of Nara to sites like Yelp.</p> 
+     </div> 
+     <div> 
+      <h2><a href="http://www.nara.me/mobile" target="_blank">Nara Mobile</a></h2> 
+      <p>Download the revolutionary app that puts the power of Nara’s relevance engine in your hand, wherever you are.</p> 
+     </div> 
+     <div> 
+      <h2><a href="http://www.hungrygowhere.my/recommendations/" target="_blank">Singtel</a></h2> 
+      <p>See how we plugged into Singtel to deliver personalized restaurant recommendations and a 300% increase in engagement.</p> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+  <section class="block-action-mobile"> 
+   <h2>See Nara in action.</h2> 
+   <ul class="mobile-subnav"> 
+    <li><a href="http://www.nara.me">Nara.me</a></li> 
+    <li><a href="http://www.nara.me/mobile">Nara Mobile</a></li> 
+    <li><a href="http://www.hungrygowhere.my/recommendations/">Singtel</a></li> 
+   </ul> 
+  </section> 
+  <section class="block-sponsors"> 
+   <img src="img/sponsors.jpg"> 
+  </section> 
+  <section class="block-cta" data-ng-include="'includes/form.html'"></section> 
+  <div class="overlay" data-ng-show="show" data-ng-cloak="" data-ng-include="'includes/overlay.html'"></div> 
+  <footer> 
+   <a href="#">©2014 Nara Logics, Inc.</a> 
+   <span class="hide-mobile">|</span> 
+   <br class="show-mobile"> 
+   <a href="#" data-ng-click="openOverlay($event,'privacy')">Privacy</a> 
+  </footer> 
+  <!-- Vendor Scripts --> 
+  <script>window.jQuery || document.write('<script src="js/_vendor/jquery-2.1.0.min.js"><\/script>')</script> 
+  <script src="js/_vendor/greensock/TimelineMax.min.js"></script> 
+  <script src="js/_vendor/greensock/TweenMax.min.js"></script> 
+  <script src="js/_vendor/angular.min.js"></script> 
+  <!-- Custom Scripts --> 
+  <script src="js/plugins.js"></script> 
+  <script src="js/app.js"></script> 
+  <script src="js/home.js"></script> 
+  <script src="js/arrayDefs.js"></script> 
+  <script src="js/waypoints.js"></script> 
+  <script src="js/waves.js"></script> 
+  <script src="js/dots.js"></script> 
+  <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-46684789-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>   
+ </body>
+</html>

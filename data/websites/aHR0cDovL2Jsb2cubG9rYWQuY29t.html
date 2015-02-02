@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" itemscope itemtype="http://schema.org/Thing" class="squarespace-damask" lang="en-US">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"> 
+  <!--INCLUDE SQS SCRIPTS, META TAGS AND USER CONTENT FROM THE CODE INJECTION TAB--> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css"> 
+  <link href="http://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet" type="text/css"> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css"> 
+  <!-- This is Squarespace. -->
+  <!-- joannes-vermorel-jsj7 --> 
+  <base href=""> 
+  <meta charset="utf-8"> 
+  <title>Big Data for Commerce - Lokad</title> 
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
+  <link rel="canonical" href="http://blog.lokad.com/"> 
+  <meta property="og:site_name" content="Big Data for Commerce - Lokad"> 
+  <meta property="og:title" content="Big Data for Commerce - Lokad"> 
+  <meta property="og:url" content="http://blog.lokad.com/"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:description" content="Prices, stock levels, direct marketing, ad spending can be optimized 
+through a better use of (Big) Data. On this blog, the Lokad team shares 
+insights and news."> 
+  <meta property="og:image" content="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/t/51a4732ae4b0643b1ca87a3b/1417171708068/?format=1000w"> 
+  <meta itemprop="name" content="Big Data for Commerce - Lokad"> 
+  <meta itemprop="url" content="http://blog.lokad.com/"> 
+  <meta itemprop="description" content="Prices, stock levels, direct marketing, ad spending can be optimized 
+through a better use of (Big) Data. On this blog, the Lokad team shares 
+insights and news."> 
+  <meta itemprop="thumbnailUrl" content="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/t/51a4732ae4b0643b1ca87a3b/1417171708068/?format=1000w"> 
+  <link rel="image_src" href="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/t/51a4732ae4b0643b1ca87a3b/1417171708068/?format=1000w"> 
+  <meta itemprop="image" content="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/t/51a4732ae4b0643b1ca87a3b/1417171708068/?format=1000w"> 
+  <meta name="description" content="Insights concerning predictive optimization of commerce and manufacturing."> 
+  <script type="text/javascript">SQUARESPACE_ROLLUPS = {};</script> 
+  <script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//static.squarespace.com/universal/scripts-compressed/common-c30b72777f3611eb9d86fa1f536003b9-min.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common');</script> 
+  <script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//static.squarespace.com/universal/scripts-compressed/commerce-2268dd8d906e68c96b73b5946e179251-min.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-commerce');</script> 
+  <script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].css = ["//static.squarespace.com/universal/styles-compressed/commerce-e58be4bacdeeed35e8138bacd73aa12c-min.css"]; })(SQUARESPACE_ROLLUPS, 'squarespace-commerce');</script> 
+  <script type="text/javascript" data-sqs-type="dynamic-assets-loader">(function() {(function(a){try{if(window.top!=window&&window.top.Squarespace&&window.top.Squarespace.frameAvailable){window.top.Squarespace.frameAvailable(window,SQUARESPACE_ROLLUPS);return}}catch(d){console.error(d)}window.__dynamicAssetLoaderErrorLogger=function(a){var b=new XMLHttpRequest;b.open("GET","/api/rollups/error?path="+encodeURIComponent(a.src||a.href)+"&page="+encodeURIComponent(window.location.href),!0);b.send()};for(var c in a){if(a[c].js)for(var b=0;b<a[c].js.length;b++)document.write('<script type="text/javascript" src="'+
+a[c].js[b]+'" onerror="__dynamicAssetLoaderErrorLogger(this)">\x3c/script>');if(a[c].css)for(b=0;b<a[c].css.length;b++)document.write('<link rel="stylesheet" type="text/css" href="'+a[c].css[b]+'" onerror="__dynamicAssetLoaderErrorLogger(this)" />')}})(SQUARESPACE_ROLLUPS);
+})();</script> 
+  <script>Static.SQUARESPACE_CONTEXT = {"rollups":{"squarespace-audio-player":{"css":"//static.squarespace.com/universal/styles-compressed/audio-player-3d296132f5773d0024056c9449cffd92-min.css","js":"//static.squarespace.com/universal/scripts-compressed/audio-player-a33dc0dcbfb8acf7b97a44d24944de65-min.js"},"squarespace-calendar-block-renderer":{"css":"//static.squarespace.com/universal/styles-compressed/calendar-block-renderer-edb9ea58c015fca447b97a2948a5c589-min.css","js":"//static.squarespace.com/universal/scripts-compressed/calendar-block-renderer-e1db8ee387298b95f8b521ea202d5fa4-min.js"},"squarespace-comments":{"css":"//static.squarespace.com/universal/styles-compressed/comments-0eeb350021efe00540fbb65b276d3701-min.css","js":"//static.squarespace.com/universal/scripts-compressed/comments-81e4a3e332c86b01d3775efb218affa3-min.js"},"squarespace-dialog":{"css":"//static.squarespace.com/universal/styles-compressed/dialog-3aa353dc0ac8992256671d29344cf512-min.css","js":"//static.squarespace.com/universal/scripts-compressed/dialog-f8fd100a225e287465f9a2e4e6723495-min.js"},"squarespace-events-collection":{"css":"//static.squarespace.com/universal/styles-compressed/events-collection-edb9ea58c015fca447b97a2948a5c589-min.css","js":"//static.squarespace.com/universal/scripts-compressed/events-collection-b305e9d0613e2bace43cbe4f787e1893-min.js"},"squarespace-pinterest":{"css":"//static.squarespace.com/universal/styles-compressed/pinterest-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/pinterest-67073476a1985644e993d4d017d79a71-min.js"}},"pageType":1,"website":{"id":"51a45891e4b0cf20ca0b18f2","identifier":"joannes-vermorel-jsj7","contentModifiedOn":1417171708068,"cloneable":false,"developerMode":true,"siteStatus":{},"language":"en-US","timeZone":"America/New_York","machineTimeZoneOffset":-18000000,"timeZoneOffset":-18000000,"timeZoneAbbr":"EST","siteTitle":"Big Data for Commerce - Lokad","siteDescription":"","location":{"mapZoom":11.0,"mapLat":40.70331997260574,"mapLng":-74.03646686640626,"addressTitle":"","addressLine1":"","addressLine2":"","addressCountry":""},"logoImageId":"51a4732ae4b0643b1ca87a3b","shareButtonOptions":{"1":true,"4":true},"logoImageUrl":"//static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/t/51a4732ae4b0643b1ca87a3b/1417171708068/","authenticUrl":"http://blog.lokad.com","baseUrl":"http://blog.lokad.com","primaryDomain":"blog.lokad.com","socialAccounts":[{"serviceId":4,"userId":"69376901","userName":"lokad","screenname":"Lokad.com","addedOn":1388659472870,"profileUrl":"https://twitter.com/lokad","iconUrl":"http://pbs.twimg.com/profile_images/562926036/twitterProfilePhoto_normal.jpg","collectionId":"52c54310e4b0d215ddeebf24","iconEnabled":true,"serviceName":"twitter"},{"serviceId":4,"userId":"70115680","userName":"vermorel","screenname":"Joannes Vermorel","addedOn":1388659548211,"profileUrl":"https://twitter.com/vermorel","iconUrl":"http://pbs.twimg.com/profile_images/3750486080/55370040c764f109fda49a8920673b57_normal.jpeg","collectionId":"52c5435ce4b07ef824ccda86","iconEnabled":true,"serviceName":"twitter"},{"serviceId":14,"userId":"aPtLj4xMQs","userName":"vermorel","screenname":"Joannes Vermorel","addedOn":1388659580292,"profileUrl":"http://www.linkedin.com/in/vermorel","iconUrl":"http://m.c.lnkd.licdn.com/mpr/mprx/0_KMzyHni5gWPh2PHorUb_HqTExf5K2P4o-R3iHztv8Wl81cfEpxLKQv6UlGL77NJ6lscCFt21lXYN","iconEnabled":true,"serviceName":"linkedin"},{"serviceId":21,"userId":"100310978155185781321","screenname":"Joannes Vermorel","addedOn":1411725155463,"profileUrl":"https://plus.google.com/100310978155185781321","iconUrl":"https://lh6.googleusercontent.com/-SRp7zpH80Xw/AAAAAAAAAAI/AAAAAAAAACw/aRk86VKjxAU/photo.jpg","iconEnabled":true,"serviceName":"google"}],"typekitId":"","statsMigrated":true},"websiteSettings":{"id":"51a45891e4b0cf20ca0b18f3","websiteId":"51a45891e4b0cf20ca0b18f2","type":"Business","subject":"Software and IT","subjects":[{"systemSubject":"tech"}],"markdownMode":true,"simpleLikingEnabled":true,"mobileInfoBarSettings":{"isContactEmailEnabled":false,"isContactPhoneNumberEnabled":false,"isLocationEnabled":false,"isBusinessHoursEnabled":false},"lastAgreedTermsOfService":2,"defaultPostFormat":"%y/%m/%d/%t","commentLikesAllowed":true,"commentAnonAllowed":true,"commentThreaded":true,"commentApprovalRequired":false,"commentAvatarsOn":true,"commentSortType":2,"commentFlagThreshold":0,"commentFlagsAllowed":true,"commentEnableByDefault":true,"commentDisableAfterDaysDefault":0,"disqusShortname":"","homepageTitleFormat":"%s","collectionTitleFormat":"%c \u2014 %s","itemTitleFormat":"%i \u2014 %s","commentsEnabled":true,"contactEmail":"contact@lokad.com","allowSquarespacePromotion":true,"storeSettings":{"returnPolicy":null,"termsOfService":null,"privacyPolicy":null,"expressCheckout":false,"useLightCart":false,"showNoteField":false,"currenciesSupported":["USD"],"defaultCurrency":"USD","selectedCurrency":"USD","measurementStandard":1,"showCustomCheckoutForm":false,"enableMailingListOptInByDefault":true,"isLive":false,"storeState":3,"stripeConnected":false},"useEscapeKeyToLogin":true,"configurationMenuItems":[{},{},{},{},{},{}],"ssBadgeType":1,"ssBadgePosition":4,"ssBadgeVisibility":1,"ssBadgeDevices":1},"websiteCloneable":false,"collection":{"title":"Big Data for Commerce - Lokad","id":"51a4590de4b0f7e4206bbdd9","fullUrl":"/","publicCommentCount":86},"subscribed":false,"appDomain":"squarespace.com","secureDomain":"https://joannes-vermorel-jsj7.squarespace.com","templateTweakable":true,"tweakJSON":{"aspect-ratio":"Auto","gallery-arrow-style":"No Background","gallery-aspect-ratio":"3:2 Standard","gallery-auto-crop":"true","gallery-autoplay":"false","gallery-design":"Slideshow","gallery-info-overlay":"Show on Hover","gallery-loop":"false","gallery-navigation":"Bullets","gallery-show-arrows":"true","gallery-transitions":"Fade","galleryArrowBackground":"#222","galleryArrowColor":"#fff","galleryAutoplaySpeed":"3","galleryCircleColor":"#fff","galleryInfoBackground":"rgba(0, 0, 0, .7)","galleryThumbnailSize":"100px","gridSize":"350px","gridSpacing":"20px","product-gallery-auto-crop":"false","product-image-auto-crop":"true"},"templateId":"51a45892e4b0cf20ca0b19fb","pageFeatures":[1,2],"impersonatedSession":false,"isFacebookTab":false,"tzData":{"zones":[[-300,"US","E%sT",null]],"rules":{"US":[[1967,2006,null,"Oct","lastSun","2:00","0","S"],[1987,2006,null,"Apr","Sun>=1","2:00","1:00","D"],[2007,"max",null,"Mar","Sun>=8","2:00","1:00","D"],[2007,"max",null,"Nov","Sun>=1","2:00","0","S"]]}}}; SquarespaceFonts.loadViaContext(); Squarespace.load(window); </script> 
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://blog.lokad.com/journal?format=RSS"> 
+  <!--[if gte IE 9]> <link rel="stylesheet" type="text/css" href="//static.squarespace.com/static/sitecss/51a45891e4b0cf20ca0b18f2/0/51a45892e4b0cf20ca0b19fb/51a45892e4b0cf20ca0b1a19/33/1397549814919/site.css?&filterFeatures=false&part=1"/><link rel="stylesheet" type="text/css" href="//static.squarespace.com/static/sitecss/51a45891e4b0cf20ca0b18f2/0/51a45892e4b0cf20ca0b19fb/51a45892e4b0cf20ca0b1a19/33/1397549814919/site.css?&filterFeatures=false&part=2"/><link rel="stylesheet" type="text/css" href="//static.squarespace.com/static/sitecss/51a45891e4b0cf20ca0b18f2/0/51a45892e4b0cf20ca0b19fb/51a45892e4b0cf20ca0b1a19/33/1397549814919/site.css?&filterFeatures=false&part=3"/><link rel="stylesheet" type="text/css" href="//static.squarespace.com/static/sitecss/51a45891e4b0cf20ca0b18f2/0/51a45892e4b0cf20ca0b19fb/51a45892e4b0cf20ca0b1a19/33/1397549814919/site.css?&filterFeatures=false&part=4"/><![endif]--> 
+  <!--[if lt IE 9]><script src="//static.squarespace.com"></script><link rel="stylesheet" type="text/css" href="//static.squarespace.com/static/sitecss/51a45891e4b0cf20ca0b18f2/0/51a45892e4b0cf20ca0b19fb/51a45892e4b0cf20ca0b1a19/33/1397549814919/site.css?&filterFeatures=false&noMedia=true&part=1"/><link rel="stylesheet" type="text/css" href="//static.squarespace.com/static/sitecss/51a45891e4b0cf20ca0b18f2/0/51a45892e4b0cf20ca0b19fb/51a45892e4b0cf20ca0b1a19/33/1397549814919/site.css?&filterFeatures=false&noMedia=true&part=2"/><link rel="stylesheet" type="text/css" href="//static.squarespace.com/static/sitecss/51a45891e4b0cf20ca0b18f2/0/51a45892e4b0cf20ca0b19fb/51a45892e4b0cf20ca0b1a19/33/1397549814919/site.css?&filterFeatures=false&noMedia=true&part=3"/><link rel="stylesheet" type="text/css" href="//static.squarespace.com/static/sitecss/51a45891e4b0cf20ca0b18f2/0/51a45892e4b0cf20ca0b19fb/51a45892e4b0cf20ca0b1a19/33/1397549814919/site.css?&filterFeatures=false&noMedia=true&part=4"/><![endif]--> 
+  <!--[if !IE]> -->
+  <link rel="stylesheet" type="text/css" href="//static.squarespace.com/static/sitecss/51a45891e4b0cf20ca0b18f2/0/51a45892e4b0cf20ca0b19fb/51a45892e4b0cf20ca0b1a19/33/1397549814919/site.css?&amp;filterFeatures=false">
+  <!-- <![endif]--> 
+  <meta name="google-site-verification" content="XfHmAOQQtcqji6WYnfvLNb2kEfYMckoapl3Eole79ts">
+  <script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-352156-2']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script>
+  <!-- End of Squarespace Headers --> 
+  <script type="text/javascript" src="https://static.squarespace.com/static/ta/51a45891e4b0cf20ca0b18f2/33/scripts/combo/?site.js"></script> 
+ </head> 
+ <body id="collection-51a4590de4b0f7e4206bbdd9" class="gallery-design-slideshow aspect-ratio-auto lightbox-style-dark gallery-navigation-bullets gallery-info-overlay-show-on-hover gallery-aspect-ratio-32-standard gallery-arrow-style-no-background gallery-transitions-fade gallery-show-arrows gallery-auto-crop   product-list-titles-under product-list-alignment-center product-item-size-11-square product-image-auto-crop product-gallery-size-11-square  show-product-price show-product-item-nav product-social-sharing   event-thumbnails event-thumbnail-size-32-standard event-date-label event-date-label-time event-excerpts event-list-date event-list-time event-list-address event-icalgcal-links      opentable-style-light newsletter-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square button-style-default button-corner-style-square product-list-titles-under product-list-alignment-center product-item-size-11-square product-image-auto-crop product-gallery-size-11-square  show-product-price show-product-item-nav product-social-sharing native-currency-code-usd collection-type-blog collection-51a4590de4b0f7e4206bbdd9 collection-layout-default homepage view-list mobile-style-available"> 
+  <!--HEADER--> 
+  <div id="Head">
+   <div class="row"> 
+    <div class="column grid_3" data-content-field="site-title">
+     <a data-content-field="site-title" class="logo" href="/">Big Data for Commerce - Lokad</a>
+    </div> 
+    <div class="column grid_9"> 
+     <div class="controls"> 
+      <a class="btn" href="http://hub.lokad.com">Login</a> 
+      <div class="search"> 
+       <div class="sqs-layout sqs-grid-1 columns-1" data-type="block-field" data-updated-on="1369728797488" id="headerBlocks">
+        <div class="row sqs-row">
+         <div class="col sqs-col-1 span-1">
+          <div class="sqs-block search-block sqs-block-search" data-block-type="33" id="block-671436edadba10cf9ea8">
+           <div class="sqs-block-content">
+            <div class="sqs-search-ui-text-input sqs-search-ui-button-wrapper color-dark" data-source="block" data-preview="false" data-collection="" boost_title="10"> 
+             <div class="spinner-wrapper"></div> 
+             <input type="search" class="search-input" value="" placeholder="Search"> 
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+      </div> 
+      <a class="ctrl c_email" href="mailto:contact@lokad.com">contact@lokad.com</a> 
+      <span class="ctrl c_call">+1 (716) 989 6531</span> 
+      <a class="ctrl c_blog" href="http://blog.lokad.com/">Blog</a> 
+     </div> 
+     <div class="nav" id="main-navigation" data-content-field="navigation-mainNav"> 
+      <ul> 
+       <li class=" active"> 
+        <!--COLLECTION--> <a href="/">Blog</a> 
+        <!--EXTERNAL LINK--> </li> 
+       <li class=""> 
+        <!--COLLECTION--> 
+        <!--EXTERNAL LINK--> <a href="http://www.lokad.com/in-the-press"> Press </a> </li> 
+       <li class=""> 
+        <!--COLLECTION--> 
+        <!--EXTERNAL LINK--> <a href="http://www.lokad.com/customer-references"> Customers </a> </li> 
+       <li class=""> 
+        <!--COLLECTION--> 
+        <!--EXTERNAL LINK--> <a href="http://www.lokad.com/pricing"> Pricing </a> </li> 
+       <li class=""> 
+        <!--COLLECTION--> 
+        <!--EXTERNAL LINK--> <a href="http://www.lokad.com/forecasting-technology"> Technology </a> </li> 
+       <li class=""> 
+        <!--COLLECTION--> 
+        <!--EXTERNAL LINK--> <a href="http://www.lokad.com/support"> Knowledgebase </a> </li> 
+       <li class=""> 
+        <!--COLLECTION--> 
+        <!--EXTERNAL LINK--> <a href="http://www.lokad.com/aerospace-inventory-forecasting"> Aerospace </a> </li> 
+       <li class=""> 
+        <!--COLLECTION--> 
+        <!--EXTERNAL LINK--> <a href="http://www.lokad.com/aboutus"> Company </a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div>
+  </div> 
+  <!-- End of section: Header --> 
+  <!-- Section: Page Caption --> 
+  <div id="PageCaption"> 
+   <div class="row">
+    <div class="column span_12"></div>
+   </div> 
+  </div> 
+  <!--CONTENT INJECTION POINT--> 
+  <div id="Content">
+   <div class="row"> 
+    <div id="Text" class="column grid_8"> 
+     <section id="content"> 
+      <!-- CATEGORY FILTER RESULTS ex: http://base-template.squarespace.com/blog/?category=category1 --> 
+      <!-- TAG FILTER RESULTS ex: http://base-template.squarespace.com/blog/?tag=tag2 --> 
+      <!-- AUTHOR FILTER RESULTS ex: http://www.base-template.com/blog?author=4f046df4d09ae2cf23d1aaa2 --> 
+      <!--ITEM LOOP--> 
+      <!--WRAPPER--> 
+      <article id="post-54783916e4b053a861bfab57" class="hentry tag-salescast tag-release author-joannes-vermorel post-type-text article-index-1"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/11/28/auto-refresh-your-data-from-salescast">Auto-refresh your data from Salescast</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/11/28/auto-refresh-your-data-from-salescast"><time datetime="2014-11-28">November 28, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1417168814063" id="item-54783916e4b053a861bfab57">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-28bf8097a593a58d0397">
+           <div class="sqs-block-content">
+            <p>The user interface of Salescast had barely changed since the last major upgrade we <a href="http://blog.lokad.com/journal/2012/8/17/the-all-new-salescast-forecasting-inventory-optimizer.html">shipped two years ago</a>. However, under the hood, Salescast had been undergoing steady changes to improve reliability and performance.</p> 
+            <p>This summer, we released native support for <a href="http://www.lokad.com/sync-brightpearl">Brightpearl</a>, <a href="http://www.lokad.com/sync-linnworks">Linnworks</a> and TradeGecko. However, those new capabilities of Lokad were not integrated into Salescast, and, as a result, generating a new forecast report required 4 steps:</p> 
+            <ol> 
+             <li>Go to <code>Sync</code> in Lokad, and trigger a refresh.</li> 
+             <li>Wait until the data refresh is completed.</li> 
+             <li>Go to <code>Salescast</code> in Lokad, and trigger a run.</li> 
+             <li>Wait until the forecast reported is generated.</li> 
+            </ol> 
+            <p>Obviously, the steps 1 and 2 were less than desirable. Thus, we opted for a more drastic revision of the Salescast user interface. The webapp has now a <em>Project creation wizard</em> that let you directly bind a data source with your Salescast project.</p> 
+            <p><img data-preserve-html-node="true" src="/s/salescast-wizard-screenshot.png" style="width:650px"></p> 
+            <p>Once the data source is bound to the project, any Salescast run will start by automatically refreshing the data source. This entirely removes the two convoluted steps 1 and 2 as detailed above.</p> 
+            <p><img data-preserve-html-node="true" src="/s/salescast-project-screenshot.png" style="width:650px"></p> 
+            <p>If you have been using Salescast already and if you wish to benefit from this new feature, you need to delete your existing Salescast project - look for the <code>Delete</code> button below the settings in the project view - and then to re-create a project. If you have already configured a data source in the <code>Sync</code> tab, then Salescast will offer you the possibility to use this data source directly, leveraging the existing configuration.</p> 
+            <p><em>We have another major evolution for the user interface of Salescast in the development pipeline. Stay tuned.</em></p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/11/28/auto-refresh-your-data-from-salescast">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=salescast">salescast</a>, <a class="tag" href="?tag=release">release</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/11/28/auto-refresh-your-data-from-salescast" class="sqs-comment-link sqs-disqus-comment-link" data-id="54783916e4b053a861bfab57"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="54783916e4b053a861bfab57" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/54783916e4b053a861bfab57/1417171708066/" data-record-type="1" data-full-url="/journal/2014/11/28/auto-refresh-your-data-from-salescast" data-title="Auto-refresh your data from Salescast"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-5478329be4b066b34235d037" class="hentry tag-job author-joannes-vermorel post-type-text article-index-2"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/11/28/job-quantitative-business-analyst">Job: Quantitative Business Analyst</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/11/28/job-quantitative-business-analyst"><time datetime="2014-11-28">November 28, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1417163765610" id="item-5478329be4b066b34235d037">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-ffd3b3229536b568be02">
+           <div class="sqs-block-content">
+            <p><em>Once again the Lokad team needs to expand. This time we are seeking a <strong>quantitative business analyst</strong>.</em></p> 
+            <h2 id="jobdescription">Job description</h2> 
+            <p>Your goal will be to drive commerce companies - our clients - to improve their performance when tackling a variety of quantitative challenges such as inventory forecasting or pricing optimization. In order to achieve this goal, you will benefit from the technologies that Lokad has developed, and you will also benefit from a direct mentoring from the Lokad founding team. You will be reporting to the COO of the company.</p> 
+            <p>Your contributions will be varied:</p> 
+            <ul> 
+             <li>deciphering ins and outs of businesses and assist the clients in extracting the data actually relevant to the resolution of their challenge. </li> 
+             <li>communicating a vision of how to best address the business goals considering the technologies available and through a realistic use of the data.</li> 
+             <li>exploring the data of the client and assessing both potential data problems and potential data usages aligned with the clients’ business goals.</li> 
+             <li>implementing some quantitative optimization logic, along with the corresponding workflows to consume the results produced by Lokad.</li> 
+            </ul> 
+            <p>The quality of your contributions will have a significant impact on the business value generated by Lokad for the client.</p> 
+            <p>Most of our clients operate either in North America or Europe. You will primarily communicate with them by email and phone. Once in a while, a large client may require an actual meeting to take place, but this is rather the exception than the norm. From the client perspective, Lokad will train you to become the <em>Lokad expert</em> who manages their account.</p> 
+            <p>This position is in our office in Paris (13th arrondissement). This job is not eligible for remote work. Salary depends on the experience and subject to negotiation. We’d prefer at least 1 or 2 years of experience.</p> 
+            <h2 id="desiredskills">Desired Skills</h2> 
+            <p>Excellent communication skills, both oral and written, and both in English and in French, are necessary. Most businesses are satisfied with abysmal writing, producing documents so boring and confusing that the documents are not even worth the time it takes to read them. You will be expected to be able to produce sharp, technical and well-written reports.</p> 
+            <p>We do not expect you to have any prior knowledge on commerce optimization. However, you will be dealing with a lot of data. If you happen to be a wizard at Excel calculations, this will strongly play in your favor. Also, while programming skills are not required, even modest skills in this area would already be a big plus.</p> 
+            <p>We do not expect you to have much prior knowledge on statistics, especially about the modern statistics flavor favored by Lokad, however, we expect you to have a sharp analytical mind, and to be “good with numbers” in general. “Fixing” a broken quantitative optimization process frequently boils down to pinpointing the one incorrect calculation step among a dozen steps or more.</p> 
+            <p><em>To apply just drop a mail to <a href="mailto:contact@lokad.com">contact@lokad.com</a> with your resume.</em></p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/11/28/job-quantitative-business-analyst">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=job">job</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/11/28/job-quantitative-business-analyst" class="sqs-comment-link sqs-disqus-comment-link" data-id="5478329be4b066b34235d037"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="5478329be4b066b34235d037" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/5478329be4b066b34235d037/1417163847173/" data-record-type="1" data-full-url="/journal/2014/11/28/job-quantitative-business-analyst" data-title="Job: Quantitative Business Analyst"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-545896abe4b0a55677d96d98" class="hentry tag-aerospace author-joannes-vermorel post-type-text article-index-3"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/11/4/inventory-forecasting-for-aerospace">Inventory forecasting for Aerospace</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/11/4/inventory-forecasting-for-aerospace"><time datetime="2014-11-04">November 04, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1415092018097" id="item-545896abe4b0a55677d96d98">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-843d32b71d36199a717f">
+           <div class="sqs-block-content">
+            <p><span data-preserve-html-node="true" style="float:right;width:350px;margin-left:10px"><img data-preserve-html-node="true" src="/s/jet-engines.jpg"></span> While the core focus of Lokad’s activity has been on commerce since the very beginning, over the years, we have also delivered forecasts and optimized stock levels for a variety of other verticals. Some verticals prove to be more challenging than others as far forecasting is concerned, and the <strong>aerospace industry with its low rotations, its highly expensive parts and its costly stock-out incidents</strong> - i.e. grounded aircrafts waiting for a missing part - is certainly <strong>one of the most challenging verticals</strong> in terms of forecasting. In particular, classic inventory forecasting models tend to work very poorly for aerospace, primarily because the underlying assumptions behind these classic models (normal distributions, Poisson distributions, weekly or monthly forecasts) completely misfit the actual statistical patterns observed in aerospace.</p> 
+            <p>Over the last 6 months, we have re-engineered a <strong>brand new forecasting engine</strong> purely <a href="http://www.lokad.com/aerospace-inventory-forecasting">dedicated to aerospace</a>. At its core, this forecasting engine also leverages <a href="http://www.lokad.com/quantile-forecasting-technology">quantile forecasts</a>, because this type of forecasting is about the only class of statistical models that actually works for aerospace. However, unlike our initial forecasting engine targeted at commerce, this variant natively integrates the logistics associated with high-cost repairable parts where components are first changed and then repaired. In particular, the TAT (turn-around times) are also modeled through quantile forecasts. In addition, among other industry-specific factors, fleet composition over time, including known future evolutions, is also natively integrated into the forecasting engine. </p> 
+            <p>Considering the complex structure of the aerospace market, Lokad does not offer a packaged inventory forecasting solution readily accessible online as we do for commerce. However, if you are interested in forecasting for aerospace, don’t hesitate to drop us an email anytime at <a href="mailto:contact@lokad.com">contact@lokad.com</a>.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/11/4/inventory-forecasting-for-aerospace">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=aerospace">aerospace</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/11/4/inventory-forecasting-for-aerospace" class="sqs-comment-link sqs-disqus-comment-link" data-id="545896abe4b0a55677d96d98"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="545896abe4b0a55677d96d98" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/545896abe4b0a55677d96d98/1415092361207/" data-record-type="1" data-full-url="/journal/2014/11/4/inventory-forecasting-for-aerospace" data-title="Inventory forecasting for Aerospace"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-5440ddcbe4b0e40be7075ae1" class="hentry tag-books tag-commerce tag-priceforge author-joannes-vermorel post-type-text article-index-4"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/10/17/book-quantitative-commerce-optimization">Book: Quantitative Commerce Optimization</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/10/17/book-quantitative-commerce-optimization"><time datetime="2014-10-17">October 17, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1413537715847" id="item-5440ddcbe4b0e40be7075ae1">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-6b7c4f667d9e81014b67">
+           <div class="sqs-block-content">
+            <p><img data-preserve-html-node="true" src="/s/book-priceforge.png" style="float:left; margin-right:10px"> We have just released a book!</p> 
+            <p><a href="http://www.blurb.com/b/5601062-quantitative-commerce-optimization-with-envision-a">Quantitative Commerce Optimization with Envision and Priceforge</a></p> 
+            <p>Our app <a href="http://www.lokad.com/priceforge-pricing-software-for-commerce">Priceforge</a> has been designed to support all kind of commerce centric data calculations and data visualizations. While it started with a focus on <em>pricing</em>, it can do a lot more.</p> 
+            <p>This book is addressed to commerce executives and commerce analysts who want to harness the power of technology to bring their company to the next stage of profitability.</p> 
+            <p>Many if not most of the challenges faced by commerce are best addressed through quantitative numerical analysis. The advanced optimization of prices, stocks, assortments, promotions, campaigns, and customer loyalty are but a few examples of what can be achieved through data analysis and automated or semi-automated decisions. In commerce, there are simply too many products, clients, suppliers, and competitors. Sticking to manual processes is invariably too costly and too slow.</p> 
+            <p>The first part of the book is a manual to get started with <em>Envision</em>, the programming language dedicated to commerce data processing and visualization by Lokad. The second part of the book is purely dedicated to pricing strategies for commerce.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/10/17/book-quantitative-commerce-optimization">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=books">books</a>, <a class="tag" href="?tag=commerce">commerce</a>, <a class="tag" href="?tag=priceforge">priceforge</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/10/17/book-quantitative-commerce-optimization" class="sqs-comment-link sqs-disqus-comment-link" data-id="5440ddcbe4b0e40be7075ae1"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="5440ddcbe4b0e40be7075ae1" data-like-count="1"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/5440ddcbe4b0e40be7075ae1/1413545855884/" data-record-type="1" data-full-url="/journal/2014/10/17/book-quantitative-commerce-optimization" data-title="Book: Quantitative Commerce Optimization"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-542c0134e4b06f71cbc43440" class="hentry tag-insights tag-forecasting author-joannes-vermorel post-type-text article-index-5"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/10/9/top-10-oddities-in-demand-forecasting">Top 10 Oddities in Demand Forecasting</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/10/9/top-10-oddities-in-demand-forecasting"><time datetime="2014-10-09">October 09, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1412170749705" id="item-542c0134e4b06f71cbc43440">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-66ea076088128ee068d0">
+           <div class="sqs-block-content">
+            <p>Statistical forecasting is a highly counter-intuitive field. And most assumptions which may seem intuitive at a first glance, turn out to be plain wrong. In this post, we compile a short list of the worst offenders among all the statistical oddities that make the bread and butter of Lokad’s business.</p> 
+            <p><strong>1. Advance forecasting systems DO NOT learn from their errors</strong></p> 
+            <p>Forecasting systems typically refresh their forecasts on a daily or weekly basis. Every time a new batch of forecasts is produced, a forecasting system has the opportunity to compare its older forecasts with the newly acquired data, and possibly learn from this. As a result, it would seem highly reasonable to expect any given forecasting system to learn from its errors, just as a human expert would do. However, this is not the case. An advance forecasting system will NOT try to learn from its errors. Indeed, better methods are available out there, namely [backtesting] (http://www.lokad.com/backtesting-definition), which offer superior statistical performance. With backtesting, the system re-challenges itself against the entire history available every time a forecast is generated, not just against the latest increment of data. </p> 
+            <p><strong>2. Most important statistical factors are noise and randomness</strong></p> 
+            <p>When practitioners are asked about the dominant factors in their demand, many answer: seasonality, product lifecycle, market pressure, business growth, etc. However, most of the time, there is an elephant in the room: the elephant being statistical noise found the in observation of demand.</p> 
+            <p>Most of the time, the forecasting challenge is addressed as if, given sufficient efforts, demand forecasts could be made accurate. Yet, this viewpoint is incorrect, as most of the time forecasts are irreducibly inaccurate. Embracing the randomness found in the demand usually yields better business results than trying to eliminate this randomness.</p> 
+            <p><strong>3. Expert corrections generally make forecasts less satisfactory</strong></p> 
+            <p>While it seems reasonable to manually adjust statistical forecasts with industry-specific insights, we have observed, on many occasions, that this practice does not yield the desired results. Even when manual corrections are performed by an expert in this field, they just tend to degrade the overall accuracy, unless the underlying forecasting systems are inherently poor. Only in this case, can manual corrections help improve forecast results. </p> 
+            <p>This is often linked to the fact that human perception is heavily biased towards the perception of “patterns”. Frequently this leads to false perceptions of trends, which are nothing more than random business fluctuations. Mistakenly interpreting randomness as a “pattern” tends to generate much more significant errors than just ignoring the pattern in the first place, and treating it as mere noise.</p> 
+            <p><strong>4. Forecasting error must be measured in Dollars</strong></p> 
+            <p>A more accurate forecast does not necessarily translate into better business results. Indeed, the classic way to look at forecasts consist of optimizing metrics such as MAPE (mean absolute percentage error) that are only weakly correlated with main business interests. Such metrics are misleading because they originate from rather delusional thinking that if forecasts were perfectly accurate, then MAPE error would be at zero. However, a perfectly accurate forecast is not a reasonable scenario, and the whole point of using a performance metric is to have it aligned with the interests of any given business. In other words, forecasting error should be expressed in Dollars, not percentages. Daily, weekly and monthly forecasts are not consistent.</p> 
+            <p>If forecasts are produced both on a daily basis and on a weekly basis, it would be highly reasonable to expect that if the daily forecasts are summed into weekly forecasts, then both forecasts converge on the same values, given that the same technology and the same settings have being used to generate the two sets of forecasts in question.</p> 
+            <p>Unfortunately, this is not true, and the two sets of forecasts will diverge; and for very sound statistical reasons too. In short, daily (resp. weekly) forecasts are optimized against a metric expressed at the daily (resp. weekly) level; statistically, as these two metrics are different, the numerical outputs of the numerical optimization have simply no reason to match.</p> 
+            <p><strong>5. SKU-level forecasts do not match category-level forecasts</strong></p> 
+            <p>If the same forecasting system is used to forecast demand both at the SKU level and at the category level, one would expect the two sets of forecasts to be consistent: by summing all the forecasts associated with the SKUs that belong to a given category, it would not be unreasonable to imagine ending-up with the same number than the forecast relating to the category itself. This is going to be the case for the same reasons as those outlined in the previous paragraph. </p> 
+            <p>Even more alarming, it is actually very common to observe rather odd situations where completely divergent patterns exist between forecasts at the SKUs level and at category level. <a href="http://blog.lokad.com/journal/2011/4/1/business-is-up-but-forecasts-are-down.html">For example</a>, all SKU forecasts might be strictly decreasing, while forecasts at the category level are steadily increasing. Another typical case is seasonality, which is very visible at the category level, but barely noticeable at the SKU level. When a similar situation arises, it may be tempting to try to correct SKU-level forecasts in order to align them with category forecasts, but such a technique would only degrade the overall accuracy of the forecast.</p> 
+            <p><strong>6. Changing the unit of measurement does matter</strong></p> 
+            <p>At a first glance, the unit used to measure the demand should not have any impact. If demand is counted in inventory units, and if all the points in the history are multiplied by 10, then one would expect all forecasts to be multiplied by 10 without any additional consequences. However, with technology such as that developed by Lokad, the forecasting process is not going to happen this way, at least, not exactly in this way.</p> 
+            <p>Indeed, an advance demand forecasting technology does leverage many tricks using small numbers. The quantity of 1 is not just any quantity. For example, we have observed that, on average, supermarket and hypermarkets receipts come with more than 75% of their lines with a quantity equal to 1. This results in many statistical tricks being related to “small numbers”. Multiplying any given demand history by 10 would just confuse all the heuristics in place for any advance commerce forecasting system.</p> 
+            <p><strong>7. Best promotion forecasts are frequently generated when promotions are ignored</strong></p> 
+            <p>Forecasting promotions is difficult, really difficult. In retail, not only can the demand response to a promotion go from nothing (no uplift) to a 100x uplift, but the factors that influence promotions are complex, diverse and usually not accurately tracked in IT systems. Combining complex business behaviors with inaccurate data is a recipe which is likely to lead to a “Garbage In, Garbage Out” problem.</p> 
+            <p>In fact, we have routinely observed that discarding promotional data was, at least as a very humble initial approach, the least inefficient way to forecast promotional demand. We are not claiming that this method is highly satisfying or optimal, but are merely trying to demonstrate that a native forecast built on correct but incomplete historical data usually outperforms complex models build on more extensive but partially inaccurate data.</p> 
+            <p><strong>8. The more erratic the history, the “flatter” the forecast</strong></p> 
+            <p>Visually, if historical data exhibits strong visual patterns, then one would expect a forecast to exhibit similarly strong visual patterns. However, whenever historical data exhibits erratic variations, this expectation does not hold, and the reverse happens: the more erratic the demand history, the smoother the forecasts.</p> 
+            <p>Again, the root cause here is that the human mind is geared towards the perception of patterns. Erratic fluctuations are not patterns (in the statistical sense) but noise, and a forecasting system, if designed correctly, behaves precisely like a filter for that noise. Once the noise is removed, all that often remains is just a “flattish” forecast.</p> 
+            <p><strong>9. Daily, weekly and monthly forecasts are usually unnecessary</strong></p> 
+            <p>Periodic forecasts are everywhere - from business news to weather bulletins; and yet, they rarely represent an adequate statistical answer to “real-life” business challenges. The problem with these periodic forecasts lies in the fact that instead of directly tackling the business decision that depends on some uncertain future, they are typically leveraged in some indirect way to construct the decision afterward.</p> 
+            <p>A much more effective strategy consists of a thinking about business decisions as being the forecasts. By doing so, it becomes much easier to align forecasts with specific business needs and priorities, e.g. measuring the forecast error in Dollars rather than percentages as detailed above.</p> 
+            <p><strong>10. Most of inventory forecasting literature is of little use</strong></p> 
+            <p>When confronted with any difficult subject, it is reasonable to begin exploring this subject by investigating the different peer-reviewed materials available in scientific literature. Especially since thousands of papers and articles are available to the reader, as far as demand forecasting and inventory optimization are concerned.</p> 
+            <p>Yet, we have found that the quasi-totality of the methods analysed in such literature <strong>just do not work</strong>. Mathematical correctness does not translate into business wisdom. Many models considered as <em>all-time classics</em> are just plain dysfunctional. For instance, </p> 
+            <ul> 
+             <li>Safety stocks are false, since they are based on normal distribution assumptions, </li> 
+             <li>EOQ (economic order quantities) are inaccurate, as they are based on flat-fee per order that is completely unrealistic,</li> 
+             <li>Holt-Winters, is a forecasting model which is quite unstable numerically and requires too much historical depth to be tractable,</li> 
+             <li>ARIMA, which is the archetype of mathematically-driven approach, is far too complicated for too little results,</li> 
+             <li>etc.</li> 
+            </ul> 
+            <p>Oddities in demand forecasting are (probably) countless. Don't hesitate to post your own observations in the comments section below.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/10/9/top-10-oddities-in-demand-forecasting">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=insights">insights</a>, <a class="tag" href="?tag=forecasting">forecasting</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/10/9/top-10-oddities-in-demand-forecasting" class="sqs-comment-link sqs-disqus-comment-link" data-id="542c0134e4b06f71cbc43440"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="542c0134e4b06f71cbc43440" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/542c0134e4b06f71cbc43440/1412841205379/" data-record-type="1" data-full-url="/journal/2014/10/9/top-10-oddities-in-demand-forecasting" data-title="Top 10 Oddities in Demand Forecasting"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-542bc636e4b0fc0cfad33513" class="hentry tag-video tag-priceforge author-joannes-vermorel post-type-text article-index-6"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/10/1/new-video-for-priceforge">New video for Priceforge</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/10/1/new-video-for-priceforge"><time datetime="2014-10-01">October 01, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1412155140626" id="item-542bc636e4b0fc0cfad33513">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-3c20d56a53edc34eb9f4">
+           <div class="sqs-block-content">
+            <p>Priceforge is both a pricing engine and a dashboarding engine. It was already a cool app, and now it has a cool video too. More materials are coming, stay tuned!</p>
+           </div>
+          </div>
+          <div class="sqs-block video-block sqs-block-video" data-block-json="{&quot;layout&quot;:&quot;caption-hidden&quot;,&quot;overlay&quot;:false,&quot;description&quot;:{&quot;html&quot;:&quot;Craft your own pricing strategy and out-price your competitors. Gain market shares but preserve your margins. Perform simulations and visualize the results with our dashboards.&quot;},&quot;hSize&quot;:null,&quot;floatDir&quot;:null,&quot;html&quot;:&quot;<iframe src=\&quot;//www.youtube.com/embed/VSpefFUkbh8?wmode=opaque&amp;amp;enablejsapi=1\&quot; height=\&quot;480\&quot; width=\&quot;854\&quot; scrolling=\&quot;no\&quot; frameborder=\&quot;0\&quot; allowfullscreen=\&quot;\&quot;>\n</iframe>&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=VSpefFUkbh8&quot;,&quot;width&quot;:854,&quot;height&quot;:480,&quot;providerName&quot;:&quot;YouTube&quot;,&quot;thumbnailUrl&quot;:&quot;http://i.ytimg.com/vi/VSpefFUkbh8/hqdefault.jpg&quot;,&quot;resolvedBy&quot;:&quot;youtube&quot;}" data-block-type="32" id="block-yui_3_17_2_1_1412154914099_21700">
+           <div class="sqs-block-content">
+            <div class="intrinsic" style="max-width:100%">
+             <div class="embed-block-wrapper" style="padding-bottom:56.20609%;">
+              <div class="sqs-video-wrapper" data-html="<iframe src=&quot;//www.youtube.com/embed/VSpefFUkbh8?wmode=opaque&amp;enablejsapi=1&quot; height=&quot;480&quot; width=&quot;854&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;><br/></iframe>" data-provider-name="YouTube"></div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/10/1/new-video-for-priceforge">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=video">video</a>, <a class="tag" href="?tag=priceforge">priceforge</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/10/1/new-video-for-priceforge" class="sqs-comment-link sqs-disqus-comment-link" data-id="542bc636e4b0fc0cfad33513"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="542bc636e4b0fc0cfad33513" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/542bc636e4b0fc0cfad33513/1412155214011/" data-record-type="1" data-full-url="/journal/2014/10/1/new-video-for-priceforge" data-title="New video for Priceforge"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-54006c74e4b083547913f4d9" class="hentry tag-hiring author-joannes-vermorel post-type-text article-index-7"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/8/29/lokad-is-hiring-junior-and-senior-developers">Lokad is hiring: junior and senior developers</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/8/29/lokad-is-hiring-junior-and-senior-developers"><time datetime="2014-08-29">August 29, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1409315392529" id="item-54006c74e4b083547913f4d9">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-c021fc8f90c05f2b24a7">
+           <div class="sqs-block-content">
+            <p><img data-preserve-html-node="true" src="/s/we-need-you.jpeg" style="float:right;margin-left:15px">Business is growing and moving fast. A few weeks ago we moved to <a href="http://tyba.com/company/lokad/">new offices</a> twice as large as the previous ones. More than ever, we are seeking <strong>talented software developers</strong>. We have two open positions in Paris: a junior and a senior.</p> 
+            <p>While working with us, you will focus on <a href="http://www.lokad.com/salescast-sales-forecasting-software">big</a> <a href="http://www.lokad.com/priceforge-pricing-software-for-commerce">data</a> <a href="http://www.lokad.com/botdefender-anti-scraping-software-for-commerce">apps</a>. We are <a href="http://www.lokad.com/forecasting-technology">technology</a>-driven company. We pay a lot of efforts in <em>crafting</em> highly interesting (and challenging too) bits of technology. Our apps are lean and focus on the quantitative optimization of commerce. At Lokad, you won't end-up being a drone adding the 1001th feature to a shapeless piece of enterprise software.</p> 
+            <p>From a practical perspective, we have bright offices, with transparent panels to keep the noise low and the concentration high. We buy the best tools that money can buy, hardware and software. You get free coffee and free cookies - well, at less when we don't mess up our own <a href="http://www.lokad.com/reorder-point-definition">replenishment</a>.</p> 
+            <p>You will benefit from a small but <strong>highly capable and highly experienced development team</strong> which will help you bring your development skills to the next level. Also, we remain a small-sized company where <em>individual</em> contributions actually contribute to the success of the company. Salary will be competitive and depends on experience.</p> 
+            <p>Apply now by sending your resume to <a href="mailto:contact@lokad.com">contact@lokad.com</a>.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/8/29/lokad-is-hiring-junior-and-senior-developers">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=hiring">hiring</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/8/29/lokad-is-hiring-junior-and-senior-developers" class="sqs-comment-link sqs-disqus-comment-link" data-id="54006c74e4b083547913f4d9"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="54006c74e4b083547913f4d9" data-like-count="1"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/54006c74e4b083547913f4d9/1409316389063/" data-record-type="1" data-full-url="/journal/2014/8/29/lokad-is-hiring-junior-and-senior-developers" data-title="Lokad is hiring: junior and senior developers"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-53fc9fe1e4b0f5f24721d6db" class="hentry tag-insights tag-inventory-optimization author-joannes-vermorel post-type-text article-index-8"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/8/26/mitigating-supplier-stockouts">Mitigating supplier stockouts</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/8/26/mitigating-supplier-stockouts"><time datetime="2014-08-26">August 26, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1409065704260" id="item-53fc9fe1e4b0f5f24721d6db">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-78eb2ebcfaf3881a0dd2">
+           <div class="sqs-block-content">
+            <p>Most inventory optimization processes are approximate in the sense that the propensity of the suppliers to face a stockout is not modeled. This approximation simplifies a lot the analysis, and as long suppliers have service levels that are substantially higher than the target service levels of the downstream retailer, distortions introduced in the inventory analysis are minimal. However, if the <strong>retailer seeks service levels higher than the ones offered by its supplier, then things get more complicated, and a lot more expensive</strong> inventory-wise too. Let’s briefly review how to mitigate supplier stockouts.</p> 
+            <p>From a pure inventory control perspective, associated with the <a href="http://www.lokad.com/quantile-forecasting-technology">quantile forecasting insights</a>, assuming there is only a single supplier available, the correct way to model the supplier stockouts consists of adjusting the <em>lead time</em>. Indeed, when the stock is not readily available on the supplier-side, the retailer needs to wait until the inventory is renewed to get its next replenishment under way. Thus, in order to account for the potential supplier stockouts, the applicable lead time is not anymore the ordering delay plus the shipping delay, but the same plus the supplier’s own lead time.</p> 
+            <p>Frequently in practice however, the lead time of the supplier is much larger than the typical lead time of the retailer. Such situations happen for example when the supplier is a wholesaler importing from Asia. In such conditions, trying to achieve a service level greater or equal to the one of the supplier proves to be a costly exercise because the lead time can be increased several times to match the one of the supplier. As a result, it’s not infrequent to observe that the stock would need to be more than doubled as well as a direct consequence of this increase of lead time.</p> 
+            <p>One typical way to <strong>mitigate supplier stockouts</strong> without resorting to drastic inventory increase consists of <strong>introducing some redundancy</strong>, either within the offering itself, or by diversifying the suppliers.</p> 
+            <p><strong>Redundancy in the offering</strong> happens when some goods being sold are similar enough to be considered as substitutes. The presence of substitutes, even imperfect ones, mitigate the supplier’s stockouts - as well as the retailer’s own stockouts – by reducing the damage as a certain fraction of the demand can be redirected to the substitute products when the other one is missing. One drawback of this approach is that, frequently, unless when dealing with quasi-perfect substitutes, it’s hard to assess whether two distinct products will indeed be perceived as actual substitutes by the clients. Ideally, this would require a statistical analysis of its own. Also, too many substitutes can clutter the offering, making it less appealing to the clients in the end.</p> 
+            <p><strong>Redundancy on the supplier-side</strong> typically involves secondary suppliers selling at higher prices because overall purchase volumes are smaller. Those suppliers serve as back-up if the primary suppliers cannot readily serve the products. The primary benefit of this approach is an extra available obtained for the exact product that clients seek. Then, one potential major drawbacks lie in the correlation that exists between the levels of inventory of the various suppliers. Simply put, if one supplier goes out of stock for a given item, then chances are that the market demand for the product has been <em>surprisingly</em> large and as a consequence most of the other suppliers will go (or have already gone) out of stock too.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/8/26/mitigating-supplier-stockouts">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=insights">insights</a>, <a class="tag" href="?tag=inventory+optimization">inventory optimization</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/8/26/mitigating-supplier-stockouts" class="sqs-comment-link sqs-disqus-comment-link" data-id="53fc9fe1e4b0f5f24721d6db"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="53fc9fe1e4b0f5f24721d6db" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/53fc9fe1e4b0f5f24721d6db/1409065918381/" data-record-type="1" data-full-url="/journal/2014/8/26/mitigating-supplier-stockouts" data-title="Mitigating supplier stockouts"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-53d64831e4b0da36743bb728" class="hentry tag-priceforge tag-release author-joannes-vermorel post-type-text article-index-9"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/7/28/faster-and-better-priceforge">Faster and better Priceforge</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/7/28/faster-and-better-priceforge"><time datetime="2014-07-28">July 28, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1406553243864" id="item-53d64831e4b0da36743bb728">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-1b8b3292af005d196644">
+           <div class="sqs-block-content">
+            <p>Over the last couple of weeks, we have deployed several incremental releases for <a href="http://www.lokad.com/priceforge-pricing-software-for-commerce">Priceforge</a>, our pricing optimization webapp. Below, we review some of the latest additions.</p> 
+            <p><strong>Faster data import.</strong> Our parsing logic has been largely rewritten for better performance. The app is now loading the data at roughly 30MB/s when processing large flat files. This is about 8x faster than our initial implementation. </p> 
+            <p><strong>Better development UI.</strong> The code editor now displays in the sidebar the <em>types</em> of the columns loaded from the flat files, as inferred from the Envision script itself. This is particularly handy to troubleshoot complex scripts. Also, the code editor now warns you if you are about to run a script that mismatches the data as observed during the last run.</p> 
+            <p><strong>More expressive scripts.</strong> The WHERE clause can now be used to filter any event stream, not just items. A new function named <em>concat</em> (for string concatenation) is introduced, and the <em>title</em> value for any tile is now treated as regular string scalar.</p> 
+            <p>Several important additions are still being implemented in Priceforge which should make Envision - our scripting language - even more expressive. In particular, we have started working on time-series operators such as <em>lag</em> or <em>integral</em> Those are particularly usuful in order to compare a strategy (pricing/stocking) with an alternative over distinct periods of time. Stay tuned.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/7/28/faster-and-better-priceforge">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=priceforge">priceforge</a>, <a class="tag" href="?tag=release">release</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/7/28/faster-and-better-priceforge" class="sqs-comment-link sqs-disqus-comment-link" data-id="53d64831e4b0da36743bb728"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="53d64831e4b0da36743bb728" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/53d64831e4b0da36743bb728/1406553302367/" data-record-type="1" data-full-url="/journal/2014/7/28/faster-and-better-priceforge" data-title="Faster and better Priceforge"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-53b7dd3fe4b08ad83704a88e" class="hentry tag-linnworks tag-sync tag-release author-joannes-vermorel post-type-text article-index-10"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/7/5/native-linnworks-support">Native Linnworks support</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/7/5/native-linnworks-support"><time datetime="2014-07-05">July 05, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1404559082402" id="item-53b7dd3fe4b08ad83704a88e">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-2e7e97cffb656e9855b0">
+           <div class="sqs-block-content">
+            <p>A few days ago, we were announcing a native support for <a href="http://blog.lokad.com/journal/2014/6/26/sync-by-lokad-native-brightpearl-support">Brightpearl</a>, now we are very proud to announce that it's Linnworks turn to get natively supported.</p> 
+            <p><img data-preserve-html-node="true" src="/s/sync-linnworks.png" style="max-width:670px"></p> 
+            <p>In order to import your Linnworks data into Lokad, you just need to generate an <a href="http://linnworks.com/Doc/KB_API_token">API token</a> and to copy-and-paste this token into Lokad. <em>Done</em>.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/7/5/native-linnworks-support">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=linnworks">linnworks</a>, <a class="tag" href="?tag=sync">sync</a>, <a class="tag" href="?tag=release">release</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/7/5/native-linnworks-support" class="sqs-comment-link sqs-disqus-comment-link" data-id="53b7dd3fe4b08ad83704a88e"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="53b7dd3fe4b08ad83704a88e" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/53b7dd3fe4b08ad83704a88e/1404559219812/" data-record-type="1" data-full-url="/journal/2014/7/5/native-linnworks-support" data-title="Native Linnworks support"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-53abdabce4b0c8440b31765d" class="hentry tag-sync tag-brightpearl tag-release author-joannes-vermorel post-type-text article-index-11"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/6/26/sync-by-lokad-native-brightpearl-support">Sync by Lokad, native Brightpearl support</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/6/26/sync-by-lokad-native-brightpearl-support"><time datetime="2014-06-26">June 26, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1403773683146" id="item-53abdabce4b0c8440b31765d">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-76ccce549af3549aef8e">
+           <div class="sqs-block-content">
+            <p>Moving data around is the Achilles' heel of most commerce optimization projects; no matter if it's stocks, prices or staffing being optimized. Over the last year, and thanks to the support <a href="http://www.lokad.com/salescast-partners">our partners</a>, data integration had become a lesser pain for companies using the Lokad technology, but still, it remained a hassle.</p> 
+            <p>Today, we are proud to announce the immediate availability of <a href="http://www.lokad.com/sync-commerce-data-import-export">Sync</a>, a web app dedicated to the <strong>1-click import of all the relevant business data</strong> either for <a href="http://www.lokad.com/salescast-sales-forecasting-software">Salescast</a> (inventory optimization) or for <a href="http://www.lokad.com/priceforge-pricing-software-for-commerce">Priceforge</a> (pricing optimization). Data are retrieved directly from the third party app - typically through its Web API.</p> 
+            <p>This initial version supports <a href="http://www.brightpearl.com/">Brightpearl</a>, an awesome commerce management solution. Just create a new project with Sync:</p> 
+            <p><img data-preserve-html-node="true" src="/s/sync-screenshot-brightpearl.png" style="max-width:670px"></p> 
+            <p>Click <strong>Run</strong> and a few minutes afterward, the data files are available within <a href="http://www.lokad.com/ftp-hosting">BigFiles</a>, our file hosting app, ready to be crunched by our other apps:</p> 
+            <p><img data-preserve-html-node="true" src="/s/bigfiles-screenshot-brightpearl.png" style="max-width:670px"></p> 
+            <p>For the duration of the beta, Sync is made available for free. We have not taken any final decision concerning the final price, but it will be a very affordable monthly subscription.</p> 
+            <p>This release is only the first step of many. Need something more? Don't hesitate to <a href="contact@lokad.com">drop us an email</a>.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/6/26/sync-by-lokad-native-brightpearl-support">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=sync">sync</a>, <a class="tag" href="?tag=brightpearl">brightpearl</a>, <a class="tag" href="?tag=release">release</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/6/26/sync-by-lokad-native-brightpearl-support" class="sqs-comment-link sqs-disqus-comment-link" data-id="53abdabce4b0c8440b31765d"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="53abdabce4b0c8440b31765d" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/53abdabce4b0c8440b31765d/1403801570865/" data-record-type="1" data-full-url="/journal/2014/6/26/sync-by-lokad-native-brightpearl-support" data-title="Sync by Lokad, native Brightpearl support"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-5390151be4b08170e26c3dd1" class="hentry tag-insights tag-forecasting author-joannes-vermorel post-type-text article-index-12"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/6/5/top-10-lies-of-forecasting-vendors">Top 10 lies of forecasting vendors</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/6/5/top-10-lies-of-forecasting-vendors"><time datetime="2014-06-05">June 05, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1401951721217" id="item-5390151be4b08170e26c3dd1">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-48e0f3f2a1031b2747ac">
+           <div class="sqs-block-content">
+            <p><span data-preserve-html-node="true" style="float:left;margin-right:15px"><img src="/s/lies.gif" alt="" title=""></span><br data-preserve-html-node="true"><br data-preserve-html-node="true"></p> 
+            <blockquote> 
+             <p><em>Prediction is very difficult, especially about the future. Niels Bohr</em></p> 
+            </blockquote> 
+            <p><br data-preserve-html-node="true">Lokad has been in the forecasting business for more than half a decade now, and while we took an immense pride in sticking to what we believe to be the truth, we did witness countless times competitors getting away with unabashed lies. Hence, for the record and for the fun of it, let’s list the top 10 lies of forecasting vendors.<br data-preserve-html-node="true"></p> 
+            <h2 id="1ourforecastsareaccurate">1. Our forecasts are accurate</h2> 
+            <p>No, they aren’t. Statistical forecasts might be the "best" forecasts available but qualifying those forecasts as “accurate” is, at best, delusional. Statistical forecasting is the technical equivalent of driving a car while looking in the rearview mirror. When it’s the only option available, it has to be done, but overall, it’s a messy exercise. Delusional vendors push clients toward fragile setups which rely too much on a promised accuracy that, reasonably, won’t ever be delivered. For most businesses, the only viable solution consists of embracing the fact that the future is uncertain, and planning accordingly. </p> 
+            <h2 id="2wewillforecastyourpromotions">2. We will forecast your promotions</h2> 
+            <p>We have <a href="http://blog.lokad.com/journal/2013/8/2/promotion-planning-in-general-merchandise-retail-data-challenges">already</a> <a href="http://blog.lokad.com/journal/2013/8/6/promotion-planning-in-general-merchandise-retail-process-challenges">written</a> <a href="http://blog.lokad.com/journal/2013/9/3/promotion-planning-in-general-merchandize-retail-optimization-challenges">extensively</a> about promotion forecasts. In a nutshell, getting promotion forecasts right is <strong>insanely hard</strong>. In particular, it takes a massive data qualification effort to have anything exploitable for statistics. The problem is even harder for ecommerce where the visibility given to any product can go from nothing to front page placement in minutes – and back to nothing in minutes as well. Claiming that a forecasting technology is good enough to forecast promotions - during the course of a vendor selection process – only proves that the vendor is dangerously little experienced with actual promotion forecasts. More seasoned or more honest vendors would argue there is not a single chance that such a <em>promotion forecasting benchmark</em> does not end-up in a major garbage-in garbage-out exercise.</p> 
+            <h2 id="3weareexperiencedwithyourvertical">3. We are experienced with your vertical</h2> 
+            <p>Vendors are <em>so experienced</em> that they don’t hesitate to propose forecasting methods that are guaranteed to fail such as daily or weekly median forecasts in case of (e)commerce. At Lokad, it took us a few years to realize that median forecasts were irremediably dysfunctional as far inventory optimization was concerned. We started to realize the depth of the problem the day we started to observe the actual impact of our forecasts on the business of our clients. It’s wasn’t pretty but it proved very enlightening. If the forecasting vendor does not emphasize that your reorder points and reorder quantities are the only relevant forecasts for inventory optimization, the vendor is either deceptive or clueless.</p> 
+            <h2 id="4ourtechnologyisintuitiveandefficient">4. Our technology is intuitive and efficient</h2> 
+            <p>Statistical forecasting is so <a href="http://blog.lokad.com/journal/2009/3/2/flat-forecasts.html">intensely</a> counter-intuitive that there is no way to have both something intuitive AND efficient. It’s either intuitive and completely incorrect, or unsettling and <em>possibly</em> correct. It’s just the way the human brain works. We are not geared for a correct <a href="http://www-psych.stanford.edu/~bigopp/randomness.html">perception of randomness</a>. We see patterns everywhere when it’s just statistical noise. What makes statistical forecasts efficient against human "expert" forecasts is precisely the fact that while the forecasting models are pretty dumb by human intelligence standards, when correctly designed, those models are not biased.</p> 
+            <h2 id="5youwillgetxlessstockandylessstockouts">5. You will get X% less stock and Y% less stock-outs</h2> 
+            <p>Enterprise software vendors absolutely love case studies claiming ground-breaking results. One private joke at Lokad is that, in order to catch up with competitor claims, we should also start claiming that <em>our software cures cancer too</em>. The reality is that the immense majority of those case studies are utter garbage. Numbers are made up, testimonials are made up and observed improvements, if any, are vastly unrelated to the forecasting solution. The customer is happy because the case study gives them some good press and drive their own competition nuts. Combo: by claiming very loudly that the super-expensive enterprise solution XYZ was the best thing that ever happened to your business, you drive a competitor in doing the same outrageously expensive mistake.</p> 
+            <h2 id="6youwillhavethefreedomtotuneyourforecasts">6. You will have the freedom to tune your forecasts</h2> 
+            <p>And the bullet that you will shoot in your own foot comes free of charge; and you should have a look at the incredible health care plan that you can buy from us too. Giving the opportunity to the client to have <em>full control</em> on its forecasts is not technically a lie, but it remains an extremely deceptive move when considering the consequences. It’s a case of <a href="http://en.wikipedia.org/wiki/Moral_hazard">moral hazard</a>. In case of success, the technology of the vendor gets praised. In case of failure, the incompetent staff of the client gets blamed. Worse, if the first attempt fails, then there is no alternative but to purchase some extra training sessions from the vendor. Obviously, there is some serious money to be made in prolonging the problem. </p> 
+            <h2 id="7weusestateofarttechnologies">7. We use state-of-art technologies</h2> 
+            <p>As far statistical learning is concerned state-of-the-art technologies are found in voice recognition, face recognition, spam filtering and all the other ultra-horizontal machine learning problems where companies like Google, Microsoft and Apple are investing hundreds of millions. It might be humbling to say, but demand forecasting is a somewhat niche business that does not justify hundreds of millions of R&amp;D investments. As a result, even the most technologically aggressive companies like us, are about a decade behind what could be really considered as state-of-art in machine learning. However, the reality is that most forecasting vendors are half-a-century behind state of the art: ARIMA, Holt-Winters and Box-Jenkins models were already there back in 1970.</p> 
+            <h2 id="8aforecastingbenchmarkcannotlie">8. A forecasting benchmark cannot lie</h2> 
+            <p>Statistics are certainly the most refined way to lie. Lies can be made up from numbers in all sort of ways. At Lokad, we have faced several benchmarks where returning zeroes as forecasts for all products would have ensured an outstanding victory in the benchmarking process. Yet, setting all inventory levels at zero does not really strike as a wise business option. Whenever a vendor claims X percents of error, you should really ask yourself how many <em>dollars</em> of errors are you going to get. Minimizing <em>percents of error</em> is a very different thing than measuring the <em>dollars of error</em>. Believing that the first drives the latter is vastly mistaken – but vendors won’t hesitate to claim the exact opposite because percents of error are much safer grounds to decline any responsibility in the subsequent mess.</p> 
+            <h2 id="9oursoftwareisthebest">9. Our software is the best</h2> 
+            <p>The vendor website looks like it was designed in the late nineties; it’s not possible to try the software online; there are no screenshots, no public pricing, no public documentation and no API either, but, trust us, it’s really good software. As Riley said, <em>When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck.</em> Software is one of those businesses where there is absolutely no barrier to selling everything online. Unless your software is deeply dysfunctional, you have <em>zero</em> incentive in keeping it hidden. Decent vendors don’t argue they are the best, they just let clients try and see for themselves.</p> 
+            <h2 id="10wemanageyourinventoryandyourforecasts">10. We manage your inventory AND your forecasts</h2> 
+            <p>Yes, sure. And some chess masters happen to be soccer champions too. Software is all about focus, and what it takes, as a company, to be good at designing, say, an ERP or a WMS, is about the exact opposite of what it takes to be good at <a href="http://blog.lokad.com/journal/2009/5/9/machine-learning-company-whats-so-special.html">designing a forecasting software</a>. ERP companies make poor forecasting tools, simply because forecasting is just one add-on among dozens if not hundreds. Despite whatever vendors might say, forecasting <em>cannot</em> be the No1 priority of an ERP vendor; it’s a second-class citizen by design. Respectively, if you have a capable team of data scientists, you can’t keep them driven to design the hundreds of screens it takes to have a full-fledged ERP.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/6/5/top-10-lies-of-forecasting-vendors">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=insights">insights</a>, <a class="tag" href="?tag=forecasting">forecasting</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/6/5/top-10-lies-of-forecasting-vendors" class="sqs-comment-link sqs-disqus-comment-link" data-id="5390151be4b08170e26c3dd1"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="5390151be4b08170e26c3dd1" data-like-count="3"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/5390151be4b08170e26c3dd1/1401956356111/" data-record-type="1" data-full-url="/journal/2014/6/5/top-10-lies-of-forecasting-vendors" data-title="Top 10 lies of forecasting vendors"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-5381f4ece4b0fe1778d277a6" class="hentry tag-priceforge tag-api tag-bigfiles author-joannes-vermorel post-type-text article-index-13"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/5/25/web-api-and-file-exports-for-priceforge">Web API and file exports for Priceforge</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/5/25/web-api-and-file-exports-for-priceforge"><time datetime="2014-05-25">May 25, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1401027017007" id="item-5381f4ece4b0fe1778d277a6">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-55e517d7c16ab5cf825c">
+           <div class="sqs-block-content">
+            <p><span data-preserve-html-node="true" style="float:left;margin-right:10px"><img src="/s/priceforge-logo.svg" alt="" title=""></span> Priceforge, our <a href="http://www.lokad.com/priceforge-pricing-software-for-commerce">dashboarding and pricing webapp</a>, is under rapid evolution. In particular, two new features, related to process automation, have just been put in production. With those features, it is now possible to design a completely automated setup, where every day and without any manual intervention, dashboards get refreshed and where revised prices get imported back into the business systems.</p> 
+            <h2 id="webapi">Web API</h2> 
+            <p>Inspired from the design already in place for Salescast, Priceforge has now its own <a href="http://www.lokad.com/priceforge-web-api">Web API</a> (Application Programing Interface). The purpose of this API is to offer the possibility to programmatically control the execution of your Priceforge projects from a remote system. </p> 
+            <p>For example, with this API, it becomes possible to write a script that runs outside Priceforge, which first uploads the latest data by FTP toward BigFiles - our file hosting service - and second, that triggers the execution of the relevant Priceforge projects.</p> 
+            <p>This API follows usual REST patterns with JSON-formatted messages. For now, there are two methods:</p> 
+            <ul> 
+             <li><code>/api/startrun</code> which triggers a project execution.</li> 
+             <li><code>/api/projectstatus</code> which details the state of a project.</li> 
+            </ul> 
+            <h2 id="fileexport">File export</h2> 
+            <p>Priceforge can perform advance calculations to compute revised prices or optimized item display ranks - our technology not limited to <em>prices</em> only. However, to make the most of Priceforge, those data need to be imported back into the relevant business systems, Magento or Prestashop for example.</p> 
+            <p>Priceforge now supports a built-in mechanism to export data throught the <code>file</code> tile. A <em>tile</em> - in Priceforge - is one of the elementary blocks that compose a dashboard. For example, Priceforge supports very visual tiles such as <em>barchart</em> or <em>linechart</em>.</p> 
+            <p>The tile of type <code>file</code> has two outputs. First, the tile gets displayed as a plain block within the dashboard. If this tile gets clicked, you download the file. Second, the file is pushed back to BigFiles at the specified location. For example:</p> 
+            <pre><code>show file "/foo/my-prices.tsv" with Id, Label, Price
+</code></pre> 
+            <p>This tiny <a href="http://www.lokad.com/priceforge-envision-syntax">Envision</a> script defines a tile of type <code>file</code> which produces a file named <code>my-prices.tsv</code> that is pushed to the folder named <code>/foo</code> in BigFiles. This file then becomes available for download through FTP.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/5/25/web-api-and-file-exports-for-priceforge">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=priceforge">priceforge</a>, <a class="tag" href="?tag=api">api</a>, <a class="tag" href="?tag=bigfiles">bigfiles</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/5/25/web-api-and-file-exports-for-priceforge" class="sqs-comment-link sqs-disqus-comment-link" data-id="5381f4ece4b0fe1778d277a6"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="5381f4ece4b0fe1778d277a6" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/5381f4ece4b0fe1778d277a6/" data-record-type="1" data-full-url="/journal/2014/5/25/web-api-and-file-exports-for-priceforge" data-title="Web API and file exports for Priceforge"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-537bb133e4b0fa7cc744397d" class="hentry tag-overfitting tag-insights author-joannes-vermorel post-type-text article-index-14"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/5/20/how-to-mitigate-overfitting-when-forecasting-demand">How to mitigate overfitting when forecasting demand?</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/5/20/how-to-mitigate-overfitting-when-forecasting-demand"><time datetime="2014-05-20">May 20, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1400618179689" id="item-537bb133e4b0fa7cc744397d">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-e5b975632f90164b4cae">
+           <div class="sqs-block-content">
+            <p><span data-preserve-html-node="true" style="float:left; margin-right:15px"><img src="/s/noise.jpg" alt="Just noise, no signal" title=""></span> Our <a href="http://blog.lokad.com/journal/2009/4/22/overfitting-when-accuracy-measure-goes-wrong.html">video about overfitting</a> received its share of attention since it was published 5 years ago, that is, a half a century ago for a startup like Lokad. Years later, we have made a lot of progress but overfitting remains a tough matter.</p> 
+            <p>In short, <strong>overfitting represents the risk that your forecasting model is accurate only at predicting the past</strong>, and not at predicting the future. A good forecasting model should be good at predicting the data you do not have.</p> 
+            <p>A <strong>common misconception</strong> is that there is no other way to assess a model except by checking its performance against the historical data. True, the historical data <em>must be leveraged</em>; however, if there is one insight to remember from the <a href="http://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory">Vapnik-Chervonenkis theory</a> is that all models are not born equal: some models carry a lot more <em>structural risk</em> - a concept part of the theory - than others. Entire class of models can be either considered as safe, or unsafe. from a pure theoretical perspective, which turns into very real accuracy improvements.</p> 
+            <blockquote> 
+             <p>Overfitting issues cannot be avoided entirely, but they can be mitigated nonetheless.</p> 
+            </blockquote> 
+            <p>There are several ways to mitigate overfitting. First, the one rule you should never break is: <strong>a forecasting model should <em>never</em> be assessed against the data that has been used to train the model</strong> in the first place. Many toolkits regress models on the entire history in order estimate the overall <em>fit</em> afterward. Well, as the name suggests, such a process gives you the <em>fit</em> but nothing more. In particular, the fit should not be interpreted as any kind of expected accuracy, <em>it is not</em>. The fit is typically <em>much lower</em> than the real accuracy.</p> 
+            <p>Second, one simple way of mitigating ovefitting is to perform <a href="http://www.lokad.com/backtesting-definition">extensive back-testing</a>. In practice, it means your process needs to split the input dataset over dozens - if not hundreds - of incremental date thresholds, and re-train all the forecasting models and re-assess them each time. Backtesting requires a lot of processing power. Being able to allocate the massive processing power it takes to perform extensive back-testing was actually one of the primary reasons why <a href="http://blog.lokad.com/journal/2010/6/23/honored-by-the-windows-azure-partner-award-of-2010.html">Lokad migrated toward cloud computing</a> in the first place.</p> 
+            <p>Third, even the most extensive <strong>back-testing is worth little if your time-series are sparse</strong> in the first place, that is, if time-series represent items of low sales volumes. Indeed, as most of the data points of the time-series are at zero, the back-testing process learns very little by iterating over zeroes. Unfortunately for commerce, about 90% of the items sold or serviced have a demand history that is considered as <em>sparse</em> from a statistical viewpoint. In order to address this problem, the performance of the model should be assessed with <strong>a multiple time-series viewpoint</strong>. It's not the performance of the model over a single time-series that matters, but its performance over well-defined clusters of time-series. Then, every becomes a balance between the <em>local</em> vs the <em>global</em> empirical accuracy when it comes to select the best model.</p> 
+            <p><em>Any question? Don't hesitate to post them as comments.</em></p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/5/20/how-to-mitigate-overfitting-when-forecasting-demand">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=overfitting">overfitting</a>, <a class="tag" href="?tag=insights">insights</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/5/20/how-to-mitigate-overfitting-when-forecasting-demand" class="sqs-comment-link sqs-disqus-comment-link" data-id="537bb133e4b0fa7cc744397d"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="537bb133e4b0fa7cc744397d" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/537bb133e4b0fa7cc744397d/" data-record-type="1" data-full-url="/journal/2014/5/20/how-to-mitigate-overfitting-when-forecasting-demand" data-title="How to mitigate overfitting when forecasting demand?"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-53738af5e4b02899e91e5d4d" class="hentry tag-priceforge author-joannes-vermorel post-type-text article-index-15"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/5/14/visual-dashboard-editor-with-priceforge">Visual dashboard editor for Priceforge</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/5/14/visual-dashboard-editor-with-priceforge"><time datetime="2014-05-14">May 14, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1400081423677" id="item-53738af5e4b02899e91e5d4d">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-60a3132a03dc7fb45047">
+           <div class="sqs-block-content">
+            <p>Our app <a href="http://www.lokad.com/priceforge-pricing-software-for-commerce">Priceforge</a> is a data visualization engine as well as a price optimizer. Through its syntax, Envision offers a programmatic way to define the tiles that appear in your dashboard. </p> 
+            <p>While it's very handy to have an absolute control on the way numbers are computed, picking the colors of your tiles and <strong>composing the layout of your dashboard from the programming language itself is tedious</strong>. That's why Priceforge supports a visual editor for your dashboards.</p> 
+            <p>Let's have a look at the sample dashboard provided by Priceforge:</p> 
+            <p><img src="/s/visual-editor1.png" alt="" title=""></p> 
+            <p>Notice the <em>Editor</em> button at the top right of the window. If you click this button, it toggles the visual editor mode of Priceforge. All the tiles get dark and their respective positions - following Excel-like grid system used by Envision - appear on of each tile.</p> 
+            <p><img src="/s/visual-editor2.png" alt="" title=""></p> 
+            <p>Then, while it's possible to move each tile invidually, the visual editor offers a simple way to move all tiles up or down. Just click one of those green crosses on the left, and a new blank line is inserted.</p> 
+            <p><img src="/s/visual-editor3.png" alt="" title=""></p> 
+            <p>You can also remove this line blank line by clicking the red cross that now appears on the right.</p> 
+            <p>If you click a tile in particular, the modal dialog box appears. This box is titled <em>Edit Properties</em> as illustrated below. From this box, you can control the title, the position and size, the unit and the color of the tile. In practice, it's the position and the color that are the most handy to be adjusted from the visual editor.</p> 
+            <p><img src="/s/visual-editor4.png" alt="" title=""></p> 
+            <p>Once you're done with your changes, don't forget to save them by clicking the button <em>Save tile properties</em> that now appears at the top right of the window.</p> 
+            <p><img src="/s/visual-editor5.png" alt="" title=""></p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/5/14/visual-dashboard-editor-with-priceforge">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=priceforge">priceforge</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/5/14/visual-dashboard-editor-with-priceforge" class="sqs-comment-link sqs-disqus-comment-link" data-id="53738af5e4b02899e91e5d4d"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="53738af5e4b02899e91e5d4d" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/53738af5e4b02899e91e5d4d/" data-record-type="1" data-full-url="/journal/2014/5/14/visual-dashboard-editor-with-priceforge" data-title="Visual dashboard editor for Priceforge"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-535914b2e4b05e6280944acd" class="hentry tag-pricing tag-insights author-joannes-vermorel post-type-text article-index-16"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/4/24/short-term-vs-long-term-pricing-analysis">Short-term vs long-term pricing analysis</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/4/24/short-term-vs-long-term-pricing-analysis"><time datetime="2014-04-24">April 24, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1398348219255" id="item-535914b2e4b05e6280944acd">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-5d0904b5158653169b56">
+           <div class="sqs-block-content">
+            <p>At first glance the notion of <a href="http://en.wikipedia.org/wiki/Price_elasticity_of_demand">price elasticity of demand</a> looks fairly reasonable, tractable even. Elasticity gives the percentage change in quantity demanded in response to a one percent change in price.</p> 
+            <p>Putting aside a couple of odd situations where an increase of price creates an increase of demand, in the vast majority of situations, the elasticity is negative: <strong>demand decreases as price increases</strong>.</p> 
+            <p><span data-preserve-html-node="true" style="float:right"><img src="/s/price-elasticity.svg" alt="" title=""></span> Most of the pricing literature indicates that price elasticity is a very desirable metric, because, through its analysis, it becomes possible to <strong>calculate the optimal price, that is, the price that maximizes the margin</strong>.</p> 
+            <p>However, as far commerce is concerned, we observe that price elasticity is a <strong>misleading metric</strong>, even when measured correctly - which is also a tough challenge.</p> 
+            <p>Indeed, for about any commerce, most elasticity analysis tend to show that <strong>prices can be increased and it won't impact much the demand</strong>. Worse, if a small scale A/B test is carried out, the test <em>will confirm</em> the analytical insight provided by the elasticity analysis.</p> 
+            <p><em>And yet, the conclusion is plainly (deadly) incorrect.</em></p> 
+            <p>Pricing is a signal sent to the market, and the market is made of habits. Only the most price-sensitive buyers do the effort of systematically checking the price of the competition. Most buyers do it only once in a while.</p> 
+            <blockquote> 
+             <p>If your commerce were to increase all its prices by 20%, what would happen for the next 2 weeks? For most commerce, not much. Yet, within a couple of months, market shares would decline rather abruptly - unless the pricing shift is part of complete rebranding in order to reach richer segments.</p> 
+            </blockquote> 
+            <p><strong>In the short-term, demand tends to be fairly inelastic</strong> because <em>habits</em> dominate. In the long-term, it's the opposite: it's almost impossible to maintain a higher price than the competition if the package (product + service) is the same.</p> 
+            <p>From a pricing perspective, it's important <strong>not to be fooled by short-sighted quantitative analysis</strong>. Price elasticity is relevant, but by construction, it is short-signed because it ignores that commerce is a <a href="http://en.wikipedia.org/wiki/Repeated_game">repeated game</a> where the goal is not to maximize the margin of the next client purchase, but rather optimize the market shares that offer the best sustainable margins.</p> 
+            <p><a data-preserve-html-node="true" href="http://www.lokad.com/priceforge-pricing-software-for-commerce"><span data-preserve-html-node="true" style="float:left"><img src="/s/priceforge-logo.svg" alt="" title=""></span></a> <em>Need a tool that gives you the insights it takes to craft solid prices? Don't hesitate to have a look at <a href="http://www.lokad.com/priceforge-pricing-software-for-commerce">Priceforge</a>, our pricing webapp.</em></p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/4/24/short-term-vs-long-term-pricing-analysis">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=pricing">pricing</a>, <a class="tag" href="?tag=insights">insights</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/4/24/short-term-vs-long-term-pricing-analysis" class="sqs-comment-link sqs-disqus-comment-link" data-id="535914b2e4b05e6280944acd"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="535914b2e4b05e6280944acd" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/535914b2e4b05e6280944acd/1398351751640/" data-record-type="1" data-full-url="/journal/2014/4/24/short-term-vs-long-term-pricing-analysis" data-title="Short-term vs long-term pricing analysis"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-534fa3a9e4b0757a373aa40b" class="hentry tag-pricing tag-priceforge tag-insights author-joannes-vermorel post-type-text article-index-17"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/4/17/ignore-prices-only-pricing-strategies-matter">Ignore prices, only pricing strategies matter</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/4/17/ignore-prices-only-pricing-strategies-matter"><time datetime="2014-04-17">April 17, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1397729326886" id="item-534fa3a9e4b0757a373aa40b">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-1625d505201118d6cc07">
+           <div class="sqs-block-content">
+            <p>In order to achieve a better pricing in commerce, the whole initiative should start by <strong>realizing that prices themselves are irrelevant</strong>. Only the pricing strategy itself matters, that is, the logic that crunches all inputs such as the purchase prices and all the other relevant variables in order to produce the final price values.</p> 
+            <p>When asked about the first step to get better prices, many retail practitioners answer: knowing the prices of your competitors. <strong>Rubbish.</strong> The first step consists of transitioning from <em>implicit</em> pricing strategies to <em>explicit</em> strategies, because only the latter are subject to <strong>measurable improvements</strong>.</p> 
+            <blockquote> 
+             <p>Unless you’re quite familiar with the concept of pricing, this might sound <em>very</em> confusing.</p> 
+            </blockquote> 
+            <p>The most difficult challenge of pricing is that <strong>you can’t replay the past</strong>. Once you’ve set a price, you will never know how many sales you would have got if you had put another price on display. </p> 
+            <p>Oh yes, you can still change the price <em>now</em> and observe the sales for the next month, but are your sales growing because the price is going down or because your web traffic is going up or because your new product picture is more attractive? You will never know <em>for sure</em>. Actually, it’s not just you. Nobody and certainly not us at Lokad, will never <em>ever</em> know for sure.</p> 
+            <p>Technically, we can argue that pricing is not eligible to <a href="http://www.lokad.com/backtesting-definition">backtesting</a>.</p> 
+            <p><strong>Focusing on the prices themselves is a defective process</strong> in the sense that this process can’t be challenged. Prices can be changed, obviously, but, except for pathological situations where obvious pricing mistakes get corrected, your company won’t be able to decide if the new prices made the situation better or worse.</p> 
+            <blockquote> 
+             <p>As the old saying goes, you can’t optimize what you can’t measure.</p> 
+            </blockquote> 
+            <p><strong>What can be challenged, however, is the pricing strategy.</strong> The pricing strategy is the logic, the set of rules, that processes the input data such as purchase costs, customer acquisition costs, inventory costs, prices of competitors ... and that produces the final public prices to be put on display. </p> 
+            <p>Unlike raw prices, a pricing strategy can be challenged: given two pricing strategies, a strict experimentation protocol can be devised to <strong>decide which one of the two strategies is the most profitable one</strong>. Designing such a protocol is not a simple task, we will get back to this in a later post.</p> 
+            <p>Intuitively, if you have 1000 items to be priced, you can assign the first 500 to the first strategy, and the last 500 to the second strategy. If the two pools of items are comparable, then it becomes possible to assess the performance of the respective strategies.</p> 
+            <blockquote> 
+             <p>In the past, a few very large online merchants tried to display different prices to different customers just for the sake of gaining further market knowledge. In order to be fair, somehow, all customers were offered, at the end of the check-out, the lowest price. This approach stirred controversies, as far we know, it’s not used anymore, at least not at scale. Furthermore, in many countries, customer protection laws prevent retailers from tweaking their prices per customer.</p> 
+            </blockquote> 
+            <p>Unfortunately, in most retail businesses, the <strong>pricing strategy does not exist anywhere but in the mind of the people in charge</strong> of setting the prices. Frequently, a myriad of spreadsheets also contains bits of pricing logic. However, as spreadsheets mix both data and logic, updating those spreadsheets with the latest data is error-prone and time-consuming.</p> 
+            <p>With such a setup, pricing strategies remain implicit and unchallenged, and consequently the performance of the pricing remains stagnant. Worse, any market change that ends up reflected in the prices requires a lot of manpower just to re-enter the revised prices in the system somehow.</p> 
+            <p>Thus, any pricing initiative in retail should start by transitioning toward an explicit pricing strategy that, given the proper data inputs, can be executed by a machine in order to produce the revised price values.</p> 
+            <p>Some practitioners might argue that <em>the machine</em> is pretty dumb and that it will never know the market like they do. Well, this is absolutely true. Having a fully automated pricing logic just happens to be simplest way to make sure that the pricing logic is well-defined (non-ambiguous, conclusive, etc); however, this logic might be nothing more than the <strong>formal transcription of the pricing logic as understood by the practitioner</strong> herself. The <em>machine</em> is not expected to invent the pricing strategy, merely to execute it whenever refreshed prices are needed.</p> 
+            <p><a href="http://www.lokad.com/priceforge-pricing-software-for-commerce">Priceforge</a>, our pricing optimization webapp, has been designed precisely to let your company <em>write</em> its pricing strategies, because it’s the first step toward a situation where it becomes possible to actually improve the pricing. </p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/4/17/ignore-prices-only-pricing-strategies-matter">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=pricing">pricing</a>, <a class="tag" href="?tag=priceforge">priceforge</a>, <a class="tag" href="?tag=insights">insights</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/4/17/ignore-prices-only-pricing-strategies-matter" class="sqs-comment-link sqs-disqus-comment-link" data-id="534fa3a9e4b0757a373aa40b"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="534fa3a9e4b0757a373aa40b" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/534fa3a9e4b0757a373aa40b/1397746829915/" data-record-type="1" data-full-url="/journal/2014/4/17/ignore-prices-only-pricing-strategies-matter" data-title="Ignore prices, only pricing strategies matter"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-53479ca5e4b0c263af916007" class="hentry tag-hiring author-joannes-vermorel post-type-text article-index-18"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/4/11/were-hiring-junior-account-manager">We're hiring: Junior Account Manager</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/4/11/were-hiring-junior-account-manager"><time datetime="2014-04-11">April 11, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1397221929026" id="item-53479ca5e4b0c263af916007">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-null">
+           <div class="sqs-block-content">
+            <p><span data-preserve-html-node="true" style="float:right"><img src="/s/we-need-you.jpeg" alt="" title=""></span>Lokad is growing, and we need you. As a junior account manager, you will learn how to grow prospects into clients, and then, learn how to support them so that they make the most of our technology.</p> 
+            <h2 id="mission">Mission</h2> 
+            <p>Your goal will be to establish and grow commercial relationships between Lokad and its clients. As Lokad is reaching a global market, you will be expected to converse by email in English with companies located pretty much anywhere on the globe. You will also be expected to handle phone calls, in English. Note that we don’t do much cold calling - so you won't spend your days being rejected after trying to call people who don’t know or don’t care about Lokad.</p> 
+            <p>The position in our office Paris (13th arrondissement). This job is not eligible for remote work. Salary depends on the experience and subject to negotiation.</p> 
+            <h2 id="profile">Profile</h2> 
+            <p>We are seeking an enthusiastic and communicative junior. Impeccable command of English is critical because most of our business happens outside France. For practical reasons, we also expect impeccable command of French.</p> 
+            <p>We do not expect you to be knowledgeable about Big Data, but if you happen to be a bit savvy with the web, or software, or ecommerce, it will be appreciated.</p> 
+            <h2 id="skills">Skills</h2> 
+            <ul> 
+             <li>Impeccable command of English and French.</li> 
+             <li>Sharp analytical mind.</li> 
+            </ul> 
+            <p><em>To apply, send us your resume to <a href="contact@lokad.com">contact@lokad.com</a>. In your message, please explain shortly why you would be a good fit for this job.</em></p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/4/11/were-hiring-junior-account-manager">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=hiring">hiring</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/4/11/were-hiring-junior-account-manager" class="sqs-comment-link sqs-disqus-comment-link" data-id="53479ca5e4b0c263af916007"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="53479ca5e4b0c263af916007" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/53479ca5e4b0c263af916007/1397222235096/" data-record-type="1" data-full-url="/journal/2014/4/11/were-hiring-junior-account-manager" data-title="We're hiring: Junior Account Manager"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-533d91bae4b02233d7417f6c" class="hentry tag-quantiles tag-inventory tag-insights tag-inventory-optimization author-joannes-vermorel post-type-text article-index-19"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/4/3/control-your-service-levels-dont-let-them-control-you">Control your service levels, don’t let them control you</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/4/3/control-your-service-levels-dont-let-them-control-you"><time datetime="2014-04-03">April 03, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1396544099022" id="item-533d91bae4b02233d7417f6c">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-null">
+           <div class="sqs-block-content">
+            <p><span data-preserve-html-node="true" style="float:right;margin-left:15px"><img src="/s/tau-logo100.png" alt="" title=""></span> In retail, many companies don’t have much control over their <a href="http://www.lokad.com/service-level-definition">service levels</a>. In fact, many companies <strong>don’t monitor the service level where it matters the most: the physical store</strong>. Indeed, measuring in-store service level is a tedious exercise. Some companies - mostly panelists - specialize in doing this sort of measurements, but the cost is steep as there is no workaround for the extensive manpower involved in the process.</p> 
+            <blockquote> 
+             <p>Taking a step back, why do we even need to measure the service level?</p> 
+            </blockquote> 
+            <p>Wouldn’t it be more convenient <strong>if the service level was something obtained <em>by design</em></strong> and defined through explicit settings within the inventory optimization software? This would certainly be a lot more practical. Service levels certainly don't need to be an afterthought of the inventory optimization process.</p> 
+            <p>It turns out that, historically, the need to measure the service levels came from early inventory optimization methods such as the <a href="http://www.lokad.com/calculate-safety-stocks-with-sales-forecasting">safety stock analysis</a> that offer about no control on actual service levels. Indeed, the underlying models rely on the assumption that the demand is <a href="http://en.wikipedia.org/wiki/Normal_distribution">normally distributed</a> and this assumption is so wrong in practice that most retailers gave up on this assumption in favor of ad-hoc safety stock coefficients.</p> 
+            <p>Those ad-hoc safety stock coefficients are not bad <em>per se</em>: they are certainly better than relying on abusive assumptions about the future demand. However, <strong>the quantitative relationship between the safety stock and the service level is lost</strong>. Hence, retailers end-up measuring their service levels and tweaking coefficients until inventory stabilizes <em>somehow</em>. At the end, the situation is not satisfying because the inventory strategy is inflexible: safety stock coefficients can’t be changed without exposing the company to a myriad of problems, repeating the tedious empirical adjustments done originally.</p> 
+            <p>However, with the advent of <a href="http://www.lokad.com/quantile-forecasting-technology">quantile forecasting</a>, it’s now possible to <strong>produce forecasts that <em>very accurately</em> drive the service levels</strong>, even if the quantile forecasts themselves are not accurate. All it takes is <em>unbiased</em> forecasts, and not <em>perfectly accurate forecasts</em>.</p> 
+            <p>Indeed, quantile forecasts directly and very natively address the problem of producing the reorder quantities it takes to cover target service levels. If a new and better quantile forecasting technology is found, then this technology might be capable of achieving the same service levels with less inventory, but both technologies deliver the service levels they promise <em>by design</em>.</p> 
+            <p>This behavior is very unlike the case of <em>classic forecasting</em> allied to safety stock analysis where an improvement of the accuracy, while being desirable, leads to erratic results in practice. For example, for many low volume products, as observed in stores, shifting to a <em>dumb</em> forecasting model that always returns zero usually <em>improves</em> the accuracy defined as the <a href="http://www.lokad.com/forecasting-accuracy-definition">absolute difference</a> between the actual sales and the forecasted sales. Obviously, shifting toward zero forecasts for half of the products can only end with dismal business results. This example might appears as anecdotal but it is not. Zero forecasts are the most accurate <em>classic</em> forecasts in numerous situations.</p> 
+            <p>Thus, <strong>in order to take control of your service levels, it takes an inventory optimization methodology where such a control is built-in</strong>.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/4/3/control-your-service-levels-dont-let-them-control-you">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=quantiles">quantiles</a>, <a class="tag" href="?tag=inventory">inventory</a>, <a class="tag" href="?tag=insights">insights</a>, <a class="tag" href="?tag=inventory+optimization">inventory optimization</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/4/3/control-your-service-levels-dont-let-them-control-you" class="sqs-comment-link sqs-disqus-comment-link" data-id="533d91bae4b02233d7417f6c"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="533d91bae4b02233d7417f6c" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/533d91bae4b02233d7417f6c/1396553196577/" data-record-type="1" data-full-url="/journal/2014/4/3/control-your-service-levels-dont-let-them-control-you" data-title="Control your service levels, don’t let them control you"></div>  
+       <p></p> 
+      </article> 
+      <!--WRAPPER--> 
+      <article id="post-533a89c7e4b088ba35574ab3" class="hentry tag-prestashop tag-botdefender tag-scraping author-joannes-vermorel post-type-text article-index-20"> 
+       <!--MAIN IMAGE--> 
+       <!--POST TILE--> 
+       <h1 class="title"> <a href="/journal/2014/4/1/prestashop-add-on-for-botdefender">Prestashop add-on for BotDefender</a> </h1> 
+       <!--POST META--> 
+       <p class="meta"> Published on <a href="/journal/2014/4/1/prestashop-add-on-for-botdefender"><time datetime="2014-04-01">April 01, 2014</time></a> by <a href="?author=519396cce4b04d532fc328a4">Joannes Vermorel</a>. </p> 
+       <!--EXCERPT OR BODY--> 
+       <!--MAIN CONTENT--> 
+       <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1396346197551" id="item-533a89c7e4b088ba35574ab3">
+        <div class="row sqs-row">
+         <div class="col sqs-col-12 span-12">
+          <div class="sqs-block markdown-block sqs-block-markdown" data-block-type="44" id="block-null">
+           <div class="sqs-block-content">
+            <p><span data-preserve-html-node="true" style="float:left;margin-right:5px"><img src="/s/botdefender-logo.png" alt="BotDefender logo" title=""></span> A few weeks ago, we released an add-on for Magento, and now it's the turn of Prestashop to get protected by <a href="http://www.lokad.com/botdefender-anti-scraping-software-for-commerce">BotDefender</a> against the automated retrieval of all the prices by competitors. Check out our <a href="http://addons.prestashop.com/en/front-office-features-prestashop-modules/12723-botdefender-by-lokad.html">Prestashop add-on for BotDefender</a> (also available from the <a href="https://www.xtendify.com/en/product/174-botdefender-by-lokad-prestashop-module">Xtendify store</a>). </p> 
+            <p><em>Protecting your store has now its 1-click solution!</em></p> 
+            <p>This add-on has been co-designed as a joint effort between Xtendify, our Prestashop specialist, and the Lokad team. As we did for Magento, we paid the same attention to the add-on performance. </p> 
+            <p>Meantime, while add-ons are being released, the BotDefender infrastructure has also been upgraded for better performance. Now BotDefender auto-diagnostics the need for SSL in order to revert to plain HTTP whenever it's applicable.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div> 
+       <!--  <p class="read_more"><a class="link" href="/journal/2014/4/1/prestashop-add-on-for-botdefender">Permalink</a></p> --> 
+       <!--BLOG INJECTION--> 
+       <p class="meta meta_bottom"> 
+        <!--CATEGORIES--> <span class="meta_categories">Categories: </span> 
+        <!--TAGS--> <span class="meta_tags">Tags: <a class="tag" href="?tag=prestashop">prestashop</a>, <a class="tag" href="?tag=botdefender">botdefender</a>, <a class="tag" href="?tag=scraping">scraping</a> </span> 
+        <!--LINK TO COMMENTS--> <span class="meta_comments"> <a href="/journal/2014/4/1/prestashop-add-on-for-botdefender" class="sqs-comment-link sqs-disqus-comment-link" data-id="533a89c7e4b088ba35574ab3"></a> </span> 
+        <!--SHARE AND LIKE--> <span class="meta_buttons"> <span class="sqs-simple-like" data-item-id="533a89c7e4b088ba35574ab3" data-like-count="0"><span class="like-icon"></span><span class="like-count"></span></span> </span></p>
+       <div class="squarespace-social-buttons button-style" data-system-data-id="" data-asset-url="http://static.squarespace.com/static/51a45891e4b0cf20ca0b18f2/51a4590de4b0f7e4206bbdd9/533a89c7e4b088ba35574ab3/1396592757433/" data-record-type="1" data-full-url="/journal/2014/4/1/prestashop-add-on-for-botdefender" data-title="Prestashop add-on for BotDefender"></div>  
+       <p></p> 
+      </article> 
+      <!--PAGINATION--> 
+      <nav> 
+       <!--NEWER PAGE--> 
+       <a class="disabled">Newer</a> 
+       <!--OLDER PAGE--> 
+       <a href="/?offset=1396345278019">Older</a> 
+      </nav> 
+     </section> 
+    </div> 
+    <div id="Side" class="column grid_4"> 
+     <aside id="sidebar"> 
+      <div class="sqs-layout sqs-grid-1 columns-1" data-type="block-field" data-updated-on="1372150786757" id="sidebarBlocks">
+       <div class="row sqs-row">
+        <div class="col sqs-col-1 span-1">
+         <div class="sqs-block rss-block sqs-block-rss" data-block-type="49" id="block-2e2ecab518ece8682e5e">
+          <div class="sqs-block-content">
+           <a href="http://blog.lokad.com/?format=rss" title="Big Data for Commerce - Lokad RSS" class="social-rss">Big Data for Commerce - Lokad RSS</a>
+          </div>
+         </div>
+         <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-1fde4e86a1d383dfa77d">
+          <div class="sqs-block-content">
+           <h2>About this blog</h2>
+           <p>News and insights about forecasting and inventory optimization. Stay tuned with the latest developments of Lokad.&nbsp;</p>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="row sqs-row">
+        <div class="col sqs-col-1 span-1">
+         <div class="sqs-block tagcloud-block sqs-block-tagcloud" data-block-type="14" id="block-cdd5b626a731f0e9c725">
+          <div class="sqs-block-content">
+           <ul class="sqs-tagcloud"> 
+            <li title="insights - 36" style="font-size: 3em;"> <a href="/journal?tag=insights"> <span class="name">insights</span> </a> </li> 
+            <li title="forecasting - 31" style="font-size: 2.93em;"> <a href="/journal?tag=forecasting"> <span class="name">forecasting</span> </a> </li> 
+            <li title="salescast - 16" style="font-size: 2.6em;"> <a href="/journal?tag=salescast"> <span class="name">salescast</span> </a> </li> 
+            <li title="release - 15" style="font-size: 2.57em;"> <a href="/journal?tag=release"> <span class="name">release</span> </a> </li> 
+            <li title="video - 13" style="font-size: 2.5em;"> <a href="/journal?tag=video"> <span class="name">video</span> </a> </li> 
+            <li title="bigdata - 11" style="font-size: 2.42em;"> <a href="/journal?tag=bigdata"> <span class="name">bigdata</span> </a> </li> 
+            <li title="cloud computing - 9" style="font-size: 2.33em;"> <a href="/journal?tag=cloud+computing"> <span class="name">cloud computing</span> </a> </li> 
+            <li title="pricing - 9" style="font-size: 2.33em;"> <a href="/journal?tag=pricing"> <span class="name">pricing</span> </a> </li> 
+            <li title="history - 8" style="font-size: 2.27em;"> <a href="/journal?tag=history"> <span class="name">history</span> </a> </li> 
+            <li title="hiring - 8" style="font-size: 2.27em;"> <a href="/journal?tag=hiring"> <span class="name">hiring</span> </a> </li> 
+            <li title="supply chain - 7" style="font-size: 2.21em;"> <a href="/journal?tag=supply+chain"> <span class="name">supply chain</span> </a> </li> 
+            <li title="retail - 7" style="font-size: 2.21em;"> <a href="/journal?tag=retail"> <span class="name">retail</span> </a> </li> 
+            <li title="quantiles - 7" style="font-size: 2.21em;"> <a href="/journal?tag=quantiles"> <span class="name">quantiles</span> </a> </li> 
+            <li title="priceforge - 7" style="font-size: 2.21em;"> <a href="/journal?tag=priceforge"> <span class="name">priceforge</span> </a> </li> 
+            <li title="inventory - 7" style="font-size: 2.21em;"> <a href="/journal?tag=inventory"> <span class="name">inventory</span> </a> </li> 
+            <li title="azure - 6" style="font-size: 2.14em;"> <a href="/journal?tag=azure"> <span class="name">azure</span> </a> </li> 
+            <li title="community - 6" style="font-size: 2.14em;"> <a href="/journal?tag=community"> <span class="name">community</span> </a> </li> 
+            <li title="roadmap - 6" style="font-size: 2.14em;"> <a href="/journal?tag=roadmap"> <span class="name">roadmap</span> </a> </li> 
+            <li title="whitepaper - 6" style="font-size: 2.14em;"> <a href="/journal?tag=whitepaper"> <span class="name">whitepaper</span> </a> </li> 
+            <li title="team - 6" style="font-size: 2.14em;"> <a href="/journal?tag=team"> <span class="name">team</span> </a> </li> 
+            <li title="inventory optimization - 5" style="font-size: 2.06em;"> <a href="/journal?tag=inventory+optimization"> <span class="name">inventory optimization</span> </a> </li> 
+            <li title="documentation - 5" style="font-size: 2.06em;"> <a href="/journal?tag=documentation"> <span class="name">documentation</span> </a> </li> 
+            <li title="technology - 5" style="font-size: 2.06em;"> <a href="/journal?tag=technology"> <span class="name">technology</span> </a> </li> 
+            <li title="safety stock - 5" style="font-size: 2.06em;"> <a href="/journal?tag=safety+stock"> <span class="name">safety stock</span> </a> </li> 
+            <li title="opensource - 5" style="font-size: 2.06em;"> <a href="/journal?tag=opensource"> <span class="name">opensource</span> </a> </li> 
+            <li title="promotion - 5" style="font-size: 2.06em;"> <a href="/journal?tag=promotion"> <span class="name">promotion</span> </a> </li> 
+            <li title="optimization - 4" style="font-size: 1.97em;"> <a href="/journal?tag=optimization"> <span class="name">optimization</span> </a> </li> 
+            <li title="api - 4" style="font-size: 1.97em;"> <a href="/journal?tag=api"> <span class="name">api</span> </a> </li> 
+            <li title="events - 4" style="font-size: 1.97em;"> <a href="/journal?tag=events"> <span class="name">events</span> </a> </li> 
+            <li title="integration - 4" style="font-size: 1.97em;"> <a href="/journal?tag=integration"> <span class="name">integration</span> </a> </li> 
+            <li title="business - 4" style="font-size: 1.97em;"> <a href="/journal?tag=business"> <span class="name">business</span> </a> </li> 
+            <li title="shelfcheck - 4" style="font-size: 1.97em;"> <a href="/journal?tag=shelfcheck"> <span class="name">shelfcheck</span> </a> </li> 
+            <li title="oos - 4" style="font-size: 1.97em;"> <a href="/journal?tag=oos"> <span class="name">oos</span> </a> </li> 
+            <li title="botdefender - 4" style="font-size: 1.97em;"> <a href="/journal?tag=botdefender"> <span class="name">botdefender</span> </a> </li> 
+            <li title="technical - 4" style="font-size: 1.97em;"> <a href="/journal?tag=technical"> <span class="name">technical</span> </a> </li> 
+            <li title="magento - 4" style="font-size: 1.97em;"> <a href="/journal?tag=magento"> <span class="name">magento</span> </a> </li> 
+            <li title="accuracy - 3" style="font-size: 1.86em;"> <a href="/journal?tag=accuracy"> <span class="name">accuracy</span> </a> </li> 
+            <li title="insight - 3" style="font-size: 1.86em;"> <a href="/journal?tag=insight"> <span class="name">insight</span> </a> </li> 
+            <li title="subscription - 3" style="font-size: 1.86em;"> <a href="/journal?tag=subscription"> <span class="name">subscription</span> </a> </li> 
+            <li title="partners - 3" style="font-size: 1.86em;"> <a href="/journal?tag=partners"> <span class="name">partners</span> </a> </li> 
+            <li title="data - 3" style="font-size: 1.86em;"> <a href="/journal?tag=data"> <span class="name">data</span> </a> </li> 
+            <li title="microsoft - 3" style="font-size: 1.86em;"> <a href="/journal?tag=microsoft"> <span class="name">microsoft</span> </a> </li> 
+            <li title="formula - 3" style="font-size: 1.86em;"> <a href="/journal?tag=formula"> <span class="name">formula</span> </a> </li> 
+            <li title="osa - 3" style="font-size: 1.86em;"> <a href="/journal?tag=osa"> <span class="name">osa</span> </a> </li> 
+            <li title="software - 2" style="font-size: 1.71em;"> <a href="/journal?tag=software"> <span class="name">software</span> </a> </li> 
+            <li title="model - 2" style="font-size: 1.71em;"> <a href="/journal?tag=model"> <span class="name">model</span> </a> </li> 
+            <li title="press - 2" style="font-size: 1.71em;"> <a href="/journal?tag=press"> <span class="name">press</span> </a> </li> 
+            <li title="models - 2" style="font-size: 1.71em;"> <a href="/journal?tag=models"> <span class="name">models</span> </a> </li> 
+            <li title="upgrade - 2" style="font-size: 1.71em;"> <a href="/journal?tag=upgrade"> <span class="name">upgrade</span> </a> </li> 
+            <li title="scraping - 2" style="font-size: 1.71em;"> <a href="/journal?tag=scraping"> <span class="name">scraping</span> </a> </li> 
+           </ul> 
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="row sqs-row">
+        <div class="col sqs-col-1 span-1">
+         <div class="sqs-block postsbymonth-block sqs-block-postsbymonth" data-block-type="30" id="block-5a6c62c09bfb0b4487f9">
+          <div class="sqs-block-content">
+           <ul> 
+            <li><a href="/journal/?month=november-2014&amp;view=calendar"><span class="name">November 2014</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=october-2014&amp;view=calendar"><span class="name">October 2014</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=august-2014&amp;view=calendar"><span class="name">August 2014</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=july-2014&amp;view=calendar"><span class="name">July 2014</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=june-2014&amp;view=calendar"><span class="name">June 2014</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=may-2014&amp;view=calendar"><span class="name">May 2014</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=april-2014&amp;view=calendar"><span class="name">April 2014</span> <span class="count"><span>(</span>5<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=march-2014&amp;view=calendar"><span class="name">March 2014</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=february-2014&amp;view=calendar"><span class="name">February 2014</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=january-2014&amp;view=calendar"><span class="name">January 2014</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=december-2013&amp;view=calendar"><span class="name">December 2013</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=november-2013&amp;view=calendar"><span class="name">November 2013</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=october-2013&amp;view=calendar"><span class="name">October 2013</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=september-2013&amp;view=calendar"><span class="name">September 2013</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=august-2013&amp;view=calendar"><span class="name">August 2013</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=july-2013&amp;view=calendar"><span class="name">July 2013</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=june-2013&amp;view=calendar"><span class="name">June 2013</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=may-2013&amp;view=calendar"><span class="name">May 2013</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=april-2013&amp;view=calendar"><span class="name">April 2013</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=march-2013&amp;view=calendar"><span class="name">March 2013</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=february-2013&amp;view=calendar"><span class="name">February 2013</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=january-2013&amp;view=calendar"><span class="name">January 2013</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=december-2012&amp;view=calendar"><span class="name">December 2012</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=november-2012&amp;view=calendar"><span class="name">November 2012</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=october-2012&amp;view=calendar"><span class="name">October 2012</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=september-2012&amp;view=calendar"><span class="name">September 2012</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=august-2012&amp;view=calendar"><span class="name">August 2012</span> <span class="count"><span>(</span>5<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=july-2012&amp;view=calendar"><span class="name">July 2012</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=june-2012&amp;view=calendar"><span class="name">June 2012</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=may-2012&amp;view=calendar"><span class="name">May 2012</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=april-2012&amp;view=calendar"><span class="name">April 2012</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=march-2012&amp;view=calendar"><span class="name">March 2012</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=february-2012&amp;view=calendar"><span class="name">February 2012</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=january-2012&amp;view=calendar"><span class="name">January 2012</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=november-2011&amp;view=calendar"><span class="name">November 2011</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=october-2011&amp;view=calendar"><span class="name">October 2011</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=september-2011&amp;view=calendar"><span class="name">September 2011</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=august-2011&amp;view=calendar"><span class="name">August 2011</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=july-2011&amp;view=calendar"><span class="name">July 2011</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=june-2011&amp;view=calendar"><span class="name">June 2011</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=may-2011&amp;view=calendar"><span class="name">May 2011</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=april-2011&amp;view=calendar"><span class="name">April 2011</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=march-2011&amp;view=calendar"><span class="name">March 2011</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=february-2011&amp;view=calendar"><span class="name">February 2011</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=january-2011&amp;view=calendar"><span class="name">January 2011</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=november-2010&amp;view=calendar"><span class="name">November 2010</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=october-2010&amp;view=calendar"><span class="name">October 2010</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=september-2010&amp;view=calendar"><span class="name">September 2010</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=august-2010&amp;view=calendar"><span class="name">August 2010</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=june-2010&amp;view=calendar"><span class="name">June 2010</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=may-2010&amp;view=calendar"><span class="name">May 2010</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=april-2010&amp;view=calendar"><span class="name">April 2010</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=march-2010&amp;view=calendar"><span class="name">March 2010</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=february-2010&amp;view=calendar"><span class="name">February 2010</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=january-2010&amp;view=calendar"><span class="name">January 2010</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=december-2009&amp;view=calendar"><span class="name">December 2009</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=november-2009&amp;view=calendar"><span class="name">November 2009</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=october-2009&amp;view=calendar"><span class="name">October 2009</span> <span class="count"><span>(</span>7<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=september-2009&amp;view=calendar"><span class="name">September 2009</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=august-2009&amp;view=calendar"><span class="name">August 2009</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=july-2009&amp;view=calendar"><span class="name">July 2009</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=june-2009&amp;view=calendar"><span class="name">June 2009</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=may-2009&amp;view=calendar"><span class="name">May 2009</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=april-2009&amp;view=calendar"><span class="name">April 2009</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=march-2009&amp;view=calendar"><span class="name">March 2009</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=january-2009&amp;view=calendar"><span class="name">January 2009</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=december-2008&amp;view=calendar"><span class="name">December 2008</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=november-2008&amp;view=calendar"><span class="name">November 2008</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=october-2008&amp;view=calendar"><span class="name">October 2008</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=september-2008&amp;view=calendar"><span class="name">September 2008</span> <span class="count"><span>(</span>5<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=august-2008&amp;view=calendar"><span class="name">August 2008</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=july-2008&amp;view=calendar"><span class="name">July 2008</span> <span class="count"><span>(</span>3<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=june-2008&amp;view=calendar"><span class="name">June 2008</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=may-2008&amp;view=calendar"><span class="name">May 2008</span> <span class="count"><span>(</span>5<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=april-2008&amp;view=calendar"><span class="name">April 2008</span> <span class="count"><span>(</span>5<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=march-2008&amp;view=calendar"><span class="name">March 2008</span> <span class="count"><span>(</span>1<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=february-2008&amp;view=calendar"><span class="name">February 2008</span> <span class="count"><span>(</span>5<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=january-2008&amp;view=calendar"><span class="name">January 2008</span> <span class="count"><span>(</span>5<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=december-2007&amp;view=calendar"><span class="name">December 2007</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=november-2007&amp;view=calendar"><span class="name">November 2007</span> <span class="count"><span>(</span>6<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=october-2007&amp;view=calendar"><span class="name">October 2007</span> <span class="count"><span>(</span>7<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=september-2007&amp;view=calendar"><span class="name">September 2007</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=august-2007&amp;view=calendar"><span class="name">August 2007</span> <span class="count"><span>(</span>4<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=july-2007&amp;view=calendar"><span class="name">July 2007</span> <span class="count"><span>(</span>8<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=june-2007&amp;view=calendar"><span class="name">June 2007</span> <span class="count"><span>(</span>5<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=may-2007&amp;view=calendar"><span class="name">May 2007</span> <span class="count"><span>(</span>14<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=april-2007&amp;view=calendar"><span class="name">April 2007</span> <span class="count"><span>(</span>7<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=march-2007&amp;view=calendar"><span class="name">March 2007</span> <span class="count"><span>(</span>7<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=february-2007&amp;view=calendar"><span class="name">February 2007</span> <span class="count"><span>(</span>5<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=january-2007&amp;view=calendar"><span class="name">January 2007</span> <span class="count"><span>(</span>9<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=december-2006&amp;view=calendar"><span class="name">December 2006</span> <span class="count"><span>(</span>5<span>)</span></span></a></li> 
+            <li><a href="/journal/?month=november-2006&amp;view=calendar"><span class="name">November 2006</span> <span class="count"><span>(</span>2<span>)</span></span></a></li> 
+           </ul> 
+          </div>
+         </div>
+        </div>
+       </div>
+      </div> 
+     </aside> 
+    </div> 
+   </div>
+  </div> 
+  <!-- End of section: Content --> 
+  <div id="Footer">
+   <div class="row"> 
+    <!--FOOTER WITH OPEN BLOCK FIELD--> 
+    <footer id="footer"> 
+     <!-- <squarespace:block-field id="footerBlocks" columns="12" /> --> 
+     <div class="left column grid_8"> 
+      <ul> 
+       <li> <b>Language</b>:<br> <a href="http://www.lokad.com/" rel="alternate" hreflang="en" title="In English">English</a><br> <a href="http://www.lokad.com/fr/" rel="alternate" hreflang="fr" title="En français">Français</a><br> <a href="http://www.lokad.com/de/" rel="alternate" hreflang="de" title="Auf Deutsch">Deutsch</a><br> <a href="http://www.lokad.com/es/" rel="alternate" hreflang="es" title="En español">Español</a><br> <a href="http://www.lokad.com/ru/" rel="alternate" hreflang="ru" title="Русский">Русский</a><br> <a href="http://www.lokad.com/jp/" rel="alternate" hreflang="jp" title="日本語">日本語</a> </li> 
+       <li> <b>Products</b>:<br> <a href="http://www.lokad.com/salescast-sales-forecasting-software" title="Salescast, inventory optimization software, made easy">Salescast</a><br> <a href="http://www.lokad.com/stockwatch-inventory-intelligence" title="Stockwatch inventory intelligence software">Stockwatch</a><br> <a href="http://www.lokad.com/phantomscan-cycle-count-optimization" title="Phantomscan, optimize cycle counts and get rid of phantom inventory">Phantomscan</a><br> <a href="http://www.lokad.com/shelfcheck-on-shelf-availability-optimization" title="Shelfcheck, on-shelf availability optimization software">Shelfcheck</a><br> <a href="http://www.lokad.com/ftp-hosting" title="FTP hosting, 1GB of free storage, simple and scalable. For businesses of any size.">BigFiles</a> </li> 
+       <li> <b>Guides</b>:<br> <a href="http://www.lokad.com/calculate-safety-stocks-with-sales-forecasting" title="Calculate safety stock with sales forecasting and Microsoft Excel">Safety Stock with Excel</a><br> <a href="http://www.lokad.com/forecasting-methods-and-formulas-with-excel" title="Forecasting methods and formulas with Excel">Forecasting methods with Excel</a><br> <a href="http://www.lokad.com/economic-order-quantity-eoq-definition-and-formula" title="Economic Order Quantity (EOQ) definition and Excel formula">Economic Order Quantity (EOQ) with Excel</a><br> <a href="http://www.lokad.com/service-level-definition-and-formula" title="Service level definition and formula (inventory)">Optimal service level with Excel</a> </li> 
+      </ul> 
+     </div> 
+     <div class="right column grid_4"> 
+      <a href="http://www.lokad.com/aboutus">Contact Us</a> | 
+      <a href="http://www.lokad.com/privacy">Terms of Service</a>
+      <br> ©2007-2013, Lokad. All rights reserved. 
+     </div> 
+    </footer> 
+   </div>
+  </div> 
+  <!--INJECTION POINT FOR TRACKING SCRIPTS AND USER CONTENT FROM THE CODE INJECTION TAB--> 
+  <script type="text/javascript" data-sqs-type="imageloader">(function() {var SQUARESPACE_SIZES=[1500,1E3,750,500,300,100],IMAGE_LOADING_CLASS="loading",ImageLoader=new function(){this.load=function(a,b){function c(a,b,c){var d=new Image;d.onload=b;d.onerror=c;d.src=a}a.getDOMNode&&(a=a.getDOMNode());var d=this._getDataFromNode(a,b),e=!(!d.dimensions||!d.dimensions.width||!d.dimensions.height),l=d.load+"";if("false"===l)return!1;var g=d.mode;if(e&&("fit"==g||"fill"==g)){g=a.parentNode;if(!g)return console.error("Not doing anything, parentNode not found."),!1;if(!this.refresh(a,
+b,g))return!1}var n=this._intendToLoad(a,d);if("string"==typeof n&&"viewport"!==l){var m=this.getUrl(n,d),d=a.getAttribute("data-image-resolution");a.getAttribute("src")!==m&&this.isValidResolution(n,d)&&(a.onload=function(){a.className=a.className.replace(IMAGE_LOADING_CLASS," ").trim();a.setAttribute("data-image-resolution",n)},!a.getAttribute("src")&&-1===a.className.indexOf(IMAGE_LOADING_CLASS)&&(a.className+=(a.className?" ":"")+IMAGE_LOADING_CLASS),!a.getAttribute("src")&&e?a.setAttribute("src",
+m):c(m,function(){e?a.setAttribute("src",m):(a.setAttribute("data-image-dimensions",this.width+"x"+this.height),ImageLoader.load(a,b))},function(){a.className=a.className.replace(IMAGE_LOADING_CLASS," ").trim();a.setAttribute("src",m)}));return!0}return n};this.refresh=function(a,b,c){a.getDOMNode&&(a=a.getDOMNode());c&&c.getDOMNode&&(c=c.getDOMNode());c=c||a.parentNode;if(!c)return console.error("Not doing anything, parentNode not found."),!1;var d=this._getDataFromNode(a,b),e=c.offsetWidth,l=c.offsetHeight;
+b=d.mode;if("none"!=b){var g=d.dimensions.width,n=d.dimensions.height,m=g/n,q=e/l;if(d.fixedRatio)"fill"==b&&q>m||"fit"==b&&q<m?(h=100,k=100*(q/m),r=(100-k)*d.focalPoint.y,p=0):(h=100*(m/q),k=100,r=0,p=(100-h)*d.focalPoint.x),a.style.top=r+"%",a.style.left=p+"%",a.style.width=h+"%",a.style.height=k+"%";else{var f;"fill"===b?f=m>q?l/n:e/g:"fit"===b&&(f=m<q?l/n:e/g);!d.stretch&&("fit"==b&&1<f)&&(f=1);var h=Math.ceil(g*f),k=Math.ceil(n*f);if(0===h||0===k)return!1;var p,r;"fill"===b?(p=Math.min(Math.max(e/
+2-h*d.focalPoint.x,e-h),0),r=Math.min(Math.max(l/2-k*d.focalPoint.y,l-k),0)):"fit"===b&&(f=d.fitAlignment,p=f.left?0:f.right?e-h:h<e?(e-h)/2:0,r=f.top?0:f.bottom?l-k:k<l?(l-k)/2:0,"inline"==this._getStyle(a,"display")&&(a.style.fontSize="0px"),this._resetAlt(a,function(){h-=a.offsetHeight-a.clientHeight;k-=a.offsetWidth-a.clientWidth}));a.style.top=Math.ceil(r)+"px";a.style.left=Math.ceil(p)+"px";a.style.width=Math.ceil(h)+"px";a.style.height=Math.ceil(k)+"px"}p=this._getStyle(c,"position");a.style.position=
+"relative"==p?"absolute":"relative";if("fill"==b&&(b=this._getStyle(c,"overflow"),!b||"hidden"!=b))c.style.overflow="hidden";return!0}};this._intendToLoad=function(a,b){function c(c,d){"none"===b.mode&&(a.style.width=null,a.style.height=null);var e=parseFloat(a.getAttribute(c)),f=parseFloat(e);if(!f||isNaN(f))e=g._getStyle(a,c),f=parseFloat(e);if(!f||isNaN(f))e=g._getStyle(a,"max-"+c,"max"+(c.substr(0,1).toUpperCase()+c.substr(1))),f=parseFloat(e);if(0===d||e)switch(g._stringType(e)){case "percentage":d=
+parseInt(e,10)/100*l["offset"+c.substr(0,1).toUpperCase()+c.substr(1)];break;case "number":d=parseInt(e,10)}!f&&(0!==d&&!a.getAttribute("src"))&&(d=0);return d}b=b||this._getDataFromNode(a);if(!b.source)return!1;var d=a.offsetWidth,e=a.offsetHeight,l=a.parentNode,g=this;this._resetAlt(a,function(){d=c("width",d);e=c("height",e)});0===d&&0===e?(d=b.dimensions.width,e=b.dimensions.height):0===d?d=this.getDimensionForValue("width",e,b):0===e&&(e=this.getDimensionForValue("height",d,b));"viewport"===
+b.load&&(a.style.width=Math.floor(d)+"px",a.style.height=Math.floor(e)+"px");return this.getSquarespaceSize(d,e,b)};this._getDataFromNode=function(a,b){b=b||{};var c={focalPoint:{x:0.5,y:0.5},dimensions:{width:null,height:null},mode:"none",fitAlignment:{center:!0},load:"true",stretch:!0,fixedRatio:!1};if(b.focalPoint)c.focalPoint=b.focalPoint;else{var d=a.getAttribute("data-image-focal-point");if(d&&(d=d.split(","))&&2==d.length)c.focalPoint={x:parseFloat(d[0]),y:parseFloat(d[1])}}if(b.dimensions)c.dimensions=
+b.dimensions;else if((d=a.getAttribute("data-image-dimensions"))&&(d=d.split("x"))&&2==d.length)c.dimensions={width:parseInt(d[0],10),height:parseInt(d[1],10)};b.mode?c.mode=b.mode:a.parentNode&&(d=a.parentNode.className,-1!==d.indexOf("content-fill")?c.mode="fill":-1!==d.indexOf("content-fit")&&(c.mode="fit"));if("fit"===c.mode&&a.parentNode&&(d=b.fitAlignment||a.getAttribute("data-alignment")||a.parentNode.getAttribute("data-alignment")))c.fitAlignment={top:-1!==d.indexOf("top"),left:-1!==d.indexOf("left"),
+center:-1!==d.indexOf("center"),right:-1!==d.indexOf("right"),bottom:-1!==d.indexOf("bottom")};if(b.load)c.load=b.load;else if(d=a.getAttribute("data-load"))c.load=d;if("undefined"!==typeof b.stretch)c.stretch=b.stretch;else if(d=a.getAttribute("data-image-stretch"))c.stretch="true"===d?!0:!1;c.source=b.source?b.source:a.getAttribute("data-src");if(c.source&&(-1!==c.source.indexOf("squarespace.com")||-1!==c.source.indexOf("squarespace.net"))&&"http:"===c.source.substr(0,5)&&"https"===window.location.protocol.substr(0,
+5))c.source=c.source.replace("http://","https://");if(b.fixedRatio)c.fixedRatio=b.fixedRatio;else if(d=a.getAttribute("data-fixed-ratio"))c.fixedRatio="true"==d;return c};this._stringType=function(a){return"string"===typeof a&&-1!==a.indexOf("%")?"percentage":isNaN(parseInt(a,10))?NaN:"number"};this._getStyle=function(a,b,c){var d;a.currentStyle?d=a.currentStyle[c||b]:window.getComputedStyle&&(d=document.defaultView.getComputedStyle(a,null).getPropertyValue(b));return d};this._isVisible=function(a){a=
+a.getBoundingClientRect();return 0<=a.left&&0<=a.top||0<=a.bottom&&0<=a.right||0<=a.left&&0<=a.bottom||0<=a.right&&0<=a.top};this.getSquarespaceSize=function(a,b,c){a=Math.max(b/(c.dimensions.height/c.dimensions.width),a);"number"==typeof window.devicePixelRatio&&(a*=window.devicePixelRatio);for(b=1;b<SQUARESPACE_SIZES.length&&!(a>SQUARESPACE_SIZES[b]);b++);return SQUARESPACE_SIZES[b-1]+"w"};this.getDimensionForValue=function(a,b,c){var d=c.dimensions.width;c=c.dimensions.height;return"width"==a?
+d/c*b:"height"==a?c/d*b:NaN};this.getUrl=function(a,b){var c=b.source;return a&&("/"==c[0]||-1!=c.indexOf("squarespace.com")||-1!=c.indexOf("squarespace.net"))?(-1===c.indexOf("format="+a)&&(c=c+(-1!==c.indexOf("?")?"&":"?")+"format="+a),window.Static&&(window.Static.IN_BACKEND&&-1===c.indexOf("storage=local"))&&(c+="&storage=local"),c):b.source};this.isValidResolution=function(a,b){a=parseInt(a,10);b=parseInt(b,10);return isNaN(a)||isNaN(b)?!0:a>b};this._resetAlt=function(a,b){var c=a.getAttribute("alt"),
+d=c&&0<c.length&&!a.getAttribute("src");if(d){var e=a.style.display;a.removeAttribute("alt");a.style.display="none";a.offsetHeight+0;a.style.display=e}b.call(this);d&&a.setAttribute("alt",c)}};window.ImageLoader=ImageLoader;var siteCSSHandle,loopHandle,imagesTimer=50;function ancestorHasClass(a,b){return"undefined"!==typeof a.className&&-1!==a.className.indexOf(b)?!0:a.parentNode?ancestorHasClass(a.parentNode,b):!1}
+var hasAttr=function(a,b){return a.hasAttribute?a.hasAttribute(b):!!a.attributes[b]},getAttr=function(a,b){return a.getAttribute?a.getAttribute(b):a.attributes[b]};function init(){var a=document.images;if(0<a.length)for(var b=0,c=a.length;b<c;b++)(hasAttr(a[b],"data-image")||hasAttr(a[b],"data-src"))&&"false"!==getAttr(a[b],"data-load")+""&&ImageLoader.load(a[b])}init();window.YUI&&YUI.add("squarespace-imageloader",function(a){});
+})();</script> 
+  <script>Squarespace.afterBodyLoad(Y);</script>   
+ </body>
+</html>

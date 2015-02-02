@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<!-- Rendered by Strikingly 523-->
+<html itemscope itemtype="http://schema.org/WebPage" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" class="" static="yes">
+ <head> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"74f55de04c","applicationID":"4870173","transactionName":"IlcLQxBeWFoHShYTWAZdFhgRWVtBPUtNAk0IWw==","queueTime":0,"applicationTime":33,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-476.min.js","userAttributes":"GhoVUhBcVVoLVlJBA0NRAVYBWEBfQEU="}</script> 
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQcOWVBADAsHVFBVBA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script> 
+  <title>Idaciti - telling stories with global financial data</title> 
+  <script phantom="keep">
+window.$S={};$S.global_conf={"environment":"production","host_suffix":"strikingly.com","SEGMENTIO_API_KEY":"eb3txa37hi","FACEBOOK_APP_ID":"138736959550286","BOBCAT_ANALYTICS_POST_URL":"//stats.b.strikingly.com","locale":"en","in_china":false,"browser_locale":"en"};$S.conf={"pages_show_static_path":"//assets.strikingly.com/assets/pages_show_static-0523d0f8efdbb1bebaa36d617bd0cb05.js","keenio_collection":"strikingly_pageviews","keenio_pbs_impression_collection":"strikingly_pbs_impression","keenio_pbs_conversion_collection":"strikingly_pbs_conversion","keenio_pageservice_imageshare_collection":"strikingly_pageservice_imageshare","headless_render":true};$S.page_meta={"id":198578,"permalink":"idaciti","created_at":"2014-05-14T09:51:07-07:00","user":{"membership":"pro","id":160158},"category":{"name":"startup","id":2},"social_media_config":{"url":"http://hello.idaciti.com/","title":"Idaciti - telling stories with global financial data","image":"http://assets.strikingly.com/assets/fb_images/default.png","description":"idaciti is a social BI platform\r\nwith a quick and simple workflow\r\nto let you create and share stories from data.\r\n \r\n\r\nNow investors, analysts, corporations and academics\r\ncan connect and collaborate around\r\nglobal financial data.\r\n\r\n \r\n\r\nNow we can all be\r\n\r\ndata storytellers.","fb_app_id":"138736959550286"},"keenio_config":{"keenio_project_id":"5317e03605cd66236a000002","keenio_write_key":"efd460f8e282891930ff1957321c12b64a6db50694fd0b4a01d01f347920dfa3ce48e8ca249b5ea9917f98865696cfc39bc6814e4743c39af0a4720bb711627d9cf0fe63d5d52c3866c9c1c3178aaec6cbfc1a9ab62a3c9a827d2846a9be93ecf4ee3d61ebee8baaa6a1d735bff6e37b"},"show_strikingly_logo":false,"show_navigation_buttons":true,"slide_names":["Home","Why","What","How","Dare to Share","Stories","Get Invite","Connect"],"social_media":{"type":"SocialMediaList","id":null,"link_list":[{"type":"Facebook","id":null,"url":"","link_url":"","share_text":"idaciti is a social BI platform\nwith a quick and simple workflow\nto let you create and share stories from data.\n \n\nNow investors, analysts, corporations and academics\ncan connect and collaborate around\nglobal financial data.\n\n \n\nNow we can all be\n\ndata storytellers.","app_id":138736959550286,"show_button":null},{"type":"Twitter","id":null,"url":"","link_url":"","share_text":"Saw an awesome one pager. Check it out #strikingly","show_button":null},{"type":"GPlus","id":null,"url":"","link_url":"","share_text":"idaciti is a social BI platform\nwith a quick and simple workflow\nto let you create and share stories from data.\n \n\nNow investors, analysts, corporations and academics\ncan connect and collaborate around\nglobal financial data.\n\n \n\nNow we can all be\n\ndata storytellers.","show_button":null}],"button_list":[{"type":"Facebook","id":null,"url":"","link_url":"","share_text":"idaciti is a social BI platform\nwith a quick and simple workflow\nto let you create and share stories from data.\n \n\nNow investors, analysts, corporations and academics\ncan connect and collaborate around\nglobal financial data.\n\n \n\nNow we can all be\n\ndata storytellers.","app_id":138736959550286,"show_button":false},{"type":"Twitter","id":null,"url":"","link_url":"","share_text":"Saw an awesome one pager. Check it out @strikingly","show_button":false},{"type":"GPlus","id":null,"url":"","link_url":"","share_text":"idaciti is a social BI platform\nwith a quick and simple workflow\nto let you create and share stories from data.\n \n\nNow investors, analysts, corporations and academics\ncan connect and collaborate around\nglobal financial data.\n\n \n\nNow we can all be\n\ndata storytellers.","show_button":false},{"type":"LinkedIn","id":null,"url":"","link_url":"","share_text":"idaciti is a social BI platform\nwith a quick and simple workflow\nto let you create and share stories from data.\n \n\nNow investors, analysts, corporations and academics\ncan connect and collaborate around\nglobal financial data.\n\n \n\nNow we can all be\n\ndata storytellers.","show_button":false}]},"has_optimizely":false,"optimizely_experiment_id":null,"theme":{"name":"fresh"},"services":[],"strk_upvt":"UmEwanhjR0JNeTFLcnNUSVpCaVZLd3pXQzNtdVJvMXFjL3NVTXJsS1UveGRsSG1pdlVxZGVleU5ETnRQTHN0S0xWZUR2c3dWdmxJRVBQdzhkZVlRalZZVHNqaUpTRFVvcENaVWhjdGx0ZzFYWndxenhOWitPb0RoS1VqbGhsOVNWdUJzMGFSSlBvM2dkTmtSQk9YU0dBPT0tLWhJZHBpVlRXRlNaMis5UnBxQklCRHc9PQ==--5d79a05d59ef222958bfeb1498598cecf0eb9d4d"};$S.app_instances=[];
+</script> 
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
+  <meta content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=3.0" id="viewport" name="viewport"> 
+  <link href="//assets.strikingly.com/assets/themes/fresh/main_show-b7c26cebbd95f4614851d35495e4ecab.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:300italic,600italic,300,600|Quando|Josefin+Slab:400,700,400italic,700italic|Trocchi|Arvo|Lato:300,400,700,300italic,400italic,700italic|Raleway:200,300,700|Playfair+Display:400,700,400italic,700italic|Bitter:400,700,400italic|Vollkorn:400,400italic|Titillium+Web|EB+Garamond|Arapey:400italic&amp;subset=latin,latin-ext" media="screen" rel="stylesheet" type="text/css">
+  <link href="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_64,w_64/ptxyaphihrv8vqqzjjtr.png" rel="shortcut icon" type="image/x-icon"> 
+  <link href="http://assets.strikingly.com/assets/fb_images/default.png" rel="apple-touch-icon" sizes="60x60"> 
+  <link href="http://assets.strikingly.com/assets/fb_images/default.png" rel="apple-touch-icon" sizes="76x76"> 
+  <link href="http://assets.strikingly.com/assets/fb_images/default.png" rel="apple-touch-icon" sizes="120x120"> 
+  <link href="http://assets.strikingly.com/assets/fb_images/default.png" rel="apple-touch-icon" sizes="152x152"> 
+  <meta content="Idaciti - telling stories with global financial data" property="og:title"> 
+  <meta content="http://hello.idaciti.com/" property="og:url"> 
+  <meta content="http://assets.strikingly.com/assets/fb_images/default.png" property="og:image"> 
+  <meta content="Idaciti - telling stories with global financial data" property="og:site_name"> 
+  <meta content="idaciti is a social BI platform
+with a quick and simple workflow
+to let you create and share stories from data.
+ 
+
+Now investors, analysts, corporations and academics
+can connect and collaborate around
+global financial data.
+
+ 
+
+Now we can all be
+
+data storytellers." property="og:description"> 
+  <meta content="Idaciti - telling stories with global financial data" itemprop="name"> 
+  <meta content="idaciti is a social BI platform
+with a quick and simple workflow
+to let you create and share stories from data.
+ 
+
+Now investors, analysts, corporations and academics
+can connect and collaborate around
+global financial data.
+
+ 
+
+Now we can all be
+
+data storytellers." itemprop="description"> 
+  <meta content="http://assets.strikingly.com/assets/fb_images/default.png" itemprop="image"> 
+  <meta content="summary" name="twitter:card"> 
+  <meta content="Idaciti - telling stories with global financial data" name="twitter:title"> 
+  <meta content="idaciti is a social BI platform
+with a quick and simple workflow
+to let you create and share stories from data.
+ 
+
+Now investors, analysts, corporations and academics
+can connect and collaborate around
+global financial data.
+
+ 
+
+Now we can all be
+
+data storytellers." name="twitter:description"> 
+  <meta content="http://assets.strikingly.com/assets/fb_images/default.png" name="twitter:image"> 
+  <meta content="idaciti is a social BI platform
+with a quick and simple workflow
+to let you create and share stories from data.
+ 
+
+Now investors, analysts, corporations and academics
+can connect and collaborate around
+global financial data.
+
+ 
+
+Now we can all be
+
+data storytellers." name="description"> 
+  <meta content="social BI, XBRL, Financial Data, Storytelling, Big Data, Data Story" name="keywords"> 
+  <meta content="//assets.strikingly.com" name="asset-url"> 
+  <meta name="mode"> 
+  <meta content="{&quot;permalink&quot;:&quot;idaciti&quot;,&quot;id&quot;:198578}" name="support-helper"> 
+  <meta content="{&quot;custom_domain&quot;:&quot;hello.idaciti.com&quot;}" name="site-configs"> 
+  <link href="http://hello.idaciti.com/" rel="canonical"> 
+  <script type="text/javascript">
+      window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["identify","track"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("2001800499");
+    </script> 
+  <script phantom="keep">
+if (!console) var console = {
+log: function() {},
+warn: function() {},
+error: function() {}
+};
+isHeadlessRendering = function() {
+return ($S.conf.headless_render && document.getElementsByTagName('html')[0].getAttribute('static') != 'yes');
+}
+var _gaq = _gaq || [];
+if (!isHeadlessRendering() && !$S.conf.is_screenshot_rendering) {
+/* load errorception */
+var _errs=["518ac810441fb4b7180002fa"];(function(a,b){a.onerror=function(){_errs.push(arguments)};
+var d=function(){var a=b.createElement("script"),c=b.getElementsByTagName("script")[0];
+a.src="//d15qhc0lu1ghnk.cloudfront.net/beacon.js";a.async=!0;
+c.parentNode.insertBefore(a,c)};a.addEventListener?a.addEventListener("load",d,!1):
+a.attachEvent("onload",d)})(window,document);
+_gaq.push(['_setAccount', 'UA-25124444-6']);
+_gaq.push(['_setDomainName', 'strikingly.com']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+// configuration for keen.io
+var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+
+// Configure the Keen object with your Project ID and (optional) access keys.
+Keen.configure({
+projectId: $S.page_meta.keenio_config.keenio_project_id,
+writeKey: $S.page_meta.keenio_config.keenio_write_key // required for sending events
+});
+}
+
+
+</script> 
+  <style type="text/css">.fancybox-margin{margin-right:0px;}</style>
+ </head> 
+ <body class="show" id="pages" spellcheck="false" style="">
+  <script phantom="keep" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js" type="text/javascript"></script> 
+  <script phantom="keep">
+window.jQuery || document.write('<script src="//assets.strikingly.com/assets/jquery-78ef9afcc2199a30e3ea419c9be7e2cb.js"><\/script>')
+</script> 
+  <script src="//assets.strikingly.com/assets/themes/fresh/main_static-473e7f892afd4893eff64e36fba0ec8a.js" type="text/javascript"></script> 
+  <div data-bind="attr:{'class': data.templateVariation}" id="s-content" class=""> 
+   <div data-bind="with: data.menu.components" id="strikingly-navigation-menu"> 
+    <div class="navigator" data-bind="visible: $root.data.showNav" id="header-container" style=""> 
+     <div class="container wide-container"> 
+      <div class="strikingly-nav-spacer"></div> 
+      <div class="sixteen columns header"> 
+       <div class="logo" data-component="image" data-name="logo" data-use-url="true" id="logo">
+        <div class="content content2" data-bind="fadeVisibleAndHide: !logo.isState('editor')" style="visibility: visible; opacity: 1; "> 
+         <a class="image-link" data-bind="if: logo.hasLink() || !edit_page.isShowPage, attr: { href: logo.link(), target: logo.target() }" href="javascript:void(0);" target="_self"></a> 
+         <span class="image-link" data-bind="ifnot: logo.hasLink() || !edit_page.isShowPage"> <img alt="" data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': logo.assetUrl, alt: logo.caption, title: logo.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_540,w_720/vypncx2taz0inngo9tnw.png" title=""> </span> 
+        </div>
+       </div> 
+       <div class="nav" data-bind="css:{'no-power': !power_button.hasContentOrIsEditMode() }"> 
+        <ul class="s-nav"> 
+         <span data-bind="template: {name:'navbarItemTemplate', foreach: $root.data.slides}"> <li data-bind="visible: components.slideSettings.show_nav"> <a class="s-nav-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }" href="#home">Home</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="s-nav-item selected" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }" href="#why">Why</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="s-nav-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }" href="#what">What</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="s-nav-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }" href="#how">How</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="s-nav-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }" href="#dare-to-share">Dare to Share</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="s-nav-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }" href="#stories">Stories</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="s-nav-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }" href="#get-invite">Get Invite</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="s-nav-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }" href="#connect">Connect</a> </li> </span> 
+         <span data-bind="template: {name:'navbarLinkTemplate', foreach: $root.data.submenu.list}"> <li> <a data-bind="text:components.link.text, attr: { href: components.link.link_url(), target: components.link.target() }" href="http://application.idaciti.com" target="_blank">Login</a> </li> </span> 
+        </ul> 
+       </div> 
+       <div class="power-container" data-bind="visible: power_button.hasContentOrIsEditMode() "> 
+        <div class="power" data-asset-type="flat-circle-160-free" data-component="image" data-image-size="64x64#" data-name="power_button" data-use-url="false" id="navbar-top-button">
+         <div class="content content2" data-bind="fadeVisibleAndHide: !power_button.isState('editor')" style="visibility: visible; opacity: 1; "> 
+          <img alt="" data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': power_button.assetUrl, alt: power_button.caption, title: power_button.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_fill,g_faces:center,h_64,w_64/ltdq3nv3he4ucgzgva5w.png" title=""> 
+         </div>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="header-spacer"></div> 
+   </div> 
+   <ul class="slides" data-bind="stopBinding: true"> 
+    <li class="slide"> <a class="section-anchor" data-scroll-name="#1"></a> <a class="section-name-anchor" data-section-name="Home"></a> 
+     <div class="wide image resize strikingly-light-text lazy lazy-background hasImage" data-bind="'className': background.getSelectedClassName(), 'style': background.selectedStyleLazy(), 'css':{'lazy':true, 'lazy-background':true, hasImage:background.hasContent()}, 'attr': {'data-background': background.assetUrl()}" style="background-image: url(http://assets.strikingly.com/assets/icons/transparent.png); background-size: cover; background-position: 49% 50%; background-repeat: no-repeat no-repeat; " data-background="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_progressive,h_1200,q_90,w_2000/qjvdzmhi43319fpz6ntv.jpg"> 
+      <div class="container"> 
+       <div class="sixteen columns"> 
+        <div class="spacer" style="height:10px">
+         &nbsp;
+        </div> 
+        <h3 class="subtitle"> <span class="line hide" data-bind="visible:text1.value().length > 0" style="display: none; "></span> 
+         <div class="ib">
+          <div data-component="text" data-name="text1" data-text-type="body" class="text-component">
+           <div class="content content2" data-bind="visible: !(text1.isState('editor') || !text1.hasContent()), htmlValue: text1.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="display: none; font-family: Georgia; "></div>
+          </div>
+         </div> <span class="line" data-bind="visible:text1.value().length > 0" style="display: none; "></span> </h3> 
+        <h1 class="title big">
+         <div data-component="text" data-name="text2" data-text-type="title" class="text-component">
+          <div class="content content2" data-bind="visible: !(text2.isState('editor') || !text2.hasContent()), htmlValue: text2.value, style: (window.edit_page.data.titleFont() != '') ? { fontFamily: window.edit_page.data.titleFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+           <div>
+            &nbsp;
+           </div> 
+           <div>
+            &nbsp;
+           </div> 
+           <div>
+            &nbsp;
+           </div> 
+           <div>
+            &nbsp;
+           </div> 
+           <div>
+            <span style="font-size: 80%;">Telling Stories </span>
+           </div> 
+           <div>
+            <span style="font-size: 80%;">with Global Financial Data</span>
+           </div> 
+           <div>
+            &nbsp;
+           </div>
+          </div>
+         </div></h1> 
+        <br> 
+        <br> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="slide selected"> <a class="section-anchor" data-scroll-name="#2"></a> <a class="section-name-anchor" data-section-name="Why"></a> 
+     <div class="wide gray"> 
+      <div class="container"> 
+       <div class="row big"> 
+        <div class="sixteen columns"> 
+         <h2 class="title center" data-bind="visible:title.hasContentOrIsEditMode()"> 
+          <div class="ib relative"> 
+           <span class="line-abs" data-bind="visible:title.hasContent()"></span> 
+           <div data-component="text" data-name="title" data-text-type="heading" class="text-component">
+            <div class="content content2" data-bind="visible: !(title.isState('editor') || !title.hasContent()), htmlValue: title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+             <div>
+              <span style="font-size: 130%;">Why idaciti</span>
+             </div>
+            </div>
+           </div> 
+           <span class="line-abs right" data-bind="visible:title.hasContent()"></span> 
+          </div> <span class="line fixed-show" data-bind="visible:title.hasContent()"></span> </h2> 
+         <h3 class="title2 center">
+          <div data-component="text" data-name="subtitle" data-text-type="body" class="text-component">
+           <div class="content content2" data-bind="visible: !(subtitle.isState('editor') || !subtitle.hasContent()), htmlValue: subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+            <div> 
+             <span style="font-size: 130%;"><em>Because we think a great way to get value</em></span>
+             <br>
+             <span style="font-size: 130%;"><em>from the world of big financial data</em></span>
+             <br>
+             <span style="font-size: 130%;"><em>is by using data to tell stories.</em></span> 
+            </div>
+           </div>
+          </div></h3> 
+        </div> 
+       </div> 
+       <div class="row big" data-bind="visible: media.hasContentOrIsEditMode()"> 
+        <div class="fourteen columns offset-one center"> 
+         <div class="media content repeatable-component ko_container ui-sortable" data-bind="sortableRepeatable: { template: 'media_box', data: media.list }">
+          <div class="repeatable" data-bind="mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler"> 
+           <div class="components.media content">
+            <div class="content"> 
+             <div class="video-content" data-bind="visible: components.media.showVideo()" style=""> 
+              <div class="player" data-bind="html: components.media.video.parent ? (components.media.video.parent.showImage() ? '' : components.media.video.html) : components.media.video.html ">
+               <iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F96711271&amp;wmode=transparent&amp;url=http%3A%2F%2Fvimeo.com%2F96711271&amp;image=http%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F476844735_295x166.jpg&amp;key=25afbca9c69b4d728fa90e96b92e6b33&amp;type=text%2Fhtml&amp;schema=vimeo" width="400" height="300" scrolling="no" frameborder="0" allowfullscreen></iframe>
+              </div> 
+             </div> 
+             <div class="image-content" data-bind="visible: components.media.showImage()" style="display:none;"> 
+              <a class="image-link" data-bind="if: components.media.image.hasLink() || !edit_page.isShowPage, attr: { href: components.media.image.link(), target: components.media.image.target() }" href="javascript:void(0);" target="_self"></a> 
+              <span class="image-link" data-bind="ifnot: components.media.image.hasLink() || !edit_page.isShowPage"> <img data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.media.image.assetUrl, alt: components.media.image.caption, title: components.media.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="//assets.strikingly.com/assets/themes/fresh/inc.png" alt="" title=""> </span> 
+             </div> 
+            </div> 
+           </div> 
+           <br> 
+           <div class="text text-component" data-component="text" data-name="components.text" data-use-font="true">
+            <div class="content content2" data-bind="visible: !(components.text.isState('editor') || !components.text.hasContent()), htmlValue: components.text.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+             <div> 
+              <span style="font-size: 130%;">Whether you are a financial analyst or an investor, a business academic or a data journalist, idaciti stories can promote your perspective or justify decisions,</span>
+              <br>
+              <span style="font-size: 130%;">impress your peers or illuminate an issue that you care about.</span> 
+             </div>
+            </div>
+           </div> 
+           <br> 
+           <br> 
+           <br> 
+          </div>
+         </div> 
+        </div> 
+       </div> 
+       <div class="row big" data-bind="visible: news.hasContentOrIsEditMode()" style="display: none; "> 
+        <div class="sixteen columns center"> 
+         <div class="image-row center"> 
+          <div class="news content repeatable-component ko_container ui-sortable" data-bind="sortableRepeatable: { template: 'news_box', data: news.list }"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="slide"> <a class="section-anchor" data-scroll-name="#3"></a> <a class="section-name-anchor" data-section-name="What"></a> 
+     <div class="wide gray"> 
+      <div class="container"> 
+       <div class="texts content repeatable-component ko_container ui-sortable" data-bind="sortableRepeatable: { template: 'text_box', data: texts.list }">
+        <div class="repeatable" data-bind="mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler"> 
+         <div class="row" data-bind="visible: components.title.hasContentOrIsEditMode() "> 
+          <div class="twelve columns offset-two"> 
+           <br> 
+           <h2 class="title center" data-bind="visible:components.title.hasContentOrIsEditMode()"> 
+            <div class="ib relative"> 
+             <span class="line-abs" data-bind="visible:components.title.hasContent()"></span> 
+             <div class="div text-component" data-component="text" data-name="components.title" data-text-type="heading" data-use-font="true">
+              <div class="content content2" data-bind="visible: !(components.title.isState('editor') || !components.title.hasContent()), htmlValue: components.title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+               <div>
+                <span style="font-size: 130%;">IDACITI EXPLAINED</span>
+               </div>
+              </div>
+             </div> 
+             <span class="line-abs right" data-bind="visible:components.title.hasContent()"></span> 
+            </div> <span class="line fixed-show" data-bind="visible:components.title.hasContent()"></span> </h2> 
+          </div> 
+         </div> 
+         <div class="row big"> 
+          <div class="twelve columns offset-two"> 
+           <div class="text text-component" data-component="text" data-name="components.text" data-use-font="true">
+            <div class="content content2" data-bind="visible: !(components.text.isState('editor') || !components.text.hasContent()), htmlValue: components.text.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+             <div style="text-align: center;"> 
+              <span style="font-size: 160%;">idaciti is a social BI platform</span>
+              <br>
+              <span style="font-size: 160%;">with a quick and simple workflow</span>
+              <br>
+              <span style="font-size: 160%;">to let you create and share stories from data.</span> 
+             </div> 
+             <p style="text-align: center;"><span style="font-size: 160%;">&nbsp;</span></p> 
+             <p style="text-align: center;"><span style="font-size: 160%;">Now investors, analysts, corporations and academics</span><br><span style="font-size: 160%;">can connect and collaborate around</span><br><span style="font-size: 160%;">global financial data.</span></p> 
+             <p style="text-align: center;"><span style="font-size: 160%;">&nbsp;</span></p> 
+             <p style="text-align: center;"><span style="font-size: x-large;"><span>For our preview release, we are focusing on the high education market. We want to engage professors and students in a Linkedin like social environment to collaborate around the global financial data.</span></span></p> 
+             <p style="text-align: center;"><span style="font-size: 160%;">&nbsp;</span></p> 
+             <div style="text-align: center;">
+              <span style="font-size: 160%;">Read more about <a href="https://www.linkedin.com/pulse/article/20141002002255-4403917-story-based-exploratory-learning" target="_blank" title="idaciti -- Story-based Exploratory Learning">Story-based Explorative Learning</a></span>
+             </div> 
+             <div style="text-align: center;">
+              &nbsp;
+             </div> 
+             <div style="text-align: center;">
+              <span style="font-size: 160%;">Read more about&nbsp;<a href="https://www.linkedin.com/pulse/article/20140826172016-4403917-engage-inspire-challenge?trk=prof-post" target="_blank" title="idaciti -- Engage. Challenge. Inspire.">Engage. Challenge. Inspire.</a></span>
+             </div> 
+             <p style="text-align: center;">&nbsp;</p> 
+             <p style="text-align: center;"><span style="font-size: 160%;">&nbsp;</span></p>
+            </div>
+           </div> 
+           <br> 
+          </div> 
+         </div> 
+        </div>
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="slide"> <a class="section-anchor" data-scroll-name="#4"></a> <a class="section-name-anchor" data-section-name="How"></a> 
+     <div class="wide"> 
+      <div class="container"> 
+       <div class="row big"> 
+        <div class="sixteen columns"> 
+         <h2 class="title center" data-bind="visible:title.hasContentOrIsEditMode()"> 
+          <div class="ib relative"> 
+           <span class="line-abs" data-bind="visible:title.hasContent()"></span> 
+           <div data-component="text" data-name="title" data-text-type="heading" class="text-component">
+            <div class="content content2" data-bind="visible: !(title.isState('editor') || !title.hasContent()), htmlValue: title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+             <div>
+              <span style="font-size: 130%;">TELL YOUR STORY</span>
+             </div>
+            </div>
+           </div> 
+           <span class="line-abs right" data-bind="visible:title.hasContent()"></span> 
+          </div> <span class="line fixed-show" data-bind="visible:title.hasContent()"></span> </h2> 
+         <h3 class="title2 center">
+          <div data-component="text" data-name="subtitle" data-text-type="body" class="text-component">
+           <div class="content content2" data-bind="visible: !(subtitle.isState('editor') || !subtitle.hasContent()), htmlValue: subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+            <div>
+             &nbsp;
+            </div> 
+            <div>
+             Get Data. Build Cards. Craft Story. Share Story.
+            </div>
+           </div>
+          </div></h3> 
+        </div> 
+       </div> 
+       <div class="clients content repeatable-component ko_container ui-sortable" data-bind="sortableRepeatable: { template: 'client_box', data: clients.list }">
+        <div class="row big repeatable" data-bind="mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler, visible: parent.hasContentOrIsEditMode()"> 
+         <div class="two columns offset-one center five" data-bind="css: {'five':components.image.hasContent(), 'eight offset-four': !(components.title.hasContentOrIsEditMode() || components.subtitle.hasContentOrIsEditMode() || components.location.hasContentOrIsEditMode() || components.description.hasContentOrIsEditMode())} "> 
+          <div data-component="image" data-name="components.image" data-use-url="true">
+           <div class="content content2" data-bind="fadeVisibleAndHide: !components.image.isState('editor')" style="visibility: visible; opacity: 1; "> 
+            <a class="image-link" data-bind="if: components.image.hasLink() || !edit_page.isShowPage, attr: { href: components.image.link(), target: components.image.target() }" href="javascript:void(0);" target="_self"></a> 
+            <span class="image-link" data-bind="ifnot: components.image.hasLink() || !edit_page.isShowPage"> <img alt="" data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.image.assetUrl, alt: components.image.caption, title: components.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_540,w_720/kc8wofpqgylmmvktl7rr.png" title=""> </span> 
+           </div>
+          </div> 
+         </div> 
+         <div class="four columns nine" data-bind="css: {'nine':components.title.hasContent() || components.subtitle.hasContent() || components.location.hasContent() || components.description.hasContent() , 'ten':!components.image.hasContent()} "> 
+          <div class="half-offset-left"> 
+           <div class="div" data-bind="visible: components.title.hasContentOrIsEditMode() "> 
+            <h2 class="subtitle text-component" data-component="text" data-name="components.title" data-text-type="heading" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.title.isState('editor') || !components.title.hasContent()), htmlValue: components.title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+              <div>
+               <span style="font-size: 130%;">Data</span>
+              </div>
+             </div></h2> 
+           </div> 
+           <div class="div" data-bind="visible: components.subtitle.hasContentOrIsEditMode() " style="display: none; "> 
+            <div class="text2 text-component" data-component="text" data-name="components.subtitle" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.subtitle.isState('editor') || !components.subtitle.hasContent()), htmlValue: components.subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="display: none; font-family: Georgia; "></div>
+            </div> 
+           </div> 
+           <div class="div" data-bind="visible: components.location.hasContentOrIsEditMode() "> 
+            <div class="text3 text-component" data-component="text" data-name="components.location" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.location.isState('editor') || !components.location.hasContent()), htmlValue: components.location.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+              <div>
+               <span style="font-size: 130%;">Leverage our curated data.</span>
+              </div>
+             </div>
+            </div> 
+           </div> 
+           <div class="text text-component" data-component="text" data-name="components.description" data-use-font="true">
+            <div class="content content2" data-bind="visible: !(components.description.isState('editor') || !components.description.hasContent()), htmlValue: components.description.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+             <div>
+              <span style="font-size: 130%;">Idaciti gives you access to a set of curated business and financial data to use as the foundation for your stories. We make it easy for you to find and connect data about companies and their performance.</span>
+             </div> 
+             <div>
+              <span style="font-size: 130%;">&nbsp;</span>
+             </div> 
+             <div>
+              &nbsp;
+             </div> 
+             <div>
+              &nbsp;
+             </div>
+            </div>
+           </div> 
+          </div> 
+         </div> 
+        </div>
+        <div class="row big repeatable" data-bind="mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler, visible: parent.hasContentOrIsEditMode()"> 
+         <div class="two columns offset-one center five" data-bind="css: {'five':components.image.hasContent(), 'eight offset-four': !(components.title.hasContentOrIsEditMode() || components.subtitle.hasContentOrIsEditMode() || components.location.hasContentOrIsEditMode() || components.description.hasContentOrIsEditMode())} "> 
+          <div data-component="image" data-name="components.image" data-use-url="true">
+           <div class="content content2" data-bind="fadeVisibleAndHide: !components.image.isState('editor')" style="visibility: visible; opacity: 1; "> 
+            <a class="image-link" data-bind="if: components.image.hasLink() || !edit_page.isShowPage, attr: { href: components.image.link(), target: components.image.target() }" href="javascript:void(0);" target="_self"></a> 
+            <span class="image-link" data-bind="ifnot: components.image.hasLink() || !edit_page.isShowPage"> <img alt="" data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.image.assetUrl, alt: components.image.caption, title: components.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_540,w_720/j9pvfomd598c3obpq9pd.png" title=""> </span> 
+           </div>
+          </div> 
+         </div> 
+         <div class="four columns nine" data-bind="css: {'nine':components.title.hasContent() || components.subtitle.hasContent() || components.location.hasContent() || components.description.hasContent() , 'ten':!components.image.hasContent()} "> 
+          <div class="half-offset-left"> 
+           <div class="div" data-bind="visible: components.title.hasContentOrIsEditMode() "> 
+            <h2 class="subtitle text-component" data-component="text" data-name="components.title" data-text-type="heading" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.title.isState('editor') || !components.title.hasContent()), htmlValue: components.title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+              <div>
+               <span style="font-size: 130%;">Card</span>
+              </div>
+             </div></h2> 
+           </div> 
+           <div class="div" data-bind="visible: components.subtitle.hasContentOrIsEditMode() " style="display: none; "> 
+            <div class="text2 text-component" data-component="text" data-name="components.subtitle" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.subtitle.isState('editor') || !components.subtitle.hasContent()), htmlValue: components.subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="display: none; font-family: Georgia; "></div>
+            </div> 
+           </div> 
+           <div class="div" data-bind="visible: components.location.hasContentOrIsEditMode() "> 
+            <div class="text3 text-component" data-component="text" data-name="components.location" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.location.isState('editor') || !components.location.hasContent()), htmlValue: components.location.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+              <div>
+               <span style="font-size: 130%;">Visualize data on cards.</span>
+              </div>
+             </div>
+            </div> 
+           </div> 
+           <div class="text text-component" data-component="text" data-name="components.description" data-use-font="true">
+            <div class="content content2" data-bind="visible: !(components.description.isState('editor') || !components.description.hasContent()), htmlValue: components.description.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+             <div>
+              <span style="font-size: 130%;">An idaciti Card is used to visualize data to communicate information. We make it easy for you to display KPIs, charts, maps or other relevant content on your cards so that each card functions as an individual information insight.</span>
+             </div> 
+             <div>
+              &nbsp;
+             </div> 
+             <div>
+              &nbsp;
+             </div>
+            </div>
+           </div> 
+          </div> 
+         </div> 
+        </div>
+        <div class="row big repeatable" data-bind="mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler, visible: parent.hasContentOrIsEditMode()"> 
+         <div class="two columns offset-one center five" data-bind="css: {'five':components.image.hasContent(), 'eight offset-four': !(components.title.hasContentOrIsEditMode() || components.subtitle.hasContentOrIsEditMode() || components.location.hasContentOrIsEditMode() || components.description.hasContentOrIsEditMode())} "> 
+          <div data-component="image" data-name="components.image" data-use-url="true">
+           <div class="content content2" data-bind="fadeVisibleAndHide: !components.image.isState('editor')" style="visibility: visible; opacity: 1; "> 
+            <a class="image-link" data-bind="if: components.image.hasLink() || !edit_page.isShowPage, attr: { href: components.image.link(), target: components.image.target() }" href="javascript:void(0);" target="_self"></a> 
+            <span class="image-link" data-bind="ifnot: components.image.hasLink() || !edit_page.isShowPage"> <img alt="" data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.image.assetUrl, alt: components.image.caption, title: components.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_540,w_720/bnka3xr2kmclkssqcrus.png" title=""> </span> 
+           </div>
+          </div> 
+         </div> 
+         <div class="four columns nine" data-bind="css: {'nine':components.title.hasContent() || components.subtitle.hasContent() || components.location.hasContent() || components.description.hasContent() , 'ten':!components.image.hasContent()} "> 
+          <div class="half-offset-left"> 
+           <div class="div" data-bind="visible: components.title.hasContentOrIsEditMode() "> 
+            <h2 class="subtitle text-component" data-component="text" data-name="components.title" data-text-type="heading" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.title.isState('editor') || !components.title.hasContent()), htmlValue: components.title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+              <div>
+               <span style="font-size: 130%;">Story</span>
+              </div>
+             </div></h2> 
+           </div> 
+           <div class="div" data-bind="visible: components.subtitle.hasContentOrIsEditMode() " style="display: none; "> 
+            <div class="text2 text-component" data-component="text" data-name="components.subtitle" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.subtitle.isState('editor') || !components.subtitle.hasContent()), htmlValue: components.subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="display: none; font-family: Georgia; "></div>
+            </div> 
+           </div> 
+           <div class="div" data-bind="visible: components.location.hasContentOrIsEditMode() "> 
+            <div class="text3 text-component" data-component="text" data-name="components.location" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.location.isState('editor') || !components.location.hasContent()), htmlValue: components.location.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+              <div>
+               <span style="font-size: 130%;">Connect cards into stories.</span>
+              </div>
+             </div>
+            </div> 
+           </div> 
+           <div class="text text-component" data-component="text" data-name="components.description" data-use-font="true">
+            <div class="content content2" data-bind="visible: !(components.description.isState('editor') || !components.description.hasContent()), htmlValue: components.description.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+             <div>
+              <span style="font-size: 130%;">An idaciti Story is a combination of cards connected into a compelling narrative. We make it easy for you to create a beginning, a middle and an end for your story and to share and publish your stories so they get the attention they deserve. Stories can be told with data, as well as with images, videos and words.</span>
+             </div>
+            </div>
+           </div> 
+          </div> 
+         </div> 
+        </div>
+        <div class="row big repeatable" data-bind="mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler, visible: parent.hasContentOrIsEditMode()"> 
+         <div class="two columns offset-one center five" data-bind="css: {'five':components.image.hasContent(), 'eight offset-four': !(components.title.hasContentOrIsEditMode() || components.subtitle.hasContentOrIsEditMode() || components.location.hasContentOrIsEditMode() || components.description.hasContentOrIsEditMode())} "> 
+          <div data-component="image" data-name="components.image" data-use-url="true">
+           <div class="content content2" data-bind="fadeVisibleAndHide: !components.image.isState('editor')" style="visibility: visible; opacity: 1; "> 
+            <a class="image-link" data-bind="if: components.image.hasLink() || !edit_page.isShowPage, attr: { href: components.image.link(), target: components.image.target() }" href="javascript:void(0);" target="_self"></a> 
+            <span class="image-link" data-bind="ifnot: components.image.hasLink() || !edit_page.isShowPage"> <img alt="" data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.image.assetUrl, alt: components.image.caption, title: components.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_540,w_720/cincevtsfj2nckxkyagj.png" title=""> </span> 
+           </div>
+          </div> 
+         </div> 
+         <div class="four columns nine" data-bind="css: {'nine':components.title.hasContent() || components.subtitle.hasContent() || components.location.hasContent() || components.description.hasContent() , 'ten':!components.image.hasContent()} "> 
+          <div class="half-offset-left"> 
+           <div class="div" data-bind="visible: components.title.hasContentOrIsEditMode() "> 
+            <h2 class="subtitle text-component" data-component="text" data-name="components.title" data-text-type="heading" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.title.isState('editor') || !components.title.hasContent()), htmlValue: components.title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+              <div>
+               <span style="font-size: 130%;">Social</span>
+              </div>
+             </div></h2> 
+           </div> 
+           <div class="div" data-bind="visible: components.subtitle.hasContentOrIsEditMode() " style="display: none; "> 
+            <div class="text2 text-component" data-component="text" data-name="components.subtitle" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.subtitle.isState('editor') || !components.subtitle.hasContent()), htmlValue: components.subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="display: none; font-family: Georgia; "></div>
+            </div> 
+           </div> 
+           <div class="div" data-bind="visible: components.location.hasContentOrIsEditMode() "> 
+            <div class="text3 text-component" data-component="text" data-name="components.location" data-use-font="true">
+             <div class="content content2" data-bind="visible: !(components.location.isState('editor') || !components.location.hasContent()), htmlValue: components.location.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+              <div>
+               <span style="font-size: 130%;">Share stories to create collective intelligence.</span>
+              </div>
+             </div>
+            </div> 
+           </div> 
+           <div class="text text-component" data-component="text" data-name="components.description" data-use-font="true">
+            <div class="content content2" data-bind="visible: !(components.description.isState('editor') || !components.description.hasContent()), htmlValue: components.description.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+             <div>
+              <span style="font-size: 130%;">Idaciti encourages you to socialize your cards and stories. That's the best way to improve the quality of your information and benefit from the wisdom of the crowd or your trusted circle.</span>
+             </div> 
+             <div>
+              &nbsp;
+             </div>
+            </div>
+           </div> 
+          </div> 
+         </div> 
+        </div>
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="slide"> <a class="section-anchor" data-scroll-name="#5"></a> <a class="section-name-anchor" data-section-name="Dare to Share"></a> 
+     <div class="wide image cta-section strikingly-light-text lazy lazy-background hasImage" data-bind="'className': background.getSelectedClassName(), 'style': background.selectedStyleLazy(), 'css':{'lazy':true, 'lazy-background':true, hasImage:background.hasContent()}, 'attr': {'data-background': background.assetUrl()}" style="background-image: url(http://assets.strikingly.com/assets/icons/transparent.png); background-size: cover; background-position: 49% 50%; background-repeat: no-repeat no-repeat; " data-background="http://assets.strikingly.com/static/backgrounds/focus/2.jpg"> 
+      <div class="container"> 
+       <div class="spacer">
+        &nbsp;
+       </div> 
+       <div class="row big" data-bind="visible:title.hasContentOrIsEditMode() || subtitle.hasContentOrIsEditMode()"> 
+        <div class="sixteen columns"> 
+         <h2 class="title center" data-bind="visible:title.hasContentOrIsEditMode()"> 
+          <div class="ib relative"> 
+           <span class="line-abs" data-bind="visible:title.hasContent()"></span> 
+           <div data-component="text" data-name="title" data-text-type="heading" class="text-component">
+            <div class="content content2" data-bind="visible: !(title.isState('editor') || !title.hasContent()), htmlValue: title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+             <div> 
+              <span style="font-size: 130%;">Dare to Share</span>&nbsp;
+             </div>
+            </div>
+           </div> 
+           <span class="line-abs right" data-bind="visible:title.hasContent()"></span> 
+          </div> <span class="line fixed-show" data-bind="visible:title.hasContent()"></span> </h2> 
+         <h3 class="title2 center">
+          <div data-component="text" data-name="subtitle" data-text-type="body" class="text-component">
+           <div class="content content2" data-bind="visible: !(subtitle.isState('editor') || !subtitle.hasContent()), htmlValue: subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+            <div> 
+             <span style="font-size: 130%;">We believe in data transparency and in the power of using data to undertsand the world better and drive change.</span>
+             <br>
+             <span style="font-size: 130%;">We want to help everyone create collective intelligence we can all benefit from.</span>
+             <br>
+             <span style="font-size: 130%;">But to do that you have to Dare to Share.</span> 
+            </div> 
+            <div>
+             &nbsp;
+            </div>
+           </div>
+          </div></h3> 
+        </div> 
+       </div> 
+       <div class="center sixteen columns cta-button"> 
+        <div class="button content">
+         <a class="button-component" data-bind="attr: { href: button.url, target: button.target() }, text: button.text, visible: button.hasContent()" data-component="button" href="#get-invite" target="_self">Get Invite</a> 
+        </div> 
+        <br> 
+        <br> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="slide"> <a class="section-anchor" data-scroll-name="#6"></a> <a class="section-name-anchor" data-section-name="Stories"></a> 
+     <div class="wide image strikingly-slider no-resize"> 
+      <div class="slider-container"> 
+       <div class="iosslider" data-bind="attr: {'data-auto-play': slider1.auto_play}" data-auto-play="15000"> 
+        <div class="slider1 content slider repeatable-component" data-bind="template: {
+        foreach: slider1.list,
+        name: 'slider_template2'
+      }"> 
+         <div class="item strikingly-light-text lazy lazy-background hasImage" data-bind="'className': components.image1.getSelectedClassName(), 'style': components.image1.selectedStyleLazy(), 'css':{'lazy':true, 'lazy-background':true, hasImage:components.image1.hasContent()}, 'attr': {'data-background': components.image1.assetUrl()}" style="background-image: url(http://assets.strikingly.com/assets/icons/transparent.png); background-size: cover; background-position: 49% 50%; background-repeat: no-repeat no-repeat; " data-background="http://assets.strikingly.com/static/backgrounds/blur/10.jpg"> 
+          <div class="inner"> 
+           <div class="container"> 
+            <div class="six columns right offset-one media-outer" data-bind="visible: components.media1.hasContentOrIsEditMode(), css: {'recede': components.media1.hasNoContentAndIsEditMode(), 'seven': components.media1.showVideo()}"> 
+             <div class="media-wrapper animated"> 
+              <div class="components.media1 content">
+               <div class="content"> 
+                <div class="video-content" data-bind="visible: components.media1.showVideo()" style="display:none;"> 
+                 <div class="player" data-bind="html: components.media1.video.parent ? (components.media1.video.parent.showImage() ? '' : components.media1.video.html) : components.media1.video.html "></div> 
+                </div> 
+                <div class="image-content" data-bind="visible: components.media1.showImage()" style=""> 
+                 <a class="image-link" data-bind="if: components.media1.image.hasLink() || !edit_page.isShowPage, attr: { href: components.media1.image.link(), target: components.media1.image.target() }" href="http://174.36.13.178/storyboard/embed/33e75ff09d1cd601bbe69f351039152189" target="_blank"> <img data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.media1.image.assetUrl, alt: components.media1.image.caption, title: components.media1.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_900,q_80,w_1200/v1/160158/AppleWatchStory_zbwy1t.png" alt="All about Apple" title="All about Apple"> </a> 
+                 <span class="image-link" data-bind="ifnot: components.media1.image.hasLink() || !edit_page.isShowPage"></span> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="columns right left-align valign slider-desc eight" data-bind="css: {'twelve': components.media1.inEditorAndHasNoContent(), 'center': !components.media1.hasContent(), 'eight': components.media1.showImage(), 'seven': components.media1.showVideo()}"> 
+             <div class="half-offset-right"> 
+              <h2 class="title animated"> 
+               <div class="ib relative text-component" data-component="text" data-name="components.text1" data-text-type="heading" data-use-font="true">
+                <div class="content content2" data-bind="visible: !(components.text1.isState('editor') || !components.text1.hasContent()), htmlValue: components.text1.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+                 <div>
+                  Apple: Marketing or Technology?
+                 </div>
+                </div>
+               </div> <br> <span class="line" data-bind="visible:components.text1.hasContent()"></span> </h2> 
+              <h3 class="title2 animated text-component" data-component="text" data-name="components.text2" data-text-type="body" data-use-font="true">
+               <div class="content content2" data-bind="visible: !(components.text2.isState('editor') || !components.text2.hasContent()), htmlValue: components.text2.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+                <div> 
+                 <span>Is Apple moving into more fashion-minded luxury goods market to protect its profit margin? The&nbsp;</span>
+                 <span><b>Apple Watch</b> are meticulously designed and continue Apple’s design strategy of elegant simplicity and fine materials.</span> 
+                </div> 
+                <div>
+                 &nbsp;
+                </div> 
+                <div>
+                 <span>I love Apple, but after watching the 9.9.2014 event, I have to ask if&nbsp;<span>f<i>undamental innovation</i> is missing from the highly anticipated <i>marketing</i>event? Is Apple changing from a technology company that's marketing-savvy to a marketing company that creates technology-based products and services?</span></span>
+                </div>
+               </div></h3> 
+              <div class="cta-button-wrapper animated left" data-bind="visible: components.button1.hasContentOrIsEditMode(), css: {'left':!components.text1.isCenterAligned() || !components.text2.isCenterAligned()}"> 
+               <div class="cta-button"> 
+                <div class="components.button1 content">
+                 <a class="button-component" data-bind="attr: { href: components.button1.url, target: components.button1.target() }, text: components.button1.text, visible: components.button1.hasContent()" data-component="button" href="http://174.36.13.178/storyboard/embed/33e75ff09d1cd601bbe69f351039152189" target="_blank">View Story</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item strikingly-light-text lazy lazy-background hasImage" data-bind="'className': components.image1.getSelectedClassName(), 'style': components.image1.selectedStyleLazy(), 'css':{'lazy':true, 'lazy-background':true, hasImage:components.image1.hasContent()}, 'attr': {'data-background': components.image1.assetUrl()}" style="background-image: url(http://assets.strikingly.com/assets/icons/transparent.png); background-size: cover; background-position: 49% 50%; background-repeat: no-repeat no-repeat; " data-background="http://assets.strikingly.com/static/backgrounds/blur/6.jpg"> 
+          <div class="inner"> 
+           <div class="container"> 
+            <div class="six columns right offset-one media-outer" data-bind="visible: components.media1.hasContentOrIsEditMode(), css: {'recede': components.media1.hasNoContentAndIsEditMode(), 'seven': components.media1.showVideo()}"> 
+             <div class="media-wrapper animated"> 
+              <div class="components.media1 content">
+               <div class="content"> 
+                <div class="video-content" data-bind="visible: components.media1.showVideo()" style="display:none;"> 
+                 <div class="player" data-bind="html: components.media1.video.parent ? (components.media1.video.parent.showImage() ? '' : components.media1.video.html) : components.media1.video.html "></div> 
+                </div> 
+                <div class="image-content" data-bind="visible: components.media1.showImage()" style=""> 
+                 <a class="image-link" data-bind="if: components.media1.image.hasLink() || !edit_page.isShowPage, attr: { href: components.media1.image.link(), target: components.media1.image.target() }" href="http://162.144.108.196/idaciti/application/storyboard/embed/1679091c5a6880faf6fb5e6087eb1b2dc" target="_blank"> <img data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.media1.image.assetUrl, alt: components.media1.image.caption, title: components.media1.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_900,w_1200/rntqsqrjibyptn2bjebr.png" alt="Declining Tax Burdens?" title="Declining Tax Burdens?"> </a> 
+                 <span class="image-link" data-bind="ifnot: components.media1.image.hasLink() || !edit_page.isShowPage"></span> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="columns right left-align valign slider-desc eight" data-bind="css: {'twelve': components.media1.inEditorAndHasNoContent(), 'center': !components.media1.hasContent(), 'eight': components.media1.showImage(), 'seven': components.media1.showVideo()}"> 
+             <div class="half-offset-right"> 
+              <h2 class="title animated"> 
+               <div class="ib relative text-component" data-component="text" data-name="components.text1" data-text-type="heading" data-use-font="true">
+                <div class="content content2" data-bind="visible: !(components.text1.isState('editor') || !components.text1.hasContent()), htmlValue: components.text1.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+                 <div>
+                  Declining Tax Burdens?
+                 </div>
+                </div>
+               </div> <br> <span class="line" data-bind="visible:components.text1.hasContent()"></span> </h2> 
+              <h3 class="title2 animated text-component" data-component="text" data-name="components.text2" data-text-type="body" data-use-font="true">
+               <div class="content content2" data-bind="visible: !(components.text2.isState('editor') || !components.text2.hasContent()), htmlValue: components.text2.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+                <div>
+                 US has the highest corporate tax rate in the world. Corporations continue to find ways to maximize profits (good!) and avoid paying high taxes (bad?).&nbsp;
+                </div> 
+                <div>
+                 President Obama has publicly demanded "
+                 <strong>economic patriotism</strong>" from U.S. corporations that use legal means to avoid U.S. taxes through overseas mergers.
+                </div>
+               </div></h3> 
+              <div class="cta-button-wrapper animated left" data-bind="visible: components.button1.hasContentOrIsEditMode(), css: {'left':!components.text1.isCenterAligned() || !components.text2.isCenterAligned()}"> 
+               <div class="cta-button"> 
+                <div class="components.button1 content">
+                 <a class="button-component" data-bind="attr: { href: components.button1.url, target: components.button1.target() }, text: components.button1.text, visible: components.button1.hasContent()" data-component="button" href="http://162.144.108.196/idaciti/application/storyboard/embed/1679091c5a6880faf6fb5e6087eb1b2dc" target="_blank">View Story</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item strikingly-light-text lazy lazy-background hasImage" data-bind="'className': components.image1.getSelectedClassName(), 'style': components.image1.selectedStyleLazy(), 'css':{'lazy':true, 'lazy-background':true, hasImage:components.image1.hasContent()}, 'attr': {'data-background': components.image1.assetUrl()}" style="background-image: url(http://assets.strikingly.com/assets/icons/transparent.png); background-size: cover; background-position: 49% 50%; background-repeat: no-repeat no-repeat; " data-background="http://assets.strikingly.com/static/backgrounds/blur/10.jpg"> 
+          <div class="inner"> 
+           <div class="container"> 
+            <div class="six columns right offset-one media-outer" data-bind="visible: components.media1.hasContentOrIsEditMode(), css: {'recede': components.media1.hasNoContentAndIsEditMode(), 'seven': components.media1.showVideo()}"> 
+             <div class="media-wrapper animated"> 
+              <div class="components.media1 content">
+               <div class="content"> 
+                <div class="video-content" data-bind="visible: components.media1.showVideo()" style="display:none;"> 
+                 <div class="player" data-bind="html: components.media1.video.parent ? (components.media1.video.parent.showImage() ? '' : components.media1.video.html) : components.media1.video.html "></div> 
+                </div> 
+                <div class="image-content" data-bind="visible: components.media1.showImage()" style=""> 
+                 <a class="image-link" data-bind="if: components.media1.image.hasLink() || !edit_page.isShowPage, attr: { href: components.media1.image.link(), target: components.media1.image.target() }" href="http://162.144.108.196/idaciti/application/storyboard/embed/c4ca4238a01b923820dcc509a6f75849b" target="_blank"> <img data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.media1.image.assetUrl, alt: components.media1.image.caption, title: components.media1.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_900,w_1200/otutzmz5n0uclvnpfyx6.png" alt="Dow Power" title="Dow Power"> </a> 
+                 <span class="image-link" data-bind="ifnot: components.media1.image.hasLink() || !edit_page.isShowPage"></span> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="columns right left-align valign slider-desc eight" data-bind="css: {'twelve': components.media1.inEditorAndHasNoContent(), 'center': !components.media1.hasContent(), 'eight': components.media1.showImage(), 'seven': components.media1.showVideo()}"> 
+             <div class="half-offset-right"> 
+              <h2 class="title animated"> 
+               <div class="ib relative text-component" data-component="text" data-name="components.text1" data-text-type="heading" data-use-font="true">
+                <div class="content content2" data-bind="visible: !(components.text1.isState('editor') || !components.text1.hasContent()), htmlValue: components.text1.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+                 <div>
+                  <span style="font-size: 100%;">Dow Power!</span>
+                 </div>
+                </div>
+               </div> <br> <span class="line" data-bind="visible:components.text1.hasContent()"></span> </h2> 
+              <h3 class="title2 animated text-component" data-component="text" data-name="components.text2" data-text-type="body" data-use-font="true">
+               <div class="content content2" data-bind="visible: !(components.text2.isState('editor') || !components.text2.hasContent()), htmlValue: components.text2.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+                <div>
+                 Dow flirts with 17,000 in the beginning of 2nd half of 2014, and briefly reached a new high of 17,068 on July 3rd. Instead of speculating if Dow will continue to grow or become sluggish after the new high, we will look at the financial strength of these companies.
+                </div>
+               </div></h3> 
+              <div class="cta-button-wrapper animated left" data-bind="visible: components.button1.hasContentOrIsEditMode(), css: {'left':!components.text1.isCenterAligned() || !components.text2.isCenterAligned()}"> 
+               <div class="cta-button"> 
+                <div class="components.button1 content">
+                 <a class="button-component" data-bind="attr: { href: components.button1.url, target: components.button1.target() }, text: components.button1.text, visible: components.button1.hasContent()" data-component="button" href="http://162.144.108.196/idaciti/application/storyboard/embed/c4ca4238a01b923820dcc509a6f75849b" target="_blank">View Story</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item strikingly-light-text lazy lazy-background hasImage" data-bind="'className': components.image1.getSelectedClassName(), 'style': components.image1.selectedStyleLazy(), 'css':{'lazy':true, 'lazy-background':true, hasImage:components.image1.hasContent()}, 'attr': {'data-background': components.image1.assetUrl()}" style="background-image: url(http://assets.strikingly.com/assets/icons/transparent.png); background-size: cover; background-position: 49% 50%; background-repeat: no-repeat no-repeat; " data-background="http://assets.strikingly.com/static/backgrounds/blur/10.jpg"> 
+          <div class="inner"> 
+           <div class="container"> 
+            <div class="six columns right offset-one media-outer" data-bind="visible: components.media1.hasContentOrIsEditMode(), css: {'recede': components.media1.hasNoContentAndIsEditMode(), 'seven': components.media1.showVideo()}"> 
+             <div class="media-wrapper animated"> 
+              <div class="components.media1 content">
+               <div class="content"> 
+                <div class="video-content" data-bind="visible: components.media1.showVideo()" style="display:none;"> 
+                 <div class="player" data-bind="html: components.media1.video.parent ? (components.media1.video.parent.showImage() ? '' : components.media1.video.html) : components.media1.video.html "></div> 
+                </div> 
+                <div class="image-content" data-bind="visible: components.media1.showImage()" style=""> 
+                 <a class="image-link" data-bind="if: components.media1.image.hasLink() || !edit_page.isShowPage, attr: { href: components.media1.image.link(), target: components.media1.image.target() }" href="http://162.144.108.196/idaciti/application/storyboard/embed/eccbc87e4b35ce2fe28308fd9f2a7baf3" target="_blank"> <img data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.media1.image.assetUrl, alt: components.media1.image.caption, title: components.media1.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_900,w_1200/j9wwikagaiwk8hg3tmgb.png" alt="Pay for Performance -- Google vs. Competitors" title="Pay for Performance -- Google vs. Competitors"> </a> 
+                 <span class="image-link" data-bind="ifnot: components.media1.image.hasLink() || !edit_page.isShowPage"></span> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="columns right left-align valign slider-desc eight" data-bind="css: {'twelve': components.media1.inEditorAndHasNoContent(), 'center': !components.media1.hasContent(), 'eight': components.media1.showImage(), 'seven': components.media1.showVideo()}"> 
+             <div class="half-offset-right"> 
+              <h2 class="title animated"> 
+               <div class="ib relative text-component" data-component="text" data-name="components.text1" data-text-type="heading" data-use-font="true">
+                <div class="content content2" data-bind="visible: !(components.text1.isState('editor') || !components.text1.hasContent()), htmlValue: components.text1.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+                 <div>
+                  Pay for Performance?
+                 </div>
+                </div>
+               </div> <br> <span class="line" data-bind="visible:components.text1.hasContent()"></span> </h2> 
+              <h3 class="title2 animated text-component" data-component="text" data-name="components.text2" data-text-type="body" data-use-font="true">
+               <div class="content content2" data-bind="visible: !(components.text2.isState('editor') || !components.text2.hasContent()), htmlValue: components.text2.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+                <div>
+                 It Depends on the Measuring Stick.
+                </div> 
+                <div>
+                 Study showed&nbsp;companies that chose a metric and stuck with it generally did better than those of companies that changed their measures.
+                </div> 
+                <div>
+                 Stability of design has value.
+                </div>
+               </div></h3> 
+              <div class="cta-button-wrapper animated left" data-bind="visible: components.button1.hasContentOrIsEditMode(), css: {'left':!components.text1.isCenterAligned() || !components.text2.isCenterAligned()}"> 
+               <div class="cta-button"> 
+                <div class="components.button1 content">
+                 <a class="button-component" data-bind="attr: { href: components.button1.url, target: components.button1.target() }, text: components.button1.text, visible: components.button1.hasContent()" data-component="button" href="http://162.144.108.196/idaciti/application/storyboard/embed/eccbc87e4b35ce2fe28308fd9f2a7baf3" target="_blank">View Story</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item strikingly-light-text lazy lazy-background hasImage" data-bind="'className': components.image1.getSelectedClassName(), 'style': components.image1.selectedStyleLazy(), 'css':{'lazy':true, 'lazy-background':true, hasImage:components.image1.hasContent()}, 'attr': {'data-background': components.image1.assetUrl()}" style="background-image: url(http://assets.strikingly.com/assets/icons/transparent.png); background-size: cover; background-position: 49% 50%; background-repeat: no-repeat no-repeat; " data-background="http://assets.strikingly.com/static/backgrounds/blur/6.jpg"> 
+          <div class="inner"> 
+           <div class="container"> 
+            <div class="six columns right offset-one media-outer" data-bind="visible: components.media1.hasContentOrIsEditMode(), css: {'recede': components.media1.hasNoContentAndIsEditMode(), 'seven': components.media1.showVideo()}"> 
+             <div class="media-wrapper animated"> 
+              <div class="components.media1 content">
+               <div class="content"> 
+                <div class="video-content" data-bind="visible: components.media1.showVideo()" style="display:none;"> 
+                 <div class="player" data-bind="html: components.media1.video.parent ? (components.media1.video.parent.showImage() ? '' : components.media1.video.html) : components.media1.video.html "></div> 
+                </div> 
+                <div class="image-content" data-bind="visible: components.media1.showImage()" style=""> 
+                 <a class="image-link" data-bind="if: components.media1.image.hasLink() || !edit_page.isShowPage, attr: { href: components.media1.image.link(), target: components.media1.image.target() }" href="http://162.144.108.196/idaciti/application/storyboard/embed/c9f0f895fb898ab9159f51fd0297e236d" target="_blank"> <img data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.media1.image.assetUrl, alt: components.media1.image.caption, title: components.media1.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_900,w_1200/k8qusaxr6lwsiw1r6l7i.png" alt="Do Stock Buy Backs Reward Shareholders?" title="Do Stock Buy Backs Reward Shareholders?"> </a> 
+                 <span class="image-link" data-bind="ifnot: components.media1.image.hasLink() || !edit_page.isShowPage"></span> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="columns right left-align valign slider-desc eight" data-bind="css: {'twelve': components.media1.inEditorAndHasNoContent(), 'center': !components.media1.hasContent(), 'eight': components.media1.showImage(), 'seven': components.media1.showVideo()}"> 
+             <div class="half-offset-right"> 
+              <h2 class="title animated"> 
+               <div class="ib relative text-component" data-component="text" data-name="components.text1" data-text-type="heading" data-use-font="true">
+                <div class="content content2" data-bind="visible: !(components.text1.isState('editor') || !components.text1.hasContent()), htmlValue: components.text1.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+                 <div>
+                  Stock Repurchase
+                 </div>
+                </div>
+               </div> <br> <span class="line" data-bind="visible:components.text1.hasContent()"></span> </h2> 
+              <h3 class="title2 animated text-component" data-component="text" data-name="components.text2" data-text-type="body" data-use-font="true">
+               <div class="content content2" data-bind="visible: !(components.text2.isState('editor') || !components.text2.hasContent()), htmlValue: components.text2.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+                <div>
+                 The companies listed on the Dow Jones Industrial Average authorized $211 billion in buybacks in 2013. Does the buy backs&nbsp;signal that companies anticipate slower future growth? Or,&nbsp;repurchasing of shares is a prudent use of cash?
+                </div>
+               </div></h3> 
+              <div class="cta-button-wrapper animated left" data-bind="visible: components.button1.hasContentOrIsEditMode(), css: {'left':!components.text1.isCenterAligned() || !components.text2.isCenterAligned()}"> 
+               <div class="cta-button"> 
+                <div class="components.button1 content">
+                 <a class="button-component" data-bind="attr: { href: components.button1.url, target: components.button1.target() }, text: components.button1.text, visible: components.button1.hasContent()" data-component="button" href="http://162.144.108.196/idaciti/application/storyboard/embed/c9f0f895fb898ab9159f51fd0297e236d" target="_blank">View Story</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item strikingly-light-text lazy lazy-background hasImage" data-bind="'className': components.image1.getSelectedClassName(), 'style': components.image1.selectedStyleLazy(), 'css':{'lazy':true, 'lazy-background':true, hasImage:components.image1.hasContent()}, 'attr': {'data-background': components.image1.assetUrl()}" style="background-image: url(http://assets.strikingly.com/assets/icons/transparent.png); background-size: cover; background-position: 49% 50%; background-repeat: no-repeat no-repeat; " data-background="http://assets.strikingly.com/static/backgrounds/blur/6.jpg"> 
+          <div class="inner"> 
+           <div class="container"> 
+            <div class="six columns right offset-one media-outer" data-bind="visible: components.media1.hasContentOrIsEditMode(), css: {'recede': components.media1.hasNoContentAndIsEditMode(), 'seven': components.media1.showVideo()}"> 
+             <div class="media-wrapper animated"> 
+              <div class="components.media1 content">
+               <div class="content"> 
+                <div class="video-content" data-bind="visible: components.media1.showVideo()" style="display:none;"> 
+                 <div class="player" data-bind="html: components.media1.video.parent ? (components.media1.video.parent.showImage() ? '' : components.media1.video.html) : components.media1.video.html "></div> 
+                </div> 
+                <div class="image-content" data-bind="visible: components.media1.showImage()" style=""> 
+                 <a class="image-link" data-bind="if: components.media1.image.hasLink() || !edit_page.isShowPage, attr: { href: components.media1.image.link(), target: components.media1.image.target() }" href="http://162.144.108.196/idaciti/application/storyboard/embed/6512bd43d9bcaa6e02c990b0a82652dca" target="_blank"> <img data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.media1.image.assetUrl, alt: components.media1.image.caption, title: components.media1.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_900,w_1200/l2de9mm4341erfulz5rg.png" alt="Coffee, Anyone?" title="Coffee, Anyone?"> </a> 
+                 <span class="image-link" data-bind="ifnot: components.media1.image.hasLink() || !edit_page.isShowPage"></span> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="columns right left-align valign slider-desc eight" data-bind="css: {'twelve': components.media1.inEditorAndHasNoContent(), 'center': !components.media1.hasContent(), 'eight': components.media1.showImage(), 'seven': components.media1.showVideo()}"> 
+             <div class="half-offset-right"> 
+              <h2 class="title animated"> 
+               <div class="ib relative text-component" data-component="text" data-name="components.text1" data-text-type="heading" data-use-font="true">
+                <div class="content content2" data-bind="visible: !(components.text1.isState('editor') || !components.text1.hasContent()), htmlValue: components.text1.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+                 <div>
+                  Coffee, Anyone?
+                 </div>
+                </div>
+               </div> <br> <span class="line" data-bind="visible:components.text1.hasContent()"></span> </h2> 
+              <h3 class="title2 animated text-component" data-component="text" data-name="components.text2" data-text-type="body" data-use-font="true">
+               <div class="content content2" data-bind="visible: !(components.text2.isState('editor') || !components.text2.hasContent()), htmlValue: components.text2.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+                <div>
+                 Why do so many customers drive past a half-dozen other coffee shops to get to a Starbucks and then queue up in a slow moving line, all-the-while talking to people they've never seen before as if they're old friends?
+                </div> 
+                <div>
+                 Does amazing brand power translate to values for investors?
+                </div>
+               </div></h3> 
+              <div class="cta-button-wrapper animated left" data-bind="visible: components.button1.hasContentOrIsEditMode(), css: {'left':!components.text1.isCenterAligned() || !components.text2.isCenterAligned()}"> 
+               <div class="cta-button"> 
+                <div class="components.button1 content">
+                 <a class="button-component" data-bind="attr: { href: components.button1.url, target: components.button1.target() }, text: components.button1.text, visible: components.button1.hasContent()" data-component="button" href="http://162.144.108.196/idaciti/application/storyboard/embed/6512bd43d9bcaa6e02c990b0a82652dca" target="_blank">View Story</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="prev-button" data-bind="mouseclick: slider1.updateIndex, visible: slider1.list().length > 1"> 
+         <div class="arrow"></div> 
+        </div> 
+        <div class="next-button" data-bind="mouseclick: slider1.updateIndex, visible: slider1.list().length > 1"> 
+         <div class="arrow"></div> 
+        </div> 
+        <div class="slide-selectors" data-bind="visible: slider1.list().length > 1"> 
+         <div class="slide-selectors-inner"> 
+          <div class="slider1 content repeatable-component" data-bind="template: {
+        foreach: slider1.list,
+        name: 'slider_selector_template2'
+      }"> 
+           <div class="selector-wrapper"> 
+            <div class="selector" data-bind="mouseclick: parent.select2"></div> 
+           </div> 
+           <div class="selector-wrapper"> 
+            <div class="selector" data-bind="mouseclick: parent.select2"></div> 
+           </div> 
+           <div class="selector-wrapper"> 
+            <div class="selector" data-bind="mouseclick: parent.select2"></div> 
+           </div> 
+           <div class="selector-wrapper"> 
+            <div class="selector" data-bind="mouseclick: parent.select2"></div> 
+           </div> 
+           <div class="selector-wrapper"> 
+            <div class="selector" data-bind="mouseclick: parent.select2"></div> 
+           </div> 
+           <div class="selector-wrapper"> 
+            <div class="selector" data-bind="mouseclick: parent.select2"></div> 
+           </div> 
+          </div> 
+          <div class="clearfix"></div> 
+         </div> 
+        </div> 
+        <div class="place-holder" data-bind="visible: !slider1.hasContent()" style="display: none;"> 
+         <div class="fa fa-desktop"></div> 
+         <div class="fa fa-angle-left"></div> 
+         <div class="fa fa-angle-right"></div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="slide"> <a class="section-anchor" data-scroll-name="#7"></a> <a class="section-name-anchor" data-section-name="Get Invite"></a> 
+     <div class="wide image strikingly-light-text lazy lazy-background hasImage" data-bind="'className': background.getSelectedClassName(), 'style': background.selectedStyleLazy(), 'css':{'lazy':true, 'lazy-background':true, hasImage:background.hasContent()}, 'attr': {'data-background': background.assetUrl()}" style="background-image: url(http://assets.strikingly.com/assets/icons/transparent.png); background-size: cover; background-position: 49% 50%; background-repeat: no-repeat no-repeat; " data-background="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_progressive,h_1200,q_90,w_2000/rd81h8mtfcqz1tiiqpf9.jpg"> 
+      <div class="container"> 
+       <div class="sixteen columns clearfix"> 
+        <div class="media" data-bind="visible:media1.hasContentOrIsEditMode()" style="display: none; "> 
+         <div class="media1 content">
+          <div class="content"> 
+           <div class="video-content" data-bind="visible: media1.showVideo()" style="display:none;"> 
+            <div class="player" data-bind="html: media1.video.parent ? (media1.video.parent.showImage() ? '' : media1.video.html) : media1.video.html "></div> 
+           </div> 
+           <div class="image-content" data-bind="visible: media1.showImage()" style=""> 
+            <a class="image-link" data-bind="if: media1.image.hasLink() || !edit_page.isShowPage, attr: { href: media1.image.link(), target: media1.image.target() }" href="javascript:void(0);" target="_self"></a> 
+            <span class="image-link" data-bind="ifnot: media1.image.hasLink() || !edit_page.isShowPage"> <img alt="" data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': media1.image.assetUrl, alt: media1.image.caption, title: media1.image.caption }" src="//assets.strikingly.com/assets/icons/transparent.png" class="lazy lazy-img" data-original="//assets.strikingly.com/assets/icons/transparent.png" title=""> </span> 
+           </div> 
+          </div> 
+         </div> 
+         <br> 
+         <br> 
+        </div> 
+        <h2 class="subtitle" data-bind="visible:text1.hasContentOrIsEditMode()"> <span class="line hide" data-bind="visible:text1.value().length > 0"></span> 
+         <div class="ib">
+          <div data-component="text" data-name="text1" data-text-type="body" class="text-component">
+           <div class="content content2" data-bind="visible: !(text1.isState('editor') || !text1.hasContent()), htmlValue: text1.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+            <div>
+             &nbsp;
+            </div> 
+            <div>
+             <span style="font-size: 130%;">&nbsp;Get Invite</span>
+            </div>
+           </div>
+          </div>
+         </div> <span class="line" data-bind="visible:text1.value().length > 0"></span> </h2> 
+        <h2 class="title big" data-bind="visible:text2.hasContentOrIsEditMode()">
+         <div data-component="text" data-name="text2" data-text-type="title" class="text-component">
+          <div class="content content2" data-bind="visible: !(text2.isState('editor') || !text2.hasContent()), htmlValue: text2.value, style: (window.edit_page.data.titleFont() != '') ? { fontFamily: window.edit_page.data.titleFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+           <div>
+            I WANT TO BE A DATA STORYTELLER
+           </div>
+          </div>
+         </div></h2> 
+        <br> 
+       </div> 
+       <div class="sixteen columns clearfix"> 
+        <div class="signup-form s-template-form" data-bind="style: (window.edit_page.data.bodyFont &amp;&amp; window.edit_page.data.bodyFont() !== '') ? {fontFamily: window.edit_page.data.bodyFont()  } : {fontFamily : 'inherit'}" style="font-family: Georgia; "> 
+         <div class="email1 content">
+          <form accept-charset="UTF-8" action="/i/idaciti/collected_emails.jsm" class="new_collected_email" id="new_collected_email" method="post">
+           <div style="margin:0;padding:0;display:inline">
+            <input name="utf8" type="hidden" value="✓">
+           </div>
+           <div class="inputs" data-bind="template: { name: 'emailFormTemplate2', data: email1}"> 
+            <div class="signup-form-container"> 
+             <div class="form s-form-not-success" data-bind="visible: !isSuccess()"> 
+              <div class="fields-container"> 
+               <div class="input" data-bind="visible: hasNameBox()"> 
+                <label class="outside" data-bind="text: name_label" for="collected_email[name]">Name</label> 
+                <input name="collected_email[name]" type="text"> 
+                <div class="error s-form-error-name" data-bind="visible: isNameEmpty()" style="display: none; ">
+                  Please enter a name. 
+                </div> 
+               </div> 
+               <div class="input" data-bind="visible: hasEmailBox()"> 
+                <label class="outside" data-bind="text: email_label" for="collected_email[email]">Email</label> 
+                <input name="collected_email[email]" type="text"> 
+                <div class="error s-form-error-email" data-bind="visible: isEmailInvalid()" style="display: none; ">
+                  Invalid email. 
+                </div> 
+               </div> 
+               <div class="input submit"> 
+                <input class="submit-button button s-form-click" data-bind="mouseclick: submit, value: submit_label" type="button" value="Send"> 
+                <div class="loading-icon s-form-icon" data-bind="visible: isLoading()" style="display: none; "></div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="hint s-form-submit-message s-form-success thanks" data-bind="visible: isSuccess(), html: thanksMessage" style="display: none; ">
+              Thanks for your interest in idaciti. We will contact you when your invitation is ready. If you are requesting access for a school project, please make sure you send request using the school email address.
+             </div> 
+            </div> 
+           </div> 
+           <input data-bind="value:email1.recipient" id="collected_email_recipient" name="collected_email[recipient]" type="hidden" value="info@idaciti.com"> 
+           <input data-bind="value:email1.hide_email" id="collected_email_skip_email" name="collected_email[skip_email]" type="hidden" value="false"> 
+           <input data-bind="value:email1.hide_name" id="collected_email_skip_name" name="collected_email[skip_name]" type="hidden" value="false"> 
+           <div class="input" style="display:none;"> 
+            <label class="outside">Comment</label> 
+            <label class="overlay">Comment</label> 
+            <input name="collected_email[_comment]" type="text"> 
+           </div> 
+          </form> 
+         </div> 
+        </div> 
+        <br> 
+        <br> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="slide"> <a class="section-anchor" data-scroll-name="#8"></a> <a class="section-name-anchor" data-section-name="Connect"></a> 
+     <div class="wide"> 
+      <div class="container"> 
+       <div class="row big"> 
+        <div class="sixteen columns"> 
+         <h2 class="title center" data-bind="visible:title.hasContentOrIsEditMode()"> 
+          <div class="ib relative"> 
+           <span class="line-abs" data-bind="visible:title.hasContent()"></span> 
+           <div data-component="text" data-name="title" data-text-type="heading" class="text-component">
+            <div class="content content2" data-bind="visible: !(title.isState('editor') || !title.hasContent()), htmlValue: title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+             <div>
+              We are always happy to hear from you.
+             </div> 
+             <div>
+              Connect with us.
+             </div> 
+             <div>
+              &nbsp;
+             </div>
+            </div>
+           </div> 
+           <span class="line-abs right" data-bind="visible:title.hasContent()"></span> 
+          </div> <span class="line fixed-show" data-bind="visible:title.hasContent()"></span> </h2> 
+         <h3 class="title2 center">
+          <div data-component="text" data-name="subtitle" data-text-type="body" class="text-component">
+           <div class="content content2" data-bind="visible: !(subtitle.isState('editor') || !subtitle.hasContent()), htmlValue: subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="display: none; font-family: Georgia; "></div>
+          </div></h3> 
+        </div> 
+       </div> 
+       <div class="center s-mh s-contact-listing"> 
+        <div class="socialMedia content repeatable-component ko_container ui-sortable" data-bind="sortableRepeatable: { template: 'contact_box', data: socialMedia.list }">
+         <div class="three columns center no-float repeatable" data-bind="mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler"> 
+          <div class="small-image s-mhi" data-component="image" data-name="components.image" data-use-url="true">
+           <div class="content content2" data-bind="fadeVisibleAndHide: !components.image.isState('editor')" style="visibility: visible; opacity: 1; "> 
+            <a class="image-link" data-bind="if: components.image.hasLink() || !edit_page.isShowPage, attr: { href: components.image.link(), target: components.image.target() }" href="javascript:void(0);" target="_self"></a> 
+            <span class="image-link" data-bind="ifnot: components.image.hasLink() || !edit_page.isShowPage"> <img alt="" data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.image.assetUrl, alt: components.image.caption, title: components.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_540,w_720/fbu3z2ltrragnnvgpeit.png" title=""> </span> 
+           </div>
+          </div> 
+          <br> 
+          <br> 
+          <div class="subtitle small text-component" data-component="text" data-name="components.title" data-text-type="heading" data-use-font="true">
+           <div class="content content2" data-bind="visible: !(components.title.isState('editor') || !components.title.hasContent()), htmlValue: components.title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+            <div>
+             <a title="idaciti Inc." href="https://www.linkedin.com/company/3794350?trk=tyah&amp;trkInfo=tarId%3A1405315154110%2Ctas%3Aidaciti%2Cidx%3A1-1-1" target="_blank">LinkedIn</a>
+            </div>
+           </div>
+          </div> 
+          <div class="text text-component" data-component="text" data-name="components.subtitle" data-use-font="true">
+           <div class="content content2" data-bind="visible: !(components.subtitle.isState('editor') || !components.subtitle.hasContent()), htmlValue: components.subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+            <div>
+             <a title="Emily Huang" href="http://www.linkedin.com/in/emilyhuang/" target="_blank">Emily Huang</a>
+            </div> 
+            <div>
+             <a title="Christine Tan" href="http://www.linkedin.com/pub/christine-tan/7/858/8" target="_blank">Christine Tan</a>
+            </div> 
+            <div>
+             <a title="Pete Cleary" href="http://www.linkedin.com/pub/pete-cleary/7/ba/287" target="_blank">Pete Cleary</a>
+            </div> 
+            <div>
+             <a title="Stewart McKie" href="http://uk.linkedin.com/in/tripos" target="_blank">Stewart McKie</a>
+            </div>
+           </div>
+          </div> 
+          <br> 
+          <br> 
+         </div>
+         <div class="three columns center no-float repeatable" data-bind="mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler"> 
+          <div class="small-image s-mhi" data-component="image" data-name="components.image" data-use-url="true">
+           <div class="content content2" data-bind="fadeVisibleAndHide: !components.image.isState('editor')" style="visibility: visible; opacity: 1; "> 
+            <a class="image-link" data-bind="if: components.image.hasLink() || !edit_page.isShowPage, attr: { href: components.image.link(), target: components.image.target() }" href="javascript:void(0);" target="_self"></a> 
+            <span class="image-link" data-bind="ifnot: components.image.hasLink() || !edit_page.isShowPage"> <img alt="" data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.image.assetUrl, alt: components.image.caption, title: components.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://uploads.striking.ly/page/images/icons/twitter-icon.png" title=""> </span> 
+           </div>
+          </div> 
+          <br> 
+          <br> 
+          <div class="subtitle small text-component" data-component="text" data-name="components.title" data-text-type="heading" data-use-font="true">
+           <div class="content content2" data-bind="visible: !(components.title.isState('editor') || !components.title.hasContent()), htmlValue: components.title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+            <div>
+             <a title="idaciti dare to share" href="https://twitter.com/idacitiShare" target="_blank">Twitter</a>
+            </div>
+           </div>
+          </div> 
+          <div class="text text-component" data-component="text" data-name="components.subtitle" data-use-font="true">
+           <div class="content content2" data-bind="visible: !(components.subtitle.isState('editor') || !components.subtitle.hasContent()), htmlValue: components.subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="display: none; font-family: Georgia; "></div>
+          </div> 
+          <br> 
+          <br> 
+         </div>
+         <div class="three columns center no-float repeatable" data-bind="mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler"> 
+          <div class="small-image s-mhi" data-component="image" data-name="components.image" data-use-url="true">
+           <div class="content content2" data-bind="fadeVisibleAndHide: !components.image.isState('editor')" style="visibility: visible; opacity: 1; "> 
+            <a class="image-link" data-bind="if: components.image.hasLink() || !edit_page.isShowPage, attr: { href: components.image.link(), target: components.image.target() }" href="mailto:info@idaciti.com" target="_blank"> <img alt="" data-bind="attr: { 'class': 'lazy lazy-img', 'data-original': components.image.assetUrl, alt: components.image.caption, title: components.image.caption }" src="//assets.strikingly.com/assets/icons/transparent-f5d8889fd5f3654718ec06b1a97062cf.png" class="lazy lazy-img" data-original="http://uploads.striking.ly/page/images/icons/email-icon.png" title=""> </a> 
+            <span class="image-link" data-bind="ifnot: components.image.hasLink() || !edit_page.isShowPage"></span> 
+           </div>
+          </div> 
+          <br> 
+          <br> 
+          <div class="subtitle small text-component" data-component="text" data-name="components.title" data-text-type="heading" data-use-font="true">
+           <div class="content content2" data-bind="visible: !(components.title.isState('editor') || !components.title.hasContent()), htmlValue: components.title.value, style: (window.edit_page.data.headingFont() != '') ? { fontFamily: window.edit_page.data.headingFont } : { fontFamily: 'inherit' }" style="font-family: Bitter; ">
+            <div>
+             <a title="email idaciti" href="mailto:info@idaciti.com">Email</a>
+            </div>
+           </div>
+          </div> 
+          <div class="text text-component" data-component="text" data-name="components.subtitle" data-use-font="true">
+           <div class="content content2" data-bind="visible: !(components.subtitle.isState('editor') || !components.subtitle.hasContent()), htmlValue: components.subtitle.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="display: none; font-family: Georgia; "></div>
+          </div> 
+          <br> 
+          <br> 
+         </div>
+        </div> 
+       </div> 
+      </div> 
+     </div> </li> 
+   </ul> 
+   <div class="strikingly-footer-spacer" data-bind="visible:!data.showFooter() &amp;&amp; data.showStrikinglyLogo" style="display: none; "></div> 
+   <div data-bind="with: data.footer" id="strikingly-footer"> 
+    <div class="widecontainer" data-bind="visible:$root.data.showFooter" id="footer-container"> 
+     <div class="container" id="footer"> 
+      <div id="footer-social-media"> 
+       <br> 
+       <div class="socialMedia content">
+        <div class="social-media-display"> 
+         <ul class="links" data-bind="template: {name:'socialMediaLinks', foreach: socialMedia.link_list, as: 'link' }, runWhenBound: socialMedia.render" style="clear:both;"> 
+          <li data-bind="template: { name: type(), data: link, 'if': show_link }"></li> 
+          <li data-bind="template: { name: type(), data: link, 'if': show_link }"></li> 
+          <li data-bind="template: { name: type(), data: link, 'if': show_link }"></li> 
+         </ul> 
+         <ul class="buttons" data-bind="html: socialMedia.mediaListHtml"></ul> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="footer-text"> 
+       <div data-component="text" data-name="copyright" data-text-type="body" class="text-component">
+        <div class="content content2" data-bind="visible: !(copyright.isState('editor') || !copyright.hasContent()), htmlValue: copyright.value, style: (window.edit_page.data.bodyFont() != '') ? { fontFamily: window.edit_page.data.bodyFont } : { fontFamily: 'inherit' }" style="font-family: Georgia; ">
+         <div> 
+          <span style="font-size: 130%;"><strong>Get Data. Build Cards. Craft Story. Share Story.</strong></span> 
+          <p>&nbsp;</p> 
+          <p><span style="font-size: 130%;">Copyright © 2014 idaciti, Inc. All rights reserved.</span><br><span style="font-size: 130%;"><a title="idaciti Terms and Privacy Statement" href="http://terms.idaciti.com" target="_blank">Terms &amp; Privacy</a></span></p> 
+         </div> 
+         <div>
+          &nbsp;
+         </div>
+        </div>
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="ko-container" data-bind="with: data"> 
+    <div class="logo-footer" data-bind="visible: showStrikinglyLogo" id="strikingly-footer-logo" style="display: none; "> 
+     <a class="logo-link" href="https://www.strikingly.com/?ref=logo&amp;permalink=idaciti&amp;custom_domain=hello.idaciti.com&amp;utm_campaign=footer_pbs&amp;utm_content=http%3A%2F%2Fhello.idaciti.com%2F&amp;utm_medium=user_page&amp;utm_source=footer_logo&amp;utm_term=pbs_v0" target="_blank">Powered by Strikingly - Best website builder for the mobile age</a> 
+     <div class="logo-hover"></div> 
+     <div class="logo-footer-tooltip"> 
+      <div class="tooltip-container"> 
+       <div class="tooltip-white"> 
+        <span>Create your own website with Strikingly</span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="branding-info" id="brand-info" style="display: none"> 
+      <a href="https://www.strikingly.com/?ref=u_form&amp;utm_campaign=contact_form_pbs&amp;utm_content=http%3A%2F%2Fhello.idaciti.com%2F&amp;utm_medium=user_page&amp;utm_source=contact_form" target="_blank"> ${thanksMessage} 
+       <div class="img-wrapper"> 
+        <img alt="Contact-form-brand" src="//assets.strikingly.com/assets/icons/contact-form-brand-f1ef4df3a2d4cc7e8cfe62ee9cdf505c.png"> 
+       </div> </a> 
+     </div> 
+    </div> 
+    <div class="logo-footer-var2" id="strikingly-footer-logo-var2" style="display:none"> 
+     <a class="logo-link" href="https://www.strikingly.com/?ref=logo&amp;permalink=idaciti&amp;custom_domain=hello.idaciti.com&amp;utm_campaign=footer_pbs&amp;utm_content=http%3A%2F%2Fhello.idaciti.com%2F&amp;utm_medium=user_page&amp;utm_source=footer_logo&amp;utm_term=pbs_v2" target="_blank" title="Create your own website with Strikingly"> Powered by Strikingly - Best website builder for the mobile age </a> 
+    </div> 
+    <div class="logo-footer-var3" id="strikingly-footer-logo-var3" style="display:none"> 
+     <a class="logo-link" href="https://www.strikingly.com/?ref=logo&amp;permalink=idaciti&amp;custom_domain=hello.idaciti.com&amp;utm_campaign=footer_pbs&amp;utm_content=http%3A%2F%2Fhello.idaciti.com%2F&amp;utm_medium=user_page&amp;utm_source=footer_logo&amp;utm_term=pbs_v3" target="_blank" title="Create your own website with Strikingly"> Powered by Strikingly - Best website builder for the mobile age </a> 
+    </div> 
+   </div> 
+   <div class="ko-container" data-bind="with: data"> 
+    <div class="navigation-buttons strikingly-fixed" data-bind="visible: showNavigationButtons"> 
+     <span class="prev" data-bind="fadeVisible: !window.slide_navigator.isFirst(), mouseclick: window.slide_navigator.prev" title="Previous Section" style="display: block; visibility: visible; opacity: 1; "></span> 
+     <span class="next" data-bind="fadeVisible: !window.slide_navigator.isLast(), mouseclick: window.slide_navigator.next" title="Next Section" style="visibility: visible; opacity: 1; "></span> 
+    </div> 
+   </div> 
+   <div class="ko-container" data-bind="with: data"> 
+    <div class="navbar-drawer strikingly-drawer hidden"> 
+     <ul id="nav-drawer-list"> 
+      <span data-bind="template: {name:'strikinglyNavbarTouchItemTemplate', foreach: slides}"> <li data-bind="visible: components.slideSettings.show_nav"> <a class="navbar-drawer-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }, mouseclick: Bobcat.TH.toggleDrawer " href="#home">Home</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="navbar-drawer-item selected" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }, mouseclick: Bobcat.TH.toggleDrawer " href="#why">Why</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="navbar-drawer-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }, mouseclick: Bobcat.TH.toggleDrawer " href="#what">What</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="navbar-drawer-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }, mouseclick: Bobcat.TH.toggleDrawer " href="#how">How</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="navbar-drawer-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }, mouseclick: Bobcat.TH.toggleDrawer " href="#dare-to-share">Dare to Share</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="navbar-drawer-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }, mouseclick: Bobcat.TH.toggleDrawer " href="#stories">Stories</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="navbar-drawer-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }, mouseclick: Bobcat.TH.toggleDrawer " href="#get-invite">Get Invite</a> </li> <li data-bind="visible: components.slideSettings.show_nav"> <a class="navbar-drawer-item" data-bind="text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }, mouseclick: Bobcat.TH.toggleDrawer " href="#connect">Connect</a> </li> </span> 
+      <span data-bind="template: {name:'strikinglyNavbarTouchLinkTemplate', foreach: submenu.list}"> <li> <a data-bind="text:components.link.text, attr: { href: components.link.link_url(), target: components.link.target() }" href="http://application.idaciti.com" target="_blank">Login</a> </li> </span> 
+     </ul> 
+    </div> 
+    <div class="mobile-actions hidden"> 
+     <ul id="mobile-action-list"> 
+      <li class="pad"> <a href="mailto:info@idaciti.com" target="_blank"> 
+        <div class="entypo entypo-mail"></div> </a> </li> 
+     </ul> 
+    </div> 
+    <div class="navbar-drawer-bar hidden" data-bind="visible: showMobileNav() || true"> 
+     <div class="drawer-container"> 
+      <a class="navbar" data-bind="visible: showMobileNav()" href="javascript:void(0);" onclick="Bobcat.TH.toggleDrawer(); return false;"> 
+       <div class="fa fa-bars"></div> </a> 
+      <a class="mobile blue" href="javascript:void(0);" onclick="Bobcat.TH.toggleMobileDrawer(); return false;"> 
+       <div class="entypo entypo-mobile"></div> </a> 
+      <div class="navbar-drawer-title-container"> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- ==================== --> 
+  <!-- = Content Partials = --> 
+  <!-- ==================== --> 
+  <div id="fb-root"></div> 
+  <script phantom="keep" src="//assets.strikingly.com/assets/bobcat/show_init-4960707e474840b2994e7b01c4c76a3e.js" type="text/javascript"></script> 
+  <div class="image-share s-page-layer fill"> 
+   <div class="s-page-shade fill"></div> 
+   <div class="s-page-wrapper"> 
+    <div class="s-page-content"> 
+     <iframe frameborder="0" id="s-image-share-iframe" marginheight="0" marginwidth="0" src=""></iframe> 
+    </div> 
+   </div> 
+  </div> 
+  <iframe name="strk-tracking" id="strk-tracking" src="//b.strikingly.com/ping.html?thm=fresh&amp;mem=pro&amp;brd=false&amp;v=UmEwanhjR0JNeTFLcnNUSVpCaVZLd3pXQzNtdVJvMXFjL3NVTXJsS1UveGRsSG1pdlVxZGVleU5ETnRQTHN0S0xWZUR2c3dWdmxJRVBQdzhkZVlRalZZVHNqaUpTRFVvcENaVWhjdGx0ZzFYWndxenhOWitPb0RoS1VqbGhsOVNWdUJzMGFSSlBvM2dkTmtSQk9YU0dBPT0tLWhJZHBpVlRXRlNaMis5UnBxQklCRHc9PQ%3D%3D--5d79a05d59ef222958bfeb1498598cecf0eb9d4d"></iframe> 
+ </body>
+</html>

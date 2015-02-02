@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/ico" href="/favicon.ico"> 
+  <title>GraphLab | Unleash Data Science</title> 
+  <meta property="og:title" content="GraphLab | Unleash Data Science"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="http://graphlab.com/index.html"> 
+  <meta property="og:image" content="http://graphlab.com/images/GLlogo_FU_STACKED_300.png"> 
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"> 
+  <style>
+      span.trademark {
+        font-size: 0.5em;
+        vertical-align: super;
+      }
+    </style> 
+  <link href="/styles/GraphLab.css" rel="stylesheet"> 
+  <style>
+  .customer-image {
+    margin-right: 20px;
+  }
+  .product-feature {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px 0px 30px 0px;
+    height: 210px;
+  }
+
+  .product-feature.fast {
+    background-image: url("/images/homeicon_fast.png");
+  width: 192px;
+  background-repeat: no-repeat;
+  background-position: 45px 95px;
+  }
+    .product-feature.fast:hover {
+  background-position: -155px 95px;
+  }
+  .product-feature.tablegraph {
+    background-image: url("/images/homeicon_tablegraph.png");
+  width: 192px;
+  background-repeat: no-repeat;
+  background-position: 0px 86px;
+  }
+    .product-feature.tablegraph:hover {
+  background-position: -200px 86px;
+  }
+  .product-feature.pythonapi {
+    background-image: url("/images/homeicon_pythonapi.png");
+  width: 192px;
+  background-repeat: no-repeat;
+  background-position: 40px 95px;
+  }
+  .product-feature.pythonapi:hover {
+  background-position: -160px 95px;
+  }
+  .product-feature.scale {
+    background-image: url("/images/homeicon_scale.png");
+  width: 192px;
+  background-repeat: no-repeat;
+  background-position: 10px 92px;
+  }
+    .product-feature.scale:hover {
+  background-position: -190px 92px;
+  }
+  .product-feature.resources {
+    background-image: url("/images/homeicon_resources.png");
+  width: 192px;
+  background-repeat: no-repeat;
+  background-position: 15px 90px;
+  }
+    .product-feature.resources:hover {
+  background-position: -185px 90px;
+  }
+
+  @media(min-width: 768px) {
+    .product-feature h3 {
+      height: 57px;
+    }
+  }
+</style> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js"></script> 
+  <script type="text/javascript" src="//use.typekit.net/hzm6svm.js"></script> 
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script> 
+  <script type="text/javascript">
+      require.config({
+        paths: {
+          'react': '//fb.me/react-with-addons-0.10.0.min',
+          'bootstrap': '//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min',
+          'zeroclipboard': '//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.min'
+        },
+        baseUrl: '/js/'
+      });
+    </script> 
+  <script type="text/javascript">
+      require(['GraphLab', 'bootstrap'], function(GraphLab) {
+        $(function() {
+          GraphLab.Nav.attachHandlers([{"items": [{"title": "Overview", "url": "/products/create/overview.html"}, {"title": "Technology", "url": "/products/create/technology.html"}, {"title": "Performance", "url": "/products/create/performance.html"}, {"title": "Features", "url": "/products/create/features.html"}, {"hidden": false, "title": "Quick Start", "url": "/products/create/quick-start-guide.html"}, {"hidden": true, "title": "Release Notes", "url": "/products/create/upgrade/index.html"}, {"hidden": true, "title": "Virtual Installation", "url": "/products/create/virtual_install.html"}, {"hidden": true, "title": "GraphLab Create with Enhanved GPU Installation", "url": "/products/create/gpu_install.html"}, {"title": "Purchase", "url": "/products/create/purchase-plans.html"}], "paths": ["/products/create/docs", "/products/create/cpp_doc"], "title": "Product", "url": "/products/create/overview.html"}, {"items": [{"title": "By Industry", "url": "/uses/index.html"}, {"title": "By Application", "url": "/uses/by_application.html"}], "title": "Uses", "url": "/uses/index.html"}, {"items": [{"paths": ["/learn/gallery/notebooks"], "title": "Gallery", "url": "/learn/gallery/index.html"}, {"title": "How-To", "url": "/learn/how-to/index.html"}, {"title": "Translator", "url": "/learn/translator/index.html"}, {"title": "API Documentation", "url": "/products/create/docs"}, {"title": "User Guide", "url": "/learn/userguide/index.html"}, {"target": "_blank", "title": "Forum", "url": "http://forum.graphlab.com"}], "title": "Learn", "url": "/learn/index.html"}, {"items": [{"title": "Upcoming Events", "url": "/events/index.html"}, {"title": "GraphLab Conference 2014", "url": "/events/conference14.html"}, {"hidden": true, "title": "Internship Program", "url": "/events/internship.html"}, {"hidden": true, "title": "User Groups", "url": "/events/usergroups.html"}, {"hidden": true, "title": "LSRS 2014", "url": "/events/lsrs14.html"}, {"hidden": true, "title": "RecSysTV 2014", "url": "http://boxfish.com/recsys"}, {"hidden": true, "title": "GraphLab Workshop 2013", "url": "/events/workshop13.html"}, {"hidden": true, "title": "LSRS 2013", "url": "/events/lsrs13.html"}, {"hidden": true, "title": "GraphLab Workshop 2012", "url": "/events/workshop12.html"}], "title": "Events", "url": "/events/index.html"}, {"items": [{"paths": ["/company/press"], "title": "Press", "url": "/company/press/index.html"}, {"title": "Team", "url": "/company/team/index.html"}, {"title": "Investors", "url": "/company/team/investors.html"}, {"title": "Careers", "url": "/company/careers.html"}, {"onclick": "onclick=\"trackClick(event, \u0027\u0027);return false;\"", "title": "Blog", "url": "http://blog.graphlab.com"}, {"target": "_blank", "title": "GraphLab.org", "url": "http://graphlab.org/index.html"}, {"title": "Contact Us", "url": "/company/contact.html"}], "title": "Company", "url": "/company/press/index.html"}, {"hidden": true, "items": [{"hidden": true, "title": "Terms of Use", "url": "/legal/terms_of_use.html"}, {"hidden": true, "title": "Privacy Policy", "url": "/legal/privacy_policy.html"}, {"hidden": true, "title": "GraphLab Create EULA", "url": "/legal/graphlab-create-eula.html"}], "title": "Legal", "url": "/legal/terms_of_use.html"}, {"hidden": true, "items": [{"title": "404 Not Found", "url": "/missing.html"}], "title": "ErrorPages"}, {"hidden": true, "items": [], "title": "Google Webmaster Tools", "url": "/google47d857324e802208.html"}]);
+          GraphLab.Search.attachHandlers();
+        });
+      });
+    </script> 
+  <script type="text/javascript">
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-43241412-2', 'auto');
+          ga('send', 'pageview');
+          function trackClick(evt, target, cb) {
+            var href = evt.currentTarget.getAttribute('href');
+            if (!Boolean(target)) {
+              target = href;
+            }
+            ga('send', 'event', 'outbound', 'click', target, {'hitCallback':
+              function () {
+                if (cb) {
+                  cb();
+                } else {
+                  document.location = href;
+                }
+              }
+            });
+          }
+        </script> 
+  <script type="text/javascript">
+           (function(d,s,i,r) {
+             if (d.getElementById(i)){return;}
+             var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+             n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/426799.js';
+             e.parentNode.insertBefore(n, e);
+           })(document,"script","hs-analytics",300000);
+         </script> 
+ </head> 
+ <body class="gl"> 
+  <div> 
+   <div class="cml-colorbar-top-container">
+    <table class="cml-colorbar-top" width="100%" border="0" cellspacing="0" cellpadding="0"> 
+     <tbody>
+      <tr> 
+       <td width="20%" bgcolor="#B0007F"></td> 
+       <td width="20%" bgcolor="#0A8CC4"></td> 
+       <td width="20%" bgcolor="#85BD00"></td> 
+       <td width="20%" bgcolor="#FF5500"></td> 
+       <td width="20%" bgcolor="#5E5555"></td> 
+      </tr> 
+     </tbody>
+    </table>
+   </div> 
+   <nav class="navbar navbar-default cml-navbar" role="navigation"> 
+    <div class="container"> 
+     <div class="navbar-header"> 
+      <button type="button" class="navbar-toggle cml-navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      <a class="navbar-brand gl-navbarbrand" rel="home" href="/index.html"> <img src="/images/gl_logo_tl.png" alt="GraphLab" class="cml-logo" style="width: 180px; height: 62px;"> </a> 
+     </div> 
+     <div class="collapse navbar-collapse cml-navbar-collapse" id="navbar-collapse"> 
+      <ul class="nav navbar-nav cml-navbar-nav"> 
+       <li class="cml-navlink glcom-navlink  glcom-navlink-first "> 
+        <div class="dropdown"> 
+         <div class="btn dropdown-toggle cml-navlink-padding " type="button" id="gl-navlink-Product"> 
+          <a href="/products/create/overview.html"> Product </a> 
+         </div> 
+         <ul class="dropdown-menu gl-topnav-dropdown-menu" role="menu" aria-labelledby="gl-navlink-Product"> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/products/create/overview.html">Overview </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/products/create/technology.html">Technology </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/products/create/performance.html">Performance </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/products/create/features.html">Features </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/products/create/quick-start-guide.html">Quick Start </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/products/create/purchase-plans.html">Purchase </a> </li> 
+         </ul> 
+        </div> </li> 
+       <li class="cml-navlink glcom-navlink "> 
+        <div class="dropdown"> 
+         <div class="btn dropdown-toggle cml-navlink-padding " type="button" id="gl-navlink-Uses"> 
+          <a href="/uses/index.html"> Uses </a> 
+         </div> 
+         <ul class="dropdown-menu gl-topnav-dropdown-menu" role="menu" aria-labelledby="gl-navlink-Uses"> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/uses/index.html">By Industry </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/uses/by_application.html">By Application </a> </li> 
+         </ul> 
+        </div> </li> 
+       <li class="cml-navlink glcom-navlink "> 
+        <div class="dropdown"> 
+         <div class="btn dropdown-toggle cml-navlink-padding " type="button" id="gl-navlink-Learn"> 
+          <a href="/learn/index.html"> Learn </a> 
+         </div> 
+         <ul class="dropdown-menu gl-topnav-dropdown-menu" role="menu" aria-labelledby="gl-navlink-Learn"> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/learn/gallery/index.html">Gallery </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/learn/how-to/index.html">How-To </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/learn/translator/index.html">Translator </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/products/create/docs">API Documentation </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/learn/userguide/index.html">User Guide </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="http://forum.graphlab.com" target="_blank">Forum <i class="fa fa-external-link offsitearrow"></i> </a> </li> 
+         </ul> 
+        </div> </li> 
+       <li class="cml-navlink glcom-navlink "> 
+        <div class="dropdown"> 
+         <div class="btn dropdown-toggle cml-navlink-padding " type="button" id="gl-navlink-Events"> 
+          <a href="/events/index.html"> Events </a> 
+         </div> 
+         <ul class="dropdown-menu gl-topnav-dropdown-menu" role="menu" aria-labelledby="gl-navlink-Events"> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/events/index.html">Upcoming Events </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/events/conference14.html">GraphLab Conference 2014 </a> </li> 
+          <li role="presentation" class="divider"></li> 
+         </ul> 
+        </div> </li> 
+       <li class="cml-navlink glcom-navlink "> 
+        <div class="dropdown"> 
+         <div class="btn dropdown-toggle cml-navlink-padding " type="button" id="gl-navlink-Company"> 
+          <a href="/company/press/index.html"> Company </a> 
+         </div> 
+         <ul class="dropdown-menu gl-topnav-dropdown-menu" role="menu" aria-labelledby="gl-navlink-Company"> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/company/press/index.html">Press </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/company/team/index.html">Team </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/company/team/investors.html">Investors </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/company/careers.html">Careers </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="http://blog.graphlab.com" onclick="trackClick(event, '');return false;">Blog </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="http://graphlab.org/index.html" target="_blank">GraphLab.org <i class="fa fa-external-link offsitearrow"></i> </a> </li> 
+          <li role="presentation" class="divider"></li> 
+          <li role="presentation"> <a role="menuitem" tabindex="-1" href="/company/contact.html">Contact Us </a> </li> 
+         </ul> 
+        </div> </li> 
+      </ul> 
+      <ul class="nav navbar-nav cml-navbar-nav navbar-right"> 
+       <li><a class="btn btn-primary" href="/products/create/quick-start-guide.html">Download</a></li> 
+       <li> <a data-container="body" data-toggle="popover" data-placement="bottom" href="javascript:" id="header-search-button" class="searchbttn-com"> <span class="glyphicon glyphicon-search"></span> </a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </nav> 
+   <div class="container"> 
+    <div class="row" style="background-color: #0a8cc4; color: white;"> 
+     <div class="col-sm-8 col-md-9"> 
+      <div style="margin-left: 35px; margin-right: 35px; margin-top: 6px;"> 
+       <span style="font-size: 60px; font-weight: 100;">GraphLab Create<span class="trademark"></span></span> 
+       <br> 
+       <span style="font-size: 32px;  font-weight: 100;"> Build scalable predictive applications, <em>fast</em> </span> 
+      </div> 
+     </div> 
+     <div class="col-sm-4 col-md-3"> 
+      <div style="margin-left: 35px; margin-right: 35px; margin-top: 25px;"> 
+       <!--HubSpot Call-to-Action Code --> 
+       <span class="hs-cta-wrapper" id="hs-cta-wrapper-e7c905fc-db34-426a-b25d-4fec56fbb880"> <span class="hs-cta-node hs-cta-e7c905fc-db34-426a-b25d-4fec56fbb880" id="hs-cta-e7c905fc-db34-426a-b25d-4fec56fbb880"> 
+         <!--[if lte IE 8]>
+            <div id="hs-cta-ie-element"></div>
+            <![endif]--> <a href="http://cta-redirect.hubspot.com/cta/redirect/426799/e7c905fc-db34-426a-b25d-4fec56fbb880"> <img class="hs-cta-img" id="hs-cta-img-e7c905fc-db34-426a-b25d-4fec56fbb880" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/426799/e7c905fc-db34-426a-b25d-4fec56fbb880.png"> </a> </span> <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script> <script type="text/javascript">
+                    hbspt.cta.load(426799, 'e7c905fc-db34-426a-b25d-4fec56fbb880');
+                </script> </span> 
+       <!-- end HubSpot Call-to-Action Code --> 
+      </div> 
+     </div> 
+     <div class="visible-xs"> 
+      <br>
+     </div> 
+     <div class="col-sm-12 hidden-xs"> 
+      <div style="margin-left: 35px; margin-right: 35px; margin-top: 25px; margin-bottom: 25px;"> 
+       <img src="/images/homepage_banner.png" class="img-responsive" alt="from inspiration to production"> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-xs-12"> 
+      <h2 style="color: #B0007F;">Our Customers</h2> 
+     </div> 
+     <div class="col-xs-12"> 
+      <img class="customer-image" src="/images/customers/zillow.png" width="120px" alt="Zillow"> 
+      <img class="customer-image" src="/images/customers/adobe.png" width="90px" alt="Adobe"> 
+      <img class="customer-image" src="/images/customers/pandora.png" width="120px" alt="Pandora"> 
+      <img class="customer-image" src="/images/customers/exxon.png" width="120px" alt="ExxonMobil"> 
+      <img class="customer-image" src="/images/customers/securboration.png" width="120px" alt="Securboration"> 
+      <img class="customer-image" src="/images/customers/bosch.png" width="100px" alt="Bosch"> 
+      <img class="customer-image" src="/images/customers/crosswise.png" width="120px" alt="Crosswise"> 
+      <img class="customer-image" src="/images/customers/stumbleupon.png" width="120px" alt="StumbleUpon"> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-xs-12"> 
+      <hr> 
+      <h2 style="color: #B0007F;">What's new</h2> 
+     </div> 
+     <div class="col-md-4"> 
+      <a onclick="trackClick(event, '');return false;" href="http://strataconf.com/stratany2014/public/schedule/detail/37849"> <h3> GraphLab wins third place at Strata + Hadoop World Startup Showcase! </h3> </a> 
+      <p> Out of the dozen finalists, GraphLab impresses judges and attendees by demonstrating the simpicity of building a recommender and deploying it as live services on AWS - all in Python with GraphLab Create<span class="trademark"></span>. </p> 
+      <a href="/events/index.html"> <h3>Upcoming Events</h3> </a>
+      <a onclick="trackClick(event, '');return false;" href="https://sites.google.com/site/software4ml/speakers" target="_blank">Software Engineering for Machine Learning</a> 
+      <p>December 13, 2014 | Montreal, Canada</p> 
+      <a onclick="trackClick(event, '');return false;" href="http://www.meetup.com/seattle-python-data-science/events/219015985/" target="_blank"> Data Science at Zillow: The Zestimate<sup>®</sup> and Beyond Meetup </a> 
+      <p>January 27, 2015 | 7:00 PM | Seattle, WA</p> 
+      <a onclick="trackClick(event, '');return false;" href="http://strataconf.com/big-data-conference-ca-2015/public/schedule/detail/39129" target="_blank">Strata + Hadoop World: Large-Scale Machine Learning Day</a> 
+      <p>February 18, 2015 | San Jose, CA</p>  
+     </div> 
+     <div class="col-md-4"> 
+      <a onclick="trackClick(event, '');return false;" href="http://blog.graphlab.com"> <h3>Blog</h3> </a> 
+      <a href="http://blog.graphlab.com/why-r-users-should-try-graphlab-create"> <p> <strong>Why R users should try GraphLab Create<span class="trademark"></span></strong> </p> </a> 
+      <p> <small>Posted by Chris Dubois on Oct 23, 2014</small> </p> 
+      <p> Devoted R users are getting really excited about GraphLab Create’s scalable data frame, the SFrame. GraphLab Create's Python interface is a small step from the operations that R users are used to - and very little Python knowledge is required. In this blog, I discuss a few areas where GraphLab Create goes beyond the limits of R, like memory and parallelization. I also show a few quick examples of how to use GraphLab Create SFrame commands to illustrate the similarities between pandas and dplyr. </p> 
+      <p> <a href="http://blog.graphlab.com/why-r-users-should-try-graphlab-create">Read More</a> </p> 
+     </div> 
+     <div class="col-md-4"> 
+      <a href="/products/create/overview.html"> <h3>Get GraphLab Create<span class="trademark"></span></h3> </a> 
+      <p> GraphLab Create<span class="trademark"></span> provides a machine learning platform for data scientists and business analysts with some programming background to easily take their ideas from inspiration to production with the same code base. </p> 
+      <a href="/products/create/quick-start-guide.html">Download Now</a> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-md-12"> 
+      <hr> 
+      <h2 style="color: #B0007F;">Why GraphLab Create?</h2> 
+     </div> 
+     <div class="row homepage5col"> 
+      <div class="col-md-2 col-sm-4"> 
+       <a href="/products/create/performance.html" class="product-feature fast"> <h3> Blazing <br>performance</h3> </a> 
+      </div> 
+      <div class="col-md-3 col-sm-4"> 
+       <a href="/products/create/features.html" class="product-feature tablegraph"> <h3> Support for graphs <br>and tabular data</h3> </a> 
+      </div> 
+      <div class="col-md-2 col-sm-4"> 
+       <a href="/products/create/docs" class="product-feature pythonapi"> <h3> Simple <br>Python API</h3> </a> 
+      </div> 
+      <div class="col-md-3 col-sm-4"> 
+       <a href="/products/create/overview.html#pipeline" class="product-feature scale"> <h3> Prototype to production <br>with the same code</h3> </a> 
+      </div> 
+      <div class="col-md-2 col-sm-4"> 
+       <a href="/learn" class="product-feature resources"> <h3> Lots of resources <br>to get you going</h3> </a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <footer> 
+   <div id="gl-prefooter"> 
+    <div class="container"> 
+     <div class="col-md-3 col-sm-4 col-xs-12"> 
+      <div class="gl-footer-about">
+        About 
+      </div> 
+      <div class="gl-footer-links"> 
+       <div> 
+        <div class="gl-footer-link"> 
+         <a href="http://graphlab.com/company/contact.html" onclick="trackClick(event, '');return false;"> Contact </a> 
+        </div> 
+        <div class="gl-footer-link"> 
+         <a href="http://graphlab.com/company/team/index.html" onclick="trackClick(event, '');return false;"> Team </a> 
+        </div> 
+       </div> 
+       <div> 
+        <div class="gl-footer-link"> 
+         <a href="http://graphlab.com/company/careers.html" onclick="trackClick(event, '');return false;"> Careers </a> 
+        </div> 
+        <div class="gl-footer-link"> 
+         <a href="http://graphlab.com/company/press.html" onclick="trackClick(event, '');return false;"> Press </a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="gl-footer-social"> 
+       <div class="gl-footer-about">
+         Connect With Us 
+       </div> 
+       <ul class="nav nav-pills gl-footer-socialbuttons"> 
+        <li><a onclick="trackClick(event, 'twitter');return false;" href="https://twitter.com/graphlabteam"><i class="fa fa-twitter fa-lg"></i></a></li> 
+        <li><a onclick="trackClick(event, 'linkedin');return false;" href="http://www.linkedin.com/company/graphlab"><i class="fa fa-linkedin fa-lg"></i></a></li> 
+        <li><a onclick="trackClick(event, 'facebook');return false;" href="https://www.facebook.com/graphlabinc"><i class="fa fa-facebook fa-lg"></i></a></li> 
+        <li><a onclick="trackClick(event, 'youtube');return false;" href="http://www.youtube.com/channel/UC9T07WMdwB6IPf_dKXhVsCQ"><i class="fa fa-youtube fa-lg"></i></a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="col-lg-3 visible-lg"></div> 
+     <div class="col-lg-6 col-md-9 col-sm-8 col-xs-12"> 
+      <div class="pull-right"> 
+       <div class="gl-footer-connect"> 
+        <div class="gl-footer-connect-text">
+          Be the first to get our hot new tools. Subscribe to our email list. 
+        </div> 
+        <div class="gl-footer-connect-button"> 
+         <a target="_blank" href="http://graphlab.hs-sites.com/stay-in-touch-with-graphlab" onclick="trackClick(event, 'mailchimp');return false;" class="btn btn-default btn-gl-connect"> Subscribe </a> 
+        </div> 
+       </div> 
+       <div class="gl-footer-dog"> 
+        <img style="width: 232px; height: 160px;" src="http://graphlab.com/images/footer_dog.png" alt=""> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="cml-footer"> 
+    <div class="container"> 
+     <span class="cml-footer-text pull-left"> © 2014 GraphLab Inc. · All Rights Reserved. No part of this website may be reproduced without GraphLab, Inc.'s expressed consent. GraphLab and logo are property of GraphLab Inc. </span> 
+     <span class="cml-footer-links pull-right"> <a href="http://graphlab.com/legal/privacy_policy.html" onclick="trackClick(event, '');return false;"> Privacy Policy </a> &nbsp;|&nbsp; <a href="http://graphlab.com/legal/terms_of_use.html" onclick="trackClick(event, '');return false;"> Terms of Use </a> </span> 
+    </div> 
+   </div> 
+   <div class="cml-colorbar-bottom-container"> 
+    <table class="cml-colorbar-bottom" width="100%" border="0" cellspacing="0" cellpadding="0"> 
+     <tbody>
+      <tr> 
+       <td width="20%" bgcolor="#B0007F"></td> 
+       <td width="20%" bgcolor="#0A8CC4"></td> 
+       <td width="20%" bgcolor="#85BD00"></td> 
+       <td width="20%" bgcolor="#FF5500"></td> 
+       <td width="20%" bgcolor="#5E5555"></td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </div> 
+  </footer>   
+ </body>
+</html>

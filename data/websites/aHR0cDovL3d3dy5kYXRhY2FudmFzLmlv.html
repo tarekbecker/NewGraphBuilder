@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="DataCanvas">
+ <head>
+  <meta charset="utf-8">
+  <title>DataCanvas - Easy data pipeline</title>
+  <meta name="description" content="DataCanvas is a visualized, powerful and simple data analysis platform to unlock the value of your data">
+  <meta name="keywords" content="DataCanvas, data, platform, visualization, big data, machine learning, hive, spark, hadoop, dataflow">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="cache-control" content="max-age=0">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+  <meta http-equiv="pragma" content="no-cache">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/dist/app.css?timestamp=1417061268386">
+  <link id="theme-style" rel="stylesheet" href="/css/styles-theme.css?timestamp=1417061268386">
+  <link id="StyleLanguage" rel="stylesheet" href="/css/language/style_en_US.css?timestamp=1417061268386">
+  <script type="text/javascript" src="/js/lib/checkIE.js"></script>
+  <script src="/js/lib/jquery.js"></script>
+  <!--[if lt IE 9]>
+    <script src="bower/es5-shim/es5-shim.min.js"></script>
+    <script src="bower/json3/lib/json3.min.js"></script>
+    <![endif]-->
+ </head>
+ <body data-spy="scroll">
+  <div ng-controller="IndexCtrl">
+   <!-- ******HEADER****** -->
+   <link id="theme-style" rel="stylesheet" href="/css/styles-layout.css">
+   <header id="top" class="header navbar-fixed-top">
+    <div class="container">
+     <h1 class="logo pull-left"><a class="scrollto" href="#promo"><img src="/img/logo_datacanvas.png" alt="Logo"><p translate="index.logoSlogan"></p></a></h1>
+     <!--//logo-->
+     <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+      <div class="navbar-header">
+       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-collapse">
+       <ul class="nav navbar-nav">
+        <!-- <li class="active nav-item sr-only"><a class="scrollto" href="#promo" translate="navi.Home">Home</a></li> -->
+        <li class="nav-item"><a class="scrollto" href="#features" translate="index.navi.features">Features</a></li>
+        <li class="nav-item"><a class="scrollto" href="#testimonials" translate="index.navi.why">Why DataCanvas</a></li>
+        <li class="nav-item"><a class="scrollto" href="#how" translate="index.navi.works">How</a></li>
+        <li class="nav-item"><a class="scrollto" href="#faq" translate="index.navi.faq">FAQ</a></li>
+        <li class="nav-item"><a class="scrollto" href="#pricing" translate="index.navi.pricing">Plan</a></li>
+        <li class="nav-item"><a class="scrollto" href="#contact" translate="index.navi.contact">Contact</a></li>
+        <li class="nav-item" id="loginLi"><a href="/login.html#/login" translate="index.navi.login">Login</a></li>
+        <li class="dropdown nav-item" id="console" console-action=""><a href="/home.html#/environment" translate="index.navi.console">Console</a><b class="dropdown-toggle" data-toggle="dropdown"></b>
+         <ul class="dropdown-menu" ng-mouseleave="consoleHide()">
+          <li><a ng-click="Loginout()"><i class="fa fa-power-off"></i> <em translate="header.user.Logout" class="ng-scope">Logout</em></a></li>
+         </ul></li>
+       </ul>
+      </div>
+     </nav>
+    </div>
+   </header>
+   <!-- ******PROMO****** -->
+   <section id="promo">
+    <div id="layout">
+     <div id="carousel-banner" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+       <li data-target="#carousel-banner" data-slide-to="0" class="active"></li>
+       <li data-target="#carousel-banner" data-slide-to="1"></li>
+       <li data-target="#carousel-banner" data-slide-to="2"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+       <div class="item active">
+        <div class="en_US_banner-2 {{bannerLang}}_banner-2 banner_bg">
+         <div class="container flex">
+          <div class="left top-100 grid-60">
+           <h2 class="font-35 top-50 font-white" translate="index.banner.image1">An orchestration platform<br>to start your big data journey!</h2>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="item">
+        <div class="en_US_banner-1 {{bannerLang}}_banner-1 banner_bg">
+         <div class="container flex">
+          <div class="left top-100 grid-60">
+           <h2 class="font-35 top-50 font-white" translate="index.banner.image2">Dataflow over Docker</h2>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="item">
+        <div class="en_US_banner-3 {{bannerLang}}_banner-3 banner_bg">
+         <div class="container flex">
+          <div class="left top-100 grid-60">
+           <h2 class="font-35 top-50 font-blue 3_top" translate="index.banner.image3">Advanced analytics are clicks away<br>It has never been easier!</h2>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <script>$(function() {
+                        $('.carousel').carousel();
+                    });</script>
+    </div>
+    <!--//container-->
+   </section>
+   <!--//promo-->
+   <!-- ===========FEATURES============== -->
+   <section id="features" class="features section">
+    <div class="container">
+     <div class="row">
+      <h2 class="title text-center sr-only" translate="index.features.title">Features</h2>
+      <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+       <div class="icon">
+        <i class="fa fa-eye"></i>
+       </div>
+       <!--//icon-->
+       <div class="content">
+        <h3 class="title" translate="index.features.list.1.title">Visual Programming</h3>
+        <p translate="index.features.list.1.des">Rely on drag &amp; drop interface to compose pipeline freely. Pack your own module with minimal efforts. Rich out-of-box modules that support advanced analytics.</p>
+       </div>
+       <!--//content-->
+      </div>
+      <!--//item-->
+      <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+       <div class="icon">
+        <i class="fa fa-bar-chart-o"></i>
+       </div>
+       <!--//icon-->
+       <div class="content">
+        <h3 class="title" translate="index.features.list.2.title">Ready For Big Data</h3>
+        <p translate="index.features.list.2.des">Seamlessly integration with MR, HIVE, Pig, R .etc. Connect big data infrastructures.</p>
+       </div>
+       <!--//content-->
+      </div>
+      <!--//item-->
+      <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+       <div class="icon">
+        <i class="fa fa-users"></i>
+       </div>
+       <!--//icon-->
+       <div class="content">
+        <h3 class="title" translate="index.features.list.3.title">Collaboration</h3>
+        <p translate="index.features.list.3.des">Copy&amp;Paste fan? Project and module sharing across team. Enjoy building your big data applications collaboratively!</p>
+       </div>
+       <!--//content-->
+      </div>
+      <!--//item-->
+      <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+       <div class="icon">
+        <i class="fa fa-crosshairs"></i>
+       </div>
+       <!--//icon-->
+       <div class="content">
+        <h3 class="title" translate="index.features.list.4.title">Operation Excellence</h3>
+        <p translate="index.features.list.4.des">See the production pipeline live! Unify resource, optimize workload and automation, committed to reduce your operation burden.</p>
+       </div>
+       <!--//content-->
+      </div>
+      <!--//item-->
+     </div>
+     <!--//row-->
+     <div class="row">
+      <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+       <div class="icon">
+        <i class="fa fa-heart"></i>
+       </div>
+       <!--//icon-->
+       <div class="content">
+        <h3 class="title" translate="index.features.list.5.title">Machine Learning</h3>
+        <p translate="index.features.list.5.des">Classifier, decision tree, logistic regression, we got you covered. Machine learning has never been so easier. Start to power up your business with predictive analytics today.</p>
+       </div>
+       <!--//content-->
+      </div>
+      <!--//item-->
+      <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+       <div class="icon">
+        <i class="fa fa-shield"></i>
+       </div>
+       <!--//icon-->
+       <div class="content">
+        <h3 class="title" translate="index.features.list.6.title">Everything In Container</h3>
+        <p translate="index.features.list.6.des">All modules are running in Docker container to support the sophisticated pipeline, no matter it is offline, online or streaming.</p>
+       </div>
+       <!--//content-->
+      </div>
+      <!--//item-->
+      <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+       <div class="icon">
+        <i class="fa fa-cloud"></i>
+       </div>
+       <!--//icon-->
+       <div class="content">
+        <h3 class="title" translate="index.features.list.7.title">Flexible Deployment</h3>
+        <p translate="index.features.list.7.des">DataCanvas can be deployed in the way that fits your requirement and budget best, from shared tenant on public, dedicated tenant to private deployment.</p>
+       </div>
+       <!--//content-->
+      </div>
+      <!--//item-->
+      <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+       <div class="icon">
+        <i class="fa fa-cog"></i>
+       </div>
+       <!--//icon-->
+       <div class="content">
+        <h3 class="title" translate="index.features.list.8.title">Work For Everyone</h3>
+        <p translate="index.features.list.8.des">No matter you are a data scientist, engineer or analyst, DataCanvas helps you to be more productive.</p>
+       </div>
+       <!--//content-->
+      </div>
+      <!--//item-->
+     </div>
+     <!--//row-->
+    </div>
+    <!--//container-->
+   </section>
+   <!--//features-->
+   <section id="testimonials" class="testimonials section has-pattern">
+    <div class="container">
+     <div class="row">
+      <h2 class="title text-center" translate="index.why.title">Why DataCanvas?</h2>
+      <div class="item col-md-4 col-sm-4">
+       <div class="quote-box">
+        <i class="fa fa-quote-left"></i>
+        <blockquote class="quote" translate="index.why.list1.des">
+         Analytical visualization besides data visualization, put the decision maker back to the driver seat
+        </blockquote>
+        <!--//quote-->
+       </div>
+       <!--//quote-box-->
+       <div class="people row">
+        <img class="img-rounded user-pic col-md-5 col-sm-5 col-xs-12 col-md-offset-1 col-sm-offset-1" src="/images/why/manager.png" alt="">
+        <p class="details text-center pull-left"><span class="name" translate="index.why.list1.title">Transparency</span> 
+         <!-- <span class="title">Bristol, UK</span> --></p>
+       </div>
+       <!--//people-->
+      </div>
+      <!--//item-->
+      <div class="item col-md-4 col-sm-4">
+       <div class="quote-box">
+        <i class="fa fa-quote-left"></i>
+        <blockquote class="quote" translate="index.why.list2.des">
+         Self-service platform to eliminate data plumber job, let team focus on high-value tasks
+        </blockquote>
+        <!--//quote-->
+       </div>
+       <!--//quote-box-->
+       <div class="people row">
+        <img class="img-rounded user-pic col-md-5 col-sm-5 col-xs-12 col-md-offset-1 col-sm-offset-1" src="/images/why/engineer.png" alt="">
+        <p class="details text-center pull-left"><span class="name" translate="index.why.list2.title">Self-service</span> 
+         <!-- <span class="title">Paris, France</span> --></p>
+       </div>
+       <!--//people-->
+      </div>
+      <!--//item-->
+      <div class="item col-md-4 col-sm-4">
+       <div class="quote-box">
+        <i class="fa fa-quote-left"></i>
+        <blockquote class="quote" translate="index.why.list3.des">
+         Engineer, scientist, analyst work on the same page, connect analytics, data and people
+        </blockquote>
+        <!--//quote-->
+       </div>
+       <!--//quote-box-->
+       <div class="people row">
+        <img class="img-rounded user-pic col-md-5 col-sm-5 col-xs-12 col-md-offset-1 col-sm-offset-1" src="/images/why/team.png" alt="">
+        <p class="details text-center pull-left"><span class="name" translate="index.why.list3.title">Collaboration</span> 
+         <!-- <span class="title">Hongkong, China</span> --></p>
+       </div>
+       <!--//people-->
+      </div>
+      <!--//item-->
+     </div>
+     <!--//row-->
+    </div>
+    <!--//container-->
+   </section>
+   <!--//Testimonials-->
+   <!-- ******HOW****** -->
+   <section id="how" class="how section has-pattern">
+    <div class="container">
+     <div class="row">
+      <h2 class="title text-center" translate="index.works.title">How It Works</h2>
+      <div class="col-md-10 col-md-offset-1 works_des">
+       <div class="works_l">
+        <img ng-src="/images/language/{{bannerLang}}/works1.png">
+       </div>
+       <div class="works_r">
+        <p translate="index.works.des1">The first step to use DataCanvas is to deploy a tenant on your preferred cloud service provider. After you sign up, please follow the instructions to create your private tenant, or you can simply access Playground tenant to explore DataCanvas. We encourage you to test drive before making any decision.</p>
+       </div>
+      </div>
+      <div class="col-md-10 col-md-offset-1 works_des">
+       <div class="works_l">
+        <p translate="index.works.des2">Intuitive drag &amp; drop interface to compose data pipeline in workspace. Data ETL, your favorite machine learning algorithms, advanced analytics are clicks away.</p>
+       </div>
+       <div class="works_r">
+        <img ng-src="/images/language/{{bannerLang}}/works2.png">
+       </div>
+      </div>
+      <div class="col-md-10 col-md-offset-1 works_des">
+       <div class="works_l">
+        <img ng-src="/images/language/{{bannerLang}}/works3.png">
+       </div>
+       <div class="works_r">
+        <p translate="index.works.des3">Scheduling, parallel execution and job provision provide a solid engineering platform. All data choas are managed as an online document.</p>
+       </div>
+      </div>
+     </div>
+     <!--//row-->
+    </div>
+    <!--//container-->
+   </section>
+   <!--//how-->
+   <!-- ******FAQ****** -->
+   <section id="faq" class="faq section">
+    <div class="container">
+     <div class="row">
+      <h2 class="title text-center" translate="index.questions.title">Frequently Asked Questions</h2>
+      <div class="faq-col col-md-6 col-sm-6 col-xs-12">
+       <div class="item">
+        <h3 class="question"><i class="fa fa-question-circle"></i><em translate="index.questions.list.1.title">What is DataCanvas?</em></h3>
+        <p class="answer" translate="index.questions.list.1.des">DataCanvas is an orchestration platform that helps people to build, manage and share data pipelines. It provides an visualized interface to compose data pipeline that can support advanced analytics, across all your big data infrastructures. It’s a one stop solution to empower your big data strategy.</p>
+       </div>
+       <!--//item-->
+       <div class="item">
+        <h3 class="question"><i class="fa fa-question-circle"></i><em translate="index.questions.list.2.title">What value does DataCanvas bring?</em></h3>
+        <p class="answer" translate="index.questions.list.2.des">It is a control tower to drastically simplify your data engineering. It enables data science to non-scientists. The orchestration engine let you automate across infrastructures. DataCanvas is also a collaboration hub that improves the productivity of your team. Last but not least, it enables advanced analytics at a faction of cost and time of other options around.</p>
+       </div>
+       <!--//item-->
+       <div class="item">
+        <h3 class="question"><i class="fa fa-question-circle"></i><em translate="index.questions.list.3.title">Who should use DataCanvas?</em></h3>
+        <p class="answer" translate="index.questions.list.3.des">Anyone works with data analytics could enjoy the benefits of DataCanvas. If you are a data scientist, DataCanvas helps to iterate faster. If you are a engineer, DataCanvas helps to deliver the pipelines fast. If you are an analyst, you could enjoy the analytic results with zero programming. If you are working on data pipeline Ops, DataCanvas offers facilities to make your life easier.</p>
+       </div>
+       <!--//item-->
+       <div class="item">
+        <h3 class="question"><i class="fa fa-question-circle"></i><em translate="index.questions.list.8.title">Does DataCanvas use proprietary format to save modules?</em></h3>
+        <p class="answer" translate="index.questions.list.8.des">No. We built DataCanvas to be an open and interoperable platform. All the modules are stored as standard docker image, which allows you to run it virtually anywhere. You can also import/export projects and modules.</p>
+       </div>
+       <!--//item-->
+      </div>
+      <!--//faq-col-->
+      <div class="faq-col col-md-6 col-sm-6 col-xs-12">
+       <div class="item">
+        <h3 class="question"><i class="fa fa-question-circle"></i><em translate="index.questions.list.5.title">How to try out DataCanvas?</em></h3>
+        <p class="answer" translate="index.questions.list.5.des">Please sign up and you will see detailed instructions, which allow you to enjoy our playground or start your private tenant on public cloud. DataCanvas also allows private deployment. Please contact us for private deployment support.</p>
+       </div>
+       <!--//item-->
+       <div class="item">
+        <h3 class="question"><i class="fa fa-question-circle"></i><em translate="index.questions.list.6.title">How much do you charge for DataCanvas?</em></h3>
+        <p class="answer" translate="index.questions.list.6.des">DataCanvas is under beta and we don’t charge for our beta service. But you should be aware of the cost associated with DataCanvas. If you are deploying a tenant on public cloud, you are responsible for the costs on virtual machine, network and storage from cloud service provider. We will share out detailed pricing once Datacanvas moves out of beta.</p>
+       </div>
+       <!--//item-->
+       <div class="item">
+        <h3 class="question"><i class="fa fa-question-circle"></i><em translate="index.questions.list.7.title">Which public cloud could DataCanvas be deployed on?</em></h3>
+        <p class="answer" translate="index.questions.list.7.des">Currently, we support AWS. We have a plan to support Windows Azure and Google Compute Engine in near future.</p>
+       </div>
+       <!--//item-->
+       <div class="item">
+        <h3 class="question"><i class="fa fa-question-circle"></i><em translate="index.questions.list.4.title">How does DataCanvas work?</em></h3>
+        <p class="answer" translate="index.questions.list.4.des">Please refer the information on our website. Actually the simplest way to get the answer is : sign up and experience by yourself!</p>
+       </div>
+       <!--//item-->
+       <div class="item">
+        <h3 class="question"><i class="fa fa-question-circle"></i><em translate="index.questions.list.9.title">What is playbook service?</em></h3>
+        <p class="answer" translate="index.questions.list.9.des">Playbook is a great way to apply advanced analytics on data pipelines. We provide services to make the playbook that you can instantly get the advanced analytics you want, such as recommendation, fraud detection, churn reduction and etc.</p>
+       </div>
+       <!--//item-->
+      </div>
+      <!--//faq-col-->
+     </div>
+     <!--//row-->
+    </div>
+    <!--//container-->
+   </section>
+   <!--//faq-->
+   <!-- ******PRICING****** -->
+   <section id="pricing" class="pricing section has-pattern">
+    <div class="container">
+     <div class="price-cols row">
+      <h2 class="title text-center" translate="index.pricing.title">Choose your plan today</h2>
+      <p class="des"><em translate="index.pricing.des"></em> <a href="/login.html#/signup" class="fa fa-arrow-right"></a></p>
+      <div class="items-wrapper col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+       <div class="item price-1 col-md-4 col-sm-4 col-xs-12 text-center">
+        <div class="item-inner">
+         <div class="heading">
+          <h3 class="title" translate="index.pricing.list.1.title">Starter</h3>
+          <p class="price-figure"><span class="price-figure-inner"><span class="currency"><em translate="index.pricing.symbol">$</em></span><span class="number"></span><br><span class="unit" translate="index.pricing.time">per month</span></span></p>
+         </div>
+         <div class="content">
+          <ul class="list-unstyled feature-list">
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.1.des1"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.1.des2"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.1.des3"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.1.des4"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.1.des5"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.1.des6"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.1.des7"></em></li>
+          </ul>
+          <a class="btn btn-warning btn-block" href="/login.html#/signup" translate="index.pricing.trial">Free Trial</a>
+         </div>
+         <!--//content-->
+        </div>
+        <!--//item-inner-->
+       </div>
+       <!--//item-->
+       <div class="item price-2 col-md-4 col-sm-4 col-xs-12 text-center best-buy">
+        <div class="item-inner">
+         <div class="heading">
+          <h3 class="title" translate="index.pricing.list.2.title">Professional</h3>
+          <p class="price-figure"><span class="price-figure-inner"><span class="currency"><em translate="index.pricing.symbol">$</em><em translate="index.pricing.symbol">$</em></span><span class="number"></span><br><span class="unit" translate="index.pricing.time">per month</span></span></p>
+         </div>
+         <div class="content">
+          <ul class="list-unstyled feature-list">
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.2.des1"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.2.des2"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.2.des3"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.2.des4"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.2.des5"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.2.des6"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.2.des7"></em></li>
+          </ul>
+          <a class="btn btn-warning btn-block" href="/login.html#/signup" translate="index.pricing.trial">Free Trial</a>
+         </div>
+         <!--//content-->
+         <div class="ribbon">
+          <div class="text">
+           Popular
+          </div>
+         </div>
+         <!--//ribbon-->
+        </div>
+        <!--//item-inner-->
+       </div>
+       <!--//item-->
+       <div class="item price-3 col-md-4 col-sm-4 col-xs-12 text-center">
+        <div class="item-inner">
+         <div class="heading">
+          <h3 class="title" translate="index.pricing.list.3.title">Business</h3>
+          <p class="price-figure"><span class="price-figure-inner"><span class="currency"><em translate="index.pricing.symbol">$</em><em translate="index.pricing.symbol">$</em><em translate="index.pricing.symbol">$</em></span><span class="number"></span><br><span class="unit" translate="index.pricing.time">per month</span></span></p>
+         </div>
+         <div class="content">
+          <ul class="list-unstyled feature-list">
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.3.des1"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.3.des2"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.3.des3"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.3.des4"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.3.des5"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.3.des6"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.3.des7"></em></li>
+           <li><i class="fa fa-check"></i><em translate="index.pricing.list.3.des8"></em></li>
+          </ul>
+          <a class="btn btn-warning btn-block scrollto" href="#contact" translate="index.contact.title">Contact US</a>
+         </div>
+         <!--//content-->
+        </div>
+        <!--//item-inner-->
+       </div>
+       <!--//item-->
+      </div>
+      <!--//items-wrapper-->
+     </div>
+     <!--//row-->
+    </div>
+    <!--//container-->
+   </section>
+   <!--//pricing-->
+   <!-- ******CONTACT****** -->
+   <section id="contact" class="contact section has-pattern">
+    <div class="container">
+     <div class="row text-center">
+      <h2 class="title" translate="index.contact.title">Contact US</h2>
+      <div class="intro col-md-6 col-sm-12 col-xs-12 col-md-offset-3">
+       <p translate="index.contact.des">We’d love to hear from you. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut erat magna. Aliquam porta sem a lacus imperdiet posuere. Integer semper eget ligula id eleifend.</p>
+       <ul class="list-unstyled contact-details">
+        <li><i class="fa fa-envelope"></i><a href="mailto:sophia@zetdata.com">sophia@zetdata.com</a></li>
+        <!-- <li><i class="fa fa-phone-square"></i>0800 123 456</li> -->
+       </ul>
+      </div>
+     </div>
+     <!--//row-->
+     <div class="row text-center">
+      <div class="contact-form col-md-6 col-sm-12 col-xs-12 col-md-offset-3">
+       <form class="form form-horizontal contact_div">
+        <div class="form-group name">
+         <label for="name" translate="index.contact.name" class="col-sm-2 control-label contact_label">Name</label>
+         <div class="col-sm-10">
+          <input id="name" type="text" class="form-control contact_ipt" ng-model="contact.name">
+         </div>
+        </div>
+        <!--//form-group-->
+        <div class="form-group email">
+         <label for="email" translate="index.contact.email" class="col-sm-2 control-label contact_label">Email</label>
+         <div class="col-sm-10">
+          <input id="email" type="text" class="form-control contact_ipt" ng-model="contact.email">
+         </div>
+        </div>
+        <!--//form-group-->
+        <div class="form-group message">
+         <label for="message" translate="index.contact.message" class="col-sm-2 control-label contact_label">Message</label>
+         <div class="col-sm-10">
+          <textarea id="message" class="form-control contact_ipt" rows="6" ng-model="contact.content"></textarea>
+         </div>
+        </div>
+        <!--//form-group-->
+        <div class="form-group msg-danger" style="display:none">
+         <div class="col-sm-2"></div>
+         <div class="col-sm-10">
+          <div class="alert alert-danger" role="alert">
+           <a class="close" data-dismiss="alert">×</a> 
+           <em translate="jsTip.messageEmpty"></em>
+          </div>
+         </div>
+        </div>
+        <div class="form-group msg-success" style="display:none">
+         <div class="col-sm-2"></div>
+         <div class="col-sm-10">
+          <div class="alert alert-success" role="alert">
+           <a class="close" data-dismiss="alert">×</a> 
+           <em translate="jsTip.messageOK"></em>
+          </div>
+         </div>
+        </div>
+        <button type="submit" class="btn btn-lg btn-theme" translate="index.contact.sendMsg" ng-click="sengMsg()">Send Message</button>
+       </form>
+       <!--//form-->
+      </div>
+      <!--//contact-form-->
+     </div>
+     <!--//row-->
+    </div>
+    <!--//container-->
+   </section>
+   <!--//contact-->
+   <!-- ******FOOTER****** -->
+   <footer class="footer">
+    <div class="container">
+     <div>
+      <small translate="footer.copyright">Copyright © 2014 ZetData DataCanvas</small>
+      <a href="#features" translate="footer.about" class="scrollto">about</a>
+      <a href="#features" translate="footer.help" class="scrollto">Help</a>
+     </div>
+    </div>
+    <!--======= language set =========-->
+    <div class="config-wrapper">
+     <div class="config-wrapper-inner dropdown">
+      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" id="setLang">{{nowLanguage}}</a>
+      <ul class="dropdown-menu animated half flipInX language">
+       <li class="default"><a href="javascript:void(0)" ng-click="setLang('en_US')" translate="index.language.en" id="en_US">English (US)</a></li>
+       <li><a href="javascript:void(0)" ng-click="setLang('Chinese')" translate="index.language.chinese" id="Chinese">中文（简体）</a></li>
+      </ul>
+     </div>
+     <!--//config-wrapper-inner-->
+    </div>
+   </footer>
+   <!--//footer-->
+   <!-- *****language set****** -->
+   <script src="/js/main.js"></script>
+   <!--[if !IE]>-->
+   <script src="/js/animations.js"></script>
+   <!--<![endif]-->
+  </div>
+  <script src="/dist/app.js?timestamp=1417061268386"></script>
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-54043328-1', 'auto');
+      ga('send', 'pageview');</script>
+ </body>
+</html>

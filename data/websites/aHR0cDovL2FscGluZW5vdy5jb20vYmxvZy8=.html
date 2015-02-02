@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <!-- This site uses the WordPress Twitter Bootstrap CSS plugin v3.2.0-4 from iControlWP http://icwp.io/w/ --> 
+  <link rel="stylesheet" type="text/css" href="http://alpinenow.com/blog/wp-content/plugins/wordpress-bootstrap-css/resources/bootstrap-3.2.0/css/bootstrap.css"> 
+  <!-- / WordPress Twitter Bootstrap CSS Plugin from iControlWP. --> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta charset="UTF-8"> 
+  <title>Alpine Blog</title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://alpinenow.com/blog/xmlrpc.php"> 
+  <meta name="generator" content="WordPress 3.9.3"> 
+  <title>Alpine Blog</title> 
+  <link rel="icon" type="image/png" href="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/assets/images/favicon.png"> 
+  <!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/assets/css/baseIE6.css" />
+<![endif]--> 
+  <!--[if !(IE 6)]--> 
+  <link href="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/assets/css/base.css" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" type="text/css" href="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/style.css" media="screen"> 
+  <!--[endif]--> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"> 
+  <link href="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/assets/css/takeOver.css" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" type="text/css" href="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/style.css" media="screen"> 
+  <style type="text/css">#sub-header {	background: #000;}#header {	background: #000;}
+</style> 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/assets/js/jquery.vero.pagehref.js"></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/assets/js/nav.js"></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/assets/js/jquery.fixPNG.js"></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/assets/js/jquery.vero.takeover.js"></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/assets/js/jquery.vero.htmlutilities.js"></script> 
+  <script type="text/javascript">
+var currentBlurb	= 0;
+var blurbs			= new Array();
+var images			= new Array();
+var autoplay		= 0;
+
+images.push( 'home_panel1.png' );
+images.push( 'home_panel2.png' );
+images.push( 'home_panel3.png' );
+
+blurbs.push( new Array('<div class="copy-block"><h4 class="blue">Big Data, No Problem</h4>Crunch through billions of rows each minute, making it no big deal to deal with big data.</div><div class="copy-block" style="margin-top: 42px;"><h4 class="blue">Bigger Insights</h4>Rapidly iterate models and easily collaborate across the business to get to insights that deliver bigger impact.</div>', '<div class="copy-block" style="margin-top: 30px;"><h4 class="blue">Big Data is the Sandbox</h4>What could you do if you could play directly in the data&mdash;even big data? With Alpine Data Labs you do.</div>') );
+
+blurbs.push( new Array('<div class="copy-block" style="margin-top: 30px;"><h4 class="blue">Anywhere, Anytime Access</h4>A simple browser-based interface provides easy access for all your stakeholders.</div>', '<div class="copy-block"><h4 class="blue">No PhD Required</h4>You don’t need to be a data scientist&mdash;this is predictive analytics that anyone with P&L responsibility can understand.</div><div class="copy-block" style="margin-top: 42px;"><h4 class="blue">Make all Data Accessible</h4>It no longer matters where your data is&mdash;you can use it all to drive insights without limiting yourself to extracts or samples.</div>') );
+
+blurbs.push( new Array('<div class="copy-block"><h4 class="blue">Easy to Understand</h4>In marketing, finance, operations or HR? This is predictive analytics you can understand&mdash;and contribute to.</div><div class="copy-block" style="margin-top: 42px;"><h4 class="blue">Easy to Iterate</h4>Drag-and-drop interface means you evolve your models without looking at a single line of code.</div>', '<div class="copy-block" style="margin-top: 30px;"><h4 class="blue">No Data Movement</h4>No longer worry about where your data is—use it all with ease and make your models operational with the click of a button.</div>') );
+
+$(function($) {
+	$('#book-button').useButtonCursors();
+	$('#book-button').click(function() {
+		setster_widget.show();
+	});
+	
+	$('#home-left-arrow').useButtonCursors();
+	$('#home-left-arrow').click(function(e) {
+		nav_left(e);
+	});
+	
+	$('#home-right-arrow').useButtonCursors();
+	$('#home-right-arrow').click(function(e) {
+		nav_right(e);
+	});
+	
+	$('a').each(function() {
+		if ($(this).attr('rel') > '') {
+			$(this).click(function(e) {
+				e.preventDefault();
+                if (this.id == "downloadWin")
+                {
+                        $.takeOver($(this).attr('id'), {
+                            top: 150,
+                            width: 745,
+                            height: 565,
+                            bgcolor: 'none',
+                            dimColor: '#FFF',
+                            delay: 1000,
+                            border: false,
+                            closePadY: 540,
+                            closePadX: -60,
+                            close_img: 'assets/images/download_closeButton.gif'
+                        });
+
+                }  else
+                {
+                    $.takeOver($(this).attr('id'), {
+                        top: 150,
+                        width: 680,
+                        height: 440,
+                        bgcolor: 'none',
+                        dimColor: '#FFF',
+                        delay: 1000,
+                        border: false,
+                        closePadY: 410,
+                        closePadX: -40,
+                        close_img: 'assets/images/download_closeButton.gif'
+                    });
+                }
+			});
+		}
+	});
+	
+	autoplay = setInterval('nav_right()', 10000);
+	$('#home-pagination .slide:eq(0)').useButtonCursors();
+	$('#home-pagination .slide:eq(0)').click(function(e) {
+		currentBlurb = 0;
+		clearInterval(autoplay);
+		transition_out();
+	});
+	$('#home-pagination .slide:eq(1)').useButtonCursors();
+	$('#home-pagination .slide:eq(1)').click(function(e) {
+		currentBlurb = 1;
+		clearInterval(autoplay);
+		transition_out();
+	});
+	$('#home-pagination .slide:eq(2)').useButtonCursors();
+	$('#home-pagination .slide:eq(2)').click(function(e) {
+		currentBlurb = 2;
+		clearInterval(autoplay);
+		transition_out();
+	});
+});
+
+function nav_left(e) {
+	if (e !== undefined) clearInterval(autoplay);
+	currentBlurb--;
+	if (currentBlurb == -1) {
+		currentBlurb = 2;
+	}
+	transition_out();
+}
+
+function nav_right(e) {
+	if (e !== undefined) clearInterval(autoplay);
+	currentBlurb++;
+	if (currentBlurb == 3) {
+		currentBlurb = 0;
+	}
+	transition_out();
+}
+
+function transition_out() {
+	$('#home-top-panel .col1').stop().animate({opacity: 0}, 300);
+	$('#home-top-panel .col3').stop().animate({opacity: 0}, 300, function() {
+		transition_in();
+	});
+}
+
+function transition_in() {
+	$('#home-top-panel .col1').html( blurbs[ currentBlurb ][0] );
+	$('#home-top-panel .col3').html( blurbs[ currentBlurb ][1] );
+	
+	var marginX = currentBlurb * 385;
+	$('#home-top-panel #monitor-slides').stop().delay(200).animate({marginLeft: -marginX}, 300);
+	
+	$('#home-top-panel .col1').stop().animate({opacity: 1}, 300);
+	$('#home-top-panel .col3').stop().animate({opacity: 1}, 300);
+		
+	switch( currentBlurb ) {
+		case 0:
+			$('#home-pagination .slide:eq(0)').css('backgroundPosition', '0px -13px');
+			$('#home-pagination .slide:eq(1)').css('backgroundPosition', '0px 0px');
+			$('#home-pagination .slide:eq(2)').css('backgroundPosition', '0px 0px');
+			break;
+		case 1:
+			$('#home-pagination .slide:eq(0)').css('backgroundPosition', '0px 0px');
+			$('#home-pagination .slide:eq(1)').css('backgroundPosition', '0px -13px');
+			$('#home-pagination .slide:eq(2)').css('backgroundPosition', '0px 0px');
+			break;
+		case 2:
+			$('#home-pagination .slide:eq(0)').css('backgroundPosition', '0px 0px');
+			$('#home-pagination .slide:eq(1)').css('backgroundPosition', '0px 0px');
+			$('#home-pagination .slide:eq(2)').css('backgroundPosition', '0px -13px');
+			break;	
+	}
+}
+
+</script> 
+  <script type="text/javascript">
+$(function($) {
+	setTimeout('fadeout("customer-logos",0, 0)', 500);
+	setTimeout('fadeout("customer-logos",0, 1)', 2000);
+	setTimeout('fadeout("customer-logos",1, 0)', 4500);
+	setTimeout('fadeout("customer-logos",1, 1)', 6000);
+	
+	setTimeout('fadeout("partner-logos",0, 0)', 500);
+	setTimeout('fadeout("partner-logos",0, 1)', 2000);
+	setTimeout('fadeout("partner-logos",1, 0)', 4500);
+	setTimeout('fadeout("partner-logos",1, 1)', 6000);
+		
+	setTimeout('fadeout("partner-logos1",0, 0)', 500);
+	setTimeout('fadeout("partner-logos1",0, 1)', 2000);
+	setTimeout('fadeout("partner-logos1",1, 0)', 4500);
+	setTimeout('fadeout("partner-logos1",1, 1)', 6000);
+});
+
+function fadeout(shell, row, col) {
+	var curr = 0;
+	var next = 0;
+	if ($('#'+shell+' tr:eq('+row+') td:eq('+col+') img').length == 3) {
+		if ($('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq(0)').is(':visible')) {
+				curr = 0;
+				next = 1;
+		}
+		if ($('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq(1)').is(':visible')) {
+				curr = 1;
+				next = 2;
+		}
+		if ($('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq(2)').is(':visible')) {
+				curr = 2;
+				next = 0;
+		}
+		
+		$('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq('+curr+')').animate({opacity: 0}, 200, function() {
+			$(this).css('display', 'none');
+			$('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq('+next+')').css('display', 'block');
+			$('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq('+next+')').animate({opacity: 1}, 200, function() {
+				setTimeout('fadeout("'+shell+'",'+row+', '+col+')', 7000);
+			});
+		});
+	} else {
+		if ($('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq(0)').css('display') == 'none') {
+			$('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq(1)').animate({opacity: 0}, 200, function() {
+				$(this).css('display', 'none');
+				$('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq(0)').css('display', 'block');
+				$('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq(0)').animate({opacity: 1}, 200, function() {
+					setTimeout('fadeout("'+shell+'",'+row+', '+col+')', 7000);
+				});
+			});
+		} else {
+			$('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq(0)').animate({opacity: 0}, 200, function() {
+				$(this).css('display', 'none');
+				$('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq(1)').css('display', 'block');
+				$('#'+shell+' tr:eq('+row+') td:eq('+col+') img:eq(1)').animate({opacity: 1}, 200, function() {
+					setTimeout('fadeout("'+shell+'",'+row+', '+col+')', 7000);
+				});
+			});
+		}
+	}
+}
+</script> 
+  <script>
+/*
+* for having text links open external url's in take over
+*/
+$(function($) {
+	$('a').each(function() {
+		if ($(this).attr('rel') > '') {
+			$(this).click(function(e) {
+				e.preventDefault();
+				$.takeOver($(this).attr('id'), {
+					top: 150,
+					width: 680,
+					height: 440,
+					bgcolor: 'none',
+					dimColor: '#FFF',
+					delay: 1000,
+					border: false,
+					closePadY: 410,
+					closePadX: -40,
+					close_img: 'assets/images/download_closeButton.gif'
+				});
+			});
+		}
+	});
+	
+	$('#book-button').useButtonCursors();
+	$('#book-button').click(function() {
+		setster_widget.show();
+	});
+});
+</script> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://alpinenow.com/blog/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.9.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="A2A_SHARE_SAVE-css" href="http://alpinenow.com/blog/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.7" type="text/css" media="all"> 
+  <link rel="stylesheet" id="social-media-badge-widget-jquery-ui-css" href="http://alpinenow.com/blog/wp-content/plugins/social-media-badge-widget/css/jquery-ui-skeleton.min.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="social-media-badge-widget-skeleton-style-css" href="http://alpinenow.com/blog/wp-content/plugins/social-media-badge-widget/css/social-media-badge-widget-skeleton.min.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="social-media-badge-widget-css" href="http://alpinenow.com/blog/wp-content/plugins/social-media-badge-widget/css/social-media-badge-widget.min.css?ver=3.9.3" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-includes/js/jquery/jquery.js?ver=1.11.0"></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript">
+	window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9";
+		window.analytics.load("5ack5tsuvw");
+	window.analytics.page();
+	</script>
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://alpinenow.com/blog/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://alpinenow.com/blog/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 3.9.3"> 
+  <script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}wpa2a.done=true;}wpa2a.targets=[];}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script> 
+  <!-- Jetpack Open Graph Tags --> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Alpine Blog"> 
+  <meta property="og:description" content="View from the Summit"> 
+  <meta property="og:url" content="http://alpinenow.com/blog/"> 
+  <meta property="og:site_name" content="Alpine Blog"> 
+  <meta property="og:image" content="http://wordpress.com/i/blank.jpg"> 
+  <meta name="twitter:site" content="@jetpack"> 
+  <style type="text/css" id="syntaxhighlighteranchor"></style> 
+ </head>
+ <!-- Blog Template --> 
+ <body class="sub-page-back"> 
+  <div id="sub-header-shell" class="container_fixed"> 
+   <div id="sub-header container_fixed"> 
+    <div id="sub-logoNav-shell"> 
+     <div class="row"> 
+      <div class="col-sm-3"> 
+       <div id="logo-sub">
+        <a href="http://www.alpinenow.com"><img src="http://alpinenow.com/blog/wp-content/uploads/2014/02/alpine-data-labs-top-logo.jpg"></a>
+       </div> 
+      </div> 
+      <div class="col-sm-9"> 
+       <div class="blok-2" align="right"> 
+        <p><a href="http://start.alpinenow.com/" class="try_now">Try Alpine Now</a></p> 
+       </div> 
+       <div id="nav" class="sub-nav">
+        <ul id="menu-top-nav" class="">
+         <li><a href="http://www.alpinenow.com/why-alpine">Why Alpine?</a></li> 
+         <li><a href="http://alpinenow.com/product">Product</a></li> 
+         <li><a href="http://alpinenow.com/plans">Plans</a></li> 
+         <li><a href="http://alpinenow.com/about-us">About Us</a></li> 
+         <li><a href="http://alpinenow.com/news-events">News &amp; Events</a></li> 
+        </ul>
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="shadow-bg"> 
+  </div> 
+  <div class="container-sub container_fixed"> 
+   <div class="content"> 
+    <div id="page-content"> 
+     <!-- main content --> 
+     <div id="maincontent"> 
+      <div class="post"> 
+       <div class="commentcount"> 
+        <p> <a href="http://alpinenow.com/blog/happy-thanksgiving-and-happy-customer-analytics/" title="Comment on Happy Thanksgiving…and happy customer analytics!">0</a> </p> 
+       </div> 
+       <div class="tittle-container"> 
+        <h1><a href="http://alpinenow.com/blog/happy-thanksgiving-and-happy-customer-analytics/" title="Happy Thanksgiving…and happy customer analytics!">Happy Thanksgiving…and happy customer analytics!</a></h1> 
+       </div> 
+       <div class="the-content"> 
+        <div class="addtoany_share_save_container addtoany_content_top">
+         <div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_1">
+          <a class="a2a_button_facebook_like addtoany_special_service" data-href="http://alpinenow.com/blog/happy-thanksgiving-and-happy-customer-analytics/"></a>
+          <a class="a2a_button_twitter_tweet addtoany_special_service" data-count="none" data-url="http://alpinenow.com/blog/happy-thanksgiving-and-happy-customer-analytics/" data-text="Happy Thanksgiving…and happy customer analytics!"></a>
+          <a class="a2a_button_google_plus_share addtoany_special_service" data-annotation="none" data-href="http://alpinenow.com/blog/happy-thanksgiving-and-happy-customer-analytics/"></a> 
+          <script type="text/javascript"><!--
+wpa2a.script_load();
+//--></script> 
+         </div>
+        </div>
+        <p>Today, many are getting ready to celebrate Thanksgiving, a time when families, friends and loved ones gather to reflect on the many things they are thankful for, personally and professionally. &nbsp;There are indeed many things we are thankful for here at Alpine Data Labs – from our customers to partners and the great employees who work hard at changing the world of Advanced Analytics.</p> 
+        <p>This past October, the team pulled off one of the biggest product releases in the company’s history – Alpine Chorus 5.0. &nbsp;We showcased it at the Strata conference in New York city and we’ve been overwhelmed by the level of incoming interest for our technology. &nbsp;We feel honored to be in this position and we are excited to onboard so many new customers!</p> 
+        <p>As you get a few free cycles over this holiday break, I thought I’d offer three&nbsp;quick resources to familiarize yourself&nbsp;further with Alpine Chorus 5.0 approach to the Advanced Analytics problem. &nbsp;Read more about the release <a href="http://alpinenow.com/press-release" target="_blank"><strong>here</strong></a>,&nbsp;download our&nbsp;datasheet <a href="http://go.alpinenow.com/download-datasheet-5.0.html" target="_blank"><strong>here</strong></a>&nbsp;and watch below a quick overview of how customers can use our technology to drive better customer insights.</p> 
+        <p>Happy Thanksgiving!</p> 
+        <div id="wistia_f3on5d9ed8" class="wistia_embed" style="width: 550px; height: 331px;"> 
+         <div> 
+          <p><object id="wistia_f3on5d9ed8_seo" style="display: block; height: 331px; position: relative; width: 550px;" width="300" height="150" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="movie" value="https://embed-ssl.wistia.com/flash/embed_player_v2.0.swf?2013-10-04"><param name="allowfullscreen" value="true"><param name="bgcolor" value="#000000"><param name="wmode" value="opaque"><param name="flashvars" value="controlsVisibleOnLoad=true&amp;customColor=7b796a&amp;fullscreenDisabled=true&amp;mediaDuration=1222.41&amp;showVolume=true&amp;stillUrl=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F14b5289582872d1cbd986206977ab660d946f15c.bin%3Fimage_crop_resized%3D550x331&amp;unbufferedSeek=true&amp;videoUrl=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F122a0ad77998fb69220268356914af24b874881e.bin"><embed src="https://embed-ssl.wistia.com/flash/embed_player_v2.0.swf?2013-10-04" allowfullscreen bgcolor="#000000" flashvars="controlsVisibleOnLoad=true&amp;customColor=7b796a&amp;fullscreenDisabled=true&amp;mediaDuration=1222.41&amp;showVolume=true&amp;stillUrl=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F14b5289582872d1cbd986206977ab660d946f15c.bin%3Fimage_crop_resized%3D550x331&amp;unbufferedSeek=true&amp;videoUrl=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F122a0ad77998fb69220268356914af24b874881e.bin" name="wistia_f3on5d9ed8_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></object></p> 
+          <noscript>
+           Customer Analytics with Alpine Chorus 5.0
+          </noscript> 
+         </div> 
+        </div> 
+        <p><script src="//fast.wistia.com/assets/external/E-v1.js" charset="ISO-8859-1"></script><script>// <![CDATA[
+wistiaEmbed = Wistia.embed("f3on5d9ed8");
+// ]]&gt;</script><script src="//fast.wistia.com/embed/medias/f3on5d9ed8/metadata.js" charset="ISO-8859-1"></script></p> 
+        <p>&nbsp;</p> 
+        <p>PS: If you’d like a dedicated demo, request yours&nbsp;<a href="http://alpinenow.com/alpine-chorus-50-demo" target="_blank"><strong>here</strong></a>!</p> 
+        <p>&nbsp;</p> 
+       </div> 
+       <div class="smalltext">
+        Posted by 
+        <a href="http://alpinenow.com/blog/author/Bruno" title="Posts by Bruno Aziza">Bruno Aziza</a> on November 26, 2014
+       </div> 
+       <div class="clear"></div> 
+      </div> 
+      <div class="post"> 
+       <div class="commentcount"> 
+        <p> <a href="http://alpinenow.com/blog/machine-learning-correctness-testing-at-alpine-data-labs/" title="Comment on Machine Learning Correctness Testing at Alpine Data Labs">0</a> </p> 
+       </div> 
+       <div class="tittle-container"> 
+        <h1><a href="http://alpinenow.com/blog/machine-learning-correctness-testing-at-alpine-data-labs/" title="Machine Learning Correctness Testing at Alpine Data Labs">Machine Learning Correctness Testing at Alpine Data Labs</a></h1> 
+       </div> 
+       <div class="the-content"> 
+        <div class="addtoany_share_save_container addtoany_content_top">
+         <div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_2">
+          <a class="a2a_button_facebook_like addtoany_special_service" data-href="http://alpinenow.com/blog/machine-learning-correctness-testing-at-alpine-data-labs/"></a>
+          <a class="a2a_button_twitter_tweet addtoany_special_service" data-count="none" data-url="http://alpinenow.com/blog/machine-learning-correctness-testing-at-alpine-data-labs/" data-text="Machine Learning Correctness Testing at Alpine Data Labs"></a>
+          <a class="a2a_button_google_plus_share addtoany_special_service" data-annotation="none" data-href="http://alpinenow.com/blog/machine-learning-correctness-testing-at-alpine-data-labs/"></a>
+         </div>
+        </div>
+        <p>At Alpine Data Labs, our strength is providing fast machine learning algorithms that will help you analyze your data. &nbsp;It is imperative that our machine learning algorithms be correct. &nbsp;Given the variety of tasks that fall under “Machine Learning,” determining how to quantify “correctness” and how to test it in an automated way is quite a challenge.</p> 
+        <p>&nbsp;</p> 
+        <p><b>DEFINING CORRECTNESS</b></p> 
+        <p>When testing correctness, we aren’t interested in building a good model in the classic machine learning sense. It is certainly good practice to do a test/train split or examine the bias/variance trade-off when model-building, but none of that matters if the algorithm isn’t doing what the user expects it to do. To ensure that we are getting the intended behavior we need to test either the fit parameters or the predictions of the model against other machine learning software. &nbsp;Which should we choose?</p> 
+        <p>&nbsp;</p> 
+        <p><b>THE GOLD STANDARD</b></p> 
+        <p>There are a number of very good open-source machine learning tools that we considered using, although none is an exact overlap with Alpine’s capabilities. After experimenting with Python scikit-learn and R, we decided to use R as our “Gold Standard” for several reasons. Although both are open-source, widely used, well-documented and have good coverage of machine learning algorithms, R seems to be a better overlap with the kind of statistical and machine learning tests that we do at Alpine Data Labs. Most importantly, R has a highly extensible package system that allows users to add functionality. Because of this package system, most machine learning algorithms are already implemented, many several times (<a href="http://cran.r-project.org/web/views/MachineLearning.html">http://cran.r-project.org/web/views/MachineLearning.html</a>). As an example, the <i>Recursive Partitioning</i> (aka decision trees) section lists about 12 different tree models.&nbsp;Alpine Chorus features several tree models, and matching our algorithms with an equivalent R package isn’t immediately obvious. One interesting result did come about as part of my exploratory testing with R. There was a discrepancy in the Naive Bayes class predictions between Alpine Chorus and the e1071 R library on a publicly available spam email data set (<a href="http://archive.ics.uci.edu/ml/datasets/Spambase">http://archive.ics.uci.edu/ml/data sets/Spambase</a>). After some digging into the data set, I was able to characterize the observations that were misclassified – they all had very small unnormalized posterior probabilities. In this rare situation, the class prediction was getting switched by R due to a bug in the Laplace smoothing. &nbsp;After exchanging a few emails with one of the authors of the package, we agreed that a change in one line of code would fix the issue. The recently released version 1.6-4 of the e1071 includes the fix (<a href="http://cran.r-project.org/web/packages/e1071/news.html">http://cran.r-project.org/web/packages/e1071/news.html</a>).</p> 
+        <p>&nbsp;</p> 
+        <p><b>CHOOSING DATA SETS</b></p> 
+        <p>We also want to test each Alpine&nbsp;Chorus algorithm against a variety of data sets. We might choose a set with many features, a set with many observations and a set with missing values. By choosing a variety of data sets we increase the chances that we will uncover any unintended behavior.</p> 
+        <p>&nbsp;</p> 
+        <p><b>HOW DO WE DESIGN AND RUN A TEST?</b></p> 
+        <p>Some algorithms are deterministic. For example, a basic logistic regression run against a specific data set, will always return the same coefficients, residuals, p-values and whatever else you want to test on. Alpine Chorus and R should return the same values and we can use Avalanche to verify this! Built using Robot Framework and Python, Avalanche is Alpine Data Labs’ automated testing framework. The test described below is just one of many that make up the <i>Correctness</i> library part of Avalanche. Let’s say we want to test logistic regression on a certain data set. First we run the logistic regression in R, pick a few variables to test on and save the results to a JSON file. Since our library is written in Python the JSON format is a natural choice. The results of a logistic regression might be: <i> &nbsp;&nbsp;&nbsp;</i></p> 
+        <p><i>{</i> <i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></p> 
+        <p style="padding-left: 30px;"><i>“beta”: 0.0054689909,</i> <i><br> </i><i>“SE”: 0.0024570406,</i> <i><br> “Z-value”: 2.225844711,</i> <i><br> “P-value”: 0.0260245848,</i> <i><br> “Null deviance”: 24667.028647045</i> <i><br> </i></p> 
+        <p><i>}</i></p> 
+        <p>We run the same analysis using Alpine and save the workflow. Finally we can set up a Robot test case to upload and run the workflow, then compare the results of the tests.</p> 
+        <table style="height: 130px;" border="1" width="630"> 
+         <tbody> 
+          <tr> 
+           <td><b>login</b></td> 
+           <td>alpine_user</td> 
+           <td>password</td> 
+          </tr> 
+          <tr> 
+           <td><b>upload workfile</b></td> 
+           <td>logistic_regression.afm</td> 
+           <td>cdh5_cluster</td> 
+          </tr> 
+          <tr> 
+           <td><b>execute workfile</b></td> 
+           <td>logistic_regression.afm</td> 
+           <td></td> 
+          </tr> 
+          <tr> 
+           <td><b>verify result</b></td> 
+           <td>logistic_regression.afm</td> 
+           <td></td> 
+          </tr> 
+          <tr> 
+           <td><b>read R results</b></td> 
+           <td>path_to_R_results</td> 
+           <td></td> 
+          </tr> 
+          <tr> 
+           <td><b>read Alpine results</b></td> 
+           <td>logistic_regression.afm</td> 
+           <td></td> 
+          </tr> 
+          <tr> 
+           <td><b>compare Alpine results to R</b></td> 
+           <td>alpine_results</td> 
+           <td>r_results</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p>&nbsp;</p> 
+        <p>This works great for many algorithms. &nbsp;But others have inherent randomness! Running a k-Means clustering algorithm on a data set starts by randomly choosing initial centroids and so will generally converge to a slightly different solution each time. Another example is choosing hyperparameters via k-fold cross-validation. In these cases we have to use probabilistic tests of fit parameters.</p> 
+        <p>&nbsp;</p> 
+        <p><b>SCOPE OF CORRECTNESS TESTING</b></p> 
+        <p>The last step in implementing our logistic regression test is to run it against all the data sources we support. The modular nature of Avalanche means that running tests on various data sources is as easy as changing a single variable in the test definition. If we want to run the same test against a HAWQ data source, we can replace the second line above with:</p> 
+        <table style="height: 20px;" border="1" width="629"> 
+         <tbody> 
+          <tr> 
+           <td><b>upload workfile</b></td> 
+           <td>logistic_regression.afm</td> 
+           <td>HAWQ</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p>&nbsp;</p> 
+        <p>Avalanche and automated correctness testing at Alpine are a work in progress, but we are currently testing many of our machine learning algorithms on databases and Hadoop nightly.</p> 
+       </div> 
+       <div class="smalltext">
+        Posted by 
+        <a href="http://alpinenow.com/blog/author/TJ Bay" title="Posts by TJ Bay">TJ Bay</a> on October 1, 2014
+       </div> 
+       <div class="clear"></div> 
+      </div> 
+      <div class="post"> 
+       <div class="commentcount"> 
+        <p> <a href="http://alpinenow.com/blog/integrating-r-and-the-jvm-platform-alpine-data-labs-r-execute-operator/" title="Comment on Integrating R and the JVM Platform – Alpine Data Labs’ R Execute Operator">0</a> </p> 
+       </div> 
+       <div class="tittle-container"> 
+        <h1><a href="http://alpinenow.com/blog/integrating-r-and-the-jvm-platform-alpine-data-labs-r-execute-operator/" title="Integrating R and the JVM Platform – Alpine Data Labs’ R Execute Operator">Integrating R and the JVM Platform – Alpine Data Labs’ R Execute Operator</a></h1> 
+       </div> 
+       <div class="the-content"> 
+        <div class="addtoany_share_save_container addtoany_content_top">
+         <div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_3">
+          <a class="a2a_button_facebook_like addtoany_special_service" data-href="http://alpinenow.com/blog/integrating-r-and-the-jvm-platform-alpine-data-labs-r-execute-operator/"></a>
+          <a class="a2a_button_twitter_tweet addtoany_special_service" data-count="none" data-url="http://alpinenow.com/blog/integrating-r-and-the-jvm-platform-alpine-data-labs-r-execute-operator/" data-text="Integrating R and the JVM Platform – Alpine Data Labs’ R Execute Operator"></a>
+          <a class="a2a_button_google_plus_share addtoany_special_service" data-annotation="none" data-href="http://alpinenow.com/blog/integrating-r-and-the-jvm-platform-alpine-data-labs-r-execute-operator/"></a>
+         </div>
+        </div>
+        <div> 
+         <p>In today’s multi-core, concurrent world, with data flowing through applications at previously unseen rates, it is critical to make the best use of existing hardware. In the past, blocking, synchronous, non-event-driven applications were adequate for the tasks for which they were designed. However, with thousands (or even millions) of users and huge web applications, it is necessary to decouple the request for the computation to be made from the response, in order to free up the thread of execution to do something else while some other service that is being called is busy completing its task. Furthermore, a distributed application needs to be resilient, because the more servers you have, the more likely it is for at least one to go down at any given time. The application should be responsive, meaning that it should be event-driven instead of blocking and waiting for a computation to finish. It should be elastic, scaling up and down depending on current conditions. For further details, see the&nbsp;<a href="http://www.reactivemanifesto.org/" target="_blank">Reactive Manifesto</a>.</p> 
+         <p>&nbsp;</p> 
+         <p>Reactive programming is a phenomenal idea, but it’s not always achievable “all the way down” in practice. In the real world, one rarely writes entire platforms from scratch and even then, one often needs to integrate with third-party applications that are blocking, stateful, and seem to violate nearly every reactive principle. Despite this, reactive and non-reactive code bases can co-exist, and one can take the best of both worlds using a good integration technology such as Akka.</p> 
+         <p>&nbsp;</p> 
+         <p><a href="http://akka.io/" target="_blank">Akka</a> is the #1 reactive programming platform for the Java Virtual Machine (JVM) written in Scala, with APIs for Scala and Java. It’s been shown to scale up to processing 50 million messages per second on a single node. Akka provides a location-independent model of computation, so the programming model for local multi-threading and remoting is the same. Akka provides the “<a href="http://letitcrash.com/" target="_blank">let it crash</a>” fault tolerance model, which was ported over from the Erlang programming language, and which was successfully used for years to power Ericsson’s telephone switching systems. Akka implements the Actor Model, popularized in the 1973 by Carl Hewitt, Peter Bishop and Richard Steiger. It is ironic that an old but great idea took so many years to find commercial usage (starting with Erlang in the late 1980s), but the same could be said of other great ideas such as functional programming, which is picking up just now yet its roots date back to the founding fathers of computer science (Alonzo Church), and the second oldest programming language (Lisp appeared in 1958). In addition to being a great technology for local concurrency, remoting, clustering and streaming, Akka is open source (Apache 2.0 license) and has optional commercial support provided by&nbsp;<a href="https://typesafe.com/" target="_blank">Typesafe, Inc</a>. The project was founded by&nbsp;<a href="http://jonasboner.com/" target="_blank">Jonas Bonér</a>, Typesafe’s CTO – however, given its open-source nature, it has received contributions from many people, both Typesafe employees and the community at large.</p> 
+         <p>&nbsp;</p> 
+         <p>Akka serves the use case of integrating Alpine’s backend with R perfectly. It decouples the two applications via message passing, allowing proprietary and GPL code bases to co-exist without licensing issues. It provides the necessary scalability, letting the Alpine user execute many R scripts at the same time. It provides location transparency, letting R workers to execute on a different machine than the one on which the Alpine server is running, opening up the possibility of commanding an entire R cluster. It provides fault tolerance, bringing up new R processes should any of them fail.</p> 
+         <p>&nbsp;</p> 
+         <p><a href="http://start.alpinenow.com/#/"><button id="button" class="btn btn-success" type="button">Try Alpine Chorus for FREE </button></a></p> 
+         <p>&nbsp;</p> 
+         <p>You will find below the slides and recording of a presentation I gave on that topic at the San Francisco Scala Meetup on September 10th, 2014.</p> 
+         <p>&nbsp;</p> 
+         <p><iframe class="wistia_embed" src="//fast.wistia.net/embed/iframe/x8281bf7o9" name="wistia_embed" width="600" height="338" frameborder="0" scrolling="no" allowfullscreen></iframe></p> 
+         <p>&nbsp;</p> 
+         <p style="padding-left: 60px;"><iframe src="//www.slideshare.net/slideshow/embed_code/39267618" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p> 
+        </div> 
+        <div style="color: #222222;"></div> 
+        <div style="color: #222222;"></div> 
+        <div style="color: #222222;"></div> 
+        <div style="color: #222222;"></div> 
+        <div style="color: #222222;"></div> 
+        <div style="color: #222222;"></div> 
+        <div style="color: #222222;"></div> 
+       </div> 
+       <div class="smalltext">
+        Posted by 
+        <a href="http://alpinenow.com/blog/author/Marek Kolodziej" title="Posts by Marek Kolodziej">Marek Kolodziej</a> on September 18, 2014
+       </div> 
+       <div class="clear"></div> 
+      </div> 
+      <div class="post"> 
+       <div class="commentcount"> 
+        <p> <a href="http://alpinenow.com/blog/hackathon-at-alpine-data-labs/" title="Comment on Hackathon at Alpine Data Labs">1</a> </p> 
+       </div> 
+       <div class="tittle-container"> 
+        <h1><a href="http://alpinenow.com/blog/hackathon-at-alpine-data-labs/" title="Hackathon at Alpine Data Labs">Hackathon at Alpine Data Labs</a></h1> 
+       </div> 
+       <div class="the-content"> 
+        <div class="addtoany_share_save_container addtoany_content_top">
+         <div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_4">
+          <a class="a2a_button_facebook_like addtoany_special_service" data-href="http://alpinenow.com/blog/hackathon-at-alpine-data-labs/"></a>
+          <a class="a2a_button_twitter_tweet addtoany_special_service" data-count="none" data-url="http://alpinenow.com/blog/hackathon-at-alpine-data-labs/" data-text="Hackathon at Alpine Data Labs"></a>
+          <a class="a2a_button_google_plus_share addtoany_special_service" data-annotation="none" data-href="http://alpinenow.com/blog/hackathon-at-alpine-data-labs/"></a>
+         </div>
+        </div>
+        <p>At Alpine Data Labs, we recently completed our first Developer Hackathon! The purpose of that hackathon was to give developers time between releases to work on pet projects, fix annoyances, and try out prospective technologies or features that&nbsp;they&nbsp;were interested in. Developers decided what they wanted to work on so long as it had some remote connection to Alpine products.</p> 
+        <p><a href="http://alpinenow.com/blog/wp-content/uploads/2014/07/Hackathon-edited-e1405039177179.png"><img class="alignnone  wp-image-1084" src="http://alpinenow.com/blog/wp-content/uploads/2014/07/Hackathon-edited-e1405039177179.png" alt="Hackathon edited" width="755" height="224"></a></p> 
+        <p>We’d like to share with you some of the projects that our team chose to work on.</p> 
+        <h3>Improved features</h3> 
+        <p>Look for the following in the upcoming Alpine &nbsp;Chorus release!</p> 
+        <p><strong>Operators with notes</strong></p> 
+        <p><strong>Jason</strong> decided to create a note field on each operator for documenting what an operator does. Protip: hover over an operator to see the note as a tooltip! He also updated the Hadoop Join operator to generate unique names to avoid name collisions.</p> 
+        <p><strong>Alpine Chorus Improvements</strong></p> 
+        <p><strong>Robbie</strong> concentrated on updates to Alpine Chorus, the open source project that Alpine Chorus maintains and uses as our front-end collaboration layer. The SQL editor now has SQL suggestions. Other file types such as Pig and Ruby now will have syntax highlighting. Markdown has been added as a recognized file type so Alpine Chorus is almost a wiki. Finally for Alpine Chorus, we’ve upgraded versions of some of the libraries used in Alpine Chorus.</p> 
+        <p><strong>Vertica JDBC Integration</strong></p> 
+        <p><strong>John</strong> worked on the integrating Vertica into Alpine Chorus. In the next release, users will be able to explore data from Vertica and copy data between Vertica and supported Hadoop clusters.</p> 
+        <p><strong>Machine Learning on Spark</strong></p> 
+        <p><strong>Sung</strong> tested various implementations of Elastic Net Logistic Regression and Linear Regression on Spark in preparation for adding a Spark Linear Regression operator to Alpine Chorus.</p> 
+        <p><strong>DB</strong> implemented L-BFGS, an optimizer used in regressions, and did significant performance testing on the algorithm. The L-BFGS optimizer has been contributed back to Spark MLLib and is now part of Spark 1.0.</p> 
+        <p style="text-align: left;">If you don’t already have Alpine Chorus, sign up&nbsp;<a href="http://start.alpinenow.com/" target="_blank">here</a>&nbsp;to get started and see by yourself!</p> 
+        <p><a href="http://start.alpinenow.com/#/"><button id="button" class="btn btn-success" type="button">Try Alpine Chorus for FREE </button></a></p> 
+        <p> <a href="http://alpinenow.com/blog/hackathon-at-alpine-data-labs/" class="more-link">Continue reading…</a></p> 
+       </div> 
+       <div class="smalltext">
+        Posted by 
+        <a href="http://alpinenow.com/blog/author/sara" title="Posts by Sara Asher">Sara Asher</a> on September 3, 2014
+       </div> 
+       <div class="clear"></div> 
+      </div> 
+      <div class="post"> 
+       <div class="commentcount"> 
+        <p> <a href="http://alpinenow.com/blog/real-time-analytics/" title="Comment on Real Time Analytics">0</a> </p> 
+       </div> 
+       <div class="tittle-container"> 
+        <h1><a href="http://alpinenow.com/blog/real-time-analytics/" title="Real Time Analytics">Real Time Analytics</a></h1> 
+       </div> 
+       <div class="the-content"> 
+        <div class="addtoany_share_save_container addtoany_content_top">
+         <div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_5">
+          <a class="a2a_button_facebook_like addtoany_special_service" data-href="http://alpinenow.com/blog/real-time-analytics/"></a>
+          <a class="a2a_button_twitter_tweet addtoany_special_service" data-count="none" data-url="http://alpinenow.com/blog/real-time-analytics/" data-text="Real Time Analytics"></a>
+          <a class="a2a_button_google_plus_share addtoany_special_service" data-annotation="none" data-href="http://alpinenow.com/blog/real-time-analytics/"></a>
+         </div>
+        </div>
+        <p>Reposted from&nbsp;<a href="http://dewoods.com/blog/custom-alpine-operators" target="_blank">http://dewoods.com</a></p> 
+        <h2 style="color: #363535;">Introduction</h2> 
+        <p style="color: #363535;">Many companies have realized the value of applying machine learning techniques to the data they’ve already collected in a batch oriented way, but a lot of them are still struggling to apply the same concepts to data as it’s being generated in real time. Scoring data in real time is useful for any use case where making time sensitive decisions is important. Traditional examples include fraud detection and clickstream analysis. Real time analytics is becoming even more important as the&nbsp;Internet of Things&nbsp;continue to evolve. Interconnected machines need a way to programmatically apply advanced analytics to the vast amounts of data they are&nbsp;generating.</p> 
+        <p style="color: #363535;">This article describes a technique for using&nbsp;Alpine Chorus and&nbsp;Openscoring&nbsp;to build a model, deploy it, and automatically use it to score new data as it is&nbsp;generated.</p> 
+        <h2 style="color: #363535;">Case Study: Real Time Fraud&nbsp;Detection</h2> 
+        <p style="color: #363535;">As an example, consider the use case of determining whether or not an online transaction is fraudulent. Most online retailers have an eCommerce webstore that allows customers to add items to a virtual shopping basket, enter their payment information, and instantly check out. Most transactions that take place in this way are completely legitimate, but fraudulent transactions do happen and they can end up costing retailers a lot of&nbsp;money.</p> 
+        <p style="color: #363535;">Sophisticated machine learning models can be developed to detect fraudulent transactions in a variety of ways. However, integrating fraud detection models into the online transaction flow is often more difficult then creating the model itself. Each order needs to be scored for its likelihood to be fraudulent and then automatically rejected if it exceeds a certain probability threshold. At the same time it is important to keep the false positive rate as low as possible to avoid rejecting legitimate&nbsp;transactions.</p> 
+        <h2 style="color: #363535;">Building the Model in&nbsp;Alpine Chorus</h2> 
+        <p style="color: #363535;">First, consider the data elements that typically constitute an online order. We know some basic information about the user, the items they wish to order, their billing and shipping addresses, and their payment information. We need a historic record of as many transactions as possible in order to train our model. We also need to add a new column to our data called&nbsp;<em>fraudulent</em>&nbsp;that indicates which past transactions were actually fraudulent. Because we’re using Alpine Chorus, this historic data could be stored in either Hadoop or a relational&nbsp;database.</p> 
+        <div class="highlight" style="color: #363535;"> 
+         <pre style="color: #333333;"><span class="o" style="font-weight: bold;">=&gt;</span> <span class="err" style="color: #a61717;">\</span><span class="n">d</span> <span class="n">orders</span>
+          <span class="k" style="font-weight: bold;">Table</span> <span class="s2" style="color: #d01040;">"public.orders"</span>
+      <span class="k" style="font-weight: bold;">Column</span>       <span class="o" style="font-weight: bold;">|</span>  <span class="n">Type</span>   <span class="o" style="font-weight: bold;">|</span> <span class="n">Modifiers</span>
+<span class="o" style="font-weight: bold;">-------------------+---------+-----------</span><span class="err" style="color: #a61717;">\</span>
+ <span class="n">fraudulent</span>        <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">integer</span> <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">amount</span>            <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">numeric</span> <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">user_email</span>        <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">user_id</span>           <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">billing_address1</span>  <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">billing_city</span>      <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">billing_state</span>     <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">billing_zipcode</span>   <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">billing_country</span>   <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">shipping_address1</span> <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">shipping_city</span>     <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">shipping_state</span>    <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">shipping_zipcode</span>  <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">shipping_country</span>  <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">cc_type</span>           <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">text</span>    <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">cc_number</span>         <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">bigint</span>  <span class="o" style="font-weight: bold;">|</span>
+ <span class="n">cc_cvv</span>            <span class="o" style="font-weight: bold;">|</span> <span class="kt" style="font-weight: bold; color: #445588;">integer</span> <span class="o" style="font-weight: bold;">|</span>
+</pre> 
+        </div> 
+        <p style="color: #363535;">The next step is to determine which variables we want to use in our model. This process is known as<em>exploration</em>. We might start by simply making an educated guess about which variables in our data are likely to predict fraud, but as we iterate and refine our model we will probably end up<em>transforming</em>&nbsp;our data to create new calculated variables. The model used in this example is rather simple and uses just three calculated variables. The variables used in our example model&nbsp;are:</p> 
+        <ol style="color: #363535;"> 
+         <li><span style="font-weight: bold;">billing_ne_shipping</span>&nbsp;- 1 if the billing address is not the same as the shipping address, 0 if they are the&nbsp;same</li> 
+         <li><span style="font-weight: bold;">international_shipping</span>&nbsp;- 1 if the shipping address is outside the&nbsp;<span class="caps">US</span>, 0 if it is&nbsp;domestic</li> 
+         <li><span style="font-weight: bold;">large_order</span>&nbsp;- 1 if the total amount of the order exceeds $1000, 0 if it is less than&nbsp;$1000</li> 
+        </ol> 
+        <p style="color: #363535;">In practice we could achieve better results by taking a more sophisticated approach to picking and calculating variables, but these give us a good starting point for this&nbsp;example.</p> 
+        <p style="color: #363535;">Next we use Alpine Chorus Visual Workflow Interface to train and validate our Logistic Regression&nbsp;model:</p> 
+        <p style="color: #363535;"><img src="http://dewoods.com/img/alpine-fraud-detection-model.png" alt="Alpine Fraud Detection Workflow" width="756" height="288"></p> 
+        <p style="color: #363535;">The steps in the above workflow are described as&nbsp;follows:</p> 
+        <ol style="color: #363535;"> 
+         <li>Add our data to the workflow, in this example our order history is a&nbsp;<span class="caps">CSV</span>&nbsp;file in a<a style="color: #428bca;" href="http://www.cloudera.com/">Cloudera</a>&nbsp;system</li> 
+         <li>Use the&nbsp;<span style="font-weight: bold;">Variable</span>&nbsp;operator to create the three calculated variables described above using&nbsp;<a style="color: #428bca;" href="http://pig.apache.org/">Pig</a></li> 
+         <li>Split the data into a Training set and Validation set using the&nbsp;<span style="font-weight: bold;">Random Sampling</span>&nbsp;operator</li> 
+         <li>Build a&nbsp;<span style="font-weight: bold;">Logistic</span>&nbsp;regression model using our training data&nbsp;set</li> 
+         <li>Validate the accuracy of our model by using it to score our validation data set and plot a corresponding&nbsp;<span style="font-weight: bold;">ROC</span>&nbsp;curve</li> 
+         <li><span style="font-weight: bold;">Export</span>&nbsp;our finished model as&nbsp;<span class="caps">PMML</span></li> 
+        </ol> 
+        <p><a href="http://start.alpinenow.com/#/"><button id="button" class="btn btn-success" type="button">Curious how this looks in Alpine Chorus? Click Here </button></a></p> 
+        <p style="color: #363535;"> <a href="http://alpinenow.com/blog/real-time-analytics/" class="more-link">Continue reading…</a></p> 
+       </div> 
+       <div class="smalltext">
+        Posted by 
+        <a href="http://alpinenow.com/blog/author/Dillon" title="Posts by Dillon Woods">Dillon Woods</a> on August 27, 2014
+       </div> 
+       <div class="clear"></div> 
+      </div> 
+      <ul class="pagination">
+       <li><a href="#" class="large_button">Page 1 of 11</a></li>
+       <li><a class="large_button current" href="http://alpinenow.com/blog/">1</a></li>
+       <li><a class="large_button" href="http://alpinenow.com/blog/page/2/">2</a></li>
+       <li><a class="large_button" href="http://alpinenow.com/blog/page/3/">3</a></li>
+       <li><a class="large_button" href="http://alpinenow.com/blog/page/4/">4</a></li>
+       <li><a class="large_button" href="http://alpinenow.com/blog/page/5/">5</a></li>
+       <li><a class="large_button" href="http://alpinenow.com/blog/page/2/">Next ›</a></li>
+       <li><a class="large_button" href="http://alpinenow.com/blog/page/11/">Last »</a></li>
+      </ul> 
+      <div id="pagination"> 
+       <div class="clear"></div> 
+      </div> 
+     </div> 
+     <!-- sidebar --> 
+     <div id="sidebar"> 
+      <h2>Search This Blog</h2> 
+      <form method="get" id="searchform" action="http://alpinenow.com/blog/"> 
+       <div class="searchbox"> 
+        <table cellpadding="0" cellspacing="0"> 
+         <tbody>
+          <tr> 
+           <td><input type="text" class="sinputbox" value="" name="s" id="s"></td> 
+           <td> <input type="image" src="http://alpinenow.com/blog/wp-content/themes/alpinedatalabs_DOS/images/blank.gif" id="searchsubmit" class="searchbutton" border="0" value="Search"></td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+      </form> 
+      <div id="s2_form_widget-2" class="widget s2_form_widget">
+       <h2>Subscribe to AlpineNow</h2>
+       <div class="search">
+        <form method="post" action="http://alpinenow.com/blog/blog/">
+         <input type="hidden" name="ip" value="155.56.40.73">
+         <span style="display:none !important"><label for="name">Leave Blank:</label><input type="text" id="name" name="name"><label for="uri">Do Not Change:</label><input type="text" id="uri" name="uri" value="http://"></span>
+         <p><label for="s2email">Your email:</label><br><input type="text" name="email" id="s2email" value="Enter email address..." size="20" onfocus="if (this.value == 'Enter email address...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email address...';}"></p>
+         <p><input type="submit" name="subscribe" value="Subscribe"></p>
+        </form> 
+       </div>
+      </div> 
+      <div id="recent-posts-3" class="widget widget_recent_entries"> 
+       <h2>Most Recent Entries</h2> 
+       <ul> 
+        <li> <a href="http://alpinenow.com/blog/happy-thanksgiving-and-happy-customer-analytics/">Happy Thanksgiving…and happy customer analytics!</a> </li> 
+        <li> <a href="http://alpinenow.com/blog/machine-learning-correctness-testing-at-alpine-data-labs/">Machine Learning Correctness Testing at Alpine Data Labs</a> </li> 
+        <li> <a href="http://alpinenow.com/blog/integrating-r-and-the-jvm-platform-alpine-data-labs-r-execute-operator/">Integrating R and the JVM Platform – Alpine Data Labs’ R Execute Operator</a> </li> 
+        <li> <a href="http://alpinenow.com/blog/hackathon-at-alpine-data-labs/">Hackathon at Alpine Data Labs</a> </li> 
+        <li> <a href="http://alpinenow.com/blog/real-time-analytics/">Real Time Analytics</a> </li> 
+       </ul> 
+      </div>
+      <div id="categories-3" class="widget widget_categories">
+       <h2>Categories</h2> 
+       <ul> 
+        <li class="cat-item cat-item-18"><a href="http://alpinenow.com/blog/category/business/" title="View all posts filed under Business">Business</a> </li> 
+        <li class="cat-item cat-item-6"><a href="http://alpinenow.com/blog/category/data-science/" title="View all posts filed under Data Science">Data Science</a> </li> 
+        <li class="cat-item cat-item-11"><a href="http://alpinenow.com/blog/category/engineering/" title="View all posts filed under Engineering">Engineering</a> </li> 
+        <li class="cat-item cat-item-5"><a href="http://alpinenow.com/blog/category/events/" title="View all posts filed under Events">Events</a> </li> 
+        <li class="cat-item cat-item-7"><a href="http://alpinenow.com/blog/category/healthcare/" title="View all posts filed under Healthcare">Healthcare</a> </li> 
+        <li class="cat-item cat-item-1"><a href="http://alpinenow.com/blog/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a> </li> 
+        <li class="cat-item cat-item-26"><a href="http://alpinenow.com/blog/category/wow/" title="View all posts filed under Workout of the Week">Workout of the Week</a> </li> 
+       </ul> 
+      </div>
+      <div id="archives-3" class="widget widget_archive">
+       <h2>Archives</h2> 
+       <ul> 
+        <li><a href="http://alpinenow.com/blog/2014/11/">November 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2014/10/">October 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2014/09/">September 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2014/08/">August 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2014/07/">July 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2014/06/">June 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2014/05/">May 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2014/04/">April 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2014/03/">March 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2014/02/">February 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2014/01/">January 2014</a></li> 
+        <li><a href="http://alpinenow.com/blog/2013/12/">December 2013</a></li> 
+        <li><a href="http://alpinenow.com/blog/2013/11/">November 2013</a></li> 
+        <li><a href="http://alpinenow.com/blog/2013/10/">October 2013</a></li> 
+        <li><a href="http://alpinenow.com/blog/2013/09/">September 2013</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="clear"></div> 
+    </div> 
+    <!-- end #page-content --> 
+   </div> 
+   <!-- end .content --> 
+  </div> 
+  <!-- end .container --> 
+  <div id="footer-shell"> 
+   <div id="footer"> 
+    <div class="span6"> 
+     <div id="menu"> 
+      <p><a href="/product">Product</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/plans">Plans</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/about-us">About Us</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/news-events">News &amp; Events</a></p> 
+     </div> 
+     <div id="footer-privacy-links"> 
+      <a href="/privacy">Privacy Policy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <a href="/sitemap">Site Map</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <a target="_blank" href="http://www.jobscore.com/jobs/alpinedatalabs">Careers</a> 
+     </div> 
+    </div> 
+    <div class="span6"> 
+     <div id="follow"> 
+      <div class="follow-title"> 
+       <span class="follow-us-text">Follow us on</span> 
+       <ul> 
+        <li><a target="_blank" href="https://plus.google.com/u/0/+AlpineAnalyticsNow/posts" class="GooglePlus">Alpine | Google Plus</a></li> 
+        <li><a target="_blank" href="https://www.facebook.com/AlpineDataLabs?ref=stream" class="facebook">Alpine | FaceBook</a></li> 
+        <li><a target="_blank" href="https://twitter.com/AlpineDataLabs" class="Twitter">Alpine | Twitter</a></li> 
+        <li><a target="_blank" href="http://www.linkedin.com/company/alpine-data-labs" class="LinkedIn">Alpine | LinkedIn</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div id="copyright"> 
+      <p>©2014 Alpine Data Labs<br>Sales Inquiry - (800) 503-8296&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;+1 415-423-3714<br>1550 Bryant St., Ste. 1000, San Francisco, CA 94103</p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+	analytics.identify( "", {}, {"library":"analytics-wordpress"});
+</script> 
+  <script type="text/javascript">
+  analytics.track("Viewed Home Page", {"noninteraction":true}, {"library":"analytics-wordpress"});
+    
+</script> 
+  <script type="text/javascript"><!--
+wpa2a.targets=[
+{title:'Happy Thanksgiving&#8230;and happy customer analytics!',url:'http://alpinenow.com/blog/happy-thanksgiving-and-happy-customer-analytics/'},
+{title:'Machine Learning Correctness Testing at Alpine Data Labs',url:'http://alpinenow.com/blog/machine-learning-correctness-testing-at-alpine-data-labs/'},
+{title:'Integrating R and the JVM Platform &#8211; Alpine Data Labs&#8217; R Execute Operator',url:'http://alpinenow.com/blog/integrating-r-and-the-jvm-platform-alpine-data-labs-r-execute-operator/'},
+{title:'Hackathon at Alpine Data Labs',url:'http://alpinenow.com/blog/hackathon-at-alpine-data-labs/'},
+{title:'Real Time Analytics',url:'http://alpinenow.com/blog/real-time-analytics/'}];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-content/plugins/wordpress-bootstrap-css/resources/bootstrap-3.2.0/js/bootstrap.js?ver=3.2.0-4"></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/alpinenow.com\/blog\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.9.1"></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-includes/js/jquery/ui/jquery.ui.accordion.min.js?ver=1.10.4"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var website_information = {"plugin_url":"http:\/\/alpinenow.com\/blog\/wp-content\/plugins"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://alpinenow.com/blog/wp-content/plugins/social-media-badge-widget/js/social-media-badge-widget.min.js?ver=1.0"></script> 
+  <script type="text/javascript" src="http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201449"></script> 
+  <script src="http://stats.wp.com/e-201449.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+	st_go({v:'ext',j:'1:3.1.1',blog:'65033037',post:'0',tz:'-8'});
+	var load_cmc = function(){linktracker_init(65033037,0,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script> 
+ </body>
+</html>

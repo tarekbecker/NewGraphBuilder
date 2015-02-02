@@ -1,0 +1,499 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "57568e8410e98133df208374fb6893ef",
+    "type": "Organization",
+    "properties": {
+      "role_company": null,
+      "permalink": "spaziodati",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "name": "SpazioDati",
+      "email_address": "info@spaziodati.eu",
+      "description": "By leveraging Big Data &amp; Semantic Web technologies, SpazioDati is building a high-quality knowledge-graph accessible via simple APIs on dandelion.eu. \nThe graph contains both common sense knowledge and vertical domain data (e.g. company information, healthcare, tourism...) sourced from hundreds of open and proprietary datasets.\n\nYou can access the graph to enhance your web and mobile apps with contextual data in two ways: by directly querying a REST graph API (called dataGEM) or by feeding your documents or texts to our Named Entity Recognition Linking API, (called dataTXT) which will link them to the graph, from where you can access a world of semantically related data.\n\nDandelion APIs support a wide range of use cases, like : enriching existing databases, building smart search engines and recommender systems on document collections, adding location knowledge to web apps, automatically tagging products on e-commerce sites, using data to create infographics and marketing research and many more!\n",
+      "short_description": "By leveraging Big Data & Semantic Web technologies we are building a high-quality knowledge-graph accessible via simple APIs on dandelion.eu",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 6,
+      "founded_on_month": 3,
+      "founded_on_year": 2012,
+      "founded_on": "2012-03-01",
+      "homepage_url": "http://spaziodati.eu",
+      "num_employees_max": 50,
+      "num_employees_min": 11,
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "secondary_role_for_profit": true,
+      "num_employees_range": null,
+      "created_at": 1402546955,
+      "updated_at": 1414368707,
+      "total_funding_usd": 1800000,
+      "number_of_investments": 0,
+      "number_of_employees": 20
+    },
+    "relationships": {
+      "board_members_and_advisors": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/board_members_and_advisors",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "first_name": "Marco",
+            "last_name": "Nespolo",
+            "title": "Board Member",
+            "started_on": null,
+            "path": "person/marco-nespolo",
+            "created_at": 1409293793,
+            "updated_at": 1409293890
+          },
+          {
+            "first_name": "Pietro",
+            "last_name": "Masera",
+            "title": "Board Member",
+            "started_on": null,
+            "path": "person/pietro-masera",
+            "created_at": 1409293463,
+            "updated_at": 1409293617
+          },
+          {
+            "first_name": "Luca",
+            "last_name": "Pieraccini",
+            "title": "Board Member",
+            "started_on": "2012-01-01",
+            "path": "person/luca-pieraccini",
+            "created_at": 1404393517,
+            "updated_at": 1409292922
+          }
+        ]
+      },
+      "current_team": {
+        "paging": {
+          "total_items": 18,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "Gabriele",
+            "last_name": "Antonelli",
+            "title": "President",
+            "started_on": null,
+            "path": "person/gabriele-antonelli",
+            "created_at": 1350938173,
+            "updated_at": 1409292639
+          },
+          {
+            "first_name": "Michele",
+            "last_name": "Barbera",
+            "title": "CEO",
+            "started_on": null,
+            "path": "person/michele-barbera",
+            "created_at": 1350938173,
+            "updated_at": 1409292440
+          },
+          {
+            "first_name": "Matteo",
+            "last_name": "Brunati",
+            "title": "Community Manager",
+            "started_on": "2013-10-01",
+            "path": "person/matteo-brunati",
+            "created_at": 1404392508,
+            "updated_at": 1404392509
+          },
+          {
+            "first_name": "Giovanni",
+            "last_name": "Tummarello",
+            "title": "Chief Scientist",
+            "started_on": null,
+            "path": "person/giovanni-tummarello",
+            "created_at": 1347401858,
+            "updated_at": 1409293040
+          },
+          {
+            "first_name": "Ilaria",
+            "last_name": "Botti",
+            "title": "Project Manager",
+            "started_on": "2013-02-01",
+            "path": "person/ilaria-botti",
+            "created_at": 1404401478,
+            "updated_at": 1404401604
+          },
+          {
+            "first_name": "Mattia",
+            "last_name": "Larentis",
+            "title": "Frontend Developer",
+            "started_on": "2013-01-01",
+            "path": "person/mattia-larentis",
+            "created_at": 1404401317,
+            "updated_at": 1404401317
+          },
+          {
+            "first_name": "Davide",
+            "last_name": "Setti",
+            "title": "Chief Technology Officer (CTO)",
+            "started_on": "2013-01-01",
+            "path": "person/davide-setti",
+            "created_at": 1404400468,
+            "updated_at": 1409293189
+          },
+          {
+            "first_name": "Roberto",
+            "last_name": "Bampi",
+            "title": "Backend Developer",
+            "started_on": null,
+            "path": "person/roberto-bampi",
+            "created_at": 1404402157,
+            "updated_at": 1404402228
+          }
+        ]
+      },
+      "offices": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/offices",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Headquarters",
+            "street_1": "SpazioDati S.r.l.",
+            "street_2": "Via Adriano Olivetti 13",
+            "postal_code": "38122",
+            "city": "Trento",
+            "city_path": "location/trento/e145bc7550c4f3f199e11f96189c2cc8",
+            "region": "Trentino-Alto Adige",
+            "region_path": "location/trentino-alto-adige/2ce425ecd3fc9d1b1d0cbc07cf785d4b",
+            "country": "Italy",
+            "country_path": "location/italy/9dd7a8c57b7f778590f4fed17fa5a6ff",
+            "latitude": 46.0767909,
+            "longitude": 11.1240316,
+            "created_at": 1401516159,
+            "updated_at": 1412864161
+          },
+          {
+            "type": "Address",
+            "name": "Tuscany",
+            "street_1": "via Giuntini, 25/6",
+            "street_2": "Loc. Navacchio, Cascina",
+            "postal_code": "56123",
+            "city": "Pisa",
+            "city_path": "location/pisa/43f1aef6181ae2e8334bf812b60cd532",
+            "region": "Toscana",
+            "region_path": "location/toscana/62b96df34eb6257b98744641e62058ae",
+            "country": "Italy",
+            "country_path": "location/italy/9dd7a8c57b7f778590f4fed17fa5a6ff",
+            "latitude": 43.6846946,
+            "longitude": 10.488021,
+            "created_at": 1350912974,
+            "updated_at": 1397991004
+          }
+        ]
+      },
+      "headquarters": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/headquarters",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": "Headquarters",
+            "street_1": "SpazioDati S.r.l.",
+            "street_2": "Via Adriano Olivetti 13",
+            "postal_code": "38122",
+            "city": "Trento",
+            "city_path": "location/trento/e145bc7550c4f3f199e11f96189c2cc8",
+            "region": "Trentino-Alto Adige",
+            "region_path": "location/trentino-alto-adige/2ce425ecd3fc9d1b1d0cbc07cf785d4b",
+            "country": "Italy",
+            "country_path": "location/italy/9dd7a8c57b7f778590f4fed17fa5a6ff",
+            "latitude": 46.0767909,
+            "longitude": 11.1240316,
+            "created_at": 1401516159,
+            "updated_at": 1412864161
+          },
+          {
+            "type": "Address",
+            "name": "Headquarters",
+            "street_1": "SpazioDati S.r.l.",
+            "street_2": "Via Adriano Olivetti 13",
+            "postal_code": "38122",
+            "city": "Trento",
+            "city_path": "location/trento/e145bc7550c4f3f199e11f96189c2cc8",
+            "region": "Trentino-Alto Adige",
+            "region_path": "location/trentino-alto-adige/2ce425ecd3fc9d1b1d0cbc07cf785d4b",
+            "country": "Italy",
+            "country_path": "location/italy/9dd7a8c57b7f778590f4fed17fa5a6ff",
+            "latitude": 46.0767909,
+            "longitude": 11.1240316,
+            "created_at": 1401516159,
+            "updated_at": 1412864161
+          }
+        ]
+      },
+      "funding_rounds": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/funding_rounds",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "FundingRound",
+            "name": "SpazioDati raises 0 in venture round",
+            "path": "funding-round/c1c4816d3daaefa93e44b19b14cb24bf",
+            "created_at": 1396480916,
+            "updated_at": 1400624519
+          },
+          {
+            "type": "FundingRound",
+            "name": "SpazioDati raises 0 in seed round",
+            "path": "funding-round/82f7258aa0834bf12f798caae08575e0",
+            "created_at": 1353768976,
+            "updated_at": 1398010045
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 6,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Marketplaces",
+            "uuid": "99d37c03834b09eb6672aa54a2a8de46",
+            "path": "category/marketplaces/99d37c03834b09eb6672aa54a2a8de46",
+            "created_at": 1397980728,
+            "updated_at": 1417172679
+          },
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1417159419
+          },
+          {
+            "type": "Category",
+            "name": "Text Analytics",
+            "uuid": "e7acbc9932c74c8809ed8fae63eb2559",
+            "path": "category/text analytics/e7acbc9932c74c8809ed8fae63eb2559",
+            "created_at": 1397980727,
+            "updated_at": 1416999705
+          },
+          {
+            "type": "Category",
+            "name": "Developer APIs",
+            "uuid": "371b7b2c75fb9c0017785a24bed20453",
+            "path": "category/developer ap-is/371b7b2c75fb9c0017785a24bed20453",
+            "created_at": 1397980727,
+            "updated_at": 1417176081
+          },
+          {
+            "type": "Category",
+            "name": "Semantic Web",
+            "uuid": "ac34c4c6e430f66f44aeef8ca45b52bb",
+            "path": "category/semantic web/ac34c4c6e430f66f44aeef8ca45b52bb",
+            "created_at": 1397980727,
+            "updated_at": 1417073743
+          },
+          {
+            "type": "Category",
+            "name": "Analytics",
+            "uuid": "99c5404c0ff58ee5d3344b944ddb8cd9",
+            "path": "category/analytics/99c5404c0ff58ee5d3344b944ddb8cd9",
+            "created_at": 1397980727,
+            "updated_at": 1417171293
+          }
+        ]
+      },
+      "founders": {
+        "paging": {
+          "total_items": 5,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/founders",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Person",
+            "name": "Andrea Di Benedetto",
+            "path": "person/andrea-di-benedetto",
+            "created_at": 1404393866,
+            "updated_at": 1404393866
+          },
+          {
+            "type": "Person",
+            "name": "Luca Pieraccini",
+            "path": "person/luca-pieraccini",
+            "created_at": 1404393517,
+            "updated_at": 1409292922
+          },
+          {
+            "type": "Person",
+            "name": "Gabriele Antonelli",
+            "path": "person/gabriele-antonelli",
+            "created_at": 1350938173,
+            "updated_at": 1409292639
+          },
+          {
+            "type": "Person",
+            "name": "Michele Barbera",
+            "path": "person/michele-barbera",
+            "created_at": 1350938173,
+            "updated_at": 1409292440
+          },
+          {
+            "type": "Person",
+            "name": "Giovanni Tummarello",
+            "path": "person/giovanni-tummarello",
+            "created_at": 1347401858,
+            "updated_at": 1409293040
+          }
+        ]
+      },
+      "products": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/products",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Product",
+            "name": "dataTXT API",
+            "path": "product/datatxt-api",
+            "created_at": 1404394848,
+            "updated_at": 1404395040
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1401516013/li19svd0zpoafjpju4sl.png",
+            "created_at": 1398018830,
+            "updated_at": 1401516015
+          }
+        ]
+      },
+      "images": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/images",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1402546944/q3zlgz6jfzlkltix6mul.jpg",
+            "created_at": 1402546956,
+            "updated_at": 1402546956
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 5,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.linkedin.com/company/spaziodati",
+            "type": "WebPresence",
+            "title": "linkedin",
+            "created_at": 1401515687,
+            "updated_at": 1401515688
+          },
+          {
+            "url": "http://it-it.facebook.com/spaziodati.eu",
+            "type": "WebPresence",
+            "title": "facebook",
+            "created_at": 1401515687,
+            "updated_at": 1409506021
+          },
+          {
+            "url": "http://twitter.com/spaziodati",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1350912974,
+            "updated_at": 1409404565
+          },
+          {
+            "url": "http://spaziodati.eu/blog/",
+            "type": "WebPresence",
+            "title": "blog",
+            "created_at": 1350912974,
+            "updated_at": 1397989029
+          },
+          {
+            "url": "http://spaziodati.eu",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1350912974,
+            "updated_at": 1397989029
+          }
+        ]
+      },
+      "news": {
+        "paging": {
+          "total_items": 3,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/spaziodati/news",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://semanticweb.com/spaziodati-raises-1-8m-series-investment-cerved-group_b42381",
+            "author": "Angela Guess",
+            "posted_on": "2014-04-04",
+            "type": "PressReference",
+            "title": "SpazioDati Raises $1.8M Series A Investment from Cerved Group",
+            "created_at": 1404399446,
+            "updated_at": 1404399446
+          },
+          {
+            "url": "http://semanticweb.com/dandlions-new-bloom-family-semantic-text-analysis-apis_b41172",
+            "author": "Jennifer Zaino",
+            "posted_on": "2013-12-24",
+            "type": "PressReference",
+            "title": "Dandelion\u2019s New Bloom: A Family Of Semantic Text Analysis APIs",
+            "created_at": 1404392780,
+            "updated_at": 1404392780
+          },
+          {
+            "url": "http://www.ilsole24ore.com/art/tecnologie/2012-04-20/fare-affari-open-data-190458.shtml?uuid=AbRjFERF",
+            "author": null,
+            "posted_on": null,
+            "type": "PressReference",
+            "title": "Fare affari con gli open data",
+            "created_at": 1350912974,
+            "updated_at": 2012
+          }
+        ]
+      }
+    }
+  }
+}

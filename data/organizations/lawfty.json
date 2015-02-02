@@ -1,0 +1,255 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "e43d77d35dae9180b9085972d71abf30",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "description": "Lawfty uses mobile technology and pay-per-click marketing to drive quality leads to small personal injury law firms.\n",
+      "short_description": "Big Data for Small Law",
+      "permalink": "lawfty",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://www.lawfty.com",
+      "name": "Lawfty",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "num_employees_min": 1,
+      "num_employees_max": 10,
+      "created_at": 1375900056,
+      "updated_at": 1413909503,
+      "total_funding_usd": 0,
+      "number_of_investments": 0,
+      "number_of_employees": 2
+    },
+    "relationships": {
+      "current_team": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lawfty/current_team",
+          "sort_order": "custom"
+        },
+        "items": [
+          {
+            "first_name": "Todd",
+            "last_name": "Richheimer",
+            "title": "CEO/Co Founder",
+            "started_on": "2013-08-01",
+            "path": "person/todd-richheimer",
+            "created_at": 1377178394,
+            "updated_at": 1397989189
+          },
+          {
+            "first_name": "Michael",
+            "last_name": "Terry",
+            "title": "Co-founder and CTO",
+            "started_on": null,
+            "path": "person/michael-terry",
+            "created_at": 1375900056,
+            "updated_at": 1397989173
+          }
+        ]
+      },
+      "offices": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lawfty/offices",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": null,
+            "street_1": null,
+            "street_2": null,
+            "postal_code": null,
+            "city": "New York",
+            "city_path": "location/new-york/d64b7615985cfbf44affaa89d70c4050",
+            "region": "New York",
+            "region_path": "location/new-york/83ead471332bd02e67b767279aed075b",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": 40.7143528,
+            "longitude": -74.0059731,
+            "created_at": 1375874856,
+            "updated_at": 1407369828
+          }
+        ]
+      },
+      "headquarters": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lawfty/headquarters",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Address",
+            "name": null,
+            "street_1": null,
+            "street_2": null,
+            "postal_code": null,
+            "city": "New York",
+            "city_path": "location/new-york/d64b7615985cfbf44affaa89d70c4050",
+            "region": "New York",
+            "region_path": "location/new-york/83ead471332bd02e67b767279aed075b",
+            "country": "United States",
+            "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+            "latitude": 40.7143528,
+            "longitude": -74.0059731,
+            "created_at": 1375874856,
+            "updated_at": 1407369828
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 4,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lawfty/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Big Data",
+            "uuid": "c33728a5de33d0da7bce0e3c4383bc99",
+            "path": "category/big data/c33728a5de33d0da7bce0e3c4383bc99",
+            "created_at": 1397980728,
+            "updated_at": 1417159419
+          },
+          {
+            "type": "Category",
+            "name": "Local Businesses",
+            "uuid": "1346d1036a7434b8d30b4373a63516b7",
+            "path": "category/local businesses/1346d1036a7434b8d30b4373a63516b7",
+            "created_at": 1397980728,
+            "updated_at": 1417127884
+          },
+          {
+            "type": "Category",
+            "name": "Legal",
+            "uuid": "b1234a830ad1c131b78881f8eb48c35e",
+            "path": "category/legal/b1234a830ad1c131b78881f8eb48c35e",
+            "created_at": 1397980727,
+            "updated_at": 1417179382
+          },
+          {
+            "type": "Category",
+            "name": "SaaS",
+            "uuid": "5c4e69265ff7b1880892c8eb036c5ace",
+            "path": "category/saa-s/5c4e69265ff7b1880892c8eb036c5ace",
+            "created_at": 1397980726,
+            "updated_at": 1417190669
+          }
+        ]
+      },
+      "founders": {
+        "paging": {
+          "total_items": 2,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lawfty/founders",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Person",
+            "name": "Todd Richheimer",
+            "path": "person/todd-richheimer",
+            "created_at": 1377178394,
+            "updated_at": 1397989189
+          },
+          {
+            "type": "Person",
+            "name": "Michael Terry",
+            "path": "person/michael-terry",
+            "created_at": 1375900056,
+            "updated_at": 1397989173
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lawfty/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1397187171/cb7af6de1caa6364c95a774150d5dcf5.png",
+            "created_at": 1398018549,
+            "updated_at": 1398018549
+          }
+        ]
+      },
+      "images": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lawfty/images",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1397187172/5a727df625c6bc2e72b25fa83d820665.png",
+            "created_at": 1398018549,
+            "updated_at": 1398018549
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 5,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/lawfty/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.plus.google.com/102025818658936327655",
+            "type": "WebPresence",
+            "title": "google+",
+            "created_at": 1397877760,
+            "updated_at": 2014
+          },
+          {
+            "url": "http://www.facebook.com/lawfty",
+            "type": "WebPresence",
+            "title": "facebook",
+            "created_at": 1397877760,
+            "updated_at": 2014
+          },
+          {
+            "url": "https://angel.co/lawfty",
+            "type": "WebPresence",
+            "title": "angellist",
+            "created_at": 1397877760,
+            "updated_at": 2014
+          },
+          {
+            "url": "http://twitter.com/getlawfty",
+            "type": "WebPresence",
+            "title": "twitter",
+            "created_at": 1375874856,
+            "updated_at": 1409439702
+          },
+          {
+            "url": "http://www.lawfty.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1375874856,
+            "updated_at": 1397987796
+          }
+        ]
+      }
+    }
+  }
+}

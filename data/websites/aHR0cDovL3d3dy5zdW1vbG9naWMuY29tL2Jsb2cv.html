@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="author" content="Sumo Logic"> 
+  <meta name="copyright" content="Copyright Sumo Logic 2011. All Rights Reserved."> 
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="robots" content="all"> 
+  <meta name="googlebot" content="all"> 
+  <meta name="revisit-after" content="7 days"> 
+  <meta name="viewport" content="width=1090"> 
+  <link href="/_css/master.css" media="screen" rel="stylesheet" type="text/css"> 
+  <link href="/_includes/wp/blog/wp-content/themes/sumologic/style.css" media="screen" rel="stylesheet" type="text/css"> 
+  <script src="/_js/master.js" type="text/javascript"></script> 
+  <script type="text/javascript" charset="utf-8">
+		document.write('<style type="text/css" media="screen">.fouc-fix {display: none;}</style>');
+	</script> 
+  <script type="text/javascript" src="//use.typekit.com/elg1lzp.js"></script> 
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  <title>Sumo Logic Blog</title> 
+  <link rel="alternate" type="application/rss+xml" title="Sumo Logic » Feed" href="http://www.sumologic.com/blog/feed"> 
+  <link rel="alternate" type="application/rss+xml" title="Sumo Logic » Comments Feed" href="http://www.sumologic.com/blog/comments/feed"> 
+  <script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.2.3 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-16579649-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]></script> 
+  <link rel="stylesheet" id="jetpack-subscriptions-css" href="http://www.sumologic.com/_includes/wp/blog/wp-content/plugins/jetpack/modules/subscriptions/subscriptions.css?ver=3.8.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="embed_github_gist_from_gist-css" href="http://www.sumologic.com/_includes/wp/blog/wp-content/plugins/embed-github-gist/stylesheets/embed.css?ver=3.8.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="jetpack-widgets-css" href="http://www.sumologic.com/_includes/wp/blog/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://www.sumologic.com/_includes/wp/blog/wordpress/wp-includes/js/jquery/jquery.js?ver=1.10.2"></script> 
+  <script type="text/javascript" src="http://www.sumologic.com/_includes/wp/blog/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.sumologic.com/_includes/wp/blog/wordpress/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.sumologic.com/_includes/wp/blog/wordpress/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 3.8.3"> 
+  <link rel="shortlink" href="http://wp.me/2pxai"> 
+  <!-- All in One SEO Pack 1.6.14.3 by Michael Torbert of Semper Fi Web Design[1229,1295] --> 
+  <meta name="keywords" content="wearables, misfit wearables, sumo logic, log analytics, anomaly detection, big data,apm, apm solution, apm monitoring, apm solutions, apm tool, big data analytics, realtime monitoring, real time monitoring, application monitoring, application monitoring software, new relic, appneta, traceview, appview, appdynamics, ca technologies, riverbed, appinternals, compuware, dynatrace, log analysis,compliance,hipaa,joanpepin,saas,security,soc2,sumo logic,bfs, breadth, first, search, sumo, logic, social, media, logs,,big data,breadth,first,logic,logs,media,search,social,sumo,transaction, analytics, transaction analytics, events, machine data, ,help, helpdesk, backend, code, programming, software, tips, tricks,analytics,backend,code,helpdesk,programming,software,tips,tricks,metadata, best practices, organize logs,collectors,data source,organize,azure, machine learning, metrics, microsoft, anomalies,anomaly detection,machine data,machine learning"> 
+  <link rel="canonical" href="http://www.sumologic.com/blog/"> 
+  <!-- /all in one seo pack --> 
+ </head> 
+ <body class="section-blog"> 
+  <div class="container"> 
+   <div class="span-6"> 
+    <p class="tagline"></p> 
+   </div> 
+   <div id="supernav" class="span-9 last"> 
+    <ul> 
+     <li><a href="/contact/">Contact</a></li> 
+     <li><a href="/blog/">Blog</a></li> 
+     <li><a href="https://sumologic.zendesk.com/home" target="_blank">Support</a></li> 
+     <li class="search-wrap"> 
+      <form action="/search/" method="get" id="google_search_form"> 
+       <input type="submit" id="search-button" value=""> 
+       <input type="text" name="q" value="" class="text"> 
+      </form> </li> 
+     <li><a href="https://service.sumologic.com/" target="_blank" class="highlight"><strong>Login</strong></a></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div id="header"> 
+   <div class="container"> 
+    <div class="container"> 
+     <div class="span-3"> 
+      <a class="logo " href="/"> <img src="/_media/logo.svg" alt="" width="209" height="39"> </a> 
+     </div> 
+     <div class="span-12 last" id="main-nav-wrap"> 
+      <ul id="main-nav" class="float-right valign-bottom"> 
+       <li class=""> <a href="/product/">Product</a> 
+        <ul class="product subnav"> 
+         <li class="big-data-challenge"> <a href="/big-data-challenge/">Big Data Challenge</a> 
+          <ul> 
+           <li> <a href="/big-data-challenge/real-time-data/">Real-Time Data</a> </li> 
+           <li> <a href="/big-data-challenge/the-cloud-advantage/">The Cloud Advantage</a> </li> 
+          </ul> </li> 
+         <li class="overview"> <a href="/product/">Product Overview</a> 
+          <ul> 
+           <li> <a href="/product/overview/advanced-analytics/">Machine Data Analytics</a> </li> 
+           <li> <a href="/product/overview/security/">Secure by Design</a> </li> 
+          </ul> </li> 
+         <li class="capabilities"> <a href="/product/capabilities/">Capabilities</a> 
+          <ul> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-collect">Collect</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-centralize">Centralize</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-search">Search + Troubleshoot</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-alert">Alert + Notify</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-monitor">Visualize + Monitor</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-analyze">Analyze with LogReduce</a> </li> 
+           <li> <a href="/product/capabilities/?selected_tabs=product-predict">Predict with Anomaly Detection</a> </li> 
+           <li> <a href="/product/capabilities/transactionanalytics/">Transaction Analytics</a> </li> 
+          </ul> </li> 
+         <li class="solutions"> <a href="/product/use-cases/">Use Cases</a> 
+          <ul> 
+           <li> <a href="/product/use-cases/security-compliance/">Security &amp; Compliance</a> </li> 
+           <li> <a href="/product/use-cases/availability-performance/">Availability &amp; Performance</a> </li> 
+           <li> <a href="/product/use-cases/customer-insights/">Customer Insights</a> </li> 
+           <li> <a href="/product/use-cases/cloud-deployments/">Cloud Deployments</a> </li> 
+           <li> <a href="/product/use-cases/application-releases/">Application Releases</a> </li> 
+          </ul> </li> 
+         <li> 
+          <ul class="last"> 
+           <li> <a href="/product/sumo-logic-free/">Sumo Logic Free</a> </li> 
+           <li> <a href="/product/pricing-and-packaging/">Pricing and Packaging</a> </li> 
+           <li> <a href="/product/momentum/">Momentum</a> </li> 
+           <li> <a href="/product/faq/">FAQ</a> </li> 
+          </ul> </li> 
+        </ul> </li> 
+       <li class=""> <a href="/whats-new/">What's New</a> </li> 
+       <li class=""> <a href="/applications/">Applications</a> 
+        <ul class="subnav applications"> 
+         <li> <a href="/applications/">Overview</a> 
+          <ul> 
+           <li> <a href="/applications/active-directory/">Active Directory</a> </li> 
+           <li> <a href="/applications/adobe-connect/">Adobe Connect</a> </li> 
+           <li> <a href="/applications/akamai/">Akamai</a> </li> 
+           <li> <a href="/applications/amazon-cloudfront/">Amazon Cloudfront</a> </li> 
+           <li> <a href="/applications/aws-elastic-load-balancing/">Amazon ELB</a> </li> 
+           <li> <a href="/applications/amazon-s3/">Amazon S3</a> </li> 
+           <li> <a href="/applications/apache/">Apache</a> </li> 
+           <li> <a href="/applications/aws-cloudtrail/">AWS CloudTrail</a> </li> 
+           <li> <a href="/applications/cisco/">Cisco</a> </li> 
+          </ul> </li> 
+         <li> <a href="#">&nbsp;</a> 
+          <ul> 
+           <li> <a href="/applications/collectd/">Collectd</a> </li> 
+           <li> <a href="/applications/hyperguard/">Hyperguard</a> </li> 
+           <li> <a href="/applications/IIS/">IIS</a> </li> 
+           <li> <a href="/applications/linux/">Linux</a> </li> 
+           <li> <a href="/applications/nginx/">Nginx</a> </li> 
+           <li> <a href="/applications/mac-osx/">Mac OSX</a> </li> 
+           <li> <a href="/applications/ossec/">OSSEC</a> </li> 
+           <li> <a href="/applications/pci/">PCI Compliance</a> </li> 
+           <li> <a href="/applications/palo-alto-networks/">Palo Alto Networks</a> </li> 
+          </ul> </li> 
+         <li> <a href="#">&nbsp;</a> 
+          <ul> 
+           <li> <a href="/applications/postfix/">Postfix</a> </li> 
+           <li> <a href="/applications/quickstart/">QuickStart</a> </li> 
+           <li> <a href="/applications/sentiment/">Sentiment</a> </li> 
+           <li> <a href="/applications/snort/">Snort</a> </li> 
+           <li> <a href="/applications/statsd/">StatsD</a> </li> 
+           <li> <a href="/applications/varnish/">Varnish</a> </li> 
+           <li> <a href="/applications/vmware/">VMware</a> </li> 
+           <li> <a href="/applications/windows/">Windows</a> </li> 
+          </ul> </li> 
+        </ul> </li> 
+       <li class=""> <a href="/resources/">Resources</a> </li> 
+       <li class=" about"> <a href="/about-sumo/">About Sumo</a> 
+        <ul class="about-sumo subnav"> 
+         <li> 
+          <ul> 
+           <li> <a href="/about-sumo/">Overview</a> </li> 
+           <li> <a href="/about-sumo/management/">Management</a> </li> 
+           <li> <a href="/about-sumo/our-team/">Our Team</a> </li> 
+           <li> <a href="/about-sumo/board-of-directors/">Board of Directors</a> </li> 
+           <li> <a href="/about-sumo/advisory-board/">Advisory Board</a> </li> 
+           <li> <a href="/about-sumo/partners/">Partners</a> </li> 
+          </ul> </li> 
+         <li> 
+          <ul> 
+           <li> <a href="/about-sumo/customers/">Customers</a> </li> 
+           <li> <a href="/follow-us/news/">News</a> </li> 
+           <li> <a href="/follow-us/press/">Press</a> </li> 
+           <li> <a href="/about-sumo/careers/">Careers</a> </li> 
+           <li> <a href="/about-sumo/contact/">Contact Us</a> </li> 
+          </ul> </li> 
+        </ul> </li> 
+       <li class="last"> <a class="button button-pink button-inline pie" href="/signup/">Sumo Logic FREE</a> </li> 
+      </ul> 
+     </div>
+     <!-- .span-12 --> 
+    </div>
+    <!-- .container --> 
+   </div> 
+  </div> 
+  <div id="valprop"> 
+   <div id="valprop-inner"> 
+    <div class="wrapper"> 
+     <div class="valprop-content"> 
+      <h1><a href="/blog/">Sumo Logic Blog</a></h1> 
+     </div> 
+    </div>
+    <!-- .wrapper --> 
+   </div>
+   <!-- #valprop-inner --> 
+  </div>
+  <!-- #valprop --> 
+  <div id="content-wrap" class="clearfix"> 
+   <div class="content"> 
+    <div class="wrapper"> 
+     <div class="container"> 
+      <div class="wrapper"> 
+       <div id="blog" class="clearfix"> 
+        <div class="span-10"> 
+         <div id="post-3336" class="post-item"> 
+          <div class="gravatar">
+           <img alt="Christian Beedgen, Co-Founder &amp; CTO" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2013/10/Christian-Beedgen-Co-Founder-amp-CTO_avatar_1381435595-50x50.jpeg" class="avatar avatar-50 photo" height="50" width="50">
+          </div> 
+          <h2 class="post-title"><a href="http://www.sumologic.com/blog/company/shifting-into-overdrive" rel="bookmark" title="Shifting Into Overdrive">Shifting Into Overdrive</a></h2> 
+          <p><span class="date-posted">12.02.2014</span> | Posted by Christian Beedgen, Co-Founder &amp; CTO</p> 
+          <div class="post-3336 post type-post status-publish format-standard hentry category-company"> 
+           <a href="" class="fancy" title="Shifting Into Overdrive"></a> 
+           <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.sumologic.com/blog/company/shifting-into-overdrive" addthis:title="Shifting Into Overdrive">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+           </div>
+           <h3 dir="ltr">&nbsp;</h3> 
+           <h3 dir="ltr">How Our Journey Began</h3> 
+           <p dir="ltr">Four years ago, my co-founder Kumar and I were just two guys who called coffee shops our office space. We had seen Werner Vogel’s AWS vision pitch at Stanford and imagined a world of Yottabyte scale where machine learning algorithms could make sense of it all. We dreamed of becoming the first and only native cloud analytics platform for machine generated data and next gen apps, and we dreamed that we would attract and empower customers. We imagined the day when we’d get our 500th customer. After years of troubleshooting scale limitations with on-premises enterprise software deployments, we bet our life savings that multi-tenant cloud apps could scale to the infinite data scales that were just a few years away.</p> 
+           <h3>Eclipsing Our First Goal</h3> 
+           <p dir="ltr">Just a few weeks ago, we added our 500th enterprise customer in just over two years since Sumo Logic’s inception. As software developers, the most gratifying part of our job is when customers use and love our software. This past month has been the most gratifying part of the journey so far as I’ve travelled around the world meeting with dozens of happy customers. At each city, I’m blown away by the impact that Sumo Logic has on our customers’ mission critical applications. Our code works, our customers love our software and our business is taking off faster than we could have imagined. &nbsp;</p> 
+           <h3>Momentum Is Kicking In</h3> 
+           <p dir="ltr">Our gratitude for our customers only grows when we dig through the stats of what we’ve been able to build together with our world class investors and team of 170+ Sumos. Just last quarter alone, we exceeded expectations with:</p> 
+           <ul> 
+            <li>100%+ Quarter over Quarter ACV growth</li> 
+            <li>100+ new customer logos</li> 
+            <li>12 new 1 Terabyte/day customers</li> 
+            <li>1 Quadrillion new logs indexed</li> 
+           </ul> 
+           <p>Dozens of new Sumos bringing badass skills from companies like Google, Atlassian, Microsoft, Akamai and even VMware…</p> 
+           <h3>Shifting Into Overdrive</h3> 
+           <p dir="ltr">It is still early days, and we have a tireless road of building ahead of us. Big data is approaching a $20B per year industry. And, we’re addressing machine data, which is growing 5X faster than any other segment of data. No company has built a platform for machine data that approaches our scale in the cloud:</p> 
+           <ul> 
+            <li>1 million events ingested per second</li> 
+            <li>8 petabytes scanned per day</li> 
+            <li>1 million queries processed per day</li> 
+           </ul> 
+           <p dir="ltr">Today, we’re excited to share the news that Ramin Sayar will joining us to lead Sumo Logic as our new president and CEO. With 20 years of industry experience, he has a proven track record for remarkable leadership, incubating and growing significant new and emerging businesses within leading companies. He comes to us from VMWare, where he was Sr. Vice President and General Manager of the Cloud Management Business Unit. In his time at VMWare, he developed the product and business strategy and led the fastest growing business unit. He was responsible for the industry leading Cloud Management Business and Strategy, R&amp;D, Operating P&amp;L, Product Mgmt, Product Marketing and field/business Operations for VMware’s Cloud Mgmt offerings.</p> 
+           <p>Our mission remains the same: to enable businesses to harness the power of machine data to improve their operations and deliver outstanding customer experience. With our current momentum and Ramin’s leadership, I am extremely excited about the next chapter in Sumo Logic’s journey. Please know how grateful we are to you, our customers, partners, and investors, for your belief in us and for the privilege to innovate on your behalf every day.</p> 
+          </div> 
+         </div> 
+         <!-- post --> 
+         <div id="post-3322" class="post-item"> 
+          <div class="gravatar">
+           <img alt="Binh Nguyen" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2014/11/Binh-Nguyen_avatar_1416273127-50x50.jpg" class="avatar avatar-50 photo" height="50" width="50">
+          </div> 
+          <h2 class="post-title"><a href="http://www.sumologic.com/blog/company/improving-misfit-wearables-devices-with-sumo-logic" rel="bookmark" title="Improving Misfit Wearable’s Devices With Sumo Logic">Improving Misfit Wearable’s Devices With Sumo Logic</a></h2> 
+          <p><span class="date-posted">11.20.2014</span> | Posted by Binh Nguyen</p> 
+          <div class="post-3322 post type-post status-publish format-standard hentry category-company"> 
+           <a href="" class="fancy" title="Improving Misfit Wearable’s Devices With Sumo Logic"></a> 
+           <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.sumologic.com/blog/company/improving-misfit-wearables-devices-with-sumo-logic" addthis:title="Improving Misfit Wearable’s Devices With Sumo Logic">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+           </div>
+           <p dir="ltr">At Misfit Wearables, we’ve been using Sumo Logic with great success and we wanted to share our story. &nbsp;We create smart devices that promote fitness and wellness. &nbsp;In order to develop great devices, capturing and analyzing data are critical tasks. &nbsp;We previously used a well-known open source log management tool. &nbsp;This tool was slow, limited and didn’t really deliver the value that we were looking for, yet for some time we had come to merely accept what we configured it to do for us. &nbsp;&nbsp;When we made the change to Sumo Logic, we saw some big changes. &nbsp;In summary Sumo Logic is an effective tool to manage logs and analyze data and is widely used by all our engineers in Misfit. &nbsp;However it goes way beyond that. &nbsp;The feedback from our product team has been tremendous and the main thing that is different is performance. &nbsp;Today, with Sumo Logic running in our environment, a job that once took five to ten minutes now takes several seconds. &nbsp;That was the beginning of our Sumo Logic story, because we are now implementing the Partition feature throughout our environment, and we’re already seeing results. &nbsp;Partitions has taken us to another level of performance improvement.</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <h2 dir="ltr">The Misfit Environment</h2> 
+           <p dir="ltr">&nbsp;To describe our environment, we collect a lot of data, but our setup is not unusual. Each day, we collect various logs from different collectors such as servers, clients, customers, websites and stores. &nbsp;Then by using the Data Forwarding option, all of these can be backed-up by an AWS S3 bucket. &nbsp;Pictured below is a report from the Sumo Logic dashboard of the total queries that run daily.</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <p dir="ltr"><img alt="Misfit_blog_figure1.jpg" src="https://lh4.googleusercontent.com/eabFEeL89frRwFuXCSi8lpuqFRpG9s8GFOD16iQDxjafVrgYHX8O3hSkzGxOc2FqxGaIcQGJH7bKm3FRj2zJF9VSnah5dtdYr6TQErJXVC6YKQNCbLf_ASGGCvzRp65GwQ" width="624px;" height="117px;"></p> 
+           <p dir="ltr">Fig 1. Daily query by Sumo Logic</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <p dir="ltr">&nbsp;Sumo Logic also provides us an<a href="http://www.sumologic.com/product/capabilities/?selected_tabs=product-predict"> Anomaly Detection tool</a> that can help us to automatically uncover security and other issues in real time. For those that are new to the software, there are a number of useful support features that make things easier such as Amazon Cloud Front, Data Volume, AWS Cloud Trail and Log Analysis Quick Start. &nbsp;Adoption and value have thus come about quickly at Misfit, and we are constantly finding ways to save time and effort with this powerful tool.</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <p>&nbsp;<img style="line-height: 1.5em;" alt="Misfit_blog_figure2.png" src="https://lh5.googleusercontent.com/umsjzYtUPoPgGUM_LfYsQuAKgca9Mlae9DNQBFwtD8hV8DBDNIZrfeMBOI4Srcb2VcnQz-nSUspoS6-uGYBes-PgO1E3sOw8eCJKbmpoI4uBadukaFBblhOo0MY48HMPTw" width="624px;" height="133px;"></p> 
+           <p>&nbsp;Fig 2. Sumo Logic Applications Collection</p> 
+           <p>&nbsp;</p> 
+           <h2 dir="ltr">Partitions</h2> 
+           <p dir="ltr">Recently, Sumo Logic introduced a feature called “Partitions” and we have started implementing it in a number of productive ways. &nbsp;For example, we now can easily filter a subset of one collector into a partition by creating an index. &nbsp;With this approach, we have seen drastically improved search query performance based on the reduced total number of messages that need to be searched and all partition indexes can now be automatically included in searches.</p> 
+           <p dir="ltr">&nbsp;To better understand the new feature, we have set up the following test:</p> 
+           <p dir="ltr">1. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We chose a small-size collector, which only has around 2% of total daily volume.</p> 
+           <p dir="ltr">2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then, we measure the query time by using the default index and one specific index for this collector during last N days (N = 1, 2, 3,…,14).</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <p dir="ltr">&nbsp;(a)&nbsp;</p> 
+           <p dir="ltr"><img alt="Misfit_blog_figure3.png" src="https://lh4.googleusercontent.com/GjzNNpKEa9kLPeO_n1pc07Rjoix3dshatyZKzlV0sPdbw6Cof2zSzjVHllUyymKRRp1kvmn-uynYiCHqBh_VU4BUBNZiV1vGMk8WRMZbFer44eXZfn1BpVWLH0Onzrv1SQ" width="624px;" height="112px;"></p> 
+           <p dir="ltr">(b)</p> 
+           <p dir="ltr"><img alt="Misfit_blog_figure4.png" src="https://lh4.googleusercontent.com/vQGJRKhSayUSGQHi6m_rhdruzyw9c8luSCuV8OBce4l_XwEJU7MJxaTzuL0OJd4U3xpj-VtxbFTGO43OPtxXqYLwRm-eO7CzI84vGq48NoxJW-vZmCiEQOYNZWJm_46lLQ" width="624px;" height="127px;"></p> 
+           <p dir="ltr">(c)</p> 
+           <p dir="ltr"><img alt="Misfit_blog_figure6.jpg" src="https://lh5.googleusercontent.com/1bWWAm_0DRZ8ae3yiTP2QAUDO8TJV8s9qve5dgb544yv2H2I_r2P1aRvBSVm2xJXT_AgB6OMDK3gkQo-SBMrLR9fzbr3fHPd_hBrXnGzqv7Oyl8Fw3kAk2jASKUNTyLHbA" width="442px;" height="399px;"></p> 
+           <p dir="ltr">Fig 3. Query time by using the default index versus an index by partitions. (a) Query time by the default index. (b) Query time by using an index for this collector. &nbsp;(c) The ratio between the query time by using an index and the query time by using the default index.</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <p dir="ltr">&nbsp;In Figure 3, for example searching some logs during “Last 14 days”, using the default index will take about 154 seconds; meanwhile it only takes 12 seconds by creating an index for this collector. The ratio between non-partitioned and partitioned indices over various time periods can be seen in Figure 3c. &nbsp;We save a lot of time, effort and resources with this new feature which helps with product development cycles.</p> 
+           <p dir="ltr">&nbsp;Saving time and resources on query and analysis is critical to our product. &nbsp;We here at Misfit Wearables have enjoyed using Sumo Logic and we look forward to further emerging features from the company that help us in what we do every day which is improve our product day by day and even hour by hour. &nbsp;</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <p dir="ltr">Binh Nguyen @ Misfit Wearables&nbsp;</p> 
+           <hr> 
+           <p>&nbsp;</p> 
+          </div> 
+         </div> 
+         <!-- post --> 
+         <div id="post-3293" class="post-item"> 
+          <div class="gravatar">
+           <img alt="Remy Guercio" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2014/11/Remy-Guercio_avatar_1415383177-50x50.jpg" class="avatar avatar-50 photo" height="50" width="50">
+          </div> 
+          <h2 class="post-title"><a href="http://www.sumologic.com/blog/technology/have-you-found-the-right-apm" rel="bookmark" title="Have you found the right APM?">Have you found the right APM?</a></h2> 
+          <p><span class="date-posted">11.17.2014</span> | Posted by Remy Guercio</p> 
+          <div class="post-3293 post type-post status-publish format-standard hentry category-technology"> 
+           <a href="" class="fancy" title="Have you found the right APM?"></a> 
+           <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.sumologic.com/blog/technology/have-you-found-the-right-apm" addthis:title="Have you found the right APM?">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+           </div>
+           <p dir="ltr">When choosing an Application Performance Management (APM) provider to complement your log analytics solution, it is important to consider factors such as ease of integration, breadth of features offered and alignment with your growing business needs. &nbsp;APM solutions are metrics focused, they do a great job of identifying latency spikes, drop offs in user interaction, and other metrics based issues. However, they can’t always identify the root cause of a problem or detect complex anomalies such as new error types in applications. Together, APM and log analytics solutions provide end-to-end visibility into your application stack. This post aims to provide some insight into the features and integrations that various APM providers offer with log analytics solutions. The APM vendors are listed in random order, not by any specific ranking.</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <p dir="ltr"><strong><span style="font-size: medium;"><a href="http://newrelic.com/application-monitoring" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://newrelic.com']);">New Relic</a></span></strong></p> 
+           <hr> 
+           <p dir="ltr">New Relic provides a SaaS based APM solution aimed at businesses with apps of all sizes. The APM solution provided by New Relic supports applications built on Ruby, Java, Node.js, PHP, Python, iOS and Android. The base APM solution integrates with their other solutions providing metrics based analytics from browsers, mobile platforms and synthetic testing monitors (in beta). New Relic was <a href="http://newrelic.com/gartner-magic-quadrant" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://newrelic.com']);">named as a leader</a> in Gartner’s 2014 Magic Quadrant for APM.</p> 
+           <h4>Key Features:</h4> 
+           <ul> 
+            <li>Code level visibility</li> 
+            <li>Transaction tracing</li> 
+            <li>SQL query analysis</li> 
+            <li>Alerting integrations with HipChat, Jira, PagerDuty and Campfire</li> 
+            <li>Network request tracking</li> 
+            <li>SLA compliance reporting</li> 
+            <li>Mobile: Crash reporting</li> 
+            <li>Mobile: Device analytics</li> 
+            <li>Synthetic monitoring integration</li> 
+           </ul> 
+           <h4 dir="ltr">Pricing Tiers:</h4> 
+           <p dir="ltr">Base:</p> 
+           <ul> 
+            <li>14 day free Pro trial</li> 
+            <li>Lite – 24hr data retention</li> 
+            <li>Pro – unlimited data retention, transaction tracing, phone support, and service SLA</li> 
+            <li>Enterprise – dedicated account manager, greater support</li> 
+           </ul> 
+           <p dir="ltr">Mobile:</p> 
+           <ul> 
+            <li>Lite – 24hr data retention, summary data</li> 
+            <li>Standard – 1 week data retention, response time metrics, user interaction overview</li> 
+            <li><span style="line-height: 1.5em;">Enterprise – 3 month data retention, device metrics, user interaction traces</span></li> 
+           </ul> 
+           <p>New Relic provides iPhone and Android applications where customers can view and receive alerts for important metrics, and on the web, New Relic offers a slick dashboard experience for looking into real-time application performance.</p> 
+           <p>&nbsp;</p> 
+           <p><strong><span style="font-size: medium;"><a href="http://www.appneta.com/products/traceview/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.appneta.com']);">AppNeta</a></span></strong></p> 
+           <hr> 
+           <p dir="ltr">AppNeta provides a SaaS base APM solution that supports applications written in Java, .NET, Python, PHP, Node.js and Ruby. AppNeta was <a href="http://www.gartner.com/technology/reprints.do?id=1-23QQOPU&amp;ct=141029&amp;st=sb" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.gartner.com']);">named as a niche player</a> in Gartner’s 2014 Magic Quadrant for APM.</p> 
+           <h4>Key Features:</h4> 
+           <ul> 
+            <li>Synthetic monitoring</li> 
+            <li>Code level visibility</li> 
+            <li>Transaction tracing</li> 
+            <li>SLA Compliance Reporting</li> 
+           </ul> 
+           <h4>Pricing Tiers:</h4> 
+           <p dir="ltr">TraceView (APM solution):</p> 
+           <ul> 
+            <li>Free – 1 application, 1 hour of data retention, 1 user</li> 
+            <li>Startup – 1 application, 24 hours of data retention, 3 users</li> 
+            <li>Enterprise – unlimited applications, 45 days retention, unlimited users</li> 
+           </ul> 
+           <p dir="ltr">AppView (Synthetic monitoring):</p> 
+           <ul> 
+            <li>Small – 5 monitors</li> 
+            <li>Medium – 10 monitors</li> 
+            <li><span style="line-height: 1.5em;">Large – 40 monitors</span></li> 
+           </ul> 
+           <p>AppNeta’s heat-map charting interface makes it very intuitive and easy to spot patterns, trends, and outliers in your apps metrics.</p> 
+           <p>&nbsp;</p> 
+           <p><strong><span style="font-size: medium;"><a href="http://www.appdynamics.com/product/application-performance-management/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.appdynamics.com']);">AppDynamics</a></span></strong></p> 
+           <hr> 
+           <p dir="ltr">AppDynamics focuses on providing a SaaS application performance management solution to both large and small businesses, and they offer support for Java, .NET, PHP, Node.js, iOS and Android. They offer add ons that providing metrics based analytics from browsers and mobile platforms. Gartner <a href="http://www.appdynamics.com/gartner-magic-quadrant-2014-application-performance-monitoring/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.appdynamics.com']);">named AppDynamics as a leader</a> in the 2014 Magic Quadrant for APM.</p> 
+           <h4 dir="ltr">Key Features:</h4> 
+           <ul> 
+            <li>Realtime user monitoring</li> 
+            <li>Network request snapshots</li> 
+            <li>Alerting integrations with Service Now, Pager Duty, and Jira</li> 
+            <li>Code level visibility</li> 
+            <li>Mobile: Crash reporting</li> 
+            <li>Mobile: Device analytics</li> 
+            <li>Synthetic monitoring</li> 
+           </ul> 
+           <h4 dir="ltr">Pricing Tiers:</h4> 
+           <p dir="ltr">Note: Pricing is done in units. Units are usually 1 process each, except for with node.js where 10 processes equal 1 unit.</p> 
+           <p dir="ltr">Base:</p> 
+           <ul> 
+            <li>Lite – 24hr data retention, one unit</li> 
+            <li>Pro – upto 10 units</li> 
+           </ul> 
+           <p dir="ltr">AppDynamics’ dashboards allow for the creation of visually appealing and robust application component maps that show the detailed breakdown of your application’s performance in real time.</p> 
+           <p>&nbsp; <a href="http://www.sumologic.com/blog/technology/have-you-found-the-right-apm#more-3293" class="more-link">… Continue Reading</a></p> 
+          </div> 
+         </div> 
+         <!-- post --> 
+         <div id="post-3312" class="post-item"> 
+          <div class="gravatar">
+           <img alt="Brandon Mensing" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2013/10/Brandon-Mensing_avatar_1383066980-50x50.jpg" class="avatar avatar-50 photo" height="50" width="50">
+          </div> 
+          <h2 class="post-title"><a href="http://www.sumologic.com/blog/company/use-aws-cloudtrail-to-avoid-a-console-attack" rel="bookmark" title="Use AWS CloudTrail to Avoid a Console Attack">Use AWS CloudTrail to Avoid a Console Attack</a></h2> 
+          <p><span class="date-posted">11.11.2014</span> | Posted by Brandon Mensing</p> 
+          <div class="post-3312 post type-post status-publish format-standard hentry category-company"> 
+           <a href="" class="fancy" title="Use AWS CloudTrail to Avoid a Console Attack"></a> 
+           <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.sumologic.com/blog/company/use-aws-cloudtrail-to-avoid-a-console-attack" addthis:title="Use AWS CloudTrail to Avoid a Console Attack">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+           </div>
+           <p dir="ltr">Our app for AWS CloudTrail now offers a dashboard specifically for monitoring console login activity. In the past months since the AWS team <a href="http://blogs.aws.amazon.com/security/post/Tx1RRJBQRA9MQOI/AWS-CloudTrail-Now-Logs-AWS-Management-Console-Sign-In-Events" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://blogs.aws.amazon.com']);">added this feature</a>, we decided to break out these user activities in order to provide better visibility into what’s going on with your AWS account.</p> 
+           <p dir="ltr">Many of you might think of this update as incremental and not newsworthy, but I’m actually writing here today to tell you otherwise! More and more people are using APIs and CLIs (and third parties) to work with AWS outside the console. As console logins are becoming more and more rare and as more business-critical assets are being deployed in AWS, it’s critical to always know who’s logged into your console and when.</p> 
+           <p dir="ltr">For a great and terrifying read about just how badly things can go wrong when someone gains access to your console, look no further than the story of Code Spaces. With <a href="http://www.infoworld.com/article/2608076/data-center/murder-in-the-amazon-cloud.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.infoworld.com']);">one story </a>opening with “was a company” and <a href="http://arstechnica.com/security/2014/06/aws-console-breach-leads-to-demise-of-service-with-proven-backup-plan/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://arstechnica.com']);">another</a> “abruptly closed,” there isn’t exactly a lot of suspense about how things turned out for this company. After attackers managed to gain access to Code Spaces’ AWS console, they built themselves a stronghold of backdoors and began an attempt to extort money from the company. When the attackers accounts were removed, they quickly used the additional users they had generated to get back in and begin taking out infrastructure and data. With the service down and their customer’s data in disarray, all trust in their product was lost. The company was effectively destroyed in a matter of hours.</p> 
+           <p>The new dashboard in our updated CloudTrail app allows you to quickly see who’s attempting to login to your console, from where and whether or not they’re using multi-factor authentication (which we highly recommend).</p> 
+           <p style="text-align: center;"><img class="aligncenter" alt="CloudTrail Console Logins" src="http://help.sumologic.com/Help/Resources/Images/cloudtrail_app_console_logins_668x405.png" width="534" height="324"></p> 
+           <p dir="ltr">If you haven’t installed the app previously, be sure to follow our simple steps <a href="http://help.sumologic.com/Help/Default.htm#CloudTrail_App.htm">from our documentation</a> to setup the appropriate permissions in AWS. For those of you who have already installed the app previously, you can install the app again anew in order to get a new copy of the app with the additional dashboard included. From there, we encourage you to customize queries for your specific situation and even consider setting up a scheduled search to alert you to a problematic situation.</p> 
+           <p dir="ltr">Keeping an eye out for suspicious activity on your AWS console can be an invaluable insight. As attackers get more sophisticated, it’s harder and harder to keep your business secure and operational. With the help of Sumo Logic and logs from AWS CloudTrail you can stay ahead of the game by preventing the most obvious (and most insidious) types of breaches. <a href="http://www.sumologic.com/aws-trial/">With functionality like this</a>, perhaps Code Spaces would still be in business.</p> 
+          </div> 
+         </div> 
+         <!-- post --> 
+         <div id="post-3282" class="post-item"> 
+          <div class="gravatar">
+           <img alt="Eillen Voellinger" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2014/11/Eillen-Voellinger_avatar_1415147632-50x50.jpg" class="avatar avatar-50 photo" height="50" width="50">
+          </div> 
+          <h2 class="post-title"><a href="http://www.sumologic.com/blog/company/certified-bonafide-on-your-side" rel="bookmark" title="Certified, bonafide, on your side">Certified, bonafide, on your side</a></h2> 
+          <p><span class="date-posted">11.05.2014</span> | Posted by Eillen Voellinger</p> 
+          <div class="post-3282 post type-post status-publish format-standard hentry category-company category-security category-security-analytics category-siem tag-compliance tag-hipaa tag-joanpepin tag-saas tag-security-2 tag-soc2 tag-sumo-logic"> 
+           <a href="" class="fancy" title="Certified, bonafide, on your side"></a> 
+           <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.sumologic.com/blog/company/certified-bonafide-on-your-side" addthis:title="Certified, bonafide, on your side">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+           </div>
+           <p>“How do I build trust with a cloud-based service?” &nbsp;This is the most common question Sumo Logic is asked, and we’ve got you covered. We built the service so it was not just an effortless choice for enterprise customers but the obvious one and building trust through a secure architecture was one of the first things we took care of.</p> 
+           <p>Sumo Logic is &nbsp;SOC 2 Type 2 and HIPAA compliant. Sumo Logic also complies with the U.S. – E.U. Safe Harbor framework and will soon be PCI/DSS 3.0 compliant. No other cloud-based log analytics service can say this. For your company, this means you can safely get your logs into Sumo Logic – a service you can trust and a service that will protect your data just like you would.</p> 
+           <p><img class="alignnone" alt="" src="http://test.denelelabs.com/wp-content/uploads/2011/08/solutions_compliance2.jpg" width="300" height="356"></p> 
+           <p>These are no small accomplishments, and it takes an A-team to get it done. It all came together when we hired Joan Pepin, a phreak and a hacker by admission. Joan is our VP of Security and CISO. She was employee number 11 at Sumo Logic and her proficiency has helped shape our secure service.</p> 
+           <p>Our secure architecture is also a perfect match for our “Customer First” policy and agile development culture. We make sure that we are quickly able to meet customer needs and to fix issues in real-time without compromising our secure software development processes. From network security to secure software development practices, we ensured that our developers are writing secure code in a peer-reviewed and process-driven fashion.</p> 
+           <p><img class="alignnone" alt="" src="http://www.dod.gov/pubs/dod101/images/headgrapd.jpg" width="588" height="318"></p> 
+           <p>Sumo Logic was built from the ground up to be secure, reliable, fast, and compliant. Joan understands what it means to defend a system, keep tabs on it, watch it function live. Joan worked for the Department of Defense. She can’t actually talk about what she did when she was there, but we can confirm that she was there because the Department of Defense, as she puts it, “thought my real world experience would balance off the Ph.Ds.”</p> 
+           <p><img class="alignnone" alt="" src="https://pbs.twimg.com/profile_images/28387232/LOD_logo.jpg" width="500" height="515"></p> 
+           <p>Joan learned the craft from Dr. Who, a member of the (<a href="http://en.wikipedia.org/wiki/Legion_of_Doom_(hacking)" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);">http://en.wikipedia.org/wiki/Legion_of_Doom_(hacking)</a>) Legion of Doom. (<a href="http://phrack.org/issues/31/5.html#article" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://phrack.org']);">http://phrack.org/issues/31/5.html#article</a> ) If hacker groups were rock and roll, the Legion of Doom would be Muddy Waters, Chuck Berry, Buddy Holly. They created the idea of a hacker group. They hacked into a number of state 911 systems and stole the documentation on them, distributing it throughout BBS’ in the United States. They were the original famous hacking group. Joan is no Jane-come-lately. She’s got the best resume you can have in this business.</p> 
+           <p><img class="alignnone" alt="" src="http://aspanational.files.wordpress.com/2013/08/security.jpg" width="468" height="305"></p> 
+           <p>We’re frequently asked about all the security procedures we adopt at Sumo Logic. Security is baked into every component of our service. Other than the various attestations I mentioned earlier, we also encrypt data at rest and in transit. Other security processes that are core to the Sumo Logic service include:</p> 
+           <p>+ Centrally managed, FIPS-140 two-factor authentication devices for operations personnel</p> 
+           <p>+ Biometric access controls</p> 
+           <p>+ Whole-disk encryption</p> 
+           <p>+ Thread-level access controls</p> 
+           <p>+ Whitelisting of individual processes, users, ports and addresses</p> 
+           <p>+ Strong AES-256-CBC encryption</p> 
+           <p>+ Regular penetration tests and vulnerability scans</p> 
+           <p>+ A strong Secure Development Life-Cycle (SDLC)</p> 
+           <p>+ Threat intelligence and managed vulnerability feeds to stay current with the constantly evolving threatscape and security trends</p> 
+           <p>If you’re still curious about the extent to which our teams have gone to keep your data safe, check out our white paper on the topic:<br> http://www.sumologic.com/_downloads/Sumo_Logic_Whitepaper_Securing_Logic_Service_060313.pdf</p> 
+           <p>We use our own service to capture our logs, which has helped us accomplish our enviable security and compliance accomplishments. We’ve done the legwork so your data is secure and so you can use Sumo Logic to meet your unique security and compliance needs. We have been there done that with the Sumo Logic service and now it’s your turn.</p> 
+          </div> 
+         </div> 
+         <!-- post --> 
+         <div id="post-3251" class="post-item"> 
+          <div class="gravatar">
+           <img alt="Karthik Anantha Padmanabhan" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2014/10/Karthik-Anantha-Padmanabhan_avatar_1414084734-50x50.jpg" class="avatar avatar-50 photo" height="50" width="50">
+          </div> 
+          <h2 class="post-title"><a href="http://www.sumologic.com/blog/company/optimizing-breadth-first-search-for-social-networks" rel="bookmark" title="Optimizing Breadth-First Search for Social Networks">Optimizing Breadth-First Search for Social Networks</a></h2> 
+          <p><span class="date-posted">10.28.2014</span> | Posted by Karthik Anantha Padmanabhan</p> 
+          <div class="post-3251 post type-post status-publish format-standard hentry category-company category-technology tag-bfs tag-big-data tag-breadth tag-first tag-logic tag-logs tag-media tag-search tag-social tag-sumo"> 
+           <a href="" class="fancy" title="Optimizing Breadth-First Search for Social Networks"></a> 
+           <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.sumologic.com/blog/company/optimizing-breadth-first-search-for-social-networks" addthis:title="Optimizing Breadth-First Search for Social Networks">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+           </div>
+           <style><!--
+.line-numbers { display: none; }
+--></style> 
+           <p dir="ltr">Social network graphs, like the ones captured by Facebook and Twitter exhibit small-world characteristics<em> [2][3]</em>. In 2011, Facebook documented that among all Facebook users at the time of their research (721 million users with 69 billion friendship links), there is an average average shortest path distance of 4.74 between users. This simply means that on average, any two people in the world are separated by just five other people. It’s a small world indeed ! Formally, a small-world network is defined to be a network where the typical distance <em>L</em> between two randomly chosen nodes grows proportionally to the logarithm of the number of nodes N in the network <em>[4]</em>.</p> 
+           <p>Consider the following scenario. You have a social network profile and you want someone to introduce you to the person in that profile. But luckily you are given the entire friendship graph captured by this social network. If there are mutual friends, then you just ask one of them to help you out. If not, you need some sequence of friend introductions to finally meet that person. What is the minimum number of intermediate friend introductions that you need to meet that person you are interested in ? This is equivalent to finding the shortest path in the social network graph between you and that person of interest. The solution is to run Breadth First Search on that social network graph with your profile as the starting vertex. The other interesting question is, if we have extra information about our graph exhibiting small-world properties, &nbsp;can we make the exhaustive Breadth-First Search (BFS) faster? The ideas expressed on this topic appeared in Beamer et al <em>[1],</em> where the authors optimized BFS for the number of edges traversed.</p> 
+           <p dir="ltr"><strong>Breadth-First Search:</strong></p> 
+           <p dir="ltr">BFS uses the idea of a frontier that separates the visited nodes from unvisited nodes. The frontier holds the nodes of the recently visited level and is used to find the next set of nodes to be visited. On every step of BFS, the current frontier is used to identify the next frontier from the set of unvisited nodes.</p> 
+           <p dir="ltr" style="text-align: center;"><img style="line-height: 1.5em;" alt="Example Graph (1).png" src="https://lh3.googleusercontent.com/qIcPlDMp2yz3ZQxYrjxKyEfcL4y1FZDt1JoLClSzkUZj3G6oKYBWiTSJ5p4v_lokPffHa5kppCulEXs9xn8CZBwFTt--RgOnMrQeBPPf3ftx02INosPbkV9hOPvrttHaEQ" width="387px;" height="236px;"></p> 
+           <p dir="ltr" style="text-align: center;"><strong><em>Figure 1. A simple graph</em></strong></p> 
+           <p dir="ltr">Looking at the example in the figure, the current frontier consists of the nodes 1, 2, 3, 4 and 5. The edges from these nodes are examined to find a node that has not been visited. In the above case node 2’s edges are used to mark H and add it to the next frontier. But note that even though H has been marked by 2, nodes 3, 4 and 5 still inspect H to see whether it is visited or not.</p> 
+           <p><strong>Pseudocode for Naive BFS [5] :</strong></p> 
+           <p dir="ltr"><strong>Input</strong>: <em>A graph G = (V,E) containing V vertices and E edges and source vertex s</em></p> 
+           <p dir="ltr"><strong>Output</strong>: <em>parent: Array[Int], where parent[v] gives the the parent of v in the graph or &nbsp;-1 is if a parent does not exist</em></p> 
+           <p dir="ltr"></p>
+           <div id="gist15375768" class="gist"> 
+            <div class="gist-file"> 
+             <div class="gist-data gist-syntax"> 
+              <div class="file-data"> 
+               <table cellpadding="0" cellspacing="0" class="lines highlight"> 
+                <tbody>
+                 <tr> 
+                  <td class="line-numbers"> <span class="line-number" id="file-top-down-scala-L1" rel="file-top-down-scala-L1">1</span> <span class="line-number" id="file-top-down-scala-L2" rel="file-top-down-scala-L2">2</span> <span class="line-number" id="file-top-down-scala-L3" rel="file-top-down-scala-L3">3</span> <span class="line-number" id="file-top-down-scala-L4" rel="file-top-down-scala-L4">4</span> <span class="line-number" id="file-top-down-scala-L5" rel="file-top-down-scala-L5">5</span> <span class="line-number" id="file-top-down-scala-L6" rel="file-top-down-scala-L6">6</span> <span class="line-number" id="file-top-down-scala-L7" rel="file-top-down-scala-L7">7</span> <span class="line-number" id="file-top-down-scala-L8" rel="file-top-down-scala-L8">8</span> <span class="line-number" id="file-top-down-scala-L9" rel="file-top-down-scala-L9">9</span> <span class="line-number" id="file-top-down-scala-L10" rel="file-top-down-scala-L10">10</span> <span class="line-number" id="file-top-down-scala-L11" rel="file-top-down-scala-L11">11</span> <span class="line-number" id="file-top-down-scala-L12" rel="file-top-down-scala-L12">12</span> <span class="line-number" id="file-top-down-scala-L13" rel="file-top-down-scala-L13">13</span> <span class="line-number" id="file-top-down-scala-L14" rel="file-top-down-scala-L14">14</span> <span class="line-number" id="file-top-down-scala-L15" rel="file-top-down-scala-L15">15</span> <span class="line-number" id="file-top-down-scala-L16" rel="file-top-down-scala-L16">16</span> <span class="line-number" id="file-top-down-scala-L17" rel="file-top-down-scala-L17">17</span> <span class="line-number" id="file-top-down-scala-L18" rel="file-top-down-scala-L18">18</span> <span class="line-number" id="file-top-down-scala-L19" rel="file-top-down-scala-L19">19</span> <span class="line-number" id="file-top-down-scala-L20" rel="file-top-down-scala-L20">20</span> <span class="line-number" id="file-top-down-scala-L21" rel="file-top-down-scala-L21">21</span> <span class="line-number" id="file-top-down-scala-L22" rel="file-top-down-scala-L22">22</span> <span class="line-number" id="file-top-down-scala-L23" rel="file-top-down-scala-L23">23</span> <span class="line-number" id="file-top-down-scala-L24" rel="file-top-down-scala-L24">24</span> <span class="line-number" id="file-top-down-scala-L25" rel="file-top-down-scala-L25">25</span> <span class="line-number" id="file-top-down-scala-L26" rel="file-top-down-scala-L26">26</span> <span class="line-number" id="file-top-down-scala-L27" rel="file-top-down-scala-L27">27</span> </td> 
+                  <td class="line-data"> <pre class="line-pre">
+                    <div class="line" id="file-top-down-scala-LC1">
+                     <span class="pl-k">class</span> 
+                     <span class="pl-en">BFS</span>(
+                     <span class="pl-v">g</span>: 
+                     <span class="pl-en">Graph</span>) {
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC2">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC3">  
+                     <span class="pl-k">val</span> 
+                     <span class="pl-en">parent</span> 
+                     <span class="pl-k">=</span> 
+                     <span class="pl-en">ArrayBuffer</span>.fill(g.numberVertices)(
+                     <span class="pl-k">-</span>
+                     <span class="pl-c1">1</span>).toArray
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC4">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC5">  
+                     <span class="pl-k">def</span> 
+                     <span class="pl-en">bfs</span>(
+                     <span class="pl-v">source</span>: 
+                     <span class="pl-st">Int</span>, 
+                     <span class="pl-v">updater</span>: (
+                     <span class="pl-en">Seq</span>[
+                     <span class="pl-st">Int</span>], 
+                     <span class="pl-en">Array</span>[
+                     <span class="pl-st">Int</span>]) 
+                     <span class="pl-k">=&gt;</span> 
+                     <span class="pl-en">Seq</span>[
+                     <span class="pl-st">Int</span>]) 
+                     <span class="pl-k">=</span> {
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC6">    
+                     <span class="pl-k">var</span> 
+                     <span class="pl-en">frontier</span> 
+                     <span class="pl-k">=</span> 
+                     <span class="pl-en">Seq</span>(source)
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC7">
+                         parent(source) 
+                     <span class="pl-k">=</span> 
+                     <span class="pl-k">-</span>
+                     <span class="pl-c1">2</span>
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC8">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC9">    
+                     <span class="pl-k">while</span> (
+                     <span class="pl-k">!</span>frontier.isEmpty) {
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC10">
+                           frontier 
+                     <span class="pl-k">=</span> updater(frontier, parent)
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC11">
+                         }
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC12">
+                       }
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC13">
+                     }
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC14">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC15">
+                     <span class="pl-k">trait</span> 
+                     <span class="pl-en">TopDownUpdater</span> 
+                     <span class="pl-k">extends</span> 
+                     <span class="pl-e">FrontierUpdater</span> {
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC16">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC17">  
+                     <span class="pl-k">def</span> 
+                     <span class="pl-en">update</span>(
+                     <span class="pl-v">frontier</span>: 
+                     <span class="pl-en">Seq</span>[
+                     <span class="pl-st">Int</span>], 
+                     <span class="pl-v">parents</span>: 
+                     <span class="pl-en">Array</span>[
+                     <span class="pl-st">Int</span>])
+                     <span class="pl-k">:</span> 
+                     <span class="pl-en">Seq</span>[
+                     <span class="pl-st">Int</span>] 
+                     <span class="pl-k">=</span> {
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC18">    
+                     <span class="pl-k">val</span> 
+                     <span class="pl-en">next</span> 
+                     <span class="pl-k">=</span> 
+                     <span class="pl-en">ArrayBuffer</span>[
+                     <span class="pl-st">Int</span>]()
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC19">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC20">
+                         frontier.foreach{ node 
+                     <span class="pl-k">=&gt;</span>
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC21">
+                           graph.getNeighbors(node).filter(parents(_) 
+                     <span class="pl-k">==</span> 
+                     <span class="pl-k">-</span>
+                     <span class="pl-c1">1</span>).foreach { neighbor 
+                     <span class="pl-k">=&gt;</span>
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC22">
+                             next 
+                     <span class="pl-k">+</span>
+                     <span class="pl-k">=</span> neighbor
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC23">
+                             parents(neighbor) 
+                     <span class="pl-k">=</span> node
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC24">
+                           }
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC25">
+                         }
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC26">
+                         next
+
+                    </div>
+                    <div class="line" id="file-top-down-scala-LC27">
+                       }
+
+                    </div></pre> </td> 
+                 </tr> 
+                </tbody>
+               </table> 
+              </div> 
+             </div> 
+             <div class="gist-meta"> 
+              <a href="https://gist.github.com/treadstone90/a7ca1bd9e54e42b56ad4/raw/top-down.scala" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://gist.github.com']);" style="float:right">view raw</a> 
+              <a href="https://gist.github.com/treadstone90/a7ca1bd9e54e42b56ad4#file-top-down-scala" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://gist.github.com']);">top-down.scala</a> hosted with ❤ by 
+              <a href="https://github.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">GitHub</a> 
+             </div> 
+            </div> 
+           </div> 
+           <p></p> 
+           <p>One of the observations of conventional BFS (henceforth referred to as top-down BFS) is that it always performs in the worst case complexity, i.e., <em>O(|V| + |E|)</em> where <em>V</em> and <em>E</em> are the number of vertices and number of edges respectively. For example, if a node v has p parents, then we just need to explore one edge from any p parents to v to check for connectivity. But top-down BFS checks all incoming edges to v.</p> 
+           <p>The redundancy of these additional edge lookups is more pronounced when top-down BFS is run on graphs exhibiting small-world properties. As a consequence of the definition of small-world networks, the number of nodes increases exponentially with the effective diameter of the network, which result in large networks with very low diameters. &nbsp;The low diameter of these graphs forces them to have a larger number of nodes at a particular level and leads to top-down BFS visiting a larger number of nodes in every step, making the frontier very large. Traversing the edges of the nodes in a frontier is the major computation that is performed, and top-down BFS unfortunately ends up visiting all the outgoing edges from the frontier. Moreover, it has also been shown in<em> [1]</em> that most of the edge lookups from the frontier nodes end up in visited nodes (marked by some other parent), which gives further evidence that iterating through all edges from the frontier can be avoided.</p> 
+           <p>The idea behind bottom-up BFS [1] is to avoid visiting all the edges of the nodes in the frontier, which is a pretty useful thing to do for the reasons mentioned above. To accomplish this, bottom-up BFS traverses the edges of the unvisited nodes to find a parent in the current frontier. If an unvisited node has at least one of its parents in the current frontier, then that node is added to the next frontier. To efficiently find if a node’s parent is present in the frontier, the frontier data structure is changed to a bitmap.</p> 
+           <p style="text-align: center;"><img style="line-height: 1.5em;" alt="Untitled drawing (4).png" src="https://lh4.googleusercontent.com/8Z2H8hiwQY4-dorzZziLprD9dkWa7VACoV5QDrGlENGy5eY4ZL4FTq9aF1JtNDje8mx1YL4hs5xN0yecQpGehugZ5AGKRufGbgw3ZbotcLGNNFZNbSoXysgYGg9ETm9w7Q" width="311px;" height="234px;"><img style="line-height: 1.5em;" alt="Untitled drawing (6).png" src="https://lh5.googleusercontent.com/P7--hXe577Dsnv5veXXfGIHEejyqfrLN9bgzce7XfwxGgQkseTSTSdlA5vhyUthZ6NcGUQFhO4ZBtz8YisZ5aXA_bSNNDkl95cQ0TLvNw4YWVqKAvXRkpYGSKkq4c6zlSg" width="280px;" height="211px;"></p> 
+           <p style="text-align: center;"><em><strong>Figure 2. Bottom up BFS</strong></em></p> 
+           <p>In the above example, <em>{H, I, J, K }</em> are the unvisited nodes. However only nodes <em>{ J, H }</em> have a neighbor in the current frontier and as a result the next frontier now becomes <em>{H , J}</em>. In the next iteration the set of unvisited nodes will be <em>{I, K}</em> and each of them have a parent in the current frontier which is <em>{H, J}</em>. So <em>{I, K}</em> will be visited and the search will complete in the next iteration since there will be no more nodes to be added to the next frontier, since all nodes will be visited.</p> 
+           <p>&nbsp;</p> 
+           <p dir="ltr"><strong>Pseudocode for Bottom-up BFS</strong>:</p> 
+           <p dir="ltr"><strong>Input</strong>: <em>A graph G = (V,E) containing V vertices and E edges and source vertex s</em></p> 
+           <p dir="ltr"><strong>Output</strong>: <em>parent: Array[Int], where parent[v] gives the the parent of v in the graph or &nbsp;-1 is if a parent does not exist</em></p> 
+           <div id="gist15375793" class="gist"> 
+            <div class="gist-file"> 
+             <div class="gist-data gist-syntax"> 
+              <div class="file-data"> 
+               <table cellpadding="0" cellspacing="0" class="lines highlight"> 
+                <tbody>
+                 <tr> 
+                  <td class="line-numbers"> <span class="line-number" id="file-bottom-up-scala-L1" rel="file-bottom-up-scala-L1">1</span> <span class="line-number" id="file-bottom-up-scala-L2" rel="file-bottom-up-scala-L2">2</span> <span class="line-number" id="file-bottom-up-scala-L3" rel="file-bottom-up-scala-L3">3</span> <span class="line-number" id="file-bottom-up-scala-L4" rel="file-bottom-up-scala-L4">4</span> <span class="line-number" id="file-bottom-up-scala-L5" rel="file-bottom-up-scala-L5">5</span> <span class="line-number" id="file-bottom-up-scala-L6" rel="file-bottom-up-scala-L6">6</span> <span class="line-number" id="file-bottom-up-scala-L7" rel="file-bottom-up-scala-L7">7</span> <span class="line-number" id="file-bottom-up-scala-L8" rel="file-bottom-up-scala-L8">8</span> <span class="line-number" id="file-bottom-up-scala-L9" rel="file-bottom-up-scala-L9">9</span> <span class="line-number" id="file-bottom-up-scala-L10" rel="file-bottom-up-scala-L10">10</span> <span class="line-number" id="file-bottom-up-scala-L11" rel="file-bottom-up-scala-L11">11</span> <span class="line-number" id="file-bottom-up-scala-L12" rel="file-bottom-up-scala-L12">12</span> <span class="line-number" id="file-bottom-up-scala-L13" rel="file-bottom-up-scala-L13">13</span> <span class="line-number" id="file-bottom-up-scala-L14" rel="file-bottom-up-scala-L14">14</span> <span class="line-number" id="file-bottom-up-scala-L15" rel="file-bottom-up-scala-L15">15</span> <span class="line-number" id="file-bottom-up-scala-L16" rel="file-bottom-up-scala-L16">16</span> <span class="line-number" id="file-bottom-up-scala-L17" rel="file-bottom-up-scala-L17">17</span> <span class="line-number" id="file-bottom-up-scala-L18" rel="file-bottom-up-scala-L18">18</span> <span class="line-number" id="file-bottom-up-scala-L19" rel="file-bottom-up-scala-L19">19</span> <span class="line-number" id="file-bottom-up-scala-L20" rel="file-bottom-up-scala-L20">20</span> <span class="line-number" id="file-bottom-up-scala-L21" rel="file-bottom-up-scala-L21">21</span> <span class="line-number" id="file-bottom-up-scala-L22" rel="file-bottom-up-scala-L22">22</span> <span class="line-number" id="file-bottom-up-scala-L23" rel="file-bottom-up-scala-L23">23</span> <span class="line-number" id="file-bottom-up-scala-L24" rel="file-bottom-up-scala-L24">24</span> <span class="line-number" id="file-bottom-up-scala-L25" rel="file-bottom-up-scala-L25">25</span> <span class="line-number" id="file-bottom-up-scala-L26" rel="file-bottom-up-scala-L26">26</span> <span class="line-number" id="file-bottom-up-scala-L27" rel="file-bottom-up-scala-L27">27</span> <span class="line-number" id="file-bottom-up-scala-L28" rel="file-bottom-up-scala-L28">28</span> <span class="line-number" id="file-bottom-up-scala-L29" rel="file-bottom-up-scala-L29">29</span> <span class="line-number" id="file-bottom-up-scala-L30" rel="file-bottom-up-scala-L30">30</span> </td> 
+                  <td class="line-data"> <pre class="line-pre">
+                    <div class="line" id="file-bottom-up-scala-LC1">
+                     <span class="pl-k">trait</span> 
+                     <span class="pl-en">DirectedSerialAncestorManager</span> 
+                     <span class="pl-k">extends</span> 
+                     <span class="pl-e">SerialAncestorManager</span>{
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC2">  
+                     <span class="pl-k">var</span> 
+                     <span class="pl-en">_graph</span>
+                     <span class="pl-k">:</span> 
+                     <span class="pl-en">SerialDirectedGraph</span> 
+                     <span class="pl-k">=</span> _
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC3">  
+                     <span class="pl-k">def</span> 
+                     <span class="pl-en">getAncestor</span>(
+                     <span class="pl-v">id</span>: 
+                     <span class="pl-st">Int</span>)
+                     <span class="pl-k">:</span> 
+                     <span class="pl-en">IndexedSeq</span>[
+                     <span class="pl-st">Int</span>] 
+                     <span class="pl-k">=</span> {
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC4">
+                         _graph.getParents(id)
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC5">
+                       }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC6">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC7">  
+                     <span class="pl-k">def</span> 
+                     <span class="pl-en">getVertices</span>
+                     <span class="pl-k">:</span> 
+                     <span class="pl-en">IndexedSeq</span>[
+                     <span class="pl-st">Int</span>] 
+                     <span class="pl-k">=</span> (
+                     <span class="pl-c1">0</span> to _graph.numberVertices 
+                     <span class="pl-k">-</span> 
+                     <span class="pl-c1">1</span>)
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC8">
+                     }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC9">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC10">
+                     <span class="pl-k">trait</span> 
+                     <span class="pl-en">SBottomUpUpdater</span> 
+                     <span class="pl-k">extends</span> 
+                     <span class="pl-e">FrontierUpdater</span> 
+                     <span class="pl-k">with</span> 
+                     <span class="pl-e">SerialAncestorManager</span> {
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC11">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC12">  
+                     <span class="pl-k">def</span> 
+                     <span class="pl-en">update</span>(
+                     <span class="pl-v">frontier</span>: 
+                     <span class="pl-en">BitSet</span>, 
+                     <span class="pl-v">parents</span>: 
+                     <span class="pl-en">Array</span>[
+                     <span class="pl-st">Int</span>])
+                     <span class="pl-k">:</span> 
+                     <span class="pl-en">Seq</span>[
+                     <span class="pl-st">Int</span>] 
+                     <span class="pl-k">=</span> {
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC13">    
+                     <span class="pl-k">val</span> 
+                     <span class="pl-en">next</span> 
+                     <span class="pl-k">=</span> mutable.
+                     <span class="pl-en">BitSet</span>()
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC14">    
+                     <span class="pl-k">val</span> 
+                     <span class="pl-en">vertices</span> 
+                     <span class="pl-k">=</span> getVertices
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC15">    
+                     <span class="pl-k">val</span> 
+                     <span class="pl-en">frontierSet</span> 
+                     <span class="pl-k">=</span> frontier.toSet
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC16">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC17">
+                         (vertices.filter(parents(_) 
+                     <span class="pl-k">==</span> 
+                     <span class="pl-k">-</span>
+                     <span class="pl-c1">1</span>)).foreach { node 
+                     <span class="pl-k">=&gt;</span>
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC18">      
+                     <span class="pl-k">val</span> 
+                     <span class="pl-en">neighbors</span> 
+                     <span class="pl-k">=</span> (getAncestor(node))
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC19">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC20">
+                           neighbors.find(frontierSet) 
+                     <span class="pl-k">match</span> {
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC21">        
+                     <span class="pl-k">case</span> 
+                     <span class="pl-en">Some</span>(ancestor) 
+                     <span class="pl-k">=&gt;</span> {
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC22">
+                               parents(node) 
+                     <span class="pl-k">=</span> ancestor
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC23">
+                               next(node) 
+                     <span class="pl-k">=</span> 
+                     <span class="pl-c1">true</span>
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC24">
+                             }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC25">        
+                     <span class="pl-k">case</span> 
+                     <span class="pl-c1">None</span> 
+                     <span class="pl-k">=&gt;</span> 
+                     <span class="pl-c1">None</span>
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC26">
+                           }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC27">
+                         }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC28">
+                         next.toBuffer
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC29">
+                       }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-scala-LC30">
+                     }
+
+                    </div></pre> </td> 
+                 </tr> 
+                </tbody>
+               </table> 
+              </div> 
+             </div> 
+             <div class="gist-meta"> 
+              <a href="https://gist.github.com/treadstone90/5ee73a21a23a99b7a523/raw/bottom-up.scala" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://gist.github.com']);" style="float:right">view raw</a> 
+              <a href="https://gist.github.com/treadstone90/5ee73a21a23a99b7a523#file-bottom-up-scala" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://gist.github.com']);">bottom-up.scala</a> hosted with ❤ by 
+              <a href="https://github.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">GitHub</a> 
+             </div> 
+            </div> 
+           </div> 
+           <p>&nbsp;The major advantage to this approach is that the search for an unvisited node’s parent will terminate once any one parent is found in the current frontier. Contrast this with top-down BFS, which needs to visit all the neighbors of a node in the frontier during every step.</p> 
+           <p><strong>Top-down, Bottom-up, or both?</strong></p> 
+           <p>When the frontier is large, you gain by performing bottom-ups BFS as it only examines some edges of the unvisited nodes. But when the frontier is small, it may not be advantageous to perform bottom-up BFS, as apart from having to go over, it incurs the additional overhead of identifying the unvisited nodes. Small-world networks usually start off with small frontiers in the initial step and have an exponential increase in the frontier size in the middle stages of the search procedure. These tradeoffs lead us to another approach for small-world networks where we combine combine both top-down and bottom-up BFS—hybrid BFS &nbsp;[1]. In hybrid BFS, the size of the frontier is used to define a heuristic, which is used to switch between the two approaches, top-down and bottom-up. A thorough analysis of this heuristic is presented in [1].</p> 
+           <p dir="ltr"><strong>How about parallelizing these approaches ? &nbsp;</strong></p> 
+           <p dir="ltr">When trying to parallelize the two approaches, observe that bottom-up BFS is easier to parallelize than top-down BFS. For bottom-up BFS, you can introduce parallelism in the stage where you populate the next frontier. Each of the unvisited nodes can be examined in parallel, and since every node just updates itself in the next data structure, it does not require the use of locks.</p> 
+           <p dir="ltr"></p>
+           <div id="gist15375875" class="gist"> 
+            <div class="gist-file"> 
+             <div class="gist-data gist-syntax"> 
+              <div class="file-data"> 
+               <table cellpadding="0" cellspacing="0" class="lines highlight"> 
+                <tbody>
+                 <tr> 
+                  <td class="line-numbers"> <span class="line-number" id="file-bottom-up-par-scala-L1" rel="file-bottom-up-par-scala-L1">1</span> <span class="line-number" id="file-bottom-up-par-scala-L2" rel="file-bottom-up-par-scala-L2">2</span> <span class="line-number" id="file-bottom-up-par-scala-L3" rel="file-bottom-up-par-scala-L3">3</span> <span class="line-number" id="file-bottom-up-par-scala-L4" rel="file-bottom-up-par-scala-L4">4</span> <span class="line-number" id="file-bottom-up-par-scala-L5" rel="file-bottom-up-par-scala-L5">5</span> <span class="line-number" id="file-bottom-up-par-scala-L6" rel="file-bottom-up-par-scala-L6">6</span> <span class="line-number" id="file-bottom-up-par-scala-L7" rel="file-bottom-up-par-scala-L7">7</span> <span class="line-number" id="file-bottom-up-par-scala-L8" rel="file-bottom-up-par-scala-L8">8</span> <span class="line-number" id="file-bottom-up-par-scala-L9" rel="file-bottom-up-par-scala-L9">9</span> <span class="line-number" id="file-bottom-up-par-scala-L10" rel="file-bottom-up-par-scala-L10">10</span> <span class="line-number" id="file-bottom-up-par-scala-L11" rel="file-bottom-up-par-scala-L11">11</span> <span class="line-number" id="file-bottom-up-par-scala-L12" rel="file-bottom-up-par-scala-L12">12</span> <span class="line-number" id="file-bottom-up-par-scala-L13" rel="file-bottom-up-par-scala-L13">13</span> <span class="line-number" id="file-bottom-up-par-scala-L14" rel="file-bottom-up-par-scala-L14">14</span> <span class="line-number" id="file-bottom-up-par-scala-L15" rel="file-bottom-up-par-scala-L15">15</span> <span class="line-number" id="file-bottom-up-par-scala-L16" rel="file-bottom-up-par-scala-L16">16</span> <span class="line-number" id="file-bottom-up-par-scala-L17" rel="file-bottom-up-par-scala-L17">17</span> <span class="line-number" id="file-bottom-up-par-scala-L18" rel="file-bottom-up-par-scala-L18">18</span> <span class="line-number" id="file-bottom-up-par-scala-L19" rel="file-bottom-up-par-scala-L19">19</span> <span class="line-number" id="file-bottom-up-par-scala-L20" rel="file-bottom-up-par-scala-L20">20</span> <span class="line-number" id="file-bottom-up-par-scala-L21" rel="file-bottom-up-par-scala-L21">21</span> <span class="line-number" id="file-bottom-up-par-scala-L22" rel="file-bottom-up-par-scala-L22">22</span> <span class="line-number" id="file-bottom-up-par-scala-L23" rel="file-bottom-up-par-scala-L23">23</span> <span class="line-number" id="file-bottom-up-par-scala-L24" rel="file-bottom-up-par-scala-L24">24</span> </td> 
+                  <td class="line-data"> <pre class="line-pre">
+                    <div class="line" id="file-bottom-up-par-scala-LC1">
+                     <span class="pl-k">trait</span> 
+                     <span class="pl-en">ParallelAncestorManager</span> {
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC2">  
+                     <span class="pl-k">def</span> 
+                     <span class="pl-en">getAncestor</span>(
+                     <span class="pl-v">id</span>: 
+                     <span class="pl-st">Int</span>)
+                     <span class="pl-k">:</span> 
+                     <span class="pl-en">ParSeq</span>[
+                     <span class="pl-st">Int</span>]
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC3">  
+                     <span class="pl-k">def</span> 
+                     <span class="pl-en">getParVertices</span>
+                     <span class="pl-k">:</span> 
+                     <span class="pl-en">ParSeq</span>[
+                     <span class="pl-st">Int</span>]
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC4">
+                     }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC5">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC6">
+                     <span class="pl-k">trait</span> 
+                     <span class="pl-en">PBottomUpUpdater</span> 
+                     <span class="pl-k">extends</span> 
+                     <span class="pl-e">FrontierUpdater</span> 
+                     <span class="pl-k">with</span> 
+                     <span class="pl-e">ParallelAncestorManager</span> {
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC7">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC8">  
+                     <span class="pl-k">def</span> 
+                     <span class="pl-en">update</span>(
+                     <span class="pl-v">frontier</span>: 
+                     <span class="pl-en">Seq</span>[
+                     <span class="pl-st">Int</span>], 
+                     <span class="pl-v">parents</span>: 
+                     <span class="pl-en">Array</span>[
+                     <span class="pl-st">Int</span>])
+                     <span class="pl-k">:</span>
+                     <span class="pl-en">Seq</span>[
+                     <span class="pl-st">Int</span>] 
+                     <span class="pl-k">=</span> {
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC9">    
+                     <span class="pl-k">val</span> 
+                     <span class="pl-en">next</span> 
+                     <span class="pl-k">=</span> 
+                     <span class="pl-en">BitSet</span>()
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC10">    
+                     <span class="pl-k">val</span> 
+                     <span class="pl-en">frontierSet</span> 
+                     <span class="pl-k">=</span> frontier.toSet
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC11">
+                     &nbsp;
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC12">
+                         getParVertices.filter(parents(_) 
+                     <span class="pl-k">==</span> 
+                     <span class="pl-k">-</span>
+                     <span class="pl-c1">1</span>).foreach { node 
+                     <span class="pl-k">=&gt;</span>
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC13">      
+                     <span class="pl-k">val</span> 
+                     <span class="pl-en">parNeighbors</span> 
+                     <span class="pl-k">=</span> getAncestor(node)
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC14">
+                           parNeighbors.find(x 
+                     <span class="pl-k">=&gt;</span> frontierSet.contains(x)) 
+                     <span class="pl-k">match</span> {
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC15">        
+                     <span class="pl-k">case</span> 
+                     <span class="pl-en">Some</span>(ancestor) 
+                     <span class="pl-k">=&gt;</span> {
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC16">
+                               parents(node) 
+                     <span class="pl-k">=</span> ancestor
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC17">
+                               next(node) 
+                     <span class="pl-k">=</span> 
+                     <span class="pl-c1">true</span>
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC18">
+                             }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC19">        
+                     <span class="pl-k">case</span> 
+                     <span class="pl-c1">None</span> 
+                     <span class="pl-k">=&gt;</span> 
+                     <span class="pl-c1">None</span>
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC20">
+                           }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC21">
+                         }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC22">
+                         next.toBuffer
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC23">
+                       }
+
+                    </div>
+                    <div class="line" id="file-bottom-up-par-scala-LC24">
+                     }
+
+                    </div></pre> </td> 
+                 </tr> 
+                </tbody>
+               </table> 
+              </div> 
+             </div> 
+             <div class="gist-meta"> 
+              <a href="https://gist.github.com/treadstone90/b21bfd1a1b14d98c4709/raw/bottom-up-par.scala" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://gist.github.com']);" style="float:right">view raw</a> 
+              <a href="https://gist.github.com/treadstone90/b21bfd1a1b14d98c4709#file-bottom-up-par-scala" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://gist.github.com']);">bottom-up-par.scala</a> hosted with ❤ by 
+              <a href="https://github.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">GitHub</a> 
+             </div> 
+            </div> 
+           </div> 
+           <span style="line-height: 1.5em;"><br></span>
+           <p></p> 
+           <p dir="ltr">On inspecting the top-down BFS pseudo-code for sources of parallelism, observe that the nodes in the current frontier can be explored in parallel. The parallel top-down pseudo-code is:</p> 
+           <p dir="ltr"></p>
+           <div id="gist15376199" class="gist"> 
+            <div class="gist-file"> 
+             <div class="gist-data gist-syntax"> 
+              <div class="file-data"> 
+               <table cellpadding="0" cellspacing="0" class="lines highlight"> 
+                <tbody>
+                 <tr> 
+                  <td class="line-numbers"> <span class="line-number" id="file-top-down-par-scala-L1" rel="file-top-down-par-scala-L1">1</span> <span class="line-number" id="file-top-down-par-scala-L2" rel="file-top-down-par-scala-L2">2</span> <span class="line-number" id="file-top-down-par-scala-L3" rel="file-top-down-par-scala-L3">3</span> <span class="line-number" id="file-top-down-par-scala-L4" rel="file-top-down-par-scala-L4">4</span> <span class="line-number" id="file-top-down-par-scala-L5" rel="file-top-down-par-scala-L5">5</span> <span class="line-number" id="file-top-down-par-scala-L6" rel="file-top-down-par-scala-L6">6</span> <span class="line-number" id="file-top-down-par-scala-L7" rel="file-top-down-par-scala-L7">7</span> <span class="line-number" id="file-top-down-par-scala-L8" rel="file-top-down-par-scala-L8">8</span> <span class="line-number" id="file-top-down-par-scala-L9" rel="file-top-down-par-scala-L9">9</span> <span class="line-number" id="file-top-down-par-scala-L10" rel="file-top-down-par-scala-L10">10</span> <span class="line-number" id="file-top-down-par-scala-L11" rel="file-top-down-par-scala-L11">11</span> <span class="line-number" id="file-top-down-par-scala-L12" rel="file-top-down-par-scala-L12">12</span> <span class="line-number" id="file-top-down-par-scala-L13" rel="file-top-down-par-scala-L13">13</span> </td> 
+                  <td class="line-data"> <pre class="line-pre">
+                    <div class="line" id="file-top-down-par-scala-LC1">
+                     <span class="pl-k">trait</span> 
+                     <span class="pl-en">PTopDownUpdater</span> 
+                     <span class="pl-k">extends</span> 
+                     <span class="pl-e">FrontierUpdater</span> {
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC2"> 
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC3">  
+                     <span class="pl-k">def</span> 
+                     <span class="pl-en">update</span>(
+                     <span class="pl-v">frontier</span>: 
+                     <span class="pl-en">Seq</span>[
+                     <span class="pl-st">Int</span>], 
+                     <span class="pl-v">parents</span>: 
+                     <span class="pl-en">Array</span>[
+                     <span class="pl-st">Int</span>])
+                     <span class="pl-k">:</span> 
+                     <span class="pl-en">Seq</span>[
+                     <span class="pl-st">Int</span>] 
+                     <span class="pl-k">=</span> {
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC4">    
+                     <span class="pl-k">val</span> 
+                     <span class="pl-en">next</span> 
+                     <span class="pl-k">=</span> 
+                     <span class="pl-en">ArrayBuffer</span>[
+                     <span class="pl-st">Int</span>]()
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC5"> 
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC6">
+                         frontier.par.foreach { node 
+                     <span class="pl-k">=&gt;</span>
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC7">
+                           graph.getNeighbors(node).filter(parents(_) 
+                     <span class="pl-k">==</span> 
+                     <span class="pl-k">-</span>
+                     <span class="pl-c1">1</span>).foreach { neighbor 
+                     <span class="pl-k">=&gt;</span>
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC8">
+                             next 
+                     <span class="pl-k">+</span>
+                     <span class="pl-k">=</span> neighbor
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC9">
+                             parents(neighbor) 
+                     <span class="pl-k">=</span> node
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC10">
+                           }
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC11">
+                         }
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC12">
+                         next
+
+                    </div>
+                    <div class="line" id="file-top-down-par-scala-LC13">
+                       }
+
+                    </div></pre> </td> 
+                 </tr> 
+                </tbody>
+               </table> 
+              </div> 
+             </div> 
+             <div class="gist-meta"> 
+              <a href="https://gist.github.com/treadstone90/d5c5cb06b15999c6c7d6/raw/top-down-par.scala" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://gist.github.com']);" style="float:right">view raw</a> 
+              <a href="https://gist.github.com/treadstone90/d5c5cb06b15999c6c7d6#file-top-down-par-scala" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://gist.github.com']);">top-down-par.scala</a> hosted with ❤ by 
+              <a href="https://github.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);">GitHub</a> 
+             </div> 
+            </div> 
+           </div> 
+           <p></p> 
+           <p><span style="line-height: 1.5em;">&nbsp;</span>In terms of correctness, the above pseudo-code looks good, but there is a benign race condition introduced by updating parents and next. This may result in a node being added more than once, making it inefficient. But it does not affect the correctness of the algorithm. Cleaner code would have a synchronized block to ensure only one thread updates the frontier.</p> 
+           <p dir="ltr">The hybrid approach combining the parallel versions of top-down and bottom-up BFS provides one of the fastest single node implementation of Parallel BFS [1].</p> 
+           <p>&nbsp;<em><strong>References:</strong></em></p> 
+           <ol> 
+            <li dir="ltr"> <p dir="ltr">Beamer, Scott, Krste Asanović, and David Patterson. “Direction-optimizing breadth-first search.” Scientific Programming 21.3 (2013): 137-148.</p> </li> 
+            <li dir="ltr"> <p dir="ltr">Ugander, Johan, et al. “The anatomy of the facebook social graph.” arXiv preprint arXiv:1111.4503 (2011).</p> </li> 
+            <li dir="ltr"> <p dir="ltr">Li, Jun, Shuchao Ma, and Shuang Hong. “Recommendation on social network based on graph model.” Control Conference (CCC), 2012 31st Chinese. IEEE, 2012.</p> </li> 
+            <li dir="ltr"> <p dir="ltr">Watts, Duncan J., and Steven H. Strogatz. “Collective dynamics of ‘small-world’networks.” nature 393.6684 (1998): 440-442.</p> </li> 
+            <li dir="ltr"> <p dir="ltr">Introduction to Algorithms (1990) by T H Cormen, C E Leiserson, R L Rivest</p> </li> 
+           </ol> 
+          </div> 
+         </div> 
+         <!-- post --> 
+         <div id="post-3235" class="post-item"> 
+          <div class="gravatar">
+           <img alt="Ariel Smoliar, Senior Product Manager" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2014/03/Ariel-Smoliar_avatar_1394136136-50x50.png" class="avatar avatar-50 photo" height="50" width="50">
+          </div> 
+          <h2 class="post-title"><a href="http://www.sumologic.com/blog/company/transaction-mining-for-deeper-machine-data-intelligence" rel="bookmark" title="Transaction Mining for Deeper Machine Data Intelligence">Transaction Mining for Deeper Machine Data Intelligence</a></h2> 
+          <p><span class="date-posted">10.22.2014</span> | Posted by Ariel Smoliar, Senior Product Manager</p> 
+          <div class="post-3235 post type-post status-publish format-standard hentry category-company category-technology category-use-cases category-using-sumo"> 
+           <a href="" class="fancy" title="Transaction Mining for Deeper Machine Data Intelligence"></a> 
+           <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.sumologic.com/blog/company/transaction-mining-for-deeper-machine-data-intelligence" addthis:title="Transaction Mining for Deeper Machine Data Intelligence">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+           </div>
+           <p dir="ltr">The new Sumo Logic Transaction capability allows users to analyze related sequences of machine data. The comprehensive views uncover user behavior, operational and security insights that can help organizations optimize business strategy, plans and processes.</p> 
+           <p>The new capability allows you to monitor transactions by a specific transaction ID (session ID, IP, user name, email, etc.) while handling data from distributed systems, where a request is passed through several different systems, each with its own transaction ID.</p> 
+           <p dir="ltr">Over the past two months, we have worked with beta customers on a variety of use cases, including:</p> 
+           <ul> 
+            <li dir="ltr"> <p dir="ltr"><span style="color: #333333;">Tracking transactions in a payment processing platform</span></p> </li> 
+            <li dir="ltr"> <p dir="ltr"><span style="color: #333333;">Following typical user sessions, detecting anomalous checkout transactions and catching checkout drop off in e-commerce websites</span></p> </li> 
+            <li dir="ltr"> <p dir="ltr"><span style="color: #333333;">Tracking renewals, upgrades and new signup transactions</span></p> </li> 
+            <li dir="ltr"> <p dir="ltr"><span style="color: #333333;">Monitoring phone registrations failures over a specific period</span></p> </li> 
+            <li dir="ltr"> <p dir="ltr"><span style="color: #333333;">Tracking on-boarding of new users in SaaS products</span></p> </li> 
+           </ul> 
+           <p dir="ltr">The last use case is reflective of what SaaS companies care most about: truly understanding the behavior of users on their website that drive long-term engagement. We’ve used our new transaction analytics capabilities to better understand how users find our site, the process by which they get to our Sumo Logic Free page, and how quickly they sign up. Our customer success team uses Transaction Analytics to monitor how long it takes users to create a dashboard, run a search, and perform other common actions. This enables them to provide very specific feedback to the product team for future improvements.</p> 
+           <p dir="ltr" style="text-align: center;"><img class="aligncenter" alt="" src="https://lh6.googleusercontent.com/JZUprVPEcXPzdU2AU-W6kMlkQxbnZmDeaLcIA8oke1W-of7LDnXmbFobhXHYNjIQYpfPdm0UVASIpGEwwr53Xh8w0JpNbxx59JwDiKYSoV-tUraqdpEZ6_sbrfzJ5YUq-w" width="624px;" height="76px;"><span style="font-size: x-small;">This screenshot depicts a query with IP as the transaction ID and the various states mapped from the logs</span></p> 
+           <p dir="ltr" style="text-align: center;"><img class="aligncenter" alt="" src="https://lh3.googleusercontent.com/W5jgCKC48sD3vr0ceY03ITmh6mXD-n01iUplW371p7Vg0J5mWu6r2lewYl0J_03btOxWCXwSKLb-wS3AXp0dwgYEDk33vxmQKvGEHp1KDT0Mmsql4alBzxOifg8E-a3y2A" width="600px;" height="206px;"><span style="font-size: x-small;">Sankey diagram visualizes the flow of the various components/states of a transaction on an e-commerce website</span></p> 
+           <p dir="ltr" style="text-align: left;"><span style="font-size: small;">Many of our customers are already using tools such as Google Analytics to monitor visitors flow on their website and understand customer behavior. We are not launching this new capability to replace Google Analytics (even if it’s not embraced in some countries as <a href="http://searchenginewatch.com/article/2050179/Germany-Threatens-to-Fine-Companies-That-Use-Google-Analytics" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://searchenginewatch.com']);">Germany</a>). What we bring on top of monitoring visitors flow, is the ability to identify divergence in state sequences and understand better the transitions between the states, in terms of latency for example. You probably see updates that some companies are announcing on plugins for log management platforms to detect anomalies and monitor user behavior and sessions. The team’s product philosophy is that we would like to provide our users all-rounded capability that enables them to make smart choices without requiring external tools, all from their machine data within the Sumo product.</span></p> 
+           <p dir="ltr">It was a fascinating journey working on the transaction capability with our analytics team. It’s a natural evolution of our analytics strategy which now includes: 1) real-time aggregation and correlation with our Dashboards; 2) machine learning to automatically uncover anomalies and patterns; and 3) now transaction analytics to rapidly uncover relationships across distributed events.</p> 
+           <p dir="ltr">We are all excited to launch <a href="https://www.youtube.com/watch?v=jEu62yVvMlg" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.youtube.com']);">Transaction Analytics</a>. Please share with us your feedback on the new capability and let us know if we can help with your use cases. The transaction searches and the new visualization are definitely our <a href="https://service.sumologic.com/help/Default.htm#Favorites.htm?Highlight=favorites">favorite</a> content.</p> 
+          </div> 
+         </div> 
+         <!-- post --> 
+         <div id="post-3230" class="post-item"> 
+          <div class="gravatar">
+           <img alt="Amanda Saso, Principal Tech Writer" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2013/10/Amanda-Saso-Sr.-Tech-Writer_avatar_1381435513-50x50.jpeg" class="avatar avatar-50 photo" height="50" width="50">
+          </div> 
+          <h2 class="post-title"><a href="http://www.sumologic.com/blog/company/data-with-a-little-help-from-my-friends" rel="bookmark" title="Data, with a little Help from my friends">Data, with a little Help from my friends</a></h2> 
+          <p><span class="date-posted">10.20.2014</span> | Posted by Amanda Saso, Principal Tech Writer</p> 
+          <div class="post-3230 post type-post status-publish format-standard hentry category-company category-technology category-using-sumo tag-analytics tag-backend tag-big-data tag-code tag-help tag-helpdesk tag-programming tag-software tag-sumo-logic tag-tips tag-tricks"> 
+           <a href="" class="fancy" title="Data, with a little Help from my friends"></a> 
+           <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.sumologic.com/blog/company/data-with-a-little-help-from-my-friends" addthis:title="Data, with a little Help from my friends">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+           </div>
+           <p>&nbsp;</p> 
+           <p>Ever had that sinking feeling when you start a new job and wonder just why you made the jump? I had a gut check when, shortly after joining Sumo Logic in June of 2012, I realized that we had less than 50 daily hits to our Knowledge Base on our support site. Coming from a position where I was used to over 7,000 customers reading my content each day, I nearly panicked. &nbsp;After calming down, I realized that what I was actually looking at was an amazing opportunity.</p> 
+           <p>Fast forward to 2014. I’ve already blogged about the work I’ve done with our team to bring new methods to deliver up-to-date content. (If you missed it, you can read the blog <a href="http://www.sumologic.com/blog/company/our-help-its-in-the-cloud">here</a>.) Even with these improvements I couldn’t produce metrics that proved just how many customers and prospects we have clicking through our Help system. Since I work at a data analytics company, it was kind of embarrassing to admit that I had no clue how many visitors were putting their eyes on our Help content. I mean, this is some basic stuff!</p> 
+           <p dir="ltr">Considering how much time I’ve spent working with our product, I knew that I could get all the information I needed using Sumo Logic…if I could get my hands on some log data. I had no idea how to get logging enabled, not to mention how logs should be uploaded to our Service. Frankly, my English degree is not conducive to solving engineering challenges (although I could write a pretty awesome poem about my frustrations). I’m at the mercy of my Sumo Logic co-workers to drive any processes involving how Help is delivered and how logs are sent to Sumo Logic. &nbsp;All I could do was pitch my ideas and cross my fingers.</p> 
+           <p dir="ltr">I am very lucky to work with a great group of people who are happy to help me out when they can. This is especially true of Stefan Zier, our Chief Architect, who once again came to my aid. He decommissioned old Help pages (my apologies to anyone who found their old bookmarks rudely displaying 404’s) and then routed my Help from the S3 bucket through our product, meaning that <a href="https://service.sumologic.com/help/Default.htm">Help</a> activity can be logged. I now refer to him as Stefan, Patron Saint of Technical Writers. Another trusty co-worker we call Panda helped me actually enable the logging.</p> 
+           <p dir="ltr">Once the logging began we could finally start creating some Monitors to build out a Help Metrics Dashboard. In addition to getting the number of hits and the number of distinct users, we really wanted to know which pages were generating the most hits (no surprise that search-related topics bubbled right to the top). We’re still working on other metrics, but let me share just a few data points with you.</p> 
+           <p>&nbsp;</p> 
+           <p dir="ltr">Take a look at the number of hits our Help site has handled since October 1st:</p> 
+           <p dir="ltr" style="text-align: center;"><img style="line-height: 1.5em;" alt="" src="https://lh6.googleusercontent.com/_IKzzc8ruYi4Vl9D3HWnAuaLfhcFz3u34IGX_x_rcvRHKegROHEBAJWwOlmYJ2Kjc7C08ildT2wr9F84L8JZkIFk7f49auY9T0t-TEClinBzPHfk07PkJuc8KjGVJA1Jeg" width="202px;" height="191px;"></p> 
+           <p>&nbsp;</p> 
+           <p dir="ltr">We now know that Wednesday is when you look at Help topics the most:</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <p dir="ltr" style="text-align: center;"><img style="line-height: 1.5em;" alt="" src="https://lh6.googleusercontent.com/ToL194RWaOeHxAzyw0n0bzLQG5EWHN9-K9cfFQFV7aOaGMMms1yCAObY34PCxqvtR5dNdwL1XIKg0xMHKpV1LadT9yt16Kg45JHC_geb92sJYQmGWN3fDePcgT0PxYWH8g" width="380px;" height="279px;"></p> 
+           <p>And here’s where our customers are using Help, per our <a href="https://service.sumologic.com/help/Default.htm#Geo_lookup_operator.htm">geo lookup operator</a> Monitor:</p> 
+           <p>&nbsp;</p> 
+           <p style="text-align: center;"><img style="line-height: 1.5em;" alt="" src="https://lh4.googleusercontent.com/17qbUB3xjggl8SfmZgLgosPCu3GdP079-zOwU-JaMi5qB4seXX76M8HK1sJYXTMksMBpiljTvAapebesly8eTQB9NMfyRirpZzi5I3dblSresvaeULSwnq3-avq1Za1-DQ" width="624px;" height="296px;"></p> 
+           <p>It’s very exciting to see how much Sumo Logic has grown, and how many people now look at content written by our team, from every corner of the world. Personally, it’s gratifying to feel a sense of ownership over a dataset in Sumo Logic, thanks to my friends.</p> 
+           <p dir="ltr">What’s next from our brave duo of tech writers? Beyond adding additional logging, we’re working to find a way to get feedback on Help topics directly from users. If you have any ideas or feedback, in the short term, please shoot us an email at <a href="mailto:documentation@sumologic.com">documentation@sumologic.com</a>. We would love to hear from you!</p>
+           <p></p> 
+          </div> 
+         </div> 
+         <!-- post --> 
+         <div id="post-3222" class="post-item"> 
+          <div class="gravatar">
+           <img alt="Derek Hall" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2014/10/Derek-Hall_avatar_1413419160-50x50.jpg" class="avatar avatar-50 photo" height="50" width="50">
+          </div> 
+          <h2 class="post-title"><a href="http://www.sumologic.com/blog/using-sumo/become-friends-with-metadata-to-maximize-efficiency-in-sumo-logic" rel="bookmark" title="Become Friends with Metadata to Maximize Efficiency in Sumo Logic">Become Friends with Metadata to Maximize Efficiency in Sumo Logic</a></h2> 
+          <p><span class="date-posted">10.16.2014</span> | Posted by Derek Hall</p> 
+          <div class="post-3222 post type-post status-publish format-standard hentry category-use-cases category-using-sumo tag-collectors tag-data-source tag-metadata tag-organize"> 
+           <a href="" class="fancy" title="Become Friends with Metadata to Maximize Efficiency in Sumo Logic"></a> 
+           <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.sumologic.com/blog/using-sumo/become-friends-with-metadata-to-maximize-efficiency-in-sumo-logic" addthis:title="Become Friends with Metadata to Maximize Efficiency in Sumo Logic">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+           </div>
+           <p dir="ltr">While performing my duties on-boarding our Sumo Free users, I’ve learned that the most consistent process that our users wish to eliminate prior to using our service is investigating incidents within siloed data sources. Needless to say the process is arduous because customers have to zero-in on individual servers/appliances to manually decipher all logs. Enough said!</p> 
+           <p>Centralizing your logs, making Sumo Logic the source of truth for your data, allows for real-time, rapid coordination between Dev, Ops, and Sec teams to remediate problems, patch vulnerabilities, improve end user experience etc.</p> 
+           <p dir="ltr">But now that you have your Apache Access and Errors logs, your Cisco ASA logs, email logs, Linux and Windows OS logs, VMware, and AWS ELB logs all living under the same roof, how do we make them play nicely together? How do you search on your apache error logs without accidentally inviting Linux and Windows error messages to the party? Meet your “bouncer” metadata!</p> 
+           <p dir="ltr">Leveraging metadata to build searches and dashboards is the foundation for both organizing your diverse logs and optimizing performance. Starting your search with a * can be computationally expensive and cause avoidable lag time for your results. So it’s a best practice to constrain your search to a subset of your data using a metadata field before your first pipe i.e. | using the syntax _metadatafield=foo . Or simply click into the search bar and select:</p> 
+           <p><img alt="" src="https://lh6.googleusercontent.com/iDJDBBR1n5S3f_ArraycCEdP7_rIQg_sIobMmgdiM0OL1xUhNcXMe05-tssjGBWhaKlMBaIss5tLxko69WGkYMP687iHb68wCBxohi4Q1hPgRfTD4QDOmTGdIi5cO7xZKw" width="624px;" height="185px;"></p> 
+           <p dir="ltr">Now you don’t have to remember a specific set of keywords or strings to pull up the data set you want.</p> 
+           <p dir="ltr"><strong><span style="font-size: medium;">Standardize your Metadata Convention</span></strong></p> 
+           <p dir="ltr">The above picture displays the primary metadata fields you’re capable of customizing that will get attached to your messages after ingestion. These include:</p> 
+           <ul> 
+            <li dir="ltr"> <p dir="ltr"><strong>Collector</strong> – &nbsp;The name of the Collector entered at activation time</p> </li> 
+            <li dir="ltr"> <p dir="ltr"><strong>Source</strong> – &nbsp;The name of the Source entered when the Source is created</p> </li> 
+            <li dir="ltr"> <p dir="ltr"><strong>Source Category</strong> – Open tag, completely customizable. This metadata is also typically used for mapping data streams to our apps</p> </li> 
+            <li dir="ltr"> <p dir="ltr"><strong>Source Host</strong> – &nbsp;For Remote and Syslog Sources, this is a fixed value determined by the hostname you enter in the “Hostname” field (your actual system values for hosts). For a Local File Source, you can overwrite the host system value with a new value of your choice</p> </li> 
+            <li dir="ltr"> <p dir="ltr"><strong>Source Name</strong> – &nbsp;A fixed value determined by the path you enter in the “File” field when configuring a Source. This metadata tag cannot be changed</p> </li> 
+           </ul> 
+           <p>&nbsp;</p> 
+           <p dir="ltr">You control the metadata here:</p> 
+           <p dir="ltr"><img alt="" src="https://lh5.googleusercontent.com/-yjRxFomfKpAha7PnG6nO5PIv8ehpOHpbUomsy9-Y-Gco14s3tFMTTxsuXlNsyDEUGZHthN6zDc_XQ0NHARlPttzqRpJAHBqvhz8niq5wjvfhtNk1e9Z6i2niPFzODrWLQ" width="624px;" height="369px;"></p> 
+           <p>&nbsp;</p> 
+           <p dir="ltr"><strong><span style="font-size: medium;">_sourceCategory is your best friend</span></strong></p> 
+           <p>Source Category is your best friend because it’s completely open and customizable allowing you to “categorize” your logs in a way that makes the most sense for your team. You can also provide structure by using multiple tags separated by an _ or a / . For example, say you wanted to separate your Apache logs based on staging environments, you could hierarchically categorize them to make it easy to search on them individually or together using wildcards. You might try this:</p> 
+           <p dir="ltr">Prod/Apache/Access</p> 
+           <p dir="ltr">Prod/Apache/Error</p> 
+           <p dir="ltr">QA/Apache/Access</p> 
+           <p dir="ltr">QA/Apache/Error</p> 
+           <p dir="ltr"><span style="font-size: medium;">To search individually:</span></p> 
+           <p dir="ltr">_sourcecategory=Prod/Apache/Access</p> 
+           <p dir="ltr">_sourcecategory=QA/Apache/Access</p> 
+           <p dir="ltr"><span style="font-size: medium;">Together:</span></p> 
+           <p dir="ltr">_sourcecategory=*Apache/Access</p> 
+           <p dir="ltr">_sourcecategory=*Apache/Error</p> 
+           <p dir="ltr">or</p> 
+           <p dir="ltr">_sourcecategory=Prod/Apache*</p> 
+           <p dir="ltr">_sourcecategory=QA/Apache*</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <p dir="ltr">Or say you have multiple security data sources like a Cisco Firewall, Snort IDS, and Linux OS security logs, you might try:</p> 
+           <p dir="ltr">Sec_Firewall_Cisco</p> 
+           <p dir="ltr">Sec_IDS_Snort</p> 
+           <p dir="ltr">OS_Linux_Sec</p> 
+           <p dir="ltr">And we can tie all of them together with a simple: _sourcecategory=*Sec*</p> 
+           <p dir="ltr">&nbsp;</p> 
+           <p dir="ltr"><strong><span style="font-size: medium;">_sourceCategory for Apps</span></strong></p> 
+           <p dir="ltr">Additionally we use _sourcecategory to map your data to our numerous pre-built applications. Just like in search, you can use wildcards to funnel multiple different data sources into the same app. For example you may have multiple Linux or Windows OS logs that you may have categorized differently based on location, you’re not required to use the same source category for them, simply make sure the words “Linux” and “Windows” are somewhere in the metadata field and use the wildcards to create a custom data source to funnel all of it to the app.</p> 
+           <p>&nbsp;</p> 
+           <p dir="ltr"><img alt="" src="https://lh6.googleusercontent.com/FtD-Eb6omfBKYr0f2xmOHhz3bh9yIlPGHB3FE6-JPFkyY7yV8vzVCEImdPNIhXGUpS4I7HCwhtXr2irMnhxshB6IKhsbhQKlsTk0rLoVinMrXbXfaEPjvZuXHSP33fE-lg" width="624px;" height="316px;"></p> 
+           <p dir="ltr">Here are some additional metadata fields that are not customizable but are still attached to all of your messages, these can be used to refine your queries:</p> 
+           <p>&nbsp;</p> 
+           <div dir="ltr"> 
+            <table> 
+             <colgroup> 
+              <col width="148"> 
+              <col width="391">
+             </colgroup> 
+             <tbody> 
+              <tr> 
+               <td> <p dir="ltr">Name</p> </td> 
+               <td> <p dir="ltr">Description</p> </td> 
+              </tr> 
+              <tr> 
+               <td> <p dir="ltr">_messageCount</p> </td> 
+               <td> <p dir="ltr">A sequence number (per Source) added by the Collector when the message was received.</p> </td> 
+              </tr> 
+              <tr> 
+               <td> <p dir="ltr">_messageTime</p> </td> 
+               <td> <p dir="ltr">The timestamp of the message. If the message doesn’t have a timestamp, messageTime uses the receiptTime.</p> </td> 
+              </tr> 
+              <tr> 
+               <td> <p dir="ltr">_raw</p> </td> 
+               <td> <p dir="ltr">The raw log message.</p> </td> 
+              </tr> 
+              <tr> 
+               <td> <p dir="ltr">_receiptTime</p> </td> 
+               <td> <p dir="ltr">The time the Collector received the message.</p> </td> 
+              </tr> 
+              <tr> 
+               <td> <p dir="ltr">_size</p> </td> 
+               <td> <p dir="ltr">The size of the log message.</p> </td> 
+              </tr> 
+             </tbody> 
+            </table> 
+           </div> 
+           <p>&nbsp;</p> 
+           <p dir="ltr">For additional tips on leveraging your metadata check out these docs:<a href="http://help.sumologic.com/Help/Default.htm#Metadata_Searches.htm%3FTocPath%3DSearch%7CSearch%2520Basics%7C_____12"> How Metadata is used in Searches</a>, and <a href="http://help.sumologic.com/Help/Default.htm#Adding_Metadata_to_Sources.htm%3FTocPath%3DAdministration%7CManaging%2520Installed%2520Collectors%2520and%2520Sources%7C_____7">Establishing Metadata Conventions</a>. And if you’re not familiar with Sumo please check out our <a href="https://www.sumologic.com/signup/">Sumo Logic Free</a> service and enjoy!</p> 
+          </div> 
+         </div> 
+         <!-- post --> 
+         <div id="post-3209" class="post-item"> 
+          <div class="gravatar">
+           <img alt="Kumar Saurabh, Co-Founder &amp; VP of Engineering" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2013/10/Kumar-Saurabh-Co-Founder-amp-VP-of-Engineering_avatar_1381435661-50x50.jpeg" class="avatar avatar-50 photo" height="50" width="50">
+          </div> 
+          <h2 class="post-title"><a href="http://www.sumologic.com/blog/company/machine-data-intelligence-an-update-on-our-journey" rel="bookmark" title="Machine Data Intelligence – an update on our journey">Machine Data Intelligence – an update on our journey</a></h2> 
+          <p><span class="date-posted">10.16.2014</span> | Posted by Kumar Saurabh, Co-Founder &amp; VP of Engineering</p> 
+          <div class="post-3209 post type-post status-publish format-standard hentry category-company category-technology category-using-sumo tag-anomaly-detection tag-azure tag-machine-data tag-machine-learning"> 
+           <a href="" class="fancy" title="Machine Data Intelligence – an update on our journey"></a> 
+           <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://www.sumologic.com/blog/company/machine-data-intelligence-an-update-on-our-journey" addthis:title="Machine Data Intelligence – an update on our journey">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_linkedin"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+           </div>
+           <p>In 1965, Dr. Hubert Dreyfus, a professor of philosophy at MIT, later at Berkeley, was hired by RAND Corporation to explore the issue of artificial intelligence. &nbsp;He wrote a 90-page paper called “Alchemy and Artificial Intelligence” (later expanded into the book What Computers Can’t Do) questioning the computer’s ability to serve as a model for the human brain. &nbsp;He also asserted that no computer program could defeat even a 10-year-old child at chess.</p> 
+           <p>Two years later, in 1967, several MIT students and professors challenged Dreyfus to play a game of chess against MacHack (a chess program that ran on a PDP-6 computer with only 16K of memory). &nbsp;Dreyfus accepted. Dreyfus found a move, which could have captured the enemy queen. &nbsp;The only way the computer could get out of this was to keep Dreyfus in checks with his own queen until he could fork the queen and king, and then exchange them. &nbsp;And that’s what the computer did. &nbsp;The computer checkmated Dreyfus in the middle of the board.</p> 
+           <p>I’ve brought up this “man vs. machine” story because I see another domain where a similar change is underway: the field of Machine Data.</p> 
+           <p>Businesses run on IT and IT infrastructure is getting bigger by the day, yet IT operations still remain very dependent on analytics tools with very basic monitoring logic. As the systems become more complex (and more agile) simple monitoring just doesn’t cut it. We cannot support or sustain the necessary speed and agility unless the tools becomes much more intelligent.</p> 
+           <p>We believed in this when we started Sumo Logic and with the learnings of running a large-scale system ourselves, continue to invest in making operational tooling more intelligent. We knew the market needed a system that complemented the human expertise. Humans don’t scale that well – our memory is imperfect so the ideal tools should pick up on signals that humans cannot, and at a scale that perfectly matches the business needs and today’s scale of IT data exhaust.</p> 
+           <p>Two years ago we launched our service with a pattern recognition technology called LogReduce and about five months ago we launched Structure Based Anomaly Detection. And the last three months of the journey have been a lot like teaching a chess program new tricks – the game remains the same, just that the system keeps getting better at it and more versatile.</p> 
+           <p>We are now extending our Structured Based Anomaly Detection capabilities with Metric Based Anomaly Detection. A metric could be just that – a time series of numerical value. You can take any log, filter, aggregate and pre-process however you want – and if you can turn that into a number with a time stamp – we can baseline it, and automatically alert you when the current value of the metric goes outside an expected range based on the history. We developed this new engine in collaboration with the Microsoft Azure Machine Learning team, and they have some really compelling models to detect anomalies in a time series of metric data – you can read more about that <a href="http://blogs.technet.com/b/machinelearning/archive/2014/10/16/web-services-and-marketplaces-create-a-new-data-science-economy.aspx" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://blogs.technet.com']);" target="_blank">here</a>.</p> 
+           <p>The hard part about Anomaly Detection is not about detecting anomalies – it is about detecting anomalies that are actionable. Making an anomaly actionable begins with making it understandable. Once an analyst or an operator can grok the anomalies – they are much more amenable to alert on it, build a playbook around it, or even hook up automated remediation to the alert – the Holy Grail.</p> 
+           <p>And, not all Anomaly Detection engines are equal. Like chess programs there are ones that can beat a 5 year old and others that can even beat the grandmasters. And we are well on our way to building a comprehensive Anomaly Detection engine that becomes a critical tool in every operations team’s arsenal. The key question to ask is: does the engine tell you something that is insightful, actionable and that you could not have found with standard monitoring tools.</p> 
+           <p>Below is&nbsp;an example of &nbsp;an actual Sumo production use case where some of our nodes were spending a lot of time in garbage collection impacting refresh rates for our dashboards for some of the customers.</p> 
+           <p><img class="alignnone  wp-image-3207" style="line-height: 1.5em;" alt="anomaly_detection_metric" src="http://www.sumologic.com/_includes/wp/blog/wp-content/uploads/2014/10/anomaly_detection_metric-1024x477.png" width="619" height="288"></p> 
+           <p>If this looks interesting, our Metric Based Anomaly Detection service based on Azure Machine Learning is being offered to select customers in a limited beta release and will be coming soon to machines…err..a browser near you (we are a cloud based service after all).</p> 
+           <p>P.S. If you like stories, here is another one for you. 30 years after MackHack beat Dreyfus, in the year 1997 &nbsp;Kasparov (arguably one of the best human chess players) played the <a href="http://en.wikipedia.org/wiki/Caro-Kann_Defence" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);">Caro-Kann Defence</a>. He then allowed Deep Blue to commit a knight <a href="http://en.wikipedia.org/wiki/Sacrifice_(chess)" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);">sacrifice</a>, which wrecked his defenses and forced him to resign in fewer than twenty moves. &nbsp;Enough said.</p> 
+           <p>References</p> 
+           <p>[1] http://www.chess.com/article/view/machack-attack</p> 
+           <p>&nbsp;</p> 
+           <p>&nbsp;</p> 
+           <p>&nbsp;</p> 
+          </div> 
+         </div> 
+         <!-- post --> 
+         <span class="page-numbers current">1</span> 
+         <a class="page-numbers" href="http://www.sumologic.com/blog/page/2">2</a> 
+         <a class="page-numbers" href="http://www.sumologic.com/blog/page/3">3</a> 
+         <span class="page-numbers dots">…</span> 
+         <a class="page-numbers" href="http://www.sumologic.com/blog/page/13">13</a> 
+         <a class="next page-numbers" href="http://www.sumologic.com/blog/page/2">Next »</a> 
+        </div> 
+        <div class="span-5 last" id="twitter-blog-sidebar"> 
+         <div id="primary" class="widget-area" role="complementary"> 
+          <p id="rss-subscribe"><a href="/blog/feed">Subscribe</a></p> 
+          <div class="clearfix"> 
+           <div class="blog-tabs"> 
+            <ul class="blog-tab-nav"> 
+             <li><a href="#blog-tab1">Categories</a></li> 
+             <li><a href="#blog-tab2">Authors</a></li> 
+             <li><a href="#blog-tab3">Archives</a></li> 
+            </ul> 
+            <div id="blog-tab1"> 
+             <ul class="sidebar-nav"> 
+              <li class="cat-item cat-item-7"><a href="http://www.sumologic.com/blog/category/amazon-web-services" title="View all posts filed under Amazon Web Services">Amazon Web Services</a> (17) </li> 
+              <li class="cat-item cat-item-4"><a href="http://www.sumologic.com/blog/category/ceo" title="View all posts filed under CEO">CEO</a> (6) </li> 
+              <li class="cat-item cat-item-3"><a href="http://www.sumologic.com/blog/category/company" title="View all posts filed under Company">Company</a> (94) </li> 
+              <li class="cat-item cat-item-8"><a href="http://www.sumologic.com/blog/category/culture" title="View all posts filed under Culture">Culture</a> (11) </li> 
+              <li class="cat-item cat-item-32"><a href="http://www.sumologic.com/blog/category/partners" title="View all posts filed under Partners">Partners</a> (4) </li> 
+              <li class="cat-item cat-item-9"><a href="http://www.sumologic.com/blog/category/pragmatic-aws" title="View all posts filed under Pragmatic AWS">Pragmatic AWS</a> (6) </li> 
+              <li class="cat-item cat-item-6"><a href="http://www.sumologic.com/blog/category/security" title="View all posts filed under Security">Security</a> (21) </li> 
+              <li class="cat-item cat-item-51"><a href="http://www.sumologic.com/blog/category/security-analytics" title="View all posts filed under Security Analytics">Security Analytics</a> (4) </li> 
+              <li class="cat-item cat-item-50"><a href="http://www.sumologic.com/blog/category/siem" title="View all posts filed under SIEM">SIEM</a> (2) </li> 
+              <li class="cat-item cat-item-16"><a href="http://www.sumologic.com/blog/category/survey" title="View all posts filed under Survey">Survey</a> (1) </li> 
+              <li class="cat-item cat-item-5"><a href="http://www.sumologic.com/blog/category/technology" title="View all posts filed under Technology">Technology</a> (59) </li> 
+              <li class="cat-item cat-item-11"><a href="http://www.sumologic.com/blog/category/use-cases" title="View all posts filed under Use Cases">Use Cases</a> (29) </li> 
+              <li class="cat-item cat-item-10"><a href="http://www.sumologic.com/blog/category/using-sumo" title="View all posts filed under Using Sumo">Using Sumo</a> (32) </li> 
+             </ul> 
+            </div> 
+            <div id="blog-tab2"> 
+             <ul class="sidebar-nav">
+              <li><a href="http://www.sumologic.com/blog/author/stefan" title="Posts by Stefan Zier, Chief Architect">Stefan Zier</a> (12)</li>
+              <li><a href="http://www.sumologic.com/blog/author/sanjay" title="Posts by Sanjay Sarathy, CMO">Sanjay Sarathy</a> (10)</li>
+              <li><a href="http://www.sumologic.com/blog/author/joan" title="Posts by Joan Pepin, VP of Security/CISO">Joan Pepin</a> (10)</li>
+              <li><a href="http://www.sumologic.com/blog/author/bruno" title="Posts by Bruno Kurtic, Founding Vice President of Product and Strategy">Bruno Kurtic</a> (9)</li>
+              <li><a href="http://www.sumologic.com/blog/author/christian" title="Posts by Christian Beedgen, Co-Founder &amp; CTO">Christian Beedgen</a> (8)</li>
+              <li><a href="http://www.sumologic.com/blog/author/david_a" title="Posts by David Andrzejewski, Data Sciences Engineer">David Andrzejewski</a> (7)</li>
+              <li><a href="http://www.sumologic.com/blog/author/vance" title="Posts by Vance Loiselle, CEO">Vance Loiselle</a> (7)</li>
+              <li><a href="http://www.sumologic.com/blog/author/russell" title="Posts by Russell">Russell Cohen</a> (6)</li>
+              <li><a href="http://www.sumologic.com/blog/author/kumar" title="Posts by Kumar Saurabh, Co-Founder &amp; VP of Engineering">Kumar Saurabh</a> (5)</li>
+              <li><a href="http://www.sumologic.com/blog/author/ben" title="Posts by Ben Newton, Senior Product Manager">Ben Newton</a> (5)</li>
+              <li><a href="http://www.sumologic.com/blog/author/amanda" title="Posts by Amanda Saso, Principal Tech Writer">Amanda Saso</a> (4)</li>
+              <li><a href="http://www.sumologic.com/blog/author/ariel" title="Posts by Ariel Smoliar, Senior Product Manager">Ariel Smoliar</a> (3)</li>
+              <li><a href="http://www.sumologic.com/blog/author/praveen" title="Posts by Praveen Rangnath, Former Head of Product Marketing">Praveen Rangnath</a> (3)</li>
+              <li><a href="http://www.sumologic.com/blog/author/dwayne" title="Posts by Dwayne Hoover, Senior Sales Engineer">Dwayne Hoover</a> (2)</li>
+              <li><a href="http://www.sumologic.com/blog/author/rishi" title="Posts by Rishi Divate, Technical Account Manager">Rishi Divate</a> (2)</li>
+              <li><a href="http://www.sumologic.com/blog/author/johnathan" title="Posts by Johnathan Hodge">Johnathan Hodge</a> (2)</li>
+              <li><a href="http://www.sumologic.com/blog/author/jacek" title="Posts by Jacek Migdal">Jacek Migdal</a> (2)</li>
+              <li><a href="http://www.sumologic.com/blog/author/brandon" title="Posts by Brandon Mensing">Brandon Mensing</a> (2)</li>
+              <li><a href="http://www.sumologic.com/blog/author/david" title="Posts by David Carlton, Senior Software Engineer">David Carlton</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/mike" title="Posts by Mike Cook">Mike Cook</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/yan" title="Posts by Yan Qiao, Software Engineer">Yan Qiao</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/eillen" title="Posts by Eillen Voellinger">Eillen Voellinger</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/ozan" title="Posts by Ozan Unlu">Ozan Unlu</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/mate" title="Posts by Máté Kovács, Sumo Logic Intern">Máté Kovács</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/remy" title="Posts by Remy Guercio">Remy Guercio</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/cloudpassage" title="Posts by CloudPassage: Cloud Security">CloudPassage: Cloud Security Guest Account</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/binh" title="Posts by Binh Nguyen">Binh Nguyen</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/zack" title="Posts by zack">Zack Isaacson</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/mycal" title="Posts by mycal tucker">Mycal Tucker</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/sebastian" title="Posts by Sebastian Mies, Software Engineer">Sebastian Mies</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/vera" title="Posts by Vera Chen">Vera Chen</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/jana" title="Posts by Jana Lass">Jana Lass</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/megha" title="Posts by Megha Bangalore, Software Engineer">Megha Bangalore</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/bright" title="Posts by Bright Fulton">Bright Fulton</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/vivek" title="Posts by Vivek Kaushal">Vivek Kaushal</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/mark" title="Posts by Mark Musselman">Mark Musselman</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/derek-h" title="Posts by Derek Hall">Derek Hall</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/garrett" title="Posts by Garrett Nano">Garrett Nano</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/karthik" title="Posts by Karthik Anantha Padmanabhan">Karthik Anantha Padmanabhan</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/bill" title="Posts by Bill Lazar">Bill Lazar</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/robert" title="Posts by Robert Sloan">Robert Sloan</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/manish" title="Posts by Manish Khettry">Manish Khettry</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/caleb" title="Posts by Caleb Sotelo">Caleb Sotelo</a> (1)</li>
+              <li><a href="http://www.sumologic.com/blog/author/jim" title="Posts by Jim Wilson">Jim Wilson</a> (1)</li>
+             </ul> 
+            </div> 
+            <div id="blog-tab3"> 
+             <ul class="sidebar-nav"> 
+              <li><a href="http://www.sumologic.com/blog/2014/12">December 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/11">November 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/10">October 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/09">September 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/08">August 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/07">July 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/06">June 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/05">May 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/04">April 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/03">March 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/02">February 2014</a></li> 
+              <li><a href="http://www.sumologic.com/blog/2014/01">January 2014</a></li> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+          <!-- OLD WIDGET CODE --> 
+          <!-- <li id="search" class="widget-container widget_search">
+							<form role="search" method="get" id="searchform" class="searchform" action="http://www.sumologic.com/blog/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>						</li>
+
+						<li id="archives" class="widget-container">
+							<h3 class="widget-title">Archives</h3>
+							<ul>
+									<li><a href='http://www.sumologic.com/blog/2014/12'>December 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/11'>November 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/10'>October 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/09'>September 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/08'>August 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/07'>July 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/06'>June 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/05'>May 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/04'>April 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/03'>March 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/02'>February 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2014/01'>January 2014</a></li>
+	<li><a href='http://www.sumologic.com/blog/2013/12'>December 2013</a></li>
+	<li><a href='http://www.sumologic.com/blog/2013/11'>November 2013</a></li>
+	<li><a href='http://www.sumologic.com/blog/2013/10'>October 2013</a></li>
+	<li><a href='http://www.sumologic.com/blog/2013/09'>September 2013</a></li>
+	<li><a href='http://www.sumologic.com/blog/2013/06'>June 2013</a></li>
+	<li><a href='http://www.sumologic.com/blog/2013/05'>May 2013</a></li>
+	<li><a href='http://www.sumologic.com/blog/2013/04'>April 2013</a></li>
+	<li><a href='http://www.sumologic.com/blog/2013/03'>March 2013</a></li>
+	<li><a href='http://www.sumologic.com/blog/2013/02'>February 2013</a></li>
+	<li><a href='http://www.sumologic.com/blog/2013/01'>January 2013</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/12'>December 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/11'>November 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/10'>October 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/09'>September 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/08'>August 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/07'>July 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/06'>June 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/05'>May 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/04'>April 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/03'>March 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2012/01'>January 2012</a></li>
+	<li><a href='http://www.sumologic.com/blog/2011/11'>November 2011</a></li>
+							</ul>
+						</li>
+
+						<li id="meta" class="widget-container">
+							<h3 class="widget-title">Meta</h3>
+							<ul>
+																<li><a href="http://www.sumologic.com/_includes/wp/blog/wordpress/wp-login.php">Log in</a></li>
+															</ul>
+						</li> --> 
+         </div>
+         <!-- #primary .widget-area --> 
+         <!-- <div id="secondary" class="widget-area" role="complementary">
+					<ul class="xoxo">
+											</ul>
+				</div> --> 
+         <div class="clearfix"> 
+          <div class="span-1"> 
+           <h2>Twitter</h2> 
+          </div> 
+          <div class="span-3 prepend-1 last right" style="padding-top: 5px;"> 
+           <p><a href="https://twitter.com/sumologic" class="twitter-follow-button" data-show-count="false">Follow @sumologic</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p> 
+          </div> 
+         </div> 
+         <div class="clearfix"> 
+          <div class="tabs"> 
+           <ul class="tab-nav"> 
+            <li><a href="#tab1">Sumo Logic</a></li> 
+            <li><a href="#tab2">Mentions</a></li> 
+           </ul> 
+           <div id="tab1"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              How 
+             <a href="https://twitter.com/Netskope" target="_blank">@Netskope</a> Mastered DevOps with Sumo Logic by 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> 
+             <a href="https://twitter.com/search?q=%23anomalydetection" target="_blank">#anomalydetection</a> 
+             <a href="https://twitter.com/search?q=%23apache" target="_blank">#apache</a> 
+             <a href="http://buff.ly/1ykSwut" target="_blank">buff.ly/1ykSwut</a> via 
+             <a href="https://twitter.com/SlideShare" target="_blank">@SlideShare</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              Missed our 
+             <a href="https://twitter.com/search?q=%23webinar" target="_blank">#webinar</a> on Wednesday? Find out how 
+             <a href="https://twitter.com/Netskope" target="_blank">@Netskope</a> mastered 
+             <a href="https://twitter.com/search?q=%23DevOps" target="_blank">#DevOps</a> with 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> | 
+             <a href="http://buff.ly/1CKjRce" target="_blank">buff.ly/1CKjRce</a> via 
+             <a href="https://twitter.com/SlideShare" target="_blank">@SlideShare</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/becausestartup" target="_blank">@becausestartup</a>: 
+             <a href="http://ift.tt/1B7Bota" target="_blank">ift.tt/1B7Bota</a> 
+             <a href="https://twitter.com/search?q=%23sumologic" target="_blank">#sumologic</a> 
+             <a href="https://twitter.com/search?q=%23sumovember" target="_blank">#sumovember</a> faces! 
+             <a href="https://twitter.com/search?q=%23movember" target="_blank">#movember</a> 
+             <a href="https://twitter.com/search?q=%23shavethedate" target="_blank">#shavethedate</a> 
+             <a href="https://twitter.com/search?q=%23startuplife" target="_blank">#startuplife</a> 
+             <a href="https://twitter.com/search?q=%23iMustacheYouAQuestio" target="_blank">#iMustacheYouAQuestio</a>... http… 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/cmawer" target="_blank">@cmawer</a>: Sumo Logic 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> - RT 
+             <a href="https://twitter.com/PunkyBizster" target="_blank">@PunkyBizster</a>: Big Day for 
+             <a href="https://twitter.com/search?q=%23BigData" target="_blank">#BigData</a>: 
+             <a href="https://twitter.com/VMware" target="_blank">@VMware</a> SVP Ramin Sayer joins 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> as new CE... http://t.
+             <a href="http://ow.ly/2RBLEP" target="_blank">ow.ly/2RBLEP</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              [Infographic] How to Become a Data Scientist | 
+             <a href="http://buff.ly/1yX1rkr" target="_blank">buff.ly/1yX1rkr</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/PunkyBizster" target="_blank">@PunkyBizster</a>: Big Day for 
+             <a href="https://twitter.com/search?q=%23BigData" target="_blank">#BigData</a>: 
+             <a href="https://twitter.com/VMware" target="_blank">@VMware</a> SVP Ramin Sayer joins 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> as new CEO, company shares rapid 
+             <a href="https://twitter.com/search?q=%23growth" target="_blank">#growth</a> stats : http://t.
+             <a href="http://ow.ly/FeV9M" target="_blank">ow.ly/FeV9M</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/artignacio" target="_blank">@artignacio</a>: Welcome 
+             <a href="https://twitter.com/rsayar" target="_blank">@rsayar</a>! to 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> 
+             <a href="http://buff.ly/1wi1VCk" target="_blank">buff.ly/1wi1VCk</a> 
+             <a href="https://twitter.com/search?q=%23bigdata" target="_blank">#bigdata</a> 
+             <a href="https://twitter.com/search?q=%23cloud" target="_blank">#cloud</a> 
+             <br> 
+             <span class="date"> 03 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/DataconomyMedia" target="_blank">@DataconomyMedia</a>: Machine 
+             <a href="https://twitter.com/search?q=%23data" target="_blank">#data</a> specialists 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> appoint VMWare 
+             <a href="https://twitter.com/search?q=%23cloud" target="_blank">#cloud</a> veteran 
+             <a href="https://twitter.com/rsayar" target="_blank">@rsayar</a> as CEO: 
+             <a href="http://dataconomy.com/machine-data-intelligence-firm-sumo-logic-appoints-industry-veteran-ramin-sayar-as-ceo/" target="_blank">dataconomy.com/machine-data-i…</a> 
+             <br> 
+             <span class="date"> 03 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/guruchahal" target="_blank">@guruchahal</a>: Sumo Logic Names Ramin Sayar (from 
+             <a href="https://twitter.com/search?q=%23VMware" target="_blank">#VMware</a>) CEO 
+             <a href="http://on.wsj.com/1zbavQU" target="_blank">on.wsj.com/1zbavQU</a> via 
+             <a href="https://twitter.com/WSJ" target="_blank">@WSJ</a> 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> 
+             <br> 
+             <span class="date"> 03 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/crowdedocean" target="_blank">@crowdedocean</a>: congrats 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> on new CEO 
+             <a href="http://ow.ly/FgvXV" target="_blank">ow.ly/FgvXV</a> 
+             <br> 
+             <span class="date"> 03 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+           </div> 
+           <div id="tab2"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/patelankur_1986" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/536416865883418624/Sfqwpu27_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/jflomenb" target="_blank">@jflomenb</a>: A Tale of Two Markets: When 
+             <a href="https://twitter.com/search?q=%23Cloud" target="_blank">#Cloud</a> Computing and 
+             <a href="https://twitter.com/search?q=%23BigData" target="_blank">#BigData</a> Collide | My latest on the 
+             <a href="https://twitter.com/Accel" target="_blank">@Accel</a> blog feat 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> – https://t.
+             <a href="https://theaccelblog.squarespace.com/blog/a-tale-of-two-markets-when-cloud-computing-and-big-data-collide" target="_blank">theaccelblog.squarespace.com/blog/a-tale-of…</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/patelankur_1986" target="_blank"> patelankur_1986 </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/AlinaAd" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/539244948722176001/ZPGumX0M_normal.png"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/jflomenb" target="_blank">@jflomenb</a>: A Tale of Two Markets: When 
+             <a href="https://twitter.com/search?q=%23Cloud" target="_blank">#Cloud</a> Computing and 
+             <a href="https://twitter.com/search?q=%23BigData" target="_blank">#BigData</a> Collide | My latest on the 
+             <a href="https://twitter.com/Accel" target="_blank">@Accel</a> blog feat 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> – https://t.
+             <a href="https://theaccelblog.squarespace.com/blog/a-tale-of-two-markets-when-cloud-computing-and-big-data-collide" target="_blank">theaccelblog.squarespace.com/blog/a-tale-of…</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/AlinaAd" target="_blank"> AlinaAd </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              How 
+             <a href="https://twitter.com/Netskope" target="_blank">@Netskope</a> Mastered DevOps with Sumo Logic by 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> 
+             <a href="https://twitter.com/search?q=%23anomalydetection" target="_blank">#anomalydetection</a> 
+             <a href="https://twitter.com/search?q=%23apache" target="_blank">#apache</a> 
+             <a href="http://buff.ly/1ykSwut" target="_blank">buff.ly/1ykSwut</a> via 
+             <a href="https://twitter.com/SlideShare" target="_blank">@SlideShare</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              Missed our 
+             <a href="https://twitter.com/search?q=%23webinar" target="_blank">#webinar</a> on Wednesday? Find out how 
+             <a href="https://twitter.com/Netskope" target="_blank">@Netskope</a> mastered 
+             <a href="https://twitter.com/search?q=%23DevOps" target="_blank">#DevOps</a> with 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> | 
+             <a href="http://buff.ly/1CKjRce" target="_blank">buff.ly/1CKjRce</a> via 
+             <a href="https://twitter.com/SlideShare" target="_blank">@SlideShare</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/cmawer" target="_blank">@cmawer</a>: Sumo Logic 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> - RT 
+             <a href="https://twitter.com/PunkyBizster" target="_blank">@PunkyBizster</a>: Big Day for 
+             <a href="https://twitter.com/search?q=%23BigData" target="_blank">#BigData</a>: 
+             <a href="https://twitter.com/VMware" target="_blank">@VMware</a> SVP Ramin Sayer joins 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> as new CE... http://t.
+             <a href="http://ow.ly/2RBLEP" target="_blank">ow.ly/2RBLEP</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/cmawer" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/529453383044722688/g4Bcmz0A_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              Sumo Logic 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> - RT 
+             <a href="https://twitter.com/PunkyBizster" target="_blank">@PunkyBizster</a>: Big Day for 
+             <a href="https://twitter.com/search?q=%23BigData" target="_blank">#BigData</a>: 
+             <a href="https://twitter.com/VMware" target="_blank">@VMware</a> SVP Ramin Sayer joins 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> as new CE... 
+             <a href="http://ow.ly/2RBLEP" target="_blank">ow.ly/2RBLEP</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/cmawer" target="_blank"> cmawer </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/SumoLogic" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459017587616002048/Qz_ocsrM_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/PunkyBizster" target="_blank">@PunkyBizster</a>: Big Day for 
+             <a href="https://twitter.com/search?q=%23BigData" target="_blank">#BigData</a>: 
+             <a href="https://twitter.com/VMware" target="_blank">@VMware</a> SVP Ramin Sayer joins 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> as new CEO, company shares rapid 
+             <a href="https://twitter.com/search?q=%23growth" target="_blank">#growth</a> stats : http://t.
+             <a href="http://ow.ly/FeV9M" target="_blank">ow.ly/FeV9M</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank"> SumoLogic </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/HunterDeuling" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/3116731029/cd517cb6d95356fb92e9eed684faa303_normal.png"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/jflomenb" target="_blank">@jflomenb</a>: A Tale of Two Markets: When 
+             <a href="https://twitter.com/search?q=%23Cloud" target="_blank">#Cloud</a> Computing and 
+             <a href="https://twitter.com/search?q=%23BigData" target="_blank">#BigData</a> Collide | My latest on the 
+             <a href="https://twitter.com/Accel" target="_blank">@Accel</a> blog feat 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> – https://t.
+             <a href="https://theaccelblog.squarespace.com/blog/a-tale-of-two-markets-when-cloud-computing-and-big-data-collide" target="_blank">theaccelblog.squarespace.com/blog/a-tale-of…</a> 
+             <br> 
+             <span class="date"> 04 Dec | <a href="https://twitter.com/HunterDeuling" target="_blank"> HunterDeuling </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/davidandrzej" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/459429277960663040/Y83ZTSK2_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet"> 
+             <a href="https://twitter.com/olgabot" target="_blank">@olgabot</a> 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> haha yes - Log all the science! 
+             <br> 
+             <span class="date"> 03 Dec | <a href="https://twitter.com/davidandrzej" target="_blank"> davidandrzej </a> </span> 
+            </div> 
+            <hr class="space"> 
+            <div class="avatar-sm"> 
+             <a href="https://twitter.com/NoSQLDigest" target="_blank"><img height="24" width="24" src="http://pbs.twimg.com/profile_images/499257180009529344/CSWhr7LZ_normal.jpeg"></a> 
+            </div> 
+            <div class="sidebar-tweet">
+              RT 
+             <a href="https://twitter.com/PunkyBizster" target="_blank">@PunkyBizster</a>: Big Day for 
+             <a href="https://twitter.com/search?q=%23BigData" target="_blank">#BigData</a>: 
+             <a href="https://twitter.com/VMware" target="_blank">@VMware</a> SVP Ramin Sayer joins 
+             <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> as new CEO, company shares rapid 
+             <a href="https://twitter.com/search?q=%23growth" target="_blank">#growth</a> stats : http://t.
+             <a href="http://ow.ly/FeV9M" target="_blank">ow.ly/FeV9M</a> 
+             <br> 
+             <span class="date"> 03 Dec | <a href="https://twitter.com/NoSQLDigest" target="_blank"> NoSQLDigest </a> </span> 
+            </div> 
+            <hr class="space"> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <!-- blog --> 
+       <!-- .container --> 
+      </div>
+      <!-- .wrapper --> 
+     </div> 
+     <!-- .container --> 
+    </div>
+    <!-- .wrapper --> 
+    <div class="wrapper prepend-top"> 
+     <div class="container twitter-feed"> 
+      <p class="no-margin tweet-content">How <a href="https://twitter.com/Netskope" target="_blank">@Netskope</a> Mastered DevOps with Sumo Logic by <a href="https://twitter.com/SumoLogic" target="_blank">@SumoLogic</a> <a href="https://twitter.com/search?q=%23anomalydetection" target="_blank">#anomalydetection</a> <a href="https://twitter.com/search?q=%23apache" target="_blank">#apache</a> <a href="http://buff.ly/1ykSwut" target="_blank">buff.ly/1ykSwut</a> via <a href="https://twitter.com/SlideShare" target="_blank">@SlideShare</a> <br> <span class="date">04 Dec | <a href="https://twitter.com/SumoLogic" target="_blank">SumoLogic</a></span> </p> 
+     </div> 
+    </div> 
+   </div>
+   <!-- .content --> 
+  </div> 
+  <!-- #content-wrap --> 
+  <div id="footer" class="clearfix"> 
+   <div class="wrapper"> 
+    <div id="superfooter" class="container"> 
+     <div class="span-3"> 
+      <ul> 
+       <li><a href="/big-data-challenge/"><strong>Big Data Challenge</strong></a></li> 
+       <li class="first"><a href="/big-data-challenge/">Overview</a></li>
+       <li><a href="/big-data-challenge/real-time-data/">Real-Time Data</a></li>
+       <li><a href="/big-data-challenge/the-cloud-advantage/">The Cloud Advantage</a></li> 
+      </ul> 
+     </div> 
+     <div class="span-2"> 
+      <ul> 
+       <li><a href="/product/"><strong>Product</strong></a></li> 
+       <li class="first"><a href="/product/">Overview</a></li>
+       <li><a href="/product/capabilities/">Capabilities</a></li>
+       <li><a href="/product/use-cases/">Use Cases</a></li>
+       <li><a href="/product/pricing-and-packaging/">Pricing</a></li>
+       <li><a href="/product/sumo-logic-free/">Sumo Logic Free</a></li>
+       <li><a href="/product/sumo-vs-on-premise/">Sumo vs On-premise</a></li>
+       <li><a href="/product/faq/">FAQ</a></li> 
+      </ul> 
+     </div> 
+     <div class="span-2"> 
+      <ul> 
+       <li><a href="/follow-us/"><strong>Follow Us</strong></a></li> 
+       <li class="first"><a href="/follow-us/news/">News</a></li>
+       <li><a href="/follow-us/press/">Press</a></li> 
+      </ul> 
+     </div> 
+     <div class="span-2"> 
+      <ul> 
+       <li><a href="/about-sumo/"><strong>About Sumo</strong></a></li> 
+       <li class="first"><a href="/about-sumo/">Overview</a></li>
+       <li><a href="/about-sumo/management/">Management</a></li>
+       <li><a href="/about-sumo/board-of-directors/">Board of Directors</a></li>
+       <li><a href="/about-sumo/advisory-board/">Advisory Board</a></li>
+       <li><a href="/about-sumo/customers/">Customers</a></li>
+       <li><a href="/about-sumo/partners/">Partners</a></li>
+       <li><a href="/about-sumo/careers/">Careers</a></li>
+       <li><a href="/about-sumo/contact/">Contact Us</a></li> 
+      </ul> 
+      <div id="6196377c-dbbd-4b88-8fd8-5409f4230f70" class="truste"> 
+       <script type="text/javascript" src="//privacy-policy.truste.com/privacy-seal/Sumo-Logic,-Inc-/asc?rid=6196377c-dbbd-4b88-8fd8-5409f4230f70"></script>
+       <a href="//privacy.truste.com/privacy-seal/Sumo-Logic,-Inc-/validation?rid=a822ea69-03d8-40d9-b354-c387a0373131" title="TRUSTe online privacy certification" target="_blank"><img style="border: none" src="//privacy-policy.truste.com/privacy-seal/Sumo-Logic,-Inc-/seal?rid=a822ea69-03d8-40d9-b354-c387a0373131" alt="TRUSTe online privacy certification"></a>
+      </div> 
+     </div> 
+     <div class="span-2"> 
+      <ul> 
+       <li><a href="/resources/"><strong>Resources</strong></a></li> 
+       <li><a href="/blog/"><strong>Blog</strong></a></li> 
+       <li><a href="https://sumologic.zendesk.com/home" target="_blank"><strong>Support</strong></a></li> 
+       <li><a href="http://operations.sumologic.com/" target="_blank"><strong>Status</strong></a></li> 
+      </ul> 
+     </div> 
+     <div class="span-4 last"> 
+      <div class="footer-box"> 
+       <p>Want a fully functioning version of our enterprise cloud-based log management and analytics service?</p> 
+       <a class="button button-pink pie" href="/signup/">Sumo Logic FREE</a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="container"> 
+     <div class="span-8"> 
+      <p>© 2014 Sumo Logic, All rights reserved. <a href="/privacy/">Privacy Policy</a> | <a href="/terms-and-conditions/">Terms &amp; Conditions</a></p> 
+     </div> 
+     <ul class="social-media"> 
+      <li class="youtube"><span></span><a href="https://www.youtube.com/user/sumologic" target="_blank">YouTube</a></li> 
+      <li class="google"><span></span><a href="https://plus.google.com/s/sumo%20logic" target="_blank">Google +</a></li> 
+      <li class="linkedin"><span></span><a href="http://www.linkedin.com/company/sumo-logic" target="_blank">LinkedIn</a></li> 
+      <li class="twitter"><span></span><a href="https://twitter.com/#!/SumoLogic" target="_blank">Twitter</a></li> 
+      <li class="facebook"><span></span><a href="https://www.facebook.com/Sumo.Logic" target="_blank">Facebook</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div>
+  <!-- #footer --> 
+  <!-- Twitter // START --> 
+  <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script> 
+  <!-- Twitter // END --> 
+  <!-- Google Plus // START --> 
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script> 
+  <!-- Google Plus // END --> 
+  <!-- Facebook // START --> 
+  <div id="fb-root"></div> 
+  <script src="//connect.facebook.net/en_US/all.js#appId=4972420734&amp;xfbml=1"></script> 
+  <!-- Facebook // END --> 
+  <!-- Chartbeat // START --> 
+  <script type="text/javascript">
+var _sf_async_config = {
+	uid: 8007,
+	domain: "sumologic.com"
+};
+(function() {
+	function loadChartbeat() {
+		window._sf_endpt = (new Date()).getTime();
+		var e = document.createElement('script');
+		e.setAttribute('language', 'javascript');
+		e.setAttribute('type', 'text/javascript');
+		e.setAttribute('src', (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") + "static.chartbeat.com/js/chartbeat.js");
+		document.body.appendChild(e);
+	}
+	var oldonload = window.onload;
+	window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() {
+		oldonload();
+		loadChartbeat();
+	};
+})();
+</script> 
+  <!-- Chartbeat // END --> 
+  <!-- Reinvigorate // START --> 
+  <script type="text/javascript" src="//include.reinvigorate.net/re_.js"></script> 
+  <script type="text/javascript">try { reinvigorate.track("p0305-52u88l87h8"); } catch(err) {}</script> 
+  <!-- Reinvigorate // END --> 
+  <!-- Marketo Munchkin // START --> 
+  <script src="//munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+  <script>mktoMunchkin("793-NKB-950");</script> 
+  <!-- Marketo Munchkin // END --> 
+  <!-- Google Analytics // START --> 
+  <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16579649-1']);
+_gaq.push(['_setDomainName', '.sumologic.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script');
+	ga.type = 'text/javascript';
+	ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ga, s);
+})();
+</script> 
+  <!-- Google Analytics // END --> 
+  <!-- Google Code for Free Trial Remarketing List START --> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1004672846;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "tLsCCLKr4wIQzq6I3wM";
+var google_conversion_value = 0;
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script> 
+  <noscript> 
+   <div style="display:inline;"> 
+    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1004672846/?label=tLsCCLKr4wIQzq6I3wM&amp;guid=ON&amp;script=0"> 
+   </div> 
+  </noscript> 
+  <!-- Google Code for Free Trial Remarketing List END --> 
+  <!-- DemandbaseClient // START --> 
+  <script>
+	var key='ee7c80d5290e9ede9bd82a3a6392310afe280cbc', db_cta=function(){}, s=document.createElement('script');
+	s.src='//api.demandbase.com/api/v2/ip.json?key='+key+'&callback=db_cta&page='+document.location.href+'&page_title='+document.title+'&referrer='+document.referrer;
+	document.getElementsByTagName('head')[0].appendChild(s);
+</script> 
+  <img src="https://a.company-target.com/pixel?id=1389980030&amp;type=js" alt="" style="display:none"> 
+  <img src="https://a.company-target.com/pixel?id=1389980153&amp;type=js" alt="" style="display:none"> 
+  <!-- DemandbaseClient // END --> 
+  <!-- Bizo Insight Tags // START --> 
+  <script type="text/javascript">
+  _bizo_data_partner_id = "6821";
+</script> 
+  <script type="text/javascript">
+(function() {
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";
+  b.async = true;
+  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js" ) + ".bizographics.com/insight.min.js";
+  s.parentNode.insertBefore(b, s);
+})();
+</script> 
+  <noscript> 
+   <img height="1" width="1" alt="" style="display:none;" src="//www.bizographics.com/collect/?pid=6821&amp;fmt=gif"> 
+  </noscript> 
+  <!-- Bizo Insight Tags // END --> 
+  <!-- Crazy Egg // START --> 
+  <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0025/6846.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script> 
+  <!-- Crazy Egg // END --> 
+  <!-- AddThis Button Begin --> 
+  <script type="text/javascript">var addthis_product = 'wpp-264';
+var addthis_config = {"data_track_clickback":true,"data_ga_property":"UA-16579649-1","data_ga_social":true,"data_track_addressbar":false};if (typeof(addthis_share) == "undefined"){ addthis_share = [];}</script>
+  <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f6a224b3c7fc322"></script> 
+  <div style="display:none"> 
+   <div class="grofile-hash-map-ccbf38afca8fa103820ffa4e58d2315a"> 
+   </div> 
+   <div class="grofile-hash-map-9c3afe9343ddbbc7dbf5d1e27e0249a8"> 
+   </div> 
+   <div class="grofile-hash-map-8efb5ed0bf53024c432c0c807117556e"> 
+   </div> 
+   <div class="grofile-hash-map-43a27e121c70a418d159cdda8d64eacc"> 
+   </div> 
+   <div class="grofile-hash-map-81c33416856cdab7195c51f0595c3d82"> 
+   </div> 
+   <div class="grofile-hash-map-fcfb2325bedf5ca9ab6160a105497d3d"> 
+   </div> 
+   <div class="grofile-hash-map-a272a6203de744787e2734120a7ecb6a"> 
+   </div> 
+   <div class="grofile-hash-map-8dee5e9e6966cdf222e7e053b4a306e7"> 
+   </div> 
+   <div class="grofile-hash-map-574e59b2ae39830ca7b0d4eb03efba1e"> 
+   </div> 
+   <div class="grofile-hash-map-12e6ce5008cf0b1a0fa75c35dc1864fc"> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201449"></script> 
+  <script type="text/javascript" src="http://s.gravatar.com/js/gprofiles.js?ver=2014Decaa"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.sumologic.com/_includes/wp/blog/wp-content/plugins/jetpack/modules/wpgroho.js?ver=3.8.3"></script> 
+  <script src="http://stats.wordpress.com/e-201449.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+	st_go({v:'ext',j:'1:2.9.3',blog:'35638362',post:'0',tz:'-8'});
+	var load_cmc = function(){linktracker_init(35638362,0,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script>
+  <script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=1';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script>  
+ </body>
+</html>

@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "3dce641350971d3f2f5bc6abc1cf8435",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "short_description": "Highly targeted, data-driven mobile app ads for both big brands and small businesses.",
+      "permalink": "upsnap",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "homepage_url": "http://www.upsnap.com/",
+      "name": "UpSnap",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "created_at": 1414876944,
+      "updated_at": 1414876983,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "competitors": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/upsnap/competitors",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Organization",
+            "name": "4INFO",
+            "path": "organization/4info",
+            "created_at": 1188527380,
+            "updated_at": 1416986815
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/upsnap/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1414876865/hjxqfxqif5fihdf2ktss.jpg",
+            "created_at": 1414876945,
+            "updated_at": 1414876945
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/upsnap/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://www.upsnap.com/",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1414876945,
+            "updated_at": 1414876945
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "7c22f93dbcba41b178391badbcef2310",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "description": "Guavas Inc., a provider of analytics software\n",
+      "short_description": "Guavas develops business analytics applications that leverage big data to help companies optimize their decision-making process.",
+      "permalink": "guavas",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "name": "Guavas",
+      "created_at": 1343101106,
+      "updated_at": 1397988516,
+      "total_funding_usd": 15000000,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "funding_rounds": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/guavas/funding_rounds",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "FundingRound",
+            "name": "Guavas raises 15000000 in venture round",
+            "path": "funding-round/a64ddfeb200202012001589f6b202a13",
+            "created_at": 1343101106,
+            "updated_at": 1398009885
+          }
+        ]
+      },
+      "categories": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/guavas/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Software",
+            "uuid": "c08b5441a05b9777b7a6012728caddd9",
+            "path": "category/software/c08b5441a05b9777b7a6012728caddd9",
+            "created_at": 1397980727,
+            "updated_at": 1417177095
+          }
+        ]
+      }
+    }
+  }
+}

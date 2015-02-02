@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"471c40449e","applicationID":"3341260","transactionName":"IloPEhNbWw9XEx9IUgZQEkkJW1oGQgBXXQ==","queueTime":6,"applicationTime":16,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-476.min.js"}</script> 
+  <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script> 
+  <title>
+    AirEnvy: Your Short Term Rental, Managed. Rent on Airbnb, Flipkey, VRBO
+  </title> 
+  <meta name="description" content="Profit from your home or apartment by renting out unused space through a full service management marketplace which optimizes your short-term rental."> 
+  <link href="/assets/application-4a0ca1aa466760e9b82896022df9899b.css" media="all" rel="stylesheet"> 
+  <meta content="authenticity_token" name="csrf-param"> 
+  <meta content="l8byTFrwTnrtAg6xJUQAqwGeJjFn+dwqFgRBga7xfno=" name="csrf-token"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <link href="https://s3-us-west-1.amazonaws.com/airenvyassets/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"> 
+  <link rel="shortcut icon" href="/assets/favicon.ico?v=2"> 
+  <meta name="viewport" content="user-scalable=no, width=device-width"> 
+  <!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script--> 
+  <script src="/assets/application-249d1cfb7257cd492839222065da14e4.js"></script> 
+  <script src="//cdn.optimizely.com/js/298877157.js"></script> 
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+    typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+    b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+    mixpanel.init("00ba67078194e1f40f978b6c3dcfdcf7");</script>
+  <!-- end Mixpanel --> 
+  <script>
+  $.ajaxSetup({
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader("X-CSRF-Token", $('meta[name=csrf-token]').attr('content'));
+    }
+  });
+</script> 
+ </head>
+ <body data-spy="scroll" data-target="#navparent" class="">
+  <div style="display: none"> 
+   <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script> 
+  </div> 
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->   
+  <div id="wrap" ng-app="airenvyApp"> 
+   <div id="header-container"> 
+    <header id="header" class="new-identity transition fancy" ng-controller="HeaderController"> 
+     <div class="container"> 
+      <nav class="navbar" role="navigation"> 
+       <div class="navbar-header"> 
+        <button type="button" class="navbar-toggle navbar-toggle-button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+        <a class="navbar-brand" href="/"> <img alt="Airenvy Logo" class="logo" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/airenvy_logo.svg"> </a> 
+       </div> 
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+        <ul class="nav navbar-nav"> 
+         <li><a href="/services" class="features-link">WHAT WE DO</a></li> 
+         <li><a href="/how-it-works" class="about-link">HOW IT WORKS</a></li> 
+         <li><a href="/marketing" class="marketing-link">MARKETING</a></li> 
+        </ul> 
+        <ul class="nav navbar-nav navbar-right"> 
+         <li> <a class="active hidden-xs hidden-sm" href="tel:1 (855) 692-3689">1 (855) 692-3689</a> </li> 
+         <li> <button class="hidden-xs airenvy-btn airenvy-btn-clear login-button">LOG IN</button> <a href="#" class="visible-xs login-button">LOG IN</a> </li> 
+         <li> <button class="hidden-xs airenvy-btn airenvy-btn-blue signup-button">SIGN UP</button> <a href="#" class="visible-xs signup-button">SIGN UP</a> </li> 
+         <li><a class="visible-xs" href="tel:1-855-692-3689">1 (855) 692-3689</a></li> 
+        </ul> 
+       </div> 
+      </nav> 
+     </div> 
+    </header> 
+   </div> 
+   <div id="main"> 
+    <div id="homepage" class="new-identity"> 
+     <section class="splash-section"> 
+      <div class="splashy-splash"> 
+       <div class="video-background"> 
+        <div class="video-container hidden-xs"> 
+         <video class="homepage-background-video" poster="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/video_background.jpg"> 
+          <source src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/alamo_square.mp4"> 
+          <source src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/alamo_square.webm"> 
+         </video> 
+        </div> 
+        <div class="image-container visible-xs"> 
+        </div> 
+        <div class="overlay"></div> 
+        <div class="splash-container"> 
+         <div class="search-box-container"> 
+          <div class="search-box"> 
+           <div class="splash-arrow"> 
+            <img alt="Arrow 03" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/arrow_03.png"> 
+           </div> 
+           <h4 class="text-center" style="font-weight: 600;">What will your home earn next month?</h4> 
+           <form method="GET" action="/estimate" id="input-address-for-estimate-form"> 
+            <div class="row"> 
+             <div class="col-sm-12"> 
+              <div class="search-container"> 
+               <input type="text" id="address-input" placeholder="Search for your address" class="form-control autocomplete_address required" required> 
+               <input type="text" id="address" name="address" hidden> 
+               <input type="text" id="city" name="city" hidden> 
+               <input type="text" id="zipcode" name="zipcode" value="" hidden> 
+               <input type="text" id="state" name="state" hidden> 
+               <input type="text" id="country" name="country" hidden> 
+               <input type="text" id="formatted_address" name="formatted_address" value="" hidden> 
+              </div> 
+             </div> 
+             <div class="col-sm-12 next-button"> 
+              <div class="search-button"> 
+               <button type="submit" class="airenvy-btn airenvy-btn-lg airenvy-btn-green btn-block search-button">SHOW ME THE MONEY</button> 
+              </div> 
+             </div> 
+            </div> 
+           </form> 
+          </div> 
+         </div> 
+         <div class="text-center mentioned-in hidden-xs"> 
+          <span>MENTIONED IN:</span> 
+          <img alt="Sf chronicle" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/sf_chronicle.svg"> 
+          <img alt="Wall street" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/wall_street.svg"> 
+          <img alt="Forbes" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/forbes.svg"> 
+          <img alt="Tech crunch" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/tech_crunch.svg"> 
+          <br>
+          <br> 
+          <span>MEMBER OF:</span> 
+          <img alt="Logo silicon valley" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/logo_silicon_valley.svg" style="width:190px"> 
+          <img alt="Logo vrma" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/logo_vrma.svg" style="width:70px"> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+     <section class="overview-section blue-bg gradient large"> 
+      <div class="container"> 
+       <div class="row"> 
+        <div class="col-xs-12"> 
+         <h3>Your Full-Service Short Term Rental Manager</h3> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-sm-3"> 
+         <div class="homepage-icon maximize-revenue-icon"></div> 
+         <h5>Maximize Revenue</h5> 
+         <p>Expert marketing &amp; optimal pricing</p> 
+        </div> 
+        <div class="col-sm-3"> 
+         <div class="homepage-icon save-time-icon"></div> 
+         <h5>Save Time</h5> 
+         <p>We book while you sleep</p> 
+        </div> 
+        <div class="col-sm-3"> 
+         <div class="homepage-icon simple-life-icon"></div> 
+         <h5>Simplify Your Life</h5> 
+         <p>Monitor all activities on your dashboard</p> 
+        </div> 
+        <div class="col-sm-3"> 
+         <div class="homepage-icon cleaning-keys-icon"></div> 
+         <h5>Cleaning &amp; Keys</h5> 
+         <p>Leave it to our professional team</p> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+     <section class="learn-section purple-bg gradient"> 
+      <div class="container"> 
+       <div class="text-center"> 
+        <h4> See why Airenvy is simple, profitable, and stress-free. </h4> 
+        <a href="/services" class="airenvy-btn airenvy-btn-green a-btn">LEARN MORE</a> 
+       </div> 
+      </div> 
+     </section> 
+     <section class="guarantee-section light-bg gradient"> 
+      <div class="container"> 
+       <div class="row"> 
+        <div class="col-md-offset-1 col-md-3 col-sm-4 homepage-bubble innovative-bubble hidden-xs"></div> 
+        <div class="col-md-7 col-sm-8 guarantee-details"> 
+         <div class="details-content top"> 
+          <h1 title="21%">
+           <div>
+            21%
+           </div></h1> 
+          <h4 class="text-green">increased<br>monthly revenue</h4> 
+         </div> 
+         <div class="details-content"> 
+          <h3>Innovative Property Management</h3> 
+          <p>We market your home on multiple platforms using our advanced pricing algorithm and our 24/7 booking team. Our technology manages all activities such as cleanings and key exchanges.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="guarantee-padding"></div> 
+       <div class="row"> 
+        <div class="col-md-offset-1 col-md-7 col-sm-8 guarantee-details"> 
+         <div class="details-content top"> 
+          <h1 title="100%">
+           <div>
+            100%
+           </div></h1> 
+          <h4 class="text-green">satisfaction<br>guaranteed</h4> 
+         </div> 
+         <div class="details-content"> 
+          <h3>Safe &amp; Secure</h3> 
+          <p>Guests are required to have verified IDs, reviewed profiles, and mandatory security deposits. Vendors are carefully selected and have passed background checks.</p> 
+         </div> 
+        </div> 
+        <div class="col-md-3 col-sm-4 homepage-bubble safe-bubble hidden-xs"></div> 
+       </div> 
+       <div class="guarantee-padding"></div> 
+       <div class="row"> 
+        <div class="col-md-offset-1 col-md-3 col-sm-4 homepage-bubble guest-bubble hidden-xs"></div> 
+        <div class="col-md-7 col-sm-8 guarantee-details"> 
+         <div class="details-content top"> 
+          <h1 title="24/7">
+           <div>
+            24/7
+           </div></h1> 
+          <h4 class="text-green">customer<br>support</h4> 
+         </div> 
+         <div class="details-content"> 
+          <h3>Best Guest Experience</h3> 
+          <p>We do all the work! Our team answers all inquiries quickly and efficiently before, during, and after your guest's stay.</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+     <section class="learn-more-section blue-bg gradient"> 
+      <div class="container"> 
+       <div class="row text-center"> 
+        <div class="col-xs-12"> 
+         <h3>Learn more about Airenvy</h3> 
+        </div> 
+       </div> 
+       <div class="row play-button-container"> 
+        <div class="col-md-3 col-sm-2"></div> 
+        <div class="col-md-6 col-sm-8 col-xs-12"> 
+         <div class="header-helper"> 
+          <p class="text-center">Airenvy ensures you get the most value out of your space. Our team delivers the highest levels of service, integrity, accountability, and dependability.</p> 
+         </div> 
+        </div> 
+        <div class="col-xs-12"> 
+         <div class="play-button"> 
+          <i class="fa fa-play"></i> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="row player"> 
+        <div class="col-xs-12"> 
+         <video class="about-airenvy-video" controls=""> 
+          <source src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/About%2BAirenvy-SD.mp4"> 
+          <source src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/About%2BAirenvy%2BSD.webm"> 
+         </video> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+     <section class="learn-section purple-bg gradient"> 
+      <div class="container text-center"> 
+       <h4> Most Trusted Management. </h4> 
+       <button class="airenvy-btn airenvy-btn-green signup-button">TRY IT TODAY</button> 
+      </div> 
+     </section> 
+     <section class="testimonials-section light-bg"> 
+      <div class="container"> 
+       <div class="row"> 
+        <div class="col-xs-12"> 
+         <h3 class="text-center"> Don't take our word for it. Hear it from our customers. </h3> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-sm-4"> 
+         <div class="testimonal-content"> 
+          <img class="testimonial-image" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/rob.png"> 
+          <div class="testimonial-blurb"> 
+           <p>I used to spend hours managing my Airbnb, exchanging keys with guests, and cleaning. Now, Airenvy does all that for me.</p> 
+           <h5 class="text-purple">Rob Hansen</h5> 
+           <p class="text-purple">San Francisco, CA</p> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="col-sm-4"> 
+         <div class="testimonal-content"> 
+          <img class="testimonial-image" src="https://s3-us-west-1.amazonaws.com/airenvyassets/marketing/winnie.png"> 
+          <div class="testimonial-blurb"> 
+           <p>I am so glad Airenvy is helping me with the management of my Napa property. I am so spoiled now and wonder how I ever survived without them!</p> 
+           <h5 class="text-purple">Winnie Wong</h5> 
+           <p class="text-purple">Napa, CA</p> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="col-sm-4"> 
+         <div class="testimonal-content last"> 
+          <img class="testimonial-image" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/ryan.png"> 
+          <div class="testimonial-blurb"> 
+           <p>They are great at vetting everyone who comes into your home. I came back from traveling and couldn't tell someone stayed over!</p> 
+           <h5 class="text-purple">Ryan Jackson</h5> 
+           <p class="text-purple">San Francisco, CA</p> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+     <section class="questions-section dark-bg"> 
+      <div class="container"> 
+       <div class="row"> 
+        <div class="col-xs-12"> 
+         <h3 class="text-center text-blue"> Got questions? Ask us anything. </h3> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-xs-12"> 
+         <div class="airenvy-contact-information-container"> 
+          <div class="row"> 
+           <div class="col-sm-4"> 
+            <p>Airenvy Corporate HQ</p> 
+            <p class="regular">San Francisco CA, 94103</p> 
+           </div> 
+           <div class="col-sm-4"> 
+            <p>Career Opportunities</p> 
+            <a href="mailto:jobs@airenvy.com">jobs@airenvy.com</a> 
+            <p>Sales Inquiries</p> 
+            <a href="mailto:sales@airenvy.com">sales@airenvy.com</a> 
+           </div> 
+           <div class="col-sm-4"> 
+            <p>Chat</p> 
+            <a href="http://www.hipchat.com/g2aYc7YDv" target="_blank">HipChat</a> 
+            <p>Support</p> 
+            <a href="mailto:support@airenvy.com">support@airenvy.com</a> 
+            <p class="regular">1 (855) 692-3689</p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-xs-12 links-container"> 
+         <p class="links"> <a href="/team">TEAM</a> | <a href="/services">SERVICES</a> | <a href="/services#plans">PRICING</a> | <a href="/careers">CAREERS</a> | <a href="/vendors">VENDORS</a> | <a href="/support">SUPPORT</a> </p> 
+         <p class="regular bottom-links-container"> <a href="/terms">Terms </a> &nbsp;| &nbsp;<a href="/privacy">Privacy Policy </a> &nbsp;| &nbsp;Copyright 2013-2014 Airenvy, Inc. All rights reserved. </p> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+    </div> 
+    <script type="text/javascript">
+  homepage_javascript();
+</script> 
+   </div> 
+   <div class="modal fade new-identity" id="signup-modal"> 
+    <div class="modal-dialog modal-sm"> 
+     <div class="modal-content"> 
+      <div class="modal-body"> 
+       <h4>Sign up for Airenvy</h4> 
+       <div class="row"> 
+        <div class="col-xs-12"> 
+         <p class="login-error"></p> 
+        </div> 
+       </div> 
+       <form id="signup-form" class="row"> 
+        <div class="col-xs-12"> 
+         <label class="control-label">Name</label> 
+         <input type="text" class="form-control input-field" id="signup_name" name="signup_name"> 
+        </div> 
+        <div class="col-xs-12"> 
+         <label class="control-label">Email</label> 
+         <input type="email" class="form-control input-field" id="signup_email" name="signup_email"> 
+        </div> 
+        <div class="col-xs-12"> 
+         <label class="control-label">Password</label> 
+         <input type="password" class="form-control input-field" id="signup_password" name="signup_password"> 
+        </div> 
+        <div class="col-xs-12"> 
+         <label class="control-label" style="padding-top:3px;"> <input id="agreed-to-terms" type="checkbox" checked="true"> &nbsp;&nbsp;&nbsp;I agree to the Airenvy <a href="/terms" target="_blank">terms</a> </label> 
+        </div> 
+        <div class="col-xs-12"> 
+         <button type="submit" id="signup-button" class="airenvy-btn airenvy-btn-blue action-button"> Sign Up </button> 
+        </div> 
+       </form> 
+      </div> 
+      <div class="modal-footer dark-bg"> 
+       <p class="regular text-center"> Already an Airenvy member? <a href="#" class="login-button">Log in</a> </p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="modal fade new-identity" id="login-modal"> 
+    <div class="modal-dialog modal-sm"> 
+     <div class="modal-content"> 
+      <div class="modal-body"> 
+       <h4>Log in to Airenvy</h4> 
+       <div class="row"> 
+        <div class="col-xs-12"> 
+         <p class="login-error">Incorrect email or password.</p> 
+        </div> 
+       </div> 
+       <form id="login-form" class="row"> 
+        <div class="col-xs-12"> 
+         <label class="control-label">Email</label> 
+         <input type="email" class="form-control input-field" id="login_email" name="login_email"> 
+        </div> 
+        <div class="col-xs-12"> 
+         <label class="control-label">Password</label> 
+         <input type="password" class="form-control input-field" id="login_password" name="login_password"> 
+        </div> 
+        <div class="col-xs-12 text-right"> 
+         <a href="/forgot_password">Forgot Password?</a> 
+        </div> 
+        <div class="col-xs-12"> 
+         <button type="submit" id="login-button" class="airenvy-btn airenvy-btn-blue action-button"> Log In </button> 
+        </div> 
+       </form> 
+      </div> 
+      <div class="modal-footer dark-bg"> 
+       <p class="regular text-center"> Need an Airenvy account? <a href="#" class="signup-button">Sign Up</a> </p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+          $(function () {
+              signup_login_javascript();
+          });
+      </script>  
+  <div id="footer"> 
+   <footer id="footer" class="new-identity purple-bg gradient"> 
+    <div class="container"> 
+     <nav class="navbar" role="navigation"> 
+      <div class="navbar-header" style="width:100%;"> 
+       <a class="navbar-brand" href="/"> <img alt="Airenvy Logo" class="logo" src="https://s3-us-west-1.amazonaws.com/airenvyassets/homepage/airenvy_logo.svg"> </a> 
+       <div class="pull-right"> 
+        <p class="text-white"> <span class="hidden-xs"> Free trial. No credit card required. </span> <button class="airenvy-btn airenvy-btn-blue signup-button" href="/signup">SIGN UP</button> <button class="airenvy-btn airenvy-btn-clear login-button hidden-xs" href="/signin">LOG IN</button> </p> 
+       </div> 
+      </div> 
+     </nav> 
+    </div> 
+   </footer> 
+  </div>  
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDjHp39PG0nlu0PFDAG5IV3wkTwubi6z-Y&amp;sensor=false"></script> 
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart'],'language':'en'}]}"></script> 
+  <script>
+    if (typeof(mixpanel) != "undefined") mixpanel.track("/");
+</script> 
+  <div id="fb-root"></div> 
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=501949316569863&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> 
+  <!-- begin olark code --> 
+  <!--script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+  f[z]=function(){
+  (a.s=a.s||[]).push(arguments)};var a=f[z]._={
+  },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+  f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+  0:+new Date};a.P=function(u){
+  a.p[u]=new Date-a.p[0]};function s(){
+  a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+  hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+  return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+  b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+  b.contentWindow[g].open()}catch(w){
+  c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+  var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+  b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+  loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+  /* custom configuration goes here (www.olark.com/documentation) */
+  olark.identify('5081-773-10-2730');/*]]>*/</script><noscript><a href="https://www.olark.com/site/5081-773-10-2730/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript--> 
+  <!--style>
+      #olark_tab{
+          position: fixed;
+          left: 0;
+          bottom:50%;
+          z-index:11;
+        }
+      #olark_tab a {
+          display:block;
+          /Edit these to change the look of your tab/
+          border: 3px solid white;
+          border-left-style: none;
+          border-bottom-style: none;
+          margin-top:0px;
+        }
+      #olark_tab a:hover {
+          border-color: orange;
+      }
+    </style>
+    
+    <div id="olark_tab">
+      <a href="javascript:void(0);" onclick="olark('api.box.expand')">
+      <img alt="Olark" src="/assets/temp/olark-f1566e304e477b9e1221a32fa34e0e16.png" />
+        </a>
+    </div--> 
+  <!-- end olark code --> 
+  <script type="text/javascript">
+    adroll_adv_id = "LAB77PBYSRGLDKYZTVNND3";
+    adroll_pix_id = "LIEX3BV3ZRHCZFXAI6HTHK";
+    (function () {
+        var oldonload = window.onload;
+        window.onload = function () {
+            __adroll_loaded = true;
+            var scr = document.createElement("script");
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+            scr.setAttribute('async', 'true');
+            scr.type = "text/javascript";
+            scr.src = host + "/j/roundtrip.js";
+            ((document.getElementsByTagName('head') || [null])[0] ||
+                    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+            if (oldonload) {
+                oldonload()
+            }
+        };
+    }());
+</script> 
+  <script>
+    dataLayer = [];
+</script> 
+  <!-- Google Tag Manager --> 
+  <noscript> 
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-K75SZ2" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+    var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-K75SZ2');</script> 
+  <!-- End Google Tag Manager --> 
+  <div class="js-paloma-hook" data-id="1417770281626"> 
+   <script type="text/javascript">
+    (function(){
+
+      // Do not continue if Paloma not found.
+      if (window['Paloma'] === undefined && window['console'] !== undefined){
+        console.warn("Paloma not found. Require it in your application.js.");
+        return true;
+      }
+
+      Paloma.env = 'production';
+
+      // Remove any callback details if any
+      $('.js-paloma-hook[data-id!=' + 1417770281626 + ']').remove();
+
+      var request = {"resource":"Pages","action":"homepage","params":{}};
+
+      $(document).ready(function(){
+        Paloma.engine.request(
+          request['resource'],
+          request['action'],
+          request['params']);
+      });
+
+    })();
+  </script> 
+  </div>  
+ </body>
+</html>

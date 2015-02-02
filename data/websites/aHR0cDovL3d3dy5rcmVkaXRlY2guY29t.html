@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="de">
+ <head> 
+  <meta charset="UTF-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQMHV1ZACwYCVFhUBQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script> 
+  <meta name="viewport" content="width=1100px"> 
+  <title>Kreditech</title> 
+  <link rel="pingback" href="http://www.kreditech.com/xmlrpc.php"> 
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet" type="text/css"> 
+  <link rel="icon" type="image/png" href="http://www.kreditech.com/favicon.png"> 
+  <script src="https://maps.googleapis.com/maps/api/js"></script> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://www.kreditech.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="style-css" href="http://www.kreditech.com/wp-content/themes/kreditech/css/style.css?ver=1.0.0" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/plugins/wp-mailto-links/js/wp-mailto-links.js?ver=1.4.1"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/themes/kreditech/js/jquery.easing-1.1.min.js?ver=1.3"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/themes/kreditech/js/jquery.masonry.min.js?ver=1.0"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/themes/kreditech/js/jquery.scrollTo.js?ver=1.0"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/themes/kreditech/js/jquery.transit.min.js?ver=1.0"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/themes/kreditech/js/plugins/CSSPlugin.min.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/themes/kreditech/js/easing/EasePack.min.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/themes/kreditech/js/plugins/ScrollToPlugin.min.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/themes/kreditech/js/TweenLite.min.js?ver=4.0"></script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/themes/kreditech/js/general.js?ver=1.0.0"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.kreditech.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.kreditech.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 4.0"> 
+  <link rel="canonical" href="http://www.kreditech.com/"> 
+  <link rel="shortlink" href="http://www.kreditech.com/"> 
+  <style type="text/css" media="all">
+/* WP Mailto Links Plugin */
+.wpml-nodis { display:none; }.wpml-rtl { unicode-bidi:bidi-override; direction:rtl; }.mail-link { white-space:nowrap; }</style> 
+ </head> 
+ <body class="home page page-id-69 page-template page-template-templateshome-php"> 
+  <div id="header" class="start"> 
+   <div class="width"> 
+    <ul id="menu-main" class="menu">
+     <li id="menu-item-970" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-69 current_page_item menu-item-970"><a href="http://www.kreditech.com/">Home</a></li> 
+     <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a title="what" href="http://www.kreditech.com/what-we-do/">What we do</a></li> 
+     <li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a title="who" href="http://www.kreditech.com/who-we-are/">Who we are</a></li> 
+     <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47"><a title="work" href="http://www.kreditech.com/work-with-us/">Work with us</a></li> 
+     <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a title="news" href="http://www.kreditech.com/news/">News Room</a></li> 
+     <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a title="news" href="http://www.kreditech.com/blog/">Blog</a></li> 
+     <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a title="contact" href="http://www.kreditech.com/contact/">Contact</a></li> 
+    </ul> 
+    <div id="logo-blue" class="logo animate">
+     <a href="http://www.kreditech.com"><img src="http://www.kreditech.com/wp-content/themes/kreditech/img/logo.svg" alt=""></a>
+    </div> 
+    <div class="clear"></div> 
+   </div> 
+  </div> 
+  <div id="main" class="home"> 
+   <div class="section intro" data-section="intro"> 
+    <div class="fadeSlider backgroundimage animate"> 
+     <div class="fadeSlide backgroundfill" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/10/kredi-office.jpg) no-repeat center center;background-size:cover;"></div>
+     <div class="fadeSlide backgroundfill" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/10/kredi-team.jpg) no-repeat center center;background-size:cover;"></div>
+     <div class="fadeSlide backgroundfill" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/10/kredi-office.jpg) no-repeat center center;background-size:cover;"></div>
+     <div class="fadeSlide backgroundfill" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/10/kredi-team.jpg) no-repeat center center;background-size:cover;"></div> 
+    </div> 
+    <div class="texts"> 
+     <div class="text text1"> 
+      <h3 style="text-align: center;"><i>“Banking is necessary – banks are not.”</i></h3> 
+      <p style="text-align: center;">Bill Gates</p> 
+     </div> 
+    </div> 
+    <div class="texts"> 
+     <div class="text text2"> 
+      <img src="http://www.kreditech.com/wp-content/themes/kreditech/img/logo-white.svg" width="340">
+      <br> 
+      <h2 style="text-align: center;">Banking. Redefined. Digital.</h2> 
+     </div> 
+    </div> 
+    <div class="arrow-down white moving"></div> 
+   </div> 
+   <div class="section what cf" data-section="what"> 
+    <div class="width" style="height: 100%;"> 
+     <h2 class="animated fromBottom"> What we do 
+      <div class="underline"></div> </h2> 
+     <div class="animated fromBottom contitext" style="width:310px;"> 
+      <p>The Kreditech Group uses big data, complex algorithms and automated workflows to serve a simple mission:<em> “Better banking for everyone”</em>. Based on 15,000 dynamic data points, the unique technology is capable of scoring everyone worldwide, including&nbsp;the 4bn individuals without credit score. Deploying the technology makes&nbsp;physical contact and paper exchange redundant. Funds can be paid out within secons to a credit card, bank account or NFC wallet, 24/7.</p> 
+      <p>&nbsp;</p> 
+      <p>&nbsp;</p> 
+      <p>.</p> 
+     </div> 
+     <div style="width:310px; position:absolute; left: 335px; top: 0;"> 
+      <div class="illustration"> 
+       <div class="kredi animated animatedCustom"></div> 
+       <div class="tech animated animatedCustom"></div> 
+       <div class="animated" data-dif="260" style="display: block; font-size: 24px; line-height: 1; color: #005589; text-align: left; left: 50px; width: 240px; top: 110px;">
+         Build a
+        <br>better bank. 
+       </div> 
+       <div class="animated" data-dif="260" style="display: block; font-size: 24px; line-height: 1; color: #005589; text-align: left; left: 272px;top: 110px;width: 280px;">
+         Build a better
+        <br>credit bureau. 
+       </div> 
+       <div class="animated" data-dif="310" style="display: block; left: 220px; top: 280px;"> 
+        <div class="arrow-down blue"></div> 
+       </div> 
+       <div class="animated fromFront" style="width:455px; position:absolute; left: 0px; top: 280px; text-align: center; font-size: 24px; line-height: 1;color: #005589; font-weight: bold;" data-dif="250">
+         Better banking for everyone. 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="button"> 
+     <a href="http://www.kreditech.com/what-we-do/" class="more animated fromLeft button">What we do</a> 
+    </div> 
+   </div> 
+   <hr> 
+   <div class="section where cf" data-section="work" style="overflow: visible;"> 
+    <div class="width" style="height: 100%;"> 
+     <div style="width:310px; position:absolute; bottom: 10px;"> 
+      <h2 class="animated fromBottom"> Where we are 
+       <div class="underline"></div></h2> 
+      <div class="animated fromBottom contitext" style="width:310px;"> 
+       <p>The Kreditech Group’s subsidiaries currently operate in eight countries, at least one will be added each quarter. Deploying the technology, they offer credit to millions of customers, 24/7.</p> 
+      </div> 
+     </div> 
+     <div class="footnote"> 
+      <p>¹broader regional statistics</p> 
+     </div> 
+     <div id="map" class="animated" data-dif="300" style="position:absolute; left: 40px; bottom:0; width: 980px; height: 570px;"></div> 
+    </div> 
+    <script src="http://d3js.org/d3.v3.min.js"></script> 
+    <script src="http://d3js.org/topojson.v1.min.js"></script> 
+    <script src="http://www.kreditech.com/wp-content/themes/kreditech/js/datamaps.world.min.js"></script> 
+    <script>
+							    var map = new Datamap({
+			    	element: document.getElementById('map'),
+			    	projection: 'mercator',
+					setProjection: function(element) {
+					    var projection = d3.geo.mercator()
+/* 					    var projection = d3.geo.equirectangular() */
+/* 					      .center([0, 15]) */
+/* 					      .scale(155) */
+					      .scale(130)
+					      .center([0, 40])
+					      .rotate([-12, 0])
+					      .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+					    var path = d3.geo.path()
+					      .projection(projection);
+					    return {path: path, projection: projection};
+					},
+					fills: {
+						'ramp-up' : 'rgba(255,153,0,1)','headquarter' : 'rgba(0,85,136,.5)','live' : 'rgba(0,85,136,1)',			            'office locations': 'rgba(255,255,255,1)',
+			            defaultFill: 'rgba(0,0,0,.1)'
+			            
+			        },
+			        data: {
+						'GAB': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: -0.4394488164139641,  longitude: 12.48046875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults </div></div>',  images: '',},'MOZ': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: -14.434680215297266,  longitude: 39.19921875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'LAO': {   fillKey: '',  name: "East Asia & Pacific¹",  latitude: 20.22646384029018,  longitude: 102.65625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,101,609,451 (69%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MDG': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: -18.47960905583197,  longitude: 47.4609375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'AGO': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: -8.754794702435605,  longitude: 21.26953125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'COG': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 0.3076157096439005,  longitude: 16.5234375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'COD': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: -1.6696855009865836,  longitude: 23.818359375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SOM': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 9.70905706861822,  longitude: 48.076171875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ETH': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 7.18810087117902,  longitude: 41.1328125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SSD': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 7.36246686553575,  longitude: 29.00390625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'CAF': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 6.751896464843375,  longitude: 22.060546875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'CMR': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 6.18424616128059,  longitude: 13.271484375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BEN': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 10.487811882056683,  longitude: 2.7685546875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'TGO': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 9.167178732976677,  longitude: 0.9228515625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BFA': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 12.425847783029146,  longitude: -1.2744140625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'CIV': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 9.102096738726456,  longitude: -6.50390625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'LBR': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 7.035475652433024,  longitude: -10.04150390625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SLE': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 9.102096738726456,  longitude: -11.9091796875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'GIN': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 11.135287077054238,  longitude: -9.2724609375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SEN': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 15.15697371337768,  longitude: -15.4248046875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'TCD': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 18.312810846425442,  longitude: 16.5234375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ROU': {   fillKey: 'ramp-up',  name: "Romania",  latitude: 45.943161,  longitude: 24.966760000000022,  website_link: "http://kredito24.ro",  website_title: "Kredito24.ro",  statistics: '<div class="statistics cf"><div class="value">7,406,488 (53%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'DEU': {   fillKey: 'headquarter',  name: "Germany",  latitude: 53.54282300658967,  longitude: 9.993724715344229,  website_link: "http://kreditech.de",  website_title: "kreditech.de",  statistics: '<div class="statistics cf"><div class="value">Hamburg</div><div class="text">Office</div></div>',  images: '',},'YEM': {   fillKey: '',  name: "Middle East & North Africa¹",  latitude: 14.786213310834524,  longitude: 45.3515625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">222,770,875 (84%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SYR': {   fillKey: '',  name: "Middle East & North Africa¹",  latitude: 34.316823166545355,  longitude: 37.6171875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">222,770,875 (84%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'QAT': {   fillKey: '',  name: "Middle East & North Africa¹",  latitude: 25.167824917610897,  longitude: 51.1962890625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">QAT</div><div class="text">Unscored Adults</div></div>',  images: '',},'NER': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 18.145851771694467,  longitude: 12.48046875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'OMN': {   fillKey: '',  name: "Middle East & North Africa¹",  latitude: 19.316672884127552,  longitude: 56.162109375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">222,770,875 (84%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MLI': {   fillKey: '',  name: "Sub-Saharan Africa¹",  latitude: 20.220965779522313,  longitude: -1.845703125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'LBN': {   fillKey: '',  name: "Middle East & North Africa¹",  latitude: 33.73408565897936,  longitude: 35.782470703125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">222,770,875 (84%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'JOR': {   fillKey: '',  name: "Middle East & North Africa¹",  latitude: 30.41204478249689,  longitude: 36.298828125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">222,770,875 (84%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'IRQ': {   fillKey: '',  name: "Middle East & North Africa¹",  latitude: 33.44122046725887,  longitude: 44.12109375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">222,770,875 (84%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'LBY': {   fillKey: '',  name: "Middle East & North Africa¹",  latitude: 28.304380682962783,  longitude: 23.37890625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">222,770,875 (84%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'DZA': {   fillKey: '',  name: "Middle East & North Africa¹",  latitude: 32.39851580247402,  longitude: 2.8125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">222,770,875 (84%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MAR': {   fillKey: '',  name: "Middle East & North Africa¹",  latitude: 28.033197847676377,  longitude: -9.7119140625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">222,770,875 (84%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SUR': {   fillKey: '',  name: "Latin America & Caribbean¹",  latitude: 4.831178987443295,  longitude: -55.634765625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">259,916,380 (64%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'GUY': {   fillKey: '',  name: "Latin America & Caribbean¹",  latitude: 5.662633908453343,  longitude: -58.88671875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">259,916,380 (64%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MYS': {   fillKey: '',  name: "East Asia & Pacific¹",  latitude: 4.5245868612836,  longitude: 102.7001953125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,101,609,451 (69%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'IDN': {   fillKey: '',  name: "East Asia & Pacific¹",  latitude: -0.26074133221827495,  longitude: 114.4775390625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,101,609,451 (69%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'HKG': {   fillKey: '',  name: "East Asia & Pacific¹",  latitude: 22.411113158241925,  longitude: 114.15069580078125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,101,609,451 (69%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BGD': {   fillKey: '',  name: "South Asia¹",  latitude: 23.84698966183929,  longitude: 90.263671875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">999,143,335 (92%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'AFG': {   fillKey: '',  name: "South Asia¹",  latitude: 35.46544227973762,  longitude: 68.203125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">999,143,335 (92%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'TKM': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 39.74323853007873,  longitude: 59.9853515625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SRB': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 43.359267806668186,  longitude: 21.26953125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SMR': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 43.92117551492924,  longitude: 12.45849609375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MNE': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 43.14161240142908,  longitude: 19.281005859375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MKD': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 41.47785465791774,  longitude: 22.1484375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MCO': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 43.73451907925994,  longitude: 7.420835494995117,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'LVA': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 56.4657267594593,  longitude: 26.806640625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'LIE': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 47.11138602385811,  longitude: 9.59381103515625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'HRV': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 44.65406595064094,  longitude: 15.4248046875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'GEO': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 41.711196503780265,  longitude: 44.033203125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BLR': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 42.65227604916907,  longitude: 27.421875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BGR': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 42.97250158602597,  longitude: 25.5322265625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'AZE': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 40.78275926218671,  longitude: 48.515625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ARM': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 40.55610436860182,  longitude: 44.31884765625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'AND': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 42.5269071091738,  longitude: 1.636962890625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ALB': {   fillKey: '',  name: "Europe & Central Asia¹",  latitude: 40.54831330001146,  longitude: 20.0830078125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">331,254,438 (55%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BLZ': {   fillKey: '',  name: "Latin America & Caribbean¹",  latitude: 17.289107372642512,  longitude: -88.74755859375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">259,916,380 (64%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'URY': {   fillKey: '',  name: "Latin America & Caribbean¹",  latitude: -33.714592557762856,  longitude: -55.1953125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">259,916,380 (64%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'HND': {   fillKey: '',  name: "Latin America & Caribbean¹",  latitude: 15.306792393718219,  longitude: -86.396484375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">259,916,380 (64%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'HTI': {   fillKey: '',  name: "Latin America & Caribbean¹",  latitude: 19.18944395079223,  longitude: -72.24609375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">259,916,380 (64%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'CUB': {   fillKey: '',  name: "Latin America & Caribbean¹",  latitude: 22.355494823480292,  longitude: -79.892578125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">259,916,380 (64%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'CRI': {   fillKey: '',  name: "Latin America & Caribbean¹",  latitude: 9.71194473716989,  longitude: -83.5400390625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">259,916,380 (64%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'GBR': {   fillKey: '',  name: "High Income OECD¹",  latitude: 52.4899146179686,  longitude: -1.23046875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'TUR': {   fillKey: '',  name: "High Income OECD¹",  latitude: 38.14377127683649,  longitude: 30.9375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscore Adults</div></div>',  images: '',},'SWE': {   fillKey: '',  name: "High Income OECD¹",  latitude: 60.33274717948408,  longitude: 15.29296875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SVN': {   fillKey: '',  name: "High Income OECD¹",  latitude: 45.87573185825096,  longitude: 14.52392578125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'NOR': {   fillKey: '',  name: "High Income OECD¹",  latitude: 59.98286698931025,  longitude: 7.55859375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'NZL': {   fillKey: '',  name: "High Income OECD¹",  latitude: -38.813462649326375,  longitude: 176.484375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'LUX': {   fillKey: '',  name: "High Income OECD¹",  latitude: 49.88802831062853,  longitude: 6.053466796875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'KOR': {   fillKey: '',  name: "High Income OECD¹",  latitude: 35.75126648159176,  longitude: 128.056640625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'JPN': {   fillKey: '',  name: "High Income OECD¹",  latitude: 36.46605860848431,  longitude: 139.74609375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ITA': {   fillKey: '',  name: "High Income OECD¹",  latitude: 41.253580925781186,  longitude: 15.29296875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ISR': {   fillKey: '',  name: "High Income OECD¹",  latitude: 30.241351845232355,  longitude: 34.9365234375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'IRL': {   fillKey: '',  name: "High Income OECD¹",  latitude: 52.80984380492372,  longitude: -8.26171875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ISL': {   fillKey: '',  name: "High Income OECD¹",  latitude: 64.55347455766953,  longitude: -17.9296875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'FRA': {   fillKey: '',  name: "High Income OECD¹",  latitude: 48.2324773131509,  longitude: 2.98828125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'CAN': {   fillKey: '',  name: "High Income OECD¹",  latitude: 56.759145599826795,  longitude: -111.62109375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'GRL': {   fillKey: '',  name: "Greenland (Denmark)",  latitude: 68.07767927359902,  longitude: -44.47265625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">3,340,265 (92%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MLI': {   fillKey: '',  name: "Sub-saharan Africa¹",  latitude: 18.646245142670608,  longitude: -1.58203125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BEL': {   fillKey: '',  name: "High income OECD¹",  latitude: 50.571143150041316,  longitude: 5.1416015625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MRT': {   fillKey: '',  name: "Sub-saharan Africa¹",  latitude: 21.53484700204879,  longitude: -9.404296875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">475,558,510 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'IRN': {   fillKey: '',  name: "Iran",  latitude: 31.95216223802497,  longitude: 57.744140625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">36,352,370 (66%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'KWT': {   fillKey: '',  name: "Kuwait",  latitude: 29.652414694869943,  longitude: 47.724609375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,669,758 (68%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'EST': {   fillKey: '',  name: "Estonia",  latitude: 58.44773280389084,  longitude: 25.83984375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">576,471 (66%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SLV': {   fillKey: '',  name: "El Salvador",  latitude: 13.476530436797656,  longitude: -88.08837890625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">2,712,015 (68%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'KGZ': {   fillKey: '',  name: "Kyrgyzstan",  latitude: 42.21224516288584,  longitude: 74.28955078125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">2,314,386 (62%) </div><div class="text">Unscored Adults</div></div>',  images: '',},'KHM': {   fillKey: '',  name: "Cambodia",  latitude: 13.455161833092296,  longitude: 103.9306640625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">6,801,749 (71%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BOL': {   fillKey: '',  name: "Bolivia",  latitude: -18.47960905583197,  longitude: -63.984375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">3,921,048 (61%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ARE': {   fillKey: '',  name: "United Arab Emirates",  latitude: 23.141706950167304,  longitude: 54.84375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">5,648,323 (72%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'NIC': {   fillKey: '',  name: "Nicaragua",  latitude: 11.523087506868512,  longitude: -84.7265625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">2,254,609 (59%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'CHE': {   fillKey: '',  name: "Switzerland",  latitude: 46.80106217558439,  longitude: 9.4482421875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">4,021,512 (74%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'LKA': {   fillKey: '',  name: "Sri Lanka",  latitude: 7.841615185204699,  longitude: 81.123046875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">7,542,776 (56%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'PRT': {   fillKey: '',  name: "Portugal",  latitude: 39.846783667027445,  longitude: -7.734375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">5,324,807 (77%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'UKR': {   fillKey: '',  name: "Ukraine",  latitude: 49.38237278700955,  longitude: 34.541015625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">16,670,911 (52%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'EGY': {   fillKey: '',  name: "Egypt",  latitude: 25.726012556803408,  longitude: 28.037109375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">40,481,722 (78%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BHR': {   fillKey: '',  name: "Bahrain",  latitude: 25.995081230575074,  longitude: 50.537109375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">528,748  (52%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'FIN': {   fillKey: '',  name: "Finland",  latitude: 64.01962896642122,  longitude: 27.59765625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">2,821,392 (80%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'KAZ': {   fillKey: '',  name: "Kazakhstan",  latitude: 49.52520834197441,  longitude: 68.2470703125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">5,560,340 (48%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BTN': {   fillKey: '',  name: "Bhutan",  latitude: 27.569318447519503,  longitude: 90.6591796875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">415,090 (82%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'PAN': {   fillKey: '',  name: "Panama",  latitude: 9.232248799418674,  longitude: -79.27734375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">921,672 (37%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'UZB': {   fillKey: '',  name: "Uzbekistan",  latitude: 42.94462747136449,  longitude: 60.46875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">16,685,188 (82%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'RWA': {   fillKey: '',  name: "Rwanda",  latitude: -1.842455862778598,  longitude: 30.41015625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">5,430,755 (85%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'NAM': {   fillKey: '',  name: "Namibia",  latitude: -21.125497636606266,  longitude: 18.28125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value"> 496,973 (36%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SVK': {   fillKey: '',  name: "Slovakia",  latitude: 48.69096039092549,  longitude: 18.720703125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,336,721 (34%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'AUT': {   fillKey: '',  name: "Austria",  latitude: 47.07012182383309,  longitude: 13.974609375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">2,663,136 (47%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'HUN': {   fillKey: '',  name: "Hungary",  latitude: 47.635783590864854,  longitude: 20.21484375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,712,266 (25%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'GHA': {   fillKey: '',  name: "Ghana",  latitude: 8.586814867355757,  longitude: -1.142578125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">12,919,989 (86%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'NLD': {   fillKey: '',  name: "Netherlands",  latitude: 52.4158226123788,  longitude: 6.0205078125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">2,281,491 (21%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'JAM': {   fillKey: '',  name: "Jamaica",  latitude: 18.023313567160653,  longitude: -77.4755859375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,584,625 (90%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'THA': {   fillKey: '',  name: "Thailand",  latitude: 15.623036831528264,  longitude: 104.23828125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">22,866,098 (47%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MDA': {   fillKey: '',  name: "Moldova",  latitude: 47.9614830621125,  longitude: 28.05908203125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">2,338,287 (91%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MMR': {   fillKey: '',  name: "East Asia & Pacific²",  latitude: 22.87744046489713,  longitude: 95.80078125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,101,609,451 (69%) </div><div class="text">Unscored Adults</div></div>',  images: '',},'GTM': {   fillKey: '',  name: "Guatemala",  latitude: 16.532302693677178,  longitude: -89.912109375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">7,769,695 (91%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BIH': {   fillKey: '',  name: "Bosnia and Herzegovina",  latitude: 44.81120012275078,  longitude: 16.962890625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">2,418,073 (92%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MNG': {   fillKey: '',  name: "East Asia & Pacific¹",  latitude: 44.96479793033104,  longitude: 102.83203125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,101,609,451 (69%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'CHN': {   fillKey: '',  name: "East Asia & Pacific¹",  latitude: 37.71859032558816,  longitude: 105.99609375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">1,101,609,451 (69%)</div><div class="text">Unscored Adults </div></div>',  images: '',},'DNK': {   fillKey: '',  name: "Denmark",  latitude: 56.41714179107094,  longitude: 10.37109375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">3,340,265 (92%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ZMB': {   fillKey: '',  name: "Zambia",  latitude: -13.225685572593926,  longitude: 31.376953125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">6,841,635 (93%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'TJK': {   fillKey: '',  name: "Tajikistan",  latitude: 38.36003621017682,  longitude: 72.57568359375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">4,650,932 (93%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'CYP': {   fillKey: '',  name: "Cyprus",  latitude: 34.913562948743255,  longitude: 32.783203125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">752,613 (93%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'UGA': {   fillKey: '',  name: "Uganda",  latitude: 2.378222959893639,  longitude: 32.958984375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">17,577,437 (95%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'USA': {   fillKey: '',  name: "High Income OECD¹",  latitude: 35.88905007936091,  longitude: -107.05078125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value"> 229,657,377 (33%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'PAK': {   fillKey: '',  name: "Pakistan",  latitude: 31.66335387885908,  longitude: 72.0703125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">107,489,530 (96%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ARG': {   fillKey: '',  name: "Latin America & Carribean¹",  latitude: -31.80289258670676,  longitude: -62.2265625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value"> 259,916,380 (64%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'PNG': {   fillKey: '',  name: "Papua New Guinea",  latitude: -5.17264669146713,  longitude: 143.525390625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">4,169,193 (96%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'VNM': {   fillKey: '',  name: "Vietnam",  latitude: 21.540297174930622,  longitude: 105.380859375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">62,551,245 (99%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'PRY': {   fillKey: '',  name: "Paraguay",  latitude: -21.125497636606266,  longitude: -60.1171875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">2,302,240  (54%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SDN': {   fillKey: '',  name: "Sudan",  latitude: 18.990107107246935,  longitude: 31.2890625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">20,824,452 (99%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'SAU': {   fillKey: '',  name: "Saudi Arabia",  latitude: 26.115985925333536,  longitude: 41.66015625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value"> 10,402,205 (53%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'BWA': {   fillKey: '',  name: "Botswana",  latitude: -22.593726063929296,  longitude: 23.90625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value"> 613,598 (48%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ZAF': {   fillKey: '',  name: "South Africa",  latitude: -29.535229562948455,  longitude: 23.90625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value"> 15,354,191 (45%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'NPL': {   fillKey: '',  name: "Nepal",  latitude: 27.335337073590416,  longitude: 86.0009765625,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">16,567,697 (99%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'GRC': {   fillKey: '',  name: "Greece",  latitude: 39.53793974517628,  longitude: 21.5771484375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value"> 1,268,081 (18%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'TZA': {   fillKey: '',  name: "Tanzania",  latitude: -7.007852450407383,  longitude: 35.771484375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">25,432,199 (99%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'LTU': {   fillKey: '',  name: "Lithuania",  latitude: 55.02802211299252,  longitude: 24.2578125,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">47,012 (2,3%)</div><div class="text">Unscored Adults </div></div>',  images: '',},'ECU': {   fillKey: '',  name: "Ecuador",  latitude: -1.0546279422758742,  longitude: -78.57421875,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">2,719,505 (27%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'VEN': {   fillKey: '',  name: "Venezuela",  latitude: 7.18810087117902,  longitude: -66.62109375,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">14,032,003 (71%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'COL': {   fillKey: '',  name: "Colombia",  latitude: 4.570868,  longitude: -74.29733299999998,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">4,145,977 (13%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'PAK': {   fillKey: '',  name: "Pakistan",  latitude: 30.375321,  longitude: 69.34511599999996,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">110,669,840 (98%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'ZWE': {   fillKey: '',  name: "Zimbabwe",  latitude: -19.015438,  longitude: 29.154856999999993,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">7,742,687 (96%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'UGA': {   fillKey: '',  name: "Uganda",  latitude: 1.373333,  longitude: 32.290275000000065,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">17,677,103 (96%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'KEN': {   fillKey: '',  name: "Kenya",  latitude: -0.023559,  longitude: 37.90619300000003,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">23,174,804 (95%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'NGA': {   fillKey: '',  name: "Nigeria",  latitude: 9.081999,  longitude: 8.675277000000051,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">87,415,326 (95%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'CHL': {   fillKey: '',  name: "Chile",  latitude: -35.675147,  longitude: -71.54296899999997,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">11,428,143 (94%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'PHL': {   fillKey: '',  name: "Philippines",  latitude: 12.879721,  longitude: 121.77401699999996,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">55,513,654 (91%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'MAR': {   fillKey: '',  name: "Morocco",  latitude: 31.791702,  longitude: -7.092620000000011,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">17,692,368 (80%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'IND': {   fillKey: '',  name: "India",  latitude: 20.593684,  longitude: 78.96288000000004,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><div class="value">661,129,707 (80%)</div><div class="text">Unscored Adults</div></div>',  images: '',},'KAZ': {   fillKey: 'ramp-up',  name: "Kazakhstan",  latitude: 48.019573,  longitude: 66.92368399999998,  website_link: "",  website_title: "",  statistics: '<div class="statistics cf"><h4>Evgeni Zhdanovskikh</h4><div class="text">Country Manager</div><div class="value"></div><div class="text"></div><div class="value">5,315,702 (48%)</div><div class="text">Unscored Adults</div></div>',  images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Evgeni-Zhdanovskikh-Country-Management-Russia.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',},'AUS': {   fillKey: 'live',  name: "Australia",  latitude: -37.814107,  longitude: 144.96327999999994,  website_link: "http://k24.com.au",  website_title: "K24.com.au",  statistics: '<div class="statistics cf"><h4>Sara Brown</h4><div class="text">Country Manager</div><div class="value">Melbourne</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">619,908 (4%)</div><div class="text">Unscored Adults</div></div>',  images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Sara-Brown-Country-Manager-Australia.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',},'ESP': {   fillKey: 'live',  name: "Spain",  latitude: 40.4167754,  longitude: -3.7037901999999576,  website_link: "http://kredito24.es",  website_title: "Kredito24.es",  statistics: '<div class="statistics cf"><h4>Eduardo Marin</h4><div class="text">Country Manager</div><div class="value">Madrid</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">26,253,169 (84%)</div><div class="text">Unscored Adults</div></div>',  images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Eduardo-Marin-Country-Manager-Spain.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',},'BRA': {   fillKey: 'ramp-up',  name: "Brazil",  latitude: -14.235004,  longitude: -51.92527999999999,  website_link: "http://kredito24.com.br",  website_title: "Kredito24.com.br",  statistics: '<div class="statistics cf"><h4>Thomas Strakos</h4><div class="text">Country Manager</div><div class="value"></div><div class="text"></div><div class="value">49,048,599 (36%)</div><div class="text">Unscored Adults</div></div>',  images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/thomas.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',},'PER': {   fillKey: 'live',  name: "Peru",  latitude: -12.046374,  longitude: -77.0427934,  website_link: " http://www.k24.pe/",  website_title: "K24.pe",  statistics: '<div class="statistics cf"><h4>Jorge Del Carpio</h4><div class="text">Country Manager</div><div class="value">Lima</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">11,451,602 (58%)</div><div class="text">Unscored Adults</div></div>',  images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/jorge_Website.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',},'DOM': {   fillKey: 'live',  name: "Dominican Republic ",  latitude: 18.6840307,  longitude: -68.46201489999999,  website_link: "http://www.k24.do",  website_title: "K24.do",  statistics: '<div class="statistics cf"><h4>Elizabeth Valdez</h4><div class="text">Country Manager</div><div class="value">Santo Domingo</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">2,425,117 (37%)</div><div class="text">Unscored Adults</div></div>',  images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Elizabeth-Valdez-Country-Manager-Dominican-Republic.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',},'MEX': {   fillKey: 'live',  name: "Mexico",  latitude: 19.4326077,  longitude: -99.13320799999997,  website_link: "http://kredito24.mx",  website_title: "Kredito24.mx",  statistics: '<div class="statistics cf"><h4>Pedro Vera Martinez</h4><div class="text">Country Manager</div><div class="value">Mexico City</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">38,167,708 (52%)</div><div class="text">Unscored Adults</div></div>',  images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Pedro-Vera-Martinez-Country-Manager-Mexico.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',},'CZE': {   fillKey: 'live',  name: "Czech Republic",  latitude: 50.0755381,  longitude: 14.43780049999998,  website_link: "http://kredito24.cz",  website_title: "Kredito24.cz",  statistics: '<div class="statistics cf"><h4>Jakub Skarbanek</h4><div class="text">Country Manager</div><div class="value">Prague</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">1,717,104 (24%)</div><div class="text">Unscored Adults</div></div>',  images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Jakub-Skarbanek-Country-Manager-Czech-Republic.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',},'RUS': {   fillKey: 'live',  name: "Russia",  latitude: 55.755826,  longitude: 37.6173,  website_link: "http://zaimo.ru",  website_title: "Zaimo.ru",  statistics: '<div class="statistics cf"><h4>Evgeni Zhdanovskikh</h4><div class="text">Country Manager</div><div class="value">Moscow</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">41,772,810 (41%)</div><div class="text">Unscored Adults</div></div>',  images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Evgeni-Zhdanovskikh-Country-Management-Russia.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',},'POL': {   fillKey: 'live',  name: "Poland",  latitude: 52.2296756,  longitude: 21.012228700000037,  website_link: "http://www.kredito24.pl",  website_title: "kredito24.pl",  statistics: '<div class="statistics cf"><h4>Aleksander Rutkowski</h4><div class="text">Country Manager</div><div class="value">Warsaw</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">4,650,659 (17%)</div><div class="text">Unscored Adults</div></div>',  images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Aleksander-Rutkowski-Country-Manager-Poland.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',},			        },
+			        geographyConfig: {
+					    borderWidth: 0,
+						highlightFillColor: 'rgba(0,0,0,.9)',
+						highlightBorderWidth: 0,
+			            highlightOnHover: true,
+			            popupOnHover: true,
+						popupTemplate: function(geo, data) {
+							if(!data) return " ";
+			            	else return data.images +
+					     	'<div class="hoverinfo tooltip cf">' + 
+					     		'<div class="statistic">' +	
+					     			'<div class="text">' + data.name + '</div>' +
+						 			data.statistics +
+					     		'</div>' +
+						 	'</div>';
+			            }
+
+			        },
+			        done: function(datamap) {
+			            datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+/* 			                alert(geography.properties.name); */
+/* 							var article = document.querySelector('#electriccars'); */
+							var link = JSON.parse(this.dataset.info).website_link;
+							if(link && link != ""){
+								var win = window.open(link, '_blank');
+								win.focus();
+							}
+			            });
+			        }
+				});
+				var products = [
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Romania",latitude: 45.943161,longitude: 24.966760000000022,website_link: "http://kredito24.ro",website_title: "Kredito24.ro",statistics: '<div class="statistics cf"><div class="value">7,406,488 (53%)</div><div class="text">Unscored Adults</div></div>',images: '',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Germany",latitude: 53.54282300658967,longitude: 9.993724715344229,website_link: "http://kreditech.de",website_title: "kreditech.de",statistics: '<div class="statistics cf"><div class="value">Hamburg</div><div class="text">Office</div></div>',images: '',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Kazakhstan",latitude: 48.019573,longitude: 66.92368399999998,website_link: "",website_title: "",statistics: '<div class="statistics cf"><h4>Evgeni Zhdanovskikh</h4><div class="text">Country Manager</div><div class="value"></div><div class="text"></div><div class="value">5,315,702 (48%)</div><div class="text">Unscored Adults</div></div>',images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Evgeni-Zhdanovskikh-Country-Management-Russia.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Australia",latitude: -37.814107,longitude: 144.96327999999994,website_link: "http://k24.com.au",website_title: "K24.com.au",statistics: '<div class="statistics cf"><h4>Sara Brown</h4><div class="text">Country Manager</div><div class="value">Melbourne</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">619,908 (4%)</div><div class="text">Unscored Adults</div></div>',images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Sara-Brown-Country-Manager-Australia.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Spain",latitude: 40.4167754,longitude: -3.7037901999999576,website_link: "http://kredito24.es",website_title: "Kredito24.es",statistics: '<div class="statistics cf"><h4>Eduardo Marin</h4><div class="text">Country Manager</div><div class="value">Madrid</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">26,253,169 (84%)</div><div class="text">Unscored Adults</div></div>',images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Eduardo-Marin-Country-Manager-Spain.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Brazil",latitude: -14.235004,longitude: -51.92527999999999,website_link: "http://kredito24.com.br",website_title: "Kredito24.com.br",statistics: '<div class="statistics cf"><h4>Thomas Strakos</h4><div class="text">Country Manager</div><div class="value"></div><div class="text"></div><div class="value">49,048,599 (36%)</div><div class="text">Unscored Adults</div></div>',images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/thomas.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Peru",latitude: -12.046374,longitude: -77.0427934,website_link: " http://www.k24.pe/",website_title: "K24.pe",statistics: '<div class="statistics cf"><h4>Jorge Del Carpio</h4><div class="text">Country Manager</div><div class="value">Lima</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">11,451,602 (58%)</div><div class="text">Unscored Adults</div></div>',images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/jorge_Website.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Dominican Republic ",latitude: 18.6840307,longitude: -68.46201489999999,website_link: "http://www.k24.do",website_title: "K24.do",statistics: '<div class="statistics cf"><h4>Elizabeth Valdez</h4><div class="text">Country Manager</div><div class="value">Santo Domingo</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">2,425,117 (37%)</div><div class="text">Unscored Adults</div></div>',images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Elizabeth-Valdez-Country-Manager-Dominican-Republic.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Mexico",latitude: 19.4326077,longitude: -99.13320799999997,website_link: "http://kredito24.mx",website_title: "Kredito24.mx",statistics: '<div class="statistics cf"><h4>Pedro Vera Martinez</h4><div class="text">Country Manager</div><div class="value">Mexico City</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">38,167,708 (52%)</div><div class="text">Unscored Adults</div></div>',images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Pedro-Vera-Martinez-Country-Manager-Mexico.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Czech Republic",latitude: 50.0755381,longitude: 14.43780049999998,website_link: "http://kredito24.cz",website_title: "Kredito24.cz",statistics: '<div class="statistics cf"><h4>Jakub Skarbanek</h4><div class="text">Country Manager</div><div class="value">Prague</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">1,717,104 (24%)</div><div class="text">Unscored Adults</div></div>',images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Jakub-Skarbanek-Country-Manager-Czech-Republic.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Russia",latitude: 55.755826,longitude: 37.6173,website_link: "http://zaimo.ru",website_title: "Zaimo.ru",statistics: '<div class="statistics cf"><h4>Evgeni Zhdanovskikh</h4><div class="text">Country Manager</div><div class="value">Moscow</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">41,772,810 (41%)</div><div class="text">Unscored Adults</div></div>',images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Evgeni-Zhdanovskikh-Country-Management-Russia.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',					},
+										{
+						
+					    radius: 4,
+						fillKey: 'office locations',
+						name: "Poland",latitude: 52.2296756,longitude: 21.012228700000037,website_link: "http://www.kredito24.pl",website_title: "kredito24.pl",statistics: '<div class="statistics cf"><h4>Aleksander Rutkowski</h4><div class="text">Country Manager</div><div class="value">Warsaw</div><div class="text">Office</div><div class="value"></div><div class="text"></div><div class="value">4,650,659 (17%)</div><div class="text">Unscored Adults</div></div>',images: '<div class="images cf"><div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/11/Aleksander-Rutkowski-Country-Manager-Poland.jpg) no-repeat center center; background-size: cover;width: 180px; height: 270px;"></div></div>',					},
+									];
+				map.bubbles(products, {
+						borderWidth: 0.3,
+						borderColor: 'rgb(0,0,0)',
+						fillOpacity: 1,
+			            popupOnHover: true,
+					    highlightOnHover: true,
+						highlightFillColor: 'rgba(0,0,0,.9)',
+						highlightBorderWidth: 0,
+					    highlightFillOpacity: 1,
+					    popupTemplate: function(geography, data) {
+					    	return data.images +
+					     	'<div class="hoverinfo tooltip cf">' + 
+					     		'<div class="statistic">' +	
+					     			'<div class="text">' + data.name + '</div>' +
+						 			data.statistics +
+					     		'</div>' +
+						 	'</div>';
+					    }
+					},
+				    function(data){
+/* d.className = d.className + " otherclass"; */
+						var bubbles = data.selectAll('.datamaps-bubble');
+						for(var bubbleIndex in bubbles){
+							var bubble = bubbles[bubbleIndex];
+							bubble.className = bubble.className + " animated fromTop"; 
+						}
+					    bubbles.on('click', function(data) {
+/* 							window.location.href = data.website_link; */
+							var link = data.website_link;
+							if(link && link != ""){
+								var win = window.open(link, '_blank');
+								win.focus();
+							}
+			            });
+					}
+			    );
+				map.legend();
+			</script> 
+   </div> 
+   <div class="section statistics cf" data-section="work" style="height: 260px;padding:0;"> 
+    <div class="backgroundimage animate " style="position: absolute; width: 100%;"> 
+     <div class=" backgroundfill" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/10/kredi-world.jpg) no-repeat center center;background-size:cover;"></div> 
+    </div> 
+    <div class="animate fadeSlider fadeLeftRight" style="position: absolute; width: 100%;"> 
+     <div class="fadeSlide">
+      <div class="statistic">
+       <div class="block">
+        <p class="value">15,000 </p>data points per application
+       </div>
+      </div>
+     </div>
+     <div class="fadeSlide">
+      <div class="statistic">
+       <div class="block">
+        <p class="value">EIGHT</p>countries live
+       </div>
+      </div>
+     </div>
+     <div class="fadeSlide">
+      <div class="statistic">
+       <div class="block">
+        <p class="value">70 MILLION</p>USD capital raised to date
+       </div>
+      </div>
+     </div>
+     <div class="fadeSlide">
+      <div class="statistic">
+       <div class="block">
+        <p class="value">80%</p>growth per quarter
+       </div>
+      </div>
+     </div>
+     <div class="fadeSlide">
+      <div class="statistic">
+       <div class="block">
+        <p class="value">FOUR</p>countries ramp-up
+       </div>
+      </div>
+     </div>
+     <div class="fadeSlide">
+      <div class="statistic">
+       <div class="block">
+        <p class="value">2 MILLION</p>scored customers
+       </div>
+      </div>
+     </div>
+     <div class="fadeSlide">
+      <div class="statistic">
+       <div class="block">
+        <p class="value">35 MILLION</p>USD revenue run rate
+       </div>
+      </div>
+     </div> 
+     <div class="arrowHolder">
+      <div class="arrow left white"></div>
+     </div> 
+     <div class="arrowHolder right">
+      <div class="arrow right white"></div>
+     </div> 
+    </div> 
+   </div> 
+   <div class="section who cf" data-section="who"> 
+    <div class="width" style="height: 100%;"> 
+     <div style="width:280px; position:absolute; left: 0px;"> 
+      <h2 class="animated fromBottom"> Who we are 
+       <div class="underline left"></div> </h2> 
+      <div class="animated fromBottom contitext"> 
+       <p>Sebastian Diemer (27) and Alexander Graubner-Müller (26) &nbsp;founded Kreditech Group in 2012 and have been leading the company as CEO and CTO ever since. The two have known each other since childhood. After gaining experience<br> together while working at Rocket Internet and Groupon China and selling a prior company in this field, they launched Kreditech to implement unique and groundbreaking algorithms to forecast future events based entirely on online data.</p> 
+      </div> 
+     </div> 
+     <div style="width:280px; position:absolute; left: 360px; top: 20px;"> 
+      <div class="statistic animated fromFront" data-dif="100">
+       <span class="value">200</span>employees
+      </div> 
+      <div> 
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="5">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="10">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="15">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="20">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="25">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="30">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="35">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="40">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="45">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="50">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="55">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="60">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="65">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="70">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="75">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="80">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="85">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="90">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="95">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="100">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="105">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="110">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="115">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="120">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="125">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="130">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="135">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="140">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="145">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee.svg" class="animated icon fromBottom" data-dif="150"> 
+      </div> 
+      <div class="statistic animated fromFront" data-dif="100">
+       <span class="value">40</span>nationalities
+      </div> 
+      <div> 
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="5">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="10">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="15">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="20">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="25">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="30">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="35">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="40">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="45">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="50">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="55">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="60">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="65">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="70">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="75">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="80">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="85">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="90">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="95">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="100">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="105">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="110">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="115">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="120">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="125">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="130">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="135">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="140">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="145">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="150">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="155">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="160">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="165">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="170">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_flag.svg" class="animated icon fromBottom" data-dif="175"> 
+      </div> 
+      <div class="statistic animated fromFront" data-dif="100">
+       <span class="value">40%</span>women
+      </div> 
+      <div> 
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="5">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="10">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="15">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="20">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="25">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="30">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="35">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="40">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="45">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="50">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="55">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_employee-woman.svg" class="animated icon fromBottom" data-dif="60">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="5">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="10">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="15">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="20">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="25">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="30">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="35">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="40">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="45">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="50">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="55">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="60">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="65">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="70">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="75">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="80">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="85">
+       <img src="http://www.kreditech.com/wp-content/uploads/2014/10/icon_man.svg" class="animated icon fromBottom" data-dif="90"> 
+      </div> 
+     </div> 
+     <div class="sliderholder animated" data-dif="300" style="width:240px; position:absolute; right: 0; top: 40px;"> 
+      <div class="slider" style="width: 200px; height: 300px;">
+       <div class="slide"> 
+        <div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/10/Sebastian-Diemer-CEO_Founder_1-300x450.jpg) no-repeat center center; background-size:contain;">
+         <div class="arrow arrow-left"></div>
+         <div class="arrow arrow-right"></div>
+        </div> 
+        <div class="info no-p-margin" style="margin-top: 10px;"> 
+         <p>Sebastian Diemer</p> 
+         <p><strong>CEO</strong></p> 
+        </div> 
+       </div>
+       <div class="slide"> 
+        <div class="image" style="background: url(http://www.kreditech.com/wp-content/uploads/2014/10/CTO-Alex-300x450.jpg) no-repeat center center; background-size:contain;">
+         <div class="arrow arrow-left"></div>
+         <div class="arrow arrow-right"></div>
+        </div> 
+        <div class="info no-p-margin" style="margin-top: 10px;"> 
+         <p>Alexander Graubner-Müller</p> 
+         <p><strong>CTO</strong></p> 
+        </div> 
+       </div>
+      </div> 
+     </div> 
+    </div> 
+    <div class="button"> 
+     <a href="http://www.kreditech.com/who-we-are/" class="more animated fromLeft">Who we are</a> 
+    </div> 
+   </div> 
+   <hr> 
+   <div class="section work cf" data-section="work"> 
+    <div class="width cf" style="margin-bottom: 40px;"> 
+     <div style="width:310px; position:relative; float: left;"> 
+      <h2 class="animated fromBottom"> Work with us 
+       <div class="underline"></div></h2> 
+      <div class="animated fromBottom contitext" style="width:310px;"> 
+       <p>The best finance brains in Europe meet the best tech brains – together we can achieve anything.</p> 
+      </div> 
+     </div> 
+     <div class="cf" style="width:645px; position:relative; float: right; top: 16px;">
+      <h4>Jobs</h4>
+      <br>
+      <div style="width:310px; position:relative; float: left;">
+       <a href="#" class="department" data-id="3743">
+        <div class="statistic animated fromFront" style="left: 0px"> 
+         <span class="value">25</span> in Operations
+        </div></a>
+       <a href="#" class="department" data-id="3449">
+        <div class="statistic animated fromFront" style="left: 0px"> 
+         <span class="value">9</span> in Online Marketing
+        </div></a>
+       <a href="#" class="department" data-id="3452">
+        <div class="statistic animated fromFront" style="left: 0px"> 
+         <span class="value">7</span> in Country Management
+        </div></a>
+      </div>
+      <div style="width:310px; position:relative; float: left;">
+       <a href="#" class="department" data-id="3440">
+        <div class="statistic animated fromFront" style="left: 0px"> 
+         <span class="value">6</span> in Product Management
+        </div></a>
+       <a href="#" class="department" data-id="3495">
+        <div class="statistic animated fromFront" style="left: 0px"> 
+         <span class="value">3</span> in Technical
+        </div></a>
+      </div>
+      <div id="jobsListData" class="blue">
+       <h2 class="animated">Vacancies
+        <div class="underline"></div></h2>
+       <br> 
+       <h3 class="department department-3462" data-id="3462"> <span class="title " data-dif="200">Business Development</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=33861"> <li class="job" data-id="33861" data-link="http://boards.greenhouse.io/kreditech/jobs/33861">Senior Payments Manager (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3439" data-id="3439"> <span class="title " data-dif="200">Corporate Communications</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32763"> <li class="job" data-id="32763" data-link="http://boards.greenhouse.io/kreditech/jobs/32763">Branding &amp; Digital Copywriter (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=36396"> <li class="job" data-id="36396" data-link="http://boards.greenhouse.io/kreditech/jobs/36396">PowerPoint Specialist (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32766"> <li class="job" data-id="32766" data-link="http://boards.greenhouse.io/kreditech/jobs/32766">PR Senior (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3452" data-id="3452"> <span class="title " data-dif="200">Country Management</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32719"> <li class="job" data-id="32719" data-link="http://boards.greenhouse.io/kreditech/jobs/32719">Co-Country Manager for Russia (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35303"> <li class="job" data-id="35303" data-link="http://boards.greenhouse.io/kreditech/jobs/35303">Country Manager for Dominican Republic (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32678"> <li class="job" data-id="32678" data-link="http://boards.greenhouse.io/kreditech/jobs/32678">Country Manager for Kazakhstan (M/F) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35304"> <li class="job" data-id="35304" data-link="http://boards.greenhouse.io/kreditech/jobs/35304">Country Manager for Mexico (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35267"> <li class="job" data-id="35267" data-link="http://boards.greenhouse.io/kreditech/jobs/35267">Country Manager for Romania (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32760"> <li class="job" data-id="32760" data-link="http://boards.greenhouse.io/kreditech/jobs/32760">Global Call Center Manager (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=33410"> <li class="job" data-id="33410" data-link="http://boards.greenhouse.io/kreditech/jobs/33410">Global Debt Collection Manager (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3457" data-id="3457"> <span class="title " data-dif="200">Data Science</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32648"> <li class="job" data-id="32648" data-link="http://boards.greenhouse.io/kreditech/jobs/32648">Junior Data Scientist (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32652"> <li class="job" data-id="32652" data-link="http://boards.greenhouse.io/kreditech/jobs/32652">Senior Data Scientist (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3442" data-id="3442"> <span class="title " data-dif="200">Engineering</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=33859"> <li class="job" data-id="33859" data-link="http://boards.greenhouse.io/kreditech/jobs/33859">Site Reliability Engineer II – Monitoring and Probes (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=37137"> <li class="job" data-id="37137" data-link="http://boards.greenhouse.io/kreditech/jobs/37137">Software Engineer: Scala (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3744" data-id="3744"> <span class="title " data-dif="200">Finance</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=34385"> <li class="job" data-id="34385" data-link="http://boards.greenhouse.io/kreditech/jobs/34385">Accountant / Buchhalter (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32722"> <li class="job" data-id="32722" data-link="http://boards.greenhouse.io/kreditech/jobs/32722">Associate in Corporate Finance (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=37143"> <li class="job" data-id="37143" data-link="http://boards.greenhouse.io/kreditech/jobs/37143">Chief Risk Officer (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=37641"> <li class="job" data-id="37641" data-link="http://boards.greenhouse.io/kreditech/jobs/37641">Head of Group &amp; German Taxes (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35186"> <li class="job" data-id="35186" data-link="http://boards.greenhouse.io/kreditech/jobs/35186">Head of Treasury &amp; Debt Management (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=34474"> <li class="job" data-id="34474" data-link="http://boards.greenhouse.io/kreditech/jobs/34474">Junior in Controlling (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=37247"> <li class="job" data-id="37247" data-link="http://boards.greenhouse.io/kreditech/jobs/37247">Werkstudent für Buchhaltung (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3454" data-id="3454"> <span class="title " data-dif="200">Human Resources</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32767"> <li class="job" data-id="32767" data-link="http://boards.greenhouse.io/kreditech/jobs/32767">Employer Branding Specialist (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=33846"> <li class="job" data-id="33846" data-link="http://boards.greenhouse.io/kreditech/jobs/33846">Internship in Human Resources Administration (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3443" data-id="3443"> <span class="title " data-dif="200">Infrastructure</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=33854"> <li class="job" data-id="33854" data-link="http://boards.greenhouse.io/kreditech/jobs/33854">NodeJS Developer (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3448" data-id="3448"> <span class="title " data-dif="200">Legal</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32904"> <li class="job" data-id="32904" data-link="http://boards.greenhouse.io/kreditech/jobs/32904">Legal Counsel / Contract Manager (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3461" data-id="3461"> <span class="title " data-dif="200">Office Management</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=37135"> <li class="job" data-id="37135" data-link="http://boards.greenhouse.io/kreditech/jobs/37135">System Administrator (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3450" data-id="3450"> <span class="title " data-dif="200">Offline Marketing</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=33402"> <li class="job" data-id="33402" data-link="http://boards.greenhouse.io/kreditech/jobs/33402">Junior Media Planner (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3449" data-id="3449"> <span class="title " data-dif="200">Online Marketing</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=33397"> <li class="job" data-id="33397" data-link="http://boards.greenhouse.io/kreditech/jobs/33397">Advertising Campaign Manager (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32647"> <li class="job" data-id="32647" data-link="http://boards.greenhouse.io/kreditech/jobs/32647">Head of Affiliate Markting (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=33924"> <li class="job" data-id="33924" data-link="http://boards.greenhouse.io/kreditech/jobs/33924">Head of Marketing Analytics (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32651"> <li class="job" data-id="32651" data-link="http://boards.greenhouse.io/kreditech/jobs/32651">Head of SEO (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32668"> <li class="job" data-id="32668" data-link="http://boards.greenhouse.io/kreditech/jobs/32668">Junior Web/Visual designer (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=37208"> <li class="job" data-id="37208" data-link="http://boards.greenhouse.io/kreditech/jobs/37208">SEA Manager for Czech Republic (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32757"> <li class="job" data-id="32757" data-link="http://boards.greenhouse.io/kreditech/jobs/32757">SEA Manager for Russia (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32734"> <li class="job" data-id="32734" data-link="http://boards.greenhouse.io/kreditech/jobs/32734">Senior Affiliate Marketing Manager for Russia (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32759"> <li class="job" data-id="32759" data-link="http://boards.greenhouse.io/kreditech/jobs/32759">SEO Manager (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3743" data-id="3743"> <span class="title " data-dif="200">Operations</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35190"> <li class="job" data-id="35190" data-link="http://boards.greenhouse.io/kreditech/jobs/35190">Customer Relationship Manager for Czech Rep (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35262"> <li class="job" data-id="35262" data-link="http://boards.greenhouse.io/kreditech/jobs/35262">Customer Relationship Manager for Dom Rep (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35264"> <li class="job" data-id="35264" data-link="http://boards.greenhouse.io/kreditech/jobs/35264">Customer Relationship Manager for Kazakhstan (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35260"> <li class="job" data-id="35260" data-link="http://boards.greenhouse.io/kreditech/jobs/35260">Customer Relationship Manager for Mexico (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35258"> <li class="job" data-id="35258" data-link="http://boards.greenhouse.io/kreditech/jobs/35258">Customer Relationship Manager for Peru (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35176"> <li class="job" data-id="35176" data-link="http://boards.greenhouse.io/kreditech/jobs/35176">Customer Relationship Manager for Poland (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35265"> <li class="job" data-id="35265" data-link="http://boards.greenhouse.io/kreditech/jobs/35265">Customer Relationship Manager for Romania (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=37049"> <li class="job" data-id="37049" data-link="http://boards.greenhouse.io/kreditech/jobs/37049">Customer Relationship Manager for Russia (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35261"> <li class="job" data-id="35261" data-link="http://boards.greenhouse.io/kreditech/jobs/35261">Customer Relationship Manager for Spain (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35316"> <li class="job" data-id="35316" data-link="http://boards.greenhouse.io/kreditech/jobs/35316">Debt Collection Manager for Spain (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35318"> <li class="job" data-id="35318" data-link="http://boards.greenhouse.io/kreditech/jobs/35318">Debt Collection Specialist - Czech Republic(m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35315"> <li class="job" data-id="35315" data-link="http://boards.greenhouse.io/kreditech/jobs/35315">Debt Collection Specialist for Mexico (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35314"> <li class="job" data-id="35314" data-link="http://boards.greenhouse.io/kreditech/jobs/35314">Debt Collection Specialist for Peru (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35317"> <li class="job" data-id="35317" data-link="http://boards.greenhouse.io/kreditech/jobs/35317">Debt Collection Specialist for Russia (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=36422"> <li class="job" data-id="36422" data-link="http://boards.greenhouse.io/kreditech/jobs/36422">Junior Debt Collection Specialist - Czech Republic(m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35269"> <li class="job" data-id="35269" data-link="http://boards.greenhouse.io/kreditech/jobs/35269">Junior in Customer Care - Russia (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35178"> <li class="job" data-id="35178" data-link="http://boards.greenhouse.io/kreditech/jobs/35178">Junior in Customer Relationship Management - Poland (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32752"> <li class="job" data-id="32752" data-link="http://boards.greenhouse.io/kreditech/jobs/32752">Junior Operations Manager for Kazakhstan </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35322"> <li class="job" data-id="35322" data-link="http://boards.greenhouse.io/kreditech/jobs/35322">Junior Operations Manager for Mexico (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35323"> <li class="job" data-id="35323" data-link="http://boards.greenhouse.io/kreditech/jobs/35323">Junior Operations Manager for Peru (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35325"> <li class="job" data-id="35325" data-link="http://boards.greenhouse.io/kreditech/jobs/35325">Junior Operations Manager for Poland (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35320"> <li class="job" data-id="35320" data-link="http://boards.greenhouse.io/kreditech/jobs/35320">Junior Operations Manager for Russia (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35751"> <li class="job" data-id="35751" data-link="http://boards.greenhouse.io/kreditech/jobs/35751">Operations Manager for Dominican Republic (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35755"> <li class="job" data-id="35755" data-link="http://boards.greenhouse.io/kreditech/jobs/35755">Operations Manager for Kazakhstan (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=35749"> <li class="job" data-id="35749" data-link="http://boards.greenhouse.io/kreditech/jobs/35749">Operations Manager for Mexico (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3440" data-id="3440"> <span class="title " data-dif="200">Product Management</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=33494"> <li class="job" data-id="33494" data-link="http://boards.greenhouse.io/kreditech/jobs/33494">Head of Product Strategy and Innovation (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=34528"> <li class="job" data-id="34528" data-link="http://boards.greenhouse.io/kreditech/jobs/34528">Product Manager: Kredito24 (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=34554"> <li class="job" data-id="34554" data-link="http://boards.greenhouse.io/kreditech/jobs/34554">Product Manager: Zaimo (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32758"> <li class="job" data-id="32758" data-link="http://boards.greenhouse.io/kreditech/jobs/32758">Senior Conversion Manager (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32667"> <li class="job" data-id="32667" data-link="http://boards.greenhouse.io/kreditech/jobs/32667">Senior Web Designer (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32666"> <li class="job" data-id="32666" data-link="http://boards.greenhouse.io/kreditech/jobs/32666">UI/ UX Designer - Product Management (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3455" data-id="3455"> <span class="title " data-dif="200">Recruiting</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32731"> <li class="job" data-id="32731" data-link="http://boards.greenhouse.io/kreditech/jobs/32731">Internship in Recruiting (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32726"> <li class="job" data-id="32726" data-link="http://boards.greenhouse.io/kreditech/jobs/32726">Senior Recruiter (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-3495" data-id="3495"> <span class="title " data-dif="200">Technical</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32892"> <li class="job" data-id="32892" data-link="http://boards.greenhouse.io/kreditech/jobs/32892">Customer Care Technical Operations Manager (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=32909"> <li class="job" data-id="32909" data-link="http://boards.greenhouse.io/kreditech/jobs/32909">Intern in Technical Business Development (m/f) </li> </a> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=33407"> <li class="job" data-id="33407" data-link="http://boards.greenhouse.io/kreditech/jobs/33407">Technical Writer (m/f) </li> </a> 
+       </ul> 
+       <h3 class="department department-0" data-id="0"> <span class="title " data-dif="200">No Department</span> 
+        <div class="underline"></div> </h3> 
+       <ul class="jobs"> 
+        <a href="http://www.kreditech.com/work-with-us/?gh_jid=37138"> <li class="job" data-id="37138" data-link="http://boards.greenhouse.io/kreditech/jobs/37138">Product analytics manager (m\f) </li> </a> 
+       </ul>
+      </div>
+     </div> 
+    </div> 
+    <div class="button"> 
+     <a href="http://www.kreditech.com/work-with-us/" class="more animated fromLeft button">Work with us</a> 
+    </div> 
+   </div> 
+   <div class="section news tree noHeightCalc" data-section="news"> 
+    <div class="background-blue"></div> 
+    <div class="width" style="height: 100%;"> 
+     <div class="node noNode nodeLine animated" data-id="1" style="left: 50%; top: -80px;"></div> 
+     <div style="width: 40%;float:left;position:relative;margin-bottom: 20px;"> 
+      <h2>
+       <div class="animated" data-dif="200">
+        Press Releases
+       </div>
+       <div class="node animated " id="nodeChildChild1000"></div>
+       <div class="node right nodeLine nodeFromMain animated" data-from-y="1" data-id="1000" data-main-node-id="nodeChildChild1"></div></h2>
+      <div class="branch">
+       <div class="animated" data-dif="200" style="margin: 15px 0; width: 100%;">
+        <a href="http://www.kreditech.com/press_release/kreditech-raises-40mn-usd-at-190mn-usd-valuation/"><h3>Kreditech raises 40mn USD at 190mn USD valuation
+          <div class="node animated " id="nodeChildChild1001"></div>
+          <div class="node right nodeLine nodeFromMain animated" data-id="1001" data-from-y="10" data-random="10" data-main-node-id="mainNode2"></div></h3>
+         <div style="clear:both"></div></a>
+       </div>
+      </div>
+      <div class="branch">
+       <div class="animated" data-dif="200" style="margin: 15px 0; width: 100%;">
+        <a href="http://www.kreditech.com/press_release/kreditech-raises-15-million-usd-debt-from-kreos-capital/"><h3>Kreditech Raises 15 million USD Debt from Kreos Capital
+          <div class="node animated " id="nodeChildChild1002"></div>
+          <div class="node right nodeLine nodeFromMain animated" data-id="1002" data-from-y="10" data-random="10" data-main-node-id="mainNode3"></div></h3>
+         <div style="clear:both"></div></a>
+       </div>
+      </div>
+      <div class="branch">
+       <div class="animated" data-dif="200" style="margin: 15px 0; width: 100%;">
+        <a href="http://www.kreditech.com/press_release/rene-griemens-new-cfo-at-kreditech/"><h3>Rene Griemens New CFO At Kreditech
+          <div class="node animated " id="nodeChildChild1003"></div>
+          <div class="node right nodeLine nodeFromMain animated" data-id="1003" data-from-y="10" data-random="10" data-main-node-id="mainNode4"></div></h3>
+         <div style="clear:both"></div></a>
+       </div>
+      </div> 
+     </div> 
+     <div style="width: 40%;float:right;position:relative;margin-bottom: 20px;"> 
+      <h2>
+       <div class="animated" data-dif="200">
+        Blog
+       </div>
+       <div class="node animated nodeLine nodeFromMain" data-from-y="1" data-id="1004" data-main-node-id="nodeChildChild1"></div>
+       <div class="node right animated" id="nodeChildChild1004"></div></h2>
+      <div class="branch">
+       <div class="animated " data-dif="200" style="margin: 15px 0; width: 100%;">
+        <a href="http://www.kreditech.com/blog/welcome-to-one-of-the-fastest-growing-teams-in-europe/"><h3>Welcome to One of the Fastest Growing Teams in Europe
+          <div class="node nodeLine nodeFromMain nodeFromLower animated" data-id="1005" data-main-node-id="mainNode2"></div>
+          <div class="node right animated" id="nodeChildChild1005"></div></h3>
+         <div style="clear:both"></div></a>
+       </div>
+      </div>
+      <div class="branch">
+       <div class="animated " data-dif="200" style="margin: 15px 0; width: 100%;">
+        <a href="http://www.kreditech.com/blog/you-name-it-well-be-there/"><h3>You name it, we’ll be there
+          <div class="node nodeLine nodeFromMain nodeFromLower animated" data-id="1006" data-main-node-id="mainNode3"></div>
+          <div class="node right animated" id="nodeChildChild1006"></div></h3>
+         <div style="clear:both"></div></a>
+       </div>
+      </div>
+      <div class="branch">
+       <div class="animated " data-dif="200" style="margin: 15px 0; width: 100%;">
+        <a href="http://www.kreditech.com/blog/thank-you-for-writing/"><h3>Thank you for writing…
+          <div class="node nodeLine nodeFromMain nodeFromLower animated" data-id="1007" data-main-node-id="mainNode4"></div>
+          <div class="node right animated" id="nodeChildChild1007"></div></h3>
+         <div style="clear:both"></div></a>
+       </div>
+      </div> 
+     </div> 
+     <div style="clear:both"></div> 
+    </div> 
+    <div class="width cf"> 
+     <div class="button" style="width: 40%; float: left;"> 
+      <a href="http://www.kreditech.com/news/" class="more animated fromLeft button">see all</a> 
+     </div> 
+     <div class="button" style="width: 40%; float: right;"> 
+      <a href="http://www.kreditech.com/blog/" class="more animated fromLeft button">see all</a> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="section contact"> 
+    <div class="width cf"> 
+     <div class="tree tree-call-us " style="z-index: 5;width:50%">
+      <div class="branch introduction" data-dif="200" style="width: 100%">
+       <h2 class="animated">Contact
+        <div class="node animated " id="nodeChildChild965"></div>
+        <div class="node right nodeLine nodeFromMain nodeFromLower animated " data-id="965"></div></h2>
+       <div class="animated contitext"></div>
+      </div>
+     </div>
+     <div class="tree tree-call-us-persons startRight" style="margin-top: -20px;">
+      <div class="branch team-member cf  right" style="left: 530px; top: 0px;">
+       <div class="image tooltip animated fromFront" style="-webkit-transform: translate3d(0,0,20px) rotate3d(0,1,0,13deg); transform: translate3d(0,0,20px) rotate3d(0,1,0,13deg); " data-dif="320">
+        <img src="http://www.kreditech.com/wp-content/uploads/2014/11/Anne-Martens-Hear-of-HR-180x270.jpg">
+        <div class="hoverinfo cf">
+         <h4>Anne Martens</h4>
+         <div>
+          Head of HR (VP) 
+         </div>
+         <br>
+         <div class="contact">
+          <a href="http://linkd.in/1oQSFSU" target="_blank">LinkedIn</a>
+         </div>
+         <div class="contact">
+          <a href="javascript:;" data-enc-email="naar.znegraf[at]xerqvgrpu.pbz" target="_blank" class="mail-link"><span class="wpml-rtl">moc.h<span class="wpml-nodis">1417767687</span>cetid<span class="wpml-nodis">1417767687</span>erk@s<span class="wpml-nodis">1417767687</span>reera<span class="wpml-nodis">1417767687</span>c<span class="wpml-nodis">1417767687</span></span></a>
+         </div>
+         <div class="contact">
+          Office: +49 40 605 905 60
+         </div>
+         <div class="contact"></div>
+        </div>
+       </div>
+       <div class="info" data-dif="100">
+        <span class="title animated fromLeft" data-dif="200" style="margin-top: 20px;">Anne Martens</span>
+        <div class="node nodeLine nodeFromMain animated " data-id="1009"></div>
+        <div class="node right animated " id="nodeChildChild1009"></div>
+        <p class="add_title animated">Human Resources</p>
+       </div>
+      </div>
+      <div class="branch team-member cf  left" style="left: 29px; top: 170px;">
+       <div class="image tooltip animated fromFront" style="-webkit-transform: translate3d(0,0,20px) rotate3d(0,1,0,-12deg); transform: translate3d(0,0,20px) rotate3d(0,1,0,-12deg); " data-dif="320">
+        <img src="http://www.kreditech.com/wp-content/uploads/2014/11/Anna-Friedrich-Head-of-Communications-180x270.jpg">
+        <div class="hoverinfo cf">
+         <h4>Anna Friedrich</h4>
+         <div>
+          Head of Communications (VP)
+         </div>
+         <br>
+         <div class="contact">
+          <a href="https://www.linkedin.com/in/annafriedrich" target="_blank">LinkedIn</a>
+         </div>
+         <div class="contact">
+          <a href="javascript:;" data-enc-email="naan.sevrqevpu[at]xerqvgrpu.pbz" target="_blank" class="mail-link"><span class="wpml-rtl">moc.h<span class="wpml-nodis">1417767687</span>cetid<span class="wpml-nodis">1417767687</span>erk@h<span class="wpml-nodis">1417767687</span>cirde<span class="wpml-nodis">1417767687</span>irf.a<span class="wpml-nodis">1417767687</span>nna<span class="wpml-nodis">1417767687</span></span></a>
+         </div>
+         <div class="contact">
+          Office: +49 40 605 905 621
+         </div>
+         <div class="contact"></div>
+        </div>
+       </div>
+       <div class="info" data-dif="100">
+        <span class="title animated fromRight" data-dif="200" style="margin-top: 20px;">Anna Friedrich</span>
+        <div class="node animated " id="nodeChildChild1010"></div>
+        <div class="node right nodeLine nodeFromMain animated" data-id="1010"></div>
+        <p class="add_title animated">Public Relations</p>
+       </div>
+      </div>
+      <div class="branch team-member cf  right" style="left: 547px; top: 340px;">
+       <div class="image tooltip animated fromFront" style="-webkit-transform: translate3d(0,0,20px) rotate3d(0,1,0,13deg); transform: translate3d(0,0,20px) rotate3d(0,1,0,13deg); " data-dif="320">
+        <img src="http://www.kreditech.com/wp-content/uploads/2014/11/Thomas-Antonioli-Finance-180x270.jpg">
+        <div class="hoverinfo cf">
+         <h4>Thomas Antonioli</h4>
+         <div>
+          Head of Corporate Finance (VP)
+         </div>
+         <br>
+         <div class="contact">
+          <a href="https://www.linkedin.com/profile/view?id=8729691&amp;authType=NAME_SEARCH&amp;authToken=1T3v&amp;locale=en_US&amp;srchid=3672325281416853260189&amp;srchindex=1&amp;srchtotal=1&amp;trk=vsrp_people_res_name&amp;trkInfo=VSRPsearchId%3A3672325281416853260189%2CVSRPtargetId%3A8729691%2CVSRPcmpt%3Aprimary" target="_blank">LinkedIn</a>
+         </div>
+         <div class="contact">
+          <a href="javascript:;" data-enc-email="gubznf.nagbavbyv[at]xerqvgrpu.pbz" target="_blank" class="mail-link"><span class="wpml-rtl">moc.h<span class="wpml-nodis">1417767687</span>cetid<span class="wpml-nodis">1417767687</span>erk@i<span class="wpml-nodis">1417767687</span>loino<span class="wpml-nodis">1417767687</span>tna.s<span class="wpml-nodis">1417767687</span>amoht<span class="wpml-nodis">1417767687</span></span></a>
+         </div>
+         <div class="contact">
+          Office: +49 40 605 905 691
+         </div>
+        </div>
+       </div>
+       <div class="info" data-dif="100">
+        <span class="title animated fromLeft" data-dif="200" style="margin-top: 20px;">Thomas Antonioli</span>
+        <div class="node nodeLine nodeFromMain animated " data-id="1011"></div>
+        <div class="node right animated " id="nodeChildChild1011"></div>
+        <p class="add_title animated">Investor Relations</p>
+       </div>
+      </div>
+     </div> 
+    </div> 
+    <div class="tree" style="margin-bottom:50px;"> 
+     <div class="branch">
+      <div class="node nodeFromMain" style="left: 50%;position: absolute;" data-from-y="-170"></div> 
+      <div class="button"> 
+       <a href="http://www.kreditech.com/contact/" class="more animated fromLeft button">contact</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+  <div id="footer"> 
+   <div class="width cf" style="padding: 40px 0;"> 
+    <div style="position: relative; float: left; width: 310px; height: 300px;"> 
+     <iframe width="310" height="300" src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fkreditech&amp;width=310&amp;height=300&amp;colorscheme=dark&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=274498375893564"></iframe> 
+    </div> 
+    <div style="position: relative; float: left; margin: 0 17px; width: 1px; height: 300px;background: #333;"></div> 
+    <div style="position: relative; float: left; width: 310px; height: 300px;"> 
+     <a class="twitter-timeline" href="https://twitter.com/Kreditech" data-widget-id="537635505002016768" width="310" height="300" data-chrome="nofooter noborders transparent">Tweets by @Kreditech</a> 
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+    </div> 
+    <div style="position: relative; float: left; margin: 0 17px; width: 1px; height: 300px;background: #333;"></div> 
+    <div style="position: relative; float: left; width: 310px; height: 300px;"> 
+     <iframe src="http://www.youtube.com/embed/?list=PLbKFttY8_w7oMFGceOXhHMEC5-H-VUsQ3" width="310" height="300"></iframe> 
+    </div> 
+   </div> 
+   <div class="width cf"> 
+    <hr> 
+    <ul id="menu-footer" class="menu">
+     <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="http://www.kreditech.com/imprint/">Imprint</a></li> 
+     <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="http://www.kreditech.com/data-privacy/">Data Privacy</a></li> 
+    </ul> 
+    <span>Copyright 2014 Kreditech Holding SSL GmbH ® | All Rights Reserved</span> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.kreditech.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.kreditech.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.1"></script> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40315525-1', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","licenseKey":"01e98e2dcf","applicationID":"3520962","transactionName":"ZFZVYxdQDEAFU0JcXF0cYkUMHgtdAFVOG0NbQw==","queueTime":0,"applicationTime":1,"atts":"SBFWFV9KH04=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script>  
+  <!-- Dynamic page generated in 2.911 seconds. --> 
+  <!-- Cached page generated by WP-Super-Cache on 2014-12-05 10:21:27 --> 
+  <!-- super cache -->
+ </body>
+</html>

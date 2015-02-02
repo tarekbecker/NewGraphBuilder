@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+ <!--<![endif]-->
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta name="description" content="services"> 
+  <meta name="keywords" content="enterprise software, agile business intelligence, information access, search, Endeca, Oracle, data discovery, blog"> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width"> 
+  <title>Bird's Eye View | Team Branchbird's thoughts on Data Discovery and the world at large</title> 
+  <link rel="icon" type="image/png" href="/images/favicon.png"> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="stylesheet" type="text/css" media="all" href="http://branchbird.com/blog/wp-content/themes/download-theme/style.css"> 
+  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css"> 
+  <link rel="stylesheet" type="text/css" media="all" href="/css/custom.css"> 
+  <link rel="stylesheet" media="screen" href="/css/navigation.css"> 
+  <link rel="stylesheet" media="screen" href="/css/jquery-ui-1.8.17.custom.css"> 
+  <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="css/ie7.css">
+<![endif]--> 
+  <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="css/ie8.css">
+<![endif]--> 
+  <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script> 
+  <!-- Required for twitter feed style hacking --> 
+  <script src="/js/customize-twitter-1.1.min.js" type="text/javascript"></script> 
+  <link rel="pingback" href="http://branchbird.com/blog/xmlrpc.php"> 
+  <!--[if lt IE 9]>
+<script src="http://branchbird.com/blog/wp-content/themes/branchbird/js/html5.js" type="text/javascript"></script>
+<![endif]--> 
+  <link rel="alternate" type="application/rss+xml" title="Bird's Eye View » Feed" href="http://branchbird.com/blog/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Bird's Eye View » Comments Feed" href="http://branchbird.com/blog/comments/feed/"> 
+  <link rel="stylesheet" id="jetpack-subscriptions-css" href="http://branchbird.com/blog/wp-content/plugins/jetpack/modules/subscriptions/subscriptions.css?ver=3.9.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="jetpack-widgets-css" href="http://branchbird.com/blog/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003" type="text/css" media="all"> 
+  <link rel="stylesheet" id="sharedaddy-css" href="http://branchbird.com/blog/wp-content/plugins/jetpack/modules/sharedaddy/sharing.css?ver=3.0.2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="genericons-css" href="http://branchbird.com/blog/wp-content/plugins/jetpack/_inc/genericons/genericons.css?ver=3.0.3" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://branchbird.com/blog/wp-includes/js/jquery/jquery.js?ver=1.11.0"></script> 
+  <script type="text/javascript" src="http://branchbird.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://branchbird.com/blog/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://branchbird.com/blog/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 3.9.3"> 
+  <link rel="shortlink" href="http://wp.me/2XJtl"> 
+  <script>
+	var lightbox_transition = 'elastic';
+	var lightbox_speed = 800;
+	var lightbox_fadeOut = 300;
+	var lightbox_title = false;
+	var lightbox_scalePhotos = true;
+	var lightbox_scrolling = false;
+	var lightbox_opacity = 0.201;
+	var lightbox_open = false;
+	var lightbox_returnFocus = true;
+	var lightbox_trapFocus = true;
+	var lightbox_fastIframe = true;
+	var lightbox_preloading = true;
+	var lightbox_overlayClose = true;
+	var lightbox_escKey = false;
+	var lightbox_arrowKey = false;
+	var lightbox_loop = true;
+	var lightbox_closeButton = false;
+	var lightbox_previous = "previous";
+	var lightbox_next = "next";
+	var lightbox_close = "close";
+	var lightbox_html = false;
+	var lightbox_photo = false;
+	var lightbox_width = '';
+	var lightbox_height = '';
+	var lightbox_innerWidth = 'false';
+	var lightbox_innerHeight = 'false';
+	var lightbox_initialWidth = '300';
+	var lightbox_initialHeight = '100';
+	var lightbox_maxWidth = 768;
+	var lightbox_maxHeight = 500;
+	var lightbox_slideshow = false;
+	var lightbox_slideshowSpeed = 2500;
+	var lightbox_slideshowAuto = true;
+	var lightbox_slideshowStart = "start slideshow";
+	var lightbox_slideshowStop = "stop slideshow";
+	var lightbox_fixed = true;
+	
+	
+			var lightbox_top = false;
+		var lightbox_bottom = false;
+		var lightbox_left = false;
+		var lightbox_right = false;
+		
+	var lightbox_reposition = false;
+	var lightbox_retinaImage = true;
+	var lightbox_retinaUrl = false;
+	var lightbox_retinaSuffix = "@2x.$1";
+</script> 
+  <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> 
+  <!-- Jetpack Open Graph Tags --> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Bird's Eye View"> 
+  <meta property="og:description" content="Team Branchbird's thoughts on Data Discovery and the world at large"> 
+  <meta property="og:url" content="http://branchbird.com/blog/"> 
+  <meta property="og:site_name" content="Bird's Eye View"> 
+  <meta property="og:image" content="http://wordpress.com/i/blank.jpg"> 
+  <meta name="twitter:site" content="@jetpack"> 
+ </head> 
+ <body class="home blog custom-background two-column right-sidebar"> 
+  <script type="text/javascript"> 
+
+	jQuery(document).ready(function($) {
+
+		
+		var pageName = window.location.pathname;
+		pageName = window.location.pathname.substring(0,pageName.lastIndexOf('/'));
+		//pageName = pageName.replace('/','');
+	//	alert(pageName);
+		//remove all other currents
+		$(".sf-menu a").each(function() {
+		//	if(!$(this).attr("href").contains('blog')) {
+			//	$(this).removeClass("current");
+		//	}
+		});
+
+
+
+	});
+	
+	
+</script> 
+  <script src="/js/cufon-yui.js" type="text/javascript"></script> 
+  <script src="/js/twitter.js" type="text/javascript"></script> 
+  <script type="text/javascript"> Cufon.now(); </script> 
+  <script src="/js/jquery-ui-1.8.17.custom.min.js" type="text/javascript"></script> 
+  <script src="/js/jquery.cycle.all.js" type="text/javascript"></script> 
+  <script src="/js/jquery.easing.1.3.js" type="text/javascript"></script> 
+  <script src="/js/jquery.supersubs.js" type="text/javascript"></script> 
+  <script src="/js/jquery.superfish.js" type="text/javascript"></script> 
+  <script src="/js/Arimo_400.font.js" type="text/javascript"></script> 
+  <script src="/js/custom.js" type="text/javascript"></script> 
+  <!--top starts--> 
+  <div id="top"> 
+   <div class="container clearfix"> 
+    <div class="grid_12"> 
+     <p>Transform Big Data into Big Discovery </p>
+     <p class="call">To learn more: <span style="color:#FFB400"><a href="mailto:info@branchbird.com">info@branchbird.com</a></span></p> 
+    </div> 
+   </div> 
+  </div> 
+  <!--top ends--> 
+  <!--header starts--> 
+  <div id="header"> 
+   <div class="container  header_inner clearfix"> 
+    <div class="grid_12"> 
+     <!--logo here--> 
+     <a href="/"> <img src="/images/branchbird_weblogo.png" width="250" height="82" alt="logo" class="logo"> </a> 
+     <!--menu / navigation starts--> 
+     <ul class="sf-menu"> 
+      <li><a href="/index.php">Home</a></li> 
+      <li><a href="#">What We Do</a> 
+       <ul> 
+        <li><a href="/discovery-for-agile-bi.php">Data Discovery &amp; Agile BI</a></li> 
+        <li><a href="/endeca-managed-analytics.php">Endeca Managed Analytics</a></li> 
+        <li><a href="/endeca-extensions-catalog.php">Extensions Catalog</a></li> 
+        <li><a href="/eee-cloud-offering.php">EEE Cloud Offering</a></li> 
+       </ul> </li> 
+      <li><a href="#">Who We Are</a> 
+       <ul> 
+        <li><a href="/leadership.php">Our Leadership</a></li> 
+        <li><a href="/team.php">Our Team</a></li> 
+        <li><a href="/our-approach.php">Our Approach</a></li> 
+        <li><a href="/our-customers.php">Our Customers</a></li> 
+        <li><a href="/our-partners.php">Our Partners</a></li> 
+       </ul> </li> 
+      <li><a href="#">Contact</a> 
+       <ul> 
+        <li><a href="/contact-us.php">Contact Us</a></li> 
+        <li><a href="/careers.php">Join Us</a></li> 
+        <li><a href="/news_events.php">News &amp; Events</a></li> 
+       </ul> </li> 
+      <li><a class="current" href="/blog">Blog</a> </li> 
+      <li><a id="downloads" class="" href="/blog/downloads">Downloads</a> </li> 
+     </ul> 
+     <!--menu ends--> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--header ends--> 
+  <div id="page" class="hfeed"> 
+   <header id="branding" role="banner" class="top_gradient"> 
+    <div class="container clearfix"> 
+     <div class="grid_12"> 
+      <!--page header starts--> 
+     </div> 
+    </div> 
+    <!--page header ends--> 
+   </header>
+   <!-- #branding --> 
+   <div id="main" class="container clearfix"> 
+    <div id="primary" class="color grid_12"> 
+     <div id="content" role="main"> 
+      <nav id="nav-above"> 
+       <h3 class="assistive-text">Post navigation</h3> 
+       <div class="nav-previous">
+        <a href="http://branchbird.com/blog/page/2/"><span class="meta-nav">←</span> Older posts</a>
+       </div> 
+       <div class="nav-next"></div> 
+      </nav>
+      <!-- #nav-above --> 
+      <article id="post-900" class="post-900 post type-post status-publish format-standard hentry category-bigdata category-endeca category-healthcare category-tips-and-tricks tag-data-discovery tag-healthcare"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://branchbird.com/blog/data-discovery-healthcare-3/" title="Permalink to Data Discovery In Healthcare — 3rd Installment" rel="bookmark">Data Discovery In Healthcare — 3rd Installment</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://branchbird.com/blog/data-discovery-healthcare-3/" title="9:26 pm" rel="bookmark"><time class="entry-date" datetime="2014-10-19T21:26:41+00:00" pubdate="">October 19, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://branchbird.com/blog/author/dbrock/" title="View all posts by Dan" rel="author">Dan</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://branchbird.com/blog/data-discovery-healthcare-3/#respond" title="Comment on Data Discovery In Healthcare — 3rd Installment"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>Ok. &nbsp;Now it is time to showoff. &nbsp;Check out some of the secret sauce Branchbird brings to the solution around unstructured data and custom visualizations…</p> 
+        <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="584" height="359" src="http://www.youtube.com/embed/FT6wqpCnnCI?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe></span></p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://branchbird.com/blog/category/bigdata/" title="View all posts in BigData" rel="category tag">BigData</a>, <a href="http://branchbird.com/blog/category/endeca/" title="View all posts in Endeca" rel="category tag">Endeca</a>, <a href="http://branchbird.com/blog/category/healthcare/" title="View all posts in Healthcare" rel="category tag">Healthcare</a>, <a href="http://branchbird.com/blog/category/tips-and-tricks/" title="View all posts in Tips And Tricks" rel="category tag">Tips And Tricks</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="tag-links"> <span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://branchbird.com/blog/tag/data-discovery/" rel="tag">Data Discovery</a>, <a href="http://branchbird.com/blog/tag/healthcare/" rel="tag">Healthcare</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://branchbird.com/blog/data-discovery-healthcare-3/#respond" title="Comment on Data Discovery In Healthcare — 3rd Installment"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-900 --> 
+      <article id="post-898" class="post-898 post type-post status-publish format-standard hentry category-endeca category-geospatial category-healthcare category-oeid tag-data-discovery tag-healthcare"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://branchbird.com/blog/data-discovery-healthcare-2/" title="Permalink to Data Discovery In Healthcare — 2nd Installment" rel="bookmark">Data Discovery In Healthcare — 2nd Installment</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://branchbird.com/blog/data-discovery-healthcare-2/" title="8:52 pm" rel="bookmark"><time class="entry-date" datetime="2014-10-19T20:52:45+00:00" pubdate="">October 19, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://branchbird.com/blog/author/dbrock/" title="View all posts by Dan" rel="author">Dan</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://branchbird.com/blog/data-discovery-healthcare-2/#respond" title="Comment on Data Discovery In Healthcare — 2nd Installment"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>Check out how our customer’s clinical researchers use the solution….</p> 
+        <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="584" height="359" src="http://www.youtube.com/embed/PgQuyDPBomk?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe></span></p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://branchbird.com/blog/category/endeca/" title="View all posts in Endeca" rel="category tag">Endeca</a>, <a href="http://branchbird.com/blog/category/geospatial/" title="View all posts in Geospatial" rel="category tag">Geospatial</a>, <a href="http://branchbird.com/blog/category/healthcare/" title="View all posts in Healthcare" rel="category tag">Healthcare</a>, <a href="http://branchbird.com/blog/category/oeid/" title="View all posts in OEID" rel="category tag">OEID</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="tag-links"> <span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://branchbird.com/blog/tag/data-discovery/" rel="tag">Data Discovery</a>, <a href="http://branchbird.com/blog/tag/healthcare/" rel="tag">Healthcare</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://branchbird.com/blog/data-discovery-healthcare-2/#respond" title="Comment on Data Discovery In Healthcare — 2nd Installment"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-898 --> 
+      <article id="post-895" class="post-895 post type-post status-publish format-standard hentry category-bigdata category-endeca category-geospatial category-healthcare category-oeid tag-data-discovery tag-healthcare"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://branchbird.com/blog/data-discovery-healthcare/" title="Permalink to Data Discovery In Healthcare — 1st Installment" rel="bookmark">Data Discovery In Healthcare — 1st Installment</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://branchbird.com/blog/data-discovery-healthcare/" title="8:25 pm" rel="bookmark"><time class="entry-date" datetime="2014-10-19T20:25:43+00:00" pubdate="">October 19, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://branchbird.com/blog/author/dbrock/" title="View all posts by Dan" rel="author">Dan</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://branchbird.com/blog/data-discovery-healthcare/#respond" title="Comment on Data Discovery In Healthcare — 1st Installment"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>Interested to understand how cutting edge healthcare providers are turning to data discovery solutions to unlock the insights in their medical records? &nbsp;Check out this real-world demonstration of what a recent Branchbird customer is doing to unlock a 360 degree view of their clinical outcomes leveraging all of their EMR data — both the structured and unstructured information.</p> 
+        <p>Take a look for yourself…</p> 
+        <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="584" height="359" src="http://www.youtube.com/embed/QQkhAj5i13s?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe></span></p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://branchbird.com/blog/category/bigdata/" title="View all posts in BigData" rel="category tag">BigData</a>, <a href="http://branchbird.com/blog/category/endeca/" title="View all posts in Endeca" rel="category tag">Endeca</a>, <a href="http://branchbird.com/blog/category/geospatial/" title="View all posts in Geospatial" rel="category tag">Geospatial</a>, <a href="http://branchbird.com/blog/category/healthcare/" title="View all posts in Healthcare" rel="category tag">Healthcare</a>, <a href="http://branchbird.com/blog/category/oeid/" title="View all posts in OEID" rel="category tag">OEID</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="tag-links"> <span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://branchbird.com/blog/tag/data-discovery/" rel="tag">Data Discovery</a>, <a href="http://branchbird.com/blog/tag/healthcare/" rel="tag">Healthcare</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://branchbird.com/blog/data-discovery-healthcare/#respond" title="Comment on Data Discovery In Healthcare — 1st Installment"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-895 --> 
+      <article id="post-885" class="post-885 post type-post status-publish format-standard hentry category-endeca category-geospatial category-oeid category-performance-tools"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://branchbird.com/blog/endeca-oil-gas-gis-shape-files/" title="Permalink to Fun with Shapefiles: The Two Utahs" rel="bookmark">Fun with Shapefiles: The Two Utahs</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://branchbird.com/blog/endeca-oil-gas-gis-shape-files/" title="2:38 am" rel="bookmark"><time class="entry-date" datetime="2014-09-24T02:38:09+00:00" pubdate="">September 24, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://branchbird.com/blog/author/prafferty/" title="View all posts by Patrick" rel="author">Patrick</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://branchbird.com/blog/endeca-oil-gas-gis-shape-files/#respond" title="Comment on Fun with Shapefiles: The Two Utahs"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>A little midweek enjoyment, courtesy of our Advanced Visualization Framework. &nbsp;Below, you can see a county-by-county map of Utah and all of its Oil and Gas Fields.</p> 
+        <p><iframe src="http://branchbird.com/utah.html" width="800" height="500" scrolling="no">&amp;nbsp;</iframe></p> 
+        <p>You can wave over counties and fields and get some basic statistics related to the county or field that&nbsp;you are inspecting. &nbsp;For fields, we have the oil/gas field status, the year it was opened and other basic information such as whether or not it was merged with another field.</p> 
+        <p>We had to “dumb it down a bit” and put it in to an iframe (WordPress!) but you can still some of the detail. &nbsp;It’s obviously not as flexible as our “real visualizations” (no zooming, no refining, etc.) that render inside of Oracle Endeca Studio but gives you a&nbsp;sense of how quickly and easily our technology incorporates advanced GIS data into a Data Discovery application.</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://branchbird.com/blog/category/endeca/" title="View all posts in Endeca" rel="category tag">Endeca</a>, <a href="http://branchbird.com/blog/category/geospatial/" title="View all posts in Geospatial" rel="category tag">Geospatial</a>, <a href="http://branchbird.com/blog/category/oeid/" title="View all posts in OEID" rel="category tag">OEID</a>, <a href="http://branchbird.com/blog/category/performance-tools/" title="View all posts in Performance Tools" rel="category tag">Performance Tools</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://branchbird.com/blog/endeca-oil-gas-gis-shape-files/#respond" title="Comment on Fun with Shapefiles: The Two Utahs"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-885 --> 
+      <article id="post-873" class="post-873 post type-post status-publish format-standard hentry category-endeca category-tips-and-tricks category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://branchbird.com/blog/deploying-endeca-portlets-weblogic/" title="Permalink to Deploying Oracle Endeca Portlets in WebLogic" rel="bookmark">Deploying Oracle Endeca Portlets in WebLogic</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://branchbird.com/blog/deploying-endeca-portlets-weblogic/" title="3:50 am" rel="bookmark"><time class="entry-date" datetime="2014-09-23T03:50:41+00:00" pubdate="">September 23, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://branchbird.com/blog/author/prafferty/" title="View all posts by Patrick" rel="author">Patrick</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://branchbird.com/blog/deploying-endeca-portlets-weblogic/#comments" title="Comment on Deploying Oracle Endeca Portlets in WebLogic">2</a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>We’re long overdue for a “public service” post dedicated to sharing&nbsp;best practices around how&nbsp;Branchbird does certain things during one of our implementation cycles. &nbsp;Past installments have covered <a title="Adventures in Installing – Oracle Endeca 3.1 Integrator" href="http://branchbird.com/blog/adventures-in-installing-oracle-endeca-3-1-integrator/">installation pitfalls</a>, <a title="Quick Hits: Temporal Analysis in Endeca" href="http://branchbird.com/blog/quick-hits-temporal-analysis-in-endeca/">temporal analysis</a> and the <a title="Installment 2: Under the Hood of the EBS Endeca Integration" href="http://branchbird.com/blog/under-the-hood-ebs-endeca-integration/">Endeca Extensions for Oracle EBS</a>.</p> 
+        <p>In this post, we’re sharing our internal playbook (adapted from our internal Wiki) for deploying custom portlets (such as our <a title="Introducing Visualizations 2.0" href="http://branchbird.com/blog/endeca-d3-visualizations/">Advanced Visualization Framework</a> or our <a title="Return to Action" href="http://branchbird.com/blog/editing-data-in-endeca/">Smart Tagger</a>) inside of an Oracle Endeca Studio instance on WebLogic.</p> 
+        <p>The <a href="http://docs.oracle.com/cd/E40519_01/studio.310/studio_admin/toc.htm#Adding%20and%20removing%20components%20from%20the%20Studio%20.ear%20file%20for%20WebLogic%20Server">documentation </a>is pretty light in this area so consider this our attempt to fill in the blanks for anyone looking to deploy their own portlets (or ours!) in a WebLogic environment. &nbsp;More after the jump… <a href="http://branchbird.com/blog/deploying-endeca-portlets-weblogic/#more-873" class="more-link">Continue reading <span class="meta-nav">→</span></a></p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://branchbird.com/blog/category/endeca/" title="View all posts in Endeca" rel="category tag">Endeca</a>, <a href="http://branchbird.com/blog/category/tips-and-tricks/" title="View all posts in Tips And Tricks" rel="category tag">Tips And Tricks</a>, <a href="http://branchbird.com/blog/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://branchbird.com/blog/deploying-endeca-portlets-weblogic/#comments" title="Comment on Deploying Oracle Endeca Portlets in WebLogic"><b>2</b> Replies</a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-873 --> 
+      <article id="post-848" class="post-848 post type-post status-publish format-standard hentry category-endeca category-integration category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://branchbird.com/blog/what-you-can-do-visualizations-oracle-endeca/" title="Permalink to What You Can Do…" rel="bookmark">What You Can Do…</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://branchbird.com/blog/what-you-can-do-visualizations-oracle-endeca/" title="9:42 pm" rel="bookmark"><time class="entry-date" datetime="2014-09-11T21:42:46+00:00" pubdate="">September 11, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://branchbird.com/blog/author/prafferty/" title="View all posts by Patrick" rel="author">Patrick</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://branchbird.com/blog/what-you-can-do-visualizations-oracle-endeca/#respond" title="Comment on What You Can Do…"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>Last week, we announced general availability of our Advanced Visualization Framework (AVF) for Oracle Endeca Information Discovery. &nbsp;We’ve received a lot of great feedback and we’re excited to see what our customers and partners can create&nbsp;and discover in a matter of days. Because the AVF is a framework, we’ve already gotten some questions and wanted to address some&nbsp;uncertainty around “what’s in the box”. &nbsp;For example: Is it really that easy? What capabilities does it have? What are the out of the box visualizations I get with the framework?</p> 
+        <h2>Ease of Use</h2> 
+        <p>If you haven’t already registered and downloaded some of the documentation and cookbook, I’d encourage you to do so. &nbsp;When we demoed the first version of the AVF&nbsp;at the <a href="http://www.rittmanmead.com/biforum2014/">Rittman Mead BI Forum</a> in Atlanta this spring, we wrapped up the presentation with&nbsp;a simple “file diff” of a Branchbird AVF&nbsp;visualization. &nbsp;It compared our AVF JavaScript and the corresponding “gallery entry” from the D3 site that we based it on. &nbsp;In addition to allowing us to plug one of our favorite utilities (Beyond Compare 3), it illustrated just how little code you need to change to inject powerful JavaScript into the AVF and into OEID. <a href="http://branchbird.com/blog/wp-content/uploads/2014/09/beyond-compare.png"><img class="aligncenter wp-image-862 size-medium" src="http://branchbird.com/blog/wp-content/uploads/2014/09/beyond-compare-300x143.png" alt="beyond-compare" width="300" height="143"></a></p> 
+        <h2>Capabilities</h2> 
+        <p>Talking about the framework is great, but the clearest&nbsp;way to show the capabilities&nbsp;of the AVG&nbsp;is by example. &nbsp;So, let’s take a deep dive into two of the visualizations we’ve been working on this week. &nbsp;First up, and it’s a mouthful, is our “micro-choropleth”. We started with a location-specific <a href="http://en.wikipedia.org/wiki/Choropleth_map">Choropleth </a>(follow the link for a textbook definition) centered around the City of Chicago. &nbsp;Using the multitude of <a href="http://data.cityofchicago.org">publicly available shape files for Chicago</a>, the gist of this visualization is to display some&nbsp;publicly available data at a micro-level, in this case crime statistics at a “Neighborhood” level: <a href="http://branchbird.com/blog/wp-content/uploads/2014/09/chicago-first.png"><img class="aligncenter wp-image-861 size-large" src="http://branchbird.com/blog/wp-content/uploads/2014/09/chicago-first-1024x505.png" alt="chicago-first" width="584" height="288"></a> It’s completely interactive, reacts to guided navigation, gives contextual information when you mouse&nbsp;over and even gives you the details about individual events (i.e. crimes) when you click in. <a href="http://branchbird.com/blog/wp-content/uploads/2014/09/chicago-with-table.png"><img class="aligncenter wp-image-855 size-large" src="http://branchbird.com/blog/wp-content/uploads/2014/09/chicago-with-table-1024x530.png" alt="chicago-with-table" width="584" height="302"></a> Great stuff but what if I don’t want to know about crime in Chicago? &nbsp;What if I want to track average length of stay in my hospital by where my&nbsp;patients reside? &nbsp; Similar data, same concept, how can I transition this concept easily? &nbsp;Well, our micro-choropleth has two key capabilities, both enabled by the framework, to account for this. &nbsp;Not only does&nbsp;it allow my visualization to contain&nbsp;a number of different shape layers by default (JavaScript objects for USA state-by-state, USA states and counties, etc.), it also gives you the ability to&nbsp;add additional ones via Studio (no XML, no code). <a href="http://branchbird.com/blog/wp-content/uploads/2014/09/config-top.png"><img class="aligncenter wp-image-857 size-medium" src="http://branchbird.com/blog/wp-content/uploads/2014/09/config-top-300x128.png" alt="config-top" width="300" height="128"></a> Once I’ve added the new JavaScript file containing the data shape, I can simply set some configuration to load this totally different geographic data frame rather than Chicago. &nbsp;I can then switch my geographic configuration (all enabled in my visualization’s definition) to indicate that I’ll be using zip codes rather than Chicago neighborhoods for my shapes. <a href="http://branchbird.com/blog/wp-content/uploads/2014/09/config-right.png"><img class="aligncenter wp-image-856 size-medium" src="http://branchbird.com/blog/wp-content/uploads/2014/09/config-right-300x137.png" alt="config-right" width="300" height="137"></a> Note that our health care data and medical notes are real but we de-identify the data, leaving our “public data” at the zip code level of granularity. &nbsp;From there, I simply change my query to hit population health&nbsp;data and calculate a different&nbsp;metric (length of stay in Days)&nbsp;and I’m done! <a href="http://branchbird.com/blog/wp-content/uploads/2014/09/dc-first.png"><img class="aligncenter wp-image-860 size-large" src="http://branchbird.com/blog/wp-content/uploads/2014/09/dc-first-1024x501.png" alt="dc-first" width="584" height="285"></a> That’s a pretty “wholesale” change that just got&nbsp;knocked out in a matter of minutes. &nbsp;It’s even easier to make small tweaks. &nbsp;For example, notice there are areas of “white” in my map that can look a little washed out. &nbsp;These are areas (such as the U.S. Naval Observatory) that have zip codes but lack any permanent residents. &nbsp;To increase the sharpness of my map, maybe I want to flip the line colors to black. &nbsp;I can go into the Preferences area and edit CSS to my heart’s content. &nbsp;In this case, I’ll flip the border class to “black” right through Studio (again, no cracking open the code)… <a href="http://branchbird.com/blog/wp-content/uploads/2014/09/config-bottom.png"><img class="aligncenter wp-image-858 size-medium" src="http://branchbird.com/blog/wp-content/uploads/2014/09/config-bottom-300x105.png" alt="config-bottom" width="300" height="105"></a>…and see the changes occur right away. <a href="http://branchbird.com/blog/wp-content/uploads/2014/09/dc-new.png"><img class="aligncenter wp-image-859 size-large" src="http://branchbird.com/blog/wp-content/uploads/2014/09/dc-new-1024x482.png" alt="dc-new" width="584" height="274"></a> The same form factor is valid&nbsp;for other visualizations that we’ve been working on. &nbsp;The following visualization leverages a D3 force layout to show a Node-Link analysis between NFL skill position players (it’s Fantasy Football season!) and the things they share in common (College attended, Draft Year, Draft Round, etc.). &nbsp;Below, I’ve narrowed down my data (approximately 10 years worth) by selecting&nbsp;some of the traditional powers in the SEC East and limiting to active players. <a href="http://branchbird.com/blog/wp-content/uploads/2014/09/sec-east1.png"><img class="aligncenter wp-image-867 size-large" src="http://branchbird.com/blog/wp-content/uploads/2014/09/sec-east1-1024x444.png" alt="" width="584" height="253"></a> This is an example of one of our “template visualizations”. &nbsp;It shows you relationships, interesting information but really is intended to show what you can do with your data. &nbsp;I don’t think the visualization below will help you win your fantasy league though it may help you answer a trivia question&nbsp;or two.</p> 
+        <p>However, the true&nbsp;value is in realizing how this can be used in real data scenarios. &nbsp;For example, picture a network of data related to intelligence gathering. &nbsp;I can visualize people, say known terrorists, and organizations they are affiliated with. &nbsp;From there, I can see others who may be affiliated with those organizations in a variety of ways (family relations, telephone calls, emails). &nbsp;The visualization is interactive, it lends itself to exploration through panning, scanning and re-centering. &nbsp;It can show all available detail about a given entity or relationship and provide focused detail when things get to be a bit of a jumble: And again, the key is configuration and flexibility over coding. &nbsp;The icons for each college are present on my web server&nbsp;but are <strong>driven entirely by the data</strong>, and <strong>retrieved and rendered using the framework</strong>. &nbsp;The color and behavior of my circles is configurable via CSS.</p> 
+        <h2>What’s In The Box?</h2> 
+        <p>So, you’re seeing some of the great stuff we’ve been building&nbsp;inside our AVF. &nbsp;Some of the visualizations are&nbsp;still in progress, some of them are&nbsp;“proof of concept”&nbsp;but a lot of it is already packaged up and included. We ship with visualizations for Box Plots, Donut Charts, Animated Timeline (aka Health and Wealth of Nations), and our Tree Map. &nbsp;In addition, we ship with almost a dozen code samples for other use cases that can give you a jump start on what you’re trying to create. This includes a US Choropleth (States and Counties), a number of hierarchical and parent-child discovery visualizations as well as a Sunburst chart. In addition, we’ll be “refreshing the library” on a monthly basis with new visualizations and updates to existing ones. &nbsp;These updates might&nbsp;be as simple as demonstrations of best practices and design&nbsp;patterns to fully fledged supported visualizations built by the Engineering team here in Chicago. &nbsp;Our customers and partners who are using the framework can expect an update on that front around the first of the month.</p> 
+        <p>As always, feedback and questions welcome at product [at] branchbird.com.</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://branchbird.com/blog/category/endeca/" title="View all posts in Endeca" rel="category tag">Endeca</a>, <a href="http://branchbird.com/blog/category/integration/" title="View all posts in Integration" rel="category tag">Integration</a>, <a href="http://branchbird.com/blog/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://branchbird.com/blog/what-you-can-do-visualizations-oracle-endeca/#respond" title="Comment on What You Can Do…"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-848 --> 
+      <article id="post-831" class="post-831 post type-post status-publish format-standard hentry category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://branchbird.com/blog/endeca-d3-visualizations/" title="Permalink to Introducing Visualizations 2.0" rel="bookmark">Introducing Visualizations 2.0</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://branchbird.com/blog/endeca-d3-visualizations/" title="3:05 am" rel="bookmark"><time class="entry-date" datetime="2014-09-02T03:05:44+00:00" pubdate="">September 2, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://branchbird.com/blog/author/prafferty/" title="View all posts by Patrick" rel="author">Patrick</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://branchbird.com/blog/endeca-d3-visualizations/#respond" title="Comment on Introducing Visualizations 2.0"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/08/box-plot.png"><img class="aligncenter wp-image-843 size-medium" src="http://branchbird.com/blog/wp-content/uploads/2014/08/box-plot-300x155.png" alt="box-plot" width="300" height="155"></a></p> 
+        <p>Branchbird is proud to announce general availability of&nbsp;our Advanced Visualization Framework (AVF) 2.0 for Oracle Endeca Information Discovery (OEID) today. A few months back, we released our first cut at&nbsp;a “framework within the framework” for building&nbsp;powerful data visualizations rapidly in an enterprise-class discovery environment. It allowed both our internal team and our customers to build visualizations that deliver powerful insights in a matter of days and hours (or sometimes minutes) rather than weeks and months. &nbsp;You find <a href="https://github.com/mbostock/d3/wiki/Gallery">something cool</a>, you plug the JavaScript into our framework, fill out some XML configuration and you’re on your way.</p> 
+        <h2>So What’s New?</h2> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/08/chloro.png"><img class="aligncenter size-medium wp-image-845" src="http://branchbird.com/blog/wp-content/uploads/2014/08/chloro-300x156.png" alt="chloro" width="300" height="156"></a></p> 
+        <p>This new release builds on top of our <a title="Build an Oracle Endeca Donut Chart In 15 Minutes" href="http://branchbird.com/blog/oracle-endeca-donut-chart/">previous&nbsp;work</a> and makes vast improvements both to how visualizations get built (using JavaScript) and configured (inside of OEID Studio). &nbsp;The most common piece of feedback we received the first time around was that, once an advanced visualization was ready to go, configuring that visualization could be exceedingly&nbsp;difficult even for a seasoned user. In this release, we’ve made great strides in improving what we call the configuration experience. &nbsp; Within this area, we’ve invested primarily in what&nbsp;we&nbsp;call <strong>ease of use</strong>&nbsp;and <strong>user guidance</strong>.</p> 
+        <h2>Ease of Use</h2> 
+        <p>We set out in this release to make every part of the configuration screens easier to understand. &nbsp;For each tab in our set of preferences, we’ve either streamlined the set of required fields and/or given the user a set of tools and information to use as a reference.</p> 
+        <p>For example, take the query writing process. &nbsp;In the previous version, users needed to enter their EQL essentially “without a net”. &nbsp;There was no config-side validation, no visual help with simple constructs such as the field names available in a view. &nbsp;It was hard, if not impossible, to get things right without some back and forth or three different browser tabs open. In the AVF 2.0, the EQL authoring process looks like this:</p> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/08/avf-eql.png"><img class="alignnone size-full wp-image-835" src="http://branchbird.com/blog/wp-content/uploads/2014/08/avf-eql.png" alt="avf-eql" width="851" height="751"></a>The user no longer has to remember field names and an at-a-glance reference showing display names, attribute keys and types is&nbsp;front and center. &nbsp;In addition, there is now on the spot validation of the query (upon hitting Save) to help diagnose any syntactical errors that may be present.</p> 
+        <p>Throughout the configuration experience, we’ve made things easier to use. &nbsp;But&nbsp;how does the AVG 2.0&nbsp;help the user through the full process of configuring a visualization (read on).</p> 
+        <h2>Guided Configuration</h2> 
+        <p>To that end, we set out to make it easy&nbsp;for&nbsp;developers to guide their users in configuring the data elements (queries, CSS, etc.) that provide the backing for a visualization. &nbsp;It was apparent very early on that, in many cases, building an advanced visualization requires some advanced capabilities. &nbsp;This can be illustrated in the famous “Wealth and Health of Nations” visualization that we call the Animated Timeline:</p> 
+        <p><img class="alignnone" src="http://i.gyazo.com/40ac92f9ee86b73deb80182b1df1a2ab.gif" alt="" width="871" height="313"></p> 
+        <p>It’s a really cool visualization with a nice combination of interactivity and&nbsp;dynamic playback. &nbsp;However, the first time we encountered it, it took us a moment to wrap our heads around questions such as “how&nbsp;many metrics?, how many group bys?”. &nbsp;It takes a fair amount of understanding to pull off generating the data for such a complex visualization*.</p> 
+        <p>For a complex visualization, the developer who wrote the JavaScript has this&nbsp;in-depth understanding. &nbsp;The trick is to provide a “no-code”&nbsp;capability for&nbsp;the developer to help the user along the configuration path. &nbsp;In this release, every visualization and nearly every configurable field for a visualization can be enabled for contextual help.</p> 
+        <p>This includes the visualization itself….</p> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/08/title-tip.png"><img class="alignnone size-full wp-image-837" src="http://branchbird.com/blog/wp-content/uploads/2014/08/title-tip.png" alt="title-tip" width="776" height="192"></a></p> 
+        <p>…its queries….</p> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/08/query-level.png"><img class="alignnone size-full wp-image-836" src="http://branchbird.com/blog/wp-content/uploads/2014/08/query-level.png" alt="query-level" width="615" height="384"></a></p> 
+        <p>and even Custom Preferences of your own design.</p> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/08/custom-tip.png"><img class="alignnone size-full wp-image-838" src="http://branchbird.com/blog/wp-content/uploads/2014/08/custom-tip.png" alt="custom-tip" width="770" height="237"></a></p> 
+        <p>Simply adding description attributes to the XML configuration for a given visualization type allows the developer to provide the power user with all the help they need.</p> 
+        <p>*For the record, the Animated Timeline uses 3 metrics (X, Y, size of the bubble) and 3 group by attributes (Detail, Color and Time).</p> 
+        <h2>Pruning the Hedges</h2> 
+        <p>Frankly,&nbsp;the first time we released&nbsp;this offering, we tried to make it too configurable and too open. &nbsp;Call it the software framework corollary of <a href="http://www.newyorker.com/magazine/2013/04/29/draft-no-4">“Four Drafts”</a>.</p> 
+        <p>To take one egregious example, the AVF 1.0&nbsp;had introduced the idea of configurable tokens. &nbsp;Configurable tokens are still available because they’re extremely flexible and valuable. &nbsp;However,&nbsp;we also had something called “conditional dynamic tokens”. &nbsp;These tokens&nbsp;came with their&nbsp;own grammar, best described as hieroglyphic, that governed their values at all times (sort of a symbolic case statement). &nbsp;It’s an extremely powerful construct for the developer (each token&nbsp;potentially saves you 5-10 lines of JavaScript) but completely confusing to the power user trying to configure a chart. &nbsp;Things like that are gone. &nbsp;The developer is left to do a little more work but the 99% of our users who are not making use of this functionality find the experience&nbsp;a lot easier to navigate. &nbsp;Less is more.</p> 
+        <h2>What’s Next</h2> 
+        <p>We’re also making a concerted effort to bring more developers into the fold. &nbsp;To that end, while we don’t make our framework available for download without some agreements in place, our Installation Guide and AVF Developer’s Guide can be found on our <a href="http://branchbird.com/blog/downloads">Downloads </a>page and are available to registered&nbsp;users. &nbsp;To register at Bird’s Eye View, simply click&nbsp;<a href="http://branchbird.com/blog/wp-login.php?action=register">here</a>&nbsp;or use the registration link on the right. The most exciting part of the whole documentation set (talk about an oxymoron) is a new section&nbsp;of the Developer’s Guide called the Cookbook. &nbsp;It’s a set of small, simple examples that allow&nbsp;developers to quickly come up to speed on the framework and start writing visualizations&nbsp;that much faster (15 minutes). If you’re interested in learning more, don’t hesitate to comment below or drop us a line at product [at] branchbird.com.</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://branchbird.com/blog/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://branchbird.com/blog/endeca-d3-visualizations/#respond" title="Comment on Introducing Visualizations 2.0"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-831 --> 
+      <article id="post-810" class="post-810 post type-post status-publish format-standard hentry category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://branchbird.com/blog/editing-data-in-endeca/" title="Permalink to Return to Action" rel="bookmark">Return to Action</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://branchbird.com/blog/editing-data-in-endeca/" title="9:26 pm" rel="bookmark"><time class="entry-date" datetime="2014-08-08T21:26:51+00:00" pubdate="">August 8, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://branchbird.com/blog/author/prafferty/" title="View all posts by Patrick" rel="author">Patrick</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://branchbird.com/blog/editing-data-in-endeca/#respond" title="Comment on Return to Action"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>Late last year, we introduced some<a title="Extending Collaborative Data Discovery" href="http://branchbird.com/blog/extending-collaborative-data-discovery/"> incredibly compelling capabilities</a> that allowed users&nbsp;to collaborate with each other&nbsp;inside of Oracle Endeca Information Discovery (OEID) 3.0. Our collaborative discovery extension&nbsp;allowed users with certain permissions to&nbsp;delete records, edit attributes of records and add attribute values to existing attributes, all from within OEID Studio. &nbsp;It’s an incredibly powerful way&nbsp;to <a title="Extending Collaborative Data Discovery – Common Scenarios" href="http://branchbird.com/blog/extending-collaborative-data-discovery-common-scenarios/">assist in data cleanup, data flagging or grouping certain records together with applicability to almost every data discovery scenario</a>. We’re pleased to announce that we’ve re-launched&nbsp;this functionality and it is now available for&nbsp;licensed users of OEID 3.1. &nbsp;The same great capabilities that have always been there remain, but we’ve&nbsp;given it a bit of a facelift as part of the upgrade, as you can see below.</p> 
+        <h2>Deleting Misleading or Invalid Records</h2> 
+        <p style="text-align: center;"><a href="http://branchbird.com/blog/wp-content/uploads/2014/08/delete-pre-amble.png"><img class="alignnone wp-image-815 size-full" src="http://branchbird.com/blog/wp-content/uploads/2014/08/delete-pre-amble.png" alt="delete-pre-amble" width="1920" height="1080"></a>Hey, this tweet has nothing to do with the Olympics!</p> 
+        <p style="text-align: left;">Occasionally incorrect or misleading data&nbsp;will find its way into a given application. &nbsp;If it has no business being there or has an unwanted, adverse affect, let’s get rid of it! Hey, this tweet has nothing to do with the Olympics! <a href="http://branchbird.com/blog/wp-content/uploads/2014/08/add-pre-amble.png"><img class="alignnone size-full wp-image-816" src="http://branchbird.com/blog/wp-content/uploads/2014/08/delete-tweets.png" alt="delete-tweets" width="1920" height="1080"></a> Bye, bye spammer! <a href="http://branchbird.com/blog/wp-content/uploads/2014/08/tweet-deleted.png"><img class="alignnone wp-image-818 size-full" src="http://branchbird.com/blog/wp-content/uploads/2014/08/tweet-deleted.png" alt="tweet-deleted" width="1920" height="1080"></a></p> 
+        <h2 style="text-align: left;">Augmenting Existing Records With More Attribution</h2> 
+        <p>In addition, users may find something interesting on a record (or set of records) and want to take action to augment the attribution of the record. &nbsp;Below, two terrorist incidents (from one of our internal applications) have been identified as possibly having links to ISIS based on location: <a href="http://branchbird.com/blog/wp-content/uploads/2014/08/add-pre-amble.png"><img class="alignnone wp-image-814 size-full" src="http://branchbird.com/blog/wp-content/uploads/2014/08/add-pre-amble.png" alt="add-pre-amble" width="1920" height="1080"></a> The data can be augmented by selecting the field to hold&nbsp;this additional information (for simplicity sake, we added it to “Themes”)… <a href="http://branchbird.com/blog/wp-content/uploads/2014/08/add-themes-1.png"><img class="alignnone wp-image-813 size-full" src="http://branchbird.com/blog/wp-content/uploads/2014/08/add-themes-1.png" alt="add-themes-1" width="1920" height="1080"></a> …adding the additional value (or values): <a href="http://branchbird.com/blog/wp-content/uploads/2014/08/add-themes-2.png"><img class="alignnone size-full wp-image-812" src="http://branchbird.com/blog/wp-content/uploads/2014/08/add-themes-2.png" alt="add-themes-2" width="1920" height="1080"></a></p> 
+        <h2>Replacing Existing Attributes on Records</h2> 
+        <p>In the same vein as the first use case, users may find a record or set of records where they want to set a brand new value for an attribute. &nbsp;It could be changing a Status from Open to Closed or from Valid to Invalid or maybe correcting an error during ingest such as a poorly calculated sentiment score. <a href="http://branchbird.com/blog/wp-content/uploads/2014/08/replace-sentiment.png"><img class="alignnone size-full wp-image-811" src="http://branchbird.com/blog/wp-content/uploads/2014/08/replace-sentiment.png" alt="replace-sentiment" width="1920" height="1080"></a> After each change, we update the index upon selection of “Apply Changes”. &nbsp;If you look below, you can see the result in the&nbsp;application reflected immediately: <a href="http://branchbird.com/blog/wp-content/uploads/2014/08/tadah.png"><img class="alignnone size-full wp-image-817" src="http://branchbird.com/blog/wp-content/uploads/2014/08/tadah.png" alt="tadah" width="1920" height="1080"></a> Now, there’s one final piece that hasn’t been mentioned that completely closes the loop. &nbsp;Since an Oracle Endeca Discovery Application is typically not the “system of record”, there’s the possibility that an update sourced&nbsp;from an upstream system could override changes made by users. We’ve accounted for that as well by persisting all changes to a dedicated database store that can be integrated into the update process. &nbsp;For example, if I’ve deleted a record from my application, I can use the “log of deletes” in the database as a data source in any ETL processes&nbsp;that may happen subsequently. &nbsp;Simply&nbsp;filter the incoming data stream using the data stored in the database and you’re good to go. &nbsp;If there are attribute replacements and additions, they work the same way and are tracked and logged appropriately.</p> 
+        <p>If you’re interested in pricing or capabilities or just want to give feedback, drop us a line at product [at] branchbird.com. &nbsp;It’s already been delivered to a customer in Spain last month and we’re looking forward to seeing more and more people in the community get their hands on it.</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://branchbird.com/blog/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://branchbird.com/blog/editing-data-in-endeca/#respond" title="Comment on Return to Action"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-810 --> 
+      <article id="post-677" class="post-677 post type-post status-publish format-standard hentry category-endeca category-healthcare category-oeid"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://branchbird.com/blog/endeca-fast-text-tagger/" title="Permalink to Tag 100 Times Faster — Introducing Branchbird’s Fast Text Tagger" rel="bookmark">Tag 100 Times Faster — Introducing Branchbird’s Fast Text Tagger</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://branchbird.com/blog/endeca-fast-text-tagger/" title="7:22 pm" rel="bookmark"><time class="entry-date" datetime="2014-02-14T19:22:13+00:00" pubdate="">February 14, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://branchbird.com/blog/author/dbasil/" title="View all posts by Dustin" rel="author">Dustin</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://branchbird.com/blog/endeca-fast-text-tagger/#respond" title="Comment on Tag 100 Times Faster — Introducing Branchbird’s Fast Text Tagger"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/02/BBFTTClip.png"><img class="aligncenter size-full wp-image-697" alt="BBFTTClip" src="http://branchbird.com/blog/wp-content/uploads/2014/02/BBFTTClip.png" width="199" height="93"></a>Text Tagging is the process of using a list of keywords to search and annotate unstructured data. This capability is&nbsp;frequently required by Branchbird customers, most notably in the healthcare industry.</p> 
+        <p>Oracle’s Endeca Data Integrator provides three different ways to text tag your data&nbsp;“out of the box”&nbsp;.</p> 
+        <ul class="list1"> 
+         <li>The first is the “Text Tagger – Whitelist” component which is fed a list of keywords and searches your text for exact matches.</li> 
+         <li>The second is the “Text Tagger – Regex” component which works similarly but allows for the use of regular expressions to expand the fuzzy matching capabilities when searching the text.</li> 
+         <li>The third is using “Endeca’s Text Enrichment” component (OEM’ed from Lexalytics) and supplying a model (keyword list) that takes advantage of the component’s model-based entity extraction.</li> 
+        </ul> 
+        <p>Branchbird began working on a custom text tagging component due to challenges with the aforementioned components at scale. All of the above text taggers are built to handle tagging with relatively small inputs — both the size of the supplied dictionary and the number (and size) of documents.</p> 
+        <table class="table" border="1"> 
+         <tbody> 
+          <tr> 
+           <th></th> 
+           <th>1,000 EMRs</th> 
+           <th>10,000 EMRs</th> 
+           <th>100,000 EMRs</th> 
+           <th>1,000,000 EMRs</th> 
+          </tr> 
+          <tr> 
+           <td>Fast Text Tagger (FTT)</td> 
+           <td>250 docs/sec</td> 
+           <td>1,428 docs/sec</td> 
+           <td>4,347 docs/sec</td> 
+           <td>6172 docs/sec</td> 
+          </tr> 
+          <tr> 
+           <td>Text Enrichment (TE)</td> 
+           <td>6.5 docs/second</td> 
+           <td>5 docs/second</td> 
+           <td>N/A</td> 
+           <td>N/A</td> 
+          </tr> 
+          <tr> 
+           <td>TE 4 threads</td> 
+           <td>17.5 docs/second</td> 
+           <td>15 docs/second</td> 
+           <td>15 docs/second</td> 
+           <td>N/A</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p>In one of our most common use cases, customers analyzing electronic medical records with Endeca need to enrich large amounts of free text (typically physician notes) using a medical ontology such as SNOMED-CT or MeSH. Each of these ontologies has a large number of medical “concepts” and their associated synonyms. For example, the US version of SNOMED-CT contains nearly 150,000 concepts. Unfortunately, the “out of the box” text tagger components do not perform well beyond a couple hundred keywords. To realize slightly better throughput during tagging, Endeca developers have traditionally leveraged the third component listed above — the &nbsp;Lexalytics-based “Text Enrichment” component — which offers better performance than the other options listed above.</p> 
+        <p>However, after extensive use of the “Text Enrichment” component, it became clear that not only was the performance still not acceptable at high scale, the recall of the component was inadequate especially with Electronic Medical Records (EMRs). The Text Enrichment component is NLP-based and relies on accurately parsing sentence structure and word boundaries to tokenize the document before entity extraction begins. EMRs typically have very challenging sentence structure due both to the ad hoc writing style of clinicians at point of entry and the observational metrics embedded in the record. Because of this, Text Enrichment of even small documents at high scale can be prohibitive for simple text tagging. A recent customer of ours, using very high end enterprise equipment, was experiencing 24 hour processing times using Text Enrichment text tagging with SNOMED-CT concepts to process approximately six million EMRs.</p> 
+        <p>To improve both the performance and recall issues, Branchbird set out to build a simple text tagger component for Integrator that would be easy to setup and use. The Branchbird “Fast Text Tagger” was built using a high performance dictionary matching algorithm that ingests the list of terms (and phrases) into a finite state pattern matching machine which can then be used to process the documents. One of the largest benefits of these search algorithms is that the document text only needs to be parsed once to find all possible matches within the supplied dictionary.</p> 
+        <p>The Branchbird Fast Text Tagger is intended to replace the stock “Text Tagger – Whitelist” component and the use of the “Text Enrichment” component for whitelisting. Our text tagger is intended for straight text matching with optional restrictions to allow for matching on word boundaries. If your use cases require more fuzzy-style text matching, then you should continue to use the “Text Tagger – Regexp” at low scale and “Text Enrichment” at higher scales.</p> 
+        <h1>Performance Observations</h1> 
+        <p>To go further on the metrics shown above, and duplicated here, you can see the remarkable performance of the Branchbird Fast Text Tagger as compared to “Text Enrichment” even when Text Enrichment is configured to consume 4 threads. Furthermore, the rate of the BB FTT tends to increase with the number of documents, before starting to level off near 1 million documents, whereas Text Enrichment stays relatively constant.</p> 
+        <table class="tftable" border="1"> 
+         <tbody> 
+          <tr> 
+           <th></th> 
+           <th>1,000 EMRs</th> 
+           <th>10,000 EMRs</th> 
+           <th>100,000 EMRs</th> 
+           <th>1,000,000 EMRs</th> 
+          </tr> 
+          <tr> 
+           <td>BB FTT 1 thread</td> 
+           <td>250 docs/sec</td> 
+           <td>1,428 docs/sec</td> 
+           <td>4,347 docs/sec</td> 
+           <td>6172 docs/sec</td> 
+          </tr> 
+          <tr> 
+           <td>TE 1 thread</td> 
+           <td>6.5 docs/second</td> 
+           <td>5 docs/second</td> 
+           <td>N/A</td> 
+           <td>N/A</td> 
+          </tr> 
+          <tr> 
+           <td>TE 4 threads</td> 
+           <td>17.5 docs/second</td> 
+           <td>15 docs/second</td> 
+           <td>15 docs/second</td> 
+           <td>N/A</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p>As a final performance note, the previously mentioned customer with the 24 hour graph run just for text tagging, the same process was done on this same test harness with the same data in just shy of <strong>20 minutes</strong>. It took longer to read the data from disk than it took to stream it all through the Fast Text Tagger. &nbsp;This implies that, in typical use cases, the Fast Text Tagger will not be a limiting component in your graph. For those of you curious about the benchmarking methods used, please continue below.</p> 
+        <h1>Test Runs</h1> 
+        <p>We built a graph that could execute the different test configurations sequentially and then compile the results. Shown below are four separate test runs and a screen capture of Integrator at test completion. Below each screen cap is a list of metrics:</p> 
+        <ul class="list1"> 
+         <li>Match AVG: The average number of concepts extracted over the corpus</li> 
+         <li>Total Match: The total number of concepts extracted over the corpus</li> 
+         <li>Misses: The number of non-empty EMRs where no concept was found</li> 
+         <li>Exec Time: The total execution time of the test configuration</li> 
+        </ul> 
+        <p>Note that Text Enrichment’s poor recall negatively impacts its precision (Match AVG). If you remove the (significant number of) misses, TE has precision nearly as high as our Fast Text Tagger.</p> 
+        <h3>Test 1: 1,000 EMRs</h3> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/02/1000EMRs.png"><img class="alignnone size-full wp-image-688" alt="1000EMRs" src="http://branchbird.com/blog/wp-content/uploads/2014/02/1000EMRs.png" width="1266" height="726"></a><br> 
+         <!-- begin generated table 2--/></p>
+<style type="text/css"><!-- .tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;} .tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;} .tftable tr {background-color:#ffffff;} .tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;} .tftable tr:hover {background-color:#ffff99;} --></p> 
+        <table class="tftable" border="1"> 
+         <tbody> 
+          <tr> 
+           <th>Test ID</th> 
+           <th>Match AVG</th> 
+           <th>Total Match</th> 
+           <th>Misses</th> 
+           <th>Exec Time</th> 
+          </tr> 
+          <tr> 
+           <td>BB FTT (1 thread)</td> 
+           <td>9</td> 
+           <td>9,126</td> 
+           <td>14</td> 
+           <td>4 secs</td> 
+          </tr> 
+          <tr> 
+           <td>TE (1 thread)</td> 
+           <td>4</td> 
+           <td>4,876</td> 
+           <td>260</td> 
+           <td>153 secs</td> 
+          </tr> 
+          <tr> 
+           <td>TE (4 threads)</td> 
+           <td>4</td> 
+           <td>4,876</td> 
+           <td>260</td> 
+           <td>57 secs</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p>
+         <!-- end generated table 2 --></p> 
+        <h3>Test 2: 10,000 EMRs</h3> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/02/10000EMRs.png"><img class="alignnone size-full wp-image-687" alt="10000EMRs" src="http://branchbird.com/blog/wp-content/uploads/2014/02/10000EMRs.png" width="1273" height="687"></a><br> 
+         <!-- begin generated table 3--/></p>
+<style type="text/css"><!-- .tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;} .tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;} .tftable tr {background-color:#ffffff;} .tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;} .tftable tr:hover {background-color:#ffff99;} --></p> 
+        <table class="tftable" border="1"> 
+         <tbody> 
+          <tr> 
+           <th>Test ID</th> 
+           <th>Match AVG</th> 
+           <th>Total Match</th> 
+           <th>Misses</th> 
+           <th>Exec Time</th> 
+          </tr> 
+          <tr> 
+           <td>BB FTT (1 thread)</td> 
+           <td>12</td> 
+           <td>127,617</td> 
+           <td>14</td> 
+           <td>7 secs</td> 
+          </tr> 
+          <tr> 
+           <td>TE (1 thread)</td> 
+           <td>5</td> 
+           <td>55,567</td> 
+           <td>3,739</td> 
+           <td>2,010 secs</td> 
+          </tr> 
+          <tr> 
+           <td>TE (4 threads)</td> 
+           <td>5</td> 
+           <td>55,567</td> 
+           <td>3,739</td> 
+           <td>675 secs</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p>
+         <!-- end generated table 3 --></p> 
+        <h3>Test 3: 100,000 EMRs</h3> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/02/100000EMRs.png"><img class="alignnone size-full wp-image-686" alt="100000EMRs" src="http://branchbird.com/blog/wp-content/uploads/2014/02/100000EMRs.png" width="1294" height="565"></a><br> 
+         <!-- begin generated table 4--/></p>
+<style type="text/css"><!-- .tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;} .tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;} .tftable tr {background-color:#ffffff;} .tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;} .tftable tr:hover {background-color:#ffff99;} --></p> 
+        <table class="tftable" border="1"> 
+         <tbody> 
+          <tr> 
+           <th>Test ID</th> 
+           <th>Match AVG</th> 
+           <th>Total Match</th> 
+           <th>Misses</th> 
+           <th>Exec Time</th> 
+          </tr> 
+          <tr> 
+           <td>BB FTT (1 thread)</td> 
+           <td>13</td> 
+           <td>1,380,258</td> 
+           <td>17</td> 
+           <td>23 secs</td> 
+          </tr> 
+          <tr> 
+           <td>TE (4 threads)</td> 
+           <td>5</td> 
+           <td>546,598</td> 
+           <td>38,466</td> 
+           <td>6,555 secs</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p>
+         <!-- end generated table 4 --></p> 
+        <h3>Test 4: 1,000,000 EMRs</h3> 
+        <p><a href="http://branchbird.com/blog/wp-content/uploads/2014/02/1000000EMRs.png"><img class="alignnone size-full wp-image-685" alt="1000000EMRs" src="http://branchbird.com/blog/wp-content/uploads/2014/02/1000000EMRs.png" width="1248" height="544"></a><br> 
+         <!-- begin generated table 5--/></p>
+<style type="text/css"><!-- .tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;} .tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;} .tftable tr {background-color:#ffffff;} .tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;} .tftable tr:hover {background-color:#ffff99;} --></p> 
+        <table class="tftable" border="1"> 
+         <tbody> 
+          <tr> 
+           <th>Test ID</th> 
+           <th>Match AVG</th> 
+           <th>Total Match</th> 
+           <th>Misses</th> 
+           <th>Exec Time</th> 
+          </tr> 
+          <tr> 
+           <td>BB FTT (1 thread)</td> 
+           <td>14</td> 
+           <td>14,834,247</td> 
+           <td>17</td> 
+           <td>162 secs</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p>
+         <!-- end generated table 5 --></p> 
+        <h1>Benchmarking Notes</h1> 
+        <p>Tests conducted on OEID 3.1 using the US SNOMED-CT concept dictionary (148,000 concepts) against authentic Electronic Medical Records. Physical hardware used: PC, 4 core i7 with hyperthreading, 32 GB RAM on SSD drives.</p> 
+        <p>The "Text Tagger – Whitelist" was discarded as unusable for this test setup. "Text Enrichment" with 1 thread was discarded after the 10,000 document run and TE with 4 threads was discarded after the 100,000 document run.</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://branchbird.com/blog/category/endeca/" title="View all posts in Endeca" rel="category tag">Endeca</a>, <a href="http://branchbird.com/blog/category/healthcare/" title="View all posts in Healthcare" rel="category tag">Healthcare</a>, <a href="http://branchbird.com/blog/category/oeid/" title="View all posts in OEID" rel="category tag">OEID</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://branchbird.com/blog/endeca-fast-text-tagger/#respond" title="Comment on Tag 100 Times Faster — Introducing Branchbird’s Fast Text Tagger"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-677 --> 
+      <article id="post-667" class="post-667 post type-post status-publish format-standard hentry category-endeca category-oeid"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"><a href="http://branchbird.com/blog/oracle-endeca-donut-chart/" title="Permalink to Build an Oracle Endeca Donut Chart In 15 Minutes" rel="bookmark">Build an Oracle Endeca Donut Chart In 15 Minutes</a></h1> 
+        <div class="entry-meta"> 
+         <span class="sep">Posted on </span>
+         <a href="http://branchbird.com/blog/oracle-endeca-donut-chart/" title="9:58 pm" rel="bookmark"><time class="entry-date" datetime="2014-02-03T21:58:37+00:00" pubdate="">February 3, 2014</time></a>
+         <span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://branchbird.com/blog/author/prafferty/" title="View all posts by Patrick" rel="author">Patrick</a></span></span> 
+        </div>
+        <!-- .entry-meta --> 
+        <div class="comments-link"> 
+         <a href="http://branchbird.com/blog/oracle-endeca-donut-chart/#respond" title="Comment on Build an Oracle Endeca Donut Chart In 15 Minutes"><span class="leave-reply">Reply</span></a> 
+        </div> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p>We put together a quick demo of how to use our Advanced Visualization Framework to be more productive. &nbsp;In this installment, we go “from zero to Donut Chart” in 15 minutes (really, 13 minutes).</p> 
+        <p> <a href="http://branchbird.com/blog/oracle-endeca-donut-chart/#more-667" class="more-link">Continue reading <span class="meta-nav">→</span></a></p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <span class="cat-links"> <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://branchbird.com/blog/category/endeca/" title="View all posts in Endeca" rel="category tag">Endeca</a>, <a href="http://branchbird.com/blog/category/oeid/" title="View all posts in OEID" rel="category tag">OEID</a> </span> 
+        <span class="sep"> | </span> 
+        <span class="comments-link"><a href="http://branchbird.com/blog/oracle-endeca-donut-chart/#respond" title="Comment on Build an Oracle Endeca Donut Chart In 15 Minutes"><span class="leave-reply">Leave a reply</span></a></span> 
+       </footer>
+       <!-- #entry-meta --> 
+      </article>
+      <!-- #post-667 --> 
+      <nav id="nav-below"> 
+       <h3 class="assistive-text">Post navigation</h3> 
+       <div class="nav-previous">
+        <a href="http://branchbird.com/blog/page/2/"><span class="meta-nav">←</span> Older posts</a>
+       </div> 
+       <div class="nav-next"></div> 
+      </nav>
+      <!-- #nav-above --> 
+     </div>
+     <!-- #content --> 
+    </div>
+    <!-- #primary --> 
+    <div id="secondary" class="widget-area" role="complementary"> 
+     <aside id="search-2" class="widget widget_search"> 
+      <form method="get" id="searchform" action="http://branchbird.com/blog/"> 
+       <label for="s" class="assistive-text">Search</label> 
+       <input type="text" class="field" name="s" id="s" placeholder="Search"> 
+       <input type="submit" class="submit" name="submit" id="searchsubmit" value="Search"> 
+      </form> 
+     </aside> 
+     <aside id="recent-posts-2" class="widget widget_recent_entries"> 
+      <h3 class="widget-title">Recent Posts</h3> 
+      <ul> 
+       <li> <a href="http://branchbird.com/blog/data-discovery-healthcare-3/">Data Discovery In Healthcare — 3rd Installment</a> </li> 
+       <li> <a href="http://branchbird.com/blog/data-discovery-healthcare-2/">Data Discovery In Healthcare — 2nd Installment</a> </li> 
+       <li> <a href="http://branchbird.com/blog/data-discovery-healthcare/">Data Discovery In Healthcare — 1st Installment</a> </li> 
+       <li> <a href="http://branchbird.com/blog/endeca-oil-gas-gis-shape-files/">Fun with Shapefiles: The Two Utahs</a> </li> 
+       <li> <a href="http://branchbird.com/blog/deploying-endeca-portlets-weblogic/">Deploying Oracle Endeca Portlets in WebLogic</a> </li> 
+      </ul> 
+     </aside>
+     <aside id="recent-comments-2" class="widget widget_recent_comments">
+      <h3 class="widget-title">Recent Comments</h3>
+      <ul id="recentcomments">
+       <li class="recentcomments"><a href="http://branchbird.com" rel="external nofollow" class="url">Patrick</a> on <a href="http://branchbird.com/blog/deploying-endeca-portlets-weblogic/#comment-649">Deploying Oracle Endeca Portlets in WebLogic</a></li>
+       <li class="recentcomments">Brinda on <a href="http://branchbird.com/blog/deploying-endeca-portlets-weblogic/#comment-648">Deploying Oracle Endeca Portlets in WebLogic</a></li>
+       <li class="recentcomments"><a href="http://branchbird.com/blog/endeca-d3-visualizations/" rel="external nofollow" class="url">Introducing Visualizations 2.0 | Bird's Eye View</a> on <a href="http://branchbird.com/blog/downloads/#comment-614">Downloads</a></li>
+       <li class="recentcomments"><a href="http://branchbird.com/blog/editing-data-in-endeca/" rel="external nofollow" class="url">Return to Action | Bird's Eye View</a> on <a href="http://branchbird.com/blog/extending-collaborative-data-discovery/#comment-599">Extending Collaborative Data Discovery</a></li>
+       <li class="recentcomments">Surendra on <a href="http://branchbird.com/blog/the-atg-endeca-integration-part-i/#comment-586">The ATG-Endeca Integration – Part I: Installing ATG</a></li>
+      </ul>
+     </aside>
+     <aside id="categories-2" class="widget widget_categories">
+      <h3 class="widget-title">Categories</h3> 
+      <ul> 
+       <li class="cat-item cat-item-17"><a href="http://branchbird.com/blog/category/atg/" title="View all posts filed under ATG">ATG</a> (5) </li> 
+       <li class="cat-item cat-item-13"><a href="http://branchbird.com/blog/category/bigdata/" title="View all posts filed under BigData">BigData</a> (10) </li> 
+       <li class="cat-item cat-item-12"><a href="http://branchbird.com/blog/category/connectors/" title="View all posts filed under Connectors">Connectors</a> (4) </li> 
+       <li class="cat-item cat-item-25"><a href="http://branchbird.com/blog/category/content-management/" title="View all posts filed under Content Management">Content Management</a> (1) </li> 
+       <li class="cat-item cat-item-16"><a href="http://branchbird.com/blog/category/customer-experience-management/" title="View all posts filed under Customer Experience Management">Customer Experience Management</a> (4) </li> 
+       <li class="cat-item cat-item-14"><a href="http://branchbird.com/blog/category/daas/" title="View all posts filed under DaaS">DaaS</a> (1) </li> 
+       <li class="cat-item cat-item-18"><a href="http://branchbird.com/blog/category/data-modeling/" title="View all posts filed under Data Modeling">Data Modeling</a> (3) </li> 
+       <li class="cat-item cat-item-7"><a href="http://branchbird.com/blog/category/debugging/" title="View all posts filed under Debugging">Debugging</a> (2) </li> 
+       <li class="cat-item cat-item-8"><a href="http://branchbird.com/blog/category/deep-thoughts/" title="View all posts filed under Deep Thoughts">Deep Thoughts</a> (3) </li> 
+       <li class="cat-item cat-item-22"><a href="http://branchbird.com/blog/category/e-business-suite/" title="View all posts filed under E-Business Suite">E-Business Suite</a> (3) </li> 
+       <li class="cat-item cat-item-6"><a href="http://branchbird.com/blog/category/endeca/" title="View all posts filed under Endeca">Endeca</a> (35) </li> 
+       <li class="cat-item cat-item-33"><a href="http://branchbird.com/blog/category/geospatial/" title="View all posts filed under Geospatial">Geospatial</a> (3) </li> 
+       <li class="cat-item cat-item-28"><a href="http://branchbird.com/blog/category/healthcare/" title="View all posts filed under Healthcare">Healthcare</a> (5) </li> 
+       <li class="cat-item cat-item-10"><a href="http://branchbird.com/blog/category/integration/" title="View all posts filed under Integration">Integration</a> (12) </li> 
+       <li class="cat-item cat-item-9"><a href="http://branchbird.com/blog/category/musings/" title="View all posts filed under Musings">Musings</a> (3) </li> 
+       <li class="cat-item cat-item-31"><a href="http://branchbird.com/blog/category/obi/" title="View all posts filed under OBI">OBI</a> (1) </li> 
+       <li class="cat-item cat-item-15"><a href="http://branchbird.com/blog/category/oeid/" title="View all posts filed under OEID">OEID</a> (25) </li> 
+       <li class="cat-item cat-item-3"><a href="http://branchbird.com/blog/category/performance-tools/" title="View all posts filed under Performance Tools">Performance Tools</a> (2) </li> 
+       <li class="cat-item cat-item-11"><a href="http://branchbird.com/blog/category/qlikview/" title="View all posts filed under QlikView">QlikView</a> (2) </li> 
+       <li class="cat-item cat-item-5"><a href="http://branchbird.com/blog/category/tips-and-tricks/" title="View all posts filed under Tips And Tricks">Tips And Tricks</a> (14) </li> 
+       <li class="cat-item cat-item-1"><a href="http://branchbird.com/blog/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a> (22) </li> 
+       <li class="cat-item cat-item-4"><a href="http://branchbird.com/blog/category/welcome/" title="View all posts filed under Welcome">Welcome</a> (2) </li> 
+      </ul> 
+     </aside>
+     <aside id="meta-2" class="widget widget_meta">
+      <h3 class="widget-title">Profile and Tools</h3> 
+      <ul> 
+       <li><a href="http://branchbird.com/blog/wp-login.php?action=register">Register</a></li> 
+       <li><a href="http://branchbird.com/blog/wp-login.php">Log in</a></li> 
+       <li><a href="http://branchbird.com/blog/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+       <li><a href="http://branchbird.com/blog/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+       <li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li> 
+      </ul> 
+     </aside> 
+    </div>
+    <!-- #secondary .widget-area --> 
+   </div>
+   <!-- #main --> 
+   <!--footer starts--> 
+   <div id="footer"> 
+    <div class="container footer_inner clearfix"> 
+     <!--about starts--> 
+     <div class="grid_4 first"> 
+      <h4>About Branchbird</h4> 
+      <p>Branchbird solves big data problems for companies by providing world class agile business intelligence services and solutions. Our work empowers companies to make better decisions, derive new insights from a variety of data sources and surface the competitive advantages that are critical for success.</p> 
+     </div> 
+     <!--about ends--> 
+     <!--social starts--> 
+     <div class="grid_5"> 
+      <h4>Socialize with us</h4> 
+      <div id="twitter"> 
+       <a class="twitter-timeline" data-dnt="true" data-tweet-limit="3" data-chrome="nofooter transparent noheader noborders noscrollbar" href="https://twitter.com/branchbird" data-widget-id="349604688464859137">Tweets by @branchbird</a> 
+       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+       <script>
+    var options = {
+        "url": "/css/twitter.css"
+    };
+    CustomizeTwitterWidget(options);
+    </script> 
+      </div> 
+     </div> 
+     <!--social ends--> 
+     <!--list starts--> 
+     <div class="grid_3 last"> 
+      <h4>Our Technologies</h4> 
+      <ul class="list1"> 
+       <li><a target="_blank" href="http://www.oracle.com/us/solutions/ent-performance-bi/endeca-info-discovery-1494658.html">Oracle Endeca, OBIEE</a></li> 
+       <li><a target="_blank" href="http://www.oracle.com/us/technologies/big-data/products/index.html">Oracle Big Data Appliance</a></li> 
+       <li><a target="_blank" href="http://www.oracle.com/us/technologies/big-data/products/index.html">Oracle Exalytics</a></li> 
+       <li><a target="_blank" href="http://www.cloudera.com">Cloudera's Distribution of Hadoop</a></li> 
+       <li><a target="_blank" href="http://www.qlikview.com">QlikView</a></li> 
+       <li><a target="_blank" href="http://www.tableausoftware.com">Tableau</a></li> 
+      </ul> 
+      <a href="index.php"><img src="/images/branchbird_weblogo.png" width="105" height="35" alt="logo" class="logo"></a> 
+     </div> 
+     <!--list ends--> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+   <!--footer ends--> 
+   <!--copyright starts--> 
+   <div id="copyright"> 
+    <div class="container clearfix"> 
+     <!--copyright text and general links--> 
+     <div class="grid_6"> 
+      <p>Copyright © 2012 . All rights reserved.</p> 
+     </div> 
+     <!--social links--> 
+     <div class="grid_6"> 
+      <ul class="social"> 
+       <li><a href="http://www.linkedin.com/company/branchbird"><img src="/images/icons/social/linkedin.png" width="16" height="16" alt="icon"></a></li> 
+       <li><a href="http://www.twitter.com/branchbird"><img src="/images/icons/social/twitter.png" width="16" height="16" alt="icon"></a></li> 
+       <li><a href="http://www.facebook.com/branchbird"><img src="/images/icons/social/facebook.png" width="16" height="16" alt="icon"></a></li> 
+      </ul> 
+     </div> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+   <!--copyright ends--> 
+  </div>
+  <!-- #page --> 
+  <div style="display:none"> 
+  </div> 
+  <link rel="stylesheet" id="style-name-css" href="http://branchbird.com/blog/wp-content/plugins/lightbox/css/frontend/colorbox-1.css?ver=3.9.3" type="text/css" media="all"> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var SlimStatParams = {"ajaxurl":"http:\/\/branchbird.com\/blog\/wp-admin\/admin-ajax.php","id":"92088.3b80553d17cc12979375b4d18274f867","extensions_to_track":"pdf,doc,xls,zip"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://branchbird.com/blog/wp-content/plugins/wp-slimstat/wp-slimstat.js"></script> 
+  <script type="text/javascript" src="http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201449"></script> 
+  <script type="text/javascript" src="http://s.gravatar.com/js/gprofiles.js?ver=2014Decaa"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://branchbird.com/blog/wp-content/plugins/jetpack/modules/wpgroho.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://branchbird.com/blog/wp-content/plugins/lightbox/js/frontend/custom.js?ver=3.9.3"></script> 
+  <script type="text/javascript" src="http://branchbird.com/blog/wp-content/plugins/lightbox/js/frontend/jquery.colorbox.js?ver=3.9.3"></script> 
+  <script src="http://stats.wordpress.com/e-201449.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+	st_go({v:'ext',j:'1:3.0.2',blog:'43788823',post:'0',tz:'0'});
+	var load_cmc = function(){linktracker_init(43788823,0,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script>  
+ </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html ng-app="app">
+ <head> 
+  <title>
+VC Experts
+</title> 
+  <meta content="VC Experts provides data on private company valuations, share prices, deal terms of financings, as well as industry leading information and documentation for participants in the Private Equity &amp; Venture Capital industries." name="description"> 
+  <meta content="IE=10" http-equiv="X-UA-Compatible"> 
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+  <link href="/assets/ba_application-710bbb4a978b52c596901e51de459f8b.css" media="all" rel="stylesheet"> 
+  <script src="/assets/application-e985377dd5c4ea371c9c24c5579e2f9d.js"></script> 
+  <meta content="pk_live_jqKNkAeWgalqJTQP4t3PmC11" name="stripe-key"> 
+  <meta content="authenticity_token" name="csrf-param"> 
+  <meta content="J5DP29nY5P8SL9UF/IRcgbeX+LLl49uaOel/FqDiLYA=" name="csrf-token"> 
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+  <!--[if lt IE 9]>
+<script src="/assets/html5shiv.js"></script>
+<script src="/assets/respond/respond.min.js"></script>
+<![endif]--> 
+  <!-- Google Analytics --> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-300556-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+  <script>
+  var mixpanel = {track:function(){}};
+</script> 
+ </head> 
+ <body> 
+  <div class="public container-fluid m-t-50"> 
+   <div class="navbar navbar-default navbar-fixed-top container border-l border-r" role="navigation"> 
+    <div class="navbar-header"> 
+     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="navbar-brand" href="/"> <img alt="VC Experts Logo" class="img-responsive" src="/assets/vce-logo-nav-ie-9c84a25264fd1d5468fc86f55bc82618.png"> </a> 
+    </div> 
+    <div class="navbar-collapse collapse"> 
+     <ul class="nav navbar-nav"> 
+      <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Features <span class="caret"></span> </a> 
+       <ul class="dropdown-menu" role="menu"> 
+        <li> <a href="/app#/checkout/4"> 
+          <div class="fa fa-signal"></div> Intelligence </a> </li> 
+        <li> <a href="/app#/checkout/2"> 
+          <div class="fa fa-book"></div> Reference </a> </li> 
+       </ul> </li> 
+      <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Resources <span class="caret"></span> </a> 
+       <ul class="dropdown-menu" role="menu"> 
+        <li> <a href="/calendar"> Calendar </a> </li> 
+        <li> <a href="/glossary"> Glossary </a> </li> 
+        <li> <a href="/forms"> Forms </a> </li> 
+       </ul> </li> 
+      <li><a href="/buzz" id="blog_nav_link">Blog</a></li> 
+      <li> <a href="/app#/reports"> Report Center </a> </li> 
+     </ul> 
+     <ul class="nav navbar-nav navbar-right"> 
+      <li> 
+       <form accept-charset="UTF-8" action="/users/sign_in" class="simple_form new_user" id="new_user" method="post">
+        <div style="margin:0;padding:0;display:inline">
+         <input name="utf8" type="hidden" value="✓">
+         <input name="authenticity_token" type="hidden" value="J5DP29nY5P8SL9UF/IRcgbeX+LLl49uaOel/FqDiLYA=">
+        </div>
+        <div class="navbar-form m-t-10"> 
+         <div class="form-group"> 
+          <input class="input-sm form-control" id="user_email" name="user[email]" placeholder="Email" required> 
+         </div> 
+         <div class="form-group"> 
+          <input class="input-sm form-control" id="user_password" name="user[password]" placeholder="Password" required type="password" value=""> 
+         </div> 
+         <input class="btn btn btn-info btn-sm" name="commit" type="submit" value="Sign in"> 
+        </div> 
+       </form> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <!-- cleaned --> 
+   <div class="container landing"> 
+    <div class="row vce-landingbackground p-b-50"> 
+     <div class="col-md-8 p-t-15"> 
+      <div class="vwrapper"> 
+       <iframe allowfullscreen class="video" frameborder="0" height="100%" mozallowfullscreen="" src="//player.vimeo.com/video/111567172" webkitallowfullscreen="" width="100%"></iframe> 
+      </div> 
+      <div class="col-md-6"> 
+       <div class="col-md-6"> 
+        <a class="btn btn-lg btn-primary m-t-30 btn-block" href="/app#/checkout/4"> 
+         <div class="fa fa-signal"></div> Intelligence 
+         <div class="fa fa-chevron-right"></div> </a> 
+       </div> 
+       <div class="col-md-6"> 
+        <a class="btn btn-lg btn-success m-t-30 btn-block" href="/app#/checkout/2"> 
+         <div class="fa fa-book"></div> Reference 
+         <div class="fa fa-chevron-right"></div> </a> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-md-3 m-t-20"> 
+      <div class="panel panel-default"> 
+       <div class="panel-heading"> 
+        <h3 class="panel-title">Get Started. It's Free.</h3> 
+       </div> 
+       <div class="panel-body p-b-0">
+         Stay ahead with powerful search tools, informative content, accurate analysis and verified data. 
+        <form accept-charset="UTF-8" action="/users" class="simple_form new_user" id="new_user" method="post">
+         <div style="margin:0;padding:0;display:inline">
+          <input name="utf8" type="hidden" value="✓">
+          <input name="authenticity_token" type="hidden" value="J5DP29nY5P8SL9UF/IRcgbeX+LLl49uaOel/FqDiLYA=">
+         </div>
+         <div class="form-inputs"> 
+          <div class="form-group"> 
+           <div class="input-group m-t-20"> 
+            <span class="input-group-addon"> 
+             <div class="fa fa-user"></div> </span> 
+            <input class="form-control" id="user_full_name" name="user[full_name]" placeholder="Name" required> 
+           </div> 
+          </div> 
+          <div class="form-group"> 
+           <div class="input-group m-t-5"> 
+            <span class="input-group-addon"> 
+             <div class="fa fa-envelope"></div> </span> 
+            <input class="form-control" id="user_email" name="user[email]" placeholder="Email" required type="text" value=""> 
+           </div> 
+          </div> 
+          <div class="form-group"> 
+           <div class="input-group m-t-5"> 
+            <span class="input-group-addon"> 
+             <div class="fa fa-lock"></div> </span> 
+            <input class="form-control border-l-none" id="user_password" name="user[password]" onchange="this.form.user_password_confirmation.value=this.value;" placeholder="Password" required type="password"> 
+            <input id="user_password_confirmation" name="user[password_confirmation]" required type="hidden" value=""> 
+           </div> 
+          </div> 
+          <div class="form-group"> 
+           <div class="input-group m-t-5 centered"> 
+            <input class="btn btn block btn-success" id="land_form_submit" name="commit" type="submit" value="Start Exploring"> 
+           </div> 
+           <div class="centered m-t-5">
+             No cost. No obligation. 
+           </div> 
+          </div> 
+         </div> 
+        </form> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <img alt="Image" class="img-responsive" src="/assets/vce-home-logos-top-d557ada38d4fd7b473e07839d17b0b14.jpg"> 
+    </div> 
+    <a href="/app#/checkout/4"> 
+     <div class="row intelligence-header p-20"> 
+      <div class="title"> 
+       <div class="fa fa-signal"></div> INTELLIGENCE 
+      </div> 
+      <div class="summary">
+        Customers rely on us for their private company investing due diligence 
+      </div> 
+     </div> </a> 
+    <div class="row intelligence-summary p-b-50"> 
+     <div class="col-sm-3 p-t-50"> 
+      <a href="/app#/checkout/4"> 
+       <div class="fa ico-file2"></div> 
+       <div class="title m-t-10">
+         Analyze term sheets 
+       </div> 
+       <div class="summary">
+         View liquidation preferences, anti-dilution provisions, and other deal terms from actual financings. 
+       </div> </a> 
+     </div> 
+     <div class="col-sm-3 p-t-50"> 
+      <a href="/app#/checkout/4"> 
+       <div class="fa ico-users"></div> 
+       <div class="title m-t-10">
+         See who's involved 
+       </div> 
+       <div class="summary">
+         Track C-Level executives, investors, legal counsel, and board members of portfolio companies. 
+       </div> </a> 
+     </div> 
+     <div class="col-sm-3 p-t-50"> 
+      <a href="/app#/checkout/4"> 
+       <div class="fa ico-stats"></div> 
+       <div class="title m-t-10">
+         View stock prices 
+       </div> 
+       <div class="summary">
+         Browse common and preferred prices of private company stock issuances. 
+       </div> </a> 
+     </div> 
+     <div class="col-sm-3 p-t-50"> 
+      <a href="/app#/checkout/4"> 
+       <div class="fa ico-bars"></div> 
+       <div class="title m-t-10">
+         Monitor valuations 
+       </div> 
+       <div class="summary">
+         Keep track of valuations by round, state, industry, and more. 
+       </div> </a> 
+     </div> 
+    </div> 
+    <a href="/app#/checkout/2"> 
+     <div class="row reference-header p-20"> 
+      <div class="title"> 
+       <div class="fa fa-book"></div> REFERENCE 
+      </div> 
+      <div class="summary">
+        A huge archive of invaluable reference material and legal documents 
+      </div> 
+     </div> </a> 
+    <div class="row reference-summary p-b-50"> 
+     <div class="col-sm-3 p-t-50"> 
+      <a href="/app#/checkout/2"> 
+       <div class="fa ico-books"></div> 
+       <div class="title m-t-10">
+         Expand your knowledge 
+       </div> 
+       <div class="summary">
+         View our library full of proprietary content about private market investing. 
+       </div> </a> 
+     </div> 
+     <div class="col-sm-3 p-t-50"> 
+      <a href="/app#/checkout/2"> 
+       <div class="fa ico-file"></div> 
+       <div class="title m-t-10">
+         Master financing stages 
+       </div> 
+       <div class="summary">
+         Take advantage of the hundreds of legal forms available for download. 
+       </div> </a> 
+     </div> 
+     <div class="col-sm-3 p-t-50"> 
+      <a href="/app#/checkout/2"> 
+       <div class="fa ico-newspaper"></div> 
+       <div class="title m-t-10">
+         Stay informed 
+       </div> 
+       <div class="summary">
+         Keep up-to-date with the latest news from an extensive list of contributing editors. 
+       </div> </a> 
+     </div> 
+     <div class="col-sm-3 p-t-50"> 
+      <a href="/app#/checkout/2"> 
+       <div class="fa ico-list"></div> 
+       <div class="title m-t-10">
+         Understand terminology 
+       </div> 
+       <div class="summary">
+         Browse through hundreds of glossary terms commonly used in private market financing. 
+       </div> </a> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <img alt="Image" class="img-responsive" src="/assets/bottomlogos-11a45269c2ff1f5a69b3ee8bff67cfa5.png"> 
+    </div> 
+   </div> 
+   <footer class="container p-20"> 
+    <div class="row center"> 
+     <div class="col-sm-3 m-t-20"> 
+      <ul> 
+       <li class="title"> FEATURES </li> 
+       <li class="m-t-10"> <a href="/app#/checkout/4"> Intelligence </a> </li> 
+       <li class="m-t-10"> <a href="/app#/checkout/2"> Reference </a> </li> 
+       <li class="m-t-10"> <a href="/app#/reports"> Report Center </a> </li> 
+      </ul> 
+     </div> 
+     <div class="col-sm-3 m-t-20"> 
+      <ul> 
+       <li class="title"> COMPANY </li> 
+       <li class="m-t-10"> <a href="/introduction"> About Us </a> </li> 
+       <li class="m-t-10"> <a href="/press"> Newsroom </a> </li> 
+       <li class="m-t-10"> <a href="/editors"> Editors </a> </li> 
+      </ul> 
+     </div> 
+     <div class="col-sm-3 m-t-20"> 
+      <ul> 
+       <li class="title"> RESOURCES </li> 
+       <li class="m-t-10"> <a href="/buzz"> Blog </a> </li> 
+       <li class="m-t-10"> <a href="/calendar"> Calendar </a> </li> 
+       <li class="m-t-10"> <a href="/glossary"> Glossary </a> </li> 
+       <li class="m-t-10"> <a href="/forms"> Legal Forms </a> </li> 
+      </ul> 
+     </div> 
+     <div class="col-sm-3 m-t-20"> 
+      <ul> 
+       <li class="title"> GET STARTED </li> 
+       <li class="m-t-10"> <a href="#"> Sign in </a> </li> 
+       <li class="m-t-10"> <a href="/pricing"> Pricing </a> </li> 
+       <li class="m-t-10"> <a href="/contact"> Contact us </a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="row copyright m-t-20"> 
+     <div class="col-sm-6"> 
+      <div class="pull-left">
+        Copyright © 2014 VC Experts, Inc. All rights reserved. 
+      </div> 
+     </div> 
+     <div class="col-sm-6"> 
+      <div class="pull-right"> 
+       <span> <a href="/privacy"> Privacy policy </a> </span> 
+       <span>/</span> 
+       <span> <a href="/terms"> Terms of use </a> </span> 
+       <span>/</span> 
+       <span> <a href="/sitemap"> Site map </a> </span> 
+      </div> 
+     </div> 
+    </div> 
+   </footer> 
+  </div> 
+  <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="login" role="dialog" tabindex="-1"> 
+   <div class="modal-dialog"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button> 
+      <h4 class="modal-title">Log in to VC Experts</h4> 
+     </div> 
+     <div class="modal-body"> 
+      <form accept-charset="UTF-8" action="/users/sign_in" class="simple_form new_user" id="new_user" method="post" role="form">
+       <div style="margin:0;padding:0;display:inline">
+        <input name="utf8" type="hidden" value="✓">
+        <input name="authenticity_token" type="hidden" value="J5DP29nY5P8SL9UF/IRcgbeX+LLl49uaOel/FqDiLYA=">
+       </div>
+       <div class="form-inputs"> 
+        <div class="form-group"> 
+         <div class="control-group email optional user_email">
+          <label class="email optional control-label" for="user_email">Email</label>
+          <div class="controls">
+           <input class="string email optional" id="user_email" name="user[email]" type="email" value="">
+          </div>
+         </div> 
+        </div> 
+        <div class="form-group"> 
+         <div class="control-group password optional user_password">
+          <label class="password optional control-label" for="user_password">Password</label>
+          <div class="controls">
+           <input class="password optional" id="user_password" name="user[password]" type="password">
+          </div>
+         </div> 
+        </div> 
+        <div class="container"> 
+         <div class="control-group boolean optional user_remember_me">
+          <div class="controls">
+           <input name="user[remember_me]" type="hidden" value="0">
+           <label class="checkbox"><input class="boolean optional" id="user_remember_me" name="user[remember_me]" type="checkbox" value="1">Remember me</label>
+          </div>
+         </div> 
+        </div> 
+       </div> 
+       <div class="modal-footer"> 
+        <input class="btn btn btn-primary" name="commit" type="submit" value="Sign in"> 
+       </div> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+  setTimeout(function(){var a=document.createElement("script");
+  var b=document.getElementsByTagName("script")[0];
+  a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0023/1103.js?"+Math.floor(new Date().getTime()/3600000);
+  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>   
+ </body>
+</html>

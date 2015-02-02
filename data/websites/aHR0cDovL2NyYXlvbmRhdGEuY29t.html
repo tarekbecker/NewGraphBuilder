@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+Crayon Data - Simplifying the world's choices. 
+</title> 
+  <style>
+    #coverflow_parent{
+        position: absolute;
+        top:12%;
+        left: 0%;
+        height: 88%;
+        width: 100%;
+        z-index: 10010;
+    }
+    #coverflow_overlay{
+        opacity: 0.5;
+        background-color: rgb(229, 229, 229);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #coverflow_container{
+        z-index: 100001;
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        position: relative;
+        width: 100%;
+        height: 0px;
+        left: 0px;
+        text-align: center;
+        top: 50%;
+        margin-top: -171px;
+    }
+    #coverflow{
+        /*position: absolute;
+        top: 0;
+        left: 0;
+        width: 83%;
+        max-width: 1137px;
+        vertical-align: middle;
+        */
+        width: 80%;
+        max-width: 1092px;
+        display: inline-block;
+        outline: none;
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        text-align: left;
+        position: relative;
+    }
+    @font-face {
+        font-family: 'Myriad Pro Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Myriad Pro Regular'), url('fonts/MYRIADPRO-REGULAR.woff') format('woff');
+    }
+    body{
+        background:url('images/back.jpg') ;
+        background-size:cover;
+        height:100%;
+        background-repeat: no-repeat;
+        background-position: top;
+        font-family: 'Roboto Condensed', sans-serif !important;
+    }
+    #page_html{
+        background:url('images/back.jpg') ;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    .node circle {
+        cursor: pointer;
+        stroke-width: 3px;
+
+    }
+
+    .node text {
+        font-family: 'Myriad Pro Regular';
+        pointer-events: none;
+        text-anchor: middle;
+        fill:#fff;
+        width:60px;
+    }
+    img{
+        border:0
+    }
+    line.link {
+        fill: none;
+        stroke: #cdcdcd;
+        stroke-width: 1.5px;
+    }
+    .others{
+        opacity: 0;
+    }
+    input::-webkit-input-placeholder {font-family: 'Lato', sans-serif; font-weight: 300; color: #4C4C4C; font-size: 16px;}
+    input::-moz-input-placeholder {font-family: 'Lato', sans-serif; font-weight: 300; color: #4C4C4C; font-size: 16px;}
+    input::-o-input-placeholder {font-family: 'Lato', sans-serif; font-weight: 300; color: #4C4C4C; font-size: 16px;}
+    input::input-placeholder {font-family: 'Lato', sans-serif; font-weight: 300; color: #4C4C4C; font-size: 16px;}
+    #tooltip {
+        top:-200px;
+        position: absolute;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.4);
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        -mox-box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.4) pointer-events: none;
+        z-index: 9;
+    }
+    #tooltip p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 20px;
+    }
+.page_bg
+    {
+        float: left;
+        width: 100%;
+padding-left: 28%;
+padding-right: 28%;
+        
+    }
+    .page_bg h2
+    {
+        font-size: 35px;
+        line-height: 50px;
+        margin: 0px;
+        padding: 0px;
+        color: #777;
+        font-family: 'Lato',Arial, sans-serif;
+    }
+    .page_bg p
+    {
+        font-weight: 200;
+    }
+    ul.site-map-list li
+    {
+       list-style-type:none;
+    }
+    ul.site-map-list
+    {
+       padding-left: 20px;
+    }
+    ul.sub-list li a
+    {
+	text-decoration:none;
+	color:#777;
+    }
+   ul.sub-list li a:hover
+    {
+	text-decoration:none;
+	color:#777;
+    }
+    @media only screen and (max-width: 760px) and (min-width: 320px)
+    {
+       iframe
+       {
+                  height:250px !important;;
+       }
+    }
+    /*Tooltip : http://jsfiddle.net/5PENv/*/
+</style> 
+  <meta name="description" content="Crayon Data simplifies Big Data, makes data meaningful and contextual for our clients; with a vision to resolve the Paradox of More."> 
+  <link rel="stylesheet" href="css/normalize.css"> 
+  <link rel="stylesheet" href="css/font-awesome.css"> 
+  <link rel="stylesheet" href="css/ospb.css"> 
+  <link rel="stylesheet" href="css/horizontal.css"> 
+  <script src="vendor/modernizr.js"></script> 
+  <!-- Bootstrap styles --> 
+  <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css"> 
+  <link href="http://fonts.googleapis.com/css?family=Dancing+Script:400,700|Droid+Serif:400,400italic|Sacramento|Roboto+Condensed:400,300,500,700,300italic,400italic,500italic,700italic|Roboto:300,400,500,700|Amatic+SC:400,700|Droid+Serif:400,700|Unkempt" rel="stylesheet" type="text/css"> 
+  <link href="fonts/MYRIADPRO-REGULAR.OTF" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" type="text/css" href="assets/style.css"> 
+  <link rel="stylesheet" type="text/css" href="assets/animate.css"> 
+  <link rel="stylesheet" type="text/css" href="assets/demo.css"> 
+  <link rel="shortcut icon" href="images/favicon.ico"> 
+  <!-- Font Awesome icons --> 
+  <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome"> 
+  <script src="jquery.js"></script> 
+  <script src="jquery.BlackAndWhite.js"></script> 
+  <!-- jQuery Popup Overlay --> 
+  <script src="vendor/jquery.popupoverlay.js"></script> 
+  <script src="vendor/plugins.js"></script> 
+  <script src="dist/sly.min.js"></script> 
+  <script src="vendor/horizontal.js"></script> 
+  <meta property="twitter:account_id" content="4503599629024139"> 
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32167788-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+  <!-- Custom Scripts --> 
+  <script>(function(){
+  window._fbds = window._fbds || {};
+  _fbds.pixelId = 661855393877300;
+  var fbds = document.createElement('script');
+  fbds.async = true;
+  fbds.src = '//connect.facebook.net/en_US/fbds.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(fbds, s);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(["track", "PixelInitialized", {}]);
+</script> 
+  <noscript></noscript>
+ </head>
+ <body style="height:600px">
+  <img height="1" width="1" border="0" alt="" style="display:none" src="https://www.facebook.com/tr?id=661855393877300&amp;ev=NoScript"> 
+  <!-- LeadFormix --> 
+  <a href="https://www.leadformix.com" title="Marketing Automation" onclick="window.open(this.href);return(false);"> <script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://vlog.leadformix.com/" : "https://vlog.leadformix.com/");
+<!--
+bf_action_name = '';
+bf_idsite = 9291;
+bf_url = pkBaseURL+'bf/bf.php';
+(function() {
+    var lfh = document.createElement('script'); lfh.type = 'text/javascript'; lfh.async = true;
+    lfh.src = pkBaseURL+'bf/lfx.js';
+    var s = document.getElementsByTagName('head')[0]; s.appendChild(lfh);
+  })();
+//-->
+</script> 
+   <noscript>
+    <p>Marketing Automation Platform <img src="https://vlog.leadformix.com/bf/bf.php" style="border:0" alt="Marketing Automation Tool"></p> 
+   </noscript> </a> 
+  <!-- /LeadFormix --> 
+  <script>var siteUrl = 'http://crayondata.com';</script> 
+  <meta name="google-site-verification" content="W7R9Ij-7oTK9Twu1EP7ic-XEkcpVTMCrtEN_IPH9_88"> 
+  <style>
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+#fadeandscale {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    width: 100%;
+}
+
+
+@-webkit-keyframes letter_spacing_r {
+    0% {
+        opacity: 1;
+        letter-spacing: 5px;
+
+    }
+
+    100% {
+        opacity: 0.6;
+        letter-spacing: 20px;
+    }
+}
+@-moz-keyframes letter_spacing_r {
+    0% {
+        opacity: 1;
+        -moz-transform: translateX(0) scale(1.0);
+
+    }
+
+    100% {
+        opacity: 0;
+        -moz-transform: translateX(0px) translateY(-50px)  scale(0.0);
+
+    }
+}
+@-o-keyframes letter_spacing_r {
+    0% {
+        opacity: 1;
+        -o-transform: translateX(0) scale(1.0);
+    }
+
+    100% {
+        opacity: 0;
+        -o-transform: translateX(0px) translateY(-50px) scale(0.0);
+
+    }
+}
+@keyframes letter_spacing_r {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1.0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(0px) translateY(-50px) scale(0.0);
+
+    }
+}
+
+.letter_spacing_r {
+    -webkit-animation-name: letter_spacing_r;
+    -moz-animation-name: letter_spacing_r;
+    -o-animation-name: letter_spacing_r;
+    animation-name: letter_spacing_r;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display:visible;
+}
+
+
+@-webkit-keyframes letter_spacing {
+    0% {
+        opacity: 0.6;
+        letter-spacing: 20px;
+    }
+
+    100% {
+        opacity: 1;
+        letter-spacing: 5px;
+    }
+}
+@-moz-keyframes letter_spacing {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(0px) translateY(-50px)  scale(0.0);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0) scale(1.0);
+    }
+}
+@-o-keyframes letter_spacing {
+    0% {
+        opacity: 0;
+        -o-transform: translateX(0px) translateY(-50px) scale(0.0);
+    }
+
+    100% {
+        opacity: 1;
+        -o-transform: translateX(0) scale(1.0);
+    }
+}
+@keyframes letter_spacing {
+    0% {
+        opacity: 0;
+        transform: translateX(0px) translateY(-50px) scale(0.0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1.0);
+    }
+}
+
+.letter_spacing {
+    -webkit-animation-name: letter_spacing;
+    -moz-animation-name: letter_spacing;
+    -o-animation-name: letter_spacing;
+    animation-name: letter_spacing;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display:visible;
+}
+
+@-webkit-keyframes scale_custom {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1.0);
+    }
+}
+@-moz-keyframes scale_custom {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(0px) translateY(-50px)  scale(0.0);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0) scale(1.0);
+    }
+}
+@-o-keyframes scale_custom {
+    0% {
+        opacity: 0;
+        -o-transform: translateX(0px) translateY(-50px) scale(0.0);
+    }
+
+    100% {
+        opacity: 1;
+        -o-transform: translateX(0) scale(1.0);
+    }
+}
+@keyframes scale_custom {
+    0% {
+        opacity: 0;
+        transform: translateX(0px) translateY(-50px) scale(0.0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1.0);
+    }
+}
+
+.page {
+    -webkit-animation-name: scale_custom;
+    -moz-animation-name: scale_custom;
+    -o-animation-name: scale_custom;
+    animation-name: scale_custom;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+@-webkit-keyframes scale_custom_r {
+    from {
+        opacity: 1;
+        -webkit-transform: scale(1.0);
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: scale(0.0);
+    }
+}
+@-moz-keyframes scale_custom_r {
+    0% {
+        opacity: 1;
+        -moz-transform: translateX(0) scale(1.0);
+    }
+
+    100% {
+        opacity: 0;
+        -moz-transform: translateX(0px) translateY(-50px)  scale(0.0);
+    }
+}
+@-o-keyframes scale_custom_r {
+    0% {
+        opacity: 1;
+        -o-transform: translateX(0) scale(1.0);
+    }
+
+    100% {
+        opacity: 0;
+        -o-transform: translateX(0px) translateY(-50px) scale(0.0);
+    }
+}
+@keyframes scale_custom_r {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1.0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(0px) translateY(-50px) scale(0.0);
+    }
+}
+.page_r {
+    display:none;
+    -webkit-animation-name: scale_custom_r;
+    -moz-animation-name: scale_custom_r;
+    -o-animation-name: scale_custom_r;
+    animation-name: scale_custom_r;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+
+}
+.popup_visible #fadeandscale {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.well {
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display:none;
+    margin:1em;
+}
+pre.prettyprint {
+    padding: 9px 14px;
+}
+.fulltable {
+    max-width: 100%;
+    overflow: auto;
+}
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.lineheight {
+    line-height: 3em;
+}
+.pagetop {
+    background: url(http://subtlepatterns.com/patterns/congruent_outline.png) #333;
+    background-attachment: fixed;
+    color: #fff;
+}
+.page-header {
+    border-bottom: none;
+}
+.initialism {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+</style>  
+  <div id="info" style="position: absolute; z-index: 10000009; background:url('images/back.jpg') ;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        font-family: 'Roboto Condensed', sans-serif !important; padding-top: 50%; top:0; left: 0; right: 0; bottom: 0; display: none"> 
+   <!-- ClickTale Top part --> 
+   <script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script> 
+   <!-- ClickTale end of Top part --> 
+   <center> 
+    <img src="images/logo.png" style="width: 107px; height: 107px; margin-bottom: 10px;"> 
+    <p style="font-size: 40px;">Please rotate your device 90<sup><span class="supertm">o</span></sup> to experience Crayon.</p> 
+   </center> 
+  </div> 
+  <a href="index.php" style="position: absolute; left:20px; top:20px; height: 7%"><img src="images/full_logo.png" style="height:100%;"></a> 
+  <a id="contact_form" style="position: absolute; right:20px; top:25px; cursor: pointer;"><img class="img_change" src="images/contact_g.png" _src="contact" style="width:36px;"></a> 
+  <a href="http://www.youtube.com/user/crayonbigdata" target="_blank" style="position: absolute; right:60px; top:25px"><img class="img_change" src="images/you_g.png" _src="you" style="width:36px;"></a> 
+  <a href="https://plus.google.com/+CrayonData1/" target="_blank" style="position: absolute; right:100px; top:25px"><img class="img_change" src="images/g+_g.png" _src="g+" style="width:36px;"></a> 
+  <a href="http://www.linkedin.com/company/crayon-data" target="_blank" style="position: absolute; right:140px; top:25px"><img class="img_change" src="images/lin_g.png" _src="lin" style="width:36px;"></a> 
+  <a href="https://twitter.com/CrayonBigData" target="_blank" style="position: absolute; right:180px; top:25px"><img class="img_change" src="images/twitter_g.png" _src="twitter" style="width:36px;"></a> 
+  <a href="https://www.facebook.com/crayondata" target="_blank" style="position: absolute; right:220px; top:25px"><img class="img_change" src="images/fb_g.png" _src="fb" style="width:36px;"></a> 
+  <a id="crayon-yoda" style="position: absolute; right:260px; top:24px; cursor:pointer" title="Latest at Crayon"><img src="images/Alert.gif" style="width:40px;"></a> 
+  <p id="page_loader" href="index.html" style="position: absolute; left:0; width: 100%; top:50%; font-size:20px; color:#808080; letter-spacing: 10px; text-align: center;"><img src="images/loading-icon_wind-tangram.gif"></p> 
+  <p id="center_title" href="index.html" style="position: absolute; left:0; width: 100%; top:65%; font-size:20px; color:#808080; letter-spacing: 10px; text-align: center;">WE SIMPLIFY THE WORLD'S CHOICES</p> 
+  <p id="top_title" href="index.html" style="position: absolute;
+left: 205px;
+right: 300px;
+top: 30px;
+font-size: 20px;
+color: #808080;
+letter-spacing: 20px;
+text-align: center;"></p> 
+  <a href="#" style="position: absolute; left:50%; margin-left: -40px; bottom:40px"><img src="images/footer_logo1.png" style="width:20px;" title="COMING SOON"></a> 
+  <a href="http://www.bigdata-madesimple.com/" target="_blank" style="position: absolute; right:50%; margin-right: -13px; bottom:40px"><img src="images/footer_logo2.png" style="width:26px;" title="BIG DATA MADE SIMPLE"></a> 
+  <div style="position: absolute; text-decoration: none; color:#9c9c9c; left:0; text-align: center; width: 100%; bottom:20px;">
+   ©2014 Crayon Data. All Rights Reserved &nbsp;|&nbsp;
+   <a id="site-map" style="color: #9c9c9c; text-decoration:none;cursor: pointer;">Site Map</a>&nbsp;|&nbsp;
+   <a id="privacy-policy" style="color:#9c9c9c;text-decoration:none;cursor: pointer;">Privacy</a>&nbsp;|&nbsp;
+   <a id="copyright" style="color:#9c9c9c;text-decoration:none;cursor: pointer;">Copyright</a>
+  </div> 
+  <!-- ClickTale Bottom part (XHTML) --> 
+  <script type="text/javascript">
+// The ClickTale Balkan Tracking Code may be programmatically customized using hooks:
+// 
+//   function ClickTalePreRecordingHook() { /* place your customized code here */  }
+//
+// For details about ClickTale hooks, please consult the wiki page http://wiki.clicktale.com/Article/Customizing_code_version_2
+
+// Add this to "OnDomLoad" event
+(function(){
+if (typeof (ClickTaleCreateDOMElement) != "function")
+{
+	ClickTaleCreateDOMElement = function(tagName)
+	{
+		if (document.createElementNS)
+		{
+			return document.createElementNS('http://www.w3.org/1999/xhtml', tagName);
+		}
+		return document.createElement(tagName);
+	}
+}
+
+if (typeof (ClickTaleAppendInHead) != "function")
+{
+	ClickTaleAppendInHead = function(element)
+	{
+		var parent = document.getElementsByTagName('head').item(0) || document.documentElement;
+		parent.appendChild(element);
+	}
+}
+
+if (typeof (ClickTaleXHTMLCompliantScriptTagCreate) != "function")
+{
+	ClickTaleXHTMLCompliantScriptTagCreate = function(code)
+	{
+		var script = ClickTaleCreateDOMElement('script');
+		script.setAttribute("type", "text/javascript");
+		script.text = code;
+		return script;
+	}
+}
+var scriptElement = ClickTaleCreateDOMElement('script');
+scriptElement.type = "text/javascript";
+scriptElement.src = (document.location.protocol=='https:'?
+'https://cdnssl.clicktale.net/www07/ptc/b288e081-fa9f-4e40-8b1f-cba8283ed898.js':
+'http://cdn.clicktale.net/www07/ptc/b288e081-fa9f-4e40-8b1f-cba8283ed898.js');
+document.body.appendChild(scriptElement);
+})();
+</script> 
+  <!-- ClickTale end of Bottom part (XHTML) --> 
+  <a href="#fadeandscale" class="fadeandscale_open" id="fadeandscale_open"></a> 
+  <div id="page" class="page_r" style="position:absolute; top: 12%; height: 88%; width:100%; left: 0px; z-index: 1000000;"> 
+   <div id="page_html" style="width: 100%; height:100%; overflow: hidden;"> 
+   </div> 
+  </div> 
+  <div id="page_close" style="display:none; position:absolute; top: 12%; margin-top: 20px; margin-right: 20px; right:0%; height: 35px; width: 35px; z-index: 1000001; cursor: pointer;"> 
+   <img src="images/close.png"> 
+  </div> 
+  <div id="next_post" style="width:40px; height: 40px; position:absolute; bottom: 10px; left: 50%; margin-left: -20px; background-image:url('images/gray_circle.png');  background-position: top; background-repeat: no-repeat; background-size: cover;overflow: hidden; z-index: 1000001; display: none;"> 
+   <img src="images/arrow.png" id="animated_div_scroll" style="float:left; padding-left: 15px; padding-top: -40px;"> 
+   <!--<img src="images/scroll_up.png" id="prev_post" style="float:right; cursor: pointer; " />--> 
+  </div> 
+  <!--<div id="effects_parent" style="margin: 0 auto !important; vertical-align: middle;">
+    <div class="frame effects" id="effects">
+        <ul id="fadeandscale_ul" class="clearfix" style="display: none;">
+            <li><img class="big_popup_r" src="images/thumb1.jpg" /></li>
+            <li><img class="big_popup_r" src="images/thumb2.jpg" /></li>
+            <li><img class="big_popup_r" src="images/thumb3.jpg" /></li>
+            <li><img class="big_popup_r" src="images/thumb4.jpg" /></li>
+            <li><img class="big_popup_r" src="images/thumb5.jpg" /></li>
+        </ul>
+    </div>
+</div>--> 
+  <div id="coverflow_close" style="display:none; position:absolute; top: 12%; margin-top: 20px; margin-right: 20px; right:0%; height: 35px; width: 35px; z-index: 10011; cursor: pointer;"> 
+   <img src="images/close.png"> 
+  </div> 
+  <div id="coverflow_parent" class="page_r"> 
+   <div id="coverflow_overlay"> 
+   </div> 
+   <div id="coverflow_container"> 
+    <div id="coverflow"> 
+     <center>
+      <img src="images/loading-icon_wind-tangram.gif" id="coverflow_loader">
+     </center> 
+     <div id="effects_parent" style="margin: 0 auto !important; vertical-align: middle; opacity: 0;"> 
+      <div class="frame effects" id="effects"> 
+       <ul id="fadeandscale_ul" class="clearfix" style="display: none;"> 
+       </ul> 
+      </div> 
+     </div> 
+     <div style="font-size: 20px;
+            color: rgb(128, 128, 128);
+            text-align: center;
+            letter-spacing: 5px;">
+       &lt; EXPLORE MORE &gt; 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--<div id="fadeandscale" style="width: 83%; max-width: 1137px; ">
+        <img class="fadeandscale_close" style="float: right;
+    margin-top: 137px;
+    margin-left: 10px;
+    cursor: pointer;" src="images/close.png"/>
+
+        <div id="effects_parent" style="margin: 0 auto !important; vertical-align: middle;">
+            <div class="frame effects" id="effects">
+                <ul id="fadeandscale_ul" class="clearfix" style="display: none;">
+                    <li><img class="big_popup_r" src="images/thumb1.jpg" /></li>
+                    <li><img class="big_popup_r" src="images/thumb2.jpg" /></li>
+                    <li><img class="big_popup_r" src="images/thumb3.jpg" /></li>
+                    <li><img class="big_popup_r" src="images/thumb4.jpg" /></li>
+                    <li><img class="big_popup_r" src="images/thumb5.jpg" /></li>
+                </ul>
+            </div>
+        </div>
+        <div style="font-size: 20px;
+        color: rgb(128, 128, 128);
+        text-align: center;
+        letter-spacing: 5px;"><< RELATED STORIES >></div>
+    </div>
+    --> 
+  <div id="tooltip" style="opacity: 0;"> 
+   <p id="value"></p> 
+  </div> 
+  <div id="chart" style="position: absolute; top:12%; width:100%; height: 76%; display: none;"> 
+  </div> 
+  <script src="d3.js"></script> 
+  <!--<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>--> 
+  <script>
+//alert(window.innerWidth);
+//alert(window.innerHeight);
+var width = window.innerWidth,
+        height = $("#chart").innerHeight(),
+        root;
+
+
+var force = d3.layout.force()
+        .linkDistance(160)
+        .charge(-1050)
+        .gravity(.06)
+        .size([width, height])
+        .on("tick", tick);
+/*
+ var force = d3.layout.force()
+ .gravity(0.06)
+ .charge(-1500)
+ .linkDistance(200)
+ .size([width, height])
+ .on("tick", tick);;
+ */
+var svg = d3.select("#chart").append("svg")
+        .attr("width", '100%')
+        .attr("height", '100%');
+
+var link = svg.selectAll(".link"),
+        node = svg.selectAll(".node");
+
+
+var root={
+    "name": "",
+    "r":0,
+    "icon": "images/logo.png",
+    "gray_icon" : "images/logo.png",
+    "c_icon" : "images/logo.png",
+    "title" : "WE SIMPLIFY THE WORLD'S CHOICES",
+    "fixed" : false,
+    "children": [
+        {
+            "name": "",
+            "r":0,
+            "icon": "images/1.png",
+            "gray_icon" : "images/1_g.png",
+            "c_icon" : "images/1_c.png",
+            "children": [
+                {"name": "", "r":1, "s_icon":"images/ln1.png" ,"story_slno":1},
+                {"name": "", "r":1, "s_icon":"images/ln2.png" ,"story_slno":2},
+                {"name": "", "r":1, "s_icon":"images/ln3.png" ,"story_slno":3},
+                {"name": "", "r":1, "s_icon":"images/ln4.png" ,"story_slno":4},
+                {"name": "", "r":1, "s_icon":"images/ln6.png" ,"story_slno":6}
+
+                /* {"name": "<tspan x='0' y='-8'>rise of</tspan><tspan x='0' dy='7'>choice</tspan><tspan x='0' dy='7'>engines</tspan>", "full_name": "<tspan x='0' y='-15'>rise of</tspan><tspan x='0' dy='15'>choice</tspan><tspan x='0' dy='15'>engines</tspan>", "r":26, "color" : '#3a528e',"story_slno":1},
+                 {"name": "<tspan x='0' y='-8'>crayon's</tspan><tspan x='0' dy='7'>taste</tspan><tspan x='0' dy='7'>graph</tspan>", "full_name": "<tspan x='0' y='-15'>crayon's</tspan><tspan x='0' dy='15'>taste</tspan><tspan x='0' dy='15'>graph</tspan>", "r":26, "color" : '#3a528e',"story_slno":2},
+                 {"name": "<tspan x='0' y='-4'>our</tspan><tspan x='0' dy='7'>platform</tspan>", "full_name": "<tspan x='0' y='-8'>our</tspan><tspan x='0' dy='15'>platform</tspan>", "r":26, "color" : '#3a528e',"story_slno":3},
+                 {"name": "<tspan x='0' y='-8'>analytics</tspan><tspan x='0' dy='7'>is</tspan><tspan x='0' dy='7'>dying</tspan>", "full_name": "<tspan x='0' y='-15'>analytics</tspan><tspan x='0' dy='15'>is</tspan><tspan x='0' dy='15'>dying</tspan>", "r":26, "color" : '#3a528e',"story_slno":4},
+                 {"name": "<tspan x='0' y='-8'>magic</tspan><tspan x='0' dy='7'>of</tspan><tspan x='0' dy='7'>maya</tspan>", "full_name": "<tspan x='0' y='-15'>magic</tspan><tspan x='0' dy='15'>of</tspan><tspan x='0' dy='15'>maya</tspan>", "r":26, "color" : '#3a528e',"story_slno":5},
+                 {"name": "<tspan x='0' y='-8'>crayon's</tspan><tspan x='0' dy='7'>interest</tspan><tspan x='0' dy='7'>graph</tspan>", "full_name": "<tspan x='0' y='-15'>crayon's</tspan><tspan x='0' dy='15'>interest</tspan><tspan x='0' dy='15'>graph</tspan>", "r":26, "color" : '#3a528e',"story_slno":6} */
+            ],
+            "title" : "HARNESS THE POWER OF BIG DATA",
+            "display_name" : "TECHNOLOGY"
+        },
+        {
+            "name": "",
+            "r":0,
+            "icon": "images/2.png",
+            "c_icon" : "images/2_c.png",
+            "gray_icon" : "images/2_g.png",
+            "children": [
+                {"name": "", "r":1, "s_icon":"images/ln7.png" ,"story_slno":7},
+                {"name": "", "r":1, "s_icon":"images/ln8.png" ,"story_slno":8},
+                {"name": "", "r":1, "s_icon":"images/ln9.png" ,"story_slno":9}
+            ],
+            "title" : "A BOX FULL OF CRAYONS",
+            "display_name" : "OUR PEOPLE"
+        },
+        {
+            "name": "",
+            "r":0,
+            "icon": "images/3.png",
+            "c_icon" : "images/3_c.png",
+            "gray_icon" : "images/3_g.png",
+            "children": [
+                {"name": "", "r":1, "s_icon":"images/ln10.png" ,"story_slno":10},
+                {"name": "", "r":1, "s_icon":"images/ln11.png" ,"story_slno":11},
+                {"name": "", "r":1, "s_icon":"images/ln12.png" ,"story_slno":12},
+                {"name": "", "r":1, "s_icon":"images/ln13.png" ,"story_slno":13},
+                {"name": "", "r":1, "s_icon":"images/ln14.png" ,"story_slno":14},
+		{"name": "", "r":1, "s_icon":"images/ln5.png" ,"story_slno":5}
+            ],
+            "title" : "MAKE DATA SERVE YOU BETTER",
+            "display_name" : "SOLUTIONS"
+        },
+        {
+            "name": "",
+            "r":0,
+            "icon": "images/5.png",
+            "c_icon" : "images/5_c.png",
+            "gray_icon" : "images/5_g.png",
+            "children": [
+                {"name": "", "r":1, "s_icon":"images/ln15.png" ,"story_slno":15},
+                {"name": "", "r":1, "s_icon":"images/ln16.png" ,"story_slno":16},
+                {"name": "", "r":1, "s_icon":"images/awards.png" ,"story_slno":17},
+                {"name": "", "r":1, "s_icon":"images/news.png" ,"story_slno":23}
+                
+
+            ],
+            "title" : "TAKE GIANT LEAPS WITH DATA",
+            "display_name" : "RESOURCES"
+        },
+        {
+            "name": "",
+            "r":0,
+            "icon": "images/6.png",
+            "c_icon" : "images/6_c.png",
+            "gray_icon" : "images/6_g.png",
+            "children": [
+                {"name": "", "r":1, "s_icon":"images/ln18.png" ,"story_slno":18},
+                {"name": "", "r":1, "s_icon":"images/ln19.png" ,"story_slno":19},
+                {"name": "", "r":1, "s_icon":"images/ln20.png" ,"story_slno":20},
+                {"name": "", "r":1, "s_icon":"images/ln21.png" ,"story_slno":21}
+
+            ],
+            "title" : "AN IDEA, A NAPKIN AND A BUNCH OF COLOURS",
+            "display_name" : "ABOUT US"
+        }
+    ]
+};
+
+
+update();
+/*root.children.forEach(function(d){
+ d._children = d.children;
+ d.children = null;
+ });
+ alert();*/
+root.children.forEach(function(d){
+    d._children = d.children;
+    d.children = null;
+});
+root._children = root.children;
+root.children = null;
+update();
+
+//nodes.forEach(function(d) {
+//    d._children = d.children;
+//    d.children = null;
+//});
+//d3.json("graph.json", function(error, json) {
+//    root = json;
+//    update();
+//});
+
+
+function update() {
+
+    var nodes = flatten(root),
+            links = d3.layout.tree().links(nodes);
+    //alert(JSON.stringify(nodes));
+
+    //document.getElementById("show").innerHTML = JSON.stringify(nodes);
+    /*var links = {"links":[
+     {"source":1,"target":0,"value":1},
+     {"source":2,"target":0,"value":8},
+     {"source":3,"target":0,"value":10}
+     ]};
+     */
+    // Restart the force layout.
+    //var nod = [{"name":"","r":0,"icon":"images/6.png","id":1},{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2},{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3},{"name":"","r":0,"icon":"images/3.png","_children":[{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3}],"id":4},{"name":"","r":0,"icon":"images/2.png","_children":[{"name":"","r":0,"icon":"images/3.png","_children":[{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3}],"id":4}],"id":5},{"name":"","r":0,"icon":"images/1.png","_children":[{"name":"","r":0,"icon":"images/2.png","_children":[{"name":"","r":0,"icon":"images/3.png","_children":[{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3}],"id":4}],"id":5}],"id":6}];
+    //var lin = [{"source":{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2},"target":{"name":"","r":0,"icon":"images/6.png","id":1}},{"source":{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3},"target":{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}},{"source":{"name":"","r":0,"icon":"images/3.png","_children":[{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3}],"id":4},"target":{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3}},{"source":{"name":"","r":0,"icon":"images/2.png","_children":[{"name":"","r":0,"icon":"images/3.png","_children":[{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3}],"id":4}],"id":5},"target":{"name":"","r":0,"icon":"images/3.png","_children":[{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3}],"id":4}},{"source":{"name":"","r":0,"icon":"images/1.png","_children":[{"name":"","r":0,"icon":"images/2.png","_children":[{"name":"","r":0,"icon":"images/3.png","_children":[{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3}],"id":4}],"id":5}],"id":6},"target":{"name":"","r":0,"icon":"images/2.png","_children":[{"name":"","r":0,"icon":"images/3.png","_children":[{"name":"","r":0,"icon":"images/4.png","_children":[{"name":"","r":0,"icon":"images/5.png","_children":[{"name":"","r":0,"icon":"images/6.png","id":1}],"id":2}],"id":3}],"id":4}],"id":5}}];
+    //var finallinks = links.concat(lin);
+    //var finalnode = nodes.concat(nod);
+    //document.getElementById("show").innerHTML = JSON.stringify(finallinks);
+    force
+            .nodes(nodes)
+            .links(links)
+            .start();
+
+    // Update links.
+    link = link.data(links, function(d) { return d.target.id; });
+
+    link.exit().remove();
+
+    link.enter().insert("line", ".node")
+            .attr("class", "link");
+
+    // Update nodes.
+    node = node.data(nodes, function(d) { return d.id; });
+
+    node.exit().remove();
+
+    var nodeEnter = node.enter().append("g")
+            .attr("class", "node")
+            .on("click", click)
+            .on("mouseover", mouseover)
+            .on("mouseout", mouseout)
+            .call(force.drag);
+
+    nodeEnter.append("circle")
+            .attr("r", function(d) { return d.r; }).attr("_r", function(d) { return d.r; });
+
+    nodeEnter.append("image")
+            .attr("xlink:href", function(d) { return d.gray_icon; })
+            .attr("x", "-40px")
+            .attr("y", "-40px")
+            .attr("width", "80px")
+            .attr("height", "80px")
+            .attr("class", "parent_g others");
+
+    nodeEnter.append("image")
+            .attr("xlink:href", function(d) { return d.c_icon; })
+            .attr("x", "-63px")
+            .attr("y", "-63px")
+            .attr("width", "126px")
+            .attr("height", "126px")
+            .attr("class", "parent_c others");
+
+
+    nodeEnter.append("image")
+            .attr("xlink:href", function(d) { return d.icon; })
+            .attr("x", "-53px")
+            .attr("y", "-53px")
+            .attr("width", "106px")
+            .attr("height", "106px")
+            .attr("class", "parent");
+    nodeEnter.append("image")
+            .attr("xlink:href", function(d) { return d.s_icon; })
+            .attr("x", "-21px")
+            .attr("y", "-21px")
+            .attr("width", "42px")
+            .attr("height", "42px")
+            .attr("class", "parent_s");
+
+    nodeEnter.append("text")
+            .attr("dy", ".35em")
+            .html(function(d) { return d.name; })
+            .attr("full_name",function(d) { return d.full_name; })
+            .attr("story_slno", function(d) { return d.story_slno; })
+            .attr("name",function(d) { return d.name; })
+            .attr("font-size","6px");
+
+    node.select("circle")
+            .style("fill", color);
+}
+
+function mouseover(d) {
+    //alert(d);
+    if(d3.select(this).select("circle").attr('r') != 0)
+    {
+        d3.select(this).select('.parent_s').transition().duration(750)
+                .attr("x", "-46px").attr("y", "-46px").attr("height",'92px').attr("width",'92px');
+        /* d3.select(this).select("circle").transition()
+         .duration(750)
+         .attr("r", +d3.select(this).select("circle").attr('_r') + 20);
+         //alert(d3.select(this).select("text").text());
+         d3.select(this).select("text").html(d3.select(this).select("text").attr('full_name'));
+         d3.select(this).select("text").transition()
+         .duration(750).attr("font-size",'14px').attr("font-weight",'bold');
+         //d3.select(this).select("text").transition({ "-webkit-transform": "translate3d(0px, " + e + "px, 0px) scale(4)" });
+         //d3.select(this).select("text").transition()
+         //        .duration(750).attr("transform",'scale(2.0)').attr("-webkit-transform",'scale(2.0)');*/
+    }
+    else if(d3.select(this).select("image").attr('href') == "images/logo.png")
+    {
+        if (d3.event.defaultPrevented) return; // ignore drag
+        //alert(d._children);
+        if (!d.children) {
+            d.children = d._children;
+            d._children = null;
+            update();
+            $('#center_title').fadeOut(500);
+            //$('#top_title').fadeIn(500);
+            /*$('#top_title').removeClass('letter_spacing');
+             $('#top_title').text(root.title);
+             $('#top_title').addClass('letter_spacing');
+             */
+            $('#top_title').removeClass('letter_spacing');
+            $('#top_title').text('').css({'letterSpacing':'20px'});
+            $('#top_title').text(root.title);
+            $('#top_title').animate({letterSpacing: "5px"},{ queue:false });
+            /*var dv = $('#top_title');
+             dv.text("");
+             jQuery({count:0}).animate({count:root.title.length}, {
+             duration: 2500,
+             step: function() {                dv.text(root.title.substring(0, Math.round(this.count)));
+             }
+             });
+             d.fixed = true;
+             */
+        }
+    }
+    else
+    {
+        //alert(d3.select(this).select('.parent_s').attr('x'));
+        //alert(d3.event.pageX + "px");
+        /*d3.select("#tooltip")
+         .style("left", d3.select(this).select('.parent_s').attr('x'))
+         .style("top", d3.select(this).select('.parent_s').attr('y'))
+         .style("opacity", 1)
+         .select("#value")
+         .text(d.title);
+         */
+        d3.select("#tooltip")
+                .style("left", d3.event.pageX + "px")
+                .style("top", d3.event.pageY + "px")
+                .style("opacity", 1)
+                .select("#value")
+                .text(d.display_name);
+    }
+}
+
+function mouseout() {
+    if(d3.select(this).select("circle").attr('r') != 0)
+    {
+        d3.select(this).select('.parent_s').transition().duration(750)
+                .attr("x", "-21px").attr("y", "-21px").attr("height",'42px').attr("width",'42px');
+        /* d3.select(this).select("text").html(d3.select(this).select("text").attr('name'));
+         d3.select(this).select("text").transition()
+         .duration(750).attr("font-size",'6px').attr("font-weight",'');*/
+    }
+    d3.select(this).select("circle").transition()
+            .duration(750)
+            .attr("r", +d3.select(this).select("circle").attr('_r'));
+    d3.select("#tooltip")
+            .style("left", "0px")
+            .style("top", "-200px")
+            .style("opacity", 0)
+            .select("#value")
+            .text('');
+}
+
+
+function tick() {
+    /*link.attr("x1", function(d) { return d.source.x; })
+     .attr("y1", function(d) { return d.source.y; })
+     .attr("x2", function(d) { return d.target.x; })
+     .attr("y2", function(d) { return d.target.y; });
+     */
+    link.attr("x1", function(d) { return Math.max((+d.source.r+64), Math.min(document.body.clientWidth - (+d.source.r+64), d.source.x)); })
+            .attr("y1", function(d) { return Math.max((+d.source.r+64), Math.min($("#chart").innerHeight() - (+d.source.r+64), d.source.y)); })
+            .attr("x2", function(d) { return Math.max((+d.target.r+64), Math.min(document.body.clientWidth - (+d.target.r+64), d.target.x)); })
+            .attr("y2", function(d) { return Math.max((+d.target.r+64), Math.min($("#chart").innerHeight() - (+d.target.r+64), d.target.y)); });
+    //node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    node.attr("transform", function(d) { return "translate(" + Math.max((+d.r+64), Math.min(document.body.clientWidth - (+d.r+64), d.x)) + "," + Math.max((+d.r+64), Math.min($("#chart").innerHeight() - (+d.r+64), d.y)) + ")"; });
+    /*node.attr("cx", function(d) { return d.x = Math.max(r, Math.min(width - r, d.x)); })
+     .attr("cy", function(d) { return d.y = Math.max(r, Math.min(height - r, d.y)); });*/
+}
+
+function color(d) {
+
+    /*
+     return d._children ? "#f1ba0b" // collapsed package
+     : d.children ? "#f1ba0b" // expanded package
+     : "#f1ba0b"; // leaf node
+     */
+    return d.color;
+}
+
+// Toggle children on click.
+function click(d) {
+    //alert(d._children);
+    if (d3.event.defaultPrevented) return; // ignore drag
+    //alert(d._children);
+    if(d.children || d._children || d3.select(this).select("image").attr('href'))
+    {
+        if(d3.select(this).select("image").attr('href') != "images/logo.png" && d3.select(this).select("image").attr('href'))
+        {
+            root.children.forEach(function(d1){
+                if(d1.children && d.children != d1.children)
+                {
+                    d1._children = d1.children;
+                    d1.children = null;
+                }
+            });
+        }
+        if (d.children) {
+            d._children = d.children;
+            d.children = null;
+        } else {
+            d.children = d._children;
+            d._children = null;
+        }
+        update();
+        //alert();
+
+        if(d3.select(this).select("image").attr('href') != "images/logo.png" && d3.select(this).select("image").attr('href') && d.children)
+        {
+            //alert();
+
+            /*  d3.selectAll(".parent").classed("others",true);
+             d3.selectAll(".parent_g").classed("others",false);
+             d3.select(this).select(".parent").classed("others", false);
+             d3.select(this).select(".parent_g").classed("others", true);*/
+
+
+            d3.selectAll(".parent").classed("others",true);
+            d3.selectAll(".parent_c").classed("others",true);
+            d3.selectAll(".parent_g").classed("others",false);
+            d3.select(this).select(".parent").classed("others", true);
+            d3.select(this).select(".parent_c").classed("others", false);
+            d3.select(this).select(".parent_g").classed("others", false);
+
+
+            /*$('#top_title').text(d.title);
+             $('#top_title').removeClass('letter_spacing');
+             $('#top_title').text(d.title);
+             $('#top_title').addClass('letter_spacing_r');
+             $('#top_title').text(d.title);
+             $('#top_title').addClass('letter_spacing');
+             */
+            
+            
+            /*$('#top_title').removeClass('letter_spacing');
+            $('#top_title').text('').css({'letterSpacing':'20px'});
+            $('#top_title').text(d.title);
+            $('#top_title').animate({letterSpacing: "5px"},{ queue:false });
+            */
+            
+            /*var dv = $('#top_title');
+             dv.text("");
+             jQuery({count:0}).animate({count:d.title.length}, {
+             duration: 2500,
+             step: function() {                dv.text(d.title.substring(0, Math.round(this.count)));
+             }
+             }); */
+        }
+        else
+        {
+            d3.selectAll(".parent_g").classed("others",true);
+            d3.selectAll(".parent_c").classed("others",true);
+            d3.selectAll(".parent").classed("others",false);
+            $('#top_title').removeClass('letter_spacing');
+            $('#top_title').text(root.title);
+            $('#top_title').animate({letterSpacing: "5px"},{ queue:false });
+            /* var dv = $('#top_title');
+             dv.text("");
+             jQuery({count:0}).animate({count:root.title.length}, {
+             duration: 2500,
+             step: function() {                dv.text(root.title.substring(0, Math.round(this.count)));
+             }
+             });*/
+        }
+        /*if(d3.select(this).select("image").attr('href') != "images/logo.png")
+         {
+         d3.select(this).select("image").transition()
+         .duration(750)
+         .attr("opacity", 0);
+         }
+         */
+    }
+    else
+    {
+        //alert(d3.select(this).select("text").attr('story_slno'));
+        var story_slno = d3.select(this).select("text").attr('story_slno');
+        $('#fadeandscale_ul').html(" ");
+        $('#coverflow_parent').removeClass('page_r');
+        $('#coverflow_parent').addClass('page');
+        $('#coverflow_close').fadeIn();
+        var request = $.ajax({
+            url: 'cover.php',
+            type: 'POST',
+            data: {story_slno:story_slno},
+            success: function(data) {
+                var a = data.split('<!-- ---');
+                var b = a[1].split(' ');
+                //alert(b[0]);
+                // alert(b[1]);
+                //alert(data);
+                $('#fadeandscale_ul').html(data);
+                $('#effects').sly('reload');
+                $('#effects').sly('activate',b[0] ,true);
+                //$('#fadeandscale_open').click();
+                //setTimeout(function(){
+                //$('#coverflow_loader').hide();
+                //}, 1500);
+            }
+        });
+        request.done(function() {
+            $('#coverflow_loader').hide();
+            $('#effects_parent').css('opacity','1');
+            //alert( "Data Saved: ");
+        });
+        //$('#coverflow_parent').removeClass('page_r');
+        //$('#coverflow_parent').addClass('page');
+        //$('#coverflow_close').fadeIn();
+    }
+}
+
+// Returns a list of all nodes under the root.
+function flatten(root) {
+    var nodes = [], i = 0;
+    function recurse(node) {
+        //alert(JSON.stringify(node));
+        if (node.children) node.children.forEach(recurse);
+        if (!node.id) node.id = ++i;
+        //node.id = ++i;
+        //alert(node.join());
+        nodes.push(node);
+    }
+    recurse(root);
+    //alert(nodes.join());
+    return nodes;
+}
+</script> 
+  <script>
+    $(function(){
+        if($( window ).width() < $( window ).height())
+        {
+            //alert();
+            $('#info').show();
+        }
+        $(window).resize(function() {
+            var width = window.innerWidth,
+                height = $("#chart").innerHeight();
+            force.size([width, height]).resume();
+            if($( window ).width() < $( window ).height())
+            {
+                //alert();
+                $('#info').show();
+            }
+            else
+            {
+                $('#info').hide();
+            }
+        });
+        function sc_down(){
+            $('#animated_div_scroll').removeClass('visible animated scrolldown scrolldown_r');
+            $('#animated_div_scroll').addClass('visible animated scrolldown');
+            setTimeout(function(){
+                sc_down1();
+            },1000)
+        }
+        function sc_down1(){
+            $('#animated_div_scroll').removeClass('visible animated scrolldown scrolldown_r');
+            $('#animated_div_scroll').addClass('visible animated scrolldown_r');
+            setTimeout(function(){
+                sc_down();
+            },200)
+        }
+        sc_down();
+        $('.img_change').mouseenter(function(){
+            //alert($(this).attr('_src'));
+            $(this).attr('src',("images/"+$(this).attr('_src')+".png"));
+        });
+        $('.img_change').mouseleave(function(){
+            //alert($(this).attr('_src'));
+            $(this).attr('src',("images/"+$(this).attr('_src')+"_g.png"));
+        });
+        $('.clearfix').show();
+
+        //$(document).on("click", ".big_popup", function() {
+
+        $('#fadeandscale').popup({
+            transition: 'all 0.3s'
+        });
+
+        $('#coverflow_close').click(function(){
+            $(this).fadeOut('slow');
+            $('#coverflow_parent').removeClass('page');
+            $('#coverflow_parent').addClass('page_r');
+            $('#fadeandscale_ul').html('');
+            $('#coverflow_loader').show();
+            $('#effects_parent').css('opacity','0');
+        });
+        $('#page_close').click(function(){
+            $(this).fadeOut('slow');
+            $('#page').removeClass('page');
+            $('#page').addClass('page_r');
+            $('#page_html').html('');
+            $('#next_post').fadeOut();
+        });
+$('#site-map').click(function(){
+            $.ajax({
+                url: 'site-map.html',
+                type: 'POST',
+                success: function(data) {
+                    $('#page_html').html(data);
+                    $('#page').removeClass('page_r');
+                    $('#page').addClass('page');
+                    $('#page_close').show();
+                    $('#next_post').show();
+                }
+            });
+        });
+$('#privacy-policy').click(function(){
+            $.ajax({
+                url: 'privacy.html',
+                type: 'POST',
+                success: function(data) {
+                    $('#page_html').html(data);
+                    $('#page').removeClass('page_r');
+                    $('#page').addClass('page');
+                    $('#page_close').show();
+                    $('#next_post').show();
+                }
+            });
+        });
+$('#copyright').click(function(){
+            $.ajax({
+                url: 'copyright.html',
+                type: 'POST',
+                success: function(data) {
+                    $('#page_html').html(data);
+                    $('#page').removeClass('page_r');
+                    $('#page').addClass('page');
+                    $('#page_close').show();
+                }
+            });
+        });
+        $('#contact_form').click(function(){
+            $.ajax({
+                url: 'form1.html',
+                type: 'POST',
+                success: function(data) {
+                    $('#page_html').html(data);
+                    $('#page').removeClass('page_r');
+                    $('#page').addClass('page');
+                    $('#page_close').show();
+                    $('#next_post').hide();
+                }
+            });
+        });
+	
+	$('#crayon-yoda').click(function(){
+            $.ajax({
+                url: 'crayon-yoda.html',
+                type: 'POST',
+                success: function(data) {
+                    $('#page_html').html(data);
+                    $('#page').removeClass('page_r');
+                    $('#page').addClass('page');
+                    $('#page_close').show();
+                    $('#next_post').hide();
+                }
+            });
+        });
+        $(document).on('click','#contact_form_submit',function(){
+            //$('#contact_form_fields').submit();
+            //alert($('#form1_name').val());
+
+            //$('#contact_form_fields').fadeOut('slow');
+            //$('#thank_you').fadeIn('slow');
+            //$('#validation_msg').fadeIn('slow');
+            //alert(str.length);
+            if($(this).attr('form') == 'contact_form')
+            {
+                if($('#form1_name').val() && $('#form1_city').val() && $('#form1_email').val() && $('#form1_phone').val())
+                {
+                    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+                    if(pattern.test($('#form1_email').val()))
+                    {
+                        $('#form1_email').css('color','#000000');
+                        var pattern = new RegExp(/^[+0-9]{1,30}$/);
+                        var str = $('#form1_phone').val().replace(/\D/g,'');
+                        if(pattern.test($('#form1_phone').val()))
+                        {
+                            $('#form1_phone').css('color','#000000');
+                            $.ajax({
+                                url: 'form1_submit.php',
+                                type: 'POST',
+                                data: {form1_name:$('#form1_name').val(),form1_city : $('#form1_city').val(), form1_email : $('#form1_email').val(), form1_phone : $('#form1_phone').val(),form1_company : $('#form1_company').val(),form1_about : $('#form1_about').val()},
+                                success: function(data) {
+                                    //alert(data);
+                                    $('#contact_form_fields').fadeOut('slow');
+                                    $('#thank_you').fadeIn('slow');
+                                }
+                            });
+                        }
+                        else
+                        {
+                            $('#form1_phone').css('color','#EE5282');
+                        }
+                    }
+                    else
+                    {
+                        $('#form1_email').css('color','#EE5282');
+                    }
+                }
+                else
+                {
+                    $('#validation_msg').fadeOut('slow');
+                    $('#validation_msg').fadeIn('slow');
+                }
+            }
+            else if($(this).attr('form') == 'demo_form')
+            {
+                if($('#form2_name').val() && $('#form2_city').val() && $('#form2_email').val() && $('#form2_phone').val() && $('#form2_company_name').val())
+                {
+                    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+                    if(pattern.test($('#form2_email').val()))
+                    {
+                        $('#form2_email').css('color','#000000');
+                        var pattern = new RegExp(/^[+0-9]{1,30}$/);
+                        var str = $('#form2_phone').val().replace(/\D/g,'');
+                        if(pattern.test($('#form2_phone').val()))
+                        {
+                            $('#form2_phone').css('color','#000000');
+                            $.ajax({
+                                url: 'form2_submit.php',
+                                type: 'POST',
+                                data: {form2_name:$('#form2_name').val(),form2_city : $('#form2_city').val(), form2_email : $('#form2_email').val(), form2_phone : $('#form2_phone').val(),form2_company : $('#form2_company_name').val(),form2_industry : $('#form2_industry').val(),form2_others : $('#form2_others').val(),form2_about : $('#form2_about').val()},
+                                success: function(data) {
+                                    //alert(data);
+                                    $('#contact_form_fields').fadeOut('slow');
+                                    $('#thank_you').fadeIn('slow');
+                                }
+                            });
+                        }
+                        else
+                        {
+                            $('#form2_phone').css('color','#EE5282');
+                        }
+                    }
+                    else
+                    {
+                        $('#form2_email').css('color','#EE5282');
+                    }
+                }
+                else
+                {
+                    $('#validation_msg').fadeOut('slow');
+                    $('#validation_msg').fadeIn('slow');
+                }
+            }
+            else if($(this).attr('form') == 'join_us')
+            {
+                if($('#form3_name').val() && $('#form3_city').val() && $('#form3_email').val() && $('#form3_phone').val() && $('#form3_stream').val())
+                {
+                    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+                    if(pattern.test($('#form3_email').val()))
+                    {
+                        $('#form3_email').css('color','#000000');
+                        var pattern = new RegExp(/^[+0-9]{1,30}$/);
+                        var str = $('#form3_phone').val().replace(/\D/g,'');
+                        if(pattern.test($('#form3_phone').val()))
+                        {
+                            $('#form3_phone').css('color','#000000');
+                            /*$.ajax({
+                                url: 'form3_submit.php',
+                                type: 'POST',
+                                data: {form3_name:$('#form3_name').val(),form3_city : $('#form3_city').val(), form3_email : $('#form3_email').val(), form3_phone : $('#form3_phone').val(),form3_cv : $('#form3_cv').val(),form3_about : $('#form3_about').val(),form3_stream : $('#form3_stream').val(),form3_degree : $('#form3_degree').val(),form3_others : $('#form3_others').val() },
+                                success: function(data) {
+                                    //alert(data);
+                                    $('#contact_form_fields').fadeOut('slow');
+                                    $('#thank_you').fadeIn('slow');
+                                }
+                            });
+                            */
+                            $('#contact_form_fields').submit();
+                            $('#contact_form_fields').fadeOut('slow');
+                            $('#thank_you').fadeIn('slow');
+                            var a = +$("#animated_div").offset().top+360;
+			        $('#animated_div').animate({
+			            scrollTop:a
+			        }, 2000);
+                        }
+                        else
+                        {
+                            $('#form3_phone').css('color','#EE5282');
+                        }
+                    }
+                    else
+                    {
+                        $('#form3_email').css('color','#EE5282');
+                    }
+                }
+                else
+                {
+                    $('#validation_msg').fadeOut('slow');
+                    $('#validation_msg').fadeIn('slow');
+                }
+            }
+        });
+        $('#coverflow_overlay').click(function(){
+            $('#coverflow_close').fadeOut('slow');
+            $('#coverflow_parent').removeClass('page');
+            $('#coverflow_parent').addClass('page_r');
+            $('#fadeandscale_ul').html('');
+        });
+                setTimeout(function(){
+            $('#page_loader').hide();
+            $('#chart').fadeIn();
+        },1500)
+    });
+</script> 
+  <!--http://bl.ocks.org/mbostock/1093130#graph.json--> 
+  <!-- Google Code for Remarketing Tag --> 
+  <!--
+
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+
+---------------------------------------------------> 
+  <script type="text/javascript">
+
+/* <![CDATA[ */
+
+var google_conversion_id = 991950616;
+
+var google_custom_params = window.google_tag_params;
+
+var google_remarketing_only = true;
+
+/* ]]> */
+
+</script> 
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+
+</script> 
+  <noscript> 
+   <div style="display:inline;"> 
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/991950616/?value=0&amp;guid=ON&amp;script=0"> 
+   </div> 
+  </noscript> 
+ </body>
+</html>

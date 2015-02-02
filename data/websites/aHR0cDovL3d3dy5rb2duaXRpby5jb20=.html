@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta name="generator" content="WordPress 3.5"> 
+  <meta property="twitter:account_id" content="18758995"> 
+  <title>Supercomputing for Data Science - Big Data Analytics - Kognitio</title> 
+  <!-- **Favicon** --> 
+  <link href="http://www.kognitio.com/wp-content/uploads/2013/05/favicon.ico" rel="shortcut icon" type="image/x-icon"> 
+  <!-- **CSS - stylesheets** --> 
+  <link id="default-css" href="http://kognitio.com/wp-content/themes/ultimate/style.css" rel="stylesheet" type="text/css" media="all"> 
+  <link id="shortcodes-css" href="http://kognitio.com/wp-content/themes/ultimate/shortcodes.css" rel="stylesheet" type="text/css" media="all"> 
+  <link id="skin-css" href="http://kognitio.com/wp-content/themes/ultimate/skins/blue/style.css" rel="stylesheet" type="text/css" media="all"> 
+  <link id="responsive-css" href="http://kognitio.com/wp-content/themes/ultimate/responsive.css" rel="stylesheet" type="text/css" media="all"> 
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://kognitio.com/feed/"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <!--[if lt IE 9]>
+
+	<link rel="stylesheet" type="text/css" href="http://kognitio.com/wp-content/themes/ultimate/css/ie8-and-down.css" />
+
+<![endif]--> 
+  <script type="text/javascript"> var mytheme_urls = {
+	 theme_base_url:'http://kognitio.com/wp-content/themes/ultimate/'
+ 	,framework_base_url:'http://kognitio.com/wp-content/themes/ultimate/framework/'};
+ </script> 
+  <meta name="keywords" content="Data Science, Big Data, Hadoop, BI"> 
+  <link rel="alternate" type="application/rss+xml" title="Kognitio » Feed" href="http://kognitio.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Kognitio » Comments Feed" href="http://kognitio.com/comments/feed/"> 
+  <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-34784759-1']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script> 
+  <link rel="alternate" type="application/rss+xml" title="Kognitio » Home Comments Feed" href="http://kognitio.com/homepage/feed/"> 
+  <link id="H1-font" href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css"> 
+  <link id="H2-font" href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css"> 
+  <link id="H3-font" href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css"> 
+  <link id="H4-font" href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css"> 
+  <link id="H5-font" href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css"> 
+  <link id="H6-font" href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css"> 
+  <style type="text/css">	H1{ font-family:Droid Sans; }	H2{ font-family:Droid Sans; }	H3{ font-family:Droid Sans; }	H4{ font-family:Droid Sans; }	H5{ font-family:Droid Sans; }	H6{ font-family:Droid Sans; }	</style> 
+  <link rel="stylesheet" id="fblb-css-css" href="http://kognitio.com/wp-content/plugins/arscode-social-slider/fblb.css?ver=3.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="jquery-lionbars-css" href="http://kognitio.com/wp-content/plugins/arscode-social-slider/lionbars/lionbars.css?ver=3.5" type="text/css" media="all"> 
+  <!--[if lte IE 7]>
+<link rel='stylesheet' id='fblb-css-ie7-css'  href='http://kognitio.com/wp-content/plugins/arscode-social-slider/ie7.css?ver=3.5' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="jquery.prettyphoto-css" href="http://kognitio.com/wp-content/plugins/wp-video-lightbox/css/prettyPhoto.css?ver=3.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="prettyphoto-css" href="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/prettyphoto/prettyPhoto.css?ver=3.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="fmslideshow-css-css" href="http://kognitio.com/wp-content/themes/ultimate/css/fmslideshow.min.css?ver=3.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="layerslider_css-css" href="http://kognitio.com/wp-content/plugins/LayerSlider/css/layerslider.css?ver=3.5.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="ditty-news-ticker-css" href="http://kognitio.com/wp-content/plugins/ditty-news-ticker/assets/css/style.css?ver=1.1.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="ditty-news-ticker-posts-css" href="http://kognitio.com/wp-content/plugins/ditty-posts-ticker/assets/css/style.css?ver=1.0.4" type="text/css" media="all"> 
+  <link rel="stylesheet" id="rs-settings-css" href="http://kognitio.com/wp-content/plugins/revslider/rs-plugin/css/settings.css?ver=3.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="rs-captions-css" href="http://kognitio.com/wp-content/plugins/revslider/rs-plugin/css/captions.css?ver=3.5" type="text/css" media="all"> 
+  <!--[if IE]>
+	<style type="text/css" media="screen">
+		.button, #top-menu ul.menu li ul li.current_page_item, #top-menu ul.menu li ul li:hover, #top-menu ul.menu-rounded li, #top-menu ul.menu-rounded li ul, #top-menu ul.menu-rounded li ul ul, .home-slider-bg, .welcome-text, .read-more-text span, .image-overlay, .readmore, .readmore:hover, .clients-skin-carousel, .breadcrumb-bg, .pagination ul li a, .pagination .next-post, .pagination .prev-post, .pagination ul li a:hover, .pagination .next-post:hover, .pagination .prev-post:hover, .pricing-table table tr.buttons td a.button.black, .dropcap.dropcap-circle, .dropcap.dropcap-bordered-circle, ul.tabs-frame li a, ul.tabs-vertical-frame li a, ul.tabs-vertical-frame li.first a, ul.tabs-vertical-frame li.last a, .toggle-frame, #ultimate-style-picker, #ultimate-style-picker h2 {
+			behavior: url(http://kognitio.com/wp-content/themes/ultimate/PIE.htc);
+		}
+	</style>
+	<![endif]-->
+  <script type="text/javascript" src="http://kognitio.com/wp-includes/js/jquery/jquery.js?ver=1.8.3"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/plugins/arscode-social-slider/js/userscripts-mobile.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/plugins/arscode-social-slider/lionbars/jquery.lionbars.0.3.min.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/plugins/wp-video-lightbox/js/jquery.prettyPhoto.js?ver=3.1.4"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/plugins/wp-video-lightbox/js/video-lightbox.js?ver=3.1.4"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/jquery.validate.min.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/sendmail.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/plugins/LayerSlider/js/layerslider.kreaturamedia.jquery.js?ver=3.5.0"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/plugins/LayerSlider/js/jquery-easing-1.3.js?ver=1.3.0"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=3.5"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://kognitio.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://kognitio.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="next" title="Company" href="http://kognitio.com/company/"> 
+  <meta name="generator" content="WordPress 3.5"> 
+  <!-- All in One SEO Pack 2.0 by Michael Torbert of Semper Fi Web Design[385,434] --> 
+  <meta name="description" content="Kognitio is driving the convergence of Big Data Analytics and Cloud Computing, with a mature and proven in-memory analytical platform allowing rapid execution of complex analytical queries."> 
+  <meta name="keywords" content="Analytics, Big Data, In-Memory Analytics, Cloud Analytics, Big Data Analytics"> 
+  <link rel="canonical" href="http://kognitio.com/"> 
+  <!-- /all in one seo pack --> 
+  <script type="text/javascript">
+
+  /* <![CDATA[ */
+
+  document.write (
+
+    '<img src="http://marketing.kognitio.com/acton/bn/5087/visitor.gif?ts='+
+
+    new Date().getTime()+
+
+    '&ref='+escape(document.referrer) + '">'
+
+  );
+
+  /* ]]> */
+
+</script> 
+  <meta name="msvalidate.01" content="8EB25787B9CDB76C6ED5FDE5D15F3CBE"> 
+ </head> 
+ <body class="home page page-id-1423 page-template page-template-tpl-home-php"> 
+  <!-- BEGIN LivePerson Monitor. --> 
+  <script type="text/javascript">
+
+if(typeof window.lpTag==='undefined'){window.lpTag={site:'66613077',_v:'1.3',protocol:location.protocol,events:{bind:function(app,ev,fn){lpTag.defer(function(){lpTag.events.bind(app,ev,fn)},0)},trigger:function(app,ev,json){lpTag.defer(function(){lpTag.events.trigger(app,ev,json)},1)}},defer:function(fn,fnType){if(fnType==0){this._defB=this._defB||[];this._defB.push(fn)}else if(fnType==1){this._defT=this._defT||[];this._defT.push(fn)}else{this._defL=this._defL||[];this._defL.push(fn)}},load:function(src,chr,id){var t=this;setTimeout(function(){t._load(src,chr,id)},0)},_load:function(src,chr,id){var url=src;if(!src){url=this.protocol+'//'+((this.ovr&&this.ovr.domain)?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site}var s=document.createElement('script');s.setAttribute('charset',chr?chr:'UTF-8');if(id){s.setAttribute('id',id)}s.setAttribute('src',url);document.getElementsByTagName('head').item(0).appendChild(s)},init:function(){this._timing=this._timing||{};this._timing.start=(new Date()).getTime();var that=this;if(window.attachEvent){window.attachEvent('onload',function(){that._domReady('domReady')})}else{window.addEventListener('DOMContentLoaded',function(){that._domReady('contReady')},false);window.addEventListener('load',function(){that._domReady('domReady')},false)}if(typeof(window._lptStop)=='undefined'){this.load()}},_domReady:function(n){if(!this.isDom){this.isDom=true;this.events.trigger('LPT','DOM_READY',{t:n})}this._timing[n]=(new Date()).getTime()}};lpTag.init()}
+
+</script> 
+  <!-- END LivePerson Monitor. --> 
+  <script type="text/javascript" language="javascript">llactid=16378</script> 
+  <script type="text/javascript" language="javascript" src="http://t4.trackalyzer.com/trackalyze.js"></script> 
+  <!-- BBar --> 
+  <!-- BBar End --> 
+  <!-- **Wrapper** --> 
+  <div id="wrapper"> 
+   <!--  ################ HEADER SECTION ################ --> 
+   <!-- **Header** --> 
+   <div id="header"> 
+    <!-- **Header Container** --> 
+    <div class="container"> 
+     <!-- **Logo** --> 
+     <div id="logo"> 
+      <a href="http://kognitio.com" title="Kognitio"> <img src="http://kognitio.com/wp-content/themes/ultimate//images/logo.png" alt="Kognitio" title="Kognitio"> </a> 
+     </div>
+     <!-- **Logo - End** --> 
+     <!-- Float Right Container --> 
+     <!-- Begin News-ticker plugin --> 
+     <div id="mtphr-dnt-2355" class="mtphr-dnt mtphr-dnt-2355 mtphr-dnt-posts mtphr-dnt-rotate mtphr-dnt-rotate-slide_up">
+      <div class="mtphr-dnt-wrapper mtphr-dnt-clearfix">
+       <div class="mtphr-dnt-tick-container">
+        <div style="height:78px;" class="mtphr-dnt-tick mtphr-dnt-clearfix">
+         <h4 class="mtphr-dnt-posts-title">Try the Kognitio Analytical Platform FREE</h4>
+         <div class="mtphr-dnt-posts-content">
+          <p>Start running real-time analytics on your Big Data<br> <a href="http://www.kognitio.com/free">Download here</a></p> 
+         </div>
+        </div>
+        <div style="height:78px;" class="mtphr-dnt-tick mtphr-dnt-clearfix">
+         <h4 class="mtphr-dnt-posts-title">The Blueberry Wave mentioned by research.</h4>
+         <div class="mtphr-dnt-posts-content">
+          <p>Recent article by <a href="http://www.research-live.com/news/the-blueberry-wave-teams-up-with-kognitio/4012504.article" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.research-live.com']);" target="_blank">'research.'</a> highlighting benefits of using Kognitio,<br> also available at <a href="http://www.dbm.today/the-blueberry-wave-and-kognitio-reduce-big-data-processing-time-to-one-minute/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.dbm.today']);" target="_blank">'DBM.Today' </a></p> 
+         </div>
+        </div>
+        <div style="height:78px;" class="mtphr-dnt-tick mtphr-dnt-clearfix">
+         <h4 class="mtphr-dnt-posts-title">Customer Satisfaction</h4>
+         <div class="mtphr-dnt-posts-content">
+          <p>Leading Analyst Firm Cites Kognitio for Highest Customer Satisfaction,<br> Plus Technology Maturity and Breadth<br> <a href="http://www.kognitio.com//infodiff2013/">Read More</a></p> 
+         </div>
+        </div>
+        <div style="height:78px;" class="mtphr-dnt-tick mtphr-dnt-clearfix">
+         <h4 class="mtphr-dnt-posts-title">2014 DBTA top 100</h4>
+         <div class="mtphr-dnt-posts-content">
+          <p>Kognitio listed in 2014 DBTA list for companies that matter in data!<br> <a href="http://www.dbta.com/Editorial/Trends-and-Applications/DBTA-100-2014---TheCompanies-That-Matter-Most-in-Data-97199.aspx?PageNum=01" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.dbta.com']);">- Read more</a></p> 
+         </div>
+        </div>
+        <div style="height:78px;" class="mtphr-dnt-tick mtphr-dnt-clearfix">
+         <h4 class="mtphr-dnt-posts-title">CRN Big Data 100: Business Analytics</h4>
+         <div class="mtphr-dnt-posts-content">
+          <p>June 2014 - Kognitio yet again recognised as key vendor in big data solutions<br> <a href="http://www.bigdatanews.com/profiles/blogs/big-data-100-business-analytics" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.bigdatanews.com']);">Big Data News Summary</a> / <a href="http://www.crn.com/slide-shows/applications-os/300072862/big-data-100-business-analytics.htm" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.crn.com']);">CRN Link</a></p> 
+         </div>
+        </div>
+        <div style="height:78px;" class="mtphr-dnt-tick mtphr-dnt-clearfix">
+         <h4 class="mtphr-dnt-posts-title">Kognitio Analytical Platform "Easy to Install From AWS Marketplace"</h4>
+         <div class="mtphr-dnt-posts-content">
+          <p>Read the review in <a href="http://www.eweek.com/cloud/slideshows/kognitio-analytical-platform-is-easy-to-install-from-aws-marketplace/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.eweek.com']);" target="_blank">eWeek</a></p> 
+         </div>
+        </div>
+        <div style="height:78px;" class="mtphr-dnt-tick mtphr-dnt-clearfix">
+         <h4 class="mtphr-dnt-posts-title">Big Data Analytics Consulting List</h4>
+         <div class="mtphr-dnt-posts-content">
+          <p>New: “46 Big Data Analytics Consulting Companies” - <a href="http://www.bigdataanalyticstoday.com/bigdata-analytics-consulting-companies/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.bigdataanalyticstoday.com']);">Read More</a></p> 
+         </div>
+        </div>
+       </div> 
+       <script>
+		jQuery( window ).load( function() {
+			jQuery( '#mtphr-dnt-2355' ).ditty_news_ticker({
+				id : '2355',
+				type : 'rotate',
+				rotate_type : 'slide_up',
+				auto_rotate : 1,
+				rotate_delay : 7,
+				rotate_pause : 1,
+				rotate_speed : 3,
+				rotate_ease : 'linear',
+				nav_reverse : 0,
+				after_load : function( $ticker ) {
+									},
+				before_change : function( $ticker ) {
+									},
+				after_change : function( $ticker ) {
+									}
+			});
+		});
+		</script> 
+      </div>
+     </div> 
+     <!-- End News-ticker plugin --> 
+     <!-- **Searchform** --> 
+     <form method="get" id="searchform" action="http://kognitio.com"> 
+      <fieldset> 
+       <input id="s" name="s" type="text" value="Search Our Site" class="text_input" onblur="if(this.value==''){this.value='Search Our Site';}" onfocus="if(this.value =='Search Our Site') {this.value=''; }"> 
+       <input name="submit" type="submit" value="Go"> 
+      </fieldset> 
+     </form>
+     <!-- **Searchform - End** --> 
+    </div>
+    <!-- Float Right Container --> 
+   </div>
+   <!-- **Header Container** --> 
+  </div>
+  <!-- **Header - End** --> 
+  <div id="mobile-header"> 
+   <a href="http://www.kognitio.com"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/05/logo-smaller.png"></a>
+  </div> 
+  <!--  ################ HEADER SECTION END ################ --> 
+  <!--  ################ TOP MENU SECTION ################ --> 
+  <!-- **Top-Menu** --> 
+  <div id="top-menu"> 
+   <div class="container"> 
+    <ul id="menu-top-menu" class="menu">
+     <li id="menu-item-1735" class="menu-item menu-item-type-post_type menu-item-object-page"><span class="hoverL"> <span class="hoverR"> </span> </span><a href="http://kognitio.com/company/">Company</a> 
+      <ul class="sub-menu"> 
+       <li id="menu-item-1745" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/company/about-kognitio/">About Kognitio</a></li> 
+       <li id="menu-item-1749" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/company/partners/">Partners</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-1893" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/company/partners/infrastructure-partners/">Infrastructure Partners</a></li> 
+         <li id="menu-item-1896" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/company/partners/software-partners/">Software Partners</a></li> 
+         <li id="menu-item-1895" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/company/partners/services-partners/">Services Partners</a></li> 
+         <li id="menu-item-1894" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/company/partners/reseller-partners/">Reseller Partners</a></li> 
+        </ul> </li> 
+       <li id="menu-item-1746" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/company/careers/">Careers</a></li> 
+       <li id="menu-item-1748" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/company/leadership/">Leadership</a></li> 
+       <li id="menu-item-3637" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com/privacy/">Privacy</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-1744" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/company/about-cookies/">About Cookies</a></li> 
+        </ul> </li> 
+       <li id="menu-item-1747" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/company/contact/">Contact</a></li> 
+      </ul> </li> 
+     <li id="menu-item-1750" class="menu-item menu-item-type-post_type menu-item-object-page"><span class="hoverL"> <span class="hoverR"> </span> </span><a href="http://kognitio.com/products/">Products</a> 
+      <ul class="sub-menu"> 
+       <li id="menu-item-2306" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//analyticalplatform/">The Kognitio Analytical Platform</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-1872" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/products/the-kognitio-analytical-platform-2/architecture/">Architecture</a></li> 
+         <li id="menu-item-1873" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/products/the-kognitio-analytical-platform-2/deployment/">Deployment</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-1986" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//products/the-kognitio-analytical-platform-2/deployment/cloud/">Cloud</a></li> 
+           <li id="menu-item-1988" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//products/the-kognitio-analytical-platform-2/deployment/appliance/">Appliance</a></li> 
+           <li id="menu-item-1985" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//products/the-kognitio-analytical-platform-2/deployment/software/">Software</a></li> 
+           <li id="menu-item-1989" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//free/">Free to Use</a></li> 
+          </ul> </li> 
+        </ul> </li> 
+       <li id="menu-item-1752" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/cloud/">Kognitio Cloud</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-3520" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//cloud-info/">Tell Me</a></li> 
+         <li id="menu-item-3518" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//gotryit/">Go Try It</a></li> 
+        </ul> </li> 
+      </ul> </li> 
+     <li id="menu-item-1757" class="menu-item menu-item-type-post_type menu-item-object-page"><span class="hoverL"> <span class="hoverR"> </span> </span><a href="http://kognitio.com/solutions/">Solutions</a> 
+      <ul class="sub-menu"> 
+       <li id="menu-item-2015" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/solutions/technology/">Technology</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-3762" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com/hadoop/">Advanced Analytics for Hadoop</a></li> 
+         <li id="menu-item-2014" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/solutions/technology/the-data-science-lab/">The Data Science Lab</a></li> 
+         <li id="menu-item-4339" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/free/">Try the Kognitio Analytical Platform</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-4341" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/demo/">Demo</a></li> 
+          </ul> </li> 
+        </ul> </li> 
+       <li id="menu-item-1742" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/solutions/industries/">Industries</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-3502" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//solutions/industries/analytical-information-services/">Analytical Service Providers</a></li> 
+         <li id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/marketinganalytics/">Digital Marketing Analytics</a></li> 
+         <li id="menu-item-2031" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/solutions/industries/energy-utilities/">Energy &amp; Utilities</a></li> 
+         <li id="menu-item-2040" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//solutions/industries/financial-services-and-insurance/">Financial Services</a></li> 
+         <li id="menu-item-2044" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/solutions/industries/governmentpublic-sector/">Government/Public Sector</a></li> 
+         <li id="menu-item-2047" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/solutions/industries/healthcare/">Healthcare</a></li> 
+         <li id="menu-item-2051" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//solutions/industries/gaming-and-gambling/">Gaming &amp; Gambling</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-3517" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//gaming/">Gaming &amp; Casinos</a></li> 
+          </ul> </li> 
+         <li id="menu-item-2055" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/solutions/industries/media-analytics/">Media Analytics</a></li> 
+         <li id="menu-item-2059" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/solutions/industries/retail-and-cpg/">Retail and CPG</a></li> 
+         <li id="menu-item-2063" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/solutions/industries/telecommunications/">Telecommunications</a></li> 
+         <li id="menu-item-2066" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/solutions/industries/travel-leisure/">Travel &amp; Leisure</a></li> 
+        </ul> </li> 
+      </ul> </li> 
+     <li id="menu-item-1761" class="menu-item menu-item-type-post_type menu-item-object-page"><span class="hoverL"> <span class="hoverR"> </span> </span><a href="http://kognitio.com/customers/">Clients</a></li> 
+     <li id="menu-item-2219" class="menu-item menu-item-type-custom menu-item-object-custom"><span class="hoverL"> <span class="hoverR"> </span> </span><a href="http://www.kognitio.com//support/customer-support/">Support</a> 
+      <ul class="sub-menu"> 
+       <li id="menu-item-5879" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="https://eu1.salesforce.com/sserv/login.jsp?orgId=00D200000005qBI" onclick="javascript:_gaq.push(['_trackEvent','outbound-menu','http://eu1.salesforce.com']);">Customer Support Portal</a></li> 
+       <li id="menu-item-1764" class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" href="http://kognitio.com/support/forums/">Free Community Forum</a></li> 
+       <li id="menu-item-5878" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//support/customer-support/">Overview of Support</a></li> 
+       <li id="menu-item-1765" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/support/training/">Training</a></li> 
+      </ul> </li> 
+     <li id="menu-item-2264" class="menu-item menu-item-type-custom menu-item-object-custom"><span class="hoverL"> <span class="hoverR"> </span> </span><a href="http://www.kognitio.com//information-center/resources/">Information Center</a> 
+      <ul class="sub-menu"> 
+       <li id="menu-item-5783" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://kognitio.com/category/analytics-news/">#AnalyticsNews</a></li> 
+       <li id="menu-item-1767" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/information-center/events/">Events</a></li> 
+       <li id="menu-item-1769" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/information-center/news/">News</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-2483" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/press-releases/">Press Releases</a></li> 
+         <li id="menu-item-4435" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/in-the-news/">In the News</a></li> 
+         <li id="menu-item-3808" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.kognitio.com//newsletter">Newsletter</a></li> 
+         <li id="menu-item-2255" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/information-center/news/press-contact/">Press Information</a></li> 
+        </ul> </li> 
+       <li id="menu-item-1770" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/information-center/reports/">Reports</a></li> 
+       <li id="menu-item-1771" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/information-center/resources/">Resources</a> 
+        <ul class="sub-menu"> 
+         <li id="menu-item-2688" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/information-center/resources/data-sheets/">Data Sheets</a></li> 
+         <li id="menu-item-2687" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/information-center/resources/whitepapers/">Whitepapers</a></li> 
+         <li id="menu-item-2686" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/information-center/resources/client-studies/">Client Studies</a></li> 
+         <li id="menu-item-2684" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/information-center/resources/videos-infographics/">Videos &amp; Infographics</a></li> 
+         <li id="menu-item-3869" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/on-demand/">Resources On-demand</a></li> 
+         <li id="menu-item-4340" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://kognitio.com/demo/">Demo</a></li> 
+        </ul> </li> 
+      </ul> </li> 
+     <li id="menu-item-2273" class="menu-item menu-item-type-taxonomy menu-item-object-category"><span class="hoverL"> <span class="hoverR"> </span> </span><a href="http://kognitio.com/category/blog/">Blog</a></li> 
+    </ul> 
+   </div> 
+  </div>
+  <!-- **Top-Menu - End** --> 
+  <!--  ################ TOP MENU SECTION END ################ --> 
+  <!--  ################ SLIDER SECTION ################ --> 
+  <!-- ** Home Slider** --> 
+  <div id="home-slider" class="mytheme-revolutionslider"> 
+   <!-- **Home Slider BG** --> 
+   <div class="home-slider-bg"> 
+    <div class="container"> 
+     <!-- START REVOLUTION SLIDER 2.1.4 --> 
+     <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:transparent;padding:5px;margin-top:0px;margin-bottom:0px;max-height:420px;"> 
+      <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;max-height:420px;height:420;"> 
+       <ul> 
+        <li data-transition="slideright" data-slotamount="7" data-masterspeed="300" data-link="http://www.kognitio.com/analyticalplatform/"> <img src="http://www.kognitio.com/dev/wp-content/uploads/2014/01/architecture-banner.png" alt="architecture-banner" data-fullwidthcentering="true"> 
+         <div class="tp-caption lfl" data-x="0" data-y="0" data-speed="300" data-start="1000" data-easing="easeOutExpo">
+          <a href="http://www.kognitio.com/dev/analyticalplatform/"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/07/KogBanner1c.png" alt="Image 2"></a>
+         </div> 
+         <div class="tp-caption fade" data-x="677" data-y="338" data-speed="300" data-start="1300" data-easing="easeOutExpo">
+          <a href="http://marketing.kognitio.com/acton/formfd/5087/0005:d-0026"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/07/KogBanner1d1.png" alt="Image 4"></a>
+         </div> 
+         <div class="tp-caption fade" data-x="11" data-y="-29" data-speed="300" data-start="0" data-easing="easeOutExpo">
+          <a href="http://www.kognitio.com/dev/analyticalplatform/"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/09/ARCHITECTURE.png" alt="Image 4"></a>
+         </div> </li> 
+        <li data-transition="slideright" data-slotamount="7" data-masterspeed="300" data-link="http://www.kognitio.com/solutions/technology/the-data-science-lab/"> <img src="http://www.kognitio.com/dev/wp-content/uploads/2014/01/dsl-banner.png" alt="dsl-banner" data-fullwidthcentering="true"> 
+         <div class="tp-caption lfr" data-x="0" data-y="0" data-speed="300" data-start="0" data-easing="easeOutExpo">
+          <a href="http://www.kognitio.com/solutions/technology/the-data-science-lab/"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/07/KogBanner2b.png" alt="Image 1"></a>
+         </div> 
+         <div class="tp-caption fade" data-x="710" data-y="333" data-speed="300" data-start="1000" data-easing="easeOutExpo">
+          <a href="http://www.kognitio.com/solutions/technology/the-data-science-lab/"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/07/DSL_webinar_d.png" alt="Image 3"></a>
+         </div> </li> 
+        <li data-transition="slideright" data-slotamount="7" data-masterspeed="300" data-link="http://www.kognitio.com/cloud/"> <img src="http://www.kognitio.com/dev/wp-content/uploads/2014/01/cloud-banner.png" alt="cloud-banner" data-fullwidthcentering="true"> 
+         <div class="tp-caption lfr" data-x="0" data-y="0" data-speed="300" data-start="0" data-easing="easeOutExpo">
+          <a href="http://www.kognitio.com/cloud/"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/07/KogBanner3b.png" alt="Image 1"></a>
+         </div> 
+         <div class="tp-caption lfr" data-x="706" data-y="322" data-speed="300" data-start="1000" data-easing="easeOutExpo">
+          <a href="http://www.kognitio.com/gotryit/"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/07/KogBanner3c.png" alt="Image 2"></a>
+         </div> </li> 
+        <li data-transition="slideright" data-slotamount="7" data-masterspeed="300" data-link="http://www.kognitio.com/solutions/industries/analytical-information-services/"> <img src="http://www.kognitio.com/dev/wp-content/uploads/2014/01/graph-banner.png" alt="graph-banner" data-fullwidthcentering="true"> 
+         <div class="tp-caption lfr" data-x="0" data-y="0" data-speed="300" data-start="0" data-easing="easeOutExpo">
+          <a href="http://www.kognitio.com/solutions/industries/analytical-information-services/"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/07/KogBanner4b.png" alt="Image 1"></a>
+         </div> 
+         <div class="tp-caption lfr" data-x="654" data-y="330" data-speed="300" data-start="1000" data-easing="easeOutExpo">
+          <a href="http://marketing.kognitio.com/acton/formfd/5087/0005:d-001f"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/07/KogBanner4c.png" alt="Image 2"></a>
+         </div> 
+         <div class="tp-caption fade" data-x="434" data-y="341" data-speed="300" data-start="1000" data-easing="easeOutExpo">
+          <a href="http://marketing.kognitio.com/acton/attachment/5087/f-0063/1/-/-/-/-/Kognitio-AIS.pdf"><img src="http://www.kognitio.com/dev/wp-content/uploads/2013/08/download-brochure.png" alt="Image 3"></a>
+         </div> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <script type="text/javascript">
+
+				var tpj=jQuery;
+				
+									tpj.noConflict();
+								
+				var revapi1;
+				
+				tpj(document).ready(function() {
+				
+				if (tpj.fn.cssOriginal != undefined)
+					tpj.fn.css = tpj.fn.cssOriginal;
+				
+				if(tpj('#rev_slider_1_1').revolution == undefined)
+					revslider_showDoubleJqueryError('#rev_slider_1_1');
+				else
+				   revapi1 = tpj('#rev_slider_1_1').show().revolution(
+					{
+						delay:12000,
+						startwidth:960,
+						startheight:420,
+						hideThumbs:200,
+						
+						thumbWidth:100,
+						thumbHeight:50,
+						thumbAmount:4,
+						
+						navigationType:"bullet",
+						navigationArrows:"verticalcentered",
+						navigationStyle:"round",
+						
+						touchenabled:"on",
+						onHoverStop:"on",
+						
+						navOffsetHorizontal:0,
+						navOffsetVertical:3,
+						
+						shadow:2,
+						fullWidth:"on",
+
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+
+						shuffle:"off",
+						
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0					});
+				
+				});	//ready
+				
+			</script> 
+     <!-- END REVOLUTION SLIDER --> 
+    </div> 
+   </div>
+   <!-- **Home Slider BG - End** --> 
+  </div>
+  <!-- **Home Slider - End** --> 
+  <!--  ################ SLIDER SECTION END ################ --> 
+  <!--  ################ MAIN SECTION ################ --> 
+  <!-- ** Main** --> 
+  <div id="main"> 
+   <!-- **Container** --> 
+   <div class="container"> 
+    <!-- **Content** --> 
+    <!--  ################ SOCIAL BARS ################ 
+
+
+
+    
+
+    <div id="social-bar">
+
+<img id="social-bar-bg" src="images/social-bar-bg.png"/>
+
+<div id="chat"><a href="http://meebo.com/">
+
+<img src="images/chat-icon.png"/>
+
+<img id="chat-hover" src="images/chat-icon-hover.png"/>
+
+</a>
+
+</div>
+
+<div id="calendar"><a href="http://meebo.com/">
+
+<img src="images/calendar-icon.png"/>
+
+<img id="calendar-hover" src="images/calendar-icon-hover.png"/>
+
+</a>
+
+</div>
+
+<div id="linkedin"><a href="http://meebo.com/">
+
+<img src="images/linkedin-icon.png"/>
+
+<img id="linkedin-hover" src="images/linkedin-icon-hover.png"/>
+
+</a>
+
+</div>
+
+<div id="facebook"><a href="http://meebo.com/">
+
+<img src="images/facebook-icon.png"/>
+
+<img id="facebook-hover" src="images/facebook-icon-hover.png"/>
+
+</a>
+
+</div>
+
+<div id="google"><a href="http://meebo.com/">
+
+<img src="images/google-icon.png"/>
+
+<img id="google-hover" src="images/google-icon-hover.png"/>
+
+</a>
+
+</div>
+
+<div id="twitter"><a href="http://meebo.com/">
+
+<img src="images/twitter-icon.png"/>
+
+<img id="twitter-hover" src="images/twitter-icon-hover.png"/>
+
+</a>
+
+</div>
+
+<div id="download-button"><a href="http://meebo.com/">
+
+<img src="images/download-button.png"/>
+
+<img id="download-button-hover" src="images/download-button-hover.png"/>
+
+</a>
+
+</div>
+
+<div id="user-button"><a href="http://meebo.com/">
+
+<img src="images/user-button.png"/>
+
+<img id="user-button-hover" src="images/user-button-hover.png"/>
+
+</a>
+
+</div>
+
+<div id="partner-button"><a href="http://meebo.com/">
+
+<img src="images/partner-button.png"/>
+
+<img id="partner-button-hover" src="images/partner-button-hover.png"/>
+
+</a>
+
+</div>
+
+</div>
+
+
+
+      ################ SOCIAL BARS END ################ --> 
+    <div class="content content-full-width"> 
+     <div id="post-1423" class="post-1423 page type-page status-publish hentry"> 
+      <div class="clients-skin-carousel">
+       <ul class="clients-carousel"> 
+        <li><a href="http://www.kognitio.com//customers/aimia/" rel="attachment wp-att-2325"><img class="alignnone  wp-image-2325" alt="aiimi-logo" src="http://www.kognitio.com//wp-content/uploads/2013/05/AIMIA.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/bet365/" rel="attachment wp-att-2324"><img class="alignnone  wp-image-2324" alt="bet365-logo" src="http://www.kognitio.com//wp-content/uploads/2013/03/bet365-logo.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/bt/" rel="attachment wp-att-2323"><img class="alignnone  wp-image-2323" alt="bt-logo" src="http://www.kognitio.com//wp-content/uploads/2013/03/bt-logo.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/willard_bishop/" rel="attachment wp-image-5728"><img class="alignnone  wp-image-5728" alt="willard-bishop-No-Backgroun" src="http://www.kognitio.com//wp-content/uploads/2014/01/willard-bishop-No-Backgroun.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/ellerines/" rel="attachment wp-att-2322"><img class="alignnone  wp-image-2322" alt="ehl-logo" src="http://www.kognitio.com//wp-content/uploads/2013/03/ehl-logo.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/everyclick/"><img class="alignnone  wp-image-2737" alt="everyclick-logo" src="http://www.kognitio.com//wp-content/uploads/2013/05/GIVE.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/ms-money-chip-pin/" rel="attachment wp-att-2320"><img class="alignnone  wp-image-2320" alt="MSbank-logo" src="http://www.kognitio.com//wp-content/uploads/2013/03/MSbank-logo.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/nectar-italia-loyalty-card-analytics/" rel="attachment wp-att-2319"><img class="alignnone  wp-image-2319" alt="nectar-logo" src="http://www.kognitio.com//wp-content/uploads/2013/05/NECTAR.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/placeiq-turning-smartphone-location-into-context-chooses-kognitio-cloud-enabling-companies-to-pinpoint-hyper-local-marketing-efforts/" rel="attachment wp-att-2317"><img class="alignnone  wp-image-2317" alt="placeiq-logo" src="http://www.kognitio.com//wp-content/uploads/2013/03/placeiq-logo.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/scottishpower/" rel="attachment wp-att-2316"><img class="alignnone  wp-image-2316" alt="scottishpower-logo" src="http://www.kognitio.com//wp-content/uploads/2013/03/scottishpower-logo.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/segmetrix/" rel="attachment wp-att-2315"><img class="alignnone  wp-image-2315" alt="segmetrix-logo" src="http://www.kognitio.com//wp-content/uploads/2013/03/segmetrix-logo.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/tattershall-castle-group/" rel="attachment wp-att-2314"><img class="alignnone  wp-image-2314" alt="tcg-logo" src="http://www.kognitio.com//wp-content/uploads/2013/03/tcg-logo.png" width="109" height="73"></a></li> 
+        <li><a href="http://www.kognitio.com//customers/vivaki-nerve-center-slashes-data-discover-time-from-hours-to-minutes-with-kognitio-cloud/" rel="attachment wp-att-2312"><img class="alignnone  wp-image-2312" alt="vivaki-logo" src="http://www.kognitio.com//wp-content/uploads/2013/03/vivaki-logo.png" width="109" height="73"></a></li> 
+       </ul>
+      </div> 
+      <div class="hr "></div> 
+      <div class="column one-third  ">
+       <a href="http://www.kognitio.com//cloud/"> </a>
+       <p></p> 
+       <h3><a href="http://www.kognitio.com//cloud/">Kognitio Cloud</a></h3> 
+       <p><a href="http://www.kognitio.com//cloud/">&nbsp;</a> <a href="http://www.kognitio.com//cloud/"><img class="alignleft size-full wp-image-552" alt="mission" src="http://www.kognitio.com//wp-content/uploads/2013/04/kog_cloud_rgb.png" width="72" height="47"></a>The fastest, most scalable in-memory analytical platform is available on a subscription basis. Whether you want the benefits of total flexibility in the public cloud or uncompromising performance and security in our exclusive private cloud, Kognitio Cloud can match your requirements. Try it today!</p> 
+       <a href="http://www.kognitio.com//cloud/" class="read-more-text">Read &nbsp;more <span> </span> </a> 
+       <p>&nbsp;</p>
+      </div> 
+      <div class="column one-third  ">
+       <a href="http://www.kognitio.com//information-center/reports/"> </a>
+       <p></p> 
+       <h3><a href="http://www.kognitio.com//information-center/reports/">Analyst Reports</a></h3> 
+       <p><a href="http://www.kognitio.com//information-center/reports/">&nbsp;</a> <a href="http://www.kognitio.com//information-center/reports/"><img class="alignleft size-full wp-image-552" alt="mission" src="http://www.kognitio.com//wp-content/uploads/2013/05/targetWEBfinal.png" width="72" height="47"></a>A new whitepaper from an independent analyst firm Enterprise Management Associates (EMA) compares in-memory databases, highlighting the Kognitio Analytical Platform, SAP HANA and Oracle TimesTen – with specific focus on how they handle analytical workloads.</p> 
+       <a href="http://www.kognitio.com//information-center/reports/" class="read-more-text">Read &nbsp;more <span> </span> </a>
+      </div> 
+      <div class="column one-third  last">
+       <a href="http://www.kognitio.com//hadoop/"> </a>
+       <p></p> 
+       <h3><a href="http://www.kognitio.com//hadoop/">Hadoop Integration</a></h3> 
+       <p><a href="http://www.kognitio.com//hadoop/"><img class="alignleft  wp-image-553" alt="support" src="http://www.kognitio.com//wp-content/uploads/2013/05/hadoopWEBfinal.png" width="72" height="47"></a></p> 
+       <p>Kognitio turbocharges Hadoop for ad-hoc analytics on Big Data in real time. Low latency, high concurrency and standard interfaces slash the adoption time and makes Hadoop easily consumable for organizations large and small. Hop on the elephant and ride fast with Kognitio!</p> 
+       <a href="http://www.kognitio.com//hadoop/" class="read-more-text">Read &nbsp;more <span> </span> </a>
+      </div> 
+      <div class="hr "></div> 
+      <div class="column one-half  ">
+       <h3><a style="font-size: 1.17em;" href="http://prezi.com/daozghnju2qm/kognitio-what-we-do/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://prezi.com']);">What We Do</a></h3> 
+       <p><iframe src="http://prezi.com/embed/daozghnju2qm/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" height="218" width="300" frameborder="0"></iframe></p> 
+       <p>Move through this presentation to understand what we do.</p> 
+       <p>&nbsp;</p>
+      </div> 
+      <div class="column one-half  last">
+       <h3><a style="font-size: 1.17em;" href="http://prezi.com/mzadjlp_4ri1/kognitio-how-we-do-it/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://prezi.com']);">How We Do It</a></h3> 
+       <p><iframe src="http://prezi.com/embed/mzadjlp_4ri1/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;token=undefined&amp;disabled_features=undefined" width="300" height="218" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></p> 
+       <p>Move through this presentation to understand how we do it.</p> 
+       <p>&nbsp;</p>
+      </div> 
+     </div>
+     <!-- #post-1423 --> 
+    </div> 
+    <!-- **Content - End** --> 
+    <!-- **Twitter Feature before footer** --> 
+    <div id="twitter-bottom-feed"> 
+     <div class="images-left"> 
+      <img class="alignnone size-full tw-img" src="http://142.4.19.96/~kognitio/dev/wp-content/themes/ultimate/images/twitter-blue.png" alt="Twitter Icon"> 
+      <img class="alignnone size-full tw-vert" src="http://142.4.19.96/~kognitio/dev/wp-content/themes/ultimate/images/twitter-vert-divide.png" alt="Twitter Vertical Divider"> 
+     </div>
+     <!-- **ends images-left div** --> 
+     <div class="content-r kog-tweets"> 
+      <h3>KOGNITIO ON TWITTER - <a href="https://twitter.com/Kognitio">@Kognitio</a></h3> 
+      <h3 class="tweet-title"><a href="https://twitter.com/Kognitio"></a></h3> 
+      <a class="twitter-timeline" href="https://twitter.com/Kognitio" data-widget-id="344797989354745857" data-screen-name="Kognitio" data-show-replies="false" data-tweet-limit="1" data-chrome="nofooter noborders transparent noheader" data-link-color="#24668D" data-related="twitterapi,twitter" data-aria-polite="assertive" width="280" height="500" lang="EN">@Follow Me On Twitter</a> 
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+      <!--p>KOGNITIO ON TWITTER - <a href="http://twitter.com/Kognitio">@Kognitio</a></p>
+		<ul id="twitter_update_list">
+    		<li>Twitter feed loading</li>
+   	 	</ul--> 
+     </div>
+     <!-- **ends content-r div** --> 
+    </div>
+    <!-- **ends twitter-bottom-feed div** --> 
+   </div>
+   <!-- **Container - End** --> 
+  </div>
+  <!-- **Main - End**--> 
+  <!--  ################ SOCIAL BARS ################ --> 
+  <!-- BEGIN LivePerson Button Code --> 
+  <!-- <a href="#"><img src="http://kognitio.com/images/new-buttons/live-chat.png" class="new-button" id="new-chat"/></a> --> 
+  <!--<a href="http://marketing.kognitio.com/acton/form/5087/0007:d-0001/0/index.htm"><img src="http://kognitio.com/images/new-buttons/request-a-meeting.png" class="new-button" id="new-meeting"/></a> --> 
+  <a href="/free/"><img src="http://kognitio.com/images/new-buttons/free-download.png" class="new-button" id="new-download"></a> 
+  <a href="http://kognitio.com/forums/"><img src="http://kognitio.com/images/new-buttons/user-forum.png" class="new-button" id="new-forum"></a> 
+  <a href="https://eu1.salesforce.com/secur/login_portal.jsp?orgId=00D200000005qBI&amp;portalId=060D0000000HqiL"><img src="http://kognitio.com/images/new-buttons/partner-portal.png" class="new-button" id="new-portal"></a> 
+  <!--  ################ SOCIAL BARS END ################ --> 
+  <!--  ################ MAIN SECTION END ################ --> 
+  <!--  ################ FOOTER SECTION ################ --> 
+  <!-- ** Footer ** --> 
+  <div id="footer"> 
+   <!-- ** Footer BG **--> 
+   <div class="footer-bg"> 
+    <!-- ** Footer Container ** --> 
+    <div class="footer-container"> 
+     <div class="column one-sixth last"></div>
+     <div class="column one-sixth last">
+      <div id="nav_menu-5" class="widget widget_nav_menu">
+       <h3 class="widgettitle">Company</h3>
+       <div class="menu-footer-2-menu-container">
+        <ul id="menu-footer-2-menu" class="menu">
+         <li id="menu-item-1645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1645"><a href="http://kognitio.com/company/about-kognitio/">About Kognitio</a></li> 
+         <li id="menu-item-1649" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1649"><a href="http://kognitio.com/company/partners/">Partners</a></li> 
+         <li id="menu-item-1646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1646"><a href="http://kognitio.com/company/careers/">Careers</a></li> 
+         <li id="menu-item-1648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1648"><a href="http://kognitio.com/company/leadership/">Leadership</a></li> 
+         <li id="menu-item-1644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1644"><a href="http://kognitio.com/company/about-cookies/">About Cookies</a></li> 
+         <li id="menu-item-1647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1647"><a href="http://kognitio.com/company/contact/">Contact</a></li> 
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="column one-sixth last">
+      <div id="nav_menu-9" class="widget widget_nav_menu">
+       <h3 class="widgettitle">Products</h3>
+       <div class="menu-footer-1-menu-container">
+        <ul id="menu-footer-1-menu" class="menu">
+         <li id="menu-item-5635" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5635"><a href="http://www.kognitio.com//products/">Products</a></li> 
+         <li id="menu-item-5637" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5637"><a href="http://www.kognitio.com//analyticalplatform/">Kognitio Analytical Platform</a></li> 
+         <li id="menu-item-5638" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5638"><a href="http://www.kognitio.com//cloud/">Kognitio Cloud</a></li> 
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="column one-sixth last">
+      <div id="nav_menu-7" class="widget widget_nav_menu">
+       <h3 class="widgettitle">Solutions</h3>
+       <div class="menu-footer-3-menu-container">
+        <ul id="menu-footer-3-menu" class="menu">
+         <li id="menu-item-2069" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2069"><a href="http://kognitio.com/solutions/technology/">Technology</a></li> 
+         <li id="menu-item-2070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2070"><a href="http://kognitio.com/solutions/industries/">Industries</a></li> 
+         <li id="menu-item-3397" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3397"><a href="http://www.kognitio.com//analyticalplatform/">The Kognitio Analytical Platform</a></li> 
+         <li id="menu-item-3398" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3398"><a href="http://www.kognitio.com//cloud/">Kognitio Cloud</a></li> 
+         <li id="menu-item-3399" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3399"><a href="http://www.kognitio.com//customers/">Clients</a></li> 
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="column one-sixth last">
+      <div id="nav_menu-4" class="widget widget_nav_menu">
+       <h3 class="widgettitle">Support</h3>
+       <div class="menu-footer-5-menu-container">
+        <ul id="menu-footer-5-menu" class="menu">
+         <li id="menu-item-3591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3591"><a href="http://kognitio.com/support/forums/">Forums</a></li> 
+         <li id="menu-item-1671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1671"><a href="http://kognitio.com/support/customer-support/">Customer Support</a></li> 
+         <li id="menu-item-1673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1673"><a href="http://kognitio.com/support/training/">Training</a></li> 
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="column one-sixth last">
+      <div id="nav_menu-8" class="widget widget_nav_menu">
+       <h3 class="widgettitle">Information Center</h3>
+       <div class="menu-footer-6-menu-container">
+        <ul id="menu-footer-6-menu" class="menu">
+         <li id="menu-item-3400" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3400"><a href="http://www.kognitio.com//information-center/events/">Events</a></li> 
+         <li id="menu-item-3403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3403"><a href="http://www.kognitio.com//information-center/news/">News</a></li> 
+         <li id="menu-item-3404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3404"><a href="http://www.kognitio.com//press-releases/">Press Releases</a></li> 
+         <li id="menu-item-3401" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3401"><a href="http://www.kognitio.com//category/analytics-news/">#AnalyticsNews</a></li> 
+         <li id="menu-item-3402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3402"><a href="http://www.kognitio.com//information-center/reports/">Reports</a></li> 
+         <li id="menu-item-3405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3405"><a href="http://www.kognitio.com//information-center/resources/">Resources</a></li> 
+        </ul>
+       </div>
+      </div>
+     </div> 
+    </div>
+    <!-- ** Footer Container End** --> 
+   </div>
+   <!-- ** Footer BG End **--> 
+  </div>
+  <!-- **Footer - End** --> 
+  <!--  ################ FOOTER SECTION END ################ --> 
+  <!--  ################ FOOTER COPYRIGHT SECTION ################ --> 
+  <!-- **Footer Copyright** --> 
+  <div class="footer-copyright"> 
+   <!-- ** Footer Copyright Container ** --> 
+   <div class="container"> 
+    <div class="copyright-content"> 
+     <ul id="menu-copyright" class="">
+      <li id="menu-item-2571" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1423 current_page_item menu-item-2571"><a href="http://kognitio.com/">Home</a></li> 
+      <li id="menu-item-2573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2573"><a href="http://kognitio.com/company/">Company</a></li> 
+      <li id="menu-item-2572" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2572"><a href="http://kognitio.com/customers/">Clients</a></li> 
+      <li id="menu-item-2569" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2569"><a href="http://kognitio.com/products/">Products</a></li> 
+      <li id="menu-item-2570" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2570"><a href="http://kognitio.com/solutions/">Solutions</a></li> 
+      <li id="menu-item-2574" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2574"><a href="http://kognitio.com/cloud/">Kognitio Cloud</a></li> 
+      <li id="menu-item-2577" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2577"><a href="http://kognitio.com/support/customer-support/">Customer Support</a></li> 
+      <li id="menu-item-3638" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3638"><a href="http://www.kognitio.com//privacy/">Privacy</a></li> 
+      <li id="menu-item-2578" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2578"><a href="http://kognitio.com/category/blog/">Blog</a></li> 
+      <li id="menu-item-2575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2575"><a href="http://kognitio.com/company/contact/">Contact</a></li> 
+     </ul> 
+     <div class="copyright-content-container">
+      © 2014 Kognitio | All Rights Reserved
+     </div> 
+    </div> 
+   </div>
+   <!-- ** Footer Copyright Container ** --> 
+  </div>
+  <!-- **Footer Copyright** --> 
+  <!--  ################ FOOTER COPYRIGHT SECTION ################ --> 
+  <!-- **Wrapper - End** --> 
+  <div class="fblbCenterOuter fblbCenterOuterFb fblbFixed fblbLeft" style="margin-top: 289px;  left: -305px;z-index: 1000;"> 
+   <div class="fblbCenterInner"> 
+    <div class="fblbWrap fblbTheme0 fblbTab9"> 
+     <div class="fblbForm" style="background: #3b5998; height: 450px; width: 300px; padding: 5px 5px 5px 0;"> 
+      <h2 class="fblbHead" style="top: 5px; left: 305px;">Facebook</h2> 
+      <div id="fblbInnerFb" class="fblbInner fblbInnerLoading" style="height: 450px; background-color: #ffffff;"> 
+       <div class="fb-root" id="fb-root"></div> 
+       <div class="fb-like-box" data-colorscheme="light" data-border-color="#3b5998" data-href="https://www.facebook.com/kognitio" data-width="300" data-height="450" data-show-faces="true" data-stream="true" data-header="false"></div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+<!--
+var fblbFbLoaded=0;
+function fblb_FbLoad()
+{
+	if(fblbFbLoaded==1)
+	{
+		return true;
+	}
+	(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) {return;}
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	fblbFbLoaded=1;
+	if ( navigator.userAgent.match(/msie/i) ) {jQuery('#fblbInnerFb').removeClass('fblbInnerLoading');}
+}
+jQuery(document).ready(function(){	
+if ( !navigator.userAgent.match(/msie/i) ) 
+{jQuery('.fb-like-box').bind('DOMNodeInserted', function(event) { 
+if(event.target.nodeName=='IFRAME'){
+jQuery('.fb-like-box iframe').load(function() 
+{jQuery('#fblbInnerFb').removeClass('fblbInnerLoading');
+jQuery('.fb-like-box').unbind('DOMNodeInserted');});
+}});}
+fblb_FbLoad();});
+-->
+</script>
+  <div class="fblbCenterOuter fblbCenterOuterTw fblbFixed fblbLeft" style="margin-top: 336px;  left: -305px;z-index: 1000;"> 
+   <div class="fblbCenterInner"> 
+    <div class="fblbWrap fblbTheme0 fblbTab9"> 
+     <div class="fblbForm" style="background: #33ccff; height: 450px; width: 300px; padding: 5px 5px 5px 0;"> 
+      <h2 class="fblbHead" style="top: 5px; left: 305px;">Twitter</h2> 
+      <div id="fblbInnerTw" class="fblbInner fblbInnerLoading" style="height: 450px;"> 
+       <a class="twitter-timeline" data-chrome="noborders" data-link-color="#47a61e" width="295" height="450" href="https://twitter.com/twitter" data-widget-id="360095573258424320">Tweets by @twitter</a> 
+       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="fblbCenterOuter fblbCenterOuterGp fblbFixed fblbLeft" style="margin-top: 177px;  left: -305px;z-index: 1000;"> 
+   <div class="fblbCenterInner"> 
+    <div class="fblbWrap fblbTheme0 fblbTab9"> 
+     <div class="fblbForm" style="background: #a8291b; height: 450px; width: 300px; padding: 5px 5px 5px 0;"> 
+      <h2 class="fblbHead" style="top: 50%; margin-top: -18px; left: 305px;">Google Plus</h2> 
+      <div class="fblbInner" style="background: #ffffff; height: 450px;"> 
+       <div id="fblbGpBadge" class="fblbInnerLoading" style="overflow: hidden; height: 131px;"> 
+        <link href="https://plus.google.com/100841846087139793076" rel="publisher"> 
+        <div class="g-plus" data-href="https://plus.google.com/100841846087139793076" data-size="badge"></div> 
+       </div> 
+       <div style="overflow-y: auto; overflow-x: hidden; height: 319px;"> 
+        <ul id="fblbGpList" class="fblbList" style="height: 319px"> 
+         <li><a href="https://plus.google.com/100841846087139793076/posts/248h51RRZ1D" rel="nofollow">Will #Hadoop replace the #EDW ? (I think so, +Wikibon isn't so bullish).&nbsp; We have to take into account...</a><br style="clear: both;/><span class=" fblbinfo2"="">9 May 2014</li>
+         <li><a href="https://plus.google.com/100841846087139793076/posts/MbeGU6ryzKr" rel="nofollow">Data Science - Free Web Training Sessions<br> Motivation for a divide and conquer approach - Review how...</a><br style="clear: both;/><span class=" fblbinfo2"="">16 Mar 2014<span class="fblbinfo3">+2</span></li>
+         <li><a href="https://plus.google.com/100841846087139793076/posts/WPGEquv2AGn" rel="nofollow">+Rackspace&nbsp;highlights #DataGovernance &nbsp; &amp; innovation among key<br> #BigData &nbsp;challenges for 2014 http://...</a><br style="clear: both;/><span class=" fblbinfo2"="">13 Mar 2014<span class="fblbinfo3">+2</span></li>
+         <li><a href="https://plus.google.com/100841846087139793076/posts/gd4zxYDpdBH" rel="nofollow">Did you VOTE Yet?! &nbsp;&nbsp;http://www.kognitio.com/vote/ &nbsp; #HadoopSummit &nbsp; Community Choice closes Friday!...</a><br style="clear: both;/><span class=" fblbinfo2"="">8 Mar 2014<span class="fblbinfo3">+1</span></li>
+         <li><a href="https://plus.google.com/100841846087139793076/posts/bLePqvcfTxv" rel="nofollow">#HadoopSummi &nbsp;Community Choice is now open!<br> Here is a brief summary of the sessions we have put together...</a><br style="clear: both;/><span class=" fblbinfo2"="">7 Mar 2014<span class="fblbinfo3">+3</span></li>
+         <li><a href="https://plus.google.com/100841846087139793076/posts/ht4v8x8jLCx" rel="nofollow">Hello Everyone! &nbsp;+Hortonworks - Hadoop, Big Data, Paradigm Shifters&nbsp;has opened the Community Choice ...</a><br style="clear: both;/><span class=" fblbinfo2"="">7 Mar 2014<span class="fblbinfo3">+3</span></li>
+         <li><a href="https://plus.google.com/100841846087139793076/posts/8Qy67JsGTci" rel="nofollow">Happy to join the Community! &nbsp; Please VOTE for our Community Choice sessions listed on the &nbsp;#HadoopSummit...</a><br style="clear: both;/><span class=" fblbinfo2"="">7 Mar 2014<span class="fblbinfo3">+2</span></li>
+         <li><a href="https://plus.google.com/100841846087139793076/posts/AvaG44WJ8CS" rel="nofollow">BLOG: &nbsp;Our &nbsp;#HadoopSummit &nbsp;Sessions - need your VOTES in the Community Choice!<br> http://www.kognitio.com...</a><br style="clear: both;/><span class=" fblbinfo2"="">7 Mar 2014<span class="fblbinfo3">+3</span></li>
+         <li><a href="https://plus.google.com/100841846087139793076/posts/2iLtN6z9yJt" rel="nofollow">HELP: &nbsp;Why can't we get the URL of our brand term? &nbsp; When we go to the set-up it asks us to "add a few...</a><br style="clear: both;/><span class=" fblbinfo2"="">1 Mar 2014<span class="fblbinfo3">+5</span></li>
+         <li><a href="https://plus.google.com/100841846087139793076/posts/Ftbbp9WunRG" rel="nofollow">ARTICLE: Predictive #Analytics , #Security &nbsp;and the Threats you don’t KNOW you have: ¾ of businesses...</a><br style="clear: both;/><span class=" fblbinfo2"="">21 Feb 2014<span class="fblbinfo3">+4</span> </li>
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+<!--
+var fblbGpLoaded=0;
+function fblb_GpLoad()
+{
+	if(fblbGpLoaded==1)
+	{
+		return true;
+	}
+	window.___gcfg = {lang: 'en-US'};
+	(function() 
+	{var po = document.createElement("script");
+	po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(po, s);
+	jQuery('#fblbGpBadge').removeClass('fblbInnerLoading');
+	fblbGpLoaded=1;
+	})();
+}
+jQuery(document).ready(function(){	
+	 jQuery('#fblbGpList').lionbars();
+fblb_GpLoad();});
+-->
+</script>
+  <div class="fblbCenterOuter fblbCenterOuterLi fblbFixed fblbLeft" style="margin-top: 220px;  left: -305px;z-index: 1000;;"> 
+   <div class="fblbCenterInner"> 
+    <div class="fblbWrap fblbTheme0 fblbTab9"> 
+     <div class="fblbForm" style="background: #007fb1; height: 450px; width: 300px; padding: 5px 5px 5px 0;"> 
+      <h2 class="fblbHead" style="top: 50%; margin-top: -18px; left: 305px;">LinkedId</h2> 
+      <div id="fblbInnerLi" class="fblbInner fblbInnerLoading" style="overflow: hidden; background-color: #ffffff; height: 450px;"> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+<!--
+var fblbLiLoaded=0;
+function fblb_LiLoad()
+{
+	if(fblbLiLoaded==1)
+	{
+		return true;
+	}
+	 jQuery('#fblbInnerLi').append('<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>');
+			jQuery('#fblbInnerLi').append('<script type="IN/CompanyProfile" data-related="false" data-width="300" data-id="39030" data-format="inline" ></script>');
+		if ( navigator.userAgent.match(/msie/i) ) {jQuery('#fblbInnerLi').removeClass('fblbInnerLoading');}
+   
+   fblbLiLoaded=1;
+}
+jQuery(document).ready(function(){	
+fblb_LiLoad();});
+-->
+</script>
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/jquery.tabs.min.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/tinynav.min.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/isotope.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/prettyphoto/jquery.prettyPhoto.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/jquery.smartresize.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/jquery.jcarousel.min.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/jquery.cycle.all.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/nivo/jquery.nivo.slider.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/fmslider/fmslideshow.min.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/jquery.tipTip.minified.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/common.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/themes/ultimate/framework/js/public/shortcodes.js?ver=3.5"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/plugins/ditty-news-ticker/assets/js/jquery.easing.1.3.js?ver=1.1.4"></script> 
+  <script type="text/javascript" src="http://kognitio.com/wp-content/plugins/ditty-news-ticker/assets/js/ditty-news-ticker.js?ver=1.1.4"></script> 
+  <!-- Google Remarketing Pixel --> 
+  <img src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1068242334/?value=0&amp;label=yi5mCOawzAMQnquw_QM&amp;guid=ON&amp;script=0" alt="" height="1" width="1" border="0" style="border:none !important;"> 
+  <script type="text/javascript">  jQuery(document).ready(function() {  jQuery("#top-menu ul.menu").tinyNav({  active: "current_page_item" });  }); </script> 
+  <!-- Google Code for Remarketing tag --> 
+  <!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup --> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1068242334;
+var google_conversion_label = "yi5mCOawzAMQnquw_QM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script> 
+  <noscript> 
+   <div style="display:inline;"> 
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1068242334/?value=0&amp;label=yi5mCOawzAMQnquw_QM&amp;guid=ON&amp;script=0"> 
+   </div> 
+  </noscript>  
+  <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script> 
+  <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline.json?screen_name=Kognitio&amp;include_rts=false&amp;count=1&amp;callback=twitterCallback2&amp;exclude_replies=true"></script> 
+ </body>
+</html>

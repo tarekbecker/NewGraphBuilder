@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
+  <title>iauro Systems Pvt. Ltd.</title> 
+  <meta name="description" content="iauro"> 
+  <meta name="keywords" content="iauro,bigdata,cloud,mobile,web,android,ios,iot"> 
+  <meta name="author" content="Codrops"> 
+  <link rel="shortcut icon" href="img/icons/favicon.png"> 
+  <link href="http://fonts.googleapis.com/css?family=Roboto:300italic,900,100italic,400italic,400,300,500italic,700italic,100,700,500,900italic" rel="stylesheet" type="text/css"> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" type="text/css" href="css/reset.css"> 
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"> 
+  <link rel="stylesheet" type="text/css" href="css/basic.css"> 
+  <link rel="stylesheet" type="text/css" href="css/miscellaneous.css"> 
+  <link rel="stylesheet" type="text/css" href="css/component.css"> 
+  <link rel="stylesheet" type="text/css" href="css/demo.css"> 
+  <link rel="stylesheet" type="text/css" href="css/hamburgerAnim.css"> 
+  <link rel="stylesheet" type="text/css" href="css/textillate/animate.css"> 
+  <link rel="stylesheet" type="text/css" href="css/BackgroundImage.css"> 
+  <link rel="stylesheet" type="text/css" href="css/MediaQuery.css"> 
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> 
+  <script src="js/lib/modernizr.custom.js"></script> 
+ </head> 
+ <body> 
+  <div id="popup-box" class="popup">
+   <div id="iauro_CancelButton" onclick="hideDialog()"></div> 
+   <div class="TabledParent" id="contactUsDetails"> 
+    <div class="verticallyAlignInTabledParent" align="center"> 
+     <h3>Got a project!<br> We would love to hear from you</h3> 
+     <form autocomplete="on"> 
+      <input placeholder="Name" type="text" name="fname" id="fname">
+      <br> 
+      <input placeholder="Email" type="email" name="email" id="email">
+      <br> 
+      <input placeholder="Company" type="text" name="cname" id="cname">
+      <br> 
+      <select name="purposeOption" id="purposeOption2" tabindex="1"> <option value="">Select Interest</option> <option value="iOS Project">iOS Project</option> <option value="Android Project">Android Project</option> <option value="Cloud Project">Cloud Project</option> <option value="BigData Project">BigData Project</option> <option value="Web Project">Web Project</option> <option value="Even Better...">Even Better...</option> </select> 
+      <textarea placeholder="Message" name="comment" id="comment"></textarea>
+      <br> 
+      <div id="errP">
+       * erro message comes here
+      </div> 
+      <div align="center"> 
+       <input class="button button-blue" type="button" onclick="sendMail2()" value="Submit"> 
+      </div> 
+     </form> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="codRContainer"> 
+   <ul id="gn-menu" class="gn-menu-main"> 
+    <li class="gn-trigger"> <a class="gn-icon gn-icon-menu noTransition"><span>Menu</span></a> 
+     <nav class="gn-menu-wrapper"> 
+      <div class="gn-scroller"> 
+       <ul class="gn-menu"> 
+        <li id="iauro_Menu_CaseStudy1" class="HiddenMenu"><a href="Mobile">
+          <div class=" fa fa-mobile iauro_MenuIcon"></div>Mobile</a></li> 
+        <li id="iauro_Menu_Process1" class=" HiddenMenu"><a href="Cloud">
+          <div class="fa fa-cloud iauro_MenuIcon"></div>Cloud</a></li> 
+        <li id="iauro_Menu_About1" class=" HiddenMenu"><a href="BigData">
+          <div class="fa fa-database iauro_MenuIcon"></div>BigData</a></li> 
+        <li id="iauro_Menu_Contact1" class=" HiddenMenu"><a href="UI-UX">
+          <div class="fa fa-paint-brush iauro_MenuIcon"></div>UI/UX</a></li> 
+        <li id="iauro_Menu_IoT"><a href="IoT">
+          <div class="iauro_MenuIcon"></div>Internet of Things</a></li> 
+        <li id="iauro_Menu_CaseStudy"><a href="Case-Studies">
+          <div class="iauro_MenuIcon"></div>Case Studies</a></li> 
+        <li id="iauro_Menu_Process"><a href="Process">
+          <div class="iauro_MenuIcon"></div>Process</a></li> 
+        <li id="iauro_Menu_About"><a href="About">
+          <div class="iauro_MenuIcon"></div>About</a></li> 
+        <li id="iauro_Menu_Contact"><a href="Contact">
+          <div class="iauro_MenuIcon"></div>Contact</a></li> 
+       </ul> 
+      </div> 
+     </nav> </li> 
+    <li><a class="noHover" href=""><img src="img/logos/nlogo.png" id="iauro_HomeRedirctionLogo"></a></li> 
+    <li><a class="codrops-icon codrops-icon-prev leastPadding" href="Mobile"><span>Mobile</span></a></li> 
+    <li><a class="codrops-icon codrops-icon-prev leastPadding" href="Cloud"><span>Cloud</span></a></li> 
+    <li><a class="codrops-icon codrops-icon-prev leastPadding" href="BigData"><span>Big Data</span></a></li> 
+    <li><a class="codrops-icon codrops-icon-prev leastPadding" href="UI-UX"><span>UI/UX</span></a></li> 
+    <li><a class="think01Icon" href=""><span></span></a></li> 
+    <li><a><span></span></a></li> 
+   </ul> 
+  </div> 
+  <div class="headerCleanser clearfix"></div> 
+  <div class="clearfix MainWindow" id="iauro_HomeBanner"> 
+   <div id="bgBanner01" class="stretchFitToParentDiv zIndex01"></div> 
+   <div id="bgBanner02" class="stretchFitToParentDiv zIndex02"></div> 
+   <div id="bgBanner03" class="stretchFitToParentDiv bgBanner03 zIndex03"></div> 
+   <div id="bgBanner04" class="stretchFitToParentDiv zIndex04"></div> 
+   <div id="bgBanner05" class="stretchFitToParentDiv zIndex05"></div> 
+   <div id="bgBanner06" class="stretchFitToParentDiv zIndexP10"></div> 
+   <div id="bgBanner07" class="stretchFitToParentDiv zIndex07"></div> 
+   <div id="bgBanner08" class="stretchFitToParentDiv zIndex08"></div> 
+   <div id="cityBgHolder" class="container Per80Centered MainWindow-60Img_Left-40Txt_Right"> 
+    <div id="iauro_HomeBannerHeader"> 
+     <div class="onLeft"> 
+      <span>Technology is</span> 
+     </div> 
+     <div class="onRight"> 
+      <h1 class="tlt"> 
+       <ul class="texts"> 
+        <li>mobile</li> 
+        <li>change</li> 
+        <li>existence</li> 
+        <li>experience</li> 
+       </ul> </h1> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="clearfix MainWindow iauro_BlueColor" id="iauro_HomeAbout"> 
+   <div class="container Per80Centered MainWindow-50Img_Left-50Txt_Right"> 
+    <div align="center" class="verticallyAlignInTabledParent Restricted960PX"> 
+     <p id="para1AtAboutIauro" class="paraInMainWindowOnTextSideRight"> <span class="paraHead">About iauro</span> <br> iauro is a team of young, dynamic technologists who want to change the world byte by byte. @iauro, we do this by our technology-business understanding to help simplify human life. </p> 
+     <div class="clearfix"> 
+      <div id="iauro_AboutUsIcon"></div> 
+     </div> 
+     <a href="About"> <span class="explore-button">Interested In More?</span> </a> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="clearfix MainWindow" id="iauro_HomeAboutMobile"> 
+   <div class="container Per80Centered MainWindow-50Img_Left-50Txt_Right displayTable"> 
+    <div align="center" class="verticallyAlignInTabledParent"> 
+     <p id="para1At" class="paraInMainWindowOnTextSideRight invertTextColor"> <span class="paraHead">Delivering integrated <span style="color: #25B4E8">mobile</span> solutions</span> <br> We help client to achieve their vision through carefully designed, well architectured and innovative mobile solutions. </p> 
+     <div id="iauro_AboutMobileHome"></div> 
+     <a href="Mobile"> <span class="invert-explore-button">Explore Mobility</span> </a> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="firstParallaxWindowAtHomePage" class="clearfix parallaxWindow"> 
+   <div class="TabledParent"> 
+    <div class="verticallyAlignInTabledParent "> 
+     <p class="paraCenteredWhite para960limiting Per80Centered">IoT is a way of blending the virtual and real world <br>to create human experiences</p> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="clearfix MainWindow" id="iauro_HomeAboutIoT"> 
+   <div class="container Per80Centered MainWindow-40Img_Left-60Txt_Right"> 
+    <div class="onLeft"> 
+     <div id="internetOfThingsBannerBg1"></div> 
+    </div> 
+    <div class="onRight TabledParent"> 
+     <div class="verticallyAlignInTabledParent"> 
+      <p class="paraInMainWindowOnTextSideRight"> <span class="paraHead">Creating #internetOfThings</span> <br> <span class="iauro_italicFonts">Internet of things is a collaboration of sensors, connectivity, people and processes.</span><br><br> We help client achieve their ideas by relaying IoT strategies. And we add reality to life!! </p> 
+      <a class="ExploreMoreButton" href="IoT"> <p class="explore-button">Want To Explore More? </p> </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="clearfix MainWindow" id="iauro_HomeAboutBigData"> 
+   <div class="container Per80Centered MainWindow-60Txt_Left-40Img_Right"> 
+    <div class="onRight none"> 
+     <div class="verticallyAlignInTabledParent"> 
+      <div class="bannerImageHolderAtHomePage" id="mainBanner-BigData02"></div> 
+     </div> 
+    </div> 
+    <div class="onLeft"> 
+     <div class="verticallyAlignInTabledParent"> 
+      <p class="paraHead">Envisioning insights</p> 
+      <p class="paraInMainWindowOnTextSideRight" style="padding-top: 0;"> <span class="iauro_italicFonts">Storage, collection, collaboration and processing of structured and unstructured data to create meaning.</span><br><br> We help clients to optimally store and analyze their data. And create value for their businesses!!! </p> 
+      <a href="BigData" class="ExploreMoreButton"> <p class="explore-button">Dig More </p> </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="clearfix HeaderWindow" id="iauro_HomeCaseStudyCon"> 
+   <div class="clearfix HeaderWindow portfolioBannerBand"> 
+    <div class="verticallyAlignInTabledParent"> 
+     <h1 class="headAtHeaderWindow">Case Studies</h1> 
+     <p class="paraAtHeaderWindow"> Here are some of the successful solutions that we have delivered.<br>And we take pride in what we do!!</p> 
+     <div align="center"> 
+      <div class="DisplayInlineBlock" onclick="showThisCaseStudyHome('1');"> 
+       <div id="showCase01" class="showCaseAppAtIauro active Mobile_App_ServeMe01 iauro_Icons"></div> 
+       <p class="showcaseText">serVme</p> 
+      </div> 
+      <div class="DisplayInlineBlock" onclick="showThisCaseStudyHome('2');"> 
+       <div id="showCase02" class="showCaseAppAtIauro iauro_SmartHub01 iauro_Icons"> 
+       </div> 
+       <p class="showcaseText">SmartHome</p> 
+      </div> 
+      <div class="DisplayInlineBlock" onclick="showThisCaseStudyHome('3');"> 
+       <div id="showCase03" class="showCaseAppAtIauro iauro_Yopine01 iauro_Icons"> 
+       </div> 
+       <p class="showcaseText">Yopine</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="clearfix MainWindow"> 
+    <div class="container MainWindow-50Txt_Left-50Img_Right"> 
+     <div id="iauro_HomeCaseStudyArrowLeft" class="fa fa-angle-left"></div> 
+     <div id="iauro_HomeCaseStudyArrowRight" class="fa fa-angle-right"></div> 
+     <div id="CaseS01" class="relatedClassForCaseStudy"> 
+      <div class="onLeft"> 
+       <div class="TabledParent"> 
+        <div class="verticallyAlignInTabledParent"> 
+         <div class=" Mobile_App_ServeMe01  Mobile_App_LogoImagesFix  Mobile_App_LogoImages"> 
+          <p class="ApplicationTitle600H">serVme</p> 
+         </div> 
+         <div></div> 
+         <p class="paraAtHeaderWindow2">A best state of art restaurant solution which removes hassle and creates end-to-end user experience!!</p> 
+         <ul class="listStyle"> 
+          <li>iBeacon based customer identification system</li> 
+          <li>Restaurant booking widget</li> 
+          <li>User level analytics</li> 
+         </ul> 
+         <a class="ExploreMoreButton" href="CaseStudy/SerVme"> <p class="invert-explore-button">Explore serVme</p> </a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="onRight absAtRight"> 
+       <div id="Cloud_App_ServeMe02" class="Mobile_App_ImagesMobile"></div> 
+      </div> 
+     </div> 
+     <div id="CaseS02" class="relatedClassForCaseStudy"> 
+      <div class="onLeft"> 
+       <div class="TabledParent"> 
+        <div class="verticallyAlignInTabledParent"> 
+         <div class=" iauro_SmartHub01  Mobile_App_LogoImagesFix  Mobile_App_LogoImages"> 
+          <p class="ApplicationTitle600H">SmartHome</p> 
+         </div> 
+         <p class="paraAtHeaderWindow2">A smart self learning home automation system!!</p> 
+         <ul class="listStyle"> 
+          <li>Complete ipad solution. No server.</li> 
+          <li>Hotspot creation module - create overlay and assign actions to them.</li> 
+          <li>Custom macros with 3rd party API integration</li> 
+         </ul> 
+         <a class="ExploreMoreButton" href="CaseStudy/SmartHome"> <p class="invert-explore-button">Explore SmartHome</p> </a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="onRight absAtRight"> 
+       <div id="Mobile_App_SmartHubIpadIndexPage" class="Mobile_App_ImagesMobile"></div>
+       <!--  style="bottom: -150px;"  --> 
+      </div> 
+     </div> 
+     <div id="CaseS03" class="relatedClassForCaseStudy"> 
+      <div class="onLeft"> 
+       <div class="TabledParent"> 
+        <div class="verticallyAlignInTabledParent"> 
+         <div class=" iauro_Yopine01  Mobile_App_LogoImagesFix  Mobile_App_LogoImages"> 
+          <p class="ApplicationTitle600H">Yopine</p> 
+         </div> 
+         <p class="paraAtHeaderWindow2">An intuitive mobile solution to create &amp; analyze Polls!!</p> 
+         <ul class="listStyle"> 
+          <li>Ambient awareness.</li>
+          <li> Hyper-local polling.</li> 
+          <li>Analyze, brainstorm and get results on the go</li> 
+         </ul> 
+         <a class="ExploreMoreButton" href="CaseStudy/Yopine"> <p class="invert-explore-button">Explore Yopine</p> </a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="onRight absAtRight"> 
+       <div class="iauro_Yopine02 Mobile_App_ImagesMobile"></div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="HeaderWindow iauro_BlueColor" id="iauro_HomeAboutOurProcess"> 
+   <div class="container TabledParent"> 
+    <div class="verticallyAlignInTabledParent" align="center"> 
+     <h1 class="headAtHeaderWindow">How we work</h1> 
+     <p class="paraAtHeaderWindow"> We believe in continuous improvement. Daily brainstorming sessions, ideation, our everyday hunger to study and do something anew…. awesome!!We have a separate and distinct in-house process for each type of work. </p> 
+     <a class="ExploreMoreButton" href="Process"> <p class="explore-button">See Our Processes</p> </a> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="bellBgHolderAndBellHolder" class="clearfix HeaderMainWindow"> 
+   <div class="clearfix HeaderWindow"> 
+    <div class="verticallyAlignInTabledParent"> 
+     <h1 class="headAtHeaderWindow">Solutions</h1> 
+     <p class="paraAtHeaderWindow para960limiting"> Over the years, we have understood intricacies and pain areas within hospitality industry. We came our with an <br> end-to-end suite of interconnected solutions that cater all business needs within Hotel industry.<br> Here we present Restrocook!!!</p> 
+    </div> 
+   </div> 
+   <div class="clearfix MainWindow" id=""> 
+    <div id="bellBgHolder"></div> 
+    <div id="bellHolder"></div> 
+    <div class="container Per80Centered MainWindow-50Txt_Left-50Img_Right"> 
+     <div class="onLeft"> 
+      <img id="iauro_restroCookLogo" src="img/banners/logo-restrocook.png"> 
+      <p>Daily management tool for Restaurants, Banquet and Hotels</p> 
+      <div id="iauro_restroCookApp" class="iauro_GenImage"></div> 
+      <!--<div align="center">--> 
+      <!--<div class="DisplayInlineBlock">--> 
+      <!--<div  class="showCaseAppAtIauro active iauro_RestroCookBanqNRollIcon iauro_Icons" onclick="showThisCaseStudy('01');"></div>--> 
+      <!--<p>Banq N Roll</p>--> 
+      <!--</div>--> 
+      <!--<div class="DisplayInlineBlock">--> 
+      <!--<div  class="showCaseAppAtIauro iauro_RestroCookWaitPlzIcon iauro_Icons" onclick="showThisCaseStudy('02');"></div>--> 
+      <!--<p>WaitPlz</p>--> 
+      <!--</div>--> 
+      <!--<div class="DisplayInlineBlock">--> 
+      <!--<div class="showCaseAppAtIauro iauro_RestroCookRoomTogglerIcon iauro_Icons" onclick="showThisCaseStudy('03');"></div>--> 
+      <!--<p>Room Toggler</p>--> 
+      <!--</div>--> 
+      <!--<div class="DisplayInlineBlock">--> 
+      <!--<div  class="showCaseAppAtIauro active iauro_RestroCookOrderPlzIcon iauro_Icons" onclick="showThisCaseStudy('04');"></div>--> 
+      <!--<p>OrderPlz</p>--> 
+      <!--</div>--> 
+      <!--<div class="DisplayInlineBlock">--> 
+      <!--<div class="showCaseAppAtIauro active iauro_RestroCookBillPlzIcon iauro_Icons" onclick="showThisCaseStudy('05');"></div>--> 
+      <!--<p>BillPlz</p>--> 
+      <!--</div>--> 
+      <!--<div class="DisplayInlineBlock">--> 
+      <!--<div  class="showCaseAppAtIauro active iauro_RestroCookFeedBackPlzIcon iauro_Icons" onclick="showThisCaseStudy('06');"></div>--> 
+      <!--<p>FeedbackPlz</p>--> 
+      <!--</div>--> 
+      <!--</div>--> 
+      <br> 
+      <a href="RestroCook" target="_blank"> <p class="explore-button wooden-explore-button">More Information</p> </a> 
+     </div> 
+     <div class="onRight"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="clearfix HeaderWindow Per80Centered" align="center" id="iauro_HomeAboutRecognition"> 
+   <div class="verticallyAlignInTabledParent"> 
+    <h1 class="headAtHeaderWindow">Recognition</h1> 
+    <p class="paraAtHeaderWindow">App developed by us featured in media</p> 
+    <div align="center" class="iauro_GenImage" id="iauro_HomeRecognisation"> 
+     <!--<img src="img/banners/homePage/recognition.png">--> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="iauroStatSection" class="clearfix HeaderWindow iauro_BlueColor" align="center"> 
+   <div class="container" align="center"> 
+    <div class="verticallyAlignInTabledParent"> 
+     <div class="clearfix"> 
+      <h1 class="headAtHeaderWindow">iauro Stats</h1> 
+      <div class="statHolder clearfix"> 
+       <div class="subStatHolder"> 
+        <div class="singleSubStatHolder clearfix"> 
+         <div class="imageHolderAtSingleSubStat" id="imageHolderAtSingleSubStat_01"> 
+         </div> 
+         <div class="relDescriptionHolderAtSingleSubStat"> 
+          <span class="headAtRelDescriptionHolderAtSingleSubStat">25,000+</span> 
+          <span class="bodyAtRelDescriptionHolderAtSingleSubStat">Coffee cups</span> 
+         </div> 
+        </div> 
+        <div class="singleSubStatHolder clearfix"> 
+         <div class="imageHolderAtSingleSubStat" id="imageHolderAtSingleSubStat_02"> 
+         </div> 
+         <div class="relDescriptionHolderAtSingleSubStat"> 
+          <span class="headAtRelDescriptionHolderAtSingleSubStat">1,70,000+</span> 
+          <span class="bodyAtRelDescriptionHolderAtSingleSubStat">Emails</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="verticalDividerBetweenSubStatHolder"></div> 
+       <div class="subStatHolder"> 
+        <div class="singleSubStatHolder clearfix"> 
+         <div class="imageHolderAtSingleSubStat" id="imageHolderAtSingleSubStat_03"> 
+         </div> 
+         <div class="relDescriptionHolderAtSingleSubStat"> 
+          <span class="headAtRelDescriptionHolderAtSingleSubStat">1120+</span> 
+          <span class="bodyAtRelDescriptionHolderAtSingleSubStat">Pizzas</span> 
+         </div> 
+        </div> 
+        <div class="singleSubStatHolder clearfix"> 
+         <div class="imageHolderAtSingleSubStat" id="imageHolderAtSingleSubStat_04"> 
+         </div> 
+         <div class="relDescriptionHolderAtSingleSubStat"> 
+          <span class="headAtRelDescriptionHolderAtSingleSubStat">1m+</span> 
+          <span class="bodyAtRelDescriptionHolderAtSingleSubStat">Code lines</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="verticalDividerBetweenSubStatHolder"></div> 
+       <div class="subStatHolder"> 
+        <div class="singleSubStatHolder clearfix"> 
+         <div class="imageHolderAtSingleSubStat" id="imageHolderAtSingleSubStat_05"> 
+         </div> 
+         <div class="relDescriptionHolderAtSingleSubStat"> 
+          <span class="headAtRelDescriptionHolderAtSingleSubStat">110+</span> 
+          <span class="bodyAtRelDescriptionHolderAtSingleSubStat">Devices</span> 
+         </div> 
+        </div> 
+        <div class="singleSubStatHolder clearfix"> 
+         <div class="imageHolderAtSingleSubStat" id="imageHolderAtSingleSubStat_06"> 
+         </div> 
+         <div class="relDescriptionHolderAtSingleSubStat"> 
+          <span class="headAtRelDescriptionHolderAtSingleSubStat">320+</span> 
+          <span class="bodyAtRelDescriptionHolderAtSingleSubStat">Projects</span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="clearfix HeaderWindow" id="iauro_FooterFix" style="padding-top: 20px;"> 
+   <div align="center"> 
+    <div class="clearfix Per80Centered WhiteLine"></div> 
+   </div> 
+   <div class="clearfix"> 
+    <div class="container Per80Centered MainWindow-60Img_Left-40Txt_Right"> 
+     <div class="onLeft"> 
+      <div class="linkBoxAtFooter"> 
+       <ul> 
+        <li><a class="WhiteText" href="Mobile">Mobile</a></li> 
+        <li><a class="WhiteText" href="Cloud">Cloud</a></li> 
+        <li><a class="WhiteText" href="BigData">Big Data</a></li> 
+       </ul> 
+      </div> 
+      <div class="linkBoxAtFooter"> 
+       <ul> 
+        <li><a class="WhiteText" href="IoT">IoT</a></li> 
+        <li><a class="WhiteText" href="UI-UX">UI/UX</a></li> 
+        <li><a class="WhiteText" href="Case-Studies">Case Studies</a></li> 
+       </ul> 
+      </div> 
+      <div class="linkBoxAtFooter"> 
+       <ul> 
+        <li><a class="WhiteText" href="About">About</a></li> 
+        <li><a class="WhiteText" href="Process">Process</a></li> 
+        <li><a class="WhiteText" href="Contact">Contact</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="onRight" id="iauro_FooterTalktoUs"> 
+      <p class="clearfix"> <span class="blinking">|</span> <span class="explore-button" onclick="ContactUsForm()">Talk to Us</span> </p> 
+      <div class="clearfix"> 
+       <a href="http://www.pinterest.com/iaurosystems/" target="_blank"><img class="socialIconAtFooter" src="img/icons/social/pintrest.png"></a> 
+       <a href="https://twitter.com/iauro" target="_blank"><img class="socialIconAtFooter" src="img/icons/social/social-icon-twitter.png"></a> 
+       <a href="http://www.slideshare.net/iauro" target="_blank"><img class="socialIconAtFooter" src="img/icons/social/social-icon-slideShare.png"></a> 
+       <a href="https://www.linkedin.com/company/iauro-systems-pvt-ltd" target="_blank"><img class="socialIconAtFooter" src="img/icons/social/social-icon-linkedIn.png"></a> 
+       <a href="https://www.facebook.com/iauro" target="_blank"><img class="socialIconAtFooter" src="img/icons/social/social-icon-facebook.png"></a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="iauro_FooterAllRightsText"> 
+    <footer class="clearfix"> 
+     <img src="img/logos/logo-for-bottom.png"> 
+     <p class="copyRightNoteAtFooter">© 2014 iauro Systems Pvt Ltd. All rights reserved.</p> 
+     <div class="socialIconHolderAtFooter"></div> 
+    </footer> 
+   </div> 
+  </div> 
+  <script src="js/lib/jquery/jquery-2.1.1.min.js"></script> 
+  <script src="js/lib/jquery/jquery-UI-1.11.1.js"></script> 
+  <script src="js/lib/jquery/jquery.color-2.1.2.min.js"></script> 
+  <script src="js/lib/jquery/jquery-migrate-1.1.1.min.js"></script> 
+  <script src="js/lib/jquery/jquery.client.js"></script> 
+  <script src="js/lib/classie.js"></script> 
+  <script src="js/lib/gnmenu.js"></script> 
+  <script src="js/lib/parallaxLibs/scrollability.js"></script> 
+  <script src="js/lib/parallaxLibs/stellar.js"></script> 
+  <script src="js/utility.js"></script> 
+  <script src="js/mediaQ.js"></script> 
+  <script src="js/lib/flippy.js"></script> 
+  <script src="js/lib/textillate/jquery.fittext.js"></script> 
+  <script src="js/lib/textillate/jquery.lettering.js"></script> 
+  <script src="js/lib/textillate/jquery.textillate.js"></script> 
+  <script src="js/validations.js"></script> 
+  <script src="js/sendmail.js"></script> 
+  <script>$(document).ready(function(){$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){$(this).toggleClass('open');});$('.tlt').textillate({loop:true,minDisplayTime:2000,initialDelay:0,inEffects:['bounceIn'],outEffects:['bounceOut'],in:{effect:'bounceIn',delayScale:1.5,delay:50,sync:false,shuffle:true,reverse:false,callback:function(){}},out:{effect:'bounceOut',delayScale:1.5,delay:50,sync:false,shuffle:true,reverse:false,callback:function(){}}});},$('#iauro_HomeBannerHeader .onRight').fadeIn());$(window).load(function(){showThisCaseStudyHome('1');var ua=navigator.userAgent,isMobileWebkit=/WebKit/.test(ua)&&/Mobile/.test(ua);if(!isMobileWebkit){$('#secondParallaxWindowAtHomePage').attr('data-stellar-background-ratio','0.5');$('#firstParallaxWindowAtHomePage').attr({'data-stellar-background-ratio':'0.5','data-stellar-vertical-offset':'50'});$.stellar({horizontalScrolling:false,verticalOffset:40});}});</script> 
+  <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-56762291-1']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();</script> 
+ </body>
+</html>

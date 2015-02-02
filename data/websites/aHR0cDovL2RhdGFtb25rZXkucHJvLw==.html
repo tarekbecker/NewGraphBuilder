@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta http-equiv="cache-control" content="no-cache"> 
+  <meta http-equiv="expires" content="0"> 
+  <meta http-equiv="pragma" content="no-cache"> 
+  <title>Datamonkey - interactive education in Data Analysis</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="keywords" content="education, datamonkey, sql, excel, spreadsheets, database, big data"> 
+  <meta name="author" content="datamonkey.pro"> 
+  <!-- Favicons--> 
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico"> 
+  <!-- stylesheets --> 
+  <link rel="stylesheet" type="text/css" href="/static/b2b/css/compiled/theme.css"> 
+  <link rel="stylesheet" type="text/css" href="/static/b2b/css/vendor/animate.css"> 
+  <link rel="stylesheet" type="text/css" href="/static/b2b/css/vendor/entypo.css"> 
+  <link rel="stylesheet" type="text/css" href="/static/b2b/css/vendor/brankic.css"> 
+  <!-- javascript --> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+  <script src="/static/b2b/js/bootstrap/bootstrap.min.js"></script> 
+  <script src="/static/b2b/js/theme.js"></script> 
+  <script src="/static/b2b/js/scrolling-nav.js"></script> 
+  <script src="/static/b2b/js/jquery.easing.min.js"></script> 
+  <meta property="fb:app_id" content="1434472373492604"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="http://datamonkey.pro/"> 
+  <meta property="og:title" content="Datamonkey - interactive education for you"> 
+  <meta property="og:image" content="http://datamonkey.pro/static/images/achievement_monkey.png"> 
+  <meta property="og:description" content="Learn SQL and Excel for Data Analysis interactively with concrete examples and full immersion in the work environment."> 
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--> 
+ </head> 
+ <body id="home" class="home"> 
+  <script>
+(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-51768848-1', 'datamonkey.pro');
+ga(function (tracker) {
+    var clientId = tracker.get('clientId'); // get client id from  Google Analytics
+    document.cookie = "_ga_cid=" + clientId + "; path=/"; // save it to cookie _ga_cid
+    ga('set', 'dimension1', clientId); //запись clientId для каждого пользователя
+});
+ga('send', 'pageview');
+
+</script> 
+  <!-- Yandex.Metrika counter --> 
+  <script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter25415633 = new Ya.Metrika({id:25415633,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script> 
+  <noscript>
+   <div>
+    <img src="//mc.yandex.ru/watch/25415633" style="position:absolute; left:-9999px;" alt="">
+   </div>
+  </noscript> 
+  <!-- /Yandex.Metrika counter --> 
+  <script>
+
+</script> 
+  <script>(function () {
+    var w = window;
+    var ic = w.Intercom;
+    if (typeof ic === "function") {
+        ic('reattach_activator');
+        ic('update', intercomSettings);
+    } else {
+        var d = document;
+        var i = function () {
+            i.c(arguments)
+        };
+        i.q = [];
+        i.c = function (args) {
+            i.q.push(args)
+        };
+        w.Intercom = i;
+        function l() {
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://widget.intercom.io/widget/xvkot374';
+            var x = d.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        }
+
+        if (w.attachEvent) {
+            w.attachEvent('onload', l);
+        } else {
+            w.addEventListener('load', l, false);
+        }
+    }
+})()</script> 
+  <header class="navbar navbar-inverse hero" role="banner"> 
+   <div class="container"> 
+    <div class="navbar-header"> 
+     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a href="/" class="navbar-brand">Datamonkey</a> 
+    </div> 
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"> 
+     <ul class="nav navbar-nav navbar-right"> 
+      <li> 
+       <div class="page-scroll"> 
+        <a href="#benefits" style="display: block;"> Benefits </a> 
+       </div> </li> 
+      <li> 
+       <div class="page-scroll"> 
+        <a href="#pricing" style="display: block;"> Enroll </a> 
+       </div> </li> 
+      <li> <a href="/blog/" style="display: block;"> Blog </a> </li> 
+      <li> 
+       <div class="page-scroll"> 
+        <a href="/business/" style="display: block;"> Business </a> 
+       </div> </li> 
+      <li> <a href="/sign_up_page/"> Sign up </a> </li> 
+      <li> </li> 
+     </ul> 
+    </nav> 
+   </div> 
+  </header> 
+  <div id="hero"> 
+   <div class="container"> 
+    <h1 class="hero-text animated fadeInDown" style="text-align: center"> Learn&nbsp; SQL&nbsp; and&nbsp; Excel&nbsp; for&nbsp; Data&nbsp; Analysis&nbsp; interactively </h1> 
+    <p style="text-align: center; color: #fafafa; font-size: 20px"> With concrete examples and full immersion into the work environment </p> 
+    <div class="animated fadeInDown; page-scroll" style="text-align: center; margin-top: 60px;"> 
+     <a href="#slider" class="button-outline" style="margin-right: 20px;">Learn more</a> 
+     <a href="/sign_up_page/" class="button">Start learning for free</a> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="slider"> 
+   <div class="container"> 
+    <div class="row header"> 
+     <div class="col-md-12"> 
+      <h3>Interactive lessons. Real-work environment. The learn by doing approach. </h3> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-md-12 slide-wrapper"> 
+      <div class="slideshow"> 
+       <div class="btn-nav prev"></div> 
+       <div class="btn-nav next"></div> 
+       <div class="slide active"> 
+        <img src="/static/b2b/images/slider/slide1_1.png" alt="slide3"> 
+       </div> 
+       <div class="slide"> 
+        <img src="/static/b2b/images/slider/slide3_1.png" alt="slide4"> 
+       </div> 
+       <div class="slide"> 
+        <img src="/static/b2b/images/slider/slide3.png" alt="slide1"> 
+       </div> 
+       <div class="slide"> 
+        <img src="/static/b2b/images/slider/slide4.png" alt="slide1"> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- lol --> 
+  <div id="benefits"></div> 
+  <div id="charts"> 
+   <div id="chart-option"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-12"> 
+       <div class="divider"></div> 
+      </div> 
+     </div> 
+     <div class="row header"> 
+      <h3>Why Datamonkey is better than standard courses</h3> 
+      <p> Discover the benefits </p> 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-12"> 
+       <div class="chart clearfix"> 
+        <div class="features-col col-sm-4"> 
+         <div class="header" style="text-align: center; padding: 13px 0px">
+           Features 
+         </div> 
+         <div class="spec"> 
+          <span class="icon brankic-money-bag"></span> Save your money
+          <br> 
+          <br> 
+         </div> 
+         <div class="spec"> 
+          <span class="icon brankic-chart4"></span> No boring theory
+          <br> 
+          <br> 
+         </div> 
+         <div class="spec"> 
+          <span class="icon brankic-time2"></span> Save your time
+          <br> 
+          <br> 
+         </div> 
+         <div class="spec"> 
+          <span class="icon brankic-suitcase2"></span> Real case studies 
+         </div> 
+        </div> 
+        <div class="plan-col col-sm-4"> 
+         <div class="header">
+           Standard courses 
+         </div> 
+         <div class="spec">
+           Cost too much. More than $100 for each data science course 
+         </div> 
+         <div class="spec">
+           A lot of theory, slides and videos
+          <br> 
+          <br> 
+         </div> 
+         <div class="spec">
+           Waste a lot of time while studying
+          <br> 
+          <br> 
+         </div> 
+         <div class="spec">
+           Offer standard learning material
+          <br> 
+          <br> 
+         </div> 
+        </div> 
+        <div class="plan-col last col-sm-4"> 
+         <div class="header">
+           Datamonkey 
+         </div> 
+         <div class="spec">
+           You pay for access and forget about additional costs 
+         </div> 
+         <div class="spec">
+           Only learn by doing approach. Clear explanations 
+         </div> 
+         <div class="spec">
+           The ability to learn when and where comfortable 
+         </div> 
+         <div class="spec">
+           All courses contain case studies, which will allow you to dip into the topic you studied 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="cta"> 
+    <a href="/sign_up_page/">Start learning</a> 
+   </div> 
+  </div> 
+  <div id="pricing"> 
+   <div class="container"> 
+    <div class="row header"> 
+     <div class="col-md-12"> 
+      <h3>No contract. One-time fee.</h3> 
+      <p>All plans include live support</p> 
+     </div> 
+    </div> 
+    <div class="row charts"> 
+     <div class="col-md-4"> 
+      <div class="chart first"> 
+       <div class="quantity"> 
+        <span class="price">$10</span> 
+       </div> 
+       <div class="plan-name">
+        Student
+       </div> 
+       <div class="specs"> 
+        <div class="spec"> 
+         <span class="variable">Unlimited</span> courses 
+        </div> 
+        <div class="spec"> 
+         <span class="variable">Tracking</span> performance 
+        </div> 
+        <div class="spec"> 
+         <span class="variable">Live</span> support 
+        </div> 
+        <div class="spec">
+          &nbsp; 
+        </div> 
+        <div class="spec">
+          &nbsp; 
+        </div> 
+        <div class="spec">
+          &nbsp; 
+        </div> 
+        <div class="spec" style="margin-bottom: 22px;">
+          &nbsp; 
+        </div> 
+       </div> 
+       <form role="form" action="/business/sign_up/" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="mZmRrw9Pyy3cNt4kYwJ4lot4dwmIwCUe"> 
+        <input type="hidden" name="payload" value="10"> 
+        <div class="submit"> 
+         <input type="submit" class="button button-small" value="Confirm"> 
+        </div> 
+       </form> 
+      </div> 
+     </div> 
+     <div class="col-md-4"> 
+      <div class="chart featured"> 
+       <div class="popular">
+        Most popular
+       </div> 
+       <div class="quantity"> 
+        <span class="price">$20</span> 
+       </div> 
+       <div class="plan-name">
+        Standard
+       </div> 
+       <div class="specs"> 
+        <div class="spec"> 
+         <span class="variable">Unlimited</span> courses 
+        </div> 
+        <div class="spec"> 
+         <span class="variable">Tracking</span> performance 
+        </div> 
+        <div class="spec"> 
+         <span class="variable">Live</span> support 
+        </div> 
+        <div class="spec">
+          &nbsp; 
+        </div> 
+        <div class="spec">
+          &nbsp; 
+        </div> 
+        <div class="spec">
+          &nbsp; 
+        </div> 
+        <div class="spec" style="margin-bottom: 22px;">
+          &nbsp; 
+        </div> 
+       </div> 
+       <form role="form" action="/business/sign_up/" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="mZmRrw9Pyy3cNt4kYwJ4lot4dwmIwCUe"> 
+        <input type="hidden" name="payload" value="20"> 
+        <div class="submit"> 
+         <input type="submit" class="button button-small" value="Confirm"> 
+        </div> 
+       </form> 
+      </div> 
+     </div> 
+     <div class="col-md-4"> 
+      <div class="chart last"> 
+       <div class="quantity"> 
+        <span class="price">$60</span> 
+       </div> 
+       <div class="plan-name">
+        Personal adviser
+       </div> 
+       <div class="specs"> 
+        <div class="spec"> 
+         <span class="variable">Unlimited</span> courses 
+        </div> 
+        <div class="spec"> 
+         <span class="variable">Tracking</span> performance 
+        </div> 
+        <div class="spec"> 
+         <span class="variable">Live</span> support 
+        </div> 
+        <div class="spec"> 
+         <span class="variable">Personal</span> case for you. Based on your wishes 
+        </div> 
+        <div class="spec"> 
+         <span class="variable">Analysis</span> of your training 
+        </div> 
+        <div class="spec"> 
+         <span class="variable">Personal</span> recommendations on your learning process 
+        </div> 
+       </div> 
+       <form role="form" action="/business/sign_up/" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="mZmRrw9Pyy3cNt4kYwJ4lot4dwmIwCUe"> 
+        <input type="hidden" name="payload" value="60"> 
+        <div class="submit"> 
+         <input type="submit" class="button button-small" value="Confirm"> 
+        </div> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="testimonials"> 
+   <div class="container"> 
+    <div class="row header"> 
+     <div class="col-md-12"> 
+      <h3>About founders:</h3> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-sm-6"> 
+      <div class="testimonial pull-right"> 
+       <div class="quote">
+         Hey there! A couple of words about me: background as an analyst in FMCG and e-commerce to banking Associate. Teaching experience (Data Analysis training). Master’s Degree in math. 
+        <div class="arrow-down"> 
+         <div class="arrow"></div> 
+         <div class="arrow-border"></div> 
+        </div> 
+       </div> 
+       <div class="author"> 
+        <img src="/static/b2b/images/testimonials/ilya.jpg" class="pic" alt="testimonial1"> 
+        <div class="name">
+         Ilya
+        </div> 
+        <div class="company">
+         CEO, Datamonkey
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-6"> 
+      <div class="testimonial"> 
+       <div class="quote">
+         Hello! I am an SQL professional with teacher education who was a Java/Python developer at a major gas and oil company. Now I want to share my knowledge. 
+        <br> 
+        <br> 
+        <div class="arrow-down"> 
+         <div class="arrow"></div> 
+         <div class="arrow-border"></div> 
+        </div> 
+       </div> 
+       <div class="author"> 
+        <img src="/static/b2b/images/testimonials/leo.jpg" class="pic" alt="testimonial2"> 
+        <div class="name">
+         Leonid
+        </div> 
+        <div class="company">
+         CTO, Datamonkey
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="cta" class="cta"> 
+   <a href="/sign_up_page/">Start learning</a> 
+  </div> 
+  <div id="clients"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-12"> 
+      <h3>Our Customers</h3> 
+      <p> These are some of our customers. </p> 
+      <div class="logos"> 
+       <img src="/static/b2b/images/logos/gclub.png"> 
+       <img src="/static/b2b/images/logos/bit.png"> 
+       <img src="/static/b2b/images/logos/depo.png"> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer-white"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-sm-3 menu"> 
+     </div> 
+     <div class="col-sm-6 newsletter"> 
+      <div class="signup clearfix"> 
+       <p> Sign up for the newsletter and we'll inform you of updates, offers and more. </p> 
+       <form action="/subscribe/" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="mZmRrw9Pyy3cNt4kYwJ4lot4dwmIwCUe"> 
+        <input type="email" name="email" required class="form-control" placeholder="Your email address"> 
+        <input type="hidden" name="subject" class="form-control" value="business_signup"> 
+        <input type="hidden" name="redirect" class="form-control" value="/business/"> 
+        <input type="submit" value="Sign up"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="row credits"> 
+     <div class="col-md-12">
+       Copyright © 2014. Datamonkey +1 415 799 7370 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

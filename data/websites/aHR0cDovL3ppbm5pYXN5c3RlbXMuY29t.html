@@ -1,0 +1,399 @@
+<!--?xml version="1.0" encoding="ISO-8859-1" ?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+ <head> 
+  <!-- <meta charset="utf-8"> --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+  <base href="/"> 
+  <!--[if lt IE 10]><script type="text/javascript">
+   // Fix for IE ignoring relative base tags.    
+       var baseTag = document.getElementsByTagName('base')[0];
+       baseTag.href = baseTag.href;    
+</script><![endif]--> 
+  <meta http-equiv="Pragma" content="no-cache"> 
+  <meta http-equiv="Expires" content="-1"> 
+  <link href="css/1399557150000custom.zinnia.min.css" rel="stylesheet"> 
+  <script src="js/1399557146000custom.zinnia.min.js"></script> 
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]--> 
+  <title>Home</title> 
+  <meta name="title" content="Home"> 
+ </head> 
+ <body> 
+  <!-- Top level menu--> 
+  <style type="text/css">
+    #searchnav > .dropdown-menu {
+    background-color: rgba(255,255,255,0);
+    border: 0;
+    border-color: #fff;
+    border-radius: initial;
+    box-shadow: 0px 0px 0px 0px;
+    margin-top: 0px !important;
+    }
+</style> 
+  <div id="nav" class="navbar navbar-default navbar-fixed-top navbar-custom" role="navigation"> 
+   <div class="container col-xs-12"> 
+    <div class="navbar-header"> 
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="brand-custom navbar-left" href="#"><img src="images/logo2.jpg"></a> 
+    </div> 
+    <div class="navbar-collapse collapse pagination-centered"> 
+     <ul class="nav navbar-nav navbar-right"> 
+      <li><a id="home" href="#">Home</a></li> 
+      <li class="dropdown"> <a id="products" href="products/zarada" class="dropdown-toggle">Products</a> 
+       <ul class="dropdown-menu"> 
+        <li class="primarydropdown"><a href="products/zarada">Zarada</a></li> 
+        <li class="secdropdown"><a href="products/zarada/customer-management">Customer Management</a></li> 
+        <li class="secdropdown"><a href="products/zarada/service-fulfillment">Service Fulfillment</a></li> 
+        <li class="secdropdown"><a href="products/zarada/revenue-management">Revenue Management</a></li> 
+        <li class="secdropdown"><a href="products/zarada/business-intelligence">Business Intelligence</a></li> 
+       </ul> </li> 
+      <li class="dropdown"> <a id="training" href="bigdata/research" class="dropdown-toggle">Big Data</a> 
+       <ul class="dropdown-menu"> 
+        <li class="primarydropdown"><a href="bigdata/research">Research</a></li> 
+        <li class="primarydropdown"><a href="bigdata/services">Services</a></li> 
+        <li class="primarydropdown"><a href="training/hadoop">Hadoop Training</a></li> 
+        <li class="secdropdown"><a href="training/hadoop/workshop">Hadoop Workshop</a></li> 
+        <li class="secdropdown"><a href="training/hadoop/developer-training">Hadoop Developer Training</a></li> 
+        <li class="secdropdown"><a href="training/hadoop/enterprise-training">Hadoop Enterprise training</a></li> 
+       </ul> </li> 
+      <li><a id="customers" href="customers/">Customers</a></li> 
+      <li class="dropdown"> <a id="resources" href="resources/" class="dropdown-toggle">Resources</a> 
+       <ul class="dropdown-menu"> 
+        <li><a href="resources/whitepapers">White Papers</a></li> 
+        <li><a href="resources/opensource">Open Source</a></li> 
+        <li><a href="resources/case-studies">Case Studies</a></li> 
+       </ul> </li> 
+      <li><a id="blog" href="blog">Blog</a></li> 
+      <li class="dropdown"> <a id="about" href="about-us/overview">About</a> 
+       <ul class="dropdown-menu"> 
+        <li><a href="about-us/overview">Overview</a></li> 
+        <li><a href="about-us/management">Management</a></li> 
+        <li><a href="about-us/awards">Awards</a></li> 
+        <li><a href="/events">Events</a></li> 
+        <li><a href="about-us/contact-us">Contact Us</a></li> 
+       </ul> </li> 
+      <li id="searchnav" class="hidden-xs hidden-sm dropdown"> <a id="Search" href="javascript:none"><i class="glyphicon glyphicon-search"></i></a> 
+       <ul class="dropdown-menu navbardropdown"> 
+        <li> 
+         <form id="search-form" class="form searchdiv" method="get" action="/search"> 
+          <input id="search-form-input" name="query" type="text" class="form-control iovernputboxstyle"> 
+         </form> </li> 
+       </ul> </li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- code to enable click for navbar on mobile --> 
+  <script type="text/javascript">
+    var $win = $(window);
+    $win.resize(function () {
+    if ($win.width() > 768)
+    $(".navbar-nav > .dropdown > a").attr("data-toggle", "");
+    else
+    $(".navbar-nav > .dropdown > a").attr("data-toggle", "dropdown");
+    }).resize();
+</script> 
+  <style type="text/css">
+#landingPageCarousel{
+    box-shadow: 10px 0 10px 5px #837878;
+}
+</style> 
+  <div id="landingPageCarousel" class="carousel slide align-center rowmargin hidden-xs"> 
+   <ol class="carousel-indicators"> 
+    <li data-target="#landingPageCarousel" data-slide-to="0" class="active"></li> 
+    <li data-target="#landingPageCarousel" data-slide-to="1"></li> 
+   </ol> 
+   <div class="carousel-inner"> 
+    <div class="item active"> 
+     <a href="http://mlapps.zinniasystems.com" target="_blank"><img src="images/mlapps/mlapps.png"></a> 
+    </div> 
+    <div class="item"> 
+     <a href="/products/zarada"><img src="images/carousel1.jpg"> </a> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="header" class="visible-xs jumbotron align-center mainpage-heading"> 
+   <h3>Welcome to Zinnia Systems</h3> 
+   <!--<a href="events/hadoop-2.0-workshop"><p class="btn btn-sm btn-success">Register now</p></a>--> 
+  </div> 
+  <div class="col-md-12 col-sm-12" style="margin-bottom:2%;"> 
+   <div class="row"> 
+    <div class="col-md-4 col-sm-4 justify-text"> 
+     <div class="thumbnail align-center"> 
+      <h2><a href="products/zarada">Zarada</a></h2> 
+      <a href="products/zarada"><img src="images/zarada_landing.jpg" style="width:25%;height:10%;margin-left:37%;" class="img-circle hidden-xs"></a> 
+      <div class="caption"> 
+       <p class="homepagetext">One stop Solution for your BSS needs</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-md-4 col-sm-4 justify-text"> 
+     <div class="thumbnail align-center"> 
+      <h2><a href="resources/opensource">Nectar</a></h2> 
+      <a href="resources/opensource"><img src="images/nectar_logo.jpg" style="width:25%;height:10%;margin-left:37%;" class="img-circle hidden-xs"></a> 
+      <div class="caption"> 
+       <p class="homepagetext">Open source predictive modeling framework from Zinnia</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-md-4 col-sm-4 justify-text"> 
+     <div class="thumbnail align-center"> 
+      <h2><a href="blog">Thought Leadership</a></h2> 
+      <a href="blog"><img src="images/blog_main.jpg" style="width:25%;height:10%;margin-left:37%;" class="img-circle hidden-xs"></a> 
+      <div class="caption"> 
+       <p class="homepagetext">Thoughts and stories around technology</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <img alt="" src="images/ch-bd_shadow.png" style="width:100%;"> 
+  <div id="training" class="col-lg-12 col-xs-12"> 
+   <div class="row" style="padding-bottom:5%;"> 
+    <!--<h2 class="align-center"><img src="images/training2.png" class="iconsspan">Hadoop Training</h2>--> 
+    <h2 class="align-center" style="padding-bottom:2%;">Big Data</h2> 
+    <div class="col-lg-4 col-md-4 col-sm-4"> 
+     <div class="thumbnail align-center"> 
+      <h2><a href="bigdata/research">Research</a></h2> 
+      <a href="bigdata/research"><img src="images/research_front.jpg" style="width:34%;height:25%;margin-left:35%;" class="img-circle hidden-xs"></a> 
+      <div class="caption"> 
+       <p class="homepagetext">Bringing ideas to reality</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-lg-4 col-md-4 col-sm-4"> 
+     <div class="thumbnail align-center"> 
+      <h2><a href="bigdata/services">Services</a></h2> 
+      <a href="bigdata/services"><img src="images/services_front.jpg" style="width:32%;height:25%;margin-left:35%;" class="img-circle hidden-xs"></a> 
+      <div class="caption "> 
+       <p class="homepagetext">Get complete stories of our client interactions</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-lg-4 col-md-4 col-sm-4"> 
+     <div class="thumbnail align-center"> 
+      <h3><a href="training/hadoop">Hadoop Training</a></h3> 
+      <a href="training/hadoop"><img src="images/graduation_cap.jpg" style="width:25%;height:25%;margin-left:35%;" class="hidden-xs"></a> 
+      <div class="caption"> 
+       <p class="homepagetext">Equip yourself with necessary skills to tackle Big Data</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <img alt="" src="images/ch-ad_shadow.png" style="width:100%;"> 
+   <div class="align-center companytext hidden-xs">
+    Enabled by us
+   </div> 
+   <div class="row hidden-xs">
+    <h3 style="margin-top: 2%;margin-bottom: 0.9%;" class="align-center"><a href="/customers"><img class="companyspan" src="images/infosys.jpg"><img class="companyspan" src="images/motorola.png"><img class="companyspan" src="images/citi-bank.jpg"><img class="companyspan" src="images/virtusa.jpg"><img class="companyspan" src="images/infotech.jpg"><img class="companyspan" src="images/wipro.png"><img class="companyspan" src="images/exilant.png"></a></h3> 
+   </div> 
+  </div> 
+  <!-- Site footer --> 
+  <div class="footer footerborder"> 
+   <div class="masthead"> 
+    <div class="col-md-12 trainedborder hidden-xs"> 
+     <div class="container"> 
+      <div class="row footerstyle rowmargin footerborder"> 
+       <div class="col-md-2 col-xs-2"> 
+        <strong>Products</strong> 
+        <hr> 
+        <p><a href="products/zarada/customer-management">Customer Management</a></p> 
+        <p><a href="products/zarada/service-fulfillment">Service Fulfillment</a></p> 
+        <p><a href="products/zarada/revenue-management">Revenue Management</a></p> 
+        <p><a href="products/zarada/business-intelligence">Business Intelligence and Reporting</a></p> 
+       </div> 
+       <div class="col-md-2 col-xs-2"> 
+        <strong>Big Data</strong> 
+        <hr> 
+        <p><a href="bigdata/research">Research</a></p> 
+        <p><a href="bigdata/services">Services</a></p> 
+        <p><a href="training/hadoop">Hadoop Training</a></p> 
+       </div> 
+       <div class="col-md-2 col-xs-2"> 
+        <strong> Enabled By Zinnia</strong> 
+        <hr> 
+        <p><a href="customers/">Customers</a></p> 
+        <p><a href="blog">Blog</a></p> 
+        <p><a href="/events">Events</a></p> 
+       </div> 
+       <div class="col-md-2 col-xs-2"> 
+        <strong>Resources</strong> 
+        <hr> 
+        <p><a href="resources/whitepapers">White Papers</a></p> 
+        <p><a href="resources/opensource">Open Source</a></p> 
+        <p><a href="resources/case-studies">Case Studies</a></p> 
+       </div> 
+       <div class="col-md-2 col-xs-2"> 
+        <strong>About</strong> 
+        <hr> 
+        <p><a href="about-us/overview">Overview</a></p> 
+        <p><a href="about-us/management">Management</a></p> 
+        <p><a href="about-us/awards">Awards</a></p> 
+        <p><a href="/events">Events</a></p> 
+        <p><a href="about-us/contact-us">Contact Us</a></p> 
+       </div> 
+       <div class="col-md-2 col-xs-2"> 
+        <strong>Follow us</strong> 
+        <hr> 
+        <p style="font-weight:bold;">Zinnia Systems Private Limited </p>
+        <p> </p>
+        <p>No 2283, I floor, 14th A Main,HAL 2nd stage, Bangalore 560038</p> 
+        <div class="followus row"> 
+         <div class="col-md-3 col-xs-3"> 
+          <a href="https://www.facebook.com/pages/Zinnia-Systems/194933867116" target="_blank"><p class="align-center"><i class="fa fa-facebook "> </i></p></a> 
+         </div> 
+         <div class="col-md-3 col-xs-3"> 
+          <a href="https://twitter.com/zinniasystems" target="_blank"> <p class="align-center"><i class="fa fa-twitter"></i></p> </a> 
+         </div> 
+         <div class="col-md-3 col-xs-3"> 
+          <a href="http://www.linkedin.com/company/zinnia-systems" target="_blank"><p class="align-center"><i class="fa fa-linkedin"> </i></p></a> 
+         </div> 
+         <div class="col-md-3 col-xs-3"> 
+          <a href="https://plus.google.com/103179196090290581849/posts" target="_blank"><p class="align-center"><i class="fa fa-google-plus"> </i> </p></a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-xs-12 visible-xs"> 
+     <div class="row footerrow footerborder" style="padding-top:3%;"> 
+      <div class="col-md-3 col-xs-3 "> 
+       <a href="https://www.facebook.com/pages/Zinnia-Systems/194933867116" target="_blank"><p class="align-center"> <i class="fa fa-facebook fa-lg"></i> </p></a> 
+      </div> 
+      <div class="col-md-3 col-xs-3"> 
+       <a href="https://twitter.com/zinniasystems" target="_blank"> <p class="align-center"> <i class="fa fa-twitter fa-lg"></i> </p></a> 
+      </div> 
+      <div class="col-md-3 col-xs-3"> 
+       <a href="http://www.linkedin.com/company/zinnia-systems" target="_blank"><p class="align-center"> <i class="fa fa-linkedin fa-lg"></i> </p></a> 
+      </div> 
+      <div class="col-md-3 col-xs-3"> 
+       <a href="https://plus.google.com/103179196090290581849/posts" target="_blank"><p class="align-center"> <i class="fa fa-google-plus fa-lg"></i> </p> </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-md-12 col-xs-12 companyinfo align-center"> 
+     <p>Zinnia Systems Inc 2013. All Rights Reserved |Hadoop and the Hadoop elephant logo are trademarks of the Apache Software Foundation | <a href="privacy-policy">Privacy Policy</a> | <a href="terms-of-use">Terms of Service</a></p> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+
+    /*--------------------- Selected tab Script ----------------------------*/
+
+    (function(){
+    var loc = window.location.pathname;
+    var menuItem;
+    if(loc=="/"){
+    menuItem="home";
+    } else {
+    var startingIndex = loc.indexOf('/');
+    var endIndex = loc.indexOf("/",startingIndex+1);
+    menuItem = loc.substr(startingIndex+1,endIndex-1);
+    }
+    var element = $('#'+menuItem);
+    element.addClass("tab-selected");
+    })();
+
+    /*--------------------- Search button Script ----------------------------*/
+
+    var searchNavItem = $("#searchnav");
+    searchNavItem.hover(function(){ $("#search-form-input")[0].focus(); })
+    $("#searchnav").find("form")[0].onsubmit = function() {
+    if ($("#search-form-input")[0].value.trim().length > 1)
+    {
+    return true;
+    }
+    return false;
+    }
+
+
+    /*--------------------- Breadcrumb Script ----------------------------*/
+
+    var loc = window.location.pathname;
+    var breadcrumString = "<ul class='breadcrumb hidden-xs'>";
+    if(loc.lastIndexOf('/') == loc.length-1){
+    loc = loc.substring(0,loc.length-1);
+    }
+    arr = loc.split('/');
+    var indexOfSlash = loc.indexOf("/",1);
+    if(arr.length > 1){
+    for(var i = 1; i < arr.length-1; i++){
+    breadcrumString += "<li><a href=" + loc.substring(1,indexOfSlash) + "> " + arr[i].toUpperCase() + "</a></li>";
+    indexOfSlash = loc.indexOf("/",indexOfSlash+1);
+    }
+    }
+    breadcrumString += "<li><a style='color:#757171;'>" + arr[arr.length-1].toUpperCase() + "</a></li></ul>";
+    $('.page-heading').find(".container").prepend(breadcrumString);
+
+    $('.page-heading').prepend(breadcrumString.replace('hidden-xs','visible-xs'));
+
+
+
+
+
+    /*--------------------- Feedback Form Script ----------------------------*/
+
+    /*var feedbackFormDivObject = $("#feedback-form-div");
+    var feedbackButton = $("#feedback");
+    var documentObject = $(document);
+    var documentClickHandler = function(){
+    feedbackFormDivObject.toggle( "slow");
+    documentObject.unbind("click",documentClickHandler);
+    };
+    function collectInfo(){
+    $("#feedback-form").find("input")[0].value= window.location.pathname;
+    $("#feedback-form").find("input")[1].value= window.screen.height;
+    $("#feedback-form").find("input")[2].value= window.screen.width;
+    $("#feedback-form").find("input")[3].value= new Date();
+    }
+
+
+    feedbackButton.click(function (event) {
+    feedbackFormDivObject.toggle( "slow" );
+    event.stopPropagation();
+    documentObject.click(documentClickHandler);
+    feedbackFormDivObject.click( function(event) { event.stopImmediatePropagation()});
+
+    });
+
+    $("#feedback-submit").click(function(event){
+    var feedbackTextArea = $("#feedback-form-div").find("textarea")[0];
+    if(feedbackTextArea.value.length == 0) {
+    feedbackTextArea.setAttribute("placeholder","Please enter some feedback. Empty feedback not allowed!!..");
+    return;
+    }
+    collectInfo();
+    $.post('/feedback?'+$('#feedback-form').serialize());
+    feedbackFormDivObject.html("Thank you for your feedback");
+    event.stopPropagation();
+
+    documentObject.unbind("click",documentClickHandler);
+    feedbackFormDivObject.off("click");
+    feedbackButton.off("click");
+    feedbackButton.click(function(){feedbackFormDivObject.toggle( "slow" ) ;});
+    feedbackFormDivObject.click(function(){feedbackFormDivObject.toggle( "slow" );});
+    });
+    */
+
+    /*--------------------- google analytics Script ----------------------------*/
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-45897797-1', 'zinniasystems.com');
+        ga('send', 'pageview');
+
+    /*--------------------- Carousel Script ----------------------------*/
+    $('#landingPageCarousel').carousel({
+    interval: 6000
+    });
+</script>   
+ </body>
+</html>

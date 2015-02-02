@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <title>goGeo - High Performance Maps Platform</title> 
+  <meta name="description" content="Meet goGeo - a scalable and powerfull geospatial and LBS PaaS"> 
+  <meta name="keywords" content="maps lbs geospatial database platform development"> 
+  <meta name="author" content="goGeo inc. (R)"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <!-- social metatags --> 
+  <meta property="”og:title”" content="”goGeo" -="" high="" performance="" maps="" platform”=""> 
+  <meta property="”og:type”" content="”website”/"> 
+  <meta property="”og:image”" content="”/static/img/favicon-160x160.png”/"> 
+  <meta property="”og:url”" content="”http://gogeo.io”/"> 
+  <meta property="”og:description”" content="”Meet" gogeo="" -="" a="" scalable="" and="" powerfull="" geospatial="" lbs="" paas”=""> 
+  <meta name="”twitter:card”" content="”summary”"> 
+  <meta name="”twitter:url”" content="”http://gogeo.io/index.html”"> 
+  <meta name="”twitter:title”" content="”goGeo" -="" high="" performance="" maps="" platform”=""> 
+  <meta name="”twitter:description”" content="”Meet" gogeo="" -="" a="" scalable="" and="" powerfull="" geospatial="" lbs="" paas”=""> 
+  <meta name="”twitter:image”" content="”/static/img/apple-touch-icon-60x60.png”"> 
+  <link rel="stylesheet" href="/startup/flat-ui/bootstrap/css/bootstrap.css"> 
+  <link rel="stylesheet" href="/startup/flat-ui/css/flat-ui.css">
+  <!-- end --> 
+  <link rel="stylesheet" href="/startup/common-files/css/icon-font.css"> 
+  <link rel="stylesheet" href="/startup/common-files/css/animations.css"> 
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> 
+  <link href="//cdn.rawgit.com/noelboss/featherlight/master/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles"> 
+  <link rel="stylesheet" href="/static/css/app.css"> 
+  <!-- fav icons --> 
+  <link rel="shortcut icon" href="/static/img/favicon.ico"> 
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/img/apple-touch-icon-57x57.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/img/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/img/apple-touch-icon-60x60.png"> 
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/img/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/img/apple-touch-icon-76x76.png"> 
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/img/apple-touch-icon-152x152.png"> 
+  <link rel="icon" type="image/png" href="/static/img/favicon-196x196.png" sizes="196x196"> 
+  <link rel="icon" type="image/png" href="/static/img/favicon-160x160.png" sizes="160x160"> 
+  <link rel="icon" type="image/png" href="/static/img/favicon-96x96.png" sizes="96x96"> 
+  <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16"> 
+  <link rel="icon" type="image/png" href="/static/img/favicon-32x32.png" sizes="32x32"> 
+  <meta name="msapplication-TileColor" content="#2b5797"> 
+  <meta name="msapplication-TileImage" content="/static/img/mstile-144x144.png"> 
+  <meta name="msapplication-config" content="/static/img/browserconfig.xml"> 
+ </head> 
+ <body> 
+  <div class="page-wrapper"> 
+   <header class="header-10"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="navbar col-sm-12" role="navigation"> 
+       <div class="navbar-header"> 
+        <button type="button" class="navbar-toggle"></button> 
+        <a class="brand" href="#"><img src="/static/img/logos/gogeo-brand-white-icon.png"></a> 
+       </div> 
+       <div class="collapse navbar-collapse pull-right"> 
+        <ul class="nav pull-left"> 
+         <!-- {"title"=>"Home", "path"=>"/", "pageid"=>"home"} --> 
+         <li><a class="active" href="/">Home</a></li> 
+         <!-- {"title"=>"Features", "path"=>"/features", "pageid"=>"features"} --> 
+         <li><a href="/features">Features</a></li> 
+         <!-- {"title"=>"Demos", "path"=>"http://demos.gogeo.io", "pageid"=>"demos"} --> 
+         <li><a href="http://demos.gogeo.io">Demos</a></li> 
+         <!-- {"title"=>"Docs", "path"=>"http://docs.gogeo.io", "pageid"=>"docs"} --> 
+         <li><a href="http://docs.gogeo.io">Docs</a></li> 
+         <!-- {"title"=>"Community", "path"=>"http://discuss.gogeo.io/", "pageid"=>"forum"} --> 
+         <li><a href="http://discuss.gogeo.io/">Community</a></li> 
+         <!-- {"title"=>"About Us", "path"=>"/company/"} --> 
+         <li><a href="/company/">About Us</a></li> 
+         <!-- {"title"=>"Try it for free", "path"=>"/beta_signup", "pageid"=>"signup", "featured"=>true} --> 
+         <li><a class="btn-featured" href="/beta_signup">Try it for free</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="header-background"></div> 
+   </header> 
+   <section class="header-10-sub v-center"> 
+    <div class="background">
+     &nbsp;
+    </div> 
+    <div> 
+     <div class="container"> 
+      <div class="hero-unit"> 
+       <h1><span>High Performance </span><br> <span>Maps Platform</span></h1> 
+       <!-- <p>We’ve created the product that will help your<br> startup to look even better.</p> --> 
+      </div> 
+     </div> 
+    </div> 
+    <a class="control-btn fui-arrow-down" href="#"> </a> 
+   </section> 
+   <section class="content-25 bg-clouds"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-8 col-md-offset-2 text-center"> 
+       <h2>Real Time Processing of Large Datasets<br> <small>Explore sample apps with large datasets and <strong>no preprocessing</strong></small> </h2> 
+      </div> 
+     </div> 
+     <iframe class="lightbox" id="demo1" src="http://demos.gogeo.io/police-uk/" height="600" style="border:none; width:100%;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe> 
+     <iframe class="lightbox" id="demo2" src="http://demos.gogeo.io/geo-aggregation/" height="600" style="border:none; width:100%;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe> 
+     <div class="row"> 
+      <div class="col-md-8 col-md-offset-2 text-center"> 
+       <div class="col-md-6"> 
+        <div class="panel panel-info" style="font-size: 18px"> 
+         <div class="panel-heading text-left"> 
+          <strong>UK Crime Location Intelligence</strong> 
+         </div> 
+         <div class="panel-body text-left"> 
+          <strong>Dataset:</strong> 
+          <ul> 
+           <li>23 million crime records</li> 
+           <li>Source: <a href="http://data.police.uk/about/">data.police.uk</a></li> 
+          </ul> 
+          <strong>Location analytics features:</strong> 
+          <ul> 
+           <li>Clustering to better view large amount of markers</li> 
+           <li>Crime summary by police district while exploring the map</li> 
+           <li>Draw an area and/or change the time range of analysis</li> 
+           <li>Search by crime type</li> 
+          </ul> 
+          <div class="text-center"> 
+           <button class="btn btn-info" href="#" data-featherlight="#demo1">LAUNCH APPLICATION</button> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-md-6"> 
+        <div class="panel panel-info" style="font-size: 18px"> 
+         <div class="panel-heading text-left"> 
+          <strong>US Places Analytics</strong> 
+         </div> 
+         <div class="panel-body text-left"> 
+          <strong>Dataset:</strong> 
+          <ul> 
+           <li>13 million US places</li> 
+           <li>Source: <a href="https://archive.org/details/2011-08-SimpleGeo-CC0-Public-Spaces">SimpleGeo places database</a></li> 
+          </ul> 
+          <strong>Location analytics features:</strong> 
+          <ul> 
+           <li>Clustering to better view large amount of markers</li> 
+           <li>Company summary by business category while exploring the map</li> 
+           <li>Draw an area of analysis</li> 
+           <li>Switch to markers on closest zoom levels</li> 
+          </ul> 
+          <div class="text-center"> 
+           <button class="btn btn-info" href="#" data-featherlight="#demo2">LAUNCH APPLICATION</button> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <!-- call to unregistered action --> 
+   <section class="content-11"> 
+    <div class="container"> 
+     <span>Learn how to build GIS applications like those in minutes.</span> 
+     <a class="btn btn-large btn-info" href="http://docs.gogeo.io/">VIEW DOCS &amp; SAMPLES</a> 
+    </div> 
+   </section>
+   <section class="logos"> 
+    <div class="container"> 
+     <h3>Partners</h3> 
+     <!-- no máximo 5 logos --> 
+     <a href="http://mct.gov.br/" target="_blank"><img src="/static/img/logos/BrasilGov.png" height="100" width="155" alt="Governo Brasileiro"></a> 
+     <a href="http://www.fumsoft.org.br/empreendedorismo/acelera-mg" target="_blank"><img src="/static/img/logos/mcti.png" height="100" width="155" alt="MCTI"></a> 
+     <a href="http://www.startupbrasil.org.br/" target="_blank"><img src="/static/img/logos/startupBrasil.png" height="100" width="155" alt="Programa StartUp Brasil"></a> 
+    </div> 
+   </section> 
+   <footer class="footer-3 footer-2"> 
+    <div class="container"> 
+     <div class="row v-center"> 
+      <div class="col-sm-2"> 
+       <a class="brand" href="#"><img src="/static/img/logos/gogeo-brand-white-icon.png" alt="gogeo Logo"></a> 
+      </div> 
+      <div class="col-sm-10"> 
+       <nav class="pull-right"> 
+        <ul class="footer-2-navmenu"> 
+         <li><a href="/">Home</a></li> 
+         <li><a href="/features">Features</a></li> 
+         <li><a href="http://demos.gogeo.io">Demos</a></li> 
+         <li><a href="http://docs.gogeo.io">Docs</a></li> 
+         <li><a href="http://discuss.gogeo.io/">Community</a></li> 
+         <li><a href="/company/">About Us</a></li> 
+         <li><a href="/beta_signup">Try it for free</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+     </div> 
+    </div> 
+   </footer> 
+  </div> 
+  <script src="/startup/common-files/js/jquery-1.10.2.min.js"></script> 
+  <script src="/startup/flat-ui/js/bootstrap.min.js"></script> 
+  <script src="/startup/common-files/js/modernizr.custom.js"></script> 
+  <script src="/startup/common-files/js/jquery.scrollTo-1.4.3.1-min.js"></script> 
+  <script src="/startup/common-files/js/easing.min.js"></script> 
+  <script src="/startup/common-files/js/startup-kit.js"></script> 
+  <script src="//cdn.rawgit.com/noelboss/featherlight/master/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script> 
+  <script src="/static/js/script.js"></script> 
+  <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-51416381-1', 'gogeo.io');
+  ga('send', 'pageview');
+</script> 
+  <script>
+    (function(f,b,g){
+        var xo=g.prototype.open,xs=g.prototype.send,c;
+        f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
+        f._hjSettings={hjid:3293, hjsv:1};
+        if(b.addEventListener){b.addEventListener("DOMContentLoaded",function(){f.hj.documentHtml=b.documentElement.outerHTML;c=b.createElement("script");c.async=1;c.src="//static.hotjar.com/c/hotjar-3293.js?sv=1";b.getElementsByTagName("head")[0].appendChild(c);})}
+        if(!f._hjPlayback && b.addEventListener){
+            g.prototype.open=function(l,j,m,h,k){this._u=j;xo.call(this,l,j,m,h,k)};
+            g.prototype.send=function(e){var j=this;function h(){if(j.readyState===4){f.hj("_xhr",j._u,j.status,j.response)}}this.addEventListener("readystatechange",h,false);xs.call(this,e)};
+        }
+    })(window,document,window.XMLHttpRequest);
+</script>   
+ </body>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html id="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html id="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0xdata - H2O.ai - Fast Scalable Machine Learning</title>
+  <meta name="description" content="H2O - Fast Scalable Machine Learning For Smart Applications">
+  <link rel="publisher" href="https://plus.google.com/109486779212435464374/">
+  <meta property="og:title" content="H2O - Fast Scalable Machine Learning For Smart Applications">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://h2o.ai/assets/images/h2o.png">
+  <meta property="og:url" content="http://h2o.ai">
+  <meta property="og:description" content="H2O makes Hadoop do Math! H2O scales statistics, machine learning and math over Big Data.  H2O keeps familiar interfaces like R, Excel &amp; JSON so that big data enthusiasts and experts can explore, munge, model and score data sets using a range of simple to advanced algorithms.">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://0xdata.com/blog/feed-all.xml">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap/css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/assets/styles/icomoon.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/assets/styles/font-awesome.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/assets/styles/screen.css?t=201411121400" media="screen">
+  <link rel="stylesheet" type="text/css" href="/assets/styles/github.css" media="screen">
+  <!-- Optimizely Code-->
+  <script type="type/javascript" src="//cdn.optimizely.com/js/2185330150.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/styles/futura-mock.css" media="screen"> 
+  <!-- TypeKit<script type="text/javascript" src="//use.typekit.net/wcb1ppg.js"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script>/end TypeKit --> 
+  <!--[if lte IE 8]><script type="text/javascript">(function() {
+  var html5elements = "address|article|aside|audio|canvas|command|datalist|details|dialog|figure|figcaption|footer|header|hgroup|keygen|mark|main|meter|menu|nav|progress|ruby|section|time|video".split('|');
+  for(var i = 0; i < html5elements.length; i++) {
+    document.createElement(html5elements[i]);
+  }
+})();</script><script type="text/javascript" src="/assets/vendor/respond.min.js"></script><![endif]-->
+  <meta name="twitter:widgets:csp" content="on">
+  <link rel="stylesheet" type="text/css" href="/assets/vendor/owl-carousel/owl.carousel.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/assets/vendor/owl-carousel/owl.theme.css" media="screen">
+ </head>
+ <body>
+  <div id="Wave-background"></div>
+  <header class="site-header container">
+   <nav role="navigation" class="navbar navbar-default site-nav">
+    <ul class="nav navbar-nav navbar-left">
+     <li><a href="/product/" id="product-link" title="Product">Product</a></li>
+     <li><a href="#" id="use-case-link" title="Use Cases">Use Cases</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-logo">
+     <li><a href="/#/" id="home-logo-link" title="Home"><img src="/assets/images/h2o-home.png" alt="Logo"></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+     <li><a href="/h2o-world/" id="h2o-world-link" title="H2O World">H<sub>2</sub>O World</a></li>
+     <li><a href="/download/" id="download-link" title="Download" class="black-border">DOWNLOAD</a></li>
+    </ul>
+   </nav>
+  </header>
+  <!--      a(href='http://play.h2o.ai/', id='play-link', class="black-border" title='Play') -->
+  <!--          | PLAY -->
+  <!--          span.glyphicon.glyphicon-play-->
+  <!-- Section : Hidden drawer-->
+  <section id="use-case-drawer" class="hidden-drawer">
+   <div class="container">
+    <ul id="application-list">
+     <li><a href="/use-cases/ad-tech" id="ad-tech-link" title="Ad Technology">Ad Technology</a></li>
+     <li><a href="/use-cases/fraud-detection" id="fraud-detection-link" title="Fraud Detection">Fraud Detection</a></li>
+     <li><a href="/use-cases/marketing-mix" id="marketing-mix-link" title="Marketing Mix">Marketing Mix</a></li>
+     <li> <a href="/use-cases/customer-intelligence" id="customer-intelligence-link" title="Customer Intelligence">Customer Intelligence</a></li>
+    </ul>
+   </div>
+  </section>
+  <!-- /end Section : Hidden drawer-->
+  <!-- Section : Promo -->
+  <section id="Promo">
+   <div class="jumbotron">
+    <div class="waves"></div>
+    <div class="container">
+     <div class="col-sm-6"> 
+      <h1>MAKE BETTER PREDICTIONS</h1>
+      <h2>Fast Scalable Machine Learning<br>For Smarter Applications</h2>
+      <div class="button-row">
+       <a role="button" href="/download/" id="download-home-CTA" title="Download H2O" class="btn btn-primary btn-lg">Download <span class="glyphicon glyphicon-arrow-down"> </span></a>
+       <ul class="nav nav-pills">
+        <li><a href="http://docs.h2o.ai/" target="_blank" title="H2O Documentation" class="btn btn-link">Documentation</a></li>
+        <li><a href="http://github.com/0xdata/h2o-dev/" target="_blank" title="H2O on GitHub" class="btn btn-link">GitHub</a></li>
+        <li><a href="http://learn.h2o.ai" target="_blank" title="Training" class="btn btn-link">Training</a></li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- /end Section : Promo -->
+  <!-- /end Section : Countdown-banner-->
+  <!-- Section : News-Banner-->
+  <section id="News-Banner">
+   <div class="container">
+    <h3>It's Time to Play! </h3>
+    <a href="http://play.h2o.ai/"><button class="news-button">Start Playing with H2O</button></a>
+   </div>
+  </section>
+  <!-- /end Section : News-Banner-->
+  <!-- Section : Industry-Use-Case-->
+  <section id="Industry-Use-Case">
+   <div class="container">
+    <h2>For All Types of Business</h2>
+    <h4 class="sub-header">From modeling in familiar desktop environments to large scale enterprise</h4>
+    <h4 class="sub-header">datasets stretching across hundreds of servers, H2O makes your analysis fluid.</h4>
+    <div class="row">
+     <div class="col-lg-5 col-lg-offset-1">
+      <a href="/use-cases/marketing-mix/">
+       <div id="marketing-use-case" class="image-square">
+        <hr class="image-square-yellow">
+        <h3>Marketing Mix Modeling</h3>
+        <h4>Better Marketing with H2O </h4>
+       </div></a>
+      <a href="/use-cases/ad-tech/">
+       <div id="ad-tech-use-case" class="image-square">
+        <hr class="image-square-yellow">
+        <h3>Advertising Technology</h3>
+        <h4>Better Conversions with H2O</h4>
+       </div></a>
+     </div>
+     <div class="col-lg-5">
+      <a href="/use-cases/fraud-detection/">
+       <div id="fraud-detection-use-case" class="image-square">
+        <hr class="image-square-yellow">
+        <h3>Risk and Fraud Analysis</h3>
+        <h4>Better Detection with H2O </h4>
+       </div></a>
+      <a href="/use-cases/customer-intelligence">
+       <div id="customer-intelligence" class="image-square">
+        <hr class="image-square-yellow">
+        <h3>Customer Intelligence</h3>
+        <h4>Better Sales with H2O</h4>
+       </div></a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- /end Section : Industry-Use-Case-->
+  <!-- Section : Customer stories -->
+  <section id="Customer_stories">
+   <div class="container">
+    <ul id="owl-carousel-customers" class="owl-carousel">
+     <li><a href="/customers" title="Cisco" class="stories-item">
+       <figure>
+        <div style="background-image: url(/assets/uploads/2014/03/cisco.png); -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/assets/uploads/2014/03/cisco.png, sizingMethod=scale)';" class="image">
+         <img src="/assets/uploads/2014/03/cisco.png" alt="Cisco">
+        </div>
+       </figure></a></li>
+     <li><a href="/customers" title="eBay" class="stories-item">
+       <figure>
+        <div style="background-image: url(/assets/uploads/2014/03/ebay.png); -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/assets/uploads/2014/03/ebay.png, sizingMethod=scale)';" class="image">
+         <img src="/assets/uploads/2014/03/ebay.png" alt="eBay">
+        </div>
+       </figure></a></li>
+     <li><a href="/customers" title="Nielsen" class="stories-item">
+       <figure>
+        <div style="background-image: url(/assets/uploads/2014/03/nielsen.png); -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/assets/uploads/2014/03/nielsen.png, sizingMethod=scale)';" class="image">
+         <img src="/assets/uploads/2014/03/nielsen.png" alt="Nielsen">
+        </div>
+       </figure></a></li>
+     <li><a href="/customers" title="Paypal" class="stories-item">
+       <figure>
+        <div style="background-image: url(/assets/uploads/2014/03/paypal.png); -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/assets/uploads/2014/03/paypal.png, sizingMethod=scale)';" class="image">
+         <img src="/assets/uploads/2014/03/paypal.png" alt="Paypal">
+        </div>
+       </figure></a></li>
+     <li><a href="/customers" title="Picwell" class="stories-item">
+       <figure>
+        <div style="background-image: url(/assets/uploads/2014/03/picwell.png); -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/assets/uploads/2014/03/picwell.png, sizingMethod=scale)';" class="image">
+         <img src="/assets/uploads/2014/03/picwell.png" alt="Picwell">
+        </div>
+       </figure></a></li>
+     <li><a href="/customers" title="Rushcard" class="stories-item">
+       <figure>
+        <div style="background-image: url(/assets/uploads/2014/03/rushcard.png); -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/assets/uploads/2014/03/rushcard.png, sizingMethod=scale)';" class="image">
+         <img src="/assets/uploads/2014/03/rushcard.png" alt="Rushcard">
+        </div>
+       </figure></a></li>
+     <li><a href="/customers" title="Trulia" class="stories-item">
+       <figure>
+        <div style="background-image: url(/assets/uploads/2014/03/trulia.png); -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/assets/uploads/2014/03/trulia.png, sizingMethod=scale)';" class="image">
+         <img src="/assets/uploads/2014/03/trulia.png" alt="Trulia">
+        </div>
+       </figure></a></li>
+     <li><a href="/customers" title="Vendavo" class="stories-item">
+       <figure>
+        <div style="background-image: url(/assets/uploads/2014/03/vendavo.png); -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/assets/uploads/2014/03/vendavo.png, sizingMethod=scale)';" class="image">
+         <img src="/assets/uploads/2014/03/vendavo.png" alt="Vendavo">
+        </div>
+       </figure></a></li>
+    </ul>
+   </div>
+  </section>
+  <!-- /end Section : Customer stories  -->
+  <!-- Section : Why-H2O-->
+  <section id="Why-H2O">
+   <div class="container">
+    <hr class="feature-divider">
+    <hr class="yellow-line">
+    <h3>Why H2O?</h3>
+    <p> H2O is for data scientists and application developers who need fast, in-memory scalable machine learning for smarter applications. H2O is an open source parallel processing engine for machine learning. Unlike traditional analytics tools, H2O provides a combination of extraordinary math, a high performance parallel architecture, and unrivaled ease of use.</p>
+    <a href="/product/"><button class="h2o-button">Learn More</button></a>
+    <hr class="feature-divider">
+   </div>
+  </section>
+  <!-- /end Section : Why-H2O-->
+  <!-- Section : Community-->
+  <section id="Community">
+   <div class="community-image"></div>
+   <div class="community-message">
+    <img src="/assets/images/home/com_icon.png">
+    <h2>H2O Community</h2>
+    <h4>Keep up to date with what's happening in the H2O community. See blog posts, event dates &amp; more.</h4>
+    <a href="/events/"><button class="community-button">Learn More</button></a>
+   </div>
+  </section>
+  <!-- / end Section : Community-->
+  <!-- Section : Press -->
+  <section id="Press">
+   <div class="container">
+    <div class="row">
+     <header class="col-md-2">
+      <h2>Press</h2>
+      <a href="/news" title="Press" class="text-link">H<sub>2</sub>O is making waves<br>in the industry<i class="icon-arrow-right"></i></a>
+     </header>
+     <div class="col-md-9 col-md-offset-1">
+      <ul id="owl-carousel-press" class="owl-carousel">
+       <li><a href="/reports/impact-report-b" title="0xdata takes $8.9M and becomes H2O to match its open-source machine-learning project" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/news-banners/images/vb.png" alt="0xdata takes $8.9M and becomes H2O to match its open-source machine-learning project">
+           <h3>0xdata takes $8.9M and becomes H2O to match its open-source machine-learning project</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>“H2O integrates nicely into the workflows of data scientists who are familiar with the R programming language..”</p> 
+         </article></a></li>
+       <li><a href="/reports/impact-report-b" title="0xdata scores $8.9m series A, looks to disrupt advanced analysis with prediction engine" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/news-banners/images/451.jpg" alt="0xdata scores $8.9m series A, looks to disrupt advanced analysis with prediction engine">
+           <h3>0xdata scores $8.9m series A, looks to disrupt advanced analysis with prediction engine</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>“The startup has a good track record on executing on roadmap plans, which bodes well for future product development.”</p> 
+         </article></a></li>
+       <li><a href="http://www.upi.com/Technology/2014/10/22/Big-datas-newest-player-is-making-the-biggest-impact/8011414022038/" title="0xdata Big data and machine learning's sleeping giant" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/press/images/upi.png" alt="0xdata Big data and machine learning's sleeping giant">
+           <h3>0xdata Big data and machine learning's sleeping giant</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>“As data sets and analytics continue to be more integral to business growth and efficiency, companies like 0xdata are hoping to lead the way. With products like H20 and Sparkling Water, 0xdata seems to be doing just fine on that front.”</p> 
+         </article></a></li>
+       <li><a href="http://fortune.com/2014/08/03/meet-fortunes-2014-big-data-all-stars/" title="0xdata's Arno Candel named in Fortune's 2014 Big Data All-Stars" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/press/images/fortune.png" alt="0xdata's Arno Candel named in Fortune's 2014 Big Data All-Stars">
+           <h3>0xdata's Arno Candel named in Fortune's 2014 Big Data All-Stars</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>“Big data is about more than big numbers. Meet Fortune’s first class of Big Data All-Stars: 20 extraordinary people who we think are the best at connecting the dots, digging deep, and discovering the information that will transform the way businesses operate.”</p> 
+         </article></a></li>
+       <li><a href="http://www.crn.com/slide-shows/applications-os/300073554/emerging-vendors-2014-big-data-vendors-part-2.htm" title="Emerging Vendors 2014 - Big Data Vendors" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/03/press-crn.png" alt="Emerging Vendors 2014 - Big Data Vendors">
+           <h3>Emerging Vendors 2014 - Big Data Vendors</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>“…the vendors on this list know the value of a good partnership and either have a serious commitment to the channel or plan to leverage it as they “cross the chasm” and go mainstream with their bleeding-edge technologies.”</p> 
+         </article></a></li>
+       <li><a href="http://bits.blogs.nytimes.com/2014/05/03/valuable-humans-in-our-digital-future/?_php=true&amp;amp;_type=blogs&amp;amp;_r=0" title="Valuable Humans in Our Digital Future" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/06/nytimes1.png" alt="Valuable Humans in Our Digital Future">
+           <h3>Valuable Humans in Our Digital Future</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>In the spirit of college commencements, here is some advice to the class of 2014: Be human. It pays.</p> 
+         </article></a></li>
+       <li><a href="http://ovum.com/research/on-the-radar-0xdata/" title="On the Radar - 0xdata" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/03/press-ovum.png" alt="On the Radar - 0xdata">
+           <h3>On the Radar - 0xdata</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>Traditional predictive analytics solutions tend to focus on analyzing sample sets of data, often leading to inconclusive and unreliable outcomes. 0xdata’s H2O platform highlights an alternative approach that pairs powerful in-memory machine-learning algorithms with Hadoop-scale data processing.</p> 
+         </article></a></li>
+       <li><a href="http://gigaom.com/2014/03/27/apache-mahout-hadoops-original-machine-learning-project-is-moving-on-from-mapreduce/" title="Google-scale Machine Learning with Apache Mahout, Spark and H2O" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/03/press-gigaom.png" alt="Google-scale Machine Learning with Apache Mahout, Spark and H2O">
+           <h3>Google-scale Machine Learning with Apache Mahout, Spark and H2O</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>Apache Mahout, a machine learning library for Hadoop since 2009, is joining the exodus away from MapReduce. The project’s community has decided to rework Mahout to support the increasingly popular Apache Spark in-memory data-processing framework, as well as the H<sub>2</sub>O engine for running machine learning and mathematical workloads at scale.</p> 
+         </article></a></li>
+       <li><a href="http://portfortune.wordpress.com/2014/01/02/analytic-startups-0xdata/" title="Analytic Startups - 0xdata" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/03/press-portfortune.png" alt="Analytic Startups - 0xdata">
+           <h3>Analytic Startups - 0xdata</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>0xdata (“Hexdata”) is a small group of smart people from Stanford and Silicon Valley with VC backing and an open source software project for advanced analytics (H2O). Founded in 2011, 0xdata first appeared on analyst dashboards in 2012 and has steadily built a presence in the data science community since then.</p> 
+         </article></a></li>
+       <li><a href="http://www.crn.com/slide-shows/applications-os/240164423/the-10-coolest-big-data-products-of-2013.htm/pgno/0/1?itc=nextpage" title="The 10 Coolest Big Data Products Of 2013" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/03/press-crn.png" alt="The 10 Coolest Big Data Products Of 2013">
+           <h3>The 10 Coolest Big Data Products Of 2013</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>It’s no surprise there’s been an explosion this year of innovative big data products from both young startups and more established vendors. Here are the ones that particularly caught our attention in 2013.</p> 
+         </article></a></li>
+       <li><a href="http://www.crn.com/slide-shows/channel-programs/240163608/10-hot-technology-startups-for-november.htm" title="10 Hot Technology Startups For November" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/03/press-crn.png" alt="10 Hot Technology Startups For November">
+           <h3>10 Hot Technology Startups For November</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>No flowers. No leaves. November. But the chill in the air isn’t cooling off the IT industry’s startups, including some just launching their first products and others that are beyond their initial launch and (they hope) entering a phase of rapid growth.</p> 
+         </article></a></li>
+       <li><a href="http://www.forbes.com/sites/oreillymedia/2013/11/06/simplifying-interactive-realtime-and-advanced-analytics/" title="Simplifying Interactive, Real-Time And Advanced Analytics" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/03/press-forbes.png" alt="Simplifying Interactive, Real-Time And Advanced Analytics">
+           <h3>Simplifying Interactive, Real-Time And Advanced Analytics</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>Here are a few observations based on conversations I had during the just concluded Strata NYC conference.</p> 
+         </article></a></li>
+       <li><a href="http://www.information-management.com/news/new-product-news-11-1-2013-10025010-1.html" title="New Product News - November 1, 2013" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/03/press-info-mgt.png" alt="New Product News - November 1, 2013">
+           <h3>New Product News - November 1, 2013</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>0xdata, an open source machine learning and predictive analytics company for big data, announced general availability of the latest release of H2O, a prediction engine for big data users of Hadoop, R and Excel. H2O quickly delivers parallel and distributed advanced algorithms. The second generation H2O ‘Fluid Vector’ release delivers new levels of performance, ease of use and integration with R.</p> 
+         </article></a></li>
+       <li><a href="http://blog.revolutionanalytics.com/2013/10/finding-r-in-a-hadoop-world.html" title="Finding R in a Hadoop World" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/03/press-hadoop.png" alt="Finding R in a Hadoop World">
+           <h3>Finding R in a Hadoop World</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>In the spirit of college commencements, here is some advice to the class of 2014: Be human. It pays.</p> 
+         </article></a></li>
+       <li><a href="http://www.crn.com/slide-shows/applications-os/240163206/13-big-data-products-to-check-out-at-hadoop-world.htm?pgno=1" title="13 Hot Big Data Products From This Week's Hadoop World" target="_blank" class="press-item">
+         <article>
+          <header>
+           <img src="/assets/uploads/2014/03/press-crn.png" alt="13 Hot Big Data Products From This Week's Hadoop World">
+           <h3>13 Hot Big Data Products From This Week's Hadoop World</h3>
+           <span class="cover"><span class="label">Read more</span></span>
+          </header>
+          <p>The 2013 O’Reilly Strata + Hadoop World conference is under way in New York, where just about every major player in the big data arena is showing off their latest technology for collecting, managing and analyzing big data.</p> 
+         </article></a></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- /end Section : Press -->
+  <!-- Section : Resources-->
+  <section id="Resources">
+   <div class="resources-image"></div>
+   <div class="resources-message">
+    <img src="/assets/images/home/res_icon.png">
+    <h2>H2O Resources</h2>
+    <h4>Find tutorials, examples, documentation, training, booklets &amp; more.</h4>
+    <a href="/resources/"><button class="resources-button">Learn More</button></a>
+   </div>
+  </section>
+  <!-- / end Section : Resources-->
+  <!-- Section : News -->
+  <section id="News">
+   <div class="container">
+    <!-- News : Posts -->
+    <div id="tab-News_Posts" class="row news-row">
+     <header class="col-sm-3">
+      <h2 style="margin-bottom:0">Posts <a href="/blog" title="Blog" style="color:#999;text-decoration:none"><i class="icon-arrow-right"></i></a></h2>
+     </header>
+     <div class="col-sm-9">
+      <table class="post-listing">
+       <tbody>
+        <tr> 
+         <td class="post-date">December 2, 2014</td>
+         <td><a href="/blog/2014/12/h2o-world-machine-learning-is-fun">H2O WORLD 2014 Machine Learning IS Fun.</a><span class="post-author">&nbsp;—&nbsp;<a href="/team/joel-horwitz">Joel Horwitz</a></span></td>
+        </tr>
+        <tr> 
+         <td class="post-date">December 2, 2014</td>
+         <td><a href="/blog/2014/12/s-lang-as-api">What if the S language had been copyrighted?</a><span class="post-author">&nbsp;—&nbsp;<a href="/team/patrick-aboyoun">Patrick Aboyoun</a></span></td>
+        </tr>
+        <tr> 
+         <td class="post-date">November 30, 2014</td>
+         <td><a href="/blog/2014/12/sparkling-water-tutorials-updated">Sparkling Water Tutorials Updated</a><span class="post-author">&nbsp;—&nbsp;<a href="/team/michal-malohlava">Michal Malohlava</a></span></td>
+        </tr>
+        <tr> 
+         <td class="post-date">November 24, 2014</td>
+         <td><a href="/blog/2014/11/key/takeaways/from/the/worlds/top/kagglers">Key Takeaways from the World's Top Kagglers</a><span class="post-author">&nbsp;—&nbsp;<a href="/team/arno-candel">Arno Candel</a></span></td>
+        </tr>
+        <tr> 
+         <td class="post-date">November 20, 2014</td>
+         <td><a href="/blog/2014/11/predictive-modeling-at-scale">Predictive Modeling at Scale: Cisco Modernizes Predictive Model Production with H2O (joint work with Lou Cairvalheira)</a><span class="post-author">&nbsp;—&nbsp;<a href="/team/yan-zou">Yan Zou</a></span></td>
+        </tr>
+        <tr> 
+         <td class="post-date">November 18, 2014</td>
+         <td><a href="/blog/2014/11/introducing-flow">Introducing Flow!</a><span class="post-author">&nbsp;—&nbsp;<a href="/team/prithvi-prabhu">Prithvi Prabhu</a></span></td>
+        </tr>
+        <tr> 
+         <td class="post-date">November 15, 2014</td>
+         <td><a href="/blog/2014/16/Hacking/Algos">Hacking Algorithms in H<sub>2</sub>O With Cliff</a><span class="post-author">&nbsp;—&nbsp;<a href="/team/cliff-click">Cliff Click</a></span></td>
+        </tr>
+        <tr> 
+         <td class="post-date">November 15, 2014</td>
+         <td><a href="/blog/2014/11/H2OWorld/Competitive/DataScience/Panel">Competitive Data Science, Kaggle, Kdd and other Sports</a><span class="post-author">&nbsp;—&nbsp;<a href="/team/srisatish-ambati">SriSatish Ambati</a></span></td>
+        </tr>
+        <tr> 
+         <td class="post-date">November 10, 2014</td>
+         <td><a href="/blog/2014/11/Hacking/Algo/Quantiles">Hacking Algorithms into H<sub>2</sub>O: Quantiles</a><span class="post-author">&nbsp;—&nbsp;<a href="/team/cliff-click">Cliff Click</a></span></td>
+        </tr>
+        <tr> 
+         <td class="post-date">November 10, 2014</td>
+         <td><a href="/blog/2014/11/Hacking/Algo/Grep">Hacking Algorithms into H<sub>2</sub>O: Grep</a><span class="post-author">&nbsp;—&nbsp;<a href="/team/cliff-click">Cliff Click</a></span></td>
+        </tr>
+       </tbody>
+      </table>
+      <div style="padding:15px 0 0 0">
+       <a href="/blog/" title="Blog">View all posts »</a>
+      </div>
+     </div>
+    </div>
+    <!-- News : Tweets -->
+    <div id="tab-News_Tweets" class="row news-row">
+     <header class="col-sm-3">
+      <h2>Tweets</h2>
+      <ul>
+       <li><a href="https://twitter.com/hexadata" title="Twitter" class="twitter"><i class="icon icon-twitter"></i></a></li>
+       <li><a href="http://github.com/0xdata/" title="GitHub" class="github"><i class="icon icon-github"></i></a></li>
+       <li><a href="https://www.facebook.com/0xdata" title="Facebook" class="facebook"><i class="icon icon-facebook"></i></a></li>
+       <li><a href="https://www.linkedin.com/company/0xdata" title="Linkedin" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+     </header>
+     <div class="col-sm-9">
+      <div class="row">
+       <div class="col-xs-12 col-sm-6 col-md-4">
+        <p class="tweet">Don't miss out on the value gained from <a target="_blank" href="http://twitter.com/search?q=%23h2oworld">#h2oworld</a> <a target="_blank" href="http://t.co/QMdWJr53yG">http://t.co/QMdWJr53yG</a></p>
+        <p class="tweet-published"><a target="_blank" href="http://twitter.com/status/540531741417803777">December 4 2014 • 7:43:04 AM</a></p>
+        <p class="tweet">Don't miss out on the value gained from <a target="_blank" href="http://twitter.com/search?q=%23h2oworld">#h2oworld</a> <a target="_blank" href="http://t.co/Tej5K63tWC">http://t.co/Tej5K63tWC</a></p>
+        <p class="tweet-published"><a target="_blank" href="http://twitter.com/status/540530238531579905">December 4 2014 • 7:37:06 AM</a></p>
+       </div>
+       <div class="col-xs-12 col-sm-6 col-md-4">
+        <p class="tweet">RT <a target="_blank" title="Kirk Borne" href="http://twitter.com/KirkDBorne">@KirkDBorne</a>: Free <a target="_blank" href="http://twitter.com/search?q=%23MachineLearning">#MachineLearning</a> <a target="_blank" href="http://twitter.com/search?q=%23DeepLearning">#DeepLearning</a> guide: <a target="_blank" href="http://t.co/jOwYpk0Klj">http://t.co/jOwYpk0Klj</a>… <a target="_blank" href="http://twitter.com/search?q=%23DataScience">#DataScience</a> by <a target="_blank" title="H2O" href="http://twitter.com/h2oai">@h2oai</a> <a target="_blank" title="Arno Candel" href="http://twitter.com/ArnoCandel">@ArnoCandel</a> http://t.co/7YxoYjvRv8</p>
+        <p class="tweet-published"><a target="_blank" href="http://twitter.com/status/539894599360466944">December 2 2014 • 1:31:17 PM</a></p>
+        <p class="tweet">I added a video to a <a target="_blank" title="YouTube" href="http://twitter.com/YouTube">@YouTube</a> playlist <a target="_blank" href="http://t.co/AfFyhAdOxT">http://t.co/AfFyhAdOxT</a> Matt Dowle - Data.Table and R in Insurance</p>
+        <p class="tweet-published"><a target="_blank" href="http://twitter.com/status/539865738480463872">December 2 2014 • 11:36:36 AM</a></p>
+       </div>
+       <div class="col-xs-12 col-sm-6 col-md-4">
+        <p class="tweet">I added a video to a <a target="_blank" title="YouTube" href="http://twitter.com/YouTube">@YouTube</a> playlist <a target="_blank" href="http://t.co/iACLCmbBb4">http://t.co/iACLCmbBb4</a> Sandy Ryza, Cloudera - MLlib and Apache Spark</p>
+        <p class="tweet-published"><a target="_blank" href="http://twitter.com/status/539864237540380672">December 2 2014 • 11:30:39 AM</a></p>
+        <p class="tweet">I added a video to a <a target="_blank" title="YouTube" href="http://twitter.com/YouTube">@YouTube</a> playlist <a target="_blank" href="http://t.co/68XKXg0avM">http://t.co/68XKXg0avM</a> Chris Severs, eBay - Krylov - H2O On-demand</p>
+        <p class="tweet-published"><a target="_blank" href="http://twitter.com/status/539860788295794690">December 2 2014 • 11:16:56 AM</a></p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- /end News : Tweets -->
+   </div>
+  </section>
+  <!-- /end Section : News--> 
+  <section id="Contact">
+   <div class="container">
+    <div class="row">
+     <header class="col-sm-3 col-md-2">
+      <h2>Contact</h2>
+      <address><a href="http://goo.gl/maps/BiIsS" target="_blank">1185 Terra Bella Ave<br>Mountain View, CA 94043<br>(650) 429-8337</a></address>
+     </header>
+     <div class="col-sm-8 col-md-9 col-sm-offset-1 col-md-offset-1">
+      <div class="row">
+       <div class="col-sm-12 col-md-6 map">
+        <div class="map-contact-touch-block"></div>
+        <div id="map-Contact"></div>
+       </div>
+       <div class="col-sm-12 col-md-6 form">
+        <form class="contact-form">
+         <div class="row form-row">
+          <div class="col-sm-6">
+           <div class="form-group">
+            <label for="your-name" class="contact-name-label hidden">Name</label>
+            <input type="text" name="your-name" value="" placeholder="Name" class="contact-name form-control">
+           </div>
+          </div>
+          <div class="col-sm-6">
+           <div class="form-group">
+            <label for="your-email" class="contact-email-label hidden">Email</label>
+            <input type="text" name="your-email" value="" placeholder="Email" class="contact-email form-control">
+           </div>
+          </div>
+         </div>
+         <div class="row form-row">
+          <div class="col-md-12">
+           <div class="form-group">
+            <label for="your-message" class="contact-message-label hidden">Message</label>
+            <textarea name="your-message" rows="10" cols="40" placeholder="Thanks for the note!" class="contact-message form-control"></textarea>
+           </div>
+          </div>
+         </div>
+         <div class="form-row form-footer">
+          <input type="button" name="submit" value="Send" class="contact-button btn btn-primary">
+          <span class="btn clean">or send an email to <a href="mailto:support@0xdata.com" title="Email: support@0xdata.com">support@0xdata.com</a></span>
+         </div>
+         <div class="row form-success">
+          <div class="col-md-12">
+           <your>
+            message was sent successfully. Thanks!
+           </your>
+          </div>
+         </div>
+        </form>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="site-footer">
+   <div class="container">
+    <div class="row">
+     <div class="col-xs-12">
+      <nav class="footer-nav">
+       <ul class="nav navbar-nav">
+        <li><a href="/download/" title="Download">Download</a></li>
+        <li><a href="/press/" title="Press">Press</a></li>
+        <li><a href="/events/" title="Events">Events</a></li>
+        <li><a href="/blog/" title="Blog">Blog</a></li>
+        <li><a href="/support/" title="Support">Support</a></li>
+        <li><a href="/partners/" title="Partners">Partners</a></li>
+        <li><a href="/customers/" title="Customers">Customers</a></li>
+        <li><a href="/careers/" title="Careers">Careers</a></li>
+        <li><a href="/about/" title="About">About</a></li>
+       </ul>
+      </nav>
+      <a href="#" title="Back to top" class="btn btn-link pull-left go-top"><i class="icon-arrow-up"></i></a>
+      <nav class="social-nav pull-right">
+       <ul class="nav nav-pills">
+        <li><a href="http://0xdata.github.io/h2o/" title="GitHub" class="github"><i class="icon icon-github"></i></a></li>
+        <li><a href="https://twitter.com/hexadata" title="Twitter" class="twitter"><i class="icon icon-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/user/0xdata?feature=c4-feed-u" title="Facebook" class="facebook"><i class="icon icon-facebook"></i></a></li>
+        <li><a href="https://www.pinterest.com/0xdata/" title="Pinterest" class="pinterest"><i class="icon icon-pinterest"></i></a></li>
+        <li><a href="https://www.youtube.com/user/0xdata?feature=c4-feed-u" title="YouTube" class="youtube"><i class="icon icon-youtube"></i></a></li>
+        <li><a href="https://plus.google.com/109486779212435464374/posts" title="Google+" class="google-plus"><i class="icon icon-google-plus"></i></a></li>
+        <li><a href="http://www.meetup.com/H2Omeetup/" title="MeetUp" class="meet-up"><i class="icon icon-meetup"></i></a></li>
+       </ul>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script type="text/javascript" src="/assets/vendor/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="/assets/vendor/modernizr.min.js"></script>
+  <!--[if lte IE 8]><script type="text/javascript" src="/assets/vendor/selectivizr.min.js"></script><![endif]-->
+  <script type="text/javascript" src="/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript">Modernizr.load([
+  {
+    test: (Modernizr.touch),
+    yep: ['/assets/vendor/fastclick.min.js'],
+    complete: function() {
+      if (Modernizr.touch) {
+        $('body').append("<script type=\"text/javascript\">$(function() { FastClick.attach(document.body); });<\/script>");
+      }
+    }
+  }
+]);
+</script>
+  <!--[if lte IE 9]><script type="text/javascript" src="/assets/vendor/jquery.html5support.min.js"></script><script type="text/javascript">$(document).ready(function() { $.placeholder(); });</script><![endif]-->
+  <script type="text/javascript" src="/assets/vendor/imagesloaded.pkgd.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry&amp;1343675513"></script>
+  <script type="text/javascript" src="/assets/vendor/maplace.min.js"></script>
+  <script type="text/javascript" src="/assets/vendor/jquery.touchwipe.min.js"></script>
+  <!-- LeadLander -->
+  <script type="text/javascript" language="javascript">llactid=24797</script>
+  <script type="text/javascript" language="javascript" src="http://t2.trackalyzer.com/trackalyze.js"></script>
+  <script type="text/javascript" language="javascript">llfrmid=24797</script>
+  <script type="text/javascript" language="javascript" src="http://formalyzer.com/formalyze_init.js"></script>
+  <script type="text/javascript" language="javascript" src="http://formalyzer.com/formalyze_call.js"></script>
+  <!-- /end LeadLander --> 
+  <script type="text/javascript" language="javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-29263631-1', 'auto');
+ga('send', 'pageview');
+</script>
+  <script type="text/javascript" language="javascript">window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+window.analytics.load("Rl96OAVc1O");
+window.analytics.page();
+</script>
+  <script type="text/javascript" language="javascript" src="/assets/scripts/segment-trackers.js?t=201411121400"></script>
+  <script type="text/javascript" src="/assets/vendor/jquery.actual.min.js"></script>
+  <script type="text/javascript">Modernizr.load([
+  {
+    test: (Modernizr.canvas && Modernizr.svg && !Modernizr.touch),
+    complete: function() {
+      if (Modernizr.canvas && Modernizr.svg && !Modernizr.touch) {
+        $('body').append("<script type=\"text/javascript\" src=\"/assets/vendor/paper.js\"><\/script>");
+        $('body').append("<script type=\"text/paperscript\" canvas=\"canvas\" src=\"/assets/scripts/wave.js\"><\/script>");
+
+        $('body').append("<script type=\"text/javascript\" src=\"/assets/vendor/jquery.slimscroll.min.js\"><\/script>");
+        $('body').append('<script type=\"text/javascript\">if($(\".scroll-pane\").length > 0) { $(\".scroll-pane .viewport\").slimScroll({ height: \"350px\", alwaysVisible: true }); }<\/script>');
+      }
+    }
+  }
+]);
+
+</script>
+  <script type="text/javascript" src="/assets/vendor/owl-carousel/owl.carousel.js"></script>
+  <script type="text/javascript" src="/assets/vendor/jquery.vticker.min.js"></script>
+  <script type="text/javascript" src="/assets/vendor/jquery.slimscroll.min.js"></script>
+  <script type="text/javascript" src="/assets/scripts/common.js?t=201411071630"></script>
+  <!-- != yield-->
+ </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Nexgence, Inc.</title> 
+  <meta name="viewport" content="width=device-width"> 
+  <link rel="shortcut icon" type="image/ico" href="favicon.ico"> 
+  <script src="/Scripts/jquery-2.1.0.min.js"></script> 
+  <script src="/Scripts/jquery-ui-1.10.4.min.js"></script> 
+  <script src="/Scripts/jquery.unobtrusive-ajax.js"></script> 
+  <script src="http://knockoutjs.com/downloads/knockout-3.1.0.js"></script> 
+  <script src="http://knockoutjs.com/downloads/knockout-3.1.0.debug.js"></script> 
+  <script src="/Scripts/knockout.bindings.js"></script> 
+  <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"> 
+  <link href="/Content/firstbase/default.css" rel="stylesheet" type="text/css" media="all"> 
+  <link href="/Content/firstbase/fonts.css" rel="stylesheet" type="text/css" media="all"> 
+  <link href="/Content/jquery-ui.css" rel="stylesheet"> 
+ </head> 
+ <body class="body-front"> 
+  <div id="wrapper-front"> 
+   <script src="/Scripts/KnockoutModels/LoginViewModel.js"></script> 
+   <link href="/Content/iosOverlay.css" rel="stylesheet"> 
+   <link href="/Content/SearchBox.css" rel="stylesheet"> 
+   <link href="/Content/wordpress.css" rel="stylesheet"> 
+   <script type="text/javascript">
+
+    ko.extenders.required = function (target, overrideMessage) {
+        //add some sub-observables to our observable
+        target.hasError = ko.observable();
+        target.validationMessage = ko.observable();
+
+        //define a function to do validation
+        function validate(newValue) {
+            target.hasError(newValue ? false : true);
+            target.validationMessage(newValue ? "" : overrideMessage || "This field is required");
+        }
+
+        //initial validation
+        validate(target());
+
+        //validate whenever the value changes
+        target.subscribe(validate);
+
+        //return the original observable
+        return target;
+    };
+
+    $(function () {
+        var vm = new loginViewModel();
+        ko.applyBindings(vm);
+
+        $('#dialog-Login').keypress(function (e) {
+            if (e.keyCode == 13)
+                $('#btnLogin').click();
+        });
+    });
+</script> 
+   <div id="dialog-Login" style="text-align: center"> 
+    <input style="width: 200px" name="ddlUser" data-bind="valueUpdate: 'afterkeyup', value: ddlUser" type="search" placeholder="User">
+    <br> 
+    <input style="width: 220px" name="Password" data-bind="valueUpdate: 'afterkeyup', value: Password" type="password" placeholder="Password">
+    <br>
+    <br> 
+    <a class="button" id="btnLogin" data-bind="visible: ddlUser() != '' &amp;&amp; Password() != '', click: loginSubmit">Login</a>
+    <br> 
+    <img style="width: 25px; height: 25px; vertical-align: middle" data-bind="visible: IsLoading()" src="/Content/firstbase/images/AJAXLoading.gif"> 
+    <b style="font-size: 10px; color: red" data-bind="text: ErrorMessage"></b> 
+   </div> 
+   <div style="width: auto; text-align: center;"> 
+    <div style="height: 250px;"></div> 
+    <div id="banner" class="container"> 
+     <div class="title"> 
+      <h2>empowering retail.</h2> 
+      <h1>one algorithm at a time.</h1> 
+     </div> 
+    </div> 
+    <a class="button" data-bind="click: login" style="font-size: 18px; cursor: pointer; background-color: black; color: orange;">Login</a> 
+   </div> 
+   <div style="height: 100px;"> 
+   </div> 
+   <div style="text-align: center;"> 
+   </div> 
+   <div id="aboutUsSection" style="background-color: gray;"> 
+    <h1 style="text-align: center;">About Us</h1>
+    <br> 
+    <div style="text-align: center;"> 
+     <p class="mainDescription"> Nexgence is a Woodland Hills (California) based technology startup providing analytics solutions for small to mid sized retailers. Our approach uniquely designs industry specific algorithms to optimize product pricing and calibrate inventory management. Most of the proprietary algorithms used rely heavily of Bayesian statistics implemented using MCMC simulations. If we just scared the heck out of you that's because as a decision maker, you don't need to be concerned with the minutiae of the math. The strength of our product lies in its ability to harness this complex math effectively behind the scenes to generate various sensible outcomes based upon the data that you provide. And all that becomes nicely wrapped in a very easy to use interface. The platform is currently targeted towards convenience stores and apparel retailers. Alongside the primary proprietary data analysis piece, all point of sale integrations are managed through a custom built module. </p> 
+    </div>
+    <br> 
+    <a class="embedly-card" href="http://www.crunchbase.com/organization/nexgence">Nexgence | CrunchBase</a> 
+    <script>!function (a) { var b = "embedly-platform", c = "script"; if (!a.getElementById(b)) { var d = a.createElement(c); d.id = b, d.src = ("https:" === document.location.protocol ? "https" : "http") + "://cdn.embedly.com/widgets/platform.js"; var e = document.getElementsByTagName(c)[0]; e.parentNode.insertBefore(d, e) } }(document);</script> 
+   </div> 
+   <div id="vacanciesSection" style="background-color: darkslategray;" data-bind="visible: false"> 
+    <h1 style="text-align: center;">Careers</h1>
+    <br> 
+    <table style="width: 100%; font-size: 14px" data-bind="foreach: JobPostings"> 
+     <tbody> 
+      <tr> 
+       <td style="margin-left: 10px;"> <h3 style="color: orangered" data-bind="text: Title"></h3> <span style="color: orange; font-size: 14px;">Responsibilities</span><br> <p data-bind="html: Responsibilities"></p> <p style="text-align: justify; width: 50%;" data-bind="text: Description"></p> <span style="color: orange; font-size: 14px;">Desired Skills</span><br> <p data-bind="html: Skills"></p> <a data-bind="click: applyJob.bind($data, $data.Title()),text: ButtonMessage" class="button"></a> </td> 
+      </tr> 
+     </tbody> 
+    </table> 
+   </div> 
+   <div style="text-align: center; vertical-align: central; font-size: 18px;" class="ui-ios-overlay-wide" id="dialog-XieXie"> 
+    <p> Thank you for your submission.<br><br> We will carefully consider your candidacy and be in touch with you if a suitable match is found. </p> 
+   </div> 
+   <div id="dialog-ApplyVacancy" style="font-size: 12px;"> 
+    <h1 style="text-align: center" data-bind="text: avName"></h1>
+    <br> 
+    <p> <input data-bind="value: avFirstName, valueUpdate: 'afterkeyup'" type="text" placeholder="First Name"> <span class="colorDisable" data-bind="visible: avFirstName.hasError, text: avFirstName.validationMessage"> </span> <input data-bind="value: avLastName, valueUpdate: 'afterkeyup'" type="text" placeholder="Last Name"> <span class="colorDisable" data-bind="visible: avLastName.hasError, text: avLastName.validationMessage"> </span> </p> 
+    <p> <input class="textWidth2" data-bind="value: avEmailAddress, valueUpdate: 'afterkeyup'" type="text" placeholder="E-mail Address"> <span class="colorDisable" data-bind="visible: avEmailAddress.hasError, text: avEmailAddress.validationMessage"> </span> </p> 
+    <p> <textarea style="width: 100%" rows="5" data-bind="value: avLinks, valueUpdate: 'afterkeyup'" placeholder="Links to Research / Public GitHub Repository"></textarea> </p> 
+    <p> <input style="width: 100%" data-bind="value: avLinks2, valueUpdate: 'afterkeyup'" type="text" placeholder="LinkedIn Profile / Google Drive CV URL"><br><span class="colorDisable" style="text-align: center" data-bind="visible: avLinks2.hasError, text: avLinks2.validationMessage"> </span> </p> 
+    <br> 
+    <div style="text-align: center"> 
+     <a data-bind="click: avSubmit" class="button">Submit</a> 
+    </div> 
+   </div> 
+   <div id="disqus_thread"></div> 
+   <script type="text/javascript">
+    var disqus_shortname = 'retailtechnologyinsights';
+
+    (function () {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script> 
+   <noscript>
+    Please enable JavaScript to view the 
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+   </noscript> 
+   <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
+   <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'retailtechnologyinsights'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script> 
+  </div>   
+ </body>
+</html>

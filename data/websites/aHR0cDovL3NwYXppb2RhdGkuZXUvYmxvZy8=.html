@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="it-IT"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:og="http://ogp.me/ns#" 
+	xmlns:fb="http://www.facebook.com/2008/fbml" >
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="it-IT"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:og="http://ogp.me/ns#" 
+	xmlns:fb="http://www.facebook.com/2008/fbml" >
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="it-IT" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width"> 
+  <title>Building a high-quality knowledge-graph accessible via simple APIs on dandelion.eu. - SpazioDati blog</title> 
+  <link rel="stylesheet" href="http://blog.spaziodati.eu/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.0.1" type="text/css" media="all"> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://blog.spaziodati.eu/xmlrpc.php"> 
+  <link rel="shortcut icon" href="http://blog.spaziodati.eu/wp-content/themes/twentythirteen/favicon.ico"> 
+  <!--[if lt IE 9]>
+	<script src="http://blog.spaziodati.eu/wp-content/themes/twentythirteen/js/html5.js"></script>
+	<![endif]--> 
+  <link rel="alternate" type="application/rss+xml" title="Blog » Feed" href="http://blog.spaziodati.eu/it/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Blog » Feed dei commenti" href="http://blog.spaziodati.eu/it/comments/feed/"> 
+  <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.5 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-27344094-8']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script> 
+  <link rel="stylesheet" id="jetpack-subscriptions-css" href="http://blog.spaziodati.eu/wp-content/plugins/jetpack/modules/subscriptions/subscriptions.css?ver=3.7.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="social_comments-css" href="http://blog.spaziodati.eu/wp-content/plugins/social/assets/comments.css?ver=2.9.2" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="jetpack-widgets-css" href="http://blog.spaziodati.eu/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003" type="text/css" media="all"> 
+  <link rel="stylesheet" id="twentythirteen-fonts-css" href="//fonts.googleapis.com/css?family=Raleway%3A200%2C300%2C400%2C700&amp;subset=latin%2Clatin-ext" type="text/css" media="all"> 
+  <link rel="stylesheet" id="genericons-css" href="http://blog.spaziodati.eu/wp-content/plugins/jetpack/_inc/genericons/genericons.css?ver=3.0.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="twentythirteen-style-css" href="http://blog.spaziodati.eu/wp-content/themes/twentythirteen/style.css?ver=2013-12-05" type="text/css" media="all"> 
+  <!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='http://blog.spaziodati.eu/wp-content/themes/twentythirteen/css/ie.css?ver=2013-11-08' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="prefix-font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css?ver=4.0.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="sharedaddy-css" href="http://blog.spaziodati.eu/wp-content/plugins/jetpack/modules/sharedaddy/sharing.css?ver=2.9.3" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://blog.spaziodati.eu/wp-includes/js/jquery/jquery.js?ver=1.10.2"></script> 
+  <script type="text/javascript" src="http://blog.spaziodati.eu/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://blog.spaziodati.eu/wp-content/plugins/sitepress-multilingual-cms/res/js/jquery.cookie.js?ver=3.0.1"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var wpml_browser_redirect_params = {"pageLanguage":"it","languageUrls":{"it":"http:\/\/blog.spaziodati.eu\/it\/","en":"http:\/\/blog.spaziodati.eu\/en\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"blog.spaziodati.eu","path":"\/","expiration":24}};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://blog.spaziodati.eu/wp-content/plugins/sitepress-multilingual-cms/res/js/browser-redirect.js?ver=3.0.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.spaziodati.eu/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.spaziodati.eu/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 3.7.5"> 
+  <link rel="shortlink" href="http://wp.me/49Pzs"> 
+  <meta name="generator" content="WPML ver:3.0.1 stt:27,1;0"> 
+  <link rel="alternate" hreflang="it-IT" href="http://blog.spaziodati.eu/it/"> 
+  <link rel="alternate" hreflang="en-US" href="http://blog.spaziodati.eu/en/"> 
+  <style type="text/css">                                                                                                                
+</style> 
+  <!-- All in One SEO Pack 2.1.7 by Michael Torbert of Semper Fi Web Design[-1,-1] --> 
+  <meta name="description" content="SpazioDati Blog corporate: food for thoughts about Big Data, Linked Data, and Semantic Web technologies. We are building a high-quality knowledge-graph"> 
+  <meta name="keywords" content="text mining, text analysis, text api, google drive, fogli di lavoro, data journalism, datatxt,data journalism,datatxt,fogli di lavoro,google drive,text analysis,text api,smart data, casi d\'uso, datatxt-nex, hyperborea, loggia p2,casi d\'uso,datatxt-nex,hyperborea,loggia p2,linked open data, open data, hack4med, riuso, business case, hackathons,business case,hack4med,hackathons,open data,riuso"> 
+  <link rel="next" href="http://blog.spaziodati.eu/it/page/2/"> 
+  <link rel="canonical" href="http://blog.spaziodati.eu/it/"> 
+  <meta property="og:title" content="Building a high-quality knowledge-graph accessible via simple APIs on dandelion.eu. - SpazioDati blog"> 
+  <meta property="og:type" content="blog"> 
+  <meta property="og:url" content="http://blog.spaziodati.eu/it/"> 
+  <meta property="og:image" content="http://blog.spaziodati.eu/wp-content/uploads/2014/01/spaziodati-logo-dandelion.png"> 
+  <meta property="og:site_name" content="Building a high-quality knowledge-graph accessible via simple APIs on dandelion.eu. - SpazioDati blog"> 
+  <meta property="og:description" content="SpazioDati Blog corporate: food for thoughts about Big Data, Linked Data, and Semantic Web technologies. We are building a high-quality knowledge-graph accessible via simple APIs on dandelion.eu."> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:description" content="SpazioDati Blog corporate: food for thoughts about Big Data, Linked Data, and Semantic Web technologies. We are building a high-quality knowledge-graph accessible via simple APIs on dandelion.eu."> 
+  <!-- /all in one seo pack --> 
+ </head> 
+ <body class="home blog sidebar"> 
+  <div id="page" class="hfeed site"> 
+   <div class="sd-header"> 
+    <div class="sd-wrapper"> 
+     <h2 class="sd-name"><a href="http://www.spaziodati.eu" target="_blank">SpazioDati</a></h2> 
+     <div class="sd-menu-link"> 
+      <a href="/it/">IT</a> 
+      <a href="/en/">EN</a> 
+     </div> 
+    </div> 
+   </div> 
+   <header id="masthead" class="site-header" role="banner"> 
+    <a class="home-link" href="http://blog.spaziodati.eu/it/" title="Blog" rel="home"> <h1 class="site-title">Blog</h1> <h2 class="site-description"></h2> </a> 
+    <div id="navbar" class="navbar"> 
+     <nav id="site-navigation" class="navigation main-navigation" role="navigation"> 
+      <h3 class="menu-toggle">Menu</h3> 
+      <a class="screen-reader-text skip-link" href="#content" title="Vai al contenuto">Vai al contenuto</a> 
+      <div class="menu-navigation-menu-container">
+       <ul id="menu-navigation-menu" class="nav-menu">
+        <li id="menu-item-home" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="http://blog.spaziodati.eu/it/">Home</a></li>
+        <li id="menu-item-578" class="category-data menu-item menu-item-type-taxonomy menu-item-object-category menu-item-578"><a title="Si parla di Big Data, Linked Data e di Open Data ( Dati Aperti ), e di dati dalla comunità" href="http://blog.spaziodati.eu/it/category/dati/">Dati</a></li> 
+        <li id="menu-item-577" class="category-dandelion-platform menu-item menu-item-type-taxonomy menu-item-object-category menu-item-577"><a title="Si parla del data marketplace, delle API sui dataGEM, e dei servizi dataTXT" href="http://blog.spaziodati.eu/it/category/piattaforma-dandelion/">Dandelion</a></li> 
+        <li id="menu-item-576" class="category-events menu-item menu-item-type-taxonomy menu-item-object-category menu-item-576"><a title="Eventi e presentazioni " href="http://blog.spaziodati.eu/it/category/eventi/">Eventi</a></li> 
+        <li id="menu-item-575" class="category-lifespaziodati menu-item menu-item-type-taxonomy menu-item-object-category menu-item-575"><a title="Tutto quello che capita in SpazioDati" href="http://blog.spaziodati.eu/it/category/vita-in-spaziodati/">Vita@SpazioDati</a></li> 
+       </ul>
+      </div> 
+      <form role="search" method="get" class="search-form" action="http://blog.spaziodati.eu/it/"> 
+       <label> <span class="screen-reader-text">Ricerca per:</span> <input type="search" class="search-field" placeholder="Cerca …" value="" name="s" title="Ricerca per:"> </label> 
+       <input type="submit" class="search-submit" value="Cerca"> 
+      </form> 
+     </nav>
+     <!-- #site-navigation --> 
+    </div>
+    <!-- #navbar --> 
+   </header>
+   <!-- #masthead --> 
+   <div id="main" class="site-main"> 
+    <div id="primary" class="content-area"> 
+     <div id="content" class="site-content" role="main"> 
+      <article id="post-1668" class="post-1668 post type-post status-publish format-standard hentry category-piattaforma-dandelion tag-data-journalism tag-datatxt tag-fogli-di-lavoro tag-google-drive tag-text-analysis tag-text-api tag-text-mining"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"> <a href="http://blog.spaziodati.eu/it/2014/10/02/fare-analisi-del-testo-con-i-fogli-di-lavoro-di-google-grazie-alladd-on-di-datatxt/" rel="bookmark">Fare analisi del testo con i fogli di lavoro di Google, grazie all’add-on di dataTXT</a> </h1> 
+        <div class="entry-meta"> 
+         <span class="date"><a href="http://blog.spaziodati.eu/it/2014/10/02/fare-analisi-del-testo-con-i-fogli-di-lavoro-di-google-grazie-alladd-on-di-datatxt/" title="Permalink a Fare analisi del testo con i fogli di lavoro di Google, grazie all’add-on di dataTXT" rel="bookmark"><time class="entry-date" datetime="2014-10-02T17:12:44+00:00">2 ottobre 2014</time></a></span>
+         <span class="categories-links"><a href="http://blog.spaziodati.eu/it/category/piattaforma-dandelion/" title="Visualizza tutti gli articoli in Dandelion" rel="category tag">Dandelion</a></span>
+         <span class="tags-links"><a href="http://blog.spaziodati.eu/it/tag/data-journalism/" rel="tag">data journalism</a>, <a href="http://blog.spaziodati.eu/it/tag/datatxt/" rel="tag">dataTXT</a>, <a href="http://blog.spaziodati.eu/it/tag/fogli-di-lavoro/" rel="tag">fogli di lavoro</a>, <a href="http://blog.spaziodati.eu/en/tag/google-drive/" rel="tag">google drive</a>, <a href="http://blog.spaziodati.eu/en/tag/text-analysis/" rel="tag">text analysis</a>, <a href="http://blog.spaziodati.eu/it/tag/text-api/" rel="tag">text api</a>, <a href="http://blog.spaziodati.eu/en/tag/text-mining/" rel="tag">text mining</a></span>
+         <span class="author vcard"><a class="url fn n" href="http://blog.spaziodati.eu/it/author/matteobrunati/" title="Vedi tutti gli articoli di Matteo Brunati" rel="author">Matteo Brunati</a></span> 
+        </div>
+        <!-- .entry-meta --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p><img src="http://blog.spaziodati.eu/wp-content/uploads/2014/09/datatxt-drive.png" alt="Text analysis with Google Spreadsheets using dataTXT" width="550" class="aligncenter size-full wp-image-1609"><br> Se parliamo di <a href="https://en.wikipedia.org/wiki/Text_mining" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);" target="_blank">text mining</a> o di <strong>text analysis</strong>, oppure ancora di <a href="http://it.wikipedia.org/wiki/Data_mining" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://it.wikipedia.org']);" target="_blank">data mining</a>, si ha la sensazione di affrontare temi difficili. E se si è un <a href="http://it.wikipedia.org/wiki/Giornalismo_di_precisione" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://it.wikipedia.org']);" target="_blank">data journalist</a>, oppure un consulente di Social Media, o un editor di contenuti Web, sono temi che non risultano certo nuovi, forse. Ma non sono stati affrontati per la loro complessità, o per la mancanza di strumenti che ne facilitino l’uso.<br> Magari oggi <a href="http://www.lffl.org/2014/03/google-docs-approdano-i-componenti.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.lffl.org']);" target="_blank">che le funzionalità di Google Spreadsheet, ad esempio, si possono integrare</a> con add-on, e componenti aggiuntivi, questa difficoltà diventa un’opportunità.</p> 
+        <p><img src="http://2.bp.blogspot.com/-At4MyycYXhk/Ux8KyPeWm8I/AAAAAAAABb4/cY1g5CZwSfc/s1600/add-onsmenu.png" width="506" height="108" class="alignnone"></p> 
+        <p>Proprio per cogliere quest’opportunità, abbiamo sviluppato <strong><a href="https://chrome.google.com/webstore/detail/dandeliondatatxt/jnphjiobkikmooodicnbjfoghnpebemd" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://chrome.google.com']);" target="_blank">dandelion::dataTXT</a></strong>, ovvero abbiamo reso utilizzabili con un semplice menù a tendina <a href="https://dandelion.eu/products/datatxt/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://dandelion.eu']);" target="_blank"> la famiglia di API di dataTXT</a>, ora integrate all’interno dei fogli di lavoro di Google. <br> Questa presentazione pubblicata nel nostro account Slideshare riassume i temi chiave per essere subito operativi:</p> 
+        <p><iframe src="//www.slideshare.net/slideshow/embed_code/39202320" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe></p> 
+        <p>Cosa serve per iniziare ad usare l’add-on fin da subito:</p> 
+        <ul> 
+         <li>la pagina ufficiale del <a href="https://chrome.google.com/webstore/detail/dandeliondatatxt/jnphjiobkikmooodicnbjfoghnpebemd" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://chrome.google.com']);" target="_blank">Google Chrome Store</a> per installarlo</li> 
+         <li>il <a href="https://dandelion.eu/products/datatxt/integrations/gdrive" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://dandelion.eu']);" target="_blank">breve tutorial per configurarlo, pubblicato su dandelion.eu</a></li> 
+        </ul> 
+        <p> <a href="http://blog.spaziodati.eu/it/2014/10/02/fare-analisi-del-testo-con-i-fogli-di-lavoro-di-google-grazie-alladd-on-di-datatxt/#more-1668" class="more-link">Continua a leggere <span class="meta-nav">→</span></a></p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <div class="comments-link"> 
+         <a href="http://blog.spaziodati.eu/it/2014/10/02/fare-analisi-del-testo-con-i-fogli-di-lavoro-di-google-grazie-alladd-on-di-datatxt/#respond" title="Commenti a Fare analisi del testo con i fogli di lavoro di Google, grazie all’add-on di dataTXT"><span class="leave-reply">Lascia un commento</span></a> 
+        </div>
+        <!-- .comments-link --> 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <article id="post-1334" class="post-1334 post type-post status-publish format-standard hentry category-piattaforma-dandelion tag-casi-duso tag-data-journalism tag-datatxt tag-datatxt-nex tag-hyperborea tag-loggia-p2 tag-smart-data tag-text-api"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"> <a href="http://blog.spaziodati.eu/it/2014/05/27/navigare-tra-le-persone-ed-i-luoghi-citati-nei-documenti-sulla-p2-grazie-a-datatxt/" rel="bookmark">Navigare tra le persone ed i luoghi citati nei documenti sulla P2, grazie a dataTXT</a> </h1> 
+        <div class="entry-meta"> 
+         <span class="date"><a href="http://blog.spaziodati.eu/it/2014/05/27/navigare-tra-le-persone-ed-i-luoghi-citati-nei-documenti-sulla-p2-grazie-a-datatxt/" title="Permalink a Navigare tra le persone ed i luoghi citati nei documenti sulla P2, grazie a dataTXT" rel="bookmark"><time class="entry-date" datetime="2014-05-27T15:00:23+00:00">27 maggio 2014</time></a></span>
+         <span class="categories-links"><a href="http://blog.spaziodati.eu/it/category/piattaforma-dandelion/" title="Visualizza tutti gli articoli in Dandelion" rel="category tag">Dandelion</a></span>
+         <span class="tags-links"><a href="http://blog.spaziodati.eu/it/tag/casi-duso/" rel="tag">casi d'uso</a>, <a href="http://blog.spaziodati.eu/it/tag/data-journalism/" rel="tag">data journalism</a>, <a href="http://blog.spaziodati.eu/it/tag/datatxt/" rel="tag">dataTXT</a>, <a href="http://blog.spaziodati.eu/it/tag/datatxt-nex/" rel="tag">datatxt-nex</a>, <a href="http://blog.spaziodati.eu/it/tag/hyperborea/" rel="tag">hyperborea</a>, <a href="http://blog.spaziodati.eu/it/tag/loggia-p2/" rel="tag">loggia P2</a>, <a href="http://blog.spaziodati.eu/it/tag/smart-data/" rel="tag">smart data</a>, <a href="http://blog.spaziodati.eu/it/tag/text-api/" rel="tag">text api</a></span>
+         <span class="author vcard"><a class="url fn n" href="http://blog.spaziodati.eu/it/author/matteobrunati/" title="Vedi tutti gli articoli di Matteo Brunati" rel="author">Matteo Brunati</a></span> 
+        </div>
+        <!-- .entry-meta --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p><em>[AGGIORNAMENTO] Il sito fontitaliarepubblicana.it ha avuto un aggiornamento dell’interfaccia utente durante i primi giorni di giugno: gli screenshot in questo post si riferiscono alla versione precedente. </em></p> 
+        <p>Il 5 maggio è stato annunciato il sito “<a href="http://www.fontitaliarepubblicana.it/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.fontitaliarepubblicana.it']);" target="_blank"><strong>Fonti Italia Repubblicana</strong></a>“, all’interno dell’evento “<a href="http://www.archivi.beniculturali.it/index.php/news-home/item/1002-firenze-5-maggio-2014-%7C-carte-a-rischio" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.archivi.beniculturali.it']);" target="_blank">Carte a rischio. Sulle tracce di una memoria sommersa</a>“.<br> <a href="http://www.fontitaliarepubblicana.it/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.fontitaliarepubblicana.it']);" target="_blank"><img src="http://blog.spaziodati.eu/wp-content/uploads/2014/05/P2-homepage1.jpg" alt="Home page del sito sulla P2" width="1335" height="564" class="aligncenter size-full wp-image-1406"></a></p> 
+        <p>Nel sito si possono esplorare tutti i 120 documenti sulla <strong>loggia massonica P2</strong>, prodotti dalla <a href="http://storia.camera.it/organi/commissione-parlamentare-d-inchiesta-sulla-loggia-massonica-p2-08" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://storia.camera.it']);" target="_blank">commissione parlamentare d’inchiesta, presieduta da Tina Anselmi</a>, nel 1981.<br> Degno di nota l’approfondimento di Repubblica dedicato al lancio:</p> 
+        <blockquote>
+         <p>Il lavoro di digitalizzazione durato molti anni si è concluso e per chi vorrà indagare su quei documenti in gran parte ormai dimenticati o comunque finora poco studiati questo sito diventerà davvero uno strumento di lavoro preziosissimo. </p> 
+         <p>“I volumi messi insieme da Tina Anselmi sono stati pubblicati in ritardo e con un indice fumoso, a tratti incomprensibile”, spiega Tobagi [<em>Benedetta, figlia del giornalista Walter, ndA</em>], che cita come un esempio che riguarda l’omicidio di suo padre Walter, il giornalista del Corriere della Sera ucciso a Milano nel 1980 dalla Brigata XXVIII Marzo. <br>“<strong>Nel sommario cartaceo non c’era traccia del volantino di rivendicazione dell’assassinio mentre nel pdf grazie al motore di ricerca ora si trova.</strong> </p> 
+         <p>E chiunque potrà accedere agli atti dal suo computer senza dover andare per forza alla Camera. La commissione sulla P2 ha fatto scoperte che sono state sottovalutate”, dice ancora Benedetta Tobagi.</p>
+        </blockquote> 
+        <p>Un lavoro molto importante per la <strong>valorizzazione di quel patrimonio collettivo</strong> che questi documenti rappresentano. <br>Come emerge anche dai loghi presenti nel footer del sito, gli attori dietro alla realizzazione tecnica sono due: la <a href="http://www.hyperborea.com/web/guest/home" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.hyperborea.com']);" target="_blank">società Hyperborea</a>, che ha realizzato il sito vero e proprio, e la <a href="http://dandelion.eu" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://dandelion.eu']);" title="Semantic text API " target="_blank">piattaforma dandelion</a>, con le API di dataTXT, che ha permesso la ricerca delle persone, e dei luoghi citati nei lavori della commissione.<br> A onor del vero, lo zampino di dataTXT è stato rivelato fin dal giorno successivo:</p> 
+        <blockquote class="twitter-tweet" lang="it">
+         <p><a href="https://twitter.com/dagoneye" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://twitter.com']);">@dagoneye</a> ma l'archivio dei doc sulle stragi è powered by <a href="https://twitter.com/dandelion_eu" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://twitter.com']);">@dandelion_eu</a>! cc <a href="https://twitter.com/SpazioDati" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://twitter.com']);">@SpazioDati</a> <a href="http://t.co/JQDuJlFYyI" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://t.co']);">http://t.co/JQDuJlFYyI</a></p> 
+         <p>— luca (@lucacorsato) <a href="https://twitter.com/lucacorsato/statuses/463579130324598784" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://twitter.com']);">6 Maggio 2014</a></p>
+        </blockquote> 
+        <p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p> 
+        <p> <a href="http://blog.spaziodati.eu/it/2014/05/27/navigare-tra-le-persone-ed-i-luoghi-citati-nei-documenti-sulla-p2-grazie-a-datatxt/#more-1334" class="more-link">Continua a leggere <span class="meta-nav">→</span></a></p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <div class="comments-link"> 
+         <a href="http://blog.spaziodati.eu/it/2014/05/27/navigare-tra-le-persone-ed-i-luoghi-citati-nei-documenti-sulla-p2-grazie-a-datatxt/#respond" title="Commenti a Navigare tra le persone ed i luoghi citati nei documenti sulla P2, grazie a dataTXT"><span class="leave-reply">Lascia un commento</span></a> 
+        </div>
+        <!-- .comments-link --> 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <article id="post-1338" class="post-1338 post type-post status-publish format-standard hentry category-eventi tag-business-case tag-hack4med tag-hackathons tag-linked-open-data tag-open-data-2 tag-riuso"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title"> <a href="http://blog.spaziodati.eu/it/2014/05/15/datatxt-ad-hack4med-veneto-per-stimolare-la-filiera-del-valore-sugli-open-data/" rel="bookmark">dataTXT ad Hack4Med Veneto per stimolare la filiera del valore sugli Open Data</a> </h1> 
+        <div class="entry-meta"> 
+         <span class="date"><a href="http://blog.spaziodati.eu/it/2014/05/15/datatxt-ad-hack4med-veneto-per-stimolare-la-filiera-del-valore-sugli-open-data/" title="Permalink a dataTXT ad Hack4Med Veneto per stimolare la filiera del valore sugli Open Data" rel="bookmark"><time class="entry-date" datetime="2014-05-15T08:02:40+00:00">15 maggio 2014</time></a></span>
+         <span class="categories-links"><a href="http://blog.spaziodati.eu/it/category/eventi/" title="Visualizza tutti gli articoli in Eventi" rel="category tag">Eventi</a></span>
+         <span class="tags-links"><a href="http://blog.spaziodati.eu/it/tag/business-case/" rel="tag">business case</a>, <a href="http://blog.spaziodati.eu/it/tag/hack4med/" rel="tag">hack4med</a>, <a href="http://blog.spaziodati.eu/it/tag/hackathons/" rel="tag">hackathons</a>, <a href="http://blog.spaziodati.eu/it/tag/linked-open-data/" rel="tag">linked open data</a>, <a href="http://blog.spaziodati.eu/it/tag/open-data-2/" rel="tag">open data</a>, <a href="http://blog.spaziodati.eu/it/tag/riuso/" rel="tag">riuso</a></span>
+         <span class="author vcard"><a class="url fn n" href="http://blog.spaziodati.eu/it/author/matteobrunati/" title="Vedi tutti gli articoli di Matteo Brunati" rel="author">Matteo Brunati</a></span> 
+        </div>
+        <!-- .entry-meta --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p><img src="http://homerproject.eu/hack4med/Hack4Med_slide.jpg" width="628" height="256" class="alignnone"></p> 
+        <p>Il prossimo week-end del 17 e 18 maggio sarà un fine settimana davvero intenso per chi segue il tema Open Data e gli hackathons correlati: ci saranno almeno due eventi degni di attenzione.<br> Uno è l’<a href="http://dati.camera.it/it/hackathon/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://dati.camera.it']);" target="_blank">hackathon alla Camera dei Deputati</a> sui dati linked disponibili su <a href="http://dati.camera.it" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://dati.camera.it']);" target="_blank">dati.camera.it</a>, chiamato <strong>Code4Italy@Montecitorio 2014</strong>.<br> L’altro evento degno di menzione è <a href="http://hack4med.homerproject.eu/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://hack4med.homerproject.eu']);" target="_blank">Hack4Med</a>, un hackathon in simultanea su sei differenti location, all’interno del <a href="http://homerproject.eu/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://homerproject.eu']);" target="_blank">progetto europeo HOMER</a> (<em>Harmonising Open data in the MEditerranean through better access and Reuse</em>). <br> Citando dal <a href="http://www.pionero.it/2014/03/29/open-data-rampa-di-lancio-hack4med-venezia-giovedi-3-aprile/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.pionero.it']);" target="_blank">lancio iniziale di hack4med pubblicato su pionero.it</a> </p> 
+        <blockquote>
+         <p>[...]<br> Homer Project (progetto guidato dalla Regione Piemonte che vede coinvolte anche Regione Emilia Romagna, Regione Sardegna e Regione Veneto) federa diversi portali di Open Data dei paesi mediterranei e permette, attraverso <a href="http://opendata-federation.csi.it/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://opendata-federation.csi.it']);" target="_blank">un motore di ricerca sviluppato da CSI Piemonte</a>, che sfrutta il thesaurus multilingue di Eurovoc, di rendere accessibili questi dati in tutti i territori che partecipano al consorzio di Homer e poi, a cascata, anche nei portali nazionali di Open Data dei paesi partecipanti.<br> Per promuovere la parte forse più interessante del progetto che prevede la costruzione di applicazioni basate su questi dati resi pubblici e liberi, si è deciso di lanciare <strong>un Hackathon in simultanea su 6 dei territori partecipanti (Veneto, Piemonte, Corsica, Creta, Montenegro e Andalusia)</strong> per il 17 Maggio prossimo.</p>
+        </blockquote> 
+        <h3>In palio 1000 euro per “Best use of dataTXT API” @ hack4med Veneto</h3> 
+        <p>SpazioDati sponsorizza l’<a href="http://hack4med.homerproject.eu/veneto/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://hack4med.homerproject.eu']);" target="_blank">hackathon veneto di Hack4Med</a>, che si terrà nella <a href="http://padova.talentgarden.org/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://padova.talentgarden.org']);" target="_blank">sede padovana del network Talent Garden</a>, offrendo un premio di 1000 euro per il miglior utilizzo delle <a href="https://dandelion.eu/products/datatxt/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://dandelion.eu']);" target="_blank">semantic text dataTXT API</a>. Un’ottima occasione per giocare anche con i recenti sviluppi di dataTXT, come <a href="https://dandelion.eu/docs/api/datatxt/nex/v1/#param-text|url|html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://dandelion.eu']);" target="_blank">i nuovi parametri per gestire URL e codice HTML</a> come fonte di dataTXT-NEX, i <a href="https://dandelion.eu/docs/api/datatxt/custom-spots/v1/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://dandelion.eu']);" target="_blank">custom spot per personalizzare</a> e collegare determinati testi ad entità di Wikipedia ben precise, e il <a href="https://dandelion.eu/docs/api/datatxt/nex/v1/#param-lang" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://dandelion.eu']);" target="_blank">recente supporto anche al francese</a>.<br> <br>Per favorirne la comprensione e l’utilizzo, porteremo un <strong>Hackathon Toolkit</strong>, che conterrà:</p> 
+        <ul> 
+         <li>un tutorial di Open Refine con <a href="https://github.com/SpazioDati/Refine-NER-Extension/archive/v1.2.zip" onclick="javascript:_gaq.push(['_trackEvent','download','http://github.com/SpazioDati/Refine-NER-Extension/archive/v1.2.zip']);" target="_blank">l’estensione per fare entity extraction sfruttando dataTXT</a>. Immaginiamo di dover estrarre delle entità o collegare verso pagine di wikipedia una colonna o più di testo dei nostri dati di partenza: per rendere quei dati navigabili e ricercabili magari, o per associare dei tag a quelle colonne di testo.</li> 
+         <li>una versione aggregata della documentazione tecnica, divisa per linguaggio e tools da utilizzare (<a href="https://github.com/SpazioDati/python-dandelion-eu" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://github.com']);" target="_blank">dal client in python alle API su dandelion.eu</a>, alle diverse sintassi per usare le nostre REST API con C#, PHP, Java e similari)</li> 
+         <li>una raccolta di scenari e di stimolazioni ulteriori per aiutare la riflessione, e l’eureka iniziale per collegare idee e strumenti tra di loro</li> 
+        </ul> 
+        <p>Qual’è il tema comune che serve tenere a mente? Che dataTXT può essere usato per collegarsi a fonti di Wikipedia, per <strong>aumentare il contesto</strong> della propria app, o per disambiguare, o per integrare fonti social… E’ un ponte, che può aiutare a connettere, ed a filtrare.<br> Ed il <strong>contesto aumenta l’utilità delle cose</strong>: anzi, citando Pareto:</p> 
+        <blockquote>
+         <p>Creatività è trovare nessi nuovi tra cose note – Vilfredo Pareto</p>
+        </blockquote> 
+        <p>E’ quello che noi chiamiamo <strong>Smart Data</strong>:</p> 
+        <p><img src="http://doubleclix.files.wordpress.com/2011/03/smartdata02.png?w=1390" alt="null"></p> 
+        <p>Fonte: <a href="http://doubleclix.wordpress.com/2011/03/31/waypoints-from-big-data-to-smart-data/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://doubleclix.wordpress.com']);" target="_blank">WAYPOINTS FROM BIG DATA TO SMART DATA</a></p> 
+        <p> <a href="http://blog.spaziodati.eu/it/2014/05/15/datatxt-ad-hack4med-veneto-per-stimolare-la-filiera-del-valore-sugli-open-data/#more-1338" class="more-link">Continua a leggere <span class="meta-nav">→</span></a></p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta"> 
+        <div class="comments-link"> 
+         <a href="http://blog.spaziodati.eu/it/2014/05/15/datatxt-ad-hack4med-veneto-per-stimolare-la-filiera-del-valore-sugli-open-data/#respond" title="Commenti a dataTXT ad Hack4Med Veneto per stimolare la filiera del valore sugli Open Data"><span class="leave-reply">Lascia un commento</span></a> 
+        </div>
+        <!-- .comments-link --> 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <nav class="navigation paging-navigation" role="navigation"> 
+       <h1 class="screen-reader-text">Navigazione articoli</h1> 
+       <div class="nav-links"> 
+        <div class="nav-previous">
+         <a href="http://blog.spaziodati.eu/it/page/2/"><span class="meta-nav">←</span> Articoli più vecchi</a>
+        </div> 
+       </div>
+       <!-- .nav-links --> 
+      </nav>
+      <!-- .navigation --> 
+     </div>
+     <!-- #content --> 
+    </div>
+    <!-- #primary --> 
+    <div id="tertiary" class="sidebar-container" role="complementary"> 
+     <div class="sidebar-inner"> 
+      <div class="widget-area"> 
+       <aside id="text-3" class="widget widget_text">
+        <h3 class="widget-title">Resta in contatto</h3> 
+        <div class="textwidget">
+         <ul class="sd-flat-list sd-social-list"> 
+          <li><a href="mailto:hello@spaziodati.eu"><i class="fa fa-envelope fa-3x"></i></a></li> 
+          <li><a href="https://www.facebook.com/spaziodati.eu" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);" target="_blank"><i class="fa fa-facebook fa-3x"></i></a></li> 
+          <li><a href="https://twitter.com/SpazioDati" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><i class="fa fa-twitter fa-3x"></i></a></li> 
+          <li><a href="http://www.linkedin.com/company/spaziodati/" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.linkedin.com']);" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a></li> 
+         </ul>
+        </div> 
+       </aside> 
+       <aside id="recent-posts-3" class="widget widget_recent_entries"> 
+        <h3 class="widget-title">Articoli recenti</h3> 
+        <ul> 
+         <li> <a href="http://blog.spaziodati.eu/it/2014/10/02/fare-analisi-del-testo-con-i-fogli-di-lavoro-di-google-grazie-alladd-on-di-datatxt/">Fare analisi del testo con i fogli di lavoro di Google, grazie all’add-on di dataTXT</a> </li> 
+         <li> <a href="http://blog.spaziodati.eu/it/2014/05/27/navigare-tra-le-persone-ed-i-luoghi-citati-nei-documenti-sulla-p2-grazie-a-datatxt/">Navigare tra le persone ed i luoghi citati nei documenti sulla P2, grazie a dataTXT</a> </li> 
+         <li> <a href="http://blog.spaziodati.eu/it/2014/05/15/datatxt-ad-hack4med-veneto-per-stimolare-la-filiera-del-valore-sugli-open-data/">dataTXT ad Hack4Med Veneto per stimolare la filiera del valore sugli Open Data</a> </li> 
+         <li> <a href="http://blog.spaziodati.eu/it/2014/04/07/una-nuova-fase-per-spaziodati-cerved-group-investe-1-3-milioni-di-euro/">Una nuova fase per SpazioDati: Cerved Group investe 1,3 milioni di euro</a> </li> 
+         <li> <a href="http://blog.spaziodati.eu/it/2014/03/13/linked-open-data-in-italia-dopo-linternational-open-data-day-2014-i-nostri-contributi-riflessione/">Linked Open Data in Italia dopo l’International Open Data Day 2014: i nostri contributi alla riflessione</a> </li> 
+        </ul> 
+       </aside>
+       <aside id="text-2" class="widget widget_text">
+        <h3 class="widget-title">Lavora con noi</h3> 
+        <div class="textwidget">
+         Guarda tra le nostre 
+         <a target="_blank" href="http://www.spaziodati.eu/jobs">posizioni aperte</a>
+        </div> 
+       </aside>
+       <aside id="archives-3" class="widget widget_archive">
+        <h3 class="widget-title">Archivi</h3> 
+        <ul> 
+         <li><a href="http://blog.spaziodati.eu/it/2014/10/">ottobre 2014</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2014/05/">maggio 2014</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2014/04/">aprile 2014</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2014/03/">marzo 2014</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2014/02/">febbraio 2014</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2014/01/">gennaio 2014</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2013/12/">dicembre 2013</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2013/11/">novembre 2013</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2013/10/">ottobre 2013</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2013/09/">settembre 2013</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2013/05/">maggio 2013</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2013/03/">marzo 2013</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2013/02/">febbraio 2013</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2012/12/">dicembre 2012</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2012/11/">novembre 2012</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2012/10/">ottobre 2012</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2012/07/">luglio 2012</a></li> 
+         <li><a href="http://blog.spaziodati.eu/it/2012/05/">maggio 2012</a></li> 
+        </ul> 
+       </aside> 
+      </div>
+      <!-- .widget-area --> 
+     </div>
+     <!-- .sidebar-inner --> 
+    </div>
+    <!-- #tertiary --> 
+   </div>
+   <!-- #main --> 
+   <footer id="colophon" class="site-footer" role="contentinfo"> 
+    <div class="site-info"> 
+     <!--<a href="http://www.spaziodati.eu" target="_blank"><img height="50" src="http://blog.spaziodati.eu/wp-content/themes/twentythirteen/images/sd/spaziodati-black.png"/></a>--> 
+     <div class="sd-site-info"> 
+      <span>Copyright @ 2013 <a href="http://www.spaziodati.eu">SpazioDati S.r.l</a> — C.F &amp; P.I: 02241890223</span> 
+     </div> 
+     <!-- --> 
+     <!--<a href="http://wordpress.org/" title="Piattaforma semantica di pubblicazione personale">Orgogliosamente motorizzato da WordPress</a>--> 
+    </div>
+    <!-- .site-info --> 
+   </footer>
+   <!-- #colophon --> 
+  </div>
+  <!-- #page --> 
+  <div style="display:none"> 
+  </div> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var Sociali18n = {"commentReplyTitle":"Invia una risposta"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://blog.spaziodati.eu/wp-content/plugins/social/assets/social.js?ver=2.9.2"></script> 
+  <script type="text/javascript" src="http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201449"></script> 
+  <script type="text/javascript" src="http://s.gravatar.com/js/gprofiles.js?ver=2014Decaa"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://blog.spaziodati.eu/wp-content/plugins/jetpack/modules/wpgroho.js?ver=3.7.5"></script> 
+  <script type="text/javascript" src="http://blog.spaziodati.eu/wp-content/themes/twentythirteen/js/functions.js?ver=2013-11-08"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var icl_vars = {"current_language":"it","icl_home":"http:\/\/blog.spaziodati.eu\/it\/"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://blog.spaziodati.eu/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js?ver=3.7.5"></script> 
+  <script src="http://stats.wordpress.com/e-201449.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+	st_go({v:'ext',j:'1:2.9.3',blog:'61448538',post:'0',tz:'1'});
+	var load_cmc = function(){linktracker_init(61448538,0,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script> 
+ </body>
+</html>

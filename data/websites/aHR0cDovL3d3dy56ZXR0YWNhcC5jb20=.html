@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta content="authenticity_token" name="csrf-param"> 
+  <meta content="RGRTx5AWw1UiLV93hBzP1RLg2dFY6fU76fAW9ASKpWo=" name="csrf-token"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]--> 
+  <script data-turbolinks-track="true" src="/assets/application-5853c578334616f1320fbd7c59ff3487.js"></script> 
+  <link data-turbolinks-track="true" href="/assets/application-30e85de8cff1068b473a2884e2f58f12.css" media="all" rel="stylesheet"> 
+  <!-- Favicon Tag --> 
+  <link href="/assets/favicon-d3bef5702398c52a1654afd6874269d4.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"> 
+  <!-- Mobile Favicons, etc. --> 
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png"> 
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png"> 
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png"> 
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-196x196.png" sizes="196x196"> 
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-160x160.png" sizes="160x160"> 
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96"> 
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16"> 
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32"> 
+  <meta name="msapplication-TileColor" content="#da532c"> 
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png"> 
+  <title>Zettacap</title> 
+  <link data-turbolinks-track="true" href="/assets/application-30e85de8cff1068b473a2884e2f58f12.css" media="all" rel="stylesheet"> 
+  <link href="/assets/landing_page-c6b65ea41c62bb6a07348cdeee645508.css" media="all" rel="stylesheet"> 
+  <script data-turbolinks-track="true" src="/assets/landing_page-3d8da3b85a16c70c0957233d2209c885.js"></script> 
+ </head> 
+ <body> 
+  <header class="gradient clearfix"> 
+   <a href="/"><img alt="Logo" border="0" class="logo" src="/assets/logo-5113d6b02d54df0f346ac1421475862e.svg"></a> 
+   <nav id="navigation" class="nav-collapse landing-page-navigation"> 
+    <ul> 
+     <li><a id="home-button" href="#" class="landing-page-navigation current">Home</a></li> 
+     <li><a id="about-button" href="#">About</a></li> 
+     <li><a id="board-button" href="#">Board</a></li> 
+     <li><a id="blog-button" href="http://blog.zettacap.com/">Blog</a></li> 
+     <!-- <li><a href="#">Contact</a></li> --> 
+    </ul> 
+   </nav> 
+   <div id="log-in"> 
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign_in_modal"> Sign In </button> 
+    <ul class="social-media"> 
+     <li><a href="http://twitter.com/zettacap"><img class="auto-width" src="/images/icon-twitter.svg"></a></li> 
+     <li><a href="http://www.linkedin.com/company/zettacap"><img class="auto-width" src="/images/icon-linkedin.svg"></a></li> 
+    </ul> 
+   </div> 
+  </header> 
+  <div class="modal fade" id="sign_in_modal" tabindex="-1" role="dialog" aria-hidden="true"> 
+   <div class="modal-dialog"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+      <h2 class="modal-title">Sign In</h2> 
+     </div> 
+     <div class="modal-body"> 
+      <form accept-charset="UTF-8" action="/users/sign_in" method="post">
+       <div style="display:none">
+        <input name="utf8" type="hidden" value="✓">
+        <input name="authenticity_token" type="hidden" value="RGRTx5AWw1UiLV93hBzP1RLg2dFY6fU76fAW9ASKpWo=">
+       </div> 
+       <p>Email Address</p> 
+       <input id="user_email" name="user[email]" type="text"> 
+       <p>Password</p> 
+       <input id="user_password" name="user[password]" type="password"> 
+       <input name="user[remember_me]" type="hidden" value="0">
+       <input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1"> 
+       <label for="user_remember_me">Remember me</label> 
+      </form>
+     </div> 
+     <div class="modal-footer"> 
+      <input name="commit" type="submit" value="Sign in"> 
+      <a href="/users/password/new">Forgot your password?</a>  
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="modal fade modal-fluid" id="tos-modal" tabindex="-1" role="dialog" aria-hidden="true"> 
+   <div class="modal-dialog"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+      <h2 class="modal-title">Zettacap Terms of Service</h2> 
+     </div> 
+     <div class="modal-body"> 
+      <p><strong>In using this website, and associated material and information, you agree that you have read and agreed to the following Terms and Conditions. If you do not agree with the Terms and Conditions listed here, do not access or use the website or services and leave the website immediately.</strong></p> 
+      <p>The following terminology applies to&nbsp;these Terms and Conditions and any or all Agreements: “Website”, “Site”, and/or “Beta”&nbsp;refer to the information, analysis and data presented through www.zettacap.com and its related sites and entities. "Client", “User”, “You” and/or “Your” refers to you, the person accessing this Website and accepting the Company’s terms and conditions. "The Company", “Ourselves”, “We” and "Us", refers to our Company, its related parties, employees, shareholders, and/or advisors. “Party”, “Parties”, and/or “Us”, refers to both the Client and Ourselves, or either the Client or Ourselves. Any use of the above terminology or other words in the singular, plural, capitalization and/or&nbsp;he/she or they, are taken as interchangeable and therefore as referring to same.</p> 
+      <h4>Frequent Change Notification</h4> 
+      <p>We reserve the right to make changes to the Terms and Conditions and will post the revised Terms and Conditions. Your continued use of the Site constitutes assent to any new or modified provision of the Terms and Conditions. Accordingly, You should check the Terms and Conditions frequently. Your continued use of the Site constitutes consent to the revised Terms and Conditions.</p> 
+      <h4>Disclaimer</h4> 
+      <p>Nothing on this Site constitutes an offer to sell any securities or the solicitation of an offer to purchase any securities. The data, analysis, content, commentary, posts, links, tweets, re-tweets, presentations, documents, videos, and messages (collectively as "Information") on this Site and/or made by the Company are presented for informational purposes only. The intention of presenting such Information is to provoke thought by the reader as to the potential usefulness of big data, social media, text analytics, social mood, sentiment, user generated content, geo-location, news, events, publicly available information, financial data, investment trends and other data as a way to improve and/or support investment analysis and decision making. The reader should make an informed decision as to his/her investment strategy with his/her registered investment advisor ("RIA") or as an independent investor. Zettacap is not a RIA and does not provide such services. This site may contain forward looking statements and conditional statements using such words as "expects", "appears", "may", "should", "anticipates", or similar words and expressions referring to potential future outcomes. Such statements do not constitute guarantees or recommendations of any kind. Information presented on this site may be incomplete and out-of-date. Additionally, the reader understands that the algorithms used by Zettacap as well as the sources of information used may change periodically, and that the reader will not receive notifications or explanations concerning such changes. By reviewing the Information on this site, the reader agrees to the aforementioned statements and agrees to discharge and exonerate the creators of the Information as well as Zettacap, its owners, and its related parties, from any liability associated with the taking or not taking of actions due to the reader reviewing Information on this site.</p> 
+      <h4>Exclusions and Limitations</h4> 
+      <p>The Information on this Site is provided on an "as is" basis. To the fullest extent permitted by law, this Company:</p> 
+      <ul> 
+       <li><p>excludes all representations and warranties relating to this Site and its contents or which is or may be provided by any affiliates or any other third party, including in relation to any inaccuracies or omissions in this Site and/or the Company’s literature; and</p></li> 
+       <li><p>excludes all liability for damages arising out of or in connection with your use of this Site. This includes, without limitation, direct loss, loss of business or profits (whether or not the loss of such profits was foreseeable, arose in the normal course of things or you have advised this Company of the possibility of such potential loss), damage caused to your computer, computer software, systems and programs and the data thereon or any other direct or indirect, consequential and incidental damages.</p></li> 
+      </ul> 
+      <h4>Experimental Nature</h4> 
+      <p>This Site, which includes, but is not limited to, the associate material of the blog, Beta, and any attachments, is experimental in nature. More specifically, you understand and agree that:</p> 
+      <ul> 
+       <li><p>the data used in the examples provided and used to feed the Beta may not be up-to-date,</p></li> 
+       <li><p>the data feeds are not always consistent,</p></li> 
+       <li><p>the analysis used is not fully tested and its theory is not fully verified by academic sources,</p></li> 
+       <li><p>the algorithms may change periodically without notification, and</p></li> 
+       <li><p>the data and analysis might not be conducted properly and/or might contain errors and/or omissions.</p></li> 
+      </ul> 
+      <h4>Usage</h4> 
+      <p>Using the Site, You agree as follows:</p> 
+      <ul> 
+       <li><p>You are at least 18 years of age or older, or have obtained Your parent’s or legal guardian’s supervision and consent,</p></li> 
+       <li><p>You will comply with all Terms and Conditions as set forth herein,</p></li> 
+       <li><p>You will not data mine or in any way scrape data or Information from the Site,</p></li> 
+       <li><p>You will not remove any copyright, trademark or other proprietary rights notices contained in the Information,</p></li> 
+       <li><p>You agree to provide accurate, current and complete information about Yourself as prompted by our registration process and to maintain and update such information to keep it accurate, current and complete.</p></li> 
+      </ul> 
+      <h4>Pricing &amp; Payment</h4> 
+      <p>We reserve the right to update and change our Pricing and/or Payment policy at any time. The Site is currently free to access.</p> 
+      <h4>Term</h4> 
+      <p>We reserve the right to update and change our Term policy at any time. The Term is currently one month with an automatic renewal at the end of each month.</p> 
+      <h4>Termination</h4> 
+      <p>You can terminate use of the Site at any time. The Company may discontinue the Site or stop updating the Site at any time.</p> 
+      <h4>Copyright</h4> 
+      <p>All materials and data on the Site, in Information and available through the services, including without limitation, the logos, design, text, graphics, audio clips, video clips, other files, and the selection, arrangement and organization thereof are owned by the Company, its licensors or other entities. Unauthorized use of such materials is strictly prohibited.</p> 
+      <h4>Trademarks</h4> 
+      <p>All other trademarks, trade names and the like that appear on the Site, in Information or the services are the property of their respective owners. You may not use any of these trademarks, trade dress, or trade names, or any confusingly similar marks, dress or names, including without limitation as a part of any link, without express permission.</p> 
+      <h4>Indemnification</h4> 
+      <p>You agree to defend, indemnify, and hold the Company and its employees, representatives, agents, attorneys, affiliates, directors, officers, members, advisors, managers and shareholders (“Indemnified Parties”) harmless from any damage, loss, cost or expense (including without limitation, attorneys’ fees and costs) incurred in connection with any third party claim, demand or action (“Claim”) brought or asserted against any of the Indemnified Parties: (i) alleging facts or circumstances that would constitute a breach of any provision of this Terms and Conditions by You, including violations of law or allegations of violation of privacy, publicity intellectual property rights related to content You submit, (ii) arising from, related to, or connected with Your use of the Site, Information or the services, (iii) any other party’s access and use of the services with Your unique username, password or other appropriate security code. If You are obligated to provide indemnification pursuant to this provision, the Company may, in its sole and absolute discretion, control the disposition of any Claim at Your sole cost and expense. Without limiting the foregoing, you may not settle, compromise or in any other manner dispose of any Claim without the consent of the Company.</p> 
+      <h4>Limitation of Actions</h4> 
+      <p>You acknowledge and agree that, regardless of any statute or law to the contrary, any claim or cause of action you may have arising out of, relating to, or connected with your use of the Site or services, must be filed within one calendar year after such claim or cause of action arises, or forever be barred.</p> 
+      <h4>Log Files</h4> 
+      <p>We use IP addresses to analyse trends, administer the site, track user’s movement, and gather broad demographic information for aggregate use. Additionally, for systems administration, detecting usage patterns and troubleshooting purposes, our web servers automatically log standard access information including browser type, access times/open mail, URL requested, and referral URL.</p> 
+      <h4>Cookies</h4> 
+      <p>Like most interactive web sites this Site [or ISP] uses cookies to enable us to retrieve user details for each visit. Cookies are used in some areas of our Site to enable the functionality of this area and ease of use for those people visiting.</p> 
+      <h4>Communication</h4> 
+      <p>Contact information can be found on our Contact Us link on our Site.</p> 
+      <h4>Force Majeure</h4> 
+      <p>Neither party shall be liable to the other for any failure to perform any obligation under any Agreement which is due to an event beyond the control of such party including but not limited to any Act of God, terrorism, war, political insurgence, insurrection, riot, civil unrest, act of civil or military authority, uprising, earthquake, flood or any other natural or man made eventuality outside of our control, which causes the termination of an agreement or contract entered into, nor which could have been reasonably foreseen. Any Party affected by such event shall forthwith inform the other Party of the same and shall use all reasonable endeavours to comply with the terms and conditions of any Agreement contained herein.</p> 
+      <h4>Waiver</h4> 
+      <p>Failure of either Party to insist upon strict performance of any provision of this or any Agreement or the failure of either Party to exercise any right or remedy to which it, he or they are entitled hereunder shall not constitute a waiver thereof and shall not cause a diminution of the obligations under this or any Agreement. No waiver of any of the provisions of this or any Agreement shall be effective unless it is expressly stated to be such and signed by both Parties.</p> 
+      <h4>General</h4> 
+      <p>The laws of United States govern these Terms and Conditions. By accessing this Site, You consent to these Terms and Conditions and to the exclusive jurisdiction of Washington, D.C., United States courts in all disputes arising out of such access. If any of these terms are deemed invalid or unenforceable for any reason (including, but not limited to the exclusions and limitations set out above), then the invalid or unenforceable provision will be severed from these terms and the remaining terms will continue to apply. Failure of the Company to enforce any of the provisions set out in these Terms and Conditions and any Agreement, or failure to exercise any option to terminate, shall not be construed as waiver of such provisions and shall not affect the validity of these Terms and Conditions or of any Agreement or any part thereof, or the right thereafter to enforce each and every provision.</p> 
+      <h4>Notification of Changes</h4> 
+      <p>The Company reserves the right to change these Terms and Conditions from time to time as it sees fit and your continued use of the Site will signify your acceptance of any adjustment to these terms. You are therefore advised to re-read this statement on a regular basis.</p> 
+      <p><strong>These Terms and Conditions form part of the Agreement between the Client and the Company. You accessing this Website indicates your understanding, agreement to and acceptance, of the full Terms and Conditions contained herein.</strong></p> 
+     </div> 
+     <div class="modal-footer"> 
+      <p class="terms-updated">Last revised on July 11, 2014.</p> 
+      <p class="terms-updated">©Zettacap 2014 All Rights Reserved</p> 
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="background-feature" class="clearfix"> 
+   <div class="wrapper clearfix"> 
+    <h1 class="page-title"><span>Test Drive</span> Finance 2.0</h1> 
+    <div id="top-feature" class="clearfix"> 
+     <div class="left-one-third responsive-half learn-more-form"> 
+      <form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post">
+       <div style="display:none">
+        <input name="utf8" type="hidden" value="✓">
+        <input name="authenticity_token" type="hidden" value="RGRTx5AWw1UiLV93hBzP1RLg2dFY6fU76fAW9ASKpWo=">
+       </div> 
+       <div>
+        <label for="user_email">Email</label>
+        <br> 
+        <input id="user_email" name="user[email]" type="email" value="">
+       </div> 
+       <div>
+        <label for="user_password">Password</label>
+        <br> 
+        <input id="user_password" name="user[password]" type="password">
+       </div> 
+       <div>
+        <label for="user_password_confirmation">Password confirmation</label>
+        <br> 
+        <input id="user_password_confirmation" name="user[password_confirmation]" type="password">
+       </div> 
+       <div>
+        <input name="user[terms_of_service_agreement]" type="hidden" value="0">
+        <input id="user_terms_of_service_agreement" name="user[terms_of_service_agreement]" type="checkbox" value="1"> 
+        <label for="user_terms_of_service_agreement">I agree to the <a class="terms-of-service-link" href="#" data-toggle="modal" data-target="#tos-modal">Terms of Service</a></label>
+       </div> 
+       <div class="submit">
+        <input name="commit" type="submit" value="Sign Up For Free">
+       </div> 
+      </form> 
+     </div> 
+     <div class="right-two-thirds responsive-half mockup-screen display-none"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="about" class="section"> 
+   <div class="wrapper clearfix"> 
+    <div id="feature-title"> 
+     <h2 class="feature-title">Want to leverage Big Data for investing?</h2> 
+     <h2 class="feature-title feature-subtitle">Zettacap is the solution you’ve been looking for.</h2> 
+    </div> 
+    <img class="display-none" src="/images/z-divider.svg"> 
+    <div class="left-one-third key-feature equal-height-thirds"> 
+     <img class="icon-large" src="/images/icon-data.svg"> 
+     <h3>21st Century Data</h3> 
+     <p>Zettacap focuses on new data sources like social media, quantified news, web traffic, and user generated content, while incorporating traditional finance data.</p> 
+    </div> 
+    <div class="center-one-third key-feature equal-height-thirds"> 
+     <img class="icon-large" src="/images/icon-view.svg"> 
+     <h3>360° View</h3> 
+     <p>Improve your analysis by looking at a more complete view of the asset and your investment thesis.</p> 
+    </div> 
+    <div class="right-one-third key-feature equal-height-thirds"> 
+     <img class="icon-large" src="/images/icon-explore.svg"> 
+     <h3>Explore</h3> 
+     <p>Our web-based interface allows you to configure your own interactivity, from time series and comparative studies to machine learning, feel free to explore.</p> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="about-bottom" class="clearfix section"> 
+   <div class="wrapper clearfix"> 
+    <h2>Zettacap is...</h2> 
+    <div class="left-one-sixth key-feature equal-height-sixths"> 
+     <img src="/images/icon-scalable.svg" class="icon"> 
+     <h4>Scalable</h4> 
+     <p>Hadoop's fully distributed nature allows for true scalability, even with extremely large and complex datasets.</p> 
+    </div> 
+    <div class="center-one-sixth key-feature equal-height-sixths"> 
+     <img src="/images/icon-finance.svg" class="icon"> 
+     <h4>Finance</h4> 
+     <p>Zettacap only looks at finance—sector specific focus makes big data digestible, adding value where generalists stop.</p> 
+    </div> 
+    <div class="center-one-sixth key-feature equal-height-sixths"> 
+     <img src="/images/icon-affordable.svg" class="icon"> 
+     <h4>Affordable</h4> 
+     <p>Beta testers can freely use our entry level product, for additional paid-for services please contact us directly.</p> 
+    </div> 
+    <div class="center-one-sixth key-feature remove-left-border equal-height-sixths"> 
+     <img src="/images/icon-customizable.svg" class="icon"> 
+     <h4>Customizable</h4> 
+     <p>You can tweak, customize, and optimize your analysis to suit your needs and trading style.</p> 
+    </div> 
+    <div class="center-one-sixth key-feature equal-height-sixths"> 
+     <img src="/images/icon-fundamental.svg" class="icon"> 
+     <h4>Fundamental</h4> 
+     <p>Zettacap improves fundamental analysis and scenario development—which companies have the most robust hiring trends?</p> 
+    </div> 
+    <div class="right-one-sixth key-feature equal-height-sixths"> 
+     <img src="/images/icon-technical.svg" class="icon"> 
+     <h4>Technical</h4> 
+     <p>Zettacap provides new dimensions to technical analysis—attention, volume, sentiment, clustering, all help provide improved signals. </p> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="board" class="section"> 
+   <div class="wrapper clearfix"> 
+    <h2>Board of Advisors</h2> 
+    <div class="board-member clearfix"> 
+     <div class="left-one-sixth"> 
+      <img src="/images/photo-kevin.jpg"> 
+     </div> 
+     <div class="right-two-thirds"> 
+      <h3 class="board-name">Kevin Coogan</h3> 
+      <h4 class="board-title">Finance/ Big Data Domain Expert</h4> 
+      <p>Founder at AmalgaMood, big data predictive analytics for financial markets; previously founding Partner at two alternative asset management firms, structuring advisor to two companies through successful IPOs, speaker at hedge fund, big data, text analytics and economics conferences; MIBS, University of South Carolina.</p> 
+     </div> 
+    </div> 
+    <div class="board-member clearfix"> 
+     <div class="left-one-sixth"> 
+      <img src="/images/photo-joe.jpg"> 
+     </div> 
+     <div class="right-two-thirds"> 
+      <h3 class="board-name">Joe Mullin</h3> 
+      <h4 class="board-title">Financial Entrepreneur</h4> 
+      <p>Founder at Currencio, the peer-to-peer foreign exchange platform; previously CEO at General Word Development, Portfolio Manager at Millennium Global Investments, Analyst at WL Ross and Goldman Sachs; AB degree from Harvard College.</p> 
+     </div> 
+    </div> 
+    <div class="board-member clearfix"> 
+     <div class="left-one-sixth"> 
+      <img src="/images/photo-paco.jpg"> 
+     </div> 
+     <div class="right-two-thirds"> 
+      <h3 class="board-name">Paco Nathan</h3> 
+      <h4 class="board-title">Big Data &amp; Machine Learning Specialist</h4> 
+      <p>Innovative data team-lead building large-scale apps for 10+ years, frequent speaker on open source distributed systems, machine learning, and analytics; O'Reilly author <em>Enterprise Data Workflows with Cascading;</em> formerly Chief Scientist at Mesosphere, Director at Concurrent; MS Computer Science/Systems, Stanford University.</p> 
+     </div> 
+    </div> 
+    <div class="board-member clearfix"> 
+     <div class="left-one-sixth"> 
+      <img src="/images/photo-andy.jpg"> 
+     </div> 
+     <div class="right-two-thirds"> 
+      <h3 class="board-name">Andrew Smith</h3> 
+      <h4 class="board-title">Investment Banker, Valuation Expert</h4> 
+      <p>Principal with The McLean Group, manages the firm's business valuation practice, which performs business valuations for public and private companies for transaction, financial reporting, equity incentive plan, tax, and other purposes; CPA/ABV, ASA, CVA, CMA, CMAP, Series 7, 28, 63, and 79 licenses; BS Business Administration, University of Richmond.</p> 
+     </div> 
+    </div> 
+    <div class="board-member clearfix"> 
+     <div class="left-one-sixth"> 
+      <img src="/images/photo-harlan.jpg"> 
+     </div> 
+     <div class="right-two-thirds"> 
+      <h3 class="board-name">Harlan Harris</h3> 
+      <h4 class="board-title">Data Scientist</h4> 
+      <p>Co-Founder and President of Data Community DC, a 5,000+ member organization promoting data sciences; O'Reilly co-author of <em>Analyzing the Analyzers: An Introspective Survey of Data Scientists and Their Work;</em> Senior Solutions Architect at Sentrana; previously Senior Data Scientist at Kaplan Test Prep; PhD, Computer Science (Cognitive Science) from University of Illinois at Urbana-Champaign.</p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- <div id="contact" class="clearfix">
+    <div class="wrapper clearfix">
+        <h2>Contact Zettacap</h2>
+        <div class="left-one-third contact-form">
+            <form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="RGRTx5AWw1UiLV93hBzP1RLg2dFY6fU76fAW9ASKpWo=" /></div>
+              
+              <div><label for="user_email">Email</label><br />
+              <input id="user_email" name="user[email]" type="email" value="" /></div>
+              <div><label for="user_password">Password</label><br />
+              <input id="user_password" name="user[password]" type="password" /></div>
+              <div><label for="user_password_confirmation">Password confirmation</label><br />
+              <input id="user_password_confirmation" name="user[password_confirmation]" type="password" /></div>
+              <div class="submit"><input name="commit" type="submit" value="Submit" /></div>
+</form>        </div>
+        <div class="right-one-third contact-info">
+          <h4>Zettacap:</h4>
+          <p>(123) 456-7890</p>
+          <p>kevin.coogan@zettacap.com</p>
+          <p>@zettacap</p>
+        </div>
+    </div>
+</div> --> 
+  <div id="legal" class="clearfix section"> 
+   <div class="wrapper clearfix"> 
+    <h2>Contact Zettacap</h2> 
+    <div class="right-one-third contact-info"> 
+     <h4>Zettacap</h4> 
+     <p>by email: <a href="mailto:kevin.coogan@zettacap.com">kevin.coogan@zettacap.com</a></p> 
+     <p>twitter: <a href="https://twitter.com/zettacap">@zettacap</a></p> 
+     <p>linkedin: <a href="https://www.linkedin.com/company/zettacap">/zettacap</a></p> 
+     <p> </p>
+    </div> 
+   </div> 
+   <div class="wrapper clearfix legal-notice"> 
+    <h3>Legal Notice:</h3> 
+    <p>Nothing on this site constitutes an offer to sell any securities or the solicitation of an offer to purchase any securities. The content, commentary, posts, links, tweets, re-tweets, presentations, documents, videos, and messages (collectively as "Information") on this site are presented for informational purposes only. The intention of presenting such Information is to provoke thought by the reader as to the potential usefulness of big data, social media, text analytics, social mood, sentiment, user generated content, geo-location, news, events, publicly available information, financial data, investment trends and other data as a way to improve and/or support investment analysis and decision making. The reader should make an informed decision as to his/her investment strategy with his/her registered investment advisor ("RIA") or as an independent investor. Zettacap is not a RIA and does not provide such services. This site may contain forward looking statements and conditional statements using such words as "expects", "appears", "may", "should", "anticipates", or similar words and expressions referring to potential future outcomes. Such statements do not constitute guarantees or recommendations of any kind. Information presented on this site may be incomplete and out-of-date. Additionally, the reader understands that the algorithms used by Zettacap as well as the sources of information used may change periodically, and that the reader will not receive notifications or explanations concerning such changes. By reviewing the Information on this site, the reader agrees to the aforementioned statements and agrees to discharge and exonerate the creators of the Information as well as Zettacap, its owners, and its related parties, from any liability associated with the taking or not taking of actions due to the reader reviewing Information on this site.</p> 
+    <img src="/images/z-divider-gray.svg" class="divider-bottom display-none"> 
+    <img src="/images/logo-gray.svg" class="logo-gray"> 
+    <p class="copyright">© 2014 Zettacap // All rights reserved.</p> 
+   </div> 
+  </div>     
+ </body>
+</html>

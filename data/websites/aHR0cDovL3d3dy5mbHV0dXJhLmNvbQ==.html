@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <title>Flutura | Decision Sciences Analytics</title> 
+  <!--<meta name="subject" content="Keywords here" />--> 
+  <meta name="description" content="Flutura is a niche Big data analytics solutions company with a vision to transform operational outcomes by monetizing machine data."> 
+  <meta http-equiv="content-type" content="text/html;"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="title" content="Flutura Decision Sciences and Analytics - M2M and Big Data Analytics"> 
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"> 
+  <style type="text/css">
+  @import url("css/stylesheet_min.css");
+  @import url("css/responsive_stylesheet_min.css");
+  @import url("css/responsive_stylesheet_min320.css");
+  /*@import url("css/font-awesome.min.css");*/
+</style> 
+  <link rel="stylesheet" type="text/css" media="all" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"> 
+  <!--<link rel="stylesheet" type="text/css" media="all" href="css/responsive_stylesheet_min.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css">--> 
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300|Varela" rel="stylesheet" type="text/css"> 
+  <link rel="prefetch" href="images/flutura_logo.png"> 
+  <style type="text/css">
+  @import url("css/index_stylesheet.css");
+</style> 
+ </head> 
+ <body class="home-page"> 
+  <div class="page"> 
+   <div class="visual "> 
+    <div class="header-container"> 
+     <!--<div id="click_to_cnct_menu" class="resp">
+    <ul>
+        <li><a href="#"><i class="fa fa-envelope"></i><span style="margin-left:15px;">Click to connect</span></a>
+            <ul>
+                <li><a href="#" data-reveal-id="myModal_one" data-animation="fade"><i class="fa fa-calendar"></i><span class="sidemenu_span" id="sch">Schedule a demo</span></a></li>
+                <li><a href="#" data-reveal-id="myModal_two" data-animation="fade"><i class="fa fa-pencil-square-o"></i><span class="sidemenu_span" id="req_1">Request for information</span></a></li>
+            </ul>
+        </li>
+    </ul>
+
+    
+</div>--> 
+     <div id="myModal_one" class="reveal-modal"> 
+      <h1 class="click_to_cnct_menu_title"> <i style="margin-right:15px;" class="fa fa-calendar"></i>Schedule a demo </h1> 
+      <div id="cont_message" style="display:none;background-color:#eee; margin-bottom:10px; padding:10px; border-radius:5px; border:solid 1px #ccc;"></div> 
+      <div class="click_to_cnct_form_wrapper"> 
+       <div class="click_to_cnct_form_set"> 
+        <label> Name * </label>
+        <input type="hidden" name="hid" id="hid" value="Schedule a demo"> 
+        <input type="text" title="" name="name" id="name" tabindex="1" data-placement="bottom" class="form-control" maxlength="100"> 
+       </div> 
+       <div class="click_to_cnct_form_set"> 
+        <label> Email ID * </label> 
+        <input type="text" title="" name="email1" id="email1" tabindex="2" data-placement="bottom" class="form-control" maxlength="100"> 
+       </div> 
+       <!--<div class="click_to_cnct_form_set">
+    <label>
+      Contact Number
+    </label>
+    <input type="text" title="" name="mobile" id="mobile" tabindex="3" data-placement="bottom" class="form-control" maxlength="16"  >
+  </div>
+  
+  <div class="click_to_cnct_form_set">
+    <label>
+      Company Name *
+    </label>
+    <input type="text" title="" name="cname" id="cname" tabindex="4" data-placement="bottom" class="form-control" maxlength="100">
+  </div>--> 
+       <div class="click_to_cnct_form_set"> 
+        <label> Comments </label> 
+        <textarea data-placement="left" name="coments" id="coments" tabindex="5" data-toggle="tooltip" rows="3" class="form-control2" maxlength="500"></textarea> 
+        <div id="loading2" style="display:none;padding-left:145px; margin-top: -14px; float:left;"> 
+         <img src="images/loading.gif" width="32" height="32" border="0"> 
+        </div> 
+       </div> 
+       <div class="click_to_cnct_form_set"> 
+        <label> Solve this * </label> 
+        <div class="wrap"></div> 
+        <input style="width:1em;" value="4" class="inputsmall" readonly name="num1" id="num1">+ 
+        <input style="width:1em;" value="7" class="inputsmall" readonly name="num2" id="num2">= 
+        <input type="text" tabindex="6" style="width:2em;" maxlength="2" class="inputsmall inputsmall_cap" id="captcha" name="captcha" onkeypress="return isNumberKey(event)"> 
+       </div> 
+       <div class="click_to_cnct_form_set"> 
+        <input type="submit" value="Submit" class="btn" name="contact" id="contact_form" onclick="callContact();callNudgeSchedule();" tabindex="7"> 
+       </div> 
+      </div> 
+      <a class="close-reveal-modal"> × </a> 
+     </div> 
+     <div id="myModal_two" class="reveal-modal"> 
+      <h1 class="click_to_cnct_menu_title"><i style="margin-right:15px;" class="fa fa-pencil-square-o"></i>Request for information</h1> 
+      <div id="cont_message1" style="background-color:#eee; margin-bottom:10px; padding:10px; border-radius:5px; border:solid 1px #ccc;display:none;"></div> 
+      <div class="click_to_cnct_form_wrapper"> 
+       <div class="click_to_cnct_form_set"> 
+        <label> Name * </label>
+        <input type="hidden" name="hid1" id="hid1" value="Request for information"> 
+        <input type="text" title="" name="name1" id="name1" tabindex="1" data-placement="bottom" class="form-control" maxlength="100"> 
+       </div> 
+       <div class="click_to_cnct_form_set"> 
+        <label> Email ID * </label> 
+        <input type="text" title="" data-placement="bottom" name="email2" id="email2" tabindex="2" class="form-control" maxlength="100"> 
+       </div> 
+       <!--<div class="click_to_cnct_form_set">
+    <label>
+      Contact Number
+    </label>
+    <input type="text" title="" name="mobile1" id="mobile1" tabindex="3" data-placement="bottom" class="form-control" maxlength="16"  >
+  </div>
+  
+  <div class="click_to_cnct_form_set">
+    <label>
+      Company Name *
+    </label>
+    <input type="text" title="" data-placement="bottom" name="cname1" id="cname1" tabindex="4" class="form-control" maxlength="100">
+  </div>--> 
+       <div class="click_to_cnct_form_set"> 
+        <label> Comments </label> 
+        <textarea data-placement="left" data-toggle="tooltip" rows="3" name="coments1" id="coments1" tabindex="5" class="form-control2" maxlength="500"></textarea> 
+        <div id="loading2" style="display:none;padding-left:145px; margin-top: -14px; float:left;"> 
+         <img src="images/loading.gif" width="32" height="32" border="0"> 
+        </div> 
+       </div> 
+       <div class="click_to_cnct_form_set"> 
+        <label> Solve this * </label> 
+        <div class="wrap"></div> 
+        <input style="width:1em;" value="4" class="inputsmall" readonly name="num1_1" id="num1_1">+ 
+        <input style="width:1em;" value="5" class="inputsmall" readonly name="num2_1" id="num2_1">= 
+        <input type="text" style="width:2em;" maxlength="2" class="inputsmall inputsmall_cap" id="captcha1" name="captcha1" tabindex="6" onkeypress="return isNumberKey(event)"> 
+       </div> 
+       <div class="click_to_cnct_form_set"> 
+        <input type="submit" value="Submit" class="btn" tabindex="7" name="button" id="button_form" onclick="callContact1_req();callNudgeRequest();"> 
+       </div> 
+      </div> 
+      <a class="close-reveal-modal">×</a> 
+     </div> 
+     <div id="myModal_three" class="reveal-modal free_trial_popup"> 
+      <h1 class="click_to_cnct_menu_title"><i style="margin-right:15px;" class="fa fa-bar-chart-o"></i>Experience Analytics with Flutura</h1> 
+      <div id="cont_message1" style="background-color:#eee; margin-bottom:10px; padding:10px; border-radius:5px; border:solid 1px #ccc;display:none;"></div> 
+      <div class="free_trail_contnt"> 
+       <div class="free_tiral_title2">
+        <span class="free_trial_span_txt">Want to see insights from your data? We’re happy to analyze the data and find actionable insights for free.</span>
+       </div> 
+       <div class="wrap"></div> 
+       <div class="free_tiral_title3">
+        Free Trial
+       </div> 
+       <div class="wrap"></div> 
+       <div class="free_trial_pic">
+        <img src="images/free_trial_pic1.jpg" width="160" height="108">
+       </div> 
+       <div class="free_trial_pic">
+        <img src="images/free_trial_pic2.jpg" width="160" height="108">
+       </div> 
+       <div class="free_trial_pic">
+        <img src="images/free_trial_pic3.jpg" width="160" height="108">
+       </div> 
+       <div class="free_trial_pic no_margin_right">
+        <img src="images/free_trial_pic4.jpg" width="160" height="108">
+       </div> 
+       <div class="wrap"></div> 
+       <div class="free_trail_contnt_left"> 
+        <div class="free_tiral_title3 title">
+         How it works
+        </div> 
+        <div class="wrap"></div> 
+        <p>You send us your data to be analysed at <a href="mailto:info@fluturasolutions.com">info@fluturasolutions.com</a>. We send you a report that highlights key insights and hidden opportunities within 2 weeks.</p> 
+       </div> 
+       <div class="free_trail_contnt_right"> 
+        <div class="free_tiral_title3 title">
+         What to expect
+        </div> 
+        <div class="wrap"></div> 
+        <ul> 
+         <li><i class="fa fa-check icon_marg_rit"></i>Interesting Insights</li> 
+         <li><i class="fa fa-check icon_marg_rit"></i>Key Causal Factors</li> 
+         <li><i class="fa fa-check icon_marg_rit"></i>Recommendation</li> 
+         <li><i class="fa fa-check icon_marg_rit"></i>Data Segmentation</li> 
+        </ul> 
+       </div> 
+       <div class="free_trial_footer_txt">
+        Note: Insights primarily depends on the breadth and width of data provided to us. The decision to provide the outputs is at FLUTURA`s absolute discretion and the provision of data to us does not constitute a contract
+       </div> 
+      </div> 
+      <a class="close-reveal-modal">×</a> 
+     </div> 
+     <header id="header">
+      <div style=" max-width:980px; min-height:85px; width:auto; margin:auto"> 
+       <strong class="logo"><a href="index.php">Flutura</a></strong> 
+       <div class="section"> 
+        <center> 
+         <table cellpadding="5" cellspacing="1" class=""> 
+          <tbody>
+           <tr> 
+            <td align="center"> 
+             <form id="search-form" action="site_search.php" method="get"> 
+              <div class="search"> 
+               <input type="text" name="query" id="query" data-provide="typeahead" class="round" value="" action="include/js_suggest/suggest.php" autocomplete="off" delay="1500"> 
+               <input type="submit" class="corner" value=""> 
+              </div>
+              <input type="hidden" name="search" value="1"> 
+             </form> </td> 
+           </tr> 
+          </tbody>
+         </table> 
+        </center> 
+       </div> 
+       <div id="click_to_cnct_menu"> 
+        <ul> 
+         <li><a href="#"><i class="fa fa-envelope"></i><span style="margin-left:15px;">Click to connect</span></a> 
+          <ul> 
+           <li><a data-animation="fade" data-reveal-id="myModal_one" href="#"><i class="fa fa-calendar"></i><span class="sidemenu_span" id="sch_clear">Schedule a demo</span></a></li> 
+           <li><a data-animation="fade" data-reveal-id="myModal_two" href="#"><i class="fa fa-pencil-square-o"></i><span class="sidemenu_span" id="req_clear">Request for information</span></a></li> 
+           <li><a data-animation="fade" data-reveal-id="myModal_three" href="#"><i class="fa fa-gift"></i><span class="sidemenu_span">Free trial</span></a></li> 
+          </ul> </li> 
+        </ul> 
+       </div> 
+       <div id="click_to_cnct_menu" class=" click_cnct_resp"> 
+        <ul> 
+         <li><a name="#" id="click_to_cnct"><i class="fa fa-envelope"></i><span style="margin-left:15px;">Click to connect</span></a> 
+          <ul id="drop_ul"> 
+           <li><a data-animation="fade" data-reveal-id="myModal_one" href="#"><i class="fa fa-calendar"></i><span class="sidemenu_span" id="sch_clear">Schedule a demo</span></a></li> 
+           <li><a data-animation="fade" data-reveal-id="myModal_two" href="#"><i class="fa fa-pencil-square-o"></i><span class="sidemenu_span" id="req_clear">Request for information</span></a></li> 
+           <li><a data-animation="fade" data-reveal-id="myModal_three" href="#"><i class="fa fa-gift"></i><span class="sidemenu_span">Free trial</span></a></li> 
+          </ul> </li> 
+        </ul> 
+       </div> 
+       <nav class="js-slide-hidden" id="nav"> 
+        <ul id="navigation-top" class="navigation-top"> 
+         <li id="menu-item-301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-301"><a href="about_us.php" id="aboutus_link">About Us</a> 
+          <div class="drop" id="drop_about"> 
+           <ul class="sub-menu" id="about_drop"> 
+            <li id="menu-item-1722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="about_us.php#company" alt="company_tab">Company</a></li> 
+            <li id="menu-item-1722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="about_us.php#founders" alt="founders_tab">The Founders</a></li> 
+            <li id="menu-item-1722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="about_us.php#team" alt="team_tab">Team</a></li> 
+            <li id="menu-item-1722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="about_us.php#accolades" alt="accolades_tab">Accolades</a></li> 
+            <li id="menu-item-1722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="about_us.php#careers" alt="careers_tab">Careers</a></li> 
+            <li id="menu-item-1722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="about_us.php#philosophy" alt="philosophy_tab">Philosophy</a></li> 
+           </ul> 
+          </div> </li> 
+         <li id="menu-item-1028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1028"><a href="news.php">News</a></li> 
+         <li id="menu-item-1028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1028"><a href="#">Offerings</a> 
+          <div class="drop"> 
+           <ul class="sub-menu"> 
+            <li id="menu-item-1722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="industriessolutions.php">Industry Solutions</a></li> 
+            <li id="menu-item-1722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="products.php ">Products</a></li> 
+           </ul> 
+          </div> </li> 
+         <li id="menu-item-1028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1028"><a href="workshops.php">Workshops</a></li> 
+         <li id="menu-item-1028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1028"><a href="events.php">Events</a></li> 
+         <li id="menu-item-1028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1028"><a href="videos.php">Videos</a></li> 
+         <li id="menu-item-1028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1028"><a href="contactus.php">Contact Us</a></li> 
+         <li id="menu-item-1028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1028"><a href="http://blog.fluturasolutions.com/" target="_blank">Blogs</a></li> 
+        </ul> 
+       </nav>
+      </div> 
+      <a href="#" class="open-nav">open navigation</a> 
+     </header> 
+    </div> 
+    <div class="callbacks_container" style="position:absolute;"> 
+     <ul class="rslides" id="slider4"> 
+      <li> <img src="images/banner9.jpg" width="1920" height="1150" alt="Flutura Utility"> 
+       <div style=" max-width:988px; width:auto; height:auto; margin:auto; position:relative"> 
+        <p class="caption"><span>Reduced Power Losses for leading utility company</span><br> <br> Mined Smart Meter data <br> from 10,000,000 households in real-time<br> to reduce Energy Leakage<br> <a href="http://www.utilities.flutura.com/" target="_blank">Read more </a> </p> 
+       </div> </li> 
+      <li> <img src="images/banner10-2.jpg" width="1920" height="1150" alt="Flutura Safety"> 
+       <div style=" max-width:988px; width:auto; height:auto; margin:auto; position:relative"> 
+        <p class="caption"><span>Ensuring Safety in a U.S based Oil and Gas Company</span><br> <br> Mining rig based sensor machine and<br> human generated data to reduce Health, <br> Safety &amp; Environmental risk<br> <a href="industriessolutions_sub.php#oilngas">Read more </a> </p> 
+       </div> </li> 
+      <li> <img src="images/banner10-1.jpg" width="1920" height="1150" alt="Flutura Oil and Gas"> 
+       <div style=" max-width:988px; width:auto; height:auto; margin:auto; position:relative"> 
+        <p class="caption"><span>Making Buildings Energy Efficient</span><br> <br> Tamed billions of events from 65,000 connected<br> buildings in Dubai to see patterns for risk<br> mitigation and Efficient Energy utilization<br> <a href="industriessolutions_sub.php#smart">Read more </a> </p>
+        <p> </p>
+       </div> </li> 
+     </ul> 
+    </div> 
+    <div class="switcher"> 
+     <div> 
+      <ul> 
+       <li class=""><a href="#">1</a></li> 
+       <li class=""><a href="#">2</a></li> 
+       <li class="active"><a href="#">3</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer1" style="height:auto;"> 
+    <div class="footer" style="height:auto;"> 
+     <div class="top_widgets" style=" margin-bottom:10px;"> 
+      <div class="top_widget"> 
+       <div class="top_widget_head" style="border-bottom:2px solid #ff4707;">
+        Trusted across the industry
+       </div> 
+       <div class="top_widget_cnt" style=" padding-top:10px;"> 
+        <ul class="rslides" id="slider1"> 
+         <li style="text-align:center;"> 
+          <div align="center">
+           <img class="tru_img" width="125" height="81" alt="Tech Sparks" src="images/new/tech_sparks.jpg">
+          </div> <p class="trusted_cnt">Emerged winners among 800 startups evaluated in India by YourStory</p> </li> 
+         <li> 
+          <div align="center">
+           <img class="tru_img" src="images/new/intech_50_index.jpg" alt="Flutura Intech" width="125" height="81">
+          </div> <p class="trusted_cnt">One of the top 50 most innovative product companies</p> </li> 
+         <li> 
+          <div align="center">
+           <img class="tru_img" src="images/new/cio_bigdata_20.jpg" alt="Flutura CIO Bigdata" width="125" height="81">
+          </div> <p class="trusted_cnt">Voted CIO review magazine’s 20 most promising Big Data companies </p> </li> 
+         <li> 
+          <div align="center">
+           <img class="tru_img" src="images/new/demo_enter_index.jpg" alt="Flutura" width="125" height="81">
+          </div> <p class="trusted_cnt">Shortlisted to present at the prestigious Demo Enterprise event in the Silicon Valley</p> </li> 
+         <li> 
+          <div align="center">
+           <img class="tru_img" src="images/new/innotrek_index.jpg" alt="Flutura Innotreck" width="125" height="81">
+          </div> <p class="trusted_cnt">Part of the delegation from Nasscom representing India at TiECon Santa Clara</p> </li> 
+         <li> 
+          <div align="center">
+           <img class="tru_img" src="images/new/tiecon_index.jpg" alt="Flutura Tiecon" width="125" height="81">
+          </div> <p class="trusted_cnt">Invited to talk at the TiECon SantaClara event</p> </li> 
+        </ul> 
+       </div> 
+      </div> 
+      <!-- Trusted --> 
+      <div class="line1"></div> 
+      <div class="top_widget"> 
+       <ul class="rslides" id="slider2"> 
+        <li> 
+         <div class="top_widget_head" style="border-bottom:2px solid #0072ff;">
+          Twitter
+         </div> 
+         <div class="top_widget_cnt" style="text-align:center; padding-top:10px;"> 
+          <div class="twitter_widget" style="background: none ; "> 
+           <a class="twitter-timeline" style="color:#ccc" href="https://twitter.com/fluturads" data-chrome="nofooter noheader noborders transparent noscrollbar" data-widget-id="400867646427516928" data-link-color="#ccc">Tweets by @fluturads</a> 
+          </div> 
+         </div> </li> 
+       </ul> 
+      </div> 
+      <!-- social --> 
+      <div class="line1"></div> 
+      <div class="top_widget"> 
+       <div class="top_widget_head" style="border-bottom:2px solid #169410;">
+        News &amp; Events 
+       </div> 
+       <div class="top_widget_cnt" style=" padding-top:10px;"> 
+        <ul class="rslides" id="slider3"> 
+         <li> <p class="news_cnt"><span>Thursday, 17 July 2014 </span><br> Flutura triumphant in the Startup Beacon category at confluence 2014(Zinnov Award) &nbsp; &nbsp; &nbsp; &nbsp; From shrinking go-to-market cycles and increased customer expectations to green manufacturing and converging tec </p> <a href="news.php?page=1&amp;n_var=MyModel_12" id="MyModel_12">More..</a></li> 
+         <li> <p class="news_cnt"><span>Wednesday, 04 June 2014 </span><br> Flutura amongst finalist in Large Enterprises solution category in Microsoft`s code for honor award. Modern devices and cloud-based services have changed the way organizations and users operate </p> <a href="news.php?page=1&amp;n_var=MyModel_11" id="MyModel_11">More..</a></li> 
+         <li> <p class="news_cnt"><span>Friday, 23 May 2014 </span><br> What makes a Big Data &amp; Analytics Startup “Lightning” hot? There is no denying that we live in an era of Big Data </p> <a href="news.php?page=1&amp;n_var=MyModel_7" id="MyModel_7">More..</a></li> 
+         <li> <p class="news_cnt"><span>Monday, 12 May 2014 </span><br> The weather and traffic nowadays in Bangalore can easily throw off our zest before we reach the office, where our spirit is further crushed by futile metrics akin to clocking the hours </p> <a href="news.php?page=1&amp;n_var=MyModel_9" id="MyModel_9">More..</a></li> 
+         <li> <p class="news_cnt"><span>Friday, 04 April 2014 </span><br> &nbsp; &nbsp; Provides Big Data analytics technology to mine hidden insights from huge chunks of machine generated data for global oil and gas majors to bring in efficiency and safety </p> <a href="news.php?page=2&amp;n_var=MyModel_8" id="MyModel_8">More..</a></li> 
+         <li> <p class="news_cnt"><span>Friday, 27 December 2013 </span><br> Bandar Seri Begawan: Wee Jay, a project management and specialised consultancy organisation in Southeast Asia with a base in Brunei Darussalam, has recently teamed up with Flutura Decision Sciences &amp; Analytics - a company based in the Si </p> <a href="news.php?page=2&amp;n_var=MyModel_6" id="MyModel_6">More..</a></li> 
+         <li> <p class="news_cnt"><span>Friday, 27 December 2013 </span><br> On 20 April 2010, when half the world was asleep, an underwater rig exploded in the Gulf of Mexico: the infamous Macondo blowout. BP’s Deepwater Horizon drilling rig burnt, sank and leaked 4 </p> <a href="news.php?page=2&amp;n_var=MyModel_5" id="MyModel_5">More..</a></li> 
+         <li> <p class="news_cnt"><span>Friday, 27 December 2013 </span><br> Dear Reader, Entrepreneur’s Corner is pleased to feature this interview of Srikanth Muralidhara, Co-Founder of the Bangalore-based Decision Sciences Company, Flutura Solutions, that focuses on M2M (machine to machine) and Big Data analytics </p> <a href="news.php?page=2&amp;n_var=MyModel_4" id="MyModel_4">More..</a></li> 
+         <li> <p class="news_cnt"><span>Thursday, 21 November 2013 </span><br> &nbsp;Hive Technologies, an investment and&nbsp;incubation firm&nbsp;backed by the&nbsp;Patni brothers&nbsp;— Arihant and Amit — has made its first investment in a Bangalore-based startup Flutura, which provides technology to oil and </p> <a href="news.php?page=3&amp;n_var=MyModel_3" id="MyModel_3">More..</a></li> 
+         <li> <p class="news_cnt"><span>Thursday, 23 May 2013 </span><br> Data analytics and what is known as ‘big data’ have opened diverse opportunities for the information technology industry </p> <a href="news.php?page=3&amp;n_var=MyModel_1" id="MyModel_1">More..</a></li> 
+         <li> <p class="news_cnt"><span>Wednesday, 22 May 2013 </span><br> www.bigdataconclave.com/flutura.php Flutura in Business Standard Data analytics and what is known as ‘big data’ have opened diverse opportunities for the information technology industry </p> <a href="news.php?page=3&amp;n_var=MyModel_2" id="MyModel_2">More..</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+      <!-- News --> 
+     </div> 
+     <!-- top_widgets --> 
+     <div class="footer_res" style=""> 
+      <div class="copyr2"> 
+       <p style="float:left;">© Flutura Solutions </p> 
+      </div> 
+      <div class="social_icon2"> 
+       <a class="g_plus" target="_blank" href="https://plus.google.com/+FluturaDecisionSciencesAnalyticsBangalore/about" rel="publisher"></a> 
+       <a class="in" target="_blank" href="http://www.linkedin.com/company/flutura"></a> 
+       <a class="yo" target="_blank" href="http://www.scoop.it/u/flutura"></a> 
+       <a class="fac" target="_blank" href="https://www.facebook.com/FluturaSolutions"></a> 
+       <a class="tw" target="_blank" href="https://twitter.com/fluturads"></a> 
+      </div> 
+     </div> 
+     <div class="adj1"></div> 
+    </div> 
+    <div class="footer3"> 
+     <div class="footer"> 
+      <div class="copyr"> 
+       <p style="float:left;">© Flutura </p> 
+      </div> 
+      <div class="social_icon" style="width:162px;">
+       <a class="g_plus" target="_blank" href="https://plus.google.com/+FluturaDecisionSciencesAnalyticsBangalore/posts" rel="publisher"></a> 
+       <a class="in" target="_blank" href="http://www.linkedin.com/company/flutura"></a> 
+       <a class="yo" target="_blank" href="http://www.scoop.it/u/flutura"></a> 
+       <a class="fac" target="_blank" href="https://www.facebook.com/FluturaSolutions"></a> 
+       <a class="tw" target="_blank" href="https://twitter.com/fluturads"></a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+        function myGetTime() {
+            var dd = new Date();
+            var hh = dd.getHours();
+            var mm = dd.getMinutes();
+            var ss = dd.getSeconds();
+            var ms = dd.getMilliseconds();
+            return ("<br/>The time is now: " + hh + ":" + mm + ":" + ss + ":" + ms + "<br/>");
+        }
+
+</script> 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+  <script type="text/javascript">window.jQuery||document.write('<script type="text/javascript" src="js/jquery-1.11.1.js"><\/script>')</script> 
+  <!-- nudge starting --> 
+  <script type="text/javascript">(function(d,n){var s,a,p;s=document.createElement("script");s.type="text/javascript";s.async=true;s.src=(document.location.protocol==="https:"?"https:":"http:")+"//cdn.nudgespot.com"+"/nudgespot.js";a=document.getElementsByTagName("script");p=a[a.length-1];p.parentNode.insertBefore(s,p.nextSibling);window.nudgespot=n;n.init=function(t){function f(n,m){var a=m.split('.');2==a.length&&(n=n[a[0]],m=a[1]);n[m]=function(){n.push([m].concat(Array.prototype.slice.call(arguments,0)))}}n._version=0.1;n._globals=[t];n.people=n.people||[];n.params=n.params||[];m="track register unregister identify set_config people.delete people.create people.update people.create_property people.tag people.remove_Tag".split(" ");for(var i=0;i<m.length;i++)f(n,m[i])}})(document,window.nudgespot||[]);nudgespot.init("d9fe3bcf82be72dda77525fe10ef76b0");</script> 
+  <!-- nudge end --> 
+  <script type="text/javascript" src="js/bootstrap-typeahead_min.js"></script> 
+  <!--<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>--> 
+  <script type="text/javascript" src="js/custom_jquery_min.js"></script> 
+  <!--<script async type="text/javascript" src="js/index_inline_min.js"></script>--> 
+  <!--<script type="text/javascript">
+function downloadJSAtOnload() {
+var element = document.createElement("script");
+element.src = "js/index_inline_min.js";
+document.body.appendChild(element);
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>--> 
+  <script type="text/javascript">
+
+function downloadJSAtOnload() {
+
+
+
+
+var element4 = document.createElement("script");
+element4.src = "http://code.jquery.com/jquery-migrate-1.2.1.min.js";
+document.body.appendChild(element4);
+
+var element6 = document.createElement("script");
+element6.src = "js/index_inline_min.js";
+document.body.appendChild(element6);
+
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+
+</script> 
+  <script async type="text/javascript">
+	$(window).bind("load", function() {
+   // code here
+   !function(e,a,t){var n,i=e.getElementsByTagName(a)[0],o=/^http:/.test(e.location)?"http":"https";e.getElementById(t)||(n=e.createElement(a),n.id=t,n.src=o+"://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i))}(document,"script","twitter-wjs")
+	});
+	
+	
+</script> 
+  <script type="text/javascript">
+$(document).ready(function(e) {
+//$("#click_to_cnct").unbind('click mouseenter mouseleave'); //use off if you used on, to unbind usual listeners
+  		$("#click_to_cnct").on('click',function(){
+    $('#drop_ul').toggle()
+   
+    });
+});
+</script> 
+  <script>
+  $(document).ready(function(){
+		$( "#name" ).blur(function() {
+			var value = $("#name").val();
+			//var val = value.replace("<", "").replace(">", "");
+			var val = value.replace(/[&\/\\#'"?<>{}]/g,'');
+					$("#name").val(val);
+		});
+$( "#email1" ).blur(function() {
+	var value = $("#email1").val();
+	//var val = value.replace("<", "").replace(">", "");
+	var val = value.replace(/[&\/\\#'"?<>{}]/g,'');
+			$("#email1").val(val);
+});
+$( "#coments" ).blur(function() {
+	var value = $("#coments").val();
+	//var val = value.replace("<", "").replace(">", "");
+	var val = value.replace(/[&\/\\#'"?<>{}]/g,'');
+			$("#coments").val(val);
+});
+$( "#captcha" ).blur(function() {
+	var value = $("#captcha").val();
+	//var val = value.replace("<", "").replace(">", "");
+	var val = value.replace(/[&\/\\#'"?<>{}]/g,'');
+			$("#captcha").val(val);
+});
+
+$( "#name1" ).blur(function() {
+	var value = $("#name1").val();
+	//var val = value.replace("<", "").replace(">", "");
+	var val = value.replace(/[&\/\\#'"?<>{}]/g,'');
+			$("#name1").val(val);
+});
+$( "#email2" ).blur(function() {
+	var value = $("#email2").val();
+	//var val = value.replace("<", "").replace(">", "");
+	var val = value.replace(/[&\/\\#'"?<>{}]/g,'');
+			$("#email2").val(val);
+});
+$( "#coments1" ).blur(function() {
+	var value = $("#coments1").val();
+	//var val = value.replace("<", "").replace(">", "");
+	var val = value.replace(/[&\/\\#'"?<>{}]/g,'');
+			$("#coments1").val(val);
+});
+$( "#captcha1" ).blur(function() {
+	var value = $("#captcha1").val();
+	//var val = value.replace("<", "").replace(">", "");
+	var val = value.replace(/[&\/\\#'"?<>{}]/g,'');
+			$("#captcha1").val(val);
+});
+});
+	
+  </script> 
+  <!-- Click to connect start --> 
+  <div id="myModal_one" class="reveal-modal"> 
+   <h1 class="click_to_cnct_menu_title"> <i style="margin-right:15px;" class="fa fa-calendar"></i>Schedule a demo </h1> 
+   <div id="cont_message" style="display:none;background-color:#eee; margin-bottom:10px; padding:10px; border-radius:5px; border:solid 1px #ccc;"></div> 
+   <div class="click_to_cnct_form_wrapper"> 
+    <div class="click_to_cnct_form_set"> 
+     <label> Name * </label>
+     <input type="hidden" name="hid" id="hid" value="Schedule a demo"> 
+     <input type="text" title="" name="name" id="name" tabindex="1" data-placement="bottom" class="form-control" maxlength="100"> 
+    </div> 
+    <div class="click_to_cnct_form_set"> 
+     <label> Email ID * </label> 
+     <input type="text" title="" name="email1" id="email1" tabindex="2" data-placement="bottom" class="form-control" maxlength="100"> 
+    </div> 
+    <div class="click_to_cnct_form_set"> 
+     <label> Comments </label> 
+     <textarea data-placement="left" name="coments" id="coments" tabindex="5" data-toggle="tooltip" rows="3" class="form-control2" maxlength="500"></textarea> 
+     <div id="loading2" style="display:none;padding-left:145px; margin-top: -14px; float:left;"> 
+      <img src="images/loading.gif" width="32" height="32" border="0"> 
+     </div> 
+    </div> 
+    <div class="click_to_cnct_form_set"> 
+     <label> Solve this * </label> 
+     <div class="wrap"></div> 
+     <input style="width:1em;" value="1" class="inputsmall" readonly name="num1" id="num1">+ 
+     <input style="width:1em;" value="9" class="inputsmall" readonly name="num2" id="num2">= 
+     <input type="text" tabindex="6" style="width:2em;" maxlength="2" class="inputsmall inputsmall_cap" id="captcha" name="captcha" onkeypress="return isNumberKey(event)"> 
+    </div> 
+    <div class="click_to_cnct_form_set"> 
+     <input type="submit" value="Submit" class="btn" name="contact" id="contact_form" onclick="callContact();callNudgeSchedule();" tabindex="7"> 
+    </div> 
+   </div> 
+   <a class="close-reveal-modal"> × </a> 
+  </div> 
+  <div id="myModal_two" class="reveal-modal"> 
+   <h1 class="click_to_cnct_menu_title"><i style="margin-right:15px;" class="fa fa-pencil-square-o"></i>Request for information</h1> 
+   <div id="cont_message1" style="background-color:#eee; margin-bottom:10px; padding:10px; border-radius:5px; border:solid 1px #ccc;display:none;"></div> 
+   <div class="click_to_cnct_form_wrapper"> 
+    <div class="click_to_cnct_form_set"> 
+     <label> Name * </label>
+     <input type="hidden" name="hid1" id="hid1" value="Request for information"> 
+     <input type="text" title="" name="name1" id="name1" tabindex="1" data-placement="bottom" class="form-control" maxlength="100"> 
+    </div> 
+    <div class="click_to_cnct_form_set"> 
+     <label> Email ID * </label> 
+     <input type="text" title="" data-placement="bottom" name="email2" id="email2" tabindex="2" class="form-control" maxlength="100"> 
+    </div> 
+    <div class="click_to_cnct_form_set"> 
+     <label> Comments </label> 
+     <textarea data-placement="left" data-toggle="tooltip" rows="3" name="coments1" id="coments1" tabindex="5" class="form-control2" maxlength="500"></textarea> 
+     <div id="loading2" style="display:none;padding-left:145px; margin-top: -14px; float:left;"> 
+      <img src="images/loading.gif" width="32" height="32" border="0"> 
+     </div> 
+    </div> 
+    <div class="click_to_cnct_form_set"> 
+     <label> Solve this * </label> 
+     <div class="wrap"></div> 
+     <input style="width:1em;" value="2" class="inputsmall" readonly name="num1_1" id="num1_1">+ 
+     <input style="width:1em;" value="5" class="inputsmall" readonly name="num2_1" id="num2_1">= 
+     <input type="text" style="width:2em;" maxlength="2" class="inputsmall inputsmall_cap" id="captcha1" name="captcha1" tabindex="6" onkeypress="return isNumberKey(event)"> 
+    </div> 
+    <div class="click_to_cnct_form_set"> 
+     <input type="submit" value="Submit" class="btn" tabindex="7" name="button" id="button_form" onclick="callContact1_req();callNudgeRequest();"> 
+    </div> 
+   </div> 
+   <a class="close-reveal-modal">×</a> 
+  </div> 
+  <div id="myModal_three" class="reveal-modal free_trial_popup"> 
+   <h1 class="click_to_cnct_menu_title"><i style="margin-right:15px;" class="fa fa-bar-chart-o"></i>Experience Analytics with Flutura</h1> 
+   <div id="cont_message1" style="background-color:#eee; margin-bottom:10px; padding:10px; border-radius:5px; border:solid 1px #ccc;display:none;"></div> 
+   <div class="free_trail_contnt"> 
+    <div class="free_tiral_title2">
+     <span class="free_trial_span_txt">Want to see insights from your data? We’re happy to analyze the data and find actionable insights for free.</span>
+    </div> 
+    <div class="wrap"></div> 
+    <div class="free_tiral_title3">
+     Free Trial
+    </div> 
+    <div class="wrap"></div> 
+    <div class="free_trial_pic">
+     <img src="images/free_trial_pic1.jpg" width="160" height="108">
+    </div> 
+    <div class="free_trial_pic">
+     <img src="images/free_trial_pic2.jpg" width="160" height="108">
+    </div> 
+    <div class="free_trial_pic">
+     <img src="images/free_trial_pic3.jpg" width="160" height="108">
+    </div> 
+    <div class="free_trial_pic no_margin_right">
+     <img src="images/free_trial_pic4.jpg" width="160" height="108">
+    </div> 
+    <div class="wrap"></div> 
+    <div class="free_trail_contnt_left"> 
+     <div class="free_tiral_title3 title">
+      How it works
+     </div> 
+     <div class="wrap"></div> 
+     <p>You send us your data to be analysed at <a href="mailto:info@fluturasolutions.com">info@fluturasolutions.com</a>. We send you a report that highlights key insights and hidden opportunities within 2 weeks.</p> 
+    </div> 
+    <div class="free_trail_contnt_right"> 
+     <div class="free_tiral_title3 title">
+      What to expect
+     </div> 
+     <div class="wrap"></div> 
+     <ul> 
+      <li><i class="fa fa-check icon_marg_rit"></i>Interesting Insights</li> 
+      <li><i class="fa fa-check icon_marg_rit"></i>Key Causal Factors</li> 
+      <li><i class="fa fa-check icon_marg_rit"></i>Recommendation</li> 
+      <li><i class="fa fa-check icon_marg_rit"></i>Data Segmentation</li> 
+     </ul> 
+    </div> 
+    <div class="free_trial_footer_txt">
+     Note: Insights primarily depends on the breadth and width of data provided to us. The decision to provide the outputs is at FLUTURA`s absolute discretion and the provision of data to us does not constitute a contract
+    </div> 
+   </div> 
+   <a class="close-reveal-modal">×</a> 
+  </div> 
+  <!-- Click to connect end --> 
+  <script>
+function callContact(){
+	
+	  var name = $("#name").val()
+	  var coments = $("#coments").val();
+	  var email = $("#email1").val();
+	  var num1 = $("#num1").val();
+	  var num2 = $("#num2").val();
+	  var captcha = $("#captcha").val();
+	  var hid = $("#hid").val();
+	  $('#contact_form').attr('disabled', 'disabled');
+    $.ajax({
+     type: "POST",
+     url: "schedule_ajax.php",
+     data: 'name='+name+'&coments='+coments+'&num1='+num1+'&num2='+num2+'&captcha='+captcha+'&email='+email+'&hid='+hid ,
+    
+     success: function (data) {//alert("large");
+	   $('#contact_form').removeAttr('disabled');
+      if(data==1){
+			/*setTimeout(function(){$('.close').trigger('click');},1000);
+			  document.getElementById("loading2").style.display="block";*/
+			  //$('#contact_form').attr('disabled',true);
+			  
+        $('#cont_message').html('<strong>Thank you!</strong> Your message has been submitted successfully.We will get in touch with you soon!!').show().delay(5000).hide('slow');
+		  document.getElementById("name").value = "";
+		 
+		  document.getElementById("coments").value = "";
+		  document.getElementById("email1").value = "";
+		  document.getElementById("captcha").value = "";
+			 
+     /*document.getElementById("loading2").style.display="block";*/
+  
+		  $.ajax({
+		  url:'includes/captcha_reload.php',
+		  success: function(result){
+		  	$("#num1").val(result);
+		   // $("#num2").val(result.num2);
+		  },
+		  error:function(xhr,status,erroThrown){
+			  alert("error");
+		  //handle failed request
+		  }
+		  });
+		  $.ajax({
+		  url:'includes/captcha_reload1.php',
+		  success: function(result){
+		  	$("#num2").val(result);
+		   // $("#num2").val(result.num2);
+		  },
+		  error:function(xhr,status,erroThrown){
+			  alert("error");
+		  //handle failed request
+		  }
+		  });
+		  
+       //window.location.reload(true);
+       }else{
+      	$('#cont_message').html(data).show().delay(5000).hide('slow');
+       		 //$('#contact_form').attr('disabled',false);
+				 
+				
+       	}
+     	},
+    });
+ }			
+ function callContact1_req(){
+		var name = $("#name1").val();
+		
+		var coments = $("#coments1").val();
+		var email = $("#email2").val();
+		var num1 = $("#num1_1").val();
+		var num2 = $("#num2_1").val();
+		var captcha = $("#captcha1").val();
+		var hid = $("#hid1").val();
+		$('#button_form').attr('disabled', 'disabled');
+		$.ajax({
+			type: "POST",
+			url: "schedule_ajax.php",
+			data: 'name='+name+'&coments='+coments+'&num1='+num1+'&num2='+num2+'&captcha='+captcha+'&email='+email+'&hid='+hid,
+			
+			success: function (data) {//alert("small");
+			$('#button_form').removeAttr('disabled');
+			if(data==1){
+				/*setTimeout(function(){$('.close').trigger('click');},1000);
+				document.getElementById("loading2").style.display="block";*/
+				$('#cont_message1').html('<strong>Thank you!</strong> Your message has been submitted successfully.We will get in touch with you soon!!').show().delay(5000).hide('slow');
+					document.getElementById("name1").value = "";
+					
+					document.getElementById("coments1").value = "";
+					document.getElementById("email2").value = "";
+					document.getElementById("captcha1").value = "";
+					 $.ajax({
+		  url:'includes/captcha_reload.php',
+		  success: function(result){
+		  	$("#num1_1").val(result);
+		   // $("#num2").val(result.num2);
+		  },
+		  error:function(xhr,status,erroThrown){
+			  alert("error");
+		  //handle failed request
+		  }
+		  });
+		  $.ajax({
+		  url:'includes/captcha_reload1.php',
+		  success: function(result){
+		  	$("#num2_1").val(result);
+		   // $("#num2").val(result.num2);
+		  },
+		  error:function(xhr,status,erroThrown){
+			  alert("error");
+		  //handle failed request
+		  }
+		  });
+					//window.location.reload(true);
+				}else{
+					$('#cont_message1').html(data).show().delay(5000).hide('slow');
+					//$('#button_form').attr('disabled',false);
+				}
+			  },
+			});
+		}
+  </script> 
+  <script>
+  $(document).ready(function(){
+	  $('#sch_clear').click(function(e) {
+			document.getElementById("name").value = "";
+		  document.getElementById("coments").value = "";
+		  document.getElementById("email1").value = "";
+		  document.getElementById("captcha").value = "";
+														  });
+			$('#req_clear').click(function(e) {
+					document.getElementById("name1").value = "";
+					document.getElementById("coments1").value = "";
+					document.getElementById("email2").value = "";
+					document.getElementById("captcha1").value = "";
+														  });
+  });
+  </script>   
+ </body>
+</html>

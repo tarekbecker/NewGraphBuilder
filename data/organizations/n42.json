@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "352d9436fd3f0b5a29fdaf4c1dc66d49",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "short_description": "N42 is a stealth company, bringing together big data, data center, and analytics expertise",
+      "founded_on_day": 1,
+      "founded_on_trust_code": 4,
+      "founded_on_month": 1,
+      "founded_on_year": 2013,
+      "founded_on": "2013-01-01",
+      "permalink": "n42",
+      "primary_role": "company",
+      "is_closed": false,
+      "closed_on_trust_code": 0,
+      "name": "N42",
+      "closed_on_day": null,
+      "closed_on_month": null,
+      "closed_on_year": null,
+      "closed_on": null,
+      "created_at": 1405731587,
+      "updated_at": 1405731630,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "funding_rounds": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/n42/funding_rounds",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "FundingRound",
+            "name": "N42 Funding Round",
+            "path": "funding-round/728c719ee47352ead9bf39466f7956c6",
+            "created_at": 1405731630,
+            "updated_at": 1415050835
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/n42/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1405731556/aalxpstbews9wlj1mqsl.jpg",
+            "created_at": 1405731587,
+            "updated_at": 1405731587
+          }
+        ]
+      }
+    }
+  }
+}

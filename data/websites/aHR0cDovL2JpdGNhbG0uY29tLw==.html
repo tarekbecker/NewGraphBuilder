@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+ <head lang="en"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"> 
+  <meta name="description" content="We offer you backup your servers and filesystems. You can save your web sites, media files, configurations and databases with our backup service. We will protect your progress!"> 
+  <meta name="author" content="BitCalm LTD"> 
+  <meta name="keywords" content="backup,service,saas,server,filesystem,web,sites,media,files,configuration,databases,mysql,sql,ubuntu,linux,sqlite,ubuntu,debian"> 
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> 
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> 
+  <!-- build:remove:dev --> 
+  <link rel="stylesheet" href="/static/landing/dist/styles.min.css?20141125"> 
+  <!-- /build --> 
+  <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <![endif]--> 
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/landing/fav/apple-touch-icon-57x57.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/landing/fav/apple-touch-icon-114x114.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/landing/fav/apple-touch-icon-72x72.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/landing/fav/apple-touch-icon-144x144.png"> 
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/landing/fav/apple-touch-icon-60x60.png"> 
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/landing/fav/apple-touch-icon-120x120.png"> 
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/landing/fav/apple-touch-icon-76x76.png"> 
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/landing/fav/apple-touch-icon-152x152.png"> 
+  <link rel="icon" type="image/png" href="/static/landing/fav/favicon-196x196.png" sizes="196x196"> 
+  <link rel="icon" type="image/png" href="/static/landing/fav/favicon-160x160.png" sizes="160x160"> 
+  <link rel="icon" type="image/png" href="/static/landing/fav/favicon-96x96.png" sizes="96x96"> 
+  <link rel="icon" type="image/png" href="/static/landing/fav/favicon-16x16.png" sizes="16x16"> 
+  <link rel="icon" type="image/png" href="/static/landing/fav/favicon-32x32.png" sizes="32x32"> 
+  <meta name="msapplication-TileColor" content="#aae4e3"> 
+  <meta name="msapplication-TileImage" content="/static/landing/fav/mstile-144x144.png"> 
+  <title>BitCalm - backup service for your servers: filesystem, web sites, media files, backup configuration and databases</title> 
+  <!--Start of Zopim Live Chat Script--> 
+  <script type="text/javascript">
+        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+        $.src='//v2.zopim.com/?2ZFUv55yJ5vgTgr4QfXnjYFDdHLj9v2J';z.t=+new Date;$.
+        type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+        </script> 
+  <!--End of Zopim Live Chat Script--> 
+ </head> 
+ <body id="page-top" data-spy="scroll" data-target=".navbar-collapse"> 
+  <div style="width: 100%; overflow: hidden;"> 
+   <div class="navbar navbar-custom navbar-fixed-top" role="navigation"> 
+    <div class="container"> 
+     <!--<div class="bitcalm-nav">--> 
+     <div class="navbar-header"> 
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      <a class="navbar-brand scroll-link" href="#page-top"> <i class="sprite icon-bitcalm-logo"></i> <span class="navbar-brand-slogan">CLOUD&nbsp;BACKUP<br>FOR&nbsp;SERVERS</span> </a> 
+     </div> 
+     <div class="collapse navbar-collapse"> 
+      <ul class="nav navbar-nav navbar-right"> 
+       <li> <a class="scroll-link" href="#about">ABOUT</a> </li> 
+       <li> <a class="scroll-link" href="#howitworks">HOW IT WORKS</a> </li> 
+       <li> <a class="scroll-link" href="#pricing">PRICING</a> </li> 
+       <li> <a href="/app/#/login/">LOG IN</a> </li> 
+       <li> <a class="signup-button" href="/app/#/signup/">SIGN UP</a> </li> 
+      </ul> 
+     </div> 
+     <div class="clearfix"></div> 
+     <!--</div>--> 
+    </div> 
+   </div> 
+   <section class="intro"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-xs-12 intro-question-offset text-center"> 
+       <span class="intro-question">What will you do if you lose <br> all your server data today?</span> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1"> 
+       <div class="row"> 
+        <div class="col-sm-4 intro-step"> 
+         <div class="step-number">
+          1
+         </div> 
+         <div class="intro-step-text">
+          Does your project lack&nbsp;a&nbsp;sysadmin?
+         </div> 
+        </div> 
+        <div class="col-sm-4 intro-step"> 
+         <div class="step-number">
+          2
+         </div> 
+         <div class="intro-step-text">
+          Tired of configuring backups again&nbsp;and&nbsp;again?
+         </div> 
+        </div> 
+        <div class="col-sm-4 intro-step"> 
+         <div class="step-number">
+          3
+         </div> 
+         <div class="intro-step-text">
+          Have you ever had problems with restoring data from backup?
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-xs-12 intro-cat text-center"> 
+       <i class="sprite icon-mini-cat"></i> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="signup blue-background"> 
+    <div id="top-form" class="container"> 
+     <div class="row"> 
+      <div class="col-xs-12 text-center"> 
+       <span class="signup-title">Automatically backup your Linux server files&nbsp;&amp;&nbsp;databases <br>to Amazon S3 cloud and restore it by 1 click. No sysadmin required.</span> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1 signup-form"> 
+       <div class="row"> 
+        <div class="col-sm-4 col-md-4 signup-col"> 
+         <input class="start-input signup-form-email" placeholder="Email address" type="text"> 
+        </div> 
+        <div class="col-sm-3 col-md-4 signup-col"> 
+         <input class="start-input signup-form-password" placeholder="Password" type="password"> 
+        </div> 
+        <div class="col-sm-5 col-md-4 signup-col"> 
+         <div class="start-button signup-form-button noselect">
+          Configure backup in 1 minute
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-xs-12 text-center">
+        Sign up for a FREE plan today. Offer is limited. 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section id="about" class="features"> 
+    <div class="container"> 
+     <h2 class="section-title features-title text-center">BitCalm advantages</h2> 
+     <div class="row"> 
+      <div class="col-sm-6 col-lg-3"> 
+       <div class="features-item"> 
+        <div class="features-item-image">
+         <i class="sprite icon-bf-1"></i>
+        </div> 
+        <div class="features-item-description"> 
+         <span>24/7 online support</span> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-sm-6 col-lg-3"> 
+       <div class="features-item"> 
+        <div class="features-item-image">
+         <i class="sprite icon-bf-2"></i>
+        </div> 
+        <div class="features-item-description"> 
+         <span>Detailed backup statistics</span> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-sm-6 col-lg-3"> 
+       <div class="features-item"> 
+        <div class="features-item-image">
+         <i class="sprite icon-bf-3"></i>
+        </div> 
+        <div class="features-item-description"> 
+         <span>User-friendly web interface for monitoring and configuration</span> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-sm-6 col-lg-3"> 
+       <div class="features-item"> 
+        <div class="features-item-image">
+         <i class="sprite icon-bf-4"></i>
+        </div> 
+        <div class="features-item-description"> 
+         <span>Support for MySQL, PostgreSQL, MongoDB</span> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="blue-background"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-sm-6"> 
+       <h2 class="section-title">Security</h2> 
+       <div class="row"> 
+        <div class="col-xs-12"> 
+         <p>We transfer all information between your server and BitCalm service through secure channel (TLS with 2048 bit key). In the same way we send all your backed up data to the Amazon S3 storage. This way we protect you from the so-called «Man in the middle» attack (<a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">https://en.wikipedia.org/wiki/Man-in-the-middle_attack</a>)</p> 
+         <p class="m-b-none">We send your server's backed up data directly to the Amazon S3 bucket. We do not have access to the transmitted information.</p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-sm-6 security-images-block"> 
+       <div class="row"> 
+        <div class="col-md-6"> 
+         <div class="features-item"> 
+          <div class="features-item-image">
+           <i class="sprite icon-si-2"></i>
+          </div> 
+          <div class="features-item-description"> 
+           <span>Client-side files compression&nbsp;&amp; encryption</span> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="col-md-6"> 
+         <div class="features-item"> 
+          <div class="features-item-image">
+           <i class="sprite icon-si-1"></i>
+          </div> 
+          <div class="features-item-description"> 
+           <span>Opensource server-side client</span> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-md-6"> 
+         <div class="features-item"> 
+          <div class="features-item-image">
+           <i class="sprite icon-bt-6"></i>
+          </div> 
+          <div class="features-item-description"> 
+           <span>Safe&nbsp;&amp;&nbsp;secure storage (Amazon&nbsp;S3)</span> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="col-md-6"> 
+         <div class="features-item"> 
+          <div class="features-item-image">
+           <i class="sprite icon-bf-5"></i>
+          </div> 
+          <div class="features-item-description"> 
+           <span>All your data is sent to the Amazon S3 through SSL</span> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-sm-6 col-sm-push-6"> 
+       <h2 class="section-title">Storage for backups</h2> 
+       <div class="row"> 
+        <div class="col-xs-12"> 
+         <p>We use Amazon S3 to store all your server backups. It’s a highly reliable storage with uptime 99,999%. Besides, you do not need to register, configure and buy a place on Amazon S3.</p> 
+         <p>The downloading time for 1 GB of data is just 6 minutes. For more information you please refer to: <a href="https://aws.amazon.com/s3/" target="_blank">https://aws.amazon.com/s3/</a></p> 
+         <p class="m-b-none">No additional costs and hidden fees.</p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-sm-6 col-sm-pull-6 text-center amazon-offset"> 
+       <i class="sprite icon-amazon-logo"></i> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section id="os-support" class="blue-background"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-sm-6"> 
+       <h2 class="section-title">OS Support</h2> 
+       <p>We support all popular Linux OS: Debian (6+ version), Ubuntu Server (12.04+), CentOS (6.4+), Fedora, ArchLinux.</p> 
+       <p class="m-b-none">To install our backup-agent Python 2.6+ has to be installed. Usually it is already installed by default.</p> 
+      </div> 
+      <div class="col-sm-6 text-center"> 
+       <i class="sprite icon-os"></i> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section id="howitworks"> 
+    <div class="container screenshots-container"> 
+     <h2 class="section-title">How it works</h2> 
+     <div class="row"> 
+      <div class="col-md-8 col-lg-6 screenshots-image"> 
+      </div> 
+      <div class="col-md-4 col-lg-5 screenshots-togglers"> 
+       <div class="intro-step screenshots-toggler" id="installscr"> 
+        <div class="screenshots-pointer">
+         <i class="sprite icon-screenshot-pointer"></i>
+        </div> 
+        <div class="step-number">
+         1
+        </div> 
+        <div class="intro-step-text"> 
+         <div class="screenshots-toggler-title">
+          Installation in 30 seconds
+         </div> 
+         <div class="screenshots-toggler-description">
+          Install BitCalm opensource client on your server
+         </div> 
+        </div> 
+       </div> 
+       <div class="intro-step screenshots-toggler" id="configscr"> 
+        <div class="screenshots-pointer">
+         <i class="sprite icon-screenshot-pointer"></i>
+        </div> 
+        <div class="step-number">
+         2
+        </div> 
+        <div class="intro-step-text"> 
+         <div class="screenshots-toggler-title">
+          Configuration in 30 seconds
+         </div> 
+         <div class="screenshots-toggler-description">
+          Configure files and DB auto backup settings
+         </div> 
+        </div> 
+       </div> 
+       <div class="intro-step screenshots-toggler" id="retorescr"> 
+        <div class="screenshots-pointer">
+         <i class="sprite icon-screenshot-pointer"></i>
+        </div> 
+        <div class="step-number">
+         3
+        </div> 
+        <div class="intro-step-text"> 
+         <div class="screenshots-toggler-title">
+          One click data restore
+         </div> 
+         <div class="screenshots-toggler-description">
+          Easily restore your server data from any backup version
+         </div> 
+        </div> 
+       </div> 
+       <div class="clearfix"></div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section id="pricing" class="blue-background"> 
+    <div class="container pricing-container"> 
+     <h2 class="pricing-title section-title text-center">Start with choosing your plan</h2> 
+     <div class="text-center">
+      No credit card required.
+     </div> 
+     <div class="container-md-height"> 
+      <div class="row row-md-height"> 
+       <div class="col-xs-12 col-md-4 col-md-height text-center"> 
+        <div class="pricing-price">
+         FREE
+        </div> 
+        <div class="pricing-name">
+         Startup
+        </div> 
+        <div class="pricing-line"></div> 
+        <div> 
+         <p>20Gb backup storage space</p> 
+         <p>No Trials. Truly Free. Offer is limited.</p> 
+         <p>Daily backups</p> 
+         <p>Live support</p> 
+        </div> 
+        <div class="pricing-button"> 
+         <a class="start-button get-started-now" data-order="1" href="#top-form">Get started now</a> 
+        </div> 
+       </div> 
+       <div class="col-xs-12 col-md-4 col-md-height text-center"> 
+        <div class="pricing-label">
+         Popular
+        </div> 
+        <div class="pricing-price">
+         $10
+         <span class="price-lighter">/mo</span>
+        </div> 
+        <div class="pricing-name">
+         Professional
+        </div> 
+        <div class="pricing-line"></div> 
+        <div> 
+         <p><strong>Unlimited backup storage space</strong></p> 
+         <p>Daily backups</p> 
+         <p>Live support</p> 
+         <p>Offer is limited. Get started today.</p> 
+        </div> 
+        <div class="pricing-button"> 
+         <a class="start-button get-started-now" data-order="2" href="#top-form">Get started now</a> 
+        </div> 
+       </div> 
+       <div class="col-xs-12 col-md-4 col-md-height"> 
+        <div class="m-b"> 
+         <strong>All plans include:</strong> 
+        </div> 
+        <div> 
+         <p>Unlimited servers;</p> 
+         <p>Daily backups;</p> 
+         <p>Database backups;</p> 
+         <p>Recovery by one click to any server;</p> 
+         <p>Detailed backup’s statistics;</p> 
+         <p>Email notifications;</p> 
+         <p>24/7 online support;</p> 
+         <p>14 days money back guarantee</p> 
+        </div> 
+        <div class="pricing-slogan">
+          Configure cloud backups. 
+         <br>Be calm for your server data. 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section> 
+    <div class="container"> 
+     <h2 class="section-title text-center">We’re trusted by our happy users</h2> 
+     <div class="row"> 
+      <div class="col-xs-12"> 
+       <div id="reviews-carousel" class="carousel slide" data-ride="carousel" data-interval="10000"> 
+        <div class="carousel-inner" role="listbox"> 
+         <div class="item active"> 
+          <div class="carousel-caption text-center"> 
+           <div class="review-text">
+             “Really simple and secure solution for quick and easy VPS data backup configuration.” 
+           </div> 
+           <div class="review-author">
+            Leonid Toshchev, Co-founder &amp; CTO
+           </div> 
+           <div class="review-image">
+            DataMonkey.pro
+           </div> 
+          </div> 
+         </div> 
+         <div class="item"> 
+          <div class="carousel-caption text-center"> 
+           <div class="review-text">
+             “I no longer worry that a programmer forgot to run a backup for one of the projects. Many thanks for backup reports. They are very handy and useful.” 
+           </div> 
+           <div class="review-author">
+            Oleg Balbekov, CEO
+           </div> 
+           <div class="review-image">
+            Vexor.io
+           </div> 
+          </div> 
+         </div> 
+         <div class="item"> 
+          <div class="carousel-caption text-center"> 
+           <div class="review-text">
+             “For our projects we always needed a simple and reliable backup solution. BitCalm is the one — quick and secure.” 
+           </div> 
+           <div class="review-author">
+            Alexey Krasnov, CEO
+           </div> 
+           <div class="review-image">
+            CloudLayar.com
+           </div> 
+          </div> 
+         </div> 
+         <div class="item"> 
+          <div class="carousel-caption text-center"> 
+           <div class="review-text">
+             “This is a really nice and interesting backup solution with user-friendly web-interface, especially compared to a purely console and scary tools for nerds. We will recommend this service to our customers.” 
+           </div> 
+           <div class="review-author">
+            Andrey Vasiliev, CTO
+           </div> 
+           <div class="review-image">
+            WooServers.com
+           </div> 
+          </div> 
+         </div> 
+         <div class="item"> 
+          <div class="carousel-caption text-center"> 
+           <div class="review-text">
+             “This is an excellent technical solution for backups. Regular tasks of backup configuration no longer take so much of my time.” 
+           </div> 
+           <div class="review-author">
+            Theo Chamley, Sysadmin
+           </div> 
+           <div class="review-image">
+            Oxalide.com
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <a class="left carousel-control" href=".carousel" role="button" data-slide="prev"> <span class="sprite icon-carousel-left-button"></span> </a> 
+        <a class="right carousel-control" href=".carousel" role="button" data-slide="next"> <span class="sprite icon-carousel-right-button"></span> </a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="blue-background"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-sm-6 col-sm-offset-3"> 
+       <div class="row"> 
+        <div class="col-sm-12 text-center bottom-block-title">
+          Configure your server data
+         <br> backup in 1 minute 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-sm-12 text-center bottom-block-tip">
+          Sign up for BitCalm 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1 bottom-form"> 
+       <div class="row"> 
+        <div class="col-sm-4 col-md-4 signup-col"> 
+         <input class="start-input signup-form-email" placeholder="Email address" type="text"> 
+        </div> 
+        <div class="col-sm-3 col-md-4 signup-col"> 
+         <input class="start-input signup-form-password" placeholder="Password" type="password"> 
+        </div> 
+        <div class="col-sm-5 col-md-4 signup-col"> 
+         <div class="start-button signup-form-button noselect">
+          Configure backup in 1 minute
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="footer"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-sm-3"> 
+       <div class="footer-logo"> 
+        <i class="sprite icon-bitcalm-footer-logo"></i> 
+       </div> 
+       <div class="footer-copyright">
+         Copyright © 2014 
+        <br> BitCalm LLC 
+        <br> Address: 654&nbsp;Croswell&nbsp;Ave, Grand&nbsp;Rapids, Michigan 
+        <br> 
+        <i class="sprite icon-footer-phone"></i> 
+       </div> 
+       <!--<a class="footer-link" href="/terms/" target="_blank">Terms, Privacy & Copyright Security</a>--> 
+      </div> 
+      <div class="col-sm-3"> 
+       <h3 class="footer-title">PRODUCT</h3> 
+       <!--<a class="footer-link" href="">Pricing</a>--> 
+       <a class="footer-link" href="http://blog.bitcalm.com/">Blog</a> 
+       <a class="footer-link" href="/features/">Features</a> 
+       <a class="footer-link" href="https://github.com/bitcalm/" target="_blank">Opensource code <i class="sprite icon-footer-external-icon"></i></a> 
+      </div> 
+      <!--<div class="col-sm-3">--> 
+      <!--<h3 class="footer-title">HELP</h3>--> 
+      <!--<a class="footer-link" href="">FAQ</a>--> 
+      <!--<a class="footer-link" href="">Feedback</a>--> 
+      <!--<a class="footer-link" href="">Refferal program</a>--> 
+      <!--<a class="footer-link" href="">Knowledgebase</a>--> 
+      <!--</div>--> 
+      <div class="col-sm-3"> 
+       <h3 class="footer-title">CONNECT</h3> 
+       <a class="footer-link" href="mailto:info@bitcalm.com"><i class="sprite icon-footer-email-icon"></i>&nbsp;info@bitcalm.com</a> 
+       <a class="footer-link" href="https://fb.com/bitcalm" target="_blank"><i class="sprite icon-footer-fb-icon"></i>&nbsp;fb.com/bitcalm</a> 
+       <a class="footer-link" href="https://twitter.com/@bitcalm" target="_blank"><i class="sprite icon-footer-twitter-icon"></i>&nbsp;twitter.com/@bitcalm</a> 
+       <!--<a class="footer-link" href="https://linkedin.com/bitcalm" target="_blank"><i class="sprite icon-footer-linkedin-icon"></i>&nbsp; linkedin.com/bitcalm</a>--> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+  </div> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+  <!-- build:remove:dev --> 
+  <script src="/static/landing/dist/scripts.min.js?20141204"></script> 
+  <!-- /build --> 
+  <script>
+    var yaParams = {ab_test_landing: "landing_A2"};
+    var dimensionValue = 'Вариант A2 для УТП';
+</script> 
+  <!-- Yandex.Metrika counter --> 
+  <script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter25015670 = new Ya.Metrika({
+                id:25015670,
+                webvisor:true,
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                trackHash:true
+            });
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script> 
+  <noscript>
+   <div>
+    <img src="//mc.yandex.ru/watch/25015670" style="position:absolute; left:-9999px;" alt="">
+   </div>
+  </noscript> 
+  <!-- /Yandex.Metrika counter --> 
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    (function () {
+        var userUUID = "",
+            userGaId = "";
+        /*
+        
+        
+        */
+        if (userUUID.length && userGaId.length) {
+            /*
+            
+            
+            */
+            ga('create', 'UA-51356996-1', {
+                'clientId': userGaId
+            });
+        } else {
+            ga('create', 'UA-51356996-1', 'auto');
+        }
+
+        if (userUUID.length) {
+            ga('set', '&uid', userUUID);
+        }
+
+        /**/
+        ga(function(tracker) {
+            var clientId = tracker.get('clientId');
+            document.cookie = "_ga_cid=" + clientId + "; path=/";
+            ga('set', 'dimension3', clientId);
+        });
+
+        if (userUUID.length) {
+           /*
+             */
+           ga('set', 'dimension2', userUUID);
+        }
+
+        if (window.dimensionValue) {
+            /**/
+            ga('set', 'dimension1', dimensionValue);
+        }
+
+
+
+        ga('send', 'pageview', {
+            'page': location.pathname + location.search + location.hash
+        });
+    })();
+
+</script>  
+ </body>
+</html>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html id="ie8" lang="en-US"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-US">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width"> 
+  <meta name="msvalidate.01" content="F7C60ADE505B722CD3425AB42C597280"> 
+  <link rel="profile" href="//gmpg.org/xfn/11"> 
+  <link rel="pingback" href="xmlrpc.php"> 
+  <title>Takipi blog - Server Debugging Made Easy</title> 
+  <link rel="shortcut icon" href="//takipi.wpengine.com/wp-content/uploads/2013/03/takipi2.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//takipi.wpengine.com/wp-content/uploads/2013/03/takipi2.png"> 
+  <script type="text/javascript">
+
+gau_removeUtms = function()
+{
+  if (window.history &&
+	window.history.replaceState &&
+	window.location.hash.indexOf("__utma") > 0)
+  {
+  	var newAnchor = window.location.hash.indexOf("__utma");
+  	
+  	var newUrl = window.location.pathname +
+					window.location.search +
+				 	window.location.hash.substring(0, newAnchor - 1)
+
+	window.history.replaceState({}, "", newUrl);
+  }
+};
+					window.___gcfg = {lang: 'en-US'}; // This fixes G+1 button orientation
+
+					var _gas = _gas || [];
+
+					_gas.push(['_setAccount', 'UA-29184077-8']);
+					_gas.push(['_setAccount', 'UA-29184077-4']);
+					_gas.push(['_setAllowLinker', true]);
+					_gas.push(['_setAllowAnchor', true]);
+					_gas.push(['_setDomainName', 'takipiblog.com']);
+					_gas.push(['_setDomainName', 'takipioncode.com']);
+					_gas.push(['_setDomainName', 'takipi.com']);
+					_gas.push(['_gasMultiDomain', 'click']);
+					_gas.push(['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js']);
+					_gas.push(['_trackPageview']);
+					_gas.push(['_gasTrackForms']);
+					_gas.push(['_gasTrackOutboundLinks']);
+					_gas.push(['_gasTrackMaxScroll']);
+					_gas.push(['_gasTrackDownloads', {category: 'Installer Downloads', extensions: 'msi'}]);
+					_gas.push(['_gasTrackVideo']);
+					_gas.push(['_gasTrackAudio']);
+					_gas.push(['_gasTrackYoutube', {force: true}]);
+					_gas.push(['_gasTrackMailto']);
+					_gas.push(gau_removeUtms);
+
+					(function() {
+					var ga = document.createElement('script');
+					ga.id = 'gas-script';
+					ga.setAttribute('data-use-dcjs', 'false'); // CHANGE TO TRUE FOR DC.JS SUPPORT
+					ga.type = 'text/javascript';
+					ga.async = true;
+					ga.src = '//cdnjs.cloudflare.com/ajax/libs/gas/1.11.0/gas.min.js';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(ga, s);
+					})();
+				</script> 
+  <link rel="alternate" type="application/rss+xml" title="Takipi Blog » Feed" href="feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Takipi Blog » Comments Feed" href="comments/feed/"> 
+  <link rel="stylesheet" id="digg-digg-css" href="wp-content/plugins/digg-digg/css/diggdigg-style.css?ver=5.3.6" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="standard-activity-tabs-css" href="wp-content/themes/standard/lib/activity/css/widget.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="gcse-widget-css" href="wp-content/themes/standard/lib/google-custom-search/css/widget.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="standard-ad-300x250-widget-css" href="wp-content/themes/standard/lib/standard-ad-300x250/css/widget.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="standard-ad-125x125-widget-css" href="wp-content/themes/standard/lib/standard-ad-125x125/css/widget.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="standard-ad-468x60-css" href="wp-content/themes/standard/lib/standard-ad-billboard/css/widget.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="standard-personal-image-widget-css" href="wp-content/themes/standard/lib/personal-image/css/widget.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="standard-influence-css" href="wp-content/themes/standard/lib/influence/css/widget.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="fancybox-css" href="wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.6.pack.css?ver=1.5.6" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="bootstrap-css" href="wp-content/themes/standard/css/lib/bootstrap.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="bootstrap-responsive-css" href="wp-content/themes/standard/css/lib/bootstrap-responsive.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="standard-css" href="wp-content/themes/standard/style.css?ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="takipi-css" href="wp-content/themes/standard/takipi3.css?ver=4.0.1" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://blog.takipi.com/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script> 
+  <script type="text/javascript" src="http://blog.takipi.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://blog.takipi.com/wp-content/plugins/q2w3-fixed-widget/js/q2w3-fixed-widget.min.js?ver=4.0.6"></script> 
+  <script type="text/javascript" src="http://blog.takipi.com/wp-content/themes/standard/js/lib/bootstrap/bootstrap.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://blog.takipi.com/wp-content/themes/standard/js/lib/jquery.fitvids.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://blog.takipi.com/wp-content/themes/standard/js/lib/jquery.base64.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://blog.takipi.com/wp-content/themes/standard/js/theme.js?ver=4.0.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml"> 
+  <meta name="description" content="Takipi blog - Server Debugging Made Easy"> 
+  <meta name="keywords" content="takipi, server, debug, java, scala, production, staging"> 
+  <link rel="next" href="page/2/"> 
+  <link rel="canonical" href="http://blog.takipi.com/"> 
+  <style type="text/css"> #site-title, #site-description, #logo { clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); } </style> 
+  <script type="text/javascript">
+	/* <![CDATA[ */
+	var fb_timeout = null;
+	var fb_opts = { 'overlayShow' : true, 'hideOnOverlayClick' : true, 'showCloseButton' : true, 'centerOnScroll' : true, 'enableEscapeButton' : true, 'autoScale' : true };
+	var easy_fancybox_handler = function(){
+	/* IMG */
+	var fb_IMG_select = 'a[href*=".jpg"]:not(.nofancybox), area[href*=".jpg"]:not(.nofancybox), a[href*=".jpeg"]:not(.nofancybox), area[href*=".jpeg"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox), area[href*=".png"]:not(.nofancybox)';
+	jQuery(fb_IMG_select).addClass('fancybox');
+	var fb_IMG_sections = jQuery('div.gallery ');
+	fb_IMG_sections.each(function() { jQuery(this).find(fb_IMG_select).attr('rel', 'gallery-' + fb_IMG_sections.index(this)); });
+	jQuery('a.fancybox, area.fancybox, li.fancybox a:not(li.nofancybox a)').fancybox( jQuery.extend({}, fb_opts, { 'transitionIn' : 'elastic', 'easingIn' : 'easeOutBack', 'transitionOut' : 'elastic', 'easingOut' : 'easeInBack', 'opacity' : false, 'hideOnContentClick' : false, 'titleShow' : true, 'titlePosition' : 'over', 'titleFromAlt' : true, 'showNavArrows' : true, 'enableKeyboardNav' : true, 'cyclic' : false }) );
+	/* Auto-click */ 
+	jQuery('#fancybox-auto').trigger('click');
+	}
+	/* ]]> */
+	</script> 
+  <style type="text/css"> .fancybox-hidden{display:none}.rtl #fancybox-left{left:auto;right:0px}.rtl #fancybox-right{left:0px;right:auto}.rtl #fancybox-right-ico{background-position:-40px -30px}.rtl #fancybox-left-ico{background-position:-40px -60px}.rtl .fancybox-title-over{text-align:right}.rtl #fancybox-left-ico,.rtl #fancybox-right-ico{right:-9999px}.rtl #fancybox-right:hover span{right:auto;left:20px}.rtl #fancybox-left:hover span{right:20px}#fancybox-img{max-width:none;max-height:none} </style> 
+  <!--[if lt IE 8]> <style type="text/css"> .fancybox-ie6 #fancybox-close{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_close.png",sizingMethod="scale")} .fancybox-ie6 #fancybox-left-ico{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_nav_left.png",sizingMethod="scale")} .fancybox-ie6 #fancybox-right-ico{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_nav_right.png",sizingMethod="scale")} .fancybox-ie6 #fancybox-title-over{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_title_over.png",sizingMethod="scale");zoom:1} .fancybox-ie6 #fancybox-title-float-left{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_title_left.png",sizingMethod="scale")} .fancybox-ie6 #fancybox-title-float-main{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_title_main.png",sizingMethod="scale")} .fancybox-ie6 #fancybox-title-float-right{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_title_right.png",sizingMethod="scale")} .fancybox-ie6 #fancybox-bg-w,.fancybox-ie6 #fancybox-bg-e,.fancybox-ie6 #fancybox-left,.fancybox-ie6 #fancybox-right,#fancybox-hide-sel-frame{height:expression(this.parentNode.clientHeight+"px")} #fancybox-loading.fancybox-ie6{position:absolute;margin-top:0;top:expression((-20+(document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2)+(ignoreMe=document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+"px")} #fancybox-loading.fancybox-ie6 div{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_loading.png", sizingMethod="scale")} .fancybox-ie #fancybox-bg-n{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_n.png",sizingMethod="scale")} .fancybox-ie #fancybox-bg-ne{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_ne.png",sizingMethod="scale")} .fancybox-ie #fancybox-bg-e{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_e.png",sizingMethod="scale")} .fancybox-ie #fancybox-bg-se{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_se.png",sizingMethod="scale")} .fancybox-ie #fancybox-bg-s{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_s.png",sizingMethod="scale")} .fancybox-ie #fancybox-bg-sw{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_sw.png",sizingMethod="scale")} .fancybox-ie #fancybox-bg-w{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_w.png",sizingMethod="scale")} .fancybox-ie #fancybox-bg-nw{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_nw.png",sizingMethod="scale")} </style> <![endif]--> 
+  <!--[if IE 8]> <style type="text/css"> .fancybox-ie #fancybox-bg-n{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_n.png",sizingMethod="scale")'} .fancybox-ie #fancybox-bg-ne{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_ne.png",sizingMethod="scale")'} .fancybox-ie #fancybox-bg-e{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_e.png",sizingMethod="scale")'} .fancybox-ie #fancybox-bg-se{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_se.png",sizingMethod="scale")'} .fancybox-ie #fancybox-bg-s{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_s.png",sizingMethod="scale")'} .fancybox-ie #fancybox-bg-sw{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_sw.png",sizingMethod="scale")'} .fancybox-ie #fancybox-bg-w{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_w.png",sizingMethod="scale")'} .fancybox-ie #fancybox-bg-nw{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_nw.png",sizingMethod="scale")'} </style> <![endif]--> 
+  <script type="text/javascript">
+			function addMixpanelId(href) {  
+  try {
+    var param = "mp="+mixpanel.get_distinct_id();
+
+    if (href.charAt(href.length - 1) === '?') //Very unlikely
+        return href + param;
+    else if (href.indexOf('?') > 0)
+        return href + '&' + param;
+    else
+        return href + '?' + param;
+  } catch (e) { }
+
+  return href;
+}
+
+			function trackOutboundLink(link, eventAction, eventValue) { 
+				try { 
+					_gas.push(['_trackEvent', "Takipi Outbound" , eventAction, eventValue]);
+					_gas.push(['_setCustomVar', 5, 'internal_campaign2', eventAction+'-'+eventValue, 2]);
+				} catch(err){}
+				
+				link.href = addMixpanelId(link.href);
+					
+				if (link.target != "_blank")
+				{
+					setTimeout(function() {
+						document.location.href = link.href;
+					}, 150);
+				}
+			}
+		</script> 
+  <style type="text/css"> .syntaxhighlighter { overflow-y: hidden !important; overflow-x: auto !important; } </style> 
+  <script type="text/javascript">
+		var MIXPANEL_API_KEY 		= '483bb4fc0b55c2aa112d91af0438ab7f';
+
+		mp_init = function()
+		{
+			mixpanel.init(MIXPANEL_API_KEY);
+		};
+
+		getParameterByName = function(name)
+		{
+			name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			
+			var regexS = "[\\?&]" + name + "=([^&#]*)";
+			var regex = new RegExp(regexS);
+			var results = regex.exec(window.location.search);
+			
+			if (results == null)
+			{
+				return "";
+			}
+			else
+			{
+				return decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+		};
+
+		mp_people_set_once_utm = function()
+		{
+			var campaign_keywords = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+		    var keywordIndex;
+
+		    var props = {};
+		    var hasProps = false;
+		    for (keywordIndex = 0; keywordIndex < campaign_keywords.length; ++keywordIndex)
+		    {
+		    	campaignKeyword = campaign_keywords[keywordIndex];
+		    	var campaignKeyWordValue = getParameterByName(campaignKeyword);
+
+		    	if (campaignKeyWordValue.length > 0)
+		    	{
+		    		props[campaignKeyword] = campaignKeyWordValue;
+		    		hasProps = true;
+		    	}
+		    }
+
+		    if (hasProps)
+		    {
+				mixpanel.people.set_once(props);
+			}
+		};
+
+		mp_people_set_once_start = function()
+		{
+			props = {"First seen": new Date(),
+				"First blog seen": new Date(),
+				 "Initial referrer": document.referrer,
+				"Initial blog referrer": document.referrer,
+			    	 "Visitor first page": document.location.href,
+				"Blog first page": document.location.href};
+
+			mixpanel.people.set_once(props);
+		};
+
+		mp_blog_default_init = function()
+		{
+			mp_init();
+			mp_people_set_once_start();
+			mp_people_set_once_utm();
+		};
+		</script> 
+  <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+		typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+		b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+		mp_blog_default_init();
+		</script> 
+ </head> 
+ <body class="home blog"> 
+  <div class="navigationWrapper"> 
+   <div id="takipi-header"> 
+    <div class="navigation"> 
+     <div class="internal"> 
+      <div class="logoHolder"> 
+       <a class="takipilogo" href="//www.takipi.com/" onclick="trackOutboundLink(this, 'navigation', 'index'); return false;"></a> 
+      </div> 
+      <div class="navHolder"> 
+       <ul id="nav"> 
+        <li><a id="navigation-features" class="underlinelink" href="//www.takipi.com/features" onclick="trackOutboundLink(this, 'navigation', 'features'); return false;">Features</a></li> 
+        <li><a id="navigation-pricing" class="underlinelink" href="//www.takipi.com/pricing" onclick="trackOutboundLink(this, 'navigation', 'pricing'); return false;">Pricing</a></li> 
+        <li><a id="navigation-starting" class="underlinelink" href="//www.takipi.com/start" onclick="trackOutboundLink(this, 'navigation', 'starting'); return false;">Getting Started</a></li> 
+        <li><a id="navigation-monsters" class="underlinelink" href="//www.takipi.com/monsters" onclick="trackOutboundLink(this, 'navigation', 'monsters'); return false;">Monsters</a></li> 
+        <li><a id="navigation-support" class="underlinelink" href="//www.takipi.com/support" onclick="trackOutboundLink(this, 'navigation', 'support'); return false;">Support</a></li> 
+        <li><a id="navigation-aboutus" class="underlinelink" href="//www.takipi.com/about" onclick="trackOutboundLink(this, 'navigation', 'aboutus'); return false;">About Us</a></li> 
+        <li><a id="navigation-blog" class="underlinelink" href="/">Blog</a></li> 
+       </ul> 
+       <ul id="nav-mobile"> 
+        <li><a id="navigation-features" class="underlinelink" href="//www.takipi.com/features.html" onclick="trackOutboundLink(this, 'mob-navigation', 'features'); return false;">Features</a></li> 
+        <li><a id="navigation-aboutus" class="underlinelink" href="//www.takipi.com/aboutus.html" onclick="trackOutboundLink(this, 'mob-navigation', 'aboutus'); return false;">About Us</a></li> 
+        <li><a id="navigation-login" class="underlinelink loginBtn" href="https://app.takipi.com/" onclick="trackOutboundLink(this, 'mob-navigation', 'login'); return false;">Log in</a></li> 
+       </ul> 
+      </div> 
+      <div class="userHolder"> 
+       <a class="signup" id="navigation-create-accoun" href="https://app.takipi.com/account.html">Sign up</a> 
+       <a class="login" id="navigation-login" href="https://app.takipi.com/">Login</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="imageHeaderWrapper"> 
+    <a href="/"><img src="wp-content/uploads/2014/03/Takipi-blog-site-header5.png" class="imageHeader" width="900px" height="272px"></a> 
+   </div> 
+  </div> 
+  <div id="header" class="imageless"> 
+   <div id="head-wrapper" class="container clearfix"> 
+   </div> 
+  </div> 
+  <div id="wrapper"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div id="main" class="span8 clearfix" role="main"> 
+      <div id="post-692" class="post-692 post type-post status-publish format-standard hentry category-code category-devops category-java category-performance category-takipi clearfix"> 
+       <div class="post-header clearfix"> 
+        <div class="title-wrap clearfix"> 
+         <h2 class="post-title entry-title"> <a href="15-tools-to-use-when-deploying-code-to-production/" rel="bookmark" title="15 Tools Java Developers Should Use After a Major Release">15 Tools Java Developers Should Use After a Major Release</a> </h2> 
+         <div class="post-header-meta"> 
+          <div class="author-box-image"> 
+           <img alt="" src="//1.gravatar.com/avatar/35d3cc95d9df5f8b50ebb728dd94df24?s=36&amp;d=retro&amp;r=G" class="avatar avatar-36 photo" height="36" width="36"> 
+          </div> 
+          <span class="the-author">By <a href="author/alexzhitnitsky/" title="Alex Zhitnitsky">Alex Zhitnitsky</a>&nbsp;—&nbsp;</span> 
+          <span class="the-time updated">December 1, 2014</span> 
+          <span class="the-comment-link">—&nbsp;<a href="15-tools-to-use-when-deploying-code-to-production/#respond" title="Comment on 15 Tools Java Developers Should Use After a Major Release"><span class="dsq-postid" rel="692 http://blog.takipi.com/?p=692">Leave a comment</span></a></span> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="content-692" class="entry-content clearfix"> 
+        <div class="dd_post_share dd_post_share_left">
+         <div class="dd_buttons">
+          <div class="dd_button">
+           <fb:like href="15-tools-to-use-when-deploying-code-to-production/" send="false" show_faces="false" layout="button_count" width="92"></fb:like>
+          </div>
+          <div class="dd_button">
+           <script type="IN/Share" data-url="http://blog.takipi.com/15-tools-to-use-when-deploying-code-to-production/" data-counter="right"></script>
+          </div>
+          <div class="dd_button">
+           <g:plusone size="medium" href="15-tools-to-use-when-deploying-code-to-production/"></g:plusone>
+          </div>
+          <div class="dd_button">
+           <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.takipi.com/15-tools-to-use-when-deploying-code-to-production/" data-count="horizontal" data-text="15 Tools Java Developers Should Use After a Major Release" data-via="takipid"></a>
+          </div>
+         </div>
+        </div>
+        <p><a href="wp-content/uploads/2014/12/FredOps.jpg"><img class="alignnone wp-image-694 size-full" src="wp-content/uploads/2014/12/FredOps.jpg" alt="FredOps 15 Tools Java Developers Should Use After a Major Release" width="580" height="300" title="15 Tools Java Developers Should Use After a Major Release"></a></p> 
+        <p><strong>The ultimate&nbsp;survival kit for new deployments</strong></p> 
+        <p>Unlike toying around with zombie apocalypse scenarios, debating the machete versus the shotgun, troubles in Java production environments are quite real, especially after new deployments (but it’s good to be ready for zombies <a href="//www.dudeiwantthat.com/outdoors/tools/3-day-all-inclusive-zombie-7877.jpg">as well</a>). Taking this a step further, it’s much easier to get into trouble today than ever before when new code shipping cycles are cut down to weeks and sometimes days or even multiple times a day. To avoid being run down by the zombies, here’s the survival kit setup you need to fully understand the impact of new code on your system. Did anything break? Is it slowing you down? And how to fix it? Here’s the tool set and architecture to crack it once and for all.</p> 
+        <p> <a href="15-tools-to-use-when-deploying-code-to-production/#more-692" class="more-link">Continue Reading…</a></p> 
+        <script type="text/javascript"> </script> 
+       </div> 
+       <div class="post-meta clearfix"> 
+        <div class="meta-date-cat-tags pull-left"> 
+         <span class="the-category">In <a href="category/code/">Code</a>, <a href="category/devops/">DevOps</a>, <a href="category/code/java/">Java</a>, <a href="category/performance/">Performance</a>, <a href="category/takipi/">Takipi</a></span> 
+        </div> 
+        <div class="meta-comment-link pull-right"> 
+         <a class="pull-right post-link" href="15-tools-to-use-when-deploying-code-to-production/" title="permalink "><img src="wp-content/themes/standard/images/icn-permalink.png" alt="permalink "></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="post-682" class="post-682 post type-post status-publish format-standard hentry category-clojure category-performance clearfix"> 
+       <div class="post-header clearfix"> 
+        <div class="title-wrap clearfix"> 
+         <h2 class="post-title entry-title"> <a href="clojure-at-scale-why-python-just-wasnt-enough-for-appsflyer/" rel="bookmark" title="Clojure at Scale: Why Python Just Wasn’t Enough for AppsFlyer">Clojure at Scale: Why Python Just Wasn’t Enough for AppsFlyer</a> </h2> 
+         <div class="post-header-meta"> 
+          <div class="author-box-image"> 
+           <img alt="" src="//1.gravatar.com/avatar/35d3cc95d9df5f8b50ebb728dd94df24?s=36&amp;d=retro&amp;r=G" class="avatar avatar-36 photo" height="36" width="36"> 
+          </div> 
+          <span class="the-author">By <a href="author/alexzhitnitsky/" title="Alex Zhitnitsky">Alex Zhitnitsky</a>&nbsp;—&nbsp;</span> 
+          <span class="the-time updated">November 17, 2014</span> 
+          <span class="the-comment-link">—&nbsp;<a href="clojure-at-scale-why-python-just-wasnt-enough-for-appsflyer/#comments" title="Comment on Clojure at Scale: Why Python Just Wasn’t Enough for AppsFlyer"><span class="dsq-postid" rel="682 http://www.takipiblog.com/?p=682">4 Comments</span></a></span> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="content-682" class="entry-content clearfix"> 
+        <div class="dd_post_share dd_post_share_left">
+         <div class="dd_buttons">
+          <div class="dd_button">
+           <fb:like href="//www.takipiblog.com/clojure-at-scale-why-python-just-wasnt-enough-for-appsflyer/" send="false" show_faces="false" layout="button_count" width="92"></fb:like>
+          </div>
+          <div class="dd_button">
+           <script type="IN/Share" data-url="http://www.takipiblog.com/clojure-at-scale-why-python-just-wasnt-enough-for-appsflyer/" data-counter="right"></script>
+          </div>
+          <div class="dd_button">
+           <g:plusone size="medium" href="//www.takipiblog.com/clojure-at-scale-why-python-just-wasnt-enough-for-appsflyer/"></g:plusone>
+          </div>
+          <div class="dd_button">
+           <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.takipiblog.com/clojure-at-scale-why-python-just-wasnt-enough-for-appsflyer/" data-count="horizontal" data-text="Clojure at Scale: Why Python Just Wasn't Enough for AppsFlyer" data-via="takipid"></a>
+          </div>
+         </div>
+        </div>
+        <p><strong>A first hand experience and an introduction to Clojure at scale</strong></p> 
+        <p>Still considered a bit of an esoteric language, Clojure is one of the JVM languages that get us excited. There aren’t many stories around about why companies start using Clojure or how they use it to build systems at Scale. We were lucky to hear an excellent example of using Clojure during a demo of <a href="//www.takipi.com/?utm_source=Blog&amp;amp;utm_medium=in-post&amp;amp;utm_content=clojurescale&amp;amp;utm_campaign=clojure">Takipi’s error viewer for Clojure</a> at AppsFlyer’s office where we learned about the architecture that powers their mobile app measuring and tracking platform.</p> 
+        <p>In this post we’re sharing with you the experience of our new friends from AppsFlyer, Adi Shacham-Shavit, who manages the R&amp;D department, and Ron Klein, a senior backend developer. First thing’s first, a huge thanks to Ron and Adi who treated us to behind the scenes of Clojure at <a href="//www.appsflyer.com/" target="_blank">AppsFlyer</a>! If you have any questions for them and interested to learn more, please feel free to use the comments section below.</p> 
+        <p> <a href="clojure-at-scale-why-python-just-wasnt-enough-for-appsflyer/#more-682" class="more-link">Continue Reading…</a></p> 
+        <script type="text/javascript"> </script> 
+       </div> 
+       <div class="post-meta clearfix"> 
+        <div class="meta-date-cat-tags pull-left"> 
+         <span class="the-category">In <a href="category/code/clojure/">Clojure</a>, <a href="category/performance/">Performance</a></span> 
+        </div> 
+        <div class="meta-comment-link pull-right"> 
+         <a class="pull-right post-link" href="clojure-at-scale-why-python-just-wasnt-enough-for-appsflyer/" title="permalink "><img src="wp-content/themes/standard/images/icn-permalink.png" alt="permalink "></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="post-674" class="post-674 post type-post status-publish format-standard hentry category-java clearfix"> 
+       <div class="post-header clearfix"> 
+        <div class="title-wrap clearfix"> 
+         <h2 class="post-title entry-title"> <a href="java-code-hacks-the-ultimate-deadlock-workaround/" rel="bookmark" title="Java Code Hacks – The Ultimate Deadlock Workaround">Java Code Hacks – The Ultimate Deadlock Workaround</a> </h2> 
+         <div class="post-header-meta"> 
+          <div class="author-box-image"> 
+           <img alt="" src="//1.gravatar.com/avatar/35d3cc95d9df5f8b50ebb728dd94df24?s=36&amp;d=retro&amp;r=G" class="avatar avatar-36 photo" height="36" width="36"> 
+          </div> 
+          <span class="the-author">By <a href="author/alexzhitnitsky/" title="Alex Zhitnitsky">Alex Zhitnitsky</a>&nbsp;—&nbsp;</span> 
+          <span class="the-time updated">November 10, 2014</span> 
+          <span class="the-comment-link">—&nbsp;<a href="java-code-hacks-the-ultimate-deadlock-workaround/#respond" title="Comment on Java Code Hacks – The Ultimate Deadlock Workaround"><span class="dsq-postid" rel="674 http://www.takipiblog.com/?p=674">Leave a comment</span></a></span> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="content-674" class="entry-content clearfix"> 
+        <div class="dd_post_share dd_post_share_left">
+         <div class="dd_buttons">
+          <div class="dd_button">
+           <fb:like href="//www.takipiblog.com/java-code-hacks-the-ultimate-deadlock-workaround/" send="false" show_faces="false" layout="button_count" width="92"></fb:like>
+          </div>
+          <div class="dd_button">
+           <script type="IN/Share" data-url="http://www.takipiblog.com/java-code-hacks-the-ultimate-deadlock-workaround/" data-counter="right"></script>
+          </div>
+          <div class="dd_button">
+           <g:plusone size="medium" href="//www.takipiblog.com/java-code-hacks-the-ultimate-deadlock-workaround/"></g:plusone>
+          </div>
+          <div class="dd_button">
+           <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.takipiblog.com/java-code-hacks-the-ultimate-deadlock-workaround/" data-count="horizontal" data-text="Java Code Hacks - The Ultimate Deadlock Workaround" data-via="takipid"></a>
+          </div>
+         </div>
+        </div>
+        <p><a href="wp-content/uploads/2014/10/Leaking-Pipe.jpg"><img class="alignnone size-full wp-image-651" src="wp-content/uploads/2014/10/Leaking-Pipe.jpg" alt="Leaking Pipe Java Code Hacks The Ultimate Deadlock Workaround" width="580" height="300" title="Java Code Hacks The Ultimate Deadlock Workaround"></a></p> 
+        <p><strong>The quick and dirty deadlock solution to get those threads off your back</strong></p> 
+        <p>A few weeks ago we’ve asked you to send us your best Java code hacks, and share the stories behind them. What exactly is a code hack? We’ve asked what’s the most useful debugging trick you use, what are some of the things you do that most developers aren’t aware of and how you managed to solve that issue that was bugging you for way too long. Basically any non-straight forward solution using a piece of gum and a <a href="//img.wonderhowto.com/img/54/44/63403557981278/0/howto-unzip-dress-with-paperclip-macgyver-style.w654.jpg">paperclip</a>.</p> 
+        <p>This post is the first story in the series, kicking it off with <a href="//cmpxchg16.me/" target="_blank">Uri Shamay</a>, Principal Lead System Software Engineer at Akamai, who shares a story of deadlock madness.</p> 
+        <p style="direction: ltr;">Thanks Uri, enjoy your new&nbsp;Kano DIY computer!</p> 
+        <h3 style="direction: ltr;"><span style="text-decoration: underline;">Share your hack and get a Kano computer –&nbsp;<a href="tell-us-your-best-java-coding-hacks-and-win-the-kano-diy-computer/?utm_source=blog&amp;utm_medium=inpost&amp;utm_content=sendus&amp;utm_campaign=hackspost" target="_blank">Send us</a> your story!</span></h3> 
+        <p> <a href="java-code-hacks-the-ultimate-deadlock-workaround/#more-674" class="more-link">Continue Reading…</a></p> 
+        <script type="text/javascript"> </script> 
+       </div> 
+       <div class="post-meta clearfix"> 
+        <div class="meta-date-cat-tags pull-left"> 
+         <span class="the-category">In <a href="category/code/java/">Java</a></span> 
+        </div> 
+        <div class="meta-comment-link pull-right"> 
+         <a class="pull-right post-link" href="java-code-hacks-the-ultimate-deadlock-workaround/" title="permalink "><img src="wp-content/themes/standard/images/icn-permalink.png" alt="permalink "></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="post-669" class="post-669 post type-post status-publish format-standard hentry category-cloud category-java category-performance clearfix"> 
+       <div class="post-header clearfix"> 
+        <div class="title-wrap clearfix"> 
+         <h2 class="post-title entry-title"> <a href="beyond-thread-pools-java-concurrency-is-not-as-bad-as-you-think/" rel="bookmark" title="Beyond Thread Pools: Java Concurrency is Not as Bad as You Think">Beyond Thread Pools: Java Concurrency is Not as Bad as You Think</a> </h2> 
+         <div class="post-header-meta"> 
+          <div class="author-box-image"> 
+           <img alt="" src="//1.gravatar.com/avatar/35d3cc95d9df5f8b50ebb728dd94df24?s=36&amp;d=retro&amp;r=G" class="avatar avatar-36 photo" height="36" width="36"> 
+          </div> 
+          <span class="the-author">By <a href="author/alexzhitnitsky/" title="Alex Zhitnitsky">Alex Zhitnitsky</a>&nbsp;—&nbsp;</span> 
+          <span class="the-time updated">November 4, 2014</span> 
+          <span class="the-comment-link">—&nbsp;<a href="beyond-thread-pools-java-concurrency-is-not-as-bad-as-you-think/#comments" title="Comment on Beyond Thread Pools: Java Concurrency is Not as Bad as You Think"><span class="dsq-postid" rel="669 http://www.takipiblog.com/?p=669">3 Comments</span></a></span> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="content-669" class="entry-content clearfix"> 
+        <div class="dd_post_share dd_post_share_left">
+         <div class="dd_buttons">
+          <div class="dd_button">
+           <fb:like href="//www.takipiblog.com/beyond-thread-pools-java-concurrency-is-not-as-bad-as-you-think/" send="false" show_faces="false" layout="button_count" width="92"></fb:like>
+          </div>
+          <div class="dd_button">
+           <script type="IN/Share" data-url="http://www.takipiblog.com/beyond-thread-pools-java-concurrency-is-not-as-bad-as-you-think/" data-counter="right"></script>
+          </div>
+          <div class="dd_button">
+           <g:plusone size="medium" href="//www.takipiblog.com/beyond-thread-pools-java-concurrency-is-not-as-bad-as-you-think/"></g:plusone>
+          </div>
+          <div class="dd_button">
+           <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.takipiblog.com/beyond-thread-pools-java-concurrency-is-not-as-bad-as-you-think/" data-count="horizontal" data-text="Beyond Thread Pools: Java Concurrency is Not as Bad as You Think" data-via="takipid"></a>
+          </div>
+         </div>
+        </div>
+        <p>&nbsp;</p> 
+        <p><a href="wp-content/uploads/2014/11/Concurrency.jpg"><img class="alignnone size-full wp-image-670" src="wp-content/uploads/2014/11/Concurrency.jpg" alt="Concurrency Beyond Thread Pools: Java Concurrency is Not as Bad as You Think" width="580" height="300" title="Beyond Thread Pools: Java Concurrency is Not as Bad as You Think"></a></p> 
+        <p><b>Apache Hadoop, Apache Spark, Akka, Java 8 streams and Quasar:&nbsp;</b><b>The classic use cases to the newest concurrency approaches for Java developers</b></p> 
+        <p>There’s a lot of chatter going around about newer concepts in concurrency, yet many developers haven’t had a chance to wrap their heads around them yet. In this post we’ll go through the things you need to know about Java 8 streams, Hadoop, Apache Spark, Quasar fibers and the Reactive programming approach – and help you stay in the loop, especially if you’re not working with them on a regular basis. It’s not the future, this is happening right now.</p> 
+        <p> <a href="beyond-thread-pools-java-concurrency-is-not-as-bad-as-you-think/#more-669" class="more-link">Continue Reading…</a></p> 
+        <script type="text/javascript"> </script> 
+       </div> 
+       <div class="post-meta clearfix"> 
+        <div class="meta-date-cat-tags pull-left"> 
+         <span class="the-category">In <a href="category/cloud/">Cloud computing</a>, <a href="category/code/java/">Java</a>, <a href="category/performance/">Performance</a></span> 
+        </div> 
+        <div class="meta-comment-link pull-right"> 
+         <a class="pull-right post-link" href="beyond-thread-pools-java-concurrency-is-not-as-bad-as-you-think/" title="permalink "><img src="wp-content/themes/standard/images/icn-permalink.png" alt="permalink "></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="post-659" class="post-659 post type-post status-publish format-standard hentry category-java clearfix"> 
+       <div class="post-header clearfix"> 
+        <div class="title-wrap clearfix"> 
+         <h2 class="post-title entry-title"> <a href="350-developers-voted-for-features-in-java-9-have-they-decided-the-same-as-oracle/" rel="bookmark" title="350 Developers Voted for Features in Java 9: Do They Agree With Oracle?">350 Developers Voted for Features in Java 9: Do They Agree With Oracle?</a> </h2> 
+         <div class="post-header-meta"> 
+          <div class="author-box-image"> 
+           <img alt="" src="//1.gravatar.com/avatar/35d3cc95d9df5f8b50ebb728dd94df24?s=36&amp;d=retro&amp;r=G" class="avatar avatar-36 photo" height="36" width="36"> 
+          </div> 
+          <span class="the-author">By <a href="author/alexzhitnitsky/" title="Alex Zhitnitsky">Alex Zhitnitsky</a>&nbsp;—&nbsp;</span> 
+          <span class="the-time updated">October 27, 2014</span> 
+          <span class="the-comment-link">—&nbsp;<a href="350-developers-voted-for-features-in-java-9-have-they-decided-the-same-as-oracle/#comments" title="Comment on 350 Developers Voted for Features in Java 9: Do They Agree With Oracle?"><span class="dsq-postid" rel="659 http://www.takipiblog.com/?p=659">5 Comments</span></a></span> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="content-659" class="entry-content clearfix"> 
+        <div class="dd_post_share dd_post_share_left">
+         <div class="dd_buttons">
+          <div class="dd_button">
+           <fb:like href="//www.takipiblog.com/350-developers-voted-for-features-in-java-9-have-they-decided-the-same-as-oracle/" send="false" show_faces="false" layout="button_count" width="92"></fb:like>
+          </div>
+          <div class="dd_button">
+           <script type="IN/Share" data-url="http://www.takipiblog.com/350-developers-voted-for-features-in-java-9-have-they-decided-the-same-as-oracle/" data-counter="right"></script>
+          </div>
+          <div class="dd_button">
+           <g:plusone size="medium" href="//www.takipiblog.com/350-developers-voted-for-features-in-java-9-have-they-decided-the-same-as-oracle/"></g:plusone>
+          </div>
+          <div class="dd_button">
+           <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.takipiblog.com/350-developers-voted-for-features-in-java-9-have-they-decided-the-same-as-oracle/" data-count="horizontal" data-text="350 Developers Voted for Features in Java 9: Do They Agree With Oracle?" data-via="takipid"></a>
+          </div>
+         </div>
+        </div>
+        <p><a href="wp-content/uploads/2014/10/duke9.png"><img class="alignnone size-full wp-image-664" src="wp-content/uploads/2014/10/duke9.png" alt="duke9 350 Developers Voted for Features in Java 9: Do They Agree With Oracle?" width="580" height="300" title="350 Developers Voted for Features in Java 9: Do They Agree With Oracle?"></a></p> 
+        <p><strong>We’ve asked over 350 developers and 3 JCP experts about their Java 9 expectations, here’s what we found out.</strong></p> 
+        <p>When we asked the Java community to share their thoughts about Java 9, we could hardly imagine that the best comment we’ll receive won’t have anything to do with Java: “To make fun of Microsoft, they should skip Java 9 and go straight to Java 10”, wrote John Doe. So thank you anonymous commentator, wherever you are.</p> 
+        <p>Over 350 Java developers participated in this project, which gives us a great overview of the features developers really want to see in the next version. We did see some of the usual suspects, but there were also some features we were surprised to see at the top of the list.</p> 
+        <p>We then asked 3 JCP experts to share the features they’d like to see the most in the next releases, to get a better understanding about the way the actual release is heading down.</p> 
+        <p>&nbsp;</p> 
+        <p> <a href="350-developers-voted-for-features-in-java-9-have-they-decided-the-same-as-oracle/#more-659" class="more-link">Continue Reading…</a></p> 
+        <script type="text/javascript"> </script> 
+       </div> 
+       <div class="post-meta clearfix"> 
+        <div class="meta-date-cat-tags pull-left"> 
+         <span class="the-category">In <a href="category/code/java/">Java</a></span> 
+        </div> 
+        <div class="meta-comment-link pull-right"> 
+         <a class="pull-right post-link" href="350-developers-voted-for-features-in-java-9-have-they-decided-the-same-as-oracle/" title="permalink "><img src="wp-content/themes/standard/images/icn-permalink.png" alt="permalink "></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="post-649" class="post-649 post type-post status-publish format-standard hentry category-java category-takipi clearfix"> 
+       <div class="post-header clearfix"> 
+        <div class="title-wrap clearfix"> 
+         <h2 class="post-title entry-title"> <a href="tell-us-your-best-java-coding-hacks-and-win-the-kano-diy-computer/" rel="bookmark" title="Send Us Your Best Java Hacks and Win a Kano Computer">Send Us Your Best Java Hacks and Win a Kano Computer</a> </h2> 
+         <div class="post-header-meta"> 
+          <div class="author-box-image"> 
+           <img alt="" src="//1.gravatar.com/avatar/35d3cc95d9df5f8b50ebb728dd94df24?s=36&amp;d=retro&amp;r=G" class="avatar avatar-36 photo" height="36" width="36"> 
+          </div> 
+          <span class="the-author">By <a href="author/alexzhitnitsky/" title="Alex Zhitnitsky">Alex Zhitnitsky</a>&nbsp;—&nbsp;</span> 
+          <span class="the-time updated">October 23, 2014</span> 
+          <span class="the-comment-link">—&nbsp;<a href="tell-us-your-best-java-coding-hacks-and-win-the-kano-diy-computer/#respond" title="Comment on Send Us Your Best Java Hacks and Win a Kano Computer"><span class="dsq-postid" rel="649 http://www.takipiblog.com/?p=649">Leave a comment</span></a></span> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="content-649" class="entry-content clearfix"> 
+        <div class="dd_post_share dd_post_share_left">
+         <div class="dd_buttons">
+          <div class="dd_button">
+           <fb:like href="//www.takipiblog.com/tell-us-your-best-java-coding-hacks-and-win-the-kano-diy-computer/" send="false" show_faces="false" layout="button_count" width="92"></fb:like>
+          </div>
+          <div class="dd_button">
+           <script type="IN/Share" data-url="http://www.takipiblog.com/tell-us-your-best-java-coding-hacks-and-win-the-kano-diy-computer/" data-counter="right"></script>
+          </div>
+          <div class="dd_button">
+           <g:plusone size="medium" href="//www.takipiblog.com/tell-us-your-best-java-coding-hacks-and-win-the-kano-diy-computer/"></g:plusone>
+          </div>
+          <div class="dd_button">
+           <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.takipiblog.com/tell-us-your-best-java-coding-hacks-and-win-the-kano-diy-computer/" data-count="horizontal" data-text="Send Us Your Best Java Hacks and Win a Kano Computer" data-via="takipid"></a>
+          </div>
+         </div>
+        </div>
+        <p><a href="wp-content/uploads/2014/10/Leaking-Pipe.jpg"><img class="alignnone size-full wp-image-651" src="wp-content/uploads/2014/10/Leaking-Pipe.jpg" alt="Leaking Pipe Send Us Your Best Java Hacks and Win a Kano Computer" width="580" height="300" title="Send Us Your Best Java Hacks and Win a Kano Computer"></a></p> 
+        <p><strong>What are the most extraordinary pieces of Java code you’ve had the chance to write? Share your story and win a Kano – A Raspberry pi DIY&nbsp;computer kit</strong></p> 
+        <p>Having so much Java code written every day can produce quite a lot of quirks and trouble. It can make you laugh, it can make you cry, but when it finally works it sometimes feels like magic. In this post we’re looking hear your stories from the trenches of your IDE: What’s the most useful debugging trick you use? What are some of the things you do that most developers aren’t aware of? How did you manage to solve that issue that was bugging you for way too long?</p> 
+        <p> <a href="tell-us-your-best-java-coding-hacks-and-win-the-kano-diy-computer/#more-649" class="more-link">Continue Reading…</a></p> 
+        <script type="text/javascript"> </script> 
+       </div> 
+       <div class="post-meta clearfix"> 
+        <div class="meta-date-cat-tags pull-left"> 
+         <span class="the-category">In <a href="category/code/java/">Java</a>, <a href="category/takipi/">Takipi</a></span> 
+        </div> 
+        <div class="meta-comment-link pull-right"> 
+         <a class="pull-right post-link" href="tell-us-your-best-java-coding-hacks-and-win-the-kano-diy-computer/" title="permalink "><img src="wp-content/themes/standard/images/icn-permalink.png" alt="permalink "></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="post-646" class="post-646 post type-post status-publish format-standard hentry category-java clearfix"> 
+       <div class="post-header clearfix"> 
+        <div class="title-wrap clearfix"> 
+         <h2 class="post-title entry-title"> <a href="supercharged-jstack-how-to-debug-your-servers-at-100mph/" rel="bookmark" title="Supercharged jstack: How to Debug Your Servers at 100mph">Supercharged jstack: How to Debug Your Servers at 100mph</a> </h2> 
+         <div class="post-header-meta"> 
+          <div class="author-box-image"> 
+           <img alt="" src="//1.gravatar.com/avatar/b5b16c15aa7081fb42c99544c86b27f8?s=36&amp;d=retro&amp;r=G" class="avatar avatar-36 photo" height="36" width="36"> 
+          </div> 
+          <span class="the-author">By <a href="author/talweiss/" title="Tal Weiss">Tal Weiss</a>&nbsp;—&nbsp;</span> 
+          <span class="the-time updated">October 20, 2014</span> 
+          <span class="the-comment-link">—&nbsp;<a href="supercharged-jstack-how-to-debug-your-servers-at-100mph/#respond" title="Comment on Supercharged jstack: How to Debug Your Servers at 100mph"><span class="dsq-postid" rel="646 http://www.takipiblog.com/?p=646">Leave a comment</span></a></span> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="content-646" class="entry-content clearfix"> 
+        <div class="dd_post_share dd_post_share_left">
+         <div class="dd_buttons">
+          <div class="dd_button">
+           <fb:like href="//www.takipiblog.com/supercharged-jstack-how-to-debug-your-servers-at-100mph/" send="false" show_faces="false" layout="button_count" width="92"></fb:like>
+          </div>
+          <div class="dd_button">
+           <script type="IN/Share" data-url="http://www.takipiblog.com/supercharged-jstack-how-to-debug-your-servers-at-100mph/" data-counter="right"></script>
+          </div>
+          <div class="dd_button">
+           <g:plusone size="medium" href="//www.takipiblog.com/supercharged-jstack-how-to-debug-your-servers-at-100mph/"></g:plusone>
+          </div>
+          <div class="dd_button">
+           <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.takipiblog.com/supercharged-jstack-how-to-debug-your-servers-at-100mph/" data-count="horizontal" data-text="Supercharged jstack: How to Debug Your Servers at 100mph" data-via="takipid"></a>
+          </div>
+         </div>
+        </div>
+        <p><a href="wp-content/uploads/2014/10/Breakdance.jpg"><img class="alignnone size-full wp-image-647" src="wp-content/uploads/2014/10/Breakdance.jpg" alt="Breakdance Supercharged jstack: How to Debug Your Servers at 100mph" width="580" height="300" title="Supercharged jstack: How to Debug Your Servers at 100mph"></a></p> 
+        <p><strong>A guide for&nbsp;using jstack to&nbsp;debug live Java production servers</strong></p> 
+        <p>jstack is like U2 – it’s been with us since the dawn of time, and we can’t seem to be <a href="//support.apple.com/kb/ht6439" target="_blank">rid of it</a>. Jokes aside, jstack is by far one of the handiest tools in your arsenal to debug a live production server. Even so, I still feel it’s deeply underused in terms of its ability to pull you out of the fire when things go bad, so I wanted to share a few ways in which you can supercharge into an even stronger weapon in your war against production bugs.</p> 
+        <p> <a href="supercharged-jstack-how-to-debug-your-servers-at-100mph/#more-646" class="more-link">Continue Reading…</a></p> 
+        <script type="text/javascript"> </script> 
+       </div> 
+       <div class="post-meta clearfix"> 
+        <div class="meta-date-cat-tags pull-left"> 
+         <span class="the-category">In <a href="category/code/java/">Java</a></span> 
+        </div> 
+        <div class="meta-comment-link pull-right"> 
+         <a class="pull-right post-link" href="supercharged-jstack-how-to-debug-your-servers-at-100mph/" title="permalink "><img src="wp-content/themes/standard/images/icn-permalink.png" alt="permalink "></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="post-642" class="post-642 post type-post status-publish format-standard hentry category-java clearfix"> 
+       <div class="post-header clearfix"> 
+        <div class="title-wrap clearfix"> 
+         <h2 class="post-title entry-title"> <a href="which-features-do-developers-really-want-to-see-in-java-9-you-decide/" rel="bookmark" title="Which Features Do Developers Really Want to See in Java 9? You Decide">Which Features Do Developers Really Want to See in Java 9? You Decide</a> </h2> 
+         <div class="post-header-meta"> 
+          <div class="author-box-image"> 
+           <img alt="" src="//1.gravatar.com/avatar/35d3cc95d9df5f8b50ebb728dd94df24?s=36&amp;d=retro&amp;r=G" class="avatar avatar-36 photo" height="36" width="36"> 
+          </div> 
+          <span class="the-author">By <a href="author/alexzhitnitsky/" title="Alex Zhitnitsky">Alex Zhitnitsky</a>&nbsp;—&nbsp;</span> 
+          <span class="the-time updated">October 15, 2014</span> 
+          <span class="the-comment-link">—&nbsp;<a href="which-features-do-developers-really-want-to-see-in-java-9-you-decide/#respond" title="Comment on Which Features Do Developers Really Want to See in Java 9? You Decide"><span class="dsq-postid" rel="642 http://www.takipiblog.com/?p=642">Leave a comment</span></a></span> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="content-642" class="entry-content clearfix"> 
+        <div class="dd_post_share dd_post_share_left">
+         <div class="dd_buttons">
+          <div class="dd_button">
+           <fb:like href="//www.takipiblog.com/which-features-do-developers-really-want-to-see-in-java-9-you-decide/" send="false" show_faces="false" layout="button_count" width="92"></fb:like>
+          </div>
+          <div class="dd_button">
+           <script type="IN/Share" data-url="http://www.takipiblog.com/which-features-do-developers-really-want-to-see-in-java-9-you-decide/" data-counter="right"></script>
+          </div>
+          <div class="dd_button">
+           <g:plusone size="medium" href="//www.takipiblog.com/which-features-do-developers-really-want-to-see-in-java-9-you-decide/"></g:plusone>
+          </div>
+          <div class="dd_button">
+           <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.takipiblog.com/which-features-do-developers-really-want-to-see-in-java-9-you-decide/" data-count="horizontal" data-text="Which Features Do Developers Really Want to See in Java 9? You Decide" data-via="takipid"></a>
+          </div>
+         </div>
+        </div>
+        <p><a href="wp-content/uploads/2014/09/Java-9-Telescope.png"><img class="alignnone size-full wp-image-567" src="wp-content/uploads/2014/09/Java-9-Telescope.png" alt="Java 9 Telescope Which Features Do Developers Really Want to See in Java 9? You Decide" width="580" height="300" title="Which Features Do Developers Really Want to See in Java 9? You Decide"></a></p> 
+        <p><b>Java is evolving right before our eyes, what do you have to say about it?</b></p> 
+        <p>Java 9 is fast approaching, and with more features being added rapidly, we decided not only to cover the already chosen features, but rather ask the Java community – What do YOU&nbsp;want to see in the upcoming version? This is&nbsp;your chance to make your voice heard. Which new features are&nbsp;you&nbsp;waiting for the most? Which features do you feel are unnecessary and don’t actually do any good?</p> 
+        <p>We’re looking forward to hearing your thoughts about project Jigsaw’s promise and other major changes you’d like to see coming to the JDK near you. Selected answers will be published together with all the results (Answers are anonymous but feel free to tell us who you are).</p> 
+        <h4>Let us know what you think!</h4> 
+        <p> <a href="which-features-do-developers-really-want-to-see-in-java-9-you-decide/#more-642" class="more-link">Continue Reading…</a></p> 
+        <script type="text/javascript"> </script> 
+       </div> 
+       <div class="post-meta clearfix"> 
+        <div class="meta-date-cat-tags pull-left"> 
+         <span class="the-category">In <a href="category/code/java/">Java</a></span> 
+        </div> 
+        <div class="meta-comment-link pull-right"> 
+         <a class="pull-right post-link" href="which-features-do-developers-really-want-to-see-in-java-9-you-decide/" title="permalink "><img src="wp-content/themes/standard/images/icn-permalink.png" alt="permalink "></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="post-636" class="post-636 post type-post status-publish format-standard hentry category-java clearfix"> 
+       <div class="post-header clearfix"> 
+        <div class="title-wrap clearfix"> 
+         <h2 class="post-title entry-title"> <a href="java-9-behind-the-scenes-where-do-new-features-come-from/" rel="bookmark" title="Java 9 Behind the Scenes: Where Do New Features Come From?">Java 9 Behind the Scenes: Where Do New Features Come From?</a> </h2> 
+         <div class="post-header-meta"> 
+          <div class="author-box-image"> 
+           <img alt="" src="//1.gravatar.com/avatar/35d3cc95d9df5f8b50ebb728dd94df24?s=36&amp;d=retro&amp;r=G" class="avatar avatar-36 photo" height="36" width="36"> 
+          </div> 
+          <span class="the-author">By <a href="author/alexzhitnitsky/" title="Alex Zhitnitsky">Alex Zhitnitsky</a>&nbsp;—&nbsp;</span> 
+          <span class="the-time updated">October 14, 2014</span> 
+          <span class="the-comment-link">—&nbsp;<a href="java-9-behind-the-scenes-where-do-new-features-come-from/#respond" title="Comment on Java 9 Behind the Scenes: Where Do New Features Come From?"><span class="dsq-postid" rel="636 http://www.takipiblog.com/?p=636">Leave a comment</span></a></span> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="content-636" class="entry-content clearfix"> 
+        <div class="dd_post_share dd_post_share_left">
+         <div class="dd_buttons">
+          <div class="dd_button">
+           <fb:like href="//www.takipiblog.com/java-9-behind-the-scenes-where-do-new-features-come-from/" send="false" show_faces="false" layout="button_count" width="92"></fb:like>
+          </div>
+          <div class="dd_button">
+           <script type="IN/Share" data-url="http://www.takipiblog.com/java-9-behind-the-scenes-where-do-new-features-come-from/" data-counter="right"></script>
+          </div>
+          <div class="dd_button">
+           <g:plusone size="medium" href="//www.takipiblog.com/java-9-behind-the-scenes-where-do-new-features-come-from/"></g:plusone>
+          </div>
+          <div class="dd_button">
+           <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.takipiblog.com/java-9-behind-the-scenes-where-do-new-features-come-from/" data-count="horizontal" data-text="Java 9 Behind the Scenes: Where Do New Features Come From?" data-via="takipid"></a>
+          </div>
+         </div>
+        </div>
+        <p><a href="wp-content/uploads/2014/10/JCP.jpg"><img class="alignnone size-full wp-image-637" src="wp-content/uploads/2014/10/JCP.jpg" alt="JCP Java 9 Behind the Scenes: Where Do New Features Come From?" width="580" height="300" title="Java 9 Behind the Scenes: Where Do New Features Come From?"></a></p> 
+        <p><b>Find out what’s going on behind the scenes of Java, and how new features come to life</b></p> 
+        <p>In a <a href="blog.takipi.com/java-9-the-ultimate-feature-list/" target="_blank">previous post</a> we went over the new and pending features for&nbsp;the upcoming Java 9 release, and briefly mentioned the process that a new feature goes through before being added to the next release. Since this process affects almost all Java developers, but is less known to most of them, this post will focus on giving an insider’s view of Java (and how you can suggest that new feature you always wanted). We felt the best way to understand how new features come to life would be to ask the people who are responsible for bringing them into life.</p> 
+        <p>We spoke with 2 <a href="https://jcp.org/en/participation/committee" target="_blank">Java Executive Committee</a> members, <a href="#tene">Gil Tene</a> and <a href="#keil">Werner Keil</a>, together with <a href="#warburton">Richard Warburton</a>, a London Java Community member, and asked them about new features in Java and what kind of new capabilities they’d like to see in the future. This post will cover the first part of the interview.</p> 
+        <p> <a href="java-9-behind-the-scenes-where-do-new-features-come-from/#more-636" class="more-link">Continue Reading…</a></p> 
+        <script type="text/javascript"> </script> 
+       </div> 
+       <div class="post-meta clearfix"> 
+        <div class="meta-date-cat-tags pull-left"> 
+         <span class="the-category">In <a href="category/code/java/">Java</a></span> 
+        </div> 
+        <div class="meta-comment-link pull-right"> 
+         <a class="pull-right post-link" href="java-9-behind-the-scenes-where-do-new-features-come-from/" title="permalink "><img src="wp-content/themes/standard/images/icn-permalink.png" alt="permalink "></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="post-615" class="post-615 post type-post status-publish format-standard hentry category-devops category-java category-performance category-scala category-sql clearfix"> 
+       <div class="post-header clearfix"> 
+        <div class="title-wrap clearfix"> 
+         <h2 class="post-title entry-title"> <a href="appdynamics-vs-new-relic-which-tool-is-right-for-you-the-complete-guide/" rel="bookmark" title="AppDynamics VS New Relic – Which Tool is Right For You? The Complete Guide">AppDynamics VS New Relic – Which Tool is Right For You? The Complete Guide</a> </h2> 
+         <div class="post-header-meta"> 
+          <div class="author-box-image"> 
+           <img alt="" src="//1.gravatar.com/avatar/35d3cc95d9df5f8b50ebb728dd94df24?s=36&amp;d=retro&amp;r=G" class="avatar avatar-36 photo" height="36" width="36"> 
+          </div> 
+          <span class="the-author">By <a href="author/alexzhitnitsky/" title="Alex Zhitnitsky">Alex Zhitnitsky</a>&nbsp;—&nbsp;</span> 
+          <span class="the-time updated">October 6, 2014</span> 
+          <span class="the-comment-link">—&nbsp;<a href="appdynamics-vs-new-relic-which-tool-is-right-for-you-the-complete-guide/#comments" title="Comment on AppDynamics VS New Relic – Which Tool is Right For You? The Complete Guide"><span class="dsq-postid" rel="615 http://www.takipiblog.com/?p=615">2 Comments</span></a></span> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="content-615" class="entry-content clearfix"> 
+        <div class="dd_post_share dd_post_share_left">
+         <div class="dd_buttons">
+          <div class="dd_button">
+           <fb:like href="//www.takipiblog.com/appdynamics-vs-new-relic-which-tool-is-right-for-you-the-complete-guide/" send="false" show_faces="false" layout="button_count" width="92"></fb:like>
+          </div>
+          <div class="dd_button">
+           <script type="IN/Share" data-url="http://www.takipiblog.com/appdynamics-vs-new-relic-which-tool-is-right-for-you-the-complete-guide/" data-counter="right"></script>
+          </div>
+          <div class="dd_button">
+           <g:plusone size="medium" href="//www.takipiblog.com/appdynamics-vs-new-relic-which-tool-is-right-for-you-the-complete-guide/"></g:plusone>
+          </div>
+          <div class="dd_button">
+           <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.takipiblog.com/appdynamics-vs-new-relic-which-tool-is-right-for-you-the-complete-guide/" data-count="horizontal" data-text="AppDynamics VS New Relic - Which Tool is Right For You? The Complete Guide" data-via="takipid"></a>
+          </div>
+         </div>
+        </div>
+        <p><a href="wp-content/uploads/2014/10/AppDynamics-VS-New-Relic.png"><img class="alignnone wp-image-616 size-full" src="wp-content/uploads/2014/10/AppDynamics-VS-New-Relic.png" alt="AppDynamics VS New Relic AppDynamics VS New Relic Which Tool is Right For You? The Complete Guide" width="765" height="346" title="AppDynamics VS New Relic Which Tool is Right For You? The Complete Guide"></a></p> 
+        <p><strong>New Relic VS AppDynamics: All the performance features, integrations, installation procedures and pricing plans side by side to help you decide which tool to use</strong></p> 
+        <p>When thinking about performance, AppDynamics and New Relic are the main modern tools that come to mind. Both spawned from the same company, Wily Technology, who also dealt with performance monitoring and was acquired by CA back in 2006 – making way to new technology. New Relic is an anagram of <a href="https://twitter.com/sweetlew" target="_blank">Lew Cirne</a>, its founder and CEO. AppDynamics was founded by <a href="https://twitter.com/jyotibansalsf" target="_blank">Jyoti Bansal</a>, who was a Lead Software Architect at the same Wily Technology, which was also founded by Lew.</p> 
+        <p>The main goal of this guide is to help you understand the similarities and differences between the two, so you can decide which one fits your company’s needs.</p> 
+        <p> <a href="appdynamics-vs-new-relic-which-tool-is-right-for-you-the-complete-guide/#more-615" class="more-link">Continue Reading…</a></p> 
+        <script type="text/javascript"> </script> 
+       </div> 
+       <div class="post-meta clearfix"> 
+        <div class="meta-date-cat-tags pull-left"> 
+         <span class="the-category">In <a href="category/devops/">DevOps</a>, <a href="category/code/java/">Java</a>, <a href="category/performance/">Performance</a>, <a href="category/code/scala/">Scala</a>, <a href="category/code/sql/">SQL</a></span> 
+        </div> 
+        <div class="meta-comment-link pull-right"> 
+         <a class="pull-right post-link" href="appdynamics-vs-new-relic-which-tool-is-right-for-you-the-complete-guide/" title="permalink "><img src="wp-content/themes/standard/images/icn-permalink.png" alt="permalink "></a> 
+        </div> 
+       </div> 
+      </div> 
+      <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'takipiblog';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            
+        }());
+    //]]>
+    </script> 
+      <div id="post-nav"> 
+       <ul class="pager"> 
+        <li class="previous"> <a href="page/2/" rel="previous"><span class="nav-previous meta-nav"><i class="icon-chevron-left"></i> Older</span></a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div id="sidebar" class="span4"> 
+      <div id="text-17" class="widget widget_text"> 
+       <div class="textwidget">
+        <div style="width: 305px; display: block; padding: 0px;"> 
+         <a id="sidebar-takipi-header1" href="//www.takipi.com/" target="_blank" onclick="trackOutboundLink(this, 'sidebar', 'top'); return false;"><img src="wp-content/uploads/2014/09/banner_dark.png" style="opacity: 1;"></a> 
+        </div> 
+        <div class="miniSignupSidebarDialog"></div>
+       </div> 
+      </div>
+      <div id="text-15" class="widget widget_text"> 
+       <div class="textwidget">
+        <div style="padding-top: 20px"> 
+         <a href="//twitter.com/takipid" class="twitter-follow-button" data-show-count="true">Follow </a>
+         <a href="//twitter.com/takipid" target="_blank" rel="nofollow"></a> 
+         <a href="//cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fwww.takipiblog.com%2Ffeed%2F" target="blank"><img id="feedlyFollow" src="//s3.feedly.com/img/follows/feedly-follow-rectangle-volume-medium_2x.png" alt="follow us in feedly" width="71" height="28"></a> 
+        </div>
+       </div> 
+      </div>
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="clearfix"> 
+   <div id="sub-floor" class="clearfix"> 
+    <div class="container"> 
+     <div class="row-fluid"> 
+      <div class="span12"> 
+       <div id="footer-links"> 
+       </div> 
+       <div id="credit">
+         © 2014 
+        <a href="/">Takipi Blog</a> — 
+        <a href="//standardtheme.com/?utm_source=standard-theme&amp;utm_medium=footer&amp;utm_content=wp-org&amp;utm_campaign=Standard%2BFooter" target="_blank">Standard</a> by 
+        <a href="//8bit.io/?utm_source=standard-theme&amp;utm_medium=footer&amp;utm_content=wp-org&amp;utm_campaign=Standard%2BFooter" target="_blank">8BIT</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+jQuery(document).ready(function(){
+  var q2w3_sidebar_1_options = { "sidebar" : "sidebar-0", "margin_top" : 0, "margin_bottom" : 0, "screen_max_width" : 1280, "width_inherit" : false, "widgets" : ['text-17','text-15'] };
+  q2w3_sidebar(q2w3_sidebar_1_options);
+  setInterval(function () { q2w3_sidebar(q2w3_sidebar_1_options); }, 1500);
+});
+</script> 
+  <script type="text/javascript" src="http://blog.takipi.com/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.6.pack.js?ver=1.5.6"></script> 
+  <script type="text/javascript" src="http://blog.takipi.com/wp-content/plugins/easy-fancybox/jquery.easing.pack.js?ver=1.3"></script> 
+  <script type="text/javascript" src="http://blog.takipi.com/wp-content/plugins/easy-fancybox/jquery.mousewheel.pack.js?ver=3.1.3"></script> 
+  <script type="text/javascript">
+jQuery(document).on('ready post-load', easy_fancybox_handler );
+</script> 
+  <script type="text/javascript">
+adroll_adv_id = "RTHTY4IRUVAN5CPZ5YUQ46";
+adroll_pix_id = "UW2XQSYWXVA4VHGMKZD5WU";
+
+</script> 
+  <div id="fb-root"></div>  
+ </body>
+</html>

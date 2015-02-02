@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <title>December 3, 2014 - September 11, 2014 | Blog | Typesafe</title> 
+  <meta name="play2.3"> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+  <meta name="author" content="Typesafe Inc."> 
+  <meta name="description" content="The Typesafe Blog covers best practices for building reactive applications.  Get the Blog Newsletter.  All Posts · Older Posts · More Posts."> 
+  <meta name="keywords" content="reactive application, reactive programming, reactive platform, play framework, akka, scala, java, jvm-based runtime, Typesafe, Typesafe Activator"> 
+  <meta name="viewport" content="width=1024"> 
+  <meta name="google-site-verification" content="mbcFKcmLObbY0E7gixT6QA0vYAVe7lNEKr9TbVRDyME"> 
+  <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script> 
+  <link href="https://plus.google.com/108281124915010080743" rel="publisher"> 
+  <link rel="shortcut icon" href="//dommkopfq6m1m.cloudfront.net/assets/0b5e3dfdaa05fbd6ba84f5b7c6612076-favicon.ico"> 
+  <!--[if IE]><script src="//dommkopfq6m1m.cloudfront.net/assets/lib/html5shiv/3044234175ac91f49b03ff999c592b85-html5shiv.min.js"></script><![endif]--> 
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" href="//dommkopfq6m1m.cloudfront.net/assets/lib/normalize.css/836625e5ecabdada6dd84787e0f72a16-normalize.css" type="text/css" charset="utf-8"> 
+  <link rel="stylesheet" href="//dommkopfq6m1m.cloudfront.net/assets/lib/foundation/css/ee9b8f5024ef0fc2fedadf7514f040cf-foundation.min.css" type="text/css" charset="utf-8"> 
+  <link rel="stylesheet" href="//dommkopfq6m1m.cloudfront.net/assets/stylus/3e4f49fc1157cb0f26e6f0d1ef50c4f9-main.min.css" type="text/css" charset="utf-8"> 
+  <script type="text/javascript" src="//dommkopfq6m1m.cloudfront.net/assets/lib/modernizr/da2c1b8dc967ad0e19eb25638216cdc6-modernizr.min.js"></script> 
+  <!-- Google Analytics --> 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-23127719-1', 'typesafe.com', {'allowLinker': true, 'name': 'tsTracker'});
+  ga('tsTracker.require', 'linker');
+  ga('tsTracker.linker:autoLink', ['typesafe.com','playframework.com','scala-lang.org','scaladays.org','spray.io','akka.io','scala-sbt.org','scala-ide.org']);
+  ga('tsTracker.send', 'pageview');
+</script> 
+  <script>
+/**
+* Function that tracks a click on an outbound link in Google Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label.
+*/
+var trackOutboundLink = function(cat, label, url) {
+   ga('tsTracker.send', 'event', cat, 'Outbound Click', label, {'hitCallback':
+     function () {
+     document.location = url;
+     }
+   });
+}
+</script> 
+  <link rel="stylesheet" href="//dommkopfq6m1m.cloudfront.net/assets/lib/highlightjs/styles/45bd099cbefc82e65db94cfc8474e931-default.min.css"> 
+  <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Typesafe Blog - All Posts"> 
+ </head> 
+ <body class="blog list"> 
+  <div id="clipped"> 
+   <header id="site-header"> 
+    <div class="row"> 
+     <div class="small-3 columns"> 
+      <a href="/" id="logo">Typesafe</a> 
+     </div> 
+     <div class="small-9 columns"> 
+      <nav class="primary-nav"> 
+       <dl class="nav-list-product"> 
+        <dt>
+         <a href="/products/typesafe-reactive-platform">Products</a>
+        </dt> 
+        <dd> 
+         <a href="/products/typesafe-reactive-platform">Typesafe Reactive Platform</a> 
+         <a href="/products/slick-extensions">Slick Extensions</a> 
+         <a href="/get-started">Get Started</a> 
+        </dd> 
+       </dl> 
+       <dl class="nav-list-subscription"> 
+        <dt>
+         <a href="/subscription">Subscription</a>
+        </dt> 
+        <dd> 
+         <a href="/subscription">Subscription Program</a> 
+         <a href="/subscription/consulting">Consulting</a> 
+         <a href="/subscription/training">Training</a> 
+         <a href="https://support.typesafe.com/">Log Into Support</a> 
+         <h2><a href="/subscription/typesafe-together">Typesafe Together</a></h2> 
+         <a href="/subscription/typesafe-together">Overview</a> 
+         <a href="https://together.typesafe.com">Customer Portal</a> 
+         <a href="/subscription/typesafe-together/our-customers-are-hiring">Our Customers Are Hiring</a> 
+        </dd> 
+       </dl> 
+       <dl class="nav-list-resources"> 
+        <dt>
+         <a href="/resources">Resources</a>
+        </dt> 
+        <dd> 
+         <a href="http://go.typesafe.com">Go Typesafe</a> 
+         <h2><a href="/resources">Resource Center</a></h2> 
+         <a href="/resources">Featured Content</a> 
+         <a href="/resources/e-books">E-Books</a> 
+         <a href="/resources/videos">Videos</a> 
+         <a class="ib" href="https://soundcloud.com/typesafe" target="_blank">Typesafe Podcast Channel</a>
+         <a class="ib rss-icon" href="http://feeds.soundcloud.com/users/soundcloud:users:100369928/sounds.rss" target="_blank">
+          <svg class="svg-icon svg-icon-rss-box" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 240 240" enable-background="new 0 0 240 240">
+           <path class="svg-icon-rss-box-path" fill="#f06565" d="M225 5h-210c-5.5 0-10 4.5-10 10v210c0 5.5 4.5 10 10 10h210c5.5 0 10-4.5 10-10v-210c0-5.5-4.5-10-10-10zm-171.6 210c-15.7 0-28.4-12.7-28.4-28.4s12.7-28.4 28.4-28.4 28.4 12.7 28.4 28.4-12.8 28.4-28.4 28.4zm72.8 0c0-55.9-45.3-101.2-101.2-101.2v-29.6c72.2 0 130.8 58.6 130.8 130.8h-29.6zm59.2 0c0-88.6-71.8-160.4-160.4-160.4v-29.6c104.9 0 190 85.1 190 190h-29.6z" />
+          </svg></a> 
+         <a href="/resources/case-studies-and-stories">Case Studies &amp; Stories</a> 
+         <a href="/activator/templates">Activator Templates</a> 
+         <h2><a href="/account">Typesafe Account</a></h2> 
+         <a href="/account/login">Login</a> 
+         <a href="/account/register">Sign up</a> 
+        </dd> 
+       </dl> 
+       <dl class="nav-list-community"> 
+        <dt>
+         <a href="/community">Community</a>
+        </dt> 
+        <dd> 
+         <a href="/community">Community Events</a> 
+         <a href="http://shop.typesafe.com">Online Store</a> 
+         <h2>Core Projects</h2> 
+         <a href="/community/core-projects/play-framework">Play Framework</a> 
+         <a href="/community/core-projects/akka">Akka</a> 
+         <a href="/community/core-projects/scala">Scala</a> 
+         <h2>Core Tools</h2> 
+         <a href="/community/core-tools/slick">Slick</a> 
+         <a href="/community/core-tools/sbt">sbt</a> 
+         <a href="/activator">Typesafe Activator</a> 
+         <a href="/community/core-tools/migration-manager">Migration Manager</a> 
+         <h2>Other Projects</h2> 
+         <a href="/community/other-projects/apache-spark">Apache Spark</a> 
+        </dd> 
+       </dl> 
+       <dl class="nav-list-company"> 
+        <dt>
+         <a href="/company">Company</a>
+        </dt> 
+        <dd> 
+         <a href="/company">About</a> 
+         <a href="/company/leadership">Leadership</a> 
+         <a href="/company/careers">Careers</a> 
+         <a href="/company/news">News &amp; Press Releases</a> 
+         <a href="/company/contact">Contact</a> 
+        </dd> 
+       </dl> 
+       <dl class="nav-list-partners"> 
+        <dt>
+         <a href="/partners/overview">Partners</a>
+        </dt> 
+        <dd> 
+         <a href="/partners/overview">Overview</a> 
+         <a href="/partners/consulting-partners">Consulting Partners</a> 
+         <a href="/partners/isv-partners">ISV Partners</a> 
+         <a href="/partners/training-partners">Training Partners</a> 
+         <a href="/partners/become-a-partner">Become a Partner</a> 
+        </dd> 
+       </dl> 
+       <a href="/blog">Blog</a> 
+      </nav> 
+     </div> 
+    </div>
+    <!--end row--> 
+   </header> 
+   <div id="page-content"> 
+    <div id="sticky-ctas"> 
+     <a class="btn blue-dkr" href="/company/contact" data-text="Contact Us"><span>
+       <svg class="svg-icon svg-icon-email" title="email" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 190 126" enable-background="new 0 0 190 126">
+        <path fill="#fff" d="M10.9 15.9c4.9 2.6 72.5 38.9 75 40.3 2.5 1.4 5.8 2 9.1 2s6.5-.7 9.1-2c2.5-1.4 70.1-37.7 75-40.3 4.9-2.6 9.5-10.9.5-10.9h-169.2c-9 0-4.3 8.2.5 10.9zm170.2 20c-5.5 2.9-73.7 38.5-77.1 40.3-3.4 1.8-5.8 2-9.1 2s-5.7-.2-9.1-2c-3.4-1.8-71.5-37.4-77.1-40.3-3.7-2.1-3.7.3-3.7 2.2v73.4c0 4.2 5.6 9.6 9.9 9.6h160.2c4.3 0 9.9-5.4 9.9-9.6v-73.4s0-4.3-3.9-2.2z" />
+       </svg></span></a> 
+     <a class="btn blue-dkr" href="/newsletter" data-text="Newsletter Sign Up"><span>
+       <svg class="svg-icon svg-icon-newsletter" title="newsletter" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 240 240" enable-background="new 0 0 240 240">
+        <path fill="#fff" d="M91.9 149l-51.1-20.4v17.3l51.1 20.4v-17.3zm0-53.1l-51.1-20.4v17.3l51.1 20.4v-17.3zm137.5-88.7c-3.5-2.4-8-2.9-11.9-1.3l-97.5 39-97.5-39c-3.9-1.6-8.4-1.1-11.9 1.3-3.5 2.4-5.6 6.3-5.6 10.6v163.6c0 5.2 3.2 9.9 8 11.9l102 40.7s2.1.7 2.5.8c.8.2 1.6.2 2.5.2.8 0 1.7-.1 2.5-.2.4-.1 2.5-.8 2.5-.8l102-40.8c4.9-1.9 8-6.6 8-11.9v-163.5c0-4.3-2.1-8.2-5.6-10.6zm-122.2 201.7l-81.8-32.7v-143.3l81.8 32.7v143.3zm107.4-32.8l-81.8 32.7v-143.2l81.8-32.7v143.2zm-15.4-47.5l-51.1 20.4v17.3l51.1-20.4v-17.3zm0-53.1l-51.1 20.4v17.3l51.1-20.4v-17.3z" />
+       </svg></span></a> 
+     <a class="btn" href="/get-started" data-text="Typesafe Reactive Platform"><span>
+       <svg class="svg-icon svg-icon-download" title="download" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 210 180" enable-background="new 0 0 210 180">
+        <path fill="#fff" d="M198.4 120.4l-31.8-21.4h-19.6l34 26.1h-35.4c-1 0-1.9.5-2.4 1.3l-8.2 22.4h-59.9l-8.2-22.4c-.5-.8-1.4-1.3-2.4-1.3h-35.4l34-26.1h-19.7l-31.8 21.4c-4.7 2.8-7.6 9.3-6.3 14.5l5.6 30.7c1.3 5.1 6.9 9.3 12.5 9.3h163.1c5.6 0 11.2-4.2 12.5-9.3l5.6-30.7c1.4-5.1-1.5-11.6-6.2-14.5zm-41.4-64.2h-33v-51.2h-38v51.2h-33l52 48.8 52-48.8z" />
+       </svg></span></a> 
+    </div> 
+    <section id="top"> 
+     <div class="row"> 
+      <header class="large-12 columns"> 
+       <h1>Blog</h1> 
+       <h2>December 3, 2014 - September 11, 2014</h2> 
+      </header> 
+     </div> 
+    </section> 
+    <section class="fw-wrapper"> 
+     <div class="row"> 
+      <div class="typo large-8 medium-7 columns"> 
+       <div class="posts"> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/spark-survey">Spark Survey</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/typesafe" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/typesafe.png"> @typesafe </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             December 3, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/spark">spark</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p><span style="font-family:helvetica">Back in September, we ran a survey to gather people’s thoughts and upgrade plans around Java 8. We were surprised to find that among the 3,000 respondents, more than 17% are already using Apache Spark in production. Considering how Spark support by the major Hadoop vendors is only about a year old, this number took many by surprise.</span></p> 
+           <p></p> 
+           <a href="/blog/spark-survey" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/hootsuite-success-story-how-hootsuite-modernized-its-url-shortener">Hootsuite Success Story: How Hootsuite Modernized Its URL Shortener </a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/typesafe" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/typesafe.png"> @typesafe </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             December 2, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/casestudy">casestudy</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/playframework">playframework</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/akka">akka</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/scala">scala</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>Today we are excited to share a new case study with our friends at&nbsp;<a href="https://hootsuite.com/">Hootsuite</a>, a widely used social media relationship platform. This specific use case focuses on&nbsp;<a href="http://ow.ly/">Ow.ly</a>, Hootsuite’s popular URL shortening and click analytics service. Essentially, the tool became so popular and such a critical part of the Hootsuite product, that the the engineering team found themselves dedicating much more time and cost into keeping the service performant and reliable than they expected.</p> 
+           <p></p> 
+           <a href="/blog/hootsuite-success-story-how-hootsuite-modernized-its-url-shortener" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/improved-dependency-management-with-sbt-0137">Improved dependency management with sbt 0.13.7</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/eed3si9n" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/eed3si9n.png"> @eed3si9n </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             December 1, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/activator">activator</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/scala">scala</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/sbt">sbt</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/play">play</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p dir="ltr">In this post, we will go over the dependency management improvements that were added to sbt 0.13.6 and 0.13.7 including:</p> 
+           <ul dir="ltr"> 
+            <li>Performance improvements with cached resolution</li> 
+            <li>Eviction warnings</li> 
+            <li>Unresolved dependency errors</li> 
+           </ul> 
+           <p></p> 
+           <a href="/blog/improved-dependency-management-with-sbt-0137" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/gearing-up-for-scala-exchange-2014">Gearing up for Scala eXchange 2014!</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/typesafe" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/typesafe.png"> @typesafe </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             November 20, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/Scala">Scala</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/events">events</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>Typesfe is excited to sign up for another year as a sponsor at <a href="https://skillsmatter.com/conferences/1948-scala-exchange-2014">Scala eXchange</a>, an&nbsp;annual Scala conference in London!</p> 
+           <p>&nbsp;</p> 
+           <p></p> 
+           <a href="/blog/gearing-up-for-scala-exchange-2014" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/typesafe-repository-maintenance-today-at-3pm-edt">Typesafe Repository Maintenance today at 3pm EDT</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             November 13, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>Just a quick heads-up that today (13.11.2014), at 3pm EDT some maintenance work will take place on the Typesafe repository hosted by our friends at JFrog.</p> 
+           <p></p> 
+           <a href="/blog/typesafe-repository-maintenance-today-at-3pm-edt" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/akka-237-maintenance-release">Akka 2.3.7 Maintenance Release</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/akkateam" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/akkateam.png"> @akkateam </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             November 12, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/akka">akka</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p dir="ltr">We—the Akka committers—are pleased to be able to announce the availability of&nbsp;<a href="http://localhost:4000/news/2014/11/12/akka-2.3.7-released.html">Akka 2.3.7</a>. This is the seventh maintenance release of the 2.3 branch.</p> 
+           <p></p> 
+           <a href="/blog/akka-237-maintenance-release" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/reactive-retail-webinar-line-up">Reactive Retail Webinar Lineup</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/typesafe" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/typesafe.png"> @typesafe </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             November 7, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/webinar">webinar</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/reactive">reactive</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>Next week we're hosting three webinars that showcase how Typesafe technologies are used in major retail organizaitons. Check out the speaking list below and register to attend the live event or receive an email&nbsp;link to the recordings.&nbsp;</p> 
+           <p></p> 
+           <a href="/blog/reactive-retail-webinar-line-up" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/devoxx-scalapolis-2014">Devoxx Belgium: Scalapolis 2014?</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/dickwall" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/dickwall.png"> @dickwall </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             November 6, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <h2 dir="ltr"><span style="font-size:13px">Next week is&nbsp;</span><a href="http://www.devoxx.be/" style="font-size: 13px; line-height: 1.6;">Devoxx 2014 - the original one in Belgium</a><span style="font-size:13px">&nbsp;(Devoxx now has a&nbsp;</span><a href="http://www.devoxx.com/" style="font-size: 13px; line-height: 1.6;">franchise</a><span style="font-size:13px">&nbsp;with conferences in the&nbsp;</span><a href="http://www.devoxx.co.uk/" style="font-size: 13px; line-height: 1.6;">UK</a><span style="font-size:13px">&nbsp;and&nbsp;</span><a href="http://www.devoxx.fr/" style="font-size: 13px; line-height: 1.6;">France</a><span style="font-size:13px">&nbsp;in addition to Belgium). It’s one of the largest independent developer conferences in the world, and a huge draw every year for around 3500 developers.</span></h2> 
+           <div>
+            &nbsp;
+           </div> 
+           <p></p> 
+           <a href="/blog/devoxx-scalapolis-2014" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/sources-sinks-and-flowgraphs">Sources, Sinks and FlowGraphs</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/dickwall" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/dickwall.png"> @dickwall </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             October 31, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/Akka">Akka</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>The&nbsp;<a href="http://akka.io">akka</a>&nbsp;team has been hard at work on a new version of akka streams, and this has resulted in some pretty big changes to the API. As a result, it is now well over 80% more awesome (as measured by the&nbsp;<a href="http://lorhkpedia.wikispaces.com/Standard+Awesomeness+Factor">Standard Awesomeness Factor</a>&nbsp;metric). However, some of the API changes have naturally made some of the existing examples and documentation out there a bit stale.</p> 
+           <p></p> 
+           <a href="/blog/sources-sinks-and-flowgraphs" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/jaxenter-java-8-adoption-rate-higher-than-expected">JaxEnter: Java 8 adoption rate higher than expected</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             October 23, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>Typesafe’s latest survey on Java 8 explains the success of lambdas and what it means for Scala.</p> 
+           <p></p> 
+           <a href="/blog/jaxenter-java-8-adoption-rate-higher-than-expected" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/react-2014-in-sf-speakers-discount-tix-and-more">React 2014 in SF: Speakers, Discount Tickets and more!</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/typesafe" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/typesafe.png"> @typesafe </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             October 17, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/reactive">reactive</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>Get ready for a meeting of the most prolific minds at the heart of the Reactive community. On November 18th, Typesafers Jonas Boner, Roland Kuhn, Ryan Knight and Dean Wampler will join Martin Thompson, Ben Christensen and other luminaries for the second React Conf. React is a &nbsp;mixture of&nbsp;<a href="http://reactconf.com/#schedule" target="_blank">talks</a>,&nbsp;<a href="http://lanyrd.com/2014/reactsf/sdczmq/" target="_blank">speaker clinics</a>&nbsp;and&nbsp;<a href="http://lanyrd.com/2014/reactsf/nov-20/" target="_blank">workshops</a>&nbsp;that offer a an articulate and coherent journey through the reactive stack, trait by trait, UI to database.</p> 
+           <p></p> 
+           <a href="/blog/react-2014-in-sf-speakers-discount-tix-and-more" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/how-akka-helps-appgree-handle-high-peak-usage">How Akka helps Appgree Handle High Peak Usage</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/typesafe" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/typesafe.png"> @typesafe </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             October 15, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/Akka">Akka</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/CaseStudy">CaseStudy</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>Today, we are excited to share a new case study with our friends at&nbsp;<a href="http://www.appgree.com/en/">Appgree</a>, a Spain-based startup that offers real-time surveying to large audiences about products, entertainment and more.</p> 
+           <p></p> 
+           <a href="/blog/how-akka-helps-appgree-handle-high-peak-usage" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/activator-template-of-the-month-two-for-one">Activator Template of the Month: Two for One!</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/dickwall" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/dickwall.png"> @dickwall </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             October 10, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/Activator">Activator</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/Akka">Akka</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/Scala">Scala</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/Java">Java</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>This month we are featuring two related Activator Templates of the Month related by purpose but divided by language</p> 
+           <p></p> 
+           <a href="/blog/activator-template-of-the-month-two-for-one" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/typesafe-activator-what-is-it">Typesafe Activator, What *is* it? (and why should I care?)</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/dickwall" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/dickwall.png"> @dickwall </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             October 7, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/Activator">Activator</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/sbt">sbt</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/PlayFramework">PlayFramework</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>A curious thing. At training events, hackathons and any chance I get I have started asking people what they think of Activator. There are a range of different answers, usually followed by questions once the subject has been broached.</p> 
+           <p>The questions are varied, but over a large enough sample size, surprisingly consistent. It seems that Activator is a fairly misunderstood tool, and it’s not just me who noticed. This blog post will attempt to address those frequently asked questions and even if it doesn’t convince you that Activator is your new best friend, at least you might consider keeping it in your toolbox.</p> 
+           <p></p> 
+           <a href="/blog/typesafe-activator-what-is-it" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/scala-days-2015-cfp-now-live">Scala Days 2015 CFP and Save the Dates Website Now Live!</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/typesafe" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/typesafe.png"> @typesafe </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             September 25, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/ScalaDays">ScalaDays</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>It's here! The Scala Days 2015 Save the Date website and CFP are now live,&nbsp;and this year&nbsp;there will be not one, but TWO Scala Days!&nbsp;Brace yourselves!</p> 
+           <p>&nbsp;</p> 
+           <p></p> 
+           <a href="/blog/scala-days-2015-cfp-now-live" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/announcing-dbuild">Announcing dbuild!</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/ToniCunei" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/ToniCunei.png"> @ToniCunei </a> 
+             <a href="https://twitter.com/jsuereth" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/jsuereth.png"> @jsuereth </a> 
+             <a href="https://twitter.com/gkossakowski" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/gkossakowski.png"> @gkossakowski </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             September 22, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/Scala">Scala</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/dbuild">dbuild</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>Today, we're pleased to announce the open source availability of&nbsp;<a href="https://github.com/typesafehub/dbuild" target="_blank">dbuild</a>, a tool we use within Typesafe to test Scala's ecosystem.&nbsp; dbuild is a tool which can take a disparate set of projects and compile them against each other, ensuring that modifications to code in one project does not break code in another project. &nbsp;dbuild was instrumental in the Scala 2.11 release, where it was used to compile and validate more than 70 open source projects, 1.2 million lines of Scala code and 120 thousand lines of Java code. &nbsp;This helped ensure that our open source ecosystem would have a smooth transition from Scala 2.10 into the 2.11 series.</p> 
+           <p></p> 
+           <a href="/blog/announcing-dbuild" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/reactive-manifesto-20">Reactive Manifesto 2.0</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/jboner" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/jboner.png"> @jboner </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             September 17, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/reactive">reactive</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>A little over a year ago, a group of us published the&nbsp;<em>Reactive Manifesto</em>&nbsp;as a way to address new requirements in application development and provide a common vocabulary to discuss complex concepts. To date, the Manifesto has received over 6,813 signatures and has sparked what I consider to be a healthy debate in our community about what the principles for modern application infrastructure might be.</p> 
+           <p></p> 
+           <a href="/blog/reactive-manifesto-20" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/survey-java-8-opinions-and-upgrade-plans">Survey: Java 8 Opinions and Upgrade Plans </a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/typesafe" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/typesafe.png"> @typesafe </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             September 16, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/Java8">Java8</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>Earlier this year, we&nbsp;<a href="http://typesafe.com/blog/java-8-survey-results" target="_blank">conducted a survey</a>&nbsp;with more than 2,800 responders who shared their opinions and upgrade plans around Java 8. This follow-up survey is intended to take an accurate snapshot of how Java 8 upgrade plans have actually mapped to the previous benchmarks. The survey takes approximately 5 minutes to complete.</p> 
+           <p></p> 
+           <a href="/blog/survey-java-8-opinions-and-upgrade-plans" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/case-study-why-predictionio-loved-using-play-to--build-its-popular-machine-learning-server">Case Study: Why PredictionIO Loved Using Play to Build its Popular Machine Learning Server</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/typesafe" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/typesafe.png"> @typesafe </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             September 11, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/PlayFramework">PlayFramework</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/Scala">Scala</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/CaseStudy">CaseStudy</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>We're really excited to share the work we've been doing with the team at&nbsp;<a href="http://prediction.io/" target="_blank">PredictionIO</a>,&nbsp;a popular open source Machine Learning server that developers use to create “predictive” features in&nbsp;web and mobile applications. Showcased as one of the featured machine learning products on GitHub, PredictionIO&nbsp;<br> powers hundreds of applications for its community of more than 5,000 developers. That’s pretty amazing adoption for&nbsp;a product that’s less than two years old.</p> 
+           <p></p> 
+           <a href="/blog/case-study-why-predictionio-loved-using-play-to--build-its-popular-machine-learning-server" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <article class="row"> 
+         <div class="small-12 columns"> 
+          <h1><a href="/blog/case-study-akka-play-and-slick-help-spendgo-innovate-customer-loyalty-at-the-pos">Case Study: Akka, Play and Slick Help Spendgo Innovate Customer Loyalty at the POS</a></h1> 
+          <div class="meta clearfix"> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/009cfb2efcd8bdbf22e4dd3dbf8d451c-entypo_pencil.svg" class="svg-icon">
+            </dt> 
+            <dd class="authors"> 
+             <a href="https://twitter.com/typesafe" target="_blank"> <img src="//d379ifj7s9wntv.cloudfront.net/website/images/profiles/typesafe.png"> @typesafe </a> 
+            </dd> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/5ee86dc687ecb27363abce00d8b0c2f8-entypo_calendar.svg" class="svg-icon">
+            </dt> 
+            <dd>
+             September 11, 2014
+            </dd> 
+           </dl> 
+           <dl> 
+            <dt>
+             <img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/navy/681bb3e1ad00c0fe002d6303b5daf938-entypo_tag.svg" class="svg-icon">
+            </dt> 
+            <dd class="blog-tag">
+             <a href="/blog/Akka">Akka</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/PlayFramework">PlayFramework</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/Slick">Slick</a>
+            </dd> 
+            <dd class="blog-tag">
+             <a href="/blog/CaseStudy">CaseStudy</a>
+            </dd> 
+           </dl> 
+          </div> 
+          <div class="summary"> 
+           <p> </p>
+           <p>Today we're excited to share a new success story with&nbsp;Spendgo,&nbsp;a San Francisco-based technology startup innovating customer loyalty at the point-of-sale (POS).&nbsp;&nbsp;If you’ve&nbsp;bought a Razzmatazz or Caribbean Passion smoothie recently, you’ve probably already interacted with Spendgo.&nbsp;</p> 
+           <p></p> 
+           <a href="/blog/case-study-akka-play-and-slick-help-spendgo-innovate-customer-loyalty-at-the-pos" class="btn blue full-width">Read More...</a> 
+          </div> 
+         </div> 
+        </article> 
+        <div class="row"> 
+         <div class="small-12 columns"> 
+          <a href="/blog/all" class="btn blue full-width">All Blog Posts</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <aside class="large-4 medium-5 columns"> 
+       <ul> 
+        <li><h3>Get Updates</h3></li> 
+        <li><a href="/blog/all">All Blog Posts</a></li> 
+        <li><a href="/blog/rss.xml">Blog RSS Feed</a></li> 
+       </ul> 
+       <form action="/blog" method="get"> 
+        <fieldset class="search-box"> 
+         <label for="user-name">Search Blog</label> 
+         <input name="query" type="search" placeholder="Search" autofocus> 
+         <button><img src="//dommkopfq6m1m.cloudfront.net/assets/images/svg/entypo/white/90c143e496456c99aa9e5ae5ac9d0ca8-entypo_search.svg" class="svg-icon"></button> 
+        </fieldset> 
+       </form> 
+       <div class="tags tag-box"> 
+        <h2>Filter By Tag</h2> 
+        <a href="/blog/bigdata" data-count="1">bigdata</a> 
+        <a href="/blog/Training" data-count="2">Training</a> 
+        <a href="/blog/activator" data-count="3">activator</a> 
+        <a href="/blog/BigData" data-count="1">BigData</a> 
+        <a href="/blog/ScalaIDE" data-count="4">ScalaIDE</a> 
+        <a href="/blog/ScalaDays" data-count="9">ScalaDays</a> 
+        <a href="/blog/dbuild" data-count="1">dbuild</a> 
+        <a href="/blog/Partner" data-count="5">Partner</a> 
+        <a href="/blog/Scala" data-count="69">Scala</a> 
+        <a href="/blog/play" data-count="1">play</a> 
+        <a href="/blog/Spray" data-count="3">Spray</a> 
+        <a href="/blog/akka" data-count="7">akka</a> 
+        <a href="/blog/Typesafe" data-count="8">Typesafe</a> 
+        <a href="/blog/IDE" data-count="1">IDE</a> 
+        <a href="/blog/reactive" data-count="5">reactive</a> 
+        <a href="/blog/Slick" data-count="6">Slick</a> 
+        <a href="/blog/Reactive" data-count="10">Reactive</a> 
+        <a href="/blog/sbt" data-count="7">sbt</a> 
+        <a href="/blog/playframework" data-count="5">playframework</a> 
+        <a href="/blog/webinar" data-count="5">webinar</a> 
+        <a href="/blog/casestudy" data-count="2">casestudy</a> 
+        <a href="/blog/spark" data-count="2">spark</a> 
+        <a href="/blog/streams" data-count="1">streams</a> 
+        <a href="/blog/Webinar" data-count="11">Webinar</a> 
+        <a href="/blog/Events" data-count="5">Events</a> 
+        <a href="/blog/typesafe" data-count="1">typesafe</a> 
+        <a href="/blog/scala" data-count="9">scala</a> 
+        <a href="/blog/Java8" data-count="8">Java8</a> 
+        <a href="/blog/Akka" data-count="73">Akka</a> 
+        <a href="/blog/CaseStudy" data-count="26">CaseStudy</a> 
+        <a href="/blog/tips" data-count="1">tips</a> 
+        <a href="/blog/Activator" data-count="12">Activator</a> 
+        <a href="/blog/Java" data-count="6">Java</a> 
+        <a href="/blog/events" data-count="2">events</a> 
+        <a href="/blog/PlayFramework" data-count="46">PlayFramework</a> 
+        <a href="/blog/News" data-count="1">News</a> 
+       </div> 
+       <div class="aside-white-paper-promo java-8-survey"> 
+        <span class="new-badge">New</span> 
+        <span>
+         <svg class="svg-icon svg-icon-book" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 155 210" enable-background="new 0 0 155 210">
+          <path class="svg-icon-path" fill="#fff" d="M146.4 54.8l-93.2-48c-12.8-6.7-38 6.3-45.2 17.7-3.2 5.1-3 8.8-3 10.9l1.1 108.3c.1 2.3 3 5.4 5.5 6.9 5.2 3.2 83.5 52 85.7 53.3 1.2.7 2.6 1.1 4 1.1 1.2 0 2.4-.3 3.5-.8 2.4-1.2 3.8-3.4 3.8-5.8v-113.8c0-2.4-1.4-4.6-3.6-5.7l-84.8-47.2c1-1.9 4.7-5.8 11.7-9.4 7.3-3.8 12.8-2.4 14-1.9 0 0 81.3 43.4 83.8 44.7 2.5 1.3 2.5 1.5 2.5 3.7v107.9c0 5.4 5.5 7.6 9.5 7.6s8.3-3.9 8.3-7.6v-116.2c0-2.3-1.4-4.5-3.6-5.7z" />
+         </svg> Report</span> 
+        <h2>JAVA 8 <span>2014</span></h2> 
+        <h4>A Global Survey of 3,030 Java Professionals</h4> 
+        <a href="http://info.typesafe.com/COLL-2014-10-20-Java-8-II-Survey-Report-LP.html?lsd=COLL-2014-10-20-Java-8-II-Survey-Report&amp;lst=WS" target="_blank" class="btn full-width small">DOWNLOAD NOW</a> 
+       </div> 
+       <div class="trp-strip"> 
+        <span class="scala"></span> 
+        <span class="akka"></span> 
+        <span class="play"></span> 
+       </div> 
+       <div class="aside-white-paper-promo"> 
+        <span>
+         <svg class="svg-icon svg-icon-book" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 155 210" enable-background="new 0 0 155 210">
+          <path class="svg-icon-path" fill="#fff" d="M146.4 54.8l-93.2-48c-12.8-6.7-38 6.3-45.2 17.7-3.2 5.1-3 8.8-3 10.9l1.1 108.3c.1 2.3 3 5.4 5.5 6.9 5.2 3.2 83.5 52 85.7 53.3 1.2.7 2.6 1.1 4 1.1 1.2 0 2.4-.3 3.5-.8 2.4-1.2 3.8-3.4 3.8-5.8v-113.8c0-2.4-1.4-4.6-3.6-5.7l-84.8-47.2c1-1.9 4.7-5.8 11.7-9.4 7.3-3.8 12.8-2.4 14-1.9 0 0 81.3 43.4 83.8 44.7 2.5 1.3 2.5 1.5 2.5 3.7v107.9c0 5.4 5.5 7.6 9.5 7.6s8.3-3.9 8.3-7.6v-116.2c0-2.3-1.4-4.5-3.6-5.7z" />
+         </svg> White Paper</span> 
+        <h2><small>Introducing the</small>Typesafe<br> Reactive Platform</h2> 
+        <a href="http://info.typesafe.com/COLL-20XX-Intro-TS-Reactive-WP_LP.html?lst=WS&amp;lsd=COLL-20XX-Intro-TS-Reactive-WP" target="_blank" class="btn full-width small">DOWNLOAD NOW</a> 
+       </div> 
+       <div class="trp-strip"> 
+        <span class="scala"></span> 
+        <span class="akka"></span> 
+        <span class="play"></span> 
+       </div> 
+       <div class="aside-white-paper-promo"> 
+        <span>
+         <svg class="svg-icon svg-icon-book" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 155 210" enable-background="new 0 0 155 210">
+          <path class="svg-icon-path" fill="#fff" d="M146.4 54.8l-93.2-48c-12.8-6.7-38 6.3-45.2 17.7-3.2 5.1-3 8.8-3 10.9l1.1 108.3c.1 2.3 3 5.4 5.5 6.9 5.2 3.2 83.5 52 85.7 53.3 1.2.7 2.6 1.1 4 1.1 1.2 0 2.4-.3 3.5-.8 2.4-1.2 3.8-3.4 3.8-5.8v-113.8c0-2.4-1.4-4.6-3.6-5.7l-84.8-47.2c1-1.9 4.7-5.8 11.7-9.4 7.3-3.8 12.8-2.4 14-1.9 0 0 81.3 43.4 83.8 44.7 2.5 1.3 2.5 1.5 2.5 3.7v107.9c0 5.4 5.5 7.6 9.5 7.6s8.3-3.9 8.3-7.6v-116.2c0-2.3-1.4-4.5-3.6-5.7z" />
+         </svg> White Paper</span> 
+        <h2><small>Big Data Applications</small>Getting Started<br>with Spark</h2> 
+        <a href="http://info.typesafe.com/COLL-20XX-Spark-WP_LP.html?lst=WS&amp;lsd=COLL-20XX-Spark-WP" target="_blank" class="btn full-width small">DOWNLOAD NOW</a> 
+       </div> 
+       <div class="trp-strip"> 
+        <span class="scala"></span> 
+        <span class="akka"></span> 
+        <span class="play"></span> 
+       </div> 
+      </aside> 
+     </div> 
+    </section> 
+   </div> 
+   <footer id="site-footer"> 
+    <article class="fw-wrapper shadow white-dkr"> 
+     <div class="row"> 
+      <div class="small-12 medium-6 large-6 columns"> 
+       <div class="action-box"> 
+        <h2>Typesafe Newsletter</h2> 
+        <p>Subscribe to our newsletter for regular<br> updates from Typesafe.</p> 
+        <a class="btn blue" href="/newsletter">Subscribe to our newsletter</a> 
+       </div> 
+      </div> 
+      <div class="small-12 medium-6 large-6 columns"> 
+       <div class="action-box"> 
+        <h2>Have a Question?</h2> 
+        <p><a href="/company/contact">Contact us</a> to learn more about our training, support and subscription offerings. Are you a <a href="/account">subscriber needing support</a>?</p> 
+        <a class="btn blue" href="/company/contact">Contact Us</a> 
+       </div> 
+      </div> 
+     </div> 
+    </article> 
+    <article class="fw-wrapper teal-blue related-content"> 
+     <div class="row"> 
+      <div class="small-8 columns"> 
+       <section class="blog"> 
+        <h2>From the blog</h2> 
+        <article> 
+         <h2><a href="/blog/spark-survey">Spark Survey</a></h2> 
+         <p></p>
+         <p><span style="font-family:helvetica">Back in September, we ran a survey to gather people’s thoughts and upgrade plans around Java 8. We were surprised to find that among the 3,000 respondents, more than 17% are already using Apache Spark in production. Considering how Spark support by the major Hadoop vendors is only about a year old, this number took many by surprise.</span></p> 
+         <p></p> 
+         <a class="btn red small" href="/blog/spark-survey">Continue reading...</a> 
+        </article> 
+        <article> 
+         <h2><a href="/blog/hootsuite-success-story-how-hootsuite-modernized-its-url-shortener">Hootsuite Success Story: How Hootsuite Modernized Its URL Shortener </a></h2> 
+         <p></p>
+         <p>Today we are excited to share a new case study with our friends at&nbsp;<a href="https://hootsuite.com/">Hootsuite</a>, a widely used social media relationship platform. This specific use case focuses on&nbsp;<a href="http://ow.ly/">Ow.ly</a>, Hootsuite’s popular URL shortening and click analytics service. Essentially, the tool became so popular and such a critical part of the Hootsuite product, that the the engineering team found themselves dedicating much more time and cost into keeping the service performant and reliable than they expected.</p> 
+         <p></p> 
+         <a class="btn red small" href="/blog/hootsuite-success-story-how-hootsuite-modernized-its-url-shortener">Continue reading...</a> 
+        </article> 
+       </section> 
+      </div> 
+      <div class="small-4 columns"> 
+       <section class="news"> 
+        <h2>Newsroom</h2> 
+        <ul> 
+         <li><a href="/company/news/dzone-apache-spark-survey-from-typesafe">DZone: Apache Spark Survey from Typesafe</a></li> 
+         <li><a href="/company/news/irewind-and-typesafe-founder-martin-odersky-among-the-winners-of-the-swiss-ict-award">iRewind and Typesafe founder Martin Odersky among the winners of the Swiss ICT Award</a></li> 
+         <li><a href="/company/news/infoq-typesafes-kevin-webber-actor-based-concurrency-for-reactive-systems">InfoQ: Typesafe's Kevin Webber: Actor-based Concurrency for Reactive Systems</a></li> 
+         <li><a href="/company/news/typesafe-to-bring-reactive-applications-to-microsoft-azure">Typesafe to Bring Reactive Applications to Microsoft Azure</a></li> 
+         <li><a href="/company/news/jaxenter-java-8-adoption-rate-higher-than-expected">JAXenter: Java 8 adoption rate higher than expected</a></li> 
+         <li><a href="/company/news/techrepublic-can-anything-slow-the-java-8-train">TechRepublic: Can anything slow the Java 8 train?</a></li> 
+        </ul> 
+       </section> 
+      </div> 
+     </div> 
+    </article> 
+    <article class="fw-wrapper slate footer-nav"> 
+     <nav class="row"> 
+      <div class="small-4 columns"> 
+       <dl class="nav-list-product"> 
+        <dt>
+         <a href="/products/typesafe-reactive-platform">Products</a>
+        </dt> 
+        <dd> 
+         <a href="/products/typesafe-reactive-platform">Typesafe Reactive Platform</a> 
+         <a href="/products/slick-extensions">Slick Extensions</a> 
+         <a href="/get-started">Get Started</a> 
+        </dd> 
+       </dl> 
+       <dl class="nav-list-subscription"> 
+        <dt>
+         <a href="/subscription">Subscription</a>
+        </dt> 
+        <dd> 
+         <a href="/subscription">Subscription Program</a> 
+         <a href="/subscription/consulting">Consulting</a> 
+         <a href="/subscription/training">Training</a> 
+         <a href="https://support.typesafe.com/">Log Into Support</a> 
+         <h2><a href="/subscription/typesafe-together">Typesafe Together</a></h2> 
+         <a href="/subscription/typesafe-together">Overview</a> 
+         <a href="https://together.typesafe.com">Customer Portal</a> 
+         <a href="/subscription/typesafe-together/our-customers-are-hiring">Our Customers Are Hiring</a> 
+        </dd> 
+       </dl> 
+       <dl class="nav-list-company"> 
+        <dt>
+         <a href="/company">Company</a>
+        </dt> 
+        <dd> 
+         <a href="/company">About</a> 
+         <a href="/company/leadership">Leadership</a> 
+         <a href="/company/careers">Careers</a> 
+         <a href="/company/news">News &amp; Press Releases</a> 
+         <a href="/company/contact">Contact</a> 
+        </dd> 
+       </dl> 
+      </div> 
+      <div class="small-4 columns"> 
+       <dl class="nav-list-resources"> 
+        <dt>
+         <a href="/resources">Resources</a>
+        </dt> 
+        <dd> 
+         <a href="http://go.typesafe.com">Go Typesafe</a> 
+         <h2><a href="/resources">Resource Center</a></h2> 
+         <a href="/resources">Featured Content</a> 
+         <a href="/resources/e-books">E-Books</a> 
+         <a href="/resources/videos">Videos</a> 
+         <a class="ib" href="https://soundcloud.com/typesafe" target="_blank">Typesafe Podcast Channel</a>
+         <a class="ib rss-icon" href="http://feeds.soundcloud.com/users/soundcloud:users:100369928/sounds.rss" target="_blank">
+          <svg class="svg-icon svg-icon-rss-box" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 240 240" enable-background="new 0 0 240 240">
+           <path class="svg-icon-rss-box-path" fill="#f06565" d="M225 5h-210c-5.5 0-10 4.5-10 10v210c0 5.5 4.5 10 10 10h210c5.5 0 10-4.5 10-10v-210c0-5.5-4.5-10-10-10zm-171.6 210c-15.7 0-28.4-12.7-28.4-28.4s12.7-28.4 28.4-28.4 28.4 12.7 28.4 28.4-12.8 28.4-28.4 28.4zm72.8 0c0-55.9-45.3-101.2-101.2-101.2v-29.6c72.2 0 130.8 58.6 130.8 130.8h-29.6zm59.2 0c0-88.6-71.8-160.4-160.4-160.4v-29.6c104.9 0 190 85.1 190 190h-29.6z" />
+          </svg></a> 
+         <a href="/resources/case-studies-and-stories">Case Studies &amp; Stories</a> 
+         <a href="/activator/templates">Activator Templates</a> 
+         <h2><a href="/account">Typesafe Account</a></h2> 
+         <a href="/account/login">Login</a> 
+         <a href="/account/register">Sign up</a> 
+        </dd> 
+       </dl> 
+       <dl class="nav-list-partners"> 
+        <dt>
+         <a href="/partners/overview">Partners</a>
+        </dt> 
+        <dd> 
+         <a href="/partners/overview">Overview</a> 
+         <a href="/partners/consulting-partners">Consulting Partners</a> 
+         <a href="/partners/isv-partners">ISV Partners</a> 
+         <a href="/partners/training-partners">Training Partners</a> 
+         <a href="/partners/become-a-partner">Become a Partner</a> 
+        </dd> 
+       </dl> 
+      </div> 
+      <div class="small-4 columns"> 
+       <dl class="nav-list-community"> 
+        <dt>
+         <a href="/community">Community</a>
+        </dt> 
+        <dd> 
+         <a href="/community">Community Events</a> 
+         <a href="http://shop.typesafe.com">Online Store</a> 
+         <h2>Core Projects</h2> 
+         <a href="/community/core-projects/play-framework">Play Framework</a> 
+         <a href="/community/core-projects/akka">Akka</a> 
+         <a href="/community/core-projects/scala">Scala</a> 
+         <h2>Core Tools</h2> 
+         <a href="/community/core-tools/slick">Slick</a> 
+         <a href="/community/core-tools/sbt">sbt</a> 
+         <a href="/activator">Typesafe Activator</a> 
+         <a href="/community/core-tools/migration-manager">Migration Manager</a> 
+         <h2>Other Projects</h2> 
+         <a href="/community/other-projects/apache-spark">Apache Spark</a> 
+        </dd> 
+       </dl> 
+       <dl class="nav-list-blog"> 
+        <dt>
+         <a href="/blog">Blog</a>
+        </dt> 
+        <dd> 
+         <a href="/blog">Typesafe Blog</a> 
+        </dd> 
+       </dl> 
+      </div> 
+     </nav> 
+     <div class="row legal-social"> 
+      <div class="legal small-12 medium-4 large-4 columns"> 
+       <p>© Typesafe – <a href="/legal/licenses">Licenses</a> – <a href="/legal/terms">Terms</a></p> 
+      </div> 
+      <div class="social small-12 medium-8 large-8 columns"> 
+       <h2>Follow us...</h2> 
+       <a href="https://github.com/typesafehub" class="share-github">Github</a> 
+       <a href="https://twitter.com/typesafe" class="share-twitter">Twitter</a> 
+       <a href="https://plus.google.com/+Typesafe" rel="publisher" class="share-google">Google+</a> 
+       <a href="https://www.linkedin.com/company/typesafe" class="share-linkedin">Linkedin</a> 
+       <a href="https://facebook.com/typesafe" class="share-facebook">Facebook</a> 
+      </div> 
+     </div> 
+    </article> 
+   </footer> 
+   <script type="text/javascript" src="//dommkopfq6m1m.cloudfront.net/assets/lib/jquery/d021c983bd6e7291b43a5cc1fb2ebe99-jquery.min.js"></script> 
+   <script type="text/javascript" src="//dommkopfq6m1m.cloudfront.net/assets/lib/fastclick/327df78f44606d22a4ffdf83eabda999-fastclick.js"></script> 
+   <script type="text/javascript" src="//dommkopfq6m1m.cloudfront.net/assets/lib/foundation/js/a93000a3e28cd96ba89e873ced191fc7-foundation.min.js"></script> 
+   <script type="text/javascript" src="//dommkopfq6m1m.cloudfront.net/assets/javascripts/ee84131aae3bcdb19e08ed279186392a-main.min.js"></script> 
+   <script type="text/javascript" src="//dommkopfq6m1m.cloudfront.net/assets/lib/retinajs/d3e2d6e7887add1872c197bab95a16b7-retina.js"></script> 
+   <!--Marketo--> 
+   <script type="text/javascript">
+        (function() {
+          var didInit = false;
+          function initMunchkin() {
+            if(didInit === false) {
+              didInit = true;
+              Munchkin.init('558-NCX-702');
+            }
+          }
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '//munchkin.marketo.net/munchkin.js';
+          s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+              initMunchkin();
+            }
+          };
+          s.onload = initMunchkin;
+          document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+    </script> 
+   <script type="text/javascript" src="//dommkopfq6m1m.cloudfront.net/assets/lib/highlightjs/7528d6194f937612b2c915e20154adc9-highlight.min.js"></script> 
+   <script>hljs.initHighlightingOnLoad();</script> 
+   <!-- ActOn --> 
+   <script type="text/javascript">
+      /* <![CDATA[ */
+      document.write ('<img style="position:absolute;width:0px;height:0px;" src="//a3608.actonsoftware.com/acton/bn/3608/visitor.gif?ts='+new Date().getTime()+'&ref='+escape(document.referrer) + '">');
+      var aoAccountId = '3608';
+      var aoCookieMode = 'STANDARD';
+      var aoCookieDomain = 'typesafe.com';
+      var aoServerContext = 'http://marketing.typesafe.com/acton';
+      /* ]]> */
+    </script> 
+   <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"3628919","applicationTime":95,"beacon":"beacon-2.newrelic.com","queueTime":0,"licenseKey":"326147d629","transactionName":"YgBWZREED0AFVRBRV1tKelQXERh3DUUUWUxWDVFDTCsERxBPIFFLRQRAUgsAEw==","agent":"js-agent.newrelic.com\/nr-476.min.js","errorBeacon":"bam.nr-data.net"}</script> 
+  </div> 
+  <script>
+          $(document).foundation();
+        </script>   
+ </body>
+</html>

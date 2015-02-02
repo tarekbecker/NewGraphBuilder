@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"></html><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js lt-ie9 lt-ie8"></html><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js lt-ie9"></html><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+ <!--<![endif]-->
+ <head>
+  <meta charset="utf-8">
+  <!--<link rel="dns-prefetch" href="//dumply.s3.amazonaws.com"> -->
+  <title>BigCalc</title>
+  <meta name="description" content="Big Data">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <link rel="stylesheet" href="/main.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/js/modernizr-2.6.1.min.js"></script>
+ </head>
+ <body>
+  <div class="navbar">
+   <div class="navbar-inner">
+    <div class="container-fluid">
+     <a id="grip" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+     <a href="/" class="brand">BigCalc</a>
+     <div class="nav-collapse">
+      <ul class="nav pull-right">
+       <li><a href="/products/quantcalc">Products</a></li>
+       <li><a href="/jobs">Jobs</a></li>
+       <li><a href="/about">About</a></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="wrapper"> 
+   <div id="main">
+    <div ng-controller="MainController" class="container-fluid">
+     <div ng-view="" class="row-fluid">
+      <hr>
+     </div>
+    </div>
+   </div>
+  </div>
+  <footer class="container-fluid">
+   <div class="row-fluid">
+    <div class="span12">
+     <p class="pull-right">© BigCalc 2013 <a href="terms">Terms</a> &amp; <a href="privacy">Privacy</a> | <a href="mailto:info@bigcalc.com">Contact Us</a></p>
+    </div>
+   </div>
+  </footer>
+  <script>// make it safe to use console.log always
+(function(a) {
+  function b() {}
+  window.log = b;
+  for (var c = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","), d; !! (d = c.pop());) {
+    a[d] = a[d] || b;
+  }
+})(function() {
+  try {
+    console.log();
+    return window.console;
+  } catch (a) {
+    return (window.console = {});
+  }
+}());</script>
+  <script type="text/javascript">Modernizr.load({
+load: [ '/js/script' ]
+});
+</script>
+  <script>(function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.0.min.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?
+g=a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);
+mixpanel.init("bdfe39678c9c4159ecb3c93776be2b70");</script>
+ </body>
+</html>

@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "version": 2,
+    "www_path_prefix": "http://www.crunchbase.com/",
+    "api_path_prefix": "http://api.crunchbase.com/v/2/",
+    "image_path_prefix": "https://res.cloudinary.com/crunchbase-production/"
+  },
+  "data": {
+    "uuid": "7f0424bf9e61b2149e69e67aca8b6f34",
+    "type": "Organization",
+    "properties": {
+      "role_company": true,
+      "short_description": "Big Data Resource",
+      "permalink": "stormsplitter",
+      "primary_role": "company",
+      "closed_on_trust_code": 0,
+      "name": "STORMSPLITTER",
+      "is_closed": false,
+      "description": "Big Data and associated product and service resource covering analytics, data storage and security as well as funding sources.\n",
+      "homepage_url": "http://stormsplitter.com",
+      "email_address": "contact@stormsplitter.com",
+      "created_at": 1387996723,
+      "updated_at": 1397989204,
+      "total_funding_usd": 0,
+      "number_of_investments": 0
+    },
+    "relationships": {
+      "categories": {
+        "paging": {
+          "total_items": 4,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/stormsplitter/categories",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "Category",
+            "name": "Machine Learning",
+            "uuid": "5ea0cdb7c9a647fc50f8c9b0fac04863",
+            "path": "category/machine learning/5ea0cdb7c9a647fc50f8c9b0fac04863",
+            "created_at": 1397980727,
+            "updated_at": 1417087918
+          },
+          {
+            "type": "Category",
+            "name": "Venture Capital",
+            "uuid": "b37dbaebc825e6a036de84556a5d2e1f",
+            "path": "category/venture capital/b37dbaebc825e6a036de84556a5d2e1f",
+            "created_at": 1397980727,
+            "updated_at": 1417105742
+          },
+          {
+            "type": "Category",
+            "name": "Analytics",
+            "uuid": "99c5404c0ff58ee5d3344b944ddb8cd9",
+            "path": "category/analytics/99c5404c0ff58ee5d3344b944ddb8cd9",
+            "created_at": 1397980727,
+            "updated_at": 1417088109
+          },
+          {
+            "type": "Category",
+            "name": "Cloud Data Services",
+            "uuid": "d0c29b4e27db3c4734fe94881a585836",
+            "path": "category/cloud data services/d0c29b4e27db3c4734fe94881a585836",
+            "created_at": 1397980726,
+            "updated_at": 1417114234
+          }
+        ]
+      },
+      "primary_image": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/stormsplitter/primary_image",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "type": "ImageAsset",
+            "title": null,
+            "path": "image/upload/v1397191147/9c9192160925365b41c5225b9c19b121.png",
+            "created_at": 1398018897,
+            "updated_at": 1398018897
+          }
+        ]
+      },
+      "websites": {
+        "paging": {
+          "total_items": 1,
+          "first_page_url": "http://api.crunchbase.com/v/2/organization/stormsplitter/websites",
+          "sort_order": "created_at DESC"
+        },
+        "items": [
+          {
+            "url": "http://stormsplitter.com",
+            "type": "WebPresence",
+            "title": "homepage",
+            "created_at": 1387996723,
+            "updated_at": 1397989204
+          }
+        ]
+      }
+    }
+  }
+}

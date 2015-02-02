@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+ <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#"> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta http-equiv="Content-Language" content="en"> 
+  <title>aerospike/act · GitHub</title> 
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub"> 
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub"> 
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png"> 
+  <meta property="fb:app_id" content="1401488693436528"> 
+  <meta content="@github" name="twitter:site">
+  <meta content="summary" name="twitter:card">
+  <meta content="aerospike/act" name="twitter:title">
+  <meta content="act - Aerospike Certification Tool" name="twitter:description">
+  <meta content="https://avatars0.githubusercontent.com/u/2214313?v=3&amp;s=400" name="twitter:image:src"> 
+  <meta content="GitHub" property="og:site_name">
+  <meta content="object" property="og:type">
+  <meta content="https://avatars0.githubusercontent.com/u/2214313?v=3&amp;s=400" property="og:image">
+  <meta content="aerospike/act" property="og:title">
+  <meta content="https://github.com/aerospike/act" property="og:url">
+  <meta content="act - Aerospike Certification Tool" property="og:description"> 
+  <meta name="browser-stats-url" content="/_stats"> 
+  <link rel="assets" href="https://assets-cdn.github.com/"> 
+  <link rel="conduit-xhr" href="https://ghconduit.com:25035"> 
+  <meta name="pjax-timeout" content="1000"> 
+  <meta name="msapplication-TileImage" content="/windows-tile.png"> 
+  <meta name="msapplication-TileColor" content="#ffffff"> 
+  <meta name="selected-link" value="repo_source" data-pjax-transient=""> 
+  <meta name="google-analytics" content="UA-3769691-2"> 
+  <meta content="collector.githubapp.com" name="octolytics-host">
+  <meta content="collector-cdn.github.com" name="octolytics-script-host">
+  <meta content="github" name="octolytics-app-id">
+  <meta content="9B382849:15D6:C0BD79D:548172D5" name="octolytics-dimension-request_id"> 
+  <meta content="Rails, view, files#disambiguate" name="analytics-event"> 
+  <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"> 
+  <meta content="authenticity_token" name="csrf-param"> 
+  <meta content="OJasHzVgrY4On4yZnNxppZossH6hxgpdL8w1T2W/zjPVGTVSfuKAbQ7cJOESkKVcqQDeoMY3mDpl0WGi5HQO8w==" name="csrf-token"> 
+  <link href="https://assets-cdn.github.com/assets/github-2a88a7bf0ff1b660d7ff29c3220a68751650b37fc53d40d3a7068e835fd213ec.css" media="all" rel="stylesheet" type="text/css"> 
+  <link href="https://assets-cdn.github.com/assets/github2-b36fcdb95993682cc6d5f175a21907c22d43c9149860bf5071a77ec0697a4eb6.css" media="all" rel="stylesheet" type="text/css"> 
+  <meta http-equiv="x-pjax-version" content="709dfe2f1afb76bb5ed2c62514721540"> 
+  <meta name="description" content="act - Aerospike Certification Tool"> 
+  <meta name="go-import" content="github.com/aerospike/act git https://github.com/aerospike/act.git"> 
+  <meta content="2214313" name="octolytics-dimension-user_id">
+  <meta content="aerospike" name="octolytics-dimension-user_login">
+  <meta content="6917623" name="octolytics-dimension-repository_id">
+  <meta content="aerospike/act" name="octolytics-dimension-repository_nwo">
+  <meta content="true" name="octolytics-dimension-repository_public">
+  <meta content="false" name="octolytics-dimension-repository_is_fork">
+  <meta content="6917623" name="octolytics-dimension-repository_network_root_id">
+  <meta content="aerospike/act" name="octolytics-dimension-repository_network_root_nwo"> 
+  <link href="https://github.com/aerospike/act/commits/master.atom" rel="alternate" title="Recent Commits to act:master" type="application/atom+xml"> 
+ </head> 
+ <body class="logged_out  env-production  vis-public"> 
+  <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a> 
+  <div class="wrapper"> 
+   <div class="header header-logged-out" role="banner"> 
+    <div class="container clearfix"> 
+     <a class="header-logo-wordmark" href="https://github.com/" ga-data-click="(Logged out) Header, go to homepage, icon:logo-wordmark"> <span class="mega-octicon octicon-logo-github"></span> </a> 
+     <div class="header-actions" role="navigation"> 
+      <a class="button primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a> 
+      <a class="button" href="/login?return_to=%2Faerospike%2Fact" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a> 
+     </div> 
+     <div class="site-search repo-scope js-site-search" role="search"> 
+      <form accept-charset="UTF-8" action="/aerospike/act/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/aerospike/act/search" method="get">
+       <div style="margin:0;padding:0;display:inline">
+        <input name="utf8" type="hidden" value="✓">
+       </div> 
+       <input type="text" class="js-site-search-field is-clearable" data-hotkey="s" name="q" placeholder="Search" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" tabindex="1" autocapitalize="off"> 
+       <div class="scope-badge">
+        This repository
+       </div> 
+      </form> 
+     </div> 
+     <ul class="header-nav left" role="navigation"> 
+      <li class="header-nav-item"> <a class="header-nav-link" href="/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a> </li> 
+      <li class="header-nav-item"> <a class="header-nav-link" href="/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a> </li> 
+      <li class="header-nav-item"> <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a> </li> 
+      <li class="header-nav-item"> <a class="header-nav-link" href="/blog" data-ga-click="(Logged out) Header, go to blog, text:blog">Blog</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="start-of-content" class="accessibility-aid"></div> 
+   <div class="site" itemscope itemtype="http://schema.org/WebPage"> 
+    <div id="js-flash-container"> 
+    </div> 
+    <div class="pagehead repohead instapaper_ignore readability-menu"> 
+     <div class="container"> 
+      <ul class="pagehead-actions"> 
+       <li> <a href="/login?return_to=%2Faerospike%2Fact" class="minibutton with-count star-button tooltipped tooltipped-n" aria-label="You must be signed in to star a repository" rel="nofollow"> <span class="octicon octicon-star"></span> Star </a> <a class="social-count js-social-count" href="/aerospike/act/stargazers"> 48 </a> </li> 
+       <li> <a href="/login?return_to=%2Faerospike%2Fact" class="minibutton with-count js-toggler-target fork-button tooltipped tooltipped-n" aria-label="You must be signed in to fork a repository" rel="nofollow"> <span class="octicon octicon-repo-forked"></span> Fork </a> <a href="/aerospike/act/network" class="social-count"> 16 </a> </li> 
+      </ul> 
+      <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public"> <span class="mega-octicon octicon-repo"></span> <span class="author"><a href="/aerospike" class="url fn" itemprop="url" rel="author"><span itemprop="title">aerospike</span></a></span>
+       <!--
+       --><span class="path-divider">/</span>
+       <!--
+       --><strong><a href="/aerospike/act" class="js-current-repository" data-pjax="#js-repo-pjax-container">act</a></strong> <span class="page-context-loader"> <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </span> </h1> 
+     </div>
+     <!-- /.container --> 
+    </div>
+    <!-- /.repohead --> 
+    <div class="container"> 
+     <div class="repository-with-sidebar repo-container new-discussion-timeline with-full-navigation "> 
+      <div class="repository-sidebar clearfix"> 
+       <nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders" role="navigation" data-pjax="#js-repo-pjax-container" data-issue-count-url="/aerospike/act/issues/counts"> 
+        <ul class="sunken-menu-group"> 
+         <li class="tooltipped tooltipped-w" aria-label="Code"> <a href="/aerospike/act" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /aerospike/act"> <span class="octicon octicon-code"></span> <span class="full-word">Code</span> <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </a> </li> 
+         <li class="tooltipped tooltipped-w" aria-label="Issues"> <a href="/aerospike/act/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /aerospike/act/issues"> <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span> <span class="js-issue-replace-counter"></span> <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </a> </li> 
+         <li class="tooltipped tooltipped-w" aria-label="Pull Requests"> <a href="/aerospike/act/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /aerospike/act/pulls"> <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span> <span class="js-pull-replace-counter"></span> <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </a> </li> 
+         <li class="tooltipped tooltipped-w" aria-label="Wiki"> <a href="/aerospike/act/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g w" data-selected-links="repo_wiki /aerospike/act/wiki"> <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span> <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </a> </li> 
+        </ul> 
+        <div class="sunken-menu-separator"></div> 
+        <ul class="sunken-menu-group"> 
+         <li class="tooltipped tooltipped-w" aria-label="Pulse"> <a href="/aerospike/act/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /aerospike/act/pulse"> <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span> <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </a> </li> 
+         <li class="tooltipped tooltipped-w" aria-label="Graphs"> <a href="/aerospike/act/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /aerospike/act/graphs"> <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span> <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </a> </li> 
+        </ul> 
+       </nav> 
+       <div class="only-with-full-nav"> 
+        <div class="clone-url open" data-protocol-type="http" data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone"> 
+         <h3><span class="text-emphasized">HTTPS</span> clone URL</h3> 
+         <div class="input-group js-zeroclipboard-container"> 
+          <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target" value="https://github.com/aerospike/act.git" readonly> 
+          <span class="input-group-button"> <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button> </span> 
+         </div> 
+        </div> 
+        <div class="clone-url " data-protocol-type="subversion" data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone"> 
+         <h3><span class="text-emphasized">Subversion</span> checkout URL</h3> 
+         <div class="input-group js-zeroclipboard-container"> 
+          <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target" value="https://github.com/aerospike/act" readonly> 
+          <span class="input-group-button"> <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button> </span> 
+         </div> 
+        </div> 
+        <p class="clone-options">You can clone with <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a> or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>. <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you."> <span class="octicon octicon-question"></span> </a> </p> 
+        <a href="/aerospike/act/archive/master.zip" class="minibutton sidebar-button" aria-label="Download the contents of aerospike/act as a zip file" title="Download the contents of aerospike/act as a zip file" rel="nofollow"> <span class="octicon octicon-cloud-download"></span> Download ZIP </a> 
+       </div> 
+      </div>
+      <!-- /.repository-sidebar --> 
+      <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container=""> 
+       <span id="js-show-full-navigation"></span> 
+       <div class="repository-meta js-details-container "> 
+        <div class="repository-description">
+          Aerospike Certification Tool 
+        </div> 
+        <div class="repository-website"> 
+         <p><a href="http://www.aerospike.com" rel="nofollow">http://www.aerospike.com</a></p> 
+        </div> 
+       </div> 
+       <div class="overall-summary overall-summary-bottomless"> 
+        <div class="stats-switcher-viewport js-stats-switcher-viewport"> 
+         <div class="stats-switcher-wrapper"> 
+          <ul class="numbers-summary"> 
+           <li class="commits"> <a data-pjax="" href="/aerospike/act/commits/master"> <span class="octicon octicon-history"></span> <span class="num text-emphasized"> 44 </span> commits </a> </li> 
+           <li> <a data-pjax="" href="/aerospike/act/branches"> <span class="octicon octicon-git-branch"></span> <span class="num text-emphasized"> 2 </span> branches </a> </li> 
+           <li> <a data-pjax="" href="/aerospike/act/releases"> <span class="octicon octicon-tag"></span> <span class="num text-emphasized"> 0 </span> releases </a> </li> 
+           <li> 
+            <include-fragment src="/aerospike/act/contributors_size"> 
+             <a href="/aerospike/act/graphs/contributors"> <span class="octicon octicon-organization"></span> <span class="num text-emphasized"></span> Fetching contributors </a> 
+            </include-fragment> </li> 
+          </ul> 
+          <div class="repository-lang-stats"> 
+           <ol class="repository-lang-stats-numbers"> 
+            <li> <a href="/aerospike/act/search?l=c"> <span class="color-block language-color" style="background-color:#555;"></span> <span class="lang">C</span> <span class="percent">69.8%</span> </a> </li> 
+            <li> <a href="/aerospike/act/search?l=python"> <span class="color-block language-color" style="background-color:#3581ba;"></span> <span class="lang">Python</span> <span class="percent">21.0%</span> </a> </li> 
+            <li> <a href="/aerospike/act/search?l=cpp"> <span class="color-block language-color" style="background-color:#f34b7d;"></span> <span class="lang">C++</span> <span class="percent">7.9%</span> </a> </li> 
+            <li> <span class="other"> <span data-lang="Other" class="color-block language-color"></span> <span class="lang">Other</span> <span class="percent">1.3%</span> </span> </li> 
+           </ol> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="tooltipped tooltipped-s" aria-label="Show language statistics"> 
+        <a href="#" class="repository-lang-stats-graph js-toggle-lang-stats" style="background-color:#ccc"> <span class="language-color" style="width:69.8%; background-color:#555;" itemprop="keywords">C</span><span class="language-color" style="width:21.0%; background-color:#3581ba;" itemprop="keywords">Python</span><span class="language-color" style="width:7.9%; background-color:#f34b7d;" itemprop="keywords">C++</span><span class="language-color" style="width:1.3%; background-color:#ccc;" itemprop="keywords">Other</span> </a> 
+       </div> 
+       <include-fragment src="/aerospike/act/show_partial?partial=recently_touched_branches_list"></include-fragment> 
+       <div class="file-navigation in-mid-page"> 
+        <a href="/aerospike/act/find/master" class="js-show-file-finder minibutton empty-icon tooltipped tooltipped-s right" data-pjax="" data-hotkey="t" aria-label="Quickly jump between files"> <span class="octicon octicon-list-unordered"></span> </a> 
+        <a href="/aerospike/act/compare" aria-label="Compare &amp; review" class="minibutton primary tooltipped tooltipped-s left compare-button" data-pjax=""> <span class="octicon octicon-git-compare"></span> </a> 
+        <div class="select-menu js-menu-container js-select-menu left"> 
+         <span class="minibutton select-menu-button js-menu-target css-truncate" data-hotkey="w" data-master-branch="master" data-ref="master" title="master" role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true"> <span class="octicon octicon-git-branch"></span> <i>branch:</i> <span class="js-select-button css-truncate-target">master</span> </span> 
+         <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="" aria-hidden="true"> 
+          <div class="select-menu-modal"> 
+           <div class="select-menu-header"> 
+            <span class="select-menu-title">Switch branches/tags</span> 
+            <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span> 
+           </div> 
+           <!-- /.select-menu-header --> 
+           <div class="select-menu-filters"> 
+            <div class="select-menu-text-filter"> 
+             <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags"> 
+            </div> 
+            <div class="select-menu-tabs"> 
+             <ul> 
+              <li class="select-menu-tab"> <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a> </li> 
+              <li class="select-menu-tab"> <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a> </li> 
+             </ul> 
+            </div>
+            <!-- /.select-menu-tabs --> 
+           </div>
+           <!-- /.select-menu-filters --> 
+           <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches"> 
+            <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring"> 
+             <div class="select-menu-item js-navigation-item "> 
+              <span class="select-menu-item-icon octicon octicon-check"></span> 
+              <a href="/aerospike/act/tree/gh-pages" data-name="gh-pages" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="gh-pages">gh-pages</a> 
+             </div> 
+             <!-- /.select-menu-item --> 
+             <div class="select-menu-item js-navigation-item selected"> 
+              <span class="select-menu-item-icon octicon octicon-check"></span> 
+              <a href="/aerospike/act/tree/master" data-name="master" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="master">master</a> 
+             </div> 
+             <!-- /.select-menu-item --> 
+            </div> 
+            <div class="select-menu-no-results">
+             Nothing to show
+            </div> 
+           </div> 
+           <!-- /.select-menu-list --> 
+           <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags"> 
+            <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring"> 
+            </div> 
+            <div class="select-menu-no-results">
+             Nothing to show
+            </div> 
+           </div> 
+           <!-- /.select-menu-list --> 
+          </div> 
+          <!-- /.select-menu-modal --> 
+         </div> 
+         <!-- /.select-menu-modal-holder --> 
+        </div> 
+        <!-- /.select-menu --> 
+        <div class="breadcrumb">
+         <span class="repo-root js-repo-root"><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/aerospike/act" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">act</span></a></span></span>
+         <span class="separator">/</span>
+         <form action="/login?return_to=%2Faerospike%2Fact" aria-label="Sign in to make or propose changes" class="js-new-blob-form tooltipped tooltipped-e new-file-link" method="post">
+          <span aria-label="Sign in to make or propose changes" class="js-new-blob-submit octicon octicon-plus" data-test-id="create-new-git-file" role="button"></span>
+         </form>
+        </div> 
+       </div> 
+       <div class="commit commit-tease js-details-container"> 
+        <p class="commit-title "> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> <span class="hidden-text-expander inline"><a href="#" class="js-details-target">…</a></span> </p> 
+        <div class="commit-desc">
+         <pre>…ate directly, custom random number generator fills buffer for every write.</pre>
+        </div> 
+        <div class="commit-meta"> 
+         <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="b2e413e370e34b091081db84fbd8da4837ab7ce5" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button> 
+         <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="sha-block" data-pjax="">latest commit <span class="sha">b2e413e370</span></a> 
+         <div class="authorship"> 
+          <img alt="gooding470" class="avatar" data-user="952329" height="20" src="https://avatars2.githubusercontent.com/u/952329?v=3&amp;s=40" width="20"> 
+          <span class="author-name"><a href="/gooding470" rel="contributor">gooding470</a></span> authored 
+          <time class="updated" datetime="2014-11-17T21:35:57Z" is="relative-time">Nov 17, 2014</time> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="file-wrap"> 
+        <table class="files" data-pjax=""> 
+         <tbody> 
+          <tr class="warning include-fragment-error"> 
+           <td class="icon"><span class="octicon octicon-alert"></span></td> 
+           <td class="content" colspan="3">Failed to load latest commit information.</td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-directory"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/tree/master/examples" class="js-directory-link" id="bfebe34154a0dfd9fc7b447fc9ed74e9-413b0d6ca8aa3441dca10b0a25ea27f40ed0734d" title="examples">examples</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-directory"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/tree/master/latency_calc" class="js-directory-link" id="4f799d39f10ccf2bcc02951265a468f8-a0184793e47577a28d6218dc47f9420088b1165c" title="latency_calc">latency_calc</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/639122d3a7daa36a50f3bb5aa7c06b9b53eef6cb" class="message" data-pjax="true" title="AER-2653 - improved histograms for ACT - histogram data are now based on a nanosecond clock, and histograms can be configured to use microsecond buckets.
+Histogram bucketing has also been fixed, and histogram performance improved, as was done for the Aerospike server.
+Streamlined clock code.
+Version is now displayed in the act output and the act_latency.py output.
+(This is the second commit for these changes...)">AER-2653 - improved histograms for ACT - histogram data are now based…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-09-05T00:47:59Z" is="time-ago">Sep 4, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/LICENSE" class="js-directory-link" id="9879d6db96fd29134fc802214163b95a-988836cd7b638349e402ff35b51d9191f4e276fa" title="LICENSE">LICENSE</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/eee1defa4258bffe92eb381e3950c4f28f71a9db" class="message" data-pjax="true" title="Copy the code license to a licence file">Copy the code license to a licence file</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2012-12-10T19:52:29Z" is="time-ago">Dec 10, 2012</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/Makefile" class="js-directory-link" id="b67911656ef5d18c4ae36cb6741b7965-e21e0d575bc086df1da900f7f5d43e76cd5bf623" title="Makefile">Makefile</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/Makesalt" class="js-directory-link" id="90a57734d7f4125d25f2978b1c28746c-9dbe45f32bc274cc068d47aa542997163dbf6c46" title="Makesalt">Makesalt</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-d8892418deab07f0218aff79e3cb518fb66cfb6d" title="README.md">README.md</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/act.c" class="js-directory-link" id="d510ef0b459a4f8cef0eed168a1a65bb-46023bf20aa810f6b8828f441473c7e4e610b635" title="act.c">act.c</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/act_config_helper.py" class="js-directory-link" id="e134b9bc21789449c006c823363eee32-335a9e272bd10b88fa40172282c3c16dfc80b7bf" title="act_config_helper.py">act_config_helper.py</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/actconfig.txt" class="js-directory-link" id="6bb1fda912e770bf6d73f052ccec3086-7112e5227ced3235f0f9ff5a0236dcde24ecdbd5" title="actconfig.txt">actconfig.txt</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/atomic.h" class="js-directory-link" id="9751fae7a6c70b2efc3b391a92e1963e-97e982dacb403efe0a2e81071b7a560a02097316" title="atomic.h">atomic.h</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/clock.h" class="js-directory-link" id="945e832df99ee156dbf02374b17d95a3-11988224fb37ceac386a9083b828a7941a5b3fae" title="clock.h">clock.h</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/histogram.c" class="js-directory-link" id="0db32cdad3404e591b259f7d4716a370-234e7e59969a90d7edcd8d2bd9216e7ca9d49f71" title="histogram.c">histogram.c</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/histogram.h" class="js-directory-link" id="c06c3c42850778aaa5282281a363888c-217e7f7169e876b95aab180c03b4b4618a9cd116" title="histogram.h">histogram.h</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/queue.c" class="js-directory-link" id="a5618994268beaa9fba3b5fc78562a8b-38a1acc40a7780a4310ea3d57b231755b8f57732" title="queue.c">queue.c</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/queue.h" class="js-directory-link" id="704cd01c1ebdd01526ce0db5d42f45f8-060da2939e044bf63d690c0f36423fe677819952" title="queue.h">queue.h</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/random.c" class="js-directory-link" id="a962031992b7b5934db41bf925b3487e-c5a24459c58ce0e74cd4e10afa921f51e10785c0" title="random.c">random.c</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/random.h" class="js-directory-link" id="32048a8b5621663147889a5885e0e50d-a080a4dc9ad87a6d0cb1f27eb61d3d4e7bf3a2ae" title="random.h">random.h</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/runact" class="js-directory-link" id="42c01e1497e78db5053415a52b4c5cc0-e5928b854c7a6e2fe9de8c294cdd5a80875f6c13" title="runact">runact</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/dc30be6460d9c89edb4e3eee99d669a5febb6041" class="message" data-pjax="true" title="Adding instruction on Making in README and header for runact script">Adding instruction on Making in README and header for runact script</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2013-01-08T01:45:58Z" is="time-ago">Jan 7, 2013</time></span> </td> 
+          </tr> 
+          <tr> 
+           <td class="icon"> <span class="octicon octicon-file-text"></span> <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16"> </td> 
+           <td class="content"> <span class="css-truncate css-truncate-target"><a href="/aerospike/act/blob/master/salt.c" class="js-directory-link" id="7efda6d4d9d72033ecb4745676c6d2d2-9d5294ad628d29fd3f8cc3b7060ad920738aca1d" title="salt.c">salt.c</a></span> </td> 
+           <td class="message"> <span class="css-truncate css-truncate-target"> <a href="/aerospike/act/commit/b2e413e370e34b091081db84fbd8da4837ab7ce5" class="message" data-pjax="true" title="ACT version 3.0 - new config scheme specifies record size and write rate directly, custom random number generator fills buffer for every write.">ACT version 3.0 - new config scheme specifies record size and write r…</a> </span> </td> 
+           <td class="age"> <span class="css-truncate css-truncate-target"><time datetime="2014-11-17T21:35:57Z" is="time-ago">Nov 17, 2014</time></span> </td> 
+          </tr> 
+         </tbody> 
+        </table> 
+       </div> 
+       <div id="readme" class="boxed-group flush clearfix announce instapaper_body md"> 
+        <h3> <span class="octicon octicon-book"></span> README.md </h3> 
+        <article class="markdown-body entry-content" itemprop="mainContentOfPage">
+         <h2> <a id="user-content-aerospike-certification-tool-act" class="anchor" href="#aerospike-certification-tool-act" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aerospike Certification Tool (ACT)</h2> 
+         <p>This project is maintained by <a href="http://www.aerospike.com">Aerospike</a></p> 
+         <h3> <a id="user-content-overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3> 
+         <hr> 
+         <p>ACT is a program for testing and certifying flash/SSD devices' performance for Aerospike Database (with SATA, SAS and PCIe connectors). ACT shows latency responses when you are reading from and writing to the database concurrently while modeling the Aerospike Database server's I/O pattern as closely as practical.</p> 
+         <p>ACT allows you to test a single drive or multiple drives, using your actual connector/controller hardware.</p> 
+         <p>The purpose of this certification is:</p> 
+         <ol class="task-list"> 
+          <li>Determine if an SSD device(s) will stand up to the demands of a high-speed real-time database</li> 
+          <li>Evaluate the upper limits of the throughput you can expect from a drive(s)</li> 
+         </ol> 
+         <p>Not all SSDs can handle the high volume of transactions required by high performance real-time databases like Aerospike Database. Many SSDs are rated for 100K+ reads/writes per second, but in production the actual load they can withstand for sustained periods of time is generally much lower. In the process of testing many common SSDs in high-throughput tests, Aerospike developed this certification tool, ACT, that you can use to test/certify an SSD for yourself.</p> 
+         <p>We have found performance – especially latency – of SSDs to be highly dependent on the write load the SSD is subjected to. Over the first few hours of a test, performance can be excellent, but past the 4- to 10-hour mark (depending on the drive), performance can suffer.</p> 
+         <p>The ACT tool allows you to test an SSD device(s) for yourself. In addition, Aerospike has tested a variety of SSDs and has specific recommendations. For more information, visit the Aerospike Database documentation at: <a href="https://docs.aerospike.com/">https://docs.aerospike.com/</a>.</p> 
+         <h4> <a id="user-content-what-the-act-tool-does" class="anchor" href="#what-the-act-tool-does" aria-hidden="true"><span class="octicon octicon-link"></span></a>What the ACT Tool Does</h4> 
+         <hr> 
+         <p>ACT performs a combination of large (128K) block reads and writes and small (1.5K) block reads, simulating standard real-time database read/write loads.</p> 
+         <p>Reads and write latency is measured for a long enough period of time (typically 24 hours) to evaluate drive stability and overall performance.</p> 
+         <p><strong>Traffic/Loading</strong> </p> 
+         <p>You can simulate:</p> 
+         <ul class="task-list"> 
+          <li>1x - normal load (2000 reads/sec and 1000 writes/sec per drive)</li> 
+          <li>3x - high load (6000 reads/sec and 3000 writes/sec per drive)</li> 
+          <li>any other stress load or high-performance load (custom configurable)</li> 
+         </ul> 
+         <p><strong>Latency Rate Analysis</strong> </p> 
+         <p>ACT's output shows latency rates broken down by intervals of 1, 8 and 64 ms (configurable). </p> 
+         <p>For example, the test might indicate that 0.25% of requests failed to complete in 1 ms or less and 0.01% of requests failed to complete in 8 ms or less.</p> 
+         <p><strong>Methodology</strong></p> 
+         <p>The small read operations model client transaction requests. The operations occur at a specified rate. Requests are added at this rate to a specified number of read transaction queues, each of which is serviced by a specified number of threads.</p> 
+         <p>The large-block read and write operations model the Aerospike server's defragmentation process. The operations occur at a specified rate, executed from one dedicated large-block read thread and one dedicated large-block write thread per device.</p> 
+         <h4> <a id="user-content-process-for-certifying-a-drives-for-3x-performance" class="anchor" href="#process-for-certifying-a-drives-for-3x-performance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Process for Certifying a Drive(s) for 3x Performance</h4> 
+         <hr> 
+         <p><strong>In general, we recommend that you certify a drive for 3x performance. Many drives do not pass the 3x certification. If you do not have a high-volume application, you may find that a 2x or 2.5x certification will be sufficient. The instructions below describe the 3x certification process, but you may need to adjust the test based on your requirements.</strong></p> 
+         <p>To certify a drive(s) for 3x performance with Aerospike Database requires two stages:</p> 
+         <ol class="task-list"> 
+          <li>Test a single drive to determine performance using the hardware configuration and connectors. The single-device certification will help you determine individual drive performance. </li> 
+          <li>If you will be using multiple drives, you can then run ACT to test multiple drives to see how the results will be affected by the capacity of the bus or the throughput of the RAID controller that is managing your drives.</li> 
+         </ol> 
+         <p>The test process with ACT is the same for both stages, but in the first stage you are testing a drive and in the second stage, you are testing the linearity/scalability of your connector with multiple drives installed.</p> 
+         <p>The single-drive stage takes 48 hours. The multi-drive stage takes an additional 48 hours.</p> 
+         <h5> <a id="user-content-the-first-stage-is-to-certify-a-single-drive-to-test-the-drive-itself-and-the-connection" class="anchor" href="#the-first-stage-is-to-certify-a-single-drive-to-test-the-drive-itself-and-the-connection" aria-hidden="true"><span class="octicon octicon-link"></span></a>The first stage is to certify a single drive, to test the drive itself and the connection.</h5> 
+         <p>Begin by installing your SSD device. Our website has more details about installing SSDs in different environments and configurations at <a href="https://docs.aerospike.com/">https://docs.aerospike.com/</a>.</p> 
+         <p><strong>Test 1: Test under high loads</strong></p> 
+         <p>Run ACT for 24 hrs using the 3x test (6000 reads/sec and 3000 writes/sec). The drive passes this test if less than 5% of operations fail to complete in 1 ms or less.</p> 
+         <p>Many drives fail the 3x test and are unsuitable for use with Aerospike Database.</p> 
+         <p><strong>Test 2: Stress test to ensure the drive does not fail under excessive loads</strong></p> 
+         <p>Run a 6x test for 24 hrs (12000 reads/sec and 6000 writes/sec). The drive passes this test if ACT runs to completion, regardless of the error rate.</p> 
+         <p><strong>If you are testing a single drive, then the drive is certified when it passes Test 1 and Test 2.</strong></p> 
+         <h5> <a id="user-content-the-second-stage-is-to-certify-multiple-drives-to-make-sure-that-performance-scales-linearly-when-you-add-drives" class="anchor" href="#the-second-stage-is-to-certify-multiple-drives-to-make-sure-that-performance-scales-linearly-when-you-add-drives" aria-hidden="true"><span class="octicon octicon-link"></span></a>The second stage is to certify multiple drives, to make sure that performance scales linearly when you add drives.</h5> 
+         <p>Install the additional SSDs to be tested. Our website has more details about installing SSDs in different environments and configurations at <a href="https://docs.aerospike.com/">https://docs.aerospike.com/</a>.</p> 
+         <p><strong>Test 3: Repeat Test 1, with all drives installed: Test under high loads</strong></p> 
+         <p>Run ACT for 24 hrs using the 3x test (6000 reads/sec and 3000 writes/sec). The drives pass this test if less than 5% of operations fail to complete in 1 ms or less.</p> 
+         <p><strong>Test 4: Repeat Test 2, with all drives installed: Stress test to ensure the drives do not fail under excessive loads</strong></p> 
+         <p>Run a 6x test for 24 hrs (12000 reads/sec and 6000 writes/sec). The drives pass this test if ACT runs to completion, regardless of the error rate.</p> 
+         <p><strong>The drives are certified if they pass Test 3 and Test 4.</strong> Once the drive(s) has been certified, the drive can be used with Aerospike Database.</p> 
+         <p>&nbsp;</p> 
+         <h4> <a id="user-content-determining-expected-performance-at-higher-throughput" class="anchor" href="#determining-expected-performance-at-higher-throughput" aria-hidden="true"><span class="octicon octicon-link"></span></a>Determining Expected Performance at Higher Throughput</h4> 
+         <hr> 
+         <p>If your application is going to have high volumes of transactions and your drive(s) passes the 3x certification, we recommend that you test your drive to determine its upper limit on transaction processing latency. This will help you determine how many SSDs you will need to run your application when you are fully scaled up.</p> 
+         <p>To certify a drive(s) at higher levels of performance, do the certification process as described above, but use higher loads (12x, 24x, etc.). Test the drive(s) at progressively higher rates until more than 5% of operations fail in 1 ms. </p> 
+         <p>For example, if you test at 24x and less than 5% of operations fail to complete in 1 ms, re-run the test at 48x, etc. When the drive completes the test at a particular speed with <em>more</em> than 5% of operations failing to complete in 1 ms (i.e., fails the test), then the drive is certified at the next lower level where the drive DOES have fewer than 5% of errors in under 1 ms.</p> 
+         <p>If your drive is testing well at higher loads, you may want to shorten the test time. Running ACT for six hours will give you a good idea whether your drive can pass ACT testing at a given traffic volume. Before certifying your drive at a given traffic level, we recommend a full 24-hour test.</p> 
+         <p>As before, test a single drive first, and then test with multiple drives to make sure that the performance scales linearly with your connector/controller.</p> 
+         <h3> <a id="user-content-getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h3> 
+         <hr> 
+         <p><strong>Download the ACT package through git:</strong></p> 
+         <pre><code>$ git clone git@github.com:aerospike/act.git
+</code></pre> 
+         <p>This creates an /act directory. </p> 
+         <p>Alternately you can download the ZIP or TAR file from the links at the left. When you unpack/untar the file, it acreates an /aerospike-act- directory.</p> 
+         <p><strong>Install the Required Libraries</strong> Before you can build ACT, you need to install some libraries.</p> 
+         <p>For CentOS:</p> 
+         <pre><code>$ sudo yum install make gcc openssl-devel
+</code></pre> 
+         <p>For Debian or Ubuntu:</p> 
+         <pre><code>$ sudo apt-get install make gcc libc6-dev libssl-dev
+</code></pre> 
+         <p><strong>Build the package.</strong></p> 
+         <pre><code>$ cd act    OR    cd /aerospike-act-&lt;version&gt;
+$ make
+$ make -f Makesalt
+</code></pre> 
+         <p>This will create 2 binaries:</p> 
+         <ul class="task-list"> 
+          <li> <strong><em>actprep</em></strong>: This executable prepares a drive for ACT by writing zeroes on every sector of the disk and then filling it up with random data (salting). This simulates a normal production state.</li> 
+          <li> <strong><em>act</em></strong>: The ACT tool executable.</li> 
+         </ul> 
+         <p>The root also contains a bash script called <strong>runact</strong> that runs actprep and act in a single process.</p> 
+         <h3> <a id="user-content-running-the-act-certification-process" class="anchor" href="#running-the-act-certification-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running the ACT Certification Process</h3> 
+         <hr> 
+         <p>To certify your drive(s), first determine what certification test you will run, as described above in <strong>Process for Certifying a Drive(s) for 3x Performance</strong> or <strong>Determining Expected Performance at Higher Throughput</strong>.</p> 
+         <p>For each certification test with ACT, you must perform the following steps:</p> 
+         <ol class="task-list"> 
+          <li>Prepare the drive(s) with actprep -- only the first time you test a drive(s)</li> 
+          <li>Create the config file for your test.</li> 
+          <li>Run the test, sending the results to a log file.</li> 
+          <li>Analyze log file output using the /latency_calc/act_latency.py script.</li> 
+          <li>Determine pass/fail for the test.</li> 
+         </ol> 
+         <p>The details of these steps are described in detail below.</p> 
+         <p><strong>The tests destroy all data on the devices being tested!</strong></p> 
+         <p>When preparing devices and running tests, make sure the devices are specified by name correctly.</p> 
+         <p>Make sure the test device is not mounted.</p> 
+         <h4> <a id="user-content-1-prepare-the-drives-with-actprep---first-time-only" class="anchor" href="#1-prepare-the-drives-with-actprep---first-time-only" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Prepare the Drives with actprep - First Time Only</h4> 
+         <hr> 
+         <p>The first time you test a drive(s), you must prepare the drive(s) by first cleaning them (writing zeros everywhere) and then "salting" them (writing random data everywhere) with actprep.</p> 
+         <p>actprep takes a device name as its only command-line parameter. For a typical 240GB SSD, actprep takes 30-60+ minutes to run. The time varies depending on the drive and the capacity.</p> 
+         <p>If you are testing multiple drives, you can run actprep on all of the drives in parallel. Preparing multiple drives in parallel does not take a lot more time than preparing a single drive, so this step should only take an hour or two.</p> 
+         <p>For example, to clean and salt the device /dev/sdc: (over-provisioned using hdparm)</p> 
+         <pre><code>$ sudo ./actprep /dev/sdc &amp;
+</code></pre> 
+         <p>If you are using a RAID controller / over-provisioned using fdisk, make sure you specify the partition and not the raw device. If the raw device is used then ACT will wipe out the partition table and this will invalidate the test.</p> 
+         <pre><code>$ sudo ./actprep /dev/sdc1 &amp;
+</code></pre> 
+         <h4> <a id="user-content-2-create-a-configuration-file" class="anchor" href="#2-create-a-configuration-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Create a Configuration File</h4> 
+         <hr> 
+         <p>The ACT package includes a Python script act_config_helper.py which helps you create a configuration file you can use to run ACT. When you run this program it will: </p> 
+         <ol class="task-list"> 
+          <li>Ask you basic questions about the test you want to run</li> 
+          <li>Generate the correct config file, based on your answers</li> 
+         </ol> 
+         <p>To run act_config_helper.py:</p> 
+         <pre><code>$ python act_config_helper.py
+</code></pre> 
+         <p>If you are testing multiple drives, specify the drives and the desired traffic per drive per second, and the config file will be created appropriately.</p> 
+         <p>Alternately you can create the config file manually by copying one of the sample config files in the /examples directory and modifying it, as described in the <strong>ACT Configuration Reference</strong> below.</p> 
+         <h4> <a id="user-content-3-run-the-test" class="anchor" href="#3-run-the-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Run the test</h4> 
+         <hr> 
+         <p>From the ACT installation directory, run:</p> 
+         <pre><code>$ sudo ./act actconfig.txt &gt; ouput.txt &amp;
+</code></pre> 
+         <p>where:</p> 
+         <pre><code>* actconfig.txt - path/name for your config file name
+* output.txt    - path/name of your log file
+</code></pre> 
+         <p>If running ACT from a remote terminal, it is best to run it as a background process, or within a "screen". To verify that ACT is running, tail the output text file with the -f option.</p> 
+         <p>Note that if the drive(s) being tested performs so badly that ACT's internal transaction queues become extremely backed-up, ACT will halt before the configured test duration has elapsed. ACT may also halt prematurely if it encounters unexpected drive I/O or system errors.</p> 
+         <h4> <a id="user-content-4-analyze-act-output" class="anchor" href="#4-analyze-act-output" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Analyze ACT Output</h4> 
+         <hr> 
+         <p>Run /latency_calc/act_latency.py to process the ACT log file and tabulate data. Note that you can run the script when the test is not yet complete, and you will see the partial results.</p> 
+         <p>For example:</p> 
+         <pre><code>$ ./act_latency.py -l output.txt
+</code></pre> 
+         <p>where:</p> 
+         <pre><code> -l &lt;act output file name&gt;   - required parameter that specifies the path/name of the log file generated by ACT
+ -t &lt;slice duration in seconds&gt;  - optional parameter specifying slice length; default is 3600 sec (1 hour)
+</code></pre> 
+         <p>The Python script analyzes the ACT output in time slices as specified, and displays latency data and various verification intervals for each slice. The script output will show latencies both for end-to-end transactions (which include time spent on the transaction queues) and for the device IO portion of transactions.</p> 
+         <p>The example output below shows a 12-hour test (each slice is an hour). The <strong>trans</strong> table shows transaction latency (end to end) and the <strong>device</strong> table at the right shows device latency. So for example, in the 5th hour, 1.68% of transactions failed to complete in under 1ms.</p> 
+         <pre><code>         trans                  device
+         %&gt;(ms)                 %&gt;(ms)
+ slice        1      8     64        1      8     64
+ -----   ------ ------ ------   ------ ------ ------
+     1     1.67   0.00   0.00     1.63   0.00   0.00
+     2     1.38   0.00   0.00     1.32   0.00   0.00
+     3     1.80   0.14   0.00     1.56   0.08   0.00
+     4     1.43   0.00   0.00     1.39   0.00   0.00
+     5     1.68   0.00   0.00     1.65   0.00   0.00
+     6     1.37   0.00   0.00     1.33   0.00   0.00
+     7     1.44   0.00   0.00     1.41   0.00   0.00
+     8     1.41   0.00   0.00     1.35   0.00   0.00
+     9     2.70   0.73   0.00     1.91   0.08   0.00
+    10     1.54   0.00   0.00     1.51   0.00   0.00
+    11     1.53   0.00   0.00     1.48   0.00   0.00
+    12     1.47   0.00   0.00     1.43   0.00   0.00
+ -----   ------ ------ ------   ------ ------ ------
+   avg     1.62   0.07   0.00     1.50   0.01   0.00
+   max     2.70   0.73   0.00     1.91   0.08   0.00
+</code></pre> 
+         <h4> <a id="user-content-5-evaluate-devices-by-the-standard-passfail-criteria" class="anchor" href="#5-evaluate-devices-by-the-standard-passfail-criteria" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Evaluate Device(s) by the Standard Pass/Fail Criteria</h4> 
+         <hr> 
+         <h5> <a id="user-content-passing-a-performance-test" class="anchor" href="#passing-a-performance-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>Passing a Performance Test</h5> 
+         <p>In any one-hour period of an ACT performance test, we expect that:</p> 
+         <ul class="task-list"> 
+          <li>fewer than 5% of transactions fail to complete in 1 ms</li> 
+          <li>fewer than 1% of transactions fail to complete in 8 ms</li> 
+          <li>fewer than 0.1% of transactions fail to complete in 64 ms</li> 
+         </ul> 
+         <p>The <strong>max</strong> line of the output shows the highest values observed in any single slice (hour) of time and the values on the max line should not exceed the allowable error values specified above. </p> 
+         <p>In the example output above, we show only 12 hours of results, and the drive passes because the worst performance in any slice was 2.7% of transactions failing to complete within 1 ms, 0.73% of transactions failing to complete in less than 8 ms and no transactions failing to complete within 64 ms.</p> 
+         <p>A device(s) which does not exceed these error thresholds in 24 hours passes the load test.</p> 
+         <h5> <a id="user-content-passing-a-stress-test" class="anchor" href="#passing-a-stress-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>Passing a Stress Test</h5> 
+         <p>When doing stress testing at a level ABOVE where the drive is certified, a device passes the test if ACT runs to completion, regardless of the number of errors. </p> 
+         <h2> <a id="user-content-tips-and-tricks" class="anchor" href="#tips-and-tricks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tips and Tricks</h2> 
+         <hr> 
+         <p>If a drive is failing or there is a large discrepancy between the device and transaction latencies, try increasing the number of threads in the config file by one or two (as described below).</p> 
+         <p>If a drive has been used for some other purpose for a period of time before testing, then the speed may have degraded and performance may be much poorer than a new drive of the same model.</p> 
+         <h2> <a id="user-content-act-configuration-reference" class="anchor" href="#act-configuration-reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>ACT Configuration Reference</h2> 
+         <hr> 
+         <h4> <a id="user-content-modifying-the-config-file-manually" class="anchor" href="#modifying-the-config-file-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modifying the Config File Manually</h4> 
+         <hr> 
+         <p>For ease of use, this package includes act_config_helper.py for creating config files. <strong>Using act_config_helper.py is the recommended method for creating config files.</strong></p> 
+         <p>If you are going to modify the config file manually, the package includes five example configuration files:</p> 
+         <ul class="task-list"> 
+          <li>actconfig_1x.txt - run a normal load test on one device</li> 
+          <li>actconfig_3x.txt - run a 3 times normal load test on one device</li> 
+          <li>actconfig_6x.txt - run a 6 times normal load test on one device</li> 
+          <li>actconfig_12x.txt - run a 12 times normal load test on one device</li> 
+          <li>actconfig_24x.txt - run a 24 times normal load test on one device</li> 
+          <li>actconfig_1x_2d.txt - run a normal load test on two devices at a time</li> 
+          <li>actconfig_1x_4d.txt - run a normal load test test on four devices at a time</li> 
+         </ul> 
+         <p>When modifying config files, you must be sure to set:</p> 
+         <ol class="task-list"> 
+          <li>the device name(s)</li> 
+          <li>the number of reads/writes to perform</li> 
+          <li>the number of large block operations to perform (large-block-ops-per-sec)</li> 
+         </ol> 
+         <p>For example, to run a 48x test, you would modify the actconfig_24x.txt file to specify the correct drive and the correct number of reads/writes per drive. For a test of 8 drives at 6x, you would modify the actconfig_1x_4d.txt file to specify all of your drives AND to specify the number of reads/writes to perform (6x rather than 1x).</p> 
+         <p>The other fields in the configuration files should generally not be changed. </p> 
+         <h4> <a id="user-content-format-of-lines-in-the-config-file" class="anchor" href="#format-of-lines-in-the-config-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Format of Lines in the Config File</h4> 
+         <hr> 
+         <p>All fields use a </p> 
+         <pre><code>name-token: value
+</code></pre> 
+         <p>format, and must be on a single line. Field order in the file is unimportant. To add comments, add a line(s) that begin with '#'. </p> 
+         <h3> <a id="user-content-fields-that-you-must-change" class="anchor" href="#fields-that-you-must-change" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fields that you Must Change:</h3> 
+         <p><strong>device-names</strong> Comma-separated list of device names (full path) to test. For example:</p> 
+         <pre><code>device-names: /dev/sdb,/dev/sdc
+</code></pre> 
+         <p>Make sure the devices named are entered correctly.</p> 
+         <h3> <a id="user-content-fields-that-you-will-sometimes-change" class="anchor" href="#fields-that-you-will-sometimes-change" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fields that you will Sometimes Change:</h3> 
+         <p><strong>num-queues</strong> Total number of queues. If queue-per-device is set to yes, the num-queues field is ignored, since in this case the number of queues is determined by the number of devices. if queue-per-device is set to no, you must specify the number of queues based on how many devices you are testing. We recommend two queues per device. Formula: 2 x number of devices.</p> 
+         <p><strong>threads-per-queue</strong> Number of threads per read transaction queue. If a drive is failing and there is a large discrepancy between transaction and device speeds from the ACT test you can try increasing the number of threads. Default is 8 threads/queue.</p> 
+         <p><strong>record-bytes</strong> Size of a record in bytes. This determines the size of a read operation -- just record-bytes rounded up to a multiple of 512 bytes (or whatever the device's minimum direct op size). Also, along with write-reqs-per-sec and large-block-op-kbytes, this item determines the rate of large block operations. record-bytes is rounded up to a multiple of 128 bytes for the purposes of this calculation. For example, if record-bytes is 1500, write-reqs-per-sec is 1000, and large-block-op-kbytes is 128, we write (1536 x 1000) bytes per second, or (1536 x 1000) / (128 x 1024) = 11.71875 large blocks per second. We double this to simulate defragmentation where blocks depleted to 50%-used are re-packed, yielding a large block write (and read) rate of 23.4375 blocks per second.</p> 
+         <p><strong>read-reqs-per-sec</strong> Read transactions/second to generate. Note that this is not per device, or per read transaction queue. For 3 times (3x) the normal load for four drives, this value would be 3*4*2000 = 24000. Formula: n x number of drives x 2000</p> 
+         <p><strong>write-reqs-per-sec</strong> Write transactions/second to simulate. Note that we do not do separate device write operations per transaction -- written records are pooled up in big buffers which are then written to device. Therefore along with record-bytes and large-block-op-kbytes, this item determines the rate of large block operations. Note also, if write-reqs-per-sec is zero (read-only simulation) then no large block operations are done.</p> 
+         <h3> <a id="user-content-fields-that-you-will-rarely-or-never-change" class="anchor" href="#fields-that-you-will-rarely-or-never-change" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fields that you will Rarely or Never Change:</h3> 
+         <p><strong>queue-per-device</strong> Flag that determines ACT's internal read transaction queue setup -- yes means each device is read by a single dedicated read transaction queue, no means each device is read by all read transaction queues. If this field is left out, the default is no.</p> 
+         <p><strong>test-duration-sec</strong> Duration of the entire test, in seconds. Note that it has to be a single number, e.g. use 86400, not 60*60*24. The default is one day (24 hours).</p> 
+         <p><strong>report-interval-sec</strong> Interval between generating observations, in seconds. This is the smallest granularity that you can analyze. Default is 1 sec. The /latency_calc/act_latency.py script aggregates these observations into slices, typically hour-long groups.</p> 
+         <p><strong>microsecond-histograms</strong> Flag that specifies what time units the histogram buckets will use -- yes means use microseconds, no means use milliseconds. If this field is left out, the default is no.</p> 
+         <p><strong>large-block-op-kbytes</strong> Size written and read in each large-block write and large-block read operation respectively, in Kbytes.</p> 
+         <p><strong>use-valloc</strong> Flag that determines ACT's memory allocation mechanism for read transaction buffers -- yes means a system memory allocation call is used, no means dynamic stack allocation is used. If this field is left out, the default is no.</p> 
+         <p><strong>scheduler-mode</strong> Mode in /sys/block//queue/scheduler for all the devices in the test run -- noop means no special scheduling is done for device I/O operations, cfq means operations may be reordered to optimize for physical constraints imposed by rotating disc drives (which likely means it hurts performance for ssds). If the field is left out, the default is noop.</p> 
+        </article> 
+       </div> 
+      </div> 
+     </div>
+     <!-- /.repo-container --> 
+     <div class="modal-backdrop"></div> 
+    </div>
+    <!-- /.container --> 
+   </div>
+   <!-- /.site --> 
+  </div>
+  <!-- /.wrapper --> 
+  <div class="container"> 
+   <div class="site-footer" role="contentinfo"> 
+    <ul class="site-footer-links right"> 
+     <li><a href="https://status.github.com/">Status</a></li> 
+     <li><a href="https://developer.github.com">API</a></li> 
+     <li><a href="http://training.github.com">Training</a></li> 
+     <li><a href="http://shop.github.com">Shop</a></li> 
+     <li><a href="/blog">Blog</a></li> 
+     <li><a href="/about">About</a></li> 
+    </ul> 
+    <a href="/" aria-label="Homepage"> <span class="mega-octicon octicon-mark-github" title="GitHub"></span> </a> 
+    <ul class="site-footer-links"> 
+     <li>© 2014 <span title="0.08043s from github-fe116-cp1-prd.iad.github.net">GitHub</span>, Inc.</li> 
+     <li><a href="/site/terms">Terms</a></li> 
+     <li><a href="/site/privacy">Privacy</a></li> 
+     <li><a href="/security">Security</a></li> 
+     <li><a href="/contact">Contact</a></li> 
+    </ul> 
+   </div>
+   <!-- /.site-footer --> 
+  </div>
+  <!-- /.container --> 
+  <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay"> 
+   <div class="fullscreen-container js-suggester-container"> 
+    <div class="textarea-wrap"> 
+     <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder=""></textarea> 
+     <div class="suggester-container"> 
+      <div class="suggester fullscreen-suggester js-suggester js-navigation-container"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="fullscreen-sidebar"> 
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode"> <span class="mega-octicon octicon-screen-normal"></span> </a> 
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w" aria-label="Switch themes"> <span class="octicon octicon-color-mode"></span> </a> 
+   </div> 
+  </div> 
+  <div id="ajax-error-message" class="flash flash-error"> 
+   <span class="octicon octicon-alert"></span> 
+   <a href="#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a> Something went wrong with that request. Please try again. 
+  </div> 
+  <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-153d6254b838872c8db73c8bd92905913f6f5b2164b7e40e5292286bd5a39403.js" type="text/javascript"></script> 
+  <script async crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-886fe84cd93793c0e83129f222d7621e25bd43d46a8da650ab27872729a03871.js" type="text/javascript"></script>   
+ </body>
+</html>

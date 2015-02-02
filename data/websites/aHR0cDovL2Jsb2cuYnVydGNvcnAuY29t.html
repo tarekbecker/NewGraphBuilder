@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <script>var __pbpa = true;</script>
+  <script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script>
+  <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=0fe6931f685c5a29060675a836044a62"></script>  
+  <!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]--> 
+  <!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]--> 
+  <!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]--> 
+  <!--[if gt IE 8]><!-->  
+  <!--<![endif]-->  
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width"> 
+  <script type="text/javascript">
+    var REDIRECTS = {
+    "/11901900923/": "/19633380847/", // theo-talks-at-mongouk
+    "/11904541250/": "/19673556647/", // jakobs-talk-at-the-european-js-conf
+    "/11946331142/": "/20055655563/", // mikka-remoting
+    "/11984263060/": "/19634424322/", // the-twelve
+    "/12026903612/": "/19634482158/", // doing-it-simultaneously
+    "/12166320017/": "/19634523739/", // garbage-collectors-appreciation-week
+    "/12167063836/": "/20055734342/", // time-helper
+    "/12167068498/": "/20055746373/", // mikka-scheduling
+    "/12326742138/": "/19634543641/", // idempotency-as-the-holy-grail-for-scaling
+    "/12427644681/": "/19633341326/", // geohashing
+    "/13558929233/": "/19634558568/", // storing-stuff-not-worth-storing
+    "/13631539118/": "/19634576166/", // storing-stuff-not-worth-storing-mysql
+    "/13915575098/": "/19633326417/", // git-strategizing
+    "/14255414455/": "/19634591993/", // storing-stuff-not-worth-storing-files
+    "/14402152769/": "/19633446820/", // pagination-in-cassandra
+    "/15295637392/": "/19633309410/", // a-cautionary-tale-of-using-the-right-data-set-when
+    "/18490214337/": "/19673585432/", // three-signs-that-you-should-go-for-a-fat-client
+    "/18792683632/": "/19633294711/", // how-to-write-a-jruby-extension-in-pure-java
+    "/18954662536/": "/19634613252/", // storing-stuff-not-worth-storing-mongodb
+    "/19621492881/": "/20055253572/", // slides-from-theos-jruby-presentation
+    "/19625236452/": "/20055864910/", // slides-from-davids-mongodb-presentation
+    "/19673164223/": "/19779654259/", // emacs-the-black-box
+    "/13986174909/": "/20056389888/" // internet-explorer-throw-gotcha
+  };
+
+  var url = window.location.href;
+  for (var oldId in REDIRECTS) {
+    if (url.indexOf(oldId) !== -1) {
+      window.location.replace(url.replace(oldId, REDIRECTS[oldId]));
+      break;
+    }
+  }
+  </script> 
+  <script src="http://use.typekit.com/rxc7jxy.js"></script> 
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  <title>A blog by Burt.</title> 
+  <link rel="icon" href="http://33.media.tumblr.com/avatar_36c21d4084fe_128.png"> 
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://blog.burtcorp.com/rss"> 
+  <meta name="text:Disqus Shortname" content="engineeringburt"> 
+  <meta name="text:Google Analytics ID" content="UA-7395476-2"> 
+  <meta property="og:site_name" content="Burt"> 
+  <meta property="fb:admins" content="327300006"> 
+  <meta property="og:image" content="http://burtcorp.com/images/burt-icon-facebook.png"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:url" content=""> 
+  <meta property="og:description" content=""> 
+  <meta property="og:title" content="A blog by Burt."> 
+  <link rel="stylesheet" href="http://burtcorp.com.s3.amazonaws.com/blog.css"> 
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css"> 
+  <style>
+    input.email {
+        width: 100px;
+          -webkit-transition: all 0.3s ease-out;  
+     -moz-transition: all 0.3s ease-out;  
+       -o-transition: all 0.3s ease-out;  
+          transition: all 0.3s ease-out;  
+    }
+    input.email:focus {
+        width: 150px;
+    }
+    
+  </style> 
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7395476-2']);
+    _gaq.push(['_setDomainName', 'engineering.burtcorp.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script> 
+  <script type="text/javascript" src="http://measure.richmetrics.com/rfm/burtcorp-blog/rich-burtcorp-blog.js"></script> 
+  <script type="text/javascript">var switchTo5x=true;</script> 
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
+  <script type="text/javascript">stLight.options({publisher:'747d84a3-0818-40b9-8631-ba9ae66eb273'});</script> 
+  <link rel="alternate" href="android-app://com.tumblr/tumblr/x-callback-url/blog?blogName=blogbyburt"> 
+  <script src="http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=c78ef57bd25c48e7f24a984e7ef6ceba"></script> 
+  <link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3"> 
+  <meta http-equiv="x-dns-prefetch-control" content="off"> 
+  <meta name="keywords" content="Burt,burt.hub,news,burtcorp,analytics"> 
+  <!-- TWITTER TAGS -->
+  <meta charset="utf-8">
+  <meta name="twitter:site" content="tumblr">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="blogbyburt">
+  <meta name="twitter:description" content=" ">
+  <meta name="twitter:creator" content="burtcorp">
+  <meta name="twitter:app:name:iphone" content="Tumblr">
+  <meta name="twitter:app:name:ipad" content="Tumblr">
+  <meta name="twitter:app:name:googleplay" content="Tumblr">
+  <meta name="twitter:app:id:iphone" content="305343404">
+  <meta name="twitter:app:id:ipad" content="305343404">
+  <meta name="twitter:app:id:googleplay" content="com.tumblr">
+  <meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=blogbyburt&amp;referrer=twitter-cards">
+  <meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=blogbyburt&amp;referrer=twitter-cards">
+  <meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=blogbyburt&amp;referrer=twitter-cards"> 
+ </head> 
+ <body id="" class=" "> 
+  <header id="header"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span12"> 
+      <h1 class="logo"> <a href="/" class="active">Burt</a> <span>blog</span> </h1> 
+      <nav> 
+       <ul> 
+        <li><a class="" href="http://burtcorp.com/#hub">Apps</a></li> 
+        <li><a class="lnk" href="http://burtcorp.com/#clients">Clients</a></li> 
+        <li><a class="lnk" href="http://burtcorp.com/#press">Press</a></li> 
+        <li><a class="lnk" href="http://burtcorp.com/#team">Team</a></li> 
+        <li><a class="lnk" href="http://burtcorp.com/#contact">Contact</a></li> 
+        <li><a class="active ext_lnk" href="http://blog.burtcorp.com">Blog</a></li> 
+       </ul> 
+      </nav> 
+     </div> 
+    </div> 
+   </div> 
+  </header> 
+  <div class="content" id="content"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="span9"> 
+      <ul id="posts"> 
+       <li class="post"> 
+        <div class="post_side"> 
+         <a href="http://blog.burtcorp.com/post/52702547160/burt-june-update"> <img class="avatar" src="http://38.media.tumblr.com/avatar_07378973b29c_64.png" width="64" height="64" alt="fredrikkellermann" title="fredrikkellermann"> </a> 
+         <small>Jun 11, 2013</small> 
+        </div> 
+        <div class="post_head"> 
+         <h2 class=""> <a href="http://blog.burtcorp.com/post/52702547160/burt-june-update">Burt June Update</a> <small>by <a href="http://fredrikkellermann.tumblr.com/" class="author_name">fredrikkellermann</a></small> </h2> 
+        </div> 
+        <div class="post_body"> 
+         <h1><strong>Hello&nbsp;</strong></h1> 
+         <p><span>Summer has finally arrived and we’re busy improving our offering for publishers. We are excited to announce that we’ve been certified as a KIA-Index measurement provider.</span></p> 
+         <p><span>Very soon we will be announcing a new product that will solve the “big” data challengethat modern publishers face. Stay tuned for more information shortly!</span></p> 
+         <h2><strong>Product News</strong></h2> 
+         <p><span>As part of our endless commitment to make tools for everyone in the publisher value chain, we have continued to refine our products and make important changes and enhancements based on customer feedback. Below is a short summary.</span></p> 
+         <p><span><strong>Burt for KIA.</strong> We have introduced a new app that provides an overview of the data reported to KIA and enables publishers to compare important metrics across sites.</span></p> 
+         <p><span><strong>Campaign Reporting.</strong> Our upgraded Campaign Reporting app enables customers to benchmark campaigns compared with their own site(s) or against the network average. The new tools includes key ad performance metrics such as viewable and engagement rate, click-through rate, and more. It also displays more comprehensive ad reporting in a more compact and easier to read layout. And we’re improving performance for customers tracking 10,000+ campaigns with Burt.</span></p> 
+         <p><span><strong>Time Series.</strong> Added possibility to view placements across categories combinations and unique visitors per device type.</span></p> 
+         <h2><strong>Recommended Reading</strong></h2> 
+         <div>
+          <a href="http://blog.f-i.com/usatoday-com-redesigning-one-of-americas-most-popular-news-site/" target="_blank">Great reading about how Fi redesigned USA Today.</a>
+          <br>
+          <br>
+          <a href="http://allthingsd.com/20130520/in-media-big-data-is-booming-but-big-results-are-lacking/" target="_blank">In Media, Big Data Is Booming but Big Results Are Lacking</a>
+          <br>
+          <br>
+          <a href="http://blog.burtcorp.com/post/51570754043/high-scalability-at-tumblr-and-burt" target="_blank">High scalability at Tumblr and Burt</a>
+          <br>
+          <br>
+          <a href="http://www.youtube.com/watch?v=4mclZnf_QM4" target="_blank">The technology behind Burt</a>
+         </div> 
+        </div> </li> 
+       <li class="post"> 
+        <div class="post_side"> 
+         <a href="http://blog.burtcorp.com/post/51570754043/high-scalability-at-tumblr-and-burt"> <img class="avatar" src="http://33.media.tumblr.com/avatar_8e0dade69c69_64.png" width="64" height="64" alt="iconara" title="iconara"> </a> 
+         <small>May 28, 2013</small> 
+        </div> 
+        <div class="post_head"> 
+         <h2 class="engineering"> <a href="http://blog.burtcorp.com/post/51570754043/high-scalability-at-tumblr-and-burt">High scalability at Tumblr and Burt</a> <small>by <a href="http://architecturalatrocities.com/" class="author_name">iconara</a></small> </h2> 
+        </div> 
+        <div class="post_body"> 
+         <p>Because of Yahoo’s recent acquisition of Tumblr, <a href="http://highscalability.com/blog/2013/5/20/the-tumblr-architecture-yahoo-bought-for-a-cool-billion-doll.html">High Scalability had a blog post</a> about the architecture behind the billion dollar blog platform. It’s apples and oranges but we thought some of the numbers they wrote about looked very similar:</p> 
+         <ul>
+          <li>Tumblr serves 500 million pageviews per day, and Burt tracks about the same number of pageviews and ad impressions</li> 
+          <li>Their peak request rate is around 40K/s, ours isn’t very far behind.</li> 
+          <li>Their analytics system processes a terabyte of data every day and so do we!</li> 
+         </ul>
+         <p>Congrats to the acquisition guys!</p> 
+        </div> </li> 
+       <li class="post"> 
+        <div class="post_side"> 
+         <a href="http://blog.burtcorp.com/post/45977370011/testing-testing-crystal-ball"> <img class="avatar" src="http://33.media.tumblr.com/avatar_6f314dafdf37_64.png" width="64" height="64" alt="srdan" title="srdan"> </a> 
+         <small>Mar 22, 2013</small> 
+        </div> 
+        <div class="post_head"> 
+         <h2 class="design ideas demo burt analytics burtcorp bi visualize data"> <a href="http://blog.burtcorp.com/post/45977370011/testing-testing-crystal-ball">Testing, testing … Crystal Ball</a> <small>by <a href="http://srdan.tumblr.com/" class="author_name">srdan</a></small> </h2> 
+        </div> 
+        <div class="post_body"> 
+         <p><strong>A part of gathering all the data and crunching it is also to be able to make assumptions on future trends. So here’s and idea how we could visualize those predictions. Given the past four weeks, how should next week’s pageviews look like - hour by hour.<br><br><img alt="image" src="http://media.tumblr.com/76a95820d2483aa6c0ef876b700fe19c/tumblr_inline_mj4txbQgCA1qz4rgp.png"></strong></p> 
+         <p>You’d be able to quickly answer questions such as: What’s the number of pageviews, exposures you’ll be able to serve, as well as predict worst and best case scenarios…</p> 
+         <p><iframe frameborder="0" height="480" id="qpl_lQDfJja6" scrolling="no" src="http://quipol.com/lQDfJja6" width="320">Quipol</iframe></p> 
+         <script src="http://quipol.com/javascripts/embed_quipol.js?qpl_lQDfJja6" type="text/javascript"></script> 
+        </div> </li> 
+       <li class="post"> 
+        <div class="post_side"> 
+         <a href="http://blog.burtcorp.com/post/45338805565/from-our-innovation-corner-take-the-tour"> <img class="avatar" src="http://33.media.tumblr.com/avatar_6f314dafdf37_64.png" width="64" height="64" alt="srdan" title="srdan"> </a> 
+         <small>Mar 14, 2013</small> 
+        </div> 
+        <div class="post_head"> 
+         <h2 class="design tourgide burt burtcorp burt_hub campaign_reporting"> <a href="http://blog.burtcorp.com/post/45338805565/from-our-innovation-corner-take-the-tour">From our Innovation Corner: Take the Tour</a> <small>by <a href="http://srdan.tumblr.com/" class="author_name">srdan</a></small> </h2> 
+        </div> 
+        <div class="post_body"> 
+         <p><strong>We’re flirting with the idea of creating tour guides for our apps. Here’s an example how it could look like for our Campaign Reporting app. Take it right away or pick it up at some other point when you have time.</strong></p> 
+         <p><img alt="image" src="http://media.tumblr.com/1e0709b41ce4b9c96a84dd818ace6b9e/tumblr_inline_mj4tvl9mOP1qz4rgp.png"></p> 
+         <p>You forget things, right? Everyone does.&nbsp;<em>The viewable-active-visible-durational-collegial-clustered-megaflips. ..per second? Huh.. How’s that important, again?</em></p> 
+         <p>We do try to avoid confusing and un-actionable metrics, but we also release new apps all the time. This’d be a good way of getting quickly (re-)acquainted.&nbsp;</p> 
+         <p><iframe frameborder="0" height="480" id="qpl_hvaKYtsX" scrolling="no" src="http://quipol.com/hvaKYtsX" width="320">Quipol</iframe></p> 
+         <script src="http://quipol.com/javascripts/embed_quipol.js?qpl_hvaKYtsX" type="text/javascript"></script> 
+        </div> </li> 
+       <li class="post"> 
+        <div class="post_side"> 
+         <a href="http://blog.burtcorp.com/post/45103782727/from-our-innovation-corner-placement-monitoring"> <img class="avatar" src="http://33.media.tumblr.com/avatar_6f314dafdf37_64.png" width="64" height="64" alt="srdan" title="srdan"> </a> 
+         <small>Mar 11, 2013</small> 
+        </div> 
+        <div class="post_head"> 
+         <h2 class="design feature new poll burt burt_hub"> <a href="http://blog.burtcorp.com/post/45103782727/from-our-innovation-corner-placement-monitoring">From our Innovation Corner: Placement Monitoring</a> <small>by <a href="http://srdan.tumblr.com/" class="author_name">srdan</a></small> </h2> 
+        </div> 
+        <div class="post_body"> 
+         <p><strong>View all your placements at a glance, drag them around, pinch and spread to get deeper insights using your mobile, tablet or computer.</strong></p> 
+         <p><strong><img alt="image" src="http://media.tumblr.com/2184b4eba2b29bf26cce9fcf9626413b/tumblr_inline_mj4ttxSW6F1qz4rgp.png"></strong><br><br>This view emphasises only the most significant about your placements. Viewing it as rows in a table can draw your focus away from what’s important - just because you can see and sort placements by number of clicks doesn’t necessarily make it the only way you should look at it. Colour coded in positive green for your best performing placements and alarming red for those that might need more of your attention. Quickly choose placement &nbsp;of your interest and get more data by pinch and spread. Easy peasy.</p> 
+         <p><iframe frameborder="0" height="480" id="qpl_oEVD85RX" scrolling="no" src="http://quipol.com/oEVD85RX" width="320">Quipol</iframe></p> 
+         <script src="http://quipol.com/javascripts/embed_quipol.js?qpl_oEVD85RX" type="text/javascript"></script> 
+        </div> </li> 
+       <li class="post"> 
+        <div class="post_side"> 
+         <a href="http://blog.burtcorp.com/post/44290058850/burt-designer-suite"> <img class="avatar" src="http://38.media.tumblr.com/avatar_63d11d7f4ab1_64.gif" width="64" height="64" alt="vonsydow" title="vonsydow"> </a> 
+         <small>Mar 1, 2013</small> 
+        </div> 
+        <div class="post_head"> 
+         <h2 class="analytics digital_media designer_suite display burt burt_hub burtcorp news"> <a href="http://blog.burtcorp.com/post/44290058850/burt-designer-suite">Design for Appraisal: Introducing the Burt Designer Suite</a> <small>by <a href="http://gustavvonsydow.com/" class="author_name">vonsydow</a></small> </h2> 
+        </div> 
+        <div class="post_body"> 
+         <p class="p1"><img src="http://media.tumblr.com/f67b2a77b3f13d481121d46c9d21d9b4/tumblr_inline_mjav972Ps51qz4rgp.png"></p> 
+         <p></p> 
+         <p class="p1"><span>When it comes to advertising, we at Burt abide a simple but time proven and effective philosophy:&nbsp; if consumers like what they see in an ad, it will work. If they don’t, it most likely won’t.&nbsp;</span></p> 
+         <p class="p1">Most adtech companies base their business on the notion that powerful algorithms can deliver — say it with me now – the right ad, to the right person, in the right place, at the right time - and that’s all they need to do.&nbsp; We, on the other hand, believe ad placement is only part of the challenge and if digital advertising is to be successful, there needs to be as much focus on the non-technical function of design as on the technical issue of inventory.&nbsp; That idea was the original inspiration behind Burt Designer Suite.</p> 
+         <p class="p1"></p> 
+         <div>
+          <p><a href="http://blog.burtcorp.com/post/44290058850/burt-designer-suite">Read more »</a></p>
+         </div> 
+        </div> </li> 
+       <li class="post"> 
+        <div class="post_side"> 
+         <a href="http://blog.burtcorp.com/post/43074551445/networkmonitoring"> <img class="avatar" src="http://38.media.tumblr.com/avatar_f61bb726b910_64.png" width="64" height="64" alt="vajna" title="vajna"> </a> 
+         <small>Feb 14, 2013</small> 
+        </div> 
+        <div class="post_head"> 
+         <h2 class="news network_monitoring digital_media publishers burt burt_hub burtcorp"> <a href="http://blog.burtcorp.com/post/43074551445/networkmonitoring">Just Released for Pubs Only: Network Monitoring</a> <small>by <a href="http://vajna.tumblr.com/" class="author_name">vajna</a></small> </h2> 
+        </div> 
+        <div class="post_body"> 
+         <p><iframe frameborder="0" height="410" src="http://player.vimeo.com/video/59396130" width="500"></iframe></p> 
+         <p><strong id="internal-source-marker_0.2898375929798931"><br><br></strong>Media owners we work with often own several sites. While they usually want to optimize every site as separate entity there is also a need to have an overview over entire business they own. <br><br>In other words our starting point solving this problem was to provide media owners with an overview of different sites and&nbsp;<span>easy </span><span>comparisons between them without digging too deep into details.</span></p> 
+         <p></p> 
+         <div>
+          <p><a href="http://blog.burtcorp.com/post/43074551445/networkmonitoring">Read more »</a></p>
+         </div> 
+        </div> </li> 
+       <li class="post"> 
+        <div class="post_side"> 
+         <a href="http://blog.burtcorp.com/post/42346417199/more-news-at-the-burt-hub-the-audience-disovery"> <img class="avatar" src="http://33.media.tumblr.com/avatar_6f314dafdf37_64.png" width="64" height="64" alt="srdan" title="srdan"> </a> 
+         <small>Feb 5, 2013</small> 
+        </div> 
+        <div class="post_head"> 
+         <h2 class="news audience_discovery business_intelligence digital_media burt burt_hub"> <a href="http://blog.burtcorp.com/post/42346417199/more-news-at-the-burt-hub-the-audience-disovery">More news at the Burt.hub - the Audience Disovery app</a> <small>by <a href="http://srdan.tumblr.com/" class="author_name">srdan</a></small> </h2> 
+        </div> 
+        <div class="post_body"> 
+         <p><iframe frameborder="0" height="379" src="http://player.vimeo.com/video/58713783" width="500"></iframe></p> 
+         <p class="p1">We know all there is to know about your demographics. It’s been a part of our major apps for a long time. You want to know who saw your advertisers’ campaign? We got you covered. What’s the age distribution for people visiting this webpage or a certain category? Not a problem. You have all the information already there, but it isn’t very accessible and it requires a lot of manual labor to dig out, polish and present. The things get further complicated if you have multiple sites.&nbsp;</p> 
+         <p class="p1">How do you know which combination of sites is seen by your advertisers’preferred&nbsp;audience? And how many were they? You’d have to have some sort of tool that&nbsp;analyses&nbsp;demographics across your sites and then lets you combine sites and calculate reach and affinity(*) for your advertisers’ audience and tells you how many impressions you’d need to book. Preferably in real-time, while you have your customer on the phone, right?&nbsp;</p> 
+         <div>
+          <p><a href="http://blog.burtcorp.com/post/42346417199/more-news-at-the-burt-hub-the-audience-disovery">Read more »</a></p>
+         </div> 
+        </div> </li> 
+       <li class="post"> 
+        <div class="post_side"> 
+         <a href="http://blog.burtcorp.com/post/41694349901/just-released-in-the-burt-hub-awesome-time-series"> <img class="avatar" src="http://38.media.tumblr.com/avatar_f61bb726b910_64.png" width="64" height="64" alt="vajna" title="vajna"> </a> 
+         <small>Jan 28, 2013</small> 
+        </div> 
+        <div class="post_head"> 
+         <h2 class="news burt burt_hub time_series analytics data_analyst"> <a href="http://blog.burtcorp.com/post/41694349901/just-released-in-the-burt-hub-awesome-time-series">Just Released in the Burt.hub: Awesome Time Series App</a> <small>by <a href="http://vajna.tumblr.com/" class="author_name">vajna</a></small> </h2> 
+        </div> 
+        <div class="post_body"> 
+         <p><span>We just introduced a brand new app to our Burt.hub family and we thought we’d share some thoughts and deliver some background to this sweet new analytics ride.&nbsp;</span><br><br>We always strive to make our apps simple, fun and beautiful. And relevant. Relevant - that’s a huge part of it. And it’s a lot harder that it seems. We collect these vast oceans of data and then we filter and process and crunch and analyze until what we’ve got is as potent as Uranium-235 and means something to our customers. Then we wrap it all up nicely and make it fast and intuitive to discover and consume. Great success!<br><br>In doing so, however, we end up with a lot of good data getting overlooked. We had built a system we used internally for a couple of months to see trends and figure our differences across various dimensions over time when one of our more active customers came to visit and got blown away. He’d loved our other apps and our approach thus far, but this was something else. He could see all sorts of uses for our little tool and demanded we’d give to him.<br><br>We didn’t.<br><br>Thing is, you can say a lot about Burt but damnit we don’t do anything half-arsed. We do it right, or we don’t do it at all. <br><br>So we sent him home and told him to keep a keen eye towards the skies in the west. We proceeded ripping the tool apart, making it faster, more flexible, hotter and added vitals such as excel export, hourly-, daily-, weekly-, monthly- rollups, freely selected time-spans, device type separation and just maxing it all out. <br><br>Check out the video below. Not bad a start, ey? We’ve got great plans for the app and will add additional data-sources and other improvements continuously. And as we always say for all of our apps - they really come to life when you put some real chunky data in there =)</p> 
+         <p><br><iframe frameborder="0" height="412" src="http://player.vimeo.com/video/58093953" width="500"></iframe><br><br>Want to see more and play around with you own data? Get in touch with my super friendly colleague Daniel Alman at <a href="mailto:alman@burtcorp.com">alman@burtcorp.com</a> and he’ll hook you up.</p> 
+        </div> </li> 
+       <li class="post"> 
+        <div class="post_side"> 
+         <a href="http://blog.burtcorp.com/post/38956538949/2013-another-year-when-mobile-will-really-break"> <img class="avatar" src="http://38.media.tumblr.com/avatar_f61bb726b910_64.png" width="64" height="64" alt="vajna" title="vajna"> </a> 
+         <small>Dec 27, 2012</small> 
+        </div> 
+        <div class="post_head"> 
+         <h2 class="trends"> <a href="http://blog.burtcorp.com/post/38956538949/2013-another-year-when-mobile-will-really-break">2013: another year when “mobile” will REALLY break through?</a> <small>by <a href="http://vajna.tumblr.com/" class="author_name">vajna</a></small> </h2> 
+        </div> 
+        <div class="post_body"> 
+         <p>New years’ resolutions, summaries, trend predictions and yearly round ups are just as much a part of December as are Christmas decorations. Every year there is a lot of talk on how mobile, or tablet for that matter, will completely revolutionize the marketing playground and in this upcoming year this REALLY will break through. Of course the mobile platforms and hugely increased amount of users and devices has changed the game but not as closely as to what “trend spotters” have been predicting. Let us offer some thoughts of our own in the anticipation of turning yet another year.<br><br>To share Burt CEOs, Gustav von Sydows thoughts:<br><em>“When it comes to strategic approaches it is rather critical for marketers to analyse and better understand their entire online footprint, from how their prospective customers interact with video, display, integrated marketing etc. to how to build a stronger relationship with their existing customer base thru social media, mobile, email and ecommerce.”</em><br></p> 
+         <div>
+          <p><a href="http://blog.burtcorp.com/post/38956538949/2013-another-year-when-mobile-will-really-break">Read more »</a></p>
+         </div> 
+        </div> </li> 
+      </ul> 
+      <div class="pagination"> 
+       <a class="next" rel="next" href="/page/2">Next page →</a> 
+      </div> 
+     </div> 
+     <div class="span3 sidebar"> 
+      <h5 class="categories">Categories</h5> 
+      <nav> 
+       <ul> 
+        <li><a class="business" href="/tagged/business">Business</a></li> 
+        <li><a class="design" href="/tagged/design">Design</a></li> 
+        <li><a class="engineering" href="/tagged/engineering">Engineering</a></li> 
+        <li><a class="trends" href="/tagged/trends">Thoughts &amp; Trends</a></li> 
+        <li><a class="news" href="/tagged/news">News</a></li> 
+        <li><a class="hiring" href="/tagged/hiring">We're Hiring</a></li> 
+       </ul> 
+      </nav> 
+      <form action="/search" method="get"> 
+       <input class="search" placeholder="Search" type="text" name="q" value=""> 
+      </form> 
+      <ul class="links"> 
+       <li><a class="website" href="http://burtcorp.com" title="back to burtcorp.com">Burt Website</a></li> 
+       <li><a class="archive" href="/archive/">Archive</a></li> 
+       <li><a class="rss" href="http://blog.burtcorp.com/rss">RSS feed</a></li> 
+       <li><a class="twitter" href="https://twitter.com/burtcorp">Twitter</a></li> 
+       <li><a class="facebook" href="http://www.facebook.com/Burtcorp">Facebook</a></li> 
+       <li><a class="tumblr" href="http://ramblings.burtcorp.com/">Tumblr</a></li> 
+      </ul> 
+      <ul id="pages" class="navigation"> 
+      </ul> 
+      <h5>Blog Alert</h5> 
+      <p style="font-size:14px; color:#a7a7a7; line-height: 16px ">Email me when there's <br> new posts please</p> 
+      <form id="blog_alert" action="https://forms.hubspot.com/uploads/form/v2/120191/d3e59b4c-05b9-45a7-ab95-39d93559d61a" method="post"> 
+       <input class="email" placeholder="Your Email" type="text" name="email" value=""> 
+       <a href="#" style="background-color: rgb(210, 95, 43); background-image: -webkit-linear-gradient(top, rgb(216, 106, 48), rgb(200, 79, 35)); border-bottom-color: rgba(0, 0, 0, 0.247059); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 5px 0px; color: rgb(251, 236, 229); display: inline; font-size: 16px; font-weight: bold; line-height: 16px; padding-bottom: 6px; padding-left: 11px; padding-right: 11px; padding-top: 5px; position: relative; text-align: center; text-decoration: none; text-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 0px;top: 12px;" onclick="$('#blog_alert').submit();">Submit</a> 
+      </form> 
+      <br>
+      <br> 
+      <h5>Burt.<span>tweets</span></h5> 
+      <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script> 
+      <script>
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 4,
+        interval: 30000,
+        width: 'auto',
+        height: 300,
+        theme: {
+          shell: {
+            background: 'transparent',
+            color: '#A7A7A7'
+          },
+          tweets: {
+            background: 'transparent',
+            color: '#A7A7A7',
+            links: '#E56F30'
+          }
+        },
+        features: {
+          scrollbar: false,
+          loop: false,
+          live: false,
+          behavior: 'all'
+        }
+      }).render().setUser('burtcorp').start();
+      </script> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+  <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]--> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="http://burtcorp.com/js/libs/writecapture.js"></script> 
+  <script type="text/javascript">
+
+  $(function(){
+    // wrap image with <span class="image-wrap"> for styling
+    $('#posts img').each(function() {
+      var imgClass = $(this).attr('class');
+      $(this).wrap('<span class="image-wrap ' + imgClass + '" style="width: auto; height: auto;"/>');
+      $(this).removeAttr('class');
+    });
+
+  });
+
+  $('.gist').each(function(i) {
+
+      var href = $(this).find("a").attr("href");
+      if (href.indexOf("#") === -1) {
+        href = href + ".js";
+      } else {
+        href = href.replace("#file_",".js?file=");
+      }
+      console.log(href);
+      var tag = "script";
+      var path = "<" + tag + " src='" + href + "'></" + tag + ">";
+      console.log(path);
+      writeCapture.html(this, path );
+  });
+
+  
+  (function() {
+      var links = document.getElementsByTagName('a');
+      var query = '?';
+      for(var i = 0; i < links.length; i++) {
+      if(links[i].href.indexOf('#disqus_thread') >= 0) {
+          query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+      }
+      }
+      document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/engineeringburt/get_num_replies.js' + query + '"></' + 'script>');
+  })();
+  
+  </script> 
+  <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script> 
+  <!-- Start of Async HubSpot Analytics Code --> 
+  <script type="text/javascript">
+        (function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/120191.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script> 
+  <!-- End of Async HubSpot Analytics Code --> 
+  <!-- BEGIN TUMBLR CODE -->
+  <iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe>
+  <script type="text/javascript">
+    (function(){
+        var analytics_frame = document.getElementById('ga_target');
+        var analytics_iframe_loaded;
+        var user_logged_in;
+        var blog_is_nsfw = 'No';
+        var addthis_enabled = false;
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent,function(e) {
+            var message = (e.data && e.data.split) ? e.data.split(';') : '';
+            switch (message[0]) {
+                case 'analytics_iframe_loaded':
+                    analytics_iframe_loaded = true;
+                    postCSMessage();
+                    postGAMessage();
+                    postATMessage();
+                    break;
+                case 'user_logged_in':
+                    user_logged_in = message[1];
+                    postGAMessage();
+                    postATMessage();
+                    break;
+            }
+        }, false);
+
+        analytics_frame.src = "https://secure.assets.tumblr.com/analytics.html?a57a7a4b4579d695d8e64bdfee554a5e#http://blog.burtcorp.com";
+        function postGAMessage() {
+            if (analytics_iframe_loaded && user_logged_in) {
+                var is_ajax = false;
+                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/?route=%2F'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postCSMessage() {
+            COMSCORE = true;
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }
+        function postATMessage() {
+            if (addthis_enabled && analytics_iframe_loaded) {
+                analytics_frame.contentWindow.postMessage('enable_addthis', analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+    })();
+</script>
+  <script type="text/javascript">!function(s){s.src='https://www.tumblr.com/impixu?T=1417770116&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5idXJ0Y29ycC5jb21cLyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC8ifQ==&U=DHMHPPFDDG&K=6a15f206f4441ceee0103e17a0420f7ffa3470a75f5c84e1ef0733eaa185b2af&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script>
+  <noscript>
+   <img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://www.tumblr.com/impixu?T=1417770116&amp;J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5idXJ0Y29ycC5jb21cLyIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC8iLCJub3NjcmlwdCI6MX0=&amp;U=DHMHPPFDDG&amp;K=418a91c8a165a2b10a695e3f628a526a896110fc703e3aac0f6db853b00d01a9&amp;R=">
+  </noscript>
+  <script type="text/javascript">!function(s){s.src='https://www.tumblr.com/impixu?T=1417770116&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cuYnVydGNvcnAuY29tXC8iLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvIiwicG9zdHMiOlt7InBvc3RpZCI6IjUyNzAyNTQ3MTYwIiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjUxNTcwNzU0MDQzIiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQ1OTc3MzcwMDExIiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQ1MzM4ODA1NTY1IiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQ1MTAzNzgyNzI3IiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQ0MjkwMDU4ODUwIiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQzMDc0NTUxNDQ1IiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQyMzQ2NDE3MTk5IiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQxNjk0MzQ5OTAxIiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjM4OTU2NTM4OTQ5IiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfV19&U=JPDGPNHCNN&K=f18f95fa968df08af8362b2839bf15c92086d223524dfc995cf0242fdf439ab0&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script>
+  <noscript>
+   <img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://www.tumblr.com/impixu?T=1417770116&amp;J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cuYnVydGNvcnAuY29tXC8iLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvIiwicG9zdHMiOlt7InBvc3RpZCI6IjUyNzAyNTQ3MTYwIiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjUxNTcwNzU0MDQzIiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQ1OTc3MzcwMDExIiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQ1MzM4ODA1NTY1IiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQ1MTAzNzgyNzI3IiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQ0MjkwMDU4ODUwIiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQzMDc0NTUxNDQ1IiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQyMzQ2NDE3MTk5IiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjQxNjk0MzQ5OTAxIiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfSx7InBvc3RpZCI6IjM4OTU2NTM4OTQ5IiwiYmxvZ2lkIjoiNDQ4MTE5NTQiLCJzb3VyY2UiOjMzfV0sIm5vc2NyaXB0IjoxfQ==&amp;U=JPDGPNHCNN&amp;K=2d7c26b016c519d82fc2fcce3a75535815c361730ead7c8d827a125368fb5523&amp;R=">
+  </noscript>
+  <script>
+                (function() {
+                    var s = document.createElement('script');
+                    var el = document.getElementsByTagName('script')[0];
+                                            s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://l') + '.yimg.com/ss/rapid-3.18.1.js';
+                                        s.onload = function(){
+                        var YAHOO = window.YAHOO;
+                        if (YAHOO) {
+                            var keys = {
+                                pd:'/',
+                                _li:0,
+                                b_id:44811954,
+                                i_rad:0,
+                                i_strm:0
+                            };
+                            var conf = {
+                                                                spaceid:1197716038,
+                                client_only:1,
+                                yql_enabled:false,
+                                keys:keys,
+                                nol:1
+                            };
+                            YAHOO.rapid = new YAHOO.i13n.Rapid(conf);
+                        }
+                    };
+                    el.parentNode.insertBefore(s, el);
+                })();
+            </script>
+  <script>
+        (function (w,d) {
+            'use strict';
+            var l = function(el, type, listener, useCapture) {
+                el.addEventListener ?
+                el.addEventListener(type, listener, !!useCapture) :
+                el.attachEvent && el.attachEvent('on' + type, listener, !!useCapture);
+            };
+            var a = function () {
+                                if (d.getElementById('tumblr-cdx')) {
+                    return;
+                }
+                var s = d.createElement('script');
+                var el = d.getElementsByTagName('script')[0];
+                s.async = true;
+                s.src = 'http://assets.tumblr.com/assets/scripts/vendor/cedexis/cedexis.radar.min.js?_v=1360de60c9b05c6a55bd6a6e510e1699';
+                s.type = 'text/javascript';
+                s.id = 'tumblr-cdx';
+                d.body.appendChild(s);
+            };
+            l(w,'load',a);
+        }(window, document));
+</script>
+  <iframe id="tumblr_controls" class="tumblr_controls" width="1" height="1" frameborder="0" scrolling="no" src="https://secure.assets.tumblr.com/assets/html/iframe/o.html?_v=e62bb39e803951fade52d018c6a0056f#src=http%3A%2F%2Fblog.burtcorp.com%2F&amp;lang=en_US&amp;name=blogbyburt&amp;brag=false&amp;avatar=http%3A%2F%2F38.media.tumblr.com%2Favatar_36c21d4084fe_64.png&amp;title=A+blog+by+Burt.&amp;url=http%3A%2F%2Fblog.burtcorp.com%2F&amp;page_slide=slide"></iframe>
+  <div id="teaser_iframe_container" style="display:none;">
+   <iframe scrolling="no" frameborder="0" src="https://www.tumblr.com/assets/html/iframe/teaser.html?_v=391d2e8bd72c4cb84fec0fda964697d3#src=http%3A%2F%2Fblog.burtcorp.com%2F&amp;lang=en_US&amp;name=blogbyburt&amp;brag=false&amp;avatar=http%3A%2F%2F38.media.tumblr.com%2Favatar_36c21d4084fe_64.png&amp;title=A+blog+by+Burt.&amp;url=http%3A%2F%2Fblog.burtcorp.com%2F&amp;page_slide=slide" id="teaser_iframe" width="1" height="1"></iframe>
+  </div>
+  <script type="text/javascript">
+    (function(Tumblr){
+        var follow_iframe_initialized = false;
+        if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {
+            // Don't do anything until the first initialize event
+            Tumblr.PostMessageListener.initialize(function(message, origin) {
+                if (follow_iframe_initialized || message.length < 2) return;
+
+                if (message[0] === 'follow_iframe' && message[1] === 'enable') {
+                    Tumblr.FollowTeaser.current_page = 1;
+                    Tumblr.FollowTeaser.infer_infinite_scroll = true;
+                    Tumblr.FollowTeaser.create_from_tumblr_controls("http:\/\/assets.tumblr.com\/assets\/html\/iframe\/follow.html?_v=3f7aaadc4834fb52a1754e9878721fe6");
+                    Tumblr.FollowTeaser.scroll_listener(true);
+                    follow_iframe_initialized = true;
+                }
+            });
+        }
+    })(this.Tumblr || (this.Tumblr = {}));
+</script>
+  <!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]-->
+  <!-- END TUMBLR CODE -->  
+ </body>
+</html>

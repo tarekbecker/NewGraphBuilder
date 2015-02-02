@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<!--// OPEN HTML //-->
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+ <!-- Supreme - A Responsive Magazine/Blog WordPress Theme - Designed & Developed by Swift Ideas ( www.swiftideas.net ) -->
+ <!--// OPEN HEAD //-->
+ <head> 
+  <!--// SITE TITLE //--> 
+  <title>Big Data and Analytics Blog - Experfy Insights</title> 
+  <!--// SITE META //--> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"> 
+  <!--// PINGBACK & FAVICON //--> 
+  <link rel="pingback" href="http://www.experfy.com/blog/xmlrpc.php"> 
+  <!--[if lt IE 9]>
+	    <!--// LEGACY HTML SUPPORT //--> 
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> 
+  <!--[endif]----> 
+  <!--// GOOGLE FONT LOADER //--> 
+  <script>
+			WebFontConfig = {
+			    google: { families: [ 'Vidaloka'] }
+			};
+			
+			(function() {
+				document.getElementsByTagName("html")[0].setAttribute("class","wf-loading")
+				//  NEEDED to push the wf-loading class to your head
+				document.getElementsByTagName("html")[0].setAttribute("className","wf-loading")
+				// for IE…
+			
+			var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				 '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'false';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			})();
+		</script> 
+  <!--// WORDPRESS HEADER HOOK //--> 
+  <script>
+        writeCookie();
+        function writeCookie()
+        {
+            the_cookie = document.cookie;
+            if( the_cookie ){
+                if( window.devicePixelRatio >= 2 ){
+                    the_cookie = "pixel_ratio="+window.devicePixelRatio+";"+the_cookie;
+                    document.cookie = the_cookie;
+                    //location = '';
+                }
+            }
+        }
+    </script> 
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.7 - https://yoast.com/wordpress/plugins/seo/ --> 
+  <link rel="canonical" href="http://www.experfy.com/blog/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Big Data and Analytics Blog - Experfy Insights"> 
+  <meta property="og:url" content="http://www.experfy.com/blog/"> 
+  <meta property="og:site_name" content="Experfy Insights"> 
+  <script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "http://www.experfy.com/blog/", "potentialAction": { "@type": "SearchAction", "target": "http://www.experfy.com/blog/?s={search_term}", "query-input": "required name=search_term" } }</script> 
+  <!-- / Yoast WordPress SEO plugin. --> 
+  <link rel="alternate" type="application/rss+xml" title="Experfy Insights » Feed" href="http://www.experfy.com/blog/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Experfy Insights » Comments Feed" href="http://www.experfy.com/blog/comments/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Experfy Insights » Big Data and Analytics Blog Comments Feed" href="http://www.experfy.com/blog/home-no-slider/feed/"> 
+  <link rel="stylesheet" id="bootstrap-css" href="http://www.experfy.com/blog/wp-content/themes/supreme/includes/page-builder/assets/bootstrap/css/bootstrap.css?ver=3.0.2" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="js_composer_front-css" href="http://www.experfy.com/blog/wp-content/themes/supreme/includes/page-builder/assets/js_composer_front.css?ver=3.0.2" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://www.experfy.com/blog/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="rs-plugin-settings-css" href="http://www.experfy.com/blog/wp-content/plugins/revslider/rs-plugin/css/settings.css?rev=4.3.1&amp;ver=4.0.1" type="text/css" media="all"> 
+  <style type="text/css">
+.tp-caption a {
+color:#ff7302;
+text-shadow:none;
+-webkit-transition:all 0.2s ease-out;
+-moz-transition:all 0.2s ease-out;
+-o-transition:all 0.2s ease-out;
+-ms-transition:all 0.2s ease-out;
+}
+
+.tp-caption a:hover {
+color:#ffa902;
+}
+</style> 
+  <link rel="stylesheet" id="rs-captions-css" href="http://www.experfy.com/blog/wp-content/plugins/revslider/rs-plugin/css/dynamic-captions.css?rev=4.3.1&amp;ver=4.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="mailchimp-for-wp-checkbox-css" href="http://www.experfy.com/blog/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.min.css?ver=2.1.6" type="text/css" media="all"> 
+  <link rel="stylesheet" id="mailchimp-for-wp-form-theme-dark-css" href="http://www.experfy.com/blog/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-dark.min.css?ver=2.1.6" type="text/css" media="all"> 
+  <link rel="stylesheet" id="base-css-css" href="http://www.experfy.com/blog/wp-content/themes/supreme/css/base.css" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="skeleton-css-css" href="http://www.experfy.com/blog/wp-content/themes/supreme/css/skeleton.css" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="fontawesome-css-css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="main-css-css" href="http://www.experfy.com/blog/wp-content/themes/supreme-child/style.css" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="layout-css-css" href="http://www.experfy.com/blog/wp-content/themes/supreme/css/layout.css" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="custom-css-css" href="http://www.experfy.com/blog/wp-content/themes/supreme/css/custom-styles.css.php" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="optimizepress-fancybox-css" href="http://www.experfy.com/blog/wp-content/plugins/optimizePressPlugin/lib/js/fancybox/jquery.fancybox.min.css?ver=2.3.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="optimizepress-wp-css" href="http://www.experfy.com/blog/wp-content/plugins/optimizePressPlugin/lib/css/wp.css?ver=2.3.3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="optimizepress-default-css" href="http://www.experfy.com/blog/wp-content/plugins/optimizePressPlugin/lib/assets/default.min.css?ver=2.3.3" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-includes/js/jquery/jquery.js?ver=1.11.1"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var OptimizePress = {"ajaxurl":"http:\/\/www.experfy.com\/blog\/wp-admin\/admin-ajax.php","SN":"optimizepress","version":"2.3.3","script_debug":".min","imgurl":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/lib\/images\/","OP_URL":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/","OP_JS":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/lib\/js\/","include_url":"http:\/\/www.experfy.com\/blog\/wp-includes\/","op_autosave_interval":"300","op_autosave_enabled":"Y","paths":{"url":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/","img":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/lib\/images\/","js":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/lib\/js\/","css":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/lib\/css\/"},"social":{"twitter":"optimizepress","facebook":"optimizepress","googleplus":"111273444733787349971"},"flowplayerHTML5":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/lib\/modules\/blog\/video\/flowplayer-5.5.0\/flowplayer.swf","flowplayerKey":"","flowplayerLogo":"","flowplayer":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/lib\/modules\/blog\/video\/flowplayer\/flowplayer-3.2.7.swf","flowplayer_control":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/lib\/modules\/blog\/video\/flowplayer\/flowplayer.controls-3.2.5.swf","mediaelementplayer":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/optimizePressPlugin\/lib\/modules\/blog\/video\/mediaelement\/","pb_unload_alert":"This page is asking you to confirm that you want to leave - data you have entered may not be saved.","pb_save_alert":"Please make sure you are happy with all of your options as some options will not be able to be changed for this page later."};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/plugins/optimizePressPlugin/lib/js/jquery/jquery.noconflict.min.js?ver=2.3.3"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/plugins/optimizePressPlugin/lib/js/jquery/jquery.loadScript.min.js?ver=2.3.3"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?rev=4.3.1&amp;ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?rev=4.3.1&amp;ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/includes/page-builder/assets/js_composer_front.js?ver=4.0.1"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var love_it_vars = {"ajaxurl":"http:\/\/www.experfy.com\/blog\/wp-admin\/admin-ajax.php","nonce":"c0a0cb3427","already_loved_message":"You have already loved this item.","error_message":"Sorry, there was a problem processing your request.","logged_in":"false"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/includes/plugins/love-it-pro/includes/js/love-it.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/includes/plugins/love-it-pro/includes/js/jquery.cookie.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.8"></script> 
+  <link rel="shortlink" href="http://www.experfy.com/blog/"> 
+  <!--[if (gte IE 6)&(lte IE 8)]>
+        <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/plugins/optimizePressPlugin/lib/js/selectivizr-1.0.2-min.js?ver=1.0.2"></script>
+        <![endif]--> 
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+  <style id="op_custom_css">
+.op-live-editor .fancybox-overlay {
+    z-index: 100001;
+}
+.op-live-editor .fancybox-opened {
+    overflow: visible;
+}
+</style> 
+  <meta property="fb:app_id" content="1456037204643104"> 
+  <script type="text/javascript">
+(function(url){
+if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+var wfscr = document.createElement('script');
+wfscr.type = 'text/javascript';
+wfscr.async = true;
+wfscr.src = url + '&r=' + Math.random();
+(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+})('//www.experfy.com/blog/wp-admin/admin-ajax.php?action=wordfence_logHuman&hid=338B9C931135E9347FC0535863A2E342'); 
+</script>
+  <!-- Google Analytics Tracking by Google Analyticator 6.4.8: http://www.videousermanuals.com/google-analyticator/ --> 
+  <script type="text/javascript">window.google_analytics_uacct = "UA-46693092-1";</script> 
+  <script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'disabled';
+    var analyticsEventTracking = 'enabled';
+</script> 
+  <script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-46693092-1', 'auto');
+ 
+	ga('send', 'pageview');
+</script> 
+  <!--// CLOSE HEAD //--> 
+ </head> 
+ <!--// OPEN BODY //--> 
+ <body class="home page page-id-5824 page-template-default light page-shadow  op-plugin"> 
+  <!-- OPEN Social Scripts --> 
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script> 
+  <script type="text/javascript">stLight.options({publisher: "ur-72c8cf80-2647-2464-a894-abc33849d467", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script> 
+  <!-- CLOSE Social Scripts --> 
+  <noscript> 
+   <div class="no-js-alert">
+     Please enable JavaScript to view this website. 
+   </div> 
+  </noscript> 
+  <div id="top-bar"> 
+   <div class="container"> 
+    <nav id="top-bar-menu" class="top-menu twelve columns clearfix"> 
+     <div id="top-bar-date">
+      December 5, 2014
+     </div> 
+    </nav> 
+    <nav id="mobile-top-bar-menu" class="mobile-nav"> 
+     <span class="selected-option">- Menu -</span> 
+     <div class="menu">
+      <ul>
+       <option class="menu-item-3015 menu-item-depth-0" value=""></option>
+       <option class="menu-item-10 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1238 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1272 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6021 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5485 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5370 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5824 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1583 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6020 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6019 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1580 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6018 menu-item-depth-0" value=""></option>
+       <option class="menu-item-634 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6017 menu-item-depth-0" value=""></option>
+       <option class="menu-item-616 menu-item-depth-0" value=""></option>
+       <option class="menu-item-608 menu-item-depth-0" value=""></option>
+       <option class="menu-item-613 menu-item-depth-0" value=""></option>
+       <option class="menu-item-570 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1075 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6028 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1211 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5861 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5867 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5862 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5868 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1303 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6022 menu-item-depth-0" value=""></option>
+       <option class="menu-item-7910 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5372 menu-item-depth-0" value=""></option>
+       <option class="menu-item-173 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6023 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6025 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5865 menu-item-depth-0" value=""></option>
+       <option class="menu-item-4705 menu-item-depth-0" value=""></option>
+       <option class="menu-item-2184 menu-item-depth-0" value=""></option>
+       <option class="menu-item-3028 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6029 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5339 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6375 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5373 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1395 menu-item-depth-0" value=""></option>
+       <option class="menu-item-15 menu-item-depth-0" value=""></option>
+       <option class="menu-item-2935 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6030 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5204 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6033 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6003 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6026 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5864 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5869 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1349 menu-item-depth-0" value=""></option>
+       <option class="menu-item-3041 menu-item-depth-0" value=""></option>
+       <option class="menu-item-3039 menu-item-depth-0" value=""></option>
+       <option class="menu-item-3019 menu-item-depth-0" value=""></option>
+       <option class="menu-item-3596 menu-item-depth-0" value=""></option>
+       <option class="menu-item-372 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6005 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1544 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6006 menu-item-depth-0" value=""></option>
+       <option class="menu-item-496 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6013 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1547 menu-item-depth-0" value=""></option>
+       <option class="menu-item-327 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1509 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6012 menu-item-depth-0" value=""></option>
+       <option class="menu-item-477 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1516 menu-item-depth-0" value=""></option>
+       <option class="menu-item-480 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1519 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1507 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6011 menu-item-depth-0" value=""></option>
+       <option class="menu-item-463 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6008 menu-item-depth-0" value=""></option>
+       <option class="menu-item-445 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6015 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1550 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6014 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1541 menu-item-depth-0" value=""></option>
+       <option class="menu-item-390 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1493 menu-item-depth-0" value=""></option>
+       <option class="menu-item-470 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6009 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1497 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6010 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1524 menu-item-depth-0" value=""></option>
+       <option class="menu-item-521 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6016 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1558 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1537 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1490 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6007 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6409 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6032 menu-item-depth-0" value=""></option>
+       <option class="menu-item-869 menu-item-depth-0" value=""></option>
+       <option class="menu-item-2 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1195 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5860 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1164 menu-item-depth-0" value=""></option>
+       <option class="menu-item-3036 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5492 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6027 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5374 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6031 menu-item-depth-0" value=""></option>
+       <option class="menu-item-6024 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1333 menu-item-depth-0" value=""></option>
+       <option class="menu-item-1169 menu-item-depth-0" value=""></option>
+       <option class="menu-item-3017 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5863 menu-item-depth-0" value=""></option>
+       <option class="menu-item-3025 menu-item-depth-0" value=""></option>
+       <option class="menu-item-653 menu-item-depth-0" value=""></option>
+       <option class="menu-item-3021 menu-item-depth-0" value=""></option>
+       <option class="menu-item-5866 menu-item-depth-0" value=""></option>
+      </ul>
+     </div> 
+     <!-- CLOSE #mobile-navigation --> 
+    </nav> 
+    <div id="top-bar-social" class="four columns"> 
+     <ul class="social-icons small light">
+      <li class="linkedin"><a href="https://www.linkedin.com/company/3513709" target="_blank">LinkedIn</a></li>
+      <li class="facebook"><a href="https://www.facebook.com/experfy" target="_blank">Facebook</a></li>
+      <li class="twitter"><a href="http://www.twitter.com/Experfy" target="_blank">Twitter</a></li>
+      <li class="vimeo"><a href="http://www.vimeo.com/experfy" target="_blank">Vimeo</a></li>
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="container"> 
+   <div id="header-section" class="logo-right logo-fade clearfix"> 
+    <div class="container"> 
+     <header class="sixteen columns"> 
+      <div class="header-advert nine columns alpha"> 
+      </div> 
+      <div id="logo" class="seven columns omega"> 
+       <a href="http://www.experfy.com/blog"> <img class="standard" src="http://www.experfy.com/blog/wp-content/uploads/2014/05/experfy_insights_logo_new2.fw_.png" alt="Experfy Insights"> <img class="retina" src="http://www.experfy.com/blog/wp-content/uploads/2014/05/experfy_insights_logo_new2.fw_.png" alt="Experfy Insights"> </a> 
+      </div> 
+     </header> 
+    </div> 
+   </div> 
+   <div id="aux-area"> 
+    <div class="container"> 
+     <div id="header-search" class="sixteen columns"> 
+      <form method="get" id="header-searchform" action="http://www.experfy.com/blog/"> 
+       <input type="text" placeholder="Type something and hit enter to search" name="s" id="s"> 
+      </form> 
+     </div> 
+     <div id="header-subscribe" class="sixteen columns"> 
+      <form action="http://experfy.us8.list-manage.com/subscribe/post?u=1054e917e27bb37157b80cef8&amp;id=d1b4ea6811" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate> 
+       <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email address and hit enter to subscribe" required> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="nav-section" class="nav-indicator nav-shadow  clearfix"> 
+    <div class="container"> 
+     <div class="nav-wrap sixteen columns clearfix"> 
+      <!-- OPEN #main-navigation --> 
+      <nav id="main-navigation" class="twelve columns alpha"> 
+       <div class="menu-top-menu-container">
+        <ul id="menu-top-menu" class="menu">
+         <li id="menu-item-6494" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6494"><a href="https://www.experfy.com">Experfy Marketplace</a></li> 
+         <li id="menu-item-7906" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-7906"><a href="http://www.experfy.com/blog/">Big Data Blog</a></li> 
+         <li id="menu-item-7916" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7916"><a href="#">Experfy Updates</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-7909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7909 default"><a href="http://www.experfy.com/blog/press/">Press</a></li> 
+           <li id="menu-item-7917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7917 default"><a href="http://www.experfy.com/blog/company-updates/">Company Updates</a></li> 
+          </ul> </li> 
+        </ul>
+       </div> 
+       <!-- CLOSE #main-navigation --> 
+      </nav> 
+      <!-- OPEN #mobile-navigation --> 
+      <nav id="mobile-navigation" class="mobile-nav"> 
+       <span class="selected-option">- Menu -</span> 
+       <div class="menu-top-menu-container">
+        <select id="menu-top-menu-1" class="menu dropdown-menu"><option value="" class="blank">– Menu –</option><option class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6494 menu-item-depth-0" value="https://www.experfy.com">Experfy Marketplace</option> <option class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-7906 menu-item-depth-0" value="http://www.experfy.com/blog/" selected>Big Data Blog</option> <option class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7916 menu-item-depth-0" value="#">Experfy Updates</option> <option class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7909 menu-item-depth-1 default" value="http://www.experfy.com/blog/press/">- Press</option> <option class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7917 menu-item-depth-1 default" value="http://www.experfy.com/blog/company-updates/">- Company Updates</option> </select>
+       </div> 
+       <!-- CLOSE #mobile-navigation --> 
+      </nav> 
+      <div id="menubar-controls" class="four columns omega"> 
+       <div class="control-item"> 
+        <a id="subscribe-activate" href="#"><i class="icon-envelope-alt"></i></a> 
+        <span class="tooltip aux">Subscribe<span class="arrow"></span></span> 
+       </div> 
+       <div class="control-item"> 
+        <a id="search-activate" href="#"><i class="icon-search"></i></a> 
+        <span class="tooltip aux">Search<span class="arrow"></span></span> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="mini-header" class="nav-indicator nav-shadow "> 
+    <div class="container"> 
+     <div class="nav-wrap sixteen columns clearfix"> 
+      <!-- OPEN #main-navigation --> 
+      <nav id="mini-navigation" class="twelve columns alpha"> 
+       <div class="menu-top-menu-container">
+        <ul id="menu-top-menu-2" class="menu">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6494"><a href="https://www.experfy.com">Experfy Marketplace</a></li> 
+         <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-7906"><a href="http://www.experfy.com/blog/">Big Data Blog</a></li> 
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7916"><a href="#">Experfy Updates</a> 
+          <ul class="sub-menu"> 
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7909 default"><a href="http://www.experfy.com/blog/press/">Press</a></li> 
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7917 default"><a href="http://www.experfy.com/blog/company-updates/">Company Updates</a></li> 
+          </ul> </li> 
+        </ul>
+       </div> 
+       <!-- CLOSE #main-navigation --> 
+      </nav> 
+      <div id="mini-search" class="four columns omega"> 
+       <form method="get" action="http://www.experfy.com/blog/"> 
+        <input type="text" name="s"> 
+       </form> 
+       <a href="#" class="mini-search-link"><i class="icon-search"></i></a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- OPEN #main-container --> 
+   <div id="main-container" class="clearfix"> 
+    <div id="ticker-wrap" class="clearfix">
+     <div class="container">
+      <div class="sixteen columns">
+       <ul id="posts-ticker" class="news-ticker js-hidden" data-latesttext="Latest:">
+        <li class="news-item"><a href="http://www.experfy.com/blog/rethinking-decision-factory-roger-martin/" title="“Rethinking the Decision Factory” by Roger Martin">“Rethinking the Decision Factory” by Roger Martin</a></li>
+        <li class="news-item"><a href="http://www.experfy.com/blog/women-in-data-science-10-selected-profiles/" title="Women in Data Science: 10 Selected Profiles">Women in Data Science: 10 Selected Profiles</a></li>
+        <li class="news-item"><a href="http://www.experfy.com/blog/women-stem-workforce/" title="Where are the Women in the STEM Workforce?">Where are the Women in the STEM Workforce?</a></li>
+        <li class="news-item"><a href="http://www.experfy.com/blog/marketing-analytics-content-marketing/" title="Marketing Analytics and Content Marketing">Marketing Analytics and Content Marketing</a></li>
+        <li class="news-item"><a href="http://www.experfy.com/blog/modern-marketer-artist-scientist/" title="The Big Data Marketer: An Artist or a Scientist?">The Big Data Marketer: An Artist or a Scientist?</a></li>
+        <li class="news-item"><a href="http://www.experfy.com/blog/cmos-can-use-big-data-analytics-drive-profits/" title="How CMOs Can Use Big Data Analytics to Drive Profits">How CMOs Can Use Big Data Analytics to Drive Profits</a></li>
+        <li class="news-item"><a href="http://www.experfy.com/blog/cloudera-vs-hortonworks-comparing-hadoop-distributions/" title="Cloudera vs Hortonworks vs MapR: Comparing Hadoop Distributions">Cloudera vs Hortonworks vs MapR: Comparing Hadoop Distributions</a></li>
+        <li class="news-item"><a href="http://www.experfy.com/blog/pentaho-vs-tableau-comparison-visualization-dashboards/" title="Pentaho vs Tableau: Two popular visualization and dashboarding tools">Pentaho vs Tableau: Two popular visualization and dashboarding tools</a></li>
+        <li class="news-item"><a href="http://www.experfy.com/blog/measuring-marketing-roi-big-data/" title="Measuring Marketing ROI with Big Data">Measuring Marketing ROI with Big Data</a></li>
+        <li class="news-item"><a href="http://www.experfy.com/blog/idea-to-action/" title="From Idea to Action">From Idea to Action</a></li>
+       </ul>
+      </div>
+     </div>
+    </div> 
+    <div class="container"> 
+     <!-- OPEN #page-wrap --> 
+     <div id="page-wrap" class="sixteen columns"> 
+      <div class="inner-page-wrap has-no-sidebar clearfix"> 
+       <!-- OPEN article --> 
+       <div class="post-5824 page type-page status-publish hentry clearfix top-spacing" id="5824"> 
+        <section class="page-content clearfix"> 
+         <div class="row-fluid "> 
+          <div class="wpb_blog_widget wpb_content_element span12"> 
+           <div class="wpb_wrapper blog-wrap"> 
+            <ul class="blog-items masonry-items clearfix">
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/rethinking-decision-factory-roger-martin/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/11/decision-factory-298x124.jpg" width="298" height="124" alt="“Rethinking the Decision Factory” by Roger Martin"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/editors-picks/">Editor's Picks</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/rethinking-decision-factory-roger-martin/">“Rethinking the Decision Factory” by Roger Martin</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on November 6, 2014
+               </div>
+               <div class="excerpt">
+                <p>Companies everywhere struggle with the management of knowledge workers. They compete fiercely to find and retain the best talent,...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/rethinking-decision-factory-roger-martin/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/rethinking-decision-factory-roger-martin/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/rethinking-decision-factory-roger-martin/#disqus_thread" data-disqus-identifier="experfy-8219"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="8219" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/women-in-data-science-10-selected-profiles/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/11/woman-data-scientist-298x170.jpg" width="298" height="170" alt="Women in Data Science: 10 Selected Profiles"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/data-science/">Data Science</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/women-in-data-science-10-selected-profiles/">Women in Data Science: 10 Selected Profiles</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on November 4, 2014
+               </div>
+               <div class="excerpt">
+                <p>There has been some discussion in the past about women data scientists. &nbsp;Things look very bleak if you ask...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/women-in-data-science-10-selected-profiles/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/women-in-data-science-10-selected-profiles/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/women-in-data-science-10-selected-profiles/#disqus_thread" data-disqus-identifier="experfy-8172"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="8172" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/women-stem-workforce/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/11/STEM-298x217.jpg" width="298" height="217" alt="Where are the Women in the STEM Workforce?"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/data-science/">Data Science</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/women-stem-workforce/">Where are the Women in the STEM Workforce?</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on November 3, 2014
+               </div>
+               <div class="excerpt">
+                <p>The business economy in the United States boomed because of the nation’s unchallenged devotion to the growth of its...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/women-stem-workforce/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/women-stem-workforce/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/women-stem-workforce/#disqus_thread" data-disqus-identifier="experfy-8208"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="8208" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/marketing-analytics-content-marketing/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/09/Marketing-Analytics-298x169.jpg" width="298" height="169" alt="Marketing Analytics and Content Marketing"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/customer-marketing-analytics/">Customer and Marketing Analytics</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/marketing-analytics-content-marketing/">Marketing Analytics and Content Marketing</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on September 28, 2014
+               </div>
+               <div class="excerpt">
+                <p>Today’s sophisticated analytics tools can accurately measure which marketing strategy or tool is generating revenue, which tool is working...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/marketing-analytics-content-marketing/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/marketing-analytics-content-marketing/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/marketing-analytics-content-marketing/#disqus_thread" data-disqus-identifier="experfy-8131"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="8131" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">2</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/modern-marketer-artist-scientist/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/09/New-Marketing-298x223.jpeg" width="298" height="223" alt="The Big Data Marketer: An Artist or a Scientist?"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/customer-marketing-analytics/">Customer and Marketing Analytics</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/modern-marketer-artist-scientist/">The Big Data Marketer: An Artist or a Scientist?</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on September 18, 2014
+               </div>
+               <div class="excerpt">
+                <p>In the big data world, we have heard about data scientists, but now the industry thought leaders are more...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/modern-marketer-artist-scientist/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/modern-marketer-artist-scientist/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/modern-marketer-artist-scientist/#disqus_thread" data-disqus-identifier="experfy-8078"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="8078" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">3</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/cmos-can-use-big-data-analytics-drive-profits/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/09/CMO-Profits-298x136.jpg" width="298" height="136" alt="How CMOs Can Use Big Data Analytics to Drive Profits"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/customer-marketing-analytics/">Customer and Marketing Analytics</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/cmos-can-use-big-data-analytics-drive-profits/">How CMOs Can Use Big Data Analytics to Drive Profits</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on September 18, 2014
+               </div>
+               <div class="excerpt">
+                <p>A Google and Shopper Sciences study reported that “the average shopper in 2011 used almost twice the number of...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/cmos-can-use-big-data-analytics-drive-profits/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/cmos-can-use-big-data-analytics-drive-profits/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/cmos-can-use-big-data-analytics-drive-profits/#disqus_thread" data-disqus-identifier="experfy-8055"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="8055" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">3</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/cloudera-vs-hortonworks-comparing-hadoop-distributions/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/09/hortonworks-cloudera-mapr-298x167.jpg" width="298" height="167" alt="Cloudera vs Hortonworks vs MapR: Comparing Hadoop Distributions"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/big-data/hadoop-nosql/">Hadoop, NoSQL &amp; NewSQL</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/cloudera-vs-hortonworks-comparing-hadoop-distributions/">Cloudera vs Hortonworks vs MapR: Comparing Hadoop Distributions</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on September 5, 2014
+               </div>
+               <div class="excerpt">
+                <p>For all those looking to harness the potential of big data, Hadoop is the platform of choice. This open...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/cloudera-vs-hortonworks-comparing-hadoop-distributions/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/cloudera-vs-hortonworks-comparing-hadoop-distributions/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/cloudera-vs-hortonworks-comparing-hadoop-distributions/#disqus_thread" data-disqus-identifier="experfy-8082"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="8082" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/pentaho-vs-tableau-comparison-visualization-dashboards/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/08/Fencing-298x198.jpg" width="298" height="198" alt="Pentaho vs Tableau: Two popular visualization and dashboarding tools"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/business-intelligence/">Business Intelligence</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/pentaho-vs-tableau-comparison-visualization-dashboards/">Pentaho vs Tableau: Two popular visualization and dashboarding tools</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on August 24, 2014
+               </div>
+               <div class="excerpt">
+                <p>Need help with your Big Data project or simply&nbsp;need data scientists, data engineers and visualizers to augment your existing...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/pentaho-vs-tableau-comparison-visualization-dashboards/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/pentaho-vs-tableau-comparison-visualization-dashboards/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/pentaho-vs-tableau-comparison-visualization-dashboards/#disqus_thread" data-disqus-identifier="experfy-8047"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="8047" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">2</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/measuring-marketing-roi-big-data/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/08/ROI-Measurement-298x109.png" width="298" height="109" alt="Measuring Marketing ROI with Big Data"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/customer-marketing-analytics/">Customer and Marketing Analytics</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/measuring-marketing-roi-big-data/">Measuring Marketing ROI with Big Data</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on August 20, 2014
+               </div>
+               <div class="excerpt">
+                <p>The main objective of marketing analytics is to measure the effectiveness, or the ROI, of various marketing channels used...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/measuring-marketing-roi-big-data/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/measuring-marketing-roi-big-data/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/measuring-marketing-roi-big-data/#disqus_thread" data-disqus-identifier="experfy-8022"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="8022" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/idea-to-action/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/08/idea_2b.fw_5-298x108.png" width="298" height="108" alt="From Idea to Action"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#;" href="http://www.experfy.com/blog/category/company-updates/">Company Updates</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/idea-to-action/">From Idea to Action</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on August 17, 2014
+               </div>
+               <div class="excerpt">
+                <p>What prompted the idea for Experfy and how did it come to fruition? It all began with my&nbsp;experience with...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/idea-to-action/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/idea-to-action/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/idea-to-action/#disqus_thread" data-disqus-identifier="experfy-7931"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7931" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">6</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/big-data-driven-marketing-analytics-invades-enterprise/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/08/Big-Data-Inforgraphic-298x144.jpg" width="298" height="144" alt="Big Data Driven Marketing Analytics Invades the Enterprise"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/customer-marketing-analytics/">Customer and Marketing Analytics</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/big-data-driven-marketing-analytics-invades-enterprise/">Big Data Driven Marketing Analytics Invades the Enterprise</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on August 16, 2014
+               </div>
+               <div class="excerpt">
+                <p>According to McKinsey, a comfortable 20% of marketing budgets can actually be redirected to other necessary expenditure without the...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/big-data-driven-marketing-analytics-invades-enterprise/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/big-data-driven-marketing-analytics-invades-enterprise/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/big-data-driven-marketing-analytics-invades-enterprise/#disqus_thread" data-disqus-identifier="experfy-7840"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7840" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/big-data-funding-rounds-july-26-2014-privacy-analytics-quantifind-synapsify-hortonworks/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/02/venture_capital-298x192.jpg" width="298" height="192" alt="Big Data Funding Rounds (July 26, 2014): Privacy Analytics, Quantifind, Synapsify, Hortonworks"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/venture-capital/">Venture Capital</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/big-data-funding-rounds-july-26-2014-privacy-analytics-quantifind-synapsify-hortonworks/">Big Data Funding Rounds (July 26, 2014): Privacy Analytics, Quantifind, Synapsify, Hortonworks</a></h4>
+               <div class="blog-item-details">
+                By 
+                <a href="http://www.experfy.com" title="Visit admin’s website" rel="author external">admin</a> on July 26, 2014
+               </div>
+               <div class="excerpt">
+                <p>Privacy Analytics, an Ottawa based Analytics Company that helps maintain the anonymity of personal data, arranged $3.5 million seed...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/big-data-funding-rounds-july-26-2014-privacy-analytics-quantifind-synapsify-hortonworks/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/big-data-funding-rounds-july-26-2014-privacy-analytics-quantifind-synapsify-hortonworks/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/big-data-funding-rounds-july-26-2014-privacy-analytics-quantifind-synapsify-hortonworks/#disqus_thread" data-disqus-identifier="experfy-7408"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7408" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/big-data-next-big-recruiter/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/07/Recruit-298x167.jpg" width="298" height="167" alt="Big Data: The next big recruiter?"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/human-resource-analytics/">Human Resource Analytics</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/big-data-next-big-recruiter/">Big Data: The next big recruiter?</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on July 26, 2014
+               </div>
+               <div class="excerpt">
+                <p>The world has gone&nbsp;digital, and there is a push toward a paperless economy. In addition, companies are making an&nbsp;intelligent...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/big-data-next-big-recruiter/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/big-data-next-big-recruiter/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/big-data-next-big-recruiter/#disqus_thread" data-disqus-identifier="experfy-7405"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7405" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">1</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/big-data-funding-rounds-july-14-2014-databricks-retailnext-luminoso-amplitude/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/05/Venture_Capitalist_E_20080910223239-298x198.jpg" width="298" height="198" alt="Big Data Funding Rounds (July 14, 2014): Databricks, RetailNext, Luminoso, Amplitude"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/venture-capital/">Venture Capital</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/big-data-funding-rounds-july-14-2014-databricks-retailnext-luminoso-amplitude/">Big Data Funding Rounds (July 14, 2014): Databricks, RetailNext, Luminoso, Amplitude</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on July 14, 2014
+               </div>
+               <div class="excerpt">
+                <p>Databricks, the commercial start-up from the developers of Apache Spark and Shark project, bags $33 million in series B...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/big-data-funding-rounds-july-14-2014-databricks-retailnext-luminoso-amplitude/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/big-data-funding-rounds-july-14-2014-databricks-retailnext-luminoso-amplitude/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/big-data-funding-rounds-july-14-2014-databricks-retailnext-luminoso-amplitude/#disqus_thread" data-disqus-identifier="experfy-7399"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7399" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/sap-business-objects-vs-ibm-cognos-bi-whos-winner/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/07/BusinessIntelligence-298x129.png" width="298" height="129" alt="SAP Business Objects vs IBM Cognos BI: Who’s the Winner?"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/business-intelligence/">Business Intelligence</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/sap-business-objects-vs-ibm-cognos-bi-whos-winner/">SAP Business Objects vs IBM Cognos BI: Who’s the Winner?</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on July 4, 2014
+               </div>
+               <div class="excerpt">
+                <p>Every business is data driven today. The inflow of humongous amount of big data requires equally competent tools to...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/sap-business-objects-vs-ibm-cognos-bi-whos-winner/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/sap-business-objects-vs-ibm-cognos-bi-whos-winner/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/sap-business-objects-vs-ibm-cognos-bi-whos-winner/#disqus_thread" data-disqus-identifier="experfy-7233"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7233" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">4</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/reinvention-bioinformatics-big-data-applications/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/07/DNA-Sequence-298x95.png" width="298" height="95" alt="Reinvention of Bioinformatics with Big Data Applications"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/big-data/">Big Data</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/reinvention-bioinformatics-big-data-applications/">Reinvention of Bioinformatics with Big Data Applications</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on July 3, 2014
+               </div>
+               <div class="excerpt">
+                <p>The main objective of this post is to acquaint a broad readership with the technical developments in the field...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/reinvention-bioinformatics-big-data-applications/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/reinvention-bioinformatics-big-data-applications/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/reinvention-bioinformatics-big-data-applications/#disqus_thread" data-disqus-identifier="experfy-7088"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7088" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/major-hurdles-big-data-risks-threats/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/07/Cyber-Security-298x184.jpg" width="298" height="184" alt="Major Hurdles in Big Data: Risks and Threats"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/big-data/">Big Data</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/major-hurdles-big-data-risks-threats/">Major Hurdles in Big Data: Risks and Threats</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on July 1, 2014
+               </div>
+               <div class="excerpt">
+                <p>In her white paper Big Data, Bigger Opportunities (April 2013), author Jean Yan, Program Manager at Data.gov, U.S. General...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/major-hurdles-big-data-risks-threats/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/major-hurdles-big-data-risks-threats/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/major-hurdles-big-data-risks-threats/#disqus_thread" data-disqus-identifier="experfy-7061"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7061" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/latest-big-data-funding-rounds-july-1-mapr-couchbase-kreditech-crowdtwist/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/05/Venture_Capitalist_E_20080910223239-298x198.jpg" width="298" height="198" alt="Latest Big Data Funding Rounds (July 1): MapR, Couchbase, Kreditech, CrowdTwist, Keen IO"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/venture-capital/">Venture Capital</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/latest-big-data-funding-rounds-july-1-mapr-couchbase-kreditech-crowdtwist/">Latest Big Data Funding Rounds (July 1): MapR, Couchbase, Kreditech, CrowdTwist, Keen IO</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on July 1, 2014
+               </div>
+               <div class="excerpt">
+                <p>Here are the latest big data funding rounds. MapR&nbsp;was just rewarded a hefty $110 million in capital funds. Google...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/latest-big-data-funding-rounds-july-1-mapr-couchbase-kreditech-crowdtwist/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/latest-big-data-funding-rounds-july-1-mapr-couchbase-kreditech-crowdtwist/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/latest-big-data-funding-rounds-july-1-mapr-couchbase-kreditech-crowdtwist/#disqus_thread" data-disqus-identifier="experfy-7057"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7057" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/big-data-service-market-future-growth-opportunities/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/06/business-intelligence-wall-298x223.jpg" width="298" height="223" alt="Big Data as a Service Market: Future Growth Opportunities"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/big-data/">Big Data</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/big-data-service-market-future-growth-opportunities/">Big Data as a Service Market: Future Growth Opportunities</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 29, 2014
+               </div>
+               <div class="excerpt">
+                <p>The recent data explosion due to sensor-enabled machines, mobile devices, social media, and cloud computing has been projected to...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/big-data-service-market-future-growth-opportunities/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/big-data-service-market-future-growth-opportunities/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/big-data-service-market-future-growth-opportunities/#disqus_thread" data-disqus-identifier="experfy-7046"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7046" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">3</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/microstrategy-vs-tableau-whos-ahead-bi-race/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/06/business-intelligence-298x112.png" width="298" height="112" alt="Microstrategy vs Tableau: Who’s Ahead in the BI Race?"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/business-intelligence/">Business Intelligence</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/microstrategy-vs-tableau-whos-ahead-bi-race/">Microstrategy vs Tableau: Who’s Ahead in the BI Race?</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 29, 2014
+               </div>
+               <div class="excerpt">
+                <p>With the inflow of a huge volume of data comes the need to handle it better. This is because...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/microstrategy-vs-tableau-whos-ahead-bi-race/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/microstrategy-vs-tableau-whos-ahead-bi-race/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/microstrategy-vs-tableau-whos-ahead-bi-race/#disqus_thread" data-disqus-identifier="experfy-7039"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7039" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">4</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/smarter-cities-turning-big-data-into-insights-for-better-asset-management/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/06/landscape-smart-cities-298x126.jpg" width="298" height="126" alt="Smarter Cities: Turning Big Data into Insights for Better Asset Management"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/operations-analytics/">Operations Analytics</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/smarter-cities-turning-big-data-into-insights-for-better-asset-management/">Smarter Cities: Turning Big Data into Insights for Better Asset Management</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 25, 2014
+               </div>
+               <div class="excerpt">
+                <p>When IBM released its Cloud-based Intelligent Operations software suite, it certainly had the increasingly overpopulated cities around the globe...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/smarter-cities-turning-big-data-into-insights-for-better-asset-management/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/smarter-cities-turning-big-data-into-insights-for-better-asset-management/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/smarter-cities-turning-big-data-into-insights-for-better-asset-management/#disqus_thread" data-disqus-identifier="experfy-7024"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7024" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/intersection-genomics-big-data/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/06/bigdata-brain-298x209.jpg" width="298" height="209" alt="The Intersection of Genomics and Big Data"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/pharma-life-sciences-analytics/">Pharma and Life Sciences Analytics</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/intersection-genomics-big-data/">The Intersection of Genomics and Big Data</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 25, 2014
+               </div>
+               <div class="excerpt">
+                <p>Genomics&nbsp;happens to be the study of the complete genetic material of organisms. &nbsp;This specialized field of study encompasses the...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/intersection-genomics-big-data/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/intersection-genomics-big-data/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/intersection-genomics-big-data/#disqus_thread" data-disqus-identifier="experfy-7016"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7016" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">2</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/latest-big-data-funding-rounds-june-25-2014-sidecar-cloudphysics-cisco-canada-rhiza-big-data-partnership/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/05/Venture_Capitalist_E_20080910223239-298x198.jpg" width="298" height="198" alt="Latest Big Data Funding Rounds (June 25, 2014): Sidecar, CloudPhysics, Cisco Canada, Rhiza, Big Data Partnership"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/venture-capital/">Venture Capital</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/latest-big-data-funding-rounds-june-25-2014-sidecar-cloudphysics-cisco-canada-rhiza-big-data-partnership/">Latest Big Data Funding Rounds (June 25, 2014): Sidecar, CloudPhysics, Cisco Canada, Rhiza, Big Data Partnership</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 25, 2014
+               </div>
+               <div class="excerpt">
+                <p>Which big data funding rounds have made news in the month of June? Sidecar, the&nbsp;big-data enabled marketing solutions provider...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/latest-big-data-funding-rounds-june-25-2014-sidecar-cloudphysics-cisco-canada-rhiza-big-data-partnership/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/latest-big-data-funding-rounds-june-25-2014-sidecar-cloudphysics-cisco-canada-rhiza-big-data-partnership/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/latest-big-data-funding-rounds-june-25-2014-sidecar-cloudphysics-cisco-canada-rhiza-big-data-partnership/#disqus_thread" data-disqus-identifier="experfy-7013"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="7013" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/hadoop-market-size-adoption-growth-2020/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/06/Hadoop-Market-Size-298x111.png" width="298" height="111" alt="Hadoop Market Size, Adoption and Growth Through 2020"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/big-data/">Big Data</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/hadoop-market-size-adoption-growth-2020/">Hadoop Market Size, Adoption and Growth Through 2020</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 22, 2014
+               </div>
+               <div class="excerpt">
+                <p>In its research report on the growth patterns of the Hadoop Market Analysis,&nbsp;Allied Market Research forecasts that the global...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/hadoop-market-size-adoption-growth-2020/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/hadoop-market-size-adoption-growth-2020/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/hadoop-market-size-adoption-growth-2020/#disqus_thread" data-disqus-identifier="experfy-6993"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="6993" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">2</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/top-20-big-data-companies-2014-competitive-landscape/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/06/Dawn-of-Big-Data-298x150.jpg" width="298" height="150" alt="Top 20 Big Data Companies in 2014: Competitive Landscape"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/big-data/">Big Data</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/top-20-big-data-companies-2014-competitive-landscape/">Top 20 Big Data Companies in 2014: Competitive Landscape</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 22, 2014
+               </div>
+               <div class="excerpt">
+                <p>Visiongain has predicted that the big data market would reach $12.4 billion. The big data phenomenon gradually surpassed the...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/top-20-big-data-companies-2014-competitive-landscape/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/top-20-big-data-companies-2014-competitive-landscape/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/top-20-big-data-companies-2014-competitive-landscape/#disqus_thread" data-disqus-identifier="experfy-6988"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="6988" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/can-python-replace-r-developing-predictive-models/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/02/python-snake-298x198.jpg" width="298" height="198" alt="Can Python Replace R for Developing Predictive Models?"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/predictive-analytics-analytics/">Predictive Analytics</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/can-python-replace-r-developing-predictive-models/">Can Python Replace R for Developing Predictive Models?</a></h4>
+               <div class="blog-item-details">
+                By Andrew Peterson on June 22, 2014
+               </div>
+               <div class="excerpt">
+                <p>This is a guest post by Dr.&nbsp;Andrew Peterson, Senior Data Scientist. A&nbsp;related post—Is Python Becoming the King of the...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/can-python-replace-r-developing-predictive-models/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/can-python-replace-r-developing-predictive-models/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/can-python-replace-r-developing-predictive-models/#disqus_thread" data-disqus-identifier="experfy-6998"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="6998" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/information-builders-versus-tibco-spotfire-another-bi-duel/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/06/Top-Business-Intelligence-Companies-298x192.jpg" width="298" height="192" alt="Information Builders versus Tibco Spotfire: Another BI Duel"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/analytics/business-intelligence/">Business Intelligence</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/information-builders-versus-tibco-spotfire-another-bi-duel/">Information Builders versus Tibco Spotfire: Another BI Duel</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 21, 2014
+               </div>
+               <div class="excerpt">
+                <p>A point to note is that comparative literature on Tibco Spotfire versus Information Builders is practically non-existent—apart from the...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/information-builders-versus-tibco-spotfire-another-bi-duel/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/information-builders-versus-tibco-spotfire-another-bi-duel/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/information-builders-versus-tibco-spotfire-another-bi-duel/#disqus_thread" data-disqus-identifier="experfy-6970"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="6970" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/big-data-transformation-gaming-industry/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/06/violence-in-video-games-298x170.jpg" width="298" height="170" alt="Big Data and the Transformation of the Gaming Industry"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/big-data/">Big Data</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/big-data-transformation-gaming-industry/">Big Data and the Transformation of the Gaming Industry</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 21, 2014
+               </div>
+               <div class="excerpt">
+                <p>Ever since the video gaming industry has invaded the online space, this fast-paced industry is almost bursting on its...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/big-data-transformation-gaming-industry/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/big-data-transformation-gaming-industry/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/big-data-transformation-gaming-industry/#disqus_thread" data-disqus-identifier="experfy-6962"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="6962" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/latest-big-data-funding-rounds-oration-sisense-scaling-data-vizury-health-integrated-exabeam/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/05/Venture_Capitalist_E_20080910223239-298x198.jpg" width="298" height="198" alt="Latest Big Data Funding Rounds (June 17, 2014): Oration, SiSense, Scaling Data, Vizury, Health Integrated, Exabeam"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/venture-capital/">Venture Capital</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/latest-big-data-funding-rounds-oration-sisense-scaling-data-vizury-health-integrated-exabeam/">Latest Big Data Funding Rounds (June 17, 2014): Oration, SiSense, Scaling Data, Vizury, Health Integrated, Exabeam</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 17, 2014
+               </div>
+               <div class="excerpt">
+                <p>Oration, the Health-Cost Transparency Company Receives Funds from TIE Oration, the big-data startup, focused on building a completely transparent...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/latest-big-data-funding-rounds-oration-sisense-scaling-data-vizury-health-integrated-exabeam/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/latest-big-data-funding-rounds-oration-sisense-scaling-data-vizury-health-integrated-exabeam/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/latest-big-data-funding-rounds-oration-sisense-scaling-data-vizury-health-integrated-exabeam/#disqus_thread" data-disqus-identifier="experfy-6941"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="6941" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+             <li class="blog-item">
+              <figure>
+               <a href="http://www.experfy.com/blog/democratization-big-data-outcomes/" class="link-to-post">
+                <div class="overlay">
+                 <div class="thumb-info">
+                  <i class="icon-file-alt"></i>
+                 </div>
+                </div><img src="http://www.experfy.com/blog/wp-content/uploads/2014/06/dna-sequences-298x208.png" width="298" height="208" alt="Democratization of Big Data Outcomes"></a>
+              </figure>
+              <div class="blog-details-wrap">
+               <div class="item-cats">
+                <a class="cat-item" style="background-color:#59cf7b;" href="http://www.experfy.com/blog/category/big-data/">Big Data</a>
+               </div>
+               <h4><a href="http://www.experfy.com/blog/democratization-big-data-outcomes/">Democratization of Big Data Outcomes</a></h4>
+               <div class="blog-item-details">
+                By Experfy Editor on June 17, 2014
+               </div>
+               <div class="excerpt">
+                <p>“70% say a positive outcome resulted from their last major decision in which data played a pivotal role, while...</p>
+               </div>
+               <div class="read-more-bar">
+                <a class="read-more" href="http://www.experfy.com/blog/democratization-big-data-outcomes/">Read more<i class="icon-chevron-right"></i></a>
+                <div class="comments-likes">
+                 <a href="http://www.experfy.com/blog/democratization-big-data-outcomes/#comment-area"><i class="icon-comments"></i><span></span></a>
+                 <a class="disqus-count" href="http://www.experfy.com/blog/democratization-big-data-outcomes/#disqus_thread" data-disqus-identifier="experfy-6945"></a> 
+                 <div class="love-it-wrapper">
+                  <a href="#" class="love-it" data-post-id="6945" data-user-id="0"><i class="icon-heart"></i></a> 
+                  <span class="love-count">0</span>
+                 </div>
+                </div>
+               </div>
+              </div></li>
+            </ul>
+            <div class="pagination-wrap masonry-pagination">
+             <ul class="pagenavi"> 
+              <li><span class="current">1</span></li>
+              <li><a href="http://www.experfy.com/blog/page/2/" class="single_page" title="2">2</a></li>
+              <li><a href="http://www.experfy.com/blog/page/3/" class="single_page" title="3">3</a></li>
+              <li><a href="http://www.experfy.com/blog/page/4/" class="single_page" title="4">4</a></li>
+              <li><a href="http://www.experfy.com/blog/page/2/">Next</a></li>
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </section> 
+        <!-- CLOSE article --> 
+       </div> 
+      </div> 
+      <!-- WordPress Hook --> 
+      <!-- CLOSE #page-wrap --> 
+     </div> 
+     <!-- CLOSE .container --> 
+    </div> 
+    <!-- CLOSE #main-container --> 
+   </div> 
+   <!-- OPEN #footer --> 
+   <section id="footer"> 
+    <div class="container"> 
+     <div id="footer-widgets" class="clearfix"> 
+      <div class="four columns alpha"> 
+      </div> 
+      <div class="four columns"> 
+      </div> 
+      <div class="four columns"> 
+      </div> 
+      <div class="four columns omega"> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- CLOSE #footer --> 
+   </section> 
+   <footer id="copyright"> 
+    <div class="container"> 
+     <p class="twelve columns">©2014 Experfy, Inc.</p> 
+     <div class="beam-me-up three columns offset-by-one">
+      <a href="#"><i class="icon-arrow-up"></i></a>
+     </div> 
+    </div> 
+   </footer> 
+   <!-- CLOSE #container --> 
+  </div> 
+  <div id="sf-included" class="has-blog has-ticker "></div> 
+  <script>
+			var disqus_shortname = "experfy";
+			(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+		</script> 
+  <!--// WORDPRESS FOOTER HOOK //--> 
+  <script>
+		var getElementsByClassName=function(a,b,c){if(document.getElementsByClassName){getElementsByClassName=function(a,b,c){c=c||document;var d=c.getElementsByClassName(a),e=b?new RegExp("\\b"+b+"\\b","i"):null,f=[],g;for(var h=0,i=d.length;h<i;h+=1){g=d[h];if(!e||e.test(g.nodeName)){f.push(g)}}return f}}else if(document.evaluate){getElementsByClassName=function(a,b,c){b=b||"*";c=c||document;var d=a.split(" "),e="",f="http://www.w3.org/1999/xhtml",g=document.documentElement.namespaceURI===f?f:null,h=[],i,j;for(var k=0,l=d.length;k<l;k+=1){e+="[contains(concat(' ', @class, ' '), ' "+d[k]+" ')]"}try{i=document.evaluate(".//"+b+e,c,g,0,null)}catch(m){i=document.evaluate(".//"+b+e,c,null,0,null)}while(j=i.iterateNext()){h.push(j)}return h}}else{getElementsByClassName=function(a,b,c){b=b||"*";c=c||document;var d=a.split(" "),e=[],f=b==="*"&&c.all?c.all:c.getElementsByTagName(b),g,h=[],i;for(var j=0,k=d.length;j<k;j+=1){e.push(new RegExp("(^|\\s)"+d[j]+"(\\s|$)"))}for(var l=0,m=f.length;l<m;l+=1){g=f[l];i=false;for(var n=0,o=e.length;n<o;n+=1){i=e[n].test(g.className);if(!i){break}}if(i){h.push(g)}}return h}}return getElementsByClassName(a,b,c)},
+			dropdowns = document.getElementsByTagName( 'select' );
+		for ( i=0; i<dropdowns.length; i++ )
+			if ( dropdowns[i].className.match( 'dropdown-menu' ) ) dropdowns[i].onchange = function(){ if ( this.value != '' ) window.location.href = this.value; }
+	</script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/js/jquery.news-ticker.min.js?ver=1.0"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/plugins/optimizePressPlugin/lib/js/jquery/jquery.placeholder.min.js?ver=2.3.3"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/plugins/optimizePressPlugin/lib/js/fancybox/jquery.fancybox.pack.min.js?ver=2.3.3"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.experfy.com\/blog\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.2"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-includes/js/hoverIntent.min.js?ver=r7"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/js/jquery.easing.1.3.js?ver=1.3"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/js/jquery-ui-1.9.2.custom.min.js?ver=1.9.2"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/js/jquery.flexslider-min.js?ver=2.1"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/js/jquery.fancybox.pack.js?ver=2.1.1"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/js/view.min.js?auto"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/includes/page-builder/assets/js/jquery.isotope.min.js?ver=4.0.1"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/js/jquery.fitvids.js?ver=1.0"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-content/themes/supreme/js/functions.js?ver=1.0"></script> 
+  <script type="text/javascript" src="http://www.experfy.com/blog/wp-includes/js/comment-reply.min.js?ver=4.0.1"></script> 
+  <!--// CLOSE BODY //-->  
+  <!--// CLOSE HTML //--> 
+ </body>
+</html>

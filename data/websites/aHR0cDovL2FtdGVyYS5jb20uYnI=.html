@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <title>Amtera</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta name="robots" content="noindex,nofollow"> 
+  <link rel="alternate" type="application/rss+xml" title="Amtera » Home Comments Feed" href="http://www.amtera.com.br/?feed=rss2&amp;page_id=582&amp;lang=en"> 
+  <link rel="stylesheet" id="wp-anything-slider-css" href="http://www.amtera.com.br/wp-content/plugins/wp-anything-slider/wp-anything-slider.css?ver=3.7.1" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://www.amtera.com.br/wp-includes/js/comment-reply.min.js?ver=3.7.1"></script> 
+  <script type="text/javascript" src="http://www.amtera.com.br/wp-includes/js/jquery/jquery.js?ver=1.10.2"></script> 
+  <script type="text/javascript" src="http://www.amtera.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script> 
+  <script type="text/javascript" src="http://www.amtera.com.br/wp-content/plugins/wp-anything-slider/js/jquery.cycle.all.min.js?ver=3.7.1"></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.amtera.com.br/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.amtera.com.br/wp-includes/wlwmanifest.xml"> 
+  <link rel="prev" title="Contact" href="http://www.amtera.com.br/?page_id=134&amp;lang=en"> 
+  <meta name="generator" content="WordPress 3.7.1"> 
+  <link rel="canonical" href="http://www.amtera.com.br/?lang=en"> 
+  <link rel="shortlink" href="http://www.amtera.com.br/?p=582"> 
+  <link rel="meta" type="application/rdf+xml" title="SIOC" href="http://www.amtera.com.br/?lang=en?feed=lhrdf"> 
+  <link rel="sitemap" type="application/rdf+xml" title="SIOC" href="http://www.amtera.com.br/wp-content/plugins/lh-rdf/index.rdf"> 
+  <meta http-equiv="Content-Language" content="en-US"> 
+  <style type="text/css" media="screen">
+.qtrans_flag span { display:none }
+.qtrans_flag { height:12px; width:18px; display:block }
+.qtrans_flag_and_text { padding-left:20px }
+.qtrans_flag_pt { background:url(http://www.amtera.com.br/wp-content/plugins/qtranslate/flags/br.png) no-repeat }
+.qtrans_flag_en { background:url(http://www.amtera.com.br/wp-content/plugins/qtranslate/flags/gb.png) no-repeat }
+</style> 
+  <link hreflang="pt" href="http://www.amtera.com.br/?lang=pt" rel="alternate"> 
+  <!-- Easy Columns 2.1.1 by Pat Friedl http://www.patrickfriedl.com --> 
+  <link rel="stylesheet" href="http://www.amtera.com.br/wp-content/plugins/easy-columns/css/easy-columns.css" type="text/css" media="screen, projection"> 
+  <meta name="description" content="AMTERA - Semantic Technologies"> 
+  <meta name="keywords" content="amtera, semantics, linked data, big data, information retrieval, distributional semantics"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+  <link rel="shortcut icon" href="http://www.amtera.com.br/wp-content/themes/amtera-theme/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="http://www.amtera.com.br/wp-content/themes/amtera-theme/img/favicon.ico"> 
+  <link rel="stylesheet" type="text/css" href="http://www.amtera.com.br/wp-content/themes/amtera-theme/style.css" media="screen"> 
+  <link rel="stylesheet" type="text/css" href="http://www.amtera.com.br/wp-content/themes/amtera-theme/css/responsivemobilemenu.css" media="screen"> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css"> 
+  <link rel="pingback" href="http://www.amtera.com.br/xmlrpc.php?lang=en"> 
+  <!-- jQuery Library--> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
+  <!-- Date --> 
+  <script type="text/javascript" src="http://www.amtera.com.br/wp-content/themes/amtera-theme/js/moment.min.js"></script> 
+  <script type="text/javascript" src="http://www.amtera.com.br/wp-content/themes/amtera-theme/js/date.js"></script> 
+  <!-- Responsible Menu--> 
+  <script type="text/javascript" src="http://www.amtera.com.br/wp-content/themes/amtera-theme/js/responsivemobilemenu.js"></script> 
+  <!--Slider Set--> 
+  <script type="text/JavaScript">
+			var currentSlide = 0;
+			var isAnimating = true;
+			$(document).ready(function() {
+				var width = 720;
+				var slides = $('#list-images li');
+				var numSlides = slides.length;
+  
+				// Wrap the slides & set the wrap width - this will be used to animate the slider left/right
+				slides.wrapAll('<div id="slide-wrap"></div>').css({'float' : 'left','width' : width});
+				$('#slide-wrap').css({width: width * numSlides});
+  
+				// Hover function - animate the slides based on index of links
+				$('#list-links li a').hover(function(){
+					$('#list-links li').removeClass('hover');
+					var i = $(this).index('#list-links li a');
+					$(this).parent().addClass('hover');
+					$('#slide-wrap').stop().animate({'marginLeft' : width*(-i)});
+				});
+				
+				
+				// Click function - slideshow 1
+				$('#s1-bullets span').click(function(evt){
+					evt.preventDefault();
+					isAnimating = false;
+					$('#s1-bullets span').removeClass('currentSlide').addClass('notCurrentSlide');
+					var newSlide = $(this).index('#s1-bullets span');
+					$(this).addClass('currentSlide');
+					//$("#slideshow > div").hide();
+					if(currentSlide != newSlide){
+						$('#slideshow > div:eq(' + currentSlide + ')')
+					    .fadeOut(1000)
+					    .end();
+						$('#slideshow > div:eq(' + newSlide + ')')
+					    .fadeIn(1000)
+					    .end();
+					    currentSlide = newSlide;
+				    }
+				});
+			});
+		</script> 
+  <script type="text/JavaScript">
+			$(function(){
+				$("#slideshow > div:gt(0)").hide();
+				setInterval(function() { 
+					if(isAnimating){
+						var newSlide = (currentSlide + 1) % 3;
+						$('#s1-bullets span').removeClass('currentSlide').addClass('notCurrentSlide');
+						$('#s1-bullets span:eq(' + newSlide + ')').addClass('currentSlide');
+						$('#slideshow > div:eq(' + currentSlide + ')')
+						 .fadeOut(1000);
+						$('#slideshow > div:eq(' + newSlide + ')') 
+						 .fadeIn(1000)
+						 .end();
+						currentSlide = newSlide;
+					 }
+				},  4800);
+				
+				
+			});
+		</script> 
+  <!-- JS Back to Top --> 
+  <script>
+			$(document).ready(function() {
+				$('a[href=#top]').click(function(){
+					$('html, body').animate({scrollTop:0}, 'slow');
+					return false;
+				});
+			});
+		</script> 
+ </head> 
+ <body lang="en-US"> 
+  <!-- Marcador Top --> 
+  <a name="top"></a> 
+  <div class="top-line1"></div> 
+  <div class="top-line2"> 
+   <div class="top-container1"> 
+    <div class="widget"> 
+     <div id="sidebar"> 
+      <div class="widget">
+       <ul class="qtrans_language_chooser" id="qtranslate-4-chooser">
+        <li class="lang-pt"><a href="http://www.amtera.com.br/?lang=pt" hreflang="pt" title="PT"><span>PT</span></a></li>
+        <li class="lang-en active"><a href="http://www.amtera.com.br/?lang=en" hreflang="en" title="    EN"><span> EN</span></a></li>
+       </ul>
+       <div class="qtrans_widget_end"></div>
+       <script type="text/javascript">
+// <![CDATA[
+var lc = document.getElementById('qtranslate-4-chooser');
+var s = document.createElement('select');
+s.id = 'qtrans_select_qtranslate-4-chooser';
+lc.parentNode.insertBefore(s,lc);
+        var sb = document.getElementById('qtrans_select_qtranslate-4-chooser');
+        var o = document.createElement('option');
+        var l = document.createTextNode('PT');
+        
+        o.value = 'http://www.amtera.com.br/?lang=pt';
+        o.appendChild(l);
+        sb.appendChild(o);
+        
+        var sb = document.getElementById('qtrans_select_qtranslate-4-chooser');
+        var o = document.createElement('option');
+        var l = document.createTextNode('    EN');
+        o.selected = 'selected';
+        o.value = 'http://www.amtera.com.br/?lang=en';
+        o.appendChild(l);
+        sb.appendChild(o);
+        s.onchange = function() { document.location.href = this.value;}
+lc.style.display='none';
+// ]]>
+</script> 
+      </div>
+      <div class="widget">
+       <a href="https://www.facebook.com/pages/Amtera-Semantic-Technologies/133864616746757?fref=ts"><img src="http://www.amtera.com.br/wp-content/plugins/social-profiles-widget/images/default/Twitter_24x24.png" class="Twitter"></a>
+       <a href="https://www.facebook.com/pages/Amtera-Semantic-Technologies/133864616746757?fref=ts"><img src="http://www.amtera.com.br/wp-content/plugins/social-profiles-widget/images/default/Facebook_24x24.png" class="Facebook"></a>
+      </div>
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="top-container2"> 
+   <span class="logoRegion"> <a href="?lang=en">
+     <div class="logo"></div></a> </span> 
+   <div class="menuMobile"> 
+    <div class="rmm" data-menu-style="sapphire" data-menu-title="<a href='/'><img src='http://www.amtera.com.br/wp-content/themes/amtera-theme/img/logo.png' style='margin-top:-32px;'></a>"> 
+     <ul> 
+      <li><a href="?page_id=46&amp;lang=en">About Amtera</a></li>
+      <li><a href="?page_id=55&amp;lang=en">Products</a></li>
+      <li><a href="?page_id=48&amp;lang=en">Services</a></li>
+      <li><a href="?page_id=91&amp;lang=en">Research</a></li>
+      <li><a href="?page_id=57&amp;lang=en">Web API's</a></li>
+      <li><a href="?page_id=134&amp;lang=en">Contact</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="menu"> 
+    <ul> 
+     <li><a href="?page_id=46&amp;lang=en">About Amtera</a></li>
+     <span class="separador">•</span>
+     <li><a href="?page_id=55&amp;lang=en">Products</a></li>
+     <span class="separador">•</span>
+     <li><a href="?page_id=48&amp;lang=en">Services</a></li>
+     <span class="separador">•</span>
+     <li><a href="?page_id=91&amp;lang=en">Research</a></li>
+     <span class="separador">•</span>
+     <li><a href="?page_id=57&amp;lang=en">Web API's</a></li>
+     <span class="separador">•</span>
+     <li><a href="?page_id=134&amp;lang=en">Contact</a></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div class="slider-container"> 
+   <div id="slideshow"> 
+    <div id="slide2"> 
+     <div id="slide2_content"> 
+      <div class="title-slide2">
+       Esprit Search Platform
+      </div> 
+      <div class="note-text-slide2">
+       High performance workplace. Unleash the power of collaboration with 
+       <strong>Esprit</strong>.
+      </div> 
+      <a class="btn-slide2" href="products.html#esprit">Read more
+       <div class="seta2"> 
+       </div></a> 
+     </div> 
+    </div> 
+    <div id="slide3"> 
+     <div id="slide3_content"> 
+      <div class="title-slide3">
+       What semantics could mean for your business?
+      </div> 
+      <div class="note-text-slide3">
+       Discover the new paradigms of flexibility and intelligence on your business.
+      </div> 
+      <a class="btn-slide3" href="services.html#">Read more
+       <div class="seta"> 
+       </div></a> 
+     </div> 
+    </div> 
+    <div id="slide4"> 
+     <div id="slide4_content"> 
+      <div class="title-slide4">
+       Sentient: Intelligent Web Marketing
+      </div> 
+      <div class="note-text-slide4">
+       Understand your customers and engage with them with this state-of-the-art Social Media and Web Marketing solution.
+      </div> 
+      <a class="btn-slide4" href="products.html#sentient">Read more
+       <div class="seta"> 
+       </div></a> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="s1-bullets" style="width: 90px; margin: 15px auto 60px;"> 
+    <span class="currentSlide"> </span> 
+    <span class="notCurrentSlide"> </span> 
+    <span class="notCurrentSlide"> </span> 
+    <div style="clear:both"> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="document-div-center-home"> 
+   <div class="title-home">
+    <h1>About Amtera</h1>
+   </div> 
+   <a href="#top" class="btn-top">Back to top
+    <div class="seta-bt"> 
+    </div></a> 
+   <h4>Amtera is an Information Technology company that aims to provide intelligent systems based on Semantic Technologies and Big Data. Our core expertise area is search and semantic processing of information for Big Data scenarios.</h4> 
+   <div class="img1-home"> 
+   </div> 
+   <h4>We work to address common demands within knowledge-centric organizations such as intelligent knowledge management, intelligent intranets, data integration, customer relations automation, among others.</h4> 
+   <h4>We provide highly specialized products and services (consulting and training) in Semantic Technologies and Big Data.</h4> 
+   <a href="?page_id=46&amp;lang=en" class="btn-read">Read more
+    <div class="seta-bt-r"> 
+    </div></a> 
+   <div class="space1"> 
+   </div> 
+   <div class="title-home">
+    <h1>Products</h1>
+   </div> 
+   <a href="#top" class="btn-top">Back to top
+    <div class="seta-bt"> 
+    </div></a> 
+   <h3></h3> 
+   <div class="box"> 
+    <div class="top-box2">
+     <div class="icon2"> 
+     </div>
+     <span>Esprit<sup>©</sup> Search Platform</span>
+    </div> 
+    <p>Esprit is a simple-to-use knowledge management tool based on semantic search, focused on corporate and government markets, where users can quickly and efficiently share and find information (in 2-3 steps). </p> 
+    <a href="?page_id=55&amp;lang=en#esprit" class="btn-read2">Read more
+     <div class="seta-bt2-r"> 
+     </div></a> 
+   </div> 
+   <div class="box"> 
+    <div class="top-box3">
+     <div class="icon3"> 
+     </div>
+     <span>Sentient<sup>©</sup> Web Marketing</span>
+    </div> 
+    <p>Sentient is a Web platform which supports organizations in their Web marketing campaigns. Sentient allows the automated sentiment analysis of consumer opinions related to an organization or its products. However, Sentient goes beyond sentiment analysis, allowing its users to have the consumer profile of its audience, to measure and understand the impact of each campaign and to organize the communication with its customers. </p> 
+    <a href="?page_id=55&amp;lang=en#sentient" class="btn-read2">Read more
+     <div class="seta-bt2-r"> 
+     </div></a> 
+   </div> 
+   <div class="space1"> 
+   </div> 
+   <div class="title-home">
+    <h1>Services</h1>
+   </div> 
+   <a href="#top" class="btn-top">Back to top
+    <div class="seta-bt"> 
+    </div></a> 
+   <h3></h3> 
+   <div class="colummservices"> 
+    <div class="service1"> 
+     <strong>Big Data</strong> 
+     <p>On the Data Era, dealing with the huge amounts and heterogeneous sources of information and extracting meaningful insights from it can be a challenge. Big Data is a set of new paradigms of storage and processing which aims to cope with data volumes at Web scale.</p> 
+     <a href="?page_id=55&amp;lang=en#sentient" class="btn-read2">Read more
+      <div class="seta-bt3-r"> 
+      </div></a> 
+    </div> 
+    <div class="service2"> 
+     <strong>Semantic Technologies</strong> 
+     <p>Semantic Technologies are emerging as an important paradigm in the solution of corporate demands of flexibility and intelligence. Nowadays, the transformation of information into business knowledge represents an essential strategic advantage, and the use of Semantic Technologies can provide a major improvement in the way people interact with information.</p> 
+     <a href="?page_id=55&amp;lang=en#sentient" class="btn-read2">Read more
+      <div class="seta-bt3-r"> 
+      </div></a> 
+    </div> 
+    <div class="service3"> 
+     <strong>Training</strong> 
+     <p>Amtera's educational consulting service focuses on developing customized training programs that expand your employee's technical expertise and impacts your bottom line. We determine your training requirements and fashion a training program that addresses those requirements in an efficient and cost effective manner.</p> 
+     <a href="?page_id=55&amp;lang=en#sentient" class="btn-read2">Read more
+      <div class="seta-bt3-r"> 
+      </div></a> 
+    </div> 
+    <div class="both"></div> 
+   </div> 
+   <!--Tab Slider--> 
+   <div class="wrap"> 
+    <div id="menu-slider"> 
+     <ul id="list-links"> 
+      <li class="hover"> <a href="?page_id=48&amp;lang=en#big-data-consulting">Big Data</a> </li> 
+      <li> <a href="?page_id=48&amp;lang=en#semantics-consulting">Semantic Technologies</a> </li> 
+      <li> <a href="?page_id=48&amp;lang=en#training">Training</a> </li> 
+     </ul> 
+     <ul id="list-images"> 
+      <li> <p>On the Data Era, dealing with the huge amounts and heterogeneous sources of information and extracting meaningful insights from it can be a challenge. Big Data is a set of new paradigms of storage and processing which aims to cope with data volumes at Web scale.</p> <p>Amtera provides consulting services in Big Data Technologies, using state-of-the-art tools to put you on control of your data.</p> <p>For additional information <a href="?page_id=134&amp;lang=en">contact</a> our sales team.</p> </li> 
+      <li> <p>Semantic Technologies are emerging as an important paradigm in the solution of corporate demands of flexibility and intelligence. Nowadays, the transformation of information into business knowledge represents an essential strategic advantage, and the use of Semantic Technologies can provide a major improvement in the way people interact with information.</p> <p>Amtera provides consulting services in Semantic Technologies, applying the power of Semantics to your specific business demands. If your organization is knowledge intensive, Semantic Technologies could bring solid improvements in the way users generate business knowledge from information.</p> <p>For additional information <a href="?page_id=134&amp;lang=en">contact</a> our sales team.</p> </li> 
+      <li> <p>Amtera's educational consulting service focuses on developing customized training programs that expand your employee's technical expertise and impacts your bottom line. We determine your training requirements and fashion a training program that addresses those requirements in an efficient and cost effective manner.</p> <p>For additional information <a href="?page_id=134&amp;lang=en">contact</a> our sales team.</p> </li> 
+     </ul> 
+    </div> 
+    <div class="space3"></div> 
+   </div> 
+  </div>  
+  <div class="defaultFooter"> 
+   <!-- begin WP-ANYTHING --> 
+   <div id="WP-ANYTHING-SETTING4"> 
+    <div id="anything">
+     <div class="footer1"> 
+      <div class="footer-container"> 
+       <div class="box-footer1"> 
+        <ul> 
+         <li><h5>About Amtera</h5></li> 
+         <li><a href="/?page_id=46&amp;lang=en#corporate">Corporate Overview</a></li> 
+         <li><a href="/?page_id=46&amp;lang=en#philosophy">Philosophy</a></li> 
+         <li><a href="/?page_id=46&amp;lang=en#team">Management Team</a></li> 
+         <li><a href="/?page_id=134&amp;lang=en">Office Locations</a></li> 
+         <li><a href="/?page_id=46&amp;lang=en">Careers</a></li> 
+         <li><a href="/?page_id=46&amp;lang=en#clientpartner">Clients &amp; Partners</a></li> 
+        </ul> 
+       </div> 
+       <div class="box-footer1"> 
+        <ul> 
+         <li><h5>Products</h5></li> 
+         <li><a href="/?page_id=55&amp;lang=en#Esprit">Esprit</a></li> 
+         <li><a href="/?page_id=55&amp;lang=en#Sentient">Sentient</a></li> 
+        </ul> 
+       </div> 
+       <div class="box-footer1"> 
+        <ul> 
+         <li><h5>Services</h5></li> 
+         <li><a href="/?page_id=48&amp;lang=en#consulting">Big Data Consulting</a></li> 
+         <li><a href="/?page_id=48&amp;lang=en#training">Semantic Technologies Consulting</a></li> 
+         <li><a href="/?page_id=48&amp;lang=en#support">Training</a></li> 
+        </ul> 
+       </div> 
+       <div class="box-footer2"> 
+        <h6>We'd be glad to hear from you.</h6> 
+        <p>T: 55(21) 2172-5165</p> 
+        <p>E: contact@amtera.com.br</p> 
+        <div class="space5"></div> 
+       </div> 
+      </div> 
+     </div> 
+     <!--Footer2--> 
+     <div class="footer2"> 
+      <div class="footer-container"> 
+       <a href="#">Terms and Conditions</a> 
+       <a href="#">Privacy Policy</a> 
+       <a href="#">Press</a> 
+       <a href="#">Jobs</a> 
+       <span>© 2014 Amtera Semantic Technologies. All rights reserved.</span> 
+      </div> 
+     </div>
+    </div> 
+   </div> 
+   <script type="text/javascript">
+    jQuery(function() {
+	jQuery('#WP-ANYTHING-SETTING4').cycle({
+		fx: 'scrollLeft',
+		speed: 700,
+		timeout: 5000	});
+	});
+	</script> 
+   <!-- end WP-ANYTHING --> 
+  </div> 
+  <div class="mobileFooter"> 
+   <span> © 2014 Amtera Semantic Technologies. <br> Todos os direitos reservados. </span> 
+   <div class="footer-sidebar"> 
+    <span id="qtranslate-7">
+     <ul class="qtrans_language_chooser" id="qtranslate-7-chooser">
+      <li class="lang-pt"><a href="http://www.amtera.com.br/?lang=pt" hreflang="pt" title="PT"><span>PT</span></a></li>
+      <li class="lang-en active"><a href="http://www.amtera.com.br/?lang=en" hreflang="en" title="    EN"><span> EN</span></a></li>
+     </ul>
+     <div class="qtrans_widget_end"></div><script type="text/javascript">
+// <![CDATA[
+var lc = document.getElementById('qtranslate-7-chooser');
+var s = document.createElement('select');
+s.id = 'qtrans_select_qtranslate-7-chooser';
+lc.parentNode.insertBefore(s,lc);
+        var sb = document.getElementById('qtrans_select_qtranslate-7-chooser');
+        var o = document.createElement('option');
+        var l = document.createTextNode('PT');
+        
+        o.value = 'http://www.amtera.com.br/?lang=pt';
+        o.appendChild(l);
+        sb.appendChild(o);
+        
+        var sb = document.getElementById('qtrans_select_qtranslate-7-chooser');
+        var o = document.createElement('option');
+        var l = document.createTextNode('    EN');
+        o.selected = 'selected';
+        o.value = 'http://www.amtera.com.br/?lang=en';
+        o.appendChild(l);
+        sb.appendChild(o);
+        s.onchange = function() { document.location.href = this.value;}
+lc.style.display='none';
+// ]]>
+</script> </span> 
+   </div> 
+  </div>   
+ </body>
+</html>
